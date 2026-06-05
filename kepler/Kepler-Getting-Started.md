@@ -9,3 +9,5 @@ taxonomy:
 
 # Getting Started
 Thank you for choosing Kepler from Gitkraken to help wrangle your AI Agents in a way that makes sense!
+
+---
