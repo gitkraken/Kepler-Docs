@@ -138,13 +138,11 @@ Each column header includes:
 - Session name (truncated)
 - Repository name
 - Controls: external link (↗), expand, add (+), close (×)
-- Status bar with keyboard shortcut indicator (⌨1, ⌨2, ⌨3)
+- Status bar with session index (#1, #2, #3)
 - Status badge
 - Repository name
 - Task name
 - Time since last activity
-
-<!-- TODO: confirm with engineering — exact keyboard shortcut format for ⌨1/2/3 navigation -->
 
 ### CHANGES Section
 
