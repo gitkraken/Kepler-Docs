@@ -13,6 +13,11 @@ An IDE is built for one developer writing code. An ADE is built for one develope
 
 Kepler and GitKraken Desktop are separate products built for different workflows. GitKraken Desktop is the right choice for focused, single-repo Git work. Kepler is the right choice when you are running agents across multiple repos at the same time.
 
+<figure>
+  <img src="/_images/kepler-full-screen.png" class="help-center-img img-bordered" alt="Kepler showing the task list on the left, a diff view in the center, and an agent chat panel on the right" />
+  <figcaption style="text-align: center; color: #888">Kepler with a Task open. The task list is on the left, the diff view is in the center, and the agent chat is on the right.</figcaption>
+</figure>
+
 **You're in the right place if you are:**
 
 - Running two or more coding agents simultaneously
@@ -25,9 +30,14 @@ Kepler and GitKraken Desktop are separate products built for different workflows
 
 Kepler is available for **Windows**, **Mac**, and **Linux**.
 
-<!-- TODO: confirm with engineering — download URL and any platform-specific installer notes -->
+| Platform | Installer | Minimum OS |
+|---|---|---|
+| Windows | 64-bit, ARM64 | Windows 10+ |
+| Mac | Apple Silicon, Intel | macOS 12+ |
+| Linux (x64) | .deb, .rpm, .AppImage | Ubuntu LTS 18.04+ / Debian 10+ / RHEL 8+ / Fedora 39+ |
+| Linux (ARM) | .deb, .rpm, .AppImage | Ubuntu LTS 20.04+ / RHEL 8+ / Fedora 39+ |
 
-1. Go to the Kepler download page and download the installer for your platform.
+1. Go to [gitkraken.com/kepler/download](https://www.gitkraken.com/kepler/download) and download the installer for your platform and architecture.
 2. Run the installer and follow the on-screen prompts.
 3. Launch Kepler.
 
