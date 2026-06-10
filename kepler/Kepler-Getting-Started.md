@@ -14,8 +14,8 @@ An IDE is built for one developer writing code. An ADE is built for one develope
 Kepler and GitKraken Desktop are separate products built for different workflows. GitKraken Desktop is the right choice for focused, single-repo Git work. Kepler is the right choice when you are running agents across multiple repos at the same time.
 
 <figure>
-  <img src="/_images/kepler-full-screen.png" class="help-center-img img-bordered" alt="Kepler showing the task list on the left, a diff view in the center, and an agent chat panel on the right" />
-  <figcaption style="text-align: center; color: #888">Kepler with a Task open. The task list is on the left, the diff view is in the center, and the agent chat is on the right.</figcaption>
+  <img src="/wp-content/uploads/kepler-full-screen.png" class="help-center-img img-bordered" alt="Kepler showing the task list on the left, a diff view in the center, and an agent chat panel on the right">
+  <figcaption style="text-align:center; color:#888">Kepler with a Task open. The task list is on the left, the diff view is in the center, and the agent chat is on the right.</figcaption>
 </figure>
 
 **You're in the right place if you are:**
@@ -44,8 +44,8 @@ Kepler is available for **Windows**, **Mac**, and **Linux**.
 On first open, Kepler displays the **Home** view. No repos are connected yet and no agents are configured. The next two sections cover the minimum setup required before creating your first Task.
 
 <figure>
-  <img src="..." class="help-center-img img-bordered" alt="Kepler Home view on first launch with no repos or agents configured" />
-  <figcaption style="text-align: center; color: #888">Kepler Home view on first launch, before any repos or agents are configured.</figcaption>
+  <img src="..." class="help-center-img img-bordered" alt="Kepler Home view on first launch with no repos or agents configured">
+  <figcaption style="text-align:center; color:#888">Kepler Home view on first launch, before any repos or agents are configured.</figcaption>
 </figure>
 
 <!-- TODO: confirm with engineering — confirm first-launch UI state and replace screenshot placeholder -->
@@ -91,8 +91,8 @@ This section covers creating a Task from scratch. For all three Task creation me
 6. Click **Create Task**. The agent session starts and the Task appears in List or Kanban view.
 
 <figure>
-  <img src="..." class="help-center-img img-bordered" alt="New Task creation dialog showing repo, base branch, and agent selection fields" />
-  <figcaption style="text-align: center; color: #888">The New Task dialog. Select a repo, base branch, and agent, then click Create Task.</figcaption>
+  <img src="..." class="help-center-img img-bordered" alt="New Task creation dialog showing repo, base branch, and agent selection fields">
+  <figcaption style="text-align:center; color:#888">The New Task dialog. Select a repo, base branch, and agent, then click Create Task.</figcaption>
 </figure>
 
 <!-- TODO: confirm with engineering — confirm exact button labels and dialog field names, replace screenshot placeholder -->
