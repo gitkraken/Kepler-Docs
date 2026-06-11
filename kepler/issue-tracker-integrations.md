@@ -1,11 +1,23 @@
 ---
-
 title: Issue Tracker Integrations
 description: Connect your issue tracker to Kepler so you can create Tasks directly from issues and pass issue context to your agents automatically.
+product: Kepler
+feature: Issue Tracker Integrations
+content_type: how-to
+audience: developer
+plan_required: all
+os_support: [Windows, macOS, Linux]
+git_hosts: [generic]
+integrations: [jira, linear, trello, github, github-enterprise, gitlab, gitlab-self-hosted, azure-devops]
+hosted_variant: both
+status: GA
+last_verified: 2026-06
+llms_include: true
+tags: [integrations, issue-trackers, jira, linear, trello, github, gitlab, azure-devops, oauth]
 taxonomy:
     category: kepler
-
 ---
+<kbd>Last updated: June 2026</kbd>
 
 ## Overview
 

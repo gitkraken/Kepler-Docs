@@ -1,11 +1,23 @@
 ---
 title: Remote Environments
 description: Run Kepler Tasks on a remote machine via SSH or inside a Windows Subsystem for Linux (WSL) environment, or expose Kepler for remote access using the built-in server.
+product: Kepler
+feature: Remote Environments
+content_type: how-to
+audience: developer
+plan_required: all
+os_support: [Windows, macOS, Linux]
+git_hosts: [generic]
+integrations: []
+hosted_variant: both
+status: GA
+last_verified: 2026-06
+llms_include: true
+tags: [remote-environments, ssh, wsl, remote-access, ngrok, networking]
 taxonomy:
     category: kepler
 ---
-
-# Remote Environments
+<kbd>Last updated: June 2026</kbd>
 
 Kepler (GitKraken's Agentic Development Environment, or ADE) covers two remote scenarios. First, you can run Tasks on a remote machine or WSL environment when you need more compute or a Linux runtime. Second, you can expose Kepler over the network to access it from another device.
 

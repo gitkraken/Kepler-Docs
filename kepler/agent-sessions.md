@@ -1,13 +1,23 @@
 ---
-
 title: Agent Sessions
 description: Learn how to configure, direct, and review agent sessions in Kepler, including how to read diffs, stage changes, and commit agent output.
+product: Kepler
+feature: Agent Sessions
+content_type: how-to
+audience: developer
+plan_required: all
+os_support: [Windows, macOS, Linux]
+git_hosts: [generic]
+integrations: [claude-code, codex-cli, copilot-cli, cursor, opencode]
+hosted_variant: both
+status: GA
+last_verified: 2026-06
+llms_include: true
+tags: [agent-sessions, console, diff, staging, commits, worktrees, modes]
 taxonomy:
     category: kepler
-
 ---
-
-# Agent Sessions
+<kbd>Last updated: June 2026</kbd>
 
 An **agent session** is a running coding agent within a Task in Kepler, GitKraken's Agentic Development Environment (ADE). This page covers how to configure a session before it starts, how to direct the agent from the console, and how to review, stage, and commit the changes it produces.
 

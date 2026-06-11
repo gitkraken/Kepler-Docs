@@ -1,9 +1,23 @@
 ---
 title: Pull Request Integrations
 description: Connect your Git hosting platform to Kepler so you can create Tasks directly from pull requests.
+product: Kepler
+feature: Pull Request Integrations
+content_type: how-to
+audience: developer
+plan_required: all
+os_support: [Windows, macOS, Linux]
+git_hosts: [github, github-enterprise, gitlab, gitlab-self-managed, bitbucket, azure-devops]
+integrations: [github, github-enterprise, gitlab, gitlab-self-managed, bitbucket, azure-devops]
+hosted_variant: both
+status: GA
+last_verified: 2026-06
+llms_include: true
+tags: [integrations, pull-requests, github, gitlab, bitbucket, azure-devops, oauth]
 taxonomy:
     category: kepler
 ---
+<kbd>Last updated: June 2026</kbd>
 
 ## Overview
 

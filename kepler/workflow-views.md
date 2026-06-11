@@ -1,11 +1,23 @@
 ---
 title: Workflow Views
 description: Understand Kepler's three workflow views (List, Kanban, and Console) and when to use each one.
+product: Kepler
+feature: Workflow Views
+content_type: how-to
+audience: developer
+plan_required: all
+os_support: [Windows, macOS, Linux]
+git_hosts: [generic]
+integrations: []
+hosted_variant: both
+status: GA
+last_verified: 2026-06
+llms_include: true
+tags: [workflow-views, list-view, kanban, console, tasks, worktrees, sessions]
 taxonomy:
     category: kepler
 ---
-
-# Workflow Views
+<kbd>Last updated: June 2026</kbd>
 
 Kepler, GitKraken's **Agentic Development Environment** (**ADE**), has three views for managing **Tasks**, **worktrees**, and **agent sessions**. Switch between them using the top navigation bar.
 

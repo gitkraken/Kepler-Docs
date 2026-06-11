@@ -1,13 +1,23 @@
 ---
-
 title: Settings
 description: A reference for every setting in Kepler, organized by section, plus a complete keyboard shortcut reference.
+product: Kepler
+feature: Settings
+content_type: reference
+audience: developer
+plan_required: all
+os_support: [Windows, macOS, Linux]
+git_hosts: [generic]
+integrations: []
+hosted_variant: both
+status: GA
+last_verified: 2026-06
+llms_include: true
+tags: [settings, configuration, keyboard-shortcuts, appearance, terminal, agents, preferences]
 taxonomy:
     category: kepler
-
 ---
-
-# Settings
+<kbd>Last updated: June 2026</kbd>
 
 Open Settings with **⌘ .** (Mac) or from the main menu.
 

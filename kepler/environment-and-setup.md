@@ -1,9 +1,23 @@
 ---
 title: Environment and Setup
 description: Configure Kepler's environment settings: repos directory, worktree paths, custom startup commands, and embedded terminals.
+product: Kepler
+feature: Environment and Setup
+content_type: how-to
+audience: developer
+plan_required: all
+os_support: [Windows, macOS, Linux]
+git_hosts: [generic]
+integrations: []
+hosted_variant: both
+status: GA
+last_verified: 2026-06
+llms_include: true
+tags: [environment, setup, repositories, worktrees, terminal, custom-commands, startup]
 taxonomy:
     category: kepler
 ---
+<kbd>Last updated: June 2026</kbd>
 
 ## Overview
 

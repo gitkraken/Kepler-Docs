@@ -1,9 +1,23 @@
 ---
 title: Agent Integrations
 description: Connect Claude Code, Codex CLI, Copilot CLI, Cursor, or OpenCode to Kepler and start running agent sessions inside your Tasks.
+product: Kepler
+feature: Agent Integrations
+content_type: how-to
+audience: developer
+plan_required: all
+os_support: [Windows, macOS, Linux]
+git_hosts: [generic]
+integrations: [claude-code, codex-cli, copilot-cli, cursor, opencode]
+hosted_variant: both
+status: GA
+last_verified: 2026-06
+llms_include: true
+tags: [agent-integrations, claude-code, codex-cli, copilot-cli, cursor, opencode, setup]
 taxonomy:
     category: kepler
 ---
+<kbd>Last updated: June 2026</kbd>
 
 ## Overview
 
