@@ -1,9 +1,23 @@
 ---
 title: Getting Started with Kepler
 description: Install Kepler, connect your first agent, and create your first Task.
+product: Kepler
+feature: Getting Started
+content_type: how-to
+audience: developer
+plan_required: all
+os_support: [Windows, macOS, Linux]
+git_hosts: [generic]
+integrations: [claude-code, codex-cli, copilot-cli, cursor, opencode]
+hosted_variant: both
+status: GA
+last_verified: 2026-06
+llms_include: true
+tags: [getting-started, install, setup, tasks, agents, first-task]
 taxonomy:
     category: kepler
----
+
+<kbd>Last updated: June 2026</kbd>
 
 ## What is Kepler?
 
@@ -24,7 +38,7 @@ Kepler and GitKraken Desktop are separate products built for different workflows
 - Coordinating work across multiple repositories
 - Reviewing and merging agent output without leaving a single interface
 
----
+***
 
 ## Install Kepler
 
@@ -50,7 +64,7 @@ On first open, Kepler displays the **Home** view. No repos are connected yet and
 
 <!-- TODO: confirm with engineering — confirm first-launch UI state and replace screenshot placeholder -->
 
----
+***
 
 ## Minimum setup before creating your first Task
 
@@ -75,7 +89,7 @@ Kepler requires at least one agent integration before you can launch an agent se
 
 For supported agents and connection steps, see [Agent Integrations](/kepler/agent-integrations).
 
----
+***
 
 ## Create your first Task
 
@@ -97,7 +111,7 @@ This section covers creating a Task from scratch. For all three Task creation me
 
 <!-- TODO: confirm with engineering — confirm exact button labels and dialog field names, replace screenshot placeholder -->
 
----
+***
 
 ## What a ready state looks like
 
