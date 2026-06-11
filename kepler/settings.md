@@ -16,7 +16,7 @@ llms_include: true
 tags: [settings, configuration, keyboard-shortcuts, appearance, terminal, agents, preferences]
 taxonomy:
     category: kepler
-
+---
 <kbd>Last updated: June 2026</kbd>
 
 Open Settings with **⌘ .** (Mac) or from the main menu.

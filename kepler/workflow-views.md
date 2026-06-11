@@ -16,10 +16,10 @@ llms_include: true
 tags: [workflow-views, list-view, kanban, console, tasks, worktrees, sessions]
 taxonomy:
     category: kepler
-
+---
 <kbd>Last updated: June 2026</kbd>
 
-Kepler, GitKraken's **Agentic Development Environment** (**ADE**), has three views for managing **Tasks**, **worktrees**, and **agent sessions**. Switch between them using the top navigation bar.
+**Kepler**, GitKraken's **Agentic Development Environment** (**ADE**), has three views for managing **Tasks**, **worktrees**, and **agent sessions**. Switch between them using the top navigation bar.
 
 ## Choosing a View
 
