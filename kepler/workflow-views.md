@@ -15,7 +15,7 @@ last_verified: 2026-06
 llms_include: true
 tags: [workflow-views, list-view, kanban, console, tasks, worktrees, sessions]
 taxonomy:
-    category: kepler
+  category: kepler
 ---
 <kbd>Last updated: June 2026</kbd>
 

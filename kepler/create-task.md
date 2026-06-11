@@ -15,7 +15,7 @@ last_verified: 2026-06
 llms_include: true
 tags: [tasks, create-task, worktrees, issues, pull-requests, kanban, shared-context]
 taxonomy:
-    category: kepler
+  category: kepler
 ---
 <kbd>Last updated: June 2026</kbd>
 

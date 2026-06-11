@@ -15,7 +15,7 @@ last_verified: 2026-06
 llms_include: true
 tags: [agent-integrations, claude-code, codex-cli, copilot-cli, cursor, opencode, setup]
 taxonomy:
-    category: kepler
+  category: kepler
 ---
 <kbd>Last updated: June 2026</kbd>
 
