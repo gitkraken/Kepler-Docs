@@ -35,8 +35,8 @@ Four settings are available when you start a session. Three of them can be overr
 | **Effort Level** | How thoroughly the agent reasons | Default | See [Effort levels](#effort-levels) below |
 
 <figure>
-  <img src="/_images/set-agent.png" class="help-center-img img-bordered" alt="Session configuration bar showing the Agent dropdown open with Claude Code, Codex, and OpenCode options, alongside Mode, Model, and Effort dropdowns all set to Default" />
-  <figcaption style="text-align: center; color: #888">The Agent dropdown at session start. Mode, Model, and Effort default to Default.</figcaption>
+  <img src="/wp-content/uploads/set-agent.png" class="help-center-img img-bordered" alt="Session configuration bar showing the Agent dropdown open with Claude Code, Codex, and OpenCode options, alongside Mode, Model, and Effort dropdowns all set to Default">
+  <figcaption style="text-align:center; color:#888">The Agent dropdown at session start. Mode, Model, and Effort default to Default.</figcaption>
 </figure>
 
 **Agent** is set at session start and cannot be changed mid-session. For details on each supported agent runtime, see [Agent Integrations](agent-integrations.md).
@@ -86,8 +86,8 @@ The input bar at the bottom of the console has these controls:
 | **↑ Send** | Submit the instruction |
 
 <figure>
-  <img src="/_images/context-usage.png" class="help-center-img img-bordered" alt="Context Usage popover showing 23%, a green progress bar, 45.8K tokens used out of 200K total, and a cost of $0.5705" />
-  <figcaption style="text-align: center; color: #888">The Context Usage popover. Click the percentage indicator in the input bar to see token consumption and session cost.</figcaption>
+  <img src="/wp-content/uploads/context-usage.png" class="help-center-img img-bordered" alt="Context Usage popover showing 23%, a green progress bar, 45.8K tokens used out of 200K total, and a cost of $0.5705">
+  <figcaption style="text-align:center; color:#888">The Context Usage popover. Click the percentage indicator in the input bar to see token consumption and session cost.</figcaption>
 </figure>
 
 ### How to course-correct
@@ -112,8 +112,8 @@ Click a worktree in the **List view** sidebar. The diff opens in the center pane
 - **Red** lines were removed; **green** lines were added.
 
 <figure>
-  <img src="/_images/file-diff.png" class="help-center-img img-bordered" alt="Kepler diff view in Stacked mode showing red removed lines and green added lines on the left, with the Working changes panel on the right displaying STAGED and CHANGES file lists and a Commit button" />
-  <figcaption style="text-align: center; color: #888">The diff view in Stacked mode. The right panel shows staged files, unstaged changes, and the commit message field.</figcaption>
+  <img src="/wp-content/uploads/file-diff.png" class="help-center-img img-bordered" alt="Kepler diff view in Stacked mode showing red removed lines and green added lines on the left, with the Working changes panel on the right displaying STAGED and CHANGES file lists and a Commit button">
+  <figcaption style="text-align:center; color:#888">The diff view in Stacked mode. The right panel shows staged files, unstaged changes, and the commit message field.</figcaption>
 </figure>
 
 ### Working changes panel
@@ -146,8 +146,8 @@ The **CHANGES (N)** panel lists unstaged files. Each entry shows the file path a
 The commit message field is pre-populated by the agent. Edit it if needed, then click **Commit** to commit the staged files.
 
 <figure>
-  <img src="/_images/stage-and-commit.png" class="help-center-img img-bordered" alt="STAGED panel showing four modified files with Discard All and Unstage All buttons, a pre-populated commit message, and the Commit button" />
-  <figcaption style="text-align: center; color: #888">The staged files panel with an agent-generated commit message ready to commit.</figcaption>
+  <img src="/wp-content/uploads/stage-and-commit.png" class="help-center-img img-bordered" alt="STAGED panel showing four modified files with Discard All and Unstage All buttons, a pre-populated commit message, and the Commit button">
+  <figcaption style="text-align:center; color:#888">The staged files panel with an agent-generated commit message ready to commit.</figcaption>
 </figure>
 
 **Push**, **Pull**, and **Fetch** are available from the header bar at the top of the view without leaving Kepler.

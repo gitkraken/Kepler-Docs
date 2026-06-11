@@ -124,8 +124,8 @@ Kepler displays a QR code. Scan it with a mobile device or secondary machine to 
 The QR code encodes the access URL based on the auto-detected address, or the **URL Override** if one is set. Scan the code from any device on the same network to open Kepler in a browser.
 
 <figure>
-  <img src="..." class="help-center-img img-bordered" alt="Kepler Remote Access settings panel showing port, host, URL Override fields, and a QR code" />
-  <figcaption style="text-align: center; color: #888">Remote Access settings with QR code displayed after clicking Start.</figcaption>
+  <img src="..." class="help-center-img img-bordered" alt="Kepler Remote Access settings panel showing port, host, URL Override fields, and a QR code">
+  <figcaption style="text-align:center; color:#888">Remote Access settings with QR code displayed after clicking Start.</figcaption>
 </figure>
 
 ### Expose Kepler Outside the Local Network with ngrok

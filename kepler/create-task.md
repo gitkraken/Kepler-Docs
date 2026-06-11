@@ -64,8 +64,8 @@ Start here when you have a clear goal and no existing issue or PR to pull contex
 7. Click **Launch task**.
 
 <figure>
-  <img src="..." class="help-center-img img-bordered" alt="New task creation screen showing repo selection, worktree options, and bottom bar settings" />
-  <figcaption style="text-align: center; color: #888">Creating a Task from scratch: repo selector, worktree picker, base branch dropdown, and launch settings.</figcaption>
+  <img src="..." class="help-center-img img-bordered" alt="New task creation screen showing repo selection, worktree options, and bottom bar settings">
+  <figcaption style="text-align:center; color:#888">Creating a Task from scratch: repo selector, worktree picker, base branch dropdown, and launch settings.</figcaption>
 </figure>
 
 ### Settings reference
@@ -112,8 +112,8 @@ Use the search bar to find issues by title or by pasting a URL. Use the filter b
 Kepler passes the issue title, description, and metadata to the agent when the session starts.
 
 <figure>
-  <img src="..." class="help-center-img img-bordered" alt="Issue selection screen showing filter bar, issue list, Task preview rows, and bottom bar" />
-  <figcaption style="text-align: center; color: #888">Selecting issues to launch as Tasks. Each issue gets its own Task preview row.</figcaption>
+  <img src="..." class="help-center-img img-bordered" alt="Issue selection screen showing filter bar, issue list, Task preview rows, and bottom bar">
+  <figcaption style="text-align:center; color:#888">Selecting issues to launch as Tasks. Each issue gets its own Task preview row.</figcaption>
 </figure>
 
 ***
@@ -152,8 +152,8 @@ Kepler infers **"Address feedback"** as the agent's starting instruction from th
 5. Click **Launch task**.
 
 <figure>
-  <img src="..." class="help-center-img img-bordered" alt="Pull request selection screen showing multi-PR grouping options and Task preview rows" />
-  <figcaption style="text-align: center; color: #888">Selecting multiple PRs: split into separate Tasks or group under one Task.</figcaption>
+  <img src="..." class="help-center-img img-bordered" alt="Pull request selection screen showing multi-PR grouping options and Task preview rows">
+  <figcaption style="text-align:center; color:#888">Selecting multiple PRs: split into separate Tasks or group under one Task.</figcaption>
 </figure>
 
 ***
@@ -183,8 +183,8 @@ To manage shared context:
 - Click **+ Add markdown** to add a new context block.
 
 <figure>
-  <img src="..." class="help-center-img img-bordered" alt="Task detail view showing worktrees list, sessions panel, and shared context section with a prompt card" />
-  <figcaption style="text-align: center; color: #888">Task detail view: worktrees, sessions, and shared context.</figcaption>
+  <img src="..." class="help-center-img img-bordered" alt="Task detail view showing worktrees list, sessions panel, and shared context section with a prompt card">
+  <figcaption style="text-align:center; color:#888">Task detail view: worktrees, sessions, and shared context.</figcaption>
 </figure>
 
 ***

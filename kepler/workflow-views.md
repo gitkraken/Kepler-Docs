@@ -124,13 +124,13 @@ Use the **Filters** panel to narrow the board by:
 - **Agent** — filter by agent runtime (for example, Claude Code, Codex).
 
 <figure>
-  <img src="/_images/kanban-status.png" class="help-center-img img-bordered" alt="Kanban view with the Status filter dropdown open, showing checkboxes for Needs Attention, Active, Idle, Errored, and Inactive" />
-  <figcaption style="text-align: center; color: #888">The Status filter in Kanban view</figcaption>
+  <img src="/wp-content/uploads/kanban-status.png" class="help-center-img img-bordered" alt="Kanban view with the Status filter dropdown open, showing checkboxes for Needs Attention, Active, Idle, Errored, and Inactive">
+  <figcaption style="text-align:center; color:#888">The Status filter in Kanban view</figcaption>
 </figure>
 
 <figure>
-  <img src="/_images/task-filter.png" class="help-center-img img-bordered" alt="Kanban view with the Tasks filter dropdown open, listing task names as checkboxes with a No task option at the bottom" />
-  <figcaption style="text-align: center; color: #888">The Tasks filter in Kanban view</figcaption>
+  <img src="/wp-content/uploads/task-filter.png" class="help-center-img img-bordered" alt="Kanban view with the Tasks filter dropdown open, listing task names as checkboxes with a No task option at the bottom">
+  <figcaption style="text-align:center; color:#888">The Tasks filter in Kanban view</figcaption>
 </figure>
 
 Use the **Sort** control to order cards (for example, **Newest first**).
@@ -173,8 +173,8 @@ Each session column displays the conversation between you and the agent:
 - Tool calls appear as collapsible rows with a **Completed** badge or an error state.
 
 <figure>
-  <img src="/_images/course-correct.png" class="help-center-img img-bordered" alt="Console view showing three agent sessions side by side. The middle session displays tool calls with error states. The right session shows a formatted commit summary as an agent response." />
-  <figcaption style="text-align: center; color: #888">Console view with multiple active sessions, showing tool call errors and an agent response with commit history</figcaption>
+  <img src="/wp-content/uploads/course-correct.png" class="help-center-img img-bordered" alt="Console view showing three agent sessions side by side. The middle session displays tool calls with error states. The right session shows a formatted commit summary as an agent response.">
+  <figcaption style="text-align:center; color:#888">Console view with multiple active sessions, showing tool call errors and an agent response with commit history</figcaption>
 </figure>
 
 ### Input Bar

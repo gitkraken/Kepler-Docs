@@ -57,8 +57,8 @@ When you connect a PR, Kepler pulls the following from it:
 4. After authorization, GitHub is now connected in **Integrations**.
 
 <figure>
-  <img src="/img/kepler/github-integration-connected.png" class="help-center-img img-bordered" alt="GitHub shown as connected in Kepler Integrations settings" />
-  <figcaption style="text-align: center; color: #888">GitHub connected in Kepler Integrations</figcaption>
+  <img src="/wp-content/uploads/github-integration-connected.png" class="help-center-img img-bordered" alt="GitHub shown as connected in Kepler Integrations settings">
+  <figcaption style="text-align:center; color:#888">GitHub connected in Kepler Integrations</figcaption>
 </figure>
 
 ***
@@ -79,8 +79,8 @@ When you connect a PR, Kepler pulls the following from it:
 5. Click **Save**.
 
 <figure>
-  <img src="/img/kepler/github-enterprise-integration.png" class="help-center-img img-bordered" alt="GitHub Enterprise connection form in Kepler showing host URL and token fields" />
-  <figcaption style="text-align: center; color: #888">GitHub Enterprise connection form in Kepler</figcaption>
+  <img src="/wp-content/uploads/github-enterprise-integration.png" class="help-center-img img-bordered" alt="GitHub Enterprise connection form in Kepler showing host URL and token fields">
+  <figcaption style="text-align:center; color:#888">GitHub Enterprise connection form in Kepler</figcaption>
 </figure>
 
 ***
@@ -99,8 +99,8 @@ When you connect a PR, Kepler pulls the following from it:
 4. After authorization, GitLab is now connected in **Integrations**.
 
 <figure>
-  <img src="/img/kepler/gitlab-integration-connected.png" class="help-center-img img-bordered" alt="GitLab shown as connected in Kepler Integrations settings" />
-  <figcaption style="text-align: center; color: #888">GitLab connected in Kepler Integrations</figcaption>
+  <img src="/wp-content/uploads/gitlab-integration-connected.png" class="help-center-img img-bordered" alt="GitLab shown as connected in Kepler Integrations settings">
+  <figcaption style="text-align:center; color:#888">GitLab connected in Kepler Integrations</figcaption>
 </figure>
 
 ***
@@ -121,8 +121,8 @@ When you connect a PR, Kepler pulls the following from it:
 5. Click **Save**.
 
 <figure>
-  <img src="/img/kepler/gitlab-self-managed-integration.png" class="help-center-img img-bordered" alt="GitLab Self-Managed connection form in Kepler showing host URL and token fields" />
-  <figcaption style="text-align: center; color: #888">GitLab Self-Managed connection form in Kepler</figcaption>
+  <img src="/wp-content/uploads/gitlab-self-managed-integration.png" class="help-center-img img-bordered" alt="GitLab Self-Managed connection form in Kepler showing host URL and token fields">
+  <figcaption style="text-align:center; color:#888">GitLab Self-Managed connection form in Kepler</figcaption>
 </figure>
 
 ***
@@ -141,8 +141,8 @@ When you connect a PR, Kepler pulls the following from it:
 4. After authorization, Bitbucket is now connected in **Integrations**.
 
 <figure>
-  <img src="/img/kepler/bitbucket-integration-connected.png" class="help-center-img img-bordered" alt="Bitbucket shown as connected in Kepler Integrations settings" />
-  <figcaption style="text-align: center; color: #888">Bitbucket connected in Kepler Integrations</figcaption>
+  <img src="/wp-content/uploads/bitbucket-integration-connected.png" class="help-center-img img-bordered" alt="Bitbucket shown as connected in Kepler Integrations settings">
+  <figcaption style="text-align:center; color:#888">Bitbucket connected in Kepler Integrations</figcaption>
 </figure>
 
 ***
@@ -161,8 +161,8 @@ When you connect a PR, Kepler pulls the following from it:
 4. After authorization, Azure DevOps is now connected in **Integrations**.
 
 <figure>
-  <img src="/img/kepler/azure-devops-integration-connected.png" class="help-center-img img-bordered" alt="Azure DevOps shown as connected in Kepler Integrations settings" />
-  <figcaption style="text-align: center; color: #888">Azure DevOps connected in Kepler Integrations</figcaption>
+  <img src="/wp-content/uploads/azure-devops-integration-connected.png" class="help-center-img img-bordered" alt="Azure DevOps shown as connected in Kepler Integrations settings">
+  <figcaption style="text-align:center; color:#888">Azure DevOps connected in Kepler Integrations</figcaption>
 </figure>
 
 ---

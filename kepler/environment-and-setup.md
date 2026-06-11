@@ -49,8 +49,8 @@ The **Default Repositories Folder** is the directory where Kepler clones reposit
 4. Click **Save**.
 
 <figure>
-  <img src="../_images/settings-default-repos-folder.png" class="help-center-img img-bordered" alt="Default Repositories Folder field in Settings → General" />
-  <figcaption style="text-align: center; color: #888">Settings → General — Default Repositories Folder</figcaption>
+  <img src="/wp-content/uploads/settings-default-repos-folder.png" class="help-center-img img-bordered" alt="Default Repositories Folder field in Settings → General">
+  <figcaption style="text-align:center; color:#888">Settings → General — Default Repositories Folder</figcaption>
 </figure>
 
 ### What happens if it is not set
@@ -71,8 +71,8 @@ The **Default Worktrees Folder** is the directory where Kepler creates new workt
 4. Click **Save**.
 
 <figure>
-  <img src="../_images/settings-default-worktrees-folder.png" class="help-center-img img-bordered" alt="Default Worktrees Folder field in Settings → General" />
-  <figcaption style="text-align: center; color: #888">Settings → General — Default Worktrees Folder</figcaption>
+  <img src="/wp-content/uploads/settings-default-worktrees-folder.png" class="help-center-img img-bordered" alt="Default Worktrees Folder field in Settings → General">
+  <figcaption style="text-align:center; color:#888">Settings → General — Default Worktrees Folder</figcaption>
 </figure>
 
 ### Path placeholders
@@ -108,8 +108,8 @@ Custom commands are shell commands that Kepler runs automatically when it create
 4. Click the **No commands >** row to open the command editor for that repo.
 
 <figure>
-  <img src="../_images/settings-repo-custom-commands.png" class="help-center-img img-bordered" alt="Repositories list in Settings showing 'No commands >' rows per repo" />
-  <figcaption style="text-align: center; color: #888">Settings → Repositories — click a repo row to add custom commands</figcaption>
+  <img src="/wp-content/uploads/settings-repo-custom-commands.png" class="help-center-img img-bordered" alt="Repositories list in Settings showing 'No commands >' rows per repo">
+  <figcaption style="text-align:center; color:#888">Settings → Repositories — click a repo row to add custom commands</figcaption>
 </figure>
 
 ### How to add commands
