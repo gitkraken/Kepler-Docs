@@ -16,7 +16,7 @@ llms_include: true
 tags: [getting-started, install, setup, tasks, agents, first-task]
 taxonomy:
     category: kepler
-
+---
 <kbd>Last updated: June 2026</kbd>
 
 ## What is Kepler?
