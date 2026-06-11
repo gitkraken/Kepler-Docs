@@ -1,6 +1,6 @@
 ---
 title: Environment and Setup
-description: Configure Kepler's environment settings: repos directory, worktree paths, custom startup commands, and embedded terminals.
+description: "Configure Kepler's environment settings: repos directory, worktree paths, custom startup commands, and embedded terminals."
 product: Kepler
 feature: Environment and Setup
 content_type: how-to
