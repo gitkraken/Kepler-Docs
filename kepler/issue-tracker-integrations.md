@@ -16,7 +16,7 @@ llms_include: true
 tags: [integrations, issue-trackers, jira, linear, trello, github, gitlab, azure-devops, oauth]
 taxonomy:
     category: kepler
----
+
 <kbd>Last updated: June 2026</kbd>
 
 ## Overview

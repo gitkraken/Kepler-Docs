@@ -16,7 +16,7 @@ llms_include: true
 tags: [environment, setup, repositories, worktrees, terminal, custom-commands, startup]
 taxonomy:
     category: kepler
----
+
 <kbd>Last updated: June 2026</kbd>
 
 ## Overview

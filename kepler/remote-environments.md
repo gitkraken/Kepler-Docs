@@ -16,7 +16,7 @@ llms_include: true
 tags: [remote-environments, ssh, wsl, remote-access, ngrok, networking]
 taxonomy:
     category: kepler
----
+
 <kbd>Last updated: June 2026</kbd>
 
 Kepler (GitKraken's Agentic Development Environment, or ADE) covers two remote scenarios. First, you can run Tasks on a remote machine or WSL environment when you need more compute or a Linux runtime. Second, you can expose Kepler over the network to access it from another device.
