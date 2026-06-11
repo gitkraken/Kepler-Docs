@@ -19,10 +19,15 @@ Four settings are available when you start a session. Three of them can be overr
 
 | Setting | What it controls | Default | Options |
 |---|---|---|---|
-| **Agent** | Which agent runtime executes the session | — | Claude Code, Codex CLI, Copilot CLI, Cursor, OpenCode |
-| **Mode** | How the agent handles decisions | — | See [Modes](#modes) below |
-| **Model** | The model powering the agent | Default (recommended) | Varies by agent |
-| **Effort Level** | How thoroughly the agent reasons | — | See [Effort levels](#effort-levels) below |
+| **Agent** | Which agent runtime executes the session | — | Claude Code, Codex, Copilot CLI, Cursor, OpenCode |
+| **Mode** | How the agent handles decisions | Default | See [Modes](#modes) below |
+| **Model** | The model powering the agent | Default | Varies by agent |
+| **Effort Level** | How thoroughly the agent reasons | Default | See [Effort levels](#effort-levels) below |
+
+<figure>
+  <img src="/_images/set-agent.png" class="help-center-img img-bordered" alt="Session configuration bar showing the Agent dropdown open with Claude Code, Codex, and OpenCode options, alongside Mode, Model, and Effort dropdowns all set to Default" />
+  <figcaption style="text-align: center; color: #888">The Agent dropdown at session start. Mode, Model, and Effort default to Default.</figcaption>
+</figure>
 
 **Agent** is set at session start and cannot be changed mid-session. For details on each supported agent runtime, see [Agent Integrations](agent-integrations.md).
 
@@ -67,9 +72,13 @@ The input bar at the bottom of the console has these controls:
 | **Mode** dropdown | Override the mode for this message only |
 | **Model** dropdown | Override the model for this message only |
 | **Effort** dropdown | Override the effort level for this message only |
+| **N% context usage** | Shows context window consumption as a percentage. Click to see tokens used, context window size, and cost for the session so far. |
 | **↑ Send** | Submit the instruction |
 
-<!-- TODO: confirm with engineering — document the "20%" indicator (likely token budget remaining or cost usage) -->
+<figure>
+  <img src="/_images/context-usage.png" class="help-center-img img-bordered" alt="Context Usage popover showing 23%, a green progress bar, 45.8K tokens used out of 200K total, and a cost of $0.5705" />
+  <figcaption style="text-align: center; color: #888">The Context Usage popover. Click the percentage indicator in the input bar to see token consumption and session cost.</figcaption>
+</figure>
 
 ### How to course-correct
 
@@ -93,13 +102,13 @@ Click a worktree in the **List view** sidebar. The diff opens in the center pane
 - **Red** lines were removed; **green** lines were added.
 
 <figure>
-  <img src="" class="help-center-img img-bordered" alt="Diff view showing red removed lines and green added lines with stacked/split toggle" />
-  <figcaption style="text-align: center; color: #888">The diff view with Stacked mode active. Click the toggle to switch to Split view.</figcaption>
+  <img src="/_images/file-diff.png" class="help-center-img img-bordered" alt="Kepler diff view in Stacked mode showing red removed lines and green added lines on the left, with the Working changes panel on the right displaying STAGED and CHANGES file lists and a Commit button" />
+  <figcaption style="text-align: center; color: #888">The diff view in Stacked mode. The right panel shows staged files, unstaged changes, and the commit message field.</figcaption>
 </figure>
 
 ### Working changes panel
 
-The **Working Changes** panel on the right shows uncommitted changes alongside the worktree's recent commit history.
+The **Working changes** panel on the right shows uncommitted changes alongside the worktree's recent commit history.
 
 Click any commit in the history to see:
 - Full title and description
@@ -111,15 +120,27 @@ Click any commit in the history to see:
 
 The **STAGED (N)** panel lists files queued for the next commit, where N is the file count. Each entry shows the file path and a change type badge (**M**, **A**, or **D**).
 
-- **Discard All**: discards all changes. <!-- TODO: confirm with engineering — document the confirmation prompt behavior -->
+- **Discard All**: discards all staged changes. <!-- TODO: confirm with engineering — document the confirmation prompt behavior -->
 - **Unstage All**: moves all staged files back to unstaged.
 - Click an individual file to view its diff. Per-file controls let you unstage or discard that file individually. <!-- TODO: confirm with engineering — confirm exact per-file interaction -->
 
+### Changes panel
+
+The **CHANGES (N)** panel lists unstaged files. Each entry shows the file path and a change type badge.
+
+- **Discard All**: discards all unstaged changes. <!-- TODO: confirm with engineering — document the confirmation prompt behavior -->
+- **Stage All**: moves all unstaged files into the staged panel.
+
 ### Committing
 
-The commit message field is pre-populated by Kepler. Edit it if needed, then click **Commit** to commit the staged files.
+The commit message field is pre-populated by the agent. Edit it if needed, then click **Commit** to commit the staged files.
 
-**Push**, **Pull**, and **Fetch** are available from the diff view toolbar (top right) without leaving Kepler.
+<figure>
+  <img src="/_images/stage-and-commit.png" class="help-center-img img-bordered" alt="STAGED panel showing four modified files with Discard All and Unstage All buttons, a pre-populated commit message, and the Commit button" />
+  <figcaption style="text-align: center; color: #888">The staged files panel with an agent-generated commit message ready to commit.</figcaption>
+</figure>
+
+**Push**, **Pull**, and **Fetch** are available from the header bar at the top of the view without leaving Kepler.
 
 Click **Back to session** to close the diff and return to the agent session console.
 
