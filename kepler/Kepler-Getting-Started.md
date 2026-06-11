@@ -22,20 +22,13 @@ taxonomy:
 ## What is Kepler?
 Kepler is GitKraken's **ADE** (Agentic Development Environment), built for developers directing multiple AI coding agents across multiple repos in parallel.
 
-An IDE is built for one developer writing code. An ADE is built for one developer directing agents that write code in parallel. Kepler manages the worktrees, branching, agent sessions, and change review.
-
-Kepler and GitKraken Desktop are separate products built for different workflows. GitKraken Desktop is the right choice for focused, single-repo Git work. Kepler is the right choice when you are running agents across multiple repos at the same time.
 
 <figure>
   <img src="/wp-content/uploads/kepler-full-screen.png" class="help-center-img img-bordered" alt="Kepler showing the task list on the left, a diff view in the center, and an agent chat panel on the right">
-  <figcaption style="text-align:center; color:#888">Kepler with a Task open. The task list is on the left, the diff view is in the center, and the agent chat is on the right.</figcaption>
+  <figcaption style="text-align:center; color:#888">Kepler with a Task open. The task list is on the left, the agent chat is in the center, and agent changes on the right.</figcaption>
 </figure>
 
-**You're in the right place if you are:**
 
-- Running two or more coding agents simultaneously
-- Coordinating work across multiple repositories
-- Reviewing and merging agent output without leaving a single interface
 
 ***
 
