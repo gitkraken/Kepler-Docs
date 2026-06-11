@@ -41,7 +41,7 @@ When you connect a PR, Kepler pulls the following from it:
 - Open review comments
 - Current review state
 
----
+***
 
 ## GitHub
 
@@ -61,7 +61,7 @@ When you connect a PR, Kepler pulls the following from it:
   <figcaption style="text-align: center; color: #888">GitHub connected in Kepler Integrations</figcaption>
 </figure>
 
----
+***
 
 ## GitHub Enterprise
 
@@ -83,7 +83,7 @@ When you connect a PR, Kepler pulls the following from it:
   <figcaption style="text-align: center; color: #888">GitHub Enterprise connection form in Kepler</figcaption>
 </figure>
 
----
+***
 
 ## GitLab
 
@@ -103,7 +103,7 @@ When you connect a PR, Kepler pulls the following from it:
   <figcaption style="text-align: center; color: #888">GitLab connected in Kepler Integrations</figcaption>
 </figure>
 
----
+***
 
 ## GitLab Self-Managed
 
@@ -125,7 +125,7 @@ When you connect a PR, Kepler pulls the following from it:
   <figcaption style="text-align: center; color: #888">GitLab Self-Managed connection form in Kepler</figcaption>
 </figure>
 
----
+***
 
 ## Bitbucket
 
@@ -145,7 +145,7 @@ When you connect a PR, Kepler pulls the following from it:
   <figcaption style="text-align: center; color: #888">Bitbucket connected in Kepler Integrations</figcaption>
 </figure>
 
----
+***
 
 ## Azure DevOps
 

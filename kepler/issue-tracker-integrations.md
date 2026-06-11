@@ -36,7 +36,7 @@ Connecting an issue tracker lets you create a Kepler **Task** (the core unit of 
 | GitLab Self-Hosted Issues | Personal Access Token | Yes |
 | Azure DevOps | OAuth 2.0 | No |
 
----
+***
 
 ## Jira
 
@@ -72,7 +72,7 @@ When you create a Task from a Jira issue, Kepler passes the following fields to 
 - Jira Data Center and Jira Server are not supported. Use the GitHub Enterprise or GitLab Self-Hosted integration for self-managed workflows.
 - Attachments and embedded images in issue descriptions are not passed to the agent.
 
----
+***
 
 ## Linear
 
@@ -106,7 +106,7 @@ Creating a Task from a Linear issue passes these fields to the agent:
 
 - Sub-issues are not recursively fetched; only the selected issue's fields are passed.
 
----
+***
 
 ## Trello
 
@@ -140,7 +140,7 @@ From a Trello card, Kepler passes:
 - Card attachments are not passed to the agent.
 - Custom fields are not currently supported.
 
----
+***
 
 ## GitHub Issues
 
@@ -174,7 +174,7 @@ Kepler reads these fields from the GitHub issue:
 - GitHub Projects (v2) fields beyond the standard issue fields are not passed.
 - Private repositories require the **repo** OAuth scope; Kepler requests this during authorization.
 
----
+***
 
 ## GitHub Enterprise Issues
 
@@ -203,7 +203,7 @@ Kepler pulls the same fields as GitHub Issues (see above). Field availability de
 - GitHub Enterprise Cloud (GHEC) with an enterprise account uses the standard GitHub Issues integration above, not this one.
 - Tokens are stored per user; each team member must connect their own PAT.
 
----
+***
 
 ## GitLab Issues
 
@@ -237,7 +237,7 @@ From a GitLab issue, Kepler passes:
 
 - GitLab EE-only fields (e.g., epic membership, health status) are not currently passed.
 
----
+***
 
 ## GitLab Self-Hosted Issues
 
@@ -266,7 +266,7 @@ Kepler pulls the same fields as GitLab Issues (see above). Field availability de
 - The GitLab instance must be reachable from your machine. Air-gapped instances are not supported unless Kepler is deployed in your network.
 - Tokens are stored per user; each team member must connect their own PAT.
 
----
+***
 
 ## Azure DevOps
 
@@ -302,5 +302,5 @@ From an Azure DevOps work item, Kepler passes:
 - Azure DevOps Server (on-premises) is not currently supported.
 - Rich text formatting in work item descriptions may be partially stripped when passed to the agent.
 
----
+***
 

@@ -31,7 +31,7 @@ Choose based on what you're doing.
 | **Kanban** | Tracking work status across all Tasks |
 | **Console** | Monitoring multiple agent sessions and sending instructions |
 
----
+***
 
 ## List View
 
@@ -79,7 +79,7 @@ The **Create command...** dropdown in the top navigation is for creating saved c
 
 <!-- TODO: confirm with engineering — exact behavior and availability of "Create command..." -->
 
----
+***
 
 ## Kanban View
 
@@ -135,7 +135,7 @@ Use the **Filters** panel to narrow the board by:
 
 Use the **Sort** control to order cards (for example, **Newest first**).
 
----
+***
 
 ## Console View
 

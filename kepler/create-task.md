@@ -37,7 +37,7 @@ Tasks move through four stages on the Kepler board:
 3. **In Review**
 4. **Done**
 
----
+***
 
 ## Three ways to create a Task
 
@@ -49,7 +49,7 @@ Kepler gives you three starting points depending on where your work lives:
 | [From an issue](#creating-a-task-from-an-issue) | You want Kepler to pull issue title, description, and metadata into the agent's context automatically. |
 | [From a pull request](#creating-a-task-from-a-pull-request) | You want an agent to start a review or address open review comments on an existing PR. |
 
----
+***
 
 ## Creating a Task from scratch
 
@@ -80,7 +80,7 @@ Start here when you have a clear goal and no existing issue or PR to pull contex
 | **Model** | The underlying language model the agent uses | — | Available models |
 | **Effort** | How much work the agent does before pausing for review | — | Low, Medium, High |
 
----
+***
 
 ## Creating a Task from an issue
 
@@ -116,7 +116,7 @@ Kepler passes the issue title, description, and metadata to the agent when the s
   <figcaption style="text-align: center; color: #888">Selecting issues to launch as Tasks. Each issue gets its own Task preview row.</figcaption>
 </figure>
 
----
+***
 
 ## Creating a Task from a pull request
 
@@ -156,7 +156,7 @@ Kepler infers **"Address feedback"** as the agent's starting instruction from th
   <figcaption style="text-align: center; color: #888">Selecting multiple PRs: split into separate Tasks or group under one Task.</figcaption>
 </figure>
 
----
+***
 
 ## Task detail: worktrees, sessions, and shared context
 
@@ -187,7 +187,7 @@ To manage shared context:
   <figcaption style="text-align: center; color: #888">Task detail view: worktrees, sessions, and shared context.</figcaption>
 </figure>
 
----
+***
 
 ## Managing Tasks
 

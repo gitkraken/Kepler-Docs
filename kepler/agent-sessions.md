@@ -21,7 +21,7 @@ taxonomy:
 
 An **agent session** is a running coding agent within a Task in Kepler, GitKraken's Agentic Development Environment (ADE). This page covers how to configure a session before it starts, how to direct the agent from the console, and how to review, stage, and commit the changes it produces.
 
----
+***
 
 ## Configuring an agent session
 
@@ -55,7 +55,7 @@ Four settings are available when you start a session. Three of them can be overr
 
 <!-- TODO: confirm with engineering — document the exact available effort levels and their names -->
 
----
+***
 
 ## Using the console to direct agents
 
@@ -94,7 +94,7 @@ The input bar at the bottom of the console has these controls:
 
 Send a follow-up instruction when you see unexpected output, a tool call error, or a **Needs Attention** or **Disconnected** status. You do not need to restart the session.
 
----
+***
 
 ## Reviewing changes: diffs, staging, and commits
 
@@ -154,7 +154,7 @@ The commit message field is pre-populated by the agent. Edit it if needed, then 
 
 Click **Back to session** to close the diff and return to the agent session console.
 
----
+***
 
 ## Optional agent features: AI Sync
 

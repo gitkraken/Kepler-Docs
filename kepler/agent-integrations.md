@@ -35,7 +35,7 @@ Each connected agent runs as an **agent session** inside a **Task**. A Task is t
 | Cursor | AI code editor with built-in agent | Cursor installed <!-- TODO: confirm with engineering: auth or API key requirements --> | Supported |
 | OpenCode | Open-source, model-agnostic coding agent | OpenCode installed; API key for your chosen model | Supported |
 
----
+***
 
 ## Claude Code
 
@@ -82,7 +82,7 @@ Run `claude auth` in a terminal to confirm your session is active. Re-authentica
 **Permission errors**
 Ensure the user running Kepler has read and execute access to the Claude Code binary and to the repo directory.
 
----
+***
 
 ## Codex CLI
 
@@ -127,7 +127,7 @@ Confirm your `OPENAI_API_KEY` environment variable is set and valid. Re-export t
 **Permission errors**
 Ensure the user running Kepler has read and execute access to the Codex binary and to the repo directory.
 
----
+***
 
 ## Copilot CLI
 
@@ -164,7 +164,7 @@ Run `gh auth status` to confirm your GitHub session is active. Re-authenticate w
 **Permission errors**
 Ensure the user running Kepler has read and execute access to the `gh` binary and to the repo directory.
 
----
+***
 
 ## Cursor
 
@@ -198,7 +198,7 @@ Confirm Cursor is installed and that the `cursor` binary is accessible. Enter th
 **Authentication or API key errors**
 <!-- TODO: confirm with engineering: how Cursor auth errors surface in Kepler and what the resolution is -->
 
----
+***
 
 ## OpenCode
 

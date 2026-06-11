@@ -21,7 +21,7 @@ taxonomy:
 
 Open Settings with **⌘ .** (Mac) or from the main menu.
 
----
+***
 
 ## Update
 
@@ -30,7 +30,7 @@ The **Update** section shows the currently installed version of Kepler and lets 
 - **Current version** — displays the installed version number (for example, v0.6.2).
 - **Check for updates** — checks for and downloads any available release.
 
----
+***
 
 ## Appearance
 
@@ -41,7 +41,7 @@ The **Appearance** section controls the visual theme and color mode.
 | **Theme** | The overall UI design language | Base | Base, Observatory |
 | **Mode** | Light or dark color rendering | System | Dark, Light, System |
 
----
+***
 
 ## Terminal
 
@@ -53,7 +53,7 @@ The **Terminal** section controls the font and spacing used in Kepler's integrat
 | **Font Size** | Terminal font size in pixels | 13 |
 | **Line Height** | Vertical spacing between lines | 1.2 |
 
----
+***
 
 ## Diff View
 
@@ -65,7 +65,7 @@ The **Diff View** section sets the default layout for the diff panel.
 
 You can override this per-session using the toggle in the diff panel itself.
 
----
+***
 
 ## Language
 
@@ -75,7 +75,7 @@ The **Language** section sets the display language for Kepler's UI.
 |---------|-----------------|---------|
 | **Language** | UI display language | English |
 
----
+***
 
 ## Keyboard Shortcuts
 
@@ -105,7 +105,7 @@ Shortcuts shown are for Mac. The Windows/Linux equivalents substitute **Ctrl** f
 | New tab | ⌘ T | Ctrl T |
 | Dismiss / Cancel | Escape | Escape |
 
----
+***
 
 ## General
 
@@ -143,7 +143,7 @@ The **Diagnostics** section shows the log file path and controls for managing it
 
 The log file can grow up to approximately 20 MB. Attach it when filing a bug report.
 
----
+***
 
 ## Voice Input
 
@@ -166,7 +166,7 @@ Kepler downloads a local speech recognition model to your device.
 
 The **Downloaded model** row shows the model name, revision, download date, and disk usage. Use **Re-download** to refresh the model or **Delete model** to remove it from disk.
 
----
+***
 
 ## Agents
 
@@ -226,7 +226,7 @@ The **Default agent** dropdown sets which agent is pre-selected in the Task Laun
 |---------|-----------------|---------|
 | **Show token usage** | Reads Claude Code and Codex access tokens from disk to call providers' usage APIs. Endpoints are undocumented and may change. Tokens are sent only to their respective provider. | Off |
 
----
+***
 
 ## Features
 
@@ -244,7 +244,7 @@ To enable AI Sync, toggle it on in the Features section. Once enabled, agents ca
 
 To enable Compose, toggle it on in the Features section. Once enabled, agents can restructure in-progress work into well-scoped commits before pushing.
 
----
+***
 
 ## Projects
 
@@ -258,7 +258,7 @@ Each project in the list shows:
 
 Click **+ New project** to create a project and add repositories to it.
 
----
+***
 
 ## Repositories
 
@@ -270,7 +270,7 @@ To remove a repository, open its entry and use the remove option.
 
 For details on startup commands and environment setup, see [environment-and-setup.md](environment-and-setup.md).
 
----
+***
 
 ## Provider Integrations
 
@@ -294,7 +294,7 @@ Each provider shows either a **Connect** button (not yet connected) or a **Recon
 
 For per-provider setup instructions, see [pull-request-integrations.md](pull-request-integrations.md) and [issue-tracker-integrations.md](issue-tracker-integrations.md).
 
----
+***
 
 ## Remote Access
 

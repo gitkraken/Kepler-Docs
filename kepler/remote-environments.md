@@ -21,7 +21,7 @@ taxonomy:
 
 Kepler (GitKraken's Agentic Development Environment, or ADE) covers two remote scenarios. First, you can run Tasks on a remote machine or WSL environment when you need more compute or a Linux runtime. Second, you can expose Kepler over the network to access it from another device.
 
----
+***
 
 ## SSH: Run Tasks on a Remote Machine
 
@@ -66,7 +66,7 @@ Once saved, the remote machine is available as a target when you create or confi
 
 <!-- TODO: confirm with engineering — are there any Kepler-specific logs to check when an SSH connection fails? -->
 
----
+***
 
 ## WSL: Run Tasks in Windows Subsystem for Linux
 
@@ -95,7 +95,7 @@ The WSL environment is available as a Task target alongside any other remote mac
 
 **SSH connection refused in WSL** — The SSH daemon may not be running inside WSL. Start it with `sudo service ssh start` inside the WSL terminal.
 
----
+***
 
 ## Remote Access: Access Kepler from Another Device
 

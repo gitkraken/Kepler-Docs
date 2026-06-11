@@ -25,7 +25,7 @@ Before Kepler's **Tasks** work reliably, three settings must be in place: a defa
 
 **Task** is the core unit of work in Kepler, GitKraken's Agentic Development Environment (ADE). Each Task holds work across one or more repos and contains worktrees, agent sessions, and changes. Configuring the settings below correctly ensures that every new worktree Kepler creates lands in the right place and starts in a usable state.
 
----
+***
 
 ## Setup Order
 
@@ -35,7 +35,7 @@ Complete these steps in order. Each one depends on the previous.
 2. Set the **Default Worktrees Folder**.
 3. Add custom commands for repos that need them.
 
----
+***
 
 ## Default Repositories Folder
 
@@ -57,7 +57,7 @@ The **Default Repositories Folder** is the directory where Kepler clones reposit
 
 If the **Default Repositories Folder** is empty, Kepler cannot resolve repo paths when a Task creates a new worktree. Worktree creation will fail or prompt you to supply a path manually each time. Set this before doing anything else.
 
----
+***
 
 ## Default Worktrees Folder
 
@@ -94,7 +94,7 @@ The **Default Worktrees Folder** path supports placeholders. Kepler substitutes 
 
 With this pattern, every repo gets its worktrees nested inside its own directory. A repo at `/projects/my-app` would produce worktrees at `/projects/my-app/worktrees/<worktree-name>`.
 
----
+***
 
 ## Custom Commands Per Repository
 
@@ -127,7 +127,7 @@ If a custom command exits with a non-zero status, Kepler stops running remaining
 
 <!-- TODO: confirm with engineering — does Kepler surface a specific error UI when a custom command fails, and is there a way to re-run setup commands on an existing worktree without creating a new Task? -->
 
----
+***
 
 ## Embedded Terminals
 
