@@ -21,7 +21,13 @@ taxonomy:
 
 ## Overview
 
-Before Kepler's **Tasks** work reliably, three settings must be in place: a default repositories folder, a default worktrees folder, and (for repos that need it) custom startup commands. This page walks through each setting in order and explains the embedded terminal you can use once Tasks are running.
+Before Kepler's **Tasks** work reliably, three settings must be in place:
+
+- A default repositories folder
+- A default worktrees folder
+- Custom startup commands (for repos that need them)
+
+This page walks through each setting in order and explains the embedded terminal you can use once Tasks are running.
 
 **Task** is the core unit of work in Kepler, GitKraken's Agentic Development Environment (ADE). Each Task holds work across one or more repos and contains worktrees, agent sessions, and changes. Configuring the settings below correctly ensures that every new worktree Kepler creates lands in the right place and starts in a usable state.
 
@@ -39,7 +45,7 @@ Complete these steps in order. Each one depends on the previous.
 
 ## Default Repositories Folder
 
-The **Default Repositories Folder** is the directory where Kepler clones repositories. Every other environment setting depends on a valid path here. If this is not set, Kepler cannot locate repos when creating worktrees or running agents.
+The **Default Repositories Folder** defines where Kepler clones repositories. Every other environment setting depends on a valid path here. If this is not set, Kepler cannot locate repos when creating worktrees or running agents.
 
 ### How to set it
 
@@ -53,7 +59,7 @@ The **Default Repositories Folder** is the directory where Kepler clones reposit
   <figcaption style="text-align:center; color:#888">Settings → General — Default Repositories Folder</figcaption>
 </figure>
 
-### What happens if it is not set
+### What happens if the Default Repositories Folder is not set
 
 If the **Default Repositories Folder** is empty, Kepler cannot resolve repo paths when a Task creates a new worktree. Worktree creation will fail or prompt you to supply a path manually each time. Set this before doing anything else.
 
@@ -98,7 +104,7 @@ With this pattern, every repo gets its worktrees nested inside its own directory
 
 ## Custom Commands Per Repository
 
-Custom commands are shell commands that Kepler runs automatically when it creates a new worktree for a specific repo. Use them to install dependencies, run a build, or start a file watcher. The worktree is ready when the agent session begins, with no manual setup required.
+Custom commands are shell commands that Kepler runs automatically when it creates a new worktree for a specific repo. Use them to install dependencies, run a build, or start a file watcher. The worktree starts ready for the agent session, with no manual setup required.
 
 ### Where to configure
 
@@ -121,7 +127,7 @@ Custom commands are shell commands that Kepler runs automatically when it create
 
 Kepler runs these commands in the worktree's directory immediately after the worktree is created, before any agent session starts.
 
-### What happens if a custom command fails
+### Troubleshoot a failed custom command
 
 If a custom command exits with a non-zero status, Kepler stops running remaining commands for that worktree and surfaces the error. The worktree is created, but it may not be in a usable state. Check the command output in the Task view to diagnose the failure, correct the command in **Settings → Repositories**, and create a new Task to retry.
 
