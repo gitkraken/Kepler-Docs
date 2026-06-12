@@ -19,14 +19,14 @@ taxonomy:
 ---
 <kbd>Last updated: June 2026</kbd>
 
+## Overview
+
+Kepler is GitKraken's **Agentic Development Environment** (ADE), a delivery surface that adds task management and Git worktrees around the coding agent you already use. You do not switch agents to use Kepler; you connect the one you already have.
+
 <figure>
   <img src="/wp-content/uploads/agents-view.png" class="help-center-img img-bordered" alt="The Agents settings panel in Kepler showing Claude Code, Codex, GitHub Copilot, Cursor CLI, and OpenCode with their installation status, binary path, and Enabled toggle for each">
   <figcaption style="text-align:center; color:#888">The Agents settings panel. Each agent shows its installation status, binary path, and an Enabled toggle.</figcaption>
 </figure>
-
-## Overview
-
-Kepler is GitKraken's **Agentic Development Environment** (ADE), a delivery surface that adds task management and Git worktrees around the coding agent you already use. You do not switch agents to use Kepler; you connect the one you already have.
 
 Each connected agent runs as an **agent session** inside a **Task**. A Task is the core unit of work in Kepler: it holds work across one or more repos, manages a **worktree** (a Git worktree per Task per repo), and tracks all changes produced by the session.
 
