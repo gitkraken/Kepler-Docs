@@ -37,6 +37,11 @@ Tasks move through four stages on the Kepler board:
 3. **In Review**
 4. **Done**
 
+<figure>
+  <img src="/wp-content/uploads/task-view.png" class="help-center-img img-bordered" alt="A Kepler Task named 'Set all pages to May 2026' showing 5 worktrees across multiple repos on the left, 3 agent sessions with NEW CONTEXT badges on the right, and a Shared context section with a prompt card at the bottom">
+  <figcaption style="text-align:center; color:#888">A Task with 5 worktrees, 3 agent sessions, and a shared context prompt sent to every session.</figcaption>
+</figure>
+
 ***
 
 ## Three ways to create a Task
@@ -55,6 +60,11 @@ Kepler gives you three starting points depending on where your work lives:
 
 Start here when you have a clear goal and no existing issue or PR to pull context from.
 
+<figure>
+  <img src="/wp-content/uploads/new-task-button.png" class="help-center-img img-bordered" alt="The + New task button in the Kepler top navigation bar, highlighted with a teal border">
+  <figcaption style="text-align:center; color:#888">Click <strong>+ New task</strong> in the top-right corner to open the Task Launcher.</figcaption>
+</figure>
+
 1. Click **+ New task**.
 2. Select one or more repos.
 3. Choose **New worktree** or select an existing branch.
@@ -64,8 +74,13 @@ Start here when you have a clear goal and no existing issue or PR to pull contex
 7. Click **Launch task**.
 
 <figure>
-  <img src="..." class="help-center-img img-bordered" alt="New task creation screen showing repo selection, worktree options, and bottom bar settings">
-  <figcaption style="text-align:center; color:#888">Creating a Task from scratch: repo selector, worktree picker, base branch dropdown, and launch settings.</figcaption>
+  <img src="/wp-content/uploads/start-task-modal.png" class="help-center-img img-bordered" alt="The Start a task dialog in Kepler showing the Repositories section with an Add repo button, Task Name field, Prompt field, and Agent, Model, Mode, and Effort dropdowns at the bottom">
+  <figcaption style="text-align:center; color:#888">The Task Launcher: add a repo, name the task, add a prompt, configure agent settings, and click <strong>Launch task</strong>.</figcaption>
+</figure>
+
+<figure>
+  <img src="/wp-content/uploads/set-agent.png" class="help-center-img img-bordered" alt="The Task Launcher bottom bar showing the Agent dropdown open with Claude Code, Codex, and OpenCode as options, alongside Mode, Model, and Effort dropdowns">
+  <figcaption style="text-align:center; color:#888">Select an agent from the bottom bar. Mode, Model, and Effort options update based on the selected agent.</figcaption>
 </figure>
 
 ### Settings reference
@@ -112,8 +127,8 @@ Use the search bar to find issues by title or by pasting a URL. Use the filter b
 Kepler creates one Task per selected issue and passes the issue title, description, and metadata to the agent when the session starts.
 
 <figure>
-  <img src="..." class="help-center-img img-bordered" alt="Issue selection screen showing filter bar, issue list, Task preview rows, and bottom bar">
-  <figcaption style="text-align:center; color:#888">Selecting issues to launch as Tasks. Each issue gets its own Task preview row.</figcaption>
+  <img src="/wp-content/uploads/start-task-from-issue.png" class="help-center-img img-bordered" alt="The Start from issues tab showing a filtered issue list with one issue selected, a Task preview row with repo, worktree type, and base branch selectors, and the bottom bar showing 1 issue → 1 task and the Launch task button">
+  <figcaption style="text-align:center; color:#888">Selecting an issue to launch as a Task. The preview row lets you set the repo, worktree type, and base branch before launching.</figcaption>
 </figure>
 
 ***
@@ -152,8 +167,8 @@ Kepler infers **"Address feedback"** as the agent's starting instruction from th
 5. Click **Launch task**.
 
 <figure>
-  <img src="..." class="help-center-img img-bordered" alt="Pull request selection screen showing multi-PR grouping options and Task preview rows">
-  <figcaption style="text-align:center; color:#888">Selecting multiple PRs: split into separate Tasks or group under one Task.</figcaption>
+  <img src="/wp-content/uploads/start-task-from-PR.png" class="help-center-img img-bordered" alt="The Start from pull requests tab with two PRs selected, showing Split into 2 tasks and Group as 1 task options, two Task preview rows each showing the repo and the worktree branch Kepler will create, and the bottom bar showing 2 PRs → 2 tasks and the Launch 2 tasks button">
+  <figcaption style="text-align:center; color:#888">Two PRs selected: use <strong>Split into 2 tasks</strong> or <strong>Group as 1 task</strong> before launching.</figcaption>
 </figure>
 
 ***

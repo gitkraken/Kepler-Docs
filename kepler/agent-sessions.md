@@ -112,7 +112,7 @@ Click a worktree in the **List view** sidebar. The diff opens in the center pane
 - **Red** lines were removed; **green** lines were added.
 
 <figure>
-  <img src="/wp-content/uploads/file-diff.png" class="help-center-img img-bordered" alt="Kepler diff view in Stacked mode showing red removed lines and green added lines on the left, with the Working changes panel on the right displaying STAGED and CHANGES file lists and a Commit button">
+  <img src="/wp-content/uploads/file-diff-kepler.png" class="help-center-img img-bordered" alt="Kepler diff view in Stacked mode showing red removed lines and green added lines on the left, with the Working changes panel on the right displaying STAGED and CHANGES file lists and a Commit button">
   <figcaption style="text-align:center; color:#888">The diff view in Stacked mode. The right panel shows staged files, unstaged changes, and the commit message field.</figcaption>
 </figure>
 
