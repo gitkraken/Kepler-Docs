@@ -35,7 +35,7 @@ Use SSH when your local machine doesn't have enough compute for the work, or whe
 
 ### Connect a Remote Machine
 
-1. Open Kepler and navigate to **Settings → Remote Environments**.
+1. Open Kepler and navigate to **Settings** <!-- TODO: confirm with engineering — verify the correct Settings section name for adding remote machines; no "Remote Environments" section is visible in the current UI -->.
 2. Click **Add Remote Machine**.
 3. Enter the SSH connection details:
    - **Host**: hostname or IP address of the remote machine.
@@ -79,7 +79,7 @@ Use WSL when you are on Windows and need a Linux environment for agent sessions 
 
 ### Connect a WSL Environment
 
-1. Open Kepler and navigate to **Settings → Remote Environments**.
+1. Open Kepler and navigate to **Settings** <!-- TODO: confirm with engineering — verify the correct Settings section name for adding remote machines; no "Remote Environments" section is visible in the current UI -->.
 2. Click **Add Remote Machine**.
 3. For **Host**, enter `localhost` (or the WSL instance address).
 4. Configure SSH credentials for the WSL environment as you would for any remote machine.

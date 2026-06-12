@@ -49,7 +49,7 @@ Claude Code is Anthropic's coding agent. Kepler launches it as an agent session 
 ### Connect Claude Code to Kepler
 
 1. Open Kepler and navigate to **Settings**.
-2. Select **Agent Integrations** from the sidebar.
+2. Select **Agents** from the sidebar.
 3. Under **Claude Code**, click **Connect**.
 4. Kepler detects the Claude Code installation path automatically. If detection fails, enter the path manually.
 5. Click **Save**.
@@ -98,7 +98,7 @@ Codex CLI is OpenAI's coding agent. Kepler connects to it as an agent session in
 ### Connect Codex CLI to Kepler
 
 1. Open Kepler and navigate to **Settings**.
-2. Select **Agent Integrations** from the sidebar.
+2. Select **Agents** from the sidebar.
 3. Under **Codex CLI**, click **Connect**.
 4. Kepler detects the Codex CLI installation path automatically. If detection fails, enter the path manually.
 5. Click **Save**.
@@ -145,7 +145,7 @@ Copilot CLI is GitHub's coding agent. Kepler connects to it as an agent session 
 ### Connect Copilot CLI to Kepler
 
 1. Open Kepler and navigate to **Settings**.
-2. Select **Agent Integrations** from the sidebar.
+2. Select **Agents** from the sidebar.
 3. Under **Copilot CLI**, click **Connect**.
 4. Kepler detects the Copilot CLI installation path automatically. If detection fails, enter the path manually.
 5. Click **Save**.
@@ -182,7 +182,7 @@ Cursor is an AI code editor with a built-in coding agent. Kepler connects to Cur
 ### Connect Cursor to Kepler
 
 1. Open Kepler and navigate to **Settings**.
-2. Select **Agent Integrations** from the sidebar.
+2. Select **Agents** from the sidebar.
 3. Under **Cursor**, click **Connect**.
 4. <!-- TODO: confirm with engineering: step-by-step connection flow for Cursor -->
 5. Click **Save**.
@@ -229,7 +229,7 @@ Use a proprietary agent (Claude Code, Codex CLI, Copilot CLI) when the agent's f
 ### Connect OpenCode to Kepler
 
 1. Open Kepler and navigate to **Settings**.
-2. Select **Agent Integrations** from the sidebar.
+2. Select **Agents** from the sidebar.
 3. Under **OpenCode**, click **Connect**.
 4. Kepler detects the OpenCode installation path automatically. If detection fails, enter the path manually.
 5. Select or enter the model you want OpenCode to use.

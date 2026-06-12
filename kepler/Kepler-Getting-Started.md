@@ -58,28 +58,37 @@ On first open, Kepler displays the **Home** view. No repos are connected yet and
 
 ## Minimum setup before creating your first Task
 
-Two things must be in place before Kepler can create a Task: a default repos directory and at least one connected agent runtime.
+Complete all five items in the **Setup** checklist before creating your first Task. Access the checklist from the **Setup** button in the top navigation bar.
 
-### Set the default repos directory
+### Sign in to GitKraken
 
-Kepler uses a single local directory as the root for all repo clones and worktrees it manages. Set this first. Everything else depends on it.
+Sign in with your GitKraken account when prompted on first launch.
 
-1. Open **Settings** (gear icon, bottom-left).
-2. Navigate to **Environment**.
-3. Set **Default repos directory** to the local path where you want Kepler to store repos and worktrees.
-4. Click **Save**.
+### Connect an AI agent
 
-The following table describes this setting:
+Connect at least one coding agent in **Settings → Agents**. For supported agents and connection steps, see [Agent Integrations](/kepler/agent-integrations).
 
-| Setting | What it controls | Default | Options |
-|---|---|---|---|
-| **Default repos directory** | Root path for all Kepler-managed repo clones and worktrees | None (must be set manually) | Any valid local directory path |
+### Connect issue & PR trackers
 
-### Connect an agent runtime
+Connect your issue tracker and Git hosting provider in **Settings → Provider Integrations**. For setup steps, see [Issue Tracker Integrations](/kepler/issue-tracker-integrations) and [Pull Request Integrations](/kepler/pull-request-integrations).
 
-Kepler requires at least one agent integration before you can launch an agent session inside a Task.
+### Set a default repositories folder
 
-For supported agents and connection steps, see [Agent Integrations](/kepler/agent-integrations).
+Set the directory where Kepler clones and stores repositories. Everything else depends on this path being set.
+
+1. Open **Settings** and navigate to **General**.
+2. Under **Default Repositories Folder**, click the folder icon and select a directory.
+3. Click **Save**.
+
+### Set a default worktree folder
+
+Set the directory where Kepler creates new worktrees. Kepler creates one worktree per Task per repo.
+
+1. Open **Settings** and navigate to **General**.
+2. Under **Default Worktrees Folder**, click the folder icon and select a directory, or type a path using the available placeholders.
+3. Click **Save**.
+
+For placeholder options and path examples, see [Environment and Setup](/kepler/environment-and-setup).
 
 ***
 

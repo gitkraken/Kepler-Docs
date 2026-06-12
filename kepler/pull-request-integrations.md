@@ -53,13 +53,13 @@ Connect GitHub to create Kepler Tasks from GitHub pull requests.
 
 ### Connect GitHub
 
-1. In Kepler, open **Settings** and navigate to **Integrations**.
+1. In Kepler, open **Settings** and navigate to **Provider Integrations**.
 2. Under **GitHub**, click **Connect**.
 3. Authorize Kepler in the GitHub OAuth window that opens.
-4. After authorization, GitHub is now connected in **Integrations**.
+4. After authorization, GitHub is now connected in **Provider Integrations**.
 
 <figure>
-  <img src="/wp-content/uploads/github-integration-connected.png" class="help-center-img img-bordered" alt="GitHub shown as connected in Kepler Integrations settings">
+  <img src="/wp-content/uploads/github-integration-connected.png" class="help-center-img img-bordered" alt="GitHub shown as connected in Kepler Provider Integrations settings">
   <figcaption style="text-align:center; color:#888">GitHub connected in Kepler Integrations</figcaption>
 </figure>
 
@@ -76,7 +76,7 @@ Connect GitHub Enterprise using a personal access token to create Kepler Tasks f
 
 ### Connect GitHub Enterprise
 
-1. In Kepler, open **Settings** and navigate to **Integrations**.
+1. In Kepler, open **Settings** and navigate to **Provider Integrations**.
 2. Under **GitHub Enterprise**, click **Connect**.
 3. Enter your GitHub Enterprise **Host URL** (for example, `https://github.example.com`).
 4. Paste your **Personal Access Token**.
@@ -99,13 +99,13 @@ Connect GitLab to create Kepler Tasks from GitLab merge requests.
 
 ### Connect GitLab
 
-1. In Kepler, open **Settings** and navigate to **Integrations**.
+1. In Kepler, open **Settings** and navigate to **Provider Integrations**.
 2. Under **GitLab**, click **Connect**.
 3. Authorize Kepler in the GitLab OAuth window that opens.
-4. After authorization, GitLab is now connected in **Integrations**.
+4. After authorization, GitLab is now connected in **Provider Integrations**.
 
 <figure>
-  <img src="/wp-content/uploads/gitlab-integration-connected.png" class="help-center-img img-bordered" alt="GitLab shown as connected in Kepler Integrations settings">
+  <img src="/wp-content/uploads/gitlab-integration-connected.png" class="help-center-img img-bordered" alt="GitLab shown as connected in Kepler Provider Integrations settings">
   <figcaption style="text-align:center; color:#888">GitLab connected in Kepler Integrations</figcaption>
 </figure>
 
@@ -122,7 +122,7 @@ Connect GitLab Self-Managed using a personal access token to create Kepler Tasks
 
 ### Connect GitLab Self-Managed
 
-1. In Kepler, open **Settings** and navigate to **Integrations**.
+1. In Kepler, open **Settings** and navigate to **Provider Integrations**.
 2. Under **GitLab Self-Managed**, click **Connect**.
 3. Enter your GitLab Self-Managed **Host URL** (for example, `https://gitlab.example.com`).
 4. Paste your **Personal Access Token**.
@@ -145,13 +145,13 @@ Connect Bitbucket to create Kepler Tasks from Bitbucket pull requests.
 
 ### Connect Bitbucket
 
-1. In Kepler, open **Settings** and navigate to **Integrations**.
+1. In Kepler, open **Settings** and navigate to **Provider Integrations**.
 2. Under **Bitbucket**, click **Connect**.
 3. Authorize Kepler in the Bitbucket OAuth window that opens.
-4. After authorization, Bitbucket is now connected in **Integrations**.
+4. After authorization, Bitbucket is now connected in **Provider Integrations**.
 
 <figure>
-  <img src="/wp-content/uploads/bitbucket-integration-connected.png" class="help-center-img img-bordered" alt="Bitbucket shown as connected in Kepler Integrations settings">
+  <img src="/wp-content/uploads/bitbucket-integration-connected.png" class="help-center-img img-bordered" alt="Bitbucket shown as connected in Kepler Provider Integrations settings">
   <figcaption style="text-align:center; color:#888">Bitbucket connected in Kepler Integrations</figcaption>
 </figure>
 
@@ -167,13 +167,13 @@ Connect Azure DevOps to create Kepler Tasks from Azure DevOps pull requests.
 
 ### Connect Azure DevOps
 
-1. In Kepler, open **Settings** and navigate to **Integrations**.
+1. In Kepler, open **Settings** and navigate to **Provider Integrations**.
 2. Under **Azure DevOps**, click **Connect**.
 3. Authorize Kepler in the Azure DevOps OAuth window that opens.
-4. After authorization, Azure DevOps is now connected in **Integrations**.
+4. After authorization, Azure DevOps is now connected in **Provider Integrations**.
 
 <figure>
-  <img src="/wp-content/uploads/azure-devops-integration-connected.png" class="help-center-img img-bordered" alt="Azure DevOps shown as connected in Kepler Integrations settings">
+  <img src="/wp-content/uploads/azure-devops-integration-connected.png" class="help-center-img img-bordered" alt="Azure DevOps shown as connected in Kepler Provider Integrations settings">
   <figcaption style="text-align:center; color:#888">Azure DevOps connected in Kepler Integrations</figcaption>
 </figure>
 

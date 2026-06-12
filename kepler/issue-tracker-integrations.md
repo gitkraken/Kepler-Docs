@@ -51,7 +51,7 @@ Connect Jira to create Kepler Tasks from Jira issues and pass issue context to y
 
 <!-- TODO: confirm with engineering - verify exact menu path and button labels -->
 
-1. Open Kepler and navigate to **Settings** → **Integrations**.
+1. Open Kepler and navigate to **Settings** → **Provider Integrations**.
 2. Under **Issue Trackers**, click **Connect** next to **Jira**.
 3. Click **Authorize with Jira**. Atlassian's OAuth flow opens.
 4. Select the Jira site you want to connect and click **Accept**.
@@ -88,7 +88,7 @@ Connect Linear to create Kepler Tasks from Linear issues and pass issue context 
 
 <!-- TODO: confirm with engineering - verify exact menu path and button labels -->
 
-1. In Kepler, go to **Settings** → **Integrations**.
+1. In Kepler, go to **Settings** → **Provider Integrations**.
 2. Under **Issue Trackers**, click **Connect** next to **Linear**.
 3. Click **Authorize with Linear**. Linear's OAuth consent screen opens.
 4. Select the workspace to connect and click **Allow access**.
@@ -124,7 +124,7 @@ Connect Trello to create Kepler Tasks from Trello cards and pass card details to
 
 <!-- TODO: confirm with engineering - verify exact menu path and button labels -->
 
-1. In Kepler, open **Settings** → **Integrations**.
+1. In Kepler, open **Settings** → **Provider Integrations**.
 2. Under **Issue Trackers**, click **Connect** next to **Trello**.
 3. Click **Authorize with Trello**. Trello's OAuth consent screen opens.
 4. Click **Allow**.
@@ -160,7 +160,7 @@ Connect GitHub Issues to create Kepler Tasks from GitHub issues and pass issue c
 
 <!-- TODO: confirm with engineering - verify exact menu path and button labels -->
 
-1. In Kepler, navigate to **Settings** → **Integrations**.
+1. In Kepler, navigate to **Settings** → **Provider Integrations**.
 2. Under **Issue Trackers**, click **Connect** next to **GitHub Issues**.
 3. Click **Authorize with GitHub**. GitHub's OAuth app authorization page opens.
 4. Select the organizations and repositories to grant access to, then click **Authorize**.
@@ -198,7 +198,7 @@ Connect GitHub Enterprise Issues using a personal access token to create Kepler 
 
 <!-- TODO: confirm with engineering - verify exact menu path and button labels -->
 
-1. Go to **Settings** → **Integrations** in Kepler.
+1. Go to **Settings** → **Provider Integrations** in Kepler.
 2. Under **Issue Trackers**, click **Connect** next to **GitHub Enterprise Issues**.
 3. Enter your **Server URL** (e.g., `https://github.yourcompany.com`).
 4. Paste your **Personal Access Token**.
@@ -227,7 +227,7 @@ Connect GitLab Issues to create Kepler Tasks from GitLab issues and pass issue c
 
 <!-- TODO: confirm with engineering - verify exact menu path and button labels -->
 
-1. In Kepler, open **Settings** → **Integrations**.
+1. In Kepler, open **Settings** → **Provider Integrations**.
 2. Under **Issue Trackers**, click **Connect** next to **GitLab Issues**.
 3. Click **Authorize with GitLab**. GitLab's OAuth consent screen opens.
 4. Click **Authorize**.
@@ -265,7 +265,7 @@ Connect GitLab Self-Hosted Issues using a personal access token to create Kepler
 
 <!-- TODO: confirm with engineering - verify exact menu path and button labels -->
 
-1. Go to **Settings** → **Integrations** in Kepler.
+1. Go to **Settings** → **Provider Integrations** in Kepler.
 2. Under **Issue Trackers**, click **Connect** next to **GitLab Self-Hosted Issues**.
 3. Enter your **Instance URL** (e.g., `https://gitlab.yourcompany.com`).
 4. Paste your **Personal Access Token**.
@@ -295,7 +295,7 @@ Connect Azure DevOps to create Kepler Tasks from Azure DevOps work items and pas
 
 <!-- TODO: confirm with engineering - verify exact menu path and button labels -->
 
-1. In Kepler, navigate to **Settings** → **Integrations**.
+1. In Kepler, navigate to **Settings** → **Provider Integrations**.
 2. Under **Issue Trackers**, click **Connect** next to **Azure DevOps**.
 3. Click **Authorize with Azure DevOps**. Microsoft's OAuth consent screen opens.
 4. Sign in with your Microsoft account and click **Accept**.
