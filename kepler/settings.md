@@ -19,14 +19,16 @@ taxonomy:
 ---
 <kbd>Last updated: June 2026</kbd>
 
+
+This page is a reference for every setting in Kepler, organized by section. It also includes a complete keyboard shortcut reference.
+
 <figure>
   <img src="/wp-content/uploads/settings-kepler.png" class="help-center-img img-bordered" alt="The Kepler top navigation bar with the Settings gear icon highlighted in teal in the top-right corner">
   <figcaption style="text-align:center; color:#888">Click the gear icon in the top-right corner to open Settings.</figcaption>
 </figure>
 
-This page is a reference for every setting in Kepler, organized by section. It also includes a complete keyboard shortcut reference.
 
-Open Settings with **⌘ .** (Mac) or from the main menu.
+Open Settings from the gear icon in the upper right.
 
 ***
 
