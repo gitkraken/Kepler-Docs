@@ -8,11 +8,18 @@ taxonomy:
 ---
 
 
+This page walks you through installing and launching Kepler for the first time.
+
 ## Step 1
--Install Kepler
+
+- Install Kepler
+
 ## Step 2
--Run Kepler
+
+- Launch Kepler
+
 ## Step 3
--Win
+
+- Complete setup
 
 ---
