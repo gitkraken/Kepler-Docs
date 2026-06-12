@@ -103,13 +103,13 @@ Use the search bar to find issues by title or by pasting a URL. Use the filter b
 
 ### Launching Tasks from issues
 
-1. Select one or more issues. Kepler creates one Task per issue.
+1. Select one or more issues.
 2. In the Task preview row, confirm or change the **repo**, **worktree type**, and **base branch** for each Task.
 3. Click **+ Add repo** on any Task row to span that Task across multiple repos.
 4. Set **Agent**, **Mode**, **Model**, and **Effort** in the bottom bar. These settings apply to all Tasks being launched.
 5. Review the summary (e.g., "3 issues → 3 tasks"), then click **Launch task**.
 
-Kepler passes the issue title, description, and metadata to the agent when the session starts.
+Kepler creates one Task per selected issue and passes the issue title, description, and metadata to the agent when the session starts.
 
 <figure>
   <img src="..." class="help-center-img img-bordered" alt="Issue selection screen showing filter bar, issue list, Task preview rows, and bottom bar">
@@ -174,7 +174,7 @@ The **Sessions** panel lists all agent sessions in the Task. Each entry shows th
 
 **Shared context** is content you add to a Task that every agent session receives. Use it for standing instructions, style rules, or reference material that all agents should follow.
 
-**Example:** "If a `.md` file has a date stamp, change it to June 2026." Adding this to shared context means every agent session in the Task follows the rule without you repeating it per session.
+**Example:** "If a `.md` file has a date stamp, change the date stamp to June 2026." Adding this to shared context means every agent session in the Task follows the rule without you repeating it per session.
 
 To manage shared context:
 
