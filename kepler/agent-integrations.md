@@ -73,6 +73,8 @@ You do not need to re-describe your Task to the agent manually.
 
 ### Verification and troubleshooting
 
+If Claude Code is not connecting as expected, use the following troubleshooting steps.
+
 **Claude Code not detected**
 Verify that the `claude` binary is on your `PATH` by running `claude --version` in a terminal. If it is not found, reinstall Claude Code or enter the binary path manually in Kepler settings.
 
@@ -117,6 +119,8 @@ When you start a Codex CLI agent session inside a Task, Kepler passes:
 - Branch context for the session.
 
 ### Verification and troubleshooting
+
+If Codex CLI is not connecting as expected, use the following troubleshooting steps.
 
 **Codex CLI not detected**
 Run `codex --version` in a terminal to confirm the binary is on your `PATH`. If not found, reinstall Codex CLI or enter the binary path manually in Kepler settings.
@@ -190,6 +194,8 @@ Cursor is an AI code editor with a built-in coding agent. Kepler connects to Cur
 
 ### Verification and troubleshooting
 
+If Cursor is not connecting as expected, use the following troubleshooting steps.
+
 <!-- TODO: confirm with engineering: Cursor-specific detection, auth, and permission troubleshooting steps -->
 
 **Cursor not detected**
@@ -202,7 +208,7 @@ Confirm Cursor is installed and that the `cursor` binary is accessible. Enter th
 
 ## OpenCode
 
-OpenCode is an open-source, model-agnostic coding agent. It runs any model through a unified interface. Use it when you need a model that Claude Code, Codex CLI, or Copilot CLI do not offer.
+OpenCode is an open-source, model-agnostic coding agent. It runs any model through a unified interface. Use OpenCode when you need a model that Claude Code, Codex CLI, or Copilot CLI do not offer.
 
 ### Prerequisites
 
@@ -237,6 +243,8 @@ Use a proprietary agent (Claude Code, Codex CLI, Copilot CLI) when the agent's f
 </figure>
 
 ### Verification and troubleshooting
+
+If OpenCode is not connecting as expected, use the following troubleshooting steps.
 
 **OpenCode not detected**
 Run `opencode --version` in a terminal to confirm the binary is on your `PATH`. If not found, reinstall OpenCode or enter the binary path manually in Kepler settings.
