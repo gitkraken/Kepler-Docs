@@ -20,7 +20,7 @@ taxonomy:
 <kbd>Last updated: June 2026</kbd>
 
 <figure>
-  <img src="/wp-content/uploads/settings.png" class="help-center-img img-bordered" alt="The Kepler top navigation bar with the Settings gear icon highlighted in teal in the top-right corner">
+  <img src="/wp-content/uploads/settings-kepler.png" class="help-center-img img-bordered" alt="The Kepler top navigation bar with the Settings gear icon highlighted in teal in the top-right corner">
   <figcaption style="text-align:center; color:#888">Click the gear icon in the top-right corner to open Settings.</figcaption>
 </figure>
 
