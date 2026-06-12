@@ -50,11 +50,9 @@ Kepler is available for **Windows**, **Mac**, and **Linux**.
 On first open, Kepler displays the **Home** view. No repos are connected yet and no agents are configured. The next two sections cover the minimum setup required before creating your first Task.
 
 <figure>
-  <img src="..." class="help-center-img img-bordered" alt="Kepler Home view on first launch with no repos or agents configured">
-  <figcaption style="text-align:center; color:#888">Kepler Home view on first launch, before any repos or agents are configured.</figcaption>
+  <img src="/wp-content/uploads/blank-kepler.png" class="help-center-img img-bordered" alt="Kepler List view on first launch showing an empty task list in the sidebar and a 'No task selected' state in the center panel with a Launch a task button">
+  <figcaption style="text-align:center; color:#888">Kepler on first launch. No tasks exist yet — click <strong>Launch a task</strong> or <strong>+ New task</strong> to create your first one.</figcaption>
 </figure>
-
-<!-- TODO: confirm with engineering — confirm first-launch UI state and replace screenshot placeholder -->
 
 ***
 
@@ -91,7 +89,12 @@ A **Task** is the core unit of work in Kepler. It holds work across one or more 
 
 This section covers creating a Task from scratch. For all three Task creation methods and full option details, see [Create a Task](/kepler/create-task).
 
-1. Click **New Task** from the Home view or the task list.
+<figure>
+  <img src="/wp-content/uploads/new-task-button.png" class="help-center-img img-bordered" alt="The + New task button in the Kepler top navigation bar, highlighted with a teal border">
+  <figcaption style="text-align:center; color:#888">Click <strong>+ New task</strong> in the top-right corner to open the Task Launcher.</figcaption>
+</figure>
+
+1. Click **+ New task** in the top-right corner.
 2. Select a repo. Kepler clones it into your default repos directory if it is not already present locally.
 3. Set a base branch. This is the branch the Task's worktree branches from.
 4. Select an agent runtime.
@@ -110,10 +113,24 @@ Kepler automatically creates an isolated Git worktree for this Task. The agent s
 
 ## Verify your setup
 
-Setup is complete when all of the following are true:
+Kepler tracks your setup progress in the **Setup** checklist, accessible from the top navigation bar. The checklist shows **Setup · N/5** and turns fully green when all five items are complete.
 
-- Your **Default repos directory** is set in **Settings → Environment**.
-- At least one **agent runtime** is connected and shows as available.
-- A **Task** has been created and is visible in **List** or **Kanban** view with an active agent session.
+<figure>
+  <img src="/wp-content/uploads/set-up-kepler.png" class="help-center-img img-bordered" alt="The Finish setting up Kepler checklist showing 5 of 5 items marked DONE and More setup options expanded to reveal Connect a remote environment and Control Kepler remotely">
+  <figcaption style="text-align:center; color:#888">The Setup checklist with all five required items complete and the optional items expanded.</figcaption>
+</figure>
+
+The five required setup steps are:
+
+1. **Sign in to GitKraken** — authenticate with your GitKraken account.
+2. **Connect an AI agent** — connect at least one coding agent (for example, Claude Code). See [Agent Integrations](/kepler/agent-integrations).
+3. **Connect issue & PR trackers** — connect your issue tracker and Git hosting provider. See [Issue Tracker Integrations](/kepler/issue-tracker-integrations) and [Pull Request Integrations](/kepler/pull-request-integrations).
+4. **Set a default repositories folder** — set the directory where Kepler stores cloned repos. See [Environment and Setup](/kepler/environment-and-setup).
+5. **Set a default worktree folder** — set the directory where Kepler creates new worktrees. See [Environment and Setup](/kepler/environment-and-setup).
+
+Expanding **More setup options** reveals two additional items that are optional but recommended:
+
+- **Connect a remote environment** — run Tasks on a remote machine or inside WSL. See [Remote Environments](/kepler/remote-environments).
+- **Control Kepler remotely** — start Kepler's local server to access the UI from another device. See [Remote Environments](/kepler/remote-environments).
 
 ---
