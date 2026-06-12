@@ -21,7 +21,7 @@ taxonomy:
 
 ## Overview
 
-Kepler (GitKraken's Agentic Development Environment, or ADE) connects to your Git hosting platform so you can create a **Task** directly from an existing pull request. This lets an agent address review comments or begin a code review without manual setup.
+Kepler (GitKraken's Agentic Development Environment, or ADE) connects to your Git hosting platform so you can create a **Task** directly from an existing pull request. Connecting a PR lets an agent address review comments or begin a code review without manual setup.
 
 ### Supported providers
 
@@ -45,6 +45,8 @@ When you connect a PR, Kepler pulls the following from it:
 
 ## GitHub
 
+Connect GitHub to create Kepler Tasks from GitHub pull requests.
+
 ### Prerequisites
 
 - A GitHub account with at least read access to the repository.
@@ -64,6 +66,8 @@ When you connect a PR, Kepler pulls the following from it:
 ***
 
 ## GitHub Enterprise
+
+Connect GitHub Enterprise using a personal access token to create Kepler Tasks from pull requests on your self-hosted instance.
 
 ### Prerequisites
 
@@ -87,6 +91,8 @@ When you connect a PR, Kepler pulls the following from it:
 
 ## GitLab
 
+Connect GitLab to create Kepler Tasks from GitLab merge requests.
+
 ### Prerequisites
 
 - A GitLab account with at least Reporter access to the project.
@@ -106,6 +112,8 @@ When you connect a PR, Kepler pulls the following from it:
 ***
 
 ## GitLab Self-Managed
+
+Connect GitLab Self-Managed using a personal access token to create Kepler Tasks from merge requests on your self-managed instance.
 
 ### Prerequisites
 
@@ -129,6 +137,8 @@ When you connect a PR, Kepler pulls the following from it:
 
 ## Bitbucket
 
+Connect Bitbucket to create Kepler Tasks from Bitbucket pull requests.
+
 ### Prerequisites
 
 - A Bitbucket account with at least read access to the repository.
@@ -148,6 +158,8 @@ When you connect a PR, Kepler pulls the following from it:
 ***
 
 ## Azure DevOps
+
+Connect Azure DevOps to create Kepler Tasks from Azure DevOps pull requests.
 
 ### Prerequisites
 
