@@ -204,7 +204,7 @@ To manage shared context:
 
 ### Session status vs. Task stage
 
-**Task stage** is the Kanban column the Task occupies (Exploration → In Development → In Review → Done). **Session status** is the real-time state of an individual agent session.
+**Task stage** is the Kanban column the Task occupies (Exploration → In Development → In Review → Done). Kepler advances the stage automatically based on agent activity — you cannot move it manually. **Session status** is the real-time state of an individual agent session.
 
 | Status | Meaning |
 |---|---|
@@ -219,9 +219,6 @@ To manage shared context:
 
 Kepler sends a toast notification when a Task completes or needs attention. The notification shows the Task name, the agent that ran it, and the repo and branch. Click **View** to jump directly to the Task.
 
-### Moving a Task between stages
-
-<!-- TODO: confirm with engineering — confirm the exact interaction (drag-and-drop, dropdown, or right-click menu) for moving a Task between Kanban columns manually -->
 
 ### Archiving a Task
 

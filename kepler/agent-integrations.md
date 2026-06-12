@@ -19,6 +19,11 @@ taxonomy:
 ---
 <kbd>Last updated: June 2026</kbd>
 
+<figure>
+  <img src="/wp-content/uploads/agents-view.png" class="help-center-img img-bordered" alt="The Agents settings panel in Kepler showing Claude Code, Codex, GitHub Copilot, Cursor CLI, and OpenCode with their installation status, binary path, and Enabled toggle for each">
+  <figcaption style="text-align:center; color:#888">The Agents settings panel. Each agent shows its installation status, binary path, and an Enabled toggle.</figcaption>
+</figure>
+
 ## Overview
 
 Kepler is GitKraken's **Agentic Development Environment** (ADE), a delivery surface that adds task management and Git worktrees around the coding agent you already use. You do not switch agents to use Kepler; you connect the one you already have.
@@ -56,10 +61,6 @@ Claude Code is Anthropic's coding agent. Kepler launches it as an agent session 
 
 <!-- TODO: confirm with engineering: exact settings path and field names for Claude Code connection -->
 
-<figure>
-  <img src="..." class="help-center-img img-bordered" alt="Claude Code connection settings in Kepler">
-  <figcaption style="text-align:center; color:#888">Claude Code connection settings panel in Kepler</figcaption>
-</figure>
 
 ### How Kepler passes context
 
@@ -105,10 +106,6 @@ Codex CLI is OpenAI's coding agent. Kepler connects to it as an agent session in
 
 <!-- TODO: confirm with engineering: exact settings path and field names for Codex CLI connection -->
 
-<figure>
-  <img src="..." class="help-center-img img-bordered" alt="Codex CLI connection settings in Kepler">
-  <figcaption style="text-align:center; color:#888">Codex CLI connection settings panel in Kepler</figcaption>
-</figure>
 
 ### How Kepler passes context
 
@@ -152,10 +149,6 @@ Copilot CLI is GitHub's coding agent. Kepler connects to it as an agent session 
 
 <!-- TODO: confirm with engineering: exact settings path and field names for Copilot CLI connection -->
 
-<figure>
-  <img src="..." class="help-center-img img-bordered" alt="Copilot CLI connection settings in Kepler">
-  <figcaption style="text-align:center; color:#888">Copilot CLI connection settings panel in Kepler</figcaption>
-</figure>
 
 ### Verification and troubleshooting
 
@@ -187,10 +180,6 @@ Cursor is an AI code editor with a built-in coding agent. Kepler connects to Cur
 4. <!-- TODO: confirm with engineering: step-by-step connection flow for Cursor -->
 5. Click **Save**.
 
-<figure>
-  <img src="..." class="help-center-img img-bordered" alt="Cursor connection settings in Kepler">
-  <figcaption style="text-align:center; color:#888">Cursor connection settings panel in Kepler</figcaption>
-</figure>
 
 ### Verification and troubleshooting
 
@@ -237,10 +226,6 @@ Use a proprietary agent (Claude Code, Codex CLI, Copilot CLI) when the agent's f
 
 <!-- TODO: confirm with engineering: exact settings path, field names, and model selector behavior for OpenCode -->
 
-<figure>
-  <img src="..." class="help-center-img img-bordered" alt="OpenCode connection settings in Kepler">
-  <figcaption style="text-align:center; color:#888">OpenCode connection settings panel in Kepler</figcaption>
-</figure>
 
 ### Verification and troubleshooting
 
