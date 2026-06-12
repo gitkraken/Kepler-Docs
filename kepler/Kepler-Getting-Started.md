@@ -71,6 +71,8 @@ Kepler uses a single local directory as the root for all repo clones and worktre
 3. Set **Default repos directory** to the local path where you want Kepler to store repos and worktrees.
 4. Click **Save**.
 
+The following table describes this setting:
+
 | Setting | What it controls | Default | Options |
 |---|---|---|---|
 | **Default repos directory** | Root path for all Kepler-managed repo clones and worktrees | None (must be set manually) | Any valid local directory path |
@@ -91,10 +93,11 @@ This section covers creating a Task from scratch. For all three Task creation me
 
 1. Click **New Task** from the Home view or the task list.
 2. Select a repo. Kepler clones it into your default repos directory if it is not already present locally.
-3. Set a base branch. This is the branch the Task's worktree will branch from.
-4. Kepler creates a Git worktree for this Task automatically. The worktree is isolated from your main working copy.
-5. Select an agent runtime.
-6. Click **Create Task**. The agent session starts and the Task appears in List or Kanban view.
+3. Set a base branch. This is the branch the Task's worktree branches from.
+4. Select an agent runtime.
+5. Click **Create Task**.
+
+Kepler automatically creates an isolated Git worktree for this Task. The agent session starts and the Task appears in **List** or **Kanban** view.
 
 <figure>
   <img src="..." class="help-center-img img-bordered" alt="New Task creation dialog showing repo, base branch, and agent selection fields">
@@ -105,7 +108,7 @@ This section covers creating a Task from scratch. For all three Task creation me
 
 ***
 
-## What a ready state looks like
+## Verify your setup
 
 Setup is complete when all of the following are true:
 
