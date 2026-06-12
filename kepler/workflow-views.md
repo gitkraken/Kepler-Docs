@@ -39,7 +39,7 @@ List view shows a single worktree's changes, agent session, and commit history.
 
 ### Layout
 
-List view is divided into three panels:
+List view has three panels:
 
 - **Left sidebar** — Task and worktree navigation
 - **Center panel** — Diff or agent session
@@ -75,7 +75,7 @@ Click any commit to see its full detail: title, description, author, email, time
 
 ### Create Command
 
-The **Create command...** dropdown in the top navigation is for creating saved command templates.
+Use the **Create command...** dropdown in the top navigation to create saved command templates.
 
 <!-- TODO: confirm with engineering — exact behavior and availability of "Create command..." -->
 
@@ -110,7 +110,7 @@ Each card represents one worktree and shows:
 - Agent indicator — agent initial, last context snippet, and time since last activity
 - **+ New session** button
 
-If no agent session has been started yet, the card shows a **No sessions yet** state. Use **+ New session** to start one.
+If you have not started an agent session, the card shows a **No sessions yet** state. Use **+ New session** to start one.
 
 ### Search and Filters
 
@@ -118,9 +118,9 @@ Use the **Search** bar to find worktrees by branch name or Task name.
 
 Use the **Filters** panel to narrow the board by:
 
-- **Status** — Needs Attention, Active, Idle, Errored, Inactive. All statuses are enabled by default.
-- **Repos** — limit to one or more specific repositories.
-- **Tasks** — filter by Task name. Select **No task** to show worktrees that are not associated with any Task.
+- **Status** — filter by session status: Needs Attention, Active, Idle, Errored, or Inactive (all enabled by default).
+- **Repos** — limit results to one or more specific repositories.
+- **Tasks** — filter by Task name; select **No task** to show worktrees not associated with any Task.
 - **Agent** — filter by agent runtime (for example, Claude Code, Codex).
 
 <figure>
