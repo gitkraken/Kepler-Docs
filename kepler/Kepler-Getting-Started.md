@@ -67,7 +67,7 @@ Complete all five items in the **Setup** checklist before creating your first Ta
 
 ### 1. Sign in to GitKraken
 
-Sign in with your GitKraken account when prompted on first launch.
+Sign in with your [GitKraken account](https://gitkraken.dev) when prompted on first launch.
 
 ### 2. Connect an AI agent
 
@@ -113,19 +113,18 @@ This section covers creating a Task from scratch. For all three Task creation me
   <figcaption style="text-align:center; color:#888">Click <strong>+ New task</strong> in the top-right corner to open the Task Launcher.</figcaption>
 </figure>
 
-1. Click **+ New task** in the top-right corner.
-2. Select a repo. Kepler clones it into your default repos directory if it is not already present locally.
-3. Set a base branch. This is the branch the Task's worktree branches from.
-4. Select an agent runtime.
-5. Click **Create Task**.
-
-Kepler automatically creates an isolated Git worktree for this Task. The agent session starts and the Task appears in **List** or **Kanban** view.
-
 <figure>
-  <img src="..." class="help-center-img img-bordered" alt="New Task creation dialog showing repo, base branch, and agent selection fields">
-  <figcaption style="text-align:center; color:#888">The New Task dialog. Select a repo, base branch, and agent, then click Create Task.</figcaption>
+  <img src="/wp-content/uploads/start-task-modal.png" class="help-center-img img-bordered" alt="The Start a task dialog in Kepler showing the Repositories section with an Add repo button, Task Name field, Prompt field, and Agent, Model, Mode, and Effort dropdowns at the bottom">
+  <figcaption style="text-align:center; color:#888">The Task Launcher. Add a repo, name the task, add a prompt, and click <strong>Launch task</strong>.</figcaption>
 </figure>
 
-<!-- TODO: confirm with engineering — confirm exact button labels and dialog field names, replace screenshot placeholder -->
+1. Click **+ New task** in the top-right corner to open the Task Launcher.
+2. Under **Repositories**, click **+ Add repo** and select a repository. Kepler clones it into your default repos directory if it is not already present locally.
+3. Enter a **Task Name**.
+4. (Optional) Enter a **Prompt** with starting instructions for the agent.
+5. Select an **Agent** and configure **Model**, **Mode**, and **Effort** as needed.
+6. Click **Launch task**.
+
+Kepler creates an isolated Git worktree for this Task, starts the agent session, and the Task appears in **List** or **Kanban** view.
 
 ---
