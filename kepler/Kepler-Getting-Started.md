@@ -56,23 +56,28 @@ On first open, Kepler displays the **Home** view. No repos are connected yet and
 
 ***
 
-## Minimum setup before creating your first Task
+## Setup Guide
 
-Complete all five items in the **Setup** checklist before creating your first Task. Access the checklist from the **Setup** button in the top navigation bar.
+Complete all five items in the **Setup** checklist before creating your first Task. Access the checklist from the **Setup** button in the top navigation bar. The checklist shows **Setup · N/5** and turns fully green when all five items are complete.
 
-### Sign in to GitKraken
+<figure>
+  <img src="/wp-content/uploads/set-up-kepler.png" class="help-center-img img-bordered" alt="The Finish setting up Kepler checklist showing 5 of 5 items marked DONE and More setup options expanded to reveal Connect a remote environment and Control Kepler remotely">
+  <figcaption style="text-align:center; color:#888">The Setup checklist with all five required items complete and the optional items expanded.</figcaption>
+</figure>
+
+### 1. Sign in to GitKraken
 
 Sign in with your GitKraken account when prompted on first launch.
 
-### Connect an AI agent
+### 2. Connect an AI agent
 
 Connect at least one coding agent in **Settings → Agents**. For supported agents and connection steps, see [Agent Integrations](/kepler/agent-integrations).
 
-### Connect issue & PR trackers
+### 3. Connect issue & PR trackers
 
 Connect your issue tracker and Git hosting provider in **Settings → Provider Integrations**. For setup steps, see [Issue Tracker Integrations](/kepler/issue-tracker-integrations) and [Pull Request Integrations](/kepler/pull-request-integrations).
 
-### Set a default repositories folder
+### 4. Set a default repositories folder
 
 Set the directory where Kepler clones and stores repositories. Everything else depends on this path being set.
 
@@ -80,7 +85,7 @@ Set the directory where Kepler clones and stores repositories. Everything else d
 2. Under **Default Repositories Folder**, click the folder icon and select a directory.
 3. Click **Save**.
 
-### Set a default worktree folder
+### 5. Set a default worktree folder
 
 Set the directory where Kepler creates new worktrees. Kepler creates one worktree per Task per repo.
 
@@ -89,6 +94,11 @@ Set the directory where Kepler creates new worktrees. Kepler creates one worktre
 3. Click **Save**.
 
 For placeholder options and path examples, see [Environment and Setup](/kepler/environment-and-setup).
+
+Expanding **More setup options** in the checklist reveals two additional optional items:
+
+- **Connect a remote environment** — run Tasks on a remote machine or inside WSL. See [Remote Environments](/kepler/remote-environments).
+- **Control Kepler remotely** — start Kepler's local server to access the UI from another device. See [Remote Environments](/kepler/remote-environments).
 
 ***
 
@@ -117,29 +127,5 @@ Kepler automatically creates an isolated Git worktree for this Task. The agent s
 </figure>
 
 <!-- TODO: confirm with engineering — confirm exact button labels and dialog field names, replace screenshot placeholder -->
-
-***
-
-## Verify your setup
-
-Kepler tracks your setup progress in the **Setup** checklist, accessible from the top navigation bar. The checklist shows **Setup · N/5** and turns fully green when all five items are complete.
-
-<figure>
-  <img src="/wp-content/uploads/set-up-kepler.png" class="help-center-img img-bordered" alt="The Finish setting up Kepler checklist showing 5 of 5 items marked DONE and More setup options expanded to reveal Connect a remote environment and Control Kepler remotely">
-  <figcaption style="text-align:center; color:#888">The Setup checklist with all five required items complete and the optional items expanded.</figcaption>
-</figure>
-
-The five required setup steps are:
-
-1. **Sign in to GitKraken** — authenticate with your GitKraken account.
-2. **Connect an AI agent** — connect at least one coding agent (for example, Claude Code). See [Agent Integrations](/kepler/agent-integrations).
-3. **Connect issue & PR trackers** — connect your issue tracker and Git hosting provider. See [Issue Tracker Integrations](/kepler/issue-tracker-integrations) and [Pull Request Integrations](/kepler/pull-request-integrations).
-4. **Set a default repositories folder** — set the directory where Kepler stores cloned repos. See [Environment and Setup](/kepler/environment-and-setup).
-5. **Set a default worktree folder** — set the directory where Kepler creates new worktrees. See [Environment and Setup](/kepler/environment-and-setup).
-
-Expanding **More setup options** reveals two additional items that are optional but recommended:
-
-- **Connect a remote environment** — run Tasks on a remote machine or inside WSL. See [Remote Environments](/kepler/remote-environments).
-- **Control Kepler remotely** — start Kepler's local server to access the UI from another device. See [Remote Environments](/kepler/remote-environments).
 
 ---
