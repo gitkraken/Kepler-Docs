@@ -21,7 +21,7 @@ taxonomy:
 
 ## Overview
 
-Connecting an issue tracker lets you create a Kepler **Task** (the core unit of work in Kepler's Agentic Development Environment, or ADE) directly from an issue. Kepler passes the issue title, description, and metadata to the agent automatically as its starting context.
+Connecting an issue tracker lets you create a Kepler **Task**, the core unit of work in Kepler's **Agentic Development Environment** (**ADE**), directly from an issue. Kepler passes the issue title, description, and metadata to the agent automatically as its starting context.
 
 ### Supported trackers
 

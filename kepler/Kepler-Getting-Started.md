@@ -20,7 +20,7 @@ taxonomy:
 <kbd>Last updated: June 2026</kbd>
 
 ## What is Kepler?
-Kepler is GitKraken's **ADE** (Agentic Development Environment), built for developers directing multiple AI coding agents across multiple repos in parallel.
+Kepler is GitKraken's **Agentic Development Environment** (**ADE**), built for developers directing multiple AI coding agents across multiple repos in parallel.
 
 
 <figure>
