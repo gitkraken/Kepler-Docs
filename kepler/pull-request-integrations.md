@@ -19,14 +19,16 @@ taxonomy:
 ---
 <kbd>Last updated: June 2026</kbd>
 
-<figure>
-  <img src="/wp-content/uploads/pr-integrations.png" class="help-center-img img-bordered" alt="The Provider Integrations settings panel in Kepler showing Azure DevOps and GitHub as connected, and Bitbucket, GitHub Enterprise, GitLab, GitLab Self-Hosted, Jira, Linear, and Trello available to connect">
-  <figcaption style="text-align:center; color:#888">The Provider Integrations settings panel. Connected providers show a Connected badge; others show a Connect button.</figcaption>
-</figure>
+
 
 ## Overview
 
 Kepler (GitKraken's Agentic Development Environment, or ADE) connects to your Git hosting platform so you can create a **Task** directly from an existing pull request. Connecting a PR lets an agent address review comments or begin a code review without manual setup.
+
+<figure>
+  <img src="/wp-content/uploads/pr-integrations.png" class="help-center-img img-bordered" alt="The Provider Integrations settings panel in Kepler showing Azure DevOps and GitHub as connected, and Bitbucket, GitHub Enterprise, GitLab, GitLab Self-Hosted, Jira, Linear, and Trello available to connect">
+  <figcaption style="text-align:center; color:#888">The Provider Integrations settings panel. Connected providers show a Connected badge; others show a Connect button.</figcaption>
+</figure>
 
 ### Supported providers
 
