@@ -45,7 +45,7 @@ Use SSH when your local machine doesn't have enough compute for the work, or whe
 4. Click **Test Connection** to verify Kepler can reach the machine.
 5. Click **Save**.
 
-Once saved, the remote machine is available as a target when you create or configure a Task.
+After you save, the remote machine is available as a target when you create or configure a Task.
 
 ### What Runs Remotely vs. Locally
 
@@ -99,7 +99,7 @@ The WSL environment is available as a Task target alongside any other remote mac
 
 ## Remote Access: Access Kepler from Another Device
 
-Remote Access is a separate feature from SSH and WSL. It starts a local server inside Kepler so you can reach the Kepler UI from another device on your network, or from outside your network via a tunnel.
+Remote Access is a separate feature from SSH and WSL. Remote Access starts a local server inside Kepler so you can reach the Kepler UI from another device on your network, or from outside your network via a tunnel.
 
 ### Configure Remote Access
 
