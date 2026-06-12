@@ -25,7 +25,7 @@ An **agent session** is a running coding agent within a Task in Kepler, GitKrake
 
 ## Configuring an agent session
 
-Four settings are available when you start a session. Three of them can be overridden per message; one is fixed for the life of the session.
+When you start a session, you can configure four settings. You can override three of them per message; one is fixed for the life of the session.
 
 | Setting | What it controls | Default | Options |
 |---|---|---|---|
@@ -39,9 +39,9 @@ Four settings are available when you start a session. Three of them can be overr
   <figcaption style="text-align:center; color:#888">The Agent dropdown at session start. Mode, Model, and Effort default to Default.</figcaption>
 </figure>
 
-**Agent** is set at session start and cannot be changed mid-session. For details on each supported agent runtime, see [Agent Integrations](agent-integrations.md).
+You set **Agent** at session start and cannot change it mid-session. For details on each supported agent runtime, see [Agent Integrations](agent-integrations.md).
 
-**Mode**, **Model**, and **Effort Level** can all be changed on any individual message from the console input bar without restarting the session.
+You can change **Mode**, **Model**, and **Effort Level** on any individual message from the console input bar without restarting the session.
 
 ### Modes
 
@@ -59,7 +59,7 @@ Four settings are available when you start a session. Three of them can be overr
 
 ## Using the console to direct agents
 
-The console is where you send instructions and read agent output. Each session opens in its own tab.
+Use the console to send instructions and read agent output. Each session opens in its own tab.
 
 ### Session tabs
 
@@ -143,14 +143,14 @@ The **CHANGES (N)** panel lists unstaged files. Each entry shows the file path a
 
 ### Committing
 
-The commit message field is pre-populated by the agent. Edit it if needed, then click **Commit** to commit the staged files.
+The agent pre-populates the commit message field. Edit it if needed, then click **Commit** to commit the staged files.
 
 <figure>
   <img src="/wp-content/uploads/stage-and-commit.png" class="help-center-img img-bordered" alt="STAGED panel showing four modified files with Discard All and Unstage All buttons, a pre-populated commit message, and the Commit button">
   <figcaption style="text-align:center; color:#888">The staged files panel with an agent-generated commit message ready to commit.</figcaption>
 </figure>
 
-**Push**, **Pull**, and **Fetch** are available from the header bar at the top of the view without leaving Kepler.
+Use **Push**, **Pull**, and **Fetch** from the header bar to sync the current branch without leaving Kepler.
 
 Click **Back to session** to close the diff and return to the agent session console.
 
@@ -158,7 +158,7 @@ Click **Back to session** to close the diff and return to the agent session cons
 
 ## Optional agent features: AI Sync
 
-**AI Sync** is an experimental feature (disabled by default) that gives agents tools to rebase or merge with automatic conflict resolution. Each operation can be rolled back.
+**AI Sync** is an experimental feature (disabled by default) that gives agents tools to rebase or merge with automatic conflict resolution. You can roll back each operation.
 
 To enable AI Sync, go to **Settings → Features** and toggle **AI Sync** on.
 
