@@ -30,12 +30,6 @@ Every Task contains:
 - A diff and changes view
 - **Shared context** — standing instructions sent to every agent session in the Task
 
-Tasks move through four stages on the Kepler board:
-
-1. **Exploration**
-2. **In Development**
-3. **In Review**
-4. **Done**
 
 <figure>
   <img src="/wp-content/uploads/task-view.png" class="help-center-img img-bordered" alt="A Kepler Task named 'Set all pages to May 2026' showing 5 worktrees across multiple repos on the left, 3 agent sessions with NEW CONTEXT badges on the right, and a Shared context section with a prompt card at the bottom">
@@ -101,20 +95,6 @@ Start here when you have a clear goal and no existing issue or PR to pull contex
 
 Use this path to have Kepler pass issue context (title, description, and metadata) to the agent automatically.
 
-### Supported issue trackers
-
-GitHub Issues, GitHub Enterprise, GitLab, GitLab Self-Hosted, Jira, Linear, Trello, Azure DevOps.
-
-For integration setup, see [Issue Tracker Integrations](issue-tracker-integrations.md).
-
-### Finding an issue
-
-Use the search bar to find issues by title or by pasting a URL. Use the filter bar to narrow results:
-
-- **Assigned to me / All visible** toggle
-- **Provider** — filter by issue tracker
-- **Repo** — filter by repository
-- **Hide tasked** — hides issues that already have an active Task
 
 ### Launching Tasks from issues
 
@@ -131,21 +111,27 @@ Kepler creates one Task per selected issue and passes the issue title, descripti
   <figcaption style="text-align:center; color:#888">Selecting an issue to launch as a Task. The preview row lets you set the repo, worktree type, and base branch before launching.</figcaption>
 </figure>
 
+### Supported issue trackers
+
+GitHub Issues, GitHub Enterprise, GitLab, GitLab Self-Hosted, Jira, Linear, Trello, Azure DevOps.
+
+For integration setup, see [Issue Tracker Integrations](issue-tracker-integrations.md).
+
+### Finding an issue
+
+Use the search bar to find issues by title or by pasting a URL. Use the filter bar to narrow results:
+
+- **Assigned to me / All visible** toggle
+- **Provider** — filter by issue tracker
+- **Repo** — filter by repository
+- **Hide tasked** — hides issues that already have an active Task
+
 ***
 
 ## Creating a Task from a pull request
 
 Use this when starting a PR review or having an agent address open review comments.
 
-### Supported PR providers
-
-GitHub, GitHub Enterprise, GitLab, GitLab Self-Managed, Bitbucket, Azure DevOps.
-
-For integration setup, see [Pull Request Integrations](pull-request-integrations.md).
-
-### Finding a pull request
-
-Use the search bar to find PRs by title or by pasting a URL. Use the filter bar to narrow results by **provider**, **repo**, or **Hide tasked**.
 
 ### Launching Tasks from a single PR
 
@@ -170,6 +156,16 @@ Kepler infers **"Address feedback"** as the agent's starting instruction from th
   <img src="/wp-content/uploads/start-task-from-PR.png" class="help-center-img img-bordered" alt="The Start from pull requests tab with two PRs selected, showing Split into 2 tasks and Group as 1 task options, two Task preview rows each showing the repo and the worktree branch Kepler will create, and the bottom bar showing 2 PRs → 2 tasks and the Launch 2 tasks button">
   <figcaption style="text-align:center; color:#888">Two PRs selected: use <strong>Split into 2 tasks</strong> or <strong>Group as 1 task</strong> before launching.</figcaption>
 </figure>
+
+### Supported PR providers
+
+GitHub, GitHub Enterprise, GitLab, GitLab Self-Managed, Bitbucket, Azure DevOps.
+
+For integration setup, see [Pull Request Integrations](pull-request-integrations.md).
+
+### Finding a pull request
+
+Use the search bar to find PRs by title or by pasting a URL. Use the filter bar to narrow results by **provider**, **repo**, or **Hide tasked**.
 
 ***
 
@@ -198,8 +194,8 @@ To manage shared context:
 - Click **+ Add markdown** to add a new context block.
 
 <figure>
-  <img src="..." class="help-center-img img-bordered" alt="Task detail view showing worktrees list, sessions panel, and shared context section with a prompt card">
-  <figcaption style="text-align:center; color:#888">Task detail view: worktrees, sessions, and shared context.</figcaption>
+  <img src="/wp-content/uploads/task-view.png" class="help-center-img img-bordered" alt="A Kepler Task named 'Set all pages to May 2026' showing 5 worktrees across multiple repos on the left, 3 agent sessions with NEW CONTEXT badges on the right, and a Shared context section with a prompt card at the bottom">
+  <figcaption style="text-align:center; color:#888">A Task with 5 worktrees, 3 agent sessions, and a shared context prompt sent to every session.</figcaption>
 </figure>
 
 ***
@@ -234,5 +230,14 @@ Click the **archive icon** on the Task card to archive it. Archived Tasks are re
 ### Closing a Task and its worktrees
 
 <!-- TODO: confirm with engineering — describe what happens to worktrees (deleted, retained, merged) when a Task is closed or archived -->
+
+### Delete a Task
+
+Click the **trash icon** on the Task row to delete it. A **Delete** confirmation tooltip appears before the action completes.
+
+<figure>
+  <img src="/wp-content/uploads/delete-task.png" class="help-center-img img-bordered" alt="A Task row in the Kepler task list with the trash icon highlighted in teal and a Delete tooltip visible">
+  <figcaption style="text-align:center; color:#888">Click the trash icon on a Task row to delete it.</figcaption>
+</figure>
 
 ---
