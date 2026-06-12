@@ -19,6 +19,8 @@ taxonomy:
 ---
 <kbd>Last updated: June 2026</kbd>
 
+This page is a reference for every setting in Kepler, organized by section. It also includes a complete keyboard shortcut reference.
+
 Open Settings with **⌘ .** (Mac) or from the main menu.
 
 ***
@@ -147,7 +149,7 @@ The log file can grow up to approximately 20 MB. Attach it when filing a bug rep
 
 ## Voice Input
 
-The **Voice Input** section controls Kepler's on-device speech-to-text feature. Audio is transcribed locally on your device and is never uploaded.
+The **Voice Input** section controls Kepler's on-device speech-to-text feature. Kepler transcribes audio locally on your device and never uploads it.
 
 | Setting | What it controls | Default |
 |---------|-----------------|---------|
@@ -236,13 +238,13 @@ The **Features** section has two opt-in experimental capabilities, both off by d
 
 **AI Sync** gives agents tools to rebase or merge branches with automatic conflict resolution. Operations are safe and can be rolled back.
 
-To enable AI Sync, toggle it on in the Features section. Once enabled, agents can rebase or merge the current branch as part of a task without manual intervention.
+To enable AI Sync, toggle it on in the Features section. After you enable AI Sync, agents can rebase or merge the current branch as part of a task without manual intervention.
 
 ### Compose
 
 **Compose** gives agents tools to reorganize messy changes into clean, atomic commits. Operations are safe and can be undone.
 
-To enable Compose, toggle it on in the Features section. Once enabled, agents can restructure in-progress work into well-scoped commits before pushing.
+To enable Compose, toggle it on in the Features section. After you enable Compose, agents can restructure in-progress work into well-scoped commits before pushing.
 
 ***
 
@@ -262,11 +264,11 @@ Click **+ New project** to create a project and add repositories to it.
 
 ## Repositories
 
-The **Repositories** section lists every repository Kepler knows about. Each entry shows the repository's local path and a **No commands >** row you can click to add custom startup commands that run when the repo is opened.
+The **Repositories** section lists every repository Kepler knows about. Each entry shows the repository's local path and a **No commands >** row you can click to add custom startup commands that run when you open the repo.
 
 Click **+ Add repository** to register an existing local repository with Kepler.
 
-To remove a repository, open its entry and use the remove option.
+To remove a repository, open its entry and click **Remove**.
 
 For details on startup commands and environment setup, see [environment-and-setup.md](environment-and-setup.md).
 
