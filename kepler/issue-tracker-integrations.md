@@ -40,6 +40,8 @@ Connecting an issue tracker lets you create a Kepler **Task**, the core unit of 
 
 ## Jira
 
+Connect Jira to create Kepler Tasks from Jira issues and pass issue context to your agents automatically.
+
 ### Prerequisites
 
 - A Jira Cloud account with permission to install OAuth apps.
@@ -51,7 +53,7 @@ Connecting an issue tracker lets you create a Kepler **Task**, the core unit of 
 
 1. Open Kepler and navigate to **Settings** → **Integrations**.
 2. Under **Issue Trackers**, click **Connect** next to **Jira**.
-3. Click **Authorize with Jira**. You will be redirected to Atlassian's OAuth flow.
+3. Click **Authorize with Jira**. Atlassian's OAuth flow opens.
 4. Select the Jira site you want to connect and click **Accept**.
 5. Kepler shows **Jira connected** with your site name.
 
@@ -69,12 +71,14 @@ When you create a Task from a Jira issue, Kepler passes the following fields to 
 
 ### Limitations
 
-- Jira Data Center and Jira Server are not supported. Use the GitHub Enterprise or GitLab Self-Hosted integration for self-managed workflows.
-- Attachments and embedded images in issue descriptions are not passed to the agent.
+- Kepler does not support Jira Data Center or Jira Server. Use the GitHub Enterprise or GitLab Self-Hosted integration for self-managed workflows.
+- Kepler does not pass attachments or embedded images from issue descriptions to the agent.
 
 ***
 
 ## Linear
+
+Connect Linear to create Kepler Tasks from Linear issues and pass issue context to your agents automatically.
 
 ### Prerequisites
 
@@ -104,11 +108,13 @@ Creating a Task from a Linear issue passes these fields to the agent:
 
 ### Limitations
 
-- Sub-issues are not recursively fetched; only the selected issue's fields are passed.
+- Kepler fetches only the selected issue's fields; sub-issues are not included.
 
 ***
 
 ## Trello
+
+Connect Trello to create Kepler Tasks from Trello cards and pass card details to your agents automatically.
 
 ### Prerequisites
 
@@ -137,12 +143,14 @@ From a Trello card, Kepler passes:
 
 ### Limitations
 
-- Card attachments are not passed to the agent.
-- Custom fields are not currently supported.
+- Kepler does not pass card attachments to the agent.
+- Kepler does not currently support custom fields.
 
 ***
 
 ## GitHub Issues
+
+Connect GitHub Issues to create Kepler Tasks from GitHub issues and pass issue context to your agents automatically.
 
 ### Prerequisites
 
@@ -171,12 +179,14 @@ Kepler reads these fields from the GitHub issue:
 
 ### Limitations
 
-- GitHub Projects (v2) fields beyond the standard issue fields are not passed.
+- Kepler does not pass GitHub Projects (v2) fields beyond the standard issue fields.
 - Private repositories require the **repo** OAuth scope; Kepler requests this during authorization.
 
 ***
 
 ## GitHub Enterprise Issues
+
+Connect GitHub Enterprise Issues using a personal access token to create Kepler Tasks from issues on your self-hosted instance.
 
 ### Prerequisites
 
@@ -201,11 +211,13 @@ Kepler pulls the same fields as GitHub Issues (see above). Field availability de
 ### Limitations
 
 - GitHub Enterprise Cloud (GHEC) with an enterprise account uses the standard GitHub Issues integration above, not this one.
-- Tokens are stored per user; each team member must connect their own PAT.
+- Kepler stores tokens per user; each team member must connect their own PAT.
 
 ***
 
 ## GitLab Issues
+
+Connect GitLab Issues to create Kepler Tasks from GitLab issues and pass issue context to your agents automatically.
 
 ### Prerequisites
 
@@ -235,11 +247,13 @@ From a GitLab issue, Kepler passes:
 
 ### Limitations
 
-- GitLab EE-only fields (e.g., epic membership, health status) are not currently passed.
+- Kepler does not currently pass GitLab EE-only fields (for example, epic membership and health status).
 
 ***
 
 ## GitLab Self-Hosted Issues
+
+Connect GitLab Self-Hosted Issues using a personal access token to create Kepler Tasks from issues on your self-managed instance.
 
 ### Prerequisites
 
@@ -263,12 +277,14 @@ Kepler pulls the same fields as GitLab Issues (see above). Field availability de
 
 ### Limitations
 
-- The GitLab instance must be reachable from your machine. Air-gapped instances are not supported unless Kepler is deployed in your network.
-- Tokens are stored per user; each team member must connect their own PAT.
+- Your machine must be able to reach the GitLab instance. Air-gapped instances are not supported unless Kepler is deployed in your network.
+- Kepler stores tokens per user; each team member must connect their own PAT.
 
 ***
 
 ## Azure DevOps
+
+Connect Azure DevOps to create Kepler Tasks from Azure DevOps work items and pass work item details to your agents automatically.
 
 ### Prerequisites
 
@@ -299,8 +315,8 @@ From an Azure DevOps work item, Kepler passes:
 
 ### Limitations
 
-- Azure DevOps Server (on-premises) is not currently supported.
-- Rich text formatting in work item descriptions may be partially stripped when passed to the agent.
+- Kepler does not currently support Azure DevOps Server (on-premises).
+- Rich text formatting in work item descriptions may be partially stripped when Kepler passes the description to the agent.
 
 ***
 
