@@ -19,9 +19,16 @@ taxonomy:
 ---
 <kbd>Last updated: June 2026</kbd>
 
+
+
 ## Overview
 
 Kepler (GitKraken's Agentic Development Environment, or ADE) connects to your Git hosting platform so you can create a **Task** directly from an existing pull request. Connecting a PR lets an agent address review comments or begin a code review without manual setup.
+
+<figure>
+  <img src="/wp-content/uploads/pr-integrations.png" class="help-center-img img-bordered" alt="The Provider Integrations settings panel in Kepler showing Azure DevOps and GitHub as connected, and Bitbucket, GitHub Enterprise, GitLab, GitLab Self-Hosted, Jira, Linear, and Trello available to connect">
+  <figcaption style="text-align:center; color:#888">The Provider Integrations settings panel. Connected providers show a Connected badge; others show a Connect button.</figcaption>
+</figure>
 
 ### Supported providers
 
@@ -58,10 +65,6 @@ Connect GitHub to create Kepler Tasks from GitHub pull requests.
 3. Authorize Kepler in the GitHub OAuth window that opens.
 4. After authorization, GitHub is now connected in **Provider Integrations**.
 
-<figure>
-  <img src="/wp-content/uploads/github-integration-connected.png" class="help-center-img img-bordered" alt="GitHub shown as connected in Kepler Provider Integrations settings">
-  <figcaption style="text-align:center; color:#888">GitHub connected in Kepler Integrations</figcaption>
-</figure>
 
 ***
 
@@ -82,10 +85,6 @@ Connect GitHub Enterprise using a personal access token to create Kepler Tasks f
 4. Paste your **Personal Access Token**.
 5. Click **Save**.
 
-<figure>
-  <img src="/wp-content/uploads/github-enterprise-integration.png" class="help-center-img img-bordered" alt="GitHub Enterprise connection form in Kepler showing host URL and token fields">
-  <figcaption style="text-align:center; color:#888">GitHub Enterprise connection form in Kepler</figcaption>
-</figure>
 
 ***
 
@@ -104,10 +103,6 @@ Connect GitLab to create Kepler Tasks from GitLab merge requests.
 3. Authorize Kepler in the GitLab OAuth window that opens.
 4. After authorization, GitLab is now connected in **Provider Integrations**.
 
-<figure>
-  <img src="/wp-content/uploads/gitlab-integration-connected.png" class="help-center-img img-bordered" alt="GitLab shown as connected in Kepler Provider Integrations settings">
-  <figcaption style="text-align:center; color:#888">GitLab connected in Kepler Integrations</figcaption>
-</figure>
 
 ***
 
@@ -128,10 +123,6 @@ Connect GitLab Self-Managed using a personal access token to create Kepler Tasks
 4. Paste your **Personal Access Token**.
 5. Click **Save**.
 
-<figure>
-  <img src="/wp-content/uploads/gitlab-self-managed-integration.png" class="help-center-img img-bordered" alt="GitLab Self-Managed connection form in Kepler showing host URL and token fields">
-  <figcaption style="text-align:center; color:#888">GitLab Self-Managed connection form in Kepler</figcaption>
-</figure>
 
 ***
 
@@ -150,10 +141,6 @@ Connect Bitbucket to create Kepler Tasks from Bitbucket pull requests.
 3. Authorize Kepler in the Bitbucket OAuth window that opens.
 4. After authorization, Bitbucket is now connected in **Provider Integrations**.
 
-<figure>
-  <img src="/wp-content/uploads/bitbucket-integration-connected.png" class="help-center-img img-bordered" alt="Bitbucket shown as connected in Kepler Provider Integrations settings">
-  <figcaption style="text-align:center; color:#888">Bitbucket connected in Kepler Integrations</figcaption>
-</figure>
 
 ***
 
@@ -172,9 +159,5 @@ Connect Azure DevOps to create Kepler Tasks from Azure DevOps pull requests.
 3. Authorize Kepler in the Azure DevOps OAuth window that opens.
 4. After authorization, Azure DevOps is now connected in **Provider Integrations**.
 
-<figure>
-  <img src="/wp-content/uploads/azure-devops-integration-connected.png" class="help-center-img img-bordered" alt="Azure DevOps shown as connected in Kepler Provider Integrations settings">
-  <figcaption style="text-align:center; color:#888">Azure DevOps connected in Kepler Integrations</figcaption>
-</figure>
 
 ---

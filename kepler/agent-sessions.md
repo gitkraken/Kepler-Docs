@@ -59,6 +59,11 @@ You can change **Mode**, **Model**, and **Effort Level** on any individual messa
 
 ## Using the console to direct agents
 
+<figure>
+  <img src="/wp-content/uploads/direct-agent-from-console.png" class="help-center-img img-bordered" alt="Kepler agent session console showing a task list on the left, an active session tab with agent output in the center, and the console input bar at the bottom with Mode, Model, and Effort selectors">
+  <figcaption style="text-align:center; color:#888">The agent console. Type instructions in the input bar at the bottom and read agent output in the center panel.</figcaption>
+</figure>
+
 Use the console to send instructions and read agent output. Each session opens in its own tab.
 
 ### Session tabs
@@ -77,7 +82,7 @@ The input bar at the bottom of the console has these controls:
 
 | Control | What it does |
 |---|---|
-| 🎤 **Mic** | Voice input |
+| 🎤 **Mic** | Voice input — see [Voice Input](/kepler/settings#voice-input) to enable and configure |
 | 📎 **Attachment** | Attach a file for the agent to reference |
 | **Mode** dropdown | Override the mode for this message only |
 | **Model** dropdown | Override the model for this message only |

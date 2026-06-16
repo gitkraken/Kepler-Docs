@@ -19,7 +19,12 @@ taxonomy:
 ---
 <kbd>Last updated: June 2026</kbd>
 
-**Kepler**, GitKraken's **Agentic Development Environment** (**ADE**), has three views for managing **Tasks**, **worktrees**, and **agent sessions**. Switch between them using the top navigation bar.
+Kepler has three views for working with your Tasks. Use the **List**, **Kanban**, and **Console** toggle at the top of the screen to switch between them.
+
+<figure>
+  <img src="/wp-content/uploads/workflow-views.png" class="help-center-img img-bordered" alt="The Kepler view switcher showing List, Kanban, and Console tabs in the top center of the screen">
+  <figcaption style="text-align:center; color:#888">The List, Kanban, and Console view switcher.</figcaption>
+</figure>
 
 ## Choosing a View
 
@@ -34,6 +39,11 @@ Choose based on what you're doing.
 ***
 
 ## List View
+
+<figure>
+  <img src="/wp-content/uploads/list-view-sessions.png" class="help-center-img img-bordered" alt="Kepler List view showing the task and worktree sidebar on the left and an active agent session in the center panel with tool call rows marked Completed and an agent response below">
+  <figcaption style="text-align:center; color:#888">List view with the task sidebar on the left and an active agent session in the center panel.</figcaption>
+</figure>
 
 List view shows a single worktree's changes, agent session, and commit history.
 
@@ -55,11 +65,11 @@ Use the **Filter/search bar** to narrow the list by Task or worktree name.
 
 Click a worktree to open its diff and commit history in the center and right panels. The breadcrumb at the top of the center panel shows **Task name → worktree name**.
 
-### Center Panel — Diff View
+### Center Panel
 
-The diff panel shows the file changes for the selected worktree.
+By default, the center panel shows the agent session chat for the selected worktree. Click a file in the right panel to open the diff view for that file.
 
-Each file shows its path and `+/-` line stats. Use the **Stacked/Split** toggle to switch between unified and side-by-side diff layouts. Unmodified sections are collapsed by default; click to expand them. Added lines appear in green; removed lines appear in red.
+In the diff view, each file shows its path and `+/-` line stats. Use the **Stacked/Split** toggle to switch between unified and side-by-side diff layouts. Unmodified sections are collapsed by default; click to expand them. Added lines appear in green; removed lines appear in red.
 
 To return to the agent session from the diff view, click **Back to session** (×).
 
@@ -93,6 +103,8 @@ Worktrees move across four columns as work progresses:
 2. **In Development**
 3. **In Review**
 4. **Done**
+
+Kepler advances the stage automatically based on what the agent is doing. For example, when Kepler detects a pull request, the worktree moves to **In Review** automatically.
 
 Each column header displays the number of worktrees currently in that stage.
 

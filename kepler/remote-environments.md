@@ -19,7 +19,13 @@ taxonomy:
 ---
 <kbd>Last updated: June 2026</kbd>
 
+
 Kepler (GitKraken's Agentic Development Environment, or ADE) covers two remote scenarios. First, you can run Tasks on a remote machine or WSL environment when you need more compute or a Linux runtime. Second, you can expose Kepler over the network to access it from another device.
+
+<figure>
+  <img src="/wp-content/uploads/remote-access.png" class="help-center-img img-bordered" alt="The Remote Access settings panel in Kepler showing Remote Access Inactive with a Start button, and Port, Host, and URL Override fields below">
+  <figcaption style="text-align:center; color:#888">The Remote Access settings panel. Set the port, host, and optional URL Override, then click <strong>Start</strong>.</figcaption>
+</figure>
 
 ***
 
@@ -123,10 +129,6 @@ Kepler displays a QR code. Scan it with a mobile device or secondary machine to 
 
 The QR code encodes the access URL based on the auto-detected address, or the **URL Override** if one is set. Scan the code from any device on the same network to open Kepler in a browser.
 
-<figure>
-  <img src="..." class="help-center-img img-bordered" alt="Kepler Remote Access settings panel showing port, host, URL Override fields, and a QR code">
-  <figcaption style="text-align:center; color:#888">Remote Access settings with QR code displayed after clicking Start.</figcaption>
-</figure>
 
 ### Expose Kepler Outside the Local Network with ngrok
 
