@@ -135,22 +135,44 @@ Use this when starting a PR review or having an agent address open review commen
 
 ### Launching Tasks from a single PR
 
-1. Select the PR.
-2. In the Task preview, confirm the repo and the worktree branch Kepler will create (e.g., "Worktree will be created on `new-example-page`").
-3. Set **Agent**, **Mode**, **Model**, and **Effort** in the bottom bar.
-4. Click **Launch task**.
+1. Click **+ New task**.
 
-Kepler infers **"Address feedback"** as the agent's starting instruction from the PR diff, description, and open comments.
+<figure>
+  <img src="/wp-content/uploads/new-task.png" class="help-center-img img-bordered" alt="The + New task button in the Kepler top navigation bar, highlighted with a teal border">
+  <figcaption style="text-align:center; color:#888">Click <strong>+ New task</strong> to open the Task Launcher.</figcaption>
+</figure>
+
+2. Click **Start from pull requests** and select a PR from your connected providers, or paste a URL directly.
+
+<figure>
+  <img src="/wp-content/uploads/select-pr-task.png" class="help-center-img img-bordered" alt="The Start from pull requests tab showing a search bar and a list of open pull requests from connected providers">
+  <figcaption style="text-align:center; color:#888">Select a PR from your connected providers or paste a URL into the search bar.</figcaption>
+</figure>
+
+3. Before you launch, pick a mode:
+   - **Review** — the agent analyzes the changes and suggests improvements.
+   - **Address feedback** — the agent reads the review comments and applies the ones that make sense.
+
+<figure>
+  <img src="/wp-content/uploads/review-or-address-pr-feedback.png" class="help-center-img img-bordered" alt="The agent mode dropdown on a PR Task row showing Review (Analyze the changes and suggest improvements) and Address feedback (Triage the feedback and apply what is warranted) options">
+  <figcaption style="text-align:center; color:#888">Pick <strong>Review</strong> for a second set of eyes, or <strong>Address feedback</strong> to have the agent handle waiting comments.</figcaption>
+</figure>
+
+4. In the Task preview, confirm the repo and the worktree branch Kepler will create (e.g., "Worktree will be created on `new-example-page`").
+5. Set **Agent**, **Model**, and **Effort** in the bottom bar.
+6. Click **Launch task**.
 
 ### Launching Tasks from multiple PRs
 
-1. Select two or more PRs. Two options appear:
+1. Click **+ New task**, then click **Start from pull requests**.
+2. Select two or more PRs. Two options appear:
    - **Split into N tasks** — creates one Task per PR. Use this when each PR represents independent work.
    - **Group as 1 task** — places all PRs under a single Task. Use this when the PRs are related and you want a single agent to work across them.
-2. Choose your grouping option.
-3. Confirm the per-task repo selector in each Task preview row.
-4. Set **Agent**, **Mode**, **Model**, and **Effort** in the bottom bar. The summary shows "N PRs → N tasks."
-5. Click **Launch task**.
+3. Choose your grouping option.
+4. Pick a **mode** (Review or Address feedback) for each Task row.
+5. Confirm the per-task repo selector in each Task preview row.
+6. Set **Agent**, **Model**, and **Effort** in the bottom bar. The summary shows "N PRs → N tasks."
+7. Click **Launch task**.
 
 <figure>
   <img src="/wp-content/uploads/start-task-from-PR.png" class="help-center-img img-bordered" alt="The Start from pull requests tab with two PRs selected, showing Split into 2 tasks and Group as 1 task options, two Task preview rows each showing the repo and the worktree branch Kepler will create, and the bottom bar showing 2 PRs → 2 tasks and the Launch 2 tasks button">
