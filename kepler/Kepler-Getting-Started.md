@@ -73,27 +73,42 @@ Sign in with your [GitKraken account](https://gitkraken.dev) when prompted on fi
 
 Connect at least one coding agent in **Settings → Agents**. For supported agents and connection steps, see [Agent Integrations](/kepler/agent-integrations).
 
+<figure>
+  <img src="/wp-content/uploads/agent-settings.png" class="help-center-img img-bordered" alt="The Agents section in Kepler Settings showing GitHub Copilot, Cursor CLI, and OpenCode entries each with a Not installed status, an Install button, a Binary path row, and a Re-scan and Custom path option">
+  <figcaption style="text-align:center; color:#888">Settings → Agents. Each agent shows its binary status. Click <strong>Install</strong> or <strong>Custom path…</strong> to point Kepler to an existing installation.</figcaption>
+</figure>
+
 ### 3. Connect issue & PR trackers
 
 Connect your issue tracker and Git hosting provider in **Settings → Provider Integrations**. For setup steps, see [Issue Tracker Integrations](/kepler/issue-tracker-integrations) and [Pull Request Integrations](/kepler/pull-request-integrations).
 
-### 4. Set a default repositories folder
+<figure>
+  <img src="/wp-content/uploads/provider-integrations.png" class="help-center-img img-bordered" alt="The Provider Integrations section in Kepler Settings listing Azure DevOps, Bitbucket, GitHub, GitHub Enterprise, GitLab, GitLab Self-Hosted, Jira, Linear, and Trello, each with a Connect or Reconnect button">
+  <figcaption style="text-align:center; color:#888">Settings → Provider Integrations. Connected providers show a <strong>Reconnect</strong> button; others show <strong>Connect</strong>.</figcaption>
+</figure>
 
-Set the directory where Kepler clones and stores repositories. Everything else depends on this path being set.
+### 4. Set default folder locations
 
-1. Open **Settings** and navigate to **General**.
-2. Under **Default Repositories Folder**, click the folder icon and select a directory.
-3. Click **Save**.
+Open **Settings → General** and set both paths before creating your first Task.
 
-### 5. Set a default worktree folder
+- **Default Repositories Folder** — where Kepler clones repos. Every Task that references a repo not already on disk will clone it here.
+- **Default Worktrees Folder** — where Kepler creates Git worktrees. Kepler creates one worktree per Task per repo.
 
-Set the directory where Kepler creates new worktrees. Kepler creates one worktree per Task per repo.
+Click the folder icon next to each field to browse, or type a path directly. The worktree path supports placeholders:
 
-1. Open **Settings** and navigate to **General**.
-2. Under **Default Worktrees Folder**, click the folder icon and select a directory, or type a path using the available placeholders.
-3. Click **Save**.
+| Placeholder | Value |
+|---|---|
+| `<REPOSITORY_PATH>` | Main repo folder |
+| `<REPOSITORY_NAME>` | Repo name |
+| `<SOURCE_PATH>` | Files source (main repo, or the source worktree when forking) |
+| `<WORKTREE_PATH>` | The new worktree folder |
 
-For placeholder options and path examples, see [Environment and Setup](/kepler/environment-and-setup).
+Commands run inside the new worktree folder using your default login shell, so there's no need to `cd` into it and tools configured in your shell profile (e.g. `nvm`) are available.
+
+<figure>
+  <img src="/wp-content/uploads/default-locations.png" class="help-center-img img-bordered" alt="Settings → General showing Default Repositories Folder set to /Users/jonathansilva/kepler/repositories and Default Worktrees Folder set to /Users/jonathansilva/worktrees, both highlighted with a teal dashed border, and a Placeholders table below listing REPOSITORY_PATH, REPOSITORY_NAME, SOURCE_PATH, and WORKTREE_PATH">
+  <figcaption style="text-align:center; color:#888">Settings → General. Set both folder paths before launching your first Task.</figcaption>
+</figure>
 
 Expanding **More setup options** in the checklist reveals two additional optional items:
 
