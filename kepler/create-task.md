@@ -120,6 +120,13 @@ Kepler creates one Task per selected issue and passes the issue title, descripti
   <figcaption style="text-align:center; color:#888">Selecting an issue to launch as a Task. The preview row lets you set the repo, worktree type, and base branch before launching.</figcaption>
 </figure>
 
+When multiple issues are selected, the **Split into N tasks** and **Group as 1 task** buttons appear above the Task preview rows. Use the bottom bar to configure the agent, model, mode, and effort for all Tasks at once before launching.
+
+<figure>
+  <img src="/wp-content/uploads/set-modes-create-from-issues.png" class="help-center-img img-bordered" alt="Three issues selected in the Start from issues tab, showing Split into 3 tasks and Group as 1 task buttons highlighted, the Mode dropdown open with Auto, Default, Accept Edits, Plan Mode, and Don't Ask options, and the bottom bar showing Claude Code as the agent and 3 issues → 3 tasks with a Launch 3 tasks button">
+  <figcaption style="text-align:center; color:#888">With multiple issues selected, choose to split or group them, then configure the agent, mode, model, and effort before launching.</figcaption>
+</figure>
+
 ### Supported issue trackers
 
 GitHub Issues, GitHub Enterprise, GitLab, GitLab Self-Hosted, Jira, Linear, Trello, Azure DevOps.
