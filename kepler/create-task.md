@@ -95,14 +95,23 @@ Start here when you have a clear goal and no existing issue or PR to pull contex
 
 Use this path to have Kepler pass issue context (title, description, and metadata) to the agent automatically.
 
+Click **+ New task**, then select the **Start from issues** tab.
+
+<figure>
+  <img src="/wp-content/uploads/start-from-issues-selection.png" class="help-center-img img-bordered" alt="The Task Launcher showing three tabs — Start a task, Start from issues (highlighted with a teal border, showing 22 issues), and Start from pull requests — with an issue list and filter bar below">
+  <figcaption style="text-align:center; color:#888">Click <strong>Start from issues</strong> to browse or search your connected issue trackers.</figcaption>
+</figure>
 
 ### Launching Tasks from issues
 
 1. Select one or more issues.
-2. In the Task preview row, confirm or change the **repo**, **worktree type**, and **base branch** for each Task.
-3. Click **+ Add repo** on any Task row to span that Task across multiple repos.
-4. Set **Agent**, **Mode**, **Model**, and **Effort** in the bottom bar. These settings apply to all Tasks being launched.
-5. Review the summary (e.g., "3 issues → 3 tasks"), then click **Launch task**.
+2. If you selected multiple issues, choose how to group them:
+   - **Split into N tasks** — creates one Task per issue. Use this when each issue represents independent work.
+   - **Group as 1 task** — places all issues under a single Task. Use this when the issues are related and you want one agent to work across them.
+3. In the Task preview row, confirm or change the **repo**, **worktree type**, and **base branch** for each Task.
+4. Click **+ Add repo** on any Task row to span that Task across multiple repos.
+5. Set **Agent**, **Mode**, **Model**, and **Effort** in the bottom bar. These settings apply to all Tasks being launched.
+6. Review the summary (e.g., "3 issues → 3 tasks"), then click **Launch task**.
 
 Kepler creates one Task per selected issue and passes the issue title, description, and metadata to the agent when the session starts.
 
