@@ -36,6 +36,13 @@ Connecting an issue tracker lets you create a Kepler **Task**, the core unit of 
 | GitLab Self-Hosted Issues | Personal Access Token | Yes |
 | Azure DevOps | OAuth 2.0 | No |
 
+All providers are configured in **Settings → Provider Integrations**.
+
+<figure>
+  <img src="/wp-content/uploads/provider-integrations.png" class="help-center-img img-bordered" alt="The Provider Integrations section in Kepler Settings listing Azure DevOps, Bitbucket, GitHub, GitHub Enterprise, GitLab, GitLab Self-Hosted, Jira, Linear, and Trello, each with a Connect or Reconnect button">
+  <figcaption style="text-align:center; color:#888">Settings → Provider Integrations. Connected providers show a <strong>Reconnect</strong> button; unconnected providers show <strong>Connect</strong>.</figcaption>
+</figure>
+
 ***
 
 ## Jira
