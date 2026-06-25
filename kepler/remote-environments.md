@@ -123,16 +123,20 @@ Navigate to **Settings → Remote Access** to configure the server before starti
 2. Review the port, host, and URL Override settings.
 3. Click **Start**.
 
-Kepler displays a QR code. Scan it with a mobile device or secondary machine to open the Kepler UI in a browser.
+Kepler shows **Remote Access Active** and generates an **Access URL** with a QR code. The URL includes a bootstrap token (e.g. `?bootstrap=…`) that scopes access to this session. Scan the QR code with your phone camera or copy the URL to open Kepler in a browser on another device.
+
+<figure>
+  <img src="/wp-content/uploads/remote-access-active.png" class="help-center-img img-bordered" alt="The Remote Access settings panel in Kepler showing Remote Access Active with a Stop button, Port set to 3000, Host set to 0.0.0.0, a URL Override field with placeholder text, and an Access URL section showing a QR code with the label 'Scan with your phone camera to open' and the full bootstrap URL below it with a copy button">
+  <figcaption style="text-align:center; color:#888">Remote Access active. Scan the QR code with your phone camera or click the copy button to grab the access URL.</figcaption>
+</figure>
 
 ### Connect via QR Code
 
-The QR code encodes the access URL based on the auto-detected address, or the **URL Override** if one is set. Scan the code from any device on the same network to open Kepler in a browser.
-
+The QR code encodes the access URL based on the auto-detected address, or the **URL Override** if one is set. Scan the code from any device on the same network to open Kepler in a browser — including your phone. This lets you check Task progress, read agent output, and give direction from wherever you are without sitting at your desk.
 
 ### Expose Kepler Outside the Local Network with ngrok
 
-To access Kepler from outside your local network, use a tunneling tool such as ngrok.
+To access Kepler from outside your local network — for example, to monitor running Tasks from your phone while away from the office — use a tunneling tool such as ngrok.
 
 1. Install ngrok and authenticate it with your ngrok account.
 2. Start Kepler's Remote Access server (see above).
@@ -149,9 +153,7 @@ The QR code now encodes the ngrok URL, and Kepler is accessible from any device 
 
 ### Security Considerations
 
-By default, Kepler's Remote Access server does not require authentication. Anyone who can reach the server URL can access your Kepler instance.
-
-<!-- TODO: confirm with engineering — is any authentication or token-based access available for Remote Access? -->
+Kepler's access URL includes a session-scoped bootstrap token, so anyone who connects must use the full URL — guessing the address alone is not enough. That said, anyone with the URL can access your Kepler instance, so treat it like a credential.
 
 To limit who can connect:
 
