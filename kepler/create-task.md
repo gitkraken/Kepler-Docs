@@ -135,12 +135,19 @@ For integration setup, see [Issue Tracker Integrations](issue-tracker-integratio
 
 ### Finding an issue
 
-Use the search bar to find issues by title or by pasting a URL. Use the filter bar to narrow results:
+Type in the search bar to filter issues by title, or **paste an issue URL directly** to jump straight to a specific issue.
+
+<figure>
+  <img src="/wp-content/uploads/select-issues-or-enter-URL.png" class="help-center-img img-bordered" alt="The Start from issues tab showing the search bar highlighted with a teal dashed border and labeled 'Search issues or paste a URL…', with a filter bar below and a list of issues with checkboxes, several already checked">
+  <figcaption style="text-align:center; color:#888">Search by title or paste an issue URL to find a specific issue. Check multiple issues to launch them as separate Tasks at once.</figcaption>
+</figure>
+
+Use the filter bar to narrow results further:
 
 - **Assigned to me / All visible** toggle
 - **Provider** — filter by issue tracker
 - **Repo** — filter by repository
-- **Hide tasked** — hides issues that already have an active Task
+- **Show tasked** — shows issues that already have an active Task (hidden by default)
 
 ***
 
