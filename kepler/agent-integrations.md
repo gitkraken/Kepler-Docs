@@ -42,7 +42,7 @@ Each connected agent runs as an **agent session** inside a **Task**. A Task is t
 
 ***
 
-## <img src="/wp-content/uploads/claude-kepler.svg" class="img-responsive" style="width:20px; height:20px; object-fit:contain; vertical-align:middle; margin-right:8px;" alt=""> Claude Code
+## Claude Code
 
 Claude Code is Anthropic's coding agent. Kepler launches it as an agent session inside a Task and passes Task context and repo state automatically at session start.
 
@@ -84,7 +84,7 @@ Ensure the user running Kepler has read and execute access to the Claude Code bi
 
 ***
 
-## <img src="/wp-content/uploads/codex-kepler.svg" class="img-responsive" style="width:20px; height:20px; object-fit:contain; vertical-align:middle; margin-right:8px;" alt=""> Codex CLI
+## Codex CLI
 
 Codex CLI is OpenAI's coding agent. Kepler connects to it as an agent session inside a Task and passes Task context and repo access automatically.
 
@@ -124,7 +124,7 @@ Ensure the user running Kepler has read and execute access to the Codex binary a
 
 ***
 
-## <img src="/wp-content/uploads/copilot-kepler.svg" class="img-responsive" style="width:20px; height:20px; object-fit:contain; vertical-align:middle; margin-right:8px;" alt=""> Copilot CLI
+## Copilot CLI
 
 Copilot CLI is GitHub's coding agent. Kepler connects to it as an agent session and passes Task context and repo access at session start.
 
@@ -154,7 +154,7 @@ Ensure the user running Kepler has read and execute access to the `gh` binary an
 
 ***
 
-## <img src="/wp-content/uploads/cursor-kepler.svg" class="img-responsive" style="width:20px; height:20px; object-fit:contain; vertical-align:middle; margin-right:8px;" alt=""> Cursor
+## Cursor
 
 Cursor is an AI code editor with a built-in coding agent. Kepler connects to Cursor's agent and runs it as an agent session inside a Task.
 
@@ -179,7 +179,7 @@ Confirm Cursor is installed and that the `cursor` binary is accessible. Enter th
 
 ***
 
-## <img src="/wp-content/uploads/opencode-kepler.svg" class="img-responsive" style="width:20px; height:20px; object-fit:contain; vertical-align:middle; margin-right:8px;" alt=""> OpenCode
+## OpenCode
 
 OpenCode is an open-source, model-agnostic coding agent. It runs any model through a unified interface. Use OpenCode when you need a model that Claude Code, Codex CLI, or Copilot CLI do not offer.
 
