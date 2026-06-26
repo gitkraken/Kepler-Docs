@@ -34,15 +34,15 @@ Each connected agent runs as an **agent session** inside a **Task**. A Task is t
 
 | Agent | Description | Prerequisites | Status |
 |---|---|---|---|
-| Claude Code | Anthropic's coding agent | Claude Code installed and configured locally | Supported |
-| Codex CLI | OpenAI's coding agent | Codex CLI installed and configured locally | Supported |
-| Copilot CLI | GitHub's coding agent | Copilot CLI installed and authorized with a GitHub account | Supported |
-| Cursor | AI code editor with built-in agent | Cursor installed | Supported |
-| OpenCode | Open-source, model-agnostic coding agent | OpenCode installed; API key for your chosen model | Supported |
+| <img src="/wp-content/uploads/claude.svg" width="16" height="16" style="vertical-align:middle; margin-right:4px;" alt=""> Claude Code | Anthropic's coding agent | Claude Code installed and configured locally | Supported |
+| <img src="/wp-content/uploads/codex.svg" width="16" height="16" style="vertical-align:middle; margin-right:4px;" alt=""> Codex CLI | OpenAI's coding agent | Codex CLI installed and configured locally | Supported |
+| <img src="/wp-content/uploads/copilot.svg" width="16" height="16" style="vertical-align:middle; margin-right:4px;" alt=""> Copilot CLI | GitHub's coding agent | Copilot CLI installed and authorized with a GitHub account | Supported |
+| <img src="/wp-content/uploads/cursor.svg" width="16" height="16" style="vertical-align:middle; margin-right:4px;" alt=""> Cursor | AI code editor with built-in agent | Cursor installed <!-- TODO: confirm with engineering: auth or API key requirements --> | Supported |
+| <img src="/wp-content/uploads/opencode.svg" width="16" height="16" style="vertical-align:middle; margin-right:4px;" alt=""> OpenCode | Open-source, model-agnostic coding agent | OpenCode installed; API key for your chosen model | Supported |
 
 ***
 
-## Claude Code
+## <img src="/wp-content/uploads/claude.svg" width="20" height="20" style="vertical-align:middle; margin-right:8px;" alt=""> Claude Code
 
 Claude Code is Anthropic's coding agent. Kepler launches it as an agent session inside a Task and passes Task context and repo state automatically at session start.
 
@@ -84,7 +84,7 @@ Ensure the user running Kepler has read and execute access to the Claude Code bi
 
 ***
 
-## Codex CLI
+## <img src="/wp-content/uploads/codex.svg" width="20" height="20" style="vertical-align:middle; margin-right:8px;" alt=""> Codex CLI
 
 Codex CLI is OpenAI's coding agent. Kepler connects to it as an agent session inside a Task and passes Task context and repo access automatically.
 
@@ -124,7 +124,7 @@ Ensure the user running Kepler has read and execute access to the Codex binary a
 
 ***
 
-## Copilot CLI
+## <img src="/wp-content/uploads/copilot.svg" width="20" height="20" style="vertical-align:middle; margin-right:8px;" alt=""> Copilot CLI
 
 Copilot CLI is GitHub's coding agent. Kepler connects to it as an agent session and passes Task context and repo access at session start.
 
@@ -154,7 +154,7 @@ Ensure the user running Kepler has read and execute access to the `gh` binary an
 
 ***
 
-## Cursor
+## <img src="/wp-content/uploads/cursor.svg" width="20" height="20" style="vertical-align:middle; margin-right:8px;" alt=""> Cursor
 
 Cursor is an AI code editor with a built-in coding agent. Kepler connects to Cursor's agent and runs it as an agent session inside a Task.
 
@@ -179,7 +179,7 @@ Confirm Cursor is installed and that the `cursor` binary is accessible. Enter th
 
 ***
 
-## OpenCode
+## <img src="/wp-content/uploads/opencode.svg" width="20" height="20" style="vertical-align:middle; margin-right:8px;" alt=""> OpenCode
 
 OpenCode is an open-source, model-agnostic coding agent. It runs any model through a unified interface. Use OpenCode when you need a model that Claude Code, Codex CLI, or Copilot CLI do not offer.
 
