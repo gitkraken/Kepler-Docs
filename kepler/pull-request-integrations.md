@@ -63,7 +63,7 @@ Connect GitHub to create Kepler Tasks from GitHub pull requests.
 1. In Kepler, open **Settings** and navigate to **Provider Integrations**.
 2. Under **GitHub**, click **Connect**.
 3. Authorize Kepler in the GitHub OAuth window that opens.
-4. After authorization, GitHub is now connected in **Provider Integrations**.
+4. Kepler shows GitHub as connected in **Provider Integrations**.
 
 
 ***
@@ -101,7 +101,7 @@ Connect GitLab to create Kepler Tasks from GitLab merge requests.
 1. In Kepler, open **Settings** and navigate to **Provider Integrations**.
 2. Under **GitLab**, click **Connect**.
 3. Authorize Kepler in the GitLab OAuth window that opens.
-4. After authorization, GitLab is now connected in **Provider Integrations**.
+4. Kepler shows GitLab as connected in **Provider Integrations**.
 
 
 ***
@@ -139,7 +139,7 @@ Connect Bitbucket to create Kepler Tasks from Bitbucket pull requests.
 1. In Kepler, open **Settings** and navigate to **Provider Integrations**.
 2. Under **Bitbucket**, click **Connect**.
 3. Authorize Kepler in the Bitbucket OAuth window that opens.
-4. After authorization, Bitbucket is now connected in **Provider Integrations**.
+4. Kepler shows Bitbucket as connected in **Provider Integrations**.
 
 
 ***
@@ -157,7 +157,7 @@ Connect Azure DevOps to create Kepler Tasks from Azure DevOps pull requests.
 1. In Kepler, open **Settings** and navigate to **Provider Integrations**.
 2. Under **Azure DevOps**, click **Connect**.
 3. Authorize Kepler in the Azure DevOps OAuth window that opens.
-4. After authorization, Azure DevOps is now connected in **Provider Integrations**.
+4. Kepler shows Azure DevOps as connected in **Provider Integrations**.
 
 
 ---

@@ -20,7 +20,10 @@ taxonomy:
 <kbd>Last updated: June 2026</kbd>
 
 
-Kepler (GitKraken's Agentic Development Environment, or ADE) covers two remote scenarios. First, you can run Tasks on a remote machine or WSL environment when you need more compute or a Linux runtime. Second, you can expose Kepler over the network to access it from another device.
+Kepler covers two remote scenarios:
+
+- Run Tasks on a remote machine or WSL environment when you need more compute or a Linux runtime.
+- Expose Kepler over the network to access it from another device.
 
 <figure>
   <img src="/wp-content/uploads/remote-access.png" class="help-center-img img-bordered" alt="The Remote Access settings panel in Kepler showing Remote Access Inactive with a Start button, and Port, Host, and URL Override fields below">

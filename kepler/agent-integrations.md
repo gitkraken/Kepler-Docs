@@ -70,7 +70,7 @@ When you start a Claude Code agent session inside a Task, Kepler automatically p
 - The repo path and the Task's dedicated worktree.
 - Branch context so the agent commits to the correct branch.
 
-You do not need to re-describe your Task to the agent manually.
+Kepler passes the context automatically — no manual re-description needed.
 
 ### Verification and troubleshooting
 

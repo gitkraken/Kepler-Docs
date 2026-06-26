@@ -50,7 +50,7 @@ Kepler gives you three starting points depending on where your work lives:
 
 ***
 
-## Creating a Task from scratch
+## Create a Task from scratch
 
 Start here when you have a clear goal and no existing issue or PR to pull context from.
 
@@ -91,7 +91,7 @@ Start here when you have a clear goal and no existing issue or PR to pull contex
 
 ***
 
-## Creating a Task from an issue
+## Create a Task from an issue
 
 Use this path to have Kepler pass issue context (title, description, and metadata) to the agent automatically.
 
@@ -160,7 +160,7 @@ Use the filter bar to narrow results further:
 
 ***
 
-## Creating a Task from a pull request
+## Create a Task from a pull request
 
 Use this when starting a PR review or having an agent address open review comments.
 
@@ -254,11 +254,11 @@ To manage shared context:
 
 ***
 
-## Managing Tasks
+## Manage Tasks
 
 ### Session status vs. Task stage
 
-**Task stage** is the Kanban column the Task occupies (Exploration → In Development → In Review → Done). Kepler advances the stage automatically based on agent activity — you cannot move it manually. **Session status** is the real-time state of an individual agent session.
+**Task stage** is the Kanban column the Task occupies. It progresses through Exploration, In Development, In Review, and Done. Kepler advances the stage automatically based on agent activity — you cannot move it manually. **Session status** is the real-time state of an individual agent session.
 
 | Status | Meaning |
 |---|---|

@@ -88,9 +88,7 @@ The **Language** section sets the display language for Kepler's UI.
 
 ## Keyboard Shortcuts
 
-The table below lists all confirmed shortcuts.
-
-Shortcuts shown are for Mac. The Windows/Linux equivalents substitute **Ctrl** for **⌘** and **Alt** for **⌥** unless noted.
+Kepler supports the following keyboard shortcuts. Shortcuts shown are for macOS. The Windows/Linux equivalents substitute **Ctrl** for **⌘** and **Alt** for **⌥** unless noted.
 
 | Action | Mac | Windows / Linux |
 |--------|-----|-----------------|
@@ -126,7 +124,7 @@ Sets the default directory where Kepler clones new repositories. Click **Browse*
 
 ### Default Worktrees Folder
 
-Sets the default directory for new [worktrees](worktrees.md). Click **Browse** to pick a location. The path supports the following placeholders:
+Sets the default directory for new worktrees. Click **Browse** to pick a location. The path supports the following placeholders:
 
 <figure>
   <img src="/wp-content/uploads/default-locations.png" class="help-center-img img-bordered" alt="Settings → General showing Default Repositories Folder set to /Users/jonathansilva/kepler/repositories and Default Worktrees Folder set to /Users/jonathansilva/worktrees, both highlighted with a teal dashed border, and a Placeholders table below">

@@ -103,7 +103,7 @@ Connect Linear to create Kepler Tasks from Linear issues and pass issue context 
 
 ### What Kepler pulls from Linear
 
-Creating a Task from a Linear issue passes these fields to the agent:
+When you create a Task from a Linear issue, Kepler passes these fields to the agent:
 
 - Issue identifier and title
 - Description (Markdown)
@@ -139,7 +139,7 @@ Connect Trello to create Kepler Tasks from Trello cards and pass card details to
 
 ### What Kepler pulls from Trello
 
-From a Trello card, Kepler passes:
+When you create a Task from a Trello card, Kepler passes these fields to the agent:
 
 - Card name (title)
 - Card description
@@ -175,7 +175,7 @@ Connect GitHub Issues to create Kepler Tasks from GitHub issues and pass issue c
 
 ### What Kepler pulls from GitHub Issues
 
-Kepler reads these fields from the GitHub issue:
+When you create a Task from a GitHub issue, Kepler passes these fields to the agent:
 
 - Issue number and title
 - Body (Markdown)
@@ -242,7 +242,7 @@ Connect GitLab Issues to create Kepler Tasks from GitLab issues and pass issue c
 
 ### What Kepler pulls from GitLab Issues
 
-From a GitLab issue, Kepler passes:
+When you create a Task from a GitLab issue, Kepler passes these fields to the agent:
 
 - Issue IID and title
 - Description (Markdown)
@@ -309,7 +309,7 @@ Connect Azure DevOps to create Kepler Tasks from Azure DevOps work items and pas
 
 ### What Kepler pulls from Azure DevOps
 
-From an Azure DevOps work item, Kepler passes:
+When you create a Task from an Azure DevOps work item, Kepler passes these fields to the agent:
 
 - Work item ID and title
 - Description

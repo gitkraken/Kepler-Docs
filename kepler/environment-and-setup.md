@@ -21,25 +21,15 @@ taxonomy:
 
 ## Overview
 
-Before Kepler's **Tasks** work reliably, three settings must be in place:
+This page covers the three environment settings you must configure before running Tasks, plus the embedded terminal.
 
-- A default repositories folder
-- A default worktrees folder
-- Custom startup commands (for repos that need them)
-
-This page walks through each setting in order and explains the embedded terminal you can use once Tasks are running.
-
-**Task** is the core unit of work in Kepler, GitKraken's Agentic Development Environment (ADE). Each Task holds work across one or more repos and contains worktrees, agent sessions, and changes. Configuring the settings below correctly ensures that every new worktree Kepler creates lands in the right place and starts in a usable state.
-
-***
-
-## Setup Order
-
-Complete these steps in order. Each one depends on the previous.
+Complete these steps in order. Each one depends on the previous:
 
 1. Set the **Default Repositories Folder**.
 2. Set the **Default Worktrees Folder**.
 3. Add custom commands for repos that need them.
+
+Each Task holds work across one or more repos and contains worktrees, agent sessions, and changes. Configuring the settings below correctly ensures that every new worktree Kepler creates lands in the right place and starts in a usable state.
 
 ***
 

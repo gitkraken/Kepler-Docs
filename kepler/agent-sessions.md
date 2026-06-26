@@ -19,7 +19,7 @@ taxonomy:
 ---
 <kbd>Last updated: June 2026</kbd>
 
-An **agent session** is a running coding agent within a Task in Kepler, GitKraken's Agentic Development Environment (ADE). This page covers how to configure a session before it starts, how to direct the agent from the console, and how to review, stage, and commit the changes it produces.
+An **agent session** is a running coding agent within a Task in Kepler. This page covers how to configure a session before it starts, how to direct the agent from the console, and how to review, stage, and commit the changes it produces.
 
 ***
 
@@ -101,7 +101,7 @@ Send a follow-up instruction when you see unexpected output, a tool call error, 
 
 ***
 
-## Reviewing changes: diffs, staging, and commits
+## Review, stage, and commit changes
 
 After the agent runs, open the diff view to inspect what changed, stage files, and commit.
 
@@ -161,7 +161,7 @@ Click **Back to session** to close the diff and return to the agent session cons
 
 ***
 
-## Optional agent features
+## AI Sync (experimental)
 
 Two optional features can be toggled in **Settings → Features**. Both are safe to enable — every operation they perform can be rolled back or undone.
 

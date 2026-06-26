@@ -19,14 +19,14 @@ taxonomy:
 ---
 <kbd>Last updated: June 2026</kbd>
 
-Kepler has three views for working with your Tasks. Use the **List**, **Kanban**, and **Console** toggle at the top of the screen to switch between them.
+This page describes Kepler's three workflow views and when to use each one. Use the **List**, **Kanban**, and **Console** toggle at the top of the screen to switch between them.
 
 <figure>
   <img src="/wp-content/uploads/workflow-views.png" class="help-center-img img-bordered" alt="The Kepler view switcher showing List, Kanban, and Console tabs in the top center of the screen">
   <figcaption style="text-align:center; color:#888">The List, Kanban, and Console view switcher.</figcaption>
 </figure>
 
-## Choosing a View
+## When to use each view
 
 Choose based on what you're doing.
 
@@ -86,8 +86,6 @@ Click any commit to see its full detail: title, description, author, email, time
 ### Create Command
 
 Use the **Create command...** dropdown in the top navigation to create saved command templates.
-
-<!-- TODO: confirm with engineering — exact behavior and availability of "Create command..." -->
 
 ***
 
@@ -178,7 +176,7 @@ Use this section to check staged and unstaged changes without leaving Console vi
 
 ### Conversation Format
 
-Each session column displays the conversation between you and the agent:
+Each column shows your conversation with the agent:
 
 - Your messages appear as chat bubbles.
 - Agent responses appear as formatted markdown.
