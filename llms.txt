@@ -1,0 +1,27 @@
+# Kepler
+
+> Kepler is GitKraken's Agentic Development Environment (ADE) — a task management and Git worktree layer that connects to the coding agent you already use (Claude Code, Codex CLI, Copilot CLI, Cursor, or OpenCode).
+
+Scope: 10 pages included. Excluded: 1 template page (kepler-New-Page-Template.md) with no doc content, 1 repo README.
+
+## Getting Started
+
+- [Getting Started with Kepler](https://help.gitkraken.com/kepler/kepler-getting-started/): Install Kepler, connect your first agent, and create your first Task.
+
+## Core Workflows
+
+- [Create a Task](https://help.gitkraken.com/kepler/create-task/): Learn how to create Tasks in Kepler from scratch, from issues, or from pull requests, and how to manage them through completion.
+- [Agent Sessions](https://help.gitkraken.com/kepler/agent-sessions/): Learn how to configure, direct, and review agent sessions in Kepler, including how to read diffs, stage changes, and commit agent output.
+- [Workflow Views](https://help.gitkraken.com/kepler/workflow-views/): Understand Kepler's three workflow views (List, Kanban, and Console) and when to use each one.
+
+## Integrations
+
+- [Agent Integrations](https://help.gitkraken.com/kepler/agent-integrations/): Connect Claude Code, Codex CLI, Copilot CLI, Cursor, or OpenCode to Kepler and start running agent sessions inside your Tasks.
+- [Issue Tracker Integrations](https://help.gitkraken.com/kepler/issue-tracker-integrations/): Connect your issue tracker to Kepler so you can create Tasks directly from issues and pass issue context to your agents automatically.
+- [Pull Request Integrations](https://help.gitkraken.com/kepler/pull-request-integrations/): Connect your Git hosting platform to Kepler so you can create Tasks directly from pull requests.
+
+## Configuration
+
+- [Environment and Setup](https://help.gitkraken.com/kepler/environment-and-setup/): Configure Kepler's environment settings: repos directory, worktree paths, custom startup commands, and embedded terminals.
+- [Settings](https://help.gitkraken.com/kepler/settings/): A reference for every setting in Kepler, organized by section, plus a complete keyboard shortcut reference.
+- [Remote Environments](https://help.gitkraken.com/kepler/remote-environments/): Run Kepler Tasks on a remote machine via SSH or inside a Windows Subsystem for Linux (WSL) environment, or expose Kepler for remote access using the built-in server.

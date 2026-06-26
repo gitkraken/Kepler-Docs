@@ -1,0 +1,1801 @@
+# Kepler Documentation — llms-full.txt
+Generated: 2026-06-26
+Pages: 10
+Source: https://help.gitkraken.com/kepler/
+
+---
+# Getting Started with Kepler
+URL: https://help.gitkraken.com/kepler/kepler-getting-started/
+product: Kepler
+feature: Getting Started
+content_type: how-to
+audience: developer
+plan_required: all
+status: GA
+last_verified: 2026-06
+
+## What is Kepler?
+Kepler is GitKraken's **Agentic Development Environment** (**ADE**), built for developers directing multiple AI coding agents across multiple repos in parallel.
+
+***
+
+## Install Kepler
+
+Kepler is available for **Windows**, **Mac**, and **Linux**.
+
+| Platform | Installer | Minimum OS |
+|---|---|---|
+| Windows | 64-bit, ARM64 | Windows 10+ |
+| macOS | Apple Silicon, Intel | macOS 12+ |
+| Linux (x64) | .deb, .rpm, .AppImage | Ubuntu LTS 18.04+ / Debian 10+ / RHEL 8+ / Fedora 39+ |
+| Linux (ARM) | .deb, .rpm, .AppImage | Ubuntu LTS 20.04+ / RHEL 8+ / Fedora 39+ |
+
+1. Go to [gitkraken.com/kepler/download](https://www.gitkraken.com/kepler/download) and download the installer for your platform and architecture.
+2. Run the installer and follow the on-screen prompts.
+3. Launch Kepler.
+
+On first open, Kepler displays the **Home** view. No repos or agents are configured yet. The next two sections cover the minimum setup required before creating your first Task.
+
+***
+
+## Complete the setup checklist
+
+Complete all five items in the **Setup** checklist before creating your first Task. Access the checklist from the **Setup** button in the top navigation bar. The checklist shows **Setup · N/5** and turns fully green when all five items are complete.
+
+### 1. Sign in to GitKraken
+
+Sign in with your [GitKraken account](https://gitkraken.dev) when prompted on first launch.
+
+### 2. Connect an AI agent
+
+Connect at least one coding agent in **Settings → Agents**. For supported agents and connection steps, see [Agent Integrations](/kepler/agent-integrations).
+
+### 3. Connect issue & PR trackers
+
+Connect your issue tracker and Git hosting provider in **Settings → Provider Integrations**. For setup steps, see [Issue Tracker Integrations](/kepler/issue-tracker-integrations) and [Pull Request Integrations](/kepler/pull-request-integrations).
+
+### 4. Set default folder locations
+
+Open **Settings → General** and set both paths before creating your first Task.
+
+- **Default Repositories Folder** — where Kepler clones repos. Every Task that references a repo not already on disk will clone it here.
+- **Default Worktrees Folder** — where Kepler creates Git worktrees. Kepler creates one worktree per Task per repo.
+
+Click the folder icon next to each field to browse, or type a path directly. The worktree path supports placeholders:
+
+| Placeholder | Value |
+|---|---|
+| `<REPOSITORY_PATH>` | Main repo folder |
+| `<REPOSITORY_NAME>` | Repo name |
+| `<SOURCE_PATH>` | Files source (main repo, or the source worktree when forking) |
+| `<WORKTREE_PATH>` | The new worktree folder |
+
+Commands run inside the new worktree folder using your default login shell, so there's no need to `cd` into it and tools configured in your shell profile (e.g. `nvm`) are available.
+
+Expand **More setup options** in the checklist to see two optional items:
+
+- **Connect a remote environment** — run Tasks on a remote machine or inside WSL. See [Remote Environments](/kepler/remote-environments).
+- **Control Kepler remotely** — start Kepler's local server to access the UI from another device. See [Remote Environments](/kepler/remote-environments).
+
+***
+
+## Create your first Task
+
+A **Task** is the core unit of work in Kepler. It holds work across one or more repos and contains the **worktrees**, **agent sessions**, and changes that belong to a single unit of work.
+
+This section covers creating a Task from scratch. For all three Task creation methods and full option details, see [Create a Task](/kepler/create-task).
+
+1. Click **+ New task** in the top-right corner to open the Task Launcher.
+2. Under **Repositories**, click **+ Add repo** and select a repository. Kepler clones it into your default repos directory if it is not already present locally.
+3. Enter a **Task Name**.
+4. (Optional) Enter a **Prompt** with starting instructions for the agent.
+5. Select an **Agent** and configure **Model**, **Mode**, and **Effort** as needed.
+6. Click **Launch task**.
+
+Kepler creates an isolated Git worktree for this Task, starts the agent session, and the Task appears in **List** or **Kanban** view.
+
+---
+# Create a Task
+URL: https://help.gitkraken.com/kepler/create-task/
+product: Kepler
+feature: Tasks
+content_type: how-to
+audience: developer
+plan_required: all
+status: GA
+last_verified: 2026-06
+
+## What is a Task?
+
+A **Task** is the core unit of work in Kepler, GitKraken's Agentic Development Environment (ADE). A Task holds work across one or more repos.
+
+Every Task contains:
+
+- One or more **worktrees** — one Git worktree per repo
+- One or more **agent sessions** — running coding agents within the Task
+- A diff and changes view
+- **Shared context** — standing instructions sent to every agent session in the Task
+
+***
+
+## Three ways to create a Task
+
+Kepler gives you three starting points depending on where your work lives:
+
+| Starting point | When to use |
+|---|---|
+| From scratch | You know the goal and don't need to pull context from an existing issue or PR. |
+| From an issue | You want Kepler to pull issue title, description, and metadata into the agent's context automatically. |
+| From a pull request | You want an agent to start a review or address open review comments on an existing PR. |
+
+***
+
+## Create a Task from scratch
+
+Start here when you have a clear goal and no existing issue or PR to pull context from.
+
+1. Click **+ New task**.
+2. Select one or more repos.
+3. Choose **New worktree** or select an existing branch.
+4. Set the base branch using the **From** dropdown. The dropdown is searchable; `origin/main` is labeled **DEFAULT**.
+5. Optionally click **+ Add repo** to include additional repos in the same Task. Each repo gets its own worktree and base branch configuration.
+6. Set **Agent**, **Mode**, **Model**, and **Effort** in the bottom bar.
+7. Click **Launch task**.
+
+### Settings reference
+
+| Setting | What it controls | Default | Options |
+|---|---|---|---|
+| **Repo(s)** | Which repos are included in the Task | — | Any connected repo |
+| **Worktree** | Whether to create a new Git worktree or use an existing branch | New worktree | New worktree, existing branch |
+| **Base branch** | The branch the worktree is created from | `origin/main` | Any branch (searchable) |
+| **Agent** | Which coding agent runs sessions in the Task | — | Configured agents |
+| **Mode** | Agent operating mode | — | Depends on agent |
+| **Model** | The underlying language model the agent uses | — | Available models |
+| **Effort** | How much work the agent does before pausing for review | — | Low, Medium, High |
+
+***
+
+## Create a Task from an issue
+
+Use this path to have Kepler pass issue context (title, description, and metadata) to the agent automatically.
+
+Click **+ New task**, then select the **Start from issues** tab.
+
+### Launching Tasks from issues
+
+1. Select one or more issues.
+2. If you selected multiple issues, choose how to group them:
+   - **Split into N tasks** — creates one Task per issue. Use this when each issue represents independent work.
+   - **Group as 1 task** — places all issues under a single Task. Use this when the issues are related and you want one agent to work across them.
+3. In the Task preview row, confirm or change the **repo**, **worktree type**, and **base branch** for each Task.
+4. Click **+ Add repo** on any Task row to span that Task across multiple repos.
+5. Set **Agent**, **Mode**, **Model**, and **Effort** in the bottom bar. These settings apply to all Tasks being launched.
+6. Review the summary (e.g., "3 issues → 3 tasks"), then click **Launch task**.
+
+Kepler creates one Task per selected issue and passes the issue title, description, and metadata to the agent when the session starts.
+
+When multiple issues are selected, the **Split into N tasks** and **Group as 1 task** buttons appear above the Task preview rows. Use the bottom bar to configure the agent, model, mode, and effort for all Tasks at once before launching.
+
+### Supported issue trackers
+
+Kepler can pull issues from the following trackers:
+
+- GitHub Issues
+- GitHub Enterprise
+- GitLab
+- GitLab Self-Hosted
+- Jira
+- Linear
+- Trello
+- Azure DevOps
+
+For integration setup, see [Issue Tracker Integrations](/kepler/issue-tracker-integrations).
+
+### Finding an issue
+
+Type in the search bar to filter issues by title, or **paste an issue URL directly** to jump straight to a specific issue.
+
+Use the filter bar to narrow results further:
+
+- **Assigned to me / All visible** toggle
+- **Provider** — filter by issue tracker
+- **Repo** — filter by repository
+- **Show tasked** — shows issues that already have an active Task (hidden by default)
+
+***
+
+## Create a Task from a pull request
+
+Use this when starting a PR review or having an agent address open review comments.
+
+### Launching Tasks from a single PR
+
+1. Click **+ New task**.
+2. Click **Start from pull requests** and select a PR from your connected providers, or paste a URL directly.
+3. Before you launch, pick a mode:
+   - **Review** — the agent analyzes the changes and suggests improvements.
+   - **Address feedback** — the agent reads the review comments and applies the ones that make sense.
+4. In the Task preview, confirm the repo and the worktree branch Kepler will create (e.g., "Worktree will be created on `new-example-page`").
+5. Set **Agent**, **Model**, and **Effort** in the bottom bar.
+6. Click **Launch task**.
+
+### Launching Tasks from multiple PRs
+
+1. Click **+ New task**, then click **Start from pull requests**.
+2. Select two or more PRs. Two options appear:
+   - **Split into N tasks** — creates one Task per PR. Use this when each PR represents independent work.
+   - **Group as 1 task** — places all PRs under a single Task. Use this when the PRs are related and you want a single agent to work across them.
+3. Choose your grouping option.
+4. Pick a **mode** (Review or Address feedback) for each Task row.
+5. Confirm the per-task repo selector in each Task preview row.
+6. Set **Agent**, **Model**, and **Effort** in the bottom bar. The summary shows "N PRs → N tasks."
+7. Click **Launch task**.
+
+### Supported PR providers
+
+GitHub, GitHub Enterprise, GitLab, GitLab Self-Managed, Bitbucket, Azure DevOps.
+
+For integration setup, see [Pull Request Integrations](/kepler/pull-request-integrations).
+
+### Finding a pull request
+
+Use the search bar to find PRs by title or by pasting a URL. Use the filter bar to narrow results by **provider**, **repo**, or **Hide tasked**.
+
+***
+
+## Task detail: worktrees, sessions, and shared context
+
+Once a Task is open, the Task header shows the Task name and the total worktree count (e.g., "5 worktrees").
+
+### Worktrees
+
+The **Worktrees** section lists every Git worktree in the Task with its branch name and repo.
+
+### Sessions
+
+The **Sessions** panel lists all agent sessions in the Task. Each entry shows the branch, repo, and a **NEW CONTEXT** badge when there is unread context.
+
+### Shared context
+
+**Shared context** is content you add to a Task that every agent session receives. Use it for standing instructions, style rules, or reference material that all agents should follow.
+
+**Example:** "If a `.md` file has a date stamp, change the date stamp to June 2026." Adding this to shared context means every agent session in the Task follows the rule without you repeating it per session.
+
+To manage shared context:
+
+- Each piece of shared context appears as a **prompt card** showing the prompt text and version number (e.g., "v2").
+- Click **Edit** on a card to update it or **Remove** to delete it.
+- Click **+ Add markdown** to add a new context block.
+
+***
+
+## Manage Tasks
+
+### Session status vs. Task stage
+
+**Task stage** is the Kanban column the Task occupies. It progresses through Exploration, In Development, In Review, and Done. Kepler advances the stage automatically based on agent activity — you cannot move it manually. **Session status** is the real-time state of an individual agent session.
+
+| Status | Meaning |
+|---|---|
+| 🟠 **Needs Attention** | The agent is waiting for your input. |
+| 🟢 **Active** | The agent is running. |
+| ⚫ **Idle** | The session stopped but is not complete. |
+| 🔴 **Errored** | The session hit an error. |
+| ⚫ **Inactive** | The session is not running and has no pending work. |
+| **Disconnected** | The session lost connection to the agent runtime. |
+
+### Notifications
+
+Kepler sends a toast notification when a Task completes or needs attention. The notification shows the Task name, the agent that ran it, and the repo and branch. Click **View** to jump directly to the Task.
+
+### Archiving a Task
+
+Click the **archive icon** on the Task card to archive it. Archived Tasks are removed from the active board.
+
+### Delete a Task
+
+Click the **trash icon** on the Task row to delete it. A **Delete** confirmation tooltip appears before the action completes.
+
+---
+# Agent Sessions
+URL: https://help.gitkraken.com/kepler/agent-sessions/
+product: Kepler
+feature: Agent Sessions
+content_type: how-to
+audience: developer
+plan_required: all
+status: GA
+last_verified: 2026-06
+
+An **agent session** is a running coding agent within a Task in Kepler. This page covers how to configure a session before it starts, how to direct the agent from the console, and how to review, stage, and commit the changes it produces.
+
+***
+
+## Configuring an agent session
+
+When you start a session, you can configure four settings. You can override three of them per message; one is fixed for the life of the session.
+
+| Setting | What it controls | Default | Options |
+|---|---|---|---|
+| **Agent** | Which agent runtime executes the session | — | Claude Code, Codex, Copilot CLI, Cursor, OpenCode |
+| **Mode** | How the agent handles decisions | Default | See Modes below |
+| **Model** | The model powering the agent | Default | Varies by agent |
+| **Effort Level** | How thoroughly the agent reasons | Default | See Effort levels below |
+
+You set **Agent** at session start and cannot change it mid-session. For details on each supported agent runtime, see [Agent Integrations](/kepler/agent-integrations).
+
+You can change **Mode**, **Model**, and **Effort Level** on any individual message from the console input bar without restarting the session.
+
+### Modes
+
+**Mode** controls how the agent handles decisions during a session, from pausing at every decision point to running without interruption.
+
+### Effort levels
+
+**Effort Level** controls how thoroughly the agent reasons before acting. Higher effort produces more thorough results but takes longer.
+
+***
+
+## Using the console to direct agents
+
+Use the console to send instructions and read agent output. Each session opens in its own tab.
+
+### Session tabs
+
+Each session has a tab at the top of the console showing its name (truncated if long). Click **×** to close a tab. Click **+** to open a new session tab. Multiple sessions per worktree can be open simultaneously.
+
+### Reading agent output
+
+- **User messages** appear as chat bubbles.
+- **Agent responses** render as formatted markdown: bold text, inline code, lists, and tables.
+- **Tool calls** (file reads, searches, shell commands) appear as collapsible rows, for example `find /path...`, with a **Completed** badge or an error state. Click **▶** to expand the full tool output.
+
+### Input bar controls
+
+The input bar at the bottom of the console has these controls:
+
+| Control | What it does |
+|---|---|
+| 🎤 **Mic** | Voice input — see [Voice Input](/kepler/settings#voice-input) to enable and configure |
+| 📎 **Attachment** | Attach a file for the agent to reference |
+| **Mode** dropdown | Override the mode for this message only |
+| **Model** dropdown | Override the model for this message only |
+| **Effort** dropdown | Override the effort level for this message only |
+| **N% context usage** | Shows context window consumption as a percentage. Click to see tokens used, context window size, and cost for the session so far. |
+| **↑ Send** | Submit the instruction |
+
+### How to course-correct
+
+Send a follow-up instruction when you see unexpected output, a tool call error, or a **Needs Attention** or **Disconnected** status. You do not need to restart the session.
+
+***
+
+## Review, stage, and commit changes
+
+After the agent runs, open the diff view to inspect what changed, stage files, and commit.
+
+### Opening the diff
+
+Click a worktree in the **List view** sidebar. The diff opens in the center panel.
+
+### Reading the diff
+
+- **File path and +/- line stats** appear at the top of each file's diff.
+- **Stacked vs. Split toggle**: Stacked shows changes top-to-bottom; Split shows them side-by-side.
+- Unmodified sections are collapsed with a line count. Click to expand them.
+- **Red** lines were removed; **green** lines were added.
+
+### Working changes panel
+
+The **Working changes** panel on the right shows uncommitted changes alongside the worktree's recent commit history.
+
+Click any commit in the history to see:
+- Full title and description
+- Author name, email, and timestamp
+- Full commit hash and branch tags
+- Per-file +/- stats with change type (M / A / D)
+
+### Staged files panel
+
+The **STAGED (N)** panel lists files queued for the next commit, where N is the file count. Each entry shows the file path and a change type badge (**M**, **A**, or **D**).
+
+- **Discard All**: discards all staged changes.
+- **Unstage All**: moves all staged files back to unstaged.
+- Click an individual file to view its diff. Per-file controls let you unstage or discard that file individually.
+
+### Changes panel
+
+The **CHANGES (N)** panel lists unstaged files. Each entry shows the file path and a change type badge.
+
+- **Discard All**: discards all unstaged changes.
+- **Stage All**: moves all unstaged files into the staged panel.
+
+### Committing
+
+The agent pre-populates the commit message field. Edit it if needed, then click **Commit** to commit the staged files.
+
+Use **Push**, **Pull**, and **Fetch** from the header bar to sync the current branch without leaving Kepler.
+
+Click **Back to session** to close the diff and return to the agent session console.
+
+***
+
+## AI Sync (experimental)
+
+Two optional features can be toggled in **Settings → Features**. Both are safe to enable — every operation they perform can be rolled back or undone.
+
+**AI Sync** — gives agents tools to rebase or merge with automatic conflict resolution. Enable this when agents are working across branches that need to stay in sync.
+
+**Compose** — gives agents tools to reorganize messy changes into clean, atomic commits. Enable this when you want agent output committed in a structured, reviewable way rather than as a single bulk commit.
+
+For more on these settings, see [Settings](/kepler/settings#features).
+
+---
+# Workflow Views
+URL: https://help.gitkraken.com/kepler/workflow-views/
+product: Kepler
+feature: Workflow Views
+content_type: how-to
+audience: developer
+plan_required: all
+status: GA
+last_verified: 2026-06
+
+This page describes Kepler's three workflow views and when to use each one. Use the **List**, **Kanban**, and **Console** toggle at the top of the screen to switch between them.
+
+## When to use each view
+
+Choose based on what you're doing.
+
+| View | Best for |
+|------|----------|
+| **List** | Reviewing diffs, commits, and file history on one worktree |
+| **Kanban** | Tracking work status across all Tasks |
+| **Console** | Monitoring multiple agent sessions and sending instructions |
+
+***
+
+## List View
+
+List view shows a single worktree's changes, agent session, and commit history.
+
+### Layout
+
+List view has three panels:
+
+- **Left sidebar** — Task and worktree navigation
+- **Center panel** — Diff or agent session
+- **Right panel** — Git history
+
+### Left Sidebar
+
+The sidebar lists all Tasks and their associated worktrees. The **Tasks N** header shows the total Task count.
+
+Tasks appear at the top level. Each Task expands to show its worktrees, labeled with the branch name and repository. A dot indicator on a worktree means it **Needs Attention**.
+
+Use the **Filter/search bar** to narrow the list by Task or worktree name.
+
+Click a worktree to open its diff and commit history in the center and right panels. The breadcrumb at the top of the center panel shows **Task name → worktree name**.
+
+### Center Panel
+
+By default, the center panel shows the agent session chat for the selected worktree. Click a file in the right panel to open the diff view for that file.
+
+In the diff view, each file shows its path and `+/-` line stats. Use the **Stacked/Split** toggle to switch between unified and side-by-side diff layouts. Unmodified sections are collapsed by default; click to expand them. Added lines appear in green; removed lines appear in red.
+
+To return to the agent session from the diff view, click **Back to session** (×).
+
+### Right Panel — Git History
+
+The right panel shows **Working changes** at the top, followed by a list of recent commits.
+
+Click any commit to see its full detail: title, description, author, email, timestamp, hash, branch tags, and a file list with `+/-` stats and `M` / `A` / `D` change indicators.
+
+### Push, Pull, and Fetch
+
+**Push**, **Pull**, and **Fetch** buttons appear in the top-right corner of List view. Use them to sync the current worktree's branch with its remote.
+
+### Create Command
+
+Use the **Create command...** dropdown in the top navigation to create saved command templates.
+
+***
+
+## Kanban View
+
+Kanban view shows every worktree as a card on a board, organized by development stage.
+
+### Board Layout
+
+Worktrees move across four columns as work progresses:
+
+1. **Exploration**
+2. **In Development**
+3. **In Review**
+4. **Done**
+
+Kepler advances the stage automatically based on what the agent is doing. For example, when Kepler detects a pull request, the worktree moves to **In Review** automatically.
+
+Each column header displays the number of worktrees currently in that stage.
+
+### Card Anatomy
+
+Each card represents one worktree and shows:
+
+- Branch name
+- External link (↗) to open the branch in your source host
+- Task name
+- Repository name
+- Session status badge
+- **Open chat** button
+- Archive icon
+- Agent indicator — agent initial, last context snippet, and time since last activity
+- **+ New session** button
+
+If you have not started an agent session, the card shows a **No sessions yet** state. Use **+ New session** to start one.
+
+### Search and Filters
+
+Use the **Search** bar to find worktrees by branch name or Task name.
+
+Use the **Filters** panel to narrow the board by:
+
+- **Status** — filter by session status: Needs Attention, Active, Idle, Errored, or Inactive (all enabled by default).
+- **Repos** — limit results to one or more specific repositories.
+- **Tasks** — filter by Task name; select **No task** to show worktrees not associated with any Task.
+- **Agent** — filter by agent runtime (for example, Claude Code, Codex).
+
+Use the **Sort** control to order cards (for example, **Newest first**).
+
+***
+
+## Console View
+
+Console view shows all active agent sessions side by side.
+
+### Session Column Layout
+
+Each session appears as a column. The Task header shows the session name and a count of active sessions.
+
+Each column header includes:
+
+- Session name (truncated)
+- Repository name
+- Controls: external link (↗), expand, add (+), close (×)
+- Status bar with session index (#1, #2, #3)
+- Status badge
+- Task name
+- Time since last activity
+
+### CHANGES Section
+
+Each session column contains a collapsible **CHANGES N** section, where N is the total number of changed files.
+
+Expand it to see **STAGED** and **UNSTAGED** sub-sections. Each file is listed with its path and a change indicator (`M`, `A`, or `D`).
+
+Use this section to check staged and unstaged changes without leaving Console view. For the full diff or staging controls, switch to List view.
+
+### Conversation Format
+
+Each column shows your conversation with the agent:
+
+- Your messages appear as chat bubbles.
+- Agent responses appear as formatted markdown.
+- Tool calls appear as collapsible rows with a **Completed** badge or an error state.
+
+### Input Bar
+
+The input bar at the bottom of each session column includes:
+
+- Microphone (🎤) for voice input
+- Attachment button
+- **Mode** selector
+- **Model** selector (**Default** recommended)
+- **Effort** selector
+- A usage indicator
+- **Send** button (↑)
+
+You can change Mode, Model, and Effort on a per-message basis.
+
+### Disconnected Sessions
+
+If a session loses connection to its runtime, it appears as disconnected in the column.
+
+### Notifications
+
+When a Task completes or needs attention, a toast notification appears with a **View** button. Click **View** to open the Task.
+
+---
+# Agent Integrations
+URL: https://help.gitkraken.com/kepler/agent-integrations/
+product: Kepler
+feature: Agent Integrations
+content_type: how-to
+audience: developer
+plan_required: all
+status: GA
+last_verified: 2026-06
+
+## Overview
+
+Kepler is GitKraken's **Agentic Development Environment** (ADE), a delivery surface that adds task management and Git worktrees around the coding agent you already use. You do not switch agents to use Kepler; you connect the one you already have.
+
+Each connected agent runs as an **agent session** inside a **Task**. A Task is the core unit of work in Kepler: it holds work across one or more repos, manages a **worktree** (a Git worktree per Task per repo), and tracks all changes produced by the session.
+
+### Supported agents
+
+| Agent | Description | Prerequisites | Status |
+|---|---|---|---|
+| Claude Code | Anthropic's coding agent | Claude Code installed and configured locally | Supported |
+| Codex CLI | OpenAI's coding agent | Codex CLI installed and configured locally | Supported |
+| Copilot CLI | GitHub's coding agent | Copilot CLI installed and authorized with a GitHub account | Supported |
+| Cursor | AI code editor with built-in agent | Cursor installed | Supported |
+| OpenCode | Open-source, model-agnostic coding agent | OpenCode installed; API key for your chosen model | Supported |
+
+***
+
+## Claude Code
+
+Claude Code is Anthropic's coding agent. Kepler launches it as an agent session inside a Task and passes Task context and repo state automatically at session start.
+
+### Prerequisites
+
+- Claude Code must be installed on your local machine.
+- Claude Code must be authenticated with a valid Anthropic API key or Claude.ai account before connecting to Kepler.
+
+### Connect Claude Code to Kepler
+
+1. Open Kepler and navigate to **Settings**.
+2. Select **Agents** from the sidebar.
+3. Under **Claude Code**, click **Connect**.
+4. Kepler detects the Claude Code installation path automatically. If detection fails, enter the path manually.
+5. Click **Save**.
+
+### How Kepler passes context
+
+When you start a Claude Code agent session inside a Task, Kepler automatically provides:
+
+- The Task description and any attached instructions.
+- The repo path and the Task's dedicated worktree.
+- Branch context so the agent commits to the correct branch.
+
+Kepler passes the context automatically — no manual re-description needed.
+
+### Verification and troubleshooting
+
+**Claude Code not detected**
+Verify that the `claude` binary is on your `PATH` by running `claude --version` in a terminal. If it is not found, reinstall Claude Code or enter the binary path manually in Kepler settings.
+
+**Authentication errors**
+Run `claude auth` in a terminal to confirm your session is active. Re-authenticate if the token has expired, then return to Kepler and reconnect.
+
+**Permission errors**
+Ensure the user running Kepler has read and execute access to the Claude Code binary and to the repo directory.
+
+***
+
+## Codex CLI
+
+Codex CLI is OpenAI's coding agent. Kepler connects to it as an agent session inside a Task and passes Task context and repo access automatically.
+
+### Prerequisites
+
+- Codex CLI must be installed on your local machine.
+- Codex CLI must be configured with a valid OpenAI API key.
+
+### Connect Codex CLI to Kepler
+
+1. Open Kepler and navigate to **Settings**.
+2. Select **Agents** from the sidebar.
+3. Under **Codex CLI**, click **Connect**.
+4. Kepler detects the Codex CLI installation path automatically. If detection fails, enter the path manually.
+5. Click **Save**.
+
+### How Kepler passes context
+
+When you start a Codex CLI agent session inside a Task, Kepler passes:
+
+- The Task description and instructions.
+- The repo path and the Task's dedicated worktree.
+- Branch context for the session.
+
+### Verification and troubleshooting
+
+**Codex CLI not detected**
+Run `codex --version` in a terminal to confirm the binary is on your `PATH`. If not found, reinstall Codex CLI or enter the binary path manually in Kepler settings.
+
+**Authentication errors**
+Confirm your `OPENAI_API_KEY` environment variable is set and valid. Re-export the key if it has changed, then reconnect Codex CLI in Kepler settings.
+
+**Permission errors**
+Ensure the user running Kepler has read and execute access to the Codex binary and to the repo directory.
+
+***
+
+## Copilot CLI
+
+Copilot CLI is GitHub's coding agent. Kepler connects to it as an agent session and passes Task context and repo access at session start.
+
+### Prerequisites
+
+- Copilot CLI must be installed on your local machine.
+- Copilot CLI must be authorized with a GitHub account that has an active Copilot subscription.
+
+### Connect Copilot CLI to Kepler
+
+1. Open Kepler and navigate to **Settings**.
+2. Select **Agents** from the sidebar.
+3. Under **Copilot CLI**, click **Connect**.
+4. Kepler detects the Copilot CLI installation path automatically. If detection fails, enter the path manually.
+5. Click **Save**.
+
+### Verification and troubleshooting
+
+**Copilot CLI not detected**
+Run `gh copilot --version` in a terminal to confirm the extension is installed. If not found, install it with `gh extension install github/gh-copilot`.
+
+**Authorization errors**
+Run `gh auth status` to confirm your GitHub session is active. Re-authenticate with `gh auth login` if needed, then reconnect in Kepler settings.
+
+**Permission errors**
+Ensure the user running Kepler has read and execute access to the `gh` binary and to the repo directory.
+
+***
+
+## Cursor
+
+Cursor is an AI code editor with a built-in coding agent. Kepler connects to Cursor's agent and runs it as an agent session inside a Task.
+
+### Prerequisites
+
+- Cursor must be installed on your local machine.
+
+### Connect Cursor to Kepler
+
+1. Open Kepler and navigate to **Settings**.
+2. Select **Agents** from the sidebar.
+3. Under **Cursor**, click **Connect**.
+4. Click **Save**.
+
+### Verification and troubleshooting
+
+**Cursor not detected**
+Confirm Cursor is installed and that the `cursor` binary is accessible. Enter the binary path manually in Kepler settings if auto-detection fails.
+
+***
+
+## OpenCode
+
+OpenCode is an open-source, model-agnostic coding agent. It runs any model through a unified interface. Use OpenCode when you need a model that Claude Code, Codex CLI, or Copilot CLI do not offer.
+
+### Prerequisites
+
+- OpenCode must be installed on your local machine.
+- You must have a valid API key for the model you intend to use (for example, Anthropic, OpenAI, or another supported provider).
+
+### When to use OpenCode vs. a proprietary agent
+
+Use OpenCode when:
+
+- You want to switch between models without switching agents.
+- You are using a model not offered by Claude Code, Codex CLI, or Copilot CLI.
+- You want to run a self-hosted or open-weight model.
+
+Use a proprietary agent (Claude Code, Codex CLI, Copilot CLI) when the agent's fixed model meets your needs and you want first-party support.
+
+### Connect OpenCode to Kepler
+
+1. Open Kepler and navigate to **Settings**.
+2. Select **Agents** from the sidebar.
+3. Under **OpenCode**, click **Connect**.
+4. Kepler detects the OpenCode installation path automatically. If detection fails, enter the path manually.
+5. Select or enter the model you want OpenCode to use.
+6. Click **Save**.
+
+### Verification and troubleshooting
+
+**OpenCode not detected**
+Run `opencode --version` in a terminal to confirm the binary is on your `PATH`. If not found, reinstall OpenCode or enter the binary path manually in Kepler settings.
+
+**API key errors**
+Confirm the API key for your chosen model is set correctly. OpenCode reads API keys from environment variables. Verify that the relevant variable (for example, `ANTHROPIC_API_KEY` or `OPENAI_API_KEY`) is exported in your shell environment, then reconnect in Kepler settings.
+
+**Permission errors**
+Ensure the user running Kepler has read and execute access to the OpenCode binary and to the repo directory.
+
+---
+# Issue Tracker Integrations
+URL: https://help.gitkraken.com/kepler/issue-tracker-integrations/
+product: Kepler
+feature: Issue Tracker Integrations
+content_type: how-to
+audience: developer
+plan_required: all
+status: GA
+last_verified: 2026-06
+
+## Overview
+
+Connecting an issue tracker lets you create a Kepler **Task**, the core unit of work in Kepler's **Agentic Development Environment** (**ADE**), directly from an issue. Kepler passes the issue title, description, and metadata to the agent automatically as its starting context.
+
+### Supported trackers
+
+| Tracker | Auth method | Self-hosted support |
+|---|---|---|
+| Jira | OAuth 2.0 | No (Cloud only) |
+| Linear | OAuth 2.0 | No |
+| Trello | OAuth 2.0 | No |
+| GitHub Issues | OAuth 2.0 | No |
+| GitHub Enterprise Issues | Personal Access Token | Yes |
+| GitLab Issues | OAuth 2.0 | No |
+| GitLab Self-Managed Issues | Personal Access Token | Yes |
+| Azure DevOps | OAuth 2.0 | No |
+
+All providers are configured in **Settings → Provider Integrations**.
+
+***
+
+## Jira
+
+Connect Jira to create Kepler Tasks from Jira issues and pass issue context to your agents automatically.
+
+### Prerequisites
+
+- A Jira Cloud account with permission to install OAuth apps.
+- A Kepler account with at least one workspace configured.
+
+### Connect Jira
+
+1. Open Kepler and navigate to **Settings** → **Provider Integrations**.
+2. Under **Issue Trackers**, click **Connect** next to **Jira**.
+3. Click **Authorize with Jira**. Atlassian's OAuth flow opens.
+4. Select the Jira site you want to connect and click **Accept**.
+5. Kepler shows **Jira connected** with your site name.
+
+### What Kepler pulls from Jira
+
+When you create a Task from a Jira issue, Kepler passes the following fields to the agent:
+
+- Issue key and summary (title)
+- Description (including formatted text and code blocks)
+- Labels
+- Assignee
+- Priority
+- Status
+- Linked issue keys
+
+### Limitations
+
+- Kepler does not support Jira Data Center or Jira Server.
+- Kepler does not pass attachments or embedded images from issue descriptions to the agent.
+
+***
+
+## Linear
+
+Connect Linear to create Kepler Tasks from Linear issues and pass issue context to your agents automatically.
+
+### Prerequisites
+
+- A Linear workspace with member or admin access.
+
+### Connect Linear
+
+1. In Kepler, go to **Settings** → **Provider Integrations**.
+2. Under **Issue Trackers**, click **Connect** next to **Linear**.
+3. Click **Authorize with Linear**. Linear's OAuth consent screen opens.
+4. Select the workspace to connect and click **Allow access**.
+5. Kepler shows **Linear connected** when the authorization completes.
+
+### What Kepler pulls from Linear
+
+When you create a Task from a Linear issue, Kepler passes these fields to the agent:
+
+- Issue identifier and title
+- Description (Markdown)
+- Labels
+- Assignee
+- Priority
+- State (status)
+- Project and cycle membership
+
+### Limitations
+
+- Kepler fetches only the selected issue's fields; sub-issues are not included.
+
+***
+
+## Trello
+
+Connect Trello to create Kepler Tasks from Trello cards and pass card details to your agents automatically.
+
+### Prerequisites
+
+- A Trello account with access to the boards you want to use.
+
+### Connect Trello
+
+1. In Kepler, open **Settings** → **Provider Integrations**.
+2. Under **Issue Trackers**, click **Connect** next to **Trello**.
+3. Click **Authorize with Trello**. Trello's OAuth consent screen opens.
+4. Click **Allow**.
+5. Kepler confirms the connection with **Trello connected**.
+
+### What Kepler pulls from Trello
+
+When you create a Task from a Trello card, Kepler passes these fields to the agent:
+
+- Card name (title)
+- Card description
+- Labels
+- Members (assignees)
+- Due date
+- Checklist names and items
+
+### Limitations
+
+- Kepler does not pass card attachments to the agent.
+- Kepler does not currently support custom fields.
+
+***
+
+## GitHub Issues
+
+Connect GitHub Issues to create Kepler Tasks from GitHub issues and pass issue context to your agents automatically.
+
+### Prerequisites
+
+- A GitHub account with access to the repositories whose issues you want to use.
+
+### Connect GitHub Issues
+
+1. In Kepler, navigate to **Settings** → **Provider Integrations**.
+2. Under **Issue Trackers**, click **Connect** next to **GitHub Issues**.
+3. Click **Authorize with GitHub**. GitHub's OAuth app authorization page opens.
+4. Select the organizations and repositories to grant access to, then click **Authorize**.
+5. After authorization, Kepler shows **GitHub connected**.
+
+### What Kepler pulls from GitHub Issues
+
+When you create a Task from a GitHub issue, Kepler passes these fields to the agent:
+
+- Issue number and title
+- Body (Markdown)
+- Labels
+- Assignees
+- Milestone
+- Linked pull request references
+
+### Limitations
+
+- Kepler does not pass GitHub Projects (v2) fields beyond the standard issue fields.
+- Private repositories require the **repo** OAuth scope; Kepler requests this during authorization.
+
+***
+
+## GitHub Enterprise Issues
+
+Connect GitHub Enterprise Issues using a personal access token to create Kepler Tasks from issues on your self-hosted instance.
+
+### Prerequisites
+
+- A GitHub Enterprise Server instance (3.x or later recommended).
+- A personal access token (PAT) with `repo` scope, generated on your GitHub Enterprise instance.
+- Your GitHub Enterprise Server hostname (e.g., `github.yourcompany.com`).
+
+### Connect GitHub Enterprise Issues
+
+1. Go to **Settings** → **Provider Integrations** in Kepler.
+2. Under **Issue Trackers**, click **Connect** next to **GitHub Enterprise Issues**.
+3. Enter your **Server URL** (e.g., `https://github.yourcompany.com`).
+4. Paste your **Personal Access Token**.
+5. Click **Connect**. Kepler verifies the token and shows **GitHub Enterprise connected**.
+
+### Limitations
+
+- GitHub Enterprise Cloud (GHEC) with an enterprise account uses the standard GitHub Issues integration, not this one.
+- Kepler stores tokens per user; each team member must connect their own PAT.
+
+***
+
+## GitLab Issues
+
+Connect GitLab Issues to create Kepler Tasks from GitLab issues and pass issue context to your agents automatically.
+
+### Prerequisites
+
+- A GitLab.com account with access to the projects whose issues you want to use.
+
+### Connect GitLab Issues
+
+1. In Kepler, open **Settings** → **Provider Integrations**.
+2. Under **Issue Trackers**, click **Connect** next to **GitLab Issues**.
+3. Click **Authorize with GitLab**. GitLab's OAuth consent screen opens.
+4. Click **Authorize**.
+5. The page returns to Kepler showing **GitLab connected**.
+
+### What Kepler pulls from GitLab Issues
+
+When you create a Task from a GitLab issue, Kepler passes these fields to the agent:
+
+- Issue IID and title
+- Description (Markdown)
+- Labels
+- Assignees
+- Milestone
+- Weight (if set)
+- Linked issue references
+
+### Limitations
+
+- Kepler does not currently pass GitLab EE-only fields (for example, epic membership and health status).
+
+***
+
+## GitLab Self-Managed Issues
+
+Connect GitLab Self-Managed Issues using a personal access token to create Kepler Tasks from issues on your self-managed instance.
+
+### Prerequisites
+
+- A self-managed GitLab instance (GitLab CE or EE, 15.x or later recommended).
+- A personal access token with `api` scope, generated on your GitLab instance.
+- Your GitLab instance URL (e.g., `https://gitlab.yourcompany.com`).
+
+### Connect GitLab Self-Managed Issues
+
+1. Go to **Settings** → **Provider Integrations** in Kepler.
+2. Under **Issue Trackers**, click **Connect** next to **GitLab Self-Managed Issues**.
+3. Enter your **Instance URL** (e.g., `https://gitlab.yourcompany.com`).
+4. Paste your **Personal Access Token**.
+5. Click **Connect**. Kepler verifies the token and shows **GitLab Self-Managed connected**.
+
+### Limitations
+
+- Your machine must be able to reach the GitLab instance. Air-gapped instances are not supported unless Kepler is deployed in your network.
+- Kepler stores tokens per user; each team member must connect their own PAT.
+
+***
+
+## Azure DevOps
+
+Connect Azure DevOps to create Kepler Tasks from Azure DevOps work items and pass work item details to your agents automatically.
+
+### Prerequisites
+
+- An Azure DevOps organization with member or higher access.
+- Work items enabled on the project(s) you want to use.
+
+### Connect Azure DevOps
+
+1. In Kepler, navigate to **Settings** → **Provider Integrations**.
+2. Under **Issue Trackers**, click **Connect** next to **Azure DevOps**.
+3. Click **Authorize with Azure DevOps**. Microsoft's OAuth consent screen opens.
+4. Sign in with your Microsoft account and click **Accept**.
+5. Kepler shows **Azure DevOps connected** with your organization name.
+
+### What Kepler pulls from Azure DevOps
+
+When you create a Task from an Azure DevOps work item, Kepler passes these fields to the agent:
+
+- Work item ID and title
+- Description
+- Work item type (Bug, User Story, Task, etc.)
+- Tags
+- Assigned to
+- State
+- Area path and iteration path
+
+### Limitations
+
+- Kepler does not currently support Azure DevOps Server (on-premises).
+- Rich text formatting in work item descriptions may be partially stripped when Kepler passes the description to the agent.
+
+---
+# Pull Request Integrations
+URL: https://help.gitkraken.com/kepler/pull-request-integrations/
+product: Kepler
+feature: Pull Request Integrations
+content_type: how-to
+audience: developer
+plan_required: all
+status: GA
+last_verified: 2026-06
+
+## Overview
+
+Kepler (GitKraken's Agentic Development Environment, or ADE) connects to your Git hosting platform so you can create a **Task** directly from an existing pull request. Connecting a PR lets an agent address review comments or begin a code review without manual setup.
+
+### Supported providers
+
+| Provider | Auth method | Self-hosted support |
+|---|---|---|
+| GitHub | OAuth | No |
+| GitHub Enterprise | Personal Access Token | Yes |
+| GitLab | OAuth | No |
+| GitLab Self-Managed | Personal Access Token | Yes |
+| Bitbucket | OAuth | No |
+| Azure DevOps | OAuth | No |
+
+When you connect a PR, Kepler pulls the following from it:
+
+- Diff
+- Description
+- Open review comments
+- Current review state
+
+***
+
+## GitHub
+
+Connect GitHub to create Kepler Tasks from GitHub pull requests.
+
+### Prerequisites
+
+- A GitHub account with at least read access to the repository.
+
+### Connect GitHub
+
+1. In Kepler, open **Settings** and navigate to **Provider Integrations**.
+2. Under **GitHub**, click **Connect**.
+3. Authorize Kepler in the GitHub OAuth window that opens.
+4. Kepler shows GitHub as connected in **Provider Integrations**.
+
+***
+
+## GitHub Enterprise
+
+Connect GitHub Enterprise using a personal access token to create Kepler Tasks from pull requests on your self-hosted instance.
+
+### Prerequisites
+
+- A GitHub Enterprise account with at least read access to the repository.
+- A Personal Access Token (classic) with the `repo` scope, or a fine-grained token with **Contents** (read) and **Pull requests** (read) permissions.
+
+### Connect GitHub Enterprise
+
+1. In Kepler, open **Settings** and navigate to **Provider Integrations**.
+2. Under **GitHub Enterprise**, click **Connect**.
+3. Enter your GitHub Enterprise **Host URL** (for example, `https://github.example.com`).
+4. Paste your **Personal Access Token**.
+5. Click **Save**.
+
+***
+
+## GitLab
+
+Connect GitLab to create Kepler Tasks from GitLab merge requests.
+
+### Prerequisites
+
+- A GitLab account with at least Reporter access to the project.
+
+### Connect GitLab
+
+1. In Kepler, open **Settings** and navigate to **Provider Integrations**.
+2. Under **GitLab**, click **Connect**.
+3. Authorize Kepler in the GitLab OAuth window that opens.
+4. Kepler shows GitLab as connected in **Provider Integrations**.
+
+***
+
+## GitLab Self-Managed
+
+Connect GitLab Self-Managed using a personal access token to create Kepler Tasks from merge requests on your self-managed instance.
+
+### Prerequisites
+
+- Access to a GitLab Self-Managed instance with at least Reporter access to the project.
+- A Personal Access Token with the `read_api` and `read_repository` scopes.
+
+### Connect GitLab Self-Managed
+
+1. In Kepler, open **Settings** and navigate to **Provider Integrations**.
+2. Under **GitLab Self-Managed**, click **Connect**.
+3. Enter your GitLab Self-Managed **Host URL** (for example, `https://gitlab.example.com`).
+4. Paste your **Personal Access Token**.
+5. Click **Save**.
+
+***
+
+## Bitbucket
+
+Connect Bitbucket to create Kepler Tasks from Bitbucket pull requests.
+
+### Prerequisites
+
+- A Bitbucket account with at least read access to the repository.
+
+### Connect Bitbucket
+
+1. In Kepler, open **Settings** and navigate to **Provider Integrations**.
+2. Under **Bitbucket**, click **Connect**.
+3. Authorize Kepler in the Bitbucket OAuth window that opens.
+4. Kepler shows Bitbucket as connected in **Provider Integrations**.
+
+***
+
+## Azure DevOps
+
+Connect Azure DevOps to create Kepler Tasks from Azure DevOps pull requests.
+
+### Prerequisites
+
+- An Azure DevOps account with at least Reader access to the project.
+
+### Connect Azure DevOps
+
+1. In Kepler, open **Settings** and navigate to **Provider Integrations**.
+2. Under **Azure DevOps**, click **Connect**.
+3. Authorize Kepler in the Azure DevOps OAuth window that opens.
+4. Kepler shows Azure DevOps as connected in **Provider Integrations**.
+
+---
+# Environment and Setup
+URL: https://help.gitkraken.com/kepler/environment-and-setup/
+product: Kepler
+feature: Environment and Setup
+content_type: how-to
+audience: developer
+plan_required: all
+status: GA
+last_verified: 2026-06
+
+## Overview
+
+This page covers the three environment settings you must configure before running Tasks, plus the embedded terminal.
+
+Complete these steps in order. Each one depends on the previous:
+
+1. Set the **Default Repositories Folder**.
+2. Set the **Default Worktrees Folder**.
+3. Add custom commands for repos that need them.
+
+Each Task holds work across one or more repos and contains worktrees, agent sessions, and changes. Configuring the settings below correctly ensures that every new worktree Kepler creates lands in the right place and starts in a usable state.
+
+***
+
+## Default Repositories Folder
+
+The **Default Repositories Folder** defines where Kepler clones repositories. Every other environment setting depends on a valid path here. If this is not set, Kepler cannot locate repos when creating worktrees or running agents.
+
+### How to set it
+
+1. Open **Settings**.
+2. Navigate to **General**.
+3. Under **Default Repositories Folder**, click **Browse** and select the directory you want Kepler to use for cloned repos.
+4. Click **Save**.
+
+### What happens if the Default Repositories Folder is not set
+
+If the **Default Repositories Folder** is empty, Kepler cannot resolve repo paths when a Task creates a new worktree. Worktree creation will fail or prompt you to supply a path manually each time. Set this before doing anything else.
+
+***
+
+## Default Worktrees Folder
+
+The **Default Worktrees Folder** is the directory where Kepler creates new worktrees. Kepler creates one worktree per Task per repo, so setting this keeps worktrees in a consistent location instead of spreading across arbitrary directories.
+
+### How to set it
+
+1. Open **Settings**.
+2. Navigate to **General**.
+3. Under **Default Worktrees Folder**, click **Browse** and select the directory, or type a path directly using the placeholders described below.
+4. Click **Save**.
+
+### Path placeholders
+
+The **Default Worktrees Folder** path supports placeholders. Kepler substitutes these at worktree creation time, so worktrees always land in a consistent, predictable location for every repo.
+
+| Placeholder | Resolves to |
+|---|---|
+| `<REPOSITORY_PATH>` | Full path to the main repo folder |
+| `<REPOSITORY_NAME>` | Name of the repository |
+| `<SOURCE_PATH>` | Path of the source location (main repo, or source worktree when forking from an existing worktree) |
+| `<WORKTREE_PATH>` | Full path to the new worktree folder |
+
+**Example path using placeholders:**
+
+```
+<REPOSITORY_PATH>/worktrees/<WORKTREE_PATH>
+```
+
+With this pattern, every repo gets its worktrees nested inside its own directory. A repo at `/projects/my-app` would produce worktrees at `/projects/my-app/worktrees/<worktree-name>`.
+
+***
+
+## Custom Commands Per Repository
+
+Custom commands are shell commands that Kepler runs automatically when it creates a new worktree for a specific repo. Use them to install dependencies, run a build, or start a file watcher. The worktree starts ready for the agent session, with no manual setup required.
+
+### Where to configure
+
+1. Open **Settings**.
+2. Navigate to **Repositories**.
+3. Find the repo you want to configure. Repos without custom commands show a **No commands >** row.
+4. Click the **No commands >** row to open the command editor for that repo.
+
+### How to add commands
+
+1. In the command editor, click **Add Command**.
+2. Enter the shell command to run (for example, `npm install` or `pnpm build`).
+3. Add additional commands as needed. Commands run in the order listed.
+4. Click **Save**.
+
+Kepler runs these commands in the worktree's directory immediately after the worktree is created, before any agent session starts.
+
+### Troubleshoot a failed custom command
+
+If a custom command exits with a non-zero status, Kepler stops running remaining commands for that worktree and surfaces the error. The worktree is created, but it may not be in a usable state. Check the command output in the Task view to diagnose the failure, correct the command in **Settings → Repositories**, and create a new Task to retry.
+
+***
+
+## Embedded Terminals
+
+Kepler has an embedded terminal scoped to each worktree. Use it to run commands or inspect files without leaving the app.
+
+When you open a terminal for a worktree, it starts in that worktree's directory. You do not need to `cd` into it manually.
+
+### When to use the embedded terminal
+
+- Run one-off commands (linting, tests, manual builds) while an agent session is active in the same worktree.
+- Inspect files or git state without switching context.
+- Debug issues that a running agent session does not surface on its own.
+
+### Limitations
+
+The embedded terminal is scoped to a single worktree. It does not provide access to the broader filesystem outside that worktree's directory without navigating manually. For workflows that span multiple repos or worktrees simultaneously, a standalone terminal may be more practical.
+
+---
+# Settings
+URL: https://help.gitkraken.com/kepler/settings/
+product: Kepler
+feature: Settings
+content_type: reference
+audience: developer
+plan_required: all
+status: GA
+last_verified: 2026-06
+
+This page is a reference for every setting in Kepler, organized by section. It also includes a complete keyboard shortcut reference.
+
+***
+
+## Update
+
+The **Update** section shows the currently installed version of Kepler and lets you check for newer releases.
+
+- **Current version** — displays the installed version number (for example, v0.6.2).
+- **Check for updates** — checks for and downloads any available release.
+
+***
+
+## Appearance
+
+The **Appearance** section controls the visual theme and color mode.
+
+| Setting | What it controls | Default | Options |
+|---------|-----------------|---------|---------|
+| **Theme** | The overall UI design language | Base | Base, Observatory |
+| **Mode** | Light or dark color rendering | System | Dark, Light, System |
+
+***
+
+## Terminal
+
+The **Terminal** section controls the font and spacing used in Kepler's integrated terminal.
+
+| Setting | What it controls | Default |
+|---------|-----------------|---------|
+| **Font Family** | Comma-separated list of font families; Kepler uses the first one available on your system | `Fira Code, JetBrains Mono, Menlo` |
+| **Font Size** | Terminal font size in pixels | 13 |
+| **Line Height** | Vertical spacing between lines | 1.2 |
+
+***
+
+## Diff View
+
+The **Diff View** section sets the default layout for the diff panel.
+
+| Setting | What it controls | Default | Options |
+|---------|-----------------|---------|---------|
+| **Default diff layout** | How diffs are displayed when you open the diff panel | Stacked | Stacked, Split |
+
+You can override this per-session using the toggle in the diff panel itself.
+
+***
+
+## Language
+
+The **Language** section sets the display language for Kepler's UI.
+
+| Setting | What it controls | Default |
+|---------|-----------------|---------|
+| **Language** | UI display language | English |
+
+***
+
+## Keyboard Shortcuts
+
+Kepler supports the following keyboard shortcuts. Shortcuts shown are for macOS. The Windows/Linux equivalents substitute **Ctrl** for **⌘** and **Alt** for **⌥** unless noted.
+
+| Action | Mac | Windows / Linux |
+|--------|-----|-----------------|
+| Toggle left sidebar | ⌘ B | Ctrl B |
+| Toggle right sidebar | ⌘ ⌥ B | Ctrl Alt B |
+| Open settings | ⌘ . | Ctrl . |
+| New task | ⌘ ⇧ N | Ctrl Shift N |
+| Switch to List view | ⌘ 1 | Ctrl 1 |
+| Switch to Kanban view | ⌘ 2 | Ctrl 2 |
+| Switch to Console view | ⌘ 3 | Ctrl 3 |
+| Switch to tab 1–9 | ⌥ 1–9 | Alt 1–9 |
+| Previous tab | ⌘ ⇧ [ | Ctrl Shift [ |
+| Next tab | ⌘ ⇧ ] | Ctrl Shift ] |
+| Open quick launcher | ⇧ ⌥ T (Global) | Shift Alt T (Global) |
+| New window | ⌘ N | Ctrl N |
+| Zoom in | ⌘ = | Ctrl = |
+| Zoom out | ⌘ – | Ctrl – |
+| Reset zoom | ⌘ 0 | Ctrl 0 |
+| Close tab | ⌘ W | Ctrl W |
+| Toggle terminal | ⌘ J | Ctrl J |
+| New tab | ⌘ T | Ctrl T |
+| Dismiss / Cancel | Escape | Escape |
+
+***
+
+## General
+
+The **General** section has settings for default file system locations, the folder picker, and diagnostic logs.
+
+### Default Repositories Folder
+
+Sets the default directory where Kepler clones new repositories. Click **Browse** to pick a different location. The default is your `~/kepler/repositories` directory.
+
+### Default Worktrees Folder
+
+Sets the default directory for new worktrees. Click **Browse** to pick a location. The path supports the following placeholders:
+
+| Placeholder | Meaning |
+|-------------|---------|
+| `<REPOSITORY_PATH>` | The main repository folder |
+| `<REPOSITORY_NAME>` | The repository name |
+| `<SOURCE_PATH>` | Where files come from: the main repo, or the source worktree when forking |
+| `<WORKTREE_PATH>` | The new worktree folder |
+
+For example, `<REPOSITORY_PATH>/.worktrees/<REPOSITORY_NAME>` places each worktree inside the repo it belongs to.
+
+### Always use the custom folder picker
+
+By default, local windows use the native OS folder dialog and remote windows use Kepler's built-in picker. Enable this setting to use Kepler's custom picker in all windows.
+
+### Diagnostics
+
+The **Diagnostics** section shows the log file path and controls for managing it.
+
+- **Log file path** — shows the full path to the current log file (for example, `.../Application Support/Kepler/logs/kepler.log`).
+- **Reveal** — opens the log file location in Finder / Explorer.
+- **Copy path** — copies the log path to your clipboard.
+- **Clear log** — deletes the current log contents.
+
+The log file can grow up to approximately 20 MB. Attach it when filing a bug report.
+
+***
+
+## Voice Input
+
+The **Voice Input** section controls Kepler's on-device speech-to-text feature. Kepler transcribes audio locally on your device and never uploads it.
+
+| Setting | What it controls | Default |
+|---------|-----------------|---------|
+| **Enable voice input** | Shows a push-to-talk microphone button in the agent chat prompt | Off |
+| **Submit after speaking** | Automatically sends the prompt when you stop recording instead of inserting the text for review | Off |
+| **Continuous dictation** | Keeps the mic open and transcribes each phrase as you pause, rather than requiring press-and-hold | Off |
+
+### Model
+
+Kepler downloads a local speech recognition model to your device.
+
+| Setting | What it controls |
+|---------|-----------------|
+| **GPU model variant** | Auto-selected based on your GPU (for example, `webgpu` or `q4/q4f16`). Click **Re-analyze GPU** to re-detect. |
+| **Model size** | Controls the accuracy-vs-speed tradeoff. Options: Tiny, Base, Small, Large. **Tiny** is the fastest and smallest (~100 MB) and is recommended for most setups. |
+
+The **Downloaded model** row shows the model name, revision, download date, and disk usage. Use **Re-download** to refresh the model or **Delete model** to remove it from disk.
+
+***
+
+## Agents
+
+The **Agents** section lists every AI coding agent Kepler can detect on your system and lets you configure how each one runs. Click **Refresh** to re-scan for newly installed agents.
+
+### Agent list
+
+Each agent entry shows:
+
+- **Name** — the agent's display name.
+- **Status badge** — `Installed`, `Bundled`, or `Not installed`.
+- **Sign in / Sign out** — authenticates the agent with its provider.
+- **Enabled toggle** — activates or deactivates the agent in Kepler.
+
+### Binary detection
+
+The **BINARY** field shows the resolved binary path. The dropdown displays `Auto · [version]` by default. Click **Re-scan** to force Kepler to search again.
+
+> **Auto** follows this resolution order: PATH → shell → common install paths.
+
+### Advanced
+
+Each agent has an expandable **Advanced** section with additional configuration options.
+
+### Supported agents
+
+| Agent | Default status | Notes |
+|-------|---------------|-------|
+| **Claude Code** | Installed | Binary auto-detected. Supports the ACP bridge option (see below). |
+| **Codex** | Bundled | Uses Kepler's bundled `codex-acp` engine, not an installed CLI. Reads the OAuth token from `~/.codex/auth.json` or `$CODEX_HOME/auth.json`. |
+| **GitHub Copilot** | Not installed | An **Install** button is shown. |
+| **Cursor CLI** | Installed | Requires sign-in to activate. |
+| **OpenCode** | Installed | Requires sign-in to activate. |
+
+### Claude Code options
+
+| Setting | What it controls | Default |
+|---------|-----------------|---------|
+| **Use ACP bridge for Claude Code** | Runs Claude Code through the Agent Client Protocol bridge so Kepler drives sessions directly. Turn off to launch Claude Code in a terminal instead. | On |
+| **Detect external Claude Code sessions** | Adds hooks to `~/.claude/settings.json` so Kepler can surface Claude Code sessions started outside the app. | Off |
+
+### GitKraken MCP server
+
+| Setting | What it controls | Default |
+|---------|-----------------|---------|
+| **Install GitKraken MCP for detected clients** | Adds the GitKraken MCP server to every detected MCP client so agents can call provider APIs directly. Reinstalls on app startup; uninstalling is not supported. | On |
+
+### Default agent
+
+The **Default agent** dropdown sets which agent is pre-selected in the Task Launcher. Kepler applies this agent's default model, mode, and effort when you start a new session.
+
+### Show token usage
+
+| Setting | What it controls | Default |
+|---------|-----------------|---------|
+| **Show token usage** | Reads Claude Code and Codex access tokens from disk to call providers' usage APIs. Provider endpoints are unofficial and may change. Tokens are sent only to their respective provider. | Off |
+
+***
+
+## Features
+
+The **Features** section has two opt-in experimental capabilities, both off by default.
+
+### AI Sync
+
+**AI Sync** gives agents tools to rebase or merge branches with automatic conflict resolution. Operations are safe and can be rolled back.
+
+To enable AI Sync, toggle it on in the Features section. After you enable AI Sync, agents can rebase or merge the current branch as part of a task without manual intervention.
+
+### Compose
+
+**Compose** gives agents tools to reorganize messy changes into clean, atomic commits. Operations are safe and can be undone.
+
+To enable Compose, toggle it on in the Features section. After you enable Compose, agents can restructure in-progress work into well-scoped commits before pushing.
+
+***
+
+## Projects
+
+A **Project** groups multiple repositories together so they appear as a unit in Kepler. Use Projects when your work spans several repos, for example a frontend and backend repo you develop in parallel.
+
+Each project in the list shows:
+
+- **Name** — the project's display name.
+- **Repo count** — the number of repositories in the project.
+- **Edit button** (pencil icon) — opens the project editor to rename it or add/remove repos.
+
+Click **+ New project** to create a project and add repositories to it.
+
+***
+
+## Repositories
+
+The **Repositories** section lists every repository Kepler knows about. Each entry shows the repository's local path and a **No commands >** row you can click to add custom startup commands that run when you open the repo.
+
+Click **+ Add repository** to register an existing local repository with Kepler.
+
+To remove a repository, open its entry and click **Remove**.
+
+For details on startup commands and environment setup, see [Environment and Setup](/kepler/environment-and-setup).
+
+***
+
+## Provider Integrations
+
+The **Provider Integrations** section connects Kepler to your issue trackers and pull-request providers so they appear in the Task Launcher. Click **Refresh** to re-check connection status.
+
+Supported providers:
+
+| Provider |
+|----------|
+| Azure DevOps |
+| Bitbucket |
+| GitHub |
+| GitHub Enterprise |
+| GitLab |
+| GitLab Self-Managed |
+| Jira |
+| Linear |
+| Trello |
+
+Each provider shows either a **Connect** button (not yet connected) or a **Reconnect** button (previously connected).
+
+For per-provider setup instructions, see [Pull Request Integrations](/kepler/pull-request-integrations) and [Issue Tracker Integrations](/kepler/issue-tracker-integrations).
+
+***
+
+## Remote Access
+
+The **Remote Access** section starts a local server that lets you open Kepler from another device on the same network, such as a second computer or phone. This is not SSH or WSL remote development; for those, see [Remote Environments](/kepler/remote-environments).
+
+### Status and controls
+
+- **Status indicator** — shows **Remote Access Inactive** or **Remote Access Active**.
+- **Start** — activates the local server.
+
+### Network settings
+
+| Setting | What it controls | Default |
+|---------|-----------------|---------|
+| **Port** | The port Kepler's server listens on | 3000 |
+| **Host** | The host address Kepler binds to | 0.0.0.0 |
+| **URL Override** | If set, this URL is used in the QR code instead of the auto-detected local address. Use this when you expose Kepler through a tunnel service (for example, `https://my-tunnel.ngrok.io`). | — |
+
+### Accessing Kepler remotely
+
+1. Start Remote Access from the Settings panel.
+2. Scan the QR code shown, or copy the URL, and open it on the remote device.
+3. If the device is on a different network, set a **URL Override** to a public tunnel address (for example, from ngrok) before starting the server.
+
+---
+# Remote Environments
+URL: https://help.gitkraken.com/kepler/remote-environments/
+product: Kepler
+feature: Remote Environments
+content_type: how-to
+audience: developer
+plan_required: all
+status: GA
+last_verified: 2026-06
+
+Kepler covers two remote scenarios:
+
+- Run Tasks on a remote machine or WSL environment when you need more compute or a Linux runtime.
+- Expose Kepler over the network to access it from another device.
+
+***
+
+## SSH: Run Tasks on a Remote Machine
+
+Use SSH when your local machine doesn't have enough compute for the work, or when builds are too slow. When a Task runs via SSH, Kepler runs the worktrees and agent sessions on the remote machine. Kepler's UI remains local.
+
+### Prerequisites
+
+- SSH access to the remote machine (key-based or password authentication).
+- Kepler installed locally.
+
+### Connect a Remote Machine
+
+1. Open Kepler and navigate to **Settings**.
+2. Click **Add Remote Machine**.
+3. Enter the SSH connection details:
+   - **Host**: hostname or IP address of the remote machine.
+   - **Port**: SSH port. Default: `22`.
+   - **Username**: the SSH user on the remote machine.
+   - **Authentication**: select key-based or password authentication.
+4. Click **Test Connection** to verify Kepler can reach the machine.
+5. Click **Save**.
+
+After you save, the remote machine is available as a target when you create or configure a Task.
+
+### What Runs Remotely vs. Locally
+
+| Component | Runs on |
+|---|---|
+| Tasks | Remote machine |
+| Worktrees | Remote machine |
+| Agent sessions | Remote machine |
+| Kepler UI | Local machine |
+
+### Troubleshooting SSH Connections
+
+**Connection refused** — Confirm the SSH daemon is running on the remote machine and the port is open in the firewall.
+
+**Authentication failed** — Verify the username and credentials. For key-based auth, confirm the public key is in `~/.ssh/authorized_keys` on the remote machine.
+
+**Timeout** — Check that the remote machine is reachable from your network. If connecting over a VPN, confirm the VPN is active.
+
+For Kepler-specific logs, see the log file path in **Settings → General → Diagnostics**.
+
+***
+
+## WSL: Run Tasks in Windows Subsystem for Linux
+
+Use WSL when you are on Windows and need a Linux environment for agent sessions or builds. Kepler connects to a WSL environment the same way it connects to a remote machine via SSH.
+
+### Prerequisites
+
+- WSL installed on the local Windows machine.
+- WSL version 2 recommended.
+
+### Connect a WSL Environment
+
+1. Open Kepler and navigate to **Settings**.
+2. Click **Add Remote Machine**.
+3. For **Host**, enter `localhost` (or the WSL instance address).
+4. Configure SSH credentials for the WSL environment as you would for any remote machine.
+5. Click **Test Connection**, then **Save**.
+
+The WSL environment is available as a Task target alongside any other remote machines.
+
+### Troubleshooting WSL Connections
+
+**WSL not detected** — Confirm WSL is installed and at least one distribution is running. Run `wsl --list --running` in PowerShell to check.
+
+**Version conflict** — If you experience unexpected behavior, run `wsl --set-default-version 2` in PowerShell to ensure WSL 2 is the default.
+
+**SSH connection refused in WSL** — The SSH daemon may not be running inside WSL. Start it with `sudo service ssh start` inside the WSL terminal.
+
+***
+
+## Remote Access: Access Kepler from Another Device
+
+Remote Access is a separate feature from SSH and WSL. Remote Access starts a local server inside Kepler so you can reach the Kepler UI from another device on your network, or from outside your network via a tunnel.
+
+### Configure Remote Access
+
+Navigate to **Settings → Remote Access** to configure the server before starting it.
+
+| Setting | What it controls | Default | Notes |
+|---|---|---|---|
+| **Port** | The port Kepler's server listens on | `3000` | Change if port 3000 is in use |
+| **Host** | The address the server binds to | `0.0.0.0` | `0.0.0.0` listens on all network interfaces |
+| **URL Override** | The URL used in the QR code instead of the auto-detected address | _(none)_ | Use this when connecting through a tunnel, e.g., `https://my-tunnel.ngrok.io` |
+
+### Start Remote Access
+
+1. Open **Settings → Remote Access**.
+2. Review the port, host, and URL Override settings.
+3. Click **Start**.
+
+Kepler shows **Remote Access Active** and generates an **Access URL** with a QR code. The URL includes a bootstrap token (e.g. `?bootstrap=…`) that scopes access to this session. Scan the QR code with your phone camera or copy the URL to open Kepler in a browser on another device.
+
+### Connect via QR Code
+
+The QR code encodes the access URL based on the auto-detected address, or the **URL Override** if one is set. Scan the code from any device on the same network to open Kepler in a browser — including your phone. This lets you check Task progress, read agent output, and give direction from wherever you are without sitting at your desk.
+
+### Expose Kepler Outside the Local Network with ngrok
+
+To access Kepler from outside your local network — for example, to monitor running Tasks from your phone while away from the office — use a tunneling tool such as ngrok.
+
+1. Install ngrok and authenticate it with your ngrok account.
+2. Start Kepler's Remote Access server (see above).
+3. In a terminal, run:
+   ```
+   ngrok http 3000
+   ```
+   Replace `3000` with your configured port if you changed the default.
+4. Copy the public URL ngrok generates (for example, `https://abc123.ngrok.io`).
+5. In **Settings → Remote Access**, paste the ngrok URL into the **URL Override** field.
+6. Click **Start** (or **Restart** if the server is already running).
+
+The QR code now encodes the ngrok URL, and Kepler is accessible from any device with internet access.
+
+### Security Considerations
+
+Kepler's access URL includes a session-scoped bootstrap token, so anyone who connects must use the full URL — guessing the address alone is not enough. That said, anyone with the URL can access your Kepler instance, so treat it like a credential.
+
+To limit who can connect:
+
+- Use Remote Access only on trusted networks, or behind a tunnel that enforces authentication (such as ngrok's OAuth/IP restriction options).
+- Stop the Remote Access server when you are not using it by clicking **Stop** in **Settings → Remote Access**.
+- If using ngrok or a similar tunnel, use the URL Override field so the QR code reflects the secured tunnel URL rather than the local address.
+
+---
