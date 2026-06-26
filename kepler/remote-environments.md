@@ -40,11 +40,10 @@ Use SSH when your local machine doesn't have enough compute for the work, or whe
 
 - SSH access to the remote machine (key-based or password authentication).
 - Kepler installed locally.
-<!-- TODO: confirm with engineering — does the remote machine need any Kepler agent software installed, or does Kepler push it automatically? -->
 
 ### Connect a Remote Machine
 
-1. Open Kepler and navigate to **Settings** <!-- TODO: confirm with engineering — verify the correct Settings section name for adding remote machines; no "Remote Environments" section is visible in the current UI -->.
+1. Open Kepler and navigate to **Settings**.
 2. Click **Add Remote Machine**.
 3. Enter the SSH connection details:
    - **Host**: hostname or IP address of the remote machine.
@@ -73,7 +72,7 @@ After you save, the remote machine is available as a target when you create or c
 
 **Timeout** — Check that the remote machine is reachable from your network. If connecting over a VPN, confirm the VPN is active.
 
-<!-- TODO: confirm with engineering — are there any Kepler-specific logs to check when an SSH connection fails? -->
+For Kepler-specific logs, see the log file path in **Settings → General → Diagnostics**.
 
 ***
 
@@ -84,11 +83,11 @@ Use WSL when you are on Windows and need a Linux environment for agent sessions 
 ### Prerequisites
 
 - WSL installed on the local Windows machine.
-- WSL version 2 recommended. <!-- TODO: confirm with engineering — is WSL 2 required, or is WSL 1 supported? -->
+- WSL version 2 recommended.
 
 ### Connect a WSL Environment
 
-1. Open Kepler and navigate to **Settings** <!-- TODO: confirm with engineering — verify the correct Settings section name for adding remote machines; no "Remote Environments" section is visible in the current UI -->.
+1. Open Kepler and navigate to **Settings**.
 2. Click **Add Remote Machine**.
 3. For **Host**, enter `localhost` (or the WSL instance address).
 4. Configure SSH credentials for the WSL environment as you would for any remote machine.
@@ -100,7 +99,7 @@ The WSL environment is available as a Task target alongside any other remote mac
 
 **WSL not detected** — Confirm WSL is installed and at least one distribution is running. Run `wsl --list --running` in PowerShell to check.
 
-**Version conflict** — If you experience unexpected behavior, run `wsl --set-default-version 2` in PowerShell to ensure WSL 2 is the default. <!-- TODO: confirm with engineering — specific version requirements for Kepler. -->
+**Version conflict** — If you experience unexpected behavior, run `wsl --set-default-version 2` in PowerShell to ensure WSL 2 is the default.
 
 **SSH connection refused in WSL** — The SSH daemon may not be running inside WSL. Start it with `sudo service ssh start` inside the WSL terminal.
 

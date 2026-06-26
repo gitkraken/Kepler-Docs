@@ -28,8 +28,6 @@ This page is a reference for every setting in Kepler, organized by section. It a
 </figure>
 
 
-Open Settings from the gear icon in the upper right.
-
 ***
 
 ## Update
@@ -208,8 +206,6 @@ The **BINARY** field shows the resolved binary path. The dropdown displays `Auto
 
 Each agent has an expandable **Advanced** section with additional configuration options.
 
-<!-- TODO: confirm with engineering — document per-agent Advanced section contents -->
-
 ### Supported agents
 
 | Agent | Default status | Notes |
@@ -241,7 +237,7 @@ The **Default agent** dropdown sets which agent is pre-selected in the Task Laun
 
 | Setting | What it controls | Default |
 |---------|-----------------|---------|
-| **Show token usage** | Reads Claude Code and Codex access tokens from disk to call providers' usage APIs. Endpoints are undocumented and may change. Tokens are sent only to their respective provider. | Off |
+| **Show token usage** | Reads Claude Code and Codex access tokens from disk to call providers' usage APIs. Provider endpoints are unofficial and may change. Tokens are sent only to their respective provider. | Off |
 
 ***
 

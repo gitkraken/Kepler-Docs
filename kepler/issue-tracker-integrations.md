@@ -56,7 +56,6 @@ Connect Jira to create Kepler Tasks from Jira issues and pass issue context to y
 
 ### Connect Jira
 
-<!-- TODO: confirm with engineering - verify exact menu path and button labels -->
 
 1. Open Kepler and navigate to **Settings** → **Provider Integrations**.
 2. Under **Issue Trackers**, click **Connect** next to **Jira**.
@@ -93,7 +92,6 @@ Connect Linear to create Kepler Tasks from Linear issues and pass issue context 
 
 ### Connect Linear
 
-<!-- TODO: confirm with engineering - verify exact menu path and button labels -->
 
 1. In Kepler, go to **Settings** → **Provider Integrations**.
 2. Under **Issue Trackers**, click **Connect** next to **Linear**.
@@ -129,7 +127,6 @@ Connect Trello to create Kepler Tasks from Trello cards and pass card details to
 
 ### Connect Trello
 
-<!-- TODO: confirm with engineering - verify exact menu path and button labels -->
 
 1. In Kepler, open **Settings** → **Provider Integrations**.
 2. Under **Issue Trackers**, click **Connect** next to **Trello**.
@@ -165,7 +162,6 @@ Connect GitHub Issues to create Kepler Tasks from GitHub issues and pass issue c
 
 ### Connect GitHub Issues
 
-<!-- TODO: confirm with engineering - verify exact menu path and button labels -->
 
 1. In Kepler, navigate to **Settings** → **Provider Integrations**.
 2. Under **Issue Trackers**, click **Connect** next to **GitHub Issues**.
@@ -203,7 +199,6 @@ Connect GitHub Enterprise Issues using a personal access token to create Kepler 
 
 ### Connect GitHub Enterprise Issues
 
-<!-- TODO: confirm with engineering - verify exact menu path and button labels -->
 
 1. Go to **Settings** → **Provider Integrations** in Kepler.
 2. Under **Issue Trackers**, click **Connect** next to **GitHub Enterprise Issues**.
@@ -232,7 +227,6 @@ Connect GitLab Issues to create Kepler Tasks from GitLab issues and pass issue c
 
 ### Connect GitLab Issues
 
-<!-- TODO: confirm with engineering - verify exact menu path and button labels -->
 
 1. In Kepler, open **Settings** → **Provider Integrations**.
 2. Under **Issue Trackers**, click **Connect** next to **GitLab Issues**.
@@ -299,7 +293,6 @@ Connect Azure DevOps to create Kepler Tasks from Azure DevOps work items and pas
 
 ### Connect Azure DevOps
 
-<!-- TODO: confirm with engineering - verify exact menu path and button labels -->
 
 1. In Kepler, navigate to **Settings** → **Provider Integrations**.
 2. Under **Issue Trackers**, click **Connect** next to **Azure DevOps**.

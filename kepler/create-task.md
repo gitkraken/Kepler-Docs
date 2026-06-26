@@ -267,7 +267,7 @@ To manage shared context:
 | ⚫ **Idle** | The session stopped but is not complete. |
 | 🔴 **Errored** | The session hit an error. |
 | ⚫ **Inactive** | The session is not running and has no pending work. |
-| **Disconnected** | The session lost connection to the agent runtime. <!-- TODO: confirm cause and reconnect steps with engineering --> |
+| **Disconnected** | The session lost connection to the agent runtime. |
 
 ### Notifications
 
@@ -277,10 +277,6 @@ Kepler sends a toast notification when a Task completes or needs attention. The 
 ### Archiving a Task
 
 Click the **archive icon** on the Task card to archive it. Archived Tasks are removed from the active board.
-
-### Closing a Task and its worktrees
-
-<!-- TODO: confirm with engineering — describe what happens to worktrees (deleted, retained, merged) when a Task is closed or archived -->
 
 ### Delete a Task
 

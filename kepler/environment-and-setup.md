@@ -121,17 +121,12 @@ Kepler runs these commands in the worktree's directory immediately after the wor
 
 If a custom command exits with a non-zero status, Kepler stops running remaining commands for that worktree and surfaces the error. The worktree is created, but it may not be in a usable state. Check the command output in the Task view to diagnose the failure, correct the command in **Settings → Repositories**, and create a new Task to retry.
 
-<!-- TODO: confirm with engineering — does Kepler surface a specific error UI when a custom command fails, and is there a way to re-run setup commands on an existing worktree without creating a new Task? -->
 
 ***
 
 ## Embedded Terminals
 
 Kepler has an embedded terminal scoped to each worktree. Use it to run commands or inspect files without leaving the app.
-
-### How to open a terminal for a worktree
-
-<!-- TODO: confirm with engineering — exact UI path to open the embedded terminal for a specific worktree (e.g., right-click menu, button in the Task view, keyboard shortcut) -->
 
 When you open a terminal for a worktree, it starts in that worktree's directory. You do not need to `cd` into it manually.
 
@@ -145,6 +140,5 @@ When you open a terminal for a worktree, it starts in that worktree's directory.
 
 The embedded terminal is scoped to a single worktree. It does not provide access to the broader filesystem outside that worktree's directory without navigating manually. For workflows that span multiple repos or worktrees simultaneously, a standalone terminal may be more practical.
 
-<!-- TODO: confirm with engineering — are there any other known limitations (e.g., shell type, environment variable inheritance, multiplexing, persistent sessions across Task restarts)? -->
 
 ---

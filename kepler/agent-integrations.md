@@ -37,7 +37,7 @@ Each connected agent runs as an **agent session** inside a **Task**. A Task is t
 | Claude Code | Anthropic's coding agent | Claude Code installed and configured locally | Supported |
 | Codex CLI | OpenAI's coding agent | Codex CLI installed and configured locally | Supported |
 | Copilot CLI | GitHub's coding agent | Copilot CLI installed and authorized with a GitHub account | Supported |
-| Cursor | AI code editor with built-in agent | Cursor installed <!-- TODO: confirm with engineering: auth or API key requirements --> | Supported |
+| Cursor | AI code editor with built-in agent | Cursor installed | Supported |
 | OpenCode | Open-source, model-agnostic coding agent | OpenCode installed; API key for your chosen model | Supported |
 
 ***
@@ -58,9 +58,6 @@ Claude Code is Anthropic's coding agent. Kepler launches it as an agent session 
 3. Under **Claude Code**, click **Connect**.
 4. Kepler detects the Claude Code installation path automatically. If detection fails, enter the path manually.
 5. Click **Save**.
-
-<!-- TODO: confirm with engineering: exact settings path and field names for Claude Code connection -->
-
 
 ### How Kepler passes context
 
@@ -104,9 +101,6 @@ Codex CLI is OpenAI's coding agent. Kepler connects to it as an agent session in
 4. Kepler detects the Codex CLI installation path automatically. If detection fails, enter the path manually.
 5. Click **Save**.
 
-<!-- TODO: confirm with engineering: exact settings path and field names for Codex CLI connection -->
-
-
 ### How Kepler passes context
 
 When you start a Codex CLI agent session inside a Task, Kepler passes:
@@ -147,9 +141,6 @@ Copilot CLI is GitHub's coding agent. Kepler connects to it as an agent session 
 4. Kepler detects the Copilot CLI installation path automatically. If detection fails, enter the path manually.
 5. Click **Save**.
 
-<!-- TODO: confirm with engineering: exact settings path and field names for Copilot CLI connection -->
-
-
 ### Verification and troubleshooting
 
 **Copilot CLI not detected**
@@ -170,28 +161,21 @@ Cursor is an AI code editor with a built-in coding agent. Kepler connects to Cur
 ### Prerequisites
 
 - Cursor must be installed on your local machine.
-<!-- TODO: confirm with engineering: whether an API key or Cursor account login is required, and how Kepler authenticates with Cursor -->
 
 ### Connect Cursor to Kepler
 
 1. Open Kepler and navigate to **Settings**.
 2. Select **Agents** from the sidebar.
 3. Under **Cursor**, click **Connect**.
-4. <!-- TODO: confirm with engineering: step-by-step connection flow for Cursor -->
-5. Click **Save**.
+4. Click **Save**.
 
 
 ### Verification and troubleshooting
 
 If Cursor is not connecting as expected, use the following troubleshooting steps.
 
-<!-- TODO: confirm with engineering: Cursor-specific detection, auth, and permission troubleshooting steps -->
-
 **Cursor not detected**
 Confirm Cursor is installed and that the `cursor` binary is accessible. Enter the binary path manually in Kepler settings if auto-detection fails.
-
-**Authentication or API key errors**
-<!-- TODO: confirm with engineering: how Cursor auth errors surface in Kepler and what the resolution is -->
 
 ***
 
@@ -203,7 +187,6 @@ OpenCode is an open-source, model-agnostic coding agent. It runs any model throu
 
 - OpenCode must be installed on your local machine.
 - You must have a valid API key for the model you intend to use (for example, Anthropic, OpenAI, or another supported provider).
-- <!-- TODO: confirm with engineering: full list of supported models and providers -->
 
 ### When to use OpenCode vs. a proprietary agent
 
@@ -223,9 +206,6 @@ Use a proprietary agent (Claude Code, Codex CLI, Copilot CLI) when the agent's f
 4. Kepler detects the OpenCode installation path automatically. If detection fails, enter the path manually.
 5. Select or enter the model you want OpenCode to use.
 6. Click **Save**.
-
-<!-- TODO: confirm with engineering: exact settings path, field names, and model selector behavior for OpenCode -->
-
 
 ### Verification and troubleshooting
 

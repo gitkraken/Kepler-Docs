@@ -162,7 +162,6 @@ Each column header includes:
 - Controls: external link (↗), expand, add (+), close (×)
 - Status bar with session index (#1, #2, #3)
 - Status badge
-- Repository name
 - Task name
 - Time since last activity
 
@@ -201,13 +200,10 @@ The input bar at the bottom of each session column includes:
 
 You can change Mode, Model, and Effort on a per-message basis.
 
-<!-- TODO: confirm with engineering — what the "20%" usage indicator represents -->
 
 ### Disconnected Sessions
 
 If a session loses connection to its runtime, it appears as disconnected in the column.
-
-<!-- TODO: confirm with engineering — cause of disconnected sessions and steps to reconnect -->
 
 ### Notifications
 

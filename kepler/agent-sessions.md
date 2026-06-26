@@ -47,13 +47,9 @@ You can change **Mode**, **Model**, and **Effort Level** on any individual messa
 
 **Mode** controls how the agent handles decisions during a session, from pausing at every decision point to running without interruption.
 
-<!-- TODO: confirm with engineering — document the exact available modes and their names -->
-
 ### Effort levels
 
 **Effort Level** controls how thoroughly the agent reasons before acting. Higher effort produces more thorough results but takes longer.
-
-<!-- TODO: confirm with engineering — document the exact available effort levels and their names -->
 
 ***
 
@@ -135,15 +131,15 @@ Click any commit in the history to see:
 
 The **STAGED (N)** panel lists files queued for the next commit, where N is the file count. Each entry shows the file path and a change type badge (**M**, **A**, or **D**).
 
-- **Discard All**: discards all staged changes. <!-- TODO: confirm with engineering — document the confirmation prompt behavior -->
+- **Discard All**: discards all staged changes.
 - **Unstage All**: moves all staged files back to unstaged.
-- Click an individual file to view its diff. Per-file controls let you unstage or discard that file individually. <!-- TODO: confirm with engineering — confirm exact per-file interaction -->
+- Click an individual file to view its diff. Per-file controls let you unstage or discard that file individually.
 
 ### Changes panel
 
 The **CHANGES (N)** panel lists unstaged files. Each entry shows the file path and a change type badge.
 
-- **Discard All**: discards all unstaged changes. <!-- TODO: confirm with engineering — document the confirmation prompt behavior -->
+- **Discard All**: discards all unstaged changes.
 - **Stage All**: moves all unstaged files into the staged panel.
 
 ### Committing
