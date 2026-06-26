@@ -33,7 +33,7 @@ Connecting an issue tracker lets you create a Kepler **Task**, the core unit of 
 | GitHub Issues | OAuth 2.0 | No |
 | GitHub Enterprise Issues | Personal Access Token | Yes |
 | GitLab Issues | OAuth 2.0 | No |
-| GitLab Self-Hosted Issues | Personal Access Token | Yes |
+| GitLab Self-Managed Issues | Personal Access Token | Yes |
 | Azure DevOps | OAuth 2.0 | No |
 
 All providers are configured in **Settings → Provider Integrations**.
@@ -78,7 +78,7 @@ When you create a Task from a Jira issue, Kepler passes the following fields to 
 
 ### Limitations
 
-- Kepler does not support Jira Data Center or Jira Server. Use the GitHub Enterprise or GitLab Self-Hosted integration for self-managed workflows.
+- Kepler does not support Jira Data Center or Jira Server. Use the GitHub Enterprise or GitLab Self-Managed integration for self-managed workflows.
 - Kepler does not pass attachments or embedded images from issue descriptions to the agent.
 
 ***
@@ -258,9 +258,9 @@ From a GitLab issue, Kepler passes:
 
 ***
 
-## GitLab Self-Hosted Issues
+## GitLab Self-Managed Issues
 
-Connect GitLab Self-Hosted Issues using a personal access token to create Kepler Tasks from issues on your self-managed instance.
+Connect GitLab Self-Managed Issues using a personal access token to create Kepler Tasks from issues on your self-managed instance.
 
 ### Prerequisites
 
@@ -268,17 +268,16 @@ Connect GitLab Self-Hosted Issues using a personal access token to create Kepler
 - A personal access token with `api` scope, generated on your GitLab instance.
 - Your GitLab instance URL (e.g., `https://gitlab.yourcompany.com`).
 
-### Connect GitLab Self-Hosted Issues
+### Connect GitLab Self-Managed Issues
 
-<!-- TODO: confirm with engineering - verify exact menu path and button labels -->
 
 1. Go to **Settings** → **Provider Integrations** in Kepler.
-2. Under **Issue Trackers**, click **Connect** next to **GitLab Self-Hosted Issues**.
+2. Under **Issue Trackers**, click **Connect** next to **GitLab Self-Managed Issues**.
 3. Enter your **Instance URL** (e.g., `https://gitlab.yourcompany.com`).
 4. Paste your **Personal Access Token**.
-5. Click **Connect**. Kepler verifies the token and shows **GitLab Self-Hosted connected**.
+5. Click **Connect**. Kepler verifies the token and shows **GitLab Self-Managed connected**.
 
-### What Kepler pulls from GitLab Self-Hosted Issues
+### What Kepler pulls from GitLab Self-Managed Issues
 
 Kepler pulls the same fields as GitLab Issues (see above). Field availability depends on your GitLab version and edition.
 
