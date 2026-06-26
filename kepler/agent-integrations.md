@@ -34,11 +34,11 @@ Each connected agent runs as an **agent session** inside a **Task**. A Task is t
 
 | Agent | Description | Prerequisites | Status |
 |---|---|---|---|
-| <img src="/wp-content/uploads/claude.svg" class="img-responsive" style="width:16px; height:16px; object-fit:contain; vertical-align:middle; margin-right:6px;" alt=""> Claude Code | Anthropic's coding agent | Claude Code installed and configured locally | Supported |
-| <img src="/wp-content/uploads/codex.svg" class="img-responsive" style="width:16px; height:16px; object-fit:contain; vertical-align:middle; margin-right:6px;" alt=""> Codex CLI | OpenAI's coding agent | Codex CLI installed and configured locally | Supported |
-| <img src="/wp-content/uploads/copilot.svg" class="img-responsive" style="width:16px; height:16px; object-fit:contain; vertical-align:middle; margin-right:6px;" alt=""> Copilot CLI | GitHub's coding agent | Copilot CLI installed and authorized with a GitHub account | Supported |
-| <img src="/wp-content/uploads/cursor.svg" class="img-responsive" style="width:16px; height:16px; object-fit:contain; vertical-align:middle; margin-right:6px;" alt=""> Cursor | AI code editor with built-in agent | Cursor installed <!-- TODO: confirm with engineering: auth or API key requirements --> | Supported |
-| <img src="/wp-content/uploads/opencode.svg" class="img-responsive" style="width:16px; height:16px; object-fit:contain; vertical-align:middle; margin-right:6px;" alt=""> OpenCode | Open-source, model-agnostic coding agent | OpenCode installed; API key for your chosen model | Supported |
+| Claude Code | Anthropic's coding agent | Claude Code installed and configured locally | Supported |
+| Codex CLI | OpenAI's coding agent | Codex CLI installed and configured locally | Supported |
+| Copilot CLI | GitHub's coding agent | Copilot CLI installed and authorized with a GitHub account | Supported |
+| Cursor | AI code editor with built-in agent | Cursor installed <!-- TODO: confirm with engineering: auth or API key requirements --> | Supported |
+| OpenCode | Open-source, model-agnostic coding agent | OpenCode installed; API key for your chosen model | Supported |
 
 ***
 
