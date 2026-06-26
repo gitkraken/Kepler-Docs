@@ -19,6 +19,8 @@ taxonomy:
 ---
 <kbd>Last updated: June 2026</kbd>
 
+This page walks you through installing Kepler, completing setup, and creating your first Task.
+
 ## What is Kepler?
 Kepler is GitKraken's **Agentic Development Environment** (**ADE**), built for developers directing multiple AI coding agents across multiple repos in parallel.
 
@@ -39,7 +41,7 @@ Kepler is available for **Windows**, **Mac**, and **Linux**.
 | Platform | Installer | Minimum OS |
 |---|---|---|
 | Windows | 64-bit, ARM64 | Windows 10+ |
-| Mac | Apple Silicon, Intel | macOS 12+ |
+| macOS | Apple Silicon, Intel | macOS 12+ |
 | Linux (x64) | .deb, .rpm, .AppImage | Ubuntu LTS 18.04+ / Debian 10+ / RHEL 8+ / Fedora 39+ |
 | Linux (ARM) | .deb, .rpm, .AppImage | Ubuntu LTS 20.04+ / RHEL 8+ / Fedora 39+ |
 
@@ -47,7 +49,7 @@ Kepler is available for **Windows**, **Mac**, and **Linux**.
 2. Run the installer and follow the on-screen prompts.
 3. Launch Kepler.
 
-On first open, Kepler displays the **Home** view. No repos are connected yet and no agents are configured. The next two sections cover the minimum setup required before creating your first Task.
+On first open, Kepler displays the **Home** view. No repos or agents are configured yet. The next two sections cover the minimum setup required before creating your first Task.
 
 <figure>
   <img src="/wp-content/uploads/blank-kepler.png" class="help-center-img img-bordered" alt="Kepler List view on first launch showing an empty task list in the sidebar and a 'No task selected' state in the center panel with a Launch a task button">
@@ -56,7 +58,7 @@ On first open, Kepler displays the **Home** view. No repos are connected yet and
 
 ***
 
-## Setup Guide
+## Complete the setup checklist
 
 Complete all five items in the **Setup** checklist before creating your first Task. Access the checklist from the **Setup** button in the top navigation bar. The checklist shows **Setup · N/5** and turns fully green when all five items are complete.
 
@@ -110,7 +112,7 @@ Commands run inside the new worktree folder using your default login shell, so t
   <figcaption style="text-align:center; color:#888">Settings → General. Set both folder paths before launching your first Task.</figcaption>
 </figure>
 
-Expanding **More setup options** in the checklist reveals two additional optional items:
+Expand **More setup options** in the checklist to see two optional items:
 
 - **Connect a remote environment** — run Tasks on a remote machine or inside WSL. See [Remote Environments](/kepler/remote-environments).
 - **Control Kepler remotely** — start Kepler's local server to access the UI from another device. See [Remote Environments](/kepler/remote-environments).
