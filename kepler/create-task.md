@@ -129,7 +129,16 @@ When multiple issues are selected, the **Split into N tasks** and **Group as 1 t
 
 ### Supported issue trackers
 
-GitHub Issues, GitHub Enterprise, GitLab, GitLab Self-Hosted, Jira, Linear, Trello, Azure DevOps.
+Kepler can pull issues from the following trackers:
+
+- GitHub Issues
+- GitHub Enterprise
+- GitLab
+- GitLab Self-Hosted
+- Jira
+- Linear
+- Trello
+- Azure DevOps
 
 For integration setup, see [Issue Tracker Integrations](issue-tracker-integrations.md).
 

@@ -128,6 +128,11 @@ Sets the default directory where Kepler clones new repositories. Click **Browse*
 
 Sets the default directory for new [worktrees](worktrees.md). Click **Browse** to pick a location. The path supports the following placeholders:
 
+<figure>
+  <img src="/wp-content/uploads/default-locations.png" class="help-center-img img-bordered" alt="Settings → General showing Default Repositories Folder set to /Users/jonathansilva/kepler/repositories and Default Worktrees Folder set to /Users/jonathansilva/worktrees, both highlighted with a teal dashed border, and a Placeholders table below">
+  <figcaption style="text-align:center; color:#888">Settings → General. Set both folder paths before launching your first Task.</figcaption>
+</figure>
+
 | Placeholder | Meaning |
 |-------------|---------|
 | `<REPOSITORY_PATH>` | The main repository folder |
@@ -180,6 +185,11 @@ The **Downloaded model** row shows the model name, revision, download date, and 
 ## Agents
 
 The **Agents** section lists every AI coding agent Kepler can detect on your system and lets you configure how each one runs. Click **Refresh** to re-scan for newly installed agents.
+
+<figure>
+  <img src="/wp-content/uploads/agents-view.png" class="help-center-img img-bordered" alt="Settings → Agents showing Claude Code (Installed, Enabled), Codex (Bundled, Enabled), GitHub Copilot (Not installed, Install button), Cursor CLI (Installed, Sign in, Enabled), and OpenCode (Installed, Sign in, Enabled), each with a Binary row showing the resolved path and version">
+  <figcaption style="text-align:center; color:#888">Settings → Agents. Each agent shows its install status, sign-in state, enabled toggle, and resolved binary path.</figcaption>
+</figure>
 
 ### Agent list
 
@@ -285,19 +295,24 @@ For details on startup commands and environment setup, see [environment-and-setu
 
 The **Provider Integrations** section connects Kepler to your issue trackers and pull-request providers so they appear in the Task Launcher. Click **Refresh** to re-check connection status.
 
+<figure>
+  <img src="/wp-content/uploads/pr-integrations.png" class="help-center-img img-bordered" alt="Settings → Provider Integrations listing Azure DevOps (Connected, with a warning icon), Bitbucket, GitHub (Connected), GitHub Enterprise, GitLab, GitLab Self-Hosted, Jira, Linear, and Trello, each with a Connect or Reconnect button">
+  <figcaption style="text-align:center; color:#888">Settings → Provider Integrations. Connected providers show <strong>Reconnect</strong>; unconnected providers show <strong>Connect</strong>.</figcaption>
+</figure>
+
 Supported providers:
 
-| Provider | Notes |
-|----------|-------|
-| Azure DevOps | |
-| Bitbucket | |
-| GitHub | |
-| GitHub Enterprise | |
-| GitLab | |
-| GitLab Self-Managed | |
-| Jira | |
-| Linear | |
-| Trello | |
+| Provider |
+|----------|
+| Azure DevOps |
+| Bitbucket |
+| GitHub |
+| GitHub Enterprise |
+| GitLab |
+| GitLab Self-Managed |
+| Jira |
+| Linear |
+| Trello |
 
 Each provider shows either a **Connect** button (not yet connected) or a **Reconnect** button (previously connected).
 
@@ -308,6 +323,11 @@ For per-provider setup instructions, see [pull-request-integrations.md](pull-req
 ## Remote Access
 
 The **Remote Access** section starts a local server that lets you open Kepler from another device on the same network, such as a second computer or phone. This is not SSH or WSL remote development; for those, see [remote-environments.md](remote-environments.md).
+
+<figure>
+  <img src="/wp-content/uploads/remote-access.png" class="help-center-img img-bordered" alt="Settings → Remote Access showing Remote Access Inactive with a Start button, and Port, Host, and URL Override fields below">
+  <figcaption style="text-align:center; color:#888">Settings → Remote Access before the server is started. Click <strong>Start</strong> to activate and generate the access QR code.</figcaption>
+</figure>
 
 ### Status and controls
 

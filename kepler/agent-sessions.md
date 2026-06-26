@@ -161,14 +161,19 @@ Click **Back to session** to close the diff and return to the agent session cons
 
 ***
 
-## Optional agent features: AI Sync
+## Optional agent features
 
-**AI Sync** is an experimental feature (disabled by default) that gives agents tools to rebase or merge with automatic conflict resolution. You can roll back each operation.
+Two optional features can be toggled in **Settings → Features**. Both are safe to enable — every operation they perform can be rolled back or undone.
 
-To enable AI Sync, go to **Settings → Features** and toggle **AI Sync** on.
+**AI Sync** — gives agents tools to rebase or merge with automatic conflict resolution. Enable this when agents are working across branches that need to stay in sync.
 
-Once enabled, the agent can invoke rebase and merge operations with automatic conflict resolution.
+**Compose** — gives agents tools to reorganize messy changes into clean, atomic commits. Enable this when you want agent output committed in a structured, reviewable way rather than as a single bulk commit.
 
-For more on experimental features, see [Settings](settings.md#features).
+<figure>
+  <img src="/wp-content/uploads/ai-sync-compose.png" class="help-center-img img-bordered" alt="Settings → Features panel showing AI Sync (enabled, checked) with the description 'Gives agents tools to rebase or merge with automatic conflict resolution. Operations are safe and can be easily rolled back.' and Compose (disabled, unchecked) with the description 'Gives agents tools to reorganize messy changes into clean, atomic commits. Operations are safe and can be easily undone.'">
+  <figcaption style="text-align:center; color:#888">Settings → Features. AI Sync and Compose are both disabled by default — enable either independently.</figcaption>
+</figure>
+
+For more on these settings, see [Settings](settings.md#features).
 
 ---
