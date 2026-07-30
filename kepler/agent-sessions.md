@@ -35,7 +35,7 @@ When you start a session, you can configure four settings. You can override thre
 | **Effort Level** | How thoroughly the agent reasons | Default | See [Effort levels](#effort-levels) below |
 
 <figure>
-  <img src="/wp-content/uploads/set-agent.png" class="help-center-img img-bordered" alt="Session configuration bar showing the Agent dropdown open with Claude Code, Codex, and OpenCode options, alongside Mode, Model, and Effort dropdowns all set to Default">
+  <img src="/wp-content/uploads/set-agent-2.png" class="help-center-img img-bordered" alt="Session configuration bar showing the Agent dropdown open with Claude Code, Codex, and OpenCode options, alongside Mode, Model, and Effort dropdowns all set to Default">
   <figcaption style="text-align:center; color:#888">The Agent dropdown at session start. Mode, Model, and Effort default to Default.</figcaption>
 </figure>
 
