@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>%%SITE%%</title>
+<style>
+:root{
+  --teal:#00907D; --teal-lift:#12b39c;
+  --ink:#1b2124; --ink-soft:#4a5560; --ink-faint:#6b7780;
+  --line:#e3e7ea; --line-soft:#eef1f3; --bg:#fff; --bg-alt:#f7f9fa;
+  --warn-bg:#fff8e6; --warn-line:#e8c46a; --warn-ink:#7a5a00;
+  --info-bg:#eef5ff; --info-line:#9dc0ee; --info-ink:#1f4d80;
+  --bad-bg:#fdecec; --bad-line:#e5a1a1; --bad-ink:#8c2b2b;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --teal:#2fc2ab; --teal-lift:#57d6c2;
+    --ink:#e6ebee; --ink-soft:#aeb9c2; --ink-faint:#8391 9c;
+    --ink-faint:#8b97a1;
+    --line:#2b3237; --line-soft:#222830; --bg:#14181b; --bg-alt:#1a1f23;
+    --warn-bg:#2a2313; --warn-line:#6b5a24; --warn-ink:#e8cf8a;
+    --info-bg:#15202e; --info-line:#2d4c6e; --info-ink:#a9cbf0;
+    --bad-bg:#2b1717; --bad-line:#6b3232; --bad-ink:#efaaaa;
+  }
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--bg); color:var(--ink);
+  font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--teal); text-decoration:none}
+a:hover{color:var(--teal-lift); text-decoration:underline}
+
+/* ---------- shell ---------- */
+.top{
+  position:sticky; top:0; z-index:20; display:flex; align-items:center; gap:16px;
+  padding:12px 24px; background:var(--bg); border-bottom:1px solid var(--line);
+}
+.brand{font-weight:650; letter-spacing:-.01em}
+.brand small{color:var(--ink-faint); font-weight:400; margin-left:8px}
+.top .grow{flex:1}
+.toggle{
+  display:flex; align-items:center; gap:7px; font-size:13px; color:var(--ink-soft);
+  cursor:pointer; user-select:none; padding:5px 10px; border:1px solid var(--line);
+  border-radius:6px; background:var(--bg-alt);
+}
+.toggle input{margin:0; accent-color:var(--teal)}
+.shell{display:grid; grid-template-columns:288px minmax(0,1fr) 208px; gap:0; align-items:start}
+@media (max-width:1180px){ .shell{grid-template-columns:264px minmax(0,1fr)} .toc{display:none} }
+@media (max-width:820px){ .shell{grid-template-columns:1fr} .side{display:none} }
+
+/* ---------- sidebar ---------- */
+.side{
+  position:sticky; top:57px; max-height:calc(100vh - 57px); overflow-y:auto;
+  border-right:1px solid var(--line); padding:20px 16px 48px;
+}
+.filter{
+  width:100%; padding:7px 10px; margin-bottom:18px; font-size:13.5px; color:var(--ink);
+  background:var(--bg-alt); border:1px solid var(--line); border-radius:6px;
+}
+.filter:focus{outline:2px solid var(--teal); outline-offset:-1px}
+.nav-sec{margin-bottom:22px}
+.nav-sec h3{
+  margin:0 0 7px; font-size:11px; font-weight:680; letter-spacing:.08em;
+  text-transform:uppercase; color:var(--ink-faint);
+}
+.nav-sec.preview-only h3{color:var(--warn-ink)}
+.nav-sec ul{list-style:none; margin:0; padding:0}
+.nav-sec li{margin:0}
+.nav-sec a{
+  display:block; padding:5px 10px; margin-left:-10px; border-radius:6px;
+  font-size:14.5px; color:var(--ink-soft); line-height:1.4;
+}
+.nav-sec a:hover{background:var(--bg-alt); color:var(--ink); text-decoration:none}
+.nav-sec a.on{background:var(--bg-alt); color:var(--teal); font-weight:600; box-shadow:inset 2px 0 0 var(--teal)}
+.nav-sec[hidden]{display:none}
+
+/* ---------- content ---------- */
+main{padding:40px 56px 96px; max-width:840px}
+@media (max-width:820px){ main{padding:28px 20px 64px} }
+article h1{font-size:33px; line-height:1.2; letter-spacing:-.02em; margin:0 0 14px}
+article h2{font-size:23px; letter-spacing:-.01em; margin:44px 0 12px; padding-top:6px}
+article h3{font-size:17.5px; margin:30px 0 8px}
+article h4{font-size:15.5px; margin:24px 0 6px; color:var(--ink-soft)}
+article p{margin:0 0 15px}
+article ul,article ol{margin:0 0 15px; padding-left:24px}
+article li{margin:4px 0}
+article hr{border:0; border-top:1px solid var(--line); margin:36px 0}
+article strong{font-weight:640}
+.desc{color:var(--ink-faint); font-size:16.5px; margin:0 0 22px !important; line-height:1.5}
+blockquote{
+  margin:0 0 18px; padding:13px 16px; background:var(--warn-bg);
+  border:1px solid var(--warn-line); border-left:3px solid var(--warn-line); border-radius:0 6px 6px 0;
+}
+blockquote p{margin:0}
+blockquote p+p{margin-top:10px}
+code{
+  font:13.5px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  background:var(--bg-alt); border:1px solid var(--line-soft); border-radius:4px; padding:1px 5px;
+}
+pre{background:var(--bg-alt); border:1px solid var(--line); border-radius:8px; padding:14px 16px; overflow-x:auto}
+pre code{background:none; border:0; padding:0; font-size:13px}
+kbd{
+  font:12px ui-monospace,Menlo,monospace; background:var(--bg-alt);
+  border:1px solid var(--line); border-bottom-width:2px; border-radius:5px;
+  padding:2px 7px; color:var(--ink-faint);
+}
+table{border-collapse:collapse; width:100%; margin:0 0 20px; font-size:14.5px; display:block; overflow-x:auto}
+th,td{border:1px solid var(--line); padding:9px 12px; text-align:left; vertical-align:top}
+th{background:var(--bg-alt); font-weight:640; font-size:13px; letter-spacing:.01em}
+tbody tr:nth-child(even){background:var(--bg-alt)}
+img{max-width:100%; border:1px solid var(--line); border-radius:8px}
+
+/* ---------- meta strip ---------- */
+.meta{display:flex; flex-wrap:wrap; gap:6px; margin:0 0 20px}
+.chip{
+  font:11.5px/1.5 ui-monospace,Menlo,monospace; color:var(--ink-faint);
+  background:var(--bg-alt); border:1px solid var(--line); border-radius:20px; padding:2px 9px;
+}
+.chip.warn{background:var(--warn-bg); border-color:var(--warn-line); color:var(--warn-ink)}
+.chip.bad{background:var(--bad-bg); border-color:var(--bad-line); color:var(--bad-ink)}
+body.hide-meta .meta{display:none}
+
+/* ---------- TODO callouts ---------- */
+.todo{
+  display:flex; gap:10px; align-items:flex-start; margin:0 0 18px; padding:10px 13px;
+  border-radius:7px; font-size:13.5px; line-height:1.55;
+  background:var(--warn-bg); border:1px dashed var(--warn-line); color:var(--warn-ink);
+}
+.todo.t-screenshot{background:var(--info-bg); border-color:var(--info-line); color:var(--info-ink)}
+.todo-k{
+  flex:none; font:10.5px/1.7 ui-monospace,Menlo,monospace; text-transform:uppercase;
+  letter-spacing:.07em; font-weight:700; opacity:.85;
+}
+body.hide-todo .todo{display:none}
+
+/* ---------- toc + prevnext ---------- */
+.toc{position:sticky; top:57px; max-height:calc(100vh - 57px); overflow-y:auto; padding:40px 20px 48px 0}
+.toc h4{margin:0 0 8px; font-size:11px; font-weight:680; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-faint)}
+.toc ol{list-style:none; margin:0; padding:0}
+.toc li{margin:0 0 3px}
+.toc a{display:block; font-size:13px; line-height:1.4; color:var(--ink-faint); padding:3px 0}
+.toc a:hover{color:var(--teal); text-decoration:none}
+.pn{display:flex; gap:14px; margin-top:56px; padding-top:22px; border-top:1px solid var(--line)}
+.pn a{
+  flex:1; padding:13px 16px; border:1px solid var(--line); border-radius:8px;
+  font-size:14.5px; font-weight:600;
+}
+.pn a:hover{border-color:var(--teal); text-decoration:none}
+.pn span{display:block; font-size:11px; font-weight:600; letter-spacing:.07em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:3px}
+.pn .nx{text-align:right}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="brand">Kepler Docs <small>local preview — not the live site</small></div>
+  <div class="grow"></div>
+  <label class="toggle"><input type="checkbox" id="t-todo" checked> Show TODOs</label>
+  <label class="toggle"><input type="checkbox" id="t-meta" checked> Show frontmatter</label>
+</div>
+
+<div class="shell">
+  <nav class="side">
+    <input class="filter" id="filter" type="search" placeholder="Filter pages…" autocomplete="off">
+    %%NAV%%
+  </nav>
+  <main>
+    %%ARTICLES%%
+    <div class="pn" id="pn"></div>
+  </main>
+  <aside class="toc"><h4>On this page</h4><ol id="toc"></ol></aside>
+</div>
+
+<script>
+const PN = %%PREVNEXT%%;
+const FIRST = "%%FIRST%%";
+const arts = [...document.querySelectorAll('article')];
+const links = [...document.querySelectorAll('.nav-sec a')];
+
+function slugify(s){
+  return s.toLowerCase().replace(/[^\w\s-]/g,'').trim().replace(/\s+/g,'-');
+}
+
+function show(slug){
+  let target = arts.find(a => a.dataset.slug === slug) || arts.find(a => a.dataset.slug === FIRST);
+  arts.forEach(a => { a.hidden = a !== target; });
+  links.forEach(a => a.classList.toggle('on', a.dataset.slug === target.dataset.slug));
+
+  // on-this-page
+  const toc = document.getElementById('toc');
+  toc.innerHTML = '';
+  target.querySelectorAll('h2').forEach(h => {
+    if(!h.id) h.id = slugify(h.textContent);
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    a.href = '#' + target.dataset.slug + '::' + h.id;
+    a.textContent = h.textContent;
+    a.onclick = e => { e.preventDefault(); h.scrollIntoView({behavior:'smooth', block:'start'}); };
+    li.appendChild(a); toc.appendChild(li);
+  });
+
+  // prev / next
+  const pn = PN[target.dataset.slug] || {};
+  const box = document.getElementById('pn');
+  box.innerHTML = '';
+  if(pn.prev) box.insertAdjacentHTML('beforeend',
+    `<a href="#${pn.prev.slug}"><span>Previous</span>${pn.prev.title}</a>`);
+  if(pn.next) box.insertAdjacentHTML('beforeend',
+    `<a class="nx" href="#${pn.next.slug}"><span>Next</span>${pn.next.title}</a>`);
+
+  document.title = (target.querySelector('h1')?.textContent || 'Kepler Docs') + ' — preview';
+  window.scrollTo(0,0);
+}
+
+function route(){
+  const raw = location.hash.replace(/^#/, '');
+  const [slug, anchor] = raw.split('::');
+  show(slug || FIRST);
+  if(anchor){
+    const el = document.getElementById(anchor);
+    if(el) el.scrollIntoView({block:'start'});
+  }
+}
+addEventListener('hashchange', route);
+
+document.getElementById('t-todo').onchange = e =>
+  document.body.classList.toggle('hide-todo', !e.target.checked);
+document.getElementById('t-meta').onchange = e =>
+  document.body.classList.toggle('hide-meta', !e.target.checked);
+
+document.getElementById('filter').oninput = e => {
+  const q = e.target.value.toLowerCase().trim();
+  document.querySelectorAll('.nav-sec').forEach(sec => {
+    let any = false;
+    sec.querySelectorAll('li').forEach(li => {
+      const hit = !q || li.textContent.toLowerCase().includes(q);
+      li.hidden = !hit; if(hit) any = true;
+    });
+    sec.hidden = !any;
+  });
+};
+
+route();
+</script>
+</body>
+</html>

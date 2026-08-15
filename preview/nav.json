@@ -1,0 +1,55 @@
+{
+  "site": "Kepler Docs \u2014 local preview",
+  "note": "This file is the proposed left-nav structure for the WordPress help center. It lives here because the real nav is built in WordPress and not in this repo. Edit it, re-run build.py, and reload index.html.",
+  "sections": [
+    {
+      "title": "Getting Started",
+      "pages": [
+        "Kepler-Getting-Started.md"
+      ]
+    },
+    {
+      "title": "Core Concepts",
+      "pages": [
+        "kepler-interface.md",
+        "arranging-your-work.md",
+        "actions.md",
+        "tasks-and-resources.md",
+        "task-view.md",
+        "agent-graph.md"
+      ]
+    },
+    {
+      "title": "Working in Kepler",
+      "pages": [
+        "create-task.md",
+        "agent-sessions.md",
+        "review-changes.md",
+        "voice-input.md"
+      ]
+    },
+    {
+      "title": "Integrations",
+      "pages": [
+        "agent-integrations.md",
+        "issue-tracker-integrations.md",
+        "pull-request-integrations.md"
+      ]
+    },
+    {
+      "title": "Configuration",
+      "pages": [
+        "settings.md",
+        "remote-environments.md"
+      ]
+    },
+    {
+      "title": "Retired \u2014 preview only, not in the site nav",
+      "preview_only": true,
+      "pages": [
+        "workflow-views.md",
+        "environment-and-setup.md"
+      ]
+    }
+  ]
+}
