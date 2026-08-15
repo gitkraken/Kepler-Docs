@@ -1,6 +1,6 @@
 ---
 title: Issue Tracker Integrations
-description: Connect your issue tracker to Kepler so you can create Tasks directly from issues and pass issue context to your agents automatically.
+description: Connect your issue trackers to Kepler so the issues assigned to you land in one list, with everything an agent needs already attached.
 product: Kepler
 feature: Issue Tracker Integrations
 content_type: how-to
@@ -11,311 +11,143 @@ git_hosts: [generic]
 integrations: [jira, linear, trello, github, github-enterprise, gitlab, gitlab-self-hosted, azure-devops]
 hosted_variant: both
 status: GA
-last_verified: 2026-06
+last_verified: 2026-08
 llms_include: true
-tags: [integrations, issue-trackers, jira, linear, trello, github, gitlab, azure-devops, oauth]
+tags: [integrations, issue-trackers, jira, linear, trello, github, gitlab, azure-devops, accounts, settings]
 taxonomy:
     category: kepler
 ---
-<kbd>Last updated: June 2026</kbd>
+<kbd>Last updated: August 2026</kbd>
 
-## Overview
+Connect an issue tracker and every issue assigned to you shows up in [the Kepler interface](/kepler/kepler-interface), alongside your pull requests and the tasks you already have running. Starting work on one becomes picking a row rather than describing the work from scratch.
 
-Connecting an issue tracker lets you create a Kepler **Task**, the core unit of work in Kepler's **Agentic Development Environment** (**ADE**), directly from an issue. Kepler passes the issue title, description, and metadata to the agent automatically as its starting context.
+Providers are managed in **Settings → Integrations**, in the **Provider Integrations** section.
 
-### Supported trackers
+<!-- TODO(screenshot): Settings → Integrations → Provider Integrations, with one provider connected and its Accounts list expanded. The existing _images/provider-integrations.png and _images/pr-integrations.png predate the Connected badge, the Disconnect button, and the account switcher. -->
 
-| Tracker | Auth method | Self-hosted support |
+***
+
+## Trackers Kepler can read issues from
+
+Eight of Kepler's nine providers return issues.
+
+| Provider | Name in Settings | Also returns pull requests |
 |---|---|---|
-| Jira | OAuth 2.0 | No (Cloud only) |
-| Linear | OAuth 2.0 | No |
-| Trello | OAuth 2.0 | No |
-| GitHub Issues | OAuth 2.0 | No |
-| GitHub Enterprise Issues | Personal Access Token | Yes |
-| GitLab Issues | OAuth 2.0 | No |
-| GitLab Self-Managed Issues | Personal Access Token | Yes |
-| Azure DevOps | OAuth 2.0 | No |
+| **GitHub** | GitHub | Yes |
+| **GitHub Enterprise** | GitHub Enterprise | Yes |
+| **GitLab** | GitLab | Yes |
+| **GitLab Self-Hosted** | GitLab Self-Hosted | Yes |
+| **Azure DevOps** | Azure DevOps | Yes |
+| **Jira** | Jira | No |
+| **Linear** | Linear | No |
+| **Trello** | Trello | No |
 
-All providers are configured in **Settings → Provider Integrations**.
+Bitbucket is the ninth. It returns pull requests only — see [Pull Request Integrations](/kepler/pull-request-integrations).
 
-<figure>
-  <img src="/wp-content/uploads/provider-integrations.png" class="help-center-img img-bordered" alt="The Provider Integrations section in Kepler Settings listing Azure DevOps, Bitbucket, GitHub, GitHub Enterprise, GitLab, GitLab Self-Hosted, Jira, Linear, and Trello, each with a Connect or Reconnect button">
-  <figcaption style="text-align:center; color:#888">Settings → Provider Integrations. Connected providers show a <strong>Reconnect</strong> button; unconnected providers show <strong>Connect</strong>.</figcaption>
-</figure>
+Self-hosted instances are first-class: **GitHub Enterprise** and **GitLab Self-Hosted** read issues the same way their cloud counterparts do. Which fields come back depends on your server's version.
 
 ***
 
-## Jira
+## Connect a tracker
 
-Connect Jira to create Kepler Tasks from Jira issues and pass issue context to your agents automatically.
+1. Open **Settings → Integrations**.
+2. Find the provider in **Provider Integrations** and click **Connect**.
+3. Authorize Kepler in the browser window that opens.
+4. Kepler returns to **Provider Integrations** and the provider shows a **Connected** badge.
 
-### Prerequisites
+Integrations are held by your GitKraken account rather than by this copy of Kepler, so a provider you connect here is also available to the `gk` CLI and GitKraken Desktop. You need to be signed in to a GitKraken account to manage them; Kepler prompts you if you are not.
 
-- A Jira Cloud account with permission to install OAuth apps.
-- A Kepler account with at least one workspace configured.
+**Connect** hands the whole authorization to GitKraken's website — Kepler opens `/connect` there in your system browser with the provider named, and hands it a redirect back into Kepler. There is no in-app form for a host URL or a personal access token, so whatever a provider needs, you supply it in the browser. Kepler notices the return and refetches your providers rather than serving what it had cached.
 
-### Connect Jira
+<!-- TODO(verify): the redirect and the absence of an in-app form are confirmed against getConnectUrl (src/backend/auth/auth.ts) and useConnectProvider (src/ui/data/auth.ts) at kepler 7c31af83e. The browser-side steps themselves live on GitKraken's website and are not in this repo — confirm with the web team what Jira site selection, Linear workspace selection, and the GitHub Enterprise / GitLab Self-Hosted host-and-token fields actually ask for before documenting them as a numbered flow. -->
 
+Three controls sit on a connected provider's row:
 
-1. Open Kepler and navigate to **Settings** → **Provider Integrations**.
-2. Under **Issue Trackers**, click **Connect** next to **Jira**.
-3. Click **Authorize with Jira**. Atlassian's OAuth flow opens.
-4. Select the Jira site you want to connect and click **Accept**.
-5. Kepler shows **Jira connected** with your site name.
+| Control | What it does |
+|---|---|
+| **Reconnect** | Re-runs authorization. Use it when a sign-in has expired |
+| **Disconnect** | Removes the provider — see below |
+| **Refresh** | At the top of the section, re-checks every provider |
 
-### What Kepler pulls from Jira
-
-When you create a Task from a Jira issue, Kepler passes the following fields to the agent:
-
-- Issue key and summary (title)
-- Description (including formatted text and code blocks)
-- Labels
-- Assignee
-- Priority
-- Status
-- Linked issue keys
-
-### Limitations
-
-- Kepler does not support Jira Data Center or Jira Server. Use the GitHub Enterprise or GitLab Self-Managed integration for self-managed workflows.
-- Kepler does not pass attachments or embedded images from issue descriptions to the agent.
+A warning triangle on a row means that provider's sign-in has expired. Kepler tries to refresh the token on its own; **Reconnect** is the manual fix.
 
 ***
 
-## Linear
+## More than one account of the same provider
 
-Connect Linear to create Kepler Tasks from Linear issues and pass issue context to your agents automatically.
+You can connect several accounts of the same provider — two GitHub accounts, a work Jira site and a personal one. When a provider has two or more, an **Accounts** list appears under its row with one entry per account.
 
-### Prerequisites
+Each entry carries two independent controls.
 
-- A Linear workspace with member or admin access.
+| Control | What it changes | How far it reaches |
+|---|---|---|
+| **Read from this account** | Which account Kepler reads this provider's issues and pull requests from | Kepler only, and non-destructive |
+| **Set as primary** / **Primary** | The provider's primary account | Everywhere — other Kepler windows, the `gk` CLI, and GitKraken Desktop |
 
-### Connect Linear
+**Browsing a secondary account does not change your primary.** Selecting **Read from this account** on a second account switches what Kepler shows you and leaves the primary alone, which is why it is a radio rather than a button. The primary is the default read account, so a provider with no override reads through it.
 
+Switching either one clears that provider's saved filters — an organization or project from the old account need not exist on the new one — and re-fetches the list.
 
-1. In Kepler, go to **Settings** → **Provider Integrations**.
-2. Under **Issue Trackers**, click **Connect** next to **Linear**.
-3. Click **Authorize with Linear**. Linear's OAuth consent screen opens.
-4. Select the workspace to connect and click **Allow access**.
-5. Kepler shows **Linear connected** when the authorization completes.
-
-### What Kepler pulls from Linear
-
-When you create a Task from a Linear issue, Kepler passes these fields to the agent:
-
-- Issue identifier and title
-- Description (Markdown)
-- Labels
-- Assignee
-- Priority
-- State (status)
-- Project and cycle membership
-
-### Limitations
-
-- Kepler fetches only the selected issue's fields; sub-issues are not included.
+The read account also authenticates git. Starting work on an issue in a repository you have never cloned makes Kepler clone it, using the same connection it reads through — see [Pull Request Integrations](/kepler/pull-request-integrations) for which hosts that covers and what happens on the ones it does not.
 
 ***
 
-## Trello
+## Disconnect a provider
 
-Connect Trello to create Kepler Tasks from Trello cards and pass card details to your agents automatically.
+Click **Disconnect** on the provider's row in **Settings → Integrations** and confirm.
 
-### Prerequisites
+Disconnecting reaches further than Kepler. It removes the provider from GitKraken entirely, so the `gk` CLI and GitKraken Desktop lose access too, along with **any additional accounts of that provider**. You can reconnect at any time.
 
-- A Trello account with access to the boards you want to use.
+Kepler also drops that provider's saved filters and its rows from your lists, so nothing lingers behind pointing at a provider you no longer have.
 
-### Connect Trello
-
-
-1. In Kepler, open **Settings** → **Provider Integrations**.
-2. Under **Issue Trackers**, click **Connect** next to **Trello**.
-3. Click **Authorize with Trello**. Trello's OAuth consent screen opens.
-4. Click **Allow**.
-5. Kepler confirms the connection with **Trello connected**.
-
-### What Kepler pulls from Trello
-
-When you create a Task from a Trello card, Kepler passes these fields to the agent:
-
-- Card name (title)
-- Card description
-- Labels
-- Members (assignees)
-- Due date
-- Checklist names and items
-
-### Limitations
-
-- Kepler does not pass card attachments to the agent.
-- Kepler does not currently support custom fields.
+<!-- TODO(verify): the confirmation dialog's claim about additional accounts may be wrong. settings.providers.disconnectDescription (src/shared/i18n/locales/en.ts) says "along with any additional {name} accounts", but the only provider backend left after kepler#1956 removes the provider's PRIMARY connection and lets the platform promote a secondary, so a multi-account provider stays connected — see the disconnect docblock in src/backend/provider/core-gitlens-adapter.ts at 7c31af83e. This page currently follows the dialog. Settle which is right with engineering; if the backend is right, both the dialog copy and this paragraph need changing. -->
 
 ***
 
-## GitHub Issues
+## Jira, Linear, and Trello have no pull requests
 
-Connect GitHub Issues to create Kepler Tasks from GitHub issues and pass issue context to your agents automatically.
+Kepler keeps two separate lists of what each provider can return: which providers can list issues, and which can list pull requests. Jira, Linear, and Trello are on the first list only.
 
-### Prerequisites
+Two consequences you will notice:
 
-- A GitHub account with access to the repositories whose issues you want to use.
+- **Kepler never asks them for pull requests.** They are excluded from the pull-request read rather than queried and ignored.
+- **The interface hides the dead filters.** A provider filter only offers providers that can return results for what you are looking at, so Jira never appears as a pull-request filter. In the list, facets are built from the rows actually loaded, so a facet with nothing to offer is not shown at all.
 
-### Connect GitHub Issues
-
-
-1. In Kepler, navigate to **Settings** → **Provider Integrations**.
-2. Under **Issue Trackers**, click **Connect** next to **GitHub Issues**.
-3. Click **Authorize with GitHub**. GitHub's OAuth app authorization page opens.
-4. Select the organizations and repositories to grant access to, then click **Authorize**.
-5. After authorization, Kepler shows **GitHub connected**.
-
-### What Kepler pulls from GitHub Issues
-
-When you create a Task from a GitHub issue, Kepler passes these fields to the agent:
-
-- Issue number and title
-- Body (Markdown)
-- Labels
-- Assignees
-- Milestone
-- Linked pull request references
-
-### Limitations
-
-- Kepler does not pass GitHub Projects (v2) fields beyond the standard issue fields.
-- Private repositories require the **repo** OAuth scope; Kepler requests this during authorization.
+The same rule runs the other way for Bitbucket, which has no issues.
 
 ***
 
-## GitHub Enterprise Issues
+## What Kepler reads from an issue
 
-Connect GitHub Enterprise Issues using a personal access token to create Kepler Tasks from issues on your self-hosted instance.
+When an issue becomes a task, Kepler attaches what it read so the agent starts with the context rather than asking for it.
 
-### Prerequisites
+| Field | Notes |
+|---|---|
+| **Identifier** | The issue key or number — `GK-1234` for Jira, `DRE-2` for Linear, a number for GitHub, GitLab, and Azure DevOps |
+| **Title** | |
+| **Description** | The issue body |
+| **Issue type** | The provider's own vocabulary — a Jira issue type, an Azure DevOps work item type |
+| **Author** | When the provider reports one |
+| **Assignees** | |
+| **Labels** | The provider's own labels. Kepler distinguishes "this issue has no labels" from "this provider cannot report labels" |
+| **Project or board** | Jira projects, Linear teams, Azure DevOps areas. Git hosts hang issues off a repository instead |
+| **Repository** | Name, owner, and host, for the git hosts |
+| **URL** | Used by **Open in browser** |
 
-- A GitHub Enterprise Server instance (3.x or later recommended).
-- A personal access token (PAT) with `repo` scope, generated on your GitHub Enterprise instance.
-- Your GitHub Enterprise Server hostname (e.g., `github.yourcompany.com`).
+<!-- TODO(verify): re-checked field by field against the shared Issue shape in src/shared/provider/issue.ts at kepler 7c31af83e — unchanged, and the table above is complete. It still carries no priority, due date, milestone, Trello checklist, Linear cycle, or Azure DevOps area/iteration path, all of which the June 2026 version of this page claimed. Confirm with engineering whether any of those reach the agent by another path before re-adding them. -->
 
-### Connect GitHub Enterprise Issues
-
-
-1. Go to **Settings** → **Provider Integrations** in Kepler.
-2. Under **Issue Trackers**, click **Connect** next to **GitHub Enterprise Issues**.
-3. Enter your **Server URL** (e.g., `https://github.yourcompany.com`).
-4. Paste your **Personal Access Token**.
-5. Click **Connect**. Kepler verifies the token and shows **GitHub Enterprise connected**.
-
-### What Kepler pulls from GitHub Enterprise Issues
-
-Kepler pulls the same fields as GitHub Issues (see above). Field availability depends on your GitHub Enterprise Server version.
-
-### Limitations
-
-- GitHub Enterprise Cloud (GHEC) with an enterprise account uses the standard GitHub Issues integration above, not this one.
-- Kepler stores tokens per user; each team member must connect their own PAT.
+Kepler does not pass issue attachments or embedded images to the agent.
 
 ***
 
-## GitLab Issues
+## Where your issues turn up
 
-Connect GitLab Issues to create Kepler Tasks from GitLab issues and pass issue context to your agents automatically.
+| Surface | What it gives you |
+|---|---|
+| [The Kepler interface](/kepler/kepler-interface) | The **Todo** segment lists every issue assigned to you across every connected tracker, grouped and filtered how you like |
+| [Actions](/kepler/actions) | The **Action** button on a row hands the issue to an agent with its context attached. Firing an Action on an untracked issue is also how it becomes a task |
+| [Tasks and Resources](/kepler/tasks-and-resources) | An issue is a resource on a task, so you can attach one to work that already exists |
 
-### Prerequisites
+The **Issue type**, **Label**, and **Project** filters carry your provider's own vocabulary rather than a Kepler translation of it.
 
-- A GitLab.com account with access to the projects whose issues you want to use.
-
-### Connect GitLab Issues
-
-
-1. In Kepler, open **Settings** → **Provider Integrations**.
-2. Under **Issue Trackers**, click **Connect** next to **GitLab Issues**.
-3. Click **Authorize with GitLab**. GitLab's OAuth consent screen opens.
-4. Click **Authorize**.
-5. The page returns to Kepler showing **GitLab connected**.
-
-### What Kepler pulls from GitLab Issues
-
-When you create a Task from a GitLab issue, Kepler passes these fields to the agent:
-
-- Issue IID and title
-- Description (Markdown)
-- Labels
-- Assignees
-- Milestone
-- Weight (if set)
-- Linked issue references
-
-### Limitations
-
-- Kepler does not currently pass GitLab EE-only fields (for example, epic membership and health status).
-
-***
-
-## GitLab Self-Managed Issues
-
-Connect GitLab Self-Managed Issues using a personal access token to create Kepler Tasks from issues on your self-managed instance.
-
-### Prerequisites
-
-- A self-managed GitLab instance (GitLab CE or EE, 15.x or later recommended).
-- A personal access token with `api` scope, generated on your GitLab instance.
-- Your GitLab instance URL (e.g., `https://gitlab.yourcompany.com`).
-
-### Connect GitLab Self-Managed Issues
-
-
-1. Go to **Settings** → **Provider Integrations** in Kepler.
-2. Under **Issue Trackers**, click **Connect** next to **GitLab Self-Managed Issues**.
-3. Enter your **Instance URL** (e.g., `https://gitlab.yourcompany.com`).
-4. Paste your **Personal Access Token**.
-5. Click **Connect**. Kepler verifies the token and shows **GitLab Self-Managed connected**.
-
-### What Kepler pulls from GitLab Self-Managed Issues
-
-Kepler pulls the same fields as GitLab Issues (see above). Field availability depends on your GitLab version and edition.
-
-### Limitations
-
-- Your machine must be able to reach the GitLab instance. Air-gapped instances are not supported unless Kepler is deployed in your network.
-- Kepler stores tokens per user; each team member must connect their own PAT.
-
-***
-
-## Azure DevOps
-
-Connect Azure DevOps to create Kepler Tasks from Azure DevOps work items and pass work item details to your agents automatically.
-
-### Prerequisites
-
-- An Azure DevOps organization with member or higher access.
-- Work items enabled on the project(s) you want to use.
-
-### Connect Azure DevOps
-
-
-1. In Kepler, navigate to **Settings** → **Provider Integrations**.
-2. Under **Issue Trackers**, click **Connect** next to **Azure DevOps**.
-3. Click **Authorize with Azure DevOps**. Microsoft's OAuth consent screen opens.
-4. Sign in with your Microsoft account and click **Accept**.
-5. Kepler shows **Azure DevOps connected** with your organization name.
-
-### What Kepler pulls from Azure DevOps
-
-When you create a Task from an Azure DevOps work item, Kepler passes these fields to the agent:
-
-- Work item ID and title
-- Description
-- Work item type (Bug, User Story, Task, etc.)
-- Tags
-- Assigned to
-- State
-- Area path and iteration path
-
-### Limitations
-
-- Kepler does not currently support Azure DevOps Server (on-premises).
-- Rich text formatting in work item descriptions may be partially stripped when Kepler passes the description to the agent.
-
-***
-
+---

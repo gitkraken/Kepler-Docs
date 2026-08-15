@@ -1,212 +1,31 @@
 ---
 title: Workflow Views
-description: Understand Kepler's three workflow views (List, Kanban, and Console) and when to use each one.
+description: The List, Kanban, and Console views have been replaced by a single Kepler interface.
 product: Kepler
 feature: Workflow Views
-content_type: how-to
+content_type: reference
 audience: developer
 plan_required: all
 os_support: [Windows, macOS, Linux]
 git_hosts: [generic]
 integrations: []
 hosted_variant: both
-status: GA
-last_verified: 2026-06
-llms_include: true
-tags: [workflow-views, list-view, kanban, console, tasks, worktrees, sessions]
+status: retired
+last_verified: 2026-08
+llms_include: false
+tags: [workflow-views, retired, dashboard]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: June 2026</kbd>
-
-This page describes Kepler's three workflow views and when to use each one. Use the **List**, **Kanban**, and **Console** toggle at the top of the screen to switch between them.
-
-<figure>
-  <img src="/wp-content/uploads/workflow-views.png" class="help-center-img img-bordered" alt="The Kepler view switcher showing List, Kanban, and Console tabs in the top center of the screen">
-  <figcaption style="text-align:center; color:#888">The List, Kanban, and Console view switcher.</figcaption>
-</figure>
-
-## When to use each view
-
-Choose based on what you're doing.
-
-| View | Best for |
-|------|----------|
-| **List** | Reviewing diffs, commits, and file history on one worktree |
-| **Kanban** | Tracking work status across all Tasks |
-| **Console** | Monitoring multiple agent sessions and sending instructions |
-
-***
-
-## List View
-
-<figure>
-  <img src="/wp-content/uploads/list-view-sessions.png" class="help-center-img img-bordered" alt="Kepler List view showing the task and worktree sidebar on the left and an active agent session in the center panel with tool call rows marked Completed and an agent response below">
-  <figcaption style="text-align:center; color:#888">List view with the task sidebar on the left and an active agent session in the center panel.</figcaption>
-</figure>
-
-List view shows a single worktree's changes, agent session, and commit history.
-
-### Layout
-
-List view has three panels:
-
-- **Left sidebar** — Task and worktree navigation
-- **Center panel** — Diff or agent session
-- **Right panel** — Git history
-
-### Left Sidebar
-
-The sidebar lists all Tasks and their associated worktrees. The **Tasks N** header shows the total Task count.
-
-Tasks appear at the top level. Each Task expands to show its worktrees, labeled with the branch name and repository. A dot indicator on a worktree means it **Needs Attention**.
-
-Use the **Filter/search bar** to narrow the list by Task or worktree name.
-
-Click a worktree to open its diff and commit history in the center and right panels. The breadcrumb at the top of the center panel shows **Task name → worktree name**.
-
-### Center Panel
-
-By default, the center panel shows the agent session chat for the selected worktree. Click a file in the right panel to open the diff view for that file.
-
-In the diff view, each file shows its path and `+/-` line stats. Use the **Stacked/Split** toggle to switch between unified and side-by-side diff layouts. Unmodified sections are collapsed by default; click to expand them. Added lines appear in green; removed lines appear in red.
-
-To return to the agent session from the diff view, click **Back to session** (×).
-
-### Right Panel — Git History
-
-The right panel shows **Working changes** at the top, followed by a list of recent commits.
-
-Click any commit to see its full detail: title, description, author, email, timestamp, hash, branch tags, and a file list with `+/-` stats and `M` / `A` / `D` change indicators.
-
-### Push, Pull, and Fetch
-
-**Push**, **Pull**, and **Fetch** buttons appear in the top-right corner of List view. Use them to sync the current worktree's branch with its remote.
-
-### Create Command
-
-Use the **Create command...** dropdown in the top navigation to create saved command templates.
-
-***
-
-## Kanban View
-
-Kanban view shows every worktree as a card on a board, organized by development stage.
-
-### Board Layout
-
-Worktrees move across four columns as work progresses:
-
-1. **Exploration**
-2. **In Development**
-3. **In Review**
-4. **Done**
-
-Kepler advances the stage automatically based on what the agent is doing. For example, when Kepler detects a pull request, the worktree moves to **In Review** automatically.
-
-Each column header displays the number of worktrees currently in that stage.
-
-### Card Anatomy
-
-Each card represents one worktree and shows:
-
-- Branch name
-- External link (↗) to open the branch in your source host
-- Task name
-- Repository name
-- Session status badge
-- **Open chat** button
-- Archive icon
-- Agent indicator — agent initial, last context snippet, and time since last activity
-- **+ New session** button
-
-If you have not started an agent session, the card shows a **No sessions yet** state. Use **+ New session** to start one.
-
-### Search and Filters
-
-Use the **Search** bar to find worktrees by branch name or Task name.
-
-Use the **Filters** panel to narrow the board by:
-
-- **Status** — filter by session status: Needs Attention, Active, Idle, Errored, or Inactive (all enabled by default).
-- **Repos** — limit results to one or more specific repositories.
-- **Tasks** — filter by Task name; select **No task** to show worktrees not associated with any Task.
-- **Agent** — filter by agent runtime (for example, Claude Code, Codex).
-
-<figure>
-  <img src="/wp-content/uploads/kanban-status.png" class="help-center-img img-bordered" alt="Kanban view with the Status filter dropdown open, showing checkboxes for Needs Attention, Active, Idle, Errored, and Inactive">
-  <figcaption style="text-align:center; color:#888">The Status filter in Kanban view</figcaption>
-</figure>
-
-<figure>
-  <img src="/wp-content/uploads/task-filter.png" class="help-center-img img-bordered" alt="Kanban view with the Tasks filter dropdown open, listing task names as checkboxes with a No task option at the bottom">
-  <figcaption style="text-align:center; color:#888">The Tasks filter in Kanban view</figcaption>
-</figure>
-
-Use the **Sort** control to order cards (for example, **Newest first**).
-
-***
-
-## Console View
-
-Console view shows all active agent sessions side by side.
-
-### Session Column Layout
-
-Each session appears as a column. The Task header shows the session name and a count of active sessions.
-
-Each column header includes:
-
-- Session name (truncated)
-- Repository name
-- Controls: external link (↗), expand, add (+), close (×)
-- Status bar with session index (#1, #2, #3)
-- Status badge
-- Task name
-- Time since last activity
-
-### CHANGES Section
-
-Each session column contains a collapsible **CHANGES N** section, where N is the total number of changed files.
-
-Expand it to see **STAGED** and **UNSTAGED** sub-sections. Each file is listed with its path and a change indicator (`M`, `A`, or `D`).
-
-Use this section to check staged and unstaged changes without leaving Console view. For the full diff or staging controls, switch to List view.
-
-### Conversation Format
-
-Each column shows your conversation with the agent:
-
-- Your messages appear as chat bubbles.
-- Agent responses appear as formatted markdown.
-- Tool calls appear as collapsible rows with a **Completed** badge or an error state.
-
-<figure>
-  <img src="/wp-content/uploads/course-correct.png" class="help-center-img img-bordered" alt="Console view showing three agent sessions side by side. The middle session displays tool calls with error states. The right session shows a formatted commit summary as an agent response.">
-  <figcaption style="text-align:center; color:#888">Console view with multiple active sessions, showing tool call errors and an agent response with commit history</figcaption>
-</figure>
-
-### Input Bar
-
-The input bar at the bottom of each session column includes:
-
-- Microphone (🎤) for voice input
-- Attachment button
-- **Mode** selector
-- **Model** selector (**Default** recommended)
-- **Effort** selector
-- A usage indicator
-- **Send** button (↑)
-
-You can change Mode, Model, and Effort on a per-message basis.
-
-
-### Disconnected Sessions
-
-If a session loses connection to its runtime, it appears as disconnected in the column.
-
-### Notifications
-
-When a Task completes or needs attention, a toast notification appears with a **View** button. Click **View** to open the Task.
+<kbd>Last updated: August 2026</kbd>
+
+**This page has been replaced.** Kepler no longer has separate List, Kanban, and Console views, or a view switcher. [One interface](/kepler/kepler-interface) covers all three:
+
+| What you used | Where it is now |
+|---|---|
+| **List** — scanning everything in flight | The **Rows** arrangement |
+| **Kanban** — work by stage | The **Columns** arrangement, grouped by **Progress**. Not a replacement kanban — the SDLC-column behavior people asked for is not what this is |
+| **Console** — several agents at once | Shift-click to open sessions side by side, in [the task view](/kepler/task-view) or from the main list |
+| Diffs, commits, staging, pushing | [Review Changes](/kepler/review-changes) |
 
 ---

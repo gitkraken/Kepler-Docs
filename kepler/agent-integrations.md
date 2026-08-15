@@ -1,6 +1,6 @@
 ---
 title: Agent Integrations
-description: Connect Claude Code, Codex CLI, Copilot CLI, Cursor, or OpenCode to Kepler and start running agent sessions inside your Tasks.
+description: Kepler runs the coding agent you already have. Connect Claude Code, Codex, GitHub Copilot, Cursor, Auggie, or OpenCode, or point Kepler at your own ACP server.
 product: Kepler
 feature: Agent Integrations
 content_type: how-to
@@ -8,216 +8,203 @@ audience: developer
 plan_required: all
 os_support: [Windows, macOS, Linux]
 git_hosts: [generic]
-integrations: [claude-code, codex-cli, copilot-cli, cursor, opencode]
+integrations: [claude-code, codex-cli, copilot-cli, cursor, auggie, opencode]
 hosted_variant: both
 status: GA
-last_verified: 2026-06
+last_verified: 2026-08
 llms_include: true
-tags: [agent-integrations, claude-code, codex-cli, copilot-cli, cursor, opencode, setup]
+tags: [agent-integrations, claude-code, codex, copilot, cursor, auggie, opencode, acp, setup, settings]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: June 2026</kbd>
+<kbd>Last updated: August 2026</kbd>
 
-## Overview
+Kepler runs the coding agent you already have. You sign in with your own agent account, and Kepler adds no markup on the agents you bring.
 
-Kepler is GitKraken's **Agentic Development Environment** (ADE), a delivery surface that adds task management and Git worktrees around the coding agent you already use. You do not switch agents to use Kepler; you connect the one you already have.
+Six agents ship supported, and you can point Kepler at any other agent that speaks the Agent Client Protocol (ACP).
 
-<figure>
-  <img src="/wp-content/uploads/agents-view.png" class="help-center-img img-bordered" alt="The Agents settings panel in Kepler showing Claude Code, Codex, GitHub Copilot, Cursor CLI, and OpenCode with their installation status, binary path, and Enabled toggle for each">
-  <figcaption style="text-align:center; color:#888">The Agents settings panel. Each agent shows its installation status, binary path, and an Enabled toggle.</figcaption>
-</figure>
+All of it lives in **Settings → Agents**.
 
-Each connected agent runs as an **agent session** inside a **Task**. A Task is the core unit of work in Kepler: it holds work across one or more repos, manages a **worktree** (a Git worktree per Task per repo), and tracks all changes produced by the session.
+<!-- TODO(screenshot): Settings → Agents, showing the Default agent row and the six agent sections with their status badges. The existing _images/agents-view.png and _images/agent-settings.png predate this layout. -->
 
-### Supported agents
+***
 
-| Agent | Description | Prerequisites | Status |
+## The six supported agents
+
+Each agent gets its own section in **Settings → Agents**, in this order.
+
+| Agent | Name in Settings | How Kepler runs it | Multiple accounts |
 |---|---|---|---|
-| Claude Code | Anthropic's coding agent | Claude Code installed and configured locally | Supported |
-| Codex CLI | OpenAI's coding agent | Codex CLI installed and configured locally | Supported |
-| Copilot CLI | GitHub's coding agent | Copilot CLI installed and authorized with a GitHub account | Supported |
-| Cursor | AI code editor with built-in agent | Cursor installed <!-- TODO: confirm with engineering: auth or API key requirements --> | Supported |
-| OpenCode | Open-source, model-agnostic coding agent | OpenCode installed; API key for your chosen model | Supported |
+| **Claude Code** | Claude Code | Your installed `claude` CLI, over ACP or in an embedded terminal | Yes |
+| **Codex** | Codex | A bundled `codex-acp` engine — no separately installed CLI needed | Yes |
+| **GitHub Copilot** | GitHub Copilot | Your installed `copilot` CLI in ACP mode (`--acp`) | Yes |
+| **Cursor** | Cursor CLI | Your installed `cursor-agent` CLI in ACP mode (`acp`) | No |
+| **Auggie** | Auggie | Your installed `auggie` CLI in ACP mode (`--acp`) | Yes |
+| **OpenCode** | OpenCode | Your installed `opencode` CLI in ACP mode (`acp`) | No |
+
+**Auggie** is Augment's coding agent. It runs over the same ACP path as the rest, and its model and mode pickers work like any other agent's. It is also one of the three agents that report plan usage back to Kepler, alongside Claude Code and Codex — Auggie reports a billing cycle and a credit balance rather than rolling windows. See [Agent Sessions](/kepler/agent-sessions) for the **Token usage** chip and the opt-in it needs.
+
+**Codex is bundled.** Its section reads **Bundled** rather than **Installed**, and it has no binary picker — Codex sessions and local sign-in run on the engine Kepler ships, not on a `codex` CLI you install yourself.
+
+Two agents need a recent enough build to be driven over ACP:
+
+| Agent | Minimum |
+|---|---|
+| **GitHub Copilot** | CLI v1.0 or newer. Older builds reject `--acp` |
+| **Cursor CLI** | A build that exposes the `acp` command, added in early 2026 |
+
+Kepler checks both before it starts a session and tells you to update rather than failing with a protocol error.
 
 ***
 
-## Claude Code
+## Install an agent
 
-Claude Code is Anthropic's coding agent. Kepler launches it as an agent session inside a Task and passes Task context and repo state automatically at session start.
+When an agent is not installed, its section reads **Not installed** and offers **Install**. Kepler runs the install command on your behalf and streams the output, so you can read a failure rather than guess at one.
 
-### Prerequisites
+Install methods are declared per operating system, so the list you see depends on the machine you are on.
 
-- Claude Code must be installed on your local machine.
-- Claude Code must be authenticated with a valid Anthropic API key or Claude.ai account before connecting to Kepler.
+| Agent | macOS | Linux | Windows |
+|---|---|---|---|
+| **Claude Code** | Native installer, Homebrew, npm (global) | Native installer, npm (global) | Native installer, winget, npm (global) |
+| **Codex** | Bundled — nothing to install | Bundled — nothing to install | Bundled — nothing to install |
+| **GitHub Copilot** | Native installer, Homebrew, npm (global) | Native installer, Homebrew, npm (global) | winget, npm (global) |
+| **Cursor CLI** | Native installer, Homebrew | Native installer | Native installer |
+| **Auggie** | npm (global) | npm (global) | npm (global) |
+| **OpenCode** | Native installer, Homebrew, npm (global) | Native installer, Homebrew, npm (global), pacman | scoop, Chocolatey, npm (global) |
 
-### Connect Claude Code to Kepler
+If an agent offers no install method for your OS, Kepler says so and points you at the custom binary path instead.
 
-1. Open Kepler and navigate to **Settings**.
-2. Select **Agents** from the sidebar.
-3. Under **Claude Code**, click **Connect**.
-4. Kepler detects the Claude Code installation path automatically. If detection fails, enter the path manually.
-5. Click **Save**.
-
-### How Kepler passes context
-
-When you start a Claude Code agent session inside a Task, Kepler automatically provides:
-
-- The Task description and any attached instructions.
-- The repo path and the Task's dedicated worktree.
-- Branch context so the agent commits to the correct branch.
-
-Kepler passes the context automatically — no manual re-description needed.
-
-### Verification and troubleshooting
-
-If Claude Code is not connecting as expected, use the following troubleshooting steps.
-
-**Claude Code not detected**
-Verify that the `claude` binary is on your `PATH` by running `claude --version` in a terminal. If it is not found, reinstall Claude Code or enter the binary path manually in Kepler settings.
-
-**Authentication errors**
-Run `claude auth` in a terminal to confirm your session is active. Re-authenticate if the token has expired, then return to Kepler and reconnect.
-
-**Permission errors**
-Ensure the user running Kepler has read and execute access to the Claude Code binary and to the repo directory.
+The install output pane does not close itself when the install finishes. Mid-run errors — a permissions failure, a partial install, a post-install warning — only surface there, so you dismiss it once you have read it.
 
 ***
 
-## Codex CLI
+## Binary detection
 
-Codex CLI is OpenAI's coding agent. Kepler connects to it as an agent session inside a Task and passes Task context and repo access automatically.
+Kepler resolves each agent's binary the way your shell does: the first match on your `PATH`, so it agrees with `which`. Beyond `PATH`, it also sweeps your login shell's environment and well-known install directories, which is how an agent installed by nvm or Homebrew is found even when Kepler was not launched from a terminal.
 
-### Prerequisites
+Open **Configure** on an agent's section to see and change what it resolved.
 
-- Codex CLI must be installed on your local machine.
-- Codex CLI must be configured with a valid OpenAI API key.
+| Control | What it does |
+|---|---|
+| Status | **Installed**, **Bundled** (Codex), or **Not installed** |
+| **Install** | Runs one of the install methods above. Shown when the agent is not installed |
+| **Binary** | The resolved absolute path, or **Not found**, with where it came from (**PATH**, **Shell**, or **Common**) and its version |
+| **Re-scan** | Re-detects this agent's binary. Use it after installing or removing one outside Kepler |
+| **Custom path…** | Pins an absolute path of your own. Kepler validates it and refuses a directory or a path that is not a file |
+| **Clear custom** | Drops the pinned path and goes back to automatic resolution. Shown only while a custom path is set |
+| **Installed versions** | A picker listing every install Kepler found, with an **Auto** row. Shown only when there is more than one |
+| **Data directory** | Overrides the agent's own data and config directory. Leave it empty for the agent default |
+| **Enabled** | Whether this agent is offered when you start a session |
 
-### Connect Codex CLI to Kepler
+A pinned path that later disappears — an auto-updater cleaning up an old version, for example — falls back to automatic resolution instead of reporting the agent as missing.
 
-1. Open Kepler and navigate to **Settings**.
-2. Select **Agents** from the sidebar.
-3. Under **Codex CLI**, click **Connect**.
-4. Kepler detects the Codex CLI installation path automatically. If detection fails, enter the path manually.
-5. Click **Save**.
+**Settings → Agents → Agent options → Installed agents** carries a **Refresh** button that re-scans every agent at once.
 
-### How Kepler passes context
-
-When you start a Codex CLI agent session inside a Task, Kepler passes:
-
-- The Task description and instructions.
-- The repo path and the Task's dedicated worktree.
-- Branch context for the session.
-
-### Verification and troubleshooting
-
-If Codex CLI is not connecting as expected, use the following troubleshooting steps.
-
-**Codex CLI not detected**
-Run `codex --version` in a terminal to confirm the binary is on your `PATH`. If not found, reinstall Codex CLI or enter the binary path manually in Kepler settings.
-
-**Authentication errors**
-Confirm your `OPENAI_API_KEY` environment variable is set and valid. Re-export the key if it has changed, then reconnect Codex CLI in Kepler settings.
-
-**Permission errors**
-Ensure the user running Kepler has read and execute access to the Codex binary and to the repo directory.
+<!-- TODO(screenshot): one expanded agent section showing the Binary group — resolved path, source and version, Re-scan, Custom path…, and the Data directory field. -->
 
 ***
 
-## Copilot CLI
+## Sign in to an agent
 
-Copilot CLI is GitHub's coding agent. Kepler connects to it as an agent session and passes Task context and repo access at session start.
+An installed agent shows **Sign in** until it has a credential, and **Sign out** once it does. **Sign in** opens a modal listing the methods that agent supports on this machine, plus any methods Kepler owns itself.
 
-### Prerequisites
+| Agent | How you sign in |
+|---|---|
+| **Claude Code** | Browser sign-in. Kepler runs the sign-in for you and your browser opens; you paste a code back only if the browser callback cannot reach Kepler |
+| **Codex** | Sign in with a ChatGPT account through your browser, or supply an API key |
+| **GitHub Copilot** | **Sign in with GitHub** — Kepler's own device flow. Open `github.com/login/device` and enter the one-time code |
+| **Cursor CLI** | Cursor's own browser sign-in, driven from the modal. You can instead set `CURSOR_API_KEY` |
+| **Auggie** | **Sign in with browser**, or **Paste session token** |
+| **OpenCode** | Nothing to do in Kepler. OpenCode resolves providers from its own config file and provider environment variables |
 
-- Copilot CLI must be installed on your local machine.
-- Copilot CLI must be authorized with a GitHub account that has an active Copilot subscription.
+### Browser sign-in, including over SSH
 
-### Connect Copilot CLI to Kepler
+**Claude Code** and **Codex** both sign in through your browser, and neither drops you into a terminal to do it.
 
-1. Open Kepler and navigate to **Settings**.
-2. Select **Agents** from the sidebar.
-3. Under **Copilot CLI**, click **Connect**.
-4. Kepler detects the Copilot CLI installation path automatically. If detection fails, enter the path manually.
-5. Click **Save**.
+That holds on a [remote environment](/kepler/remote-environments) too:
 
-### Verification and troubleshooting
+- **Claude Code** over SSH offers **Sign in with browser**, which opens the sign-in page in your *local* browser and takes the code you paste back. The credential lands on the remote machine.
+- **Codex** over SSH opens ChatGPT sign-in in your local browser and bridges the callback over your SSH connection. The token is written on the remote machine and never passes through Kepler.
 
-**Copilot CLI not detected**
-Run `gh copilot --version` in a terminal to confirm the extension is installed. If not found, install it with `gh extension install github/gh-copilot`.
+Codex's browser sign-in on a remote target is the one flow with a condition on it: it needs the desktop app driving a window bound to an **SSH** host. Every client operating system qualifies, and no SSH ControlMaster is required — one is a fast path, not a prerequisite. It is not offered in a browser client, and it does not apply to a [WSL environment](/kepler/remote-environments), which has no SSH connection to bridge the callback over.
 
-**Authorization errors**
-Run `gh auth status` to confirm your GitHub session is active. Re-authenticate with `gh auth login` if needed, then reconnect in Kepler settings.
+Where it does not apply, **Import local Codex login** does the job: it copies this machine's `~/.codex/auth.json` to the remote target. That entry appears on every remote binding in the desktop app, so it also sits alongside the browser flow when both are available. Treat it as handing over a credential — anyone with access to that remote machine can send Codex requests on your account until you sign out.
 
-**Permission errors**
-Ensure the user running Kepler has read and execute access to the `gh` binary and to the repo directory.
+### Auggie's two methods
 
-***
+| Method | What it does | Where it works |
+|---|---|---|
+| **Sign in with browser** | Runs Auggie's sign-in and finishes it in your browser. Auggie stores the credential under `~/.augment` | Local, and over SSH — the remote variant opens the page in your local browser and takes a pasted JSON response |
+| **Paste session token** | You paste the JSON from `auggie token print` into Kepler. Kepler stores it and supplies it on every session | Anywhere, including CI-style setups with no browser |
 
-## Cursor
+If you run Auggie's browser sign-in on this machine yourself, Kepler detects it and you can skip the token paste.
 
-Cursor is an AI code editor with a built-in coding agent. Kepler connects to Cursor's agent and runs it as an agent session inside a Task.
+### Multiple accounts of one agent
 
-### Prerequisites
+**Claude Code**, **Codex**, **GitHub Copilot**, and **Auggie** support more than one signed-in account. **Configure → Accounts → Add account** adds one; each account keeps its own credentials and history.
 
-- Cursor must be installed on your local machine.
+For **Auggie**, a second account can only be added with **Paste session token**. Its browser sign-in writes to one fixed file, so it would sign the second account into the first account's identity.
 
-### Connect Cursor to Kepler
-
-1. Open Kepler and navigate to **Settings**.
-2. Select **Agents** from the sidebar.
-3. Under **Cursor**, click **Connect**.
-4. Click **Save**.
-
-
-### Verification and troubleshooting
-
-If Cursor is not connecting as expected, use the following troubleshooting steps.
-
-**Cursor not detected**
-Confirm Cursor is installed and that the `cursor` binary is accessible. Enter the binary path manually in Kepler settings if auto-detection fails.
+<!-- TODO(verify): checked again at kepler 7c31af83e — settings.agents.accountsHelp in src/shared/i18n/locales/en.ts is STILL worded for Claude Code ("Run multiple Claude Code logins side by side…") while the Accounts group renders for Codex, GitHub Copilot and Auggie too. This page does not quote the string, so it is a product-copy bug to raise rather than a docs fix; drop this comment once the copy is generalized. -->
 
 ***
 
-## OpenCode
+## Claude Code modes
 
-OpenCode is an open-source, model-agnostic coding agent. It runs any model through a unified interface. Use OpenCode when you need a model that Claude Code, Codex CLI, or Copilot CLI do not offer.
+Claude Code is the one agent you can run two ways. **Configure → Default mode for new sessions** picks which.
 
-### Prerequisites
+| Mode | What you get |
+|---|---|
+| **Rich chat** | The full visual experience — plans, model and effort controls, richer input. This is the default |
+| **Terminal** | Claude as a command-line session in an embedded terminal, the same as the Claude Code CLI |
 
-- OpenCode must be installed on your local machine.
-- You must have a valid API key for the model you intend to use (for example, Anthropic, OpenAI, or another supported provider).
+You can switch modes inside a running session without losing the conversation.
 
-### When to use OpenCode vs. a proprietary agent
+**Detect Claude Code sessions started outside Kepler** is a separate, off-by-default setting. Turning it on adds hooks to `~/.claude/settings.json` so sessions you start in your own terminal show up in Kepler. In **Terminal** mode, Claude Code runs as a plain terminal command, so leave detection on if you want Kepler to track those sessions.
 
-Use OpenCode when:
+***
 
-- You want to switch between models without switching agents.
-- You are using a model not offered by Claude Code, Codex CLI, or Copilot CLI.
-- You want to run a self-hosted or open-weight model.
+## Your default agent
 
-Use a proprietary agent (Claude Code, Codex CLI, Copilot CLI) when the agent's fixed model meets your needs and you want first-party support.
+**Settings → Agents → Default agent** sets which agent is preselected when you start work, and supplies the model, mode, and thinking effort a new session starts with.
 
-### Connect OpenCode to Kepler
+Agent options are saved **per account**. Picking a different account of the same agent brings up that account's own saved model and options, so a heavier model on your work account does not follow you onto your personal one.
 
-1. Open Kepler and navigate to **Settings**.
-2. Select **Agents** from the sidebar.
-3. Under **OpenCode**, click **Connect**.
-4. Kepler detects the OpenCode installation path automatically. If detection fails, enter the path manually.
-5. Select or enter the model you want OpenCode to use.
-6. Click **Save**.
+Only agents that are installed and **Enabled** appear in the picker. If your saved default is no longer installed, Kepler says so and asks you to pick another.
 
-### Verification and troubleshooting
+An Action can override all of this. See [Actions](/kepler/actions) for how an Action pins a provider, account, model, mode, and options together, and which choice wins when they disagree.
 
-If OpenCode is not connecting as expected, use the following troubleshooting steps.
+***
 
-**OpenCode not detected**
-Run `opencode --version` in a terminal to confirm the binary is on your `PATH`. If not found, reinstall OpenCode or enter the binary path manually in Kepler settings.
+## Custom ACP servers
 
-**API key errors**
-Confirm the API key for your chosen model is set correctly. OpenCode reads API keys from environment variables. Verify that the relevant variable (for example, `ANTHROPIC_API_KEY` or `OPENAI_API_KEY`) is exported in your shell environment, then reconnect in Kepler settings.
+If your agent speaks the Agent Client Protocol, Kepler can run it without any Kepler-side change. **Settings → Agents → Custom agent servers → Add**.
 
-**Permission errors**
-Ensure the user running Kepler has read and execute access to the OpenCode binary and to the repo directory.
+| Field | What it holds |
+|---|---|
+| **Name** | What the agent is called in Kepler's pickers |
+| **Command** | The binary to run — an absolute path, or a name Kepler resolves on your `PATH` |
+| **Args (one per line)** | Arguments that put your agent into ACP mode, for example `--acp` |
+| **Environment variables (KEY=value, one per line)** | Variables merged into the agent's environment on every session |
+
+Environment values are treated as secrets: they are hidden after you save, and never sent to any client. When you edit a server, leaving a value empty (`KEY=`) keeps the stored secret, and typing a new value replaces it.
+
+Custom servers appear alongside the built-in agents everywhere an agent can be chosen.
+
+***
+
+## What Kepler tells the agent about itself
+
+Agent CLIs report **Kepler** as the client name, so your sessions show up as Kepler in places like your Anthropic dashboard rather than as an unlabelled non-interactive run.
+
+This applies to the sessions Kepler drives over ACP. Claude Code's **Terminal** mode deliberately leaves the label alone, because overriding it there would break key handling in the embedded terminal.
+
+***
+
+## Sessions
+
+Connecting an agent is the setup; running one is a **session** inside a task. Sessions are covered in [Agent Sessions](/kepler/agent-sessions) — starting, resuming, queuing prompts, and reviewing what the agent produced.
+
+A task holds resources and does not require a worktree. See [Tasks and Resources](/kepler/tasks-and-resources).
 
 ---

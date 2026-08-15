@@ -1,6 +1,6 @@
 ---
 title: Remote Environments
-description: Run Kepler Tasks on a remote machine via SSH or inside a Windows Subsystem for Linux (WSL) environment, or expose Kepler for remote access using the built-in server.
+description: Run your agents on another machine over SSH or in WSL, switch environments from the title bar, and open this Kepler from another device with Remote Access.
 product: Kepler
 feature: Remote Environments
 content_type: how-to
@@ -11,156 +11,332 @@ git_hosts: [generic]
 integrations: []
 hosted_variant: both
 status: GA
-last_verified: 2026-06
+last_verified: 2026-08
 llms_include: true
-tags: [remote-environments, ssh, wsl, remote-access, ngrok, networking]
+tags: [remote-environments, ssh, wsl, windows, remote-access, qr-pairing, diagnostics, notifications]
 taxonomy:
-   category: kepler
+  category: kepler
 ---
-<kbd>Last updated: June 2026</kbd>
+<kbd>Last updated: August 2026</kbd>
 
-
-Kepler covers two remote scenarios:
-
-- Run Tasks on a remote machine or WSL environment when you need more compute or a Linux runtime.
-- Expose Kepler over the network to access it from another device.
-
-<figure>
-  <img src="/wp-content/uploads/remote-access.png" class="help-center-img img-bordered" alt="The Remote Access settings panel in Kepler showing Remote Access Inactive with a Start button, and Port, Host, and URL Override fields below">
-  <figcaption style="text-align:center; color:#888">The Remote Access settings panel. Set the port, host, and optional URL Override, then click <strong>Start</strong>.</figcaption>
-</figure>
+A **remote environment** runs your agents, worktrees, and terminals on another machine — a dev server, a cloud VM, or WSL on Windows — while you work from this window. Kepler installs itself on the host over SSH, so there is nothing to pre-install there.
 
 ***
 
-## SSH: Run Tasks on a Remote Machine
+## Two features, one word
 
-Use SSH when your local machine doesn't have enough compute for the work, or when builds are too slow. When a Task runs via SSH, Kepler runs the worktrees and agent sessions on the remote machine. Kepler's UI remains local.
+Settings groups both under **Remote**, and they point in opposite directions. Get this straight first and the rest of the page follows.
 
-### Prerequisites
+| Feature | Direction | Where it lives |
+|---|---|---|
+| **Remote Environments** | Kepler on your desktop reaches **out** to a host, and your work runs there | The title-bar chip, and the connections panel behind it |
+| **Remote Access** | Another device reaches **in** to this Kepler, and your work stays here | **Settings → Remote → Remote Access** |
 
-- SSH access to the remote machine (key-based or password authentication).
-- Kepler installed locally.
+Everything up to [Remote Access](#remote-access-reach-this-kepler-from-another-device) is about connecting *to* a host.
 
-### Connect a Remote Machine
+***
 
-1. Open Kepler and navigate to **Settings**.
-2. Click **Add Remote Machine**.
-3. Enter the SSH connection details:
-   - **Host**: hostname or IP address of the remote machine.
-   - **Port**: SSH port. Default: `22`.
-   - **Username**: the SSH user on the remote machine.
-   - **Authentication**: select key-based or password authentication.
-4. Click **Test Connection** to verify Kepler can reach the machine.
-5. Click **Save**.
+## Switching environments from the title bar
 
-After you save, the remote machine is available as a target when you create or configure a Task.
+Each window is bound to one environment at a time, and the chip in the title bar says which. Click it to open the connections popover.
 
-### What Runs Remotely vs. Locally
-
-| Component | Runs on |
+| Chip | What it means |
 |---|---|
-| Tasks | Remote machine |
-| Worktrees | Remote machine |
-| Agent sessions | Remote machine |
-| Kepler UI | Local machine |
+| **Local** | This window works on this machine |
+| **Connecting…**, or the current stage | A connect this window started is in flight |
+| **Reconnecting…** | The connection degraded and Kepler is rebuilding it |
+| Host name + latency in ms | Connected, with the round-trip time to the host |
+| Host name + **Update** | Connected, and the host's server build is older than the one this Kepler installs |
+| An error headline | The last attempt failed. The chip calms back down after a few seconds; the panel keeps the full error |
 
-### Troubleshooting SSH Connections
+The chip is hidden in a browser client, which cannot manage connections at all.
 
-**Connection refused** — Confirm the SSH daemon is running on the remote machine and the port is open in the firewall.
+<!-- TODO(screenshot): the title-bar chip connected to a host, showing the host name and latency. -->
 
-**Authentication failed** — Verify the username and credentials. For key-based auth, confirm the public key is in `~/.ssh/authorized_keys` on the remote machine.
+### The popover
 
-**Timeout** — Check that the remote machine is reachable from your network. If connecting over a VPN, confirm the VPN is active.
+The popover answers where you are and where else you can go, and hands anything heavier to the panel.
 
-For Kepler-specific logs, see the log file path in **Settings → General → Diagnostics**.
+| Part | What it does |
+|---|---|
+| Header | The current host, its latency, and how many sessions are live on it — or **Working locally** when the window is local |
+| **Disconnect** | Releases this window only. *Only disconnects this window; the server keeps its sessions running* |
+| **Update server** | Appears when a newer server build is available for the connected host |
+| **Switch to** | Every other saved host, plus **Local** — *Work on this machine* — when this window is on a remote |
+| **Detected on this PC** | WSL distros found on this machine, offered for one-click connect while you have no saved hosts |
+| **Manage remote environments…** | Opens the connections panel. **⌘ ⇧ R** on macOS, **Ctrl + Shift + R** elsewhere |
 
-***
+Clicking a **Switch to** row moves this window. Hold **Cmd** (macOS) or **Ctrl** to open that host in a new window instead and leave this window where it is; the trailing ↗ on each row does the same thing with a click.
 
-## WSL: Run Tasks in Windows Subsystem for Linux
-
-Use WSL when you are on Windows and need a Linux environment for agent sessions or builds. Kepler connects to a WSL environment the same way it connects to a remote machine via SSH.
-
-### Prerequisites
-
-- WSL installed on the local Windows machine.
-- WSL version 2 recommended.
-
-### Connect a WSL Environment
-
-1. Open Kepler and navigate to **Settings**.
-2. Click **Add Remote Machine**.
-3. For **Host**, enter `localhost` (or the WSL instance address).
-4. Configure SSH credentials for the WSL environment as you would for any remote machine.
-5. Click **Test Connection**, then **Save**.
-
-The WSL environment is available as a Task target alongside any other remote machines.
-
-### Troubleshooting WSL Connections
-
-**WSL not detected** — Confirm WSL is installed and at least one distribution is running. Run `wsl --list --running` in PowerShell to check.
-
-**Version conflict** — If you experience unexpected behavior, run `wsl --set-default-version 2` in PowerShell to ensure WSL 2 is the default.
-
-**SSH connection refused in WSL** — The SSH daemon may not be running inside WSL. Start it with `sudo service ssh start` inside the WSL terminal.
+A connect that a *different* window starts never takes over this window's chip.
 
 ***
 
-## Remote Access: Access Kepler from Another Device
+## The connections panel
 
-Remote Access is a separate feature from SSH and WSL. Remote Access starts a local server inside Kepler so you can reach the Kepler UI from another device on your network, or from outside your network via a tunnel.
+The panel is the full management surface: **Hosts** on the left, the selected host's detail on the right.
 
-### Configure Remote Access
+The rail lights up exactly one host — the one this window is bound to. Kepler scopes connection state to the calling window, so the panel reports on this window's connection and lists the rest as saved, rather than showing a status board for hosts it cannot see.
 
-Navigate to **Settings → Remote Access** to configure the server before starting it.
+| Control | What it does |
+|---|---|
+| **+** (*Add a host*) | Opens the host chooser, or the SSH wizard directly when your `~/.ssh/config` has nothing new to offer |
+| **Search hosts** | Filters the rail by name or connection string |
+| **Connect** | Connects this window. **Cmd/Ctrl**-click connects in a new window. While a connect runs, the same button cancels it |
+| ↗ | Connects to this host in a new window. Offered even for the host you are already on — one server accepts several clients |
+| **Disconnect** | Releases this window's binding |
+| **Update server** | Installs the newer server build on the connected host |
+| **Rename** (pencil, or **More actions**) | Renames the saved connection. Nothing on the host changes |
+| **Remove connection** (**More actions**) | Deletes the saved connection, with optional cleanup — see below |
 
-| Setting | What it controls | Default | Notes |
-|---|---|---|---|
-| **Port** | The port Kepler's server listens on | `3000` | Change if port 3000 is in use |
-| **Host** | The address the server binds to | `0.0.0.0` | `0.0.0.0` listens on all network interfaces |
-| **URL Override** | The URL used in the QR code instead of the auto-detected address | _(none)_ | Use this when connecting through a tunnel, e.g., `https://my-tunnel.ngrok.io` |
+### Connection details and diagnostics
 
-### Start Remote Access
+For the host this window is connected to, the detail pane shows three figures — **Latency**, **Live sessions**, and **Server build** — followed by **Sessions on this server**, labelled *survive disconnect · resumable anywhere*. Each row is a live agent session on that host, and clicking one opens it.
 
-1. Open **Settings → Remote Access**.
-2. Review the port, host, and URL Override settings.
-3. Click **Start**.
+A failed connect renders a **Couldn't connect to *host*** alert with the raw SSH diagnostic as selectable text and a **Copy error** button, so it can go into a bug report unedited. When the failure is on a host other than the one you are bound to, Kepler adds *You're still connected to *host*; this didn't drop it.*
 
-Kepler shows **Remote Access Active** and generates an **Access URL** with a QR code. The URL includes a bootstrap token (e.g. `?bootstrap=…`) that scopes access to this session. Scan the QR code with your phone camera or copy the URL to open Kepler in a browser on another device.
+Common SSH failures get a plain-language headline and a hint — **Authentication rejected (publickey)**, **Connection refused**, **Host unreachable**, **Hostname could not be resolved**, **Connection timed out**, **Host key verification failed** — with the unedited diagnostic underneath either way.
 
-<figure>
-  <img src="/wp-content/uploads/remote-access-active.png" class="help-center-img img-bordered" alt="The Remote Access settings panel in Kepler showing Remote Access Active with a Stop button, Port set to 3000, Host set to 0.0.0.0, a URL Override field with placeholder text, and an Access URL section showing a QR code with the label 'Scan with your phone camera to open' and the full bootstrap URL below it with a copy button">
-  <figcaption style="text-align:center; color:#888">Remote Access active. Scan the QR code with your phone camera or click the copy button to grab the access URL.</figcaption>
-</figure>
+For Kepler's own log file, use **Settings → General → Diagnostics**.
 
-### Connect via QR Code
+### Server management
 
-The QR code encodes the access URL based on the auto-detected address, or the **URL Override** if one is set. Scan the code from any device on the same network to open Kepler in a browser — including your phone. This lets you check Task progress, read agent output, and give direction from wherever you are without sitting at your desk.
+The **Server management** box acts on the live daemon, so it appears for the connected host only. *Disconnecting frees this window; the server keeps its sessions alive for other machines. Stopping the server affects every connected client.*
 
-### Expose Kepler Outside the Local Network with ngrok
+| Control | What it does |
+|---|---|
+| **Reconnect** | Rebuilds this window's connection to the same host |
+| **Stop server** | Stops the Kepler server on the host. Confirmation names how many agent sessions will be terminated |
+| **Auto-shutdown when idle** | Stops the server after N minutes of no connections and no active agents. Off by default; the timeout defaults to 30 minutes |
 
-To access Kepler from outside your local network — for example, to monitor running Tasks from your phone while away from the office — use a tunneling tool such as ngrok.
+**Auto-shutdown when idle** is stored on the host, not locally, so it applies to every client of that server.
 
-1. Install ngrok and authenticate it with your ngrok account.
-2. Start Kepler's Remote Access server (see above).
-3. In a terminal, run:
-   ```
-   ngrok http 3000
-   ```
-   Replace `3000` with your configured port if you changed the default.
-4. Copy the public URL ngrok generates (for example, `https://abc123.ngrok.io`).
-5. In **Settings → Remote Access**, paste the ngrok URL into the **URL Override** field.
-6. Click **Start** (or **Restart** if the server is already running).
+### Removing a connection
 
-The QR code now encodes the ngrok URL, and Kepler is accessible from any device with internet access.
+**Remove connection** deletes the saved entry on this desktop. When the entry was created by the SSH wizard, Kepler offers to clean up after itself as well:
 
-### Security Considerations
+| Cleanup option | What it does | Default |
+|---|---|---|
+| **Remove scoped known_hosts file** | Deletes the host-key trust file Kepler created for this connection | On |
+| **Remove generated local SSH key** | Deletes the key the wizard generated, and its `.pub` sibling | On when such a key exists |
+| **Uninstall Kepler server on the host** | Stops the server and removes `~/.kepler-server` | On, unless the server is in use |
+| **Remove deployed key from remote authorized_keys** | Removes the key the wizard installed on the host | Off |
 
-Kepler's access URL includes a session-scoped bootstrap token, so anyone who connects must use the full URL — guessing the address alone is not enough. That said, anyone with the URL can access your Kepler instance, so treat it like a credential.
+If the server reports live sessions or connected clients, the uninstall is disabled until you tick **Uninstall anyway, I understand sessions on this host may be lost**. If the host is unreachable, or needs a password Kepler does not have, the host-side options are suppressed and the panel says which of the two it is.
 
-To limit who can connect:
+<!-- TODO(screenshot): the connections panel — Hosts rail on the left, a connected host's detail with Latency / Live sessions / Server build and Server management. -->
 
-- Use Remote Access only on trusted networks, or behind a tunnel that enforces authentication (such as ngrok's OAuth/IP restriction options).
-- Stop the Remote Access server when you are not using it by clicking **Stop** in **Settings → Remote Access**.
-- If using ngrok or a similar tunnel, use the URL Override field so the QR code reflects the secured tunnel URL rather than the local address.
+***
+
+## Add an SSH host
+
+Click **+** in the panel. If your `~/.ssh/config` holds hosts you have not saved yet, **Add a remote environment** lists them — *Hosts found in your ~/.ssh/config* — and **Set up a new host manually…** falls through to the wizard.
+
+Each discovered row reads **Save & connect** from a local window and **Save** from a window already on a remote, because Kepler does not pull you off a live connection to add a host.
+
+A host taken from `~/.ssh/config` inherits your system SSH configuration, including its host-key trust. A host built in the wizard gets its own trust file, pinned at the fingerprint you accepted.
+
+### The wizard
+
+**Add an SSH host** walks five steps.
+
+| Step | What you do |
+|---|---|
+| *Tell Kepler where to connect.* | **Name** (optional, derived from the host), **Host**, **User** (optional, defaults to the remote `$USER`), **Port** |
+| *Choose authentication.* | Pick a mode — see below |
+| *Verify the host fingerprint.* | Kepler fetches the host key and shows its algorithm and fingerprint. **Trust and continue** pins it |
+| *Verifying the connection.* | Kepler makes a real connection before anything is saved |
+| *Ready to save.* | The connection joins your saved hosts |
+
+| Authentication mode | What it means |
+|---|---|
+| **Existing key** | Use one of the keys already in `~/.ssh`. Kepler counts what it finds; with exactly one candidate it preselects it |
+| **Password** | *Re-prompt every connect.* The password is never stored |
+| **Generate key** | *Keyless after first connect.* Kepler uses the password once to install a fresh ed25519 key at `~/.ssh/id_ed25519_kepler_<hash>`. Your existing keys are never overwritten |
+
+**Generate key** needs `ssh-keygen` on your machine; the chip reads **ssh-keygen missing** when it is absent.
+
+If a key-based connect is rejected, Kepler does not leave you stuck: the panel opens a password row so you can retry with a password, and — when no key is saved for that host yet — offers to install one at the same time.
+
+### SSH to a Windows machine
+
+Kepler connects to Windows hosts over SSH as well as POSIX ones. It detects the target's OS during the probe and switches to a PowerShell install path instead of the POSIX one, mapping the architecture to `win32-x64` or `win32-arm64`.
+
+Nothing changes in the wizard. If the host authenticates but its shell rejects Kepler's commands, the diagnostic reads **Remote shell could not run the command**, and the hint points at the OpenSSH default shell — Windows 10 and 11 ship PowerShell, so a changed default shell is the usual cause.
+
+Two things do behave differently on a Windows host, both in **Known limitations** below: installing a server build stops any session already running there, and the host-side cleanup offered by **Remove connection** does not run.
+
+***
+
+## WSL environments
+
+On Windows, a WSL 2 distro is a remote environment like any other, and the cheapest one to start with: no credentials, no fingerprint to verify.
+
+- Kepler detects WSL by asking `wsl.exe` for its status, then lists your **version 2** distros. WSL 1 distros are not offered.
+- With no saved hosts, the distros appear in the popover under **Detected on this PC**, one click from connected. Picking one saves it as well as connecting, so it survives a disconnect.
+- WSL needs no tunnel. Kepler reaches the server inside the distro through Windows' localhost passthrough, and waits for the passthrough to catch up before the window loads.
+
+***
+
+## What runs where
+
+| Piece | Runs on |
+|---|---|
+| Kepler's window and its native capabilities | Your local machine |
+| Git operations, worktrees, and repositories | The host |
+| Agent and terminal sessions | The host |
+| Provider and issue-tracker data | The host |
+| The interface itself | Served by the host's Kepler server |
+
+**Agent sessions belong to the server, not to your window.** Close the window, lose the network, or put the laptop to sleep, and the sessions keep running. Reconnect — from this machine or a different one — and they are listed and resumable. If the server itself goes away, Kepler re-spawns the agent and re-attaches to the same conversation from the session it saved.
+
+Agent sign-in happens on the host. Claude Code, Codex, and Auggie all sign in to a remote target: Kepler starts the flow there and the page opens in your *local* browser, and the credential lands on the host. Claude Code and Auggie take back a code or a JSON blob you paste. Codex bridges its callback over your SSH connection instead, which is the one flow that needs an SSH host — on a WSL environment, use **Import local Codex login**. See [Agent Integrations](/kepler/agent-integrations).
+
+***
+
+## What you see while connecting
+
+A first connect to an untouched host uploads the server bundle, so it takes minutes rather than seconds. The chip, the popover, and the panel all name the current stage, with a progress bar whenever the total is known.
+
+| Stage | What it means |
+|---|---|
+| **Checking the host** | Working out the host's OS and architecture |
+| **Authenticating** | Negotiating SSH auth |
+| **Checking the remote install** | Looking for an existing install and a live server |
+| **Downloading remote server** | Fetching the matching server bundle to your machine |
+| **Uploading remote server** | Sending it to the host |
+| **Finishing the install on the remote** | Unpacking finished; the host is completing the install |
+| **Starting the remote server** | Launching the server |
+| **Waiting for another install to finish** | Another window or machine is installing the same version. This is usually the fast path |
+| **Opening the tunnel** | Forwarding a local port to the host |
+
+**Cancel** stops the attempt, from the popover or from the host's own **Connect** button.
+
+A warm reconnect skips most of this: the server is already installed and already running, so Kepler reads its details and opens a tunnel.
+
+***
+
+## Recovery after restart or sleep
+
+Kepler expects connections to break and rebuilds them.
+
+| Event | What Kepler does |
+|---|---|
+| **The connection degrades** | Health checks run every 10 seconds. Three consecutive failures flip the chip to **Reconnecting…** and start a rebuild — up to five attempts with backoff from 1 second to a 30-second ceiling |
+| **The machine wakes from sleep** | Rather than waiting for health checks to accumulate, Kepler probes every bound window at once and rebuilds only the ones that are genuinely unreachable |
+| **Kepler restarts** | Every window is restored — geometry, route, and connection — so a remote window comes back on its remote |
+| **A restore cannot finish** | Usually a host that needs interactive auth. Kepler opens the connections panel with that host selected and *Couldn't auto-reconnect. Connect to resume where you left off.* **Stay local** dismisses it |
+
+A rebuild is not cosmetic: Kepler tears down the dead tunnel, opens a new one, and re-propagates your GitKraken sign-in to the host, so the window comes back signed in rather than at a sign-in screen. SSH connections reserve a stable local port per host, so a reconnect returns to the same origin and your interface preferences, drafts, and notification permission survive it.
+
+***
+
+## Local conveniences that still work
+
+Some things have to happen on the machine in front of you. Kepler routes those through the desktop app rather than executing them on the host.
+
+| Feature | Behavior over a remote connection |
+|---|---|
+| **Open in…** and **Reveal** | Run on your desktop machine, not on the host. Kepler reports which of them can reach the current binding and hides the rest, so there are no buttons that fail |
+| **Desktop notifications** | Shown by your local desktop when an agent finishes, needs you, or errors. Clicking one focuses the window that asked for it |
+| **Voice input** | Captured by the local app. See [Voice Input](/kepler/voice-input) |
+| **Folder pickers** | Browse the host's filesystem, since that is where the work lives |
+
+Four editors open a remote folder through their own remote extension, which is the only way a locally-installed editor can reach an SSH host's worktree:
+
+| Editor | Authority Kepler passes |
+|---|---|
+| **VS Code** | `--remote wsl+<distro>` or `--remote ssh-remote+[user@]host[:port]` |
+| **VS Code Insiders** | Same |
+| **Cursor** | Same |
+| **Windsurf** | Same |
+
+The editor resolves the host and authenticates through its own machinery. For SSH that means your own SSH configuration, so a host Kepler reaches with a custom identity file may still prompt in the editor.
+
+Other editors, and the file manager, rely on the path being reachable from Windows — which WSL is, as `\\wsl$`, and an SSH host is not. Where there is no route, the affordance does not appear.
+
+***
+
+## Remote server components
+
+The desktop installer no longer carries a server bundle for every architecture. Kepler fetches what it needs when you connect, and caches it per user.
+
+The payload is not one tarball. It is split into four layers, each a separate archive with its own cache key:
+
+| Layer | What it holds |
+|---|---|
+| `node` | The vendored Node runtime |
+| `codex` | The bundled Codex engine. Optional — a build without it ships three layers |
+| `deps` | The server's dependencies |
+| `app` | The server and the interface |
+
+| Piece | Location |
+|---|---|
+| Published manifest and layers | `<channel>/<version>/remote-servers/<arch>/` |
+| Per-user cache | `<userData>/remote-server-cache/<channel>/<version>/<arch>/` |
+| On the host | `~/.kepler-server` |
+
+The architecture token is one of `linux-x64`, `linux-arm64`, `darwin-x64`, `darwin-arm64`, `win32-x64`, `win32-arm64`.
+
+**A connect downloads only the layers the host is actually missing.** Kepler reads the small manifest first — no payload bytes — and compares each layer's key against what the host has already installed. A version bump that changes only the app leaves your Node and Codex layers alone on both sides, so an upgrade pulls a fraction of what a first connect pulls. This holds on every transport: SSH to a POSIX host, SSH to a Windows host, and WSL.
+
+Two cases still fetch everything. A host with no layer stamps at all — a first connect — has nothing to diff against. And when the missing layers come to three quarters or more of the payload, Kepler ships the whole thing rather than assembling a subset that saves little.
+
+Each layer downloads cache-first, retries with backoff, and is written atomically, so an interrupted download is never mistaken for a cached layer. When a layer cannot be fetched at all, the connect fails with **Could not download the remote-server *version* for *arch*. Check your internet connection.**
+
+The payload carries its own Node runtime, so the host needs nothing pre-installed beyond an SSH or WSL transport. Desktop and server versions are coupled: your Kepler always knows which server build it needs, which is also why an out-of-date host offers **Update server**.
+
+***
+
+## Remote access: reach this Kepler from another device
+
+**Remote Access** is the other direction. It starts a server inside this Kepler so you can open this window's Kepler from a second computer or a phone. Your work still runs here.
+
+Configure it in **Settings → Remote → Remote Access**.
+
+| Control | What it does | Default |
+|---|---|---|
+| **Status** | **Remote Access Inactive** or **Remote Access Active** | Inactive |
+| **Start** / **Stop** | Starts or stops the server | — |
+| **Port** | The port the server listens on | `3000` |
+| **Host** | The address the server binds to. `0.0.0.0` listens on every interface | `0.0.0.0` |
+| **URL Override** | *If set, this URL is used in the QR code instead of the auto-detected address* | Empty |
+
+**Port**, **Host**, and **URL Override** are read when the server next starts, so change them before you click **Start**. The status row and **Start** control are in the desktop app only.
+
+### Pairing another device
+
+Once the server runs, an **Access URL** block appears with a QR code, the URL as selectable text, and a copy button.
+
+- The URL is `<address>/?bootstrap=<token>` — a pairing token, not your credentials.
+- **Scan with your phone camera to open** is the fast path. Otherwise copy the URL. On a plain-HTTP LAN address the browser gives Kepler no clipboard, so the copy button is disabled and the QR code or the selectable text is the way across.
+- The token is **single use**, 12 characters from an alphabet with no lookalikes, and **expires five minutes** after it is minted. Each click of **Start** mints a fresh one, so the QR you are looking at is always live.
+- The paired browser exchanges the token for a signed session that lasts **30 days**, extended as you use it, with a hard cap of 90 days. That session is a **client** session, not an owner session.
+
+To reach Kepler from outside your network, put a tunnel in front of it and set **URL Override** to the tunnel's public address before starting the server, so the QR code encodes the address that actually works.
+
+Treat the access URL as a credential: anyone holding it can open your Kepler. Stop the server when you are not using it, and prefer a tunnel that enforces its own authentication over exposing the port.
+
+<!-- TODO(screenshot): Settings → Remote → Remote Access, active, with the QR code and Access URL. -->
+
+***
+
+## Known limitations
+
+| Limitation | Detail |
+|---|---|
+| **Commit and tag signing** | Signing does not work over a remote connection. Kepler says so rather than failing quietly: *Commit signing isn't available over a remote connection yet. Disable commit.gpgsign for this repo on the remote, or run the commit from a terminal there.* |
+| **Remote-connection management in a browser client** | Inherently local. A browser client shows **Remote environments need the desktop app** and hides the title-bar chip, because adding hosts, connecting, and stopping servers all run through the desktop app |
+| **Auto-update in a browser client** | A no-op. A browser cannot update itself; update the desktop app, or the host's server from a desktop window |
+| **Installing a server build on a Windows host stops its sessions** | Windows will not let anything overwrite a running executable, so the install has to stop the server before it can unpack, and that path carries no active-session check. An agent mid-turn on a Windows host is therefore interrupted — by **Update server**, and by connecting to a host whose server is out of date. A POSIX host gets the check: Kepler probes it for active sessions and restarts on its own only when it is idle |
+| **Host-side cleanup on a Windows host** | Of the four options **Remove connection** offers, two act on the host — **Uninstall Kepler server on the host** and **Remove deployed key from remote authorized_keys** — and both run through a POSIX shell, so neither works on a Windows host. The two local options are unaffected. Delete `~/.kepler-server` and the `authorized_keys` entry on the host yourself |
+
+***
+
+## Related
+
+- [Settings](/kepler/settings) — the **Remote** sub-page, and the shortcut list
+- [Agent Integrations](/kepler/agent-integrations) — signing agents in, including on a remote target
+- [Review Changes](/kepler/review-changes) — reviewing and shipping the work a remote agent produced
 
 ---
