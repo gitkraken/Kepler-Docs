@@ -17,7 +17,7 @@ tags: [settings, configuration, keyboard-shortcuts, appearance, terminal, agents
 taxonomy:
     category: kepler
 ---
-<kbd>Last updated: June 2026</kbd>
+<kbd>Last updated: August 2026</kbd>
 
 
 This page is a reference for every setting in Kepler, organized by section. It also includes a complete keyboard shortcut reference.

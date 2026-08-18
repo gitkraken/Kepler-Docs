@@ -17,7 +17,7 @@ tags: [integrations, issue-trackers, jira, linear, trello, github, gitlab, azure
 taxonomy:
     category: kepler
 ---
-<kbd>Last updated: June 2026</kbd>
+<kbd>Last updated: August 2026</kbd>
 
 ## Overview
 

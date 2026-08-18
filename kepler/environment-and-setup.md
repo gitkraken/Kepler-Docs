@@ -17,7 +17,7 @@ tags: [environment, setup, repositories, worktrees, terminal, custom-commands, s
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: June 2026</kbd>
+<kbd>Last updated: August 2026</kbd>
 
 ## Overview
 

@@ -17,7 +17,7 @@ tags: [agent-sessions, console, diff, staging, commits, worktrees, modes]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: June 2026</kbd>
+<kbd>Last updated: August 2026</kbd>
 
 An **agent session** is a running coding agent within a Task in Kepler. This page covers how to configure a session before it starts, how to direct the agent from the console, and how to review, stage, and commit the changes it produces.
 

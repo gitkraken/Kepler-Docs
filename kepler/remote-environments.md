@@ -17,7 +17,7 @@ tags: [remote-environments, ssh, wsl, remote-access, ngrok, networking]
 taxonomy:
    category: kepler
 ---
-<kbd>Last updated: June 2026</kbd>
+<kbd>Last updated: August 2026</kbd>
 
 
 Kepler covers two remote scenarios:

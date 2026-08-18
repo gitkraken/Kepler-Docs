@@ -17,7 +17,7 @@ tags: [workflow-views, list-view, kanban, console, tasks, worktrees, sessions]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: June 2026</kbd>
+<kbd>Last updated: August 2026</kbd>
 
 This page describes Kepler's three workflow views and when to use each one. Use the **List**, **Kanban**, and **Console** toggle at the top of the screen to switch between them.
 

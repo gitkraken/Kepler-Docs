@@ -17,7 +17,7 @@ tags: [agent-integrations, claude-code, codex-cli, copilot-cli, cursor, opencode
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: June 2026</kbd>
+<kbd>Last updated: August 2026</kbd>
 
 ## Overview
 

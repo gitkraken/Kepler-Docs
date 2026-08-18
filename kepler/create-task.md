@@ -17,7 +17,7 @@ tags: [tasks, create-task, worktrees, issues, pull-requests, kanban, shared-cont
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: June 2026</kbd>
+<kbd>Last updated: August 2026</kbd>
 
 ## What is a Task?
 
