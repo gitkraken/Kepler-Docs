@@ -33,7 +33,7 @@ Three things, and deliberately nothing else:
 
 - **← Dashboard** — the back button, labelled that in the app — returns you to the list exactly as you left it: same segment, grouping, filters, and selection.
 - **The task switcher** jumps to another Task without going back first. It searches as you type, and each row carries the same session status dots a row does.
-- **⋮ Task actions** holds **Rename task**, **Archive task**, and **Delete task**. On an already-archived Task, **Archive task** is replaced by **Restore task**, which puts it straight back with no confirmation.
+- **⋮ Task actions** holds **Rename task**, **Archive task**, and **Delete task**. On an already-archived Task, **Restore task** replaces **Archive task** and puts the Task straight back with no confirmation.
 
 **Rename task** opens a dialog with the name in an editable field. The field carries an **Auto-name** button — *Suggest a name from the task's prompt and resources* — which fills the field with a suggestion for you to accept or edit. It never renames on its own; the dialog's **Rename** button is what applies it. The button is hidden on a free plan.
 
@@ -47,7 +47,7 @@ The left rail lists everything attached to the Task, grouped by kind:
 
 The worktree group is called **Changes** — its rows carry each checkout's line count and open its diff review, so the header names what you go there for rather than the git object behind it.
 
-**Sessions** always stays, even on a Task that has none, so there is always a way to start the first one. Every other group appears only once it has something in it.
+**Sessions** always stays, even on a Task that has none, so you always have a way to start the first one. Every other group appears only once it has something in it.
 
 - **Add resource** sits at the bottom of the rail and opens the **Add resources** dialog.
 - The **+** on a group header adds straight into that group — **Add issues**, **Add notes**, and so on. On **Changes** it reads **Add worktree**, because that's what actually lands there. On **Sessions** the **+** is **New session** instead.
@@ -55,7 +55,15 @@ The worktree group is called **Changes** — its rows carry each checkout's line
 
 ### What a row shows
 
-Both of a row's lines truncate at rail width, so every row has a hover tip carrying its full name plus the facts the lines had no room for — **Path** above all, which is never on the row itself, along with **Repository**, **Base**, **Agent**, **Account**, **Status**, and flags like **Repository's main worktree** or **Gone from disk**.
+Both of a row's lines truncate at rail width. Every row has a hover tip carrying its full name, plus the facts the row's lines had no room for:
+
+- **Path**, above all — never shown on the row itself
+- **Repository**
+- **Base**
+- **Agent**
+- **Account**
+- **Status**
+- Flags such as **Repository's main worktree** or **Gone from disk**
 
 - A **Changes** row's subtitle is its repository and base branch, followed by the checkout's added and removed line counts.
 - A **session** row leads with its state, and names which **Account** it runs under once a harness has more than one configured — the provider logo plus an ordinal, on the row, its tab, and its collapsed strip alike.
@@ -77,7 +85,7 @@ Right-click any row. Every row opens with **Open**, **Open in new tab**, and **O
 | A worktree that's on disk | **New session here**, **New terminal here**, **Run command here**, **Open in…**, **Open remote repo**, **Copy path**, **Copy branch name**, **Copy remote URL** |
 | A folder | **Open in…**, **Copy path** |
 | A file | **Copy path** |
-| A pull request or issue | **Open in browser**, **Copy link**, **Copy title**, **Copy number**, and **Copy branch name** on a PR |
+| A pull request or issue | **Open in browser**, **Copy link**, **Copy title**, **Copy number**, and **Copy branch name** on a pull request |
 
 **Run command here** lists the repository's commands — configured in **Settings → Repositories** — and runs the one you pick in that worktree, revealing its terminal in place without taking your focus. A repository with none reads **No commands yet**, and the submenu ends with **Create command…** so you can add one from where you noticed you wanted it.
 
@@ -97,7 +105,7 @@ The content area is fixed slots, not free-form panes. Which slot a rail row open
 
 Terminals get a slot of their own rather than sharing the worktree's. A terminal is a view *onto* a checkout, so the two belong on screen at the same time: opening a shell no longer evicts the changes you were reading. When only one of the two halves has something open, it takes the whole height.
 
-Every boundary is a draggable sash, and the size you drag it to persists. The three content columns share whatever the rail leaves — equally until you drag one, and in the ratio you set from then on. The ratios are kept as proportions, not pixels, so they survive a window resize and a column opening or closing.
+Every boundary is a draggable sash, and the size you drag it to persists. The three content columns share whatever the rail leaves — equally until you drag one, and in the ratio you set from then on. Kepler keeps the ratios as proportions, not pixels, so they survive a window resize and a column opening or closing.
 
 Click a rail row to open it in its slot. Double-click to pin it. A slot with nothing open renders no column at all, and the others take its space.
 

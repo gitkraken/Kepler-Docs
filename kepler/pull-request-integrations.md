@@ -21,7 +21,7 @@ taxonomy:
 
 Connect a Git host and the pull requests you authored, plus the ones waiting on your review, show up in [the Kepler interface](/kepler/kepler-interface). Kepler also matches them to the worktrees you already have, so a branch you are working on carries its pull request wherever you see it.
 
-Providers are managed in **Settings → Integrations**, in the **Provider Integrations** section.
+Manage providers in **Settings → Integrations**, in the **Provider Integrations** section.
 
 <!-- TODO(screenshot): Settings → Integrations → Provider Integrations with GitHub connected, showing the Connected badge, Disconnect, and Reconnect. The existing _images/pr-integrations.png and _images/provider-integrations.png predate all three. -->
 
@@ -29,7 +29,7 @@ Providers are managed in **Settings → Integrations**, in the **Provider Integr
 
 ## Hosts Kepler can read pull requests from
 
-Six of Kepler's nine providers return pull requests.
+Six of Kepler's nine providers return pull requests:
 
 | Provider | Name in Settings | Also returns issues |
 |---|---|---|
@@ -50,16 +50,20 @@ GitLab merge requests appear as pull requests throughout Kepler. There is one li
 
 ## Connect a Git host
 
+Connecting a Git host takes four steps:
+
 1. Open **Settings → Integrations**.
 2. Find the provider in **Provider Integrations** and click **Connect**.
 3. Authorize Kepler in the browser window that opens.
 4. Kepler returns to **Provider Integrations** and the provider shows a **Connected** badge.
 
-Integrations are held by your GitKraken account rather than by this copy of Kepler, so a provider you connect here is also available to the `gk` CLI and GitKraken Desktop. You need to be signed in to a GitKraken account to manage them.
+Your GitKraken account holds integrations, not this copy of Kepler, so a provider you connect here also becomes available to the `gk` command-line interface (CLI) and GitKraken Desktop. You need to sign in to a GitKraken account to manage them.
 
-**Connect** hands the whole authorization to GitKraken's website — Kepler opens `/connect` there in your system browser with the provider named, and hands it a redirect back into Kepler. There is no in-app form for a host URL or a personal access token, so a self-hosted instance's address and whatever credential it needs are supplied in the browser. Kepler notices the return and refetches your providers rather than serving what it had cached.
+**Connect** hands the whole authorization to GitKraken's website. Kepler opens `/connect` there in your system browser, names the provider, and includes a redirect back into Kepler. Kepler has no in-app form for a host URL or a personal access token, so you supply a self-hosted instance's address and whatever credential it needs directly in the browser. When you return, Kepler refetches your providers instead of reusing its cached list.
 
 <!-- TODO(verify): the redirect and the absence of an in-app form are confirmed against getConnectUrl (src/backend/auth/auth.ts) and useConnectProvider (src/ui/data/auth.ts) at kepler 7c31af83e, and no per-provider token scopes are declared anywhere in the app. The browser-side steps and the scopes each provider asks for live on GitKraken's website, not in this repo — confirm them with the web team for GitHub Enterprise, GitLab Self-Hosted, Bitbucket and Azure DevOps before documenting them. -->
+
+Three controls sit on a connected provider's row:
 
 | Control | What it does |
 |---|---|
@@ -73,7 +77,7 @@ A warning triangle on a row means that provider's sign-in has expired. Kepler tr
 
 ## Cloning a repository you don't have
 
-Starting work on a pull request whose repository you have never cloned makes Kepler clone it first, into your **Default Repositories Folder**. That clone authenticates with the provider token your connected GitKraken account already holds — the same connection the pull request itself came through — so a private repository clones without you having set up a git credential helper.
+Starting work on a pull request whose repository you have never cloned makes Kepler clone that repository first, into your **Default Repositories Folder**. That clone authenticates with the provider token your connected GitKraken account already holds, the same connection the pull request itself came through. As a result, a private repository clones without you having to set up a git credential helper. Kepler authenticates the clone differently depending on the host:
 
 | Host | How the clone authenticates |
 |---|---|
@@ -83,9 +87,9 @@ Starting work on a pull request whose repository you have never cloned makes Kep
 
 For an enterprise or self-managed host, Kepler matches the clone's host against the domain stored on your connection, so the repository clones through the account connected to that instance rather than through a cloud account of the same family. When a provider has more than one account, the clone follows the same choice your reads follow: **Read from this account** where you set one, otherwise the primary.
 
-The token is handed to that one git process and nothing more. It is not written into the clone's `.git/config`, does not become part of the remote's URL, and never reaches the interface.
+Kepler hands the token to that one git process and nothing more. Kepler does not write it into the clone's `.git/config`, does not add it to the remote's URL, and never exposes it to the interface.
 
-Where Kepler holds no usable token for the host, the clone falls back to your own git credential helper. Kepler never lets git open an interactive prompt, so when there is nothing to fall back on the clone fails with a message that names the host and tells you what to do — *git has no saved credentials for this remote and Kepler cannot prompt for them. Sign in with a git credential helper (e.g. `gh auth login`, or the macOS keychain helper) or use an SSH url, then try again.*
+Where Kepler holds no usable token for the host, the clone falls back to your own git credential helper. Kepler never lets git open an interactive prompt, so when no credential helper is available, the clone fails with a message that names the host and tells you what to do — *git has no saved credentials for this remote and Kepler cannot prompt for them. Sign in with a git credential helper (e.g. `gh auth login`, or the macOS keychain helper) or use an SSH url, then try again.*
 
 ***
 
@@ -93,7 +97,7 @@ Where Kepler holds no usable token for the host, the clone falls back to your ow
 
 You can connect several accounts of the same provider. When a provider has two or more, an **Accounts** list appears under its row with one entry per account.
 
-Each entry carries two independent controls.
+Each entry carries two independent controls:
 
 | Control | What it changes | How far it reaches |
 |---|---|---|
@@ -118,7 +122,7 @@ Disconnecting reaches further than Kepler. It removes the provider from GitKrake
 
 ## Bitbucket has no issues
 
-Kepler keeps two separate lists of what each provider can return. Bitbucket is on the pull-request list only, so Kepler never asks it for issues, and a provider filter for issues never offers it. In the list, facets are built from the rows actually loaded, so a facet with nothing to offer is not shown at all.
+Kepler keeps two separate lists of what each provider can return. Bitbucket is on the pull-request list only, so Kepler never asks it for issues, and a provider filter for issues never offers it. In the list, Kepler builds facets from the rows actually loaded, so a facet with nothing to offer never appears.
 
 The same rule runs the other way for Jira, Linear, and Trello, which have no pull requests.
 
@@ -134,20 +138,20 @@ Matching runs against open and closed pull requests together, so a merged pull r
 
 ### Confirmed against inferred
 
-Every link Kepler shows records **how** it was made, so you can tell a hard link from a guess.
+Every link Kepler shows records **how** it was made, so you can tell a hard link from a guess:
 
 | How the link was made | Reads as | What it means |
 |---|---|---|
-| Recorded on the task | Confirmed | The link is authoritative. Launching the task from the pull request records one; so does an agent that opens a pull request, attaching one yourself, and the branch auto-attach below |
+| Recorded on the task | Confirmed | The link is authoritative. Kepler records one when you launch the task from the pull request, when an agent opens a pull request, when you attach one yourself, or through the branch auto-attach below |
 | The pull request's head branch matched the worktree's local branch | Confirmed | A direct branch match |
 | The head branch matched the worktree branch's **upstream** branch | Confirmed, and marked | Git-native rather than a guess, but the local name differs, so Kepler labels it **Matched from upstream branch** |
 | An identifier parsed out of the branch name | Inferred | A heuristic. Issues only — pull requests are never linked this way |
 
-A confirmed link carries no extra marking. A link Kepler wants you to look twice at is underlined with a dotted line, and its tooltip says why — **Matched from upstream branch**, or **Matched from branch name** for an inferred issue link.
+A confirmed link carries no extra marking. Kepler underlines with a dotted line any link it wants you to look twice at, and its tooltip says why — **Matched from upstream branch**, or **Matched from branch name** for an inferred issue link.
 
-When one pull request is found more than one way, the most authoritative wins: the task's own recorded link, then a local branch match, then an upstream branch match.
+When Kepler finds one pull request more than one way, the most authoritative wins: the task's own recorded link, then a local branch match, then an upstream branch match.
 
-Branch matching is scoped to each item's own repository, so two repositories with a branch of the same name do not borrow each other's pull requests.
+Kepler scopes branch matching to each item's own repository, so two repositories with a branch of the same name do not borrow each other's pull requests.
 
 ### Auto-attaching a matched pull request
 
@@ -155,21 +159,23 @@ A pull request you open outside Kepler — from a terminal `gh`, from GitKraken,
 
 Whenever fresh pull-request data arrives, Kepler looks over your active tasks that hold no pull request yet and attaches one whose head branch matches a worktree's branch. It then behaves like a pull request you attached yourself: it sits in the task's resources, and it reaches the agent as context. See [Tasks and Resources](/kepler/tasks-and-resources).
 
-Auto-attaching is deliberately stricter than the matching above, because an attached resource is saved and goes to an agent, where a read-time match only draws a card.
+Auto-attaching is deliberately stricter than the matching above, because Kepler saves an attached resource and sends it to an agent, where a read-time match only draws a card. Auto-attach follows five rules:
 
 | Rule | Why |
 |---|---|
 | Exact matches only | The pull request's head branch has to be the worktree's own branch name, and its repository has to match a remote exactly. The upstream-branch pass and the rename-tolerant fallback still draw the card; neither attaches |
 | Open pull requests only | A merged pull request cannot claim a branch name that gets reused later |
-| The head branch has to live in the same repository | Branch matching keys on the head branch name, and the author of a fork picks that name freely. An attached resource reaches your agent, so a stranger's pull request must not be able to claim your branch |
+| The head branch has to live in the same repository | Branch matching keys on the head branch name, and the author of a fork picks that name freely. An attached resource reaches your agent, so a stranger's pull request must not claim your branch |
 | One pull request per task per pass | A task drops out of the next pass as soon as it holds one |
 | A pull request another active task already holds is left alone | One active task per pull request, without taking it off the task that has it |
 
-Nothing is archived and nothing is replaced. A branch match is a guess, so it never supersedes work you started deliberately, and it never removes a link because a pull request briefly dropped out of a read.
+Auto-attach never archives anything and never replaces anything. A branch match is a guess, so it never supersedes work you started deliberately, and it never removes a link because a pull request briefly dropped out of a read.
 
 ***
 
 ## What Kepler reads from a pull request
+
+Kepler pulls these fields from a pull request:
 
 | Field | Notes |
 |---|---|
@@ -185,11 +191,13 @@ Nothing is archived and nothing is replaced. A branch match is a guess, so it ne
 
 <!-- TODO(verify): re-checked field by field against the shared PullRequest shape in src/shared/provider/pull-request.ts at kepler 7c31af83e — unchanged, and the table above is complete apart from the base-repo clone URLs, which only prefill the Clone form. The June 2026 version of this page also claimed Kepler pulls the diff, open review comments, and the current review state when you attach a pull request; none of those are fields on this shape. Confirm with engineering which path supplies review comments and the diff to a Review or Address Feedback run before documenting them. -->
 
-Azure DevOps reports pull requests without a usable number, so Kepler identifies them by URL instead. You should not see a difference; it is why a pull request you look up by link resolves correctly there.
+Azure DevOps reports pull requests without a usable number, so Kepler identifies them by URL instead. You should not see a difference; identifying by URL is why a pull request you look up by link resolves correctly there.
 
 ***
 
 ## Where your pull requests turn up
+
+Your pull requests turn up in four places:
 
 | Surface | What it gives you |
 |---|---|

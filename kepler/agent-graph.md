@@ -23,7 +23,7 @@ taxonomy:
 
 Running several agents at once is easy. Knowing what they're all doing is the hard part.
 
-The **Agent Graph** draws it. Every task, the sessions inside it, each turn, every tool call, every subagent, and the files they touch — laid out as a graph and updated live, with nodes appearing as the agents work. GitKraken has spent a decade drawing things developers otherwise hold in their heads; the commit graph did it for history, and this does it for agent work.
+The **Agent Graph** draws it: every task, the sessions inside it, each turn, every tool call, every subagent, and the files the agents touch. It lays all of this out as a graph that updates live, with nodes appearing as the agents work. GitKraken has spent a decade drawing things developers otherwise hold in their heads. The commit graph did it for history, and the Agent Graph does it for agent work.
 
 <!-- TODO(screenshot): a screen CAPTURE, not a still — the graph animates and grows as agents work, and a static frame undersells it. Ideally a short loop showing nodes appearing mid-run, with one session blocked and a subagent branch open. The most important asset in these docs. -->
 
@@ -35,14 +35,14 @@ The graph is one of Kepler's three arrangements, so you switch to it the way you
 
 | Where | How |
 |---|---|
-| **The whole fleet** | The **View** control — **Rows**, **Columns**, or the graph. Your choice is remembered across restarts |
+| **The whole fleet** | The **View** control — **Rows**, **Columns**, or the graph. Kepler remembers your choice across restarts |
 | **One session** | The task view's rail carries a per-session toggle on each session row, which docks that one session's graph beside its transcript |
 
 See [Arranging Your Work](/kepler/arranging-your-work) for the other two. The graph has no page of its own — it's an arrangement of the main list and a pane in the task view, and nothing else.
 
-Opened from the main list, the graph draws exactly what the list would have: your search and your facets narrow it before it's built, which is why the graph's own **Agent** and **Repo** filters aren't offered there — two sets of filters that could disagree, with no way to tell which won. Opened on a session, the graph starts fully expanded and grows downward, since a single conversation's tool calls and subagents are the whole reason to have it open.
+Opened from the main list, the graph draws exactly what the list would show: your search and your facets narrow the results before Kepler builds the graph. That's why the graph's own **Agent** and **Repo** filters don't appear there — two sets of filters could disagree, with no way to tell which one won. Opened on a session, the graph starts fully expanded and grows downward, since a single conversation's tool calls and subagents are the whole reason to open it.
 
-The graph is a **visualization**, not a workspace. To work in a session, open it — the graph's node details link straight through. To watch several agents at once and answer them, shift-click sessions open side by side instead; see [The Task View](/kepler/task-view).
+The graph is a **visualization**, not a workspace. To work in a session, open it — the graph's node details link straight through. To watch several agents at once and answer them, shift-click sessions to open them side by side instead; see [The Task View](/kepler/task-view).
 
 ***
 
@@ -84,13 +84,17 @@ Three states get a word on the card rather than a colour, because they're asking
 
 This is the fastest read on the graph. A task that's all **Read** is still orienting; a wall of **Edit** means it's committing to an approach.
 
-Repeated calls of the same kind fold into one node badged **Group**, which keeps the kind as its name and reports the count and how many distinct files it spans — so a **Read** node reading *9 calls · 4 files* doesn't read as the same file nine times. Click a group to unfold that one group, and click it again to fold it back up.
+Repeated calls of the same kind fold into one node badged **Group**, which keeps the kind as its name and reports the count and how many distinct files it spans. That way, a **Read** node reading *9 calls · 4 files* doesn't read as the same file nine times. Click a group to unfold it, and click again to fold it back up.
 
 ***
 
 ## Click any node for detail
 
-Selecting a node opens details beside the graph. What you get depends on what you clicked — for a session: the agent, state, model, mode, context used, cost, where it's running, and its stop reason. For a tool call: the tool, the exact input, the files and paths it touched, how long it took, and how many calls failed. For a subagent: its type, its prompt, and its own calls.
+Selecting a node opens details beside the graph. What you see depends on what you clicked:
+
+- **Session** — the agent, state, model, mode, context used, cost, where it's running, and its stop reason.
+- **Tool call** — the tool, the exact input, the files and paths it touched, how long it took, and how many calls failed.
+- **Subagent** — its type, its prompt, and its own calls.
 
 **Duration is only shown when Kepler actually watched the call happen.** Replayed history can't tell you how long something took, so the graph leaves it out rather than estimating.
 
@@ -100,7 +104,7 @@ From the details you can **Open task** or **Open session** to jump into the work
 
 ## The stats rail
 
-A rail down the right-hand side of the graph, reading top to bottom. It's the fleet's numbers rather than its shape, drawn from the same snapshot the canvas draws, so the two can never disagree. On the mashboard the rail steps aside when you have a panel open — there isn't room for both.
+A rail down the right-hand side of the graph, reading top to bottom. It's the fleet's numbers rather than its shape, drawn from the same snapshot the canvas draws, so the two can never disagree. On the dashboard the rail steps aside when you have a panel open — there isn't room for both.
 
 ### The counters
 
@@ -139,11 +143,18 @@ The calls broken down by kind, with a bar and a count each — the fastest read 
 
 ### Usage windows
 
-Your agent subscription windows, one bar per window per agent. It appears only once you've turned on **Show token usage** in [Settings](/kepler/settings).
+Your agent subscription windows, one bar per window per agent. This panel appears only once you've turned on **Show token usage** in [Settings](/kepler/settings).
 
 ### What was folded away
 
-At the foot of the rail, a note counting what the readability rules removed from the canvas — tool calls grouped, sessions filtered out, sessions Kepler can see but not trace, and tasks with no session. Reported rather than silent, because a graph that quietly hides half the calls reads as "that's all that happened".
+At the foot of the rail, a note counts what the readability rules removed from the canvas:
+
+- Tool calls grouped.
+- Sessions filtered out.
+- Sessions Kepler can see but not trace.
+- Tasks with no session.
+
+Kepler reports this instead of staying silent, because a graph that quietly hides half the calls reads as "that's all that happened".
 
 ***
 
@@ -161,7 +172,7 @@ The graph's header carries a search box, an **Options** menu, the depth slider, 
 | **Detail depth** | Header | How many layers deep the graph draws — up to five, four by default |
 | **Zoom in** / **Zoom out** / **Fit to view** | Canvas | Move around. You can also pan by dragging, and press Escape to drop a selection |
 
-Depth and layout are remembered per surface, so narrowing the graph on the main list doesn't change what a session pane opens at.
+Kepler remembers depth and layout per surface, so narrowing the graph on the main list doesn't change what a session pane opens at.
 
 ### Freeze it
 
@@ -185,7 +196,13 @@ With nothing running at all, the graph reads **Nothing running yet** — *Start 
 
 ## Early days
 
-The Agent Graph is new, and a lot about it will change. It's worth opening next to the agents you're already running — and we'd like to know whether it actually helps. **Feedback**, in the top bar, opens **Send feedback**: pick a **Type** — **Feature request**, **Bug report**, or **General feedback** — write a **Message**, and send. The same dialog links out to the public issue board.
+The Agent Graph is new, and a lot about it will change. It's worth opening next to the agents you're already running — and we'd like to know whether it actually helps. **Feedback**, in the top bar, opens **Send feedback**:
+
+1. Pick a **Type** — **Feature request**, **Bug report**, or **General feedback**.
+2. Write a **Message**.
+3. Send it.
+
+The same dialog links out to the public issue board.
 
 <!-- TODO(verify): the public issue board the feedback dialog links to is https://github.com/gitkraken/gk-ade/issues (ISSUES_URL in src/ui/components/feedback/FeedbackModal.tsx). Confirm that is the URL to publish, since the repo name is not the product name. -->
 

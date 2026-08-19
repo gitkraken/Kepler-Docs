@@ -38,17 +38,17 @@ Kepler ships with four Actions. Every one of them is editable.
 | **Review** | Review the pull request if one is attached, otherwise the uncommitted work in the worktree | Tasks, Pull requests |
 | **Address Feedback** | Triage the review comments, apply what's worth applying, and push back on the rest instead of applying every suggestion blindly | Pull requests |
 
-**Review is deliberately offered on plain tasks.** Reviewing your own uncommitted work before you push is the obvious thing to want from a worktree, so one flexible Review covers both cases rather than splitting the list into "review a PR" and "review my changes."
+**Kepler deliberately offers Review on plain tasks.** Reviewing your own uncommitted work before you push is the obvious thing to want from a worktree. One flexible Review covers both cases, rather than splitting the list into "review a pull request" and "review my changes."
 
 Every Action declares **what it can be aimed at**, which is why **Address Feedback** never appears on a task with no pull request.
 
-Built-in Actions can be edited and reset, but not deleted. What an Action applies to already controls where it shows up, so deleting one would be a weaker version of the same control.
+You can edit and reset built-in Actions, but you can't delete them. What an Action applies to already controls where it shows up, so deleting one would be a weaker version of the same control.
 
 ***
 
 ## Where the Action button appears
 
-Actions are fired from a **split button**. The left half runs your preferred Action for that surface; the chevron opens the full list.
+You fire Actions from a **split button**. The left half runs your preferred Action for that surface; the chevron opens the full list.
 
 | Surface | Preferred Action comes from |
 |---|---|
@@ -61,7 +61,7 @@ Inside a task, Actions live under the **chevron on the composer's send button** 
 
 Task rows don't carry an Action button — a task's own operations live behind the **⋮** menu on the row instead.
 
-There is no **Resume** button on a task row. Clicking the row selects it and shows its sessions, which is the way to look at running work without sending anything, and firing an Action on live work takes you to the session it landed in.
+A task row has no **Resume** button. Clicking the row selects it and shows its sessions — the way to look at running work without sending anything. Firing an Action on live work takes you to the session that Action landed in instead.
 
 ***
 
@@ -71,9 +71,9 @@ An Action fires immediately unless the firing is genuinely ambiguous. Only one t
 
 ### The left half — one click
 
-The left half of the button runs your preferred Action straight away, in the current session if there is one. It only stops to ask when the task has **two or more worktrees**.
+The left half of the button runs your preferred Action straight away, in the current session if one exists. It only stops to ask when the task has **two or more worktrees**.
 
-How many issues or pull requests are attached to the task never enters into it. An Action's prompt is its own content, word for word, and every attached item ships to the agent as shared context — all of it is the work. If you want the agent to look at one thing first, say so in the prompt box or in the chat; that's one sentence, and it's better in your own words.
+How many issues or pull requests are attached to the task doesn't change what the Action does. An Action's prompt is its own content, word for word, and every attached item ships to the agent as shared context — all of it is the work. If you want the agent to look at one thing first, say so in the prompt box or in the chat; that's one sentence, and it's better in your own words.
 
 ### The chevron — the deliberate path
 
@@ -89,7 +89,7 @@ The **Run in** view asks two independent questions, and both have small answers.
 
 **Which worktree?** In *New session*, the rows are **All N worktrees**, **A new worktree**, and then one row per branch. In *Current session*, individual sessions replace branches that already have sessions.
 
-Clicking any row **runs the Action** — there is no separate confirm step.
+Clicking any row **runs the Action** immediately, with no separate confirm step.
 
 Two things worth knowing:
 

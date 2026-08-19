@@ -21,7 +21,7 @@ taxonomy:
 
 Kepler runs the coding agent you already have. You sign in with your own agent account, and Kepler adds no markup on the agents you bring.
 
-Six agents ship supported, and you can point Kepler at any other agent that speaks the Agent Client Protocol (ACP).
+Kepler ships support for six agents, and you can point it at any other agent that speaks the Agent Client Protocol (ACP).
 
 All of it lives in **Settings → Agents**.
 
@@ -31,7 +31,7 @@ All of it lives in **Settings → Agents**.
 
 ## The six supported agents
 
-Each agent gets its own section in **Settings → Agents**, in this order.
+Each agent gets its own section in **Settings → Agents**, in this order:
 
 | Agent | Name in Settings | How Kepler runs it | Multiple accounts |
 |---|---|---|---|
@@ -61,7 +61,7 @@ Kepler checks both before it starts a session and tells you to update rather tha
 
 When an agent is not installed, its section reads **Not installed** and offers **Install**. Kepler runs the install command on your behalf and streams the output, so you can read a failure rather than guess at one.
 
-Install methods are declared per operating system, so the list you see depends on the machine you are on.
+Kepler declares install methods per operating system, so the list you see depends on the machine you're on:
 
 | Agent | macOS | Linux | Windows |
 |---|---|---|---|
@@ -74,15 +74,15 @@ Install methods are declared per operating system, so the list you see depends o
 
 If an agent offers no install method for your OS, Kepler says so and points you at the custom binary path instead.
 
-The install output pane does not close itself when the install finishes. Mid-run errors — a permissions failure, a partial install, a post-install warning — only surface there, so you dismiss it once you have read it.
+Kepler doesn't close the install output pane automatically when the install finishes. Mid-run errors — a permissions failure, a partial install, a post-install warning — surface only in that pane, so read them before you dismiss it.
 
 ***
 
 ## Binary detection
 
-Kepler resolves each agent's binary the way your shell does: the first match on your `PATH`, so it agrees with `which`. Beyond `PATH`, it also sweeps your login shell's environment and well-known install directories, which is how an agent installed by nvm or Homebrew is found even when Kepler was not launched from a terminal.
+Kepler resolves each agent's binary the way your shell does: the first match on your `PATH`, so it agrees with `which`. Beyond `PATH`, it also sweeps your login shell's environment and well-known install directories. That's how Kepler finds an agent installed by nvm or Homebrew, even when you didn't launch Kepler from a terminal.
 
-Open **Configure** on an agent's section to see and change what it resolved.
+Open **Configure** on an agent's section to see and change what it resolved:
 
 | Control | What it does |
 |---|---|
@@ -92,11 +92,11 @@ Open **Configure** on an agent's section to see and change what it resolved.
 | **Re-scan** | Re-detects this agent's binary. Use it after installing or removing one outside Kepler |
 | **Custom path…** | Pins an absolute path of your own. Kepler validates it and refuses a directory or a path that is not a file |
 | **Clear custom** | Drops the pinned path and goes back to automatic resolution. Shown only while a custom path is set |
-| **Installed versions** | A picker listing every install Kepler found, with an **Auto** row. Shown only when there is more than one |
+| **Installed versions** | A picker listing every install Kepler found, with an **Auto** row. Appears only when Kepler finds more than one |
 | **Data directory** | Overrides the agent's own data and config directory. Leave it empty for the agent default |
-| **Enabled** | Whether this agent is offered when you start a session |
+| **Enabled** | Whether Kepler offers this agent when you start a session |
 
-A pinned path that later disappears — an auto-updater cleaning up an old version, for example — falls back to automatic resolution instead of reporting the agent as missing.
+If a pinned path later disappears — for example, when an auto-updater cleans up an old version — Kepler falls back to automatic resolution instead of reporting the agent as missing.
 
 **Settings → Agents → Agent options → Installed agents** carries a **Refresh** button that re-scans every agent at once.
 
@@ -106,7 +106,7 @@ A pinned path that later disappears — an auto-updater cleaning up an old versi
 
 ## Sign in to an agent
 
-An installed agent shows **Sign in** until it has a credential, and **Sign out** once it does. **Sign in** opens a modal listing the methods that agent supports on this machine, plus any methods Kepler owns itself.
+An installed agent shows **Sign in** until it has a credential, and **Sign out** once it does. **Sign in** opens a modal listing the methods that agent supports on this machine, plus any methods Kepler owns itself:
 
 | Agent | How you sign in |
 |---|---|
@@ -126,11 +126,13 @@ That holds on a [remote environment](/kepler/remote-environments) too:
 - **Claude Code** over SSH offers **Sign in with browser**, which opens the sign-in page in your *local* browser and takes the code you paste back. The credential lands on the remote machine.
 - **Codex** over SSH opens ChatGPT sign-in in your local browser and bridges the callback over your SSH connection. The token is written on the remote machine and never passes through Kepler.
 
-Codex's browser sign-in on a remote target is the one flow with a condition on it: it needs the desktop app driving a window bound to an **SSH** host. Every client operating system qualifies, and no SSH ControlMaster is required — one is a fast path, not a prerequisite. It is not offered in a browser client, and it does not apply to a [WSL environment](/kepler/remote-environments), which has no SSH connection to bridge the callback over.
+Codex's browser sign-in on a remote target is the one flow with a condition on it: it needs the desktop app driving a window bound to an **SSH** host. Every client operating system qualifies, and Kepler doesn't require an SSH ControlMaster — one is a fast path, not a prerequisite. It is not offered in a browser client, and it does not apply to a [WSL environment](/kepler/remote-environments), which has no SSH connection to bridge the callback over.
 
-Where it does not apply, **Import local Codex login** does the job: it copies this machine's `~/.codex/auth.json` to the remote target. That entry appears on every remote binding in the desktop app, so it also sits alongside the browser flow when both are available. Treat it as handing over a credential — anyone with access to that remote machine can send Codex requests on your account until you sign out.
+Where it does not apply, **Import local Codex login** does the job: it copies this machine's `~/.codex/auth.json` to the remote target. That entry appears on every remote binding in the desktop app, so it also sits alongside the browser flow when both are available. Treat this import as handing over a credential — anyone with access to that remote machine can send Codex requests on your account until you sign out.
 
 ### Auggie's two methods
+
+Auggie supports two sign-in methods:
 
 | Method | What it does | Where it works |
 |---|---|---|
@@ -143,7 +145,7 @@ If you run Auggie's browser sign-in on this machine yourself, Kepler detects it 
 
 **Claude Code**, **Codex**, **GitHub Copilot**, and **Auggie** support more than one signed-in account. **Configure → Accounts → Add account** adds one; each account keeps its own credentials and history.
 
-For **Auggie**, a second account can only be added with **Paste session token**. Its browser sign-in writes to one fixed file, so it would sign the second account into the first account's identity.
+For **Auggie**, you can only add a second account with **Paste session token**. Its browser sign-in writes to one fixed file, so it would sign the second account into the first account's identity.
 
 <!-- TODO(verify): checked again at kepler 7c31af83e — settings.agents.accountsHelp in src/shared/i18n/locales/en.ts is STILL worded for Claude Code ("Run multiple Claude Code logins side by side…") while the Accounts group renders for Codex, GitHub Copilot and Auggie too. This page does not quote the string, so it is a product-copy bug to raise rather than a docs fix; drop this comment once the copy is generalized. -->
 
@@ -151,7 +153,7 @@ For **Auggie**, a second account can only be added with **Paste session token**.
 
 ## Claude Code modes
 
-Claude Code is the one agent you can run two ways. **Configure → Default mode for new sessions** picks which.
+Claude Code is the one agent you can run two ways. **Configure → Default mode for new sessions** picks which:
 
 | Mode | What you get |
 |---|---|
@@ -168,7 +170,7 @@ You can switch modes inside a running session without losing the conversation.
 
 **Settings → Agents → Default agent** sets which agent is preselected when you start work, and supplies the model, mode, and thinking effort a new session starts with.
 
-Agent options are saved **per account**. Picking a different account of the same agent brings up that account's own saved model and options, so a heavier model on your work account does not follow you onto your personal one.
+Kepler saves agent options **per account**. Picking a different account of the same agent brings up that account's own saved model and options, so a heavier model on your work account doesn't follow you onto your personal one.
 
 Only agents that are installed and **Enabled** appear in the picker. If your saved default is no longer installed, Kepler says so and asks you to pick another.
 
@@ -178,7 +180,7 @@ An Action can override all of this. See [Actions](/kepler/actions) for how an Ac
 
 ## Custom ACP servers
 
-If your agent speaks the Agent Client Protocol, Kepler can run it without any Kepler-side change. **Settings → Agents → Custom agent servers → Add**.
+If your agent speaks ACP, Kepler can run it without any Kepler-side change. Open **Settings → Agents → Custom agent servers → Add** and fill in these fields:
 
 | Field | What it holds |
 |---|---|
@@ -187,9 +189,9 @@ If your agent speaks the Agent Client Protocol, Kepler can run it without any Ke
 | **Args (one per line)** | Arguments that put your agent into ACP mode, for example `--acp` |
 | **Environment variables (KEY=value, one per line)** | Variables merged into the agent's environment on every session |
 
-Environment values are treated as secrets: they are hidden after you save, and never sent to any client. When you edit a server, leaving a value empty (`KEY=`) keeps the stored secret, and typing a new value replaces it.
+Kepler treats environment values as secrets: it hides them after you save and never sends them to any client. When you edit a server, leaving a value empty (`KEY=`) keeps the stored secret, and typing a new value replaces it.
 
-Custom servers appear alongside the built-in agents everywhere an agent can be chosen.
+Custom servers appear alongside the built-in agents everywhere you can choose an agent.
 
 ***
 
@@ -197,13 +199,13 @@ Custom servers appear alongside the built-in agents everywhere an agent can be c
 
 Agent CLIs report **Kepler** as the client name, so your sessions show up as Kepler in places like your Anthropic dashboard rather than as an unlabelled non-interactive run.
 
-This applies to the sessions Kepler drives over ACP. Claude Code's **Terminal** mode deliberately leaves the label alone, because overriding it there would break key handling in the embedded terminal.
+This labeling applies to the sessions Kepler drives over ACP. Claude Code's **Terminal** mode deliberately leaves the label alone, because overriding it there would break key handling in the embedded terminal.
 
 ***
 
 ## Sessions
 
-Connecting an agent is the setup; running one is a **session** inside a task. Sessions are covered in [Agent Sessions](/kepler/agent-sessions) — starting, resuming, queuing prompts, and reviewing what the agent produced.
+Connecting an agent is the setup; running one is a **session** inside a task. [Agent Sessions](/kepler/agent-sessions) covers sessions — starting, resuming, queuing prompts, and reviewing what the agent produced.
 
 A task holds resources and does not require a worktree. See [Tasks and Resources](/kepler/tasks-and-resources).
 

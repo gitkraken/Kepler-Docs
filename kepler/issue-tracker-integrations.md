@@ -21,7 +21,7 @@ taxonomy:
 
 Connect an issue tracker and every issue assigned to you shows up in [the Kepler interface](/kepler/kepler-interface), alongside your pull requests and the tasks you already have running. Starting work on one becomes picking a row rather than describing the work from scratch.
 
-Providers are managed in **Settings → Integrations**, in the **Provider Integrations** section.
+Manage providers in **Settings → Integrations**, in the **Provider Integrations** section.
 
 <!-- TODO(screenshot): Settings → Integrations → Provider Integrations, with one provider connected and its Accounts list expanded. The existing _images/provider-integrations.png and _images/pr-integrations.png predate the Connected badge, the Disconnect button, and the account switcher. -->
 
@@ -29,7 +29,7 @@ Providers are managed in **Settings → Integrations**, in the **Provider Integr
 
 ## Trackers Kepler can read issues from
 
-Eight of Kepler's nine providers return issues.
+Eight of Kepler's nine providers return issues:
 
 | Provider | Name in Settings | Also returns pull requests |
 |---|---|---|
@@ -50,14 +50,16 @@ Self-hosted instances are first-class: **GitHub Enterprise** and **GitLab Self-H
 
 ## Connect a tracker
 
+Connecting a tracker takes four steps:
+
 1. Open **Settings → Integrations**.
 2. Find the provider in **Provider Integrations** and click **Connect**.
 3. Authorize Kepler in the browser window that opens.
 4. Kepler returns to **Provider Integrations** and the provider shows a **Connected** badge.
 
-Integrations are held by your GitKraken account rather than by this copy of Kepler, so a provider you connect here is also available to the `gk` CLI and GitKraken Desktop. You need to be signed in to a GitKraken account to manage them; Kepler prompts you if you are not.
+Your GitKraken account holds integrations, not this copy of Kepler, so a provider you connect here also becomes available to the `gk` command-line interface (CLI) and GitKraken Desktop. You need to sign in to a GitKraken account to manage them; Kepler prompts you if you are not signed in.
 
-**Connect** hands the whole authorization to GitKraken's website — Kepler opens `/connect` there in your system browser with the provider named, and hands it a redirect back into Kepler. There is no in-app form for a host URL or a personal access token, so whatever a provider needs, you supply it in the browser. Kepler notices the return and refetches your providers rather than serving what it had cached.
+**Connect** hands the whole authorization to GitKraken's website. Kepler opens `/connect` there in your system browser, names the provider, and includes a redirect back into Kepler. Kepler has no in-app form for a host URL or a personal access token, so you supply whatever the provider needs directly in the browser. When you return, Kepler refetches your providers instead of reusing its cached list.
 
 <!-- TODO(verify): the redirect and the absence of an in-app form are confirmed against getConnectUrl (src/backend/auth/auth.ts) and useConnectProvider (src/ui/data/auth.ts) at kepler 7c31af83e. The browser-side steps themselves live on GitKraken's website and are not in this repo — confirm with the web team what Jira site selection, Linear workspace selection, and the GitHub Enterprise / GitLab Self-Hosted host-and-token fields actually ask for before documenting them as a numbered flow. -->
 
@@ -77,18 +79,18 @@ A warning triangle on a row means that provider's sign-in has expired. Kepler tr
 
 You can connect several accounts of the same provider — two GitHub accounts, a work Jira site and a personal one. When a provider has two or more, an **Accounts** list appears under its row with one entry per account.
 
-Each entry carries two independent controls.
+Each entry carries two independent controls:
 
 | Control | What it changes | How far it reaches |
 |---|---|---|
 | **Read from this account** | Which account Kepler reads this provider's issues and pull requests from | Kepler only, and non-destructive |
 | **Set as primary** / **Primary** | The provider's primary account | Everywhere — other Kepler windows, the `gk` CLI, and GitKraken Desktop |
 
-**Browsing a secondary account does not change your primary.** Selecting **Read from this account** on a second account switches what Kepler shows you and leaves the primary alone, which is why it is a radio rather than a button. The primary is the default read account, so a provider with no override reads through it.
+**Browsing a secondary account does not change your primary.** Selecting **Read from this account** on a second account switches what Kepler shows you and leaves the primary alone. That's why **Read from this account** is a radio control rather than a button. The primary is the default read account, so a provider with no override reads through it.
 
 Switching either one clears that provider's saved filters — an organization or project from the old account need not exist on the new one — and re-fetches the list.
 
-The read account also authenticates git. Starting work on an issue in a repository you have never cloned makes Kepler clone it, using the same connection it reads through — see [Pull Request Integrations](/kepler/pull-request-integrations) for which hosts that covers and what happens on the ones it does not.
+The read account also authenticates git. Starting work on an issue in a repository you have never cloned makes Kepler clone that repository, using the same connection it reads through. See [Pull Request Integrations](/kepler/pull-request-integrations) for which hosts this covers and what happens on the hosts it does not.
 
 ***
 
@@ -110,8 +112,8 @@ Kepler keeps two separate lists of what each provider can return: which provider
 
 Two consequences you will notice:
 
-- **Kepler never asks them for pull requests.** They are excluded from the pull-request read rather than queried and ignored.
-- **The interface hides the dead filters.** A provider filter only offers providers that can return results for what you are looking at, so Jira never appears as a pull-request filter. In the list, facets are built from the rows actually loaded, so a facet with nothing to offer is not shown at all.
+- **Kepler never asks them for pull requests.** Kepler excludes them from the pull-request read instead of querying and ignoring them.
+- **The interface hides the dead filters.** A provider filter only offers providers that can return results for what you are looking at, so Jira never appears as a pull-request filter. In the list, Kepler builds facets from the rows actually loaded, so a facet with nothing to offer never appears.
 
 The same rule runs the other way for Bitbucket, which has no issues.
 
@@ -119,7 +121,7 @@ The same rule runs the other way for Bitbucket, which has no issues.
 
 ## What Kepler reads from an issue
 
-When an issue becomes a task, Kepler attaches what it read so the agent starts with the context rather than asking for it.
+When an issue becomes a task, Kepler attaches what it read, so the agent starts with that context instead of asking for it. Kepler pulls these fields from the issue:
 
 | Field | Notes |
 |---|---|
@@ -141,6 +143,8 @@ Kepler does not pass issue attachments or embedded images to the agent.
 ***
 
 ## Where your issues turn up
+
+Your issues turn up in three places:
 
 | Surface | What it gives you |
 |---|---|

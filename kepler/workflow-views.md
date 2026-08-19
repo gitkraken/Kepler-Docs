@@ -19,13 +19,11 @@ taxonomy:
 ---
 <kbd>Last updated: August 2026</kbd>
 
-**This page has been replaced.** Kepler no longer has separate List, Kanban, and Console views, or a view switcher. [One interface](/kepler/kepler-interface) covers all three:
+**Kepler retired this page.** Kepler no longer has separate List, Kanban, and Console views, or a view switcher. [One interface](/kepler/kepler-interface) covers all three:
 
 | What you used | Where it is now |
 |---|---|
 | **List** — scanning everything in flight | The **Rows** arrangement |
-| **Kanban** — work by stage | The **Columns** arrangement, grouped by **Progress**. Not a replacement kanban — the SDLC-column behavior people asked for is not what this is |
+| **Kanban** — work by stage | The **Columns** arrangement, grouped by **Progress**. This isn't a full kanban replacement — it doesn't provide the SDLC (software development lifecycle) column behavior some users requested |
 | **Console** — several agents at once | Shift-click to open sessions side by side, in [the task view](/kepler/task-view) or from the main list |
 | Diffs, commits, staging, pushing | [Review Changes](/kepler/review-changes) |
-
----

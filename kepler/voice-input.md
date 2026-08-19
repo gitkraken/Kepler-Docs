@@ -19,13 +19,15 @@ taxonomy:
 ---
 <kbd>Last updated: August 2026</kbd>
 
-Voice input puts a microphone in the agent prompt so you can talk instead of typing. **Transcription runs on your device**, using a Whisper model Kepler downloads once. Your audio is never uploaded.
+Voice input puts a microphone in the agent prompt so you can talk instead of typing. **Transcription runs on your device**, using a Whisper model Kepler downloads once. Kepler never uploads your audio.
 
 It is off until you turn it on. Enable it in **Settings → Voice Input** and download a model; the microphone in the prompt goes live when the model is ready.
 
 ***
 
 ## Two ways to talk
+
+Voice input offers two modes:
 
 | Mode | How it works | Setting |
 |---|---|---|
@@ -34,17 +36,17 @@ It is off until you turn it on. Enable it in **Settings → Voice Input** and do
 
 With push-to-talk you can also have Kepler send for you: **Submit after speaking** sends the prompt when you stop recording instead of inserting the text for you to review.
 
-The two are mutually exclusive. Continuous dictation keeps the microphone open, so there is no single stop to submit on, and Kepler disables whichever option you did not choose with a hint saying why.
+The two are mutually exclusive. Continuous dictation keeps the microphone open, so no single stop exists to submit on. Kepler disables whichever option you didn't choose, with a hint explaining why.
 
-Short whole utterances are treated as commands rather than dictation — saying "send", "cancel", or "clear" acts on the prompt instead of being typed into it. Anything longer is dictated verbatim.
+Kepler treats short, whole utterances as commands rather than dictation: saying "send", "cancel", or "clear" acts on the prompt instead of adding text to it. Kepler dictates anything longer verbatim.
 
-While a transcription is in flight the microphone shows **Transcribing…**; a streaming session that falls behind pauses the microphone rather than dropping audio: *Transcribing too slowly — pausing the mic. Wait, or pick a smaller model.*
+While a transcription is in flight, the microphone shows **Transcribing…**. If a streaming session falls behind, it pauses the microphone rather than dropping audio: *Transcribing too slowly — pausing the mic. Wait, or pick a smaller model.*
 
 ***
 
 ## Settings → Voice Input
 
-The page reveals one step at a time, and each step appears only once it can do something.
+The page reveals one step at a time: each step appears only once it can do something.
 
 | Setting | What it controls | Default |
 |---|---|---|
@@ -54,7 +56,11 @@ The page reveals one step at a time, and each step appears only once it can do s
 | **Submit after speaking** | Sends the prompt when you stop recording, instead of inserting the text | Off |
 | **Continuous dictation** | Keeps the microphone open and transcribes each phrase as you pause | Off |
 
-Once a model is installed the page shows **Voice input is ready** with the model, its size on disk, and when it was added. From there, **Change quality** reopens the picker, **Remove** deletes the model and turns the chat microphone off, and **Technical details** shows the model id, its revision, and the backend and data type it runs on.
+Once a model is installed, the page shows **Voice input is ready** with the model, its size on disk, and when it was added. From there:
+
+- **Change quality** reopens the picker.
+- **Remove** deletes the model and turns off the chat microphone.
+- **Technical details** shows the model ID, its revision, and the backend and data type it runs on.
 
 Downloads keep going if you leave the page, and Kepler notifies you when the model is ready. For the full walkthrough of the setup sequence, see [Settings](/kepler/settings).
 
@@ -62,7 +68,7 @@ Downloads keep going if you leave the page, and Kepler notifies you when the mod
 
 ## Why the microphone is unavailable
 
-Hover the microphone and it tells you. The tooltip is the diagnosis.
+Hover the microphone, and its tooltip explains why:
 
 | Tooltip | What it means |
 |---|---|
@@ -72,7 +78,7 @@ Hover the microphone and it tells you. The tooltip is the diagnosis.
 | *Voice input is not supported in this environment* | This build or browser cannot run it |
 | *Loading voice model…* / *Transcribing…* | Busy. The button is disabled for the moment |
 
-A microphone that is available but idle reads **Start voice input**; while recording it reads **Stop and transcribe**. Stopping is never blocked — if the surrounding prompt goes read-only mid-recording, the transcript still lands in the draft.
+A microphone that is available but idle reads **Start voice input**; while recording, it reads **Stop and transcribe**. You can always stop — if the surrounding prompt goes read-only mid-recording, the transcript still lands in the draft.
 
 ***
 

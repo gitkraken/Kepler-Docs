@@ -19,7 +19,7 @@ taxonomy:
 ---
 <kbd>Last updated: August 2026</kbd>
 
-Kepler is GitKraken's **Agentic Development Environment** — a place to direct coding agents across your real work, in as many repositories as you need, at the same time.
+Kepler is GitKraken's **Agentic Development Environment (ADE)** — a place to direct coding agents across your real work, in as many repositories as you need, at the same time.
 
 You bring the agent. Kepler pulls in the issues and pull requests already assigned to you, hands any of them to an agent with the context attached, and takes the result through to a reviewed, mergeable change.
 
@@ -48,7 +48,7 @@ Kepler is in **public preview**. A free GitKraken account is all you need.
 
 ## Sign in
 
-Kepler opens on a welcome screen. Click **Sign in with GitKraken** — if you don't have an account you'll create one in the next step. There's a **Kepler Quick Start Tour** video on that screen if you'd rather watch first.
+Kepler opens on a welcome screen. Click **Sign in with GitKraken** — if you don't have an account you'll create one in the next step. A **Kepler Quick Start Tour** video appears on that screen if you'd rather watch first.
 
 ***
 
@@ -64,7 +64,11 @@ The **Setup** entry in the toolbar tracks five things, and shows **Setup · N/5*
 | 4 | **Set a default repositories folder** | Where Kepler clones repositories it doesn't find locally |
 | 5 | **Set a default worktree folder** | Where Kepler creates worktrees — one per repository, per Task |
 
-Expand **More setup options** for three optional ones: **Connect a remote environment**, **Control Kepler remotely** (both in [Remote Environments](/kepler/remote-environments)), and **Add repo commands**.
+Expand **More setup options** for three optional items:
+
+- **Connect a remote environment** — see [Remote Environments](/kepler/remote-environments)
+- **Control Kepler remotely** — see [Remote Environments](/kepler/remote-environments)
+- **Add repo commands**
 
 **Add repo commands** is worth doing early if your project needs a setup step. Save a repository's install or build command once and Kepler can run it automatically every time it creates a worktree, so an agent never starts in a checkout it can't build. See [Tasks and Resources](/kepler/tasks-and-resources).
 
@@ -74,12 +78,25 @@ Folder paths and everything else live in [Settings](/kepler/settings). You can h
 
 ## Put an agent on real work
 
-Once a tracker is connected, the **Todo** segment of [the Kepler interface](/kepler/kepler-interface) fills with the issues and pull requests assigned to you — no blank prompt box, nothing to go find.
+After you connect a tracker, the **Todo** segment of [the Kepler interface](/kepler/kepler-interface) fills with the issues and pull requests assigned to you — no blank prompt box, nothing to go find.
 
 1. Pick an item in **Todo**.
 2. Click its **Action** button.
 
-That's the whole thing. Kepler creates a Task, attaches the repository and the item, sets up an isolated worktree, and starts an agent with the context already in place. The left half of the button runs the sensible default — **Plan** for an issue, **Review** for someone else's pull request, **Address Feedback** for one of yours — and the chevron offers the rest.
+That's the whole thing. Behind the scenes, Kepler:
+
+1. Creates a Task.
+2. Attaches the repository and the item.
+3. Sets up an isolated worktree.
+4. Starts an agent with the context already in place.
+
+The left half of the button runs the sensible default:
+
+- **Plan** for an issue
+- **Review** for someone else's pull request
+- **Address Feedback** for one of yours
+
+The chevron next to the button offers the rest of the Actions.
 
 Every one of those prompts is yours to change, and you can add your own. That's the part worth reading next: [Actions](/kepler/actions).
 
@@ -87,7 +104,7 @@ Every one of those prompts is yours to change, and you can add your own. That's 
 
 ## Start something that isn't tracked yet
 
-Click **New task**, or press **Shift+Alt+T** from anywhere. Write a prompt, attach a repository if it needs one, and go. You can attach nothing at all and turn it into real work later. See [Create a Task](/kepler/create-task).
+Click **New task**, or press **Shift+Alt+T** from anywhere. Write a prompt, attach a repository if the task needs one, and go. You can attach nothing at all and turn it into real work later. See [Create a Task](/kepler/create-task).
 
 ***
 

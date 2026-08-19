@@ -27,7 +27,7 @@ This page assumes you know what's on screen; see [The Kepler Interface](/kepler/
 
 ## Three arrangements
 
-The **View** control decides how the list is drawn.
+The **View** control decides how Kepler draws the list.
 
 | View | What you get | Best for |
 |---|---|---|
@@ -35,11 +35,11 @@ The **View** control decides how the list is drawn.
 | **Columns** | The same list turned on its side — one column per group | Seeing how far along things are |
 | **Agent Graph** | A live visualization of every agent, turn, tool call, and file | Seeing what your agents are actually doing — see [The Agent Graph](/kepler/agent-graph) |
 
-**Rows** is the default, and your choice is remembered across restarts. **Rows** and **Columns** both respect the grouping and filters below.
+**Rows** is the default, and Kepler remembers your choice across restarts. **Rows** and **Columns** both respect the grouping and filters below.
 
 The **Agent Graph** replaces the list with the graph, narrowed to whatever your search and filters left. **Group** goes away while it's on — the graph draws one tree per task — and the graph's own controls take its place in the strip.
 
-**Columns** draws the sections of the *current* grouping as a horizontal board, so what the columns are is up to the **Group** control. Grouped by **Progress** — the default on Tasks in progress — the columns are the lifecycle stages, **Exploration**, **In Development**, **In Review**, and **Done**, and they stay put as work moves between them rather than appearing and vanishing under the pointer; an empty one reads **Nothing here**. **Archived** is the exception: it appears only when something is in it. On every other grouping, a section with nothing in it isn't drawn.
+**Columns** draws the sections of the *current* grouping as a horizontal board, so what the columns are is up to the **Group** control. Grouped by **Progress** — the default on Tasks in progress — the columns are the lifecycle stages: **Exploration**, **In Development**, **In Review**, and **Done**. They stay put as work moves between them rather than appearing and vanishing under the pointer, and an empty one reads **Nothing here**. **Archived** is the exception: it appears only when something is filed there. On every other grouping, Kepler doesn't draw a section with nothing in it.
 
 ***
 
@@ -58,7 +58,7 @@ The **Group** dropdown reorganizes the list. The available groupings differ by s
 | **Todo** | Type, Your role, Provider, Repository, Status, None | Type |
 | **Tasks in progress** | Progress, Activity, Repository, None | Progress |
 
-**Progress** and **Activity** are two different questions about the same tasks. *Progress* is how far the work has got — **Exploration**, **In Development**, **In Review**, **Done**, **Archived**. *Activity* is what the task's agent sessions are doing right now, in the sessions' own words: **Waiting**, **Running**, **Ready**, **Spawning**, **Unread**, **Idle**, **Error**, **Disconnected**, **Terminated**, then **No sessions** for a task nobody has started, **Done**, and **Archived** last. Group by Progress to see the shape of the pipeline; group by Activity to see what needs a person.
+**Progress** and **Activity** are two different questions about the same tasks. *Progress* is how far the work has got — **Exploration**, **In Development**, **In Review**, **Done**, **Archived**. *Activity* is what the task's agent sessions are doing right now, in the sessions' own words: **Waiting**, **Running**, **Ready**, **Spawning**, **Unread**, **Idle**, **Error**, **Disconnected**, and **Terminated**. Grouping by Activity also adds **No sessions** for a task nobody has started, then **Done**, and **Archived** last. Group by Progress to see the shape of the pipeline; group by Activity to see what needs a person.
 
 Tasks in progress has no Status grouping, because a task's status *is* its progress stage — a second axis under another name.
 
@@ -66,13 +66,13 @@ Items with no repository or provider collect under **No repository** and **No pr
 
 ### Fold a section
 
-Every group header is a fold toggle, with the section's count beside its name. Folding one unmounts its rows, so a long **Done** list stops costing anything to keep around. **Archived** starts folded when you group by Activity, since it's the section work is filed *into*. Folds last for the run rather than being written to disk.
+Every group header is a fold toggle, with the section's count beside its name. Folding one unmounts its rows, so a long **Done** list stops costing anything to keep around. **Archived** starts folded when you group by Activity, since it's the section that work is filed *into*. Folds last only for the current run; Kepler doesn't write them to disk.
 
 ***
 
 ## Filter
 
-The **Filter** menu holds one flyout per facet. Facets with nothing to offer are hidden entirely, so a single-repo setup won't show a Repository facet at all.
+The **Filter** menu holds one flyout per facet. Kepler hides facets with nothing to offer, so a single-repo setup won't show a Repository facet at all.
 
 | Segment | Facets |
 |---|---|
@@ -89,13 +89,13 @@ Once a search or a filter is narrowing the list, the strip reports the match as 
 
 ## What Kepler remembers
 
-Each segment remembers its own search, grouping and filters — they differ enough that sharing them would be meaningless — and Kepler restores the segment you left along with its view. Which panels were open is remembered for the length of a run, so a round trip to the other segment doesn't cost you the panel you were reading, but a relaunch opens on a plain list rather than a stale panel.
+Each segment remembers its own search, grouping and filters — they differ enough that sharing them would be meaningless — and Kepler restores the segment you left along with its view. Kepler also remembers which panels were open, but only for the length of a run, so a round trip to the other segment doesn't cost you the panel you were reading. A relaunch still opens on a plain list rather than a stale panel.
 
 ***
 
 ## Archive, restore, and clean up in bulk
 
-**Archive task** files a task away: it leaves the live buckets for **Archived**, its rows and sessions survive, and only the agents whose checkout is about to disappear are stopped. The confirmation offers the same two cascades the delete does — **Also delete worktrees** and **Also delete branches** — so finishing with a task doesn't have to mean deleting it to clean it off the disk. Archiving outranks everything else, so a task you filed away can't climb back into a live section because a shell is still open on it.
+**Archive task** files a task away: it leaves the live buckets for **Archived**, its rows and sessions survive, and Kepler stops only the agents whose checkout is about to disappear. The confirmation offers the same two cascades the delete does — **Also delete worktrees** and **Also delete branches** — so finishing with a task doesn't have to mean deleting it to clean it off the disk. Archiving outranks everything else, so a task you filed away can't climb back into a live section because a shell is still open on it.
 
 **Restore task** brings it back to whatever section its work now belongs in. Nothing comes back on disk — a checkout the archive removed is gone from git.
 

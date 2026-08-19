@@ -19,7 +19,7 @@ taxonomy:
 ---
 <kbd>Last updated: August 2026</kbd>
 
-**This page has been replaced.** Everything it covered is now in [Settings](/kepler/settings):
+**Kepler retired this page.** [Settings](/kepler/settings) now covers everything it described:
 
 | What you're looking for | Where it is now |
 |---|---|
@@ -27,5 +27,3 @@ taxonomy:
 | Repository commands, and running them on worktree creation | [Settings](/kepler/settings) → Repositories |
 | Embedded terminals | [Settings](/kepler/settings) → Appearance |
 | First-run setup | [Getting Started](/kepler/kepler-getting-started) |
-
----

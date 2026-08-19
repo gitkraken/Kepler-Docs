@@ -71,7 +71,7 @@ To set what every new session starts with, use **Settings → Agents → Default
 
 ### Which agents are available
 
-Claude Code, Codex, Copilot CLI, Cursor, Auggie, and OpenCode, plus any custom ACP server you add. Only agents you actually have installed are offered. See [Agent Integrations](/kepler/agent-integrations).
+Claude Code, Codex, Copilot CLI, Cursor, Auggie, and OpenCode, plus any custom server that speaks the Agent Client Protocol (ACP). Kepler offers only the agents you actually have installed. See [Agent Integrations](/kepler/agent-integrations).
 
 ***
 
@@ -97,7 +97,7 @@ With one account, no account rows appear at all.
 
 A running session stays on the account it started with. Session tabs name the account when more than one exists, and a tab whose account has since been removed reads **(account missing)**.
 
-Usage figures are read from the account the session is running on, not from whichever account happens to be first.
+Kepler reads usage figures from the account the session is running on, not from whichever account happens to be first.
 
 <!-- TODO(screenshot): Settings → Agents → Claude Code → Accounts with two accounts, one signed in. -->
 
@@ -176,7 +176,7 @@ Kepler probes the catalog when you pick a repository and refreshes it whenever a
 
 ### Mentioning files
 
-Type `@` to search the working directory and insert a path. Files you paste into a chat are automatically approved for the agent to read.
+Type `@` to search the working directory and insert a path. Kepler automatically approves files you paste into a chat for the agent to read.
 
 ***
 
@@ -219,6 +219,8 @@ Sessions you started in your own terminal appear too, marked **(external)** and 
 
 ## When the agent asks you something
 
+Kepler pauses and asks you directly when an agent needs a decision it can't make on its own. It does this in two ways: a permission request before a risky tool call, and a structured question when the agent wants your input mid-task.
+
 ### Permission requests
 
 A request pins to the top of the session: an amber shield, the tool being asked about as the heading, and the call's input beneath it. The buttons are Kepler's own wording rather than the agent's, so a request reads the same whichever agent raised it.
@@ -233,7 +235,7 @@ A request pins to the top of the session: an amber shield, the tool being asked 
 
 You get the tiers the agent actually offers. **Allow for this session** is Kepler's own middle tier and appears only next to an **Allow** — a request that offers nothing but a permanent approval, as Claude Code's plan-exit prompt does, has no one-shot decision to widen. Where an agent draws its own distinction between several permanent choices, its labels are kept instead of a single **Allow always**, and any `Tool(...)` pattern a rule would cover is spelled out on a **RULE** line beneath the buttons.
 
-Repeats are coalesced. A command that fires many identical requests — an install reaching the network over and over — asks once, and your answer settles the whole group.
+Kepler coalesces repeats. A command that fires many identical requests — an install reaching the network over and over — asks once, and your answer settles the whole group.
 
 Answered requests stay in the transcript, showing the tier you picked: **Allowed for this session** for the middle one, otherwise the button's own label, falling back to **Approved** or **Denied**.
 
@@ -248,7 +250,7 @@ Sessions Kepler detects outside itself ask through Claude Code's hooks instead, 
 | **this project (shared)** | This project, committed for your team |
 | **all projects** | Everywhere |
 
-The rule each button would write is printed above them. A rule with no command pattern is annotated **(this tool)**, meaning it covers every call to that tool rather than one command.
+Kepler prints the rule each button would write above them. A rule with no command pattern is annotated **(this tool)**, meaning it covers every call to that tool rather than one command.
 
 ### Multiple-choice and multi-select questions
 
@@ -366,7 +368,7 @@ An **Agent error** banner names the cause — *Agent binary is missing or not ex
 
 In Terminal mode a dead process reads **Terminal exited. Resume to reattach to this conversation.**, or, when it crashed, **Agent process ended unexpectedly** — *The agent process exited on its own. Your conversation is preserved — restart to reattach and continue.*
 
-Sessions recover on their own where they can: an authentication token that expires mid-session is renewed and the session continues, and remote connections re-establish after a restart or sleep.
+Sessions recover on their own where they can: Kepler renews an authentication token that expires mid-session so the session continues, and remote connections re-establish after a restart or sleep.
 
 ***
 
@@ -382,7 +384,7 @@ Kepler tells you when a session finishes or needs you.
 
 Titles read **{status}: {task}**, with the agent and the repository or branch beneath — *{adapter} on {repo}/{branch}* — and clicking one takes you to the session.
 
-Kepler stays quiet about the work you are already watching: no notification is sent for the session on screen in a focused window. A cancelled turn is not a completion, and a session reconnecting is not a completion either, so neither notifies.
+Kepler stays quiet about the work you are already watching: it sends no notification for the session on screen in a focused window. A cancelled turn is not a completion, and a session reconnecting is not a completion either, so neither notifies.
 
 Two settings in **Settings → General → App behavior** control the rest:
 
