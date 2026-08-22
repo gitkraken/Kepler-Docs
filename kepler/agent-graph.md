@@ -19,8 +19,6 @@ taxonomy:
 ---
 <kbd>Last updated: August 2026</kbd>
 
-<!-- TODO(resolve): NAMING. Every user-visible string for this feature currently reads "Nexus" — `nexus.title` and `dashboard.layout.nexus` in src/shared/i18n/locales/en.ts, on origin/main as of 2026-08-14. This page uses "Agent Graph" per the product decision. Either the strings are renamed before release or this page has to say Nexus, because a reader cannot find a control called Agent Graph in an app that says Nexus. -->
-
 Running several agents at once is easy. Knowing what they're all doing is the hard part.
 
 The **Agent Graph** draws it: every task, the sessions inside it, each turn, every tool call, every subagent, and the files the agents touch. It lays all of this out as a graph that updates live, with nodes appearing as the agents work. GitKraken has spent a decade drawing things developers otherwise hold in their heads. The commit graph did it for history, and the Agent Graph does it for agent work.
