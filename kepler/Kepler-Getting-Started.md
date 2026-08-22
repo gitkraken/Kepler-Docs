@@ -19,13 +19,16 @@ taxonomy:
 ---
 <kbd>Last updated: August 2026</kbd>
 
-Kepler is GitKraken's **Agentic Development Environment (ADE)** — a place to direct coding agents across your real work, in as many repositories as you need, at the same time.
+Kepler is GitKraken's **Agentic Development Environment (ADE)**: a place to direct coding agents across your real work, in as many repositories as you need, at the same time.
 
 You bring the agent. Kepler pulls in the issues and pull requests already assigned to you, hands any of them to an agent with the context attached, and takes the result through to a reviewed, mergeable change.
 
 Kepler is in **public preview**. A free GitKraken account is all you need.
 
-<!-- TODO(screenshot): Kepler open on the Todo segment, work visible, an Action button on a row. -->
+<figure>
+  <img src="/wp-content/uploads/kepler-getting-started-Aug-2026.png" class="help-center-img img-bordered" alt="Kepler's Todo list with an Action dropdown open on one row, offering Plan, Implement, and a custom action">
+  <figcaption style="text-align:center; color:#888">The Todo list with the Action dropdown open on a row. Pick a built-in Action or one of your own to start an agent.</figcaption>
+</figure>
 
 ***
 
@@ -38,8 +41,6 @@ Kepler is in **public preview**. A free GitKraken account is all you need.
 | Linux (x64) | .deb, .rpm, .AppImage, Flatpak, AUR | Ubuntu LTS 18.04+ / Debian 10+ / RHEL 8+ / Fedora 39+ |
 | Linux (ARM) | .deb, .rpm, .AppImage | Ubuntu LTS 20.04+ / RHEL 8+ / Fedora 39+ |
 
-<!-- TODO(verify): minimum OS versions carried over from the June page; confirm against the v0.9 release build and the download page. -->
-
 1. Go to [gitkraken.com/kepler/download](https://www.gitkraken.com/kepler/download) and pick the installer for your platform.
 2. Run it.
 3. Launch Kepler.
@@ -48,29 +49,36 @@ Kepler is in **public preview**. A free GitKraken account is all you need.
 
 ## Sign in
 
-Kepler opens on a welcome screen. Click **Sign in with GitKraken** — if you don't have an account you'll create one in the next step. A **Kepler Quick Start Tour** video appears on that screen if you'd rather watch first.
+Kepler opens on a welcome screen. Click **Sign in with GitKraken**. If you do not have an account, you'll create one in the next step.
+
+<figure>
+  <img src="/wp-content/uploads/sign-in-aug-2026.png" class="help-center-img img-bordered" alt="Kepler's welcome screen with the Sign in with GitKraken button">
+  <figcaption style="text-align:center; color:#888">The welcome screen on first launch.</figcaption>
+</figure>
+
+A **Kepler Quick Start Tour** video appears on that screen if you'd rather watch first, or watch the <a href="https://www.youtube.com/playlist?list=PLXIji1KJqw9A" target="_blank" rel="noopener noreferrer">Kepler Quick Start Tour playlist</a> on YouTube.
 
 ***
 
 ## Finish the setup checklist
 
-The **Setup** entry in the toolbar tracks five things, and shows **Setup · N/5** until they're done. Open it for **Finish setting up Kepler** and a progress readout.
+The **Setup** entry in the toolbar tracks 5 things, and shows **Setup · N/5** until they're done. Open it for **Finish setting up Kepler** and a progress readout.
 
 | # | Item | What it does |
 |---|---|---|
 | 1 | **Sign in to GitKraken** | Done when you signed in above |
 | 2 | **Connect an AI agent** | At least one coding agent. See [Agent Integrations](/kepler/agent-integrations) |
-| 3 | **Connect issue & PR trackers** | Any provider. This is what fills your Todo list — see [Issue Tracker Integrations](/kepler/issue-tracker-integrations) and [Pull Request Integrations](/kepler/pull-request-integrations) |
-| 4 | **Set a default repositories folder** | Where Kepler clones repositories it doesn't find locally |
-| 5 | **Set a default worktree folder** | Where Kepler creates worktrees — one per repository, per Task |
+| 3 | **Connect issue & PR trackers** | Any provider. This is what fills your Todo list. See [Issue Tracker Integrations](/kepler/issue-tracker-integrations) and [Pull Request Integrations](/kepler/pull-request-integrations) |
+| 4 | **Set a default repositories folder** | Where Kepler clones repositories it does not find locally |
+| 5 | **Set a default worktree folder** | Where Kepler creates one worktree per repository, per Task |
 
-Expand **More setup options** for three optional items:
+Expand **More setup options** for 3 optional items:
 
-- **Connect a remote environment** — see [Remote Environments](/kepler/remote-environments)
-- **Control Kepler remotely** — see [Remote Environments](/kepler/remote-environments)
+- **Connect a remote environment**, covered in [Remote Environments](/kepler/remote-environments)
+- **Control Kepler remotely**, also in [Remote Environments](/kepler/remote-environments)
 - **Add repo commands**
 
-**Add repo commands** is worth doing early if your project needs a setup step. Save a repository's install or build command once and Kepler can run it automatically every time it creates a worktree, so an agent never starts in a checkout it can't build. See [Tasks and Resources](/kepler/tasks-and-resources).
+**Add repo commands** is worth doing early if your project needs a setup step. Save a repository's install or build command once and Kepler can run it automatically every time it creates a worktree, so an agent never starts in a checkout it cannot build. See [Tasks and Resources](/kepler/tasks-and-resources).
 
 Folder paths and everything else live in [Settings](/kepler/settings). You can hide the checklist from the toolbar and still reach it there.
 
@@ -78,12 +86,17 @@ Folder paths and everything else live in [Settings](/kepler/settings). You can h
 
 ## Put an agent on real work
 
-After you connect a tracker, the **Todo** segment of [the Kepler interface](/kepler/kepler-interface) fills with the issues and pull requests assigned to you — no blank prompt box, nothing to go find.
+After you connect a tracker, the **Todo** segment of [the Kepler interface](/kepler/kepler-interface) fills with the issues and pull requests assigned to you.
 
 1. Pick an item in **Todo**.
 2. Click its **Action** button.
 
-That's the whole thing. Behind the scenes, Kepler:
+<figure>
+  <img src="/wp-content/uploads/actions-drop-down.png" class="help-center-img img-bordered" alt="The Action dropdown open on a Todo row, listing Plan, Implement, Review, and Address Feedback">
+  <figcaption style="text-align:center; color:#888">The Action dropdown, opened from the chevron next to the button.</figcaption>
+</figure>
+
+Nicely done! Kepler automatically does the following:
 
 1. Creates a Task.
 2. Attaches the repository and the item.
@@ -102,9 +115,14 @@ Every one of those prompts is yours to change, and you can add your own. That's 
 
 ***
 
-## Start something that isn't tracked yet
+## Start something that is not tracked yet
 
 Click **New task**, or press **Shift+Alt+T** from anywhere. Write a prompt, attach a repository if the task needs one, and go. You can attach nothing at all and turn it into real work later. See [Create a Task](/kepler/create-task).
+
+<figure>
+  <img src="/wp-content/uploads/new-task-button-aug-2026.png" class="help-center-img img-bordered" alt="The New task button in the Kepler top navigation bar">
+  <figcaption style="text-align:center; color:#888">The New task button, available from anywhere in Kepler.</figcaption>
+</figure>
 
 ***
 
