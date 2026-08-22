@@ -10,7 +10,7 @@ Scope: 16 pages included. Excluded: 3 — environment-and-setup.md, kepler-New-P
 
 ## Core Concepts
 
-- [The Kepler Interface](https://help.gitkraken.com/kepler/kepler-interface/): Kepler opens on your work — every issue and pull request assigned to you, alongside the tasks you already have running. Learn how to read it and start work from it.
+- [The Kepler Interface](https://help.gitkraken.com/kepler/kepler-interface/): Kepler opens on your work: every issue and pull request assigned to you, alongside the tasks you already have running. Learn how to read it and start work from it.
 - [Arranging Your Work](https://help.gitkraken.com/kepler/arranging-your-work/): One interface means you shape it rather than switch away from it. Choose an arrangement, group and filter the list, fold what you're done with, and archive in bulk.
 - [Actions](https://help.gitkraken.com/kepler/actions/): Actions are editable named prompts you fire at a task, issue, or pull request. Learn the four built-in Actions, how to change them, and how to write your own.
 - [Tasks and Resources](https://help.gitkraken.com/kepler/tasks-and-resources/): A Task is the unit of work in Kepler. Learn what a Task holds, how worktrees work, and how everything attached to a Task reaches your agents.
