@@ -964,11 +964,11 @@ The graph is one of Kepler's three arrangements, so you switch to it the way you
 | **The whole fleet** | The **View** control: **Rows**, **Columns**, or the graph. Kepler remembers your choice across restarts |
 | **One session** | The task view's rail carries a per-session toggle on each session row, which docks that one session's graph beside its transcript |
 
-See [Arranging Your Work](/kepler/arranging-your-work) for the other two. The graph has no page of its own. It's an arrangement of the main list and a pane in the task view, and nothing else.
+See [Arranging Your Work](/kepler/arranging-your-work) for the other two. The Agent Graph has no page of its own, but rather it's an arrangement of the main list and a pane within the task view.
 
-Opened from the main list, the graph draws exactly what the list would show: your search and your facets narrow the results before Kepler builds the graph. That's why the graph's own **Agent** and **Repo** filters don't appear there. Two sets of filters could disagree, with no way to tell which one won. Opened on a session, the graph starts fully expanded and grows downward, since a single conversation's tool calls and subagents are the whole reason to open it.
+When opened from the main list, the graph draws exactly what the list normally shows including your search and filter(s). Opened on a session, the graph starts fully expanded and grows downward (or to the right) with the conversation's tool calls and subagents.
 
-The graph is a **visualization**, not a workspace. To work in a session, open it. The graph's node details link straight through. To watch several agents at once and answer them, shift-click sessions to open them side by side instead; see [The Task View](/kepler/task-view).
+The graph is a **visualization**, not a workspace. To work in a session, open the agent session from your Task. The graph's node details link straight through. To watch several agents at once and answer them, shift-click sessions to open them side by side instead; see [The Task View](/kepler/task-view).
 
 ***
 
@@ -1030,7 +1030,9 @@ From the details you can **Open task** or **Open session** to jump into the work
 
 ## The stats rail
 
-A rail down the right-hand side of the graph, reading top to bottom. It's the fleet's numbers rather than its shape, drawn from the same snapshot the canvas draws, so the two can never disagree. On the dashboard the rail steps aside when you have a panel open. There isn't room for both.
+A rail down the right-hand side of the graph, reading top to bottom.
+
+It's the fleet's numbers rather than its shape, drawn from the same snapshot the canvas draws, so the two can never disagree. On the dashboard the rail steps aside when you have a panel open.
 
 ### The counters
 
@@ -1128,7 +1130,7 @@ The Agent Graph is new, and a lot about it will change. It's worth opening next 
 2. Write a **Message**.
 3. Send it.
 
-The same dialog links out to the public issue board.
+Alternatively, share feedback to the public issue board at [github.com/gitkraken/gk-ade/issues](https://github.com/gitkraken/gk-ade/issues).
 
 ---
 

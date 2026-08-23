@@ -23,11 +23,23 @@ Running several agents at once is easy. Knowing what they're all doing is the ha
 
 The **Agent Graph** draws it: every task, the sessions inside it, each turn, every tool call, every subagent, and the files the agents touch. It lays all of this out as a graph that updates live, with nodes appearing as the agents work. GitKraken has spent a decade drawing things developers otherwise hold in their heads. The commit graph did it for history, and the Agent Graph does it for agent work.
 
-<!-- TODO(screenshot): a screen CAPTURE, not a still — the graph animates and grows as agents work, and a static frame undersells it. Ideally a short loop showing nodes appearing mid-run, with one session blocked and a subagent branch open. The most important asset in these docs. -->
+<figure>
+  <a href="/wp-content/uploads/agent-graph.gif" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-graph.gif" class="help-center-img img-bordered" alt="The Agent Graph animating as agents work, with turn, tool-call, and file nodes appearing, including one tool call in an error state">
+  </a>
+  <figcaption style="text-align:center; color:#888">The Agent Graph, growing live as agents work.</figcaption>
+</figure>
 
 ***
 
 ## Open it
+
+<figure>
+  <a href="/wp-content/uploads/agent-graph-toggle-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-graph-toggle-aug-2026.png" class="help-center-img img-bordered" alt="The View control's toggle for switching to the Agent Graph">
+  </a>
+  <figcaption style="text-align:center; color:#888">Switching to the Agent Graph from the View control.</figcaption>
+</figure>
 
 The graph is one of Kepler's three arrangements, so you switch to it the way you'd switch to a list.
 
@@ -36,15 +48,22 @@ The graph is one of Kepler's three arrangements, so you switch to it the way you
 | **The whole fleet** | The **View** control: **Rows**, **Columns**, or the graph. Kepler remembers your choice across restarts |
 | **One session** | The task view's rail carries a per-session toggle on each session row, which docks that one session's graph beside its transcript |
 
-See [Arranging Your Work](/kepler/arranging-your-work) for the other two. The graph has no page of its own. It's an arrangement of the main list and a pane in the task view, and nothing else.
+See [Arranging Your Work](/kepler/arranging-your-work) for the other two. The Agent Graph has no page of its own, but rather it's an arrangement of the main list and a pane within the task view.
 
-Opened from the main list, the graph draws exactly what the list would show: your search and your facets narrow the results before Kepler builds the graph. That's why the graph's own **Agent** and **Repo** filters don't appear there. Two sets of filters could disagree, with no way to tell which one won. Opened on a session, the graph starts fully expanded and grows downward, since a single conversation's tool calls and subagents are the whole reason to open it.
+When opened from the main list, the graph draws exactly what the list normally shows including your search and filter(s). Opened on a session, the graph starts fully expanded and grows downward (or to the right) with the conversation's tool calls and subagents.
 
-The graph is a **visualization**, not a workspace. To work in a session, open it. The graph's node details link straight through. To watch several agents at once and answer them, shift-click sessions to open them side by side instead; see [The Task View](/kepler/task-view).
+The graph is a **visualization**, not a workspace. To work in a session, open the agent session from your Task. The graph's node details link straight through. To watch several agents at once and answer them, shift-click sessions to open them side by side instead; see [The Task View](/kepler/task-view).
 
 ***
 
 ## How to read it
+
+<figure>
+  <a href="/wp-content/uploads/how-to-read-graph-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/how-to-read-graph-aug-2026.png" class="help-center-img img-bordered" alt="The layered Agent Graph: a task and session at the top, turn nodes below, then tool-call nodes including a group, an error, and nodes needing you, down to file nodes">
+  </a>
+  <figcaption style="text-align:center; color:#888">The graph's layers, from task down to file.</figcaption>
+</figure>
 
 The graph is layered. Depth grows away from the root.
 
@@ -88,6 +107,13 @@ Repeated calls of the same kind fold into one node badged **Group**, which keeps
 
 ## Click any node for detail
 
+<figure>
+  <a href="/wp-content/uploads/node-details-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/node-details-aug-2026.png" class="help-center-img img-bordered" alt="A node's details panel open beside the graph">
+  </a>
+  <figcaption style="text-align:center; color:#888">A node's details, open beside the graph.</figcaption>
+</figure>
+
 Selecting a node opens details beside the graph. What you see depends on what you clicked:
 
 - **Session**: the agent, state, model, mode, context used, cost, where it's running, and its stop reason.
@@ -102,7 +128,16 @@ From the details you can **Open task** or **Open session** to jump into the work
 
 ## The stats rail
 
-A rail down the right-hand side of the graph, reading top to bottom. It's the fleet's numbers rather than its shape, drawn from the same snapshot the canvas draws, so the two can never disagree. On the dashboard the rail steps aside when you have a panel open. There isn't room for both.
+A rail down the right-hand side of the graph, reading top to bottom.
+
+<figure>
+  <a href="/wp-content/uploads/stat-rails-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/stat-rails-2026.png" class="help-center-img img-bordered" alt="The stats rail down the right-hand side of the Agent Graph">
+  </a>
+  <figcaption style="text-align:center; color:#888">The stats rail.</figcaption>
+</figure>
+
+It's the fleet's numbers rather than its shape, drawn from the same snapshot the canvas draws, so the two can never disagree. On the dashboard the rail steps aside when you have a panel open.
 
 ### The counters
 
@@ -158,6 +193,13 @@ Kepler reports this instead of staying silent, because a graph that quietly hide
 
 ## Finding things in a busy graph
 
+<figure>
+  <a href="/wp-content/uploads/agent-graph-header-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-graph-header-aug-2026.png" class="help-center-img img-bordered" alt="The Agent Graph's header, with the search box, Options menu, depth slider, and freeze control">
+  </a>
+  <figcaption style="text-align:center; color:#888">The graph's header controls.</figcaption>
+</figure>
+
 The graph's header carries a search box, an **Options** menu, the depth slider, and the freeze control. Zooming lives on the canvas itself.
 
 | Control | Where | What it does |
@@ -175,6 +217,13 @@ Kepler remembers depth and layout per surface, so narrowing the graph on the mai
 ### Freeze it
 
 A live graph moves while you're trying to read it. **Freeze the graph** holds it still so you can inspect a node without it shifting. A chip beside the graph reads **Live** while it's updating (with the moment of the last sample, so "live" is demonstrably live) and **Frozen** until you **Resume live updates**.
+
+<figure>
+  <a href="/wp-content/uploads/freeze-button-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/freeze-button-aug-2026.png" class="help-center-img img-bordered" alt="The Freeze the graph button">
+  </a>
+  <figcaption style="text-align:center; color:#888">The Freeze the graph button.</figcaption>
+</figure>
 
 ***
 
@@ -200,8 +249,6 @@ The Agent Graph is new, and a lot about it will change. It's worth opening next 
 2. Write a **Message**.
 3. Send it.
 
-The same dialog links out to the public issue board.
-
-<!-- TODO(verify): the public issue board the feedback dialog links to is https://github.com/gitkraken/gk-ade/issues (ISSUES_URL in src/ui/components/feedback/FeedbackModal.tsx). Confirm that is the URL to publish, since the repo name is not the product name. -->
+Alternatively, share feedback to the public issue board at [github.com/gitkraken/gk-ade/issues](https://github.com/gitkraken/gk-ade/issues).
 
 ---
