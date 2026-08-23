@@ -1942,6 +1942,11 @@ Voice input works in a window attached to a remote environment. The agent runs o
 
 Over a plain HTTP connection the microphone is unavailable — *Voice input requires a secure (https) connection*.
 
+The downloaded Whisper model is cached per browser storage context, not synced through Kepler's settings: your voice input preferences sync, but the model itself does not.
+
+- **A remote Electron window** reuses its model across reconnects and restarts, as long as you're returning to the same saved remote connection from the same desktop app. A different machine, a different profile, or a connection that falls back to a different port needs its own download.
+- **Browser-based Remote Access** caches the model per browser, device, and profile. A different browser, device, or a private window needs its own download. The same browser returning to the same address can reuse what it already has, unless that browser has since cleared its storage.
+
 See [Remote Environments](/kepler/remote-environments).
 
 ---
@@ -2199,7 +2204,7 @@ Three controls sit on a connected provider's row:
 | Control | What it does |
 |---|---|
 | **Reconnect** | Re-runs authorization. Use it when a sign-in has expired |
-| **Disconnect** | Removes the provider — see below |
+| **Disconnect** | Removes the provider's primary connection — see below |
 | **Refresh** | At the top of the section, re-checks every provider |
 
 A warning triangle on a row means that provider's sign-in has expired. Kepler tries to refresh the token on its own; **Reconnect** is the manual fix.
@@ -2229,9 +2234,12 @@ The read account also authenticates git. Starting work on an issue in a reposito
 
 Click **Disconnect** on the provider's row in **Settings → Integrations** and confirm.
 
-Disconnecting reaches further than Kepler. It removes the provider from GitKraken entirely, so the `gk` CLI and GitKraken Desktop lose access too, along with **any additional accounts of that provider**. You can reconnect at any time.
+Disconnecting reaches further than Kepler: it removes the connection from your GitKraken account, so the `gk` CLI and GitKraken Desktop lose it too. What happens to the provider depends on whether you have another account connected:
 
-Kepler also drops that provider's saved filters and its rows from your lists, so nothing lingers behind pointing at a provider you no longer have.
+- **With another account connected**, Kepler promotes it to primary and the provider stays connected under it. Nothing else changes.
+- **With no other account connected**, the provider is removed entirely. Kepler drops its saved filters and its rows from your lists, so nothing lingers behind pointing at a provider you no longer have.
+
+You can reconnect at any time.
 
 ***
 
@@ -2260,10 +2268,14 @@ When an issue becomes a task, Kepler attaches what it read, so the agent starts 
 | **Issue type** | The provider's own vocabulary: a Jira issue type, an Azure DevOps work item type |
 | **Author** | When the provider reports one |
 | **Assignees** | |
+| **Status** | The issue's current state, when the provider reports one |
+| **Last updated** | When the issue was last updated |
 | **Labels** | The provider's own labels. Kepler distinguishes "this issue has no labels" from "this provider cannot report labels" |
 | **Project or board** | Jira projects, Linear teams, Azure DevOps areas. Git hosts hang issues off a repository instead |
 | **Repository** | Name, owner, and host, for the git hosts |
 | **URL** | Used by **Open in browser** |
+
+Kepler does not read an issue's priority, due date, milestone, Trello checklist, Linear cycle, or Azure DevOps area/iteration path. An agent can still find these by opening the issue's URL itself, but Kepler does not deliver them as attached context.
 
 Kepler does not pass issue attachments or embedded images to the agent.
 

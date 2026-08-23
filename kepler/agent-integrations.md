@@ -25,7 +25,12 @@ Kepler ships support for six agents, and you can point it at any other agent tha
 
 All of it lives in **Settings → Agents**.
 
-<!-- TODO(screenshot): Settings → Agents, showing the Default agent row and the six agent sections with their status badges. The existing _images/agents-view.png and _images/agent-settings.png predate this layout. -->
+<figure>
+  <a href="/wp-content/uploads/agent-settings-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-settings-aug-2026.png" class="help-center-img img-bordered" alt="Settings → Agents, showing the Default agent row and the Claude Code and Codex sections with their status badges">
+  </a>
+  <figcaption style="text-align:center; color:#888">Settings → Agents.</figcaption>
+</figure>
 
 ***
 
@@ -100,7 +105,12 @@ If a pinned path later disappears (for example, when an auto-updater cleans up a
 
 **Settings → Agents → Agent options → Installed agents** carries a **Refresh** button that re-scans every agent at once.
 
-<!-- TODO(screenshot): one expanded agent section showing the Binary group — resolved path, source and version, Re-scan, Custom path…, and the Data directory field. -->
+<figure>
+  <a href="/wp-content/uploads/installed-agents-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/installed-agents-aug-2026.png" class="help-center-img img-bordered" alt="Settings → Agents → Agent options → Installed agents, with its Refresh button">
+  </a>
+  <figcaption style="text-align:center; color:#888">Installed agents, in Agent options.</figcaption>
+</figure>
 
 ***
 
@@ -146,8 +156,6 @@ If you run Auggie's browser sign-in on this machine yourself, Kepler detects it 
 **Claude Code**, **Codex**, **GitHub Copilot**, and **Auggie** support more than one signed-in account. **Configure → Accounts → Add account** adds one; each account keeps its own credentials and history.
 
 For **Auggie**, you can only add a second account with **Paste session token**. Its browser sign-in writes to one fixed file, so it would sign the second account into the first account's identity.
-
-<!-- TODO(verify): checked again at kepler 7c31af83e — settings.agents.accountsHelp in src/shared/i18n/locales/en.ts is STILL worded for Claude Code ("Run multiple Claude Code logins side by side…") while the Accounts group renders for Codex, GitHub Copilot and Auggie too. This page does not quote the string, so it is a product-copy bug to raise rather than a docs fix; drop this comment once the copy is generalized. -->
 
 ***
 

@@ -21,7 +21,21 @@ taxonomy:
 
 Voice input puts a microphone in the agent prompt so you can talk instead of typing. **Transcription runs on your device**, using a Whisper model Kepler downloads once. Kepler never uploads your audio.
 
+<figure>
+  <a href="/wp-content/uploads/start-voice-input-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/start-voice-input-aug-2026.png" class="help-center-img img-bordered" alt="The composer's microphone icon, with its Start voice input tooltip">
+  </a>
+  <figcaption style="text-align:center; color:#888">The composer's microphone icon.</figcaption>
+</figure>
+
 It is off until you turn it on. Enable it in **Settings → Voice Input** and download a model; the microphone in the prompt goes live when the model is ready.
+
+<figure>
+  <a href="/wp-content/uploads/voice-input-settings-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/voice-input-settings-aug-2026.png" class="help-center-img img-bordered" alt="The Settings → Voice Input page, with Enable voice input on, the downloaded model's status, and Dictation options">
+  </a>
+  <figcaption style="text-align:center; color:#888">Settings → Voice Input.</figcaption>
+</figure>
 
 ***
 
@@ -100,7 +114,10 @@ Voice input works in a window attached to a remote environment. The agent runs o
 
 Over a plain HTTP connection the microphone is unavailable — *Voice input requires a secure (https) connection*.
 
-<!-- TODO(verify): whether the downloaded Whisper model has to be downloaded again per client. src/ui/voice/constants.ts says the model cache lives in IndexedDB per renderer rather than in Kepler's settings, "because, in HTTP/remote mode, different browser clients can hold different local caches" — confirm what that means in practice for a remote window and for browser-based Remote Access before stating it. -->
+The downloaded Whisper model is cached per browser storage context, not synced through Kepler's settings: your voice input preferences sync, but the model itself does not.
+
+- **A remote Electron window** reuses its model across reconnects and restarts, as long as you're returning to the same saved remote connection from the same desktop app. A different machine, a different profile, or a connection that falls back to a different port needs its own download.
+- **Browser-based Remote Access** caches the model per browser, device, and profile. A different browser, device, or a private window needs its own download. The same browser returning to the same address can reuse what it already has, unless that browser has since cleared its storage.
 
 See [Remote Environments](/kepler/remote-environments).
 

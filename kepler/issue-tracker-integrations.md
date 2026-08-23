@@ -23,7 +23,12 @@ Connect an issue tracker and every issue assigned to you shows up in [the Kepler
 
 Manage providers in **Settings → Integrations**, in the **Provider Integrations** section.
 
-<!-- TODO(screenshot): Settings → Integrations → Provider Integrations, with one provider connected and its Accounts list expanded. The existing _images/provider-integrations.png and _images/pr-integrations.png predate the Connected badge, the Disconnect button, and the account switcher. -->
+<figure>
+  <a href="/wp-content/uploads/provider-integrations-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/provider-integrations-aug-2026.png" class="help-center-img img-bordered" alt="Settings → Integrations → Provider Integrations, with GitHub and Jira connected, showing the Connected badge and Disconnect and Reconnect buttons">
+  </a>
+  <figcaption style="text-align:center; color:#888">Provider Integrations, in Settings → Integrations.</figcaption>
+</figure>
 
 ***
 
@@ -61,14 +66,12 @@ Your GitKraken account holds integrations, not this copy of Kepler, so a provide
 
 **Connect** hands the whole authorization to GitKraken's website. Kepler opens `/connect` there in your system browser, names the provider, and includes a redirect back into Kepler. Kepler has no in-app form for a host URL or a personal access token, so you supply whatever the provider needs directly in the browser. When you return, Kepler refetches your providers instead of reusing its cached list.
 
-<!-- TODO(verify): the redirect and the absence of an in-app form are confirmed against getConnectUrl (src/backend/auth/auth.ts) and useConnectProvider (src/ui/data/auth.ts) at kepler 7c31af83e. The browser-side steps themselves live on GitKraken's website and are not in this repo — confirm with the web team what Jira site selection, Linear workspace selection, and the GitHub Enterprise / GitLab Self-Hosted host-and-token fields actually ask for before documenting them as a numbered flow. -->
-
 Three controls sit on a connected provider's row:
 
 | Control | What it does |
 |---|---|
 | **Reconnect** | Re-runs authorization. Use it when a sign-in has expired |
-| **Disconnect** | Removes the provider — see below |
+| **Disconnect** | Removes the provider's primary connection — see below |
 | **Refresh** | At the top of the section, re-checks every provider |
 
 A warning triangle on a row means that provider's sign-in has expired. Kepler tries to refresh the token on its own; **Reconnect** is the manual fix.
@@ -98,11 +101,12 @@ The read account also authenticates git. Starting work on an issue in a reposito
 
 Click **Disconnect** on the provider's row in **Settings → Integrations** and confirm.
 
-Disconnecting reaches further than Kepler. It removes the provider from GitKraken entirely, so the `gk` CLI and GitKraken Desktop lose access too, along with **any additional accounts of that provider**. You can reconnect at any time.
+Disconnecting reaches further than Kepler: it removes the connection from your GitKraken account, so the `gk` CLI and GitKraken Desktop lose it too. What happens to the provider depends on whether you have another account connected:
 
-Kepler also drops that provider's saved filters and its rows from your lists, so nothing lingers behind pointing at a provider you no longer have.
+- **With another account connected**, Kepler promotes it to primary and the provider stays connected under it. Nothing else changes.
+- **With no other account connected**, the provider is removed entirely. Kepler drops its saved filters and its rows from your lists, so nothing lingers behind pointing at a provider you no longer have.
 
-<!-- TODO(verify): the confirmation dialog's claim about additional accounts may be wrong. settings.providers.disconnectDescription (src/shared/i18n/locales/en.ts) says "along with any additional {name} accounts", but the only provider backend left after kepler#1956 removes the provider's PRIMARY connection and lets the platform promote a secondary, so a multi-account provider stays connected — see the disconnect docblock in src/backend/provider/core-gitlens-adapter.ts at 7c31af83e. This page currently follows the dialog. Settle which is right with engineering; if the backend is right, both the dialog copy and this paragraph need changing. -->
+You can reconnect at any time.
 
 ***
 
@@ -131,12 +135,14 @@ When an issue becomes a task, Kepler attaches what it read, so the agent starts 
 | **Issue type** | The provider's own vocabulary: a Jira issue type, an Azure DevOps work item type |
 | **Author** | When the provider reports one |
 | **Assignees** | |
+| **Status** | The issue's current state, when the provider reports one |
+| **Last updated** | When the issue was last updated |
 | **Labels** | The provider's own labels. Kepler distinguishes "this issue has no labels" from "this provider cannot report labels" |
 | **Project or board** | Jira projects, Linear teams, Azure DevOps areas. Git hosts hang issues off a repository instead |
 | **Repository** | Name, owner, and host, for the git hosts |
 | **URL** | Used by **Open in browser** |
 
-<!-- TODO(verify): re-checked field by field against the shared Issue shape in src/shared/provider/issue.ts at kepler 7c31af83e — unchanged, and the table above is complete. It still carries no priority, due date, milestone, Trello checklist, Linear cycle, or Azure DevOps area/iteration path, all of which the June 2026 version of this page claimed. Confirm with engineering whether any of those reach the agent by another path before re-adding them. -->
+Kepler does not read an issue's priority, due date, milestone, Trello checklist, Linear cycle, or Azure DevOps area/iteration path. An agent can still find these by opening the issue's URL itself, but Kepler does not deliver them as attached context.
 
 Kepler does not pass issue attachments or embedded images to the agent.
 
