@@ -1173,6 +1173,12 @@ All of these are editable. See [Actions](/kepler/actions).
 
 Kepler names Tasks automatically from what you started them with. Rename one whenever the name stops fitting: **Rename task** in the **⋮** menu, whose field also has an **Auto-name** button that suggests a name from the Task's prompt and resources. See [Tasks and Resources](/kepler/tasks-and-resources).
 
+<div class="note" markdown="1">
+
+**Nothing in Todo?** Set up your [issue tracker](/kepler/issue-tracker-integrations) and [pull request](/kepler/pull-request-integrations) integrations in **Settings** first. Kepler can only populate Todo with work from connected accounts.
+
+</div>
+
 ***
 
 ## From the Task Composer
@@ -1188,10 +1194,10 @@ The Composer is one prompt box above a row of four buttons:
 | **Add PR** → **PRs** | Pull requests from your connected hosts |
 | **Add context** | Everything without a button of its own: folders, files, and links |
 
-The first three read **Add …** while empty and switch to the plural with a count once they hold something. **Add context** always reads the same, because it isn't a category waiting to be filled. Picks accumulate: attach three repositories and two issues to the same Task if that's the shape of the work.
+Add as much or as little context as you wish. 
 
 1. Write the prompt: *Describe a task or ask a question…*
-2. Attach what it needs, or nothing.
+2. Attach what it needs, or nothing (which is fine!)
 3. Configure each repository (below), if you attached one.
 4. Start it.
 
@@ -1207,16 +1213,16 @@ If the Task can't start, you'll see **Failed to start the task**.
 
 Each attached repository gets a chip with two controls:
 
-- **Base branch**: the branch segment of the chip. Leave it alone and the Task gets a new branch forked from **the repository's remote default branch**, which is what the chip reads until you pick something: *New branch off origin's default branch, or the current branch if unavailable*. Open it to fork off a different branch instead, or to work directly on an existing one. A new branch takes its name from the Task name.
+- **Base branch**: the branch segment of the chip. By default, the Task gets a new branch forked from **the repository's remote default branch**, which is what the chip reads until you pick something: *New branch off origin's default branch, or the current branch if unavailable*. Open it to fork off a different branch instead, or to work directly on an existing one. A new branch takes its name from the Task name.
 - **Isolated worktree**: the worktree segment, a direct on/off toggle rather than a menu. On by default, giving the Task its own working copy. Turning it off means the Task shares your repository folder, and anything that switches that folder's branch switches the Task's branch too. See [Tasks and Resources](/kepler/tasks-and-resources).
 
-Forking off the remote default is the point, not an implementation detail. The branch you happen to have checked out is rarely where new work belongs, but new work used to land there anyway. If no remote default resolves (no remote, a shallow clone, or no network connection), Kepler falls back to the current HEAD rather than failing the launch.
+Kepler intentionally forks from the remote by default. If no remote default resolves (no remote, a shallow clone, or no network connection), Kepler falls back to the current HEAD rather than failing the launch.
 
 A repository linked to a pull request always opens in its own isolated working copy, and the toggle is locked: *This repository is linked to a pull request and always opens in its own isolated working copy.*
 
 Kepler clones a repository you haven't cloned yet when the Task starts, into your **Default Repositories Folder**: *This repository is cloned when you start the task.* Its branch is locked until then — *its branches become available after cloning* — because Kepler doesn't yet know what branches it has, and the chip reads **default branch** in the meantime.
 
-Attaching the same repository twice gives the Task two independent worktrees on it: useful for comparing two approaches, and a mistake if you didn't mean it. Two chips that would resolve to the *same* worktree get a **Duplicate worktree** marker instead, and Kepler creates only one of them. If a chip works in place on a branch another chip has already claimed for an isolated worktree, Kepler marks it **Superseded by a worktree** and skips it; git can't check one branch out in two places.
+Attaching the same repository twice gives the Task two independent worktrees on it: useful for comparing two approaches, or a mistake if you didn't mean it. Two chips that would resolve to the *same* worktree get a **Duplicate worktree** marker instead, and Kepler creates only one of them. If a chip works in place on a branch another chip has already claimed for an isolated worktree, Kepler marks it **Superseded by a worktree** and skips it; git can't check one branch out in two places.
 
 ***
 
