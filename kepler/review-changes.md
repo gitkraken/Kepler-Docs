@@ -23,7 +23,12 @@ An agent has stopped and says it is done. Now you read what it actually did, kee
 
 All of that happens in the task's **worktree**: the Git working copy the agent made its changes in. The task view rail groups a task's worktrees under **Changes**: that's where you go to review them. Open one from that group, and it opens in a column of its own. See [the task view](/kepler/task-view).
 
-<!-- TODO(screenshot): a task's worktree column — commit graph and working changes on the left, a file diff on the right. -->
+<figure>
+  <a href="/wp-content/uploads/task-worktree-column-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-worktree-column-aug-2026.png" class="help-center-img img-bordered" alt="A task's worktree column with the commit graph and working changes on the left, and a file diff open on the right">
+  </a>
+  <figcaption style="text-align:center; color:#888">A worktree's column: commit graph and working changes, with a file diff open.</figcaption>
+</figure>
 
 ***
 
@@ -31,7 +36,21 @@ All of that happens in the task's **worktree**: the Git working copy the agent m
 
 The worktree opens as two panes: the commit graph and working changes on the left, and a diff on the right once you pick a file.
 
+<figure>
+  <a href="/wp-content/uploads/open-worktree-view-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/open-worktree-view-aug-2026.png" class="help-center-img img-bordered" alt="A Changes row's context menu, with Open, Open in new tab, and Open to the side">
+  </a>
+  <figcaption style="text-align:center; color:#888">Opening a worktree from its row in the rail.</figcaption>
+</figure>
+
 The header shows the branch, the repository, and how far the branch is ahead of or behind its remote, as **↑n** and **↓n**. It also carries three controls, ordered by how far each takes you from the pane:
+
+<figure>
+  <a href="/wp-content/uploads/worktree-header-view-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/worktree-header-view-aug-2026.png" class="help-center-img img-bordered" alt="The worktree pane's header, with the branch, repository, and its Create command, Open in, and Terminal controls">
+  </a>
+  <figcaption style="text-align:center; color:#888">The worktree pane's header.</figcaption>
+</figure>
 
 - The worktree's configured commands.
 - **Open in**, for handing the checkout to another app.
@@ -54,6 +73,13 @@ Selecting a commit swaps the pane below the graph from working changes to that c
 ***
 
 ## Working changes: staged and unstaged
+
+<figure>
+  <a href="/wp-content/uploads/working-changes-staged-unstaged-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/working-changes-staged-unstaged-aug-2026.png" class="help-center-img img-bordered" alt="The Working changes view, with a Staged section and an unstaged Changes section, each with Discard and Stage/Unstage controls, above the commit message box">
+  </a>
+  <figcaption style="text-align:center; color:#888">Working changes, split into staged and unstaged sections.</figcaption>
+</figure>
 
 Selecting **Working changes** lists what is uncommitted, in up to two sections with counts.
 
@@ -96,6 +122,13 @@ Right-click a file row for:
 ## Reading the diff
 
 Click any file (in working changes or in a commit) to open its diff in the pane on the right.
+
+<figure>
+  <a href="/wp-content/uploads/diff-view-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/diff-view-aug-2026.png" class="help-center-img img-bordered" alt="A file's diff open in the right-hand pane, with added and removed lines and collapsed unmodified regions">
+  </a>
+  <figcaption style="text-align:center; color:#888">A file's diff, open in the right-hand pane.</figcaption>
+</figure>
 
 - The **file path** heads the diff, with its **+/−** line stats.
 - Added lines are green, removed lines red.
@@ -214,7 +247,12 @@ Both sets of tools default to the session's own worktree, and both can name anot
 
 On a Free plan both rows still appear, with a padlock where the checkbox goes and the tooltip *"Not available on the Free plan. Upgrade to unlock."* Everything else on this page works on a free account.
 
-<!-- TODO(screenshot): Settings → Agents → Features, with AI Sync and Compose. -->
+<figure>
+  <a href="/wp-content/uploads/ai-sync-compose-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ai-sync-compose-aug-2026.png" class="help-center-img img-bordered" alt="Settings → Agents → Features, with AI Sync and Compose both enabled">
+  </a>
+  <figcaption style="text-align:center; color:#888">AI Sync and Compose, in Settings → Agents → Features.</figcaption>
+</figure>
 
 ***
 

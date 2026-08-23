@@ -304,6 +304,13 @@ Kepler prints the rule each button would write above them. A rule with no comman
 
 Agents can ask you structured questions instead of guessing. The form renders in the conversation at the point the agent asked.
 
+<figure>
+  <a href="/wp-content/uploads/agent-session-multiple-choice-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-session-multiple-choice-aug-2026.png" class="help-center-img img-bordered" alt="A multiple-choice question form in the conversation, with numbered options, Chat about this, Cancel, and Submit">
+  </a>
+  <figcaption style="text-align:center; color:#888">A structured question, rendered in the conversation.</figcaption>
+</figure>
+
 | Kind | How it behaves |
 |---|---|
 | Multiple choice | Radio-style. One option is the answer |
