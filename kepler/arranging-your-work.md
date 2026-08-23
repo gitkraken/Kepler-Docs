@@ -22,7 +22,9 @@ taxonomy:
 Kepler has one interface rather than a set of views, so you shape it instead of switching away from it. Three controls do most of the work: the arrangement, the grouping, and the filters. Each segment remembers its own.
 
 <figure>
-  <img src="/wp-content/uploads/arrange-work-aug-2026.png" class="help-center-img img-bordered" alt="The arrangement, grouping, and filter controls above Kepler's list">
+  <a href="/wp-content/uploads/arrange-work-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/arrange-work-aug-2026.png" class="help-center-img img-bordered" alt="The arrangement, grouping, and filter controls above Kepler's list">
+  </a>
   <figcaption style="text-align:center; color:#888">The arrangement, grouping, and filter controls.</figcaption>
 </figure>
 
@@ -33,7 +35,9 @@ This page assumes you know what's on screen; see [The Kepler Interface](/kepler/
 ## Three arrangements
 
 <figure>
-  <img src="/wp-content/uploads/view-options-aug-2026.png" class="help-center-img img-bordered" alt="The View control open, showing Rows, Columns, and the graph as arrangement options">
+  <a href="/wp-content/uploads/view-options-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/view-options-aug-2026.png" class="help-center-img img-bordered" alt="The View control open, showing Rows, Columns, and the graph as arrangement options">
+  </a>
   <figcaption style="text-align:center; color:#888">The View control's arrangement options.</figcaption>
 </figure>
 
@@ -58,7 +62,9 @@ The **Agent Graph** replaces the list with the graph, narrowed to whatever your 
 The **Group** dropdown reorganizes the list.
 
 <figure>
-  <img src="/wp-content/uploads/group-options-tasks-aug-2026.png" class="help-center-img img-bordered" alt="The Group dropdown open on Tasks in progress, showing Progress, Activity, Repository, and None">
+  <a href="/wp-content/uploads/group-options-tasks-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/group-options-tasks-aug-2026.png" class="help-center-img img-bordered" alt="The Group dropdown open on Tasks in progress, showing Progress, Activity, Repository, and None">
+  </a>
   <figcaption style="text-align:center; color:#888">The Group dropdown on Tasks in progress.</figcaption>
 </figure>
 
@@ -80,7 +86,9 @@ Items with no repository or provider collect under **No repository** and **No pr
 Every group header is a fold toggle, with the section's count beside its name.
 
 <figure>
-  <img src="/wp-content/uploads/group-folds-aug-2026.png" class="help-center-img img-bordered" alt="A group header showing a fold toggle and the section's count">
+  <a href="/wp-content/uploads/group-folds-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/group-folds-aug-2026.png" class="help-center-img img-bordered" alt="A group header showing a fold toggle and the section's count">
+  </a>
   <figcaption style="text-align:center; color:#888">A group header, with its fold toggle and count.</figcaption>
 </figure>
 
@@ -93,7 +101,9 @@ Folding one unmounts its rows, so a long **Done** list stops costing anything to
 The **Filter** menu holds one flyout per facet.
 
 <figure>
-  <img src="/wp-content/uploads/filter-aug-2026.png" class="help-center-img img-bordered" alt="The Filter menu open, showing one flyout per facet">
+  <a href="/wp-content/uploads/filter-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/filter-aug-2026.png" class="help-center-img img-bordered" alt="The Filter menu open, showing one flyout per facet">
+  </a>
   <figcaption style="text-align:center; color:#888">The Filter menu, with one flyout per facet.</figcaption>
 </figure>
 
@@ -117,7 +127,9 @@ Once a search or a filter is narrowing the list, the strip reports the match as 
 The search box matches on **title, reference, or repository**: *Search title, ref, or repo…*.
 
 <figure>
-  <img src="/wp-content/uploads/search-aug-2026.png" class="help-center-img img-bordered" alt="The search box above Kepler's list, with a clear button">
+  <a href="/wp-content/uploads/search-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/search-aug-2026.png" class="help-center-img img-bordered" alt="The search box above Kepler's list, with a clear button">
+  </a>
   <figcaption style="text-align:center; color:#888">The search box, with the clear button.</figcaption>
 </figure>
 
@@ -136,7 +148,9 @@ Each segment remembers its own search, grouping, and filters, since they differ 
 **Archive task** files a task away. It leaves the live buckets for **Archived**, its rows and sessions survive, and Kepler stops only the agents whose checkout is about to disappear.
 
 <figure>
-  <img src="/wp-content/uploads/archive-aug-2026.png" class="help-center-img img-bordered" alt="The Archive task confirmation, offering to also delete worktrees and branches">
+  <a href="/wp-content/uploads/archive-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/archive-aug-2026.png" class="help-center-img img-bordered" alt="The Archive task confirmation, offering to also delete worktrees and branches">
+  </a>
   <figcaption style="text-align:center; color:#888">The Archive task confirmation.</figcaption>
 </figure>
 

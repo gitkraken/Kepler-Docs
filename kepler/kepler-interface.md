@@ -33,7 +33,9 @@ Beyond this list, you'll find a task's own page, Settings, and remote connection
 - Settings
 
 <figure>
-  <img src="/wp-content/uploads/top-tool-bar-aug-2026.png" class="help-center-img img-bordered" alt="Kepler's top bar showing New task, setup progress, the remote indicator, Feedback, account, and Settings">
+  <a href="/wp-content/uploads/top-tool-bar-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/top-tool-bar-aug-2026.png" class="help-center-img img-bordered" alt="Kepler's top bar showing New task, setup progress, the remote indicator, Feedback, account, and Settings">
+  </a>
   <figcaption style="text-align:center; color:#888">The top bar's trailing cluster.</figcaption>
 </figure>
 
@@ -45,7 +47,9 @@ Beyond this list, you'll find a task's own page, Settings, and remote connection
 The control at the top left switches between 2 views of your work.
 
 <figure>
-  <img src="/wp-content/uploads/todo-task-in-progress-aug-2026.png" class="help-center-img img-bordered" alt="The control at the top left of Kepler, switching between Todo and Tasks in progress">
+  <a href="/wp-content/uploads/todo-task-in-progress-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/todo-task-in-progress-aug-2026.png" class="help-center-img img-bordered" alt="The control at the top left of Kepler, switching between Todo and Tasks in progress">
+  </a>
   <figcaption style="text-align:center; color:#888">The Todo and Tasks in progress switcher.</figcaption>
 </figure>
 
@@ -74,7 +78,9 @@ A row reads differently depending on whether it holds a tracked issue or pull re
 ### Todo rows: issues and pull requests
 
 <figure>
-  <img src="/wp-content/uploads/todo-row-aug-2026.png" class="help-center-img img-bordered" alt="A Todo row showing the provider, type badge, role, reference, title, repository, session activity, status pill, assignee, and Action button">
+  <a href="/wp-content/uploads/todo-row-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/todo-row-aug-2026.png" class="help-center-img img-bordered" alt="A Todo row showing the provider, type badge, role, reference, title, repository, session activity, status pill, assignee, and Action button">
+  </a>
   <figcaption style="text-align:center; color:#888">A Todo row, left to right.</figcaption>
 </figure>
 
@@ -105,7 +111,9 @@ Each row shows, left to right:
 ### Task rows
 
 <figure>
-  <img src="/wp-content/uploads/task-row-aug-2026.png" class="help-center-img img-bordered" alt="A Task row showing the Task badge, title, repository, session activity, status pill, assignee, and time">
+  <a href="/wp-content/uploads/task-row-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-row-aug-2026.png" class="help-center-img img-bordered" alt="A Task row showing the Task badge, title, repository, session activity, status pill, assignee, and time">
+  </a>
   <figcaption style="text-align:center; color:#888">A Task row.</figcaption>
 </figure>
 
@@ -139,7 +147,9 @@ Both segments carry a status pill, but they answer different questions.
 Beside the pill sits one dot per distinct **session state**, with a count of each.
 
 <figure>
-  <img src="/wp-content/uploads/task-status-aug-2026.png" class="help-center-img img-bordered" alt="A status pill next to session-state dots on a row">
+  <a href="/wp-content/uploads/task-status-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-status-aug-2026.png" class="help-center-img img-bordered" alt="A status pill next to session-state dots on a row">
+  </a>
   <figcaption style="text-align:center; color:#888">The status pill and session-state dots.</figcaption>
 </figure>
 
@@ -166,7 +176,9 @@ Kepler places a task at the furthest stage any of its checkouts reached, except 
 Click the **Action** button on a Todo row to hand the item to an agent with its context already attached: the repository, the issue body, the branch, and the diff. One click, no copy-paste.
 
 <figure>
-  <img src="/wp-content/uploads/actions-drop-down.png" class="help-center-img img-bordered" alt="The Action dropdown open on a Todo row, listing Plan, Implement, Review, and Address Feedback">
+  <a href="/wp-content/uploads/actions-drop-down.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/actions-drop-down.png" class="help-center-img img-bordered" alt="The Action dropdown open on a Todo row, listing Plan, Implement, Review, and Address Feedback">
+  </a>
   <figcaption style="text-align:center; color:#888">The Action dropdown, opened from the chevron next to the button.</figcaption>
 </figure>
 
@@ -181,7 +193,9 @@ All of these defaults are editable. See [Actions](/kepler/actions).
 ### Open a panel
 
 <figure>
-  <img src="/wp-content/uploads/open-a-task-panel-aug-2026.png" class="help-center-img img-bordered" alt="The side panel open beside the list after clicking a row">
+  <a href="/wp-content/uploads/open-a-task-panel-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/open-a-task-panel-aug-2026.png" class="help-center-img img-bordered" alt="The side panel open beside the list after clicking a row">
+  </a>
   <figcaption style="text-align:center; color:#888">The side panel, opened from a row.</figcaption>
 </figure>
 
@@ -193,7 +207,9 @@ All of these defaults are editable. See [Actions](/kepler/actions).
 Shift-clicking ranges from your last plain click, the way it does in Finder or VS Code. You can open up to 8 panels at once. Opening a 9th evicts the oldest unpinned one.
 
 <figure>
-  <img src="/wp-content/uploads/multi-task-panels-aug-2026.png" class="help-center-img img-bordered" alt="Several task panels open side by side, each with its own chat">
+  <a href="/wp-content/uploads/multi-task-panels-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/multi-task-panels-aug-2026.png" class="help-center-img img-bordered" alt="Several task panels open side by side, each with its own chat">
+  </a>
   <figcaption style="text-align:center; color:#888">Several panels open side by side, each with its own chat.</figcaption>
 </figure>
 
@@ -204,7 +220,9 @@ Starting a task from **New task** while you're on the list opens the new task as
 ### Pin a panel
 
 <figure>
-  <img src="/wp-content/uploads/pin-aug-2026.png" class="help-center-img img-bordered" alt="The pin control in a panel's header, keeping the panel open">
+  <a href="/wp-content/uploads/pin-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/pin-aug-2026.png" class="help-center-img img-bordered" alt="The pin control in a panel's header, keeping the panel open">
+  </a>
   <figcaption style="text-align:center; color:#888">The pin in a panel's header.</figcaption>
 </figure>
 
@@ -224,7 +242,9 @@ One slot always stays unpinned so browsing never has to evict a pin; once every 
 Selecting a row opens a panel beside the list with everything about that item, as a stack of collapsible, resizable sections.
 
 <figure>
-  <img src="/wp-content/uploads/task-side-panel-aug-2026.png" class="help-center-img img-bordered" alt="The side panel beside the list, showing a stack of collapsible sections for a selected item">
+  <a href="/wp-content/uploads/task-side-panel-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-side-panel-aug-2026.png" class="help-center-img img-bordered" alt="The side panel beside the list, showing a stack of collapsible sections for a selected item">
+  </a>
   <figcaption style="text-align:center; color:#888">The side panel, with its stack of collapsible sections.</figcaption>
 </figure>
 
@@ -247,7 +267,9 @@ In the side panel for a Task, the primary button reads **Start**, and once a ses
 The header carries:
 
 <figure>
-  <img src="/wp-content/uploads/issue-header-aug-2026.png" class="help-center-img img-bordered" alt="The side panel's header, showing badges, the reference, the pin, and the header controls">
+  <a href="/wp-content/uploads/issue-header-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/issue-header-aug-2026.png" class="help-center-img img-bordered" alt="The side panel's header, showing badges, the reference, the pin, and the header controls">
+  </a>
   <figcaption style="text-align:center; color:#888">The side panel's header.</figcaption>
 </figure>
 
@@ -262,7 +284,9 @@ You can edit a task's name in place. Enter commits the change; Escape or clickin
 Below the header sit the task's checkouts with their line deltas. Each one opens a popover with its file count, **Run command**, **Open in…**, and **New terminal here**.
 
 <figure>
-  <img src="/wp-content/uploads/line-deltas-aug-2026.png" class="help-center-img img-bordered" alt="A task's checkouts below the header, each showing its line deltas">
+  <a href="/wp-content/uploads/line-deltas-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/line-deltas-aug-2026.png" class="help-center-img img-bordered" alt="A task's checkouts below the header, each showing its line deltas">
+  </a>
   <figcaption style="text-align:center; color:#888">A checkout's line deltas, below the header.</figcaption>
 </figure>
 

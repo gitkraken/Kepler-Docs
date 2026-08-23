@@ -24,7 +24,9 @@ Opening a Task gives you its own screen: everything attached to it on the left, 
 Get here by double-clicking a row in [the Kepler interface](/kepler/kepler-interface), or by clicking **Open full view** in the side panel. For what a Task is and what can be attached to one, see [Tasks and Resources](/kepler/tasks-and-resources).
 
 <figure>
-  <img src="/wp-content/uploads/full-task-view-aug-2026.png" class="help-center-img img-bordered" alt="The task view with the rail on the left, listing Sessions, Changes, Folders, Pull requests, Links, and Notes, and a session open on the right with tool-call approval prompts">
+  <a href="/wp-content/uploads/full-task-view-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/full-task-view-aug-2026.png" class="help-center-img img-bordered" alt="The task view with the rail on the left, listing Sessions, Changes, Folders, Pull requests, Links, and Notes, and a session open on the right with tool-call approval prompts">
+  </a>
   <figcaption style="text-align:center; color:#888">The task view: the rail on the left, a session open on the right.</figcaption>
 </figure>
 
@@ -33,7 +35,9 @@ Get here by double-clicking a row in [the Kepler interface](/kepler/kepler-inter
 ## The header
 
 <figure>
-  <img src="/wp-content/uploads/task-header-3-elements-aug-2026.png" class="help-center-img img-bordered" alt="The task header, showing the Dashboard back button, the task switcher, and the task actions menu">
+  <a href="/wp-content/uploads/task-header-3-elements-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-header-3-elements-aug-2026.png" class="help-center-img img-bordered" alt="The task header, showing the Dashboard back button, the task switcher, and the task actions menu">
+  </a>
   <figcaption style="text-align:center; color:#888">The task header's three elements.</figcaption>
 </figure>
 
@@ -54,7 +58,9 @@ The left rail lists everything attached to the Task, grouped by kind:
 **Sessions · Terminals · Changes · Folders · Files · Pull requests · Issues · Links · Notes · Attachments**
 
 <figure>
-  <img src="/wp-content/uploads/task-rail-aug-2026.png" class="help-center-img img-bordered" alt="The task view's left rail, showing Sessions, Changes, Folders, Pull requests, Links, and Notes groups, with Add resource at the bottom">
+  <a href="/wp-content/uploads/task-rail-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-rail-aug-2026.png" class="help-center-img img-bordered" alt="The task view's left rail, showing Sessions, Changes, Folders, Pull requests, Links, and Notes groups, with Add resource at the bottom">
+  </a>
   <figcaption style="text-align:center; color:#888">The rail, grouped by resource kind.</figcaption>
 </figure>
 
@@ -71,7 +77,9 @@ The worktree group is called **Changes**. Its rows carry each checkout's line co
 Both of a row's lines truncate at rail width. Every row has a hover tip carrying its full name, plus the facts the row's lines had no room for:
 
 <figure>
-  <img src="/wp-content/uploads/rail-hovers-aug-2026.png" class="help-center-img img-bordered" alt="A truncated Changes row with its hover tip open, showing the full name, repository, base branch, and path">
+  <a href="/wp-content/uploads/rail-hovers-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/rail-hovers-aug-2026.png" class="help-center-img img-bordered" alt="A truncated Changes row with its hover tip open, showing the full name, repository, base branch, and path">
+  </a>
   <figcaption style="text-align:center; color:#888">A row's hover tip, showing what its truncated lines couldn't.</figcaption>
 </figure>
 
@@ -99,7 +107,9 @@ The end of the subtitle line carries the row's controls, always visible rather t
 Right-click any row. Every row opens with **Open**, **Open in new tab**, and **Open to the side**.
 
 <figure>
-  <img src="/wp-content/uploads/rail-row-menu-aug-2026.png" class="help-center-img img-bordered" alt="A worktree row's right-click menu, listing Open, session and terminal actions, Open in, copy actions, and Detach">
+  <a href="/wp-content/uploads/rail-row-menu-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/rail-row-menu-aug-2026.png" class="help-center-img img-bordered" alt="A worktree row's right-click menu, listing Open, session and terminal actions, Open in, copy actions, and Detach">
+  </a>
   <figcaption style="text-align:center; color:#888">A worktree row's context menu.</figcaption>
 </figure>
 
@@ -119,7 +129,9 @@ The last entry is how the row leaves the Task, and it differs by kind: **Detach*
 ## The columns
 
 <figure>
-  <img src="/wp-content/uploads/task-columns-aug-2026.png" class="help-center-img img-bordered" alt="The three content columns side by side: a session conversation, a worktree's changes, and a resource's details">
+  <a href="/wp-content/uploads/task-columns-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-columns-aug-2026.png" class="help-center-img img-bordered" alt="The three content columns side by side: a session conversation, a worktree's changes, and a resource's details">
+  </a>
   <figcaption style="text-align:center; color:#888">The three content columns: Sessions, Changes, and Resources.</figcaption>
 </figure>
 
@@ -142,7 +154,9 @@ The page opens on a conversation and on the checkout that conversation is workin
 Close a column with the arrow icon on its strip. Closing a column doesn't detach anything, and it doesn't stop or archive a session; the rail still has it.
 
 <figure>
-  <img src="/wp-content/uploads/close-column-aug-2026.png" class="help-center-img img-bordered" alt="The close-column arrow icon on a column's strip, with its tooltip reading Close strip">
+  <a href="/wp-content/uploads/close-column-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/close-column-aug-2026.png" class="help-center-img img-bordered" alt="The close-column arrow icon on a column's strip, with its tooltip reading Close strip">
+  </a>
   <figcaption style="text-align:center; color:#888">The arrow icon that closes a column.</figcaption>
 </figure>
 
@@ -161,7 +175,9 @@ By default each column shows one thing at a time and you switch by picking a dif
 Turn on **Show tabs on the task page** in **Settings → General** to keep several sessions, worktrees, or resources open as tabs in the same column instead. **Open in new tab** on a rail row then adds to the strip rather than replacing what's there.
 
 <figure>
-  <img src="/wp-content/uploads/show-tabs-on-task-page-aug-2026.png" class="help-center-img img-bordered" alt="The Show tabs on the task page setting, checked, in Settings → General">
+  <a href="/wp-content/uploads/show-tabs-on-task-page-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/show-tabs-on-task-page-aug-2026.png" class="help-center-img img-bordered" alt="The Show tabs on the task page setting, checked, in Settings → General">
+  </a>
   <figcaption style="text-align:center; color:#888">The Show tabs on the task page setting, in Settings → General.</figcaption>
 </figure>
 
@@ -190,7 +206,9 @@ To fire a preconfigured prompt instead of typing one, open the chevron beside th
 **New terminal here** on a worktree row opens a shell in that checkout, in the **Terminals** slot directly under the worktree it belongs to. Running one of the repository's commands from the row does the same thing, and reveals the terminal it spawned without taking your focus.
 
 <figure>
-  <img src="/wp-content/uploads/new-terminal-here-aug-2026.png" class="help-center-img img-bordered" alt="A worktree row's context menu with New terminal here highlighted">
+  <a href="/wp-content/uploads/new-terminal-here-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-terminal-here-aug-2026.png" class="help-center-img img-bordered" alt="A worktree row's context menu with New terminal here highlighted">
+  </a>
   <figcaption style="text-align:center; color:#888">New terminal here, on a worktree row's context menu.</figcaption>
 </figure>
 

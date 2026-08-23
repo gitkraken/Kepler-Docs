@@ -26,7 +26,9 @@ You bring the agent. Kepler pulls in the issues and pull requests already assign
 Kepler is in **public preview**. A free GitKraken account is all you need.
 
 <figure>
-  <img src="/wp-content/uploads/kepler-getting-started-Aug-2026.png" class="help-center-img img-bordered" alt="Kepler's Todo list with an Action dropdown open on one row, offering Plan, Implement, and a custom action">
+  <a href="/wp-content/uploads/kepler-getting-started-Aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/kepler-getting-started-Aug-2026.png" class="help-center-img img-bordered" alt="Kepler's Todo list with an Action dropdown open on one row, offering Plan, Implement, and a custom action">
+  </a>
   <figcaption style="text-align:center; color:#888">The Todo list with the Action dropdown open on a row. Pick a built-in Action or one of your own to start an agent.</figcaption>
 </figure>
 
@@ -52,7 +54,9 @@ Kepler is in **public preview**. A free GitKraken account is all you need.
 Kepler opens on a welcome screen. Click **Sign in with GitKraken**. If you do not have an account, you'll create one in the next step.
 
 <figure>
-  <img src="/wp-content/uploads/sign-in-aug-2026.png" class="help-center-img img-bordered" alt="Kepler's welcome screen with the Sign in with GitKraken button">
+  <a href="/wp-content/uploads/sign-in-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/sign-in-aug-2026.png" class="help-center-img img-bordered" alt="Kepler's welcome screen with the Sign in with GitKraken button">
+  </a>
   <figcaption style="text-align:center; color:#888">The welcome screen on first launch.</figcaption>
 </figure>
 
@@ -92,7 +96,9 @@ After you connect a tracker, the **Todo** segment of [the Kepler interface](/kep
 2. Click its **Action** button.
 
 <figure>
-  <img src="/wp-content/uploads/actions-drop-down.png" class="help-center-img img-bordered" alt="The Action dropdown open on a Todo row, listing Plan, Implement, Review, and Address Feedback">
+  <a href="/wp-content/uploads/actions-drop-down.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/actions-drop-down.png" class="help-center-img img-bordered" alt="The Action dropdown open on a Todo row, listing Plan, Implement, Review, and Address Feedback">
+  </a>
   <figcaption style="text-align:center; color:#888">The Action dropdown, opened from the chevron next to the button.</figcaption>
 </figure>
 
@@ -120,7 +126,9 @@ Every one of those prompts is yours to change, and you can add your own. That's 
 Click **New task**, or press **Shift+Alt+T** from anywhere. Write a prompt, attach a repository if the task needs one, and go. You can attach nothing at all and turn it into real work later. See [Create a Task](/kepler/create-task).
 
 <figure>
-  <img src="/wp-content/uploads/new-task-button-aug-2026.png" class="help-center-img img-bordered" alt="The New task button in the Kepler top navigation bar">
+  <a href="/wp-content/uploads/new-task-button-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-task-button-aug-2026.png" class="help-center-img img-bordered" alt="The New task button in the Kepler top navigation bar">
+  </a>
   <figcaption style="text-align:center; color:#888">The New task button, available from anywhere in Kepler.</figcaption>
 </figure>
 
