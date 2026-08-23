@@ -15,11 +15,11 @@ Scope: 16 pages included. Excluded: 3 — environment-and-setup.md, kepler-New-P
 - [Actions](https://help.gitkraken.com/kepler/actions/): Actions are editable named prompts you fire at a task, issue, or pull request. Learn the four built-in Actions, how to change them, and how to write your own.
 - [Tasks and Resources](https://help.gitkraken.com/kepler/tasks-and-resources/): A Task is the unit of work in Kepler. Learn what a Task holds, how worktrees work, and how everything attached to a Task reaches your agents.
 - [The Task View](https://help.gitkraken.com/kepler/task-view/): Open a Task to see its resources, agent sessions, and changes side by side. Learn the rail, the columns, split panes, and how to start sessions and terminals.
-- [The Agent Graph](https://help.gitkraken.com/kepler/agent-graph/): A live graph of everything your agents are doing — every task, session, turn, tool call, subagent, and file, drawn as it happens.
+- [The Agent Graph](https://help.gitkraken.com/kepler/agent-graph/): A live graph of everything your agents are doing: every task, session, turn, tool call, subagent, and file, drawn as it happens.
 
 ## Working in Kepler
 
-- [Create a Task](https://help.gitkraken.com/kepler/create-task/): Start a Task from an issue, a pull request, or nothing at all — with the repository, branch, and context already attached.
+- [Create a Task](https://help.gitkraken.com/kepler/create-task/): Start a Task from an issue, a pull request, or nothing at all, with the repository, branch, and context already attached.
 - [Agent Sessions](https://help.gitkraken.com/kepler/agent-sessions/): An agent session is one running conversation with a coding agent inside a Task. Learn how to start one, pick the agent and account, queue prompts, answer the agent's questions, and manage a session's lifecycle.
 - [Review Changes](https://help.gitkraken.com/kepler/review-changes/): An agent finished. Read the diff, stage and commit the parts you want, push the branch, and hand the rest to AI Sync or Compose.
 - [Voice Input](https://help.gitkraken.com/kepler/voice-input/): Dictate to an agent instead of typing. Voice input transcribes on your device with Whisper, works push-to-talk or hands-free, and is available in remote windows.
