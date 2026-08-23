@@ -628,7 +628,9 @@ A Task doesn't have to start with much. You can start one from an issue in [the 
 
 ## What a Task holds
 
-Everything attached to a Task is a **resource**. Attach them from **Add resource** at the bottom of the task view's rail, or from the **+** on any group header, which opens the same **Add resources** dialog on that category.
+Everything attached to a Task is a **resource**.
+
+Attach them from **Add resource** at the bottom of the task view's rail, or from the **+** on any group header, which opens the same **Add resources** dialog on that category.
 
 | Resource | What it is |
 |---|---|
@@ -682,7 +684,7 @@ You can also pick the branch when you attach the repository: **Use this branch**
 
 **A new branch forks from the repository's remote default branch**, not from whatever branch you happen to have checked out. Naming a base yourself overrides that default. If no remote default can be resolved (no remote, a shallow clone, offline with nothing cached), Kepler falls back to the current HEAD rather than refusing to start.
 
-**A Task needs no worktree at all.** Attach a plain folder and the agent works on it in place. Attach nothing and you have a space to think. Turn it into real work whenever the idea earns it.
+Prefer not to use a worktree? **A Task does not require worktree.** Attach a plain folder and the agent works on it in place. Attach nothing and you have a space to think with the option to turn it into real work whenever the idea earns it.
 
 ### Make a new worktree ready to build
 
@@ -710,7 +712,9 @@ Attach a **Note** for anything every agent on the Task should follow: a style ru
 
 ## Detaching and deleting
 
-Removing a resource from a Task doesn't destroy it. Kepler asks separately in each case, because the answer differs:
+Removing a resource from a Task doesn't destroy it.
+
+Kepler asks separately in each case, because the answer differs:
 
 | Resource | Dialog | What removing it does |
 |---|---|---|
@@ -720,7 +724,9 @@ Removing a resource from a Task doesn't destroy it. Kepler asks separately in ea
 | **Note** | *Delete note?* | *This permanently deletes the note.* |
 | **Attachment** | *Delete attachment?* | *This permanently deletes the attachment.* |
 
-Worktrees get more care, because deleting one can lose work. **Detach** removes the worktree from the Task and leaves it on disk. **Detach & Delete** removes it entirely, and Kepler checks first:
+Worktrees get more care, because deleting one can lose work.
+
+**Detach** removes the worktree from the Task and leaves it on disk. **Detach & Delete** removes it entirely, and Kepler checks first:
 
 - If the worktree is used by **other Tasks**: *This worktree is used by other tasks, so it can't be deleted — detaching only removes it from this task.* The dialog names them under **Also used by**.
 - If it's the repository's **main worktree**: *This is the repository's main worktree — it can't be deleted, only detached from the task.*
@@ -772,7 +778,7 @@ Every one of them is scoped to the agent's own Task. An agent can't touch anothe
 
 Reads, `attach_link`, and `create_worktree` run without asking, because none of them destroy anything. The two that can (`detach_link` and `discard_worktree`) go through the normal permission prompt, so you allow them once, for the session, or always.
 
-`discard_worktree` carries the same protection your own delete does. It refuses while a live session is running in the worktree, including the agent's own. And when deleting would lose work, the first call refuses and hands the agent the inventory of what's at stake, so the agent has to relay that back to you and ask before it can retry.
+Discarding a worktree through `discard_worktree` carries the same protection your own delete does. It refuses while a live session is running in the worktree, including the agent's own. And when deleting would lose work, the first call refuses and hands the agent the inventory of what's at stake, so the agent has to relay that back to you and ask before it can retry.
 
 ---
 

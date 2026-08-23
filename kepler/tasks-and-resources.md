@@ -23,11 +23,23 @@ A **Task** is the unit of work in Kepler. It's one thing you're trying to get do
 
 A Task doesn't have to start with much. You can start one from an issue in [the Kepler interface](/kepler/kepler-interface) and it arrives with the repository and issue body already attached, or you can start one with nothing at all (no repository, no branch), chase an idea, and attach the real work to it later.
 
+<figure>
+  <img src="/wp-content/uploads/task-creation-aug-2026.png" class="help-center-img img-bordered" alt="The Task creation composer, with a prompt typed in and no repo, issue, or pull request attached">
+  <figcaption style="text-align:center; color:#888">Starting a Task from an idea, with nothing attached yet.</figcaption>
+</figure>
+
 ***
 
 ## What a Task holds
 
-Everything attached to a Task is a **resource**. Attach them from **Add resource** at the bottom of the task view's rail, or from the **+** on any group header, which opens the same **Add resources** dialog on that category.
+Everything attached to a Task is a **resource**.
+
+<figure>
+  <img src="/wp-content/uploads/add-resource-aug-2026.png" class="help-center-img img-bordered" alt="A Notes group in the task view's rail, with a + on the header and an Add resource button below the list">
+  <figcaption style="text-align:center; color:#888">The + on a group header and the Add resource button open the same dialog, scoped to that category.</figcaption>
+</figure>
+
+Attach them from **Add resource** at the bottom of the task view's rail, or from the **+** on any group header, which opens the same **Add resources** dialog on that category.
 
 | Resource | What it is |
 |---|---|
@@ -49,6 +61,11 @@ For the screen itself (the rail, the columns, split panes, tabs), see [The Task 
 ### Pull requests attach themselves
 
 You don't have to remember to attach the pull request. When a Task holds no pull request yet and one of its worktrees is sitting on a branch that exactly matches an open pull request's head branch, Kepler records that pull request as a resource on its own, however the pull request was opened, including from a terminal, from GitKraken, or on the web.
+
+<figure>
+  <img src="/wp-content/uploads/prs-attach-aug-2026.png" class="help-center-img img-bordered" alt="A Pull requests group in the task view's rail, auto-populated with an open pull request matching the worktree's branch">
+  <figcaption style="text-align:center; color:#888">A pull request Kepler attached on its own, matched by branch.</figcaption>
+</figure>
 
 This auto-attach behavior is deliberately narrow, because a wrong guess would put a stranger's work into your agent's context:
 
@@ -73,6 +90,11 @@ When you add a repository to a Task, the **Isolated worktree** toggle decides ho
 
 With isolation off, the picker reads **directly in repo**.
 
+<figure>
+  <img src="/wp-content/uploads/isolated-worktree-aug-2026.png" class="help-center-img img-bordered" alt="The repository picker reading 'directly in repo' with isolation off">
+  <figcaption style="text-align:center; color:#888">The picker with isolation off, reading directly in repo.</figcaption>
+</figure>
+
 > **Turning isolation off means the Task has no branch of its own.** *Your repository folder, used exactly as it stands. Nothing is copied and nothing is guaranteed.* Use it when you deliberately want an agent working in the checkout you're sitting in; leave it on otherwise.
 
 Kepler always isolates a repository linked to a pull request, and locks the toggle: *This repository is linked to a pull request and always opens in its own isolated working copy.*
@@ -81,13 +103,18 @@ You can also pick the branch when you attach the repository: **Use this branch**
 
 **A new branch forks from the repository's remote default branch**, not from whatever branch you happen to have checked out. Naming a base yourself overrides that default. If no remote default can be resolved (no remote, a shallow clone, offline with nothing cached), Kepler falls back to the current HEAD rather than refusing to start.
 
-**A Task needs no worktree at all.** Attach a plain folder and the agent works on it in place. Attach nothing and you have a space to think. Turn it into real work whenever the idea earns it.
+Prefer not to use a worktree? **A Task does not require worktree.** Attach a plain folder and the agent works on it in place. Attach nothing and you have a space to think with the option to turn it into real work whenever the idea earns it.
 
 ### Make a new worktree ready to build
 
 A fresh worktree is a clean checkout: no `node_modules`, no build output, nothing your setup script would normally leave behind. An agent that starts there has to install dependencies before it can do anything, or it fails on the first build.
 
 **Commands** solve that problem. Save a repository's setup steps once (`pnpm install`, a codegen step, whatever your project needs) and tick **Run on worktree creation**. Kepler runs them in the new worktree's folder every time it makes one for that repository, in order, before the agent starts. Commands you don't flag stay on demand: right-click a worktree in the task view rail and pick **Run command here**.
+
+<figure>
+  <img src="/wp-content/uploads/run-command-aug-2026.png" class="help-center-img img-bordered" alt="The Run command here option on a worktree's right-click menu in the task view rail">
+  <figcaption style="text-align:center; color:#888">Run command here, from a worktree's right-click menu.</figcaption>
+</figure>
 
 Set them up in **Settings → Repositories**, on the repository's own row. See [Settings](/kepler/settings) for the fields, the path placeholders, and what happens when one fails.
 
@@ -97,6 +124,11 @@ Set them up in **Settings → Repositories**, on the repository's own row. See [
 
 Kepler sends everything attached to a Task to **every agent session in it** as *shared context*. That's what a prompt means when it says *"described in the shared context above"*: the issue body, the pull request, your notes, the links.
 
+<figure>
+  <img src="/wp-content/uploads/shared-context-aug-2026.png" class="help-center-img img-bordered" alt="A session with a collapsible 'Task context added' row listing one attached item">
+  <figcaption style="text-align:center; color:#888">A session's shared context, expanded to show what was attached.</figcaption>
+</figure>
+
 You'll see it in the conversation as a collapsible row reading **Shared context shared** the first time, and **Shared context updated** whenever it changes, with a count of the items included. Expand it to see exactly what the agent was given.
 
 You don't edit shared context directly. You change it by attaching and detaching resources, and when it changes while a session is mid-turn, Kepler tells you **New shared context will be sent on next prompt** rather than interrupting the agent.
@@ -105,11 +137,23 @@ You don't edit shared context directly. You change it by attaching and detaching
 
 Attach a **Note** for anything every agent on the Task should follow: a style rule, a constraint, a decision you don't want re-litigated. Write it once and every session gets it, including sessions you start later.
 
+<figure>
+  <img src="/wp-content/uploads/add-note-aug-2026.png" class="help-center-img img-bordered" alt="The Add resources dialog with the Notes tab selected, a title field, and a Markdown content area">
+  <figcaption style="text-align:center; color:#888">Adding a Note with a title and Markdown content.</figcaption>
+</figure>
+
 ***
 
 ## Detaching and deleting
 
-Removing a resource from a Task doesn't destroy it. Kepler asks separately in each case, because the answer differs:
+Removing a resource from a Task doesn't destroy it.
+
+<figure>
+  <img src="/wp-content/uploads/detach-resource-aug-2026.png" class="help-center-img img-bordered" alt="A resource's right-click context menu with Detach highlighted at the bottom">
+  <figcaption style="text-align:center; color:#888">Detaching a resource from its context menu in the rail.</figcaption>
+</figure>
+
+Kepler asks separately in each case, because the answer differs:
 
 | Resource | Dialog | What removing it does |
 |---|---|---|
@@ -119,7 +163,14 @@ Removing a resource from a Task doesn't destroy it. Kepler asks separately in ea
 | **Note** | *Delete note?* | *This permanently deletes the note.* |
 | **Attachment** | *Delete attachment?* | *This permanently deletes the attachment.* |
 
-Worktrees get more care, because deleting one can lose work. **Detach** removes the worktree from the Task and leaves it on disk. **Detach & Delete** removes it entirely, and Kepler checks first:
+Worktrees get more care, because deleting one can lose work.
+
+<figure>
+  <img src="/wp-content/uploads/detach-worktree-aug-2026.png" class="help-center-img img-bordered" alt="The Detach and Detach & Delete options on a worktree">
+  <figcaption style="text-align:center; color:#888">Detach and Detach & Delete, on a worktree.</figcaption>
+</figure>
+
+**Detach** removes the worktree from the Task and leaves it on disk. **Detach & Delete** removes it entirely, and Kepler checks first:
 
 - If the worktree is used by **other Tasks**: *This worktree is used by other tasks, so it can't be deleted — detaching only removes it from this task.* The dialog names them under **Also used by**.
 - If it's the repository's **main worktree**: *This is the repository's main worktree — it can't be deleted, only detached from the task.*
@@ -138,6 +189,11 @@ Deleting a worktree that has something to lose is only possible through that che
 
 ## Renaming, archiving, and deleting a Task
 
+<figure>
+  <img src="/wp-content/uploads/rename-task-aug-2026.png" class="help-center-img img-bordered" alt="The Task actions menu open from the header, listing Rename task, Archive task, and Delete task">
+  <figcaption style="text-align:center; color:#888">The Task actions menu, open from the header.</figcaption>
+</figure>
+
 From the **Task actions** (**⋮**) menu, on the task's row or in the task view's header:
 
 | Action | What it does |
@@ -146,8 +202,6 @@ From the **Task actions** (**⋮**) menu, on the task's row or in the task view'
 | **Archive task** | Takes it out of the active list and keeps it as history. Nothing is destroyed unless you ask for it |
 | **Restore task** | On an archived Task, in place of **Archive task**. No confirmation. It goes straight back |
 | **Delete task** | Removes the Task |
-
-<!-- TODO(verify): the archive dialog's description reads "It leaves the sidebar and stays in the dashboard as history" (src/ui/components/task/TaskCleanupDialog.tsx), but the sidebar it names went away with the List view in 29a06035a. Paraphrased above; check whether the app copy is being updated. -->
 
 **Archive** and **Delete** ask the same two questions, in the same dialog, because they're the same act: **Also delete worktrees**, and (only once that's ticked) **Also delete branches**. Tick the first, and Kepler lists every worktree under **Will be deleted**, each with what deleting it costs. Kepler separately lists any worktree it will keep under **Kept — still used by other tasks**. Ticking **Also delete branches** re-reads the list, so a worktree that was safe a moment ago can turn into a warning.
 
@@ -173,6 +227,6 @@ Every one of them is scoped to the agent's own Task. An agent can't touch anothe
 
 Reads, `attach_link`, and `create_worktree` run without asking, because none of them destroy anything. The two that can (`detach_link` and `discard_worktree`) go through the normal permission prompt, so you allow them once, for the session, or always.
 
-`discard_worktree` carries the same protection your own delete does. It refuses while a live session is running in the worktree, including the agent's own. And when deleting would lose work, the first call refuses and hands the agent the inventory of what's at stake, so the agent has to relay that back to you and ask before it can retry.
+Discarding a worktree through `discard_worktree` carries the same protection your own delete does. It refuses while a live session is running in the worktree, including the agent's own. And when deleting would lose work, the first call refuses and hands the agent the inventory of what's at stake, so the agent has to relay that back to you and ask before it can retry.
 
 ---
