@@ -23,19 +23,27 @@ Opening a Task gives you its own screen: everything attached to it on the left, 
 
 Get here by double-clicking a row in [the Kepler interface](/kepler/kepler-interface), or by clicking **Open full view** in the side panel. For what a Task is and what can be attached to one, see [Tasks and Resources](/kepler/tasks-and-resources).
 
-<!-- TODO(screenshot): the task view — rail on the left, a session in the first content column, a worktree's diff with a terminal under it in the second, a resource in the third. -->
+<figure>
+  <img src="/wp-content/uploads/full-task-view-aug-2026.png" class="help-center-img img-bordered" alt="The task view with the rail on the left, listing Sessions, Changes, Folders, Pull requests, Links, and Notes, and a session open on the right with tool-call approval prompts">
+  <figcaption style="text-align:center; color:#888">The task view: the rail on the left, a session open on the right.</figcaption>
+</figure>
 
 ***
 
 ## The header
 
-Three things, and deliberately nothing else:
+<figure>
+  <img src="/wp-content/uploads/task-header-3-elements-aug-2026.png" class="help-center-img img-bordered" alt="The task header, showing the Dashboard back button, the task switcher, and the task actions menu">
+  <figcaption style="text-align:center; color:#888">The task header's three elements.</figcaption>
+</figure>
+
+The task header has 3 key elements:
 
 - **← Dashboard** (the back button, labelled that in the app) returns you to the list exactly as you left it: same segment, grouping, filters, and selection.
 - **The task switcher** jumps to another Task without going back first. It searches as you type, and each row carries the same session status dots a row does.
 - **⋮ Task actions** holds **Rename task**, **Archive task**, and **Delete task**. On an already-archived Task, **Restore task** replaces **Archive task** and puts the Task straight back with no confirmation.
 
-**Rename task** opens a dialog with the name in an editable field. The field carries an **Auto-name** button — *Suggest a name from the task's prompt and resources* — which fills the field with a suggestion for you to accept or edit. It never renames on its own; the dialog's **Rename** button is what applies it. The button is hidden on a free plan.
+**Rename task** opens a dialog with the name in an editable field. The field carries an **Auto-name** button — *Suggest a name from the task's prompt and resources* — which fills the field with a suggestion for you to accept or edit. It never renames on its own; the dialog's **Rename** button is what applies it.
 
 ***
 
@@ -44,6 +52,11 @@ Three things, and deliberately nothing else:
 The left rail lists everything attached to the Task, grouped by kind:
 
 **Sessions · Terminals · Changes · Folders · Files · Pull requests · Issues · Links · Notes · Attachments**
+
+<figure>
+  <img src="/wp-content/uploads/task-rail-aug-2026.png" class="help-center-img img-bordered" alt="The task view's left rail, showing Sessions, Changes, Folders, Pull requests, Links, and Notes groups, with Add resource at the bottom">
+  <figcaption style="text-align:center; color:#888">The rail, grouped by resource kind.</figcaption>
+</figure>
 
 The worktree group is called **Changes**. Its rows carry each checkout's line count and open its diff review, so the header names what you go there for rather than the git object behind it.
 
@@ -57,7 +70,12 @@ The worktree group is called **Changes**. Its rows carry each checkout's line co
 
 Both of a row's lines truncate at rail width. Every row has a hover tip carrying its full name, plus the facts the row's lines had no room for:
 
-- **Path**, above all, never shown on the row itself
+<figure>
+  <img src="/wp-content/uploads/rail-hovers-aug-2026.png" class="help-center-img img-bordered" alt="A truncated Changes row with its hover tip open, showing the full name, repository, base branch, and path">
+  <figcaption style="text-align:center; color:#888">A row's hover tip, showing what its truncated lines couldn't.</figcaption>
+</figure>
+
+- **Path**
 - **Repository**
 - **Base**
 - **Agent**
@@ -80,6 +98,11 @@ The end of the subtitle line carries the row's controls, always visible rather t
 
 Right-click any row. Every row opens with **Open**, **Open in new tab**, and **Open to the side**.
 
+<figure>
+  <img src="/wp-content/uploads/rail-row-menu-aug-2026.png" class="help-center-img img-bordered" alt="A worktree row's right-click menu, listing Open, session and terminal actions, Open in, copy actions, and Detach">
+  <figcaption style="text-align:center; color:#888">A worktree row's context menu.</figcaption>
+</figure>
+
 | On | Also holds |
 |---|---|
 | A worktree that's on disk | **New session here**, **New terminal here**, **Run command here**, **Open in…**, **Open remote repo**, **Copy path**, **Copy branch name**, **Copy remote URL** |
@@ -95,7 +118,12 @@ The last entry is how the row leaves the Task, and it differs by kind: **Detach*
 
 ## The columns
 
-The content area is fixed slots, not free-form panes. Which slot a rail row opens into is a property of what it is, so a session never lands next to a note and you never have to remember where you put something.
+<figure>
+  <img src="/wp-content/uploads/task-columns-aug-2026.png" class="help-center-img img-bordered" alt="The three content columns side by side: a session conversation, a worktree's changes, and a resource's details">
+  <figcaption style="text-align:center; color:#888">The three content columns: Sessions, Changes, and Resources.</figcaption>
+</figure>
+
+The content area is fixed slots, not free-form panes. A rail row's kind decides which slot it opens into, so a session never lands next to a note and you never have to remember where you put something.
 
 | Column | What opens here |
 |---|---|
@@ -111,7 +139,12 @@ Click a rail row to open it in its slot. Double-click to pin it. A slot with not
 
 The page opens on a conversation and on the checkout that conversation is working in, inferred from the session or terminal it auto-opened, so **Changes** isn't an empty column you have to go fill on every visit.
 
-Close a column with the **×** on its strip. Closing a column doesn't detach anything, and it doesn't stop or archive a session; the rail still has it.
+Close a column with the arrow icon on its strip. Closing a column doesn't detach anything, and it doesn't stop or archive a session; the rail still has it.
+
+<figure>
+  <img src="/wp-content/uploads/close-column-aug-2026.png" class="help-center-img img-bordered" alt="The close-column arrow icon on a column's strip, with its tooltip reading Close strip">
+  <figcaption style="text-align:center; color:#888">The arrow icon that closes a column.</figcaption>
+</figure>
 
 ### Split panes
 
@@ -126,6 +159,11 @@ A plain click while a slot is split replaces only the focused pane and leaves th
 By default each column shows one thing at a time and you switch by picking a different row in the rail.
 
 Turn on **Show tabs on the task page** in **Settings → General** to keep several sessions, worktrees, or resources open as tabs in the same column instead. **Open in new tab** on a rail row then adds to the strip rather than replacing what's there.
+
+<figure>
+  <img src="/wp-content/uploads/show-tabs-on-task-page-aug-2026.png" class="help-center-img img-bordered" alt="The Show tabs on the task page setting, checked, in Settings → General">
+  <figcaption style="text-align:center; color:#888">The Show tabs on the task page setting, in Settings → General.</figcaption>
+</figure>
 
 A split is independent of this setting. Turning tabs off doesn't fold side-by-side panes back into one, and a Cmd-click still splits with tabs off. That's the whole point of the gesture.
 
@@ -150,6 +188,11 @@ To fire a preconfigured prompt instead of typing one, open the chevron beside th
 ### Terminals
 
 **New terminal here** on a worktree row opens a shell in that checkout, in the **Terminals** slot directly under the worktree it belongs to. Running one of the repository's commands from the row does the same thing, and reveals the terminal it spawned without taking your focus.
+
+<figure>
+  <img src="/wp-content/uploads/new-terminal-here-aug-2026.png" class="help-center-img img-bordered" alt="A worktree row's context menu with New terminal here highlighted">
+  <figcaption style="text-align:center; color:#888">New terminal here, on a worktree row's context menu.</figcaption>
+</figure>
 
 ***
 

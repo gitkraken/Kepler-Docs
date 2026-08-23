@@ -801,13 +801,13 @@ Get here by double-clicking a row in [the Kepler interface](/kepler/kepler-inter
 
 ## The header
 
-Three things, and deliberately nothing else:
+The task header has 3 key elements:
 
 - **← Dashboard** (the back button, labelled that in the app) returns you to the list exactly as you left it: same segment, grouping, filters, and selection.
 - **The task switcher** jumps to another Task without going back first. It searches as you type, and each row carries the same session status dots a row does.
 - **⋮ Task actions** holds **Rename task**, **Archive task**, and **Delete task**. On an already-archived Task, **Restore task** replaces **Archive task** and puts the Task straight back with no confirmation.
 
-**Rename task** opens a dialog with the name in an editable field. The field carries an **Auto-name** button — *Suggest a name from the task's prompt and resources* — which fills the field with a suggestion for you to accept or edit. It never renames on its own; the dialog's **Rename** button is what applies it. The button is hidden on a free plan.
+**Rename task** opens a dialog with the name in an editable field. The field carries an **Auto-name** button — *Suggest a name from the task's prompt and resources* — which fills the field with a suggestion for you to accept or edit. It never renames on its own; the dialog's **Rename** button is what applies it.
 
 ***
 
@@ -829,7 +829,7 @@ The worktree group is called **Changes**. Its rows carry each checkout's line co
 
 Both of a row's lines truncate at rail width. Every row has a hover tip carrying its full name, plus the facts the row's lines had no room for:
 
-- **Path**, above all, never shown on the row itself
+- **Path**
 - **Repository**
 - **Base**
 - **Agent**
@@ -867,7 +867,7 @@ The last entry is how the row leaves the Task, and it differs by kind: **Detach*
 
 ## The columns
 
-The content area is fixed slots, not free-form panes. Which slot a rail row opens into is a property of what it is, so a session never lands next to a note and you never have to remember where you put something.
+The content area is fixed slots, not free-form panes. A rail row's kind decides which slot it opens into, so a session never lands next to a note and you never have to remember where you put something.
 
 | Column | What opens here |
 |---|---|
@@ -883,7 +883,7 @@ Click a rail row to open it in its slot. Double-click to pin it. A slot with not
 
 The page opens on a conversation and on the checkout that conversation is working in, inferred from the session or terminal it auto-opened, so **Changes** isn't an empty column you have to go fill on every visit.
 
-Close a column with the **×** on its strip. Closing a column doesn't detach anything, and it doesn't stop or archive a session; the rail still has it.
+Close a column with the arrow icon on its strip. Closing a column doesn't detach anything, and it doesn't stop or archive a session; the rail still has it.
 
 ### Split panes
 
