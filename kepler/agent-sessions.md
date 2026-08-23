@@ -21,7 +21,7 @@ taxonomy:
 
 An **agent session** is one running conversation with a coding agent, anchored to one working directory.
 
-A Task can hold several. Two agents on the same worktree, one agent per worktree, a session for the task folder itself — all of it is normal, and all of it lives under the Task's **Sessions** group. For the screen those sessions open in, see [The Task View](/kepler/task-view).
+A Task can hold several. Two agents on the same worktree, one agent per worktree, a session for the task folder itself: all of it is normal, and all of it lives under the Task's **Sessions** group. For the screen those sessions open in, see [The Task View](/kepler/task-view).
 
 This page covers the session itself: starting it, directing it, and its lifecycle. For reading the diff, staging, and committing what an agent produced, see [Review Changes](/kepler/review-changes).
 
@@ -87,11 +87,11 @@ Claude Code, Codex, Copilot, and Auggie can each hold more than one signed-in ac
 | **Add account** | Adds an isolated account with its own credentials and history |
 | **Account name** | Rename a row in place. The name is what you pick from later |
 | **Sign in** / **Sign out** | Authenticates or clears that account alone |
-| **Remove account** | Signs the account out and deletes its local data. Your shared skills, agents and settings are untouched |
+| **Remove account** | Signs the account out and deletes its local data. Your shared skills, agents, and settings are untouched |
 
 ### Choosing an account for a session
 
-With two or more accounts signed in, the **Agent** list expands to one row per account, labelled with the account name — so you pick the agent and the account in one click. This is true in the task composer and in the task view's **New session** menu.
+With two or more accounts signed in, the **Agent** list expands to one row per account, labelled with the account name, so you pick the agent and the account in one click. This is true in the task composer and in the task view's **New session** menu.
 
 With one account, no account rows appear at all.
 
@@ -133,7 +133,7 @@ Claude Code runs two ways, chosen in **Settings → Agents → Claude Code → D
 
 The picker is labelled **Default mode for new sessions**, and its hint adds **You can switch modes anytime within a session.** A switch restarts the agent process under the other mode and resumes the same conversation, carrying your model, mode, effort, and shared context across.
 
-Terminal mode keeps the full chat composer — attach images by paste or drag-and-drop, pick model, mode and effort, use slash commands, and mention files with `@`. Two things differ from Rich chat:
+Terminal mode keeps the full chat composer: attach images by paste or drag-and-drop, pick model, mode, and effort, use slash commands, and mention files with `@`. Two things differ from Rich chat:
 
 - Claude's own terminal interface queues your input while it is busy, so Kepler's queue banner does not appear.
 - Changing model, mode, or effort restarts the session via resume to pick the change up: *Changes to model, mode, or effort apply on your next message — the session restarts via resume to pick them up, so your current turn is never interrupted.*
@@ -165,9 +165,9 @@ While a turn is running the send button grows a stop segment — **Stop agent** 
 
 ### Slash commands and skills, per repository
 
-Type `/` to open the command menu. It lists the agent's built-in commands together with your commands and skills. Codex reports its skills with a `$` sigil and invokes them that way, so `$` opens a skills-only menu — but `/` still finds them, matched on the bare name, so you do not have to know the convention.
+Type `/` to open the command menu. It lists the agent's built-in commands together with your commands and skills. Codex reports its skills with a `$` sigil and invokes them that way, so `$` opens a skills-only menu, but `/` still finds them, matched on the bare name, so you do not have to know the convention.
 
-**Skills and slash commands are discovered per repository, not per agent.** The catalog is the union of your home-directory skills and the repository or worktree's own — for Claude Code, `~/.claude/skills` plus `.claude/skills`. Two consequences:
+**Skills and slash commands are discovered per repository, not per agent.** The catalog is the union of your home-directory skills and the repository or worktree's own: for Claude Code, `~/.claude/skills` plus `.claude/skills`. Two consequences:
 
 - One project's skills never show up in another project's menu.
 - A skill added in a worktree and not yet committed can appear in that session before it appears elsewhere.
@@ -206,7 +206,7 @@ If a send genuinely fails, Kepler puts the text back: *Something went wrong. You
 
 - Your messages appear as chat bubbles. Right-click one to **Copy message**, **Quote**, or **Ask**.
 - Agent replies render as markdown, and stream as one continuous message even when a tool runs mid-reply.
-- Tool calls collapse into groups — **{count} tool uses**, with **{count} done**, **{count} running**, and **{count} failed** tallies. Expand a group to read any call's output.
+- Tool calls collapse into groups: **{count} tool uses**, with **{count} done**, **{count} running**, and **{count} failed** tallies. Expand a group to read any call's output.
 - A plan renders as **Plan {completed}/{total}**, and a plan cut short by a stop is marked **Interrupted**.
 - Subagents get their own card, collapsed by default, holding **Prompt**, **Operations**, and **Result** sections that fold independently. Its trigger row carries the subagent type, the description it was given, how many operations it has run, and a status of **Running**, **Stopped**, **Completed**, or **Failed**, so a card that is still shut shows progress.
 - A turn that ended for a reason worth knowing carries a pill: **Reached token limit**, **Reached request limit**, **Refused to continue**, or **Cancelled**. A healthy turn shows nothing.
@@ -233,9 +233,9 @@ A request pins to the top of the session: an amber shield, the tool being asked 
 | **Reject** | Refuses this call |
 | **Reject always** | Refuses it permanently |
 
-You get the tiers the agent actually offers. **Allow for this session** is Kepler's own middle tier and appears only next to an **Allow** — a request that offers nothing but a permanent approval, as Claude Code's plan-exit prompt does, has no one-shot decision to widen. Where an agent draws its own distinction between several permanent choices, its labels are kept instead of a single **Allow always**, and any `Tool(...)` pattern a rule would cover is spelled out on a **RULE** line beneath the buttons.
+You get the tiers the agent actually offers. **Allow for this session** is Kepler's own middle tier and appears only next to an **Allow**. A request that offers nothing but a permanent approval, as Claude Code's plan-exit prompt does, has no one-shot decision to widen. Where an agent draws its own distinction between several permanent choices, its labels are kept instead of a single **Allow always**, and any `Tool(...)` pattern a rule would cover is spelled out on a **RULE** line beneath the buttons.
 
-Kepler coalesces repeats. A command that fires many identical requests — an install reaching the network over and over — asks once, and your answer settles the whole group.
+Kepler coalesces repeats. A command that fires many identical requests (an install reaching the network over and over) asks once, and your answer settles the whole group.
 
 Answered requests stay in the transcript, showing the tier you picked: **Allowed for this session** for the middle one, otherwise the button's own label, falling back to **Approved** or **Denied**.
 
@@ -294,7 +294,7 @@ What the chip shows depends on the provider. The trigger previews the shortest w
 | Provider | What its popover carries |
 |---|---|
 | **Claude Code** | The **5h** and **7d** windows, and an **Extra usage** pool with credits used against any monthly limit |
-| **Codex** | The same two windows, plus **Usage limit resets** — earned resets that clear an active limit early, each with its expiry |
+| **Codex** | The same two windows, plus **Usage limit resets**: earned resets that clear an active limit early, each with its expiry |
 | **Auggie** | A **Cycle** window for the current billing period, and a plan line naming the plan with what is left of it — *{remaining} / {included} credits left*, or *{remaining} credits left* on an unmetered plan |
 
 If the figures cannot be fetched, the chip says which problem it hit rather than showing a stale number — *Sign in to {agent} to see usage data.*, *Usage API rate-limited. Retrying in a few minutes.*, *This agent doesn't expose usage data.*
@@ -318,7 +318,7 @@ Each session carries a state, shown as a coloured dot on its tab and rows.
 | **Spawning** | Starting up |
 | **Ready** | Connected, nothing sent yet |
 | **Running** | Working on a turn |
-| **Waiting** | Blocked on you — a permission request or a question |
+| **Waiting** | Blocked on you: a permission request or a question |
 | **Unread** | Finished a turn you have not looked at |
 | **Idle** | Connected, nothing running |
 | **Disconnected** | Dormant. The conversation is kept and can be resumed |
@@ -327,7 +327,7 @@ Each session carries a state, shown as a coloured dot on its tab and rows.
 
 When Kepler has to show one status for several sessions, the most urgent wins: **Waiting** and **Error** outrank live work, and **Unread** sits above **Idle** so a finished turn is not buried.
 
-Away from the session itself those states collapse into a coarser ramp of five — attention, active, idle, errored, inactive — which is what [the main list](/kepler/kepler-interface)'s row and preview indicators read, and what decides where an [Action](/kepler/actions) fires. *Attention* covers both a waiting session and one holding an unanswered permission request or question.
+Away from the session itself those states collapse into a coarser ramp of five (attention, active, idle, errored, inactive), which is what [the main list](/kepler/kepler-interface)'s row and preview indicators read, and what decides where an [Action](/kepler/actions) fires. *Attention* covers both a waiting session and one holding an unanswered permission request or question.
 
 ***
 

@@ -21,7 +21,7 @@ taxonomy:
 
 An agent has stopped and says it is done. Now you read what it actually did, keep the parts that are right, and get them onto a branch.
 
-All of that happens in the task's **worktree** — the Git working copy the agent made its changes in. The task view rail groups a task's worktrees under **Changes** — that's where you go to review them. Open one from that group, and it opens in a column of its own. See [the task view](/kepler/task-view).
+All of that happens in the task's **worktree**: the Git working copy the agent made its changes in. The task view rail groups a task's worktrees under **Changes**: that's where you go to review them. Open one from that group, and it opens in a column of its own. See [the task view](/kepler/task-view).
 
 <!-- TODO(screenshot): a task's worktree column — commit graph and working changes on the left, a file diff on the right. -->
 
@@ -73,7 +73,7 @@ Each row shows the file path and a one-letter change indicator. Hover a row for 
 | **D** | Deleted |
 | **R** | Renamed |
 | **C** | Copied |
-| **?** | Untracked — not in Git yet |
+| **?** | Untracked: not in Git yet |
 
 | Control | Where | What it does |
 |---|---|---|
@@ -95,19 +95,19 @@ Right-click a file row for:
 
 ## Reading the diff
 
-Click any file — in working changes or in a commit — to open its diff in the pane on the right.
+Click any file (in working changes or in a commit) to open its diff in the pane on the right.
 
 - The **file path** heads the diff, with its **+/−** line stats.
 - Added lines are green, removed lines red.
 - **Unmodified regions are collapsed**, leaving three lines of context around each change.
 - **↑** and **↓** move to the previous and next file in the same set, so you can read a whole change without going back to the list. They are ignored while you are typing in a field.
-- Pick another file to replace what is in the pane. The pane also clears itself when the file you are looking at stops existing — committed, discarded, or gone.
+- Pick another file to replace what is in the pane. The pane also clears itself when the file you are looking at stops existing: committed, discarded, or gone.
 
 ### Stacked or split
 
 **Stacked** puts removals and additions in one column; **Split** puts the old and new file side by side.
 
-The layout comes from **Settings → Appearance → Diff View**, which defaults to **Stacked**, and that setting is the only control. The diff pane here has no header of its own — the file path already heads the diff body — so there is no per-diff **Stacked** / **Split** toggle to reach for.
+The layout comes from **Settings → Appearance → Diff View**, which defaults to **Stacked**, and that setting is the only control. The diff pane here has no header of its own (the file path already heads the diff body), so there is no per-diff **Stacked** / **Split** toggle to reach for.
 
 Split needs room for two columns of code. Below roughly 640 pixels of pane width the diff falls back to Stacked whatever the setting says, rather than truncating both sides into noise.
 
@@ -178,11 +178,11 @@ The three buttons above the graph act on this worktree's branch:
 
 ## Opening a pull request
 
-**Kepler has no "create pull request" button.** You open the pull request outside Kepler: the agent opens it, you run a command in the worktree's terminal, or you use your host's website. Kepler's part starts once the pull request exists — it tracks the pull request as a task resource. Three paths attach one:
+**Kepler has no "create pull request" button.** You open the pull request outside Kepler: the agent opens it, you run a command in the worktree's terminal, or you use your host's website. Kepler's part starts once the pull request exists: it tracks the pull request as a task resource. Three paths attach one:
 
 | Path | What happens |
 |---|---|
-| **The agent publishes it** | When an agent publishes a pull request, Kepler reads the result, checks that it belongs to one of the worktree's remotes, and attaches it to the task — no action from you |
+| **The agent publishes it** | When an agent publishes a pull request, Kepler reads the result, checks that it belongs to one of the worktree's remotes, and attaches it to the task: no action from you |
 | **The agent attaches it** | Agents can attach a link to the task themselves through Kepler's workspace tools. Kepler works out from the URL whether it is a pull request, an issue, or a plain link, and fetches its title and status where it can. Kepler attaches the link even when that lookup fails. The same tools detach one, including a link you attached yourself |
 | **You attach an existing one** | **Add resource → Pull requests** in the task view searches your connected hosts. **Add to task** attaches what you pick |
 
@@ -205,7 +205,7 @@ These are agent tools, not buttons in the interface. With one enabled, the agent
 
 | Feature | How an agent uses it |
 |---|---|
-| **AI Sync** | Runs the rebase or merge, resolving conflicts as it goes, then reports the result for you to accept or roll back. AI Sync backs up every run first. It also drops commits whose changes are already upstream — useful after a squash-merge |
+| **AI Sync** | Runs the rebase or merge, resolving conflicts as it goes, then reports the result for you to accept or roll back. AI Sync backs up every run first. It also drops commits whose changes are already upstream: useful after a squash-merge |
 | **Compose** | Plans the reorganization first and applies it as a second step, so you can read the plan before anything moves. It can also split a multi-commit branch into a stack, and undo what it applied |
 
 Turning either one on confirms that **New agent sessions will pick up this change**. A session already running keeps the tools it started with, so start a new session to use them.

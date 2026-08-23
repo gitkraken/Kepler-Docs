@@ -31,7 +31,7 @@ Get here by double-clicking a row in [the Kepler interface](/kepler/kepler-inter
 
 Three things, and deliberately nothing else:
 
-- **← Dashboard** — the back button, labelled that in the app — returns you to the list exactly as you left it: same segment, grouping, filters, and selection.
+- **← Dashboard** (the back button, labelled that in the app) returns you to the list exactly as you left it: same segment, grouping, filters, and selection.
 - **The task switcher** jumps to another Task without going back first. It searches as you type, and each row carries the same session status dots a row does.
 - **⋮ Task actions** holds **Rename task**, **Archive task**, and **Delete task**. On an already-archived Task, **Restore task** replaces **Archive task** and puts the Task straight back with no confirmation.
 
@@ -45,19 +45,19 @@ The left rail lists everything attached to the Task, grouped by kind:
 
 **Sessions · Terminals · Changes · Folders · Files · Pull requests · Issues · Links · Notes · Attachments**
 
-The worktree group is called **Changes** — its rows carry each checkout's line count and open its diff review, so the header names what you go there for rather than the git object behind it.
+The worktree group is called **Changes**. Its rows carry each checkout's line count and open its diff review, so the header names what you go there for rather than the git object behind it.
 
 **Sessions** always stays, even on a Task that has none, so you always have a way to start the first one. Every other group appears only once it has something in it.
 
 - **Add resource** sits at the bottom of the rail and opens the **Add resources** dialog.
-- The **+** on a group header adds straight into that group — **Add issues**, **Add notes**, and so on. On **Changes** it reads **Add worktree**, because that's what actually lands there. On **Sessions** the **+** is **New session** instead.
-- Every session that isn't live — archived ones, and ones that disconnected or terminated — collects under a **{count} archived** fold beneath the live ones. It starts collapsed. Clicking an archived session brings it back and opens it in one gesture; **Restore** in its menu does the same.
+- The **+** on a group header adds straight into that group: **Add issues**, **Add notes**, and so on. On **Changes** it reads **Add worktree**, because that's what actually lands there. On **Sessions** the **+** is **New session** instead.
+- Every session that isn't live (archived ones, and ones that disconnected or terminated) collects under a **{count} archived** fold beneath the live ones. It starts collapsed. Clicking an archived session brings it back and opens it in one gesture; **Restore** in its menu does the same.
 
 ### What a row shows
 
 Both of a row's lines truncate at rail width. Every row has a hover tip carrying its full name, plus the facts the row's lines had no room for:
 
-- **Path**, above all — never shown on the row itself
+- **Path**, above all, never shown on the row itself
 - **Repository**
 - **Base**
 - **Agent**
@@ -66,7 +66,7 @@ Both of a row's lines truncate at rail width. Every row has a hover tip carrying
 - Flags such as **Repository's main worktree** or **Gone from disk**
 
 - A **Changes** row's subtitle is its repository and base branch, followed by the checkout's added and removed line counts.
-- A **session** row leads with its state, and names which **Account** it runs under once a harness has more than one configured — the provider logo plus an ordinal, on the row, its tab, and its collapsed strip alike.
+- A **session** row leads with its state, and names which **Account** it runs under once a harness has more than one configured: the provider logo plus an ordinal, on the row, its tab, and its collapsed strip alike.
 
 The end of the subtitle line carries the row's controls, always visible rather than revealed on hover:
 
@@ -87,7 +87,7 @@ Right-click any row. Every row opens with **Open**, **Open in new tab**, and **O
 | A file | **Copy path** |
 | A pull request or issue | **Open in browser**, **Copy link**, **Copy title**, **Copy number**, and **Copy branch name** on a pull request |
 
-**Run command here** lists the repository's commands — configured in **Settings → Repositories** — and runs the one you pick in that worktree, revealing its terminal in place without taking your focus. A repository with none reads **No commands yet**, and the submenu ends with **Create command…** so you can add one from where you noticed you wanted it.
+**Run command here** lists the repository's commands (configured in **Settings → Repositories**) and runs the one you pick in that worktree, revealing its terminal in place without taking your focus. A repository with none reads **No commands yet**, and the submenu ends with **Create command…** so you can add one from where you noticed you wanted it.
 
 The last entry is how the row leaves the Task, and it differs by kind: **Detach** for a resource, **Archive** for a session, **Close terminal** for a terminal.
 
@@ -100,12 +100,12 @@ The content area is fixed slots, not free-form panes. Which slot a rail row open
 | Column | What opens here |
 |---|---|
 | **Sessions** | Agent conversations |
-| **Changes** | A worktree — its commits, its changed files, and the diff — with **Terminals** stacked underneath it in the same column |
+| **Changes** | A worktree (its commits, its changed files, and the diff) with **Terminals** stacked underneath it in the same column |
 | **Resources** | Folders, files, pull requests, issues, links, notes, attachments |
 
 Terminals get a slot of their own rather than sharing the worktree's. A terminal is a view *onto* a checkout, so the two belong on screen at the same time: opening a shell no longer evicts the changes you were reading. When only one of the two halves has something open, it takes the whole height.
 
-Every boundary is a draggable sash, and the size you drag it to persists. The three content columns share whatever the rail leaves — equally until you drag one, and in the ratio you set from then on. Kepler keeps the ratios as proportions, not pixels, so they survive a window resize and a column opening or closing.
+Every boundary is a draggable sash, and the size you drag it to persists. The three content columns share whatever the rail leaves: equally until you drag one, and in the ratio you set from then on. Kepler keeps the ratios as proportions, not pixels, so they survive a window resize and a column opening or closing.
 
 Click a rail row to open it in its slot. Double-click to pin it. A slot with nothing open renders no column at all, and the others take its space.
 
@@ -115,7 +115,7 @@ Close a column with the **×** on its strip. Closing a column doesn't detach any
 
 ### Split panes
 
-**Cmd-click a rail row — Ctrl-click on Windows and Linux — to open it beside what's already there** rather than in place of it. **Open to the side** in the row's menu is the same gesture without the modifier. The new pane lands in that row's own slot, so a session splits the Sessions column and a worktree splits the Changes column.
+**Cmd-click a rail row (Ctrl-click on Windows and Linux) to open it beside what's already there** rather than in place of it. **Open to the side** in the row's menu is the same gesture without the modifier. The new pane lands in that row's own slot, so a session splits the Sessions column and a worktree splits the Changes column.
 
 **Shift-click opens a range.** This is how you watch several agents at once: shift-click from your last plain click through another session and the whole run opens side by side in the Sessions column, so you can read them in parallel and answer whichever needs you. The anchor is your last plain click and a shift-click doesn't move it, the way it works in Finder or VS Code. With no prior click in that group, the range starts from the row already on screen.
 
@@ -127,9 +127,9 @@ By default each column shows one thing at a time and you switch by picking a dif
 
 Turn on **Show tabs on the task page** in **Settings → General** to keep several sessions, worktrees, or resources open as tabs in the same column instead. **Open in new tab** on a rail row then adds to the strip rather than replacing what's there.
 
-A split is independent of this setting. Turning tabs off doesn't fold side-by-side panes back into one, and a Cmd-click still splits with tabs off — that's the whole point of the gesture.
+A split is independent of this setting. Turning tabs off doesn't fold side-by-side panes back into one, and a Cmd-click still splits with tabs off. That's the whole point of the gesture.
 
-**Closing a session's tab only closes the tab.** It doesn't archive the session or stop the agent — the session stays in the rail, and archiving is a separate action there. Those are two different intentions and Kepler keeps them separate.
+**Closing a session's tab only closes the tab.** It doesn't archive the session or stop the agent. The session stays in the rail, and archiving is a separate action there. Those are two different intentions and Kepler keeps them separate.
 
 ***
 
@@ -139,11 +139,11 @@ A split is independent of this setting. Turning tabs off doesn't fold side-by-si
 
 | Where it can run | When you'd use it |
 |---|---|
-| **Global** | *Runs in the task folder* — the Task's own folder rather than any checkout, for work that isn't about one repository. Always first in the menu |
-| A specific **worktree** or **folder** | The normal case — the agent works in that checkout |
+| **Global** | *Runs in the task folder*: the Task's own folder rather than any checkout, for work that isn't about one repository. Always first in the menu |
+| A specific **worktree** or **folder** | The normal case: the agent works in that checkout |
 | **In every worktree or folder** | Fan the same starting instruction across all of them at once, one session each |
 
-With a single place to run, the menu lists the agents directly instead of asking twice. If the Task has nowhere to run yet, Kepler says so: **Attach a worktree or folder to start a session in.** Attach one from the rail and the option appears. If no agents are connected you'll see **No agents available** — connect one in [Agent Integrations](/kepler/agent-integrations).
+With a single place to run, the menu lists the agents directly instead of asking twice. If the Task has nowhere to run yet, Kepler says so: **Attach a worktree or folder to start a session in.** Attach one from the rail and the option appears. If no agents are connected you'll see **No agents available**. Connect one in [Agent Integrations](/kepler/agent-integrations).
 
 To fire a preconfigured prompt instead of typing one, open the chevron beside the session composer's **Send** button and pick an Action. Anything you typed rides along as a refinement. See [Actions](/kepler/actions).
 
@@ -157,7 +157,7 @@ To fire a preconfigured prompt instead of typing one, open the chevron beside th
 
 | Resource | Details |
 |---|---|
-| **Worktree**, on disk | Its commits, its changed files, and the diff — the same review you'd get anywhere else in Kepler. See [Review Changes](/kepler/review-changes) |
+| **Worktree**, on disk | Its commits, its changed files, and the diff. The same review you'd get anywhere else in Kepler. See [Review Changes](/kepler/review-changes) |
 | **Worktree**, missing | A metadata card instead: **Current branch**, **Base branch**, and the **Recorded path**, flagged **not on disk** or **gone** when it's been removed outside Kepler |
 | **Folder** / **File** | Path, plus an editable name and description |
 | **Pull request** / **Issue** | Author, assignee, and status. *Full description lives in the provider — open the link above to view it.* |

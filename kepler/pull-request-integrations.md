@@ -102,11 +102,11 @@ Each entry carries two independent controls:
 | Control | What it changes | How far it reaches |
 |---|---|---|
 | **Read from this account** | Which account Kepler reads this provider's pull requests and issues from | Kepler only, and non-destructive |
-| **Set as primary** / **Primary** | The provider's primary account | Everywhere — other Kepler windows, the `gk` CLI, and GitKraken Desktop |
+| **Set as primary** / **Primary** | The provider's primary account | Everywhere: other Kepler windows, the `gk` CLI, and GitKraken Desktop |
 
 **Browsing a secondary account does not change your primary.** Selecting **Read from this account** on a second account switches what Kepler shows you and leaves the primary alone. The primary is the default read account, so a provider with no override reads through it.
 
-Switching either one clears that provider's saved filters — a repository from the old account need not exist on the new one — and re-fetches the list.
+Switching either one clears that provider's saved filters (a repository from the old account need not exist on the new one) and re-fetches the list.
 
 ***
 
@@ -132,7 +132,7 @@ The same rule runs the other way for Jira, Linear, and Trello, which have no pul
 
 Kepler matches a pull request to a worktree by **branch**, and it tries the worktree's **upstream branch** as well as its local one.
 
-That second pass matters when the two names differ. If your local branch is `fix-login` but it tracks `origin/justin/fix-login`, matching on the local name alone finds nothing — the pull request's head branch is the upstream name. Kepler runs a second pass against the short branch of the tracking ref and catches it.
+That second pass matters when the two names differ. If your local branch is `fix-login` but it tracks `origin/justin/fix-login`, matching on the local name alone finds nothing. The pull request's head branch is the upstream name. Kepler runs a second pass against the short branch of the tracking ref and catches it.
 
 Matching runs against open and closed pull requests together, so a merged pull request still shows on the branch it merged from.
 
@@ -145,9 +145,9 @@ Every link Kepler shows records **how** it was made, so you can tell a hard link
 | Recorded on the task | Confirmed | The link is authoritative. Kepler records one when you launch the task from the pull request, when an agent opens a pull request, when you attach one yourself, or through the branch auto-attach below |
 | The pull request's head branch matched the worktree's local branch | Confirmed | A direct branch match |
 | The head branch matched the worktree branch's **upstream** branch | Confirmed, and marked | Git-native rather than a guess, but the local name differs, so Kepler labels it **Matched from upstream branch** |
-| An identifier parsed out of the branch name | Inferred | A heuristic. Issues only — pull requests are never linked this way |
+| An identifier parsed out of the branch name | Inferred | A heuristic. Issues only: pull requests are never linked this way |
 
-A confirmed link carries no extra marking. Kepler underlines with a dotted line any link it wants you to look twice at, and its tooltip says why — **Matched from upstream branch**, or **Matched from branch name** for an inferred issue link.
+A confirmed link carries no extra marking. Kepler underlines with a dotted line any link it wants you to look twice at, and its tooltip says why: **Matched from upstream branch**, or **Matched from branch name** for an inferred issue link.
 
 When Kepler finds one pull request more than one way, the most authoritative wins: the task's own recorded link, then a local branch match, then an upstream branch match.
 
@@ -155,7 +155,7 @@ Kepler scopes branch matching to each item's own repository, so two repositories
 
 ### Auto-attaching a matched pull request
 
-A pull request you open outside Kepler — from a terminal `gh`, from GitKraken, from the web — used to stay a read-time match and never become a resource. Kepler now records it for you.
+A pull request you open outside Kepler (from a terminal `gh`, from GitKraken, from the web) used to stay a read-time match and never become a resource. Kepler now records it for you.
 
 Whenever fresh pull-request data arrives, Kepler looks over your active tasks that hold no pull request yet and attaches one whose head branch matches a worktree's branch. It then behaves like a pull request you attached yourself: it sits in the task's resources, and it reaches the agent as context. See [Tasks and Resources](/kepler/tasks-and-resources).
 

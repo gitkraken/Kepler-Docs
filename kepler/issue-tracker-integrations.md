@@ -77,18 +77,18 @@ A warning triangle on a row means that provider's sign-in has expired. Kepler tr
 
 ## More than one account of the same provider
 
-You can connect several accounts of the same provider — two GitHub accounts, a work Jira site and a personal one. When a provider has two or more, an **Accounts** list appears under its row with one entry per account.
+You can connect several accounts of the same provider: two GitHub accounts, a work Jira site and a personal one. When a provider has two or more, an **Accounts** list appears under its row with one entry per account.
 
 Each entry carries two independent controls:
 
 | Control | What it changes | How far it reaches |
 |---|---|---|
 | **Read from this account** | Which account Kepler reads this provider's issues and pull requests from | Kepler only, and non-destructive |
-| **Set as primary** / **Primary** | The provider's primary account | Everywhere — other Kepler windows, the `gk` CLI, and GitKraken Desktop |
+| **Set as primary** / **Primary** | The provider's primary account | Everywhere: other Kepler windows, the `gk` CLI, and GitKraken Desktop |
 
 **Browsing a secondary account does not change your primary.** Selecting **Read from this account** on a second account switches what Kepler shows you and leaves the primary alone. That's why **Read from this account** is a radio control rather than a button. The primary is the default read account, so a provider with no override reads through it.
 
-Switching either one clears that provider's saved filters — an organization or project from the old account need not exist on the new one — and re-fetches the list.
+Switching either one clears that provider's saved filters (an organization or project from the old account need not exist on the new one) and re-fetches the list.
 
 The read account also authenticates git. Starting work on an issue in a repository you have never cloned makes Kepler clone that repository, using the same connection it reads through. See [Pull Request Integrations](/kepler/pull-request-integrations) for which hosts this covers and what happens on the hosts it does not.
 
@@ -125,10 +125,10 @@ When an issue becomes a task, Kepler attaches what it read, so the agent starts 
 
 | Field | Notes |
 |---|---|
-| **Identifier** | The issue key or number — `GK-1234` for Jira, `DRE-2` for Linear, a number for GitHub, GitLab, and Azure DevOps |
+| **Identifier** | The issue key or number: `GK-1234` for Jira, `DRE-2` for Linear, a number for GitHub, GitLab, and Azure DevOps |
 | **Title** | |
 | **Description** | The issue body |
-| **Issue type** | The provider's own vocabulary — a Jira issue type, an Azure DevOps work item type |
+| **Issue type** | The provider's own vocabulary: a Jira issue type, an Azure DevOps work item type |
 | **Author** | When the provider reports one |
 | **Assignees** | |
 | **Labels** | The provider's own labels. Kepler distinguishes "this issue has no labels" from "this provider cannot report labels" |

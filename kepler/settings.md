@@ -61,7 +61,7 @@ Legacy links of the form `/settings#<section-id>` still work: Kepler resolves th
 | `/settings/voice` | `voice` |
 | `/settings/repositories` | `repositories`, `projects` |
 
-Each installed agent also gets its own anchor, `agent-<agent-id>` — for example `agent-claude-code`.
+Each installed agent also gets its own anchor, `agent-<agent-id>`, for example `agent-claude-code`.
 
 ***
 
@@ -112,7 +112,7 @@ The folder paths and per-repository commands both accept the same placeholders. 
 
 For example, `<REPOSITORY_PATH>/.worktrees/<REPOSITORY_NAME>` nests each worktree inside the repository it belongs to. Kepler collapses any `..` segments you write, and resolves `<REPOSITORY_PATH>` and `<REPOSITORY_NAME>` as soon as it knows which repository it is planning for. `<SOURCE_PATH>` and `<WORKTREE_PATH>` only carry a value once a source and a target exist, which is why they are most useful in commands rather than in the folder path itself.
 
-Commands run inside the new worktree folder using your default login shell, so you don't need to `cd` into it, and tools configured in your shell profile — `nvm`, for instance — are available.
+Commands run inside the new worktree folder using your default login shell, so you don't need to `cd` into it, and tools configured in your shell profile (`nvm`, for instance) are available.
 
 #### App behavior
 
@@ -129,7 +129,7 @@ These six settings control app behavior:
 
 Kepler reads **Restore windows on launch** during cold start, so a change takes effect on the next launch.
 
-**Prevent sleep while agent sessions are active** holds the machine awake through the platform's own mechanism — `caffeinate` on macOS, an execution-state assertion on Windows, `systemd-inhibit` on Linux. It does nothing where the platform offers none, so a machine that sleeps anyway is a degraded experience rather than a broken one. This setting applies to the computer the agents run on, which on a remote connection is the remote host, and it counts Claude Code sessions detected outside Kepler alongside Kepler's own. Kepler releases the machine as soon as the last such session settles.
+**Prevent sleep while agent sessions are active** holds the machine awake through the platform's own mechanism: `caffeinate` on macOS, an execution-state assertion on Windows, `systemd-inhibit` on Linux. It does nothing where the platform offers none, so a machine that sleeps anyway is a degraded experience rather than a broken one. This setting applies to the computer the agents run on, which on a remote connection is the remote host, and it counts Claude Code sessions detected outside Kepler alongside Kepler's own. Kepler releases the machine as soon as the last such session settles.
 
 #### Diagnostics
 
@@ -178,7 +178,7 @@ This section lists Kepler's shortcuts. They are a reference, not editable. Mac s
 | Find in conversation | ⌘ F | Ctrl + F |
 | Dismiss / Cancel | Escape | Escape |
 
-Kepler registers **Open quick launcher** with the OS, so it works while Kepler is in the background. **Quit** is a Windows and Linux shortcut only — macOS quits through the native **⌘ Q** menu role, and Kepler hides the row there.
+Kepler registers **Open quick launcher** with the OS, so it works while Kepler is in the background. **Quit** is a Windows and Linux shortcut only. macOS quits through the native **⌘ Q** menu role, and Kepler hides the row there.
 
 That table is the whole set. Kepler has no view-switching shortcuts, since only one interface exists, so **⌘ 1**, **⌘ 2**, and **⌘ 3** stay unbound. The sidebar toggles that once sat on **⌘ B** and **⌘ ⌥ B** are also gone, along with the surfaces they opened.
 
@@ -208,7 +208,7 @@ Controls the font Kepler's embedded terminals use:
 | **Font Size** | Terminal font size in pixels. Values outside 8–32 are clamped | 13 |
 | **Line Height** | Vertical spacing between lines, to one decimal place. Values outside 1–2 are clamped | 1.2 |
 
-The greyed text in the **Font Family** field — `Fira Code, JetBrains Mono, Menlo` — is an example of the format, not the value in effect. If you name a font Kepler cannot find on this machine, the field says so and keeps your text; the terminal falls through to the next name in your list.
+The greyed text in the **Font Family** field (`Fira Code, JetBrains Mono, Menlo`) is an example of the format, not the value in effect. If you name a font Kepler cannot find on this machine, the field says so and keeps your text; the terminal falls through to the next name in your list.
 
 #### Embedded terminals
 
@@ -264,7 +264,7 @@ Under **Configure**:
 
 | Setting | What it controls | Default |
 |---|---|---|
-| **Binary** | The binary Kepler spawns. **Auto** resolves it the way your shell does — the first match on your `PATH` — so it matches `which`. Pick a specific install, or **Custom path…**, to override. **Re-scan** searches again | Auto |
+| **Binary** | The binary Kepler spawns. **Auto** resolves it the way your shell does (the first match on your `PATH`), so it matches `which`. Pick a specific install, or **Custom path…**, to override. **Re-scan** searches again | Auto |
 | **Data directory** | Overrides the agent's default data and config directory | Empty, meaning the agent's own default |
 | **Accounts** | Runs multiple logins side by side, each with its own credentials and history but sharing your skills, agents, commands, and settings. Available for Claude Code, Codex, GitHub Copilot, and Auggie | One account |
 
@@ -276,7 +276,7 @@ Claude Code adds two settings once it is installed:
 
 | Setting | What it controls | Default |
 |---|---|---|
-| **Default mode for new sessions** | **Rich chat** is the full visual experience, with plans, model and effort controls, and richer input. **Terminal** runs Claude as a command-line session in an embedded terminal, the same as the Claude Code CLI. You can switch modes inside a session at any time | Rich chat |
+| **Default mode for new sessions** | **Rich chat** is the full visual experience, with plans, model, and effort controls, and richer input. **Terminal** runs Claude as a command-line session in an embedded terminal, the same as the Claude Code CLI. You can switch modes inside a session at any time | Rich chat |
 | **Detect Claude Code sessions started outside Kepler** | Adds hooks to `~/.claude/settings.json` so Kepler surfaces sessions you start in your own terminal | Off |
 
 In **Terminal** mode with detection off, Kepler warns you: Claude Code runs as a plain terminal command there, and detection is what lets Kepler track those sessions.
@@ -315,9 +315,9 @@ Two shipped capabilities that give agents extra Git tooling. Both are off until 
 | **AI Sync** | Tools to rebase or merge with automatic conflict resolution. Every operation is safe, and you can roll it back easily | Off |
 | **Compose** | Tools to reorganize messy changes into clean, atomic commits. Every operation is safe, and you can undo it easily | Off |
 
-Turning either one on confirms that **New agent sessions will pick up this change** — sessions already running keep the tools they started with, so start a new session to use them.
+Turning either one on confirms that **New agent sessions will pick up this change**. Sessions already running keep the tools they started with, so start a new session to use them.
 
-On a Free plan both rows still appear, with a padlock in place of the checkbox and the tooltip *"Not available on the Free plan. Upgrade to unlock."* Every other plan — Pro, Advanced, Teams, Business, Enterprise, and trials — can enable them.
+On a Free plan both rows still appear, with a padlock in place of the checkbox and the tooltip *"Not available on the Free plan. Upgrade to unlock."* Every other plan (Pro, Advanced, Teams, Business, Enterprise, and trials) can enable them.
 
 <!-- TODO(screenshot): Settings → Agents → Features with AI Sync and Compose, and the padlock state on a Free plan. -->
 
@@ -329,7 +329,7 @@ An **Action** is an editable named prompt you fire at a task, issue, or pull req
 
 | Section | What it holds |
 |---|---|
-| **Preferred actions** | One picker per kind of item — **Tasks**, **Issues**, **Pull requests I authored**, **Pull requests from others** — setting which Action the one-click half of the Action button runs. Any slot can be **None** |
+| **Preferred actions** | One picker per kind of item (**Tasks**, **Issues**, **Pull requests I authored**, **Pull requests from others**) setting which Action the one-click half of the Action button runs. Any slot can be **None** |
 | **Actions** | The shipped Actions under **Built in** and yours under **Custom**, each with **Edit**, **Restore default** where you have edited it, and **Delete** on a custom row. **New action** creates one; **Restore all defaults** discards every edit |
 
 Kepler ships four default Actions:
@@ -349,7 +349,7 @@ Two sections that sound alike and do opposite things. **Remote Environments** ru
 
 ### Remote Environments
 
-Runs your agents on another machine — a dev server, a cloud VM, or WSL on Windows — while you work from here. Kepler installs itself over SSH, so the host needs nothing pre-installed.
+Runs your agents on another machine (a dev server, a cloud VM, or WSL on Windows) while you work from here. Kepler installs itself over SSH, so the host needs nothing pre-installed.
 
 This section describes the feature and routes you to it. **Manage remote environments…** opens the connections panel, where you add, connect, and remove hosts. **⌘ ⇧ R** opens the same panel from anywhere. See [Remote environments](/kepler/remote-environments).
 
@@ -365,7 +365,7 @@ Starts a local server so you can open this Kepler window from another device on 
 | **Host** | The address the server binds to | 0.0.0.0 |
 | **URL Override** | Used in the QR code instead of the auto-detected address. Set it when you expose Kepler through a tunnel, for example `https://my-tunnel.ngrok.io` | Empty |
 
-Once the server is running, an **Access URL** block appears with a QR code you can scan with your phone camera, the URL as selectable text, and a copy button. The copy button is disabled on origins with no clipboard access — a plain-HTTP LAN address is one — in which case use the QR code or select the URL text.
+Once the server is running, an **Access URL** block appears with a QR code you can scan with your phone camera, the URL as selectable text, and a copy button. The copy button is disabled on origins with no clipboard access (a plain-HTTP LAN address is one), in which case use the QR code or select the URL text.
 
 The status row and **Start** control appear in the desktop app only. **Port**, **Host**, and **URL Override** are always editable, since Kepler reads them when the server next starts.
 
@@ -400,12 +400,12 @@ Each provider row carries five controls:
 | **Connect** | Starts the connection flow for a provider you have not connected |
 | **Connected** | Shown on a working connection |
 | **Reconnect** | Refreshes an expired token. A warning icon and the hint *"Sign-in has expired. Click Reconnect to refresh this provider's token."* mark the rows that need it |
-| **Disconnect** | Disconnects the provider from GitKraken everywhere — the `gk` CLI and GitKraken Desktop lose access too, along with any additional accounts for that provider. You can reconnect at any time |
+| **Disconnect** | Disconnects the provider from GitKraken everywhere: the `gk` CLI and GitKraken Desktop lose access too, along with any additional accounts for that provider. You can reconnect at any time |
 | **Refresh** | Re-checks every provider's connection status |
 
 Providers connect through your GitKraken account, so the section asks you to sign in before it shows anything to manage.
 
-When a provider has more than one account, an **Accounts** block lists them. **Set as primary** chooses which account Kepler acts as, and **Read from this account** chooses which one Kepler reads issues and pull requests from — they can be different accounts.
+When a provider has more than one account, an **Accounts** block lists them. **Set as primary** chooses which account Kepler acts as, and **Read from this account** chooses which one Kepler reads issues and pull requests from. They can be different accounts.
 
 For per-provider setup, see [Issue Tracker Integrations](/kepler/issue-tracker-integrations) and [Pull Request Integrations](/kepler/pull-request-integrations).
 
@@ -425,7 +425,7 @@ The panel is a sequence rather than a flat list: it shows one step at a time, an
 | **Voice input is ready** | The installed model, its size on disk, and when it was added |
 | **Dictation** | How the microphone behaves. Appears once a model is installed |
 
-The check requires you to start it explicitly, because it pulls roughly 80 MB to time your GPU. It runs once — later quality changes skip it.
+The check requires you to start it explicitly, because it pulls roughly 80 MB to time your GPU. It runs once. Later quality changes skip it.
 
 ### Transcription quality
 
@@ -463,7 +463,7 @@ Two sections: **Repositories** and **Projects**.
 
 ### Repositories
 
-Every repository Kepler tracks, each row showing its name — the display name where you have set one, otherwise the folder name — its path on disk, and how many commands it has: **No commands**, **1 command**, or a count:
+Every repository Kepler tracks, each row showing its name (the display name where you have set one, otherwise the folder name), its path on disk, and how many commands it has: **No commands**, **1 command**, or a count:
 
 | Control | What it does |
 |---|---|
@@ -500,7 +500,7 @@ In the commands editor, **Add command** appends a row with three fields:
 
 Kepler drops rows left completely empty on save, so an accidental **Add command** leaves no trace.
 
-Commands flagged to run on worktree creation execute sequentially, in list order, and stop on the first failing command — Kepler skips the rest and reports them as skipped. Each one runs in the new worktree's folder through your interactive login shell, with a ten-minute timeout.
+Commands flagged to run on worktree creation execute sequentially, in list order, and stop on the first failing command. Kepler skips the rest and reports them as skipped. Each one runs in the new worktree's folder through your interactive login shell, with a ten-minute timeout.
 
 A failed command does not undo the worktree. The worktree exists but may not be usable. To fix it:
 
@@ -514,7 +514,7 @@ From the task view, right-click a worktree row in the rail and use **Run command
 
 ### Projects
 
-A **Project** groups repositories so they act as a unit — a frontend and a backend you change together, for instance. **Projects** has two controls:
+A **Project** groups repositories so they act as a unit (a frontend and a backend you change together, for instance). **Projects** has two controls:
 
 | Control | What it does |
 |---|---|

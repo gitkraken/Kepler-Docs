@@ -1,6 +1,6 @@
 ---
 title: Create a Task
-description: Start a Task from an issue, a pull request, or nothing at all — with the repository, branch, and context already attached.
+description: Start a Task from an issue, a pull request, or nothing at all, with the repository, branch, and context already attached.
 product: Kepler
 feature: Tasks
 content_type: how-to
@@ -47,13 +47,13 @@ Defaults depend on what you're acting on:
 
 All of these are editable. See [Actions](/kepler/actions).
 
-Kepler names Tasks automatically from what you started them with. Rename one whenever the name stops fitting — **Rename task** in the **⋮** menu, whose field also has an **Auto-name** button that suggests a name from the Task's prompt and resources. See [Tasks and Resources](/kepler/tasks-and-resources).
+Kepler names Tasks automatically from what you started them with. Rename one whenever the name stops fitting: **Rename task** in the **⋮** menu, whose field also has an **Auto-name** button that suggests a name from the Task's prompt and resources. See [Tasks and Resources](/kepler/tasks-and-resources).
 
 ***
 
 ## From the Task Composer
 
-Click **New task**, or press **Shift+Alt+T** to open the quick launcher from anywhere — including when Kepler isn't the focused window.
+Click **New task**, or press **Shift+Alt+T** to open the quick launcher from anywhere, including when Kepler isn't the focused window.
 
 The Composer is one prompt box above a row of four buttons:
 
@@ -62,16 +62,16 @@ The Composer is one prompt box above a row of four buttons:
 | **Add repo** → **Repos** | A repository to work in |
 | **Add issue** → **Issues** | Issues from your connected trackers |
 | **Add PR** → **PRs** | Pull requests from your connected hosts |
-| **Add context** | Everything without a button of its own — folders, files, and links |
+| **Add context** | Everything without a button of its own: folders, files, and links |
 
-The first three read **Add …** while empty and switch to the plural with a count once they hold something. **Add context** always reads the same, because it isn't a category waiting to be filled. Picks accumulate — attach three repositories and two issues to the same Task if that's the shape of the work.
+The first three read **Add …** while empty and switch to the plural with a count once they hold something. **Add context** always reads the same, because it isn't a category waiting to be filled. Picks accumulate: attach three repositories and two issues to the same Task if that's the shape of the work.
 
 1. Write the prompt: *Describe a task or ask a question…*
 2. Attach what it needs, or nothing.
 3. Configure each repository (below), if you attached one.
 4. Start it.
 
-**The Composer remembers the repositories you last started a Task with** and stages them again the next time you open it. That way, you don't have to re-pick a repository you work in every day. Kepler remembers only the repositories — the branch and worktree settings reset to their defaults — and starting from an issue or a pull request never overwrites the remembered set. Kepler drops a repository that no longer exists rather than staging it.
+**The Composer remembers the repositories you last started a Task with** and stages them again the next time you open it. That way, you don't have to re-pick a repository you work in every day. Kepler remembers only the repositories (the branch and worktree settings reset to their defaults), and starting from an issue or a pull request never overwrites the remembered set. Kepler drops a repository that no longer exists rather than staging it.
 
 The primary button fires the Action that matches what you've attached, exactly as it would from a Todo row. A linked pull request resolves to **Address Feedback** or **Review**, depending on who wrote it; a linked issue resolves to **Plan**. With nothing attached, the button reads **Start** and starts the Task with your prompt as written.
 
@@ -83,22 +83,22 @@ If the Task can't start, you'll see **Failed to start the task**.
 
 Each attached repository gets a chip with two controls:
 
-- **Base branch** — the branch segment of the chip. Leave it alone and the Task gets a new branch forked from **the repository's remote default branch**, which is what the chip reads until you pick something: *New branch off origin's default branch, or the current branch if unavailable*. Open it to fork off a different branch instead, or to work directly on an existing one. A new branch takes its name from the Task name.
-- **Isolated worktree** — the worktree segment, a direct on/off toggle rather than a menu. On by default, giving the Task its own working copy. Turning it off means the Task shares your repository folder, and anything that switches that folder's branch switches the Task's branch too. See [Tasks and Resources](/kepler/tasks-and-resources).
+- **Base branch**: the branch segment of the chip. Leave it alone and the Task gets a new branch forked from **the repository's remote default branch**, which is what the chip reads until you pick something: *New branch off origin's default branch, or the current branch if unavailable*. Open it to fork off a different branch instead, or to work directly on an existing one. A new branch takes its name from the Task name.
+- **Isolated worktree**: the worktree segment, a direct on/off toggle rather than a menu. On by default, giving the Task its own working copy. Turning it off means the Task shares your repository folder, and anything that switches that folder's branch switches the Task's branch too. See [Tasks and Resources](/kepler/tasks-and-resources).
 
-Forking off the remote default is the point, not an implementation detail. The branch you happen to have checked out is rarely where new work belongs, but new work used to land there anyway. If no remote default resolves — no remote, a shallow clone, or no network connection — Kepler falls back to the current HEAD rather than failing the launch.
+Forking off the remote default is the point, not an implementation detail. The branch you happen to have checked out is rarely where new work belongs, but new work used to land there anyway. If no remote default resolves (no remote, a shallow clone, or no network connection), Kepler falls back to the current HEAD rather than failing the launch.
 
 A repository linked to a pull request always opens in its own isolated working copy, and the toggle is locked: *This repository is linked to a pull request and always opens in its own isolated working copy.*
 
 Kepler clones a repository you haven't cloned yet when the Task starts, into your **Default Repositories Folder**: *This repository is cloned when you start the task.* Its branch is locked until then — *its branches become available after cloning* — because Kepler doesn't yet know what branches it has, and the chip reads **default branch** in the meantime.
 
-Attaching the same repository twice gives the Task two independent worktrees on it — useful for comparing two approaches, and a mistake if you didn't mean it. Two chips that would resolve to the *same* worktree get a **Duplicate worktree** marker instead, and Kepler creates only one of them. If a chip works in place on a branch another chip has already claimed for an isolated worktree, Kepler marks it **Superseded by a worktree** and skips it — git can't check one branch out in two places.
+Attaching the same repository twice gives the Task two independent worktrees on it: useful for comparing two approaches, and a mistake if you didn't mean it. Two chips that would resolve to the *same* worktree get a **Duplicate worktree** marker instead, and Kepler creates only one of them. If a chip works in place on a branch another chip has already claimed for an isolated worktree, Kepler marks it **Superseded by a worktree** and skips it; git can't check one branch out in two places.
 
 ***
 
 ## From nothing at all
 
-Attach nothing. No repository, no branch, no issue. You get somewhere to think — ask a question, explore an idea — and you can attach the real work later, once it's worth tracking. See [The Task View](/kepler/task-view).
+Attach nothing. No repository, no branch, no issue. You get somewhere to think (ask a question, explore an idea) and you can attach the real work later, once it's worth tracking. See [The Task View](/kepler/task-view).
 
 ***
 
@@ -115,6 +115,6 @@ Both paths send the same Action prompt, but they attach different amounts of det
 | Started from | What the agent receives |
 |---|---|
 | **A row in Todo** | The full issue or pull request body, attached as shared context |
-| **The Task Composer** | A reference — identifier, title, and URL — which the agent fetches the detail from itself |
+| **The Task Composer** | A reference (identifier, title, and URL) which the agent fetches the detail from itself |
 
 ---

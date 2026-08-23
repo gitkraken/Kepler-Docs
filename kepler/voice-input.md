@@ -78,7 +78,7 @@ Hover the microphone, and its tooltip explains why:
 | *Voice input is not supported in this environment* | This build or browser cannot run it |
 | *Loading voice model…* / *Transcribing…* | Busy. The button is disabled for the moment |
 
-A microphone that is available but idle reads **Start voice input**; while recording, it reads **Stop and transcribe**. You can always stop — if the surrounding prompt goes read-only mid-recording, the transcript still lands in the draft.
+A microphone that is available but idle reads **Start voice input**; while recording, it reads **Stop and transcribe**. You can always stop. If the surrounding prompt goes read-only mid-recording, the transcript still lands in the draft.
 
 ***
 
