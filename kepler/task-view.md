@@ -45,7 +45,7 @@ The task header has 3 key elements:
 
 - **← Dashboard** (the back button, labelled that in the app) returns you to the list exactly as you left it: same segment, grouping, filters, and selection.
 - **The task switcher** jumps to another Task without going back first. It searches as you type, and each row carries the same session status dots a row does.
-- **⋮ Task actions** holds **Rename task**, **Archive task**, and **Delete task**. Archiving is currently one-way: there's no **Restore task** action yet for bringing an archived Task back.
+- **⋮ Task actions** holds **Rename task**, **Archive task**, and **Delete task**. On an already-archived Task, **Restore task** replaces **Archive task** and puts the Task straight back with no confirmation.
 
 **Rename task** opens a dialog with the name in an editable field. The field carries an **Auto-name** button — *Suggest a name from the task's prompt and resources* — which fills the field with a suggestion for you to accept or edit. It never renames on its own; the dialog's **Rename** button is what applies it.
 

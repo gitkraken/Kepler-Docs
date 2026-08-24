@@ -143,7 +143,7 @@ Each segment remembers its own search, grouping, and filters, since they differ 
 
 ***
 
-## Archive and clean up in bulk
+## Archive, restore, and clean up in bulk
 
 **Archive task** files a task away. It leaves the live buckets for **Archived**, its rows and sessions survive, and Kepler stops only the agents whose checkout is about to disappear.
 
@@ -156,13 +156,14 @@ Each segment remembers its own search, grouping, and filters, since they differ 
 
 The confirmation offers the same two cascades the delete does: **Also delete worktrees** and **Also delete branches**. This way, finishing with a task doesn't have to mean deleting it to clean it off the disk. Archiving outranks everything else, so a task you filed away can't climb back into a live section because a shell is still open on it.
 
-**Archiving is currently one-way.** There's no **Restore task** action yet, so once a task is archived, it stays in **Archived** rather than moving back to a live section.
+**Restoring a task takes an extra step: filter first.** An archived task's row doesn't offer **Restore task** while it's mixed in with everything else. Filter **Activity** to **Archived** (see [Filter](#filter) above), and the **⋮** menu on a row in that filtered list swaps **Archive task** for **Restore task**, which puts it straight back.
 
 For more than one at a time, every section header on **Tasks in progress** carries a quiet **Select**. Press it, and that corner of the header becomes a bar: a select-all box, **{count} selected**, and the batch verbs. The section's rows also grow checkboxes. One section selects at a time, and while you're selecting, a click ticks a row rather than opening its panel.
 
 | Button | What it does |
 |---|---|
 | **Archive** | Archives every selected task that isn't already archived |
+| **Restore** | Takes Archive's place when everything selected is already archived. Only appears once you've filtered the list to **Activity: Archived** |
 | **Delete** | Removes the selected tasks for good |
 | **Cancel** | Leaves selection mode and drops the set |
 
