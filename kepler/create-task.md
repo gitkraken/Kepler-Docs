@@ -1,6 +1,6 @@
 ---
 title: Create a Task
-description: Learn how to create Tasks in Kepler from scratch, from issues, or from pull requests, and how to manage them through completion.
+description: Start a Task from an issue, a pull request, or nothing at all, with the repository, branch, and context already attached.
 product: Kepler
 feature: Tasks
 content_type: how-to
@@ -11,280 +11,156 @@ git_hosts: [github, github-enterprise, gitlab, gitlab-self-hosted, bitbucket, az
 integrations: [github, github-enterprise, gitlab, gitlab-self-hosted, bitbucket, azure-devops, jira, linear, trello]
 hosted_variant: both
 status: GA
-last_verified: 2026-06
+last_verified: 2026-08
 llms_include: true
-tags: [tasks, create-task, worktrees, issues, pull-requests, kanban, shared-context]
+tags: [tasks, create-task, composer, worktrees, issues, pull-requests, actions]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: June 2026</kbd>
+<kbd>Last updated: August 2026</kbd>
 
-## What is a Task?
+Kepler gives you two ways to start work, and the first is usually better: pick something that's already waiting for you.
 
-A **Task** is the core unit of work in Kepler, GitKraken's Agentic Development Environment (ADE). A Task holds work across one or more repos.
-
-Every Task contains:
-
-- One or more **worktrees** — one Git worktree per repo
-- One or more **agent sessions** — running coding agents within the Task
-- A diff and changes view
-- **Shared context** — standing instructions sent to every agent session in the Task
-
-
-<figure>
-  <img src="/wp-content/uploads/task-view.png" class="help-center-img img-bordered" alt="A Kepler Task named 'Set all pages to May 2026' showing 5 worktrees across multiple repos on the left, 3 agent sessions with NEW CONTEXT badges on the right, and a Shared context section with a prompt card at the bottom">
-  <figcaption style="text-align:center; color:#888">A Task with 5 worktrees, 3 agent sessions, and a shared context prompt sent to every session.</figcaption>
-</figure>
-
-***
-
-## Three ways to create a Task
-
-Kepler gives you three starting points depending on where your work lives:
-
-| Starting point | When to use |
+| Start from | How |
 |---|---|
-| [From scratch](#creating-a-task-from-scratch) | You know the goal and don't need to pull context from an existing issue or PR. |
-| [From an issue](#creating-a-task-from-an-issue) | You want Kepler to pull issue title, description, and metadata into the agent's context automatically. |
-| [From a pull request](#creating-a-task-from-a-pull-request) | You want an agent to start a review or address open review comments on an existing PR. |
+| **Work assigned to you** | Fire an Action on an issue or pull request in the **Todo** segment of [the Kepler interface](/kepler/kepler-interface). One click, context attached |
+| **Something you're describing yourself** | **New task** opens the Task Composer, where you write the prompt and attach what it needs |
 
 ***
 
-## Create a Task from scratch
-
-Start here when you have a clear goal and no existing issue or PR to pull context from.
+## From an issue or pull request
 
 <figure>
-  <img src="/wp-content/uploads/new-task-button.png" class="help-center-img img-bordered" alt="The + New task button in the Kepler top navigation bar, highlighted with a teal border">
-  <figcaption style="text-align:center; color:#888">Click <strong>+ New task</strong> in the top-right corner to open the Task Launcher.</figcaption>
+  <a href="/wp-content/uploads/action-button-todo-row-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/action-button-todo-row-aug-2026.png" class="help-center-img img-bordered" alt="The Action split button on a Todo row, reading Plan">
+  </a>
+  <figcaption style="text-align:center; color:#888">The Action button on a Todo row.</figcaption>
 </figure>
 
-1. Click **+ New task**.
-2. Select one or more repos.
-3. Choose **New worktree** or select an existing branch.
-4. Set the base branch using the **From** dropdown. The dropdown is searchable; `origin/main` is labeled **DEFAULT**.
-5. Optionally click **+ Add repo** to include additional repos in the same Task. Each repo gets its own worktree and base branch configuration.
-6. Set **Agent**, **Mode**, **Model**, and **Effort** in the bottom bar.
-7. Click **Launch task**.
+This is the shortest path, and the reason Kepler opens on your work. Find the item in **Todo** and click its **Action** button. Kepler then:
 
-<figure>
-  <img src="/wp-content/uploads/start-task-modal.png" class="help-center-img img-bordered" alt="The Start a task dialog in Kepler showing the Repositories section with an Add repo button, Task Name field, Prompt field, and Agent, Model, Mode, and Effort dropdowns at the bottom">
-  <figcaption style="text-align:center; color:#888">The Task Launcher: add a repo, name the task, add a prompt, configure agent settings, and click <strong>Launch task</strong>.</figcaption>
-</figure>
+1. Creates the Task.
+2. Attaches the repository and the item.
+3. Sets up a worktree.
+4. Starts an agent with the context in place.
 
-<figure>
-  <img src="/wp-content/uploads/set-agent.png" class="help-center-img img-bordered" alt="The Task Launcher bottom bar showing the Agent dropdown open with Claude Code, Codex, and OpenCode as options, alongside Mode, Model, and Effort dropdowns">
-  <figcaption style="text-align:center; color:#888">Select an agent from the bottom bar. Mode, Model, and Effort options update based on the selected agent.</figcaption>
-</figure>
+Defaults depend on what you're acting on:
 
-### Settings reference
+- **Plan** for an issue.
+- **Address Feedback** for a pull request you authored.
+- **Review** for someone else's pull request.
 
-| Setting | What it controls | Default | Options |
-|---|---|---|---|
-| **Repo(s)** | Which repos are included in the Task | — | Any connected repo |
-| **Worktree** | Whether to create a new Git worktree or use an existing branch | New worktree | New worktree, existing branch |
-| **Base branch** | The branch the worktree is created from | `origin/main` | Any branch (searchable) |
-| **Agent** | Which coding agent runs sessions in the Task | — | Configured agents |
-| **Mode** | Agent operating mode | — | Depends on agent |
-| **Model** | The underlying language model the agent uses | — | Available models |
-| **Effort** | How much work the agent does before pausing for review | — | Low, Medium, High |
+All of these are editable. See [Actions](/kepler/actions).
+
+Kepler names Tasks automatically from what you started them with. Rename one whenever the name stops fitting: **Rename task** in the **⋮** menu, whose field also has an **Auto-name** button that suggests a name from the Task's prompt and resources. See [Tasks and Resources](/kepler/tasks-and-resources).
+
+<div class="note" markdown="1">
+
+**Nothing in Todo?** Set up your [issue tracker](/kepler/issue-tracker-integrations) and [pull request](/kepler/pull-request-integrations) integrations in **Settings** first. Kepler can only populate Todo with work from connected accounts.
+
+</div>
 
 ***
 
-## Create a Task from an issue
+## From the Task Composer
 
-Use this path to have Kepler pass issue context (title, description, and metadata) to the agent automatically.
-
-Click **+ New task**, then select the **Start from issues** tab.
+Click **New task**, or press **Shift+Alt+T** to open the quick launcher from anywhere, including when Kepler isn't the focused window.
 
 <figure>
-  <img src="/wp-content/uploads/start-from-issues-selection.png" class="help-center-img img-bordered" alt="The Task Launcher showing three tabs — Start a task, Start from issues (highlighted with a teal border, showing 22 issues), and Start from pull requests — with an issue list and filter bar below">
-  <figcaption style="text-align:center; color:#888">Click <strong>Start from issues</strong> to browse or search your connected issue trackers.</figcaption>
+  <a href="/wp-content/uploads/new-task-button-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-task-button-aug-2026.png" class="help-center-img img-bordered" alt="The New task button in the Kepler top navigation bar">
+  </a>
+  <figcaption style="text-align:center; color:#888">The New task button, available from anywhere in Kepler.</figcaption>
 </figure>
 
-### Launching Tasks from issues
-
-1. Select one or more issues.
-2. If you selected multiple issues, choose how to group them:
-   - **Split into N tasks** — creates one Task per issue. Use this when each issue represents independent work.
-   - **Group as 1 task** — places all issues under a single Task. Use this when the issues are related and you want one agent to work across them.
-3. In the Task preview row, confirm or change the **repo**, **worktree type**, and **base branch** for each Task.
-4. Click **+ Add repo** on any Task row to span that Task across multiple repos.
-5. Set **Agent**, **Mode**, **Model**, and **Effort** in the bottom bar. These settings apply to all Tasks being launched.
-6. Review the summary (e.g., "3 issues → 3 tasks"), then click **Launch task**.
-
-Kepler creates one Task per selected issue and passes the issue title, description, and metadata to the agent when the session starts.
+The Composer is one prompt box above a row of four buttons:
 
 <figure>
-  <img src="/wp-content/uploads/start-task-from-issue.png" class="help-center-img img-bordered" alt="The Start from issues tab showing a filtered issue list with one issue selected, a Task preview row with repo, worktree type, and base branch selectors, and the bottom bar showing 1 issue → 1 task and the Launch task button">
-  <figcaption style="text-align:center; color:#888">Selecting an issue to launch as a Task. The preview row lets you set the repo, worktree type, and base branch before launching.</figcaption>
+  <a href="/wp-content/uploads/new-task-composer-add-buttons-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-task-composer-add-buttons-aug-2026.png" class="help-center-img img-bordered" alt="The Composer's four buttons: Add repo, Add issue, Add PR, and Add context">
+  </a>
+  <figcaption style="text-align:center; color:#888">The Composer's four attach buttons.</figcaption>
 </figure>
 
-When multiple issues are selected, the **Split into N tasks** and **Group as 1 task** buttons appear above the Task preview rows. Use the bottom bar to configure the agent, model, mode, and effort for all Tasks at once before launching.
-
-<figure>
-  <img src="/wp-content/uploads/set-modes-create-from-issues.png" class="help-center-img img-bordered" alt="Three issues selected in the Start from issues tab, showing Split into 3 tasks and Group as 1 task buttons highlighted, the Mode dropdown open with Auto, Default, Accept Edits, Plan Mode, and Don't Ask options, and the bottom bar showing Claude Code as the agent and 3 issues → 3 tasks with a Launch 3 tasks button">
-  <figcaption style="text-align:center; color:#888">With multiple issues selected, choose to split or group them, then configure the agent, mode, model, and effort before launching.</figcaption>
-</figure>
-
-### Supported issue trackers
-
-Kepler can pull issues from the following trackers:
-
-- GitHub Issues
-- GitHub Enterprise
-- GitLab
-- GitLab Self-Hosted
-- Jira
-- Linear
-- Trello
-- Azure DevOps
-
-For integration setup, see [Issue Tracker Integrations](issue-tracker-integrations.md).
-
-### Finding an issue
-
-Type in the search bar to filter issues by title, or **paste an issue URL directly** to jump straight to a specific issue.
-
-<figure>
-  <img src="/wp-content/uploads/select-issues-or-enter-URL.png" class="help-center-img img-bordered" alt="The Start from issues tab showing the search bar highlighted with a teal dashed border and labeled 'Search issues or paste a URL…', with a filter bar below and a list of issues with checkboxes, several already checked">
-  <figcaption style="text-align:center; color:#888">Search by title or paste an issue URL to find a specific issue. Check multiple issues to launch them as separate Tasks at once.</figcaption>
-</figure>
-
-Use the filter bar to narrow results further:
-
-- **Assigned to me / All visible** toggle
-- **Provider** — filter by issue tracker
-- **Repo** — filter by repository
-- **Show tasked** — shows issues that already have an active Task (hidden by default)
-
-***
-
-## Create a Task from a pull request
-
-Use this when starting a PR review or having an agent address open review comments.
-
-
-### Launching Tasks from a single PR
-
-1. Click **+ New task**.
-
-<figure>
-  <img src="/wp-content/uploads/new-task.png" class="help-center-img img-bordered" alt="The + New task button in the Kepler top navigation bar, highlighted with a teal border">
-  <figcaption style="text-align:center; color:#888">Click <strong>+ New task</strong> to open the Task Launcher.</figcaption>
-</figure>
-
-2. Click **Start from pull requests** and select a PR from your connected providers, or paste a URL directly.
-
-<figure>
-  <img src="/wp-content/uploads/select-pr-task.png" class="help-center-img img-bordered" alt="The Start from pull requests tab showing a search bar and a list of open pull requests from connected providers">
-  <figcaption style="text-align:center; color:#888">Select a PR from your connected providers or paste a URL into the search bar.</figcaption>
-</figure>
-
-3. Before you launch, pick a mode:
-   - **Review** — the agent analyzes the changes and suggests improvements.
-   - **Address feedback** — the agent reads the review comments and applies the ones that make sense.
-
-<figure>
-  <img src="/wp-content/uploads/review-or-address-pr-feedback.png" class="help-center-img img-bordered" alt="The agent mode dropdown on a PR Task row showing Review (Analyze the changes and suggest improvements) and Address feedback (Triage the feedback and apply what is warranted) options">
-  <figcaption style="text-align:center; color:#888">Pick <strong>Review</strong> for a second set of eyes, or <strong>Address feedback</strong> to have the agent handle waiting comments.</figcaption>
-</figure>
-
-4. In the Task preview, confirm the repo and the worktree branch Kepler will create (e.g., "Worktree will be created on `new-example-page`").
-5. Set **Agent**, **Model**, and **Effort** in the bottom bar.
-6. Click **Launch task**.
-
-### Launching Tasks from multiple PRs
-
-1. Click **+ New task**, then click **Start from pull requests**.
-2. Select two or more PRs. Two options appear:
-   - **Split into N tasks** — creates one Task per PR. Use this when each PR represents independent work.
-   - **Group as 1 task** — places all PRs under a single Task. Use this when the PRs are related and you want a single agent to work across them.
-3. Choose your grouping option.
-4. Pick a **mode** (Review or Address feedback) for each Task row.
-5. Confirm the per-task repo selector in each Task preview row.
-6. Set **Agent**, **Model**, and **Effort** in the bottom bar. The summary shows "N PRs → N tasks."
-7. Click **Launch task**.
-
-<figure>
-  <img src="/wp-content/uploads/start-task-from-PR.png" class="help-center-img img-bordered" alt="The Start from pull requests tab with two PRs selected, showing Split into 2 tasks and Group as 1 task options, two Task preview rows each showing the repo and the worktree branch Kepler will create, and the bottom bar showing 2 PRs → 2 tasks and the Launch 2 tasks button">
-  <figcaption style="text-align:center; color:#888">Two PRs selected: use <strong>Split into 2 tasks</strong> or <strong>Group as 1 task</strong> before launching.</figcaption>
-</figure>
-
-### Supported PR providers
-
-GitHub, GitHub Enterprise, GitLab, GitLab Self-Managed, Bitbucket, Azure DevOps.
-
-For integration setup, see [Pull Request Integrations](pull-request-integrations.md).
-
-### Finding a pull request
-
-Use the search bar to find PRs by title or by pasting a URL. Use the filter bar to narrow results by **provider**, **repo**, or **Hide tasked**.
-
-***
-
-## Task detail: worktrees, sessions, and shared context
-
-Once a Task is open, the Task header shows the Task name and the total worktree count (e.g., "5 worktrees").
-
-### Worktrees
-
-The **Worktrees** section lists every Git worktree in the Task with its branch name and repo.
-
-### Sessions
-
-The **Sessions** panel lists all agent sessions in the Task. Each entry shows the branch, repo, and a **NEW CONTEXT** badge when there is unread context.
-
-### Shared context
-
-**Shared context** is content you add to a Task that every agent session receives. Use it for standing instructions, style rules, or reference material that all agents should follow.
-
-**Example:** "If a `.md` file has a date stamp, change the date stamp to June 2026." Adding this to shared context means every agent session in the Task follows the rule without you repeating it per session.
-
-To manage shared context:
-
-- Each piece of shared context appears as a **prompt card** showing the prompt text and version number (e.g., "v2").
-- Click **Edit** on a card to update it or **Remove** to delete it.
-- Click **+ Add markdown** to add a new context block.
-
-<figure>
-  <img src="/wp-content/uploads/task-view.png" class="help-center-img img-bordered" alt="A Kepler Task named 'Set all pages to May 2026' showing 5 worktrees across multiple repos on the left, 3 agent sessions with NEW CONTEXT badges on the right, and a Shared context section with a prompt card at the bottom">
-  <figcaption style="text-align:center; color:#888">A Task with 5 worktrees, 3 agent sessions, and a shared context prompt sent to every session.</figcaption>
-</figure>
-
-***
-
-## Manage Tasks
-
-### Session status vs. Task stage
-
-**Task stage** is the Kanban column the Task occupies. It progresses through Exploration, In Development, In Review, and Done. Kepler advances the stage automatically based on agent activity — you cannot move it manually. **Session status** is the real-time state of an individual agent session.
-
-| Status | Meaning |
+| Control | What it attaches |
 |---|---|
-| 🟠 **Needs Attention** | The agent is waiting for your input. |
-| 🟢 **Active** | The agent is running. |
-| ⚫ **Idle** | The session stopped but is not complete. |
-| 🔴 **Errored** | The session hit an error. |
-| ⚫ **Inactive** | The session is not running and has no pending work. |
-| **Disconnected** | The session lost connection to the agent runtime. |
+| **Add repo** → **Repos** | A repository to work in |
+| **Add issue** → **Issues** | Issues from your connected trackers |
+| **Add PR** → **PRs** | Pull requests from your connected hosts |
+| **Add context** | Everything without a button of its own: folders, files, and links |
 
-### Notifications
+Add as much or as little context as you wish. 
 
-Kepler sends a toast notification when a Task completes or needs attention. The notification shows the Task name, the agent that ran it, and the repo and branch. Click **View** to jump directly to the Task.
+1. Write the prompt: *Describe a task or ask a question…*
+2. Attach what it needs, or nothing (which is fine!)
+3. Configure each repository (below), if you attached one.
+4. Start it.
 
+**The Composer remembers the repositories you last started a Task with** and stages them again the next time you open it. That way, you don't have to re-pick a repository you work in every day. Kepler remembers only the repositories (the branch and worktree settings reset to their defaults), and starting from an issue or a pull request never overwrites the remembered set. Kepler drops a repository that no longer exists rather than staging it.
 
-### Archiving a Task
+The primary button fires the Action that matches what you've attached, exactly as it would from a Todo row. A linked pull request resolves to **Address Feedback** or **Review**, depending on who wrote it; a linked issue resolves to **Plan**. With nothing attached, the button reads **Start** and starts the Task with your prompt as written.
 
-Click the **archive icon** on the Task card to archive it. Archived Tasks are removed from the active board.
+The chevron beside the primary button opens the rest: **Prepare**, which creates the session without starting work yet, and every Action that applies to what you've attached. Firing an Action sends that Action's prompt, with anything you typed appended as a refinement.
 
-### Delete a Task
+If the Task can't start, you'll see **Failed to start the task**.
 
-Click the **trash icon** on the Task row to delete it. A **Delete** confirmation tooltip appears before the action completes.
+### Configuring a repository
+
+Each attached repository gets a chip with two controls:
 
 <figure>
-  <img src="/wp-content/uploads/delete-task.png" class="help-center-img img-bordered" alt="A Task row in the Kepler task list with the trash icon highlighted in teal and a Delete tooltip visible">
-  <figcaption style="text-align:center; color:#888">Click the trash icon on a Task row to delete it.</figcaption>
+  <a href="/wp-content/uploads/isolated-worktree-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/isolated-worktree-aug-2026.png" class="help-center-img img-bordered" alt="A repository chip with its base branch and Isolated worktree controls">
+  </a>
+  <figcaption style="text-align:center; color:#888">A repository chip, with its base branch and Isolated worktree controls.</figcaption>
 </figure>
+
+- **Base branch**: the branch segment of the chip. By default, the Task gets a new branch forked from **the repository's remote default branch**, which is what the chip reads until you pick something: *New branch off origin's default branch, or the current branch if unavailable*. Open it to fork off a different branch instead, or to work directly on an existing one. A new branch takes its name from the Task name.
+- **Isolated worktree**: the worktree segment, a direct on/off toggle rather than a menu. On by default, giving the Task its own working copy. Turning it off means the Task shares your repository folder, and anything that switches that folder's branch switches the Task's branch too. See [Tasks and Resources](/kepler/tasks-and-resources).
+
+Kepler intentionally forks from the remote by default. If no remote default resolves (no remote, a shallow clone, or no network connection), Kepler falls back to the current HEAD rather than failing the launch.
+
+A repository linked to a pull request always opens in its own isolated working copy, and the toggle is locked: *This repository is linked to a pull request and always opens in its own isolated working copy.*
+
+Kepler clones a repository you haven't cloned yet when the Task starts, into your **Default Repositories Folder**: *This repository is cloned when you start the task.* Its branch is locked until then — *its branches become available after cloning* — because Kepler doesn't yet know what branches it has, and the chip reads **default branch** in the meantime.
+
+Attaching the same repository twice gives the Task two independent worktrees on it: useful for comparing two approaches, or a mistake if you didn't mean it. Two chips that would resolve to the *same* worktree get a **Duplicate worktree** marker instead, and Kepler creates only one of them. If a chip works in place on a branch another chip has already claimed for an isolated worktree, Kepler marks it **Superseded by a worktree** and skips it; git can't check one branch out in two places.
+
+***
+
+## From nothing at all
+
+Attach nothing. No repository, no branch, no issue. You get somewhere to think (ask a question, explore an idea) and you can attach the real work later, once it's worth tracking. See [The Task View](/kepler/task-view).
+
+<figure>
+  <a href="/wp-content/uploads/new-task-composer-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-task-composer-aug-2026.png" class="help-center-img img-bordered" alt="The Task Composer with a prompt typed in and Add repo, Add issue, Add PR, and Add context buttons, nothing attached yet">
+  </a>
+  <figcaption style="text-align:center; color:#888">The Task Composer, ready to attach a repo, issue, pull request, or other context.</figcaption>
+</figure>
+
+***
+
+## After the Task starts
+
+The Task appears in **Tasks in progress**. Click it for the side panel, or double-click to open [the task view](/kepler/task-view).
+
+<figure>
+  <a href="/wp-content/uploads/full-task-view-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/full-task-view-aug-2026.png" class="help-center-img img-bordered" alt="The task view with the rail on the left, listing Sessions, Changes, Folders, Pull requests, Links, and Notes, and a session open on the right with tool-call approval prompts">
+  </a>
+  <figcaption style="text-align:center; color:#888">The task view: the rail on the left, a session open on the right.</figcaption>
+</figure>
+
+From there you can add more sessions, attach more resources, and review what the agent changed. See [Agent Sessions](/kepler/agent-sessions) and [Review Changes](/kepler/review-changes).
+
+### Context: what gets handed to the agent
+
+Both paths send the same Action prompt, but they attach different amounts of detail:
+
+| Started from | What the agent receives |
+|---|---|
+| **A row in Todo** | The full issue or pull request body, attached as shared context |
+| **The Task Composer** | A reference (identifier, title, and URL) which the agent fetches the detail from itself |
 
 ---

@@ -1,6 +1,6 @@
 ---
 title: Getting Started with Kepler
-description: Install Kepler, connect your first agent, and create your first Task.
+description: Install Kepler, connect an agent and your trackers, and put an agent on real work in a few minutes.
 product: Kepler
 feature: Getting Started
 content_type: how-to
@@ -8,140 +8,143 @@ audience: developer
 plan_required: all
 os_support: [Windows, macOS, Linux]
 git_hosts: [generic]
-integrations: [claude-code, codex-cli, copilot-cli, cursor, opencode]
+integrations: [claude-code, codex, copilot, cursor, auggie, opencode]
 hosted_variant: both
 status: GA
-last_verified: 2026-06
+last_verified: 2026-08
 llms_include: true
-tags: [getting-started, install, setup, tasks, agents, first-task]
+tags: [getting-started, install, setup, dashboard, actions, first-task]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: June 2026</kbd>
+<kbd>Last updated: August 2026</kbd>
 
-This page walks you through installing Kepler, completing setup, and creating your first Task.
+Kepler is GitKraken's **Agentic Development Environment (ADE)**: a place to direct coding agents across your real work, in as many repositories as you need, at the same time.
 
-## What is Kepler?
-Kepler is GitKraken's **Agentic Development Environment** (**ADE**), built for developers directing multiple AI coding agents across multiple repos in parallel.
+You bring the agent. Kepler pulls in the issues and pull requests already assigned to you, hands any of them to an agent with the context attached, and takes the result through to a reviewed, mergeable change.
 
+Kepler is in **public preview**. A free GitKraken account is all you need.
 
 <figure>
-  <img src="/wp-content/uploads/kepler-full-screen.png" class="help-center-img img-bordered" alt="Kepler showing the task list on the left, a diff view in the center, and an agent chat panel on the right">
-  <figcaption style="text-align:center; color:#888">Kepler with a Task open. The task list is on the left, the agent chat is in the center, and agent changes on the right.</figcaption>
+  <a href="/wp-content/uploads/kepler-getting-started-Aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/kepler-getting-started-Aug-2026.png" class="help-center-img img-bordered" alt="Kepler's Todo list with an Action dropdown open on one row, offering Plan, Implement, and a custom action">
+  </a>
+  <figcaption style="text-align:center; color:#888">The Todo list with the Action dropdown open on a row. Pick a built-in Action or one of your own to start an agent.</figcaption>
 </figure>
-
-
 
 ***
 
 ## Install Kepler
 
-Kepler is available for **Windows**, **Mac**, and **Linux**.
-
 | Platform | Installer | Minimum OS |
 |---|---|---|
 | Windows | 64-bit, ARM64 | Windows 10+ |
 | macOS | Apple Silicon, Intel | macOS 12+ |
-| Linux (x64) | .deb, .rpm, .AppImage | Ubuntu LTS 18.04+ / Debian 10+ / RHEL 8+ / Fedora 39+ |
+| Linux (x64) | .deb, .rpm, .AppImage, Flatpak, AUR | Ubuntu LTS 18.04+ / Debian 10+ / RHEL 8+ / Fedora 39+ |
 | Linux (ARM) | .deb, .rpm, .AppImage | Ubuntu LTS 20.04+ / RHEL 8+ / Fedora 39+ |
 
-1. Go to [gitkraken.com/kepler/download](https://www.gitkraken.com/kepler/download) and download the installer for your platform and architecture.
-2. Run the installer and follow the on-screen prompts.
+1. Go to [gitkraken.com/kepler/download](https://www.gitkraken.com/kepler/download) and pick the installer for your platform.
+2. Run it.
 3. Launch Kepler.
 
-On first open, Kepler displays the **Home** view. No repos or agents are configured yet. The next two sections cover the minimum setup required before creating your first Task.
+***
+
+## Sign in
+
+Kepler opens on a welcome screen. Click **Sign in with GitKraken**. If you do not have an account, you'll create one in the next step.
 
 <figure>
-  <img src="/wp-content/uploads/blank-kepler.png" class="help-center-img img-bordered" alt="Kepler List view on first launch showing an empty task list in the sidebar and a 'No task selected' state in the center panel with a Launch a task button">
-  <figcaption style="text-align:center; color:#888">Kepler on first launch. No tasks exist yet — click <strong>Launch a task</strong> or <strong>+ New task</strong> to create your first one.</figcaption>
+  <a href="/wp-content/uploads/sign-in-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/sign-in-aug-2026.png" class="help-center-img img-bordered" alt="Kepler's welcome screen with the Sign in with GitKraken button">
+  </a>
+  <figcaption style="text-align:center; color:#888">The welcome screen on first launch.</figcaption>
+</figure>
+
+A **Kepler Quick Start Tour** video appears on that screen if you'd rather watch first, or watch the <a href="https://www.youtube.com/playlist?list=PLXIji1KJqw9A" target="_blank" rel="noopener noreferrer">Kepler Quick Start Tour playlist</a> on YouTube.
+
+***
+
+## Finish the setup checklist
+
+The **Setup** entry in the toolbar tracks 5 things, and shows **Setup · N/5** until they're done. Open it for **Finish setting up Kepler** and a progress readout.
+
+| # | Item | What it does |
+|---|---|---|
+| 1 | **Sign in to GitKraken** | Done when you signed in above |
+| 2 | **Connect an AI agent** | At least one coding agent. See [Agent Integrations](/kepler/agent-integrations) |
+| 3 | **Connect issue & PR trackers** | Any provider. This is what fills your Todo list. See [Issue Tracker Integrations](/kepler/issue-tracker-integrations) and [Pull Request Integrations](/kepler/pull-request-integrations) |
+| 4 | **Set a default repositories folder** | Where Kepler clones repositories it does not find locally |
+| 5 | **Set a default worktree folder** | Where Kepler creates one worktree per repository, per Task |
+
+Expand **More setup options** for 3 optional items:
+
+- **Connect a remote environment**, covered in [Remote Environments](/kepler/remote-environments)
+- **Control Kepler remotely**, also in [Remote Environments](/kepler/remote-environments)
+- **Add repo commands**
+
+**Add repo commands** is worth doing early if your project needs a setup step. Save a repository's install or build command once and Kepler can run it automatically every time it creates a worktree, so an agent never starts in a checkout it cannot build. See [Tasks and Resources](/kepler/tasks-and-resources).
+
+Folder paths and everything else live in [Settings](/kepler/settings). You can hide the checklist from the toolbar and still reach it there.
+
+***
+
+## Put an agent on real work
+
+After you connect a tracker, the **Todo** segment of [the Kepler interface](/kepler/kepler-interface) fills with the issues and pull requests assigned to you.
+
+1. Pick an item in **Todo**.
+2. Click its **Action** button.
+
+<figure>
+  <a href="/wp-content/uploads/actions-drop-down.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/actions-drop-down.png" class="help-center-img img-bordered" alt="The Action dropdown open on a Todo row, listing Plan, Implement, Review, and Address Feedback">
+  </a>
+  <figcaption style="text-align:center; color:#888">The Action dropdown, opened from the chevron next to the button.</figcaption>
+</figure>
+
+Nicely done! Kepler automatically does the following:
+
+1. Creates a Task.
+2. Attaches the repository and the item.
+3. Sets up an isolated worktree.
+4. Starts an agent with the context already in place.
+
+The left half of the button runs the sensible default:
+
+- **Plan** for an issue
+- **Review** for someone else's pull request
+- **Address Feedback** for one of yours
+
+The chevron next to the button offers the rest of the Actions.
+
+Every one of those prompts is yours to change, and you can add your own. That's the part worth reading next: [Actions](/kepler/actions).
+
+***
+
+## Start something that is not tracked yet
+
+Click **New task**, or press **Shift+Alt+T** from anywhere. Write a prompt, attach a repository if the task needs one, and go. You can attach nothing at all and turn it into real work later. See [Create a Task](/kepler/create-task).
+
+<figure>
+  <a href="/wp-content/uploads/new-task-button-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-task-button-aug-2026.png" class="help-center-img img-bordered" alt="The New task button in the Kepler top navigation bar">
+  </a>
+  <figcaption style="text-align:center; color:#888">The New task button, available from anywhere in Kepler.</figcaption>
 </figure>
 
 ***
 
-## Complete the setup checklist
+## Where to go next
 
-Complete all five items in the **Setup** checklist before creating your first Task. Access the checklist from the **Setup** button in the top navigation bar. The checklist shows **Setup · N/5** and turns fully green when all five items are complete.
-
-<figure>
-  <img src="/wp-content/uploads/set-up-kepler.png" class="help-center-img img-bordered" alt="The Finish setting up Kepler checklist showing 5 of 5 items marked DONE and More setup options expanded to reveal Connect a remote environment and Control Kepler remotely">
-  <figcaption style="text-align:center; color:#888">The Setup checklist with all five required items complete and the optional items expanded.</figcaption>
-</figure>
-
-### 1. Sign in to GitKraken
-
-Sign in with your [GitKraken account](https://gitkraken.dev) when prompted on first launch.
-
-### 2. Connect an AI agent
-
-Connect at least one coding agent in **Settings → Agents**. For supported agents and connection steps, see [Agent Integrations](/kepler/agent-integrations).
-
-<figure>
-  <img src="/wp-content/uploads/agent-settings.png" class="help-center-img img-bordered" alt="The Agents section in Kepler Settings showing GitHub Copilot, Cursor CLI, and OpenCode entries each with a Not installed status, an Install button, a Binary path row, and a Re-scan and Custom path option">
-  <figcaption style="text-align:center; color:#888">Settings → Agents. Each agent shows its binary status. Click <strong>Install</strong> or <strong>Custom path…</strong> to point Kepler to an existing installation.</figcaption>
-</figure>
-
-### 3. Connect issue & PR trackers
-
-Connect your issue tracker and Git hosting provider in **Settings → Provider Integrations**. For setup steps, see [Issue Tracker Integrations](/kepler/issue-tracker-integrations) and [Pull Request Integrations](/kepler/pull-request-integrations).
-
-<figure>
-  <img src="/wp-content/uploads/provider-integrations.png" class="help-center-img img-bordered" alt="The Provider Integrations section in Kepler Settings listing Azure DevOps, Bitbucket, GitHub, GitHub Enterprise, GitLab, GitLab Self-Hosted, Jira, Linear, and Trello, each with a Connect or Reconnect button">
-  <figcaption style="text-align:center; color:#888">Settings → Provider Integrations. Connected providers show a <strong>Reconnect</strong> button; others show <strong>Connect</strong>.</figcaption>
-</figure>
-
-### 4. Set default folder locations
-
-Open **Settings → General** and set both paths before creating your first Task.
-
-- **Default Repositories Folder** — where Kepler clones repos. Every Task that references a repo not already on disk will clone it here.
-- **Default Worktrees Folder** — where Kepler creates Git worktrees. Kepler creates one worktree per Task per repo.
-
-Click the folder icon next to each field to browse, or type a path directly. The worktree path supports placeholders:
-
-| Placeholder | Value |
+| If you want to | Read |
 |---|---|
-| `<REPOSITORY_PATH>` | Main repo folder |
-| `<REPOSITORY_NAME>` | Repo name |
-| `<SOURCE_PATH>` | Files source (main repo, or the source worktree when forking) |
-| `<WORKTREE_PATH>` | The new worktree folder |
-
-Commands run inside the new worktree folder using your default login shell, so there's no need to `cd` into it and tools configured in your shell profile (e.g. `nvm`) are available.
-
-<figure>
-  <img src="/wp-content/uploads/default-locations.png" class="help-center-img img-bordered" alt="Settings → General showing Default Repositories Folder set to /Users/jonathansilva/kepler/repositories and Default Worktrees Folder set to /Users/jonathansilva/worktrees, both highlighted with a teal dashed border, and a Placeholders table below listing REPOSITORY_PATH, REPOSITORY_NAME, SOURCE_PATH, and WORKTREE_PATH">
-  <figcaption style="text-align:center; color:#888">Settings → General. Set both folder paths before launching your first Task.</figcaption>
-</figure>
-
-Expand **More setup options** in the checklist to see two optional items:
-
-- **Connect a remote environment** — run Tasks on a remote machine or inside WSL. See [Remote Environments](/kepler/remote-environments).
-- **Control Kepler remotely** — start Kepler's local server to access the UI from another device. See [Remote Environments](/kepler/remote-environments).
-
-***
-
-## Create your first Task
-
-A **Task** is the core unit of work in Kepler. It holds work across one or more repos and contains the **worktrees**, **agent sessions**, and changes that belong to a single unit of work.
-
-This section covers creating a Task from scratch. For all three Task creation methods and full option details, see [Create a Task](/kepler/create-task).
-
-<figure>
-  <img src="/wp-content/uploads/new-task-button.png" class="help-center-img img-bordered" alt="The + New task button in the Kepler top navigation bar, highlighted with a teal border">
-  <figcaption style="text-align:center; color:#888">Click <strong>+ New task</strong> in the top-right corner to open the Task Launcher.</figcaption>
-</figure>
-
-<figure>
-  <img src="/wp-content/uploads/start-task-modal.png" class="help-center-img img-bordered" alt="The Start a task dialog in Kepler showing the Repositories section with an Add repo button, Task Name field, Prompt field, and Agent, Model, Mode, and Effort dropdowns at the bottom">
-  <figcaption style="text-align:center; color:#888">The Task Launcher. Add a repo, name the task, add a prompt, and click <strong>Launch task</strong>.</figcaption>
-</figure>
-
-1. Click **+ New task** in the top-right corner to open the Task Launcher.
-2. Under **Repositories**, click **+ Add repo** and select a repository. Kepler clones it into your default repos directory if it is not already present locally.
-3. Enter a **Task Name**.
-4. (Optional) Enter a **Prompt** with starting instructions for the agent.
-5. Select an **Agent** and configure **Model**, **Mode**, and **Effort** as needed.
-6. Click **Launch task**.
-
-Kepler creates an isolated Git worktree for this Task, starts the agent session, and the Task appears in **List** or **Kanban** view.
+| Change the prompts, or write your own | [Actions](/kepler/actions) |
+| Understand what a Task holds | [Tasks and Resources](/kepler/tasks-and-resources) |
+| Work inside a Task | [The Task View](/kepler/task-view) |
+| Direct an agent mid-session | [Agent Sessions](/kepler/agent-sessions) |
+| See what every agent is doing at once | [The Agent Graph](/kepler/agent-graph) |
+| Reshape the list to fit how you work | [Arranging Your Work](/kepler/arranging-your-work) |
+| Review and ship what an agent wrote | [Review Changes](/kepler/review-changes) |
+| Run agents on another machine or in WSL | [Remote Environments](/kepler/remote-environments) |
 
 ---
