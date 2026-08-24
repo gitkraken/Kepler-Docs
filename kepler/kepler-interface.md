@@ -1,6 +1,6 @@
 ---
 title: The Kepler Interface
-description: "Kepler opens on your work: every issue and pull request assigned to you, alongside the tasks you already have running. Learn how to read it and start work from it."
+description: "Kepler opens on your work - every issue and pull request assigned to you, alongside the tasks you already have running. Learn how to read it and start work from it."
 product: Kepler
 feature: Kepler Interface
 content_type: how-to
