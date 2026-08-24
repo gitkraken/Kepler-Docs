@@ -25,11 +25,8 @@ You bring the agent. Kepler pulls in the issues and pull requests already assign
 
 Kepler is in **public preview**. A free GitKraken account is all you need.
 
-<div class="embed-container embed-container--16-9" style="position: relative; width: 560px; height: 310px; overflow: hidden;">
-    <a href="https://youtu.be/U0w18ZXrZ5M" target="_blank">
-      <img src="https://img.youtube.com/vi/U0w18ZXrZ5M/maxresdefault.jpg" alt="YouTube video thumbnail"
-        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center;" />
-    </a>
+<div class="embed-container embed-container--16-9">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/U0w18ZXrZ5M?rel=0&vq=hd1080" frameborder="0" allowfullscreen></iframe>
 </div>
 
 ***
