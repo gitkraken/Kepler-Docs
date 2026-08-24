@@ -15,7 +15,7 @@ Scope: 16 pages included. Excluded: 3 — environment-and-setup.md, kepler-New-P
 - [Actions](https://help.gitkraken.com/kepler/actions/): Actions are editable named prompts you fire at a task, issue, or pull request. Learn the four built-in Actions, how to change them, and how to write your own.
 - [Tasks and Resources](https://help.gitkraken.com/kepler/tasks-and-resources/): A Task is the unit of work in Kepler. Learn what a Task holds, how worktrees work, and how everything attached to a Task reaches your agents.
 - [The Task View](https://help.gitkraken.com/kepler/task-view/): Open a Task to see its resources, agent sessions, and changes side by side. Learn the rail, the columns, split panes, and how to start sessions and terminals.
-- [The Agent Graph](https://help.gitkraken.com/kepler/agent-graph/): A live graph of everything your agents are doing: every task, session, turn, tool call, subagent, and file, drawn as it happens.
+- [The Agent Graph](https://help.gitkraken.com/kepler/agent-graph/): A live graph of everything your agents are doing - every task, session, turn, tool call, subagent, and file, drawn as it happens.
 
 ## Working in Kepler
 
