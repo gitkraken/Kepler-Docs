@@ -23,7 +23,12 @@ Connect a Git host and the pull requests you authored, plus the ones waiting on 
 
 Manage providers in **Settings → Integrations**, in the **Provider Integrations** section.
 
-<!-- TODO(screenshot): Settings → Integrations → Provider Integrations with GitHub connected, showing the Connected badge, Disconnect, and Reconnect. The existing _images/pr-integrations.png and _images/provider-integrations.png predate all three. -->
+<figure>
+  <a href="/wp-content/uploads/provider-integrations-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/provider-integrations-aug-2026.png" class="help-center-img img-bordered" alt="Settings → Integrations → Provider Integrations, with GitHub and Jira connected, showing the Connected badge and Disconnect and Reconnect buttons">
+  </a>
+  <figcaption style="text-align:center; color:#888">Provider Integrations, in Settings → Integrations.</figcaption>
+</figure>
 
 ***
 
@@ -61,7 +66,7 @@ Your GitKraken account holds integrations, not this copy of Kepler, so a provide
 
 **Connect** hands the whole authorization to GitKraken's website. Kepler opens `/connect` there in your system browser, names the provider, and includes a redirect back into Kepler. Kepler has no in-app form for a host URL or a personal access token, so you supply a self-hosted instance's address and whatever credential it needs directly in the browser. When you return, Kepler refetches your providers instead of reusing its cached list.
 
-<!-- TODO(verify): the redirect and the absence of an in-app form are confirmed against getConnectUrl (src/backend/auth/auth.ts) and useConnectProvider (src/ui/data/auth.ts) at kepler 7c31af83e, and no per-provider token scopes are declared anywhere in the app. The browser-side steps and the scopes each provider asks for live on GitKraken's website, not in this repo — confirm them with the web team for GitHub Enterprise, GitLab Self-Hosted, Bitbucket and Azure DevOps before documenting them. -->
+<!-- TODO(verify): re-confirmed at kepler 7c31af83e and on the current checkout — the redirect-only flow and the absence of an in-app form are settled (src/backend/auth/auth.ts:227 builds only websiteUrl + /connect with product, optional provider, and redirect_uri; src/ui/data/auth.ts:68 hands that off to openExternalUrl; Settings and onboarding provider buttons only call connect.mutate({ providerId }), with no host/token/scope fields anywhere in-app). No per-provider token scopes are declared in this repo either. What's still open: the browser-side steps and the scopes each provider asks for live on GitKraken's website (see help.gitkraken.com/kepler/pull-request-integrations and help.gitkraken.com/gk-dev/gk-dev-integrations), which is website-owned content outside this repo. Remains unresolved until the web team confirms the live /connect steps and provider scopes for GitHub Enterprise, GitLab Self-Hosted, Bitbucket, and Azure DevOps. -->
 
 Three controls sit on a connected provider's row:
 
@@ -114,9 +119,19 @@ Switching either one clears that provider's saved filters (a repository from the
 
 Click **Disconnect** on the provider's row in **Settings → Integrations** and confirm.
 
-Disconnecting reaches further than Kepler. It removes the provider from GitKraken entirely, so the `gk` CLI and GitKraken Desktop lose access too, along with **any additional accounts of that provider**. You can reconnect at any time.
+<figure>
+  <a href="/wp-content/uploads/disconnect-provider-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/disconnect-provider-aug-2026.png" class="help-center-img img-bordered" alt="A connected provider's row, with Connected badge, Disconnect, and Reconnect">
+  </a>
+  <figcaption style="text-align:center; color:#888">A connected provider's row.</figcaption>
+</figure>
 
-<!-- TODO(verify): the confirmation dialog's claim about additional accounts may be wrong. settings.providers.disconnectDescription (src/shared/i18n/locales/en.ts) says "along with any additional {name} accounts", but the only provider backend left after kepler#1956 removes the provider's PRIMARY connection and lets the platform promote a secondary, so a multi-account provider stays connected — see the disconnect docblock in src/backend/provider/core-gitlens-adapter.ts at 7c31af83e. This page currently follows the dialog. Settle which is right with engineering; if the backend is right, both the dialog copy and this paragraph need changing. Same comment on /kepler/issue-tracker-integrations. -->
+Disconnecting reaches further than Kepler: it removes the connection from your GitKraken account, so the `gk` CLI and GitKraken Desktop lose it too. What happens to the provider depends on whether you have another account connected:
+
+- **With another account connected**, Kepler promotes it to primary and the provider stays connected under it. Nothing else changes.
+- **With no other account connected**, the provider is removed entirely. Kepler drops its saved filters and its rows from your lists, so nothing lingers behind pointing at a provider you no longer have.
+
+You can reconnect at any time.
 
 ***
 

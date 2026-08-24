@@ -23,7 +23,12 @@ Settings is eight sub-pages, each with its own sections. This page documents eve
 
 Open Settings from the gear icon in the top bar, or with **⌘ ,** (**Ctrl ,** on Windows and Linux).
 
-<!-- TODO(screenshot): Settings open on the General sub-page, with the left rail showing Setup plus all eight sub-pages. -->
+<figure>
+  <a href="/wp-content/uploads/settings-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/settings-aug-2026.png" class="help-center-img img-bordered" alt="Settings open on the General sub-page, with the left rail showing Setup plus all eight sub-pages">
+  </a>
+  <figcaption style="text-align:center; color:#888">Settings, open on General.</figcaption>
+</figure>
 
 ***
 
@@ -97,7 +102,12 @@ Three paths tell Kepler where to put things. All three are unset out of the box;
 
 Type a path directly, or use the folder button beside the field to browse. Edits save automatically as you type, so no separate Save button exists.
 
-<!-- TODO(screenshot): Settings → General showing the three folder fields and the Placeholders legend beneath them. -->
+<figure>
+  <a href="/wp-content/uploads/placeholder-legend-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/placeholder-legend-aug-2026.png" class="help-center-img img-bordered" alt="Settings → General, showing the three folder fields and the Placeholders legend beneath them">
+  </a>
+  <figcaption style="text-align:center; color:#888">The three folder fields, with the Placeholders legend.</figcaption>
+</figure>
 
 #### Path placeholders
 
@@ -232,7 +242,12 @@ This setting is the only control over diff layout. The diff pane in a task's wor
 
 Four parts: **Default agent**, one section per agent Kepler detects, **Agent options**, and **Features**.
 
-<!-- TODO(screenshot): Settings → Agents showing the Default agent row and the first two agent sections with their status badges. -->
+<figure>
+  <a href="/wp-content/uploads/agent-settings-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-settings-aug-2026.png" class="help-center-img img-bordered" alt="Settings → Agents, showing the Default agent row and the Claude Code and Codex sections with their status badges">
+  </a>
+  <figcaption style="text-align:center; color:#888">Settings → Agents.</figcaption>
+</figure>
 
 ### Default agent
 
@@ -317,10 +332,6 @@ Two shipped capabilities that give agents extra Git tooling. Both are off until 
 
 Turning either one on confirms that **New agent sessions will pick up this change**. Sessions already running keep the tools they started with, so start a new session to use them.
 
-On a Free plan both rows still appear, with a padlock in place of the checkbox and the tooltip *"Not available on the Free plan. Upgrade to unlock."* Every other plan (Pro, Advanced, Teams, Business, Enterprise, and trials) can enable them.
-
-<!-- TODO(screenshot): Settings → Agents → Features with AI Sync and Compose, and the padlock state on a Free plan. -->
-
 ***
 
 ## Actions
@@ -371,7 +382,12 @@ The status row and **Start** control appear in the desktop app only. **Port**, *
 
 To reach Kepler from a different network, set a **URL Override** to a public tunnel address before you start the server.
 
-<!-- TODO(screenshot): Settings → Remote → Remote Access, active, with the QR code and Access URL visible. -->
+<figure>
+  <a href="/wp-content/uploads/remote-settings-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-settings-aug-2026.png" class="help-center-img img-bordered" alt="Settings → Remote → Remote Access, active, with the QR code and Access URL visible">
+  </a>
+  <figcaption style="text-align:center; color:#888">Remote Access, active, with its QR code and Access URL.</figcaption>
+</figure>
 
 ***
 
@@ -510,7 +526,12 @@ A failed command does not undo the worktree. The worktree exists but may not be 
 
 From the task view, right-click a worktree row in the rail and use **Run command here** for a second way in. It lists that repository's commands and runs the one you pick in that worktree, opening its terminal in place. A repository with none yet reads **No commands yet** and offers **Create command…**.
 
-<!-- TODO(screenshot): the Edit <repo> modal — Display name and Description above two commands, one flagged Run on worktree creation, and the Placeholders legend. -->
+<figure>
+  <a href="/wp-content/uploads/create-command-for-repo-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/create-command-for-repo-aug-2026.png" class="help-center-img img-bordered" alt="The Commands section of the Edit repo modal, with a command flagged Run on worktree creation and the Placeholders legend beneath it">
+  </a>
+  <figcaption style="text-align:center; color:#888">A repository's Commands, with the Placeholders legend.</figcaption>
+</figure>
 
 ### Projects
 

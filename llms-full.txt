@@ -2397,7 +2397,12 @@ Switching either one clears that provider's saved filters (a repository from the
 
 Click **Disconnect** on the provider's row in **Settings → Integrations** and confirm.
 
-Disconnecting reaches further than Kepler. It removes the provider from GitKraken entirely, so the `gk` CLI and GitKraken Desktop lose access too, along with **any additional accounts of that provider**. You can reconnect at any time.
+Disconnecting reaches further than Kepler: it removes the connection from your GitKraken account, so the `gk` CLI and GitKraken Desktop lose it too. What happens to the provider depends on whether you have another account connected:
+
+- **With another account connected**, Kepler promotes it to primary and the provider stays connected under it. Nothing else changes.
+- **With no other account connected**, the provider is removed entirely. Kepler drops its saved filters and its rows from your lists, so nothing lingers behind pointing at a provider you no longer have.
+
+You can reconnect at any time.
 
 ***
 
@@ -2789,8 +2794,6 @@ Two shipped capabilities that give agents extra Git tooling. Both are off until 
 | **Compose** | Tools to reorganize messy changes into clean, atomic commits. Every operation is safe, and you can undo it easily | Off |
 
 Turning either one on confirms that **New agent sessions will pick up this change**. Sessions already running keep the tools they started with, so start a new session to use them.
-
-On a Free plan both rows still appear, with a padlock in place of the checkbox and the tooltip *"Not available on the Free plan. Upgrade to unlock."* Every other plan (Pro, Advanced, Teams, Business, Enterprise, and trials) can enable them.
 
 ***
 

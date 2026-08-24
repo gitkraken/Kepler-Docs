@@ -51,8 +51,6 @@ Kepler binds each window to one environment at a time, and the title-bar chip sh
 
 Kepler hides the chip in a browser client, which cannot manage connections at all.
 
-<!-- TODO(screenshot): the title-bar chip connected to a host, showing the host name and latency. -->
-
 ### The popover
 
 The popover answers where you are and where else you can go, and hands anything heavier to the panel.
@@ -75,6 +73,13 @@ A connect that a *different* window starts never takes over this window's chip.
 ## The connections panel
 
 The panel is the full management surface: **Hosts** on the left, the selected host's detail on the right.
+
+<figure>
+  <a href="/wp-content/uploads/connection-panel-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/connection-panel-aug-2026.png" class="help-center-img img-bordered" alt="The connections panel's empty state, with no saved hosts on the left and a prompt to add an SSH host on the right">
+  </a>
+  <figcaption style="text-align:center; color:#888">The connections panel, before any host is added.</figcaption>
+</figure>
 
 The rail lights up exactly one host: the host this window is currently connected to. Kepler scopes connection state to the calling window. As a result, the panel reports on this window's connection and lists the rest as saved, rather than showing a status board for hosts the window cannot see.
 
@@ -326,7 +331,12 @@ To reach Kepler from outside your network, put a tunnel in front of it and set *
 
 Treat the access URL as a credential: anyone holding it can open your Kepler. Stop the server when you are not using it, and prefer a tunnel that enforces its own authentication over exposing the port.
 
-<!-- TODO(screenshot): Settings → Remote → Remote Access, active, with the QR code and Access URL. -->
+<figure>
+  <a href="/wp-content/uploads/remote-settings-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-settings-aug-2026.png" class="help-center-img img-bordered" alt="Settings → Remote → Remote Access, active, with the QR code and Access URL visible">
+  </a>
+  <figcaption style="text-align:center; color:#888">Remote Access, active, with its QR code and Access URL.</figcaption>
+</figure>
 
 ***
 
