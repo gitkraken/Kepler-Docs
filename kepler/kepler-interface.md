@@ -130,7 +130,7 @@ Task rows show:
 The task's own operations sit behind the **⋮** menu:
 
 - **Rename task**
-- **Archive task** (or **Restore task**, when the task is already archived)
+- **Archive task**
 - **Delete task**
 
 Task rows deliberately have no reference column and no Action button. A task's reference is the head of its identifier and names nothing you'd recognize, so the title takes that cell instead. Firing an Action from a *Todo* row is how an untracked issue or pull request becomes a task in the first place; you manage a task that already exists from its **⋮** menu.

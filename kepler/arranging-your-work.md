@@ -143,7 +143,7 @@ Each segment remembers its own search, grouping, and filters, since they differ 
 
 ***
 
-## Archive, restore, and clean up in bulk
+## Archive and clean up in bulk
 
 **Archive task** files a task away. It leaves the live buckets for **Archived**, its rows and sessions survive, and Kepler stops only the agents whose checkout is about to disappear.
 
@@ -156,17 +156,18 @@ Each segment remembers its own search, grouping, and filters, since they differ 
 
 The confirmation offers the same two cascades the delete does: **Also delete worktrees** and **Also delete branches**. This way, finishing with a task doesn't have to mean deleting it to clean it off the disk. Archiving outranks everything else, so a task you filed away can't climb back into a live section because a shell is still open on it.
 
-**Restore task** brings it back to whatever section its work now belongs in. Nothing comes back on disk: a checkout the archive removed is gone from git.
+**Archiving is currently one-way.** There's no **Restore task** action yet, so once a task is archived, it stays in **Archived** rather than moving back to a live section.
 
 For more than one at a time, every section header on **Tasks in progress** carries a quiet **Select**. Press it, and that corner of the header becomes a bar: a select-all box, **{count} selected**, and the batch verbs. The section's rows also grow checkboxes. One section selects at a time, and while you're selecting, a click ticks a row rather than opening its panel.
 
 | Button | What it does |
 |---|---|
 | **Archive** | Archives every selected task that isn't already archived |
-| **Restore** | Takes Archive's place when everything selected is already archived |
 | **Delete** | Removes the selected tasks for good |
 | **Cancel** | Leaves selection mode and drops the set |
 
-Both **Archive** and **Delete** confirm, and both offer **Also delete worktrees** and **Also delete branches**. **Restore** takes no options: it removes nothing. The batch confirmation doesn't list what each individual checkout would lose; open a task's own **⋮** for that.
+Restoring an archived task isn't available yet, in bulk or individually.
+
+Both **Archive** and **Delete** confirm, and both offer **Also delete worktrees** and **Also delete branches**. The batch confirmation doesn't list what each individual checkout would lose; open a task's own **⋮** for that.
 
 ---

@@ -220,10 +220,11 @@ From the **Task actions** (**⋮**) menu, on the task's row or in the task view'
 |---|---|
 | **Rename task** | Tasks name themselves when they're created; rename when the name stops fitting. The dialog's **Auto-name** button suggests one from the Task's prompt and resources, into the field, for you to accept or edit |
 | **Archive task** | Takes it out of the active list and keeps it as history. Nothing is destroyed unless you ask for it |
-| **Restore task** | On an archived Task, in place of **Archive task**. No confirmation. It goes straight back |
 | **Delete task** | Removes the Task |
 
 **Archive** and **Delete** ask the same two questions, in the same dialog, because they're the same act: **Also delete worktrees**, and (only once that's ticked) **Also delete branches**. Tick the first, and Kepler lists every worktree under **Will be deleted**, each with what deleting it costs. Kepler separately lists any worktree it will keep under **Kept — still used by other tasks**. Ticking **Also delete branches** re-reads the list, so a worktree that was safe a moment ago can turn into a warning.
+
+**Restoring an archived task isn't available yet.** Archiving a task is currently one-way: once you archive it, there's no action to bring it back to the active list.
 
 You can archive and restore individual sessions the same way, from the session's own menu in the rail.
 
