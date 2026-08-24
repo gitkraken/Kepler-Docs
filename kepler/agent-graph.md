@@ -1,6 +1,6 @@
 ---
 title: The Agent Graph
-description: A live graph of everything your agents are doing: every task, session, turn, tool call, subagent, and file, drawn as it happens.
+description: A live graph of everything your agents are doing - every task, session, turn, tool call, subagent, and file, drawn as it happens.
 product: Kepler
 feature: Agent Graph
 content_type: how-to
