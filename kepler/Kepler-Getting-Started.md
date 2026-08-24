@@ -25,12 +25,12 @@ You bring the agent. Kepler pulls in the issues and pull requests already assign
 
 Kepler is in **public preview**. A free GitKraken account is all you need.
 
-<figure>
-  <a href="/wp-content/uploads/kepler-getting-started-Aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/kepler-getting-started-Aug-2026.png" class="help-center-img img-bordered" alt="Kepler's Todo list with an Action dropdown open on one row, offering Plan, Implement, and a custom action">
-  </a>
-  <figcaption style="text-align:center; color:#888">The Todo list with the Action dropdown open on a row. Pick a built-in Action or one of your own to start an agent.</figcaption>
-</figure>
+<div class="embed-container embed-container--16-9" style="position: relative; width: 560px; height: 310px; overflow: hidden;">
+    <a href="https://youtu.be/U0w18ZXrZ5M" target="_blank">
+      <img src="https://img.youtube.com/vi/U0w18ZXrZ5M/maxresdefault.jpg" alt="YouTube video thumbnail"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center;" />
+    </a>
+</div>
 
 ***
 
