@@ -35,7 +35,13 @@ def parse(path):
     for line in m.group(1).splitlines():
         km = re.match(r"^([a-z_]+):\s*(.*)$", line)
         if km:
-            fm[km.group(1)] = km.group(2).strip()
+            val = km.group(2).strip()
+            # A value that needed YAML quoting (a description containing ": ",
+            # say) keeps its quotes through this regex parser; strip them so
+            # they do not reach llms.txt.
+            if len(val) > 1 and val[0] == val[-1] and val[0] in ('"', "'"):
+                val = val[1:-1]
+            fm[km.group(1)] = val
     return fm, m.group(2)
 
 
@@ -44,6 +50,12 @@ def clean(body):
     body = re.sub(r"<figure>.*?</figure>\n?", "", body, flags=re.S)
     body = re.sub(r"^<kbd>.*?</kbd>\n+", "", body)
     return re.sub(r"\n{3,}", "\n\n", body).strip()
+
+
+def write(path, text):
+    """LF on every platform, so regenerating on Windows is not a whole-file diff."""
+    with open(path, "w", encoding="utf-8", newline="\n") as fh:
+        fh.write(text)
 
 
 def main():
@@ -80,12 +92,12 @@ def main():
     head = ["# Kepler", "", f"> {BLURB}", "",
             f"Scope: {len(included)} pages included. "
             f"Excluded: {len(excluded)} — {', '.join(sorted(excluded))}.", ""]
-    (REPO / "llms.txt").write_text("\n".join(head + out).rstrip() + "\n", encoding="utf-8")
+    write(REPO / "llms.txt", "\n".join(head + out).rstrip() + "\n")
 
     stamp = date.today().isoformat()
     fhead = ["# Kepler Documentation — llms-full.txt", f"Generated: {stamp}",
              f"Pages: {len(included)}", "Source: https://help.gitkraken.com/kepler/", ""]
-    (REPO / "llms-full.txt").write_text("\n".join(fhead + full).rstrip() + "\n", encoding="utf-8")
+    write(REPO / "llms-full.txt", "\n".join(fhead + full).rstrip() + "\n")
 
     print(f"llms.txt: {len(included)} pages. llms-full.txt: "
           f"{(REPO / 'llms-full.txt').stat().st_size} bytes.")
