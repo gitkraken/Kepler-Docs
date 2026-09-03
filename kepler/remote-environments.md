@@ -302,7 +302,7 @@ The payload carries its own Node runtime, so the host needs nothing pre-installe
 
 ***
 
-## Remote access: reach this Kepler from another device
+## Remote access: reach Kepler from another device
 
 **Remote Access** is the other direction. It opens this Kepler window from another device, such as a second computer or a phone, over a secure tunnel relayed through your GitKraken account. Your work still runs here; the other device only sees the interface.
 
