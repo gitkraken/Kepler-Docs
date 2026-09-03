@@ -11,13 +11,13 @@ git_hosts: [github, github-enterprise, gitlab, gitlab-self-hosted, bitbucket, az
 integrations: [claude-code, codex, copilot, cursor, opencode, auggie, github, gitlab, bitbucket, azure-devops, jira, linear, trello]
 hosted_variant: both
 status: GA
-last_verified: 2026-08
+last_verified: 2026-09
 llms_include: true
-tags: [settings, configuration, keyboard-shortcuts, appearance, agents, actions, repositories, worktrees, terminal, voice-input, remote, integrations, preferences]
+tags: [settings, configuration, keyboard-shortcuts, appearance, agents, actions, repositories, worktrees, terminal, voice-input, remote, gitkraken-dev, integrations, preferences]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: August 2026</kbd>
+<kbd>Last updated: September 2026</kbd>
 
 Settings is eight sub-pages, each with its own sections. This page documents every one of them: what each setting controls, what it defaults to, and what changes when you change it.
 
@@ -366,28 +366,9 @@ This section describes the feature and routes you to it. **Manage remote environ
 
 ### Remote Access
 
-Starts a local server so you can open this Kepler window from another device on the same network, such as a second computer or a phone. **Remote Access** has five controls:
+Opens this Kepler window from another device over a secure tunnel relayed through your GitKraken account — no open port, no tunnel to set up yourself. Available on every plan, including the free Community edition. Click **Enable**, name the machine, then scan the QR code or open the link on the other device to pair it.
 
-| Control | What it does | Default |
-|---|---|---|
-| **Status** | **Remote Access Inactive** or **Remote Access Active** | Inactive |
-| **Start** / **Stop** | Starts or stops the server. **Stop** replaces **Start** while it runs | — |
-| **Port** | The port the server listens on | 3000 |
-| **Host** | The address the server binds to | 0.0.0.0 |
-| **URL Override** | Used in the QR code instead of the auto-detected address. Set it when you expose Kepler through a tunnel, for example `https://my-tunnel.ngrok.io` | Empty |
-
-Once the server is running, an **Access URL** block appears with a QR code you can scan with your phone camera, the URL as selectable text, and a copy button. The copy button is disabled on origins with no clipboard access (a plain-HTTP LAN address is one), in which case use the QR code or select the URL text.
-
-The status row and **Start** control appear in the desktop app only. **Port**, **Host**, and **URL Override** are always editable, since Kepler reads them when the server next starts.
-
-To reach Kepler from a different network, set a **URL Override** to a public tunnel address before you start the server.
-
-<figure>
-  <a href="/wp-content/uploads/remote-settings-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-settings-aug-2026.png" class="help-center-img img-bordered" alt="Settings → Remote → Remote Access, active, with the QR code and Access URL visible">
-  </a>
-  <figcaption style="text-align:center; color:#888">Remote Access, active, with its QR code and Access URL.</figcaption>
-</figure>
+This section describes the feature and routes you to it. See [Remote access](/kepler/remote-environments#remote-access-reach-this-kepler-from-another-device) for prerequisites, pairing, and managing sessions from gitkraken.dev.
 
 ***
 
