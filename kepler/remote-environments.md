@@ -11,13 +11,13 @@ git_hosts: [generic]
 integrations: []
 hosted_variant: both
 status: GA
-last_verified: 2026-08
+last_verified: 2026-09
 llms_include: true
-tags: [remote-environments, ssh, wsl, windows, remote-access, qr-pairing, diagnostics, notifications]
+tags: [remote-environments, ssh, wsl, windows, remote-access, qr-pairing, gitkraken-dev, diagnostics, notifications]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: August 2026</kbd>
+<kbd>Last updated: September 2026</kbd>
 
 A **remote environment** runs your agents, worktrees, and terminals on another machine: a dev server, a cloud VM, or a WSL (Windows Subsystem for Linux) instance on Windows, while you work from this window. Kepler installs itself on the host over SSH (Secure Shell), so you do not need to pre-install anything there.
 
@@ -304,38 +304,72 @@ The payload carries its own Node runtime, so the host needs nothing pre-installe
 
 ## Remote access: reach this Kepler from another device
 
-**Remote Access** is the other direction. It starts a server inside this Kepler so you can open this window's Kepler from a second computer or a phone. Your work still runs here.
+**Remote Access** is the other direction. It opens this Kepler window from another device — a second computer or a phone — over a secure tunnel relayed through your GitKraken account. Your work still runs here; the other device only sees the interface.
 
 Configure it in **Settings → Remote → Remote Access**.
 
-| Control | What it does | Default |
-|---|---|---|
-| **Status** | **Remote Access Inactive** or **Remote Access Active** | Inactive |
-| **Start** / **Stop** | Starts or stops the server | — |
-| **Port** | The port the server listens on | `3000` |
-| **Host** | The address the server binds to. `0.0.0.0` listens on every interface | `0.0.0.0` |
-| **URL Override** | *If set, this URL is used in the QR code instead of the auto-detected address* | Empty |
+### Before you start
 
-**Port**, **Host**, and **URL Override** are read when the server next starts, so change them before you click **Start**. The status row and **Start** control are in the desktop app only.
+You need a GitKraken account signed in to Kepler. Remote Access is available on every plan, including the free Community edition.
+
+### Turning on Remote Access
+
+1. Open **Settings → Remote → Remote Access**.
+2. Click **Enable**.
+3. Name the machine. Kepler pre-fills the device name; change it if you want a name your team recognizes. This is the name gitkraken.dev shows for this machine.
+
+Kepler generates a private key for this machine the first time you enable Remote Access. The key never leaves the machine — Kepler uses it to prove the machine's identity to GitKraken each time it reconnects.
 
 ### Pairing another device
 
-Once the server runs, an **Access URL** block appears with a QR code, the URL as selectable text, and a copy button.
+Once Remote Access is active, a QR code and a link appear in Settings.
 
-- The URL is `<address>/?bootstrap=<token>`: a pairing token, not your credentials.
-- **Scan with your phone camera to open** is the fast path. Otherwise copy the URL. On a plain-HTTP LAN (local area network) address, the browser denies Kepler clipboard access, so the copy button is disabled and the QR code or the selectable text is the way across.
-- The token is **single use**, 12 characters from an alphabet with no lookalikes, and **expires five minutes** after Kepler mints it. Each click of **Start** mints a fresh one, so the QR you are looking at is always live.
-- The paired browser exchanges the token for a signed session that lasts **30 days**, extended as you use it, with a hard cap of 90 days. That session is a **client** session, not an owner session.
+- **Scan with your phone camera to open** is the fast path. Otherwise, copy the link.
+- The link opens **gitkraken.dev/integrations**, where you approve the connection with your GitKraken account.
 
-To reach Kepler from outside your network, put a tunnel in front of it and set **URL Override** to the tunnel's public address before starting the server, so the QR code encodes the address that actually works.
+<figure>
+  <a href="/wp-content/uploads/remote-access-phone-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-access-phone-sep-2026.png" class="help-center-img img-bordered" alt="A paired phone's browser open on the Kepler tunnel URL, showing the connected session">
+  </a>
+  <figcaption style="text-align:center; color:#888">Once paired, the other device opens this Kepler session through the tunnel.</figcaption>
+</figure>
 
-Treat the access URL as a credential: anyone holding it can open your Kepler. Stop the server when you are not using it, and prefer a tunnel that enforces its own authentication over exposing the port.
+### Managing sessions from gitkraken.dev
+
+Go to **gitkraken.dev → Integrations → Remote Access** to manage every machine with Remote Access turned on, across all your devices.
+
+<figure>
+  <a href="/wp-content/uploads/remote-access-security-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-access-security-sep-2026.png" class="help-center-img img-bordered" alt="gitkraken.dev Integrations page showing the Remote Access (Beta) section with this machine listed">
+  </a>
+  <figcaption style="text-align:center; color:#888">gitkraken.dev → Integrations → Remote Access, listing this machine.</figcaption>
+</figure>
+
+- Expand a machine to see its active connections.
+- Revoke a single connection to sign out one paired device without affecting the others.
+- Disable a machine to turn off its tunnel entirely, from anywhere.
+
+<figure>
+  <a href="/wp-content/uploads/remote-access-options-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-access-options-sep-2026.png" class="help-center-img img-bordered" alt="Expanded machine card showing each connected device with a Revoke button, and a menu with Disable machine">
+  </a>
+  <figcaption style="text-align:center; color:#888">Expand a machine to revoke one connection or disable the whole machine.</figcaption>
+</figure>
+
+You can also manage the current machine's connections locally, in **Settings → Remote → Remote Access → Connected Devices**.
+
+### Why this is more secure than the old model
+
+- **No open port.** Kepler only makes outbound connections to GitKraken's relay; nothing listens for inbound traffic on your network.
+- **Verified relay identity.** Kepler connects only to GitKraken's known relay and rejects anything else, so a compromised network can't redirect your session.
+- **Account-bound sessions.** Every connection is tied to your GitKraken account, so gitkraken.dev always shows who is connected.
+- **Immediate revocation.** Disabling Remote Access or signing out ends the tunnel and every paired device at once.
 
 <figure>
   <a href="/wp-content/uploads/remote-settings-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-settings-aug-2026.png" class="help-center-img img-bordered" alt="Settings → Remote → Remote Access, active, with the QR code and Access URL visible">
+    <img src="/wp-content/uploads/remote-settings-aug-2026.png" class="help-center-img img-bordered" alt="Settings → Remote → Remote Access, active, with the QR code and gitkraken.dev link visible">
   </a>
-  <figcaption style="text-align:center; color:#888">Remote Access, active, with its QR code and Access URL.</figcaption>
+  <figcaption style="text-align:center; color:#888">Remote Access, active, with its QR code and gitkraken.dev link.</figcaption>
 </figure>
 
 ***
