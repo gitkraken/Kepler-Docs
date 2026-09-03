@@ -366,7 +366,7 @@ This section describes the feature and routes you to it. **Manage remote environ
 
 ### Remote Access
 
-Opens this Kepler window from another device over a secure tunnel relayed through your GitKraken account — no open port, no tunnel to set up yourself. Available on every plan, including the free Community edition. Click **Enable**, name the machine, then scan the QR code or open the link on the other device to pair it.
+Opens this Kepler window from another device over a secure tunnel relayed through your GitKraken account, with no open port and no tunnel to set up yourself. Requires a paid GitKraken plan; not available on the free Community edition. Click **Enable**, name the machine, then scan the QR code or open the link on the other device to pair it.
 
 This section describes the feature and routes you to it. See [Remote access](/kepler/remote-environments#remote-access-reach-this-kepler-from-another-device) for prerequisites, pairing, and managing sessions from gitkraken.dev.
 

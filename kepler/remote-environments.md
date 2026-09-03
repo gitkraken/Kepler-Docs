@@ -304,13 +304,20 @@ The payload carries its own Node runtime, so the host needs nothing pre-installe
 
 ## Remote access: reach this Kepler from another device
 
-**Remote Access** is the other direction. It opens this Kepler window from another device — a second computer or a phone — over a secure tunnel relayed through your GitKraken account. Your work still runs here; the other device only sees the interface.
+**Remote Access** is the other direction. It opens this Kepler window from another device, such as a second computer or a phone, over a secure tunnel relayed through your GitKraken account. Your work still runs here; the other device only sees the interface.
 
 Configure it in **Settings → Remote → Remote Access**.
 
+<figure>
+  <a href="/wp-content/uploads/remote-settings-aug-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-settings-aug-2026.png" class="help-center-img img-bordered" alt="Settings → Remote → Remote Access, active, with the QR code and gitkraken.dev link visible">
+  </a>
+  <figcaption style="text-align:center; color:#888">Remote Access, active, with its QR code and gitkraken.dev link.</figcaption>
+</figure>
+
 ### Before you start
 
-You need a GitKraken account signed in to Kepler. Remote Access is available on every plan, including the free Community edition.
+You need a GitKraken account signed in to Kepler, on a paid GitKraken plan. Remote Access is not available on the free Community edition.
 
 ### Turning on Remote Access
 
@@ -318,7 +325,7 @@ You need a GitKraken account signed in to Kepler. Remote Access is available on 
 2. Click **Enable**.
 3. Name the machine. Kepler pre-fills the device name; change it if you want a name your team recognizes. This is the name gitkraken.dev shows for this machine.
 
-Kepler generates a private key for this machine the first time you enable Remote Access. The key never leaves the machine — Kepler uses it to prove the machine's identity to GitKraken each time it reconnects.
+Kepler generates a private key for this machine the first time you enable Remote Access. The key never leaves the machine; Kepler uses it to prove the machine's identity to GitKraken each time it reconnects.
 
 ### Pairing another device
 
@@ -357,20 +364,6 @@ Go to **gitkraken.dev → Integrations → Remote Access** to manage every machi
 </figure>
 
 You can also manage the current machine's connections locally, in **Settings → Remote → Remote Access → Connected Devices**.
-
-### Why this is more secure than the old model
-
-- **No open port.** Kepler only makes outbound connections to GitKraken's relay; nothing listens for inbound traffic on your network.
-- **Verified relay identity.** Kepler connects only to GitKraken's known relay and rejects anything else, so a compromised network can't redirect your session.
-- **Account-bound sessions.** Every connection is tied to your GitKraken account, so gitkraken.dev always shows who is connected.
-- **Immediate revocation.** Disabling Remote Access or signing out ends the tunnel and every paired device at once.
-
-<figure>
-  <a href="/wp-content/uploads/remote-settings-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-settings-aug-2026.png" class="help-center-img img-bordered" alt="Settings → Remote → Remote Access, active, with the QR code and gitkraken.dev link visible">
-  </a>
-  <figcaption style="text-align:center; color:#888">Remote Access, active, with its QR code and gitkraken.dev link.</figcaption>
-</figure>
 
 ***
 
