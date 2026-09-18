@@ -11,13 +11,13 @@ git_hosts: [github, github-enterprise, gitlab, gitlab-self-hosted, bitbucket, az
 integrations: [github, github-enterprise, gitlab, gitlab-self-hosted, bitbucket, azure-devops, jira, linear, trello]
 hosted_variant: both
 status: GA
-last_verified: 2026-08
+last_verified: 2026-09
 llms_include: true
 tags: [tasks, resources, worktrees, shared-context, notes, sessions, archive, mcp]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: August 2026</kbd>
+<kbd>Last updated: September 2026</kbd>
 
 A **Task** is the unit of work in Kepler. It's one thing you're trying to get done, plus everything the agents working on it need: the repositories, the issue or pull request it came from, the branches, the notes, and every agent session you've run against it.
 
@@ -62,7 +62,7 @@ A Task can hold **more than one** of any of these. Several repositories, several
 
 For the screen itself (the rail, the columns, split panes, tabs), see [The Task View](/kepler/task-view).
 
-### Pull requests attach themselves
+### Issues and pull requests attach themselves
 
 You don't have to remember to attach the pull request. When a Task holds no pull request yet and one of its worktrees is sitting on a branch that exactly matches an open pull request's head branch, Kepler records that pull request as a resource on its own, however the pull request was opened, including from a terminal, from GitKraken, or on the web.
 
@@ -79,7 +79,9 @@ This auto-attach behavior is deliberately narrow, because a wrong guess would pu
 - Kepler attaches only open pull requests whose head branch lives in the same repository. A pull request from a fork never auto-attaches.
 - If another active Task already owns the pull request, Kepler leaves it there.
 
-Auto-attach only adds a pull request; it never removes one. Detach it yourself if you don't want it on the Task.
+**Issues attach the same way.** An issue whose branch matches one of the Task's checkouts is correlated and attached on its own, so a Task started from a branch name finds the ticket behind it. The **Related** group refreshes from its own header, and the refresh actually re-reads the provider rather than redrawing what it had.
+
+Auto-attach only adds a link; it never removes one. Detach it yourself if you don't want it on the Task.
 
 ***
 
@@ -111,7 +113,13 @@ You can also pick the branch when you attach the repository: **Use this branch**
 
 **A new branch forks from the repository's remote default branch**, not from whatever branch you happen to have checked out. Naming a base yourself overrides that default. If no remote default can be resolved (no remote, a shallow clone, offline with nothing cached), Kepler falls back to the current HEAD rather than refusing to start.
 
-Prefer not to use a worktree? **A Task does not require worktree.** Attach a plain folder and the agent works on it in place. Attach nothing and you have a space to think with the option to turn it into real work whenever the idea earns it.
+Automatic branch names are suggested from the Task's own context, led by the issue identifier where there is one, and namespaced under `kepler/` unless you configure another prefix. See [Create a Task](/kepler/create-task#naming-the-branch).
+
+Prefer not to use a worktree? **A Task does not require a worktree — or a repository.** Attach a plain folder and the agent works on it in place. Attach nothing and you have a space to think with the option to turn it into real work whenever the idea earns it.
+
+### When a worktree goes missing
+
+A worktree deleted outside Kepler **stays bound to its Task** rather than quietly disappearing from it. The row is flagged **Gone from disk**, the pane shows the metadata Kepler recorded — **Current branch**, **Base branch**, **Recorded path** — and Kepler offers to recreate it. That way a `git worktree prune` doesn't cost you the Task's record of where the work lived.
 
 ### Make a new worktree ready to build
 
@@ -126,7 +134,7 @@ A fresh worktree is a clean checkout: no `node_modules`, no build output, nothin
   <figcaption style="text-align:center; color:#888">Run command here, from a worktree's right-click menu.</figcaption>
 </figure>
 
-Set them up in **Settings → Repositories**, on the repository's own row. See [Settings](/kepler/settings) for the fields, the path placeholders, and what happens when one fails.
+Set them up in **Settings → Repos & Folders**, on the repository's own row. See [Settings](/kepler/settings) for the fields, the path placeholders, and what happens when one fails.
 
 ***
 
@@ -235,19 +243,50 @@ You can archive and restore individual sessions the same way, from the session's
 
 Agents reach the Task through Kepler's own MCP (Model Context Protocol) server, so an agent can keep the Task's resource list honest instead of leaving it to you.
 
+**Reading**
+
 | Tool | What it does |
 |---|---|
 | `get_task_context` | Read the Task's current shared context |
 | `list_task_resources` | List what's attached: worktrees, folders, files, pull request and issue links, notes |
-| `list_repos` | List the repositories a worktree could be created in, flagging the ones this Task already uses |
+| `list_repos` | List the repositories *and folders* work can happen in, flagging the ones this Task already uses |
+| `session_read` | Read another session's conversation, at the level of detail the agent asks for, by the `kepler-session:` identifier you copy from a session row |
+
+**Links and notes**
+
+| Tool | What it does |
+|---|---|
 | `attach_link` | Attach an issue, pull request, or URL. Kepler classifies it and fetches its title and status when it can |
 | `detach_link` | Remove a link, by URL or by id |
+| `add_task_note` | Write a note into the Task's shared context, visible to you and to every other session |
+| `update_task_note` | Edit a note by id. It carries the version the agent last read, so a note changed underneath it is refused rather than overwritten |
+| `remove_task_note` | Delete a note by id |
+
+**Worktrees**
+
+| Tool | What it does |
+|---|---|
 | `create_worktree` | Create a worktree on a fresh branch, forked from the repository's remote default branch or from a base you name |
+| `attach_worktree` | Bind a worktree that already exists on disk to this Task, changing no files |
+| `detach_worktree` | Remove a worktree binding without touching the worktree, the branch, or the directory |
 | `discard_worktree` | Delete a worktree, and by default its branch |
 
-Every one of them is scoped to the agent's own Task. An agent can't touch another Task's resources, and it never names a Task as an argument. Kepler derives it from who's calling.
+**Starting more work**
 
-Reads, `attach_link`, and `create_worktree` run without asking, because none of them destroy anything. The two that can (`detach_link` and `discard_worktree`) go through the normal permission prompt, so you allow them once, for the session, or always.
+| Tool | What it does |
+|---|---|
+| `create_task` | Create a *separate* Task beside this one, with its own prompt, locations, notes and links — for work that deserves tracking in its own right. It creates the Task and starts nothing |
+| `create_session` | Start an agent session on a Task and send it a first message, in a place you name. The new session runs under the calling session's own agent and settings |
+
+Every one of them is scoped to the agent's own Task. An agent can't touch another Task's resources, and it never names a Task as an argument — Kepler derives it from who's calling. `create_task` is the one exception by design: it makes something new and independent, scoped to nothing.
+
+**Which ones ask first.** Reads, `attach_link`, `add_task_note`, `create_worktree`, `create_task` and `create_session` run without asking, because none of them destroy anything. These go through the normal permission prompt, so you allow them once, for the session, or always:
+
+`detach_link` · `update_task_note` · `remove_task_note` · `attach_worktree` · `detach_worktree` · `discard_worktree`
+
+The reason is the same for each: they change or remove something you may have curated. The AI Sync and Compose tools that reset a working tree or rewrite branch history ask for the same reason; their read-only members (`sync_status`, `compose_plan`, `compose_undo_validate`) do not.
+
+**A session running in Terminal mode has no permission gate for Kepler to sit behind**, so the read-only tools are pre-approved for the CLI instead and the rest still ask. See [Agent Sessions](/kepler/agent-sessions#how-a-session-runs).
 
 Discarding a worktree through `discard_worktree` carries the same protection your own delete does. It refuses while a live session is running in the worktree, including the agent's own. And when deleting would lose work, the first call refuses and hands the agent the inventory of what's at stake, so the agent has to relay that back to you and ask before it can retry.
 

@@ -1,6 +1,6 @@
 # Kepler
 
-> Kepler is GitKraken's Agentic Development Environment (ADE) — it pulls every issue and pull request assigned to you into one place, then hands any of it to the coding agent you already use (Claude Code, Codex, Copilot, Cursor, Auggie, or OpenCode) with the context already attached.
+> Kepler is GitKraken's Agentic Development Environment (ADE) — it pulls every issue and pull request assigned to you into one place, then hands any of it to the coding agent you already use (Claude Code, Codex, Copilot, Cursor, Auggie, OpenCode, Grok Build, Pi, or Google Antigravity) with the context already attached.
 
 Scope: 16 pages included. Excluded: 3 — environment-and-setup.md, kepler-New-Page-Template.md, workflow-views.md.
 
@@ -10,7 +10,7 @@ Scope: 16 pages included. Excluded: 3 — environment-and-setup.md, kepler-New-P
 
 ## Core Concepts
 
-- [The Kepler Interface](https://help.gitkraken.com/kepler/kepler-interface/): Kepler opens on your work: every issue and pull request assigned to you, alongside the tasks you already have running. Learn how to read it and start work from it.
+- [The Kepler Interface](https://help.gitkraken.com/kepler/kepler-interface/): Kepler opens on your work - every issue and pull request assigned to you, alongside the tasks you already have running. Learn how to read it and start work from it.
 - [Arranging Your Work](https://help.gitkraken.com/kepler/arranging-your-work/): One interface means you shape it rather than switch away from it. Choose an arrangement, group and filter the list, fold what you're done with, and archive in bulk.
 - [Actions](https://help.gitkraken.com/kepler/actions/): Actions are editable named prompts you fire at a task, issue, or pull request. Learn the four built-in Actions, how to change them, and how to write your own.
 - [Tasks and Resources](https://help.gitkraken.com/kepler/tasks-and-resources/): A Task is the unit of work in Kepler. Learn what a Task holds, how worktrees work, and how everything attached to a Task reaches your agents.
@@ -21,16 +21,16 @@ Scope: 16 pages included. Excluded: 3 — environment-and-setup.md, kepler-New-P
 
 - [Create a Task](https://help.gitkraken.com/kepler/create-task/): Start a Task from an issue, a pull request, or nothing at all, with the repository, branch, and context already attached.
 - [Agent Sessions](https://help.gitkraken.com/kepler/agent-sessions/): An agent session is one running conversation with a coding agent inside a Task. Learn how to start one, pick the agent and account, queue prompts, answer the agent's questions, and manage a session's lifecycle.
-- [Review Changes](https://help.gitkraken.com/kepler/review-changes/): An agent finished. Read the diff, stage and commit the parts you want, push the branch, and hand the rest to AI Sync or Compose.
+- [Review Changes](https://help.gitkraken.com/kepler/review-changes/): An agent finished. Read the diff in the Changes overlay, publish or sync the branch, and hand the rest to AI Sync or Compose.
 - [Voice Input](https://help.gitkraken.com/kepler/voice-input/): Dictate to an agent instead of typing. Voice input transcribes on your device with Whisper, works push-to-talk or hands-free, and is available in remote windows.
 
 ## Integrations
 
-- [Agent Integrations](https://help.gitkraken.com/kepler/agent-integrations/): Kepler runs the coding agent you already have. Connect Claude Code, Codex, GitHub Copilot, Cursor, Auggie, or OpenCode, or point Kepler at your own ACP server.
+- [Agent Integrations](https://help.gitkraken.com/kepler/agent-integrations/): Kepler runs the coding agent you already have. Connect Claude Code, Codex, GitHub Copilot, Cursor, Auggie, OpenCode, Grok Build, Pi, or Google Antigravity, or point Kepler at your own ACP server.
 - [Issue Tracker Integrations](https://help.gitkraken.com/kepler/issue-tracker-integrations/): Connect your issue trackers to Kepler so the issues assigned to you land in one list, with everything an agent needs already attached.
 - [Pull Request Integrations](https://help.gitkraken.com/kepler/pull-request-integrations/): Connect your Git hosts to Kepler so the pull requests you authored and the ones waiting on your review land in one list, already matched to the worktrees they belong to.
 
 ## Configuration
 
-- [Settings](https://help.gitkraken.com/kepler/settings/): A reference for every setting in Kepler across the eight Settings sub-pages, plus folder locations, worktree path placeholders, per-repository startup commands, and the keyboard shortcut list.
+- [Settings](https://help.gitkraken.com/kepler/settings/): A reference for every setting in Kepler across the ten Settings sub-pages, plus folder locations, branch prefixes, worktree path placeholders, per-repository startup commands, and the keyboard shortcut list.
 - [Remote Environments](https://help.gitkraken.com/kepler/remote-environments/): Run your agents on another machine over SSH or in WSL, switch environments from the title bar, and open this Kepler from another device with Remote Access.
