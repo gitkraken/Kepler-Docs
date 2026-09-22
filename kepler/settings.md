@@ -23,7 +23,7 @@ Settings is ten sub-pages, each with its own sections. This page documents every
 
 Open Settings from the gear icon in the top bar, or with **⌘ ,** (**Ctrl ,** on Windows and Linux).
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/settings-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/settings-aug-2026.png" class="help-center-img img-bordered" alt="Settings open on the General sub-page, with the left rail showing Setup plus all eight sub-pages">
   </a>
@@ -129,6 +129,22 @@ Type a path directly, or use the folder button beside the field to browse. Edits
 
 **Default Tasks Folder** takes no placeholders. A task folder has no repository behind it, so nothing would ever fill one in, and Kepler refuses the value rather than storing a path that can't resolve.
 
+#### Default Task Mode
+
+| Setting | What it controls | Default |
+|---|---|---|
+| **Default Task Mode** | What a newly attached repository starts on, in the Task Composer | Isolated worktree |
+
+| Option | What it does |
+|---|---|
+| **Isolated worktree** | *A new branch in its own copy.* Forks a new branch into its own worktree |
+| **New branch** | *Created in the repository, checkout switches to it.* Forks a new branch directly in the repository's own checkout, with no worktree |
+| **Current branch** | *Whatever is checked out, as-is.* Runs on the repository's own checkout, on whichever branch it currently has, with no new branch created |
+
+This sets the default only. The repository chip's own **Base branch** and **Isolated worktree** controls still override it for any single Task. See [Create a Task](/kepler/create-task#configuring-a-repository).
+
+**Commits made on the current branch land on whichever branch is checked out at the time.** That caveat applies to **New branch** and **Current branch** alike, since both run in the repository's own checkout rather than an isolated one: if another Task is already working in that checkout, Kepler says so and offers to switch that one repository to an isolated worktree instead.
+
 #### Branch prefix
 
 | Setting | What it controls | Default |
@@ -139,7 +155,7 @@ The prefix applies to **automatic** names only — a branch name you type is use
 
 Each repository can override it under **Repos & Folders**. If a repository already has a branch literally named after the prefix, Kepler says which one and points you there: *Can't be used in {repo}: it has a branch named {branch}. Set a different prefix for that repository under Repositories.*
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/placeholder-legend-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/placeholder-legend-aug-2026.png" class="help-center-img img-bordered" alt="Settings → General, showing the three folder fields and the Placeholders legend beneath them">
   </a>
@@ -294,7 +310,7 @@ Terminals are for the work that sits alongside an agent session: running tests w
 |---|---|---|---|
 | **Diff View** | The layout diffs open in | Stacked | Stacked, Split |
 
-This setting is the only control over diff layout. The diff pane in a task's worktree column carries no header of its own, so no per-diff **Stacked** / **Split** toggle appears beside it. See [Review changes](/kepler/review-changes).
+This setting is what the layout starts on. A per-diff **Stacked** / **Split** toggle also sits on the Changes overlay's viewer header, so you can switch a single diff without changing the default. See [Review changes](/kepler/review-changes).
 
 ***
 
@@ -302,7 +318,7 @@ This setting is the only control over diff layout. The diff pane in a task's wor
 
 Four parts: **Default agent**, one section per agent Kepler detects, **Agent options**, and **Features**.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/agent-settings-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/agent-settings-aug-2026.png" class="help-center-img img-bordered" alt="Settings → Agents, showing the Default agent row and the Claude Code and Codex sections with their status badges">
   </a>
@@ -594,7 +610,7 @@ A failed command does not undo the worktree. The worktree exists but may not be 
 
 From the task view, right-click a worktree row in the rail and use **Run command here** for a second way in. It lists that repository's commands and runs the one you pick in that worktree, opening its terminal in place. A repository with none yet reads **No commands yet** and offers **Create command…**.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/create-command-for-repo-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/create-command-for-repo-aug-2026.png" class="help-center-img img-bordered" alt="The Commands section of the Edit repo modal, with a command flagged Run on worktree creation and the Placeholders legend beneath it">
   </a>
@@ -611,5 +627,26 @@ A **Project** groups repositories so they act as a unit (a frontend and a backen
 | **New project** | Names a project and picks its repositories. You can add a repository from a folder without leaving the dialog |
 
 With no projects, the section reads *"No projects yet. Create one to group your repos."*
+
+***
+
+## Help
+
+Two things: a link out to the docs, and a way to replay any explainer you dismissed.
+
+| Control | What it does |
+|---|---|
+| **Kepler documentation** | *Guides, keyboard shortcuts, and agent setup.* **Open docs** opens the Kepler docs site in your browser |
+| **Guides and callouts** | A disclosure, closed by default: *Kepler explains each view the first time you open it. Show any of those again here.* |
+
+Inside the disclosure, one row per explainer, each reading **Seen and dismissed** or **Not shown yet** with its own **Show again** button:
+
+- Todo view explainer
+- Tasks view explainer
+- Agent Graph explainer
+- Actions callout
+- Task page callout
+
+**Reset all onboarding and show everything again**, at the foot of the disclosure, clears every element's dismissed state in one action rather than one row at a time.
 
 ---
