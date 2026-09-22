@@ -23,9 +23,9 @@ A **Task** is the unit of work in Kepler. It's one thing you're trying to get do
 
 A Task doesn't have to start with much. You can start one from an issue in [the Kepler interface](/kepler/kepler-interface) and it arrives with the repository and issue body already attached, or you can start one with nothing at all (no repository, no branch), chase an idea, and attach the real work to it later.
 
-<figure>
-  <a href="/wp-content/uploads/task-creation-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-creation-aug-2026.png" class="help-center-img img-bordered" alt="The Task creation composer, with a prompt typed in and no repo, issue, or pull request attached">
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/task-creation-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-creation-sep-2026.png" class="help-center-img img-bordered" alt="The Task creation composer, with no repo or folder, issue, or pull request attached">
   </a>
   <figcaption style="text-align:center; color:#888">Starting a Task from an idea, with nothing attached yet.</figcaption>
 </figure>
@@ -36,7 +36,7 @@ A Task doesn't have to start with much. You can start one from an issue in [the 
 
 Everything attached to a Task is a **resource**.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/add-resource-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/add-resource-aug-2026.png" class="help-center-img img-bordered" alt="A Notes group in the task view's rail, with a + on the header and an Add resource button below the list">
   </a>
@@ -66,7 +66,7 @@ For the screen itself (the rail, the columns, split panes, tabs), see [The Task 
 
 You don't have to remember to attach the pull request. When a Task holds no pull request yet and one of its worktrees is sitting on a branch that exactly matches an open pull request's head branch, Kepler records that pull request as a resource on its own, however the pull request was opened, including from a terminal, from GitKraken, or on the web.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/prs-attach-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/prs-attach-aug-2026.png" class="help-center-img img-bordered" alt="A Pull requests group in the task view's rail, auto-populated with an open pull request matching the worktree's branch">
   </a>
@@ -89,7 +89,7 @@ Auto-attach only adds a link; it never removes one. Detach it yourself if you do
 
 Most work benefits from a **worktree**: a private Git working copy for this Task. Agents make their changes there, so nothing they do touches the checkout you're working in, and several agents can run at once without stepping on each other.
 
-When you add a repository to a Task, the **Isolated worktree** toggle decides how it's set up.
+When you add a repository to a Task through **Add resource**, the **Isolated worktree** toggle decides how it's set up. The Task Composer's own repository chip, used when you create a Task, reaches the same in-place-or-isolated choice through a different control with an added branch-name field. See [Create a Task](/kepler/create-task#configuring-a-repository).
 
 | Setting | What it says |
 |---|---|
@@ -98,7 +98,7 @@ When you add a repository to a Task, the **Isolated worktree** toggle decides ho
 
 With isolation off, the picker reads **directly in repo**.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/isolated-worktree-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/isolated-worktree-aug-2026.png" class="help-center-img img-bordered" alt="The repository picker reading 'directly in repo' with isolation off">
   </a>
@@ -127,7 +127,7 @@ A fresh worktree is a clean checkout: no `node_modules`, no build output, nothin
 
 **Commands** solve that problem. Save a repository's setup steps once (`pnpm install`, a codegen step, whatever your project needs) and tick **Run on worktree creation**. Kepler runs them in the new worktree's folder every time it makes one for that repository, in order, before the agent starts. Commands you don't flag stay on demand: right-click a worktree in the task view rail and pick **Run command here**.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/run-command-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/run-command-aug-2026.png" class="help-center-img img-bordered" alt="The Run command here option on a worktree's right-click menu in the task view rail">
   </a>
@@ -142,7 +142,7 @@ Set them up in **Settings → Repos & Folders**, on the repository's own row. Se
 
 Kepler sends everything attached to a Task to **every agent session in it** as *shared context*. That's what a prompt means when it says *"described in the shared context above"*: the issue body, the pull request, your notes, the links.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/shared-context-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/shared-context-aug-2026.png" class="help-center-img img-bordered" alt="A session with a collapsible 'Task context added' row listing one attached item">
   </a>
@@ -157,7 +157,7 @@ You don't edit shared context directly. You change it by attaching and detaching
 
 Attach a **Note** for anything every agent on the Task should follow: a style rule, a constraint, a decision you don't want re-litigated. Write it once and every session gets it, including sessions you start later.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/add-note-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/add-note-aug-2026.png" class="help-center-img img-bordered" alt="The Add resources dialog with the Notes tab selected, a title field, and a Markdown content area">
   </a>
@@ -170,7 +170,7 @@ Attach a **Note** for anything every agent on the Task should follow: a style ru
 
 Removing a resource from a Task doesn't destroy it.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/detach-resource-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/detach-resource-aug-2026.png" class="help-center-img img-bordered" alt="A resource's right-click context menu with Detach highlighted at the bottom">
   </a>
@@ -189,7 +189,7 @@ Kepler asks separately in each case, because the answer differs:
 
 Worktrees get more care, because deleting one can lose work.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/detach-worktree-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/detach-worktree-aug-2026.png" class="help-center-img img-bordered" alt="The Detach and Detach & Delete options on a worktree">
   </a>
@@ -215,7 +215,7 @@ Deleting a worktree that has something to lose is only possible through that che
 
 ## Renaming, archiving, and deleting a Task
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/rename-task-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/rename-task-aug-2026.png" class="help-center-img img-bordered" alt="The Task actions menu open from the header, listing Rename task, Archive task, and Delete task">
   </a>

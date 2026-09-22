@@ -31,7 +31,7 @@ Kepler gives you two ways to start work, and the first is usually better: pick s
 
 ## From an issue or pull request
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/action-button-todo-row-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/action-button-todo-row-aug-2026.png" class="help-center-img img-bordered" alt="The Action split button on a Todo row, reading Plan">
   </a>
@@ -67,18 +67,18 @@ Kepler names Tasks automatically from what you started them with. Rename one whe
 
 Click **New task**, or press **Shift+Alt+N** to open the quick launcher from anywhere, including when Kepler isn't the focused window.
 
-<figure>
-  <a href="/wp-content/uploads/new-task-button-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-task-button-aug-2026.png" class="help-center-img img-bordered" alt="The New task button in the Kepler top navigation bar">
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/new-task-button-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-task-button-sep-2026.png" class="help-center-img img-bordered" alt="The New task split button in the Kepler top bar, beside the window switcher, Feedback, Settings, and account">
   </a>
   <figcaption style="text-align:center; color:#888">The New task button, available from anywhere in Kepler.</figcaption>
 </figure>
 
 The Composer is one prompt box above a row of four buttons:
 
-<figure>
-  <a href="/wp-content/uploads/new-task-composer-add-buttons-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-task-composer-add-buttons-aug-2026.png" class="help-center-img img-bordered" alt="The Composer's four buttons: Add repo or folder, Add issue, Add PR, and Add context">
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/new-task-composer-add-buttons-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-task-composer-add-buttons-sep-2026.png" class="help-center-img img-bordered" alt="The Composer's four buttons: Add repo or folder, Add issue, Add PR, and Add context">
   </a>
   <figcaption style="text-align:center; color:#888">The Composer's four attach buttons.</figcaption>
 </figure>
@@ -115,9 +115,9 @@ If the Task can't start, you'll see **Failed to start the task**.
 
 Each attached repository gets a chip with three segments:
 
-<figure>
-  <a href="/wp-content/uploads/isolated-worktree-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/isolated-worktree-aug-2026.png" class="help-center-img img-bordered" alt="A repository chip with its base branch and Isolated worktree controls">
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/composer-repo-chip-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/composer-repo-chip-sep-2026.png" class="help-center-img img-bordered" alt="Two repository chips, each with its base branch, an editable branch name, and the Isolated worktree checkbox">
   </a>
   <figcaption style="text-align:center; color:#888">A repository chip, with its base branch and Isolated worktree controls.</figcaption>
 </figure>
@@ -125,6 +125,10 @@ Each attached repository gets a chip with three segments:
 - **Base branch**: the branch segment of the chip. By default, the Task gets a new branch forked from **the repository's remote default branch**, which is what the chip reads until you pick something: *New branch off origin's default branch, or the current branch if unavailable*. Open it to fork off a different branch instead, to work directly on an existing one, or to take the repository's **current** branch in place.
 - **Branch name**: the new branch's own name, suggested from your prompt as you type and editable in place. See below.
 - **Isolated worktree**: the worktree segment, a direct on/off toggle rather than a menu. On by default, giving the Task its own working copy — *Runs in its own working copy of the repository*. Turning it off means the Task shares your repository folder — *Uses the repository's own folder, so a branch switch here moves your checkout*. See [Tasks and Resources](/kepler/tasks-and-resources).
+
+**What a newly attached repository starts on is a setting.** These three segments open on **Settings → General → Default Task Mode**: **Isolated worktree** (the default), **New branch**, or **Current branch**. Changing it changes the starting point only; every segment above still overrides it per repository, per Task. See [Settings](/kepler/settings#default-task-mode).
+
+Picking **New branch** or **Current branch** means the Task runs in the repository's own checkout rather than an isolated one, so only one Task can use that checkout at a time. If another Task already has it, the branch menu says so, *{task} is working in this checkout.*, with a button to switch that one repository to an isolated worktree instead.
 
 ### Naming the branch
 
@@ -180,9 +184,9 @@ For what happens to the conversation once it's on a task — forking, continuing
 
 Or attach nothing. No repository, no folder, no issue. You get somewhere to think (ask a question, explore an idea) and you can attach the real work later, once it's worth tracking. See [The Task View](/kepler/task-view).
 
-<figure>
-  <a href="/wp-content/uploads/new-task-composer-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-task-composer-aug-2026.png" class="help-center-img img-bordered" alt="The Task Composer with a prompt typed in and Add repo, Add issue, Add PR, and Add context buttons, nothing attached yet">
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/new-task-composer-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-task-composer-sep-2026.png" class="help-center-img img-bordered" alt="The Task Composer with a prompt typed in and Add issue, Add PR, Add context, and Add repo or folder buttons, nothing attached yet">
   </a>
   <figcaption style="text-align:center; color:#888">The Task Composer, ready to attach a repo, issue, pull request, or other context.</figcaption>
 </figure>
@@ -193,7 +197,7 @@ Or attach nothing. No repository, no folder, no issue. You get somewhere to thin
 
 The Task appears in **Tasks in progress**. Click it for the side panel, or double-click to open [the task view](/kepler/task-view).
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/full-task-view-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/full-task-view-aug-2026.png" class="help-center-img img-bordered" alt="The task view with the rail on the left, listing Sessions, Changes, Folders, Pull requests, Links, and Notes, and a session open on the right with tool-call approval prompts">
   </a>
