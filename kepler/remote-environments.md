@@ -80,7 +80,7 @@ A connect that a *different* window starts never takes over this window's chip.
 
 The panel is the full management surface: **Hosts** on the left, the selected host's detail on the right.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/connection-panel-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/connection-panel-aug-2026.png" class="help-center-img img-bordered" alt="The connections panel's empty state, with no saved hosts on the left and a prompt to add an SSH host on the right">
   </a>
@@ -320,7 +320,7 @@ The payload carries its own Node runtime, so the host needs nothing pre-installe
 
 Configure it in **Settings → Remote → Remote Access**.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/remote-settings-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/remote-settings-aug-2026.png" class="help-center-img img-bordered" alt="Settings → Remote → Remote Access, active, with the QR code and gitkraken.dev link visible">
   </a>
@@ -346,7 +346,7 @@ Once Remote Access is active, a QR code and a link appear in Settings.
 - **Scan with your phone camera to open** is the fast path. Otherwise, copy the link.
 - The link opens **gitkraken.dev/integrations**, where you approve the connection with your GitKraken account.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/remote-access-phone-sep-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/remote-access-phone-sep-2026.png" class="help-center-img img-bordered" alt="A paired phone's browser open on the Kepler tunnel URL, showing the connected session">
   </a>
@@ -357,7 +357,7 @@ Once Remote Access is active, a QR code and a link appear in Settings.
 
 Go to **gitkraken.dev → Integrations → Remote Access** to manage every machine with Remote Access turned on, across all your devices.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/remote-access-security-sep-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/remote-access-security-sep-2026.png" class="help-center-img img-bordered" alt="gitkraken.dev Integrations page showing the Remote Access (Beta) section with this machine listed">
   </a>
@@ -368,7 +368,7 @@ Go to **gitkraken.dev → Integrations → Remote Access** to manage every machi
 - Revoke a single connection to sign out one paired device without affecting the others.
 - Disable a machine to turn off its tunnel entirely, from anywhere.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/remote-access-options-sep-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/remote-access-options-sep-2026.png" class="help-center-img img-bordered" alt="Expanded machine card showing each connected device with a Revoke button, and a menu with Disable machine">
   </a>
