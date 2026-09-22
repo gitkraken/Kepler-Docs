@@ -8,22 +8,22 @@ audience: developer
 plan_required: all
 os_support: [Windows, macOS, Linux]
 git_hosts: [generic]
-integrations: [claude-code, codex, copilot, cursor, auggie, opencode]
+integrations: [claude-code, codex, copilot, cursor, auggie, opencode, grok, pi, antigravity]
 hosted_variant: both
 status: GA
-last_verified: 2026-08
+last_verified: 2026-09
 llms_include: true
 tags: [agent-graph, dashboard, sessions, subagents, tool-calls, monitoring]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: August 2026</kbd>
+<kbd>Last updated: September 2026</kbd>
 
 Running several agents at once is easy. Knowing what they're all doing is the hard part.
 
 The **Agent Graph** draws it: every task, the sessions inside it, each turn, every tool call, every subagent, and the files the agents touch. It lays all of this out as a graph that updates live, with nodes appearing as the agents work. GitKraken has spent a decade drawing things developers otherwise hold in their heads. The commit graph did it for history, and the Agent Graph does it for agent work.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/agent-graph.gif" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/agent-graph.gif" class="help-center-img img-bordered" alt="The Agent Graph animating as agents work, with turn, tool-call, and file nodes appearing, including one tool call in an error state">
   </a>

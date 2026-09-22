@@ -8,20 +8,20 @@ audience: developer
 plan_required: all
 os_support: [Windows, macOS, Linux]
 git_hosts: [github, github-enterprise, gitlab, gitlab-self-hosted, bitbucket, azure-devops]
-integrations: [claude-code, codex-cli, copilot-cli, cursor, auggie, opencode]
+integrations: [claude-code, codex-cli, copilot-cli, cursor, auggie, opencode, grok, pi, antigravity]
 hosted_variant: both
 status: GA
-last_verified: 2026-08
+last_verified: 2026-09
 llms_include: true
 tags: [actions, prompts, agents, tasks, issues, pull-requests, settings, customization]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: August 2026</kbd>
+<kbd>Last updated: September 2026</kbd>
 
 An **Action** is a named prompt you fire at a task, issue, or pull request to start agent work.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/actions-drop-down.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/actions-drop-down.png" class="help-center-img img-bordered" alt="The Action split button on a Todo row, chevron open, showing Plan, Implement, a custom action, and Manage actions">
   </a>
