@@ -2,7 +2,7 @@
 
 > Kepler is GitKraken's Agentic Development Environment (ADE) — it pulls every issue and pull request assigned to you into one place, then hands any of it to the coding agent you already use (Claude Code, Codex, Copilot, Cursor, Auggie, OpenCode, Grok Build, Pi, or Google Antigravity) with the context already attached.
 
-Scope: 16 pages included. Excluded: 3 — environment-and-setup.md, kepler-New-Page-Template.md, workflow-views.md.
+Scope: 17 pages included. Excluded: 3 — environment-and-setup.md, kepler-New-Page-Template.md, workflow-views.md.
 
 ## Getting Started
 
@@ -34,3 +34,7 @@ Scope: 16 pages included. Excluded: 3 — environment-and-setup.md, kepler-New-P
 
 - [Settings](https://help.gitkraken.com/kepler/settings/): A reference for every setting in Kepler across the ten Settings sub-pages, plus folder locations, branch prefixes, worktree path placeholders, per-repository startup commands, and the keyboard shortcut list.
 - [Remote Environments](https://help.gitkraken.com/kepler/remote-environments/): Run your agents on another machine over SSH or in WSL, switch environments from the title bar, and open this Kepler from another device with Remote Access.
+
+## Release Notes
+
+- [Kepler 0.x](https://help.gitkraken.com/kepler/release-notes-current/): View the latest features, improvements, and fixes shipping in the current version of Kepler.
