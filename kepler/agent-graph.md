@@ -34,21 +34,21 @@ The **Agent Graph** draws it: every task, the sessions inside it, each turn, eve
 
 ## Open it
 
-<figure>
-  <a href="/wp-content/uploads/agent-graph-toggle-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-graph-toggle-aug-2026.png" class="help-center-img img-bordered" alt="The View control's toggle for switching to the Agent Graph">
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/agent-graph-toggle-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-graph-toggle-sep-2026.png" class="help-center-img img-bordered" alt="The top-left control's three segments: Todo, Tasks in progress, and Agent Graph selected">
   </a>
-  <figcaption style="text-align:center; color:#888">Switching to the Agent Graph from the View control.</figcaption>
+  <figcaption style="text-align:center; color:#888">The Agent Graph segment, beside Todo and Tasks in progress.</figcaption>
 </figure>
 
-The graph is one of Kepler's three arrangements, so you switch to it the way you'd switch to a list.
+The graph is a segment of its own, beside **Todo** and **Tasks in progress**, rather than a way of arranging the list, because it replaces the list instead of laying it out.
 
 | Where | How |
 |---|---|
-| **The whole fleet** | The **View** control: **Rows**, **Columns**, or the graph. Kepler remembers your choice across restarts |
+| **The whole fleet** | The top-left control: switch to the **Agent Graph** segment. Kepler remembers your choice across restarts |
 | **One session** | The task view's rail carries a per-session toggle on each session row, which docks that one session's graph beside its transcript |
 
-See [Arranging Your Work](/kepler/arranging-your-work) for the other two. The Agent Graph has no page of its own, but rather it's an arrangement of the main list and a pane within the task view.
+See [Arranging Your Work](/kepler/arranging-your-work) for **Todo** and **Tasks in progress**, and for the **List** and **Columns** views those two segments offer. The Agent Graph has no page of its own, but rather it's a segment of the main list and a pane within the task view.
 
 When opened from the main list, the graph draws exactly what the list normally shows including your search and filter(s). Opened on a session, the graph starts fully expanded and grows downward (or to the right) with the conversation's tool calls and subagents.
 
@@ -58,7 +58,7 @@ The graph is a **visualization**, not a workspace. To work in a session, open th
 
 ## How to read it
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/how-to-read-graph-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/how-to-read-graph-aug-2026.png" class="help-center-img img-bordered" alt="The layered Agent Graph: a task and session at the top, turn nodes below, then tool-call nodes including a group, an error, and nodes needing you, down to file nodes">
   </a>
@@ -107,7 +107,7 @@ Repeated calls of the same kind fold into one node badged **Group**, which keeps
 
 ## Click any node for detail
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/node-details-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/node-details-aug-2026.png" class="help-center-img img-bordered" alt="A node's details panel open beside the graph">
   </a>
@@ -130,7 +130,7 @@ From the details you can **Open task** or **Open session** to jump into the work
 
 A rail down the right-hand side of the graph, reading top to bottom.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/stat-rails-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/stat-rails-2026.png" class="help-center-img img-bordered" alt="The stats rail down the right-hand side of the Agent Graph">
   </a>
@@ -193,11 +193,11 @@ Kepler reports this instead of staying silent, because a graph that quietly hide
 
 ## Finding things in a busy graph
 
-<figure>
-  <a href="/wp-content/uploads/agent-graph-header-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-graph-header-aug-2026.png" class="help-center-img img-bordered" alt="The Agent Graph's header, with the search box, Options menu, depth slider, and freeze control">
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/agent-graph-header-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-graph-header-sep-2026.png" class="help-center-img img-bordered" alt="The Agent Graph's header, with the search box, and the Options menu open showing Layout, Zoom to selection, Compact stats, and Group repeated tool calls">
   </a>
-  <figcaption style="text-align:center; color:#888">The graph's header controls.</figcaption>
+  <figcaption style="text-align:center; color:#888">The graph's header controls, with the Options menu open.</figcaption>
 </figure>
 
 The graph's header carries a search box, an **Options** menu, the depth slider, and the freeze control. Zooming lives on the canvas itself.
@@ -206,6 +206,8 @@ The graph's header carries a search box, an **Options** menu, the depth slider, 
 |---|---|---|
 | *Filter tasks, sessions, agents…* | Header | Narrows the graph by name, across all three |
 | **Layout** | Options | Grow the tree **Left to right** or **Top to bottom** |
+| **Zoom to selection** | Options | Frames a picked node with its tree, ancestors, and siblings; holds still when it's already in view. Two nested settings say when the camera may move again: **Follow the tree as it grows** (zooms out as far as it takes rather than stopping once cards get too small to make out) and **Re-frame when the space changes** (reframes when a panel opens beside the graph or the window resizes) |
+| **Compact stats** | Options | Same numbers in half the room: circular meters and denser tiles, for a smaller window |
 | **Group repeated tool calls** | Options | On by default. Off draws every call as its own node |
 | **Only active sessions** | Options | Hide everything that isn't running |
 | **Agent** / **Repo** | Options | Narrow to one agent or repository. Not offered on the main list, whose own facets already do it |
@@ -218,7 +220,7 @@ Kepler remembers depth and layout per surface, so narrowing the graph on the mai
 
 A live graph moves while you're trying to read it. **Freeze the graph** holds it still so you can inspect a node without it shifting. A chip beside the graph reads **Live** while it's updating (with the moment of the last sample, so "live" is demonstrably live) and **Frozen** until you **Resume live updates**.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/freeze-button-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/freeze-button-aug-2026.png" class="help-center-img img-bordered" alt="The Freeze the graph button">
   </a>
