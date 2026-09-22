@@ -11,19 +11,19 @@ git_hosts: [generic]
 integrations: []
 hosted_variant: both
 status: retired
-last_verified: 2026-08
+last_verified: 2026-09
 llms_include: false
 tags: [workflow-views, retired, dashboard]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: August 2026</kbd>
+<kbd>Last updated: September 2026</kbd>
 
 **Kepler retired this page.** Kepler no longer has separate List, Kanban, and Console views, or a view switcher. [One interface](/kepler/kepler-interface) covers all three:
 
 | What you used | Where it is now |
 |---|---|
-| **List** — scanning everything in flight | The **Rows** arrangement |
-| **Kanban** — work by stage | The **Columns** arrangement, grouped by **Progress**. This isn't a full kanban replacement — it doesn't provide the SDLC (software development lifecycle) column behavior some users requested |
+| **List** — scanning everything in flight | The **List** view |
+| **Kanban** — work by stage | The **Columns** view, grouped by **Progress**. This isn't a full kanban replacement — it doesn't provide the SDLC (software development lifecycle) column behavior some users requested |
 | **Console** — several agents at once | Shift-click to open sessions side by side, in [the task view](/kepler/task-view) or from the main list |
-| Diffs, commits, staging, pushing | [Review Changes](/kepler/review-changes) |
+| Diffs, commits, and syncing branches | [Review Changes](/kepler/review-changes) |
