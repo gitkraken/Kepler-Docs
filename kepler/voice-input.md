@@ -8,20 +8,20 @@ audience: developer
 plan_required: all
 os_support: [Windows, macOS, Linux]
 git_hosts: [generic]
-integrations: [claude-code, codex-cli, copilot-cli, cursor, auggie, opencode]
+integrations: [claude-code, codex-cli, copilot-cli, cursor, auggie, opencode, grok, pi, antigravity]
 hosted_variant: both
 status: GA
-last_verified: 2026-08
+last_verified: 2026-09
 llms_include: true
 tags: [voice-input, dictation, whisper, microphone, settings, agent-sessions]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: August 2026</kbd>
+<kbd>Last updated: September 2026</kbd>
 
 Voice input puts a microphone in the agent prompt so you can talk instead of typing. **Transcription runs on your device**, using a Whisper model Kepler downloads once. Kepler never uploads your audio.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/start-voice-input-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/start-voice-input-aug-2026.png" class="help-center-img img-bordered" alt="The composer's microphone icon, with its Start voice input tooltip">
   </a>
@@ -30,7 +30,7 @@ Voice input puts a microphone in the agent prompt so you can talk instead of typ
 
 It is off until you turn it on. Enable it in **Settings → Voice Input** and download a model; the microphone in the prompt goes live when the model is ready.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/voice-input-settings-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/voice-input-settings-aug-2026.png" class="help-center-img img-bordered" alt="The Settings → Voice Input page, with Enable voice input on, the downloaded model's status, and Dictation options">
   </a>

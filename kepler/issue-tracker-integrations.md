@@ -23,7 +23,7 @@ Connect an issue tracker and every issue assigned to you shows up in [the Kepler
 
 Manage providers in **Settings → Integrations**, in the **Provider Integrations** section.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/provider-integrations-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/provider-integrations-aug-2026.png" class="help-center-img img-bordered" alt="Settings → Integrations → Provider Integrations, with GitHub and Jira connected, showing the Connected badge and Disconnect and Reconnect buttons">
   </a>

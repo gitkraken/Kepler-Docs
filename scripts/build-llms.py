@@ -24,7 +24,8 @@ FM_RE = re.compile(r"^---\n(.*?)\n---\n(.*)$", re.S)
 BLURB = ("Kepler is GitKraken's Agentic Development Environment (ADE) — it pulls every "
          "issue and pull request assigned to you into one place, then hands any of it to "
          "the coding agent you already use (Claude Code, Codex, Copilot, Cursor, Auggie, "
-         "or OpenCode) with the context already attached.")
+         "OpenCode, Grok Build, Pi, or Google Antigravity) with the context already "
+         "attached.")
 
 
 def parse(path):

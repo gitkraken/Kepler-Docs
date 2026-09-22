@@ -11,13 +11,13 @@ git_hosts: [github, github-enterprise, gitlab, gitlab-self-hosted, bitbucket, az
 integrations: [github, github-enterprise, gitlab, gitlab-self-hosted, bitbucket, azure-devops, jira, linear, trello]
 hosted_variant: both
 status: GA
-last_verified: 2026-08
+last_verified: 2026-09
 llms_include: true
-tags: [interface, todo, tasks, issues, pull-requests, actions, sessions, panel]
+tags: [interface, dashboard, todo, tasks, issues, pull-requests, actions, sessions, panel, windows]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: August 2026</kbd>
+<kbd>Last updated: September 2026</kbd>
 
 This may sound odd, but Kepler "opens" on your work. It offers one interface instead of a set of views to switch between, and you shape it to fit how you work. See [Arranging Your Work](/kepler/arranging-your-work).
 
@@ -28,37 +28,53 @@ Beyond this list, you'll find a task's own page, Settings, and remote connection
 - New task
 - Your setup progress
 - The remote indicator
+- The window switcher
 - Feedback
 - Your account
 - Settings
 
-<figure>
-  <a href="/wp-content/uploads/top-tool-bar-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/top-tool-bar-aug-2026.png" class="help-center-img img-bordered" alt="Kepler's top bar showing New task, setup progress, the remote indicator, Feedback, account, and Settings">
+On **Windows and Linux** the native title bar is gone and Kepler draws its own. The menu button at the leading edge holds the full application menu — **File**, **Edit**, **View**, **Window**, **Help** — including **Settings**, **Check for Updates…**, and **About**. macOS keeps its native menu bar, and both menus open the same **About Kepler** dialog.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/top-tool-bar-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/top-tool-bar-sep-2026.png" class="help-center-img img-bordered" alt="Kepler's top bar showing the New task split button, the window switcher, Feedback, Settings, and account">
   </a>
   <figcaption style="text-align:center; color:#888">The top bar's trailing cluster.</figcaption>
 </figure>
 
+The top bar sheds controls as the window narrows based on the room actually available, rather than at fixed widths, so a control disappears only when it genuinely will not fit.
+
+### The window switcher
+
+**Windows** in the top bar lists every open Kepler window and what its agents are doing, so you don't have to go and look. Its trigger carries the reason to: **Windows · {count} waiting elsewhere**, or **{count} running elsewhere**. **This window** marks the one you're in, and **New Window** opens another. The same list is on the tray icon.
+
+Each window's own title leads with the remote it's connected to and how many of its sessions are waiting on you.
+
+### New task
+
+**New task** is a split button. The left half opens the Task Composer; the chevron holds **From an external session**, which starts a task from a conversation you began outside Kepler. See [Create a Task](/kepler/create-task#from-a-session-you-already-started).
+
 
 ***
 
-## Todo + Tasks in progress
+## Todo, Tasks in progress, and the Agent Graph
 
-The control at the top left switches between 2 views of your work.
+The control at the top left switches between 3 views of your work.
 
-<figure>
-  <a href="/wp-content/uploads/todo-task-in-progress-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/todo-task-in-progress-aug-2026.png" class="help-center-img img-bordered" alt="The control at the top left of Kepler, switching between Todo and Tasks in progress">
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/todo-task-in-progress-agent-graph-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/todo-task-in-progress-agent-graph-sep-2026.png" class="help-center-img img-bordered" alt="The control at the top left of Kepler, switching between Todo, Tasks in progress, and Agent Graph">
   </a>
-  <figcaption style="text-align:center; color:#888">The Todo and Tasks in progress switcher.</figcaption>
+  <figcaption style="text-align:center; color:#888">The Todo, Tasks in progress, and Agent Graph switcher.</figcaption>
 </figure>
 
 | Segment | What it shows |
 |---|---|
 | **Todo** | Issues and pull requests assigned to you across every connected provider, and not yet picked up |
 | **Tasks in progress** | The tasks you already have running in Kepler |
+| **Agent Graph** | A live visualization of every task, session, turn, tool call, and file. See [The Agent Graph](/kepler/agent-graph) |
 
-Todo is where a working session starts; **Tasks in progress** is where it lives while underway.
+Todo is where a working session starts; **Tasks in progress** is where it lives while underway. The **Agent Graph** is a segment of its own rather than a way of arranging the list, because it replaces the list instead of laying it out — it scopes over every task, narrowed by your search and filters, and the **Group** and **View** controls step aside while it's on.
 
 When launching the app, Kepler opens on **Tasks in progress**. When you start Kepler for the first time (like on a new machine), you get a **Welcome to Kepler** screen, with a summary of what's already set up and 3 options:
 
@@ -69,6 +85,23 @@ When launching the app, Kepler opens on **Tasks in progress**. When you start Ke
 
 To populate the Todo tab, first connect at least one provider. See [Issue Tracker Integrations](/kepler/issue-tracker-integrations) and [Pull Request Integrations](/kepler/pull-request-integrations).
 
+### External sessions
+
+Above the list sits an **External sessions** section: the agent conversations running outside Kepler right now. It's pinned rather than mixed into the groups, because it answers a different question from the rest of the list — *what's running that Kepler didn't start?*
+
+| Part | What it does |
+|---|---|
+| The header | **{count} live** and **{count} waiting** |
+| **Show past sessions** | Extends the section to conversations found on disk, not just ones running now |
+| **Show {count} more** | The section keeps itself short; this opens the rest |
+| A row | Opens the conversation read-only, where you can fork it, continue it here, or adopt it into a task |
+
+With detection off, the section says so rather than sitting empty — *Sessions you start in your terminal can appear here. Kepler detects them through the agent's hooks.* — with **Turn on detection** beside it. With detection on and nothing to show, it reads **No sessions running outside Kepler right now.**
+
+External sessions stay listed under a filter that has no way to answer for them, rather than vanishing because a facet couldn't classify them.
+
+For what those sessions are and what you can do with one, see [Agent Sessions](/kepler/agent-sessions#sessions-started-outside-kepler).
+
 ***
 
 ## Reading a row
@@ -77,9 +110,9 @@ A row reads differently depending on whether it holds a tracked issue or pull re
 
 ### Todo rows: issues and pull requests
 
-<figure>
-  <a href="/wp-content/uploads/todo-row-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/todo-row-aug-2026.png" class="help-center-img img-bordered" alt="A Todo row showing the provider, type badge, role, reference, title, repository, session activity, status pill, assignee, and Action button">
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/todo-row-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/todo-row-sep-2026.png" class="help-center-img img-bordered" alt="Two Todo rows for pull requests, one badged Review and one badged Needs my review, each with its repository, status pill, time, and Action button">
   </a>
   <figcaption style="text-align:center; color:#888">A Todo row, left to right.</figcaption>
 </figure>
@@ -110,22 +143,25 @@ Each row shows, left to right:
 
 ### Task rows
 
-<figure>
-  <a href="/wp-content/uploads/task-row-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-row-aug-2026.png" class="help-center-img img-bordered" alt="A Task row showing the Task badge, title, repository, session activity, status pill, assignee, and time">
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/task-row-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-row-sep-2026.png" class="help-center-img img-bordered" alt="A Task row with no type badge, showing its title, both repositories it spans, a status pill, a session dot, and time">
   </a>
   <figcaption style="text-align:center; color:#888">A Task row.</figcaption>
 </figure>
 
 Task rows show:
 
-- A **Task** badge
 - The title
-- The repository
+- The repository, or every repository when the task spans several — *app, api +2* beyond two
 - Session activity
 - A status pill
 - The assignee
 - Time
+
+Task rows carry no type badge. Everything in **Tasks in progress** is a task, so a chip saying so earned nothing and cost the width the timestamp needed; a narrowing row now drops other cells before it drops the time.
+
+A task that spans several repositories is listed under **each** of them when the list is grouped by repository, rather than under only the first one.
 
 The task's own operations sit behind the **⋮** menu:
 
@@ -141,12 +177,12 @@ Both segments carry a status pill, but they answer different questions.
 
 | Where | Values | What it means |
 |---|---|---|
-| **Task rows** | **Exploration**, **In Development**, **In Review**, **Done**, **Archived** | Where the *work* has got to. Kepler derives it from the task's checkouts: uncommitted or unpushed changes, an open pull request, or a merged or closed one. The exception is **Archived**, which is your own filing decision |
+| **Task rows** | **Exploration**, **In Development**, **In Review**, **Done**, **Archived** | Where the *work* has got to, derived from the task's checkouts. **In Development** reads the commits ahead of the branch's recorded base; **In Review** needs an open pull request; a dirty working tree withholds **Done**; and a task can reach **Done** from the pull-request links it has stored. The exception is **Archived**, which is your own filing decision |
 | **Todo rows** | **Open**, **Draft**, **Merged**, **Closed** | The provider's own state on the issue or pull request |
 
 Beside the pill sits one dot per distinct **session state**, with a count of each.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/task-status-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/task-status-aug-2026.png" class="help-center-img img-bordered" alt="A status pill next to session-state dots on a row">
   </a>
@@ -175,7 +211,7 @@ Kepler places a task at the furthest stage any of its checkouts reached, except 
 
 Click the **Action** button on a Todo row to hand the item to an agent with its context already attached: the repository, the issue body, the branch, and the diff. One click, no copy-paste.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/actions-drop-down.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/actions-drop-down.png" class="help-center-img img-bordered" alt="The Action dropdown open on a Todo row, listing Plan, Implement, Review, and Address Feedback">
   </a>
@@ -192,9 +228,9 @@ All of these defaults are editable. See [Actions](/kepler/actions).
 
 ### Open a panel
 
-<figure>
-  <a href="/wp-content/uploads/open-a-task-panel-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/open-a-task-panel-aug-2026.png" class="help-center-img img-bordered" alt="The side panel open beside the list after clicking a row">
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/open-a-task-panel-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/open-a-task-panel-sep-2026.png" class="help-center-img img-bordered" alt="The side panel open beside the list after clicking a row">
   </a>
   <figcaption style="text-align:center; color:#888">The side panel, opened from a row.</figcaption>
 </figure>
@@ -206,9 +242,9 @@ All of these defaults are editable. See [Actions](/kepler/actions).
 
 Shift-clicking ranges from your last plain click, the way it does in Finder or VS Code. You can open up to 8 panels at once. Opening a 9th evicts the oldest unpinned one.
 
-<figure>
-  <a href="/wp-content/uploads/multi-task-panels-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/multi-task-panels-aug-2026.png" class="help-center-img img-bordered" alt="Several task panels open side by side, each with its own chat">
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/multi-task-panels-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/multi-task-panels-sep-2026.png" class="help-center-img img-bordered" alt="Several task panels open side by side, each with its own chat">
   </a>
   <figcaption style="text-align:center; color:#888">Several panels open side by side, each with its own chat.</figcaption>
 </figure>
@@ -217,11 +253,15 @@ Drag the sash between two columns to resize the one on its left. Double-click th
 
 Starting a task from **New task** while you're on the list opens the new task as a panel and leaves the list where it was, rather than throwing you onto its page.
 
+Reorder the open panels from a panel's own **Panel actions** menu (**Move left**, **Move right**) or with **Cmd/Ctrl+Alt+←** and **Cmd/Ctrl+Alt+→**.
+
+When the list reorders under you — a session finishes, a task moves bucket — the row you have selected glides to its new position rather than jumping, so you can see where it went.
+
 ### Pin a panel
 
-<figure>
-  <a href="/wp-content/uploads/pin-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/pin-aug-2026.png" class="help-center-img img-bordered" alt="The pin control in a panel's header, keeping the panel open">
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/pin-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/pin-sep-2026.png" class="help-center-img img-bordered" alt="The pin control in a panel's header, keeping the panel open">
   </a>
   <figcaption style="text-align:center; color:#888">The pin in a panel's header.</figcaption>
 </figure>
@@ -241,9 +281,9 @@ One slot always stays unpinned so browsing never has to evict a pin; once every 
 
 Selecting a row opens a panel beside the list with everything about that item, as a stack of collapsible, resizable sections.
 
-<figure>
-  <a href="/wp-content/uploads/task-side-panel-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-side-panel-aug-2026.png" class="help-center-img img-bordered" alt="The side panel beside the list, showing a stack of collapsible sections for a selected item">
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/task-side-panel-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-side-panel-sep-2026.png" class="help-center-img img-bordered" alt="The side panel beside the list, showing a stack of collapsible sections for a selected item">
   </a>
   <figcaption style="text-align:center; color:#888">The side panel, with its stack of collapsible sections.</figcaption>
 </figure>
@@ -256,7 +296,9 @@ Kepler does not draw a section that has nothing behind it.
 | **Related ({count})** | Linked issues and pull requests, counted in the heading so a folded pane still says how many | There's at least one |
 | **Start a session** | A prompt box (*Describe what to work on…*) plus the same Actions | Nothing has run on this item yet |
 | **What's running** | The live agent conversation. This is the chat | A session exists. Resizable, but not foldable: it's what the panel is for |
-| **Terminals** | Terminal tabs across the task's checkouts | A terminal is open. **New terminal here**, from a checkout in the header, is what creates it |
+| **Plan** | The plan the conversation on screen has proposed | The agent produced one |
+| **Changes** | The checkout's commits, working changes, and file diffs | You clicked a worktree chip's branch cell |
+| **Terminals** | Terminal tabs across the task's checkouts | A terminal is open. Its **✕** takes the section away without stopping the shells; the chip's Terminal cell and **Cmd/Ctrl+J** are the way back |
 
 Kepler sizes **Summary** and **Related** to their contents and then the chat takes whatever height is left over.
 
@@ -266,9 +308,9 @@ In the side panel for a Task, the primary button reads **Start**, and once a ses
 
 The header carries:
 
-<figure>
-  <a href="/wp-content/uploads/issue-header-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/issue-header-aug-2026.png" class="help-center-img img-bordered" alt="The side panel's header, showing badges, the reference, the pin, and the header controls">
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/issue-header-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/issue-header-sep-2026.png" class="help-center-img img-bordered" alt="The side panel's header, showing badges, the reference, the pin, and the header controls">
   </a>
   <figcaption style="text-align:center; color:#888">The side panel's header.</figcaption>
 </figure>
@@ -281,16 +323,47 @@ The header carries:
 
 You can edit a task's name in place. Enter commits the change; Escape or clicking away discards it.
 
-Below the header sit the task's checkouts with their line deltas. Each one opens a popover with its file count, **Run command**, **Open in…**, and **New terminal here**.
+An archived task is badged as such in both its preview and its detail header, so you can't mistake a filed task for a live one.
 
-<figure>
-  <a href="/wp-content/uploads/line-deltas-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/line-deltas-aug-2026.png" class="help-center-img img-bordered" alt="A task's checkouts below the header, each showing its line deltas">
+### The worktree chip
+
+Below the header sits one line per checkout: a **status chip** on the left and an **actions chip** pinned to the right edge, so several checkouts line up as a column.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/line-deltas-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/line-deltas-sep-2026.png" class="help-center-img img-bordered" alt="A checkout's branch cell below the header, with its tooltip open showing the repository, branch, and change counts">
   </a>
-  <figcaption style="text-align:center; color:#888">A checkout's line deltas, below the header.</figcaption>
+  <figcaption style="text-align:center; color:#888">A checkout's chip, below the header.</figcaption>
 </figure>
 
+| Cell | What it shows | What clicking it does |
+|---|---|---|
+| **Branch** | The branch name and what it adds against its base: commits, files, and the line delta, with a dot when some of it is still uncommitted | Opens the **Changes** section on that checkout |
+| **Upstream** | Behind then ahead, or **Publish** when there is no upstream at all | Runs the verb the counts call for. The chevron offers only that verb plus **Fetch** — **Pull** when behind, **Push** when ahead, and **Force push** behind a confirmation only when the branch has genuinely diverged |
+| **Terminal** | How many shells are running in this checkout | Brings the most recent one forward, or spawns one when there is none |
+| **Open in** | Your default editor | Opens the checkout there. The chevron lists the rest |
+| **Run** | The repository's commands | Runs the one you pick |
+
+The branch cell's tooltip carries the repository, the path, and the change counts broken into their committed and uncommitted halves — because only one of those two halves can still be lost.
+
+The chip sheds labels as the panel narrows by measuring the room it actually has, and truncates the branch name only once there is nothing else left to shed.
+
+The terminal strip's **+** becomes a chooser listing the task's checkouts by branch when the task has more than one.
+
 An issue or pull request keeps a status line as well, with its provider state, session dots, repository, assignee, and last activity. A task does not, because the row you clicked already showed that information.
+
+***
+
+## Back and forward
+
+Back follows one rule: **it leaves the place or mode you're in.** It never retraces a search you typed, a filter you set, or a change of view mode, so pressing it after narrowing the list takes you out of the list rather than walking back through every keystroke.
+
+| | Mac | Windows / Linux |
+|---|---|---|
+| **Back** | ⌘ [ | Alt + ← |
+| **Forward** | ⌘ ] | Alt + → |
+
+Each set of open panels gets its own history entry, so Back closes the set you just opened rather than the whole visit. Moving between Settings sub-pages replaces a single entry, so Back from Settings returns you to what you were doing before you opened it.
 
 ***
 

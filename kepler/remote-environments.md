@@ -32,7 +32,13 @@ Settings groups both under **Remote**, and they point in opposite directions. Ge
 | **Remote Environments** | Kepler on your desktop reaches **out** to a host, and your work runs there | The title-bar chip, and the connections panel behind it |
 | **Remote Access** | Another device reaches **in** to this Kepler, and your work stays here | **Settings → Remote → Remote Access** |
 
-Everything up to [Remote Access](#remote-access-reach-this-kepler-from-another-device) describes connecting *to* a host.
+Everything up to [Remote Access](#remote-access-reach-kepler-from-another-device) describes connecting *to* a host.
+
+<div class="note" markdown="1">
+
+**Remote Environments is a paid feature, but it is not a quota.** Any paid plan gets it, with **no ceiling on how many environments you can have**. Earlier builds capped the count per plan and refused paying accounts past an arbitrary number; that cap is gone. Unpaid plans see a banner offering a free trial where one is available, and **Switch to {organization}** when another organization you belong to already includes it.
+
+</div>
 
 ***
 
@@ -61,7 +67,7 @@ The popover answers where you are and where else you can go, and hands anything 
 | **Disconnect** | Releases this window only. *Only disconnects this window; the server keeps its sessions running* |
 | **Update server** | Appears when a newer server build is available for the connected host |
 | **Switch to** | Every other saved host, plus **Local** — *Work on this machine* — when this window is on a remote |
-| **Detected on this PC** | WSL distros found on this machine, offered for one-click connect while you have no saved hosts |
+| **Detected on this PC** | WSL distributions found on this machine, offered for one-click connect |
 | **Manage remote environments…** | Opens the connections panel. **⌘ ⇧ R** on macOS, **Ctrl + Shift + R** elsewhere |
 
 Clicking a **Switch to** row moves this window. Hold **Cmd** (macOS) or **Ctrl** to open that host in a new window instead, leaving this window where it is. The trailing ↗ icon on each row does the same thing with a single click.
@@ -74,7 +80,7 @@ A connect that a *different* window starts never takes over this window's chip.
 
 The panel is the full management surface: **Hosts** on the left, the selected host's detail on the right.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/connection-panel-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/connection-panel-aug-2026.png" class="help-center-img img-bordered" alt="The connections panel's empty state, with no saved hosts on the left and a prompt to add an SSH host on the right">
   </a>
@@ -85,7 +91,7 @@ The rail lights up exactly one host: the host this window is currently connected
 
 | Control | What it does |
 |---|---|
-| **+** (*Add a host*) | Opens the host chooser, or the SSH wizard directly when your `~/.ssh/config` has nothing new to offer |
+| **+** (*Add a host*) | Opens the host chooser, which lists **WSL distributions detected on this PC** ahead of the hosts in your `~/.ssh/config`, or the SSH wizard directly when neither has anything new to offer. A WSL pick saves and connects exactly like an SSH-config host |
 | **Search hosts** | Filters the rail by name or connection string |
 | **Connect** | Connects this window. **Cmd/Ctrl**-click connects in a new window. While a connect runs, the same button cancels it |
 | ↗ | Connects to this host in a new window. Offered even for the host you are already on. One server accepts several clients |
@@ -93,6 +99,12 @@ The rail lights up exactly one host: the host this window is currently connected
 | **Update server** | Installs the newer server build on the connected host |
 | **Rename** (pencil, or **More actions**) | Renames the saved connection. Nothing on the host changes |
 | **Remove connection** (**More actions**) | Deletes the saved connection, with optional cleanup — see below |
+
+### SSH configuration
+
+**Kepler reads your own `~/.ssh/config` before it offers to write to it.** A host you have already configured — its user, port, identity file, jump host, whatever you set — is used as you configured it, and Kepler offers to edit the file only when there is genuinely nothing there to reuse.
+
+**Open in → VS Code** on an SSH environment opens through that same host alias, so VS Code's own Remote-SSH resolves it exactly the way your terminal does.
 
 ### Connection details and diagnostics
 
@@ -308,7 +320,7 @@ The payload carries its own Node runtime, so the host needs nothing pre-installe
 
 Configure it in **Settings → Remote → Remote Access**.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/remote-settings-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/remote-settings-aug-2026.png" class="help-center-img img-bordered" alt="Settings → Remote → Remote Access, active, with the QR code and gitkraken.dev link visible">
   </a>
@@ -334,7 +346,7 @@ Once Remote Access is active, a QR code and a link appear in Settings.
 - **Scan with your phone camera to open** is the fast path. Otherwise, copy the link.
 - The link opens **gitkraken.dev/integrations**, where you approve the connection with your GitKraken account.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/remote-access-phone-sep-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/remote-access-phone-sep-2026.png" class="help-center-img img-bordered" alt="A paired phone's browser open on the Kepler tunnel URL, showing the connected session">
   </a>
@@ -345,7 +357,7 @@ Once Remote Access is active, a QR code and a link appear in Settings.
 
 Go to **gitkraken.dev → Integrations → Remote Access** to manage every machine with Remote Access turned on, across all your devices.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/remote-access-security-sep-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/remote-access-security-sep-2026.png" class="help-center-img img-bordered" alt="gitkraken.dev Integrations page showing the Remote Access (Beta) section with this machine listed">
   </a>
@@ -356,7 +368,7 @@ Go to **gitkraken.dev → Integrations → Remote Access** to manage every machi
 - Revoke a single connection to sign out one paired device without affecting the others.
 - Disable a machine to turn off its tunnel entirely, from anywhere.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/remote-access-options-sep-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/remote-access-options-sep-2026.png" class="help-center-img img-bordered" alt="Expanded machine card showing each connected device with a Revoke button, and a menu with Disable machine">
   </a>

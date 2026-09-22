@@ -11,19 +11,19 @@ git_hosts: [github, github-enterprise, gitlab, gitlab-self-hosted, bitbucket, az
 integrations: [github, github-enterprise, gitlab, gitlab-self-hosted, bitbucket, azure-devops, jira, linear, trello]
 hosted_variant: both
 status: GA
-last_verified: 2026-08
+last_verified: 2026-09
 llms_include: true
-tags: [arrangements, rows, columns, grouping, filters, search, archive, cleanup]
+tags: [arrangements, inbox, list, columns, grouping, filters, search, archive, cleanup]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: August 2026</kbd>
+<kbd>Last updated: September 2026</kbd>
 
 Kepler has one interface rather than a set of views, so you shape it instead of switching away from it. Three controls do most of the work: the arrangement, the grouping, and the filters. Each segment remembers its own.
 
-<figure>
-  <a href="/wp-content/uploads/arrange-work-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/arrange-work-aug-2026.png" class="help-center-img img-bordered" alt="The arrangement, grouping, and filter controls above Kepler's list">
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/arrange-work-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/arrange-work-sep-2026.png" class="help-center-img img-bordered" alt="The grouping, filter, and view controls above Kepler's list, grouped by Inbox">
   </a>
   <figcaption style="text-align:center; color:#888">The arrangement, grouping, and filter controls.</figcaption>
 </figure>
@@ -32,28 +32,31 @@ This page assumes you know what's on screen; see [The Kepler Interface](/kepler/
 
 ***
 
-## Three arrangements
+## Two layouts
 
-<figure>
-  <a href="/wp-content/uploads/view-options-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/view-options-aug-2026.png" class="help-center-img img-bordered" alt="The View control open, showing Rows, Columns, and the graph as arrangement options">
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/view-options-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/view-options-sep-2026.png" class="help-center-img img-bordered" alt="The View control open, showing List and Columns as layout options">
   </a>
-  <figcaption style="text-align:center; color:#888">The View control's arrangement options.</figcaption>
+  <figcaption style="text-align:center; color:#888">The View control's layout options.</figcaption>
 </figure>
 
 The **View** control decides how Kepler draws the list.
 
 | View | What you get | Best for |
 |---|---|---|
-| **Rows** | A dense list you read top to bottom | Scanning everything at once |
+| **List** | A dense list you read top to bottom | Scanning everything at once |
 | **Columns** | The same list turned on its side, one column per group | Seeing how far along things are |
-| **Agent Graph** | A live visualization of every agent, turn, tool call, and file | Seeing what your agents are actually doing (see [The Agent Graph](/kepler/agent-graph)) |
 
-**Rows** is the default, and Kepler remembers your choice across restarts. **Rows** and **Columns** both respect the grouping and filters below.
+**List** is the default, and each segment remembers its own choice across restarts — Todo can stay a list while Tasks in progress stays a board. Both layouts respect the grouping and filters below.
 
-**Columns** draws the sections of the *current* grouping as a horizontal board, so what the columns are is up to the **Group** control. Grouped by **Progress** (the default on Tasks in progress), the columns are the lifecycle stages: **Exploration**, **In Development**, **In Review**, and **Done**. They stay put as work moves between them rather than appearing and vanishing under the pointer, and an empty one reads **Nothing here**. **Archived** is the exception: it appears only when something is filed there. On every other grouping, Kepler doesn't draw a section with nothing in it.
+**Columns** draws the sections of the *current* grouping as a horizontal board, so what the columns are is up to the **Group** control. Grouped by **Progress**, the columns are the lifecycle stages: **Exploration**, **In Development**, **In Review**, and **Done**. They stay put as work moves between them rather than appearing and vanishing under the pointer, and an empty one reads **Nothing here**. **Archived** is the exception: it appears only when something is filed there. On every other grouping, Kepler doesn't draw a section with nothing in it.
 
-The **Agent Graph** replaces the list with the graph, narrowed to whatever your search and filters left. **Group** goes away while it's on, since the graph draws one tree per task. The graph's own controls take its place in the strip.
+<div class="note" markdown="1">
+
+**The Agent Graph is no longer a layout.** It's a segment of its own, beside **Todo** and **Tasks in progress**, because it replaces the list rather than arranging it. Selecting it hides **Group** and **View** and gives the graph's own controls the strip. See [The Agent Graph](/kepler/agent-graph).
+
+</div>
 
 ***
 
@@ -61,9 +64,9 @@ The **Agent Graph** replaces the list with the graph, narrowed to whatever your 
 
 The **Group** dropdown reorganizes the list.
 
-<figure>
-  <a href="/wp-content/uploads/group-options-tasks-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/group-options-tasks-aug-2026.png" class="help-center-img img-bordered" alt="The Group dropdown open on Tasks in progress, showing Progress, Activity, Repository, and None">
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/group-options-tasks-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/group-options-tasks-sep-2026.png" class="help-center-img img-bordered" alt="The Group dropdown open on Tasks in progress, showing Inbox checked as the default, then Progress, Activity, Repository, and None">
   </a>
   <figcaption style="text-align:center; color:#888">The Group dropdown on Tasks in progress.</figcaption>
 </figure>
@@ -72,12 +75,38 @@ The available groupings differ by segment.
 
 | Segment | Group by | Default |
 |---|---|---|
-| **Todo** | Type, Your role, Provider, Repository, Status, None | Type |
-| **Tasks in progress** | Progress, Activity, Repository, None | Progress |
+| **Todo** | Type, Needs my attention, Your role, Provider, Repository, Status, None | Type |
+| **Tasks in progress** | Inbox, Progress, Activity, Repository, None | Inbox |
+
+### Inbox
+
+**Inbox** is the default on Tasks in progress, and it is viewer-relative: it sorts by what each task is asking of *you*, not by where the work has got to. It reads top-down from what needs you toward what's filed away.
+
+| Bucket | What lands there |
+|---|---|
+| **Unread** | A session finished a turn you haven't looked at |
+| **Needs attention** | A session is blocked on a permission request or a question |
+| **Running** | An agent is working on it |
+| **Recent** | Moved in the last 24 hours |
+| **Earlier** | Moved before that |
+| **Done** | Finished, waiting only on the decision to archive it |
+| **Archived** | Your own filing decision, which outranks everything else |
+
+A session stays marked **unseen** until you actually look at it, so a turn that finished while you were elsewhere doesn't quietly clear itself.
+
+**Inbox** is one of two axes where a task can appear twice: a task that is both unread *and* blocked on you is listed under **Unread** and **Needs attention**, because each bucket is a complete answer to its own question and leaving it out of either would make that list lie. **Running** is exclusive — a task already at the top doesn't need a second row saying it's busy too. So is **Done**, which stands in for the time bucket a task would otherwise get.
+
+The 24-hour window is fixed rather than a setting: the axis is meant to be a quick daily sweep, not a tunable report.
+
+### The other axes
 
 **Progress** and **Activity** are two different questions about the same tasks. *Progress* is how far the work has got: **Exploration**, **In Development**, **In Review**, **Done**, **Archived**. *Activity* is what the task's agent sessions are doing right now, in the sessions' own words: **Waiting**, **Running**, **Ready**, **Spawning**, **Unread**, **Idle**, **Error**, **Disconnected**, and **Terminated**. Grouping by Activity also adds **No sessions** for a task nobody has started, then **Done**, and **Archived** last. Group by Progress to see the shape of the pipeline; group by Activity to see what needs a person.
 
+**Repository** is the other axis that can list a task twice: a task bound to worktrees in several repositories appears under each of them, because the axis answers "what's happening in *this* repository" one repository at a time.
+
 Tasks in progress has no Status grouping, because a task's status *is* its progress stage, a second axis under another name.
+
+On Todo, **Needs my attention** is the viewer-relative axis: what each item is asking of you right now — **Changes requested**, **Needs my review**, **Re-review**, **Comments** — with **No action needed** last, where it can't push a real obligation below the fold. It's an axis rather than a pinned section so it obeys the same rules as every other grouping: one bucket per state, collapsible headers, and no row shown twice.
 
 Items with no repository or provider collect under **No repository** and **No provider**. A pull request whose provider didn't say who authored it groups under **Unattributed**; an issue, which has no author-or-reviewer axis at all, groups under **Not applicable**.
 
@@ -85,14 +114,14 @@ Items with no repository or provider collect under **No repository** and **No pr
 
 Every group header is a fold toggle, with the section's count beside its name.
 
-<figure>
-  <a href="/wp-content/uploads/group-folds-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/group-folds-aug-2026.png" class="help-center-img img-bordered" alt="A group header showing a fold toggle and the section's count">
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/group-folds-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/group-folds-sep-2026.png" class="help-center-img img-bordered" alt="A group header showing a fold toggle and the section's count">
   </a>
   <figcaption style="text-align:center; color:#888">A group header, with its fold toggle and count.</figcaption>
 </figure>
 
-Folding one unmounts its rows, so a long **Done** list stops costing anything to keep around. **Archived** starts folded when you group by Activity, since it's the section that work is filed *into*. Folds last only for the current run; Kepler doesn't write them to disk.
+Folding one unmounts its rows, so a long **Done** list stops costing anything to keep around. **Archived** starts folded when you group by Activity or Inbox, since it's the section that work is filed *into*. Folds last only for the current run; Kepler doesn't write them to disk.
 
 ***
 
@@ -100,9 +129,9 @@ Folding one unmounts its rows, so a long **Done** list stops costing anything to
 
 The **Filter** menu holds one flyout per facet.
 
-<figure>
-  <a href="/wp-content/uploads/filter-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/filter-aug-2026.png" class="help-center-img img-bordered" alt="The Filter menu open, showing one flyout per facet">
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/filter-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/filter-sep-2026.png" class="help-center-img img-bordered" alt="The Filter menu open, showing one flyout per facet">
   </a>
   <figcaption style="text-align:center; color:#888">The Filter menu, with one flyout per facet.</figcaption>
 </figure>
@@ -118,6 +147,10 @@ Kepler hides facets with nothing to offer, so a single-repo setup won't show a R
 
 **Linked work** filters by whether an item is connected to work on the other side: *Has a task* / *No task yet* in Todo, and *Has a PR or issue* / *No PR or issue* in Tasks in progress.
 
+**Values within one facet combine as a union.** Ticking GitHub *and* GitLab under **Provider** shows items from either, not items that are somehow both. A facet with nothing ticked reads **Any** and narrows nothing. The **Search filters…** box finds a facet value without scrolling, and the menu reports **{count} of {total}** as you narrow.
+
+External sessions stay listed under a filter that has no way to answer for them, rather than vanishing because a facet couldn't classify them.
+
 Once a search or a filter is narrowing the list, the strip reports the match as *{count} of {total}* and offers **Clear filters**, which drops the search text and the facets together. **Refresh** re-fetches the current segment from your providers.
 
 ***
@@ -126,9 +159,9 @@ Once a search or a filter is narrowing the list, the strip reports the match as 
 
 The search box matches on **title, reference, or repository**: *Search title, ref, or repo…*.
 
-<figure>
-  <a href="/wp-content/uploads/search-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/search-aug-2026.png" class="help-center-img img-bordered" alt="The search box above Kepler's list, with a clear button">
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/search-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/search-sep-2026.png" class="help-center-img img-bordered" alt="The search box above Kepler's list, with a clear button">
   </a>
   <figcaption style="text-align:center; color:#888">The search box, with the clear button.</figcaption>
 </figure>
@@ -147,16 +180,16 @@ Each segment remembers its own search, grouping, and filters, since they differ 
 
 **Archive task** files a task away. It leaves the live buckets for **Archived**, its rows and sessions survive, and Kepler stops only the agents whose checkout is about to disappear.
 
-<figure>
-  <a href="/wp-content/uploads/archive-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/archive-aug-2026.png" class="help-center-img img-bordered" alt="The Archive task confirmation, offering to also delete worktrees and branches">
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/archive-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/archive-sep-2026.png" class="help-center-img img-bordered" alt="The row's ⋮ menu open, with Archive task highlighted among Open in new window, Mark as unread, Rename task, Add resource, and Delete task">
   </a>
-  <figcaption style="text-align:center; color:#888">The Archive task confirmation.</figcaption>
+  <figcaption style="text-align:center; color:#888">Archive task, in the row's ⋮ menu.</figcaption>
 </figure>
 
 The confirmation offers the same two cascades the delete does: **Also delete worktrees** and **Also delete branches**. This way, finishing with a task doesn't have to mean deleting it to clean it off the disk. Archiving outranks everything else, so a task you filed away can't climb back into a live section because a shell is still open on it.
 
-**Restoring a task takes an extra step: filter first.** An archived task's row doesn't offer **Restore task** while it's mixed in with everything else. Filter **Activity** to **Archived** (see [Filter](#filter) above), and the **⋮** menu on a row in that filtered list swaps **Archive task** for **Restore task**, which puts it straight back.
+**Restoring a task takes an extra step: filter first.** An archived task's row doesn't offer **Restore task** while it's mixed in with everything else. Filter **Activity** to **Archived** (see [Filter](#filter) above), and the **⋮** menu on a row in that filtered list swaps **Archive task** for **Restore task**, which puts it straight back. **Restore task** is also on the task page's own header as soon as the task is archived, with no filtering needed.
 
 For more than one at a time, every section header on **Tasks in progress** carries a quiet **Select**. Press it, and that corner of the header becomes a bar: a select-all box, **{count} selected**, and the batch verbs. The section's rows also grow checkboxes. One section selects at a time, and while you're selecting, a click ticks a row rather than opening its panel.
 
@@ -167,8 +200,6 @@ For more than one at a time, every section header on **Tasks in progress** carri
 | **Delete** | Removes the selected tasks for good |
 | **Cancel** | Leaves selection mode and drops the set |
 
-Restoring an archived task isn't available yet, in bulk or individually.
-
-Both **Archive** and **Delete** confirm, and both offer **Also delete worktrees** and **Also delete branches**. The batch confirmation doesn't list what each individual checkout would lose; open a task's own **⋮** for that.
+Both **Archive** and **Delete** confirm, and both offer **Also delete worktrees** and **Also delete branches**. Kepler remembers what you ticked, per dialog, so a habit doesn't have to be re-entered every time. The batch confirmation doesn't list what each individual checkout would lose; open a task's own **⋮** for that.
 
 ---

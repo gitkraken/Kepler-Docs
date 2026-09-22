@@ -8,16 +8,16 @@ audience: developer
 plan_required: all
 os_support: [Windows, macOS, Linux]
 git_hosts: [generic]
-integrations: [claude-code, codex, copilot, cursor, auggie, opencode]
+integrations: [claude-code, codex, copilot, cursor, auggie, opencode, grok, pi, antigravity]
 hosted_variant: both
 status: GA
-last_verified: 2026-08
+last_verified: 2026-09
 llms_include: true
 tags: [getting-started, install, setup, dashboard, actions, first-task]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: August 2026</kbd>
+<kbd>Last updated: September 2026</kbd>
 
 Kepler is GitKraken's **Agentic Development Environment (ADE)**: a place to direct coding agents across your real work, in as many repositories as you need, at the same time.
 
@@ -50,7 +50,7 @@ Kepler is in **public preview**. A free GitKraken account is all you need.
 
 Kepler opens on a welcome screen. Click **Sign in with GitKraken**. If you do not have an account, you'll create one in the next step.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/sign-in-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/sign-in-aug-2026.png" class="help-center-img img-bordered" alt="Kepler's welcome screen with the Sign in with GitKraken button">
   </a>
@@ -92,7 +92,7 @@ After you connect a tracker, the **Todo** segment of [the Kepler interface](/kep
 1. Pick an item in **Todo**.
 2. Click its **Action** button.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/actions-drop-down.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/actions-drop-down.png" class="help-center-img img-bordered" alt="The Action dropdown open on a Todo row, listing Plan, Implement, Review, and Address Feedback">
   </a>
@@ -120,11 +120,11 @@ Every one of those prompts is yours to change, and you can add your own. That's 
 
 ## Start something that is not tracked yet
 
-Click **New task**, or press **Shift+Alt+T** from anywhere. Write a prompt, attach a repository if the task needs one, and go. You can attach nothing at all and turn it into real work later. See [Create a Task](/kepler/create-task).
+Click **New task**, or press **Shift+Alt+N** from anywhere. Write a prompt, attach a repository if the task needs one, and go. You can attach nothing at all and turn it into real work later. See [Create a Task](/kepler/create-task).
 
-<figure>
-  <a href="/wp-content/uploads/new-task-button-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-task-button-aug-2026.png" class="help-center-img img-bordered" alt="The New task button in the Kepler top navigation bar">
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/new-task-button-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-task-button-sep-2026.png" class="help-center-img img-bordered" alt="The New task split button in the Kepler top bar, beside the window switcher, Feedback, Settings, and account">
   </a>
   <figcaption style="text-align:center; color:#888">The New task button, available from anywhere in Kepler.</figcaption>
 </figure>

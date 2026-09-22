@@ -1,6 +1,6 @@
 ---
 title: Agent Integrations
-description: Kepler runs the coding agent you already have. Connect Claude Code, Codex, GitHub Copilot, Cursor, Auggie, or OpenCode, or point Kepler at your own ACP server.
+description: Kepler runs the coding agent you already have. Connect Claude Code, Codex, GitHub Copilot, Cursor, Auggie, OpenCode, Grok Build, Pi, or Google Antigravity, or point Kepler at your own ACP server.
 product: Kepler
 feature: Agent Integrations
 content_type: how-to
@@ -8,24 +8,24 @@ audience: developer
 plan_required: all
 os_support: [Windows, macOS, Linux]
 git_hosts: [generic]
-integrations: [claude-code, codex-cli, copilot-cli, cursor, auggie, opencode]
+integrations: [claude-code, codex-cli, copilot-cli, cursor, auggie, opencode, grok, pi, antigravity]
 hosted_variant: both
 status: GA
-last_verified: 2026-08
+last_verified: 2026-09
 llms_include: true
-tags: [agent-integrations, claude-code, codex, copilot, cursor, auggie, opencode, acp, setup, settings]
+tags: [agent-integrations, claude-code, codex, copilot, cursor, auggie, opencode, grok, pi, antigravity, acp, terminal, setup, settings]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: August 2026</kbd>
+<kbd>Last updated: September 2026</kbd>
 
 Kepler runs the coding agent you already have. You sign in with your own agent account, and Kepler adds no markup on the agents you bring.
 
-Kepler ships support for six agents, and you can point it at any other agent that speaks the Agent Client Protocol (ACP).
+Kepler ships support for nine agents, and you can point it at any other agent that speaks the Agent Client Protocol (ACP) — or whose command-line interface you simply want to run inside a task.
 
 All of it lives in **Settings → Agents**.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/agent-settings-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/agent-settings-aug-2026.png" class="help-center-img img-bordered" alt="Settings → Agents, showing the Default agent row and the Claude Code and Codex sections with their status badges">
   </a>
@@ -34,22 +34,31 @@ All of it lives in **Settings → Agents**.
 
 ***
 
-## The six supported agents
+## The nine supported agents
 
 Each agent gets its own section in **Settings → Agents**, in this order:
 
-| Agent | Name in Settings | How Kepler runs it | Multiple accounts |
-|---|---|---|---|
-| **Claude Code** | Claude Code | Your installed `claude` CLI, over ACP or in an embedded terminal | Yes |
-| **Codex** | Codex | A bundled `codex-acp` engine: no separately installed CLI needed | Yes |
-| **GitHub Copilot** | GitHub Copilot | Your installed `copilot` CLI in ACP mode (`--acp`) | Yes |
-| **Cursor** | Cursor CLI | Your installed `cursor-agent` CLI in ACP mode (`acp`) | No |
-| **Auggie** | Auggie | Your installed `auggie` CLI in ACP mode (`--acp`) | Yes |
-| **OpenCode** | OpenCode | Your installed `opencode` CLI in ACP mode (`acp`) | No |
+| Agent | Name in Settings | How Kepler runs it | Run modes | Multiple accounts |
+|---|---|---|---|---|
+| **Claude Code** | Claude Code | Your installed `claude` CLI | Rich chat or Terminal | Yes |
+| **Codex** | Codex | Your installed `codex` CLI | Rich chat or Terminal | Yes |
+| **GitHub Copilot** | GitHub Copilot | Your installed `copilot` CLI in ACP mode (`--acp`) | Rich chat or Terminal | Yes |
+| **Cursor** | Cursor CLI | Your installed `cursor-agent` CLI in ACP mode (`acp`) | Rich chat or Terminal | No |
+| **OpenCode** | OpenCode | Your installed `opencode` CLI in ACP mode (`acp`) | Rich chat or Terminal | No |
+| **Auggie** | Auggie | Your installed `auggie` CLI in ACP mode (`--acp`) | Rich chat or Terminal | Yes |
+| **Grok Build** | Grok Build | Your installed `grok` CLI in ACP mode (`agent stdio`) | Rich chat or Terminal | Yes |
+| **Pi** | Pi | Your installed `pi` CLI, in its own terminal interface | Terminal only | No |
+| **Google Antigravity** | Google Antigravity | Your installed `agy` CLI, in its own terminal interface | Terminal only | No |
 
 **Auggie** is Augment's coding agent. It runs over the same ACP path as the rest, and its model and mode pickers work like any other agent's. It is also one of the three agents that report plan usage back to Kepler, alongside Claude Code and Codex. Auggie reports a billing cycle and a credit balance rather than rolling windows. See [Agent Sessions](/kepler/agent-sessions) for the **Token usage** chip and the opt-in it needs.
 
-**Codex is bundled.** Its section reads **Bundled** rather than **Installed**, and it has no binary picker. Codex sessions and local sign-in run on the engine Kepler ships, not on a `codex` CLI you install yourself.
+**Grok Build** is xAI's coding agent. It signs in through your browser, or you can supply an xAI API key. Its data lives under `~/.grok`, which is what lets Kepler keep several accounts apart.
+
+**Pi and Google Antigravity are terminal-only.** Neither CLI speaks ACP yet — Pi has no ACP mode and Google ships its ACP server as a separate binary — so Kepler runs each one's own interface in a terminal inside the task instead of leaving them out. Kepler does no auth probing for either: they use their own sign-in (`/login`, or the provider API-key environment variables they read directly).
+
+**Codex now runs your own CLI.** Earlier builds shipped a bundled `codex-acp` engine; Kepler resolves and spawns the `codex` you have installed, like every other agent, so its section reads **Installed** and it has a binary picker.
+
+Every agent that offers both modes is configured the same way. **Settings → Agents → *your agent* → Default mode for new sessions** picks between **Rich chat** and **Terminal**, per agent, and the **New session** menu can start one session the other way. See [Agent Sessions](/kepler/agent-sessions#how-a-session-runs).
 
 Two agents need a recent enough build to be driven over ACP:
 
@@ -71,11 +80,14 @@ Kepler declares install methods per operating system, so the list you see depend
 | Agent | macOS | Linux | Windows |
 |---|---|---|---|
 | **Claude Code** | Native installer, Homebrew, npm (global) | Native installer, npm (global) | Native installer, winget, npm (global) |
-| **Codex** | Bundled: nothing to install | Bundled: nothing to install | Bundled: nothing to install |
+| **Codex** | Standalone installer, Homebrew, npm (global) | Standalone installer, npm (global) | npm (global) |
 | **GitHub Copilot** | Native installer, Homebrew, npm (global) | Native installer, Homebrew, npm (global) | winget, npm (global) |
 | **Cursor CLI** | Native installer, Homebrew | Native installer | Native installer |
 | **Auggie** | npm (global) | npm (global) | npm (global) |
 | **OpenCode** | Native installer, Homebrew, npm (global) | Native installer, Homebrew, npm (global), pacman | scoop, Chocolatey, npm (global) |
+| **Grok Build** | Native installer | Native installer | Native installer |
+| **Pi** | npm (global) | npm (global) | npm (global) |
+| **Google Antigravity** | Native installer | Native installer | Native installer |
 
 If an agent offers no install method for your OS, Kepler says so and points you at the custom binary path instead.
 
@@ -91,7 +103,7 @@ Open **Configure** on an agent's section to see and change what it resolved:
 
 | Control | What it does |
 |---|---|
-| Status | **Installed**, **Bundled** (Codex), or **Not installed** |
+| Status | **Installed** or **Not installed**, with who is signed in on it |
 | **Install** | Runs one of the install methods above. Shown when the agent is not installed |
 | **Binary** | The resolved absolute path, or **Not found**, with where it came from (**PATH**, **Shell**, or **Common**) and its version |
 | **Re-scan** | Re-detects this agent's binary. Use it after installing or removing one outside Kepler |
@@ -105,7 +117,7 @@ If a pinned path later disappears (for example, when an auto-updater cleans up a
 
 **Settings → Agents → Agent options → Installed agents** carries a **Refresh** button that re-scans every agent at once.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/installed-agents-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/installed-agents-aug-2026.png" class="help-center-img img-bordered" alt="Settings → Agents → Agent options → Installed agents, with its Refresh button">
   </a>
@@ -126,6 +138,8 @@ An installed agent shows **Sign in** until it has a credential, and **Sign out**
 | **Cursor CLI** | Cursor's own browser sign-in, driven from the modal. You can instead set `CURSOR_API_KEY` |
 | **Auggie** | **Sign in with browser**, or **Paste session token** |
 | **OpenCode** | Nothing to do in Kepler. OpenCode resolves providers from its own config file and provider environment variables |
+| **Grok Build** | Browser sign-in, or **Paste an API key** for a deployment with no local browser |
+| **Pi** / **Google Antigravity** | Nothing to do in Kepler. Sign in inside the CLI itself, or set the provider environment variables it reads |
 
 ### Browser sign-in, including over SSH
 
@@ -159,18 +173,20 @@ For **Auggie**, you can only add a second account with **Paste session token**. 
 
 ***
 
-## Claude Code modes
+## Run modes
 
-Claude Code is the one agent you can run two ways. **Configure → Default mode for new sessions** picks which:
+Most agents run two ways, and each agent keeps its own default. **Configure → Default mode for new sessions** picks which:
 
 | Mode | What you get |
 |---|---|
-| **Rich chat** | The full visual experience: plans, model, and effort controls, richer input. This is the default |
-| **Terminal** | Claude as a command-line session in an embedded terminal, the same as the Claude Code CLI |
+| **Rich chat** | Kepler drives the agent over ACP and renders the conversation: plans, model, and effort controls, richer input. This is the default |
+| **Terminal** | The agent's own command-line interface, in an embedded terminal inside the task |
 
-You can switch modes inside a running session without losing the conversation.
+The **New session** menu starts one session in whichever mode is *not* the default, without changing the setting. An agent that offers only one mode shows no switch at all. See [Agent Sessions](/kepler/agent-sessions#how-a-session-runs).
 
-**Detect Claude Code sessions started outside Kepler** is a separate, off-by-default setting. Turning it on adds hooks to `~/.claude/settings.json` so sessions you start in your own terminal show up in Kepler. In **Terminal** mode, Claude Code runs as a plain terminal command, so leave detection on if you want Kepler to track those sessions.
+### Detecting sessions started outside Kepler
+
+**Settings → Agents → Agent options → Detect sessions started outside Kepler** is a separate, cross-agent setting, **on out of the box**. It installs GitKraken hooks so sessions you start in your own terminal show up in Kepler, and it covers every agent Kepler can track that way: **Claude Code**, **Codex**, **Cursor**, **GitHub Copilot**, and **OpenCode**. See [Agent Sessions](/kepler/agent-sessions#sessions-started-outside-kepler).
 
 ***
 
@@ -199,7 +215,7 @@ If your agent speaks ACP, Kepler can run it without any Kepler-side change. Open
 
 Kepler treats environment values as secrets: it hides them after you save and never sends them to any client. When you edit a server, leaving a value empty (`KEY=`) keeps the stored secret, and typing a new value replaces it.
 
-Custom servers appear alongside the built-in agents everywhere you can choose an agent.
+Custom servers appear alongside the built-in agents everywhere you can choose an agent. A custom server can run as a **terminal** session too: Kepler works out what terminal mode can offer from the command's own flags rather than from a list of agent names, so your own agent degrades exactly the way a built-in one does.
 
 ***
 
@@ -207,7 +223,7 @@ Custom servers appear alongside the built-in agents everywhere you can choose an
 
 Agent CLIs report **Kepler** as the client name, so your sessions show up as Kepler in places like your Anthropic dashboard rather than as an unlabelled non-interactive run.
 
-This labeling applies to the sessions Kepler drives over ACP. Claude Code's **Terminal** mode deliberately leaves the label alone, because overriding it there would break key handling in the embedded terminal.
+This labeling applies to the sessions Kepler drives over ACP. **Terminal** mode deliberately leaves the label alone, because overriding it there would break key handling in the embedded terminal.
 
 ***
 
@@ -215,6 +231,8 @@ This labeling applies to the sessions Kepler drives over ACP. Claude Code's **Te
 
 Connecting an agent is the setup; running one is a **session** inside a task. [Agent Sessions](/kepler/agent-sessions) covers sessions: starting, resuming, queuing prompts, and reviewing what the agent produced.
 
-A task holds resources and does not require a worktree. See [Tasks and Resources](/kepler/tasks-and-resources).
+A task holds resources and does not require a worktree — or even a repository. See [Tasks and Resources](/kepler/tasks-and-resources).
+
+Not every conversation starts in Kepler, either. See [Agent Sessions](/kepler/agent-sessions#sessions-started-outside-kepler).
 
 ---

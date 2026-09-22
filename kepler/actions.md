@@ -8,20 +8,20 @@ audience: developer
 plan_required: all
 os_support: [Windows, macOS, Linux]
 git_hosts: [github, github-enterprise, gitlab, gitlab-self-hosted, bitbucket, azure-devops]
-integrations: [claude-code, codex-cli, copilot-cli, cursor, auggie, opencode]
+integrations: [claude-code, codex-cli, copilot-cli, cursor, auggie, opencode, grok, pi, antigravity]
 hosted_variant: both
 status: GA
-last_verified: 2026-08
+last_verified: 2026-09
 llms_include: true
 tags: [actions, prompts, agents, tasks, issues, pull-requests, settings, customization]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: August 2026</kbd>
+<kbd>Last updated: September 2026</kbd>
 
 An **Action** is a named prompt you fire at a task, issue, or pull request to start agent work.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/actions-drop-down.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/actions-drop-down.png" class="help-center-img img-bordered" alt="The Action split button on a Todo row, chevron open, showing Plan, Implement, a custom action, and Manage actions">
   </a>
@@ -49,7 +49,7 @@ Every Action declares **what it can be aimed at**, which is why **Address Feedba
 
 You can edit and reset built-in Actions, but you can't delete them. What an Action applies to already controls where it shows up, so deleting one would be a weaker version of the same control.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/reset-action-to-default-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/reset-action-to-default-aug-2026.png" class="help-center-img img-bordered" alt="The built-in Plan Action's row in Settings, with reset and edit icons but no delete icon">
   </a>
@@ -73,7 +73,7 @@ You fire Actions from a **split button**. The left half runs your preferred Acti
 
 Firing an Action from a Todo row is also how an issue or pull request that isn't tracked yet **becomes** a task in Kepler.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/action-button-todo-row-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/action-button-todo-row-aug-2026.png" class="help-center-img img-bordered" alt="The Action split button, closed, on a Todo row">
   </a>
@@ -82,7 +82,7 @@ Firing an Action from a Todo row is also how an issue or pull request that isn't
 
 Inside a task, Actions live under the **chevron on the composer's send button** rather than on a split button of their own: type a refinement, then pick the Action to fire it with. See [Create a Task](/kepler/create-task).
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/inside-task-actions-button-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/inside-task-actions-button-aug-2026.png" class="help-center-img img-bordered" alt="The composer's send button inside a task, with its chevron open to the list of Actions">
   </a>
@@ -115,7 +115,7 @@ At the bottom of the list, **Manage actions…** opens **Settings → Actions**.
 
 The **Run in** view asks two independent questions, and both have small answers.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/run-in-view-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/run-in-view-aug-2026.png" class="help-center-img img-bordered" alt="The Run in view, asking which session and which worktree to use">
   </a>
@@ -139,7 +139,7 @@ Worktree choices are resolved against worktrees that actually exist on disk, so 
 
 Firing into a live session **queues** the prompt behind whatever the agent is currently doing. Nothing is dropped and nothing is cancelled, and Kepler takes you to the session the prompt went into.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/firing-into-a-running-session-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/firing-into-a-running-session-aug-2026.png" class="help-center-img img-bordered" alt="A prompt queued behind an agent's current work in a running session">
   </a>
@@ -152,9 +152,9 @@ Firing into a live session **queues** the prompt behind whatever the agent is cu
 
 Open **Settings → Actions → Preferred actions**. 
 
-<figure>
-  <a href="/wp-content/uploads/preferred-actions-settings-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/preferred-actions-settings-aug-2026.png" class="help-center-img img-bordered" alt="The Preferred actions settings, with a row per item kind and its default Action">
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/preferred-actions-settings-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/preferred-actions-settings-sep-2026.png" class="help-center-img img-bordered" alt="The Preferred actions settings, with a row per item kind and its default Action">
   </a>
   <figcaption style="text-align:center; color:#888">The Preferred actions settings.</figcaption>
 </figure>
@@ -176,14 +176,14 @@ Pull requests split by **who wrote them**, not by what you want to do with them.
 
 Any slot can be set to **None**. This simplifies the action button to only display the chevron icon.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/set-to-none-action-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/set-to-none-action-aug-2026.png" class="help-center-img img-bordered" alt="A preferred-action slot set to None, showing only the chevron on that surface">
   </a>
   <figcaption style="text-align:center; color:#888">A slot set to None, leaving only the chevron.</figcaption>
 </figure>
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/chevron-set-to-none-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/chevron-set-to-none-aug-2026.png" class="help-center-img img-bordered" alt="A row's Action button showing only the chevron, with no preferred Action set">
   </a>
@@ -196,9 +196,9 @@ Any slot can be set to **None**. This simplifies the action button to only displ
 
 In **Settings → Actions**, click the **Edit** (pencil) icon on any Action.
 
-<figure>
-  <a href="/wp-content/uploads/actions-settings-built-in-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/actions-settings-built-in-aug-2026.png" class="help-center-img img-bordered" alt="The Actions settings, with the Edit pencil icon on an Action row">
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/actions-settings-built-in-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/actions-settings-built-in-sep-2026.png" class="help-center-img img-bordered" alt="The Actions settings, with the Edit pencil icon on an Action row">
   </a>
   <figcaption style="text-align:center; color:#888">The Edit icon on an Action row in Settings.</figcaption>
 </figure>
@@ -216,7 +216,7 @@ Built-in Actions appear under **Built in**; your own appear under **Custom**.
 
 Click **New action**.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/new-custom-action-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/new-custom-action-aug-2026.png" class="help-center-img img-bordered" alt="The New action editor for creating a custom Action">
   </a>
@@ -225,7 +225,7 @@ Click **New action**.
 
 Custom Actions work exactly like the built-in ones, and they're the point of the feature: if you'd do something more than once (backport a fix, write the migration, audit a dependency bump), it should be a button rather than a prompt you retype.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/new-custom-action-config-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/new-custom-action-config-aug-2026.png" class="help-center-img img-bordered" alt="A custom Action's configuration, with its title, prompt, and applies-to settings">
   </a>
@@ -249,7 +249,7 @@ Deleting a custom Action that a preferred-Action slot points to is the same as s
 
 By default an Action runs on your **default agent**, configured in **Settings → Agents**. The **Agent** field in the Action editor reads **Inherit** until you name one.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/inherit-default-agent-setting-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/inherit-default-agent-setting-aug-2026.png" class="help-center-img img-bordered" alt="The Agent field in the Action editor, reading Inherit">
   </a>
