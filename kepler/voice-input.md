@@ -30,7 +30,7 @@ Voice input puts a microphone in the agent prompt so you can talk instead of typ
 
 It is off until you turn it on. Enable it in **Settings → Voice Input** and download a model; the microphone in the prompt goes live when the model is ready.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/voice-input-settings-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/voice-input-settings-aug-2026.png" class="help-center-img img-bordered" alt="The Settings → Voice Input page, with Enable voice input on, the downloaded model's status, and Dictation options">
   </a>

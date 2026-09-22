@@ -34,7 +34,7 @@ Every session is an agent session, but two things about one vary, and both are p
 
 Everything else on this page — prompts, steering, permissions, status, lifecycle — is the same whichever of those a session happens to be.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/agent-session-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/agent-session-aug-2026.png" class="help-center-img img-bordered" alt="A running session in the Sessions column, with a tab strip, a transcript showing a collapsed tool-call group, and the composer's agent-settings pill">
   </a>
@@ -69,18 +69,19 @@ Every session sees the Task's attached resources regardless of where it runs, so
 
 ## Agent, model, mode, and effort
 
-<figure>
-  <a href="/wp-content/uploads/agent-settings-from-composer-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-settings-from-composer-aug-2026.png" class="help-center-img img-bordered" alt="The Agent settings pill's expanded menu, opened from the composer, showing Agent, Model, Mode, and Effort sections">
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/agent-settings-from-composer-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-settings-from-composer-sep-2026.png" class="help-center-img img-bordered" alt="The Agent settings pill's expanded menu, opened from the composer, showing Agent, Runs as, Model, and Mode sections">
   </a>
   <figcaption style="text-align:center; color:#888">The Agent settings pill, opened from the composer.</figcaption>
 </figure>
 
-The composer carries an **Agent settings** pill. It holds the same four questions at launch and mid-session, and its trigger summarizes the current model and mode.
+The composer carries an **Agent settings** pill. It holds the same set of questions at launch and mid-session, and its trigger summarizes the current model and mode.
 
 | Choice | Changeable mid-session | Notes |
 |---|---|---|
 | **Agent** | No | Fixed once the session exists. Changing agent means a new session |
+| **Runs as** | No | Rich chat or Terminal, for an agent that offers both. Fixed once the session starts; use **New session** to start the other way. See [How a session runs](#how-a-session-runs) |
 | **Model** | Yes | The agent's own catalog. Models are per provider, so a model never moves to another agent |
 | **Permission mode** | Yes | The agent's own modes |
 | **Effort** | Yes | Reasoning or thinking depth, for agents that offer it |
@@ -102,7 +103,7 @@ Claude Code, Codex, Copilot CLI, Cursor, Auggie, OpenCode, Grok Build, Pi, and G
 
 Claude Code, Codex, Copilot, and Auggie can each hold more than one signed-in account. Open **Settings → Agents**, expand the agent, and find **Accounts**:
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/agent-accounts-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/agent-accounts-aug-2026.png" class="help-center-img img-bordered" alt="Settings → Agents → Claude Code, showing the Accounts section with a Default account and an Add account button">
   </a>
@@ -125,7 +126,7 @@ Claude Code, Codex, Copilot, and Auggie can each hold more than one signed-in ac
 
 With two or more accounts signed in, the **Agent** list expands to one row per account, labelled with the account name, so you pick the agent and the account in one click. This is true in the task composer and in the task view's **New session** menu.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/account-multiple-selector-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/account-multiple-selector-aug-2026.png" class="help-center-img img-bordered" alt="The Agent list with two Claude Code rows, one per signed-in account">
   </a>
@@ -168,7 +169,7 @@ A session runs one of two ways, and the choice is no longer Claude Code's alone.
 | **Rich chat** | Kepler drives the agent over the Agent Client Protocol (ACP) and renders the conversation itself: plans, model and effort controls, richer input. The default |
 | **Terminal** | The agent's own command-line interface, running in an embedded terminal inside the task |
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/claude-code-terminal-rich-chat-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/claude-code-terminal-rich-chat-aug-2026.png" class="help-center-img img-bordered" alt="Settings → Agents → Claude Code, with the Default mode for new sessions toggle set to Rich chat">
   </a>
@@ -282,7 +283,7 @@ A conversation picked up from disk starts the agent on your first message rather
 
 The composer sits at the bottom of the session.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/sending-a-prompt-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/sending-a-prompt-aug-2026.png" class="help-center-img img-bordered" alt="The session composer, with attach and voice icons, the agent-settings pill, context usage, and the Send button">
   </a>
@@ -337,7 +338,7 @@ A background subagent's tool call never holds your message back; only the main t
 
 Everything you send during one turn is merged and handed over together, so two quick corrections arrive as one instruction rather than two competing ones.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/firing-into-a-running-session-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/firing-into-a-running-session-aug-2026.png" class="help-center-img img-bordered" alt="The queue banner with one queued prompt, and Interrupt & send and Clear queue controls visible">
   </a>
@@ -394,7 +395,7 @@ Sessions you started in your own terminal appear too, marked **(external)** and 
 
 Kepler pauses and asks you directly when an agent needs a decision it can't make on its own. It does this in two ways: a permission request before a risky tool call, and a structured question when the agent wants your input mid-task.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/agent-permission-request-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/agent-permission-request-aug-2026.png" class="help-center-img img-bordered" alt="A permission request for a tool call, with its input and Allow, Allow for this session, Allow always, and Reject buttons">
   </a>
@@ -436,7 +437,7 @@ Kepler prints the rule each button would write above them. A rule with no comman
 
 Agents can ask you structured questions instead of guessing. The form renders in the conversation at the point the agent asked.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/agent-session-multiple-choice-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/agent-session-multiple-choice-aug-2026.png" class="help-center-img img-bordered" alt="A multiple-choice question form in the conversation, with numbered options, Chat about this, Cancel, and Submit">
   </a>
@@ -465,7 +466,7 @@ A restored session shows the question and the answers you gave as a read-only re
 
 Two different readouts, and they measure different things.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/usage-indicators-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/usage-indicators-aug-2026.png" class="help-center-img img-bordered" alt="The Context Usage popover, showing tokens used, the window total, and cost so far, above the composer's percentage chip">
   </a>
@@ -479,7 +480,7 @@ Two different readouts, and they measure different things.
 
 Turn the second one on in **Settings → Agents → Agent options → Show token usage → Enable**. It is off by default, and the setting says why:
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/show-token-usage-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/show-token-usage-aug-2026.png" class="help-center-img img-bordered" alt="The Show token usage setting, with Enable checked and its explanatory hint">
   </a>
@@ -504,7 +505,7 @@ If the figures cannot be fetched, the chip says which problem it hit rather than
 
 Every session's composer has a microphone. Click to record, speak, and the transcript lands in the prompt; transcription runs on your device. Voice input is off until you enable it and download a model.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/start-voice-input-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/start-voice-input-aug-2026.png" class="help-center-img img-bordered" alt="The composer's microphone icon, with its Start voice input tooltip">
   </a>
@@ -577,7 +578,7 @@ Archived sessions collect under a **{count} archived** fold beneath the live one
 
 Deleting a task or removing its repository ends that task's live sessions. Quitting Kepler with sessions running asks first, and warns that each one will stop — busy *terminals* are counted in that prompt too, not just agent sessions.
 
-Your computer will not go to sleep out from under a running agent. While any session is spawning, running, or waiting on you, Kepler holds the machine awake, and lets go as soon as the last one settles. It is on out of the box and turned off in **Settings → General → App behavior → Prevent sleep while agent sessions are active**. See [Settings](/kepler/settings).
+Your computer will not go to sleep out from under a running agent. While any session is spawning, running, or waiting on you, Kepler holds the machine awake, and lets go as soon as the last one settles. It is on out of the box and turned off in **Settings → General → Keep this computer awake**. See [Settings](/kepler/settings).
 
 ***
 
@@ -613,7 +614,7 @@ Titles read **{status}: {task}**, with the agent and the repository or branch be
 
 Kepler stays quiet about the work you are already watching: it sends no notification for the session on screen in a focused window. A cancelled turn is not a completion, and a session reconnecting is not a completion either, so neither notifies.
 
-Two settings in **Settings → General → App behavior** control the rest:
+Two settings in **Settings → General** control the rest:
 
 | Setting | What it does | Default |
 |---|---|---|
@@ -626,6 +627,6 @@ In-app toasts carry a close button on hover, and **Clear all ({count})** dismiss
 
 ## Reviewing what the agent changed
 
-Reading the diff, staging, committing, and pushing are covered on their own page. See [Review Changes](/kepler/review-changes).
+Reading the diff and syncing the branch are covered on their own page. See [Review Changes](/kepler/review-changes).
 
 ---

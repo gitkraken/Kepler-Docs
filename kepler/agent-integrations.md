@@ -25,7 +25,7 @@ Kepler ships support for nine agents, and you can point it at any other agent th
 
 All of it lives in **Settings → Agents**.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/agent-settings-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/agent-settings-aug-2026.png" class="help-center-img img-bordered" alt="Settings → Agents, showing the Default agent row and the Claude Code and Codex sections with their status badges">
   </a>
@@ -54,7 +54,7 @@ Each agent gets its own section in **Settings → Agents**, in this order:
 
 **Grok Build** is xAI's coding agent. It signs in through your browser, or you can supply an xAI API key. Its data lives under `~/.grok`, which is what lets Kepler keep several accounts apart.
 
-**Pi and Google Antigravity are terminal-only.** Neither CLI speaks ACP yet — Pi has no ACP mode and Google ships its ACP server as a separate binary — so Kepler runs each one's own interface in a terminal inside the task rather than not offering them. Kepler does no auth probing for either: they use their own sign-in (`/login`, or the provider API-key environment variables they read directly).
+**Pi and Google Antigravity are terminal-only.** Neither CLI speaks ACP yet — Pi has no ACP mode and Google ships its ACP server as a separate binary — so Kepler runs each one's own interface in a terminal inside the task instead of leaving them out. Kepler does no auth probing for either: they use their own sign-in (`/login`, or the provider API-key environment variables they read directly).
 
 **Codex now runs your own CLI.** Earlier builds shipped a bundled `codex-acp` engine; Kepler resolves and spawns the `codex` you have installed, like every other agent, so its section reads **Installed** and it has a binary picker.
 
@@ -117,7 +117,7 @@ If a pinned path later disappears (for example, when an auto-updater cleans up a
 
 **Settings → Agents → Agent options → Installed agents** carries a **Refresh** button that re-scans every agent at once.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/installed-agents-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/installed-agents-aug-2026.png" class="help-center-img img-bordered" alt="Settings → Agents → Agent options → Installed agents, with its Refresh button">
   </a>
