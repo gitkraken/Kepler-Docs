@@ -21,9 +21,9 @@ taxonomy:
 
 Kepler has one interface rather than a set of views, so you shape it instead of switching away from it. Three controls do most of the work: the arrangement, the grouping, and the filters. Each segment remembers its own.
 
-<figure>
-  <a href="/wp-content/uploads/arrange-work-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/arrange-work-aug-2026.png" class="help-center-img img-bordered" alt="The arrangement, grouping, and filter controls above Kepler's list">
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/arrange-work-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/arrange-work-sep-2026.png" class="help-center-img img-bordered" alt="The grouping, filter, and view controls above Kepler's list, grouped by Inbox">
   </a>
   <figcaption style="text-align:center; color:#888">The arrangement, grouping, and filter controls.</figcaption>
 </figure>
@@ -34,9 +34,9 @@ This page assumes you know what's on screen; see [The Kepler Interface](/kepler/
 
 ## Two layouts
 
-<figure>
-  <a href="/wp-content/uploads/view-options-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/view-options-aug-2026.png" class="help-center-img img-bordered" alt="The View control open, showing List and Columns as layout options">
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/view-options-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/view-options-sep-2026.png" class="help-center-img img-bordered" alt="The View control open, showing List and Columns as layout options">
   </a>
   <figcaption style="text-align:center; color:#888">The View control's layout options.</figcaption>
 </figure>
@@ -64,9 +64,9 @@ The **View** control decides how Kepler draws the list.
 
 The **Group** dropdown reorganizes the list.
 
-<figure>
-  <a href="/wp-content/uploads/group-options-tasks-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/group-options-tasks-aug-2026.png" class="help-center-img img-bordered" alt="The Group dropdown open on Tasks in progress, showing Progress, Activity, Repository, and None">
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/group-options-tasks-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/group-options-tasks-sep-2026.png" class="help-center-img img-bordered" alt="The Group dropdown open on Tasks in progress, showing Inbox checked as the default, then Progress, Activity, Repository, and None">
   </a>
   <figcaption style="text-align:center; color:#888">The Group dropdown on Tasks in progress.</figcaption>
 </figure>
@@ -114,9 +114,9 @@ Items with no repository or provider collect under **No repository** and **No pr
 
 Every group header is a fold toggle, with the section's count beside its name.
 
-<figure>
-  <a href="/wp-content/uploads/group-folds-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/group-folds-aug-2026.png" class="help-center-img img-bordered" alt="A group header showing a fold toggle and the section's count">
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/group-folds-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/group-folds-sep-2026.png" class="help-center-img img-bordered" alt="A group header showing a fold toggle and the section's count">
   </a>
   <figcaption style="text-align:center; color:#888">A group header, with its fold toggle and count.</figcaption>
 </figure>
@@ -129,9 +129,9 @@ Folding one unmounts its rows, so a long **Done** list stops costing anything to
 
 The **Filter** menu holds one flyout per facet.
 
-<figure>
-  <a href="/wp-content/uploads/filter-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/filter-aug-2026.png" class="help-center-img img-bordered" alt="The Filter menu open, showing one flyout per facet">
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/filter-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/filter-sep-2026.png" class="help-center-img img-bordered" alt="The Filter menu open, showing one flyout per facet">
   </a>
   <figcaption style="text-align:center; color:#888">The Filter menu, with one flyout per facet.</figcaption>
 </figure>
@@ -159,9 +159,9 @@ Once a search or a filter is narrowing the list, the strip reports the match as 
 
 The search box matches on **title, reference, or repository**: *Search title, ref, or repo…*.
 
-<figure>
-  <a href="/wp-content/uploads/search-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/search-aug-2026.png" class="help-center-img img-bordered" alt="The search box above Kepler's list, with a clear button">
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/search-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/search-sep-2026.png" class="help-center-img img-bordered" alt="The search box above Kepler's list, with a clear button">
   </a>
   <figcaption style="text-align:center; color:#888">The search box, with the clear button.</figcaption>
 </figure>
@@ -180,11 +180,11 @@ Each segment remembers its own search, grouping, and filters, since they differ 
 
 **Archive task** files a task away. It leaves the live buckets for **Archived**, its rows and sessions survive, and Kepler stops only the agents whose checkout is about to disappear.
 
-<figure>
-  <a href="/wp-content/uploads/archive-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/archive-aug-2026.png" class="help-center-img img-bordered" alt="The Archive task confirmation, offering to also delete worktrees and branches">
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/archive-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/archive-sep-2026.png" class="help-center-img img-bordered" alt="The row's ⋮ menu open, with Archive task highlighted among Open in new window, Mark as unread, Rename task, Add resource, and Delete task">
   </a>
-  <figcaption style="text-align:center; color:#888">The Archive task confirmation.</figcaption>
+  <figcaption style="text-align:center; color:#888">Archive task, in the row's ⋮ menu.</figcaption>
 </figure>
 
 The confirmation offers the same two cascades the delete does: **Also delete worktrees** and **Also delete branches**. This way, finishing with a task doesn't have to mean deleting it to clean it off the disk. Archiving outranks everything else, so a task you filed away can't climb back into a live section because a shell is still open on it.

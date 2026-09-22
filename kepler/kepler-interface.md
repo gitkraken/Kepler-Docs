@@ -35,9 +35,9 @@ Beyond this list, you'll find a task's own page, Settings, and remote connection
 
 On **Windows and Linux** the native title bar is gone and Kepler draws its own. The menu button at the leading edge holds the full application menu — **File**, **Edit**, **View**, **Window**, **Help** — including **Settings**, **Check for Updates…**, and **About**. macOS keeps its native menu bar, and both menus open the same **About Kepler** dialog.
 
-<figure>
-  <a href="/wp-content/uploads/top-tool-bar-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/top-tool-bar-aug-2026.png" class="help-center-img img-bordered" alt="Kepler's top bar showing New task, setup progress, the remote indicator, Feedback, account, and Settings">
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/top-tool-bar-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/top-tool-bar-sep-2026.png" class="help-center-img img-bordered" alt="Kepler's top bar showing the New task split button, the window switcher, Feedback, Settings, and account">
   </a>
   <figcaption style="text-align:center; color:#888">The top bar's trailing cluster.</figcaption>
 </figure>
@@ -61,11 +61,11 @@ Each window's own title leads with the remote it's connected to and how many of 
 
 The control at the top left switches between 3 views of your work.
 
-<figure>
-  <a href="/wp-content/uploads/todo-task-in-progress-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/todo-task-in-progress-aug-2026.png" class="help-center-img img-bordered" alt="The control at the top left of Kepler, switching between Todo and Tasks in progress">
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/todo-task-in-progress-agent-graph-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/todo-task-in-progress-agent-graph-sep-2026.png" class="help-center-img img-bordered" alt="The control at the top left of Kepler, switching between Todo, Tasks in progress, and Agent Graph">
   </a>
-  <figcaption style="text-align:center; color:#888">The Todo and Tasks in progress switcher.</figcaption>
+  <figcaption style="text-align:center; color:#888">The Todo, Tasks in progress, and Agent Graph switcher.</figcaption>
 </figure>
 
 | Segment | What it shows |
@@ -110,9 +110,9 @@ A row reads differently depending on whether it holds a tracked issue or pull re
 
 ### Todo rows: issues and pull requests
 
-<figure>
-  <a href="/wp-content/uploads/todo-row-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/todo-row-aug-2026.png" class="help-center-img img-bordered" alt="A Todo row showing the provider, type badge, role, reference, title, repository, session activity, status pill, assignee, and Action button">
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/todo-row-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/todo-row-sep-2026.png" class="help-center-img img-bordered" alt="Two Todo rows for pull requests, one badged Review and one badged Needs my review, each with its repository, status pill, time, and Action button">
   </a>
   <figcaption style="text-align:center; color:#888">A Todo row, left to right.</figcaption>
 </figure>
@@ -143,9 +143,9 @@ Each row shows, left to right:
 
 ### Task rows
 
-<figure>
-  <a href="/wp-content/uploads/task-row-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-row-aug-2026.png" class="help-center-img img-bordered" alt="A Task row showing the Task badge, title, repository, session activity, status pill, assignee, and time">
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/task-row-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-row-sep-2026.png" class="help-center-img img-bordered" alt="A Task row with no type badge, showing its title, both repositories it spans, a status pill, a session dot, and time">
   </a>
   <figcaption style="text-align:center; color:#888">A Task row.</figcaption>
 </figure>
@@ -182,7 +182,7 @@ Both segments carry a status pill, but they answer different questions.
 
 Beside the pill sits one dot per distinct **session state**, with a count of each.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/task-status-aug-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/task-status-aug-2026.png" class="help-center-img img-bordered" alt="A status pill next to session-state dots on a row">
   </a>
@@ -211,7 +211,7 @@ Kepler places a task at the furthest stage any of its checkouts reached, except 
 
 Click the **Action** button on a Todo row to hand the item to an agent with its context already attached: the repository, the issue body, the branch, and the diff. One click, no copy-paste.
 
-<figure>
+<figure style="text-align:center">
   <a href="/wp-content/uploads/actions-drop-down.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/actions-drop-down.png" class="help-center-img img-bordered" alt="The Action dropdown open on a Todo row, listing Plan, Implement, Review, and Address Feedback">
   </a>
@@ -228,9 +228,9 @@ All of these defaults are editable. See [Actions](/kepler/actions).
 
 ### Open a panel
 
-<figure>
-  <a href="/wp-content/uploads/open-a-task-panel-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/open-a-task-panel-aug-2026.png" class="help-center-img img-bordered" alt="The side panel open beside the list after clicking a row">
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/open-a-task-panel-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/open-a-task-panel-sep-2026.png" class="help-center-img img-bordered" alt="The side panel open beside the list after clicking a row">
   </a>
   <figcaption style="text-align:center; color:#888">The side panel, opened from a row.</figcaption>
 </figure>
@@ -242,9 +242,9 @@ All of these defaults are editable. See [Actions](/kepler/actions).
 
 Shift-clicking ranges from your last plain click, the way it does in Finder or VS Code. You can open up to 8 panels at once. Opening a 9th evicts the oldest unpinned one.
 
-<figure>
-  <a href="/wp-content/uploads/multi-task-panels-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/multi-task-panels-aug-2026.png" class="help-center-img img-bordered" alt="Several task panels open side by side, each with its own chat">
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/multi-task-panels-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/multi-task-panels-sep-2026.png" class="help-center-img img-bordered" alt="Several task panels open side by side, each with its own chat">
   </a>
   <figcaption style="text-align:center; color:#888">Several panels open side by side, each with its own chat.</figcaption>
 </figure>
@@ -259,9 +259,9 @@ When the list reorders under you — a session finishes, a task moves bucket —
 
 ### Pin a panel
 
-<figure>
-  <a href="/wp-content/uploads/pin-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/pin-aug-2026.png" class="help-center-img img-bordered" alt="The pin control in a panel's header, keeping the panel open">
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/pin-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/pin-sep-2026.png" class="help-center-img img-bordered" alt="The pin control in a panel's header, keeping the panel open">
   </a>
   <figcaption style="text-align:center; color:#888">The pin in a panel's header.</figcaption>
 </figure>
@@ -281,9 +281,9 @@ One slot always stays unpinned so browsing never has to evict a pin; once every 
 
 Selecting a row opens a panel beside the list with everything about that item, as a stack of collapsible, resizable sections.
 
-<figure>
-  <a href="/wp-content/uploads/task-side-panel-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-side-panel-aug-2026.png" class="help-center-img img-bordered" alt="The side panel beside the list, showing a stack of collapsible sections for a selected item">
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/task-side-panel-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-side-panel-sep-2026.png" class="help-center-img img-bordered" alt="The side panel beside the list, showing a stack of collapsible sections for a selected item">
   </a>
   <figcaption style="text-align:center; color:#888">The side panel, with its stack of collapsible sections.</figcaption>
 </figure>
@@ -308,9 +308,9 @@ In the side panel for a Task, the primary button reads **Start**, and once a ses
 
 The header carries:
 
-<figure>
-  <a href="/wp-content/uploads/issue-header-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/issue-header-aug-2026.png" class="help-center-img img-bordered" alt="The side panel's header, showing badges, the reference, the pin, and the header controls">
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/issue-header-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/issue-header-sep-2026.png" class="help-center-img img-bordered" alt="The side panel's header, showing badges, the reference, the pin, and the header controls">
   </a>
   <figcaption style="text-align:center; color:#888">The side panel's header.</figcaption>
 </figure>
@@ -329,9 +329,9 @@ An archived task is badged as such in both its preview and its detail header, so
 
 Below the header sits one line per checkout: a **status chip** on the left and an **actions chip** pinned to the right edge, so several checkouts line up as a column.
 
-<figure>
-  <a href="/wp-content/uploads/line-deltas-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/line-deltas-aug-2026.png" class="help-center-img img-bordered" alt="A task's checkouts below the header, each showing its branch and what it adds against its base">
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/line-deltas-sep-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/line-deltas-sep-2026.png" class="help-center-img img-bordered" alt="A checkout's branch cell below the header, with its tooltip open showing the repository, branch, and change counts">
   </a>
   <figcaption style="text-align:center; color:#888">A checkout's chip, below the header.</figcaption>
 </figure>
