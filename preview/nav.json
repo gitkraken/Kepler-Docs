@@ -44,6 +44,12 @@
       ]
     },
     {
+      "title": "Release Notes",
+      "pages": [
+        "release-notes-current.md"
+      ]
+    },
+    {
       "title": "Retired \u2014 preview only, not in the site nav",
       "preview_only": true,
       "pages": [
