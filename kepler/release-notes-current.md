@@ -36,6 +36,174 @@ New to Kepler? [Getting Started with Kepler](/kepler/kepler-getting-started) tak
 
 ***
 
+<a id="v0-11-0"></a>
+## Version 0.11.0
+
+<kbd>Tuesday, September 29th, 2026</kbd>
+
+### Features
+
+#### Agents that keep running
+
+- Agents and terminal sessions now run under a supervisor that keeps them alive through a Kepler restart or update, and recovers them when Kepler comes back. A new switch in Settings turns it on or off.
+- Kepler warns before an update only for the agents it would actually interrupt, and Quit & End Sessions ends them on the way out.
+- A detached agent that has produced no output for an hour is ended on its own.
+- A terminal session resumes after a reboot, keeps its keyboard and paste modes across a restart, and keeps running through a context compaction.
+
+#### The task page and Dashboard previews
+
+- Tabs on the task page are now free-form: drag them into groups and splits, with terminals listed after Changes in the rail.
+- Every open Dashboard preview gets its own column — up to 16 — with a placeholder until its item loads, and panel widths are remembered across reloads and segment switches.
+- Maximize one preview over the others, restore it with a click outside, and reorder panels by dragging their headers or from the panel menu.
+- Resize every panel at once with a Shift-drag, and scroll the strip with Shift+wheel or a sideways swipe, even over a terminal.
+- Preview headers were rebuilt, and can collapse for a pull request or an issue. The task page header matches.
+- The task's prompt is a context item of its own, shown in the rail, the card and the preview, and a new session can start without the task's context.
+- Start a session on another branch from the New session menu, start a new session from an existing one, and name a session yourself.
+- Tasks moving to Running stay there for 10 seconds after work stops, so the list stops flickering.
+
+#### Todo and filters
+
+- Filter Todo items by iteration and sprint, and sort the Todo and Tasks lists.
+- Exclude a filter value instead of only including it, and see search and filter pills inside the search box.
+- Issues show their own provider state, and issues included by mention say so.
+- Bitbucket and Azure self-managed servers are supported.
+
+#### Deep links
+
+- `kepler://` links open a pre-filled task composer, open a task or a session, start a session, check out a linked pull request's branch, and can carry a prompt that starts immediately.
+- A link that only half-resolves offers a clone, a resume or one clear warning.
+
+#### Remote and hosts
+
+- Remote management moved into Settings. Each saved host gets a colour and can be muted, hosts can be added or edited by hand with WSL on par with SSH, and a startup reconnect failure explains why.
+- A host already open in another window is recognised and reached through that window.
+- New Window opens on the same connection as the window it came from.
+- The connection popover was redesigned, and a connected server can be restarted or updated from the host chip, which says what the update will stop.
+
+#### Terminals and links
+
+- File paths in a terminal are links: relative paths, line suffixes and paths wrapped across lines. Open them in an editor at their line, in the default app, in the Changes viewer, or preview a markdown file rendered.
+- A terminal session shows its model, effort and mode read-only in chat.
+- Terminals answer a TUI's background-colour query and re-theme a running TUI when you change themes.
+
+#### Chat
+
+- Claude artifacts show as cards and stay attached to the task as links, and `/design` and `/slides` work in chat sessions.
+- Open a subagent in its own read-only transcript pane.
+- Attach files by path, sending only what the session's host can't already read, and open or reveal an uploaded file from its card.
+- A transcript remembers where you stopped reading, and a new autoscroll setting never fights you.
+
+#### Updates and windows
+
+- A ready update is one chip in the top bar with a popover on every screen, and downloads show progress, size, speed and time left.
+- Kepler reopens the last closed window where it was, and each window remembers its own layout.
+- Back and Forward buttons are in the top bar.
+
+#### Keyboard
+
+- Navigate the Dashboard and task page from the keyboard, switch panels with Ctrl+Tab, rename a task with F2, and move tabs with Ctrl+Shift+PageUp/PageDown.
+- Cmd/Ctrl+N opens a new task, Cmd/Ctrl+Shift+N a new window, Cmd/Ctrl+, toggles Settings, and Cmd/Ctrl+Shift+M and Cmd/Ctrl+Shift+J maximize a panel or a terminal.
+- Shortcuts now show in menu items and button tooltips.
+
+#### For your agents
+
+- Agents can find the workspace's tasks and sessions, send follow-ups to existing ones, choose the harness of a session they start, archive and restore a task, and add files to a task they create.
+- Agents can update a branch from its base with a reviewable rebase or merge, and pass guidance to the conflict resolver.
+
+#### Agents and harnesses
+
+- Antigravity is supported through its ACP server, and OpenCode v1 and v2 work side by side.
+- Each agent account can have its own colour tinting the agent icon, and accounts appear on the agent card.
+
+#### Smaller additions
+
+- Edit, reorder and add commands in the repository dialog, with a Variables menu that also appears on default folder fields.
+- Open on {provider} at the end of every worktree Open in menu, Open in default app in every file menu, and Delete worktree in the worktree pill menu.
+- A Wrap lines toggle on every code view.
+- Running commands appear on the run button and its menus.
+- The English and Spanish interface now covers the remaining hardcoded copy.
+
+### Improvements
+
+#### Performance
+
+- Typing in the composer and streaming updates no longer slow the session view, and transcripts load without unread tool output.
+- The Dashboard re-renders only the rows and panels a change touches, loads the Todo feed only on its segment, and opens previews one per frame.
+- Terminals stay responsive on busy sessions: closed views resume by delta, output is batched, and windows only receive output for terminals they show.
+- Worktree state is no longer re-read when nothing changed, and the Windows agent start is about 2.5 times faster.
+
+#### Look and feel
+
+- Dialogs were redesigned and every confirm reworded, with Enter running a dialog's primary action.
+- Popovers, menus, tooltips and dialogs share a 6px radius, and tooltips open after a slightly longer delay.
+- Back arrows are now a left chevron, and ghost buttons sit flush against their container's edge.
+- What's New is redesigned around a release hero and a grouped version rail.
+- The changes panel and overlay chrome were redesigned, with the worktree strip's controls ghosted until hovered.
+
+#### Agents and MCP
+
+- Kepler says why a first prompt is waiting for you, and warns in Settings when an installed agent's version can't be read.
+- Terminal agents disclose how their first prompt is delivered and which workspace tools they get.
+
+### Fixes
+
+#### Agents and terminals
+
+- A terminal session ended cleanly by its CLI is no longer reported as a crash, one blocked on a prompt needs attention, and one stopped during startup can resume.
+- Terminal sessions keep their conversations when a task is archived or its worktree goes, and sessions stop cleanly when their worktree is removed outside Kepler.
+- Hook-tracked sessions keep running while background subagents work, and held permission prompts go back to the CLI instead of being approved.
+- A slash command sent as a session's first prompt runs as a real command.
+- Agent CLIs resume after Ctrl+Z, a Codex first prompt is sent on its command line, and a prompt that quotes an install path no longer refuses to launch.
+- Claude folder trust is read where the CLI records it, and a worktree inherits it.
+- Queued prompts survive restarts and show their attachments.
+- Codex Sign out actually signs you out, and Kepler follows a CLI sign-in performed outside it.
+- Custom agent server environment values are encrypted at rest.
+- Terminal typing stays out of crash reports, and typed input, resizes and closes are delivered reliably.
+
+#### Chat
+
+- Agent messages keep their paragraph breaks, and the scroll-to-bottom control shows while a turn streams.
+- A resumed subagent's permission prompt is shown, and session-limit errors are clearer.
+- Unread sessions are blue again.
+
+#### Dashboard and tasks
+
+- Closing a deleted task's preview panel no longer shows Task not found, and Back returns to the panels a task launch replaced.
+- Preview panels keep their widths through closes, swaps and segment switches, and a divider stays under the pointer while you drag it.
+- A background preview panel no longer takes focus on its own, and the strip no longer jumps to a session that asks for input.
+- Linked issues and pull requests refresh by identity, resolve in the repository their link names, and Azure DevOps work items resolve correctly.
+- Repo-less tasks start sessions in place, and a gone worktree or folder is recreated before a new session starts there.
+- Closed worktree columns and the terminal drawer stay as you left them.
+
+#### Remote
+
+- A remote window keeps its route through a server restart or a failed reconnect, and SSH windows to one host share a connection.
+- Paste-code sign-in works in remote windows, and a remote daemon stays signed in when another machine sharing it quits.
+- WSL messages are no longer garbled, and Docker Desktop's own distributions are left out of discovery.
+- The outdated-server error is shown in the app's language and says which side to update.
+
+#### Updates and windows
+
+- The update card stays put once an install starts, background update-check failures no longer toast, and Windows no longer silently accepts a downgrade.
+- The About dialog opens in the window whose menu asked for it, and restored windows no longer take focus at start-up.
+- The screen can turn off on Linux, and Kepler says when a machine can't be kept awake.
+- The Windows agent start no longer flashes a console window.
+
+#### Interface
+
+- Enter in a modal's text field no longer closes the modal.
+- Pressed splitters no longer take focus or stay lit after a drag.
+- Links in a dropdown no longer crash the menu, and an open popover no longer disables the top bar.
+- Code scrolls sideways with a trackpad under one horizontal scrollbar.
+- Tab strips and the task rail line up evenly.
+
+#### Accounts and providers
+
+- One refusing Azure DevOps organization no longer expires the whole connection.
+- "All visible" includes repositories outside your account's organizations, and GitHub issue lists stop at 50 rows per page.
+
+***
+
 <a id="v0-10-0"></a>
 ## Version 0.10.0
 
