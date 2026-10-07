@@ -11,13 +11,13 @@ git_hosts: [github, github-enterprise, gitlab, gitlab-self-hosted, bitbucket, az
 integrations: [claude-code, codex-cli, copilot-cli, cursor, auggie, opencode]
 hosted_variant: both
 status: GA
-last_verified: 2026-09
+last_verified: 2026-10
 llms_include: true
 tags: [release-notes, changelog, whats-new, upgrades, version-history]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: September 2026</kbd>
+<kbd>Last updated: October 2026</kbd>
 
 Kepler is GitKraken's **Agentic Development Environment (ADE)** — one place to direct coding agents across every issue and pull request assigned to you, in as many repositories as you need, at the same time. You bring the agent; Kepler attaches the context and carries the result through to a reviewed, mergeable change.
 
@@ -33,6 +33,152 @@ This release notes page tracks what's new and changing in the current version of
 <a href="https://www.gitkraken.com/kepler/download?source=help_center" target="_blank" class="button button--basic ">Download Current Version Now</a>
 
 New to Kepler? [Getting Started with Kepler](/kepler/kepler-getting-started) takes you from install to your first agent-run task.
+
+***
+
+<a id="v0-12-0"></a>
+## Version 0.12.0
+
+<kbd>Wednesday, October 7th, 2026</kbd>
+
+### Highlights
+
+- **More issue tracking and pr integrations.** Jira Server and Data Center join the Bitbucket and Azure DevOps servers added in 0.11.0. Bitbucket and Azure DevOps pull requests waiting on your review now show up, and Jira descriptions render with their images and wiki markup.
+- **Save your Dashboard views.** Save a combination of segment, search, grouping, filters and layout under a name, and switch back to it from the Saved views chip next to the search box.
+- **Manually update task progress.** Drag a task between Exploration, In Development, In Review and Done, or put it On hold. Kepler moves a task to Done only once its branches have landed, including rebase- and squash-merged ones, and your agents can set the stage too.
+- **Review, edit, commit and resolve conflicts in Kepler.** Leave review comments on diff lines, then drop them all into your agent's prompt in one step. Amend the last commit, resolve merge conflicts from the file tree, and change a branch's merge target or compare against a different one.
+- **Control your agents' MCP servers.** Kepler lists the MCP servers each agent loads. Add or remove servers, sign in or out, and turn a server or a single tool on or off for one repository from the composer's agent menu. Set the defaults for every repository in Settings › Agents › MCP servers.
+- **Pick up where you left off after a usage limit.** Sessions resume and send queued prompts on their own when a usage limit resets. The usage meter shows each session's 5-hour and 7-day limits and when they lift.
+- **Open any file from a task.** A new file viewer opens code at a line, renders Markdown, images and SVG, and updates when the file changes on disk. Open a file path an agent writes straight from the chat, and upload files from your computer to a task.
+
+### Features
+
+#### Task progress
+
+- Set a task's stage yourself: drag its card between Progress columns, move it from the keyboard, or pick a stage from the progress control and task menus.
+- Put a task On hold, with its own Inbox group. The hold lifts when the task reaches Done, and archived tasks show in the Progress view.
+- A task's pull requests and issues refresh on their own when an agent ends a turn, a branch is pushed or a pull request is published.
+- Kepler suggests archiving a finished task, and the archive dialog shows what happens to each worktree, keeping risky ones unless you confirm.
+
+#### Files
+
+- Open any file in a new file viewer from File › Open File… and Go to File…, or as a tab on the task page: code at a line, Markdown with Preview and Source, images and SVG.
+- An open file updates in place when it changes on disk, and can show what changed since you opened it.
+- Open a file path an agent writes straight from the conversation.
+- Upload files from this computer in Add resources. Uploads belong to the task, show in Files with a Delete action, and can be saved to disk.
+- The folder picker was rebuilt around a path bar that checks what you type.
+
+#### Changes and commits
+
+- Comment on diff lines and files, and send the comments to the composer.
+- Amend the last commit from the commit box, which now looks like the prompt composer, waits for staging and shows hook output.
+- Resolve merge conflicts and delete files from the file tree. Deleted and discarded files go to the Trash first.
+- Change a branch's merge target from its chip or the task menu, or compare against a temporary target in the Changes overlay and worktree panel.
+- Kepler notices a branch that landed in its target without a pull request, and picks up merge targets changed in GitLens.
+- Large untracked folders show as one entry with a file count.
+
+#### Chat
+
+- Copy a prompt or a reply, start a new session from any message, and save images from thumbnails and the lightbox.
+- Each message shows when it was sent, with dividers for long gaps.
+- Agent thinking shows as a collapsed block, and permission prompts say why the agent is asking.
+- Preview a published Claude artifact beside the chat, and choose whether artifact comments start new turns.
+- See Claude Code background tasks in idle sessions and stop one from its card.
+
+#### Usage limits
+
+- Sessions resume and send queued prompts on their own when a usage limit resets.
+- The usage meter shows a session's own 5-hour and 7-day limits, when a limit lifts and how old the reading is, with a Refresh button.
+- See a session's prompt-cache expiry and hit rate, and how long it has been since the model last replied.
+- The terminal status bar was reworked around the session and its usage.
+
+#### Remote
+
+- Forward an SSH remote's ports to this computer from a link click or the Ports list. The remote chip shows forwarded ports, and localhost links in a task open through forwarding.
+- Reopen the last closed remote window on its host, and peek at your connections by hovering the remote chip.
+- An experimental setting loads remote windows' interface from this computer.
+
+#### Dashboard
+
+- Save a set of filters and view settings as a named view.
+- A full-width Worktrees view shows each worktree's tasks, agents, pull request and base, and bulk cleanup can clear stale locks.
+- The task preview's worktree row is a two-row pill you can step through, and the title shows an unread dot and the task prompt on hover.
+- Press Start on an empty box to start a task with its prompt.
+
+#### MCP servers
+
+- Manage MCP servers inside Kepler, from the composer's agent menu or Settings › Agents › MCP servers, including sign-in and sign-out.
+- Kepler warns when Claude sessions stop reporting to it, with a Repair action.
+
+#### For your agents
+
+- Agents can set their task's stage, put it on hold, and refresh its pull requests and issues.
+- Agents know their related tasks and who started them, can message the sessions they started without asking, and attach the dev servers they start to the task.
+
+#### Smaller additions
+
+- Jira Server and Data Center are supported, Jira images and wiki markup render in descriptions, and you can pick a Linear team when adding issues.
+- Swipe with a trackpad or Magic Mouse to go back and forward.
+- Right-click a dropdown to open its menu, and walk the branch picker with the arrow keys.
+- Save logs as a zip from Settings › Help › Logs, or show them from the Help menu.
+
+### Improvements
+
+#### Performance
+
+- Dashboard navigation is instant with side panels open, and only the parts an update changes re-render.
+- Large diffs open fast.
+- Pull requests and issues load for what is on screen instead of whole-account lists.
+- Busy terminals no longer flood windows that can't keep up, and the app no longer freezes on process, PATH, SSH or Keychain lookups.
+- New worktrees check out faster on Windows.
+
+#### Interface
+
+- Tooltips say what a click does, show shortcuts under the title, and open below their trigger.
+- Split buttons share one keyboard model with a visible focus outline, and Tab moves from the prompt to Send.
+- The agent menu is grouped by agent, and an empty one explains why and offers the fix.
+- Headers, toolbars and the composer footer fit the window as it resizes.
+- Unsent composer drafts survive a reload.
+- Each pull request and issue state has its own icon and colour, and open buttons name the provider.
+
+### Fixes
+
+#### Agents and terminals
+
+- A session no longer loses its conversation or retries forever when its background process dies, and shows a reconnecting overlay while Kepler reattaches.
+- An effort or mode changed inside a terminal CLI survives relaunches, and a terminal follows Claude when it continues under a new conversation.
+- Terminal pastes and sends no longer wait forever, and the input pause explains itself and waits for Continue.
+- Wrapped URLs and file paths stay clickable on every row, and Codex can copy to your clipboard from a remote window.
+- Codex API-key and remote ChatGPT sign-in work, a signed-in Cursor CLI shows as signed in, and Codex capacity errors are explained.
+- A terminal or external session blocked on a prompt notifies you, for every agent.
+- Model lists refresh after an agent is upgraded or signed in.
+
+#### Git and worktrees
+
+- Rebase- and squash-merged branches show as merged, cleanup no longer warns their commits will be lost, and unpushed commits are counted before a worktree is deleted.
+- Kepler's fetches no longer break a git pull you run at the same time, and creating a worktree no longer times out.
+- Edits to a symlinked file save to its target, and Escape never discards an unsaved inline edit.
+- A task reaches Done only once its own branches have landed, including a diverged branch whose pull request merged.
+
+#### Providers
+
+- Linear no longer lists Done and Canceled issues, and canceled issues are no longer shown as completed.
+- Azure DevOps and Bitbucket Data Center pull requests you review and Bitbucket Cloud review requests now show up.
+- Images in issue and pull request previews load, and merged pull requests keep their details.
+- An unreachable provider server shows as unreachable instead of signed out, and GitHub organizations that block Kepler are named.
+
+#### Remote
+
+- A remote window keeps its page when its connection is rebuilt, and the first remote window opens in place.
+- A re-verified host key is saved with the host in one step, and a new address on a saved host gets its key checked.
+
+#### Interface
+
+- Escape closes only the top layer, overlays over a dialog scroll, and toasts stay clickable while a dialog is open.
+- A sideways scroll or mouse wheel no longer goes Back.
+- "3m ago" labels keep updating.
+- Dictated text is kept after a segment finishes transcribing.
+- Kepler trusts certificates installed in your system's certificate store.
 
 ***
 
