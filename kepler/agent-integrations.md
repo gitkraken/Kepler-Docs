@@ -11,13 +11,13 @@ git_hosts: [generic]
 integrations: [claude-code, codex-cli, copilot-cli, cursor, auggie, opencode, grok, pi, antigravity]
 hosted_variant: both
 status: GA
-last_verified: 2026-09
+last_verified: 2026-10
 llms_include: true
-tags: [agent-integrations, claude-code, codex, copilot, cursor, auggie, opencode, grok, pi, antigravity, acp, terminal, setup, settings]
+tags: [agent-integrations, claude-code, codex, copilot, cursor, auggie, opencode, grok, pi, antigravity, acp, terminal, setup, settings, mcp-servers]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: September 2026</kbd>
+<kbd>Last updated: October 2026</kbd>
 
 Kepler runs the coding agent you already have. You sign in with your own agent account, and Kepler adds no markup on the agents you bring.
 
@@ -32,6 +32,8 @@ All of it lives in **Settings → Agents**.
   <figcaption style="text-align:center; color:#888">Settings → Agents.</figcaption>
 </figure>
 
+<!-- TODO(screenshot): Replace — agent cards were rebuilt (version in the title line, Accounts with colours, Opens in, Advanced section) and Agent maintenance sits above them. -->
+
 ***
 
 ## The nine supported agents
@@ -43,18 +45,24 @@ Each agent gets its own section in **Settings → Agents**, in this order:
 | **Claude Code** | Claude Code | Your installed `claude` CLI | Rich chat or Terminal | Yes |
 | **Codex** | Codex | Your installed `codex` CLI | Rich chat or Terminal | Yes |
 | **GitHub Copilot** | GitHub Copilot | Your installed `copilot` CLI in ACP mode (`--acp`) | Rich chat or Terminal | Yes |
-| **Cursor** | Cursor CLI | Your installed `cursor-agent` CLI in ACP mode (`acp`) | Rich chat or Terminal | No |
-| **OpenCode** | OpenCode | Your installed `opencode` CLI in ACP mode (`acp`) | Rich chat or Terminal | No |
+| **Cursor** | Cursor | Your installed `cursor-agent` CLI in ACP mode (`acp`) | Rich chat or Terminal | No |
+| **OpenCode** | OpenCode | Your installed `opencode` CLI, v1 or v2, in ACP mode (`acp`) | Rich chat or Terminal | No |
 | **Auggie** | Auggie | Your installed `auggie` CLI in ACP mode (`--acp`) | Rich chat or Terminal | Yes |
 | **Grok Build** | Grok Build | Your installed `grok` CLI in ACP mode (`agent stdio`) | Rich chat or Terminal | Yes |
 | **Pi** | Pi | Your installed `pi` CLI, in its own terminal interface | Terminal only | No |
-| **Google Antigravity** | Google Antigravity | Your installed `agy` CLI, in its own terminal interface | Terminal only | No |
+| **Google Antigravity** | Antigravity | Your installed `agy` CLI in a terminal, or Google's separate Antigravity ACP server (`agy_acp_server`) for Rich chat | Terminal (default) or Rich chat | No |
 
-**Auggie** is Augment's coding agent. It runs over the same ACP path as the rest, and its model and mode pickers work like any other agent's. It is also one of the three agents that report plan usage back to Kepler, alongside Claude Code and Codex. Auggie reports a billing cycle and a credit balance rather than rolling windows. See [Agent Sessions](/kepler/agent-sessions) for the **Token usage** chip and the opt-in it needs.
+**Auggie** is Augment's coding agent. It runs over the same ACP path as the rest, and its model and mode pickers work like any other agent's. It is also one of the three agents that report plan usage back to Kepler, alongside Claude Code and Codex. Auggie reports a billing cycle and a credit balance rather than rolling windows. See [Agent Sessions](/kepler/agent-sessions#usage-indicators) for the plan usage meter and the **Show token usage** opt-in it needs.
 
 **Grok Build** is xAI's coding agent. It signs in through your browser, or you can supply an xAI API key. Its data lives under `~/.grok`, which is what lets Kepler keep several accounts apart.
 
-**Pi and Google Antigravity are terminal-only.** Neither CLI speaks ACP yet — Pi has no ACP mode and Google ships its ACP server as a separate binary — so Kepler runs each one's own interface in a terminal inside the task instead of leaving them out. Kepler does no auth probing for either: they use their own sign-in (`/login`, or the provider API-key environment variables they read directly).
+**Google Antigravity runs two separate binaries.** Terminal mode runs the `agy` CLI; Rich chat runs Google's Antigravity ACP server, which is a separate download with its own version. The agent's section in **Settings → Agents** lists both under **Components** — **Antigravity CLI** (*Needed for Terminal mode.*) and **ACP server** (*Rich-text (ACP) mode. Installed separately from the Antigravity CLI.*) — each with its own **Install** or **Update to {version}**. Either one alone is enough to use the agent in that mode. Sessions stay in Terminal until you pick **Rich chat** for Antigravity, because the ACP server signs in separately from the CLI. Google publishes no ACP server for Intel Macs, so there it reads **Not available for this platform**.
+
+**Pi is terminal-only.** Its CLI has no ACP mode, so Kepler runs its own interface in a terminal inside the task instead of leaving it out. Kepler does no auth probing for Pi: it uses its own sign-in (`/login`, or the provider API-key environment variables it reads directly).
+
+**OpenCode v1 and v2 both work**, side by side. A conversation resumes with the version it was started on, and Kepler refuses to resume it on the other rather than guess.
+
+**Claude Code folder trust** is read where the CLI records your answer, so a worktree inherits the trust you already gave its repository and a session doesn't stall on the trust prompt.
 
 **Codex now runs your own CLI.** Earlier builds shipped a bundled `codex-acp` engine; Kepler resolves and spawns the `codex` you have installed, like every other agent, so its section reads **Installed** and it has a binary picker.
 
@@ -84,10 +92,10 @@ Kepler declares install methods per operating system, so the list you see depend
 | **GitHub Copilot** | Native installer, Homebrew, npm (global) | Native installer, Homebrew, npm (global) | winget, npm (global) |
 | **Cursor CLI** | Native installer, Homebrew | Native installer | Native installer |
 | **Auggie** | npm (global) | npm (global) | npm (global) |
-| **OpenCode** | Native installer, Homebrew, npm (global) | Native installer, Homebrew, npm (global), pacman | scoop, Chocolatey, npm (global) |
+| **OpenCode** | Native installer, Homebrew, and npm, each for v1 or v2 | Native installer, Homebrew, and npm, each for v1 or v2; pacman | scoop, Chocolatey, npm (global), npm (v2) |
 | **Grok Build** | Native installer | Native installer | Native installer |
 | **Pi** | npm (global) | npm (global) | npm (global) |
-| **Google Antigravity** | Native installer | Native installer | Native installer |
+| **Google Antigravity** | Native installer, plus the ACP server component (Apple Silicon only) | Native installer, plus the ACP server component | Native installer, plus the ACP server component |
 
 If an agent offers no install method for your OS, Kepler says so and points you at the custom binary path instead.
 
@@ -113,16 +121,20 @@ Open **Configure** on an agent's section to see and change what it resolved:
 | **Data directory** | Overrides the agent's own data and config directory. Leave it empty for the agent default |
 | **Enabled** | Whether Kepler offers this agent when you start a session |
 
+If Kepler can't read an installed agent's version, its section shows a **Version unknown** badge rather than plain **Installed**: *Kepler couldn't read {name}'s version. Features that depend on the version stay off, such as sending a new session's first message automatically. Reinstalling or updating {name} usually fixes this.*
+
 If a pinned path later disappears (for example, when an auto-updater cleans up an old version), Kepler falls back to automatic resolution instead of reporting the agent as missing.
 
-**Settings → Agents → Agent options → Installed agents** carries a **Refresh** button that re-scans every agent at once.
+**Agent maintenance**, above the agent cards in **Settings → Agents**, carries **Re-scan**, which re-detects every agent at once, and **Update all**, which runs each installed agent's own updater.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/installed-agents-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/installed-agents-aug-2026.png" class="help-center-img img-bordered" alt="Settings → Agents → Agent options → Installed agents, with its Refresh button">
+    <img src="/wp-content/uploads/installed-agents-aug-2026.png" class="help-center-img img-bordered" alt="The agent re-scan control in Settings → Agents">
   </a>
-  <figcaption style="text-align:center; color:#888">Installed agents, in Agent options.</figcaption>
+  <figcaption style="text-align:center; color:#888">Re-scanning installed agents.</figcaption>
 </figure>
+
+<!-- TODO(screenshot): Replace — Agent maintenance above the agent cards, with Update all and Re-scan; the image above shows the retired Installed agents → Refresh row. -->
 
 ***
 
@@ -133,26 +145,27 @@ An installed agent shows **Sign in** until it has a credential, and **Sign out**
 | Agent | How you sign in |
 |---|---|
 | **Claude Code** | Browser sign-in. Kepler runs the sign-in for you and your browser opens; you paste a code back only if the browser callback cannot reach Kepler |
-| **Codex** | Sign in with a ChatGPT account through your browser, or supply an API key |
+| **Codex** | Sign in with a ChatGPT account through your browser, or enter an API key. On a remote, **ChatGPT (device code)** |
 | **GitHub Copilot** | **Sign in with GitHub**: Kepler's own device flow. Open `github.com/login/device` and enter the one-time code |
 | **Cursor CLI** | Cursor's own browser sign-in, driven from the modal. You can instead set `CURSOR_API_KEY` |
 | **Auggie** | **Sign in with browser**, or **Paste session token** |
 | **OpenCode** | Nothing to do in Kepler. OpenCode resolves providers from its own config file and provider environment variables |
 | **Grok Build** | Browser sign-in, or **Paste an API key** for a deployment with no local browser |
-| **Pi** / **Google Antigravity** | Nothing to do in Kepler. Sign in inside the CLI itself, or set the provider environment variables it reads |
+| **Google Antigravity** | **Google OAuth**, **Google Cloud project**, or **Google Cloud project (SSO)**, driven from the modal. The ACP server used for Rich chat keeps its own sign-in, so Kepler checks whichever one the mode you picked uses |
+| **Pi** | Nothing to do in Kepler. Sign in inside the CLI itself, or set the provider environment variables it reads |
 
-### Browser sign-in, including over SSH
+### Browser sign-in, including on a remote
 
 **Claude Code** and **Codex** both sign in through your browser, and neither drops you into a terminal to do it.
 
 That holds on a [remote environment](/kepler/remote-environments) too:
 
-- **Claude Code** over SSH offers **Sign in with browser**, which opens the sign-in page in your *local* browser and takes the code you paste back. The credential lands on the remote machine.
-- **Codex** over SSH opens ChatGPT sign-in in your local browser and bridges the callback over your SSH connection. The token is written on the remote machine and never passes through Kepler.
+- **Claude Code** on a remote offers **Sign in with browser**, which opens the sign-in page in your *local* browser and takes the code you paste back. The credential lands on the remote machine.
+- **Codex** on a remote offers **ChatGPT (device code)**: *Sign in with a one-time code in your browser. Works on any remote.* Kepler shows the sign-in link and a **One-time code**; the remote CLI waits for you to finish and writes the token there. Some ChatGPT workspaces turn device sign-in off, and Kepler then points you at the alternatives.
 
-Codex's browser sign-in on a remote target is the one flow with a condition on it: it needs the desktop app driving a window bound to an **SSH** host. Every client operating system qualifies, and Kepler doesn't require an SSH ControlMaster. One is a fast path, not a prerequisite. It is not offered in a browser client, and it does not apply to a [WSL environment](/kepler/remote-environments), which has no SSH connection to bridge the callback over.
+**Import local Codex login** is the other remote route, in the desktop app: it copies this machine's `~/.codex/auth.json` to the remote target, and asks you to confirm on this machine before it reads the file. Treat this import as handing over a credential: anyone with access to that remote machine can send Codex requests on your account until you sign out.
 
-Where it does not apply, **Import local Codex login** does the job: it copies this machine's `~/.codex/auth.json` to the remote target. That entry appears on every remote binding in the desktop app, so it also sits alongside the browser flow when both are available. Treat this import as handing over a credential: anyone with access to that remote machine can send Codex requests on your account until you sign out.
+A Codex API key works locally and on a remote: Kepler collects the key in the modal and hands it to Codex for that account. **Sign out** on Codex signs the CLI itself out, and Kepler follows a sign-in you do in the Codex CLI outside Kepler.
 
 ### Auggie's two methods
 
@@ -168,6 +181,8 @@ If you run Auggie's browser sign-in on this machine yourself, Kepler detects it 
 ### Multiple accounts of one agent
 
 **Claude Code**, **Codex**, **GitHub Copilot**, and **Auggie** support more than one signed-in account. **Configure → Accounts → Add account** adds one; each account keeps its own credentials and history.
+
+Give each added account its own colour from the swatch at the left of its row — **Rose**, **Amber**, **Lime**, **Cyan**, **Blue**, or **Violet** — and the agent icon is tinted with it on session tabs, the task rail, and the terminal status bar, so sessions on different accounts are easy to tell apart. *The default account stays uncolored.* Accounts also appear on the agent's card in Settings.
 
 For **Auggie**, you can only add a second account with **Paste session token**. Its browser sign-in writes to one fixed file, so it would sign the second account into the first account's identity.
 
@@ -187,6 +202,8 @@ The **New session** menu starts one session in whichever mode is *not* the defau
 ### Detecting sessions started outside Kepler
 
 **Settings → Agents → Agent options → Detect sessions started outside Kepler** is a separate, cross-agent setting, **on out of the box**. It installs GitKraken hooks so sessions you start in your own terminal show up in Kepler, and it covers every agent Kepler can track that way: **Claude Code**, **Codex**, **Cursor**, **GitHub Copilot**, and **OpenCode**. See [Agent Sessions](/kepler/agent-sessions#sessions-started-outside-kepler).
+
+Kepler also follows its own Claude Code **Terminal** sessions through those hooks. If a live Claude terminal session keeps reporting status but its hook events stop arriving, Kepler warns *Claude sessions aren't reporting to Kepler* — status and notifications may be out of date — and offers **Repair** to reconnect Claude to Kepler. Restart any Claude session that still isn't responding afterwards.
 
 ***
 
@@ -213,9 +230,15 @@ If your agent speaks ACP, Kepler can run it without any Kepler-side change. Open
 | **Args (one per line)** | Arguments that put your agent into ACP mode, for example `--acp` |
 | **Environment variables (KEY=value, one per line)** | Variables merged into the agent's environment on every session |
 
-Kepler treats environment values as secrets: it hides them after you save and never sends them to any client. When you edit a server, leaving a value empty (`KEY=`) keeps the stored secret, and typing a new value replaces it.
+Kepler treats environment values as secrets: it encrypts them at rest, hides them after you save, and never sends them to any client. When you edit a server, leaving a value empty (`KEY=`) keeps the stored secret, and typing a new value replaces it.
 
 Custom servers appear alongside the built-in agents everywhere you can choose an agent. A custom server can run as a **terminal** session too: Kepler works out what terminal mode can offer from the command's own flags rather than from a list of agent names, so your own agent degrades exactly the way a built-in one does.
+
+***
+
+## MCP servers
+
+Kepler lists the MCP servers each agent loads, and lets you add, remove, sign in to, and turn off servers or single tools, per repository from the composer's agent menu or as defaults in **Settings → Agents → MCP servers**. See [MCP Servers](/kepler/mcp-servers).
 
 ***
 

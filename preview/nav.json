@@ -32,6 +32,7 @@
       "title": "Integrations",
       "pages": [
         "agent-integrations.md",
+        "mcp-servers.md",
         "issue-tracker-integrations.md",
         "pull-request-integrations.md"
       ]

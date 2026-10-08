@@ -1,6 +1,6 @@
 ---
 title: Pull Request Integrations
-description: Connect your Git hosts to Kepler so the pull requests you authored and the ones waiting on your review land in one list, already matched to the worktrees they belong to.
+description: Connect your Git hosts to Kepler, cloud or self-hosted, so the pull requests you authored and the ones waiting on your review land in one list, already matched to the worktrees they belong to.
 product: Kepler
 feature: Pull Request Integrations
 content_type: how-to
@@ -11,13 +11,13 @@ git_hosts: [github, github-enterprise, gitlab, gitlab-self-hosted, bitbucket, az
 integrations: [github, github-enterprise, gitlab, gitlab-self-hosted, bitbucket, azure-devops]
 hosted_variant: both
 status: GA
-last_verified: 2026-08
+last_verified: 2026-10
 llms_include: true
-tags: [integrations, pull-requests, github, gitlab, bitbucket, azure-devops, worktrees, accounts, settings]
+tags: [integrations, pull-requests, github, gitlab, bitbucket, bitbucket-data-center, azure-devops, self-hosted, worktrees, accounts, settings]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: August 2026</kbd>
+<kbd>Last updated: October 2026</kbd>
 
 Connect a Git host and the pull requests you authored, plus the ones waiting on your review, show up in [the Kepler interface](/kepler/kepler-interface). Kepler also matches them to the worktrees you already have, so a branch you are working on carries its pull request wherever you see it.
 
@@ -30,24 +30,28 @@ Manage providers in **Settings → Integrations**, in the **Provider Integration
   <figcaption style="text-align:center; color:#888">Provider Integrations, in Settings → Integrations.</figcaption>
 </figure>
 
+<!-- TODO(screenshot): Replace — the provider list has twelve providers in 0.12 (Azure DevOps Server, Bitbucket Data Center, Jira Server / Data Center) and new warning states. -->
+
 ***
 
 ## Hosts Kepler can read pull requests from
 
-Six of Kepler's nine providers return pull requests:
+Eight of Kepler's twelve providers return pull requests:
 
-| Provider | Name in Settings | Also returns issues |
-|---|---|---|
-| **GitHub** | GitHub | Yes |
-| **GitHub Enterprise** | GitHub Enterprise | Yes |
-| **GitLab** | GitLab | Yes |
-| **GitLab Self-Hosted** | GitLab Self-Hosted | Yes |
-| **Azure DevOps** | Azure DevOps | Yes |
-| **Bitbucket** | Bitbucket | No |
+| Provider | Also returns issues |
+|---|---|
+| **GitHub** | Yes |
+| **GitHub Enterprise** | Yes |
+| **GitLab** | Yes |
+| **GitLab Self-Managed** | Yes |
+| **Azure DevOps** | Yes |
+| **Azure DevOps Server** | Yes |
+| **Bitbucket** | No |
+| **Bitbucket Data Center** | No |
 
-Jira, Linear, and Trello are the other three. They return issues only — see [Issue Tracker Integrations](/kepler/issue-tracker-integrations).
+Jira, Jira Server / Data Center, Linear, and Trello are the other four. They return issues only — see [Issue Tracker Integrations](/kepler/issue-tracker-integrations).
 
-Self-hosted instances are supported. **GitHub Enterprise** and **GitLab Self-Hosted** read pull requests and merge requests the same way their cloud counterparts do; which fields come back depends on your server's version. Your machine needs to be able to reach the instance.
+Self-hosted instances are supported. **GitHub Enterprise**, **GitLab Self-Managed**, **Azure DevOps Server**, and **Bitbucket Data Center** read pull requests and merge requests the same way their cloud counterparts do, and two servers of the same kind stay separate; which fields come back depends on your server's version. Your machine needs to be able to reach the instance. Kepler trusts the certificates in your operating system's certificate store, so a server signed by your company's own certificate authority works without extra setup.
 
 GitLab merge requests appear as pull requests throughout Kepler. There is one list, not two.
 
@@ -76,7 +80,7 @@ Three controls sit on a connected provider's row:
 | **Disconnect** | Removes the provider — see below |
 | **Refresh** | At the top of the section, re-checks every provider |
 
-A warning triangle on a row means that provider's sign-in has expired. Kepler tries to refresh the token itself; **Reconnect** is the manual fix.
+A row marked **Sign-in expired** needs its token refreshed. Kepler tries to do that itself; **Reconnect** is the manual fix. A row marked **Cannot connect to server** is different: the integration is still connected, but Kepler couldn't reach the server, so check that it's up and reachable from your network or VPN rather than reconnecting. When one organization refuses Kepler's access, such as a GitHub organization that restricts OAuth apps, Kepler names it under the row and leaves only its items out. See [Issue Tracker Integrations](/kepler/issue-tracker-integrations) for the warnings in full.
 
 ***
 
@@ -87,8 +91,8 @@ Starting work on a pull request whose repository you have never cloned makes Kep
 | Host | How the clone authenticates |
 |---|---|
 | **GitHub**, **GitHub Enterprise** | Your connected account's token |
-| **GitLab**, **GitLab Self-Hosted** | Your connected account's token |
-| **Bitbucket**, **Azure DevOps** | Falls through to your own git credentials |
+| **GitLab**, **GitLab Self-Managed** | Your connected account's token |
+| **Bitbucket**, **Bitbucket Data Center**, **Azure DevOps**, **Azure DevOps Server** | Falls through to your own git credentials |
 
 For an enterprise or self-managed host, Kepler matches the clone's host against the domain stored on your connection, so the repository clones through the account connected to that instance rather than through a cloud account of the same family. When a provider has more than one account, the clone follows the same choice your reads follow: **Read from this account** where you set one, otherwise the primary.
 
@@ -137,7 +141,7 @@ You can reconnect at any time.
 
 ## Bitbucket has no issues
 
-Kepler keeps two separate lists of what each provider can return. Bitbucket is on the pull-request list only, so Kepler never asks it for issues, and a provider filter for issues never offers it. In the list, Kepler builds facets from the rows actually loaded, so a facet with nothing to offer never appears.
+Kepler keeps two separate lists of what each provider can return. Bitbucket and Bitbucket Data Center are on the pull-request list only, so Kepler never asks them for issues, and a provider filter for issues never offers them. In the list, Kepler builds facets from the rows actually loaded, so a facet with nothing to offer never appears.
 
 The same rule runs the other way for Jira, Linear, and Trello, which have no pull requests.
 
@@ -170,7 +174,7 @@ Kepler scopes branch matching to each item's own repository, so two repositories
 
 ### Auto-attaching a matched pull request
 
-A pull request you open outside Kepler (from a terminal `gh`, from GitKraken, from the web) used to stay a read-time match and never become a resource. Kepler now records it for you.
+A pull request you open outside Kepler (from a terminal `gh`, from GitKraken, from the web) doesn't stay a read-time match. Kepler records it on the task for you.
 
 Whenever fresh pull-request data arrives, Kepler looks over your active tasks that hold no pull request yet and attaches one whose head branch matches a worktree's branch. It then behaves like a pull request you attached yourself: it sits in the task's resources, and it reaches the agent as context. See [Tasks and Resources](/kepler/tasks-and-resources).
 
@@ -202,9 +206,11 @@ Kepler pulls these fields from a pull request:
 | **Head and base branch** | When the provider reports them. These drive branch matching and the branch a task starts from |
 | **Fork** | Whether the head branch lives on a fork, and where, so Kepler can fetch it from the fork remote instead of `origin` |
 | **Created at** | |
-| **URL** | Used by **Open in browser** |
+| **URL** | Used by the open control, which names the provider: **Open on GitHub**, **Open on Bitbucket**, and so on |
 
 <!-- TODO(verify): re-checked field by field against the shared PullRequest shape in src/shared/provider/pull-request.ts at kepler 7c31af83e — unchanged, and the table above is complete apart from the base-repo clone URLs, which only prefill the Clone form. The June 2026 version of this page also claimed Kepler pulls the diff, open review comments, and the current review state when you attach a pull request; none of those are fields on this shape. Confirm with engineering which path supplies review comments and the diff to a Review or Address Feedback run before documenting them. -->
+
+A merged pull request keeps its description and author for as long as a task, archived or not, still links it.
 
 Azure DevOps reports pull requests without a usable number, so Kepler identifies them by URL instead. You should not see a difference; identifying by URL is why a pull request you look up by link resolves correctly there.
 
@@ -220,5 +226,11 @@ Your pull requests turn up in four places:
 | [Actions](/kepler/actions) | The **Action** button hands the pull request to an agent. **Review** and **Address Feedback** are the two built-in Actions aimed at pull requests, and Kepler picks between them by who authored it |
 | [Review Changes](/kepler/review-changes) | Reading the diff and the commits behind a pull request |
 | [Tasks and Resources](/kepler/tasks-and-resources) | A pull request is a resource on a task, so you can attach one to work that already exists |
+
+**Review requests come from every host.** Pull requests waiting on your review show up from Azure DevOps, Azure DevOps Server, and Bitbucket Data Center as well as GitHub and GitLab. Bitbucket Cloud has no account-wide way to ask for them, so Kepler reads review requests repository by repository, starting with the repositories you have in Kepler and then the rest of your workspaces at a pace that stays inside Bitbucket's hourly request limits. On a large workspace they can take a while to appear.
+
+**Kepler loads what you're looking at.** Pull request and issue lists refresh while they're on screen, and again when you come back to the window, rather than downloading your whole account's lists in the background. A task's own pull requests refresh when an agent ends a turn, a branch is pushed, or a pull request is published.
+
+You can also start work on a pull request from GitLens or GitKraken Desktop. See [Create a Task](/kepler/create-task).
 
 ---

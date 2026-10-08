@@ -129,6 +129,8 @@ Click **New task**, or press **Shift+Alt+N** from anywhere. Write a prompt, atta
   <figcaption style="text-align:center; color:#888">The New task button, available from anywhere in Kepler.</figcaption>
 </figure>
 
+<!-- TODO(screenshot): Replace — the top bar was rebuilt in 0.11: New task and the window switcher sit at the leading edge with Back and Forward, and a ready update shows as a chip. -->
+
 ***
 
 ## Where to go next

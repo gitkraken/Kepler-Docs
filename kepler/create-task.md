@@ -11,21 +11,22 @@ git_hosts: [github, github-enterprise, gitlab, gitlab-self-hosted, bitbucket, az
 integrations: [github, github-enterprise, gitlab, gitlab-self-hosted, bitbucket, azure-devops, jira, linear, trello]
 hosted_variant: both
 status: GA
-last_verified: 2026-09
+last_verified: 2026-10
 llms_include: true
-tags: [tasks, create-task, composer, worktrees, branches, folders, issues, pull-requests, actions]
+tags: [tasks, create-task, composer, worktrees, branches, folders, issues, pull-requests, actions, gitlens, gitkraken-desktop]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: September 2026</kbd>
+<kbd>Last updated: October 2026</kbd>
 
-Kepler gives you two ways to start work, and the first is usually better: pick something that's already waiting for you.
+Kepler gives you several ways to start work, and the first is usually better: pick something that's already waiting for you.
 
 | Start from | How |
 |---|---|
 | **Work assigned to you** | Fire an Action on an issue or pull request in the **Todo** segment of [the Kepler interface](/kepler/kepler-interface). One click, context attached |
 | **Something you're describing yourself** | **New task** opens the Task Composer, where you write the prompt and attach what it needs |
 | **A conversation you already started** | **New task → From an external session** wraps a task around an agent session you began in your own terminal |
+| **Another GitKraken app** | A link from GitLens or GitKraken Desktop opens Kepler on the work you were looking at |
 
 ***
 
@@ -65,7 +66,7 @@ Kepler names Tasks automatically from what you started them with. Rename one whe
 
 ## From the Task Composer
 
-Click **New task**, or press **Shift+Alt+N** to open the quick launcher from anywhere, including when Kepler isn't the focused window.
+Click **New task** or press **Cmd/Ctrl+N**. To start one without switching to Kepler first, press **Shift+Alt+N** to open the quick launcher from anywhere, including when Kepler isn't the focused window.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/new-task-button-sep-2026.png" target="_blank" rel="noopener noreferrer">
@@ -73,6 +74,8 @@ Click **New task**, or press **Shift+Alt+N** to open the quick launcher from any
   </a>
   <figcaption style="text-align:center; color:#888">The New task button, available from anywhere in Kepler.</figcaption>
 </figure>
+
+<!-- TODO(screenshot): Replace — the top bar was rebuilt in 0.11: New task and the window switcher sit at the leading edge with Back and Forward, and a ready update shows as a chip. -->
 
 The Composer is one prompt box above a row of four buttons:
 
@@ -86,9 +89,11 @@ The Composer is one prompt box above a row of four buttons:
 | Control | What it attaches |
 |---|---|
 | **Add repo or folder** | A repository to work in, or a plain folder |
-| **Add issue** → **Issues** | Issues from your connected trackers |
+| **Add issue** → **Issues** | Issues from your connected trackers. With only Linear in the list, a team picker shows every open issue in the team you pick, not just yours |
 | **Add PR** → **PRs** | Pull requests from your connected hosts |
-| **Add context** | Everything without a button of its own: files and links |
+| **Add context** | Everything without a button of its own: folders, files, and links |
+
+In a window connected to another machine, picking a file through **Add context** also offers **Upload from this computer**. Uploads are kept with your draft and saved into the Task's own folder when it starts; if one expired before you pressed **Start**, Kepler names it rather than dropping it silently.
 
 **Repositories and folders come from one ranked list**, not two pickers — *Find a repository or folder…* — and the list learns. Kepler records how often you actually use each place and ranks the picker by it, so the repositories you work in daily are at the top on the day you start using them. The same list is behind the chip's own **Change repository or folder**.
 
@@ -108,6 +113,8 @@ Add as much or as little context as you wish.
 The primary button shows a sending state from the moment you click it, so a slow start doesn't read as a dead button. It fires the Action that matches what you've attached, exactly as it would from a Todo row. A linked pull request resolves to **Address Feedback** or **Review**, depending on who wrote it; a linked issue resolves to **Plan**. With nothing attached, the button reads **Start** and starts the Task with your prompt as written.
 
 The chevron beside the primary button opens the rest: **Prepare**, which creates the session without starting work yet, and every Action that applies to what you've attached. Firing an Action sends that Action's prompt, with anything you typed appended as a refinement.
+
+A Task that has its prompt but no session yet, such as one an agent created for you, says so in its Dashboard preview: *Start with the task prompt, or describe something else…*. Press **Start** on the empty box to send the Task's prompt as written.
 
 If the Task can't start, you'll see **Failed to start the task**.
 
@@ -182,6 +189,8 @@ For what happens to the conversation once it's on a task — forking, continuing
 
 **A Task doesn't need a repository.** Attach a plain folder from the same ranked picker and the agent works on it in place — no branch, no worktree, no Git at all. A folder of notes, a scratch directory, a checkout of something that isn't a repository: all of it is a normal Task.
 
+When you browse for a folder in a window connected to another machine, Kepler opens its own folder picker (turn on **Always use the custom folder picker** in **Settings → General** to use it everywhere). Type a path into its path bar and Kepler checks it before you select it: a folder that doesn't exist, can't be read, or is actually a file is refused with the reason, and a near miss offers **Did you mean** the closest folder.
+
 Or attach nothing. No repository, no folder, no issue. You get somewhere to think (ask a question, explore an idea) and you can attach the real work later, once it's worth tracking. See [The Task View](/kepler/task-view).
 
 <figure style="text-align:center">
@@ -190,6 +199,12 @@ Or attach nothing. No repository, no folder, no issue. You get somewhere to thin
   </a>
   <figcaption style="text-align:center; color:#888">The Task Composer, ready to attach a repo, issue, pull request, or other context.</figcaption>
 </figure>
+
+***
+
+## From another GitKraken app
+
+You can jump into Kepler from other GitKraken products, such as GitLens and GitKraken Desktop. A link from one of them can open the Task Composer already filled in with the issue, pull request, or repository you were looking at, or open a task or session you already have. If the repository isn't on this machine, Kepler stages it to be cloned when the task starts. A link Kepler can't fully resolve still opens, with one clear warning about what it couldn't use.
 
 ***
 
@@ -203,6 +218,8 @@ The Task appears in **Tasks in progress**. Click it for the side panel, or doubl
   </a>
   <figcaption style="text-align:center; color:#888">The task view: the rail on the left, a session open on the right.</figcaption>
 </figure>
+
+<!-- TODO(screenshot): Replace — the task page header and rail were rebuilt in 0.11–0.12 (Progress and Terminal controls in the header, Terminals after Changes, the Prompt row leading Notes). -->
 
 From there you can add more sessions, attach more resources, and review what the agent changed. See [Agent Sessions](/kepler/agent-sessions) and [Review Changes](/kepler/review-changes).
 
