@@ -4332,7 +4332,7 @@ body.hide-todo .todo{display:none}
 <h2 id="reviewing-what-the-agent-changed">Reviewing what the agent changed</h2>
 <p>Reading the diff and syncing the branch are covered on their own page. See <a href="#review-changes">Review Changes</a>.</p>
 <hr></article>
-<article id="review-changes" data-slug="review-changes" hidden><div class="meta"><span class="chip">feature: Review Changes</span><span class="chip">content_type: how-to</span><span class="chip">status: GA</span><span class="chip bad">last_verified: 2026-10</span><span class="chip">llms_include: true</span><span class="chip">3970 words · ~18 min</span><span class="chip warn">5 TODO</span></div><p class="desc">An agent finished. Read the diff in the Changes overlay, comment on it, stage and commit, update the branch from its base, and hand the rest to AI Sync or Compose.</p><p><kbd>Last updated: October 2026</kbd></p>
+<article id="review-changes" data-slug="review-changes" hidden><div class="meta"><span class="chip">feature: Review Changes</span><span class="chip">content_type: how-to</span><span class="chip">status: GA</span><span class="chip bad">last_verified: 2026-10</span><span class="chip">llms_include: true</span><span class="chip">3977 words · ~18 min</span><span class="chip warn">5 TODO</span></div><p class="desc">An agent finished. Read the diff in the Changes overlay, comment on it, stage and commit, update the branch from its base, and hand the rest to AI Sync or Compose.</p><p><kbd>Last updated: October 2026</kbd></p>
 <p>An agent has stopped and says it is done. Now you read what it actually did.</p>
 <p>All of that happens in the task's <strong>worktree</strong>: the Git working copy the agent made its changes in. The task view rail groups a task's worktrees under <strong>Changes</strong>: that's where you go to review them. See <a href="#task-view">the task view</a>.</p>
 <p>Reading a diff has two surfaces, and they answer different questions:</p>
@@ -4541,7 +4541,14 @@ body.hide-todo .todo{display:none}
 <hr>
 <h2 id="review-comments">Review comments</h2>
 <p>Read the diff, mark what needs fixing, and hand the whole list to the agent in one go.</p>
-<div class="todo t-screenshot"><span class="todo-k">screenshot</span><span class="todo-b">New — Changes overlay with two review comment cards under diff lines and the &quot;2 comments · Add to prompt&quot; control in the viewer header</span></div>
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/review-comment-draft-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="../_images/review-comment-draft-oct-2026.png" class="help-center-img img-bordered" alt="The Changes overlay with lines 206 and 207 of a diff selected and a review comment draft open beneath them, reading Switch to strong tags, with Cancel and Comment buttons.">
+  </a>
+  <figcaption style="text-align:center; color:#888">A review comment draft, under the lines it's about.</figcaption>
+</figure>
+
+<div class="todo t-screenshot"><span class="todo-k">screenshot</span><span class="todo-b">New — Two posted comment cards under diff lines, with the &quot;2 comments · Add to prompt&quot; control in the viewer header.</span></div>
 
 <table>
 <thead>
