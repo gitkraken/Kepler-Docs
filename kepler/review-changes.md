@@ -155,7 +155,13 @@ A failed read says so rather than standing in for an empty one: **Couldn't load 
 
 Read the diff, mark what needs fixing, and hand the whole list to the agent in one go.
 
-<!-- TODO(screenshot): New — Changes overlay with two review comment cards under diff lines and the "2 comments · Add to prompt" control in the viewer header -->
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/review-comment-draft-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/review-comment-draft-oct-2026.png" class="help-center-img img-bordered" alt="The Changes overlay with lines 206 and 207 of a diff selected and a review comment draft open beneath them, reading Switch to strong tags, with Cancel and Comment buttons.">
+  </a>
+  <figcaption style="text-align:center; color:#888">A review comment draft, under the lines it's about.</figcaption>
+</figure>
+<!-- TODO(screenshot): New — Two posted comment cards under diff lines, with the "2 comments · Add to prompt" control in the viewer header. -->
 
 | To comment on | Do this |
 |---|---|
