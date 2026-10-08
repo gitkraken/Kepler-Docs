@@ -37,13 +37,11 @@ A Task doesn't have to start with much. You can start one from an issue in [the 
 Everything attached to a Task is a **resource**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/add-resource-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/add-resource-aug-2026.png" class="help-center-img img-bordered" alt="A Notes group in the task view's rail, with a + on the header and an Add resource button below the list">
+  <a href="/wp-content/uploads/add-resource-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/add-resource-oct-2026.png" class="help-center-img img-bordered" alt="The Notes group in the task rail, led by the task's Prompt row, with a + on the group header and the Add resource button below.">
   </a>
   <figcaption style="text-align:center; color:#888">The + on a group header and the Add resource button open the same dialog, scoped to that category.</figcaption>
 </figure>
-
-<!-- TODO(screenshot): Replace — the Notes group now leads with the task's Prompt row; show it with the + on the header and Add resource below. -->
 
 Attach them from **Add resource** at the bottom of the task view's rail, or from the **+** on any group header, which opens the same **Add resources** dialog on that category.
 
@@ -74,7 +72,13 @@ The **Files** group holds two kinds of file, and Kepler treats them differently 
 
 A file attached to a prompt that Kepler copies into the Task when you send it is an uploaded copy too. In a window connected to another machine, the file picker on the **Files** tab of **Add resources** also offers **Upload from this computer**, which copies files from the machine you're sitting at into the Task's folder. Either kind can be written somewhere else with **Save as…** from its menu.
 
-<!-- TODO(screenshot): New — The Files group showing one linked file (path subtitle) and one uploaded copy (Task folder subtitle). -->
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/files-group-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/files-group-oct-2026.png" class="help-center-img img-bordered" alt="The Files group in the task rail, holding one linked file whose row reads its path on disk.">
+  </a>
+  <figcaption style="text-align:center; color:#888">A linked file in the Files group.</figcaption>
+</figure>
+<!-- TODO(screenshot): Replace — Add an uploaded copy (Task folder subtitle) beside the linked file, and use a file outside your home folder. -->
 
 ### Issues and pull requests attach themselves
 
@@ -150,13 +154,11 @@ A fresh worktree is a clean checkout: no `node_modules`, no build output, nothin
 **Commands** solve that problem. Save a repository's setup steps once (`pnpm install`, a codegen step, whatever your project needs) and tick **Run on worktree creation**. Kepler runs them in the new worktree's folder every time it makes one for that repository, in order, before the agent starts. Commands you don't flag stay on demand: right-click a worktree in the task view rail and pick **Run command here**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/run-command-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/run-command-aug-2026.png" class="help-center-img img-bordered" alt="The Run command here option on a worktree's right-click menu in the task view rail">
+  <a href="/wp-content/uploads/worktree-row-menu-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/worktree-row-menu-oct-2026.png" class="help-center-img img-bordered" alt="A worktree row's right-click menu in the task rail, with Run command here open on No commands yet and Create command. The menu also lists the Open actions, New session here, New terminal here, Rename branch, Change merge target, the copy actions, and Detach worktree last.">
   </a>
   <figcaption style="text-align:center; color:#888">Run command here, from a worktree's right-click menu.</figcaption>
 </figure>
-
-<!-- TODO(screenshot): Replace — the worktree row menu changed in 0.12 (Change merge target…, Detach worktree… last); show it with Run command here highlighted. -->
 
 Set them up in **Settings → Repos & Folders**, on the repository's own row. See [Settings](/kepler/settings) for the fields, the path placeholders, and what happens when one fails.
 
@@ -185,7 +187,12 @@ What you wrote when you started the Task is a context item of its own: the **Pro
 
 Sometimes you want an agent that forms its own view, such as a reviewer that shouldn't be steered by the implementer's brief. The **New session** menu carries a **Start with task context** checkbox, ticked by default. Untick it and the new session doesn't receive the Task's prompt or notes. It still gets the Task's worktrees, folders, files, and links, because it still needs to know where to work.
 
-<!-- TODO(screenshot): New — The New session menu with the Start with task context checkbox. -->
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/start-with-task-context-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/start-with-task-context-oct-2026.png" class="help-center-img img-bordered" alt="The New session menu opened from the + on the Sessions group header, with Start with task context ticked at the top.">
+  </a>
+  <figcaption style="text-align:center; color:#888">Start with task context, ticked by default.</figcaption>
+</figure>
 
 ### Notes are how you give standing instructions
 
@@ -205,12 +212,11 @@ Attach a **Note** for anything every agent on the Task should follow: a style ru
 Most of what you remove from a Task isn't destroyed. The menu says which you're doing: **Detach** for something that lives elsewhere, **Delete** for something only the Task holds.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/detach-resource-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/detach-resource-aug-2026.png" class="help-center-img img-bordered" alt="A resource's right-click context menu with its remove action at the bottom">
+  <a href="/wp-content/uploads/detach-resource-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/detach-resource-oct-2026.png" class="help-center-img img-bordered" alt="A pull request row's right-click menu in the task rail, with Open, Open to the side, Open in browser, the copy actions, and Detach pull request at the bottom.">
   </a>
   <figcaption style="text-align:center; color:#888">Removing a resource from its context menu in the rail.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — The rail context menu so it shows the current "Detach folder…" / "Delete file…" style labels. -->
 
 Kepler asks separately in each case, because the answer differs:
 
@@ -228,18 +234,19 @@ The Task's **Prompt** has no remove action.
 Worktrees get more care, because deleting one can lose work.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/detach-worktree-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/detach-worktree-aug-2026.png" class="help-center-img img-bordered" alt="The detach and delete options on a worktree">
+  <a href="/wp-content/uploads/detach-worktree-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/detach-worktree-oct-2026.png" class="help-center-img img-bordered" alt="The Detach worktree? dialog for a worktree only this task uses. It lists the worktree as Safe to delete, with No uncommitted changes and Branch kept, above an Also delete branch checkbox and the Cancel, Delete worktree, and Detach worktree buttons.">
   </a>
   <figcaption style="text-align:center; color:#888">Detaching or deleting a worktree.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — With the current Detach worktree… and Delete worktree… actions and the Delete worktree? dialog's worktree list. -->
 
 **Detach worktree…**, on the worktree's row in the rail, removes it from the Task and leaves it on disk: *The worktree stays on disk — it's only removed from this task.* **Delete worktree…**, on the worktree pill's menu (and as **Delete worktree** inside the detach dialog when deleting is allowed), removes it entirely. Kepler checks first:
 
 - If the worktree is used by **other Tasks**: *This worktree is used by other tasks, so it can't be deleted — detaching only removes it from this task.* The dialog names them under **Also used by**.
 - If it's the repository's **main worktree**: *This is the repository's main worktree — it can't be deleted, only detached from the task.*
 - Otherwise: *This worktree is only used by this task. Detach it to keep it on disk, or delete it. A deleted worktree stays listed on this task as gone until you detach it.*
+
+The dialog lists the worktree with what deleting it would cost, such as **No uncommitted changes** and **Branch kept**, under a verdict like **Safe to delete**. Tick **Also delete branch** to remove the branch along with the worktree.
 
 Neither is possible while a session is still running in the worktree; the menu tells you how many to archive first.
 
@@ -262,24 +269,22 @@ A worktree that would lose work is **kept**, not deleted, unless you tick the ex
 ## Renaming, archiving, and deleting a Task
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/rename-task-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/rename-task-aug-2026.png" class="help-center-img img-bordered" alt="The Task actions menu open from the header, listing Rename task, Archive task, and Delete task">
+  <a href="/wp-content/uploads/rename-task-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/rename-task-oct-2026.png" class="help-center-img img-bordered" alt="The Task actions menu open from a task panel's header, with Rename task and its F2 shortcut highlighted among Open task page, Open in new window, Pin panel, the Progress submenu, Mark as unread, Copy task prompt, Add resource, Archive task, and Delete task.">
   </a>
   <figcaption style="text-align:center; color:#888">The Task actions menu, open from the header.</figcaption>
 </figure>
-
-<!-- TODO(screenshot): Replace — the Task actions menu changed in 0.11–0.12 (Reopen, Progress submenu, Copy task prompt; Rename task edits inline); show the current menu. -->
 
 From the **Task actions** (**⋮**) menu, on the task's row or in the task view's header:
 
 | Action | What it does |
 |---|---|
-| **Rename task** | Tasks name themselves when they're created; rename when the name stops fitting. The dialog's **Auto-name** button suggests one from the Task's prompt and resources, into the field, for you to accept or edit |
+| **Rename task** | Tasks name themselves when they're created; rename when the name stops fitting. The name becomes an editable field in place; its **Auto-name** button suggests one from the Task's prompt and resources, into the field, for you to accept or edit |
 | **Archive task** | Takes it out of the active list and keeps it as history. Its sessions and resources are kept, and nothing is destroyed unless you ask for it |
 | **Restore task** | On an archived Task, in place of **Archive task**. It goes straight back, unless another active Task now holds the same pull request; then Kepler asks first, because restoring archives that one |
 | **Delete task** | Removes the Task along with its sessions and resources |
 
-**Kepler suggests archiving a finished Task.** Once a Task reaches **Done**, with no uncommitted changes left and no session still working or waiting on you, its header asks *Ready to archive?* with an **Archive** button. Dismiss it and that Task stops asking.
+**Kepler suggests archiving a finished Task.** Once a Task reaches **Done**, with no unpushed work in its worktrees and no session still working or waiting on you, its header asks *Ready to archive?* with an **Archive** button. Dismiss it and that Task stops asking.
 
 **Archive** and **Delete** ask the same two questions, in the same dialog, because they're the same act: **Also delete worktrees**, and (only once that's ticked) **Also delete branches**. Until you tick them, *Worktrees and branches stay on disk unless you tick the boxes below.* Tick the first, and Kepler lists every worktree with the same tags a single worktree delete shows, and says what will happen to each:
 
@@ -289,7 +294,13 @@ From the **Task actions** (**⋮**) menu, on the task's row or in the task view'
 
 Ticking **Also delete branches** re-reads the list, so a worktree that was safe a moment ago can turn into a warning. If the check is slow you can confirm anyway; any worktree that would lose work is kept.
 
-<!-- TODO(screenshot): New — The Archive task? dialog with Also delete worktrees ticked, showing one safe worktree and one kept because it would lose work. -->
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/archive-task-dialog-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/archive-task-dialog-oct-2026.png" class="help-center-img img-bordered" alt="The Archive task? dialog, saying the task moves to the Archived section and its worktrees and branches stay on disk unless you tick the boxes. Also delete worktrees is unticked, and Also delete branches is unavailable until it is.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The Archive task? dialog, before you tick anything.</figcaption>
+</figure>
+<!-- TODO(screenshot): New — The same dialog with Also delete worktrees ticked, listing one safe worktree and one kept because it would lose work. -->
 
 **Restore task** appears in the task view's header as soon as the Task is archived. From a row in the main list, it appears only once you've filtered **Activity** to **Archived** — see [Arranging Your Work](/kepler/arranging-your-work).
 

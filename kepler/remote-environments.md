@@ -46,6 +46,8 @@ Everything up to [Remote Access](#remote-access-reach-kepler-from-another-device
 
 Kepler binds each window to one environment at a time, and the title-bar chip shows which one. The chip leads with the environment's type icon, and a green dot on that icon means connected.
 
+<!-- TODO(screenshot): New — The title-bar chip connected to a host, in the host's color with the green connected dot. The unused `remote-chip-aug-2026.png` may be a starting point. -->
+
 | Chip | What it means |
 |---|---|
 | **Local** | This window works on this machine |
@@ -343,6 +345,7 @@ Other editors, and the file manager, rely on the path being reachable from Windo
 The desktop installer does not carry a server bundle for every architecture. Kepler fetches what it needs when you connect, and caches it per user.
 
 The payload is not one tarball. Kepler splits it into four layers instead, each a separate archive with its own cache key:
+<!-- TODO(verify): Agent Integrations says Kepler now runs your own Codex CLI instead of a bundled codex-acp engine. Confirm whether the remote server still ships a codex layer, and drop this row if not. -->
 
 | Layer | What it holds |
 |---|---|

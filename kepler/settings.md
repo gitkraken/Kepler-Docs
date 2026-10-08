@@ -222,7 +222,7 @@ The choice also applies to native dialogs, not only the in-app interface.
 
 ### Keyboard Shortcuts
 
-This section lists Kepler's shortcuts, grouped the way Settings groups them. They are a reference, not editable. Kepler also shows each shortcut in the menu items and button tooltips it belongs to. Mac symbols are shown first; on Windows and Linux, **⌘** is **Ctrl** and **⌥** is **Alt**, and **⌃** is **Ctrl** on every platform.
+This section lists Kepler's shortcuts, grouped the way Settings groups them. They are a reference, not editable. Kepler also shows each shortcut in the menu items and button tooltips it belongs to. A few tab shortcuts that Settings doesn't list, such as reopening a closed tab and jumping to a tab by position, are in [Task View](/kepler/task-view#keyboard). Mac symbols are shown first; on Windows and Linux, **⌘** is **Ctrl** and **⌥** is **Alt**, and **⌃** is **Ctrl** on every platform.
 
 **General**
 
@@ -441,7 +441,7 @@ Every agent that can run both ways carries this setting:
 
 | Setting | What it controls | Default |
 |---|---|---|
-| **Opens in** | **Rich chat** is Kepler's own transcript, with plans, model, and effort controls, and richer input. **Terminal** runs the agent's own command-line interface in an embedded terminal | Rich chat |
+| **Opens in** | **Rich chat** is Kepler's own transcript, with plans, model, and effort controls, and richer input. **Terminal** runs the agent's own command-line interface in an embedded terminal | Rich chat. Google Antigravity starts on Terminal, because its Rich chat server signs in separately |
 
 The choice is saved per agent, so one agent can default to Terminal while another stays on Rich chat. The **New session** menu starts one session in the other mode without changing the setting. A terminal-only agent shows **Terminal** with no switch. See [Agent Sessions](/kepler/agent-sessions#how-a-session-runs).
 
@@ -491,7 +491,7 @@ See [Tasks and Resources](/kepler/tasks-and-resources) for the full list and whi
 
 Each agent's own MCP server defaults, which every project inherits. Pick an agent, and an account when that agent has more than one, to see the servers that agent loads. Turn a server or a single tool off here and it's off in every repository unless a repository turns it back on for itself. You can also add and remove servers and sign in to the ones that need it.
 
-Only agents that expose their MCP servers to Kepler are listed. The composer's agent menu opens the same manager for one repository. See [MCP Servers](/kepler/mcp-servers).
+Only agents that expose their MCP servers to Kepler are listed. The composer's **Agent settings** pill opens the same manager for one repository. See [MCP Servers](/kepler/mcp-servers).
 
 ### Features
 

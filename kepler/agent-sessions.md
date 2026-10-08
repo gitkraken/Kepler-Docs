@@ -76,13 +76,11 @@ Two options in the menu change what the session starts with:
 ## Agent, model, mode, and effort
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-settings-from-composer-sep-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-settings-from-composer-sep-2026.png" class="help-center-img img-bordered" alt="The Agent settings pill's expanded menu, opened from the composer, showing Agent, Runs as, Model, and Mode sections">
+  <a href="/wp-content/uploads/agent-settings-from-composer-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-settings-from-composer-oct-2026.png" class="help-center-img img-bordered" alt="The Agent settings menu open from the New task composer, with rows for Agent, Plan usage, Runs as, Model, Effort, Mode, and Fast mode, and an MCP servers row reading 1 of 1 enabled with a Manage button.">
   </a>
   <figcaption style="text-align:center; color:#888">The Agent settings pill, opened from the composer.</figcaption>
 </figure>
-
-<!-- TODO(screenshot): Replace — the agent menu is grouped by agent in 0.12 and carries an MCP servers row. -->
 
 The composer carries an **Agent settings** pill. It holds the same set of questions at launch and mid-session, and its trigger summarizes the current model and mode.
 
@@ -91,7 +89,7 @@ The composer carries an **Agent settings** pill. It holds the same set of questi
 | **Agent** | No | Fixed once the session exists. Changing agent means a new session |
 | **Runs as** | No | Rich chat or Terminal, for an agent that offers both. Fixed once the session starts; use **New session** to start the other way. See [How a session runs](#how-a-session-runs) |
 | **Model** | Yes | The agent's own catalog. Models are per provider, so a model never moves to another agent |
-| **Permission mode** | Yes | The agent's own modes |
+| **Mode** | Yes | The agent's own permission modes |
 | **Effort** | Yes | Reasoning or thinking depth, for agents that offer it |
 | Other **Options** | Some | Options an agent can only read at spawn are editable at launch and nowhere else |
 
@@ -111,16 +109,15 @@ Claude Code, Codex, Copilot CLI, Cursor, Auggie, OpenCode, Grok Build, Pi, and G
 
 ## Several accounts for one agent
 
-Claude Code, Codex, Copilot, and Auggie can each hold more than one signed-in account. Open **Settings → Agents**, expand the agent, and find **Accounts**:
+Claude Code, Codex, GitHub Copilot, Auggie, and Grok Build can each hold more than one signed-in account. Open **Settings → Agents**, expand the agent, and find **Accounts**:
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-accounts-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-accounts-aug-2026.png" class="help-center-img img-bordered" alt="Settings → Agents → Claude Code, showing the Accounts section with a Default account and an Add account button">
+  <a href="/wp-content/uploads/agent-accounts-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-accounts-oct-2026.png" class="help-center-img img-bordered" alt="The Claude Code card in Settings → Agents, with its version, Update, and Enabled in the title line. Its Accounts section lists the uncolored default account and a second account, Claude Code (Personal), marked with a blue colour swatch.">
   </a>
   <figcaption style="text-align:center; color:#888">The Accounts section, in Settings → Agents.</figcaption>
 </figure>
 
-<!-- TODO(screenshot): Replace — Accounts rows now carry a colour picker; show two accounts with different colours. -->
 
 > Run multiple Claude Code logins side by side. Each account keeps its own credentials and history but shares your skills, agents, commands and settings.
 
@@ -142,15 +139,13 @@ An account's colour tints the agent icon on session tabs, the task rail, and the
 With two or more accounts signed in, the **Agent** list expands to one row per account, labelled with the account name, so you pick the agent and the account in one click. This is true in the task composer and in the task view's **New session** menu.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/account-multiple-selector-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/account-multiple-selector-aug-2026.png" class="help-center-img img-bordered" alt="The Agent list with two Claude Code rows, one per signed-in account">
+  <a href="/wp-content/uploads/account-multiple-selector-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/account-multiple-selector-oct-2026.png" class="help-center-img img-bordered" alt="The Agent list open in the composer, grouped by agent. Under a Claude Code heading sit two account rows, CLI and Claude Code (Personal), followed by Codex CLI and the other agents, then Add another account and Install another agent.">
   </a>
   <figcaption style="text-align:center; color:#888">The Agent list, with one row per account.</figcaption>
 </figure>
 
-<!-- TODO(screenshot): Replace — the agent menu is grouped by agent in 0.12, with account rows tinted by their colour. -->
-
-With one account, no account rows appear at all.
+With one account, the agent keeps a single row, with that account shown beside its name.
 
 A running session stays on the account it started with. Session tabs name the account when more than one exists, and a tab whose account has since been removed reads **(account missing)**.
 
@@ -187,19 +182,18 @@ A session runs one of two ways, and the choice is no longer Claude Code's alone.
 | **Terminal** | The agent's own command-line interface, running in an embedded terminal inside the task |
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/claude-code-terminal-rich-chat-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/claude-code-terminal-rich-chat-aug-2026.png" class="help-center-img img-bordered" alt="Settings → Agents → Claude Code, with the Default mode for new sessions toggle set to Rich chat">
+  <a href="/wp-content/uploads/opens-in-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/opens-in-oct-2026.png" class="help-center-img img-bordered" alt="The Claude Code card in Settings → Agents, with its Opens in control set to Rich chat rather than Terminal, below the Accounts section and above Let artifact comments start turns.">
   </a>
-  <figcaption style="text-align:center; color:#888">Default mode for new sessions, in Settings → Agents.</figcaption>
+  <figcaption style="text-align:center; color:#888">Opens in, on an agent's card in Settings → Agents.</figcaption>
 </figure>
 
-<!-- TODO(screenshot): Replace — the Claude Code agent card was rebuilt; show its Opens in (Rich chat / Terminal) control. -->
 
-**Settings → Agents → *your agent* → Default mode for new sessions** sets the default per agent, so Claude Code can default to Rich chat while Codex defaults to Terminal. The **New session** menu starts one session the other way without changing it: **Start in Terminal**, or **Start in Rich chat**. An agent that offers only one mode shows no switch at all.
+**Settings → Agents → *your agent* → Opens in** sets the default per agent, so Claude Code can default to Rich chat while Codex defaults to Terminal. The **New session** menu starts one session the other way without changing it: **Start in Terminal**, or **Start in Rich chat**. An agent that offers only one mode shows no switch at all.
 
 | Agent | Modes |
 |---|---|
-| Claude Code, Codex, GitHub Copilot, Cursor CLI, OpenCode, Auggie, Grok Build | Rich chat or Terminal |
+| Claude Code, Codex, GitHub Copilot, Cursor, OpenCode, Auggie, Grok Build | Rich chat or Terminal |
 | Google Antigravity | Terminal by default. Rich chat runs Google's separate Antigravity ACP server, once it's installed and you pick **Rich chat** for the agent |
 | Pi | Terminal only. Its CLI doesn't speak ACP |
 | Your own agent server | Whichever its command supports |
@@ -216,7 +210,12 @@ Terminal mode is not a fallback. Kepler wraps the running CLI with the things a 
 | The status bar | The session at a glance, then your plan usage. See below |
 | The composer | Kepler's own message box, with attachments, voice input, and the agent-settings pill |
 
-<!-- TODO(screenshot): New — A Terminal session showing the reworked status bar (status dot with idle time, agent, account, model/effort/mode, context ring, and the 5h/7d usage bars). -->
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/terminal-session-status-bar-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/terminal-session-status-bar-oct-2026.png" class="help-center-img img-bordered" alt="A Claude Code session running in Terminal mode, with the CLI's own prompt above Kepler's status bar. The bar shows a green status dot, the agent and account, Opus 5.5 at Medium effort in Auto mode, the context ring, the branch, the 5-hour usage meter, and Rich input.">
+  </a>
+  <figcaption style="text-align:center; color:#888">A Terminal session, with Kepler's status bar along the bottom.</figcaption>
+</figure>
 
 The status bar leads with the session and ends with its usage, left to right:
 
@@ -313,8 +312,8 @@ A conversation picked up from disk starts the agent on your first message rather
 The composer sits at the bottom of the session.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/sending-a-prompt-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/sending-a-prompt-aug-2026.png" class="help-center-img img-bordered" alt="The session composer, with attach and voice icons, the agent-settings pill, context usage, and the Send button">
+  <a href="/wp-content/uploads/sending-a-prompt-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/sending-a-prompt-oct-2026.png" class="help-center-img img-bordered" alt="The session composer with three attached files: two linked files, llms.txt and agents.md, and a pasted image.png shown as a thumbnail. Below the draft sit Attach a file and the microphone, then the 5-hour plan usage meter, the Agent settings pill, the context usage ring, and Send with its chevron.">
   </a>
   <figcaption style="text-align:center; color:#888">The composer, at the bottom of the session.</figcaption>
 </figure>
@@ -443,7 +442,20 @@ Approvals name what Claude is about to do — *Publish a new private page?*, *Up
 
 Anyone with edit access to a published artifact can comment on it, and by default a comment starts a turn in the session that published it, with a reply posted automatically. The first time a session publishes, a notice — **Artifact comments can start turns** — offers **Keep on** or **Turn off**. The standing setting is **Settings → Agents → Claude Code → Let artifact comments start turns**; running sessions keep the value they started with, and the setting lists them with **Restart all** and **Restart selected ({count})**.
 
-<!-- TODO(screenshot): New — An artifact card in a Claude chat session, and the artifact Preview pane docked beside the chat. -->
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/artifact-card-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/artifact-card-oct-2026.png" class="help-center-img img-bordered" alt="A published artifact shown as a card in a Claude Code Rich chat session, with its title, Private, Open, and a copy link button, followed by the Artifact comments can start turns notice with Keep on and Turn off.">
+  </a>
+  <figcaption style="text-align:center; color:#888">An artifact card, and the notice the first publish shows.</figcaption>
+</figure>
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/artifact-chip-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/artifact-chip-oct-2026.png" class="help-center-img img-bordered" alt="The artifact attached to the task as a link on the task's pill, with its popover open showing the artifact's title, its link, Open, and Copy link.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The published artifact, attached to the task as a link.</figcaption>
+</figure>
+<!-- TODO(screenshot): New — The artifact Preview pane docked beside the chat, with Reload and Close preview. -->
 
 ### Scrolling and where you left off
 
@@ -464,13 +476,11 @@ Sessions you started in your own terminal appear too, marked **(external)**, rea
 Kepler pauses and asks you directly when an agent needs a decision it can't make on its own. It does this in two ways: a permission request before a risky tool call, and a structured question when the agent wants your input mid-task.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-permission-request-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-permission-request-aug-2026.png" class="help-center-img img-bordered" alt="A permission request for a tool call, with its input and Allow, Allow for this session, Allow always, and Reject buttons">
+  <a href="/wp-content/uploads/agent-permission-request-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-permission-request-oct-2026.png" class="help-center-img img-bordered" alt="A permission request for a shell command, marked Needs approval, with the agent's reason, Contains brace with quote character, just above the Allow, Allow for this session, and Reject buttons.">
   </a>
-  <figcaption style="text-align:center; color:#888">A permission request, pinned to the top of the session.</figcaption>
+  <figcaption style="text-align:center; color:#888">A permission request, with the agent's reason above the buttons.</figcaption>
 </figure>
-
-<!-- TODO(screenshot): Replace — permission requests show the agent's reason above the buttons in 0.12. -->
 
 ### Permission requests
 
@@ -539,13 +549,11 @@ A restored session shows the question and the answers you gave as a read-only re
 Two different readouts, and they measure different things.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/usage-indicators-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/usage-indicators-aug-2026.png" class="help-center-img img-bordered" alt="The Context Usage popover, showing tokens used, the window total, and cost so far, above the composer's percentage chip">
+  <a href="/wp-content/uploads/usage-indicators-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/usage-indicators-oct-2026.png" class="help-center-img img-bordered" alt="The Context window card open above the composer's context ring, at 68%, listing tokens Used, Available, and Total, and the Estimated cost at API rates.">
   </a>
-  <figcaption style="text-align:center; color:#888">The Context Usage popover.</figcaption>
+  <figcaption style="text-align:center; color:#888">The Context window card, from the context ring.</figcaption>
 </figure>
-
-<!-- TODO(screenshot): Replace — The context popover so it shows the reworked card (Used, Available, Total, Estimated cost at API rates, Prompt cache). -->
 
 | Readout | What it shows | Availability |
 |---|---|---|
@@ -578,6 +586,8 @@ If the figures cannot be fetched, the meter says which problem it hit rather tha
 ### When you hit a usage limit
 
 A session doesn't keep sending into a spent limit. Prompts you queue while the account's limit is spent wait for it to lift — the queue banner reads *Sending at {time}, when the quota resets.* — and go out on their own shortly after the reset, even with no Kepler window open and across a restart. **Send now** releases one session's queue early.
+
+<!-- TODO(screenshot): New — The queue banner holding a prompt until the quota resets (*Sending at {time}, when the quota resets.*) with **Send now**. -->
 
 If a turn is cut off by the limit with nothing queued, the session stays put unless you turn on **Settings → Agents → Agent options → Resume after usage limit → Enable**: *When a turn is cut off by your account usage limit and nothing is queued, Kepler queues a "continue" message that is sent shortly after the limit resets.* It's off by default, and the queued message can be sent early or removed like any other.
 
@@ -632,13 +642,13 @@ Open sessions form a tab strip. Each tab shows the agent, the account when more 
 | **Cmd/Ctrl+T** or **+** | Starts a new session in this working copy |
 | **Alt+1**–**Alt+9** | Jumps to a tab by position |
 | **Cmd/Ctrl+Shift+[** / **]** | Previous or next tab |
-| **×** on a tab (**Archive session**) | Archives the session |
+| **×** on a tab in the Sessions column (**Archive session**) | Archives the session |
 | **Archive** on a rail row | The same thing |
 | **Restore** | Brings an archived session back into the strip |
 | **Shut down agent** | Ends the process without archiving the session |
 | **Restart agent** | Shuts it down, then reconnects |
 
-**Closing a tab and archiving are one operation.** Kepler stops the agent process, saves the conversation and its resume handle, and takes the tab out of the strip. Nothing is deleted.
+**In the Sessions column, closing a tab and archiving are one operation.** Kepler stops the agent process, saves the conversation and its resume handle, and takes the tab out of the strip. Nothing is deleted. With **Show tabs on the task page** turned on, a tab's **×** is **Close tab** instead: it only hides the tab, and the session keeps running. See [Task View](/kepler/task-view#tabs-and-groups).
 
 ### Shutting down and restarting an agent
 
@@ -667,6 +677,8 @@ Deleting a task or removing its repository ends that task's live sessions.
 
 **Settings → Agents → Features → Keep agents running across restarts and updates** is an experimental switch, off by default: *Agent sessions and terminals stay alive while Kepler restarts or updates, and reconnect afterwards.* New sessions pick up a change to it.
 
+<!-- TODO(screenshot): New — A session showing the *Reconnecting to the agent…* overlay after Kepler restarts. -->
+
 | | Switch off | Switch on |
 |---|---|---|
 | **Quit** | Asks first when sessions are running, and warns that each one will stop. Busy *terminals* are counted too | Sessions and terminals keep running, and Kepler reattaches to them when it comes back |
@@ -679,7 +691,7 @@ A session left running after a quit, with Kepler never coming back to it, is end
 
 A terminal session kept running this way also keeps its keyboard and paste modes across the restart, and a reboot that ends it still leaves it resumable.
 
-Your computer will not go to sleep out from under a running agent. While any session is spawning, running, or waiting on you, Kepler holds the machine awake, and lets go as soon as the last one settles. It is on out of the box and turned off in **Settings → General → Keep this computer awake**. See [Settings](/kepler/settings).
+Your computer will not go to sleep out from under a running agent. While any session is spawning, running, or waiting on you, Kepler holds the machine awake, and lets go as soon as the last one settles. It is on out of the box and turned off in **Settings → General → Keep awake while agents run**. See [Settings](/kepler/settings).
 
 ***
 
@@ -689,7 +701,7 @@ A session that can't carry on says so on its context card, with a badge, one sen
 
 | Badge | What happened | What to do |
 |---|---|---|
-| **Ended** or **Disconnected** | The process is gone; the conversation is not | **Resume** |
+| **Ended** | The process is gone; the conversation is not | **Resume** |
 | **Exited** | *{name} exited on its own. Restart it to continue from the saved conversation.* | Restart the agent |
 | **Can't resume** | *{name} no longer has this conversation, so it can't continue. You can still read it below.* | **Archive session**, or **Start new conversation** |
 | **Sign-in failed** | *{name} couldn't sign in. Sign in again to continue this conversation.* | Sign in again |

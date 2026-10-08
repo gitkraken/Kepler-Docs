@@ -27,7 +27,7 @@ All of it lives in **Settings → Agents**.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/agent-settings-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-settings-aug-2026.png" class="help-center-img img-bordered" alt="Settings → Agents, showing the Default agent row and the Claude Code and Codex sections with their status badges">
+    <img src="/wp-content/uploads/agent-settings-aug-2026.png" class="help-center-img img-bordered" alt="Settings → Agents, showing the Default agent row and the Claude Code and Codex cards">
   </a>
   <figcaption style="text-align:center; color:#888">Settings → Agents.</figcaption>
 </figure>
@@ -66,7 +66,7 @@ Each agent gets its own section in **Settings → Agents**, in this order:
 
 **Codex now runs your own CLI.** Earlier builds shipped a bundled `codex-acp` engine; Kepler resolves and spawns the `codex` you have installed, like every other agent, so its section reads **Installed** and it has a binary picker.
 
-Every agent that offers both modes is configured the same way. **Settings → Agents → *your agent* → Default mode for new sessions** picks between **Rich chat** and **Terminal**, per agent, and the **New session** menu can start one session the other way. See [Agent Sessions](/kepler/agent-sessions#how-a-session-runs).
+Every agent that offers both modes is configured the same way. **Settings → Agents → *your agent* → Opens in** picks between **Rich chat** and **Terminal**, per agent, and the **New session** menu can start one session the other way. See [Agent Sessions](/kepler/agent-sessions#how-a-session-runs).
 
 Two agents need a recent enough build to be driven over ACP:
 
@@ -107,11 +107,11 @@ Kepler doesn't close the install output pane automatically when the install fini
 
 Kepler resolves each agent's binary the way your shell does: the first match on your `PATH`, so it agrees with `which`. Beyond `PATH`, it also sweeps your login shell's environment and well-known install directories. That's how Kepler finds an agent installed by nvm or Homebrew, even when you didn't launch Kepler from a terminal.
 
-Open **Configure** on an agent's section to see and change what it resolved:
+Each agent's card in **Settings → Agents** shows what Kepler resolved. The version and **Install** sit in the card's title line; **Binary** and **Data directory** sit under **Advanced**:
 
 | Control | What it does |
 |---|---|
-| Status | **Installed** or **Not installed**, with who is signed in on it |
+| Version | The installed version, or **Not installed** |
 | **Install** | Runs one of the install methods above. Shown when the agent is not installed |
 | **Binary** | The resolved absolute path, or **Not found**, with where it came from (**PATH**, **Shell**, or **Common**) and its version |
 | **Re-scan** | Re-detects this agent's binary. Use it after installing or removing one outside Kepler |
@@ -180,7 +180,7 @@ If you run Auggie's browser sign-in on this machine yourself, Kepler detects it 
 
 ### Multiple accounts of one agent
 
-**Claude Code**, **Codex**, **GitHub Copilot**, and **Auggie** support more than one signed-in account. **Configure → Accounts → Add account** adds one; each account keeps its own credentials and history.
+**Claude Code**, **Codex**, **GitHub Copilot**, **Auggie**, and **Grok Build** support more than one signed-in account. **Settings → Agents → *your agent* → Accounts → Add account** adds one; each account keeps its own credentials and history.
 
 Give each added account its own colour from the swatch at the left of its row — **Rose**, **Amber**, **Lime**, **Cyan**, **Blue**, or **Violet** — and the agent icon is tinted with it on session tabs, the task rail, and the terminal status bar, so sessions on different accounts are easy to tell apart. *The default account stays uncolored.* Accounts also appear on the agent's card in Settings.
 
@@ -190,7 +190,7 @@ For **Auggie**, you can only add a second account with **Paste session token**. 
 
 ## Run modes
 
-Most agents run two ways, and each agent keeps its own default. **Configure → Default mode for new sessions** picks which:
+Most agents run two ways, and each agent keeps its own default. **Settings → Agents → *your agent* → Opens in** picks which:
 
 | Mode | What you get |
 |---|---|
@@ -238,7 +238,7 @@ Custom servers appear alongside the built-in agents everywhere you can choose an
 
 ## MCP servers
 
-Kepler lists the MCP servers each agent loads, and lets you add, remove, sign in to, and turn off servers or single tools, per repository from the composer's agent menu or as defaults in **Settings → Agents → MCP servers**. See [MCP Servers](/kepler/mcp-servers).
+Kepler lists the MCP servers each agent loads, and lets you add, remove, sign in to, and turn off servers or single tools, per repository from the composer's **Agent settings** pill or as defaults in **Settings → Agents → MCP servers**. See [MCP Servers](/kepler/mcp-servers).
 
 ***
 

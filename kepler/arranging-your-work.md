@@ -19,15 +19,14 @@ taxonomy:
 ---
 <kbd>Last updated: October 2026</kbd>
 
-Kepler has one interface rather than a set of views, so you shape it instead of switching away from it. Three controls do most of the work: the arrangement, the grouping, and the filters. Each segment remembers its own, and a combination you come back to can be saved under a name.
+Kepler has one interface rather than a set of views, so you shape it instead of switching away from it. Four controls do most of the work: the grouping, the sort, the filters, and the layout. Each segment remembers its own, and a combination you come back to can be saved under a name.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/arrange-work-sep-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/arrange-work-sep-2026.png" class="help-center-img img-bordered" alt="The grouping, filter, and view controls above Kepler's list, grouped by Inbox">
+  <a href="/wp-content/uploads/arrange-work-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/arrange-work-oct-2026.png" class="help-center-img img-bordered" alt="The control strip above Kepler's list: the Saved views menu, Group set to Progress, Sort set to Updated, Filter, the List and Columns layout switch, and a refresh button.">
   </a>
-  <figcaption style="text-align:center; color:#888">The arrangement, grouping, and filter controls.</figcaption>
+  <figcaption style="text-align:center; color:#888">The saved views, grouping, sort, filter, and layout controls.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — The control strip at 0.12 — it now carries the Saved views chip after the search box, a Sort control, and search/filter pills inside the search box. -->
 
 This page assumes you know what's on screen; see [The Kepler Interface](/kepler/kepler-interface) for that.
 
@@ -54,6 +53,13 @@ The **View** control decides how Kepler draws the list.
 **List** is the default, and each segment remembers its own choice across restarts — Todo can stay a list while Tasks in progress stays a board. Both layouts respect the grouping and filters below.
 
 **Columns** draws the sections of the *current* grouping as a horizontal board, so what the columns are is up to the **Group** control. Grouped by **Progress**, the columns are the lifecycle stages: **Exploration**, **In Development**, **In Review**, and **Done**. They stay put as work moves between them rather than appearing and vanishing under the pointer, and an empty one reads **Nothing here**. **On hold** and **Archived** are the exceptions: each appears when something is filed there, and both appear while you drag a card so you can drop onto them. On every other grouping, Kepler doesn't draw a section with nothing in it.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/columns-progress-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/columns-progress-oct-2026.png" class="help-center-img img-bordered" alt="Tasks in progress in the Columns layout grouped by Progress, with columns for Exploration, In Development, In Review, Done, and Archived, and the Group menu open with Progress checked.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The Columns layout, grouped by Progress.</figcaption>
+</figure>
 
 The Progress board is also where you can move a task by hand. See [Set a task's progress](#set-a-tasks-progress).
 
@@ -154,12 +160,24 @@ Dates sort newest first; **Name** and **ID** sort ascending. **ID** compares ref
 
 A task's progress normally follows its git and pull-request evidence (see [Status](/kepler/kepler-interface)). When that evidence can't see what you know — a review was sent back, or the work landed somewhere Kepler can't tell — set the stage yourself.
 
-<!-- TODO(screenshot): New — The Progress menu open on a task row, showing Automatic, the four stages, and On hold. -->
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/progress-menu-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/progress-menu-oct-2026.png" class="help-center-img img-bordered" alt="The Progress menu open from a task's In Review control, with Automatic checked, then Exploration, In Development, In Review, On hold, and Done.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The Progress menu.</figcaption>
+</figure>
 
 - **The progress control.** The stage word on a task row, in the preview header, and in the task page header opens a **Progress** menu: **Automatic** (*Updates as you work*), then **Exploration**, **In Development**, **In Review**, **On hold**, and **Done**. Where there's no room for the word, the control shrinks to the stage's icon rather than disappearing.
 - **The task menus.** A task's **⋮** and right-click menus carry the same choices under a **Progress** submenu, plus **Reopen** while the task is Done. Its hint says where the task will land (*Moves it to In Review*).
 - **Drag a card.** On the **Columns** layout grouped by **Progress**, drag a task's card to another column. On touch, press and hold to pick it up. Escape, or letting go over the card's own column, changes nothing.
 - **From the keyboard.** With a card focused on that board, **Cmd/Ctrl+Shift+←** and **Cmd/Ctrl+Shift+→** step it one column, stopping at **Exploration** and **Done**.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/progress-drag-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/progress-drag-oct-2026.png" class="help-center-img img-bordered" alt="A task card being dragged from In Development onto the highlighted In Review column. While the card is held, the On hold column appears with Nothing here, and Archived shows at the right edge.">
+  </a>
+  <figcaption style="text-align:center; color:#888">Dragging a card to another stage.</figcaption>
+</figure>
 
 The control's tooltip says whether the stage *Updates as you work* or was *Set manually*.
 
@@ -184,12 +202,17 @@ Agents can set the stage too, and put a task on hold, through Kepler's workspace
 The **Filter** menu holds one flyout per facet.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/filter-sep-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/filter-sep-2026.png" class="help-center-img img-bordered" alt="The Filter menu open, showing one flyout per facet">
+  <a href="/wp-content/uploads/filter-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/filter-oct-2026.png" class="help-center-img img-bordered" alt="The Filter menu on Tasks in progress, with the Repository flyout open. Kepler-Docs and gk-cli are checked, and hovering gk-cli shows its minus button with the tooltip Exclude gk-cli, Shift+Enter.">
   </a>
-  <figcaption style="text-align:center; color:#888">The Filter menu, with one flyout per facet.</figcaption>
+  <figcaption style="text-align:center; color:#888">The Filter menu, with a facet's flyout open.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — With a facet open showing the minus (exclude) button on a value row, and the Todo menu's per-provider sections. -->
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/filter-todo-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/filter-todo-oct-2026.png" class="help-center-img img-bordered" alt="The Filter menu on Todo, with Type, Linked work, Status, Your role, and Provider, then a GitHub section with Repository, Assignee, and Label and a Jira section with Assignee, Issue type, and Label. The Provider flyout lists GitHub and Jira with their counts.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The Filter menu on Todo, with a section per provider.</figcaption>
+</figure>
 
 Kepler hides facets with nothing to offer, so a single-repo setup won't show a Repository facet at all.
 
@@ -217,12 +240,11 @@ External sessions stay listed under a filter that has no way to answer for them,
 The search box matches on **title, reference, or repository**: *Search title, ref, or repo…*.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/search-sep-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/search-sep-2026.png" class="help-center-img img-bordered" alt="The search box above Kepler's list, with a clear button">
+  <a href="/wp-content/uploads/search-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/search-oct-2026.png" class="help-center-img img-bordered" alt="The search box with the query create, showing the 2 of 34 search pill and the 0 hidden filter pill at its right end, above the two matching task cards.">
   </a>
-  <figcaption style="text-align:center; color:#888">The search box, with the clear button.</figcaption>
+  <figcaption style="text-align:center; color:#888">The search box, with its search and filter pills.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — The search box with both pills showing at its right end (the search match count and the "N hidden" filter pill). -->
 
 Once a search or a filter is narrowing the list, pills at the right end of the search box say by how much, and each one clears only itself:
 
@@ -243,7 +265,12 @@ Search covers the work already loaded: on Todo, that's what you authored, are as
 
 The **Saved views** chip, just after the search box, keeps a combination you use often under a name and takes you back to it.
 
-<!-- TODO(screenshot): New — The Saved views menu open, showing a list of views with one checked, and Save current view…, Update saved view, Discard changes, Rename view…, Delete view… below. -->
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/saved-views-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/saved-views-oct-2026.png" class="help-center-img img-bordered" alt="The Saved views menu open from the chip reading View: Kanban - Progress. The view is checked under Tasks in progress, above Save current view, Update saved view, Discard changes, Rename view, and Delete view.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The Saved views menu, with a view applied.</figcaption>
+</figure>
 
 A view captures:
 
@@ -253,7 +280,7 @@ A view captures:
 - The filters
 - The layout (**List** or **Columns**)
 
-Picking a view restores all of it, including switching to its segment. The chip then reads the view's name, and a checkmark marks it in the menu. Open preview panels aren't part of a view, so applying one never reopens a task or pull request that has since gone.
+Picking a view restores all of it, including switching to its segment. The chip then reads **View:** and the view's name, and a checkmark marks it in the menu. Open preview panels aren't part of a view, so applying one never reopens a task or pull request that has since gone.
 
 | Menu item | What it does |
 |---|---|
@@ -280,16 +307,20 @@ Saved views are the exception to per-segment memory: they're stored, named, and 
 **Archive task** files a task away. It leaves the live buckets for **Archived**, its rows and sessions survive, and Kepler stops only the agents whose checkout is about to disappear.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/archive-sep-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/archive-sep-2026.png" class="help-center-img img-bordered" alt="The row's ⋮ menu open, with Archive task highlighted among Open in new window, Mark as unread, Rename task, Add resource, and Delete task">
+  <a href="/wp-content/uploads/archive-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/archive-oct-2026.png" class="help-center-img img-bordered" alt="A task row's ⋮ menu open, listing Open task page, Open in new window, the Progress submenu at Exploration, Mark as unread, Rename task, Add resource, Archive task, and Delete task.">
   </a>
   <figcaption style="text-align:center; color:#888">Archive task, in the row's ⋮ menu.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — The ⋮ menu now also carries Reopen and a Progress submenu as their own group; re-shoot. -->
 
 When a task is settled at **Done**, none of its worktrees holds unpushed work, and no agent is working or waiting on you, the preview and task page headers suggest it: *Ready to archive?* with **Archive** beside it. **Archive** opens the usual confirmation; the **X** dismisses the suggestion for that task in every window.
 
-<!-- TODO(screenshot): New — The "Ready to archive?" suggestion beside a Done pill in a preview header. -->
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/ready-to-archive-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ready-to-archive-oct-2026.png" class="help-center-img img-bordered" alt="A Done task's preview header with the Ready to archive? suggestion below it, offering Archive and an X to dismiss. The task's worktree pill reads No changes, and its pull request #33 is merged.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The Ready to archive? suggestion on a Done task.</figcaption>
+</figure>
 
 The confirmation offers the same two cascades the delete does: **Also delete worktrees** and **Also delete branches**. This way, finishing with a task doesn't have to mean deleting it to clean it off the disk. With **Also delete worktrees** ticked, the dialog lists each worktree with what will happen to it — *Merged into main*, *2 uncommitted files*, *In open PR #42* — riskiest first, and names the ones it keeps: the repository's main worktree, and worktrees another task still uses. A worktree that would lose work is kept unless you tick the extra box that names exactly what would be lost, and a row at risk can open its changes so you can judge first.
 

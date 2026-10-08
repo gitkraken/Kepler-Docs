@@ -115,11 +115,11 @@ Every one of those prompts is yours to change, and you can add your own. That's 
 
 ## Start something that is not tracked yet
 
-Click **New task**, or press **Shift+Alt+N** from anywhere. Write a prompt, attach a repository if the task needs one, and go. You can attach nothing at all and turn it into real work later. See [Create a Task](/kepler/create-task).
+Click **New task** or press **Cmd/Ctrl+N**. From outside Kepler, **Shift+Alt+N** opens the quick launcher. Write a prompt, attach a repository if the task needs one, and go. You can attach nothing at all and turn it into real work later. See [Create a Task](/kepler/create-task).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-task-button-sep-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-task-button-sep-2026.png" class="help-center-img img-bordered" alt="The New task split button in the Kepler top bar, beside the window switcher, Feedback, Settings, and account">
+  <a href="/wp-content/uploads/new-task-button-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-task-button-oct-2026.png" class="help-center-img img-bordered" alt="The New task split button at the left end of the Kepler top bar, after the window switcher and the Back and Forward buttons.">
   </a>
   <figcaption style="text-align:center; color:#888">The New task button, available from anywhere in Kepler.</figcaption>
 </figure>
@@ -172,8 +172,15 @@ When an update is ready, an **Update available** chip joins the trailing cluster
 On **Windows and Linux** the native title bar is gone and Kepler draws its own. The menu button at the leading edge holds the full application menu — **File**, **Edit**, **View**, **Window**, **Help** — including **Settings**, **Check for Updates…**, and **About**. macOS keeps its native menu bar, and both menus open the same **About Kepler** dialog.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/top-tool-bar-sep-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/top-tool-bar-sep-2026.png" class="help-center-img img-bordered" alt="Kepler's top bar showing the New task split button, the window switcher, Feedback, Settings, and account">
+  <a href="/wp-content/uploads/new-task-button-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-task-button-oct-2026.png" class="help-center-img img-bordered" alt="The New task split button at the left end of the Kepler top bar, after the window switcher and the Back and Forward buttons.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The top bar's leading edge.</figcaption>
+</figure>
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/top-tool-bar-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/top-tool-bar-oct-2026.png" class="help-center-img img-bordered" alt="The right end of the Kepler top bar: the Local environment chip with the green Remote Access glyph, then Feedback, Settings, and the account avatar.">
   </a>
   <figcaption style="text-align:center; color:#888">The top bar's trailing cluster.</figcaption>
 </figure>
@@ -185,6 +192,13 @@ Menu items and button tooltips show a command's keyboard shortcut beside it, whe
 ### The window switcher
 
 **Windows** in the top bar lists every open Kepler window and what its agents are doing, so you don't have to go and look. Its trigger carries the reason to: **Windows · {count} waiting elsewhere**, or **{count} running elsewhere**. **This window** marks the one you're in, and **New window** (**Cmd/Ctrl+Shift+N**) opens another on the same connection as the window you're in. From a remote window, **New local window** opens one on this computer instead. The same list is on the tray icon.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/window-switcher-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/window-switcher-oct-2026.png" class="help-center-img img-bordered" alt="The window switcher open under its top bar button, listing This window with a check mark, a second window named Todo — Local, and New window with its Command-Shift-N shortcut.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The window switcher, open.</figcaption>
+</figure>
 
 Each window's own title leads with the remote it's connected to and how many of its sessions are waiting on you. Each window keeps its own layout, and if you close the last window while Kepler keeps running, the next one opens where that window was.
 
@@ -247,19 +261,18 @@ A row reads differently depending on whether it holds a tracked issue or pull re
 ### Todo rows: issues and pull requests
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/todo-row-sep-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/todo-row-sep-2026.png" class="help-center-img img-bordered" alt="Two Todo rows for pull requests, one badged Review and one badged Needs my review, each with its repository, status pill, time, and Action button">
+  <a href="/wp-content/uploads/todo-row-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/todo-row-oct-2026.png" class="help-center-img img-bordered" alt="Two pull request rows marked Yours with the Address Feedback action, and two issue rows with the Plan action. Each row shows its reference, title, repository, Open status, assignee, and age.">
   </a>
-  <figcaption style="text-align:center; color:#888">A Todo row, left to right.</figcaption>
+  <figcaption style="text-align:center; color:#888">Todo rows for pull requests and issues.</figcaption>
 </figure>
 
 Each row shows, left to right:
 
 - The provider
-- A type badge (Issue or PR)
-- Your role on a pull request
-- The reference (issue key or PR number)
+- A type badge (Issue or PR) with the reference (issue key or PR number)
 - The title
+- Your role on a pull request
 - The repository
 - Any session activity
 - A status pill
@@ -280,10 +293,10 @@ An issue that's on your list only because it mentions you carries a muted **Ment
 ### Task rows
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/task-row-sep-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-row-sep-2026.png" class="help-center-img img-bordered" alt="A Task row with no type badge, showing its title, both repositories it spans, a status pill, a session dot, and time">
+  <a href="/wp-content/uploads/task-row-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-row-oct-2026.png" class="help-center-img img-bordered" alt="Two task rows grouped under Exploration. Each shows its title, repositories, the Exploration progress control, a session activity ring, the time since it last changed, and the ⋮ menu.">
   </a>
-  <figcaption style="text-align:center; color:#888">A Task row.</figcaption>
+  <figcaption style="text-align:center; color:#888">Task rows.</figcaption>
 </figure>
 
 Task rows show:
@@ -301,6 +314,7 @@ A task that spans several repositories is listed under **each** of them when the
 
 The task's own operations sit behind the **⋮** menu, and on a right-click:
 
+- **Open task page** and **Open in new window**
 - **Reopen**, while the task is Done, and a **Progress** submenu — see [Arranging Your Work](/kepler/arranging-your-work)
 - **Mark as unread**
 - **Rename task** (**F2** on a focused panel)
@@ -317,7 +331,7 @@ Both segments carry a status, but they answer different questions.
 
 | Where | Values | What it means |
 |---|---|---|
-| **Task rows** | **Exploration**, **In Development**, **In Review**, **On hold**, **Done**, **Archived** | Where the *work* has got to. Kepler derives it from the task's checkouts and pull requests unless you or an agent set it by hand. **In Development** reads uncommitted changes or commits ahead of the branch's recorded base; **In Review** needs an open or draft pull request of the task's own; **Done** needs the task's own branches to have landed. **On hold** and **Archived** are filing decisions, not evidence |
+| **Task rows** | **Exploration**, **In Development**, **In Review**, **On hold**, **Done**, **Archived** | Where the *work* has got to. Kepler derives it from the task's checkouts and pull requests unless you or an agent set it by hand. **In Development** reads uncommitted changes or commits ahead of the branch's recorded base; **In Review** needs an open or draft pull request of the task's own; **Done** needs at least one of the task's branches to have landed, with no open pull request and no commits left unlanded. **On hold** and **Archived** are filing decisions, not evidence |
 | **Todo rows** | **Open**, **Draft**, **Merged**, **Closed** for a pull request; the tracker's own state for an issue | The provider's own state on the pull request, and the workflow state your tracker uses for the issue — a Linear *In Progress*, a Jira *To Verify* — rather than a flat Open |
 
 Each pull request and issue state has its own icon and colour, so a column of pills reads at a glance.
@@ -376,8 +390,8 @@ All of these defaults are editable. See [Actions](/kepler/actions).
 ### Open a panel
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/open-a-task-panel-sep-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/open-a-task-panel-sep-2026.png" class="help-center-img img-bordered" alt="The side panel open beside the list after clicking a row">
+  <a href="/wp-content/uploads/open-a-task-panel-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/open-a-task-panel-oct-2026.png" class="help-center-img img-bordered" alt="The Todo list with issue #255 selected and its side panel open on the right, showing the issue header, its summary, and a composer for starting a task from it.">
   </a>
   <figcaption style="text-align:center; color:#888">The side panel, opened from a row.</figcaption>
 </figure>
@@ -392,8 +406,8 @@ Shift-clicking ranges from your last plain click, the way it does in Finder or V
 Every open panel gets its own column straight away. Until its item loads, the column shows a placeholder that says it's loading, that the item is gone, or that it couldn't load, with **Try again** when retrying can help. Every placeholder can be closed.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/multi-task-panels-sep-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/multi-task-panels-sep-2026.png" class="help-center-img img-bordered" alt="Several task panels open side by side, each with its own chat">
+  <a href="/wp-content/uploads/multi-task-panels-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/multi-task-panels-oct-2026.png" class="help-center-img img-bordered" alt="Three issue panels open side by side beside the Todo list, for issues #243, #244, and #241, each with its own header, summary, and chat. The #243 panel shows its task's session waiting on a permission request.">
   </a>
   <figcaption style="text-align:center; color:#888">Several panels open side by side, each with its own chat.</figcaption>
 </figure>
@@ -415,10 +429,10 @@ When the list reorders under you — a session finishes, a task moves bucket —
 ### Pin a panel
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/pin-sep-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/pin-sep-2026.png" class="help-center-img img-bordered" alt="The pin control in a panel's header, keeping the panel open">
+  <a href="/wp-content/uploads/pin-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/pin-oct-2026.png" class="help-center-img img-bordered" alt="A task panel's ⋮ Panel actions menu open, with Pin panel highlighted.">
   </a>
-  <figcaption style="text-align:center; color:#888">An unpin button in a pinned panel's header.</figcaption>
+  <figcaption style="text-align:center; color:#888">Pin panel, in a panel's ⋮ menu.</figcaption>
 </figure>
 
 A panel is a place you're browsing until you pin it. **Pin panel**, in the panel's **⋮** menu, holds it in place. After that:
@@ -437,8 +451,8 @@ One slot always stays unpinned so browsing never has to evict a pin; once every 
 Selecting a row opens a panel beside the list with everything about that item, as a stack of collapsible, resizable sections.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/task-side-panel-sep-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-side-panel-sep-2026.png" class="help-center-img img-bordered" alt="The side panel beside the list, showing a stack of collapsible sections for a selected item">
+  <a href="/wp-content/uploads/issue-side-panel-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/issue-side-panel-oct-2026.png" class="help-center-img img-bordered" alt="The side panel for GitHub issue #249, with its header, a collapsible Summary section holding the issue description, and a composer for starting a session.">
   </a>
   <figcaption style="text-align:center; color:#888">The side panel, with its stack of collapsible sections.</figcaption>
 </figure>
@@ -466,10 +480,10 @@ A task you created with a prompt but haven't started reads *Start with the task 
 The header carries:
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/issue-header-sep-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/issue-header-sep-2026.png" class="help-center-img img-bordered" alt="The side panel's header, showing badges, the reference, and the header controls">
+  <a href="/wp-content/uploads/task-preview-header-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-preview-header-oct-2026.png" class="help-center-img img-bordered" alt="A task's side panel header: the fold chevron, the task title, Open task page, the ⋮ Panel actions menu, the In Review progress control, the terminal control, and Close, above its worktree pill.">
   </a>
-  <figcaption style="text-align:center; color:#888">The side panel's header.</figcaption>
+  <figcaption style="text-align:center; color:#888">The side panel's header, on a task.</figcaption>
 </figure>
 
 - The item's badges and reference
@@ -487,7 +501,7 @@ To rename a task, choose **Rename task** from its **⋮** menu or press **F2** o
 
 The header folds down to its title row with the chevron beside it, for a task, a pull request, or an issue. A folded pull request still shows its number and review decision. Each segment remembers its own fold.
 
-A Done task with nothing left to lose shows *Ready to archive?* in its header. See [Arranging Your Work](/kepler/arranging-your-work).
+A Done task with no unpushed work and no agent working or waiting on you shows *Ready to archive?* in its header. See [Arranging Your Work](/kepler/arranging-your-work).
 
 An archived task reads **Archived** where its progress control would be, in both its preview and its detail header, so you can't mistake a filed task for a live one.
 
@@ -496,10 +510,10 @@ An archived task reads **Archived** where its progress control would be, in both
 Below the header, each of the task's checkouts is a **pill** with two rows: who it is on top, and what's in it below.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/line-deltas-sep-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/line-deltas-sep-2026.png" class="help-center-img img-bordered" alt="A checkout's worktree row below the header, with its tooltip open showing the repository, branch, and change counts">
+  <a href="/wp-content/uploads/task-preview-header-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-preview-header-oct-2026.png" class="help-center-img img-bordered" alt="A task's two-row worktree pill. The top row shows the 1/2 worktree switcher, the branch and repository, pull request #39 marked Review required, and Push with 8 commits ahead. The bottom row shows chips for 1 uncommitted file, 9 commits, and the origin/main merge target, plus the Open in and Run controls.">
   </a>
-  <figcaption style="text-align:center; color:#888">A checkout's pill, below the header.</figcaption>
+  <figcaption style="text-align:center; color:#888">A task's worktree pill, below the header.</figcaption>
 </figure>
 
 | Row | What it shows | What it does |
@@ -559,13 +573,13 @@ plan_required: all
 status: GA
 last_verified: 2026-10
 
-Kepler has one interface rather than a set of views, so you shape it instead of switching away from it. Three controls do most of the work: the arrangement, the grouping, and the filters. Each segment remembers its own, and a combination you come back to can be saved under a name.
+Kepler has one interface rather than a set of views, so you shape it instead of switching away from it. Four controls do most of the work: the grouping, the sort, the filters, and the layout. Each segment remembers its own, and a combination you come back to can be saved under a name.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/arrange-work-sep-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/arrange-work-sep-2026.png" class="help-center-img img-bordered" alt="The grouping, filter, and view controls above Kepler's list, grouped by Inbox">
+  <a href="/wp-content/uploads/arrange-work-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/arrange-work-oct-2026.png" class="help-center-img img-bordered" alt="The control strip above Kepler's list: the Saved views menu, Group set to Progress, Sort set to Updated, Filter, the List and Columns layout switch, and a refresh button.">
   </a>
-  <figcaption style="text-align:center; color:#888">The arrangement, grouping, and filter controls.</figcaption>
+  <figcaption style="text-align:center; color:#888">The saved views, grouping, sort, filter, and layout controls.</figcaption>
 </figure>
 
 This page assumes you know what's on screen; see [The Kepler Interface](/kepler/kepler-interface) for that.
@@ -593,6 +607,13 @@ The **View** control decides how Kepler draws the list.
 **List** is the default, and each segment remembers its own choice across restarts — Todo can stay a list while Tasks in progress stays a board. Both layouts respect the grouping and filters below.
 
 **Columns** draws the sections of the *current* grouping as a horizontal board, so what the columns are is up to the **Group** control. Grouped by **Progress**, the columns are the lifecycle stages: **Exploration**, **In Development**, **In Review**, and **Done**. They stay put as work moves between them rather than appearing and vanishing under the pointer, and an empty one reads **Nothing here**. **On hold** and **Archived** are the exceptions: each appears when something is filed there, and both appear while you drag a card so you can drop onto them. On every other grouping, Kepler doesn't draw a section with nothing in it.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/columns-progress-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/columns-progress-oct-2026.png" class="help-center-img img-bordered" alt="Tasks in progress in the Columns layout grouped by Progress, with columns for Exploration, In Development, In Review, Done, and Archived, and the Group menu open with Progress checked.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The Columns layout, grouped by Progress.</figcaption>
+</figure>
 
 The Progress board is also where you can move a task by hand. See [Set a task's progress](#set-a-tasks-progress).
 
@@ -693,10 +714,24 @@ Dates sort newest first; **Name** and **ID** sort ascending. **ID** compares ref
 
 A task's progress normally follows its git and pull-request evidence (see [Status](/kepler/kepler-interface)). When that evidence can't see what you know — a review was sent back, or the work landed somewhere Kepler can't tell — set the stage yourself.
 
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/progress-menu-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/progress-menu-oct-2026.png" class="help-center-img img-bordered" alt="The Progress menu open from a task's In Review control, with Automatic checked, then Exploration, In Development, In Review, On hold, and Done.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The Progress menu.</figcaption>
+</figure>
+
 - **The progress control.** The stage word on a task row, in the preview header, and in the task page header opens a **Progress** menu: **Automatic** (*Updates as you work*), then **Exploration**, **In Development**, **In Review**, **On hold**, and **Done**. Where there's no room for the word, the control shrinks to the stage's icon rather than disappearing.
 - **The task menus.** A task's **⋮** and right-click menus carry the same choices under a **Progress** submenu, plus **Reopen** while the task is Done. Its hint says where the task will land (*Moves it to In Review*).
 - **Drag a card.** On the **Columns** layout grouped by **Progress**, drag a task's card to another column. On touch, press and hold to pick it up. Escape, or letting go over the card's own column, changes nothing.
 - **From the keyboard.** With a card focused on that board, **Cmd/Ctrl+Shift+←** and **Cmd/Ctrl+Shift+→** step it one column, stopping at **Exploration** and **Done**.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/progress-drag-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/progress-drag-oct-2026.png" class="help-center-img img-bordered" alt="A task card being dragged from In Development onto the highlighted In Review column. While the card is held, the On hold column appears with Nothing here, and Archived shows at the right edge.">
+  </a>
+  <figcaption style="text-align:center; color:#888">Dragging a card to another stage.</figcaption>
+</figure>
 
 The control's tooltip says whether the stage *Updates as you work* or was *Set manually*.
 
@@ -721,10 +756,16 @@ Agents can set the stage too, and put a task on hold, through Kepler's workspace
 The **Filter** menu holds one flyout per facet.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/filter-sep-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/filter-sep-2026.png" class="help-center-img img-bordered" alt="The Filter menu open, showing one flyout per facet">
+  <a href="/wp-content/uploads/filter-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/filter-oct-2026.png" class="help-center-img img-bordered" alt="The Filter menu on Tasks in progress, with the Repository flyout open. Kepler-Docs and gk-cli are checked, and hovering gk-cli shows its minus button with the tooltip Exclude gk-cli, Shift+Enter.">
   </a>
-  <figcaption style="text-align:center; color:#888">The Filter menu, with one flyout per facet.</figcaption>
+  <figcaption style="text-align:center; color:#888">The Filter menu, with a facet's flyout open.</figcaption>
+</figure>
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/filter-todo-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/filter-todo-oct-2026.png" class="help-center-img img-bordered" alt="The Filter menu on Todo, with Type, Linked work, Status, Your role, and Provider, then a GitHub section with Repository, Assignee, and Label and a Jira section with Assignee, Issue type, and Label. The Provider flyout lists GitHub and Jira with their counts.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The Filter menu on Todo, with a section per provider.</figcaption>
 </figure>
 
 Kepler hides facets with nothing to offer, so a single-repo setup won't show a Repository facet at all.
@@ -753,10 +794,10 @@ External sessions stay listed under a filter that has no way to answer for them,
 The search box matches on **title, reference, or repository**: *Search title, ref, or repo…*.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/search-sep-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/search-sep-2026.png" class="help-center-img img-bordered" alt="The search box above Kepler's list, with a clear button">
+  <a href="/wp-content/uploads/search-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/search-oct-2026.png" class="help-center-img img-bordered" alt="The search box with the query create, showing the 2 of 34 search pill and the 0 hidden filter pill at its right end, above the two matching task cards.">
   </a>
-  <figcaption style="text-align:center; color:#888">The search box, with the clear button.</figcaption>
+  <figcaption style="text-align:center; color:#888">The search box, with its search and filter pills.</figcaption>
 </figure>
 
 Once a search or a filter is narrowing the list, pills at the right end of the search box say by how much, and each one clears only itself:
@@ -778,6 +819,13 @@ Search covers the work already loaded: on Todo, that's what you authored, are as
 
 The **Saved views** chip, just after the search box, keeps a combination you use often under a name and takes you back to it.
 
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/saved-views-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/saved-views-oct-2026.png" class="help-center-img img-bordered" alt="The Saved views menu open from the chip reading View: Kanban - Progress. The view is checked under Tasks in progress, above Save current view, Update saved view, Discard changes, Rename view, and Delete view.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The Saved views menu, with a view applied.</figcaption>
+</figure>
+
 A view captures:
 
 - The segment
@@ -786,7 +834,7 @@ A view captures:
 - The filters
 - The layout (**List** or **Columns**)
 
-Picking a view restores all of it, including switching to its segment. The chip then reads the view's name, and a checkmark marks it in the menu. Open preview panels aren't part of a view, so applying one never reopens a task or pull request that has since gone.
+Picking a view restores all of it, including switching to its segment. The chip then reads **View:** and the view's name, and a checkmark marks it in the menu. Open preview panels aren't part of a view, so applying one never reopens a task or pull request that has since gone.
 
 | Menu item | What it does |
 |---|---|
@@ -813,13 +861,20 @@ Saved views are the exception to per-segment memory: they're stored, named, and 
 **Archive task** files a task away. It leaves the live buckets for **Archived**, its rows and sessions survive, and Kepler stops only the agents whose checkout is about to disappear.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/archive-sep-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/archive-sep-2026.png" class="help-center-img img-bordered" alt="The row's ⋮ menu open, with Archive task highlighted among Open in new window, Mark as unread, Rename task, Add resource, and Delete task">
+  <a href="/wp-content/uploads/archive-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/archive-oct-2026.png" class="help-center-img img-bordered" alt="A task row's ⋮ menu open, listing Open task page, Open in new window, the Progress submenu at Exploration, Mark as unread, Rename task, Add resource, Archive task, and Delete task.">
   </a>
   <figcaption style="text-align:center; color:#888">Archive task, in the row's ⋮ menu.</figcaption>
 </figure>
 
 When a task is settled at **Done**, none of its worktrees holds unpushed work, and no agent is working or waiting on you, the preview and task page headers suggest it: *Ready to archive?* with **Archive** beside it. **Archive** opens the usual confirmation; the **X** dismisses the suggestion for that task in every window.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/ready-to-archive-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ready-to-archive-oct-2026.png" class="help-center-img img-bordered" alt="A Done task's preview header with the Ready to archive? suggestion below it, offering Archive and an X to dismiss. The task's worktree pill reads No changes, and its pull request #33 is merged.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The Ready to archive? suggestion on a Done task.</figcaption>
+</figure>
 
 The confirmation offers the same two cascades the delete does: **Also delete worktrees** and **Also delete branches**. This way, finishing with a task doesn't have to mean deleting it to clean it off the disk. With **Also delete worktrees** ticked, the dialog lists each worktree with what will happen to it — *Merged into main*, *2 uncommitted files*, *In open PR #42* — riskiest first, and names the ones it keeps: the repository's main worktree, and worktrees another task still uses. A worktree that would lose work is kept unless you tick the extra box that names exactly what would be lost, and a row at risk can open its changes so you can judge first.
 
@@ -1129,8 +1184,8 @@ A Task doesn't have to start with much. You can start one from an issue in [the 
 Everything attached to a Task is a **resource**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/add-resource-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/add-resource-aug-2026.png" class="help-center-img img-bordered" alt="A Notes group in the task view's rail, with a + on the header and an Add resource button below the list">
+  <a href="/wp-content/uploads/add-resource-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/add-resource-oct-2026.png" class="help-center-img img-bordered" alt="The Notes group in the task rail, led by the task's Prompt row, with a + on the group header and the Add resource button below.">
   </a>
   <figcaption style="text-align:center; color:#888">The + on a group header and the Add resource button open the same dialog, scoped to that category.</figcaption>
 </figure>
@@ -1163,6 +1218,13 @@ The **Files** group holds two kinds of file, and Kepler treats them differently 
 | **Uploaded copy** | Inside the Task's own folder, and belongs to this Task alone | **Task folder** | **Delete file…** deletes the copy |
 
 A file attached to a prompt that Kepler copies into the Task when you send it is an uploaded copy too. In a window connected to another machine, the file picker on the **Files** tab of **Add resources** also offers **Upload from this computer**, which copies files from the machine you're sitting at into the Task's folder. Either kind can be written somewhere else with **Save as…** from its menu.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/files-group-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/files-group-oct-2026.png" class="help-center-img img-bordered" alt="The Files group in the task rail, holding one linked file whose row reads its path on disk.">
+  </a>
+  <figcaption style="text-align:center; color:#888">A linked file in the Files group.</figcaption>
+</figure>
 
 ### Issues and pull requests attach themselves
 
@@ -1238,8 +1300,8 @@ A fresh worktree is a clean checkout: no `node_modules`, no build output, nothin
 **Commands** solve that problem. Save a repository's setup steps once (`pnpm install`, a codegen step, whatever your project needs) and tick **Run on worktree creation**. Kepler runs them in the new worktree's folder every time it makes one for that repository, in order, before the agent starts. Commands you don't flag stay on demand: right-click a worktree in the task view rail and pick **Run command here**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/run-command-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/run-command-aug-2026.png" class="help-center-img img-bordered" alt="The Run command here option on a worktree's right-click menu in the task view rail">
+  <a href="/wp-content/uploads/worktree-row-menu-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/worktree-row-menu-oct-2026.png" class="help-center-img img-bordered" alt="A worktree row's right-click menu in the task rail, with Run command here open on No commands yet and Create command. The menu also lists the Open actions, New session here, New terminal here, Rename branch, Change merge target, the copy actions, and Detach worktree last.">
   </a>
   <figcaption style="text-align:center; color:#888">Run command here, from a worktree's right-click menu.</figcaption>
 </figure>
@@ -1271,6 +1333,13 @@ What you wrote when you started the Task is a context item of its own: the **Pro
 
 Sometimes you want an agent that forms its own view, such as a reviewer that shouldn't be steered by the implementer's brief. The **New session** menu carries a **Start with task context** checkbox, ticked by default. Untick it and the new session doesn't receive the Task's prompt or notes. It still gets the Task's worktrees, folders, files, and links, because it still needs to know where to work.
 
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/start-with-task-context-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/start-with-task-context-oct-2026.png" class="help-center-img img-bordered" alt="The New session menu opened from the + on the Sessions group header, with Start with task context ticked at the top.">
+  </a>
+  <figcaption style="text-align:center; color:#888">Start with task context, ticked by default.</figcaption>
+</figure>
+
 ### Notes are how you give standing instructions
 
 Attach a **Note** for anything every agent on the Task should follow: a style rule, a constraint, a decision you don't want re-litigated. Write it once and every session gets it, including sessions you start later.
@@ -1289,8 +1358,8 @@ Attach a **Note** for anything every agent on the Task should follow: a style ru
 Most of what you remove from a Task isn't destroyed. The menu says which you're doing: **Detach** for something that lives elsewhere, **Delete** for something only the Task holds.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/detach-resource-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/detach-resource-aug-2026.png" class="help-center-img img-bordered" alt="A resource's right-click context menu with its remove action at the bottom">
+  <a href="/wp-content/uploads/detach-resource-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/detach-resource-oct-2026.png" class="help-center-img img-bordered" alt="A pull request row's right-click menu in the task rail, with Open, Open to the side, Open in browser, the copy actions, and Detach pull request at the bottom.">
   </a>
   <figcaption style="text-align:center; color:#888">Removing a resource from its context menu in the rail.</figcaption>
 </figure>
@@ -1311,8 +1380,8 @@ The Task's **Prompt** has no remove action.
 Worktrees get more care, because deleting one can lose work.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/detach-worktree-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/detach-worktree-aug-2026.png" class="help-center-img img-bordered" alt="The detach and delete options on a worktree">
+  <a href="/wp-content/uploads/detach-worktree-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/detach-worktree-oct-2026.png" class="help-center-img img-bordered" alt="The Detach worktree? dialog for a worktree only this task uses. It lists the worktree as Safe to delete, with No uncommitted changes and Branch kept, above an Also delete branch checkbox and the Cancel, Delete worktree, and Detach worktree buttons.">
   </a>
   <figcaption style="text-align:center; color:#888">Detaching or deleting a worktree.</figcaption>
 </figure>
@@ -1322,6 +1391,8 @@ Worktrees get more care, because deleting one can lose work.
 - If the worktree is used by **other Tasks**: *This worktree is used by other tasks, so it can't be deleted — detaching only removes it from this task.* The dialog names them under **Also used by**.
 - If it's the repository's **main worktree**: *This is the repository's main worktree — it can't be deleted, only detached from the task.*
 - Otherwise: *This worktree is only used by this task. Detach it to keep it on disk, or delete it. A deleted worktree stays listed on this task as gone until you detach it.*
+
+The dialog lists the worktree with what deleting it would cost, such as **No uncommitted changes** and **Branch kept**, under a verdict like **Safe to delete**. Tick **Also delete branch** to remove the branch along with the worktree.
 
 Neither is possible while a session is still running in the worktree; the menu tells you how many to archive first.
 
@@ -1344,8 +1415,8 @@ A worktree that would lose work is **kept**, not deleted, unless you tick the ex
 ## Renaming, archiving, and deleting a Task
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/rename-task-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/rename-task-aug-2026.png" class="help-center-img img-bordered" alt="The Task actions menu open from the header, listing Rename task, Archive task, and Delete task">
+  <a href="/wp-content/uploads/rename-task-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/rename-task-oct-2026.png" class="help-center-img img-bordered" alt="The Task actions menu open from a task panel's header, with Rename task and its F2 shortcut highlighted among Open task page, Open in new window, Pin panel, the Progress submenu, Mark as unread, Copy task prompt, Add resource, Archive task, and Delete task.">
   </a>
   <figcaption style="text-align:center; color:#888">The Task actions menu, open from the header.</figcaption>
 </figure>
@@ -1354,12 +1425,12 @@ From the **Task actions** (**⋮**) menu, on the task's row or in the task view'
 
 | Action | What it does |
 |---|---|
-| **Rename task** | Tasks name themselves when they're created; rename when the name stops fitting. The dialog's **Auto-name** button suggests one from the Task's prompt and resources, into the field, for you to accept or edit |
+| **Rename task** | Tasks name themselves when they're created; rename when the name stops fitting. The name becomes an editable field in place; its **Auto-name** button suggests one from the Task's prompt and resources, into the field, for you to accept or edit |
 | **Archive task** | Takes it out of the active list and keeps it as history. Its sessions and resources are kept, and nothing is destroyed unless you ask for it |
 | **Restore task** | On an archived Task, in place of **Archive task**. It goes straight back, unless another active Task now holds the same pull request; then Kepler asks first, because restoring archives that one |
 | **Delete task** | Removes the Task along with its sessions and resources |
 
-**Kepler suggests archiving a finished Task.** Once a Task reaches **Done**, with no uncommitted changes left and no session still working or waiting on you, its header asks *Ready to archive?* with an **Archive** button. Dismiss it and that Task stops asking.
+**Kepler suggests archiving a finished Task.** Once a Task reaches **Done**, with no unpushed work in its worktrees and no session still working or waiting on you, its header asks *Ready to archive?* with an **Archive** button. Dismiss it and that Task stops asking.
 
 **Archive** and **Delete** ask the same two questions, in the same dialog, because they're the same act: **Also delete worktrees**, and (only once that's ticked) **Also delete branches**. Until you tick them, *Worktrees and branches stay on disk unless you tick the boxes below.* Tick the first, and Kepler lists every worktree with the same tags a single worktree delete shows, and says what will happen to each:
 
@@ -1368,6 +1439,13 @@ From the **Task actions** (**⋮**) menu, on the task's row or in the task view'
 - A worktree Kepler can't touch is listed with why it's staying: another Task still uses it, it's the repository's main worktree, a session still runs in it, or it's already gone from disk.
 
 Ticking **Also delete branches** re-reads the list, so a worktree that was safe a moment ago can turn into a warning. If the check is slow you can confirm anyway; any worktree that would lose work is kept.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/archive-task-dialog-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/archive-task-dialog-oct-2026.png" class="help-center-img img-bordered" alt="The Archive task? dialog, saying the task moves to the Archived section and its worktrees and branches stay on disk unless you tick the boxes. Also delete worktrees is unticked, and Also delete branches is unavailable until it is.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The Archive task? dialog, before you tick anything.</figcaption>
+</figure>
 
 **Restore task** appears in the task view's header as soon as the Task is archived. From a row in the main list, it appears only once you've filtered **Activity** to **Archived** — see [Arranging Your Work](/kepler/arranging-your-work).
 
@@ -1470,8 +1548,8 @@ Opening a Task gives you its own screen — the **task page** — with everythin
 Get here by double-clicking a row in [the Kepler interface](/kepler/kepler-interface), or by clicking **Open task page** in the side panel. For what a Task is and what can be attached to one, see [Tasks and Resources](/kepler/tasks-and-resources).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/full-task-view-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/full-task-view-aug-2026.png" class="help-center-img img-bordered" alt="The task view with the rail on the left, listing Sessions, Changes, Folders, Pull requests, Links, and Notes, and a session open on the right with tool-call approval prompts">
+  <a href="/wp-content/uploads/full-task-view-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/full-task-view-oct-2026.png" class="help-center-img img-bordered" alt="The task page. Its header holds the task name, the ⋮ menu, the In Development progress control, and Terminal at the right edge. The rail lists Sessions, Changes, Pull requests, and Notes led by Prompt, and a session on the right is waiting on a command approval.">
   </a>
   <figcaption style="text-align:center; color:#888">The task view: the rail on the left, a session open on the right.</figcaption>
 </figure>
@@ -1481,10 +1559,10 @@ Get here by double-clicking a row in [the Kepler interface](/kepler/kepler-inter
 ## The header
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/task-header-3-elements-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-header-3-elements-aug-2026.png" class="help-center-img img-bordered" alt="The task header, showing the back button, the task switcher, and the task actions menu">
+  <a href="/wp-content/uploads/task-header-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-header-oct-2026.png" class="help-center-img img-bordered" alt="The left side of the task header: the context panel toggle, the back chevron, the task name chip, the ⋮ Task actions menu, and the In Development progress control.">
   </a>
-  <figcaption style="text-align:center; color:#888">The task header.</figcaption>
+  <figcaption style="text-align:center; color:#888">The left side of the task header. Terminal sits at the far right.</figcaption>
 </figure>
 
 From left to right, the header carries:
@@ -1493,7 +1571,7 @@ From left to right, the header carries:
 - **Back to dashboard** — a back chevron — returns you to the list exactly as you left it: same segment, grouping, filters, and selection.
 - **The task switcher**, the Task's name as a chip, jumps to another Task without going back first. It searches as you type, and each row carries the same session status dots a row does. Right-click the name for the same task actions the **⋮** menu holds.
 - **⋮ Task actions**. See below.
-- **The Progress control**, showing where the work stands: **Exploration**, **In Development**, **In Review**, **Done**, or **On hold**. Click it to set the stage yourself or hand it back to **Automatic**. An archived Task reads **Archived** here instead. See [Arranging your work](/kepler/arranging-your-work).
+- **The Progress control**, showing where the work stands: **Exploration**, **In Development**, **In Review**, **On hold**, or **Done**. Click it to set the stage yourself or hand it back to **Automatic**. An archived Task reads **Archived** here instead. See [Arranging your work](/kepler/arranging-your-work).
 - **Terminal**, at the right edge, which shows and hides the [terminal drawer](#the-terminal-drawer) and counts the terminals running in it.
 
 When a Task looks finished, a **Ready to archive?** prompt joins the header with **Archive** beside it, until you archive the Task or dismiss it.
@@ -1501,6 +1579,13 @@ When a Task looks finished, a **Ready to archive?** prompt joins the header with
 **⋮ Task actions** holds the Task's **Progress** submenu (with **Reopen** leading on a finished Task), **Mark as unread**, **Rename task**, **Copy task prompt**, **Add resource…**, **Shut down all agents** while any are running, then **Archive task** and **Delete task**. On an already-archived Task, **Restore task** replaces **Archive task**.
 
 **Rename task** — or **F2** anywhere on the page outside a text field — turns the name into an editable field in place. The field carries **Auto-name** — *Suggest a name from the task's prompt and resources* — which fills the field with a suggestion for you to accept or edit. It never renames on its own: **Enter** or the check mark saves, **Escape** or the **×** cancels.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/rename-inline-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/rename-inline-oct-2026.png" class="help-center-img img-bordered" alt="The task name turned into an editable field in the header, with its text selected, followed by the Auto-name button, × to cancel, and a check mark to save.">
+  </a>
+  <figcaption style="text-align:center; color:#888">Renaming a task in place.</figcaption>
+</figure>
 
 ***
 
@@ -1511,8 +1596,8 @@ The left rail lists everything attached to the Task, grouped by kind:
 **Sessions · Changes · Terminals · Folders · Files · Pull requests · Issues · Links · Notes**
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/task-rail-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-rail-aug-2026.png" class="help-center-img img-bordered" alt="The task view's left rail, showing Sessions, Changes, Folders, Pull requests, Links, and Notes groups, with Add resource at the bottom">
+  <a href="/wp-content/uploads/task-rail-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-rail-oct-2026.png" class="help-center-img img-bordered" alt="The task rail, showing Sessions with three sessions and a 2 archived fold, Changes, Terminals, Pull requests, and Notes led by the Prompt row, with Add resource at the bottom.">
   </a>
   <figcaption style="text-align:center; color:#888">The rail, grouped by resource kind.</figcaption>
 </figure>
@@ -1529,7 +1614,7 @@ The worktree group is called **Changes**. Its rows carry each checkout's real st
 
 - **Add resource** sits at the bottom of the rail and opens the **Add resources** dialog.
 - The **+** on a group header adds straight into that group: **Add issues**, **Add notes**, and so on. On **Changes** it reads **Add worktree**, because that's what actually lands there. On **Sessions** the **+** is **New session** instead.
-- Every session that isn't live (archived ones, and ones that disconnected or terminated) collects under a **{count} archived** fold beneath the live ones. It starts collapsed. Clicking an archived session brings it back and opens it in one gesture; **Restore** in its menu does the same.
+- Every session that isn't live (archived ones, and ones that ended) collects under a **{count} archived** fold beneath the live ones. It starts collapsed. Clicking an archived session brings it back and opens it in one gesture; **Restore** in its menu does the same.
 
 ### What a row shows
 
@@ -1570,8 +1655,8 @@ Every rail row draws a selected fill when it's the one on screen, and the column
 Right-click any row. Every row opens with **Open**, followed by **Open to the side** with tabs off or **Open beside** with tabs on (see [Columns or tabs](#columns-or-tabs)), when there's somewhere for it to go. A worktree row adds **Open changes**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/rail-row-menu-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/rail-row-menu-aug-2026.png" class="help-center-img img-bordered" alt="A worktree row's right-click menu, listing Open, session and terminal actions, Open in, copy actions, and Detach">
+  <a href="/wp-content/uploads/worktree-row-menu-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/worktree-row-menu-oct-2026.png" class="help-center-img img-bordered" alt="A worktree row's right-click menu in the task rail, with Run command here open on No commands yet and Create command. The menu also lists the Open actions, New session here, New terminal here, Rename branch, Change merge target, the copy actions, and Detach worktree last.">
   </a>
   <figcaption style="text-align:center; color:#888">A worktree row's context menu.</figcaption>
 </figure>
@@ -1610,8 +1695,8 @@ The content area takes one of two shapes, set by **Show tabs on the task page** 
 | **On** | Free-form **tabs** you can pin, drag between groups, and arrange side by side |
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/show-tabs-on-task-page-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/show-tabs-on-task-page-aug-2026.png" class="help-center-img img-bordered" alt="The Show tabs on the task page setting, checked, in Settings → General">
+  <a href="/wp-content/uploads/show-tabs-on-task-page-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/show-tabs-on-task-page-oct-2026.png" class="help-center-img img-bordered" alt="The Show tabs on the task page setting in Settings → General, unticked, with help text explaining that it's off by default and that turning it on keeps sessions, worktrees, and resources open as tabs.">
   </a>
   <figcaption style="text-align:center; color:#888">The Show tabs on the task page setting, in Settings → General.</figcaption>
 </figure>
@@ -1621,8 +1706,8 @@ Either way, terminals live in the [drawer](#the-terminal-drawer) beneath the con
 ### The columns
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/task-columns-sep-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-columns-sep-2026.png" class="help-center-img img-bordered" alt="The three content columns side by side: a session conversation, a worktree's changes, and a resource's details">
+  <a href="/wp-content/uploads/task-columns-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-columns-oct-2026.png" class="help-center-img img-bordered" alt="The task page with tabs off: the rail on the left, then three columns side by side, a session conversation in Sessions, a worktree's changed files in Changes, and a pull request's details in Resources.">
   </a>
   <figcaption style="text-align:center; color:#888">The three content columns: Sessions, Changes, and Resources.</figcaption>
 </figure>
@@ -1659,6 +1744,13 @@ A session's control on its strip is named for what it does: **Archive session** 
 ### Tabs and groups
 
 With tabs on, anything you open from the rail — sessions, worktrees, files, and every other resource — becomes a tab, and tabs live in **groups** you arrange freely, the way editor tabs work in VS Code.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/tabs-preview-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/tabs-preview-oct-2026.png" class="help-center-img img-bordered" alt="The task page with tabs on. A pull request opened with one click sits in an italic preview tab, and beside it a session tab shows an orange status dot in place of its close control.">
+  </a>
+  <figcaption style="text-align:center; color:#888">An italic preview tab beside a session tab.</figcaption>
+</figure>
 
 - **Drag a tab** to reorder it, onto another group to move it there, or to a group's edge to split off a new group there. Drag the sash between groups to resize them.
 - **A single click opens a preview.** A resource opened with one click shows in an italic preview tab that the next single click replaces, so browsing the rail doesn't pile up tabs. Double-click a row, or start editing in the tab, to keep it open. A session always opens as a tab you keep. Turn **Preview tabs** off in **Settings → General** to have every click keep its tab.
@@ -1707,6 +1799,13 @@ With tabs off, the column strips' **Tab actions** menus also hold **Move left** 
 
 With a single place to run, the menu lists the agents directly instead of asking twice. With many, it grows a **Search worktrees and folders** field. **Cmd/Ctrl+T** starts a session on your default agent when there's only one place to run, and opens this menu when there are several. If no agents are connected you'll see **No agents available**. Connect one in [Agent Integrations](/kepler/agent-integrations).
 
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/new-session-flyout-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-session-flyout-oct-2026.png" class="help-center-img img-bordered" alt="The New session menu with Start with task context checked at the top, then All worktrees and folders and two worktrees. One worktree's flyout is open, with Start on another branch above the agent rows, each row ending in a button that starts it in the other mode.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The New session menu, with a worktree's agents open.</figcaption>
+</figure>
+
 **Each agent row can start either run mode.** The row itself launches that agent in its default mode; the trailing button on the row starts the other one — **Start in Terminal**, or **Start in Rich chat** on an agent that already defaults to Terminal. An agent that offers only one mode shows no second control. See [Agent Sessions](/kepler/agent-sessions#how-a-session-runs).
 
 **Start on another branch** sits above a worktree's agents. Check it and pick a branch — an existing one, or a new one cut **From** a base, with an optional **Branch name** (left empty, it's *Named for you*) — and the same agent rows start the session there instead: in a fresh worktree, or in the repository's own checkout switched in place.
@@ -1722,6 +1821,13 @@ To fire a preconfigured prompt instead of typing one, open the chevron beside th
 ## Opening a file
 
 Any file can open on the task page, whether or not it's attached to the Task. It opens as a tab with tabs on, or in the **Resources** column with tabs off, in Kepler's file viewer.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/markdown-file-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/markdown-file-oct-2026.png" class="help-center-img img-bordered" alt="A Markdown file open in a task page tab, rendered with a table, headings, and lists. The viewer's header shows the file's path and size, the Preview and Source toggle, Wrap lines, and an Open in GitKraken button.">
+  </a>
+  <figcaption style="text-align:center; color:#888">A Markdown file in the file viewer, in Preview.</figcaption>
+</figure>
 
 | How to open one | What you get |
 |---|---|
@@ -1742,6 +1848,13 @@ A path that's already one of the Task's files opens that file's own tab rather t
 
 **An open file follows the disk.** When it changes, the viewer updates in place without moving you, and says **Updated just now**, or **Updated just now by** the session that changed it when Kepler saw the edit. **Show changes** shows what changed since the file was first shown; **Back to file** returns. A deleted file keeps showing the last version Kepler read, and says so.
 
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/file-updated-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/file-updated-oct-2026.png" class="help-center-img img-bordered" alt="The file viewer after the open file changed on disk, with an Updated just now banner across the top and Show changes at its right end.">
+  </a>
+  <figcaption style="text-align:center; color:#888">An open file that just changed on disk.</figcaption>
+</figure>
+
 A very large file shows its start first — *Showing the first {shown} of {total}* — with **Load the rest**.
 
 ***
@@ -1751,8 +1864,8 @@ A very large file shows its start first — *Showing the first {shown} of {total
 Terminals live in a drawer beneath the content area, spanning all of it, sized by a sash of its own. The **Terminal** control at the right edge of the header shows and hides it, and counts what's running.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-terminal-here-sep-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-terminal-here-sep-2026.png" class="help-center-img img-bordered" alt="A worktree row's context menu with New terminal here highlighted">
+  <a href="/wp-content/uploads/new-terminal-here-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-terminal-here-oct-2026.png" class="help-center-img img-bordered" alt="A worktree row's right-click menu with New terminal here highlighted, below New session here and above Rename branch, Change merge target, the copy actions, and Detach worktree.">
   </a>
   <figcaption style="text-align:center; color:#888">New terminal here, on a worktree row's context menu.</figcaption>
 </figure>
@@ -2118,8 +2231,8 @@ Kepler names Tasks automatically from what you started them with. Rename one whe
 Click **New task** or press **Cmd/Ctrl+N**. To start one without switching to Kepler first, press **Shift+Alt+N** to open the quick launcher from anywhere, including when Kepler isn't the focused window.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-task-button-sep-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-task-button-sep-2026.png" class="help-center-img img-bordered" alt="The New task split button in the Kepler top bar, beside the window switcher, Feedback, Settings, and account">
+  <a href="/wp-content/uploads/new-task-button-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-task-button-oct-2026.png" class="help-center-img img-bordered" alt="The New task split button at the left end of the Kepler top bar, after the window switcher and the Back and Forward buttons.">
   </a>
   <figcaption style="text-align:center; color:#888">The New task button, available from anywhere in Kepler.</figcaption>
 </figure>
@@ -2260,8 +2373,8 @@ You can jump into Kepler from other GitKraken products, such as GitLens and GitK
 The Task appears in **Tasks in progress**. Click it for the side panel, or double-click to open [the task view](/kepler/task-view).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/full-task-view-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/full-task-view-aug-2026.png" class="help-center-img img-bordered" alt="The task view with the rail on the left, listing Sessions, Changes, Folders, Pull requests, Links, and Notes, and a session open on the right with tool-call approval prompts">
+  <a href="/wp-content/uploads/full-task-view-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/full-task-view-oct-2026.png" class="help-center-img img-bordered" alt="The task page. Its header holds the task name, the ⋮ menu, the In Development progress control, and Terminal at the right edge. The rail lists Sessions, Changes, Pull requests, and Notes led by Prompt, and a session on the right is waiting on a command approval.">
   </a>
   <figcaption style="text-align:center; color:#888">The task view: the rail on the left, a session open on the right.</figcaption>
 </figure>
@@ -2347,8 +2460,8 @@ Two options in the menu change what the session starts with:
 ## Agent, model, mode, and effort
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-settings-from-composer-sep-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-settings-from-composer-sep-2026.png" class="help-center-img img-bordered" alt="The Agent settings pill's expanded menu, opened from the composer, showing Agent, Runs as, Model, and Mode sections">
+  <a href="/wp-content/uploads/agent-settings-from-composer-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-settings-from-composer-oct-2026.png" class="help-center-img img-bordered" alt="The Agent settings menu open from the New task composer, with rows for Agent, Plan usage, Runs as, Model, Effort, Mode, and Fast mode, and an MCP servers row reading 1 of 1 enabled with a Manage button.">
   </a>
   <figcaption style="text-align:center; color:#888">The Agent settings pill, opened from the composer.</figcaption>
 </figure>
@@ -2360,7 +2473,7 @@ The composer carries an **Agent settings** pill. It holds the same set of questi
 | **Agent** | No | Fixed once the session exists. Changing agent means a new session |
 | **Runs as** | No | Rich chat or Terminal, for an agent that offers both. Fixed once the session starts; use **New session** to start the other way. See [How a session runs](#how-a-session-runs) |
 | **Model** | Yes | The agent's own catalog. Models are per provider, so a model never moves to another agent |
-| **Permission mode** | Yes | The agent's own modes |
+| **Mode** | Yes | The agent's own permission modes |
 | **Effort** | Yes | Reasoning or thinking depth, for agents that offer it |
 | Other **Options** | Some | Options an agent can only read at spawn are editable at launch and nowhere else |
 
@@ -2380,11 +2493,11 @@ Claude Code, Codex, Copilot CLI, Cursor, Auggie, OpenCode, Grok Build, Pi, and G
 
 ## Several accounts for one agent
 
-Claude Code, Codex, Copilot, and Auggie can each hold more than one signed-in account. Open **Settings → Agents**, expand the agent, and find **Accounts**:
+Claude Code, Codex, GitHub Copilot, Auggie, and Grok Build can each hold more than one signed-in account. Open **Settings → Agents**, expand the agent, and find **Accounts**:
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-accounts-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-accounts-aug-2026.png" class="help-center-img img-bordered" alt="Settings → Agents → Claude Code, showing the Accounts section with a Default account and an Add account button">
+  <a href="/wp-content/uploads/agent-accounts-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-accounts-oct-2026.png" class="help-center-img img-bordered" alt="The Claude Code card in Settings → Agents, with its version, Update, and Enabled in the title line. Its Accounts section lists the uncolored default account and a second account, Claude Code (Personal), marked with a blue colour swatch.">
   </a>
   <figcaption style="text-align:center; color:#888">The Accounts section, in Settings → Agents.</figcaption>
 </figure>
@@ -2409,13 +2522,13 @@ An account's colour tints the agent icon on session tabs, the task rail, and the
 With two or more accounts signed in, the **Agent** list expands to one row per account, labelled with the account name, so you pick the agent and the account in one click. This is true in the task composer and in the task view's **New session** menu.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/account-multiple-selector-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/account-multiple-selector-aug-2026.png" class="help-center-img img-bordered" alt="The Agent list with two Claude Code rows, one per signed-in account">
+  <a href="/wp-content/uploads/account-multiple-selector-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/account-multiple-selector-oct-2026.png" class="help-center-img img-bordered" alt="The Agent list open in the composer, grouped by agent. Under a Claude Code heading sit two account rows, CLI and Claude Code (Personal), followed by Codex CLI and the other agents, then Add another account and Install another agent.">
   </a>
   <figcaption style="text-align:center; color:#888">The Agent list, with one row per account.</figcaption>
 </figure>
 
-With one account, no account rows appear at all.
+With one account, the agent keeps a single row, with that account shown beside its name.
 
 A running session stays on the account it started with. Session tabs name the account when more than one exists, and a tab whose account has since been removed reads **(account missing)**.
 
@@ -2452,17 +2565,17 @@ A session runs one of two ways, and the choice is no longer Claude Code's alone.
 | **Terminal** | The agent's own command-line interface, running in an embedded terminal inside the task |
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/claude-code-terminal-rich-chat-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/claude-code-terminal-rich-chat-aug-2026.png" class="help-center-img img-bordered" alt="Settings → Agents → Claude Code, with the Default mode for new sessions toggle set to Rich chat">
+  <a href="/wp-content/uploads/opens-in-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/opens-in-oct-2026.png" class="help-center-img img-bordered" alt="The Claude Code card in Settings → Agents, with its Opens in control set to Rich chat rather than Terminal, below the Accounts section and above Let artifact comments start turns.">
   </a>
-  <figcaption style="text-align:center; color:#888">Default mode for new sessions, in Settings → Agents.</figcaption>
+  <figcaption style="text-align:center; color:#888">Opens in, on an agent's card in Settings → Agents.</figcaption>
 </figure>
 
-**Settings → Agents → *your agent* → Default mode for new sessions** sets the default per agent, so Claude Code can default to Rich chat while Codex defaults to Terminal. The **New session** menu starts one session the other way without changing it: **Start in Terminal**, or **Start in Rich chat**. An agent that offers only one mode shows no switch at all.
+**Settings → Agents → *your agent* → Opens in** sets the default per agent, so Claude Code can default to Rich chat while Codex defaults to Terminal. The **New session** menu starts one session the other way without changing it: **Start in Terminal**, or **Start in Rich chat**. An agent that offers only one mode shows no switch at all.
 
 | Agent | Modes |
 |---|---|
-| Claude Code, Codex, GitHub Copilot, Cursor CLI, OpenCode, Auggie, Grok Build | Rich chat or Terminal |
+| Claude Code, Codex, GitHub Copilot, Cursor, OpenCode, Auggie, Grok Build | Rich chat or Terminal |
 | Google Antigravity | Terminal by default. Rich chat runs Google's separate Antigravity ACP server, once it's installed and you pick **Rich chat** for the agent |
 | Pi | Terminal only. Its CLI doesn't speak ACP |
 | Your own agent server | Whichever its command supports |
@@ -2478,6 +2591,13 @@ Terminal mode is not a fallback. Kepler wraps the running CLI with the things a 
 | The terminal | The agent's real interface, keys and all |
 | The status bar | The session at a glance, then your plan usage. See below |
 | The composer | Kepler's own message box, with attachments, voice input, and the agent-settings pill |
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/terminal-session-status-bar-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/terminal-session-status-bar-oct-2026.png" class="help-center-img img-bordered" alt="A Claude Code session running in Terminal mode, with the CLI's own prompt above Kepler's status bar. The bar shows a green status dot, the agent and account, Opus 5.5 at Medium effort in Auto mode, the context ring, the branch, the 5-hour usage meter, and Rich input.">
+  </a>
+  <figcaption style="text-align:center; color:#888">A Terminal session, with Kepler's status bar along the bottom.</figcaption>
+</figure>
 
 The status bar leads with the session and ends with its usage, left to right:
 
@@ -2574,8 +2694,8 @@ A conversation picked up from disk starts the agent on your first message rather
 The composer sits at the bottom of the session.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/sending-a-prompt-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/sending-a-prompt-aug-2026.png" class="help-center-img img-bordered" alt="The session composer, with attach and voice icons, the agent-settings pill, context usage, and the Send button">
+  <a href="/wp-content/uploads/sending-a-prompt-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/sending-a-prompt-oct-2026.png" class="help-center-img img-bordered" alt="The session composer with three attached files: two linked files, llms.txt and agents.md, and a pasted image.png shown as a thumbnail. Below the draft sit Attach a file and the microphone, then the 5-hour plan usage meter, the Agent settings pill, the context usage ring, and Send with its chevron.">
   </a>
   <figcaption style="text-align:center; color:#888">The composer, at the bottom of the session.</figcaption>
 </figure>
@@ -2704,6 +2824,20 @@ Approvals name what Claude is about to do — *Publish a new private page?*, *Up
 
 Anyone with edit access to a published artifact can comment on it, and by default a comment starts a turn in the session that published it, with a reply posted automatically. The first time a session publishes, a notice — **Artifact comments can start turns** — offers **Keep on** or **Turn off**. The standing setting is **Settings → Agents → Claude Code → Let artifact comments start turns**; running sessions keep the value they started with, and the setting lists them with **Restart all** and **Restart selected ({count})**.
 
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/artifact-card-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/artifact-card-oct-2026.png" class="help-center-img img-bordered" alt="A published artifact shown as a card in a Claude Code Rich chat session, with its title, Private, Open, and a copy link button, followed by the Artifact comments can start turns notice with Keep on and Turn off.">
+  </a>
+  <figcaption style="text-align:center; color:#888">An artifact card, and the notice the first publish shows.</figcaption>
+</figure>
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/artifact-chip-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/artifact-chip-oct-2026.png" class="help-center-img img-bordered" alt="The artifact attached to the task as a link on the task's pill, with its popover open showing the artifact's title, its link, Open, and Copy link.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The published artifact, attached to the task as a link.</figcaption>
+</figure>
+
 ### Scrolling and where you left off
 
 **Settings → Appearance → Chat transcript** controls how the transcript scrolls:
@@ -2723,10 +2857,10 @@ Sessions you started in your own terminal appear too, marked **(external)**, rea
 Kepler pauses and asks you directly when an agent needs a decision it can't make on its own. It does this in two ways: a permission request before a risky tool call, and a structured question when the agent wants your input mid-task.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-permission-request-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-permission-request-aug-2026.png" class="help-center-img img-bordered" alt="A permission request for a tool call, with its input and Allow, Allow for this session, Allow always, and Reject buttons">
+  <a href="/wp-content/uploads/agent-permission-request-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-permission-request-oct-2026.png" class="help-center-img img-bordered" alt="A permission request for a shell command, marked Needs approval, with the agent's reason, Contains brace with quote character, just above the Allow, Allow for this session, and Reject buttons.">
   </a>
-  <figcaption style="text-align:center; color:#888">A permission request, pinned to the top of the session.</figcaption>
+  <figcaption style="text-align:center; color:#888">A permission request, with the agent's reason above the buttons.</figcaption>
 </figure>
 
 ### Permission requests
@@ -2796,10 +2930,10 @@ A restored session shows the question and the answers you gave as a read-only re
 Two different readouts, and they measure different things.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/usage-indicators-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/usage-indicators-aug-2026.png" class="help-center-img img-bordered" alt="The Context Usage popover, showing tokens used, the window total, and cost so far, above the composer's percentage chip">
+  <a href="/wp-content/uploads/usage-indicators-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/usage-indicators-oct-2026.png" class="help-center-img img-bordered" alt="The Context window card open above the composer's context ring, at 68%, listing tokens Used, Available, and Total, and the Estimated cost at API rates.">
   </a>
-  <figcaption style="text-align:center; color:#888">The Context Usage popover.</figcaption>
+  <figcaption style="text-align:center; color:#888">The Context window card, from the context ring.</figcaption>
 </figure>
 
 | Readout | What it shows | Availability |
@@ -2887,13 +3021,13 @@ Open sessions form a tab strip. Each tab shows the agent, the account when more 
 | **Cmd/Ctrl+T** or **+** | Starts a new session in this working copy |
 | **Alt+1**–**Alt+9** | Jumps to a tab by position |
 | **Cmd/Ctrl+Shift+[** / **]** | Previous or next tab |
-| **×** on a tab (**Archive session**) | Archives the session |
+| **×** on a tab in the Sessions column (**Archive session**) | Archives the session |
 | **Archive** on a rail row | The same thing |
 | **Restore** | Brings an archived session back into the strip |
 | **Shut down agent** | Ends the process without archiving the session |
 | **Restart agent** | Shuts it down, then reconnects |
 
-**Closing a tab and archiving are one operation.** Kepler stops the agent process, saves the conversation and its resume handle, and takes the tab out of the strip. Nothing is deleted.
+**In the Sessions column, closing a tab and archiving are one operation.** Kepler stops the agent process, saves the conversation and its resume handle, and takes the tab out of the strip. Nothing is deleted. With **Show tabs on the task page** turned on, a tab's **×** is **Close tab** instead: it only hides the tab, and the session keeps running. See [Task View](/kepler/task-view#tabs-and-groups).
 
 ### Shutting down and restarting an agent
 
@@ -2934,7 +3068,7 @@ A session left running after a quit, with Kepler never coming back to it, is end
 
 A terminal session kept running this way also keeps its keyboard and paste modes across the restart, and a reboot that ends it still leaves it resumable.
 
-Your computer will not go to sleep out from under a running agent. While any session is spawning, running, or waiting on you, Kepler holds the machine awake, and lets go as soon as the last one settles. It is on out of the box and turned off in **Settings → General → Keep this computer awake**. See [Settings](/kepler/settings).
+Your computer will not go to sleep out from under a running agent. While any session is spawning, running, or waiting on you, Kepler holds the machine awake, and lets go as soon as the last one settles. It is on out of the box and turned off in **Settings → General → Keep awake while agents run**. See [Settings](/kepler/settings).
 
 ***
 
@@ -2944,7 +3078,7 @@ A session that can't carry on says so on its context card, with a badge, one sen
 
 | Badge | What happened | What to do |
 |---|---|---|
-| **Ended** or **Disconnected** | The process is gone; the conversation is not | **Resume** |
+| **Ended** | The process is gone; the conversation is not | **Resume** |
 | **Exited** | *{name} exited on its own. Restart it to continue from the saved conversation.* | Restart the agent |
 | **Can't resume** | *{name} no longer has this conversation, so it can't continue. You can still read it below.* | **Archive session**, or **Start new conversation** |
 | **Sign-in failed** | *{name} couldn't sign in. Sign in again to continue this conversation.* | Sign in again |
@@ -3459,7 +3593,7 @@ All of it lives in **Settings → Agents**.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/agent-settings-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-settings-aug-2026.png" class="help-center-img img-bordered" alt="Settings → Agents, showing the Default agent row and the Claude Code and Codex sections with their status badges">
+    <img src="/wp-content/uploads/agent-settings-aug-2026.png" class="help-center-img img-bordered" alt="Settings → Agents, showing the Default agent row and the Claude Code and Codex cards">
   </a>
   <figcaption style="text-align:center; color:#888">Settings → Agents.</figcaption>
 </figure>
@@ -3496,7 +3630,7 @@ Each agent gets its own section in **Settings → Agents**, in this order:
 
 **Codex now runs your own CLI.** Earlier builds shipped a bundled `codex-acp` engine; Kepler resolves and spawns the `codex` you have installed, like every other agent, so its section reads **Installed** and it has a binary picker.
 
-Every agent that offers both modes is configured the same way. **Settings → Agents → *your agent* → Default mode for new sessions** picks between **Rich chat** and **Terminal**, per agent, and the **New session** menu can start one session the other way. See [Agent Sessions](/kepler/agent-sessions#how-a-session-runs).
+Every agent that offers both modes is configured the same way. **Settings → Agents → *your agent* → Opens in** picks between **Rich chat** and **Terminal**, per agent, and the **New session** menu can start one session the other way. See [Agent Sessions](/kepler/agent-sessions#how-a-session-runs).
 
 Two agents need a recent enough build to be driven over ACP:
 
@@ -3537,11 +3671,11 @@ Kepler doesn't close the install output pane automatically when the install fini
 
 Kepler resolves each agent's binary the way your shell does: the first match on your `PATH`, so it agrees with `which`. Beyond `PATH`, it also sweeps your login shell's environment and well-known install directories. That's how Kepler finds an agent installed by nvm or Homebrew, even when you didn't launch Kepler from a terminal.
 
-Open **Configure** on an agent's section to see and change what it resolved:
+Each agent's card in **Settings → Agents** shows what Kepler resolved. The version and **Install** sit in the card's title line; **Binary** and **Data directory** sit under **Advanced**:
 
 | Control | What it does |
 |---|---|
-| Status | **Installed** or **Not installed**, with who is signed in on it |
+| Version | The installed version, or **Not installed** |
 | **Install** | Runs one of the install methods above. Shown when the agent is not installed |
 | **Binary** | The resolved absolute path, or **Not found**, with where it came from (**PATH**, **Shell**, or **Common**) and its version |
 | **Re-scan** | Re-detects this agent's binary. Use it after installing or removing one outside Kepler |
@@ -3608,7 +3742,7 @@ If you run Auggie's browser sign-in on this machine yourself, Kepler detects it 
 
 ### Multiple accounts of one agent
 
-**Claude Code**, **Codex**, **GitHub Copilot**, and **Auggie** support more than one signed-in account. **Configure → Accounts → Add account** adds one; each account keeps its own credentials and history.
+**Claude Code**, **Codex**, **GitHub Copilot**, **Auggie**, and **Grok Build** support more than one signed-in account. **Settings → Agents → *your agent* → Accounts → Add account** adds one; each account keeps its own credentials and history.
 
 Give each added account its own colour from the swatch at the left of its row — **Rose**, **Amber**, **Lime**, **Cyan**, **Blue**, or **Violet** — and the agent icon is tinted with it on session tabs, the task rail, and the terminal status bar, so sessions on different accounts are easy to tell apart. *The default account stays uncolored.* Accounts also appear on the agent's card in Settings.
 
@@ -3618,7 +3752,7 @@ For **Auggie**, you can only add a second account with **Paste session token**. 
 
 ## Run modes
 
-Most agents run two ways, and each agent keeps its own default. **Configure → Default mode for new sessions** picks which:
+Most agents run two ways, and each agent keeps its own default. **Settings → Agents → *your agent* → Opens in** picks which:
 
 | Mode | What you get |
 |---|---|
@@ -3666,7 +3800,7 @@ Custom servers appear alongside the built-in agents everywhere you can choose an
 
 ## MCP servers
 
-Kepler lists the MCP servers each agent loads, and lets you add, remove, sign in to, and turn off servers or single tools, per repository from the composer's agent menu or as defaults in **Settings → Agents → MCP servers**. See [MCP Servers](/kepler/mcp-servers).
+Kepler lists the MCP servers each agent loads, and lets you add, remove, sign in to, and turn off servers or single tools, per repository from the composer's **Agent settings** pill or as defaults in **Settings → Agents → MCP servers**. See [MCP Servers](/kepler/mcp-servers).
 
 ***
 
@@ -3701,7 +3835,7 @@ last_verified: 2026-10
 
 Your coding agents load Model Context Protocol (MCP) servers from their own config files. Kepler reads those files and lists exactly the servers each agent will load, so you can see them, turn a server or one of its tools off where you don't want it, add or remove a server, and sign in to a server that needs it — without editing the agent's config by hand.
 
-You manage them in two places: per repository, from the composer's agent menu, and as global defaults in **Settings → Agents → MCP servers**.
+You manage them in two places: per repository, from the composer's **Agent settings** pill, and as global defaults in **Settings → Agents → MCP servers**.
 
 **Requirements and limits**
 
@@ -3715,7 +3849,7 @@ You manage them in two places: per repository, from the composer's agent menu, a
 
 | Where | What a change applies to |
 |---|---|
-| The composer's agent menu → **MCP servers** → **Manage** | This repository (the UI calls it a *project*) for that agent |
+| The composer's **Agent settings** pill → **MCP servers** → **Manage** | This repository (the UI calls it a *project*) for that agent |
 | **Settings → Agents → MCP servers** | Every repository, as the default each one inherits |
 
 Both open the same manager. It groups servers by where they're defined:
@@ -3734,7 +3868,7 @@ Each row is a server: click it to turn it on or off, and use the arrow beside it
 
 ## Per repository
 
-In a session or in the New task composer, open the agent menu. Its **MCP servers** row reads *{enabled} of {total} enabled*; **Manage** opens the **MCP servers** dialog, titled with the agent and the repository it applies to.
+In a session or in the New task composer, open the **Agent settings** pill. Its **MCP servers** row reads *{enabled} of {total} enabled*; **Manage** opens the **MCP servers** dialog, titled with the agent and the repository it applies to.
 
 A change here applies to that repository only. Worktrees of one checkout share the setting, so a server you turn off in a repository stays off in every task's worktree of it.
 
@@ -3794,7 +3928,7 @@ In a local window, **Open sign-in page** opens your browser and Kepler finishes 
 | Where the change lands | When it takes effect |
 |---|---|
 | A Claude Code **Rich chat** session | Straight away. Kepler reconnects the session with the new servers and keeps the conversation and your model and mode picks |
-| A terminal session, or any other agent's session | On restart. The agent menu and the dialog show *{count} MCP changes apply when the agent restarts.* with **Restart agent** |
+| A terminal session, or any other agent's session | On restart. The **Agent settings** pill and the dialog show *{count} MCP changes apply when the agent restarts.* with **Restart agent** |
 | The New task composer | The session you start comes up with that state |
 
 Turning a server or tool off doesn't edit the agent's config for Claude Code, Codex, OpenCode, or GitHub Copilot: Kepler keeps the choice itself and passes it to the agent when it launches, so the same agent run from your own terminal is unaffected. The one exception is turning on a Claude Code server that Claude's own config lists as disabled, which Kepler can only do by editing that list. For Auggie, Cursor, and Grok Build, Kepler writes the change into the agent's config file, which their CLIs also read. Adding and removing a server always edits the config file.
@@ -3807,7 +3941,7 @@ Each agent account keeps its own MCP setup. When Kepler launches a Claude Code a
 
 - [Settings](/kepler/settings) — **Settings → Agents**, including the **MCP servers** section.
 - [Agent Integrations](/kepler/agent-integrations) — the agents Kepler runs and how to set them up.
-- [Agent Sessions](/kepler/agent-sessions) — the composer's agent menu, and restarting a session.
+- [Agent Sessions](/kepler/agent-sessions) — the composer's **Agent settings** pill, and restarting a session.
 
 ---
 
@@ -4419,7 +4553,7 @@ The choice also applies to native dialogs, not only the in-app interface.
 
 ### Keyboard Shortcuts
 
-This section lists Kepler's shortcuts, grouped the way Settings groups them. They are a reference, not editable. Kepler also shows each shortcut in the menu items and button tooltips it belongs to. Mac symbols are shown first; on Windows and Linux, **⌘** is **Ctrl** and **⌥** is **Alt**, and **⌃** is **Ctrl** on every platform.
+This section lists Kepler's shortcuts, grouped the way Settings groups them. They are a reference, not editable. Kepler also shows each shortcut in the menu items and button tooltips it belongs to. A few tab shortcuts that Settings doesn't list, such as reopening a closed tab and jumping to a tab by position, are in [Task View](/kepler/task-view#keyboard). Mac symbols are shown first; on Windows and Linux, **⌘** is **Ctrl** and **⌥** is **Alt**, and **⌃** is **Ctrl** on every platform.
 
 **General**
 
@@ -4637,7 +4771,7 @@ Every agent that can run both ways carries this setting:
 
 | Setting | What it controls | Default |
 |---|---|---|
-| **Opens in** | **Rich chat** is Kepler's own transcript, with plans, model, and effort controls, and richer input. **Terminal** runs the agent's own command-line interface in an embedded terminal | Rich chat |
+| **Opens in** | **Rich chat** is Kepler's own transcript, with plans, model, and effort controls, and richer input. **Terminal** runs the agent's own command-line interface in an embedded terminal | Rich chat. Google Antigravity starts on Terminal, because its Rich chat server signs in separately |
 
 The choice is saved per agent, so one agent can default to Terminal while another stays on Rich chat. The **New session** menu starts one session in the other mode without changing the setting. A terminal-only agent shows **Terminal** with no switch. See [Agent Sessions](/kepler/agent-sessions#how-a-session-runs).
 
@@ -4687,7 +4821,7 @@ See [Tasks and Resources](/kepler/tasks-and-resources) for the full list and whi
 
 Each agent's own MCP server defaults, which every project inherits. Pick an agent, and an account when that agent has more than one, to see the servers that agent loads. Turn a server or a single tool off here and it's off in every repository unless a repository turns it back on for itself. You can also add and remove servers and sign in to the ones that need it.
 
-Only agents that expose their MCP servers to Kepler are listed. The composer's agent menu opens the same manager for one repository. See [MCP Servers](/kepler/mcp-servers).
+Only agents that expose their MCP servers to Kepler are listed. The composer's **Agent settings** pill opens the same manager for one repository. See [MCP Servers](/kepler/mcp-servers).
 
 ### Features
 

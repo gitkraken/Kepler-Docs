@@ -120,16 +120,14 @@ Every one of those prompts is yours to change, and you can add your own. That's 
 
 ## Start something that is not tracked yet
 
-Click **New task**, or press **Shift+Alt+N** from anywhere. Write a prompt, attach a repository if the task needs one, and go. You can attach nothing at all and turn it into real work later. See [Create a Task](/kepler/create-task).
+Click **New task** or press **Cmd/Ctrl+N**. From outside Kepler, **Shift+Alt+N** opens the quick launcher. Write a prompt, attach a repository if the task needs one, and go. You can attach nothing at all and turn it into real work later. See [Create a Task](/kepler/create-task).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-task-button-sep-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-task-button-sep-2026.png" class="help-center-img img-bordered" alt="The New task split button in the Kepler top bar, beside the window switcher, Feedback, Settings, and account">
+  <a href="/wp-content/uploads/new-task-button-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-task-button-oct-2026.png" class="help-center-img img-bordered" alt="The New task split button at the left end of the Kepler top bar, after the window switcher and the Back and Forward buttons.">
   </a>
   <figcaption style="text-align:center; color:#888">The New task button, available from anywhere in Kepler.</figcaption>
 </figure>
-
-<!-- TODO(screenshot): Replace — the top bar was rebuilt in 0.11: New task and the window switcher sit at the leading edge with Back and Forward, and a ready update shows as a chip. -->
 
 ***
 

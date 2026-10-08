@@ -24,24 +24,22 @@ Opening a Task gives you its own screen — the **task page** — with everythin
 Get here by double-clicking a row in [the Kepler interface](/kepler/kepler-interface), or by clicking **Open task page** in the side panel. For what a Task is and what can be attached to one, see [Tasks and Resources](/kepler/tasks-and-resources).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/full-task-view-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/full-task-view-aug-2026.png" class="help-center-img img-bordered" alt="The task view with the rail on the left, listing Sessions, Changes, Folders, Pull requests, Links, and Notes, and a session open on the right with tool-call approval prompts">
+  <a href="/wp-content/uploads/full-task-view-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/full-task-view-oct-2026.png" class="help-center-img img-bordered" alt="The task page. Its header holds the task name, the ⋮ menu, the In Development progress control, and Terminal at the right edge. The rail lists Sessions, Changes, Pull requests, and Notes led by Prompt, and a session on the right is waiting on a command approval.">
   </a>
   <figcaption style="text-align:center; color:#888">The task view: the rail on the left, a session open on the right.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — With the rebuilt header (Progress control, Terminal control) and the Prompt row leading Notes in the rail. -->
 
 ***
 
 ## The header
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/task-header-3-elements-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-header-3-elements-aug-2026.png" class="help-center-img img-bordered" alt="The task header, showing the back button, the task switcher, and the task actions menu">
+  <a href="/wp-content/uploads/task-header-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-header-oct-2026.png" class="help-center-img img-bordered" alt="The left side of the task header: the context panel toggle, the back chevron, the task name chip, the ⋮ Task actions menu, and the In Development progress control.">
   </a>
-  <figcaption style="text-align:center; color:#888">The task header.</figcaption>
+  <figcaption style="text-align:center; color:#888">The left side of the task header. Terminal sits at the far right.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — The header as rebuilt in 0.11: context panel toggle, back chevron, task name chip, ⋮, Progress control, and the Terminal control at the right edge. -->
 
 From left to right, the header carries:
 
@@ -49,7 +47,7 @@ From left to right, the header carries:
 - **Back to dashboard** — a back chevron — returns you to the list exactly as you left it: same segment, grouping, filters, and selection.
 - **The task switcher**, the Task's name as a chip, jumps to another Task without going back first. It searches as you type, and each row carries the same session status dots a row does. Right-click the name for the same task actions the **⋮** menu holds.
 - **⋮ Task actions**. See below.
-- **The Progress control**, showing where the work stands: **Exploration**, **In Development**, **In Review**, **Done**, or **On hold**. Click it to set the stage yourself or hand it back to **Automatic**. An archived Task reads **Archived** here instead. See [Arranging your work](/kepler/arranging-your-work).
+- **The Progress control**, showing where the work stands: **Exploration**, **In Development**, **In Review**, **On hold**, or **Done**. Click it to set the stage yourself or hand it back to **Automatic**. An archived Task reads **Archived** here instead. See [Arranging your work](/kepler/arranging-your-work).
 - **Terminal**, at the right edge, which shows and hides the [terminal drawer](#the-terminal-drawer) and counts the terminals running in it.
 
 When a Task looks finished, a **Ready to archive?** prompt joins the header with **Archive** beside it, until you archive the Task or dismiss it.
@@ -57,6 +55,13 @@ When a Task looks finished, a **Ready to archive?** prompt joins the header with
 **⋮ Task actions** holds the Task's **Progress** submenu (with **Reopen** leading on a finished Task), **Mark as unread**, **Rename task**, **Copy task prompt**, **Add resource…**, **Shut down all agents** while any are running, then **Archive task** and **Delete task**. On an already-archived Task, **Restore task** replaces **Archive task**.
 
 **Rename task** — or **F2** anywhere on the page outside a text field — turns the name into an editable field in place. The field carries **Auto-name** — *Suggest a name from the task's prompt and resources* — which fills the field with a suggestion for you to accept or edit. It never renames on its own: **Enter** or the check mark saves, **Escape** or the **×** cancels.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/rename-inline-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/rename-inline-oct-2026.png" class="help-center-img img-bordered" alt="The task name turned into an editable field in the header, with its text selected, followed by the Auto-name button, × to cancel, and a check mark to save.">
+  </a>
+  <figcaption style="text-align:center; color:#888">Renaming a task in place.</figcaption>
+</figure>
 
 ***
 
@@ -67,12 +72,11 @@ The left rail lists everything attached to the Task, grouped by kind:
 **Sessions · Changes · Terminals · Folders · Files · Pull requests · Issues · Links · Notes**
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/task-rail-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-rail-aug-2026.png" class="help-center-img img-bordered" alt="The task view's left rail, showing Sessions, Changes, Folders, Pull requests, Links, and Notes groups, with Add resource at the bottom">
+  <a href="/wp-content/uploads/task-rail-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-rail-oct-2026.png" class="help-center-img img-bordered" alt="The task rail, showing Sessions with three sessions and a 2 archived fold, Changes, Terminals, Pull requests, and Notes led by the Prompt row, with Add resource at the bottom.">
   </a>
   <figcaption style="text-align:center; color:#888">The rail, grouped by resource kind.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — So the rail shows Terminals after Changes and the Prompt row at the top of Notes. -->
 
 The worktree group is called **Changes**. Its rows carry each checkout's real state and open its diff review, so the header names what you go there for rather than the git object behind it.
 
@@ -86,7 +90,7 @@ The worktree group is called **Changes**. Its rows carry each checkout's real st
 
 - **Add resource** sits at the bottom of the rail and opens the **Add resources** dialog.
 - The **+** on a group header adds straight into that group: **Add issues**, **Add notes**, and so on. On **Changes** it reads **Add worktree**, because that's what actually lands there. On **Sessions** the **+** is **New session** instead.
-- Every session that isn't live (archived ones, and ones that disconnected or terminated) collects under a **{count} archived** fold beneath the live ones. It starts collapsed. Clicking an archived session brings it back and opens it in one gesture; **Restore** in its menu does the same.
+- Every session that isn't live (archived ones, and ones that ended) collects under a **{count} archived** fold beneath the live ones. It starts collapsed. Clicking an archived session brings it back and opens it in one gesture; **Restore** in its menu does the same.
 
 ### What a row shows
 
@@ -127,12 +131,11 @@ Every rail row draws a selected fill when it's the one on screen, and the column
 Right-click any row. Every row opens with **Open**, followed by **Open to the side** with tabs off or **Open beside** with tabs on (see [Columns or tabs](#columns-or-tabs)), when there's somewhere for it to go. A worktree row adds **Open changes**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/rail-row-menu-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/rail-row-menu-aug-2026.png" class="help-center-img img-bordered" alt="A worktree row's right-click menu, listing Open, session and terminal actions, Open in, copy actions, and Detach">
+  <a href="/wp-content/uploads/worktree-row-menu-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/worktree-row-menu-oct-2026.png" class="help-center-img img-bordered" alt="A worktree row's right-click menu in the task rail, with Run command here open on No commands yet and Create command. The menu also lists the Open actions, New session here, New terminal here, Rename branch, Change merge target, the copy actions, and Detach worktree last.">
   </a>
   <figcaption style="text-align:center; color:#888">A worktree row's context menu.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — The worktree row menu showing Change merge target… under Rename branch, and Detach worktree… as the last entry. -->
 
 | On | Also holds |
 |---|---|
@@ -168,25 +171,24 @@ The content area takes one of two shapes, set by **Show tabs on the task page** 
 | **On** | Free-form **tabs** you can pin, drag between groups, and arrange side by side |
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/show-tabs-on-task-page-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/show-tabs-on-task-page-aug-2026.png" class="help-center-img img-bordered" alt="The Show tabs on the task page setting, checked, in Settings → General">
+  <a href="/wp-content/uploads/show-tabs-on-task-page-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/show-tabs-on-task-page-oct-2026.png" class="help-center-img img-bordered" alt="The Show tabs on the task page setting in Settings → General, unticked, with help text explaining that it's off by default and that turning it on keeps sessions, worktrees, and resources open as tabs.">
   </a>
   <figcaption style="text-align:center; color:#888">The Show tabs on the task page setting, in Settings → General.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — Settings → General showing the updated Show tabs on the task page help text and the Preview tabs setting beside it. -->
 
 Either way, terminals live in the [drawer](#the-terminal-drawer) beneath the content area, never in a column or a tab, so opening a shell never evicts the changes or the conversation you were reading. And either way, closing something is a view change: it detaches nothing, and it doesn't stop a session — the rail still has it all.
 
 ### The columns
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/task-columns-sep-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-columns-sep-2026.png" class="help-center-img img-bordered" alt="The three content columns side by side: a session conversation, a worktree's changes, and a resource's details">
+  <a href="/wp-content/uploads/task-columns-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-columns-oct-2026.png" class="help-center-img img-bordered" alt="The task page with tabs off: the rail on the left, then three columns side by side, a session conversation in Sessions, a worktree's changed files in Changes, and a pull request's details in Resources.">
   </a>
   <figcaption style="text-align:center; color:#888">The three content columns: Sessions, Changes, and Resources.</figcaption>
 </figure>
 
-<!-- TODO(screenshot): Replace — show the three columns with the rebuilt header and the current rail order (Sessions, Changes, Terminals, …). -->
+<!-- TODO(screenshot): Replace — Layout is current and names are blurred. Optional re-take on a neutral task: the session column shows the PR #39 review conversation. -->
 
 With tabs off, the content area is fixed slots, not free-form panes. A rail row's kind decides which slot it opens into, so a session never lands next to a note and you never have to remember where you put something.
 
@@ -221,7 +223,13 @@ A session's control on its strip is named for what it does: **Archive session** 
 
 With tabs on, anything you open from the rail — sessions, worktrees, files, and every other resource — becomes a tab, and tabs live in **groups** you arrange freely, the way editor tabs work in VS Code.
 
-<!-- TODO(screenshot): New — The content area with tabs on, showing two tab groups side by side, a pinned tab, and an italic preview tab. -->
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/tabs-preview-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/tabs-preview-oct-2026.png" class="help-center-img img-bordered" alt="The task page with tabs on. A pull request opened with one click sits in an italic preview tab, and beside it a session tab shows an orange status dot in place of its close control.">
+  </a>
+  <figcaption style="text-align:center; color:#888">An italic preview tab beside a session tab.</figcaption>
+</figure>
+<!-- TODO(screenshot): Replace — Names are blurred. Re-take with two tab groups side by side and a pinned tab as well as the preview tab. -->
 
 - **Drag a tab** to reorder it, onto another group to move it there, or to a group's edge to split off a new group there. Drag the sash between groups to resize them.
 - **A single click opens a preview.** A resource opened with one click shows in an italic preview tab that the next single click replaces, so browsing the rail doesn't pile up tabs. Double-click a row, or start editing in the tab, to keep it open. A session always opens as a tab you keep. Turn **Preview tabs** off in **Settings → General** to have every click keep its tab.
@@ -270,7 +278,13 @@ With tabs off, the column strips' **Tab actions** menus also hold **Move left** 
 
 With a single place to run, the menu lists the agents directly instead of asking twice. With many, it grows a **Search worktrees and folders** field. **Cmd/Ctrl+T** starts a session on your default agent when there's only one place to run, and opens this menu when there are several. If no agents are connected you'll see **No agents available**. Connect one in [Agent Integrations](/kepler/agent-integrations).
 
-<!-- TODO(screenshot): New — A worktree's agent flyout in the New session menu with Start on another branch checked and the branch picker expanded, and Start with task context below it. -->
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/new-session-flyout-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-session-flyout-oct-2026.png" class="help-center-img img-bordered" alt="The New session menu with Start with task context checked at the top, then All worktrees and folders and two worktrees. One worktree's flyout is open, with Start on another branch above the agent rows, each row ending in a button that starts it in the other mode.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The New session menu, with a worktree's agents open.</figcaption>
+</figure>
+<!-- TODO(screenshot): Replace — Account names are blurred. Re-take with Start on another branch ticked and the branch picker open. -->
 
 **Each agent row can start either run mode.** The row itself launches that agent in its default mode; the trailing button on the row starts the other one — **Start in Terminal**, or **Start in Rich chat** on an agent that already defaults to Terminal. An agent that offers only one mode shows no second control. See [Agent Sessions](/kepler/agent-sessions#how-a-session-runs).
 
@@ -288,7 +302,12 @@ To fire a preconfigured prompt instead of typing one, open the chevron beside th
 
 Any file can open on the task page, whether or not it's attached to the Task. It opens as a tab with tabs on, or in the **Resources** column with tabs off, in Kepler's file viewer.
 
-<!-- TODO(screenshot): New — A Markdown file open in a task page tab, with the Preview/Source toggle and the "Updated just now by …" line with Show changes. -->
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/markdown-file-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/markdown-file-oct-2026.png" class="help-center-img img-bordered" alt="A Markdown file open in a task page tab, rendered with a table, headings, and lists. The viewer's header shows the file's path and size, the Preview and Source toggle, Wrap lines, and an Open in GitKraken button.">
+  </a>
+  <figcaption style="text-align:center; color:#888">A Markdown file in the file viewer, in Preview.</figcaption>
+</figure>
 
 | How to open one | What you get |
 |---|---|
@@ -309,6 +328,13 @@ A path that's already one of the Task's files opens that file's own tab rather t
 
 **An open file follows the disk.** When it changes, the viewer updates in place without moving you, and says **Updated just now**, or **Updated just now by** the session that changed it when Kepler saw the edit. **Show changes** shows what changed since the file was first shown; **Back to file** returns. A deleted file keeps showing the last version Kepler read, and says so.
 
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/file-updated-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/file-updated-oct-2026.png" class="help-center-img img-bordered" alt="The file viewer after the open file changed on disk, with an Updated just now banner across the top and Show changes at its right end.">
+  </a>
+  <figcaption style="text-align:center; color:#888">An open file that just changed on disk.</figcaption>
+</figure>
+
 A very large file shows its start first — *Showing the first {shown} of {total}* — with **Load the rest**.
 
 ***
@@ -318,13 +344,12 @@ A very large file shows its start first — *Showing the first {shown} of {total
 Terminals live in a drawer beneath the content area, spanning all of it, sized by a sash of its own. The **Terminal** control at the right edge of the header shows and hides it, and counts what's running.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-terminal-here-sep-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-terminal-here-sep-2026.png" class="help-center-img img-bordered" alt="A worktree row's context menu with New terminal here highlighted">
+  <a href="/wp-content/uploads/new-terminal-here-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-terminal-here-oct-2026.png" class="help-center-img img-bordered" alt="A worktree row's right-click menu with New terminal here highlighted, below New session here and above Rename branch, Change merge target, the copy actions, and Detach worktree.">
   </a>
   <figcaption style="text-align:center; color:#888">New terminal here, on a worktree row's context menu.</figcaption>
 </figure>
 
-<!-- TODO(screenshot): Replace — the worktree row menu changed in 0.12 (Change merge target…, Open on {provider} in Open in, Detach worktree… last); show it with New terminal here highlighted. -->
 
 | How to open one | What you get |
 |---|---|

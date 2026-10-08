@@ -250,6 +250,8 @@ The chevron beside it lists **Push** (or **Publish**), **Pull** and **Fetch**, p
 
 The update view rebases or merges the branch onto its merge target — on a copy first. Your branch changes only when you apply the result.
 
+<!-- TODO(screenshot): New — The update view with the branch title, **Base branch** picker, and **Rebase**; ideally a second shot after the run showing **Apply**, **Apply & push**, and **Discard**. -->
+
 1. The title names the branch, with the **Base branch** under it. Kepler picks the detected base; choose another from the picker if you need to.
 2. Press **Rebase**, or choose **Merge** from its menu. **Stop** abandons a run in progress, and the branch is never touched.
 3. When the copy is ready, press **Apply**, or **Apply & push**, to move your branch to it. **Discard** throws it away.
@@ -262,6 +264,8 @@ When updating would conflict, the button reads **Review conflicts** and the view
 ## Merge targets
 
 A branch's **merge target** is the branch it will merge into: what its commits, counts and **Update** are measured against. Kepler detects one, and you can change it.
+
+<!-- TODO(screenshot): New — The **from {branch}** picker open, with **Save as merge target** beside the pick and **Reset to automatic ({ref})** in the list. -->
 
 | To | Do this |
 |---|---|
@@ -334,6 +338,7 @@ On a Free plan both rows still appear, with a padlock where the checkbox goes an
   </a>
   <figcaption style="text-align:center; color:#888">AI Sync and Compose, in Settings → Agents → Features.</figcaption>
 </figure>
+<!-- TODO(screenshot): Replace — Settings → Agents → Features with all five rows: AI Sync, Compose, Automatically name new tasks, Keep agents running across restarts and updates, and Use this app's interface in remote windows. -->
 
 ***
 

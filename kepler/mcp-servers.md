@@ -21,7 +21,7 @@ taxonomy:
 
 Your coding agents load Model Context Protocol (MCP) servers from their own config files. Kepler reads those files and lists exactly the servers each agent will load, so you can see them, turn a server or one of its tools off where you don't want it, add or remove a server, and sign in to a server that needs it — without editing the agent's config by hand.
 
-You manage them in two places: per repository, from the composer's agent menu, and as global defaults in **Settings → Agents → MCP servers**.
+You manage them in two places: per repository, from the composer's **Agent settings** pill, and as global defaults in **Settings → Agents → MCP servers**.
 
 **Requirements and limits**
 
@@ -35,7 +35,7 @@ You manage them in two places: per repository, from the composer's agent menu, a
 
 | Where | What a change applies to |
 |---|---|
-| The composer's agent menu → **MCP servers** → **Manage** | This repository (the UI calls it a *project*) for that agent |
+| The composer's **Agent settings** pill → **MCP servers** → **Manage** | This repository (the UI calls it a *project*) for that agent |
 | **Settings → Agents → MCP servers** | Every repository, as the default each one inherits |
 
 Both open the same manager. It groups servers by where they're defined:
@@ -56,7 +56,7 @@ Each row is a server: click it to turn it on or off, and use the arrow beside it
 
 ## Per repository
 
-In a session or in the New task composer, open the agent menu. Its **MCP servers** row reads *{enabled} of {total} enabled*; **Manage** opens the **MCP servers** dialog, titled with the agent and the repository it applies to.
+In a session or in the New task composer, open the **Agent settings** pill. Its **MCP servers** row reads *{enabled} of {total} enabled*; **Manage** opens the **MCP servers** dialog, titled with the agent and the repository it applies to.
 
 A change here applies to that repository only. Worktrees of one checkout share the setting, so a server you turn off in a repository stays off in every task's worktree of it.
 
@@ -116,7 +116,7 @@ In a local window, **Open sign-in page** opens your browser and Kepler finishes 
 | Where the change lands | When it takes effect |
 |---|---|
 | A Claude Code **Rich chat** session | Straight away. Kepler reconnects the session with the new servers and keeps the conversation and your model and mode picks |
-| A terminal session, or any other agent's session | On restart. The agent menu and the dialog show *{count} MCP changes apply when the agent restarts.* with **Restart agent** |
+| A terminal session, or any other agent's session | On restart. The **Agent settings** pill and the dialog show *{count} MCP changes apply when the agent restarts.* with **Restart agent** |
 | The New task composer | The session you start comes up with that state |
 
 Turning a server or tool off doesn't edit the agent's config for Claude Code, Codex, OpenCode, or GitHub Copilot: Kepler keeps the choice itself and passes it to the agent when it launches, so the same agent run from your own terminal is unaffected. The one exception is turning on a Claude Code server that Claude's own config lists as disabled, which Kepler can only do by editing that list. For Auggie, Cursor, and Grok Build, Kepler writes the change into the agent's config file, which their CLIs also read. Adding and removing a server always edits the config file.
@@ -129,6 +129,6 @@ Each agent account keeps its own MCP setup. When Kepler launches a Claude Code a
 
 - [Settings](/kepler/settings) — **Settings → Agents**, including the **MCP servers** section.
 - [Agent Integrations](/kepler/agent-integrations) — the agents Kepler runs and how to set them up.
-- [Agent Sessions](/kepler/agent-sessions) — the composer's agent menu, and restarting a session.
+- [Agent Sessions](/kepler/agent-sessions) — the composer's **Agent settings** pill, and restarting a session.
 
 ---
