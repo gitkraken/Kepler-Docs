@@ -41,7 +41,7 @@ It is off until you turn it on. Enable it in **Settings → Voice Input** and do
 
 ## Two ways to talk
 
-Voice input offers two modes:
+Voice input has two modes:
 
 | Mode | How it works | Setting |
 |---|---|---|
@@ -112,7 +112,7 @@ If access is denied or restricted, Kepler explains what to do:
 
 Voice input works in a window attached to a remote environment. The agent runs on the remote machine; the microphone and the transcription stay local, on the computer in front of you.
 
-Over a plain HTTP connection the microphone is unavailable — *Voice input requires a secure (https) connection*.
+Over a plain HTTP connection the microphone is unavailable, and its tooltip reads *Voice input requires a secure (https) connection*.
 
 The downloaded Whisper model is cached per browser storage context, not synced through Kepler's settings: your voice input preferences sync, but the model itself does not.
 

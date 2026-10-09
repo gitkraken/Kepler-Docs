@@ -11,21 +11,22 @@ git_hosts: [github, github-enterprise, gitlab, gitlab-self-hosted, bitbucket, az
 integrations: [github, github-enterprise, gitlab, gitlab-self-hosted, bitbucket, azure-devops, jira, linear, trello]
 hosted_variant: both
 status: GA
-last_verified: 2026-09
+last_verified: 2026-10
 llms_include: true
-tags: [tasks, create-task, composer, worktrees, branches, folders, issues, pull-requests, actions]
+tags: [tasks, create-task, composer, worktrees, branches, folders, issues, pull-requests, actions, gitlens, gitkraken-desktop]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: September 2026</kbd>
+<kbd>Last updated: October 2026</kbd>
 
-Kepler gives you two ways to start work, and the first is usually better: pick something that's already waiting for you.
+Kepler gives you several ways to start work, and the first is usually better: pick something that's already waiting for you.
 
 | Start from | How |
 |---|---|
 | **Work assigned to you** | Fire an Action on an issue or pull request in the **Todo** segment of [the Kepler interface](/kepler/kepler-interface). One click, context attached |
 | **Something you're describing yourself** | **New task** opens the Task Composer, where you write the prompt and attach what it needs |
 | **A conversation you already started** | **New task → From an external session** wraps a task around an agent session you began in your own terminal |
+| **Another GitKraken app** | A link from GitLens or GitKraken Desktop opens Kepler on the work you were looking at |
 
 ***
 
@@ -65,11 +66,11 @@ Kepler names Tasks automatically from what you started them with. Rename one whe
 
 ## From the Task Composer
 
-Click **New task**, or press **Shift+Alt+N** to open the quick launcher from anywhere, including when Kepler isn't the focused window.
+Click **New task** or press **Cmd/Ctrl+N**. To start one without switching to Kepler first, press **Shift+Alt+N** to open the quick launcher from anywhere, including when Kepler isn't the focused window.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-task-button-sep-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-task-button-sep-2026.png" class="help-center-img img-bordered" alt="The New task split button in the Kepler top bar, beside the window switcher, Feedback, Settings, and account">
+  <a href="/wp-content/uploads/new-task-button-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-task-button-oct-2026.png" class="help-center-img img-bordered" alt="The New task split button at the left end of the Kepler top bar, after the window switcher and the Back and Forward buttons.">
   </a>
   <figcaption style="text-align:center; color:#888">The New task button, available from anywhere in Kepler.</figcaption>
 </figure>
@@ -86,11 +87,13 @@ The Composer is one prompt box above a row of four buttons:
 | Control | What it attaches |
 |---|---|
 | **Add repo or folder** | A repository to work in, or a plain folder |
-| **Add issue** → **Issues** | Issues from your connected trackers |
+| **Add issue** → **Issues** | Issues from your connected trackers. With only Linear in the list, a team picker shows every open issue in the team you pick, not just yours |
 | **Add PR** → **PRs** | Pull requests from your connected hosts |
-| **Add context** | Everything without a button of its own: files and links |
+| **Add context** | Everything without a button of its own: folders, files, and links |
 
-**Repositories and folders come from one ranked list**, not two pickers — *Find a repository or folder…* — and the list learns. Kepler records how often you actually use each place and ranks the picker by it, so the repositories you work in daily are at the top on the day you start using them. The same list is behind the chip's own **Change repository or folder**.
+In a window connected to another machine, picking a file through **Add context** also offers **Upload from this computer**. Uploads are kept with your draft and saved into the Task's own folder when it starts; if one expired before you pressed **Start**, Kepler names it rather than dropping it silently.
+
+**Repositories and folders come from one ranked list**, not two pickers (*Find a repository or folder…*), and the list learns. Kepler records how often you actually use each place and ranks the picker by it, so the repositories you work in daily are at the top on the day you start using them. The same list is behind the chip's own **Change repository or folder**.
 
 Add as much or as little context as you wish. 
 
@@ -109,6 +112,8 @@ The primary button shows a sending state from the moment you click it, so a slow
 
 The chevron beside the primary button opens the rest: **Prepare**, which creates the session without starting work yet, and every Action that applies to what you've attached. Firing an Action sends that Action's prompt, with anything you typed appended as a refinement.
 
+A Task that has its prompt but no session yet, such as one an agent created for you, says so in its Dashboard preview: *Start with the task prompt, or describe something else…*. Press **Start** on the empty box to send the Task's prompt as written.
+
 If the Task can't start, you'll see **Failed to start the task**.
 
 ### Configuring a repository
@@ -124,7 +129,7 @@ Each attached repository gets a chip with three segments:
 
 - **Base branch**: the branch segment of the chip. By default, the Task gets a new branch forked from **the repository's remote default branch**, which is what the chip reads until you pick something: *New branch off origin's default branch, or the current branch if unavailable*. Open it to fork off a different branch instead, to work directly on an existing one, or to take the repository's **current** branch in place.
 - **Branch name**: the new branch's own name, suggested from your prompt as you type and editable in place. See below.
-- **Isolated worktree**: the worktree segment, a direct on/off toggle rather than a menu. On by default, giving the Task its own working copy — *Runs in its own working copy of the repository*. Turning it off means the Task shares your repository folder — *Uses the repository's own folder, so a branch switch here moves your checkout*. See [Tasks and Resources](/kepler/tasks-and-resources).
+- **Isolated worktree**: the worktree segment, a direct on/off toggle rather than a menu. On by default, giving the Task its own working copy: *Runs in its own working copy of the repository*. Turning it off means the Task shares your repository folder: *Uses the repository's own folder, so a branch switch here moves your checkout*. See [Tasks and Resources](/kepler/tasks-and-resources).
 
 **What a newly attached repository starts on is a setting.** These three segments open on **Settings → General → Default Task Mode**: **Isolated worktree** (the default), **New branch**, or **Current branch**. Changing it changes the starting point only; every segment above still overrides it per repository, per Task. See [Settings](/kepler/settings#default-task-mode).
 
@@ -134,7 +139,7 @@ Picking **New branch** or **Current branch** means the Task runs in the reposito
 
 Kepler names a Task's branch from what the Task is actually about, rather than from the Task's name alone.
 
-- **The name is suggested from your prompt** and appears on the chip as you type: *Suggested from your prompt. Click to edit.* Clicking it opens the field — **Enter keeps, Esc restores the suggestion** — and an edited name reads *Named by you.*
+- **The name is suggested from your prompt** and appears on the chip as you type: *Suggested from your prompt. Click to edit.* Clicking it opens the field (**Enter keeps, Esc restores the suggestion**), and an edited name reads *Named by you.*
 - **An issue identifier leads the name** when the Task came from one, so `KEP-421-fix-the-import-path` rather than a slug with the ticket buried in it.
 - **Automatic names are namespaced under `kepler/`.** That way a `git branch` listing in any other tool says where the branch came from, and a hand-made `feat/x` can never collide with one.
 - **A name you type is yours verbatim.** The prefix applies to automatic names only, which is how a repository with an enforced `feat/` or `fix/` push rule still works.
@@ -146,7 +151,7 @@ Kepler intentionally forks from the remote by default. If no remote default reso
 
 A repository linked to a pull request always opens in its own isolated working copy, and the toggle is locked: *This repository is linked to a pull request and always opens in its own isolated working copy.*
 
-Kepler clones a repository you haven't cloned yet when the Task starts, into your **Default Repositories Folder**: *This repository is cloned when you start the task.* Its branch is locked until then — *its branches become available after cloning* — because Kepler doesn't yet know what branches it has, and the chip reads **default branch** in the meantime.
+Kepler clones a repository you haven't cloned yet when the Task starts, into your **Default Repositories Folder**: *This repository is cloned when you start the task.* Its branch is locked until then (*its branches become available after cloning*) because Kepler doesn't yet know what branches it has, and the chip reads **default branch** in the meantime.
 
 Attaching the same repository twice gives the Task two independent worktrees on it: useful for comparing two approaches, or a mistake if you didn't mean it. Two chips that would resolve to the *same* worktree get a **Duplicate worktree** marker instead, and Kepler creates only one of them. If a chip works in place on a branch another chip has already claimed for an isolated worktree, Kepler marks it **Superseded by a worktree** and skips it; git can't check one branch out in two places.
 
@@ -154,7 +159,7 @@ Attaching the same repository twice gives the Task two independent worktrees on 
 
 ## From a session you already started
 
-You may have begun the work in a terminal before deciding it deserved tracking. The chevron on **New task** holds **From an external session** — *Create a task from a session you started outside Kepler* — which opens a picker over every agent conversation Kepler can see.
+You may have begun the work in a terminal before deciding it deserved tracking. The chevron on **New task** holds **From an external session** (*Create a task from a session you started outside Kepler*), which opens a picker over every agent conversation Kepler can see.
 
 | Part | What it does |
 |---|---|
@@ -168,19 +173,21 @@ The picker reports what it actually swept, rather than implying it found everyth
 
 Kepler checks whether the conversation's working directory already belongs to a task, so you don't end up with two tasks over one folder:
 
-> **A task already covers this folder** — *"{task}" already owns {path}, the folder this conversation runs in.*
+> **A task already covers this folder**: *"{task}" already owns {path}, the folder this conversation runs in.*
 
 **Add to that task** binds the conversation there; **Create a new task** overrides. With several candidates, the dialog asks which one and marks the **closest**. Recording the conversation on a task can take a minute, and Kepler says so rather than appearing to hang.
 
 Because a task can be created in any plain folder, a conversation you had in a scratch directory can be adopted just like one in a checkout.
 
-For what happens to the conversation once it's on a task — forking, continuing, and what Kepler will and won't answer on its behalf — see [Agent Sessions](/kepler/agent-sessions#sessions-started-outside-kepler).
+For what happens to the conversation once it's on a task (forking, continuing, and what Kepler will and won't answer on its behalf), see [Agent Sessions](/kepler/agent-sessions#sessions-started-outside-kepler).
 
 ***
 
 ## From a folder, or from nothing at all
 
-**A Task doesn't need a repository.** Attach a plain folder from the same ranked picker and the agent works on it in place — no branch, no worktree, no Git at all. A folder of notes, a scratch directory, a checkout of something that isn't a repository: all of it is a normal Task.
+**A Task doesn't need a repository.** Attach a plain folder from the same ranked picker and the agent works on it in place, with no branch, no worktree, and no Git at all. A folder of notes, a scratch directory, a checkout of something that isn't a repository: all of it is a normal Task.
+
+When you browse for a folder in a window connected to another machine, Kepler opens its own folder picker (turn on **Always use the custom folder picker** in **Settings → General** to use it everywhere). Type a path into its path bar and Kepler checks it before you select it: a folder that doesn't exist, can't be read, or is actually a file is refused with the reason, and a near miss offers **Did you mean** the closest folder.
 
 Or attach nothing. No repository, no folder, no issue. You get somewhere to think (ask a question, explore an idea) and you can attach the real work later, once it's worth tracking. See [The Task View](/kepler/task-view).
 
@@ -193,13 +200,19 @@ Or attach nothing. No repository, no folder, no issue. You get somewhere to thin
 
 ***
 
+## From another GitKraken app
+
+You can jump into Kepler from other GitKraken products, such as GitLens and GitKraken Desktop. A link from one of them can open the Task Composer already filled in with the issue, pull request, or repository you were looking at, or open a task or session you already have. If the repository isn't on this machine, Kepler stages it to be cloned when the task starts. A link Kepler can't fully resolve still opens, with one clear warning about what it couldn't use.
+
+***
+
 ## After the Task starts
 
 The Task appears in **Tasks in progress**. Click it for the side panel, or double-click to open [the task view](/kepler/task-view).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/full-task-view-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/full-task-view-aug-2026.png" class="help-center-img img-bordered" alt="The task view with the rail on the left, listing Sessions, Changes, Folders, Pull requests, Links, and Notes, and a session open on the right with tool-call approval prompts">
+  <a href="/wp-content/uploads/full-task-view-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/full-task-view-oct-2026.png" class="help-center-img img-bordered" alt="The task page. Its header holds the task name, the ⋮ menu, the In Development progress control, and Terminal at the right edge. The rail lists Sessions, Changes, Pull requests, and Notes led by Prompt, and a session on the right is waiting on a command approval.">
   </a>
   <figcaption style="text-align:center; color:#888">The task view: the rail on the left, a session open on the right.</figcaption>
 </figure>

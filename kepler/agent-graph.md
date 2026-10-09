@@ -69,7 +69,7 @@ The graph is layered. Depth grows away from the root.
 
 | Layer | What it is |
 |---|---|
-| **Task** | The root. One per task — see [Tasks and Resources](/kepler/tasks-and-resources) |
+| **Task** | The root. One per task. See [Tasks and Resources](/kepler/tasks-and-resources) |
 | **Session** | Each agent session in that task, with its agent and model |
 | **Turn** | One exchange: **Turn 1**, **Turn 2**, and so on |
 | **Tool call** | What the agent did in that turn |
@@ -239,7 +239,7 @@ Worth knowing, so you don't read precision into it that isn't there:
 - **External and terminal sessions have no activity branch.** Kepler can see that they exist but not what they're doing, so they draw as leaves with a badge rather than looking idle.
 - **Transcripts don't survive a Kepler restart.** A session's history is held in memory for the life of the backend, so a restart empties the branches beneath a session even though the session itself remains.
 
-With nothing running at all, the graph reads **Nothing running yet** — *Start an agent session and its activity appears here in real time.* Once sessions exist but your filters exclude every one of them, the hint changes to *No sessions match the current filters.*
+With nothing running at all, the graph reads **Nothing running yet**, with the hint *Start an agent session and its activity appears here in real time.* Once sessions exist but your filters exclude every one of them, the hint changes to *No sessions match the current filters.*
 
 ***
 

@@ -1,57 +1,60 @@
 ---
 title: Settings
-description: A reference for every setting in Kepler across the ten Settings sub-pages, plus folder locations, branch prefixes, worktree path placeholders, per-repository startup commands, and the keyboard shortcut list.
+description: A reference for every setting in Kepler across the eleven Settings sub-pages, plus folder locations, branch prefixes, the Variables menu, per-repository commands, MCP server defaults, and the keyboard shortcut list.
 product: Kepler
 feature: Settings
 content_type: reference
 audience: developer
 plan_required: all
 os_support: [Windows, macOS, Linux]
-git_hosts: [github, github-enterprise, gitlab, gitlab-self-hosted, bitbucket, azure-devops]
-integrations: [claude-code, codex, copilot, cursor, opencode, auggie, github, gitlab, bitbucket, azure-devops, jira, linear, trello]
+git_hosts: [github, github-enterprise, gitlab, gitlab-self-hosted, bitbucket, bitbucket-data-center, azure-devops, azure-devops-server]
+integrations: [claude-code, codex, copilot, cursor, antigravity, opencode, pi, auggie, grok, github, gitlab, bitbucket, azure-devops, jira, jira-data-center, linear, trello]
 hosted_variant: both
 status: GA
-last_verified: 2026-09
+last_verified: 2026-10
 llms_include: true
-tags: [settings, configuration, keyboard-shortcuts, appearance, agents, actions, repositories, worktrees, terminal, voice-input, remote, gitkraken-dev, integrations, preferences]
+tags: [settings, configuration, keyboard-shortcuts, appearance, agents, mcp-servers, actions, repositories, worktrees, terminal, voice-input, remote, remote-environments, remote-access, logs, gitkraken-dev, integrations, preferences]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: September 2026</kbd>
+<kbd>Last updated: October 2026</kbd>
 
-Settings is ten sub-pages, each with its own sections. This page documents every one of them: what each setting controls, what it defaults to, and what changes when you change it.
+Settings is eleven sub-pages, each with its own sections. This page documents every one of them: what each setting controls, what it defaults to, and what changes when you change it.
 
-Open Settings from the gear icon in the top bar, or with **⌘ ,** (**Ctrl ,** on Windows and Linux).
+Open Settings from the gear icon in the top bar, or with **⌘ ,** (**Ctrl ,** on Windows and Linux). The same shortcut closes Settings again, the way the gear button does.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/settings-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/settings-aug-2026.png" class="help-center-img img-bordered" alt="Settings open on the General sub-page, with the left rail showing Setup plus all eight sub-pages">
+  <a href="/wp-content/uploads/settings-general-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/settings-general-oct-2026.png" class="help-center-img img-bordered" alt="Settings open on General at version 0.12.0. The left rail lists Setup, then Account, General, Appearance, Agents, Actions, Remote Access, Remote Environments, Integrations, Voice Input, Repos &amp; Folders, and Help.">
   </a>
   <figcaption style="text-align:center; color:#888">Settings, open on General.</figcaption>
 </figure>
 
 ***
 
-## The ten sub-pages
+## The eleven sub-pages
 
 Above the sub-pages sits **Setup**, a progress ring that reopens the first-run checklist. The left rail lists the sub-pages in this order:
 
 | Sub-page | What it covers |
 |---|---|
 | **Account** | Who you're signed in as, your organization, what your plan unlocks, and GK AI Credits |
-| **General** | App updates, folder locations, the branch prefix, app behavior, diagnostics, language, keyboard shortcuts |
-| **Appearance** | Theme, terminal font, diff layout |
-| **Agents** | Your default agent, per-agent configuration, cross-agent options, AI Sync and Compose |
+| **General** | App updates, folder locations, the branch prefix, windows and notifications, language, keyboard shortcuts |
+| **Appearance** | Theme, terminal font, diff layout, chat transcript scrolling |
+| **Agents** | Your default agent, per-agent configuration, cross-agent options, MCP server defaults, and Features |
 | **Actions** | Preferred Actions per item kind, and the Action list |
-| **Remote** | Remote environments over SSH, and remote access to this window from another device |
+| **Remote Access** | Opening this Kepler from another device |
+| **Remote Environments** | The saved hosts your agents can run on, over SSH or WSL |
 | **Integrations** | Issue tracker and Git host connections |
 | **Voice Input** | On-device speech-to-text and its model |
-| **Repos & Folders** | Tracked repositories and folders, per-repository commands and branch prefixes, and Projects |
-| **Help** | The onboarding checklist and where to go next |
+| **Repos & Folders** | Tracked repositories and folders, their commands and branch prefixes, worktree cleanup, and Projects |
+| **Help** | The onboarding guides, the docs, and Kepler's logs |
 
 **Account** is first because it's the only page about the *person* rather than the app, and it's where the account menu hands off to.
 
 Moving between sub-pages replaces a single history entry. As a result, **Back** returns you to whatever you were doing before you opened Settings, rather than walking back through every sub-page you visited.
+
+In a window connected to a remote environment, Settings shows that host's settings, and its header names the host. Sections that save to *this* computer instead, such as Appearance or Keyboard Shortcuts, carry a **Saved on this machine** badge: *Applies to every Kepler window on this machine, whichever host it's connected to.*
 
 ### Deep links and section anchors
 
@@ -62,17 +65,18 @@ Legacy links of the form `/settings#<section-id>` still work: Kepler resolves th
 | Sub-page path | Section anchors, in page order |
 |---|---|
 | `/settings/account` | `account`, `plan-features`, `ai-credits` |
-| `/settings/general` | `updates`, `general`, `language`, `keyboard-shortcuts` |
-| `/settings/appearance` | `appearance`, `terminal`, `diff-view` |
-| `/settings/agents` | `default-agent`, `agents`, `agent-options`, `features` |
+| `/settings/general` | `updates`, `general`, `windows-and-notifications`, `language`, `keyboard-shortcuts` |
+| `/settings/appearance` | `appearance`, `terminal`, `diff-view`, `transcript` |
+| `/settings/agents` | `default-agent`, `agents`, `agent-options`, `mcp-servers`, `features` |
 | `/settings/actions` | `preferred-actions`, `action-list` |
-| `/settings/remote` | `remote-environments`, `remote-access` |
+| `/settings/remote-access` | `remote-access` |
+| `/settings/remote-environments` | `remote-environments` |
 | `/settings/integrations` | `provider-integrations` |
 | `/settings/voice` | `voice` |
-| `/settings/repositories` | `repositories`, `projects` |
-| `/settings/help` | `onboarding-help` |
+| `/settings/repositories` | `repositories`, `worktrees`, `projects` |
+| `/settings/help` | `onboarding-help`, `logs` |
 
-Each installed agent also gets its own anchor, `agent-<agent-id>`, for example `agent-claude-code`.
+Each agent also gets its own anchor, `agent-<agent-id>`, for example `agent-claude-code`.
 
 ***
 
@@ -95,23 +99,26 @@ When a feature is locked on the organization you're acting as but included on an
 
 ## General
 
-Four sections: **Update**, **General**, **Language**, **Keyboard Shortcuts**.
+Five sections: **Update** (shown without a heading), **General**, **Windows and notifications**, **Language**, **Keyboard Shortcuts**.
 
 ### Update
 
-The **Update** section has three rows:
+The first rows on the page are about the app itself:
 
 | Row | What it does |
 |---|---|
 | **Current version** | The installed version. Click the version number to open **What's New** for that release |
-| **Check for updates** | Checks for a newer release and downloads it in the background |
-| **New version** | Appears once a release has downloaded, with **Restart to install** beside it |
+| **Check for updates** | Checks for a newer release and downloads it in the background. Reads **Kepler is up to date** when there's nothing newer, and becomes **Check again** |
+| Download progress | While a release downloads: **Downloading** with a percentage, how much has arrived out of the total and the speed (*{done} of {total} · {rate}/s*), and the time left (*About {count} min left*). A **Verifying** step follows before it can install |
+| **New version** | Appears once a release is ready, with **Restart to update** beside it, and how many running agents a restart would stop |
+
+A ready update also shows as one chip in the top bar, on every screen, whose popover reads **Update ready to install** and says what a restart does to running work. If agents are mid-tool-call when you restart, Kepler shows *Preparing to restart — finishing {count} active tool calls…* and waits up to 2 minutes; **Restart now** skips the wait.
 
 The update controls only appear in the desktop app. In a browser window connected to Kepler, this section shows nothing to update.
 
 ### General
 
-This section covers where Kepler stores things on disk, general app behavior, and diagnostics.
+This section covers where Kepler stores things on disk, how new tasks branch, and keeping the machine awake. Its values belong to the environment you're working on, so in a remote window they're the host's.
 
 #### Folder locations
 
@@ -123,11 +130,32 @@ Three paths tell Kepler where to put things. All three are unset out of the box;
 | **Default Worktrees Folder** | Where Kepler creates new worktrees | `~/kepler/worktrees` |
 | **Default Tasks Folder** | Where Kepler creates task folders | `~/kepler/tasks` |
 
-Type a path directly, or use the folder button beside the field to browse. Edits save automatically as you type, so no separate Save button exists.
+Type a path directly, or use the folder button beside the field to browse. Edits save when you leave the field, so no separate Save button exists.
 
-**Scan for repositories**, beside the repositories folder, registers every repository it finds there — reporting **Added {count} repositories.** or **No new repositories found.** It runs only when you change the setting or press it, never on startup, so a repository you deliberately removed stays removed.
+**Scan for repositories**, beside the repositories folder, registers every repository it finds there and reports **Added {count} repositories.** or **No new repositories found.** It runs only when you change the setting or press it, never on startup, so a repository you deliberately removed stays removed.
 
-**Default Tasks Folder** takes no placeholders. A task folder has no repository behind it, so nothing would ever fill one in, and Kepler refuses the value rather than storing a path that can't resolve.
+#### The Variables menu
+
+A folder field that can contain a dynamic variable has a **Variables** menu beside it. Pick one and Kepler inserts it at the cursor; Kepler fills it in when it creates the folder, so one pattern covers every repository. Each field offers only the variables it can actually resolve:
+
+| Field | Variables offered |
+|---|---|
+| **Default Worktrees Folder** | `<REPOSITORY_PATH>` (*Main repo folder*), `<REPOSITORY_NAME>` (*Repo name*) |
+| **Default Repositories Folder** | `<REPOSITORY_NAME>` |
+| **Default Tasks Folder** | None |
+
+For example, `<REPOSITORY_PATH>/.worktrees/<REPOSITORY_NAME>` nests each worktree inside the repository it belongs to. Kepler collapses any `..` segments you write.
+
+**Default Tasks Folder** takes no variables. A task folder has no repository behind it, so nothing would ever fill one in, and Kepler refuses the value rather than storing a path that can't resolve: *Dynamic variables cannot be used here.*
+
+Per-repository commands have a **Variables** menu of their own, with two more variables. See [Per-repository commands](#per-repository-commands).
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/folder-fields-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/folder-fields-oct-2026.png" class="help-center-img img-bordered" alt="The three folder fields in Settings → General, with the Variables menu open beside Default Worktrees Folder, offering REPOSITORY_PATH (Main repo folder) and REPOSITORY_NAME (Repo name). Default Tasks Folder has no Variables menu.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The three folder fields, with the Variables menu open.</figcaption>
+</figure>
 
 #### Default Task Mode
 
@@ -151,61 +179,34 @@ This sets the default only. The repository chip's own **Base branch** and **Isol
 |---|---|---|
 | **Branch prefix** | *Added to the front of every branch name Kepler creates. Leave empty for no prefix.* | `kepler/` |
 
-The prefix applies to **automatic** names only — a branch name you type is used verbatim, which is how a repository with an enforced `feat/` or `fix/` push rule still works. A prefix you type without a trailing separator gains a `/`, so typing `team` stores `team/`, while a personal `ea-` style prefix is kept as the literal lead-in it is.
+The prefix applies to **automatic** names only. A branch name you type is used verbatim, which is how a repository with an enforced `feat/` or `fix/` push rule still works. A prefix you type without a trailing separator gains a `/`, so typing `team` stores `team/`, while a personal `ea-` style prefix is kept as the literal lead-in it is.
 
 Each repository can override it under **Repos & Folders**. If a repository already has a branch literally named after the prefix, Kepler says which one and points you there: *Can't be used in {repo}: it has a branch named {branch}. Set a different prefix for that repository under Repositories.*
 
-<figure style="text-align:center">
-  <a href="/wp-content/uploads/placeholder-legend-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/placeholder-legend-aug-2026.png" class="help-center-img img-bordered" alt="Settings → General, showing the three folder fields and the Placeholders legend beneath them">
-  </a>
-  <figcaption style="text-align:center; color:#888">The three folder fields, with the Placeholders legend.</figcaption>
-</figure>
+#### Keep awake while agents run
 
-#### Path placeholders
+| Setting | What it controls | Default |
+|---|---|---|
+| **Keep awake while agents run** | Blocks sleep and standby while an agent session is starting, running, or waiting for your input, and while Remote Access is on, because sleeping drops the connection and makes this machine unreachable. The screen can still turn off | On |
 
-The folder paths and per-repository commands both accept the same placeholders. Kepler substitutes them at worktree creation time, so one pattern covers every repository. Kepler defines four placeholders:
+Kepler holds the machine awake through the platform's own mechanism: `caffeinate` on macOS, an execution-state assertion on Windows, `systemd-inhibit` on Linux. Where that isn't possible, the setting says so under the switch. For example, it reads *Can't stay awake: there is no sleep-blocking mechanism available on this platform*, or on Linux it says that the system's polkit policy is refusing the request, with a rule an administrator can install. This setting applies to the computer the agents run on, which on a remote connection is the remote host, and it counts Claude Code sessions detected outside Kepler alongside Kepler's own. Kepler releases the machine as soon as the last such session settles.
 
-| Placeholder | Resolves to |
-|---|---|
-| `<REPOSITORY_PATH>` | Main repo folder |
-| `<REPOSITORY_NAME>` | Repo name |
-| `<SOURCE_PATH>` | Where files come from (the main repo, or the source worktree when forking) |
-| `<WORKTREE_PATH>` | The new worktree folder |
+### Windows and notifications
 
-For example, `<REPOSITORY_PATH>/.worktrees/<REPOSITORY_NAME>` nests each worktree inside the repository it belongs to. Kepler collapses any `..` segments you write, and resolves `<REPOSITORY_PATH>` and `<REPOSITORY_NAME>` as soon as it knows which repository it is planning for. `<SOURCE_PATH>` and `<WORKTREE_PATH>` only carry a value once a source and a target exist, which is why they are most useful in commands rather than in the folder path itself.
-
-Commands run inside the new worktree folder using your default login shell, so you don't need to `cd` into it, and tools configured in your shell profile (`nvm`, for instance) are available.
-
-#### App behavior
-
-These settings control app behavior:
+This computer's own window, task-tab, and notification preferences:
 
 | Setting | What it controls | Default |
 |---|---|---|
 | **Always use the custom folder picker** | Local windows use the native OS folder dialog and remote windows use Kepler's own picker, which can browse a remote filesystem. Turn this on to use Kepler's picker everywhere | Off |
 | **Restore windows on launch** | Reopens every window from your last session at its previous size, route, and connection. Turn it off to start in a single window | On |
-| **Show tabs on the task page** | Keeps several sessions, worktrees, or resources open as tabs in the same column. With it off, each column shows one thing at a time and you switch from the list on the left. You can close columns either way. See [The task view](/kepler/task-view) | Off |
-| **Keep this computer awake** | Blocks sleep and standby while an agent session is starting, running, or waiting for your input, and while Remote Access is on — sleeping drops the connection and makes this machine unreachable. The screen can still turn off | On |
+| **Show tabs on the task page** | Keeps sessions, worktrees, and resources open as tabs you can pin, drag between groups, and arrange side by side. With it off, each column of a task shows one thing at a time and you switch from the list on the left. See [The task view](/kepler/task-view) | Off |
+| **Preview tabs** | With tabs on, a single click opens a preview tab that the next click replaces. Double-click, or edit, to keep it open. Sessions always open as permanent tabs | On |
 | **Enable system notifications** | Shows desktop notifications when an agent finishes, needs your attention, or errors while Kepler is in the background. Turning it on sends a sample notification so your OS asks for permission | Off |
 | **Notify for external terminal tasks** | Notifications for Claude tasks running in your own terminal. Turn it off to silence those while keeping notifications for Kepler-managed tasks. Disabled while system notifications are off | On |
 
 Kepler reads **Restore windows on launch** during cold start, so a change takes effect on the next launch.
 
-**Keep this computer awake** holds the machine awake through the platform's own mechanism: `caffeinate` on macOS, an execution-state assertion on Windows, `systemd-inhibit` on Linux. It does nothing where the platform offers none, so a machine that sleeps anyway is a degraded experience rather than a broken one. This setting applies to the computer the agents run on, which on a remote connection is the remote host, and it counts Claude Code sessions detected outside Kepler alongside Kepler's own. Kepler releases the machine as soon as the last such session settles.
-
-#### Diagnostics
-
-The **Diagnostics** section has four rows:
-
-| Row | What it does |
-|---|---|
-| **Log file** | The full path to the current log, read-only |
-| **Reveal** | Opens the log's folder in your file manager. Hidden where the host cannot open one |
-| **Copy path** | Copies the log path to your clipboard |
-| **Clear log** | Deletes the current and rotated log files, after a confirmation |
-
-The log grows to roughly 20 MB. Attach it when you file a bug report.
+To silence notifications from one remote host only, use **Mute notifications from {host}** on that host in [Remote Environments](#remote-environments).
 
 ### Language
 
@@ -219,53 +220,99 @@ The choice also applies to native dialogs, not only the in-app interface.
 
 ### Keyboard Shortcuts
 
-This section lists Kepler's shortcuts. They are a reference, not editable. Mac symbols are shown first; the Windows and Linux column substitutes **Ctrl** for **⌘** and **Alt** for **⌥**:
+This section lists Kepler's shortcuts, grouped the way Settings groups them. They are a reference, not editable. Kepler also shows each shortcut in the menu items and button tooltips it belongs to. A few tab shortcuts that Settings doesn't list, such as reopening a closed tab and jumping to a tab by position, are in [Task View](/kepler/task-view#keyboard). Mac symbols are shown first; on Windows and Linux, **⌘** is **Ctrl** and **⌥** is **Alt**, and **⌃** is **Ctrl** on every platform.
+
+**General**
 
 | Action | Mac | Windows / Linux |
 |---|---|---|
 | Open settings | ⌘ , | Ctrl + , |
-| New task | ⌘ ⇧ N | Ctrl + Shift + N |
+| New task | ⌘ N | Ctrl + N |
 | Open quick launcher (global) | ⇧ ⌥ N | Shift + Alt + N |
-| New window | ⌘ N | Ctrl + N |
-| New session | ⌘ T | Ctrl + T |
-| Quit | — | Ctrl + Q |
-| Switch to tab 1–9 | ⌥ 1–9 | Alt + 1–9 |
-| Previous tab | ⌘ ⇧ [ | Ctrl + Shift + [ |
-| Next tab | ⌘ ⇧ ] | Ctrl + Shift + ] |
-| Move tab left | ⌘ ⌥ [ | Ctrl + Alt + [ |
-| Move tab right | ⌘ ⌥ ] | Ctrl + Alt + ] |
-| Move panel left | ⌘ ⌥ ← | Ctrl + Alt + ← |
-| Move panel right | ⌘ ⌥ → | Ctrl + Alt + → |
-| Close tab | ⌘ W | Ctrl + W |
-| Back | ⌘ [ | Alt + ← |
-| Forward | ⌘ ] | Alt + → |
+| New window | ⌘ ⇧ N | Ctrl + Shift + N |
+| Quit | None | Ctrl + Q |
 | Zoom in | ⌘ = | Ctrl + = |
 | Zoom out | ⌘ – | Ctrl + – |
 | Reset zoom | ⌘ 0 | Ctrl + 0 |
-| Toggle terminal | ⌘ J | Ctrl + J |
+| New session | ⌘ T | Ctrl + T |
+| Rename task | F2 | F2 |
 | Manage remote environments | ⌘ ⇧ R | Ctrl + Shift + R |
+| Open file | ⌘ O | Ctrl + O |
+| Go to file | ⌘ P | Ctrl + P |
+| Dismiss / Cancel | Escape | Escape |
+| Back | ⌘ [ | Alt + ← |
+| Forward | ⌘ ] | Alt + → |
+
+**Moving around**
+
+| Action | Mac | Windows / Linux |
+|---|---|---|
+| Previous tab | ⌘ ⇧ [ | Ctrl + Shift + [ or Ctrl + PageUp |
+| Next tab | ⌘ ⇧ ] | Ctrl + Shift + ] or Ctrl + PageDown |
+| Move tab left | ⌘ ⌥ [ | Ctrl + Alt + [ or Ctrl + Shift + PageUp |
+| Move tab right | ⌘ ⌥ ] | Ctrl + Alt + ] or Ctrl + Shift + PageDown |
+| Close tab | ⌘ W | Ctrl + W |
+| Toggle terminal | ⌘ J | Ctrl + J |
+| Next region | F6 | F6 |
+| Previous region | ⇧ F6 | Shift + F6 |
+
+**Dashboard**
+
+| Action | Mac | Windows / Linux |
+|---|---|---|
+| Move panel left | ⌘ ⌥ ← | Ctrl + Alt + ← |
+| Move panel right | ⌘ ⌥ → | Ctrl + Alt + → |
+| Move task to the previous Progress stage | ⌘ ⇧ ← | Ctrl + Shift + ← |
+| Move task to the next Progress stage | ⌘ ⇧ → | Ctrl + Shift + → |
+| Focus preview panel 1–8 | ⌘ 1–8 | Ctrl + 1–8 |
+| Focus last preview panel | ⌘ 9 | Ctrl + 9 |
+| Switch preview panels | ⌃ Tab | Ctrl + Tab |
+| Switch preview panels, oldest first | ⌃ ⇧ Tab | Ctrl + Shift + Tab |
+| Maximize preview panel | ⌘ ⇧ M | Ctrl + Shift + M |
+| Maximize panel terminals | ⌘ ⇧ J | Ctrl + Shift + J |
+
+**Task page**
+
+| Action | Mac | Windows / Linux |
+|---|---|---|
+| Focus chat | ⌘ 1 | Ctrl + 1 |
+| Focus changes | ⌘ 2 | Ctrl + 2 |
+| Focus resources | ⌘ 3 | Ctrl + 3 |
+| Switch sessions | ⌃ Tab | Ctrl + Tab |
+| Switch sessions, oldest first | ⌃ ⇧ Tab | Ctrl + Shift + Tab |
+| Maximize terminal drawer | ⌘ ⇧ J | Ctrl + Shift + J |
+
+**Chat**
+
+| Action | Mac | Windows / Linux |
+|---|---|---|
 | Find in conversation | ⌘ F | Ctrl + F |
 | Previous message | ⌘ ⌥ ↑ | Ctrl + Alt + ↑ |
 | Next message | ⌘ ⌥ ↓ | Ctrl + Alt + ↓ |
 | Interrupt & send | ⌘ ⇧ ⏎ | Ctrl + Shift + ⏎ |
+
+**Changes**
+
+| Action | Mac | Windows / Linux |
+|---|---|---|
 | Filter changed files | ⌘ P | Ctrl + P |
 | Previous file | ⌥ ↑ | Alt + ↑ |
 | Next file | ⌥ ↓ | Alt + ↓ |
-| Dismiss / Cancel | Escape | Escape |
+| Comment on selection | ⌘ ⇧ C | Ctrl + Shift + C |
 
-Kepler registers **Open quick launcher** with the OS, so it works while Kepler is in the background. **Quit** is a Windows and Linux shortcut only. macOS quits through the native **⌘ Q** menu role, and Kepler hides the row there.
+Some keys do different things depending on where you are. **⌘ 1**, **⌘ 2**, and **⌘ 3** focus a preview panel on the Dashboard but a column on the task page; **⌃ Tab** switches preview panels on the Dashboard and sessions on the task page; **⌘ ⇧ J** maximizes the panel's terminals on the Dashboard and the terminal drawer on the task page; **⌘ P** filters changed files in the Changes view and opens **Go to file** elsewhere.
+
+Kepler registers **Open quick launcher** with the OS, so it works while Kepler is in the background; its row carries a **Global** badge. **Quit** and the **PageUp** / **PageDown** tab keys are Windows and Linux shortcuts only, and Kepler hides those rows on macOS, which quits through the native **⌘ Q** menu role.
 
 **Back** and **Forward** are split by platform on purpose: **Alt + ←** is the Windows and Linux convention but moves by word on macOS, and **⌘ [** is the macOS convention (Safari, Finder) but not the Windows one. Holding either walks the history.
 
-**Send feedback**, **Show release notes**, **Show About**, and **Check for updates** are listed with no key bound, so you can see they exist and where they live.
-
-That table is the whole set. Kepler has no view-switching shortcuts, since only one interface exists, so **⌘ 1**, **⌘ 2**, and **⌘ 3** stay unbound.
+**Send feedback**, **Show release notes**, **Show About**, and **Check for updates** have no key bound, so they don't appear in this list; reach them from the app menu.
 
 ***
 
 ## Appearance
 
-Three sections: **Theme**, **Terminal**, **Diff View**.
+Four sections: **Theme**, **Terminal**, **Diff View**, **Chat transcript**.
 
 ### Theme
 
@@ -274,13 +321,11 @@ Three sections: **Theme**, **Terminal**, **Diff View**.
 | Option | What it is |
 |---|---|
 | **Dark** | The middle-dark theme, and **the default a fresh install runs** |
-| **Midnight** | The near-black theme. This is what **Dark** used to be |
+| **Midnight** | The near-black theme |
 | **Light** | The light palette |
 | **System** | Follows your OS color scheme and switches when the OS does. Its dark is **Dark**, not Midnight |
 
-**If you already had Kepler set to Dark, you now get the middle-dark theme.** The stored value was deliberately reused rather than migrated: a stored "dark" is someone asking for *the dark theme*, and the dark theme is now this one. Pick **Midnight** by name to get the near-black one back.
-
-**System** resolves to **Dark** because your OS says "light or dark" and nothing finer — someone following the room is asking to follow the room, not to opt into the highest contrast Kepler can draw.
+**System** resolves to **Dark** because your OS says "light or dark" and nothing finer. Someone following the room is asking to follow the room, not to opt into the highest contrast Kepler can draw.
 
 Color mode is the only appearance choice in this section. No second, design-language picker exists.
 
@@ -312,15 +357,26 @@ Terminals are for the work that sits alongside an agent session: running tests w
 
 This setting is what the layout starts on. A per-diff **Stacked** / **Split** toggle also sits on the Changes overlay's viewer header, so you can switch a single diff without changing the default. See [Review changes](/kepler/review-changes).
 
+### Chat transcript
+
+How a session's transcript scrolls:
+
+| Setting | What it controls | Default |
+|---|---|---|
+| Auto-scroll | **Auto-scroll to the end** *keeps the newest output in view. Scroll up to stop.* **Stay on my message** *keeps your message in view. The transcript doesn't scroll on its own.* | Auto-scroll to the end |
+| **Remember scroll position** | *Return to where you left off when you come back to a session.* | Off |
+
+Neither mode fights you: once you scroll up, the transcript stays where you put it.
+
 ***
 
 ## Agents
 
-Four parts: **Default agent**, one section per agent Kepler detects, **Agent options**, and **Features**.
+Five parts: **Default agent**, one card per agent, **Agent options**, **MCP servers**, and **Features**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-settings-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-settings-aug-2026.png" class="help-center-img img-bordered" alt="Settings → Agents, showing the Default agent row and the Claude Code and Codex sections with their status badges">
+  <a href="/wp-content/uploads/agent-settings-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-settings-oct-2026.png" class="help-center-img img-bordered" alt="Settings → Agents, with Default agent at the top and Update all and Re-scan above the agent cards. The Claude Code card shows its version, Update, and Enabled in the title line, then Accounts, Opens in set to Rich chat, Let artifact comments start turns, and a collapsed Advanced section.">
   </a>
   <figcaption style="text-align:center; color:#888">Settings → Agents.</figcaption>
 </figure>
@@ -339,41 +395,66 @@ Nothing is set out of the box, and the section is hidden entirely when no agent 
 
 An [Action](/kepler/actions) inherits this configuration unless it names an agent of its own.
 
-### One section per agent
+### One card per agent
 
-Kepler ships adapters for **Claude Code**, **Codex**, **GitHub Copilot**, **Cursor CLI**, **OpenCode**, **Auggie**, **Grok Build**, **Pi**, and **Google Antigravity**, listed in that order. Each gets a section titled with the agent's name. Each agent's section carries five controls:
+Kepler ships adapters for **Claude Code**, **Codex**, **GitHub Copilot**, **Cursor**, **Antigravity**, **OpenCode**, **Pi**, **Auggie**, and **Grok Build**. Settings lists the agents installed on this machine first, then the rest, each group in that order.
+
+Two buttons sit above the cards: **Update all** runs each installed agent's own updater, and **Re-scan** re-detects the agent CLIs installed on this system. Run it after installing or removing one outside Kepler.
+
+Each card's title line carries the agent's name and these controls:
 
 | Control | What it does |
 |---|---|
-| **Status** | **Installed** for a detected command-line interface (CLI), or **Not installed**, with who is signed in on it |
+| Version | The installed version. **Not installed** when Kepler can't find the CLI. A warning-toned **Version unknown** means Kepler couldn't read it, which turns off features that depend on the version, such as sending a new session's first message automatically; reinstalling or updating the agent usually fixes it |
+| **Update** | Runs the agent's updater and streams its output. Shown when Kepler has an updater for that agent |
 | **Install** | Runs an install method on your behalf and streams the output. Shown on a not-installed agent that has an installer for your OS |
-| **Sign in** / **Sign out** | Authenticates the agent with its provider. Signing out deletes the stored credentials |
 | **Enabled** | Whether Kepler offers the agent anywhere |
-| **Configure** | Expands the agent's own configuration |
 
-Under **Configure**:
+The card body holds the rest:
+
+| Control | What it does |
+|---|---|
+| **Accounts** | Runs multiple logins side by side, each with its own credentials and history but sharing your skills, agents, commands, and settings. **Add account** asks whether its conversations **Keep separate** or **Share with the CLI**. Each account row has a color picker that tints the agent icon wherever that account runs (the default account stays uncolored), plus **Sign in** and an account menu with **Rename**, **Share history with the CLI**, **Sign in another way**, **Sign out**, and **Remove account**. Available for Claude Code, Codex, GitHub Copilot, Auggie, and Grok Build |
+| **Account** | On an agent with a single login: who is signed in, with **Sign in** or **Sign out**. Signing out deletes the stored credentials |
+| **Opens in** | The default mode for new sessions. See below |
+| **Let artifact comments start turns** | Claude Code only. See below |
+| **Advanced** | A disclosure holding **Binary**, **Components**, and **Data directory** |
+
+Under **Advanced**:
 
 | Setting | What it controls | Default |
 |---|---|---|
 | **Binary** | The binary Kepler spawns. **Auto** resolves it the way your shell does (the first match on your `PATH`), so it matches `which`. Pick a specific install, or **Custom path…**, to override. **Re-scan** searches again | Auto |
+| **Components** | Extra pieces an agent can need, such as its CLI for Terminal mode (*Needed for Terminal mode.*), each with **Install** or **Update to {version}** | None |
 | **Data directory** | Overrides the agent's default data and config directory | Empty, meaning the agent's own default |
-| **Accounts** | Runs multiple logins side by side, each with its own credentials and history but sharing your skills, agents, commands, and settings. Available for Claude Code, Codex, GitHub Copilot, and Auggie | One account |
 
-**Codex now runs your own CLI.** Earlier builds spawned a bundled `codex-acp` engine; Kepler resolves and spawns the `codex` you have installed, like every other agent. Usage figures read the OAuth token from `~/.codex/auth.json`, or `CODEX_HOME/auth.json` when you have set a custom data directory.
+**Codex runs your own CLI.** Kepler resolves and spawns the `codex` you have installed, like every other agent. Usage figures read the OAuth token from `~/.codex/auth.json`, or `CODEX_HOME/auth.json` when you have set a custom data directory.
+
+**OpenCode v1 and v2 work side by side.** Its installers come in a v1 and a v2 flavor; point **Binary** at whichever one you want Kepler to run. **Antigravity** runs in rich chat through its ACP server, a separate component from its `agy` terminal CLI. See [Agent Integrations](/kepler/agent-integrations).
 
 #### Default mode for new sessions
 
-Every agent that can run both ways carries this setting, not just Claude Code:
+Every agent that can run both ways carries this setting:
 
 | Setting | What it controls | Default |
 |---|---|---|
-| **Default mode for new sessions** | **Rich chat** is Kepler's own transcript, with plans, model, and effort controls, and richer input. **Terminal** runs the agent's own command-line interface in an embedded terminal | Rich chat |
+| **Opens in** | **Rich chat** is Kepler's own transcript, with plans, model, and effort controls, and richer input. **Terminal** runs the agent's own command-line interface in an embedded terminal | Rich chat. Google Antigravity starts on Terminal, because its Rich chat server signs in separately |
 
-The choice is saved per agent, so one agent can default to Terminal while another stays on Rich chat. The **New session** menu starts one session in the other mode without changing the setting. An agent with only one mode shows no switch. See [Agent Sessions](/kepler/agent-sessions#how-a-session-runs).
+The choice is saved per agent, so one agent can default to Terminal while another stays on Rich chat. The **New session** menu starts one session in the other mode without changing the setting. A terminal-only agent shows **Terminal** with no switch. See [Agent Sessions](/kepler/agent-sessions#how-a-session-runs).
+
+#### Let artifact comments start turns
+
+| Setting | What it controls | Default |
+|---|---|---|
+| **Let artifact comments start turns** | Anyone with edit access to an artifact a Rich chat session publishes can start a turn in that session by sending a comment to Claude. A reply is posted automatically | On |
+
+Running sessions keep the value they started with. When you change it, the card lists the sessions still using the previous value, marking those that **Published an artifact** or have a **Turn in progress**, with **Restart all** and **Restart selected ({count})**. Restarting keeps each conversation; a turn in progress is interrupted, and a restarted session stops watching artifacts it published before.
 
 #### Custom agent servers
 
-Below the detected agents, **Custom agent servers** lets you add your own agent that speaks the Agent Client Protocol (ACP), by name and command. Added servers appear with the built-in agents everywhere an agent can be picked.
+Below the agent cards, **Custom agent servers** lets you add your own agent by **Name** and **Command**, with **Args (one per line)** and **Environment variables (KEY=value, one per line)**. **Runs as** chooses **Chat (ACP)**, for an agent that speaks the Agent Client Protocol, or **Terminal**, to run its own interface in a terminal. Added servers appear with the built-in agents everywhere an agent can be picked.
+
+Kepler encrypts environment values at rest and hides existing ones when you edit a server: leave a value empty (`KEY=`) to keep the stored secret, or type a new value to replace it.
 
 ### Agent options
 
@@ -381,36 +462,51 @@ Settings that apply across every agent:
 
 | Setting | What it controls | Default |
 |---|---|---|
-| **Installed agents** → **Refresh** | Re-detects the agent CLIs installed on this system. Run it after installing or removing one outside Kepler | — |
-| **Detect sessions started outside Kepler** | Installs GitKraken hooks so Kepler can show agent sessions you start in your own terminal. Covers Claude Code, Codex, Cursor, GitHub Copilot, and OpenCode in one switch. See [Agent Sessions](/kepler/agent-sessions#sessions-started-outside-kepler) | On |
-| **Install GitKraken MCP for detected clients** | Adds the GitKraken Model Context Protocol (MCP) server to every detected MCP client on this machine so agents can call provider APIs directly. Reinstalls on app startup; uninstalling is not supported | On |
+| **Detect sessions started outside Kepler** | Installs GitKraken hooks so Kepler can show agent sessions you start in your own terminal. Covers every agent that reports through hooks in one switch; the help text names them. See [Agent Sessions](/kepler/agent-sessions#sessions-started-outside-kepler) | On |
+| **GitKraken MCP server** → **Install GitKraken MCP for detected clients** | Adds the GitKraken Model Context Protocol (MCP) server to every detected MCP client on this machine so agents can call provider APIs directly. Reinstalls on app startup; uninstalling is not supported | On |
 | **Show token usage** → **Enable** | Reads your Claude Code, Codex, and Augment access tokens from disk and calls the providers' private usage APIs. Those endpoints are undocumented and may change without notice. Kepler never sends tokens anywhere except to their respective provider. The readout says when it was last updated | Off |
+| **Resume after usage limit** → **Enable** | When a turn is cut off by your account usage limit and nothing is queued, Kepler queues a "continue" message that is sent shortly after the limit resets | Off |
 
-Each agent's binary picker carries its own **Re-scan** for the single-agent case; **Refresh** here sweeps all of them.
+If Kepler stops receiving hook events from a running Claude session, every window shows *Claude sessions aren't reporting to Kepler* with a **Repair** button. Repair reinstalls the hooks; restart any Claude session that still isn't responding, since a running CLI doesn't reload its hooks.
 
 **Install GitKraken MCP for detected clients** is about the *other* MCP clients on your machine. It differs from the workspace MCP server that Kepler attaches to every session it starts itself, which is always on and has no setting. That server gives the agent tools to:
 
 - Read the task's shared context and resources, and read another session's transcript.
 - Write, edit, and remove the task's notes.
-- Attach and detach issue, pull request, and URL links.
+- Attach and detach issue, pull request, and URL links, including a dev server the agent starts, and refresh the task's pull requests and issues.
+- Set the task's Progress stage, or put it on hold.
 - List the repositories and folders in your workspace.
 - Create, attach, detach, or discard one of the task's worktrees.
-- Create a separate task, and start a session on one.
+- Find the workspace's tasks and sessions, archive and restore a task, and create a task with files attached.
+- Start a session on a task with the agent it chooses, and send follow-ups to existing sessions.
 
 See [Tasks and Resources](/kepler/tasks-and-resources) for the full list and which of them ask permission first.
 
 **AI Sync** and **Compose** below add their tools to that same server.
 
+### MCP servers
+
+Each agent's own MCP server defaults, which every project inherits. Pick an agent, and an account when that agent has more than one, to see the servers that agent loads. Turn a server or a single tool off here and it's off in every repository unless a repository turns it back on for itself. You can also add and remove servers and sign in to the ones that need it.
+
+Only agents that expose their MCP servers to Kepler are listed. The composer's **Agent settings** pill opens the same manager for one repository. See [MCP Servers](/kepler/mcp-servers).
+
 ### Features
 
-Two shipped capabilities that give agents extra Git tooling. Both are off until you turn them on, and both require a paid GitKraken subscription:
+Capabilities you switch on or off for every agent:
 
-| Setting | What it gives agents | Default |
+| Setting | What it does | Default |
 |---|---|---|
-| **AI Sync** | Tools to rebase or merge with automatic conflict resolution. Every operation is safe, and you can roll it back easily | Off |
-| **Compose** | Tools to reorganize messy changes into clean, atomic commits. Every operation is safe, and you can undo it easily | Off |
+| **AI Sync** | Gives agents tools to rebase or merge with automatic conflict resolution. Operations are safe and can be easily rolled back | Off |
+| **Compose** | Gives agents tools to reorganize messy changes into clean, atomic commits. Operations are safe and can be easily undone | Off |
+| **Automatically name new tasks** | Names a new task with AI from its prompt and attached resources. A task created from a single issue or PR keeps that item's name | On |
+| **Keep agents running across restarts and updates** | Agent sessions and terminals stay alive while Kepler restarts or updates, and reconnect afterwards. Experimental | Off |
+| **Use this app's interface in remote windows** | Remote windows load their interface from this app instead of the remote, so only your data crosses the connection. If the remote runs a different version, its own interface is used. Experimental. Desktop app only | Off |
 
-Turning either one on confirms that **New agent sessions will pick up this change**. Sessions already running keep the tools they started with, so start a new session to use them.
+**AI Sync**, **Compose**, and **Automatically name new tasks** require a paid GitKraken subscription; on the Community plan they show a lock. Turning **AI Sync** or **Compose** on confirms that **New agent sessions will pick up this change**: sessions already running keep the tools they started with. Task naming takes effect on the next task you create.
+
+**Keep agents running across restarts and updates** applies from the next session you start. With it on, a ready update's popover says *Running agents keep going through the restart.* On a build that doesn't include the runtime it needs, the switch is disabled and says so.
+
+**Use this app's interface in remote windows** applies to a remote the next time you connect to it with no other window open on it.
 
 ***
 
@@ -420,7 +516,7 @@ An **Action** is an editable named prompt you fire at a task, issue, or pull req
 
 | Section | What it holds |
 |---|---|
-| **Preferred actions** | One picker per kind of item (**Tasks**, **Issues**, **Pull requests I authored**, **Pull requests from others**) setting which Action the one-click half of the Action button runs. Any slot can be **None** |
+| **Preferred Actions** | One picker per kind of item (**Tasks**, **Issues**, **Pull requests I authored**, **Pull requests from others**) setting which Action the one-click half of the Action button runs. Any slot can be **None** |
 | **Actions** | The shipped Actions under **Built in** and yours under **Custom**, each with **Edit**, **Restore default** where you have edited it, and **Delete** on a custom row. **New action** creates one; **Restore all defaults** discards every edit |
 
 Kepler ships four default Actions:
@@ -434,21 +530,40 @@ For what the built-in Actions ask an agent to do, how the editor's **Title**, **
 
 ***
 
-## Remote
+## Remote Access
 
-Two sections that sound alike and do opposite things. **Remote Environments** runs your agents on another machine. **Remote Access** opens this Kepler from another device.
+Opens this Kepler window from another device over a secure tunnel relayed through your GitKraken account, with no open port and no tunnel to set up yourself. Requires a paid GitKraken plan; not available on the free Community edition. A status badge beside the heading shows whether it's on. Click **Enable**, name the machine, then scan the QR code or open the link on the other device to pair it.
 
-### Remote Environments
+This section describes the feature and routes you to it. See [Remote environments](/kepler/remote-environments) for prerequisites, pairing, and managing sessions from gitkraken.dev.
 
-Runs your agents on another machine (a dev server, a cloud VM, or WSL on Windows) while you work from here. Kepler installs itself over SSH, so the host needs nothing pre-installed.
+***
 
-This section describes the feature and routes you to it. **Manage remote environments…** opens the connections panel, where you add, connect, and remove hosts. **⌘ ⇧ R** opens the same panel from anywhere. See [Remote environments](/kepler/remote-environments).
+## Remote Environments
 
-### Remote Access
+The hosts your agents can run on while you work from here: a dev server, a cloud VM, or WSL on Windows. Kepler installs itself over SSH, or inside the WSL distro, so the host needs nothing pre-installed. **⌘ ⇧ R** opens this sub-page from anywhere, and so does **Manage remote environments…** in the remote chip's popover. The saved host list lives on this computer, whichever host a window is connected to.
 
-Opens this Kepler window from another device over a secure tunnel relayed through your GitKraken account, with no open port and no tunnel to set up yourself. Requires a paid GitKraken plan; not available on the free Community edition. Click **Enable**, name the machine, then scan the QR code or open the link on the other device to pair it.
+| Part | What it holds |
+|---|---|
+| **Hosts** | Your saved hosts, with **Search hosts**, each row showing whether it's connected and how many windows have it open. **Connect** opens it here; the second button opens it in a new window |
+| **Found on this machine** | Hosts Kepler detected but you haven't saved, each with **Add**, or **Hide** to tuck it under **Show hidden** |
+| **Add a host** | Adds one by hand. On Windows, **Host type** chooses **SSH** or **WSL**; a WSL host takes a **Distro** and an optional **Name** |
 
-This section describes the feature and routes you to it. See [Remote access](/kepler/remote-environments#remote-access-reach-kepler-from-another-device) for prerequisites, pairing, and managing sessions from gitkraken.dev.
+Click a saved host to open its detail:
+
+| Control | What it does |
+|---|---|
+| Name | Rename the host. Renaming is only possible from a local window |
+| **Latency**, **Live sessions**, **Server build** | The connection's current state |
+| **Color** | Tints the host's chip, its popover, and a connected window's top strip, so you can tell hosts apart. **None** leaves it plain |
+| **Mute notifications from {host}** | *Kepler won't show desktop notifications for sessions on {host}. Alerts still appear inside its windows.* |
+| **Connection** | Edit the SSH or WSL address. A new SSH address asks you to trust its host key, with **Trust and save**. Disconnect first to edit a host you're connected to |
+| **Remove {name}…** | Deletes the saved host |
+
+In a window connected to an SSH host, a **Ports** list shows the ports forwarded from that host to this computer: forward another by number, **Stop** one, or **Stop all** when more than one is forwarded.
+
+If Kepler can't reconnect a window at startup, this sub-page opens with the reason and offers to connect or **Stay local**. For example: *Couldn't auto-reconnect. Connect to resume where you left off.* A window connected to a host lists the others read-only; to add, edit, or remove hosts, use **Open in a local window**.
+
+See [Remote environments](/kepler/remote-environments) for connecting, port forwarding, and how sessions behave on a host.
 
 ***
 
@@ -461,28 +576,34 @@ Kepler lists every supported provider whether or not it is connected, in this or
 | Provider |
 |---|
 | Azure DevOps |
+| Azure DevOps Server |
 | Bitbucket |
+| Bitbucket Data Center |
 | GitHub |
 | GitHub Enterprise |
 | GitLab |
-| GitLab Self-Managed |
+| GitLab Self-Hosted |
 | Jira |
+| Jira Server / Data Center |
 | Linear |
 | Trello |
 
-Each provider row carries five controls:
+Each provider row carries these controls and states:
 
 | Control | What it does |
 |---|---|
 | **Connect** | Starts the connection flow for a provider you have not connected |
 | **Connected** | Shown on a working connection |
-| **Reconnect** | Refreshes an expired token. A warning icon and the hint *"Sign-in has expired. Click Reconnect to refresh this provider's token."* mark the rows that need it |
+| **Reconnect** | Refreshes an expired token. A **Sign-in expired** badge and the hint *"Sign-in has expired. Click Reconnect to refresh this provider's token."* mark the rows that need it |
+| **Cannot connect to server** | The provider's server didn't answer. The integration is still connected, and this clears on its own once the server responds. Check that it's reachable from your network or VPN. No reconnect needed |
 | **Disconnect** | Disconnects the provider from GitKraken everywhere: the `gk` CLI and GitKraken Desktop lose access too, along with any additional accounts for that provider. You can reconnect at any time |
 | **Refresh** | Re-checks every provider's connection status |
 
 Providers connect through your GitKraken account, so the section asks you to sign in before it shows anything to manage.
 
 When a provider has more than one account, an **Accounts** block lists them. **Set as primary** chooses which account Kepler acts as, and **Read from this account** chooses which one Kepler reads issues and pull requests from. They can be different accounts.
+
+When an organization refuses a working connection (it blocks third-party OAuth apps, or hasn't approved GitKraken), the row names the organization and says its items aren't shown, with a link to fix it, such as **Request access on GitHub**.
 
 For per-provider setup, see [Issue Tracker Integrations](/kepler/issue-tracker-integrations) and [Pull Request Integrations](/kepler/pull-request-integrations).
 
@@ -536,7 +657,7 @@ Kepler downloads the model from the internet once. Transcription then runs entir
 
 ## Repos & Folders
 
-Two sections: **Repos & Folders** and **Projects**.
+Three sections: **Repos & Folders**, **Worktrees**, and **Projects**.
 
 ### Repos & Folders
 
@@ -545,19 +666,29 @@ Every repository Kepler tracks and every folder you've attached to a task, each 
 | Control | What it does |
 |---|---|
 | **Row** | Click it to open the repository's card, which holds its name, description, branch prefix, and commands |
-| **Add repository** | Opens the repo dialog. See below |
-| **Trash icon** | Untracks the repository. The folder on disk is left untouched |
+| **Add repo** | Opens the repo dialog. See below |
+| **Add folder…** | Adds a plain folder |
+| **Trash icon** | Untracks the repository or folder. The folder on disk is left untouched |
+
+With nothing tracked, the section reads *"Add a repository or folder to manage it here."*
 
 #### One dialog for adding and editing
 
-**Add repo** and **Edit repo** are now the same shape: you give a source, Kepler inspects it, and what it found becomes a card you edit.
+**Add repo** and **Edit repo** are the same shape: you give a source, Kepler inspects it, and what it found becomes a card you edit.
 
 | Field | What it takes |
 |---|---|
 | **Folder or URL** | *Paste a URL to clone it, or pick a folder that already holds a repo.* You can also drop a folder onto the dialog, or **Create a new repo instead** |
-| The card | The resolved repository — **{name} on {provider}**, its path, its branch count — plus the name, description, branch prefix and commands you can edit |
+| The card | The resolved repository (**{name} on {provider}**, its path, its branch count), plus the name, description, branch prefix and commands you can edit |
 
 Kepler says what a source resolves to before you commit to it: **A new folder named {name} will be created here.**, *This folder already holds a clone of that repo. It will be added as is.*, **That clone is already in Kepler.**, or a refusal when the folder is occupied by something else. A path that isn't a Git repository reads **That folder isn't a Git repo.**
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/edit-repo-dialog-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/edit-repo-dialog-oct-2026.png" class="help-center-img img-bordered" alt="The Edit repo dialog for Kepler-Docs, showing its path, its GitHub repository, main and 6 branches, then Description, Branch prefix set to App setting (kepler/), and an empty Commands list with Add.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The Edit repo dialog.</figcaption>
+</figure>
 
 #### Branch prefix, per repository
 
@@ -573,16 +704,14 @@ The card's **Branch prefix** control overrides the app-wide setting for this rep
 
 Removing a repository deletes its sessions, terminals, and configured commands, and terminates any live agent and terminal sessions tied to it. Kepler confirms before it does.
 
-With no repositories tracked, the section reads *"Add a repo to configure per-repository commands."*
-
 #### Display name and description
 
 The card opens on two fields above the command list:
 
 | Field | What it does |
 |---|---|
-| **Display name** | An alias Kepler shows wherever it names this repository — *Shown across Kepler. Leave empty to use the folder name.* The field's placeholder is the folder name, and the full path on disk sits under the field, which is what tells two checkouts of one repository apart. A repository you have named this way keeps that name verbatim and stops competing with same-named folders for a disambiguating suffix |
-| **Description** | Free text — *What this repository is for (optional)* — described as *Given to agents working on this repo, so they know what it is for.* Kepler appends it to the repository's line in the resource list it hands a session, so a full sentence is more useful here than a single label |
+| **Display name** | An alias Kepler shows wherever it names this repository: *Shown across Kepler. Leave empty to use the folder name.* The field's placeholder is the folder name, and the full path on disk sits under the field, which is what tells two checkouts of one repository apart. A repository you have named this way keeps that name verbatim and stops competing with same-named folders for a disambiguating suffix |
+| **Description** | Free text. Its placeholder reads *What this repo is for. Agents working in it read this.* Kepler appends it to the repository's line in the resource list it hands a session, so a full sentence is more useful here than a single label |
 
 Both are optional. Kepler stores whitespace-only text as empty, and **Save** stays disabled until something has actually changed.
 
@@ -590,17 +719,28 @@ Both are optional. Kepler stores whitespace-only text as empty, and **Save** sta
 
 Commands are shell commands scoped to one repository. Use them to install dependencies, run a build, or start a watcher, so a new worktree is ready for an agent session with no manual setup.
 
-In the commands editor, **Add command** appends a row with three fields:
+The card's **Commands** list is edited in place. **Add** appends a row, and each row opens to three fields:
 
 | Field | What it does |
 |---|---|
-| **Name** | A label, for example *Install deps*. It is what you pick from the **Run** menu later |
-| **Command** | The shell command, for example `pnpm install`. Accepts the same path placeholders listed under **General → Path placeholders** |
-| **Run on worktree creation** | Runs this command automatically when Kepler creates a worktree for this repository. Off by default, which leaves it a command you run on demand |
+| Name | A label, for example *Install deps*. It is what you pick from the **Run** menu later |
+| Command | The shell command, for example `pnpm install`. Its **Variables** menu inserts any of the variables below |
+| **Run on worktree creation** | Runs this command automatically when Kepler creates a worktree for this repository. Off by default, which leaves it a command you run on demand. A row with it on shows a **Runs on creation** chip |
 
-Kepler drops rows left completely empty on save, so an accidental **Add command** leaves no trace.
+Commands accept four variables, which Kepler fills in when the command runs:
 
-Commands flagged to run on worktree creation execute sequentially, in list order, and stop on the first failing command. Kepler skips the rest and reports them as skipped. Each one runs in the new worktree's folder through your interactive login shell, with a ten-minute timeout.
+| Variable | Resolves to |
+|---|---|
+| `<REPOSITORY_PATH>` | Main repo folder |
+| `<REPOSITORY_NAME>` | Repo name |
+| `<SOURCE_PATH>` | Where files come from (the main repo, or the source worktree when forking) |
+| `<WORKTREE_PATH>` | The new worktree folder |
+
+Drag a row by its handle to reorder it, or move it from the keyboard with **Alt + ↑** and **Alt + ↓**. Order sets the **Run** menu order and the order that commands set to run on worktree creation run in.
+
+A row with a name but no command, or a command but no name, holds back **Save** with *Some commands are incomplete.* and takes you to the missing field. A row left completely empty is dropped on save, so an accidental **Add** leaves no trace.
+
+Commands flagged to run on worktree creation execute sequentially, in list order, and stop on the first failing command; Kepler skips the rest and reports them as skipped. Each one runs in the new worktree's folder through your login shell, so you don't need to `cd` into it, and tools configured in your shell profile (`nvm`, for instance) are available. Each has a ten-minute timeout.
 
 A failed command does not undo the worktree. The worktree exists but may not be usable. To fix it:
 
@@ -608,14 +748,49 @@ A failed command does not undo the worktree. The worktree exists but may not be 
 2. Correct the command here.
 3. Run it again from the **Run** menu.
 
-From the task view, right-click a worktree row in the rail and use **Run command here** for a second way in. It lists that repository's commands and runs the one you pick in that worktree, opening its terminal in place. A repository with none yet reads **No commands yet** and offers **Create command…**.
+From the task view, right-click a worktree row in the rail and use **Run command here** for a second way in. It lists that repository's commands and runs the one you pick in that worktree, opening its terminal in place. A repository with none yet reads **No commands yet** and offers **Create command…**. A command that's running shows on the run button and its menus, where you can stop it.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/create-command-for-repo-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/create-command-for-repo-aug-2026.png" class="help-center-img img-bordered" alt="The Commands section of the Edit repo modal, with a command flagged Run on worktree creation and the Placeholders legend beneath it">
+  <a href="/wp-content/uploads/repo-commands-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/repo-commands-oct-2026.png" class="help-center-img img-bordered" alt="A command row in the Edit repo dialog, with a drag handle, a Name field, Run on worktree creation, and a command box whose Variables menu is open on REPOSITORY_PATH, REPOSITORY_NAME, SOURCE_PATH, and WORKTREE_PATH.">
   </a>
-  <figcaption style="text-align:center; color:#888">A repository's Commands, with the Placeholders legend.</figcaption>
+  <figcaption style="text-align:center; color:#888">A repository's Commands, with the Variables menu open.</figcaption>
 </figure>
+<!-- TODO(screenshot): Optional re-take: two filled-in command rows, one showing the Runs on creation chip. -->
+
+### Worktrees
+
+*Quickly find and delete unused worktrees to free up disk space.* The section lists every worktree Kepler knows about, with a count of how many are reclaimable:
+
+| Control | What it does |
+|---|---|
+| **Flag as idle after** | How many days without activity before a worktree counts as idle. Defaults to 14 |
+| **Re-check** | Inspects the worktrees again for uncommitted or unpushed work |
+| **Select reclaimable** / **Select all** | Selects worktrees to delete |
+| **Delete worktrees** | Deletes the selected worktrees after a confirmation listing anything that would be lost, with **Also delete the branches** |
+
+Each worktree carries a status: **Active**, **Idle** (untouched for longer than the idle threshold, so it may still hold work), or **Reclaimable** (its branch is merged, its upstream is gone, or its PR is merged, with nothing uncommitted, unpushed, or still in use, so it's safe to delete).
+
+A lock Kepler itself left on a worktree, for a task this install knows or a task since deleted, is cleared and the worktree deleted. Kepler never deletes a repository's main checkout, and keeps any worktree that still has uncommitted or unpushed work, other tasks, running agent sessions, or a lock from another tool, saying why for each. Where forcing can help, the result offers **Force delete**, which discards the listed work and ends the agent sessions running there.
+
+#### The full Worktrees view
+
+**Open full view**, the expand icon beside the **Worktrees** heading, opens the same list as a full-width page, grouped by repository, with **Back to repository settings** to return. Each row has these columns:
+
+| Column | What it shows |
+|---|---|
+| **Branch** | The worktree's branch, or the commit for a detached HEAD |
+| **Status** | Active, Idle, or Reclaimable |
+| **Last activity** | How long since the worktree was touched |
+| **Evidence** | Why it may be finished: **Merged into {base}**, **Upstream branch deleted**, **PR merged**, or **PR closed** |
+| **Path** | Where it is on disk |
+| **Tasks** | The tasks using it, each with the status dots of its agent sessions and a card with its stage, links, and a jump to each session |
+| **Pull request** | The branch's pull request, with the same card as on the Dashboard |
+| **Behind base** | Commits behind and ahead of its base, and whether it can be updated cleanly or has a conflict |
+
+Selection and **Delete worktrees** work the same way as in Settings.
+
+<!-- TODO(screenshot): New: The full-width Worktrees view at v0.12.0, showing a repository group with Tasks, Pull request and Behind base columns. -->
 
 ### Projects
 
@@ -632,7 +807,11 @@ With no projects, the section reads *"No projects yet. Create one to group your 
 
 ## Help
 
-Two things: a link out to the docs, and a way to replay any explainer you dismissed.
+Two sections: **Help** and **Logs**.
+
+### Help
+
+A link out to the docs, and a way to replay any explainer you dismissed.
 
 | Control | What it does |
 |---|---|
@@ -648,5 +827,20 @@ Inside the disclosure, one row per explainer, each reading **Seen and dismissed*
 - Task page callout
 
 **Reset all onboarding and show everything again**, at the foot of the disclosure, clears every element's dismissed state in one action rather than one row at a time.
+
+### Logs
+
+*To report a problem, save the logs and attach the file.*
+
+| Control | What it does |
+|---|---|
+| **Copy path** | Copies the current log's path to your clipboard |
+| **Show in Finder** | Opens the log's folder in your file manager (**Show in Explorer** on Windows, **Show in File Manager** on Linux). Hidden where the host cannot open one |
+| **Save logs…** | Saves Kepler's logs as a single zip file |
+| **Clear log…** | Deletes the current and rotated log files, after a confirmation |
+
+In a window connected to a remote environment, these are the host's logs: *These are the logs on {machine}.* Saving them from there includes this computer's logs too, and **Show this computer's logs** opens your local ones.
+
+Without opening Settings, **Help → Show Logs in Finder** (**Show Logs in Explorer**, **Show Logs in File Manager**) in the app menu reveals this computer's log.
 
 ---
