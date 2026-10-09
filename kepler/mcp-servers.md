@@ -19,7 +19,7 @@ taxonomy:
 ---
 <kbd>Last updated: October 2026</kbd>
 
-Your coding agents load Model Context Protocol (MCP) servers from their own config files. Kepler reads those files and lists exactly the servers each agent will load, so you can see them, turn a server or one of its tools off where you don't want it, add or remove a server, and sign in to a server that needs it — without editing the agent's config by hand.
+Your coding agents load Model Context Protocol (MCP) servers from their own config files. Kepler reads those files and lists exactly the servers each agent will load, so you can see them, turn a server or one of its tools off where you don't want it, add or remove a server, and sign in to a server that needs it. You don't have to edit the agent's config by hand.
 
 You manage them in two places: per repository, from the composer's **Agent settings** pill, and as global defaults in **Settings → Agents → MCP servers**.
 
@@ -50,13 +50,25 @@ Both open the same manager. It groups servers by where they're defined:
 
 Each row is a server: click it to turn it on or off, and use the arrow beside it to list its **Tools**. A row can carry badges: **Signed in** or **Not signed in** for a server that needs authentication, **All projects** when a change to it reaches every repository, and **Locked** when *Kepler cannot edit this entry in the agent's config file*, such as a server your organization manages.
 
-<!-- TODO(screenshot): New — The MCP servers dialog for Claude Code on a repository, showing User and Project groups, one server expanded to its Tools, and the Signed in badge. -->
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/mcp-servers-dialog-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/mcp-servers-dialog-oct-2026.png" class="help-center-img img-bordered" alt="The MCP servers dialog for Claude Code on the gitkraken-client repository. The User group holds the GitKraken server and the Project group holds playwright-electron, both turned on, with Add server below.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The MCP servers dialog for one repository.</figcaption>
+</figure>
 
 ***
 
 ## Per repository
 
 In a session or in the New task composer, open the **Agent settings** pill. Its **MCP servers** row reads *{enabled} of {total} enabled*; **Manage** opens the **MCP servers** dialog, titled with the agent and the repository it applies to.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/mcp-agent-settings-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/mcp-agent-settings-oct-2026.png" class="help-center-img img-bordered" alt="The Agent settings menu from the New task composer, with the MCP servers row at the bottom reading 2 of 2 enabled beside a Manage button.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The MCP servers row in the Agent settings menu.</figcaption>
+</figure>
 
 A change here applies to that repository only. Worktrees of one checkout share the setting, so a server you turn off in a repository stays off in every task's worktree of it.
 
@@ -73,6 +85,13 @@ Turning off a single tool works for Claude Code, Codex, and Grok Build. For the 
 ## Global defaults
 
 **Settings → Agents → MCP servers** is the same manager with no repository: *Each agent's own defaults, which every project inherits. A project can turn one off for itself in its MCP servers dialog.* Pick the agent at the top, and the account when that agent has more than one.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/mcp-global-defaults-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/mcp-global-defaults-oct-2026.png" class="help-center-img img-bordered" alt="The MCP servers section of Settings → Agents, with a tab for each agent and Claude Code selected. Under User, a GitKraken server is turned on, with Add server below it.">
+  </a>
+  <figcaption style="text-align:center; color:#888">Global MCP server defaults, in Settings → Agents.</figcaption>
+</figure>
 
 The two levels combine like this:
 
@@ -96,6 +115,13 @@ Plugin servers show in Settings but can't be changed there.
 | **Command** and **Arguments** | For a command server, for example `npx -y @some/server` |
 | **URL** | For a remote server, an `http://` or `https://` address |
 | **Environment variables** / **Headers** | Key and value pairs. Values stay hidden until you choose **Show value** |
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/mcp-add-server-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/mcp-add-server-oct-2026.png" class="help-center-img img-bordered" alt="The Add server form in Settings → Agents → MCP servers for Claude Code, with Name, Transport set to Command, Command, Arguments, and Environment variables fields, and Cancel and Add server buttons.">
+  </a>
+  <figcaption style="text-align:center; color:#888">Adding a command server.</figcaption>
+</figure>
 
 Kepler writes the new server into the agent's own config file, in the format that agent uses, so the agent's CLI sees it too.
 
@@ -127,8 +153,8 @@ Each agent account keeps its own MCP setup. When Kepler launches a Claude Code a
 
 ## Related
 
-- [Settings](/kepler/settings) — **Settings → Agents**, including the **MCP servers** section.
-- [Agent Integrations](/kepler/agent-integrations) — the agents Kepler runs and how to set them up.
-- [Agent Sessions](/kepler/agent-sessions) — the composer's **Agent settings** pill, and restarting a session.
+- [Settings](/kepler/settings): **Settings → Agents**, including the **MCP servers** section.
+- [Agent Integrations](/kepler/agent-integrations): the agents Kepler runs and how to set them up.
+- [Agent Sessions](/kepler/agent-sessions): the composer's **Agent settings** pill, and restarting a session.
 
 ---

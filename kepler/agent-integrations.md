@@ -21,18 +21,16 @@ taxonomy:
 
 Kepler runs the coding agent you already have. You sign in with your own agent account, and Kepler adds no markup on the agents you bring.
 
-Kepler ships support for nine agents, and you can point it at any other agent that speaks the Agent Client Protocol (ACP) — or whose command-line interface you simply want to run inside a task.
+Kepler ships support for nine agents, and you can point it at any other agent that speaks the Agent Client Protocol (ACP), or whose command-line interface you want to run inside a task.
 
 All of it lives in **Settings → Agents**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-settings-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-settings-aug-2026.png" class="help-center-img img-bordered" alt="Settings → Agents, showing the Default agent row and the Claude Code and Codex cards">
+  <a href="/wp-content/uploads/agent-settings-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-settings-oct-2026.png" class="help-center-img img-bordered" alt="Settings → Agents, with Default agent at the top and Update all and Re-scan above the agent cards. The Claude Code card shows its version, Update, and Enabled in the title line, then Accounts, Opens in set to Rich chat, Let artifact comments start turns, and a collapsed Advanced section.">
   </a>
   <figcaption style="text-align:center; color:#888">Settings → Agents.</figcaption>
 </figure>
-
-<!-- TODO(screenshot): Replace — agent cards were rebuilt (version in the title line, Accounts with colours, Opens in, Advanced section) and Agent maintenance sits above them. -->
 
 ***
 
@@ -56,7 +54,7 @@ Each agent gets its own section in **Settings → Agents**, in this order:
 
 **Grok Build** is xAI's coding agent. It signs in through your browser, or you can supply an xAI API key. Its data lives under `~/.grok`, which is what lets Kepler keep several accounts apart.
 
-**Google Antigravity runs two separate binaries.** Terminal mode runs the `agy` CLI; Rich chat runs Google's Antigravity ACP server, which is a separate download with its own version. The agent's section in **Settings → Agents** lists both under **Components** — **Antigravity CLI** (*Needed for Terminal mode.*) and **ACP server** (*Rich-text (ACP) mode. Installed separately from the Antigravity CLI.*) — each with its own **Install** or **Update to {version}**. Either one alone is enough to use the agent in that mode. Sessions stay in Terminal until you pick **Rich chat** for Antigravity, because the ACP server signs in separately from the CLI. Google publishes no ACP server for Intel Macs, so there it reads **Not available for this platform**.
+**Google Antigravity runs two separate binaries.** Terminal mode runs the `agy` CLI; Rich chat runs Google's Antigravity ACP server, which is a separate download with its own version. The agent's section in **Settings → Agents** lists both under **Components**: **Antigravity CLI** (*Needed for Terminal mode.*) and **ACP server** (*Rich-text (ACP) mode. Installed separately from the Antigravity CLI.*). Each has its own **Install** or **Update to {version}**. Either one alone is enough to use the agent in that mode. Sessions stay in Terminal until you pick **Rich chat** for Antigravity, because the ACP server signs in separately from the CLI. Google publishes no ACP server for Intel Macs, so there it reads **Not available for this platform**.
 
 **Pi is terminal-only.** Its CLI has no ACP mode, so Kepler runs its own interface in a terminal inside the task instead of leaving it out. Kepler does no auth probing for Pi: it uses its own sign-in (`/login`, or the provider API-key environment variables it reads directly).
 
@@ -125,16 +123,14 @@ If Kepler can't read an installed agent's version, its section shows a **Version
 
 If a pinned path later disappears (for example, when an auto-updater cleans up an old version), Kepler falls back to automatic resolution instead of reporting the agent as missing.
 
-**Agent maintenance**, above the agent cards in **Settings → Agents**, carries **Re-scan**, which re-detects every agent at once, and **Update all**, which runs each installed agent's own updater.
+Two buttons sit above the agent cards in **Settings → Agents**: **Re-scan** re-detects every agent at once, and **Update all** runs each installed agent's own updater.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/installed-agents-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/installed-agents-aug-2026.png" class="help-center-img img-bordered" alt="The agent re-scan control in Settings → Agents">
+  <a href="/wp-content/uploads/agent-maintenance-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-maintenance-oct-2026.png" class="help-center-img img-bordered" alt="Update all and Re-scan above the Claude Code card in Settings → Agents.">
   </a>
-  <figcaption style="text-align:center; color:#888">Re-scanning installed agents.</figcaption>
+  <figcaption style="text-align:center; color:#888">Update all and Re-scan, above the agent cards.</figcaption>
 </figure>
-
-<!-- TODO(screenshot): Replace — Agent maintenance above the agent cards, with Update all and Re-scan; the image above shows the retired Installed agents → Refresh row. -->
 
 ***
 
@@ -182,7 +178,7 @@ If you run Auggie's browser sign-in on this machine yourself, Kepler detects it 
 
 **Claude Code**, **Codex**, **GitHub Copilot**, **Auggie**, and **Grok Build** support more than one signed-in account. **Settings → Agents → *your agent* → Accounts → Add account** adds one; each account keeps its own credentials and history.
 
-Give each added account its own colour from the swatch at the left of its row — **Rose**, **Amber**, **Lime**, **Cyan**, **Blue**, or **Violet** — and the agent icon is tinted with it on session tabs, the task rail, and the terminal status bar, so sessions on different accounts are easy to tell apart. *The default account stays uncolored.* Accounts also appear on the agent's card in Settings.
+Give each added account its own colour from the swatch at the left of its row: **Rose**, **Amber**, **Lime**, **Cyan**, **Blue**, or **Violet**. The agent icon is tinted with it on session tabs, the task rail, and the terminal status bar, so sessions on different accounts are easy to tell apart. *The default account stays uncolored.* Accounts also appear on the agent's card in Settings.
 
 For **Auggie**, you can only add a second account with **Paste session token**. Its browser sign-in writes to one fixed file, so it would sign the second account into the first account's identity.
 
@@ -203,7 +199,7 @@ The **New session** menu starts one session in whichever mode is *not* the defau
 
 **Settings → Agents → Agent options → Detect sessions started outside Kepler** is a separate, cross-agent setting, **on out of the box**. It installs GitKraken hooks so sessions you start in your own terminal show up in Kepler, and it covers every agent Kepler can track that way: **Claude Code**, **Codex**, **Cursor**, **GitHub Copilot**, and **OpenCode**. See [Agent Sessions](/kepler/agent-sessions#sessions-started-outside-kepler).
 
-Kepler also follows its own Claude Code **Terminal** sessions through those hooks. If a live Claude terminal session keeps reporting status but its hook events stop arriving, Kepler warns *Claude sessions aren't reporting to Kepler* — status and notifications may be out of date — and offers **Repair** to reconnect Claude to Kepler. Restart any Claude session that still isn't responding afterwards.
+Kepler also follows its own Claude Code **Terminal** sessions through those hooks. If a live Claude terminal session keeps reporting status but its hook events stop arriving, Kepler warns *Claude sessions aren't reporting to Kepler* and offers **Repair** to reconnect Claude to Kepler. Until then, status and notifications may be out of date. Restart any Claude session that still isn't responding afterwards.
 
 ***
 
@@ -254,7 +250,7 @@ This labeling applies to the sessions Kepler drives over ACP. **Terminal** mode 
 
 Connecting an agent is the setup; running one is a **session** inside a task. [Agent Sessions](/kepler/agent-sessions) covers sessions: starting, resuming, queuing prompts, and reviewing what the agent produced.
 
-A task holds resources and does not require a worktree — or even a repository. See [Tasks and Resources](/kepler/tasks-and-resources).
+A task holds resources and does not require a worktree, or even a repository. See [Tasks and Resources](/kepler/tasks-and-resources).
 
 Not every conversation starts in Kepler, either. See [Agent Sessions](/kepler/agent-sessions#sessions-started-outside-kepler).
 

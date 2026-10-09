@@ -50,7 +50,7 @@ The **View** control decides how Kepler draws the list.
 | **List** | A dense list you read top to bottom | Scanning everything at once |
 | **Columns** | The same list turned on its side, one column per group | Seeing how far along things are, and moving tasks between stages |
 
-**List** is the default, and each segment remembers its own choice across restarts — Todo can stay a list while Tasks in progress stays a board. Both layouts respect the grouping and filters below.
+**List** is the default, and each segment remembers its own choice across restarts, so Todo can stay a list while Tasks in progress stays a board. Both layouts respect the grouping and filters below.
 
 **Columns** draws the sections of the *current* grouping as a horizontal board, so what the columns are is up to the **Group** control. Grouped by **Progress**, the columns are the lifecycle stages: **Exploration**, **In Development**, **In Review**, and **Done**. They stay put as work moves between them rather than appearing and vanishing under the pointer, and an empty one reads **Nothing here**. **On hold** and **Archived** are the exceptions: each appears when something is filed there, and both appear while you drag a card so you can drop onto them. On every other grouping, Kepler doesn't draw a section with nothing in it.
 
@@ -106,7 +106,7 @@ The available groupings differ by segment.
 
 A session stays marked **unseen** until you actually look at it, so a turn that finished while you were elsewhere doesn't quietly clear itself.
 
-**Inbox** is one of two axes where a task can appear twice: a task that is both unread *and* blocked on you is listed under **Unread** and **Needs attention**, because each bucket is a complete answer to its own question and leaving it out of either would make that list lie. **Running** is exclusive — a task already at the top doesn't need a second row saying it's busy too. So is **Done**, which stands in for the time bucket a task would otherwise get.
+**Inbox** is one of two axes where a task can appear twice: a task that is both unread *and* blocked on you is listed under **Unread** and **Needs attention**, because each bucket is a complete answer to its own question and leaving it out of either would make that list lie. **Running** is exclusive: a task already at the top doesn't need a second row saying it's busy too. So is **Done**, which stands in for the time bucket a task would otherwise get.
 
 A task stays in **Running** for 10 seconds after its work stops, so it doesn't drop out between one prompt and the next, and running tasks keep the order they started in rather than trading places as they work. Moves into **Unread** and **Needs attention** are immediate, since those are news.
 
@@ -122,9 +122,9 @@ The 24-hour window is fixed rather than a setting: the axis is meant to be a qui
 
 Tasks in progress has no Status grouping, because a task's status *is* its progress stage, a second axis under another name.
 
-On Todo, **Needs my attention** is the viewer-relative axis: what each item is asking of you right now — **Changes requested**, **Needs my review**, **Re-review**, **Comments** — with **No action needed** last, where it can't push a real obligation below the fold. It's an axis rather than a pinned section so it obeys the same rules as every other grouping: one bucket per state, collapsible headers, and no row shown twice.
+On Todo, **Needs my attention** is the viewer-relative axis: what each item is asking of you right now (**Changes requested**, **Needs my review**, **Re-review**, **Comments**), with **No action needed** last, where it can't push a real obligation below the fold. It's an axis rather than a pinned section so it obeys the same rules as every other grouping: one bucket per state, collapsible headers, and no row shown twice.
 
-On Todo, **Status** groups issues by their tracker's own workflow state — a Linear *In Progress*, a Jira *To Verify* — rather than collapsing every open issue into one bucket.
+On Todo, **Status** groups issues by their tracker's own workflow state, such as a Linear *In Progress* or a Jira *To Verify*, rather than collapsing every open issue into one bucket.
 
 Items with no repository or provider collect under **No repository** and **No provider**. A pull request whose provider didn't say who authored it groups under **Unattributed**; an issue, which has no author-or-reviewer axis at all, groups under **Not applicable**.
 
@@ -158,7 +158,7 @@ Dates sort newest first; **Name** and **ID** sort ascending. **ID** compares ref
 
 ## Set a task's progress
 
-A task's progress normally follows its git and pull-request evidence (see [Status](/kepler/kepler-interface)). When that evidence can't see what you know — a review was sent back, or the work landed somewhere Kepler can't tell — set the stage yourself.
+A task's progress normally follows its git and pull-request evidence (see [Status](/kepler/kepler-interface)). Sometimes that evidence can't see what you know: a review was sent back, or the work landed somewhere Kepler can't tell. When that happens, set the stage yourself.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/progress-menu-oct-2026.png" target="_blank" rel="noopener noreferrer">
@@ -183,13 +183,13 @@ The control's tooltip says whether the stage *Updates as you work* or was *Set m
 
 **How a manual stage meets the evidence.** A stage you set doesn't fight git; it waits for it.
 
-- Set a stage *ahead* of the evidence — **Done** before the merge, **In Review** before the pull request — and it holds until the evidence reaches it.
-- Set a stage *behind* the evidence — **Reopen**, or a review sent back to **In Development** — and it holds until the evidence changes at all, so a reopened task still follows its next pull request.
+- Set a stage *ahead* of the evidence (**Done** before the merge, **In Review** before the pull request), and it holds until the evidence reaches it.
+- Set a stage *behind* the evidence (**Reopen**, or a review sent back to **In Development**), and it holds until the evidence changes at all, so a reopened task still follows its next pull request.
 - Once the evidence has caught up or moved on, the task goes back to following it. Pick **Automatic** to hand it back sooner. Dropping a card on the column the evidence already shows does the same thing.
 
 **Reopen** on a task you marked Done falls back to what git and the pull requests show. On a task the evidence finished, it sets **In Development**, and the task's next pull request carries it forward again.
 
-**On hold** parks a task without saying anything about how far it got. It reads **On hold** where the stage would be, with a tooltip saying who held it and where it stood before. Picking any stage or **Automatic** lifts the hold, and so does the task reaching **Done** — a merged pull request ends it on its own. A task already at Done can't be put on hold.
+**On hold** parks a task without saying anything about how far it got. It reads **On hold** where the stage would be, with a tooltip saying who held it and where it stood before. Picking any stage or **Automatic** lifts the hold, and so does the task reaching **Done**, so a merged pull request ends it on its own. A task already at Done can't be put on hold.
 
 Dropping a card on **Archived** opens the archive confirmation, and dragging an archived card out restores it first. An archived task's control reads **Archived** as a plain label, with no menu.
 
@@ -322,7 +322,7 @@ When a task is settled at **Done**, none of its worktrees holds unpushed work, a
   <figcaption style="text-align:center; color:#888">The Ready to archive? suggestion on a Done task.</figcaption>
 </figure>
 
-The confirmation offers the same two cascades the delete does: **Also delete worktrees** and **Also delete branches**. This way, finishing with a task doesn't have to mean deleting it to clean it off the disk. With **Also delete worktrees** ticked, the dialog lists each worktree with what will happen to it — *Merged into main*, *2 uncommitted files*, *In open PR #42* — riskiest first, and names the ones it keeps: the repository's main worktree, and worktrees another task still uses. A worktree that would lose work is kept unless you tick the extra box that names exactly what would be lost, and a row at risk can open its changes so you can judge first.
+The confirmation offers the same two cascades the delete does: **Also delete worktrees** and **Also delete branches**. This way, finishing with a task doesn't have to mean deleting it to clean it off the disk. With **Also delete worktrees** ticked, the dialog lists each worktree, riskiest first, with what will happen to it (*Merged into main*, *2 uncommitted files*, *In open PR #42*). It also names the ones it keeps: the repository's main worktree, and worktrees another task still uses. A worktree that would lose work is kept unless you tick the extra box that names exactly what would be lost, and a row at risk can open its changes so you can judge first.
 
 Archiving outranks everything else, so a task you filed away can't climb back into a live section because a shell is still open on it.
 
@@ -339,6 +339,6 @@ For more than one at a time, every section header on **Tasks in progress** carri
 
 Both **Archive** and **Delete** confirm, and both offer **Also delete worktrees** and **Also delete branches**. The single-task dialog remembers what you ticked last time; the batch confirmation always starts with both unticked. The batch confirmation doesn't list each worktree's fate. Instead, any worktree that would lose work is kept, and a toast afterwards says which ones and why. Open a task's own **⋮** to see the list before you confirm.
 
-To clean up worktrees rather than tasks — including stale locks Kepler left behind — use the full-width Worktrees view, opened from the worktree list in Settings. See [Settings](/kepler/settings).
+To clean up worktrees rather than tasks, including stale locks Kepler left behind, use the full-width Worktrees view, opened from the worktree list in Settings. See [Settings](/kepler/settings).
 
 ---

@@ -19,7 +19,7 @@ taxonomy:
 ---
 <kbd>Last updated: October 2026</kbd>
 
-Kepler is GitKraken's **Agentic Development Environment (ADE)** — one place to direct coding agents across every issue and pull request assigned to you, in as many repositories as you need, at the same time. You bring the agent; Kepler attaches the context and carries the result through to a reviewed, mergeable change.
+Kepler is GitKraken's **Agentic Development Environment (ADE)**: one place to direct coding agents across every issue and pull request assigned to you, in as many repositories as you need, at the same time. You bring the agent; Kepler attaches the context and carries the result through to a reviewed, mergeable change.
 
 This release notes page tracks what's new and changing in the current version of Kepler, including new features, improvements, bug fixes, and breaking changes. Use it to see what shipped in the most recent release, confirm when a capability became available, or review changes before upgrading.
 
@@ -199,7 +199,7 @@ New to Kepler? [Getting Started with Kepler](/kepler/kepler-getting-started) tak
 #### The task page and Dashboard previews
 
 - Tabs on the task page are now free-form: drag them into groups and splits, with terminals listed after Changes in the rail.
-- Every open Dashboard preview gets its own column — up to 16 — with a placeholder until its item loads, and panel widths are remembered across reloads and segment switches.
+- Every open Dashboard preview gets its own column, up to 16, with a placeholder until its item loads. Panel widths are remembered across reloads and segment switches.
 - Maximize one preview over the others, restore it with a click outside, and reorder panels by dragging their headers or from the panel menu.
 - Resize every panel at once with a Shift-drag, and scroll the strip with Shift+wheel or a sideways swipe, even over a terminal.
 - Preview headers were rebuilt, and can collapse for a pull request or an issue. The task page header matches.
@@ -361,7 +361,7 @@ New to Kepler? [Getting Started with Kepler](/kepler/kepler-getting-started) tak
 
 - Run any agent in a real terminal inside Kepler: Codex, Cursor, Copilot, OpenCode, Auggie, Grok and your own custom agent server, alongside rich chat.
 - Choose Terminal or Rich chat per session, set a default per agent, and switch to the other mode from the New session menu.
-- A status bar under each terminal session shows the running model, effort and mode — kept current when you change them inside the CLI — plus a toggle for rich input.
+- A status bar under each terminal session shows the running model, effort and mode, plus a toggle for rich input. It stays current when you change them inside the CLI.
 - Answer a terminal agent's permission requests and questions from Kepler, instead of switching to its own interface.
 - Terminal agents get Kepler's workspace tools and task context, the same as rich chat, and their transcript survives a restart.
 - Paste images into Claude Code and Codex terminals.
@@ -370,7 +370,7 @@ New to Kepler? [Getting Started with Kepler](/kepler/kepler-getting-started) tak
 
 #### Sessions you started outside Kepler
 
-- Kepler now finds agent sessions you started in your own terminal, and past sessions left on disk. Preview the transcript, then continue it, fork it, or adopt it into a task — Kepler binds a conversation to a task without taking it over. On by default.
+- Kepler now finds agent sessions you started in your own terminal, and past sessions left on disk. Preview the transcript, then continue it, fork it, or adopt it into a task. Kepler binds a conversation to a task without taking it over. On by default.
 - External sessions appear on the Dashboard, in the New task picker, the session view and the task rail, with a shared context card.
 - Create a task in any plain folder, not just a repository.
 
@@ -384,7 +384,7 @@ New to Kepler? [Getting Started with Kepler](/kepler/kepler-getting-started) tak
 #### Dashboard
 
 - New Inbox grouping sorts tasks into unread, running, needs attention, recent, earlier, done and archived. A session stays marked unseen until you look at it.
-- Rebuilt worktree chip: the branch cell shows what the branch adds against its base — commits, files and line delta — and the upstream cell offers only the verb the counts call for, with force-push behind a confirmation. Terminal, Open in and Run sit alongside as split controls.
+- Rebuilt worktree chip: the branch cell shows what the branch adds against its base (commits, files and line delta), and the upstream cell offers only the verb the counts call for, with force-push behind a confirmation. Terminal, Open in and Run sit alongside as split controls.
 - The Terminal cell counts the shells running in a checkout and brings the most recent one forward, and the "+" lets you choose between a task's checkouts by branch.
 - Tasks spanning several repositories now appear under each of them.
 - The header folds its controls one at a time as room runs out.
@@ -444,7 +444,7 @@ New to Kepler? [Getting Started with Kepler](/kepler/kepler-getting-started) tak
 - Start typing anywhere in a session to focus the message composer.
 - Manage commands… in the run menu, deep-linking to that repository's settings.
 - Cmd/Ctrl+J opens the task's terminals, Option/Alt-click opens a resource row in the browser, and text context menus offer spellcheck actions.
-- Picking an editor or a command no longer silently pins it as your default — each row carries its own set/unset toggle, reachable from the keyboard.
+- Picking an editor or a command no longer silently pins it as your default. Each row carries its own set/unset toggle, reachable from the keyboard.
 - Line-wrap toggle on code blocks.
 
 ### Improvements
@@ -462,7 +462,7 @@ New to Kepler? [Getting Started with Kepler](/kepler/kepler-getting-started) tak
 
 #### Writing a prompt
 
-- Prompt controls were tightened throughout, in the New task dialog and in a session alike — the agent pill sits beside Send everywhere, the context gauge is drawn as a usage ring, the agent picker is a list of labelled rows, the agent settings menus are searchable, every control has a real tooltip, and Send shows a sending state from the moment you click.
+- Prompt controls were tightened throughout, in the New task dialog and in a session alike. The agent pill sits beside Send everywhere, the context gauge is drawn as a usage ring, the agent picker is a list of labelled rows, the agent settings menus are searchable, every control has a real tooltip, and Send shows a sending state from the moment you click.
 
 #### Layout and windows
 
@@ -484,7 +484,7 @@ New to Kepler? [Getting Started with Kepler](/kepler/kepler-getting-started) tak
 #### Terminal sessions
 
 - Terminal sessions keep their identity across a restart, survive idle shutdown while busy and come back on reopen, launch in the mode shown when you started them, run under the Claude account you selected, and report the CLI's own error when a launch fails.
-- An interrupt is recognised whether it arrives as Escape or Ctrl+C, and a turn counts as cancelled once both its hooks and its output go quiet — so a stopped session no longer lingers as though it were still working.
+- An interrupt is recognised whether it arrives as Escape or Ctrl+C. A turn counts as cancelled once both its hooks and its output go quiet, so a stopped session no longer lingers as though it were still working.
 - A Claude terminal session honors its Default model and Manual mode picks.
 - A terminal session keeps its row when its worktree is cleaned up.
 - Terminal input state is reconstructed after a long-running session scrolls past its startup, so Shift+Enter and pasted newlines keep working.
@@ -555,7 +555,7 @@ New to Kepler? [Getting Started with Kepler](/kepler/kepler-getting-started) tak
 
 #### Agents and platforms
 
-- The GitKraken tools are installed into command-line agents only, and the workspace tools are auto-approved across agents — including Auggie, which used to lose them.
+- The GitKraken tools are installed into command-line agents only. The workspace tools are auto-approved across agents, including Auggie, which used to lose them.
 - Trusted Auggie MCP settings are preserved.
 - Codex installed through npm, and Cursor's PowerShell entry point, are both found and launched on Windows.
 
@@ -587,7 +587,7 @@ New to Kepler? [Getting Started with Kepler](/kepler/kepler-getting-started) tak
 ### Features
 
 - Read a worktree's changes without leaving the Dashboard: "View changes" in the worktree popover opens the full changes view in the side panel.
-- Jump around a long conversation from a new bar at the top of the chat — it names the prompt you're currently reading and opens a list of every prompt in the session.
+- Jump around a long conversation from a new bar at the top of the chat. It names the prompt you're currently reading and opens a list of every prompt in the session.
 - Copy any code block in a conversation with one press, and open links from the transcript directly.
 - Rename a branch from task detail.
 - Start and close a session from the keyboard; the standalone task launcher moves to Shift+Alt+N.
@@ -595,7 +595,7 @@ New to Kepler? [Getting Started with Kepler](/kepler/kepler-getting-started) tak
 
 ### Improvements
 
-- The Agent Graph is dramatically lighter — it no longer burns CPU and GPU while sitting open — and the picture holds still while the fleet works: the camera frames what you selected and stays there, roots stop reordering themselves, and node panels answer the node you picked.
+- The Agent Graph is much lighter and no longer burns CPU and GPU while sitting open. The picture also holds still while the fleet works: the camera frames what you selected and stays there, roots stop reordering themselves, and node panels answer the node you picked.
 - Worktrees an agent creates are now attributed to the session and task that made them.
 - The task page's working-changes tree shows added and removed line counts per file and per section.
 - Attention toasts opened from the Dashboard now show the task in a side panel instead of navigating away from your list, panels and scroll position.
@@ -604,7 +604,7 @@ New to Kepler? [Getting Started with Kepler](/kepler/kepler-getting-started) tak
 ### Fixes
 
 - Picking an existing branch in the Task Launcher checks it out instead of leaving the repo on a detached HEAD.
-- Launching a task no longer fails permanently after a repository's default branch is renamed — it falls back to the repo's current default, and a genuinely missing branch is named along with how to fix it.
+- Launching a task no longer fails permanently after a repository's default branch is renamed. It falls back to the repo's current default, and a genuinely missing branch is named along with how to fix it.
 - Archive Task and Delete Worktree no longer warn that commits will be lost when those commits are already pushed and part of an open pull request.
 - Typing `/` shows your agent's skills in every composer, including the launcher and the dashboard dock, and a slow first probe no longer leaves the menu permanently empty.
 - Signing in to an agent account unblocks every session waiting on it, not just one.
@@ -613,7 +613,7 @@ New to Kepler? [Getting Started with Kepler](/kepler/kepler-getting-started) tak
 - Tasks no longer climb through the progress lifecycle on a cold start.
 - A task can attach more than one pull request again.
 - Removing a worktree that git only partly removed now cleans up the leftover folder and the stale entry blocking the retry, instead of failing every retry the same way.
-- Task folders no longer end up with an unresolved repository placeholder in their path — which made them illegal filenames on Windows.
+- Task folders no longer end up with an unresolved repository placeholder in their path, which made them illegal filenames on Windows.
 - Remote windows recover on their own: a disconnect returns the window to local Kepler, and a crashed remote window recovers instead of being stranded.
 - The remote tunnel no longer flaps in a reconnect loop, and Remote Access works from inside a Remote Environment.
 - Updating while connected to a remote host restarts correctly, and a failed update now tells you what went wrong instead of silently reverting.
@@ -632,10 +632,10 @@ New to Kepler? [Getting Started with Kepler](/kepler/kepler-getting-started) tak
 
 ### Features
 
-- Changed files are now a real file tree, and every file in a diff lives in one continuous scroller — clicking a file jumps to it instead of reloading the view.
+- Changed files are now a real file tree, and every file in a diff lives in one continuous scroller. Clicking a file jumps to it instead of reloading the view.
 - Large commits paint straight away: a 200-file diff no longer downloads every file before showing the first row, and full contents load per file as you expand them.
 - Select several files in the tree with Cmd/Ctrl+click, Shift+Arrow or Cmd+A, and stage, unstage or discard them from a right-click menu.
-- New and binary files now render properly in a diff — a new file shows as a whole file, and image changes show a before/after preview.
+- New and binary files now render properly in a diff: a new file shows as a whole file, and image changes show a before/after preview.
 - Codex sub-agents now show up as their own cards in the conversation.
 
 ### Improvements
@@ -646,7 +646,7 @@ New to Kepler? [Getting Started with Kepler](/kepler/kepler-getting-started) tak
 ### Fixes
 
 - Typing `/` in the launch composer shows your agent's skills again.
-- A dormant or disconnected session's conversation is no longer blank — the saved transcript is served back.
+- A dormant or disconnected session's conversation is no longer blank. The saved transcript is served back.
 - Deleting a git worktree no longer destroys the conversation that ran in it; the session is kept, marked as missing its worktree, and stays readable.
 - Connecting an integration now names the account you're signed in to Kepler as, instead of silently using whichever account your browser is logged in to.
 - Tasks backed by a folder rather than a git worktree keep their "Start a new session" button.
@@ -675,13 +675,13 @@ New to Kepler? [Getting Started with Kepler](/kepler/kepler-getting-started) tak
 - Actions: write your own prompt actions, pick an agent per action, and fire them from any surface.
 - Agent Graph: a live graph of what your agent fleet is doing, with previews, replay and a time scrubber, on the Dashboard and beside a conversation.
 - Interactive plan review: read an agent's plan and comment on it inline before the work starts.
-- Remote Access is now generally available — a built-in tunnel to reach Kepler from anywhere, with a QR code and controls in the top bar. Your machine stays awake while it's on.
+- Remote Access is now generally available: a built-in tunnel to reach Kepler from anywhere, with a QR code and controls in the top bar. Your machine stays awake while it's on.
 - Find in conversation with Cmd/Ctrl+F.
 - Dashboard gains a "Needs my attention" grouping, an archive bucket with bulk cleanup, foldable sections, provider filters, per-worktree controls, terminals in the side panel, several task panels open at once with pinning, and a rows-and-columns list layout.
 - Multiple accounts per agent for Codex, Copilot and Auggie.
 - Grok Build harness is now supported.
 - Bring your own agent: point Kepler at any ACP compatible agent server of your own.
-- Agents can manage their own task — list and attach resources, create and discard worktrees, and write task notes.
+- Agents can manage their own task: list and attach resources, create and discard worktrees, and write task notes.
 - Add an existing local repository from Settings or the task dialog, and give repositories a custom display name and description.
 - Clones now authenticate with your account's provider token, including enterprise hosts, and adopt an existing folder on disk instead of failing.
 - Delete a worktree from the UI, with live guards and an explicit confirmation when something would be lost.
@@ -693,7 +693,7 @@ New to Kepler? [Getting Started with Kepler](/kepler/kepler-getting-started) tak
 ### Improvements
 
 - Rebuilt design system: one consistent set of colors, type and spacing, with contrast measured against WCAG AA in both light and dark.
-- Much faster startup — cold launch reaches first content sooner, and a freshly launched task is interactive immediately.
+- Much faster startup: cold launch reaches first content sooner, and a freshly launched task is interactive immediately.
 - Issue and pull request search runs on the provider instead of locally, so long lists load instantly.
 - Conversations read more calmly: consecutive tool calls collapse into clusters, batched edits group together, subagent work folds into a single card, and permission requests render inline in the transcript.
 - Markdown files an agent writes render as formatted documents, with a toggle back to the source.
@@ -711,7 +711,7 @@ New to Kepler? [Getting Started with Kepler](/kepler/kepler-getting-started) tak
 - Your per-session model, mode and effort picks survive a restart, and a retired model no longer lingers in the picker.
 - Zoom survives a macOS Space switch, a window resize and waking from sleep, and windows restore onto the monitor they were on.
 - New worktrees fork off the remote default branch instead of whatever HEAD happened to be, and the launcher names the real base branch.
-- A revoked or expired provider token is reported for what it is instead of failing every read, and an expired Claude login is told apart from being signed out — with a warning before it expires.
+- A revoked or expired provider token is reported for what it is instead of failing every read. An expired Claude login is told apart from being signed out, with a warning before it expires.
 - Terminal typing and panel resizing arrive in order, so fast input no longer transposes characters and a drag settles at the final size.
 - External agent sessions are discovered across every account and custom home directory, including Codex's current session format.
 - Long network Git operations no longer time out at 60 seconds, and an authentication failure surfaces an actionable error instead of hanging on a hidden prompt.
@@ -721,7 +721,7 @@ New to Kepler? [Getting Started with Kepler](/kepler/kepler-getting-started) tak
 ### Breaking changes
 
 - The List, Kanban and Console views have been removed. The Dashboard is the roster and the task detail view is where work happens.
-- The same-network LAN serve mode and the ngrok URL override are gone — use Remote Access instead.
+- The same-network LAN serve mode and the ngrok URL override are gone. Use Remote Access instead.
 - Once your data has been migrated by this version, older builds will refuse to open it rather than risk corrupting it.
 
 ***
@@ -747,7 +747,7 @@ New to Kepler? [Getting Started with Kepler](/kepler/kepler-getting-started) tak
 ### Features
 
 - Redesigned remote connection experience: switch between your local and remote environments from a lightweight title-bar popover, with host setup, connection details, and diagnostics moved into a dedicated panel.
-- Sign in to Claude Code through your browser without dropping to a terminal — including on remote and SSH connections.
+- Sign in to Claude Code through your browser without dropping to a terminal, including on remote and SSH connections.
 - The repo picker now auto-populates from your Default Repositories Folder.
 - Refreshed app icon.
 
@@ -778,7 +778,7 @@ New to Kepler? [Getting Started with Kepler](/kepler/kepler-getting-started) tak
 
 ### Features
 
-- Queue up prompts while the agent is busy — they're kept across disconnects, re-authentication, and reconnects.
+- Queue up prompts while the agent is busy. They're kept across disconnects, re-authentication, and reconnects.
 - Disconnect a provider directly from Settings → Provider Integrations.
 - Unified filter and sort menu for the task sidebar.
 
@@ -1066,5 +1066,5 @@ New to Kepler? [Getting Started with Kepler](/kepler/kepler-getting-started) tak
 
 - Resuming an agent session that the backend no longer recognizes now starts a fresh session instead of failing.
 - A terminal's initial prompt is now reliably delivered when its session starts.
-- Terminal contents no longer flash garbled on open — buffer replay now waits until the terminal is correctly sized.
+- Terminal contents no longer flash garbled on open. Buffer replay now waits until the terminal is correctly sized.
 - Kepler now returns you to the home view when a worktree is deleted outside the app, instead of leaving you on a broken page.

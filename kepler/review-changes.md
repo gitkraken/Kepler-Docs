@@ -43,7 +43,7 @@ Open a worktree from the rail's **Changes** group and it opens in a tab of its o
 | Control | What it does |
 |---|---|
 | The **branch pill** | The branch this checkout is on. Its chevron opens **Open changes**, **Copy branch name**, **Copy worktree path**, **Reveal in file manager**, **Refresh**, **Detach worktree…** and **Delete worktree…**. During a stopped rebase or merge it also holds **Continue {operation}** and **Abort {operation}…** |
-| The **sync control** | One button whose verb follows the branch's state — **Publish**, **Push**, **Pull**, **Fetch** or **Update** — with the counts beside it. See [Publishing and syncing the branch](#publishing-and-syncing-the-branch) |
+| The **sync control** | One button whose verb follows the branch's state (**Publish**, **Push**, **Pull**, **Fetch** or **Update**), with the counts beside it. See [Publishing and syncing the branch](#publishing-and-syncing-the-branch) |
 | **Open in** | Hands the checkout to another app. The split button runs your default; the chevron lists the rest, ending with **Open on {provider}** where the branch lives on a supported host |
 | **Run a command** | The repository's configured commands, and **Manage commands…**. See [Settings](/kepler/settings) |
 
@@ -66,13 +66,13 @@ The panel is two rows of controls over a list of files, with the commit box unde
 | **Show all files** | Shows every file in the checkout, not only what changed |
 | **Filter files** | Narrows the list |
 
-The scope is chosen once and then left alone. Kepler won't flip you to **Commits** the moment the last working change is committed, or back to **Working changes** because an agent touched a file — either would move the list under whoever was reading it.
+The scope is chosen once and then left alone. Kepler won't flip you to **Commits** the moment the last working change is committed, or back to **Working changes** because an agent touched a file. Either would move the list under whoever was reading it.
 
 **Show all files** is independent of the scope, so browsing every file in the checkout survives a scope switch.
 
 The header above the commit list says how far the branch has come: **{count} commits ahead of {branch}**, with **branched here** marking the merge base.
 
-A wholly untracked folder with hundreds of files — a build output nobody ignored, a test sandbox — shows as one muted row with its file count instead of thousands of rows. **Show files** lists them; until you do, line totals that leave them out are marked **partial**. Staging, discarding and committing take the folder as a whole, and the confirmation names its file count.
+A wholly untracked folder with hundreds of files, such as a build output nobody ignored or a test sandbox, shows as one muted row with its file count instead of thousands of rows. **Show files** lists them; until you do, line totals that leave them out are marked **partial**. Staging, discarding and committing take the folder as a whole, and the confirmation names its file count.
 
 ***
 
@@ -116,7 +116,7 @@ The header counts what you are reading: **{index} of {total}**, and **{count} fi
 - **Unmodified regions are collapsed**, leaving three lines of context around each change.
 - **Expand all** and **Collapse all** act on the whole stack; a single diff folds from its own header.
 - **Wrap lines** on the viewer's header wraps long lines instead of scrolling them sideways.
-- A file that is unchanged in the current scope is drawn as such — **Unchanged in this scope** — rather than hidden, so a **Show all files** browse reads the whole checkout.
+- A file that is unchanged in the current scope is drawn as **Unchanged in this scope** rather than hidden, so a **Show all files** browse reads the whole checkout.
 - A conflicted file is marked **!** in the tree and the viewer.
 
 Right-click a file row for its own menu: **Stage file** or **Unstage file**, **Discard changes**, **Delete**, **Open in editor**, and an **Open in** submenu with your editors, **Open in default app**, **Reveal in file manager** and **Open file on {provider}** where the file exists on a supported host. **Copy path** and **Copy relative path** end the menu. Select several rows and the items act on all of them.
@@ -127,13 +127,13 @@ In **Working changes**, the diff is the file on disk: click into it and type. Th
 
 An unsaved edit shows **Unsaved** with **Save** and **Discard** beside it. Nothing throws it away silently: **Escape**, closing the overlay, or moving to another file, scope or worktree asks **Save your edit?** first. A file with an unsaved edit can't be staged or committed until you save or discard it, since Git records what is on disk.
 
-Editing a file reached through a symlink saves to the file it points at, and the link stays a link. A symlink's own change — the path it points to — is read-only. Commits are history, so the **Commits** scope is never editable.
+Editing a file reached through a symlink saves to the file it points at, and the link stays a link. A symlink's own change (the path it points to) is read-only. Commits are history, so the **Commits** scope is never editable.
 
 ### Stacked or split
 
 **Stacked** puts removals and additions in one column; **Split** puts the old and new file side by side. The toggle sits on the viewer's header, and **Settings → Appearance → Diff View** sets what it starts on.
 
-Split needs room for two columns of code. Below roughly 640 pixels of viewer width the diff falls back to Stacked whatever the setting says — the header says **Too narrow for a split diff** rather than truncating both sides into noise.
+Split needs room for two columns of code. Below roughly 640 pixels of viewer width the diff falls back to Stacked whatever the setting says. The header says **Too narrow for a split diff** rather than truncating both sides into noise.
 
 ### Diffs that are not code
 
@@ -161,7 +161,7 @@ Read the diff, mark what needs fixing, and hand the whole list to the agent in o
   </a>
   <figcaption style="text-align:center; color:#888">A review comment draft, under the lines it's about.</figcaption>
 </figure>
-<!-- TODO(screenshot): New — Two posted comment cards under diff lines, with the "2 comments · Add to prompt" control in the viewer header. -->
+<!-- TODO(screenshot): New: Two posted comment cards under diff lines, with the "2 comments · Add to prompt" control in the viewer header. -->
 
 | To comment on | Do this |
 |---|---|
@@ -173,7 +173,7 @@ A draft opens under the last line. Type your note and press **Comment**, or **Cm
 
 Comments stay in Kepler. Nothing is posted to your Git host, and the agent doesn't see them until you send them.
 
-The viewer's header sums them up — **{count} comments**, **Add to prompt**, and a **Comment options** menu with **Discard all comments**. **Add to prompt** turns every comment into one block — each with its `path:lines`, the quoted code, and your note — and adds it to the composer of the session running in that worktree. It does not send: you read the prompt, add to it, and press Send yourself. Each card has its own **Add to prompt** for sending just that one. Sent comments are cleared from the diff.
+The viewer's header sums them up: **{count} comments**, **Add to prompt**, and a **Comment options** menu with **Discard all comments**. **Add to prompt** turns every comment into one block and adds it to the composer of the session running in that worktree. Each comment in the block carries its `path:lines`, the quoted code, and your note. It does not send: you read the prompt, add to it, and press Send yourself. Each card has its own **Add to prompt** for sending just that one. Sent comments are cleared from the diff.
 
 **Add to prompt** needs a session in this task running in the same worktree as the diff; the button's tooltip names the session it will write into. From the Dashboard, open the task first.
 
@@ -185,7 +185,12 @@ Typed text is never thrown away: **Escape** only leaves a draft's field, and a d
 
 In **Working changes**, the tree is where you stage and the commit box beneath it is where you commit. The panel and the overlay share one commit box per worktree, so a message you start in one is waiting in the other, and it's kept when the overlay closes.
 
-<!-- TODO(screenshot): New — Working changes tree with staging checkboxes, the "1 of 4 staged" badge, and the composer-style commit box with Amend ticked -->
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/staging-commit-box-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/staging-commit-box-oct-2026.png" class="help-center-img img-bordered" alt="Working changes in a worktree's Changes column, with a checkbox on each file row and four of them ticked. The header box is partly checked and its badge reads 4 of 85 staged. Below the tree sits the commit box, with Commit message, Amend last commit, and Commit.">
+  </a>
+  <figcaption style="text-align:center; color:#888">Staging files in Working changes, above the commit box.</figcaption>
+</figure>
 
 ### Staging
 
@@ -203,12 +208,12 @@ The commit box is framed like the prompt composer: one message field whose first
 | Control | What it does |
 |---|---|
 | The message field | **Cmd/Ctrl+Enter** commits |
-| **Amend last commit** | Rewrites the last commit instead of adding one. Ticking it fills an empty box with the last commit's message, and the button reads **Amend commit**. An amend can change only the message, with nothing staged. Amending a commit you've already pushed asks first — **Amend a pushed commit?** — because the next push will have to force |
+| **Amend last commit** | Rewrites the last commit instead of adding one. Ticking it fills an empty box with the last commit's message, and the button reads **Amend commit**. An amend can change only the message, with nothing staged. Amending a commit you've already pushed asks **Amend a pushed commit?** first, because the next push will have to force |
 | **Commit** | Commits what is staged |
 
 When the button can't commit yet, its tooltip says why: **Stage changes above to commit**, **Enter a commit message**, **Save or discard your edit first**, **Wait for staging to finish**, or **Resolve the conflicts first**.
 
-The commit is exactly what you were looking at. It waits for staging still in flight, and if an agent changes the index in the meantime, Kepler refuses the commit — *The staged files changed since you looked. Check them, then commit again.* — and keeps your message.
+The commit is exactly what you were looking at. It waits for staging still in flight. If an agent changes the index in the meantime, Kepler refuses the commit, keeps your message, and says *The staged files changed since you looked. Check them, then commit again.*
 
 When a Git hook stops the commit, the box says **A Git hook stopped the commit** and shows the end of the hook's output, with **Show output** for the rest. A hook that never finishes can be stopped with **Cancel commit**.
 
@@ -239,26 +244,45 @@ The strip's **sync control** is one button, and its verb is whatever the branch 
 
 | State | The button reads | What it does |
 |---|---|---|
-| Behind or diverged from its merge target | **Update** — or **Review conflicts** when updating would conflict | Opens the update view in the worktree panel. See below |
-| No upstream | **Publish** — *Creates {remote}/{branch} on the remote* | Publishes the branch |
+| Behind or diverged from its merge target | **Update**, or **Review conflicts** when updating would conflict | Opens the update view in the worktree panel. See below |
+| No upstream | **Publish**, with *Creates {remote}/{branch} on the remote* | Publishes the branch |
 | Ahead | **Push**, with **{count} ahead** | Pushes |
 | Behind | **Pull**, with **{count} behind** | Pulls. A branch that is both ahead and behind its upstream reads *Behind, pull first* on Push |
 | In step | **Fetch**, with **Up to date** | Updates your remote-tracking refs |
 
 Counts only move on a fetch, so the control says when it last looked: **Checked {time}**.
 
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/sync-control-push-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/sync-control-push-oct-2026.png" class="help-center-img img-bordered" alt="The worktree strip's sync control reading Push with 2 commits ahead, and its card open: Push 2 commits, the remote branch it pushes to, 2 ahead, and Checked just now.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The sync control on a branch that's ahead of its upstream.</figcaption>
+</figure>
+
 The chevron beside it lists **Push** (or **Publish**), **Pull** and **Fetch**, plus:
 
-- **Force push** — *Rewrites the remote branch*. Offered when the branch has diverged from its upstream, as a deliberate, separate click.
-- **Update** — where the branch stands against its merge target, and the way into the update view.
+- **Force push**: *Rewrites the remote branch*. Offered when the branch has diverged from its upstream, as a deliberate, separate click.
+- **Update**: where the branch stands against its merge target, and the way into the update view.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/sync-control-menu-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/sync-control-menu-oct-2026.png" class="help-center-img img-bordered" alt="The sync control's chevron menu open, listing Push, Pull, and Fetch, then Update.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The sync control's chevron menu.</figcaption>
+</figure>
 
 ### Updating from the base
 
-The update view rebases or merges the branch onto its merge target — on a copy first. Your branch changes only when you apply the result.
+The update view rebases or merges the branch onto its merge target. It works on a copy first, and your branch changes only when you apply the result.
 
-<!-- TODO(screenshot): New — The update view with the branch title, **Base branch** picker, and **Rebase**; ideally a second shot after the run showing **Apply**, **Apply & push**, and **Discard**. -->
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/update-view-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/update-view-oct-2026.png" class="help-center-img img-bordered" alt="The update view for kepler/docs-0.11-0.12-updates, updating from origin/main, reporting No conflicts with origin/main, with the Rebase button's menu open on Merge and a note that the run happens on a copy first.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The update view, before a run.</figcaption>
+</figure>
 
-1. The title names the branch, with the **Base branch** under it. Kepler picks the detected base; choose another from the picker if you need to.
+1. The title names the branch, with **from {branch}** under it. Kepler picks the detected base; choose another from the picker if you need to.
 2. Press **Rebase**, or choose **Merge** from its menu. **Stop** abandons a run in progress, and the branch is never touched.
 3. When the copy is ready, press **Apply**, or **Apply & push**, to move your branch to it. **Discard** throws it away.
 4. After applying, **Roll back** (or **Roll back & push**) returns the branch to where it was. The sync control's menu offers the same thing as **Roll back update**.
@@ -271,14 +295,26 @@ When updating would conflict, the button reads **Review conflicts** and the view
 
 A branch's **merge target** is the branch it will merge into: what its commits, counts and **Update** are measured against. Kepler detects one, and you can change it.
 
-<!-- TODO(screenshot): New — The **from {branch}** picker open, with **Save as merge target** beside the pick and **Reset to automatic ({ref})** in the list. -->
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/change-merge-target-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/change-merge-target-oct-2026.png" class="help-center-img img-bordered" alt="A worktree's menu with Change merge target open beside it: a Search branches field above a list of remote branches, with origin/bug-fix marked Saved, origin/main marked Automatic, and Reset to automatic (origin/main) at the bottom.">
+  </a>
+  <figcaption style="text-align:center; color:#888">Change merge target, from a worktree's menu.</figcaption>
+</figure>
 
 | To | Do this |
 |---|---|
 | Compare against another branch for now | Click **from {branch}** in the panel or the overlay and pick a branch. The commit list, counts and strip follow it, and the label's tooltip reads **For this view only**. Nothing is saved |
-| Keep that comparison | **Save as merge target**, beside the pick. Only remote branches can be saved |
+| Keep that comparison | Click **Save as merge target**, beside the pick. In a narrow panel it reads **Save**. Only remote branches can be saved |
 | Change it outright | **Change merge target…** from the merge target chip on the Dashboard, or from the worktree's menu in the task view. Remote branches only; choosing one saves it |
 | Go back to the detected one | **Reset to automatic ({ref})** in the picker |
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/save-merge-target-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/save-merge-target-oct-2026.png" class="help-center-img img-bordered" alt="The Changes panel for kepler/docs-0.11-0.12-updates on the Commits tab, comparing from origin/0.11.0-release-notes, with a Save button beside the picker.">
+  </a>
+  <figcaption style="text-align:center; color:#888">A branch picked for this view only, with Save beside it.</figcaption>
+</figure>
 
 Kepler and GitLens share a branch's merge target, so a change made in GitLens shows up in Kepler while it's running.
 
@@ -292,7 +328,7 @@ The Dashboard's task preview shows each worktree as a two-row **worktree pill**:
 
 - The top row: the branch and repository, its menu, the pull request, and the sync control.
 - The bottom row: chips for the uncommitted files, the commits and the merge target, with **Open in** and **Run** beside them. Each chip has a hover card that says what a click does, and a right-click menu of its own. Clicking the uncommitted or commits chip opens the same Changes overlay, on that scope, without going to the task page first.
-- A task with several worktrees shows one pill at a time. Its leading edge shows the position — **{position}/{count}** — and expands to **Show all {count} worktrees**. The branch name becomes a switcher you can also step through with the arrow keys, and **Auto-switch to active worktree** lets it follow whichever worktree is busiest.
+- A task with several worktrees shows one pill at a time. Its leading edge shows the position (**{position}/{count}**) and expands to **Show all {count} worktrees**. The branch name becomes a switcher you can also step through with the arrow keys, and **Auto-switch to active worktree** lets it follow whichever worktree is busiest.
 
 See [The Kepler Interface](/kepler/kepler-interface).
 
@@ -329,7 +365,7 @@ These are agent tools, not buttons in the interface. With one enabled, the agent
 
 | Feature | How an agent uses it |
 |---|---|
-| **AI Sync** | Updates the branch from its base with a rebase or merge, resolving conflicts as it goes. By default the result is prepared for review and the branch is left untouched until the agent applies it, so you can read the outcome first and have it applied or rolled back. AI Sync backs up every run. It also drops commits whose changes are already upstream: useful after a squash-merge. Tell the agent what matters — which side is authoritative, what must be preserved — and it passes that guidance to the conflict resolver |
+| **AI Sync** | Updates the branch from its base with a rebase or merge, resolving conflicts as it goes. By default the result is prepared for review and the branch is left untouched until the agent applies it, so you can read the outcome first and have it applied or rolled back. AI Sync backs up every run. It also drops commits whose changes are already upstream: useful after a squash-merge. Tell the agent what matters (which side is authoritative, what must be preserved), and it passes that guidance to the conflict resolver |
 | **Compose** | Plans the reorganization first and applies it as a second step, so you can read the plan before anything moves. It can also split a multi-commit branch into a stack, and undo what it applied |
 
 Turning either one on confirms that **New agent sessions will pick up this change**. A session already running keeps the tools it started with, so start a new session to use them.
@@ -339,21 +375,20 @@ Both sets of tools default to the session's own worktree, and both can name anot
 On a Free plan both rows still appear, with a padlock where the checkbox goes and the tooltip *"Not available on the Free plan. Upgrade to unlock."* Everything else on this page works on a free account.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ai-sync-compose-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ai-sync-compose-aug-2026.png" class="help-center-img img-bordered" alt="Settings → Agents → Features, with AI Sync and Compose both enabled">
+  <a href="/wp-content/uploads/agent-features-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-features-oct-2026.png" class="help-center-img img-bordered" alt="The Features section of Settings → Agents, with five rows: AI Sync, Compose, Automatically name new tasks, Keep agents running across restarts and updates, and Use this app's interface in remote windows. AI Sync and Automatically name new tasks are ticked.">
   </a>
   <figcaption style="text-align:center; color:#888">AI Sync and Compose, in Settings → Agents → Features.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — Settings → Agents → Features with all five rows: AI Sync, Compose, Automatically name new tasks, Keep agents running across restarts and updates, and Use this app's interface in remote windows. -->
 
 ***
 
 ## Related
 
-- [The Task View](/kepler/task-view) — the rail, the columns, and where the worktree opens
-- [Tasks and Resources](/kepler/tasks-and-resources) — worktrees, and detaching or deleting one safely
-- [Agent Sessions](/kepler/agent-sessions) — directing the agent that produced these changes
-- [Actions](/kepler/actions) — **Review** on a task reviews exactly this uncommitted work
-- [Settings](/kepler/settings) — **Diff View**, and the **Features** section
+- [The Task View](/kepler/task-view): the rail, the columns, and where the worktree opens
+- [Tasks and Resources](/kepler/tasks-and-resources): worktrees, and detaching or deleting one safely
+- [Agent Sessions](/kepler/agent-sessions): directing the agent that produced these changes
+- [Actions](/kepler/actions): **Review** on a task reviews exactly this uncommitted work
+- [Settings](/kepler/settings): **Diff View**, and the **Features** section
 
 ---

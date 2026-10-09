@@ -1,8 +1,8 @@
 # Kepler
 
-> Kepler is GitKraken's Agentic Development Environment (ADE) — it pulls every issue and pull request assigned to you into one place, then hands any of it to the coding agent you already use (Claude Code, Codex, Copilot, Cursor, Auggie, OpenCode, Grok Build, Pi, or Google Antigravity) with the context already attached.
+> Kepler is GitKraken's Agentic Development Environment (ADE). It pulls every issue and pull request assigned to you into one place, then hands any of it to the coding agent you already use (Claude Code, Codex, Copilot, Cursor, Auggie, OpenCode, Grok Build, Pi, or Google Antigravity) with the context already attached.
 
-Scope: 18 pages included. Excluded: 3 — environment-and-setup.md, kepler-New-Page-Template.md, workflow-views.md.
+Scope: 18 pages included. Excluded (3): environment-and-setup.md, kepler-New-Page-Template.md, workflow-views.md.
 
 ## Getting Started
 

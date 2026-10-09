@@ -24,13 +24,11 @@ Connect a Git host and the pull requests you authored, plus the ones waiting on 
 Manage providers in **Settings → Integrations**, in the **Provider Integrations** section.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/provider-integrations-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/provider-integrations-aug-2026.png" class="help-center-img img-bordered" alt="Settings → Integrations → Provider Integrations, with GitHub and Jira connected, showing the Connected badge and Disconnect and Reconnect buttons">
+  <a href="/wp-content/uploads/provider-integrations-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/provider-integrations-oct-2026.png" class="help-center-img img-bordered" alt="Provider Integrations in Settings → Integrations, listing all twelve providers with Refresh at the top. GitHub and Jira show a Connected badge with Disconnect and Reconnect, and the rest offer Connect.">
   </a>
   <figcaption style="text-align:center; color:#888">Provider Integrations, in Settings → Integrations.</figcaption>
 </figure>
-
-<!-- TODO(screenshot): Replace — the provider list has twelve providers in 0.12 (Azure DevOps Server, Bitbucket Data Center, Jira Server / Data Center) and new warning states. -->
 
 ***
 
@@ -43,15 +41,15 @@ Eight of Kepler's twelve providers return pull requests:
 | **GitHub** | Yes |
 | **GitHub Enterprise** | Yes |
 | **GitLab** | Yes |
-| **GitLab Self-Managed** | Yes |
+| **GitLab Self-Hosted** | Yes |
 | **Azure DevOps** | Yes |
 | **Azure DevOps Server** | Yes |
 | **Bitbucket** | No |
 | **Bitbucket Data Center** | No |
 
-Jira, Jira Server / Data Center, Linear, and Trello are the other four. They return issues only — see [Issue Tracker Integrations](/kepler/issue-tracker-integrations).
+Jira, Jira Server / Data Center, Linear, and Trello are the other four. They return issues only. See [Issue Tracker Integrations](/kepler/issue-tracker-integrations).
 
-Self-hosted instances are supported. **GitHub Enterprise**, **GitLab Self-Managed**, **Azure DevOps Server**, and **Bitbucket Data Center** read pull requests and merge requests the same way their cloud counterparts do, and two servers of the same kind stay separate; which fields come back depends on your server's version. Your machine needs to be able to reach the instance. Kepler trusts the certificates in your operating system's certificate store, so a server signed by your company's own certificate authority works without extra setup.
+Self-hosted instances are supported. **GitHub Enterprise**, **GitLab Self-Hosted**, **Azure DevOps Server**, and **Bitbucket Data Center** read pull requests and merge requests the same way their cloud counterparts do, and two servers of the same kind stay separate; which fields come back depends on your server's version. Your machine needs to be able to reach the instance. Kepler trusts the certificates in your operating system's certificate store, so a server signed by your company's own certificate authority works without extra setup.
 
 GitLab merge requests appear as pull requests throughout Kepler. There is one list, not two.
 
@@ -70,14 +68,14 @@ Your GitKraken account holds integrations, not this copy of Kepler, so a provide
 
 **Connect** hands the whole authorization to GitKraken's website. Kepler opens `/connect` there in your system browser, names the provider, and includes a redirect back into Kepler. Kepler has no in-app form for a host URL or a personal access token, so you supply a self-hosted instance's address and whatever credential it needs directly in the browser. When you return, Kepler refetches your providers instead of reusing its cached list.
 
-<!-- TODO(verify): re-confirmed at kepler 7c31af83e and on the current checkout — the redirect-only flow and the absence of an in-app form are settled (src/backend/auth/auth.ts:227 builds only websiteUrl + /connect with product, optional provider, and redirect_uri; src/ui/data/auth.ts:68 hands that off to openExternalUrl; Settings and onboarding provider buttons only call connect.mutate({ providerId }), with no host/token/scope fields anywhere in-app). No per-provider token scopes are declared in this repo either. What's still open: the browser-side steps and the scopes each provider asks for live on GitKraken's website (see help.gitkraken.com/kepler/pull-request-integrations and help.gitkraken.com/gk-dev/gk-dev-integrations), which is website-owned content outside this repo. Remains unresolved until the web team confirms the live /connect steps and provider scopes for GitHub Enterprise, GitLab Self-Managed, Bitbucket, and Azure DevOps. -->
+<!-- TODO(verify): re-confirmed at kepler 7c31af83e and on the current checkout: the redirect-only flow and the absence of an in-app form are settled (src/backend/auth/auth.ts:227 builds only websiteUrl + /connect with product, optional provider, and redirect_uri; src/ui/data/auth.ts:68 hands that off to openExternalUrl; Settings and onboarding provider buttons only call connect.mutate({ providerId }), with no host/token/scope fields anywhere in-app). No per-provider token scopes are declared in this repo either. What's still open: the browser-side steps and the scopes each provider asks for live on GitKraken's website (see help.gitkraken.com/kepler/pull-request-integrations and help.gitkraken.com/gk-dev/gk-dev-integrations), which is website-owned content outside this repo. Remains unresolved until the web team confirms the live /connect steps and provider scopes for GitHub Enterprise, GitLab Self-Managed, Bitbucket, and Azure DevOps. -->
 
 Three controls sit on a connected provider's row:
 
 | Control | What it does |
 |---|---|
 | **Reconnect** | Re-runs authorization. Use it when a sign-in has expired |
-| **Disconnect** | Removes the provider — see below |
+| **Disconnect** | Removes the provider (see below) |
 | **Refresh** | At the top of the section, re-checks every provider |
 
 A row marked **Sign-in expired** needs its token refreshed. Kepler tries to do that itself; **Reconnect** is the manual fix. A row marked **Cannot connect to server** is different: the integration is still connected, but Kepler couldn't reach the server, so check that it's up and reachable from your network or VPN rather than reconnecting. When one organization refuses Kepler's access, such as a GitHub organization that restricts OAuth apps, Kepler names it under the row and leaves only its items out. See [Issue Tracker Integrations](/kepler/issue-tracker-integrations) for the warnings in full.
@@ -91,14 +89,14 @@ Starting work on a pull request whose repository you have never cloned makes Kep
 | Host | How the clone authenticates |
 |---|---|
 | **GitHub**, **GitHub Enterprise** | Your connected account's token |
-| **GitLab**, **GitLab Self-Managed** | Your connected account's token |
+| **GitLab**, **GitLab Self-Hosted** | Your connected account's token |
 | **Bitbucket**, **Bitbucket Data Center**, **Azure DevOps**, **Azure DevOps Server** | Falls through to your own git credentials |
 
 For an enterprise or self-managed host, Kepler matches the clone's host against the domain stored on your connection, so the repository clones through the account connected to that instance rather than through a cloud account of the same family. When a provider has more than one account, the clone follows the same choice your reads follow: **Read from this account** where you set one, otherwise the primary.
 
 Kepler hands the token to that one git process and nothing more. Kepler does not write it into the clone's `.git/config`, does not add it to the remote's URL, and never exposes it to the interface.
 
-Where Kepler holds no usable token for the host, the clone falls back to your own git credential helper. Kepler never lets git open an interactive prompt, so when no credential helper is available, the clone fails with a message that names the host and tells you what to do — *git has no saved credentials for this remote and Kepler cannot prompt for them. Sign in with a git credential helper (e.g. `gh auth login`, or the macOS keychain helper) or use an SSH url, then try again.*
+Where Kepler holds no usable token for the host, the clone falls back to your own git credential helper. Kepler never lets git open an interactive prompt, so when no credential helper is available, the clone fails with a message that names the host and tells you what to do: *git has no saved credentials for this remote and Kepler cannot prompt for them. Sign in with a git credential helper (e.g. `gh auth login`, or the macOS keychain helper) or use an SSH url, then try again.*
 
 ***
 
@@ -208,7 +206,7 @@ Kepler pulls these fields from a pull request:
 | **Created at** | |
 | **URL** | Used by the open control, which names the provider: **Open on GitHub**, **Open on Bitbucket**, and so on |
 
-<!-- TODO(verify): re-checked field by field against the shared PullRequest shape in src/shared/provider/pull-request.ts at kepler 7c31af83e — unchanged, and the table above is complete apart from the base-repo clone URLs, which only prefill the Clone form. The June 2026 version of this page also claimed Kepler pulls the diff, open review comments, and the current review state when you attach a pull request; none of those are fields on this shape. Confirm with engineering which path supplies review comments and the diff to a Review or Address Feedback run before documenting them. -->
+<!-- TODO(verify): re-checked field by field against the shared PullRequest shape in src/shared/provider/pull-request.ts at kepler 7c31af83e. It's unchanged, and the table above is complete apart from the base-repo clone URLs, which only prefill the Clone form. The June 2026 version of this page also claimed Kepler pulls the diff, open review comments, and the current review state when you attach a pull request; none of those are fields on this shape. Confirm with engineering which path supplies review comments and the diff to a Review or Address Feedback run before documenting them. -->
 
 A merged pull request keeps its description and author for as long as a task, archived or not, still links it.
 

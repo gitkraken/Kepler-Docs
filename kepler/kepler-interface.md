@@ -19,7 +19,7 @@ taxonomy:
 ---
 <kbd>Last updated: October 2026</kbd>
 
-Kepler opens on your work, not on an empty editor or a blank prompt. It offers one interface instead of a set of views to switch between, and you shape it to fit how you work. See [Arranging Your Work](/kepler/arranging-your-work).
+Kepler opens on your work, not on an empty editor or a blank prompt. It has one interface instead of a set of views to switch between, and you shape it to fit how you work. See [Arranging Your Work](/kepler/arranging-your-work).
 
 Kepler pulls every issue and pull request assigned to you across your connected trackers and Git hosts into one list, alongside the tasks you already have in motion. To start work, pick something that's already there instead of describing it from scratch.
 
@@ -34,9 +34,9 @@ Beyond this list, you'll find a task's own page, Settings, and remote connection
 - Settings
 - Your account
 
-When an update is ready, an **Update available** chip joins the trailing cluster. It opens a popover that says what a restart would do to running work — how many agents it stops, whether terminals close — and offers **Restart to update**. The same chip shows on every screen, so an update never waits on a banner you scrolled past.
+When an update is ready, an **Update available** chip joins the trailing cluster. It opens a popover that says what a restart would do to running work (how many agents it stops, whether terminals close) and offers **Restart to update**. The same chip shows on every screen, so an update never waits on a banner you scrolled past.
 
-On **Windows and Linux** the native title bar is gone and Kepler draws its own. The menu button at the leading edge holds the full application menu — **File**, **Edit**, **View**, **Window**, **Help** — including **Settings**, **Check for Updates…**, and **About**. macOS keeps its native menu bar, and both menus open the same **About Kepler** dialog.
+On **Windows and Linux** the native title bar is gone and Kepler draws its own. The menu button at the leading edge holds the full application menu (**File**, **Edit**, **View**, **Window**, **Help**), including **Settings**, **Check for Updates…**, and **About**. macOS keeps its native menu bar, and both menus open the same **About Kepler** dialog.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/new-task-button-oct-2026.png" target="_blank" rel="noopener noreferrer">
@@ -51,9 +51,9 @@ On **Windows and Linux** the native title bar is gone and Kepler draws its own. 
   </a>
   <figcaption style="text-align:center; color:#888">The top bar's trailing cluster.</figcaption>
 </figure>
-<!-- TODO(screenshot): New — The trailing cluster with the "Update available" chip showing, taken while an update is ready. -->
+<!-- TODO(screenshot): New: The trailing cluster with the "Update available" chip showing, taken while an update is ready. -->
 
-The top bar sheds controls as the window narrows based on the room actually available, rather than at fixed widths, so a control disappears only when it genuinely will not fit.
+The top bar sheds controls as the window narrows based on the room actually available, rather than at fixed widths, so a control disappears only when it will not fit.
 
 Menu items and button tooltips show a command's keyboard shortcut beside it, wherever the item does exactly what the key does. The full list is in [Settings](/kepler/settings).
 
@@ -93,7 +93,7 @@ The control at the top left switches between 3 views of your work.
 | **Tasks in progress** | The tasks you already have running in Kepler |
 | **Agent Graph** | A live visualization of every task, session, turn, tool call, and file. See [The Agent Graph](/kepler/agent-graph) |
 
-Todo is where a working session starts; **Tasks in progress** is where it lives while underway. The **Agent Graph** is a segment of its own rather than a way of arranging the list, because it replaces the list instead of laying it out — it scopes over every task, narrowed by your search and filters, and the **Group** and **View** controls step aside while it's on.
+Todo is where a working session starts; **Tasks in progress** is where it lives while underway. The **Agent Graph** is a segment of its own rather than a way of arranging the list, because it replaces the list instead of laying it out. It scopes over every task, narrowed by your search and filters, and the **Group** and **View** controls step aside while it's on.
 
 When launching the app, Kepler opens on **Tasks in progress**. When you start Kepler for the first time (like on a new machine), you get a **Welcome to Kepler** screen, with a summary of what's already set up and 3 options:
 
@@ -106,7 +106,7 @@ To populate the Todo tab, first connect at least one provider. See [Issue Tracke
 
 ### External sessions
 
-Above the list sits an **External sessions** section: the agent conversations running outside Kepler right now. It's pinned rather than mixed into the groups, because it answers a different question from the rest of the list — *what's running that Kepler didn't start?*
+Above the list sits an **External sessions** section: the agent conversations running outside Kepler right now. It's pinned rather than mixed into the groups, because it answers a different question from the rest of the list: *what's running that Kepler didn't start?*
 
 | Part | What it does |
 |---|---|
@@ -115,7 +115,7 @@ Above the list sits an **External sessions** section: the agent conversations ru
 | **Show {count} more** | The section keeps itself short; this opens the rest |
 | A row | Opens the conversation read-only, where you can fork it, continue it here, or adopt it into a task |
 
-With detection off, the section says so rather than sitting empty — *Sessions you start in your terminal can appear here. Kepler detects them through the agent's hooks.* — with **Turn on detection** beside it. With detection on and nothing to show, it reads **No sessions running outside Kepler right now.**
+With detection off, the section says so rather than sitting empty: *Sessions you start in your terminal can appear here. Kepler detects them through the agent's hooks.* **Turn on detection** sits beside the message. With detection on and nothing to show, it reads **No sessions running outside Kepler right now.**
 
 External sessions stay listed under a filter that has no way to answer for them, rather than vanishing because a facet couldn't classify them.
 
@@ -135,7 +135,7 @@ A row reads differently depending on whether it holds a tracked issue or pull re
   </a>
   <figcaption style="text-align:center; color:#888">Todo rows for pull requests and issues.</figcaption>
 </figure>
-<!-- TODO(screenshot): New — An issue row with the muted **Mentioned** badge; ideally a Jira or Linear issue so its pill shows the tracker's own state, such as *In Progress*. -->
+<!-- TODO(screenshot): New: An issue row with the muted **Mentioned** badge; ideally a Jira or Linear issue so its pill shows the tracker's own state, such as *In Progress*. -->
 
 Each row shows, left to right:
 
@@ -172,7 +172,7 @@ An issue that's on your list only because it mentions you carries a muted **Ment
 Task rows show:
 
 - The title
-- The repository, or every repository when the task spans several — *app, api +2* beyond two
+- The repository, or every repository when the task spans several (*app, api +2* beyond two)
 - Session activity
 - A progress control
 - The assignee
@@ -185,7 +185,7 @@ A task that spans several repositories is listed under **each** of them when the
 The task's own operations sit behind the **⋮** menu, and on a right-click:
 
 - **Open task page** and **Open in new window**
-- **Reopen**, while the task is Done, and a **Progress** submenu — see [Arranging Your Work](/kepler/arranging-your-work)
+- **Reopen**, while the task is Done, and a **Progress** submenu. See [Arranging Your Work](/kepler/arranging-your-work).
 - **Mark as unread**
 - **Rename task** (**F2** on a focused panel)
 - **Copy task prompt**
@@ -202,7 +202,7 @@ Both segments carry a status, but they answer different questions.
 | Where | Values | What it means |
 |---|---|---|
 | **Task rows** | **Exploration**, **In Development**, **In Review**, **On hold**, **Done**, **Archived** | Where the *work* has got to. Kepler derives it from the task's checkouts and pull requests unless you or an agent set it by hand. **In Development** reads uncommitted changes or commits ahead of the branch's recorded base; **In Review** needs an open or draft pull request of the task's own; **Done** needs at least one of the task's branches to have landed, with no open pull request and no commits left unlanded. **On hold** and **Archived** are filing decisions, not evidence |
-| **Todo rows** | **Open**, **Draft**, **Merged**, **Closed** for a pull request; the tracker's own state for an issue | The provider's own state on the pull request, and the workflow state your tracker uses for the issue — a Linear *In Progress*, a Jira *To Verify* — rather than a flat Open |
+| **Todo rows** | **Open**, **Draft**, **Merged**, **Closed** for a pull request; the tracker's own state for an issue | The provider's own state on the pull request, and the workflow state your tracker uses for the issue (such as a Linear *In Progress* or a Jira *To Verify*) rather than a flat Open |
 
 Each pull request and issue state has its own icon and colour, so a column of pills reads at a glance.
 
@@ -213,12 +213,12 @@ The progress control on a task row is also a menu: click it to set the stage you
 Beside the pill sits one dot per distinct **session state**, with a count of each.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/task-status-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-status-aug-2026.png" class="help-center-img img-bordered" alt="A status pill next to session-state dots on a row">
+  <a href="/wp-content/uploads/session-dots-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/session-dots-oct-2026.png" class="help-center-img img-bordered" alt="A task row's In Development pill beside two outlined session dots, an orange 2 and a blue 1, with a tooltip reading 2 Waiting (ended) and 1 Ready (ended).">
   </a>
-  <figcaption style="text-align:center; color:#888">The status pill and session-state dots.</figcaption>
+  <figcaption style="text-align:center; color:#888">The status pill and session-state dots, with the breakdown on hover.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — The Progress stages including **On hold**, and the session dots for **Working in background**, **Reconnecting**, and a dormant session drawn as an outline. -->
+<!-- TODO(screenshot): Optional re-take: the On hold stage, and the session dots for Working in background and Reconnecting. -->
 
 This shows what the *agents* are doing, a separate question from where the work stands. The vocabulary is the agent's own:
 
@@ -233,7 +233,7 @@ This shows what the *agents* are doing, a separate question from where the work 
 - **Reconnecting**
 - **Ended**
 
-A dormant session draws as an outline rather than a filled dot.
+A dormant session draws as an outline rather than a filled dot. Hover the dots for a count of each state; a dormant session is marked *(ended)*, as in *2 Waiting (ended)*.
 
 Kepler places a task at the furthest stage any of its checkouts reached, except **Done**. Done needs at least one of the task's branches to have landed, no open pull request of its own, and no checkout still carrying commits that haven't landed. A sibling checkout you never touched doesn't hold a task back.
 
@@ -295,7 +295,7 @@ Every open panel gets its own column straight away. Until its item loads, the co
 
 Starting a task from **New task** while you're on the list opens the new task as a panel and leaves the list where it was, rather than throwing you onto its page.
 
-When the list reorders under you — a session finishes, a task moves bucket — the row you have selected glides to its new position rather than jumping, so you can see where it went.
+When the list reorders under you (a session finishes, or a task moves bucket), the row you have selected glides to its new position rather than jumping, so you can see where it went.
 
 ### Pin a panel
 
@@ -305,7 +305,6 @@ When the list reorders under you — a session finishes, a task moves bucket —
   </a>
   <figcaption style="text-align:center; color:#888">Pin panel, in a panel's ⋮ menu.</figcaption>
 </figure>
-<!-- TODO(screenshot): New — A pinned panel's header showing the **Unpin panel** button. -->
 
 A panel is a place you're browsing until you pin it. **Pin panel**, in the panel's **⋮** menu, holds it in place. After that:
 
@@ -315,6 +314,13 @@ A panel is a place you're browsing until you pin it. **Pin panel**, in the panel
 - Nothing evicts a pin when the open set is full.
 
 One slot always stays unpinned so browsing never has to evict a pin; once every other panel is pinned, the menu row reads **Keep one panel unpinned for browsing** and will not take another. A pinned panel shows **Unpin panel** in its header to release it.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/unpin-panel-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/unpin-panel-oct-2026.png" class="help-center-img img-bordered" alt="A pinned panel's header, with the Unpin panel button showing its tooltip between Terminal and the close button.">
+  </a>
+  <figcaption style="text-align:center; color:#888">Unpin panel, in a pinned panel's header.</figcaption>
+</figure>
 
 ***
 
@@ -359,7 +365,7 @@ The header carries:
 </figure>
 
 - The item's badges and reference
-- The title, with a dot when a session needs you — blue for an unread turn, orange for one waiting on you
+- The title, with a dot when a session needs you: blue for an unread turn, orange for one waiting on you
 - The progress control, on a task
 - The terminal control, on a task
 - **Restore panel**, when the panel is maximized
@@ -390,14 +396,14 @@ Below the header, each of the task's checkouts is a **pill** with two rows: who 
 
 | Row | What it shows | What it does |
 |---|---|---|
-| **Top** | The branch and repository, the worktree's own pull request, and the upstream control | The branch opens the worktree's menu: copy branch or path, open its changes, detach, delete. The upstream control runs the verb its counts call for — **Pull** when behind, **Push** when ahead, **Publish** when the branch isn't on a remote yet, and **Force push** behind a confirmation only when the branch has genuinely diverged — with **Fetch** in its chevron |
+| **Top** | The branch and repository, the worktree's own pull request, and the upstream control | The branch opens the worktree's menu: copy branch or path, open its changes, detach, delete. The upstream control runs the verb its counts call for: **Pull** when behind, **Push** when ahead, **Publish** when the branch isn't on a remote yet, and **Force push** behind a confirmation only when the branch has diverged. **Fetch** is in its chevron |
 | **Bottom** | Chips for uncommitted files, commits, and the merge target, plus **Open in** and **Run** | Each chip opens what it counts: the working changes, the commits, or how the branch compares with its merge target. **Open in** opens the checkout in your default editor, with the rest in its chevron. **Run** runs one of the repository's commands |
 
 The pill says what needs doing rather than just counting: unpushed commits, a paused rebase or merge you can continue or abort from the pill, a merge target it couldn't read with a retry, a detached HEAD explained, and **No changes** only when there really are none. Hover any chip for a card that leads with what a click does; right-click it for its own menu. As the panel narrows, the chips shrink to their icons and counts rather than disappearing, and the branch name is cut last.
 
 **More than one worktree.** A task's worktrees collapse into one pill, led by a count such as *1/3*. Step through them with the switcher on the branch name, or with the up and down arrow keys on the pill. Until you pick one, the pill follows the worktree with the latest changes. The toggle on the pill's leading edge (**Show all {count} worktrees**) lays them all out at once. Worktrees whose branches have merged share a single row, with a way to delete them through the same cleanup list archiving uses.
 
-From the keyboard, a pill is two tab stops — its changes and its actions — with the left and right arrows moving inside each.
+From the keyboard, a pill is two tab stops (its changes and its actions), with the left and right arrows moving inside each.
 
 The terminal strip's **+** becomes a chooser listing the task's checkouts by branch when the task has more than one.
 
@@ -428,7 +434,7 @@ Each set of open panels gets its own history entry, so Back closes the set you j
 | **Welcome to Kepler** / **You're all caught up** | Nothing in motion. The welcome panel stands in for the Tasks list, with 3 ways to start one |
 | **No tasks yet** | Nothing in motion, before the welcome panel resolves |
 | **No assigned PRs or issues** | Providers are connected, but nothing is assigned to you |
-| **Nothing matches these filters** | Your search or filters exclude everything. Use the button beneath it — **Clear search**, **Clear filters**, or **Clear search and filters** |
+| **Nothing matches these filters** | Your search or filters exclude everything. Use the button beneath it: **Clear search**, **Clear filters**, or **Clear search and filters** |
 | **Nothing here** | One column of the **Columns** arrangement is empty while its neighbours are not |
 | **No provider integrations** | *Connect a provider to see assigned PRs and issues here.* |
 | **Sign in to see your assigned work** | *Connect a GitKraken account to load the PRs and issues assigned to you.* |

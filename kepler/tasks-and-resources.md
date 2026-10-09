@@ -78,7 +78,7 @@ A file attached to a prompt that Kepler copies into the Task when you send it is
   </a>
   <figcaption style="text-align:center; color:#888">A linked file in the Files group.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — Add an uploaded copy (Task folder subtitle) beside the linked file, and use a file outside your home folder. -->
+<!-- TODO(screenshot): Replace: Add an uploaded copy (Task folder subtitle) beside the linked file, and use a file outside your home folder. -->
 
 ### Issues and pull requests attach themselves
 
@@ -139,13 +139,13 @@ You can also pick the branch when you attach the repository: **Use this branch**
 
 Automatic branch names are suggested from the Task's own context, led by the issue identifier where there is one, and namespaced under `kepler/` unless you configure another prefix. See [Create a Task](/kepler/create-task#naming-the-branch).
 
-Prefer not to use a worktree? **A Task does not require a worktree — or a repository.** Attach a plain folder and the agent works on it in place. Attach nothing and you have a space to think with the option to turn it into real work whenever the idea earns it.
+Prefer not to use a worktree? **A Task does not require a worktree, or even a repository.** Attach a plain folder and the agent works on it in place. Attach nothing and you have a space to think with the option to turn it into real work whenever the idea earns it.
 
 ### When a worktree goes missing
 
-A worktree deleted outside Kepler **stays bound to its Task** rather than quietly disappearing from it. The row is flagged **Gone from disk**, the pane shows the metadata Kepler recorded — **Current branch**, **Base branch**, **Recorded path** — and **Recreate worktree** brings the branch back at the recorded path. If the branch itself was deleted, Kepler creates it again from the recorded base and says so. That way a `git worktree prune` doesn't cost you the Task's record of where the work lived.
+A worktree deleted outside Kepler **stays bound to its Task** rather than quietly disappearing from it. The row is flagged **Gone from disk**, and the pane shows the metadata Kepler recorded: **Current branch**, **Base branch**, and **Recorded path**. **Recreate worktree** brings the branch back at the recorded path. If the branch itself was deleted, Kepler creates it again from the recorded base and says so. That way a `git worktree prune` doesn't cost you the Task's record of where the work lived.
 
-The same goes for an attached folder that's been removed. Start a new session in a worktree or folder that's gone and Kepler asks first — *Recreate the worktree and start the session?* — then rebuilds it before the session starts, rather than launching an agent into a directory that isn't there. A Task with no repository or folder at all starts its sessions in the Task's own folder.
+The same goes for an attached folder that's been removed. Start a new session in a worktree or folder that's gone and Kepler asks first (*Recreate the worktree and start the session?*), then rebuilds it before the session starts, rather than launching an agent into a directory that isn't there. A Task with no repository or folder at all starts its sessions in the Task's own folder.
 
 ### Make a new worktree ready to build
 
@@ -300,9 +300,9 @@ Ticking **Also delete branches** re-reads the list, so a worktree that was safe 
   </a>
   <figcaption style="text-align:center; color:#888">The Archive task? dialog, before you tick anything.</figcaption>
 </figure>
-<!-- TODO(screenshot): New — The same dialog with Also delete worktrees ticked, listing one safe worktree and one kept because it would lose work. -->
+<!-- TODO(screenshot): New: The same dialog with Also delete worktrees ticked, listing one safe worktree and one kept because it would lose work. -->
 
-**Restore task** appears in the task view's header as soon as the Task is archived. From a row in the main list, it appears only once you've filtered **Activity** to **Archived** — see [Arranging Your Work](/kepler/arranging-your-work).
+**Restore task** appears in the task view's header as soon as the Task is archived. From a row in the main list, it appears only once you've filtered **Activity** to **Archived**. See [Arranging Your Work](/kepler/arranging-your-work).
 
 You can archive and restore individual sessions the same way, from the session's own menu in the rail.
 
@@ -364,7 +364,7 @@ Where AI Sync is available, the `sync_*` tools also let an agent update a branch
 
 | Tool | What it does |
 |---|---|
-| `create_task` | Create a *separate* Task beside this one, with its own prompt, locations, notes, links and files — for work that deserves tracking in its own right. The new Task is linked back to this one (as a sub-task, parent, follow-up, or just related). It creates the Task and starts nothing |
+| `create_task` | Create a *separate* Task beside this one, with its own prompt, locations, notes, links and files, for work that deserves tracking in its own right. The new Task is linked back to this one (as a sub-task, parent, follow-up, or just related). It creates the Task and starts nothing |
 | `create_session` | Start an agent session on a Task and send it a first message, in a place you name. It clones the calling session's agent and settings unless the agent names a different agent, model, mode or options from `list_agents`, and it can start without the Task's context, as a reviewer would. It records what the new session is for: a delegate, a reviewer, or a handoff |
 | `session_send` | Send a follow-up to another session |
 

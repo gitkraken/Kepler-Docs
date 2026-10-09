@@ -2,7 +2,7 @@
 """Regenerate llms.txt and llms-full.txt from kepler/*.md.
 
 Both files used to be hand-written, which is why they went stale. This derives
-them from the pages themselves. Section grouping comes from preview/nav.json —
+them from the pages themselves. Section grouping comes from preview/nav.json,
 the one place the docs IA is written down, since the real help-center nav lives
 in WordPress.
 
@@ -21,7 +21,7 @@ FULL_FIELDS = ["product", "feature", "content_type", "audience", "plan_required"
                "status", "last_verified"]
 FM_RE = re.compile(r"^---\n(.*?)\n---\n(.*)$", re.S)
 
-BLURB = ("Kepler is GitKraken's Agentic Development Environment (ADE) — it pulls every "
+BLURB = ("Kepler is GitKraken's Agentic Development Environment (ADE). It pulls every "
          "issue and pull request assigned to you into one place, then hands any of it to "
          "the coding agent you already use (Claude Code, Codex, Copilot, Cursor, Auggie, "
          "OpenCode, Grok Build, Pi, or Google Antigravity) with the context already "
@@ -92,11 +92,11 @@ def main():
     excluded += sorted(SKIP)
     head = ["# Kepler", "", f"> {BLURB}", "",
             f"Scope: {len(included)} pages included. "
-            f"Excluded: {len(excluded)} — {', '.join(sorted(excluded))}.", ""]
+            f"Excluded ({len(excluded)}): {', '.join(sorted(excluded))}.", ""]
     write(REPO / "llms.txt", "\n".join(head + out).rstrip() + "\n")
 
     stamp = date.today().isoformat()
-    fhead = ["# Kepler Documentation — llms-full.txt", f"Generated: {stamp}",
+    fhead = ["# Kepler Documentation: llms-full.txt", f"Generated: {stamp}",
              f"Pages: {len(included)}", "Source: https://help.gitkraken.com/kepler/", ""]
     write(REPO / "llms-full.txt", "\n".join(fhead + full).rstrip() + "\n")
 

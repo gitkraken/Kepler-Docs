@@ -93,7 +93,7 @@ The Composer is one prompt box above a row of four buttons:
 
 In a window connected to another machine, picking a file through **Add context** also offers **Upload from this computer**. Uploads are kept with your draft and saved into the Task's own folder when it starts; if one expired before you pressed **Start**, Kepler names it rather than dropping it silently.
 
-**Repositories and folders come from one ranked list**, not two pickers — *Find a repository or folder…* — and the list learns. Kepler records how often you actually use each place and ranks the picker by it, so the repositories you work in daily are at the top on the day you start using them. The same list is behind the chip's own **Change repository or folder**.
+**Repositories and folders come from one ranked list**, not two pickers (*Find a repository or folder…*), and the list learns. Kepler records how often you actually use each place and ranks the picker by it, so the repositories you work in daily are at the top on the day you start using them. The same list is behind the chip's own **Change repository or folder**.
 
 Add as much or as little context as you wish. 
 
@@ -129,7 +129,7 @@ Each attached repository gets a chip with three segments:
 
 - **Base branch**: the branch segment of the chip. By default, the Task gets a new branch forked from **the repository's remote default branch**, which is what the chip reads until you pick something: *New branch off origin's default branch, or the current branch if unavailable*. Open it to fork off a different branch instead, to work directly on an existing one, or to take the repository's **current** branch in place.
 - **Branch name**: the new branch's own name, suggested from your prompt as you type and editable in place. See below.
-- **Isolated worktree**: the worktree segment, a direct on/off toggle rather than a menu. On by default, giving the Task its own working copy — *Runs in its own working copy of the repository*. Turning it off means the Task shares your repository folder — *Uses the repository's own folder, so a branch switch here moves your checkout*. See [Tasks and Resources](/kepler/tasks-and-resources).
+- **Isolated worktree**: the worktree segment, a direct on/off toggle rather than a menu. On by default, giving the Task its own working copy: *Runs in its own working copy of the repository*. Turning it off means the Task shares your repository folder: *Uses the repository's own folder, so a branch switch here moves your checkout*. See [Tasks and Resources](/kepler/tasks-and-resources).
 
 **What a newly attached repository starts on is a setting.** These three segments open on **Settings → General → Default Task Mode**: **Isolated worktree** (the default), **New branch**, or **Current branch**. Changing it changes the starting point only; every segment above still overrides it per repository, per Task. See [Settings](/kepler/settings#default-task-mode).
 
@@ -139,7 +139,7 @@ Picking **New branch** or **Current branch** means the Task runs in the reposito
 
 Kepler names a Task's branch from what the Task is actually about, rather than from the Task's name alone.
 
-- **The name is suggested from your prompt** and appears on the chip as you type: *Suggested from your prompt. Click to edit.* Clicking it opens the field — **Enter keeps, Esc restores the suggestion** — and an edited name reads *Named by you.*
+- **The name is suggested from your prompt** and appears on the chip as you type: *Suggested from your prompt. Click to edit.* Clicking it opens the field (**Enter keeps, Esc restores the suggestion**), and an edited name reads *Named by you.*
 - **An issue identifier leads the name** when the Task came from one, so `KEP-421-fix-the-import-path` rather than a slug with the ticket buried in it.
 - **Automatic names are namespaced under `kepler/`.** That way a `git branch` listing in any other tool says where the branch came from, and a hand-made `feat/x` can never collide with one.
 - **A name you type is yours verbatim.** The prefix applies to automatic names only, which is how a repository with an enforced `feat/` or `fix/` push rule still works.
@@ -151,7 +151,7 @@ Kepler intentionally forks from the remote by default. If no remote default reso
 
 A repository linked to a pull request always opens in its own isolated working copy, and the toggle is locked: *This repository is linked to a pull request and always opens in its own isolated working copy.*
 
-Kepler clones a repository you haven't cloned yet when the Task starts, into your **Default Repositories Folder**: *This repository is cloned when you start the task.* Its branch is locked until then — *its branches become available after cloning* — because Kepler doesn't yet know what branches it has, and the chip reads **default branch** in the meantime.
+Kepler clones a repository you haven't cloned yet when the Task starts, into your **Default Repositories Folder**: *This repository is cloned when you start the task.* Its branch is locked until then (*its branches become available after cloning*) because Kepler doesn't yet know what branches it has, and the chip reads **default branch** in the meantime.
 
 Attaching the same repository twice gives the Task two independent worktrees on it: useful for comparing two approaches, or a mistake if you didn't mean it. Two chips that would resolve to the *same* worktree get a **Duplicate worktree** marker instead, and Kepler creates only one of them. If a chip works in place on a branch another chip has already claimed for an isolated worktree, Kepler marks it **Superseded by a worktree** and skips it; git can't check one branch out in two places.
 
@@ -159,7 +159,7 @@ Attaching the same repository twice gives the Task two independent worktrees on 
 
 ## From a session you already started
 
-You may have begun the work in a terminal before deciding it deserved tracking. The chevron on **New task** holds **From an external session** — *Create a task from a session you started outside Kepler* — which opens a picker over every agent conversation Kepler can see.
+You may have begun the work in a terminal before deciding it deserved tracking. The chevron on **New task** holds **From an external session** (*Create a task from a session you started outside Kepler*), which opens a picker over every agent conversation Kepler can see.
 
 | Part | What it does |
 |---|---|
@@ -173,19 +173,19 @@ The picker reports what it actually swept, rather than implying it found everyth
 
 Kepler checks whether the conversation's working directory already belongs to a task, so you don't end up with two tasks over one folder:
 
-> **A task already covers this folder** — *"{task}" already owns {path}, the folder this conversation runs in.*
+> **A task already covers this folder**: *"{task}" already owns {path}, the folder this conversation runs in.*
 
 **Add to that task** binds the conversation there; **Create a new task** overrides. With several candidates, the dialog asks which one and marks the **closest**. Recording the conversation on a task can take a minute, and Kepler says so rather than appearing to hang.
 
 Because a task can be created in any plain folder, a conversation you had in a scratch directory can be adopted just like one in a checkout.
 
-For what happens to the conversation once it's on a task — forking, continuing, and what Kepler will and won't answer on its behalf — see [Agent Sessions](/kepler/agent-sessions#sessions-started-outside-kepler).
+For what happens to the conversation once it's on a task (forking, continuing, and what Kepler will and won't answer on its behalf), see [Agent Sessions](/kepler/agent-sessions#sessions-started-outside-kepler).
 
 ***
 
 ## From a folder, or from nothing at all
 
-**A Task doesn't need a repository.** Attach a plain folder from the same ranked picker and the agent works on it in place — no branch, no worktree, no Git at all. A folder of notes, a scratch directory, a checkout of something that isn't a repository: all of it is a normal Task.
+**A Task doesn't need a repository.** Attach a plain folder from the same ranked picker and the agent works on it in place, with no branch, no worktree, and no Git at all. A folder of notes, a scratch directory, a checkout of something that isn't a repository: all of it is a normal Task.
 
 When you browse for a folder in a window connected to another machine, Kepler opens its own folder picker (turn on **Always use the custom folder picker** in **Settings → General** to use it everywhere). Type a path into its path bar and Kepler checks it before you select it: a folder that doesn't exist, can't be read, or is actually a file is refused with the reason, and a near miss offers **Did you mean** the closest folder.
 

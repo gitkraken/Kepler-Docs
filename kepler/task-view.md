@@ -19,7 +19,7 @@ taxonomy:
 ---
 <kbd>Last updated: October 2026</kbd>
 
-Opening a Task gives you its own screen — the **task page** — with everything attached to it on the left, and the sessions, working copies, files, and details you're looking at on the right.
+Opening a Task gives you its own screen, the **task page**, with everything attached to it on the left and the sessions, working copies, files, and details you're looking at on the right.
 
 Get here by double-clicking a row in [the Kepler interface](/kepler/kepler-interface), or by clicking **Open task page** in the side panel. For what a Task is and what can be attached to one, see [Tasks and Resources](/kepler/tasks-and-resources).
 
@@ -44,7 +44,7 @@ Get here by double-clicking a row in [the Kepler interface](/kepler/kepler-inter
 From left to right, the header carries:
 
 - **Show/Hide context panel**, which puts the rail away and brings it back. See [The rail](#the-rail).
-- **Back to dashboard** — a back chevron — returns you to the list exactly as you left it: same segment, grouping, filters, and selection.
+- **Back to dashboard**, a back chevron, returns you to the list exactly as you left it: same segment, grouping, filters, and selection.
 - **The task switcher**, the Task's name as a chip, jumps to another Task without going back first. It searches as you type, and each row carries the same session status dots a row does. Right-click the name for the same task actions the **⋮** menu holds.
 - **⋮ Task actions**. See below.
 - **The Progress control**, showing where the work stands: **Exploration**, **In Development**, **In Review**, **On hold**, or **Done**. Click it to set the stage yourself or hand it back to **Automatic**. An archived Task reads **Archived** here instead. See [Arranging your work](/kepler/arranging-your-work).
@@ -54,7 +54,7 @@ When a Task looks finished, a **Ready to archive?** prompt joins the header with
 
 **⋮ Task actions** holds the Task's **Progress** submenu (with **Reopen** leading on a finished Task), **Mark as unread**, **Rename task**, **Copy task prompt**, **Add resource…**, **Shut down all agents** while any are running, then **Archive task** and **Delete task**. On an already-archived Task, **Restore task** replaces **Archive task**.
 
-**Rename task** — or **F2** anywhere on the page outside a text field — turns the name into an editable field in place. The field carries **Auto-name** — *Suggest a name from the task's prompt and resources* — which fills the field with a suggestion for you to accept or edit. It never renames on its own: **Enter** or the check mark saves, **Escape** or the **×** cancels.
+**Rename task**, or **F2** anywhere on the page outside a text field, turns the name into an editable field in place. The field carries **Auto-name** (*Suggest a name from the task's prompt and resources*), which fills the field with a suggestion for you to accept or edit. It never renames on its own: **Enter** or the check mark saves, **Escape** or the **×** cancels.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/rename-inline-oct-2026.png" target="_blank" rel="noopener noreferrer">
@@ -111,7 +111,7 @@ Both of a row's lines truncate at rail width. Every row has a hover tip carrying
 - **Status**
 - Flags such as **Repository's main worktree** or **Gone from disk**
 
-- A **Changes** row's subtitle is a run of glyph-and-number chips reading the checkout's real state: uncommitted files, commits on the branch, behind and ahead of the upstream, behind the merge target, with conflicts and an unpublished branch drawn as glyphs alone. A checkout with nothing to report reads **Up to date**; one that has been deleted says so. Its tooltip is a two-column table of the same facts — the branch, the repository, the path, the working tree, the commits, the upstream and the merge target — with the numbers aligned so they never wrap.
+- A **Changes** row's subtitle is a run of glyph-and-number chips reading the checkout's real state: uncommitted files, commits on the branch, behind and ahead of the upstream, behind the merge target, with conflicts and an unpublished branch drawn as glyphs alone. A checkout with nothing to report reads **Up to date**; one that has been deleted says so. Its tooltip is a two-column table of the same facts (the branch, the repository, the path, the working tree, the commits, the upstream and the merge target), with the numbers aligned so they never wrap.
 - A **session** row leads with its state, and names which **Account** it runs under once a harness has more than one configured: the provider logo plus an ordinal, on the row, its tab, and its collapsed strip alike.
 
 The end of the subtitle line carries the row's controls, always visible rather than revealed on hover:
@@ -119,12 +119,12 @@ The end of the subtitle line carries the row's controls, always visible rather t
 | Row | Controls |
 |---|---|
 | **Folder** | **Open in…** |
-| **Worktree** (on disk) | **Open in…** and the run-a-command control. The shell button stays out — the row's menu and **Cmd/Ctrl+J** both offer it, and the line has no room for a third control |
+| **Worktree** (on disk) | **Open in…** and the run-a-command control. The shell button stays out: the row's menu and **Cmd/Ctrl+J** both offer it, and the line has no room for a third control |
 | **Session** | Show or hide the [Agent Graph](/kepler/agent-graph) for that session alone, and **Archive** |
 
 The run-a-command control shows the newest command running in that worktree, with **Stop**, and falls back to your default command once nothing is running.
 
-Every rail row draws a selected fill when it's the one on screen, and the column you last pressed, focused, or opened from the rail carries an inset ring — the wide layout never moves focus on its own, so something has to say where it is.
+Every rail row draws a selected fill when it's the one on screen, and the column you last pressed, focused, or opened from the rail carries an inset ring. The wide layout never moves focus on its own, so something has to say where it is.
 
 ### The row menu
 
@@ -145,7 +145,7 @@ Right-click any row. Every row opens with **Open**, followed by **Open to the si
 | A session | **Rename session**, **New session from this one**, **Open source session** on a session started from another, **Copy session reference**, **Restart agent**, **Shut down agent**, **Show Agent Graph** |
 | A pull request or issue | **Open in browser**, **Copy link**, **Copy title**, **Copy number**, and **Copy branch name** on a pull request |
 
-**Run command here** — and the **Run a command** control on the row and the worktree's own strip — lists the repository's commands (configured in **Settings → Repos & Folders**) and runs the one you pick in that worktree, revealing its terminal in the drawer without taking your focus. Each command row leads with its state: a play glyph, a spinner while it warms up, or **Stop** while it runs, and picking a running command stops it rather than starting a second copy. A repository with none reads **No commands yet**, and the menu ends with **Create command…** so you can add one from where you noticed you wanted it, plus **Manage commands…**, which deep-links to that repository's own settings.
+**Run command here**, and the **Run a command** control on the row and the worktree's own strip, lists the repository's commands (configured in **Settings → Repos & Folders**) and runs the one you pick in that worktree, revealing its terminal in the drawer without taking your focus. Each command row leads with its state: a play glyph, a spinner while it warms up, or **Stop** while it runs, and picking a running command stops it rather than starting a second copy. A repository with none reads **No commands yet**, and the menu ends with **Create command…** so you can add one from where you noticed you wanted it, plus **Manage commands…**, which deep-links to that repository's own settings.
 
 **Open in** works the same way, with your default editor hoisted above the list rather than buried in it. On a worktree the list ends with **Open on {provider}**, which opens the branch on its git host, or the repository's home page when the branch has no upstream.
 
@@ -177,7 +177,7 @@ The content area takes one of two shapes, set by **Show tabs on the task page** 
   <figcaption style="text-align:center; color:#888">The Show tabs on the task page setting, in Settings → General.</figcaption>
 </figure>
 
-Either way, terminals live in the [drawer](#the-terminal-drawer) beneath the content area, never in a column or a tab, so opening a shell never evicts the changes or the conversation you were reading. And either way, closing something is a view change: it detaches nothing, and it doesn't stop a session — the rail still has it all.
+Either way, terminals live in the [drawer](#the-terminal-drawer) beneath the content area, never in a column or a tab, so opening a shell never evicts the changes or the conversation you were reading. And either way, closing something is a view change: it detaches nothing, and it doesn't stop a session. The rail still has it all.
 
 ### The columns
 
@@ -188,7 +188,7 @@ Either way, terminals live in the [drawer](#the-terminal-drawer) beneath the con
   <figcaption style="text-align:center; color:#888">The three content columns: Sessions, Changes, and Resources.</figcaption>
 </figure>
 
-<!-- TODO(screenshot): Replace — Layout is current and names are blurred. Optional re-take on a neutral task: the session column shows the PR #39 review conversation. -->
+<!-- TODO(screenshot): Replace: Layout is current and names are blurred. Optional re-take on a neutral task: the session column shows the PR #39 review conversation. -->
 
 With tabs off, the content area is fixed slots, not free-form panes. A rail row's kind decides which slot it opens into, so a session never lands next to a note and you never have to remember where you put something.
 
@@ -221,7 +221,7 @@ A session's control on its strip is named for what it does: **Archive session** 
 
 ### Tabs and groups
 
-With tabs on, anything you open from the rail — sessions, worktrees, files, and every other resource — becomes a tab, and tabs live in **groups** you arrange freely, the way editor tabs work in VS Code.
+With tabs on, anything you open from the rail (sessions, worktrees, files, and every other resource) becomes a tab, and tabs live in **groups** you arrange freely, the way editor tabs work in VS Code.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/tabs-preview-oct-2026.png" target="_blank" rel="noopener noreferrer">
@@ -229,7 +229,7 @@ With tabs on, anything you open from the rail — sessions, worktrees, files, an
   </a>
   <figcaption style="text-align:center; color:#888">An italic preview tab beside a session tab.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — Names are blurred. Re-take with two tab groups side by side and a pinned tab as well as the preview tab. -->
+<!-- TODO(screenshot): Replace: Names are blurred. Re-take with two tab groups side by side and a pinned tab as well as the preview tab. -->
 
 - **Drag a tab** to reorder it, onto another group to move it there, or to a group's edge to split off a new group there. Drag the sash between groups to resize them.
 - **A single click opens a preview.** A resource opened with one click shows in an italic preview tab that the next single click replaces, so browsing the rail doesn't pile up tabs. Double-click a row, or start editing in the tab, to keep it open. A session always opens as a tab you keep. Turn **Preview tabs** off in **Settings → General** to have every click keep its tab.
@@ -237,11 +237,11 @@ With tabs on, anything you open from the rail — sessions, worktrees, files, an
 - **Shift-click opens a range** of rows, each as its own tab.
 - Clicking the row of something already open just brings its tab forward. Close a tab from the tab itself.
 
-A tab's **Tab actions** chevron and its right-click menu hold everything the thing's rail row offers — plus **Rename** on a file or folder tab — led by the tab's own verbs: **Keep open** on a preview, **Pin tab** or **Unpin tab**, **Close tab**, **Close others**, **Close to the right**, **Close all**, and **Close group** when there's more than one group. A pinned tab shrinks to its icon at the front of its group and has no close control; unpin it to close it.
+A tab's **Tab actions** chevron and its right-click menu hold everything the thing's rail row offers, plus **Rename** on a file or folder tab. They lead with the tab's own verbs: **Keep open** on a preview, **Pin tab** or **Unpin tab**, **Close tab**, **Close others**, **Close to the right**, **Close all**, and **Close group** when there's more than one group. A pinned tab shrinks to its icon at the front of its group and has no close control; unpin it to close it.
 
 A session tab swaps its close control for the session's status dot while the session has something unread or needs you, so a group's tabs say which conversation wants attention.
 
-Closing a tab — with its **×** (**Close tab**), a middle-click, or **Cmd/Ctrl+W** — only hides it. A session keeps running and stays on the rail; to archive one, use **Archive** on its rail row. **Cmd/Ctrl+Shift+T** reopens the last tab you closed.
+Closing a tab with its **×** (**Close tab**), a middle-click, or **Cmd/Ctrl+W** only hides it. A session keeps running and stays on the rail; to archive one, use **Archive** on its rail row. **Cmd/Ctrl+Shift+T** reopens the last tab you closed.
 
 When every tab is closed, the content area offers **New session** and the external-session importer, so a Task with nothing open is never a dead end. With tabs on, those two controls also sit in the header, beside **Terminal**.
 
@@ -284,11 +284,11 @@ With a single place to run, the menu lists the agents directly instead of asking
   </a>
   <figcaption style="text-align:center; color:#888">The New session menu, with a worktree's agents open.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — Account names are blurred. Re-take with Start on another branch ticked and the branch picker open. -->
+<!-- TODO(screenshot): Replace: Account names are blurred. Re-take with Start on another branch ticked and the branch picker open. -->
 
-**Each agent row can start either run mode.** The row itself launches that agent in its default mode; the trailing button on the row starts the other one — **Start in Terminal**, or **Start in Rich chat** on an agent that already defaults to Terminal. An agent that offers only one mode shows no second control. See [Agent Sessions](/kepler/agent-sessions#how-a-session-runs).
+**Each agent row can start either run mode.** The row itself launches that agent in its default mode; the trailing button on the row starts the other one: **Start in Terminal**, or **Start in Rich chat** on an agent that already defaults to Terminal. An agent that offers only one mode shows no second control. See [Agent Sessions](/kepler/agent-sessions#how-a-session-runs).
 
-**Start on another branch** sits above a worktree's agents. Check it and pick a branch — an existing one, or a new one cut **From** a base, with an optional **Branch name** (left empty, it's *Named for you*) — and the same agent rows start the session there instead: in a fresh worktree, or in the repository's own checkout switched in place.
+**Start on another branch** sits above a worktree's agents. Check it and pick a branch, either an existing one or a new one cut **From** a base with an optional **Branch name** (left empty, it's *Named for you*). The same agent rows then start the session there instead: in a fresh worktree, or in the repository's own checkout switched in place.
 
 **Start with task context** is checked by default, so the session receives the Task's shared context. Uncheck it for a session that forms its own view instead. It resets each time the menu closes, so a one-off opt-out never carries over.
 
@@ -335,7 +335,7 @@ A path that's already one of the Task's files opens that file's own tab rather t
   <figcaption style="text-align:center; color:#888">An open file that just changed on disk.</figcaption>
 </figure>
 
-A very large file shows its start first — *Showing the first {shown} of {total}* — with **Load the rest**.
+A very large file shows its start first, labeled *Showing the first {shown} of {total}*, with **Load the rest**.
 
 ***
 
@@ -384,7 +384,7 @@ Right-click a path for more: **Open file**, your default editor (opening at the 
 
 Closing a terminal with something running in it confirms first, naming the job you actually launched:
 
-> **Close terminal?** — *Stops {command}, which is still running in this terminal.*
+> **Close terminal?** *Stops {command}, which is still running in this terminal.*
 
 **Close terminal** goes ahead. A terminal already closing offers only **Force close**. Quitting Kepler counts busy terminals alongside busy sessions and asks before it takes them down.
 
@@ -394,7 +394,7 @@ Closing a terminal with something running in it confirms first, naming the job y
 
 | Resource | Details |
 |---|---|
-| **Worktree**, on disk | A strip of verbs — the branch, the sync control, **Open in**, **Run a command** — over its changed files, which lead into the Changes overlay. With tabs off, the branch pill's menu offers **Detach worktree…** and **Delete worktree…** (never on the repository's main worktree). See [Review Changes](/kepler/review-changes) |
+| **Worktree**, on disk | A strip of verbs (the branch, the sync control, **Open in**, **Run a command**) over its changed files, which lead into the Changes overlay. With tabs off, the branch pill's menu offers **Detach worktree…** and **Delete worktree…** (never on the repository's main worktree). See [Review Changes](/kepler/review-changes) |
 | **Worktree**, missing | A metadata card instead: **Current branch**, **Base branch**, and the **Recorded path**, flagged **not on disk** or **gone** when it's been removed outside Kepler. A worktree that has gone stays bound to the Task, and Kepler offers to recreate it rather than quietly dropping it |
 | **Folder** | Path, plus an editable name and description |
 | **File** | The file itself, in the [file viewer](#opening-a-file), with its description, where it came from, and its size on the viewer's toolbar. **Rename** is in **File actions**. An uploaded copy says it's a copy in the task folder |

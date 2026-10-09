@@ -46,7 +46,12 @@ Everything up to [Remote Access](#remote-access-reach-kepler-from-another-device
 
 Kepler binds each window to one environment at a time, and the title-bar chip shows which one. The chip leads with the environment's type icon, and a green dot on that icon means connected.
 
-<!-- TODO(screenshot): New — The title-bar chip connected to a host, in the host's color with the green connected dot. The unused `remote-chip-aug-2026.png` may be a starting point. -->
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/remote-chip-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-chip-oct-2026.png" class="help-center-img img-bordered" alt="The title-bar chip reading dev-server, tinted violet like the title bar behind it, with a green dot on its type icon. Below it, the popover header peeks on hover: dev-server, Connected, 5 ms, the versions, Disconnect, and the restart and stop server buttons.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The chip on a host colored Violet, with the popover header peeking on hover.</figcaption>
+</figure>
 
 | Chip | What it means |
 |---|---|
@@ -75,10 +80,10 @@ The popover answers where you are and where else you can go, and hands anything 
 | **Disconnect** | Releases this window only. The server keeps its sessions running |
 | **Restart server** (circular arrow) | Restarts a connected server when no update is pending. See [Server controls](#server-controls) |
 | **Stop server** | Stops the server on the host. Every window connected to it disconnects |
-| Forwarded ports | *Port 3000 forwarded* or *3 ports forwarded*. Opens the host's **Ports** list |
+| Forwarded ports | *Port 3000 forwarded*, or a count followed by the ports, such as *2 ports forwarded 3000, 5173*. Opens the host's **Ports** list |
 | **Switch to** | Every other saved host, plus **Local** (*Work on this machine*) when this window is on a remote |
 | **Found on this machine** | WSL distributions found on this PC, offered for one-click connect while you have no saved hosts |
-| **Remote Access** | Turns Remote Access on or off for this machine, and shows how many devices are connected |
+| **Remote Access** | Turns Remote Access on or off for the machine this window works on, and shows how many devices are connected. On a remote window, it reads **Use *host* anywhere** |
 | **Manage remote environments…** | Opens **Settings → Remote Environments**. **⌘ ⇧ R** on macOS, **Ctrl + Shift + R** elsewhere |
 
 When this app, rather than the server, is the side that is behind, the header offers this app's own update instead, and says that sessions on the host keep running.
@@ -87,7 +92,12 @@ Clicking a **Switch to** row moves this window. Hold **Cmd** (macOS) or **Ctrl**
 
 A connect that a *different* window starts never takes over this window's chip.
 
-<!-- TODO(screenshot): New — The redesigned popover, connected to a host — header with versions and gear, Restart server to update with its consequence line, Switch to list, Manage remote environments…. -->
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/remote-popover-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-popover-oct-2026.png" class="help-center-img img-bordered" alt="The popover open under the dev-server chip. The header shows dev-server over SSH at localhost, Connected at 9 ms, server and app version 0.12.0, and a gear, with Disconnect and the restart and stop server buttons. Below are Switch to with Local, Remote Access with Turn on Remote Access, and Manage remote environments… with its shortcut.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The popover, connected to a host.</figcaption>
+</figure>
 
 ***
 
@@ -105,12 +115,11 @@ A connect that a *different* window starts never takes over this window's chip.
 **Settings → Remote Environments** is the full management surface. In a local window it lists your saved hosts; each row shows the host's type, **Connected** or *Not connected*, and *Open in N windows* when other windows already use it. **Connect** connects this window, the window icon connects in a new window, and **Show window** replaces **Connect** for a host open elsewhere. Click a row to drill into the host's page.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/connection-panel-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/connection-panel-aug-2026.png" class="help-center-img img-bordered" alt="Remote environments before any host is added">
+  <a href="/wp-content/uploads/remote-environments-hosts-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-environments-hosts-oct-2026.png" class="help-center-img img-bordered" alt="Settings → Remote Environments with Add a host and one saved host, dev-server, an SSH host at localhost marked Connected and Open in 1 window, with Show window and a new-window button.">
   </a>
-  <figcaption style="text-align:center; color:#888">Remote environments, before any host is added.</figcaption>
+  <figcaption style="text-align:center; color:#888">Settings → Remote Environments, with a saved host.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — As Settings → Remote Environments (host list with Add a host, and the Found on this machine section). The current image shows the retired standalone connections panel. -->
 
 **Found on this machine** lists hosts from your `~/.ssh/config` and WSL distributions you have not saved yet. **Add** saves one. Kepler shows three at first, with **Show *N* more** for the rest; the eye icon hides a host you never want offered, and **Show hidden** brings them back.
 
@@ -125,9 +134,16 @@ A host's page puts its actions in a card at the top: **Connect** (**Cmd/Ctrl**-c
 | **Mute notifications from *host*** | *Kepler won't show desktop notifications for sessions on host. Alerts still appear inside its windows.* |
 | **Sessions** | Labelled *survive disconnect · resumable anywhere*. Each row is a live agent session on that host, and clicking one opens it. For a host nobody is connected to, **Check** opens a short-lived connection to ask its server what is running |
 
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/remote-host-page-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-host-page-oct-2026.png" class="help-center-img img-bordered" alt="The page for dev-server, an SSH host that is connected in another window: Show window, Connect to dev-server in a new window, Stop server, and a trash icon at the top, then locked Connection fields with a note to disconnect first, the Color swatches with Violet picked, Mute notifications from dev-server, and Sessions labelled survive disconnect · resumable anywhere.">
+  </a>
+  <figcaption style="text-align:center; color:#888">A saved host's page.</figcaption>
+</figure>
+
 Changing the address of a host the SSH wizard created first fetches the new address's host key, under **New host key**. **Trust and save** pins that key and saves the host in one step, and every new host or port gets its own scan. Any address change notes that an install at the old address stays there.
 
-**Kepler reads your own `~/.ssh/config` before it offers to write to it.** A host you have already configured — its user, port, identity file, jump host, whatever you set — is used as you configured it, and Kepler offers to edit the file only when there is genuinely nothing there to reuse. **Open in → VS Code** on an SSH environment opens through that same host alias, so VS Code's own Remote-SSH resolves it exactly the way your terminal does.
+**Kepler reads your own `~/.ssh/config` before it offers to write to it.** A host you have already configured (its user, port, identity file, jump host, whatever you set) is used as you configured it, and Kepler offers to edit the file only when there is genuinely nothing there to reuse. **Open in → VS Code** on an SSH environment opens through that same host alias, so VS Code's own Remote-SSH resolves it exactly the way your terminal does.
 
 ### Server controls
 
@@ -163,6 +179,15 @@ Common SSH failures get a plain-language headline and a hint. Kepler recognizes:
 
 The unedited diagnostic appears underneath either way.
 
+When the failure happens while you're adding a host, the wizard shows it in place: *Something went wrong.*, the headline and hint, the **Diagnostic**, a **Copy** button for each, and **Try again**.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/remote-auth-rejected-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-auth-rejected-oct-2026.png" class="help-center-img img-bordered" alt="The SSH wizard reporting Something went wrong: Authentication rejected, The host refused the credentials we offered, and a Diagnostic, each with a Copy button, and Cancel and Try again.">
+  </a>
+  <figcaption style="text-align:center; color:#888">A failed connection while adding a host.</figcaption>
+</figure>
+
 For Kepler's own log file, use **Settings → Help → Logs**.
 
 ### Removing a connection
@@ -180,7 +205,6 @@ Removing a WSL host offers **Uninstall Kepler server on the host** for the distr
 
 If the server reports live sessions or connected clients, Kepler disables the uninstall until you tick **Uninstall anyway, I understand sessions on this host may be lost**. If the host is unreachable, or needs a password Kepler does not have, Kepler suppresses the host-side options, and the dialog states which of the two reasons applies.
 
-<!-- TODO(screenshot): New — A host's page in Settings → Remote Environments — hero card with Connect / Stop server / trash, Connection fields, Color, Mute, Sessions. -->
 
 ***
 
@@ -197,18 +221,41 @@ The SSH wizard walks five steps.
 | Step | What you do |
 |---|---|
 | *Connect to a machine you reach over SSH…* | **Name** (optional, derived from the host), **Host**, **User** (optional, defaults to the remote `$USER`), **Port** |
-| *Choose authentication.* | Pick a mode — see below |
+| *Choose authentication.* | Pick a mode (see below) |
 | *Verify the host fingerprint.* | Kepler fetches the host key and shows its algorithm and fingerprint. **Trust and continue** pins it |
 | *Verifying the connection.* | Kepler makes a real connection before anything is saved |
 | *Ready to save.* | **Add** saves the host and opens its page. Nothing connects until you press **Connect**; a password the wizard verified is reused for that first connect |
 
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/remote-new-host-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-new-host-oct-2026.png" class="help-center-img img-bordered" alt="The first step of the SSH wizard, Remote environments › New host, with Name (optional), Host, Port set to 22, and User (optional) fields, and Cancel and Continue buttons.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The first step of adding an SSH host.</figcaption>
+</figure>
+
 | Authentication mode | What it means |
 |---|---|
-| **Existing key** | Use one of the keys already in `~/.ssh`. Kepler counts what it finds; with exactly one candidate it preselects it |
+| **Existing key** | Use one of the keys already in `~/.ssh`. Kepler counts what it finds; with exactly one candidate it preselects it. With none, it reads *No keys found in ~/.ssh* and can't be picked |
 | **Password** | *Re-prompt every connect.* The password is never stored |
 | **Generate key** | *Keyless after first connect.* Kepler uses the password once to install a fresh ed25519 key at `~/.ssh/id_ed25519_kepler_<hash>`. Your existing keys are never overwritten |
 
 **Generate key** needs `ssh-keygen` on your machine; the chip reads **ssh-keygen missing** when ssh-keygen is absent.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/remote-auth-mode-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-auth-mode-oct-2026.png" class="help-center-img img-bordered" alt="The Choose authentication step of the SSH wizard for localhost, with Existing key unavailable because no keys were found in ~/.ssh, and Password and Generate key to pick from.">
+  </a>
+  <figcaption style="text-align:center; color:#888">Choosing how Kepler signs in to the host.</figcaption>
+</figure>
+
+If you pick **Password**, the wizard then offers **Set up a key for this host?** **Generate and copy key** generates a fresh ed25519 key, copies it to the host, and uses it for future connects, so you don't need the password again. **Skip** keeps the host on password sign-in.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/remote-key-offer-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-key-offer-oct-2026.png" class="help-center-img img-bordered" alt="The Set up a key for this host? step, explaining that Kepler generates an ed25519 key at ~/.ssh/id_ed25519_kepler_&lt;hash&gt; without overwriting existing keys, with Cancel, Skip, and Generate and copy key.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The offer to replace a password with a key.</figcaption>
+</figure>
 
 If the host rejects a key-based connect, Kepler does not leave you stuck: the host's page opens a password row so you can retry with a password, and, when no key is saved for that host yet, offers to install one at the same time. A connect from the popover that needs a password opens a password dialog instead.
 
@@ -245,7 +292,18 @@ While anything is forwarded, the chip shows a radio-tower glyph and the popover 
 
 Forwards belong to the window that made them. Disconnecting, closing, reconnecting, or switching hosts tears them down, and they are not restored. A forward that fails opens nothing rather than reaching a service on this computer. Local and WSL windows open `localhost` links unchanged, since WSL already passes localhost through.
 
-<!-- TODO(screenshot): New — The Ports list in an SSH window's Settings → Remote Environments, with two forwards and Stop all; and the chip with its radio-tower glyph. -->
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/remote-ports-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-ports-oct-2026.png" class="help-center-img img-bordered" alt="The Ports list in an SSH window's Settings, with Stop all and two forwards, 3000 to http://localhost:51860 and 5173 to http://localhost:51873, each with Stop, above a Port field and Add.">
+  </a>
+  <figcaption style="text-align:center; color:#888">Two forwarded ports, each on a free local port.</figcaption>
+</figure>
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/remote-ports-chip-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-ports-chip-oct-2026.png" class="help-center-img img-bordered" alt="The dev-server chip with a radio-tower glyph after its name, and its popover open with a row reading 2 ports forwarded 3000, 5173.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The radio-tower glyph on the chip, and the forwarded-ports row in the popover.</figcaption>
+</figure>
 
 ***
 
@@ -379,12 +437,11 @@ The payload carries its own Node runtime, so the host needs nothing pre-installe
 Configure it in **Settings → Remote Access**, or turn it on from the title-bar popover.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-settings-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-settings-aug-2026.png" class="help-center-img img-bordered" alt="Remote Access settings, active, with the QR code and gitkraken.dev link visible">
+  <a href="/wp-content/uploads/remote-access-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-access-oct-2026.png" class="help-center-img img-bordered" alt="Settings → Remote Access, marked Active, with Turn off Remote Access, a QR code to scan with your phone, the gitkraken.dev link with a copy button, and Connected Devices listing four phones, each with Revoke. The QR code and link are blurred.">
   </a>
-  <figcaption style="text-align:center; color:#888">Remote Access, active, with its QR code and gitkraken.dev link.</figcaption>
+  <figcaption style="text-align:center; color:#888">Remote Access, active, in Settings → Remote Access.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — From Settings → Remote Access, which is now its own Settings page rather than a section under Remote. -->
 
 ### Before you start
 
@@ -452,8 +509,8 @@ You can also manage the current machine's connections locally, in **Settings →
 
 ## Related
 
-- [Settings](/kepler/settings) — the **Remote Environments** and **Remote Access** pages, and the shortcut list
-- [Agent Integrations](/kepler/agent-integrations) — signing agents in, including on a remote target
-- [Review Changes](/kepler/review-changes) — reviewing and shipping the work a remote agent produced
+- [Settings](/kepler/settings): the **Remote Environments** and **Remote Access** pages, and the shortcut list
+- [Agent Integrations](/kepler/agent-integrations): signing agents in, including on a remote target
+- [Review Changes](/kepler/review-changes): reviewing and shipping the work a remote agent produced
 
 ---

@@ -24,12 +24,11 @@ Settings is eleven sub-pages, each with its own sections. This page documents ev
 Open Settings from the gear icon in the top bar, or with **⌘ ,** (**Ctrl ,** on Windows and Linux). The same shortcut closes Settings again, the way the gear button does.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/settings-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/settings-aug-2026.png" class="help-center-img img-bordered" alt="Settings open on the General sub-page, with the left rail listing Setup and the sub-pages">
+  <a href="/wp-content/uploads/settings-general-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/settings-general-oct-2026.png" class="help-center-img img-bordered" alt="Settings open on General at version 0.12.0. The left rail lists Setup, then Account, General, Appearance, Agents, Actions, Remote Access, Remote Environments, Integrations, Voice Input, Repos &amp; Folders, and Help.">
   </a>
   <figcaption style="text-align:center; color:#888">Settings, open on General.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — Settings → General at v0.12.0 so the rail shows all eleven sub-pages, including Remote Access and Remote Environments as separate entries. -->
 
 ***
 
@@ -133,7 +132,7 @@ Three paths tell Kepler where to put things. All three are unset out of the box;
 
 Type a path directly, or use the folder button beside the field to browse. Edits save when you leave the field, so no separate Save button exists.
 
-**Scan for repositories**, beside the repositories folder, registers every repository it finds there — reporting **Added {count} repositories.** or **No new repositories found.** It runs only when you change the setting or press it, never on startup, so a repository you deliberately removed stays removed.
+**Scan for repositories**, beside the repositories folder, registers every repository it finds there and reports **Added {count} repositories.** or **No new repositories found.** It runs only when you change the setting or press it, never on startup, so a repository you deliberately removed stays removed.
 
 #### The Variables menu
 
@@ -152,12 +151,11 @@ For example, `<REPOSITORY_PATH>/.worktrees/<REPOSITORY_NAME>` nests each worktre
 Per-repository commands have a **Variables** menu of their own, with two more variables. See [Per-repository commands](#per-repository-commands).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/placeholder-legend-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/placeholder-legend-aug-2026.png" class="help-center-img img-bordered" alt="Settings → General, showing the three folder fields">
+  <a href="/wp-content/uploads/folder-fields-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/folder-fields-oct-2026.png" class="help-center-img img-bordered" alt="The three folder fields in Settings → General, with the Variables menu open beside Default Worktrees Folder, offering REPOSITORY_PATH (Main repo folder) and REPOSITORY_NAME (Repo name). Default Tasks Folder has no Variables menu.">
   </a>
-  <figcaption style="text-align:center; color:#888">The three folder fields.</figcaption>
+  <figcaption style="text-align:center; color:#888">The three folder fields, with the Variables menu open.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — The folder fields at v0.12.0 — the Placeholders legend is gone; show the Variables menu open beside Default Worktrees Folder. -->
 
 #### Default Task Mode
 
@@ -181,7 +179,7 @@ This sets the default only. The repository chip's own **Base branch** and **Isol
 |---|---|---|
 | **Branch prefix** | *Added to the front of every branch name Kepler creates. Leave empty for no prefix.* | `kepler/` |
 
-The prefix applies to **automatic** names only — a branch name you type is used verbatim, which is how a repository with an enforced `feat/` or `fix/` push rule still works. A prefix you type without a trailing separator gains a `/`, so typing `team` stores `team/`, while a personal `ea-` style prefix is kept as the literal lead-in it is.
+The prefix applies to **automatic** names only. A branch name you type is used verbatim, which is how a repository with an enforced `feat/` or `fix/` push rule still works. A prefix you type without a trailing separator gains a `/`, so typing `team` stores `team/`, while a personal `ea-` style prefix is kept as the literal lead-in it is.
 
 Each repository can override it under **Repos & Folders**. If a repository already has a branch literally named after the prefix, Kepler says which one and points you there: *Can't be used in {repo}: it has a branch named {branch}. Set a different prefix for that repository under Repositories.*
 
@@ -189,9 +187,9 @@ Each repository can override it under **Repos & Folders**. If a repository alrea
 
 | Setting | What it controls | Default |
 |---|---|---|
-| **Keep awake while agents run** | Blocks sleep and standby while an agent session is starting, running, or waiting for your input, and while Remote Access is on — sleeping drops the connection and makes this machine unreachable. The screen can still turn off | On |
+| **Keep awake while agents run** | Blocks sleep and standby while an agent session is starting, running, or waiting for your input, and while Remote Access is on, because sleeping drops the connection and makes this machine unreachable. The screen can still turn off | On |
 
-Kepler holds the machine awake through the platform's own mechanism: `caffeinate` on macOS, an execution-state assertion on Windows, `systemd-inhibit` on Linux. Where that isn't possible, the setting says so under the switch — for example *Can't stay awake: there is no sleep-blocking mechanism available on this platform*, or, on Linux, that the system's polkit policy is refusing the request, with a rule an administrator can install. This setting applies to the computer the agents run on, which on a remote connection is the remote host, and it counts Claude Code sessions detected outside Kepler alongside Kepler's own. Kepler releases the machine as soon as the last such session settles.
+Kepler holds the machine awake through the platform's own mechanism: `caffeinate` on macOS, an execution-state assertion on Windows, `systemd-inhibit` on Linux. Where that isn't possible, the setting says so under the switch. For example, it reads *Can't stay awake: there is no sleep-blocking mechanism available on this platform*, or on Linux it says that the system's polkit policy is refusing the request, with a rule an administrator can install. This setting applies to the computer the agents run on, which on a remote connection is the remote host, and it counts Claude Code sessions detected outside Kepler alongside Kepler's own. Kepler releases the machine as soon as the last such session settles.
 
 ### Windows and notifications
 
@@ -232,7 +230,7 @@ This section lists Kepler's shortcuts, grouped the way Settings groups them. The
 | New task | ⌘ N | Ctrl + N |
 | Open quick launcher (global) | ⇧ ⌥ N | Shift + Alt + N |
 | New window | ⌘ ⇧ N | Ctrl + Shift + N |
-| Quit | — | Ctrl + Q |
+| Quit | None | Ctrl + Q |
 | Zoom in | ⌘ = | Ctrl + = |
 | Zoom out | ⌘ – | Ctrl + – |
 | Reset zoom | ⌘ 0 | Ctrl + 0 |
@@ -327,7 +325,7 @@ Four sections: **Theme**, **Terminal**, **Diff View**, **Chat transcript**.
 | **Light** | The light palette |
 | **System** | Follows your OS color scheme and switches when the OS does. Its dark is **Dark**, not Midnight |
 
-**System** resolves to **Dark** because your OS says "light or dark" and nothing finer — someone following the room is asking to follow the room, not to opt into the highest contrast Kepler can draw.
+**System** resolves to **Dark** because your OS says "light or dark" and nothing finer. Someone following the room is asking to follow the room, not to opt into the highest contrast Kepler can draw.
 
 Color mode is the only appearance choice in this section. No second, design-language picker exists.
 
@@ -377,12 +375,11 @@ Neither mode fights you: once you scroll up, the transcript stays where you put 
 Five parts: **Default agent**, one card per agent, **Agent options**, **MCP servers**, and **Features**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-settings-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-settings-aug-2026.png" class="help-center-img img-bordered" alt="Settings → Agents, showing the Default agent row and the Claude Code and Codex cards">
+  <a href="/wp-content/uploads/agent-settings-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-settings-oct-2026.png" class="help-center-img img-bordered" alt="Settings → Agents, with Default agent at the top and Update all and Re-scan above the agent cards. The Claude Code card shows its version, Update, and Enabled in the title line, then Accounts, Opens in set to Rich chat, Let artifact comments start turns, and a collapsed Advanced section.">
   </a>
   <figcaption style="text-align:center; color:#888">Settings → Agents.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — Settings → Agents at v0.12.0 — agent cards now have the version in the title line, Accounts with colour pickers, "Opens in", and an Advanced disclosure; MCP servers section sits above Features. -->
 
 ### Default agent
 
@@ -402,7 +399,7 @@ An [Action](/kepler/actions) inherits this configuration unless it names an agen
 
 Kepler ships adapters for **Claude Code**, **Codex**, **GitHub Copilot**, **Cursor**, **Antigravity**, **OpenCode**, **Pi**, **Auggie**, and **Grok Build**. Settings lists the agents installed on this machine first, then the rest, each group in that order.
 
-Above the cards, **Agent maintenance** holds two buttons: **Update all** runs each installed agent's own updater, and **Re-scan** re-detects the agent CLIs installed on this system — run it after installing or removing one outside Kepler.
+Two buttons sit above the cards: **Update all** runs each installed agent's own updater, and **Re-scan** re-detects the agent CLIs installed on this system. Run it after installing or removing one outside Kepler.
 
 Each card's title line carries the agent's name and these controls:
 
@@ -428,7 +425,7 @@ Under **Advanced**:
 | Setting | What it controls | Default |
 |---|---|---|
 | **Binary** | The binary Kepler spawns. **Auto** resolves it the way your shell does (the first match on your `PATH`), so it matches `which`. Pick a specific install, or **Custom path…**, to override. **Re-scan** searches again | Auto |
-| **Components** | Extra pieces an agent can need, such as its CLI for Terminal mode (*Needed for Terminal mode.*), each with **Install** or **Update to {version}** | — |
+| **Components** | Extra pieces an agent can need, such as its CLI for Terminal mode (*Needed for Terminal mode.*), each with **Install** or **Update to {version}** | None |
 | **Data directory** | Overrides the agent's default data and config directory | Empty, meaning the agent's own default |
 
 **Codex runs your own CLI.** Kepler resolves and spawns the `codex` you have installed, like every other agent. Usage figures read the OAuth token from `~/.codex/auth.json`, or `CODEX_HOME/auth.json` when you have set a custom data directory.
@@ -543,7 +540,7 @@ This section describes the feature and routes you to it. See [Remote environment
 
 ## Remote Environments
 
-The hosts your agents can run on — a dev server, a cloud VM, or WSL on Windows — while you work from here. Kepler installs itself over SSH, or inside the WSL distro, so the host needs nothing pre-installed. **⌘ ⇧ R** opens this sub-page from anywhere, and so does **Manage remote environments…** in the remote chip's popover. The saved host list lives on this computer, whichever host a window is connected to.
+The hosts your agents can run on while you work from here: a dev server, a cloud VM, or WSL on Windows. Kepler installs itself over SSH, or inside the WSL distro, so the host needs nothing pre-installed. **⌘ ⇧ R** opens this sub-page from anywhere, and so does **Manage remote environments…** in the remote chip's popover. The saved host list lives on this computer, whichever host a window is connected to.
 
 | Part | What it holds |
 |---|---|
@@ -564,7 +561,7 @@ Click a saved host to open its detail:
 
 In a window connected to an SSH host, a **Ports** list shows the ports forwarded from that host to this computer: forward another by number, **Stop** one, or **Stop all** when more than one is forwarded.
 
-If Kepler can't reconnect a window at startup, this sub-page opens with the reason — for example *Couldn't auto-reconnect. Connect to resume where you left off.* — and offers to connect or **Stay local**. A window connected to a host lists the others read-only; to add, edit, or remove hosts, use **Open in a local window**.
+If Kepler can't reconnect a window at startup, this sub-page opens with the reason and offers to connect or **Stay local**. For example: *Couldn't auto-reconnect. Connect to resume where you left off.* A window connected to a host lists the others read-only; to add, edit, or remove hosts, use **Open in a local window**.
 
 See [Remote environments](/kepler/remote-environments) for connecting, port forwarding, and how sessions behave on a host.
 
@@ -585,7 +582,7 @@ Kepler lists every supported provider whether or not it is connected, in this or
 | GitHub |
 | GitHub Enterprise |
 | GitLab |
-| GitLab Self-Managed |
+| GitLab Self-Hosted |
 | Jira |
 | Jira Server / Data Center |
 | Linear |
@@ -598,7 +595,7 @@ Each provider row carries these controls and states:
 | **Connect** | Starts the connection flow for a provider you have not connected |
 | **Connected** | Shown on a working connection |
 | **Reconnect** | Refreshes an expired token. A **Sign-in expired** badge and the hint *"Sign-in has expired. Click Reconnect to refresh this provider's token."* mark the rows that need it |
-| **Cannot connect to server** | The provider's server didn't answer. The integration is still connected, and this clears on its own once the server responds — check that it's reachable from your network or VPN. No reconnect needed |
+| **Cannot connect to server** | The provider's server didn't answer. The integration is still connected, and this clears on its own once the server responds. Check that it's reachable from your network or VPN. No reconnect needed |
 | **Disconnect** | Disconnects the provider from GitKraken everywhere: the `gk` CLI and GitKraken Desktop lose access too, along with any additional accounts for that provider. You can reconnect at any time |
 | **Refresh** | Re-checks every provider's connection status |
 
@@ -606,7 +603,7 @@ Providers connect through your GitKraken account, so the section asks you to sig
 
 When a provider has more than one account, an **Accounts** block lists them. **Set as primary** chooses which account Kepler acts as, and **Read from this account** chooses which one Kepler reads issues and pull requests from. They can be different accounts.
 
-When an organization refuses a working connection — it blocks third-party OAuth apps, or hasn't approved GitKraken — the row names the organization and says its items aren't shown, with a link to fix it, such as **Request access on GitHub**.
+When an organization refuses a working connection (it blocks third-party OAuth apps, or hasn't approved GitKraken), the row names the organization and says its items aren't shown, with a link to fix it, such as **Request access on GitHub**.
 
 For per-provider setup, see [Issue Tracker Integrations](/kepler/issue-tracker-integrations) and [Pull Request Integrations](/kepler/pull-request-integrations).
 
@@ -682,9 +679,16 @@ With nothing tracked, the section reads *"Add a repository or folder to manage i
 | Field | What it takes |
 |---|---|
 | **Folder or URL** | *Paste a URL to clone it, or pick a folder that already holds a repo.* You can also drop a folder onto the dialog, or **Create a new repo instead** |
-| The card | The resolved repository — **{name} on {provider}**, its path, its branch count — plus the name, description, branch prefix and commands you can edit |
+| The card | The resolved repository (**{name} on {provider}**, its path, its branch count), plus the name, description, branch prefix and commands you can edit |
 
 Kepler says what a source resolves to before you commit to it: **A new folder named {name} will be created here.**, *This folder already holds a clone of that repo. It will be added as is.*, **That clone is already in Kepler.**, or a refusal when the folder is occupied by something else. A path that isn't a Git repository reads **That folder isn't a Git repo.**
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/edit-repo-dialog-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/edit-repo-dialog-oct-2026.png" class="help-center-img img-bordered" alt="The Edit repo dialog for Kepler-Docs, showing its path, its GitHub repository, main and 6 branches, then Description, Branch prefix set to App setting (kepler/), and an empty Commands list with Add.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The Edit repo dialog.</figcaption>
+</figure>
 
 #### Branch prefix, per repository
 
@@ -706,8 +710,8 @@ The card opens on two fields above the command list:
 
 | Field | What it does |
 |---|---|
-| **Display name** | An alias Kepler shows wherever it names this repository — *Shown across Kepler. Leave empty to use the folder name.* The field's placeholder is the folder name, and the full path on disk sits under the field, which is what tells two checkouts of one repository apart. A repository you have named this way keeps that name verbatim and stops competing with same-named folders for a disambiguating suffix |
-| **Description** | Free text — *What this repository is for (optional)* — described as *Given to agents working on this repo, so they know what it is for.* Kepler appends it to the repository's line in the resource list it hands a session, so a full sentence is more useful here than a single label |
+| **Display name** | An alias Kepler shows wherever it names this repository: *Shown across Kepler. Leave empty to use the folder name.* The field's placeholder is the folder name, and the full path on disk sits under the field, which is what tells two checkouts of one repository apart. A repository you have named this way keeps that name verbatim and stops competing with same-named folders for a disambiguating suffix |
+| **Description** | Free text. Its placeholder reads *What this repo is for. Agents working in it read this.* Kepler appends it to the repository's line in the resource list it hands a session, so a full sentence is more useful here than a single label |
 
 Both are optional. Kepler stores whitespace-only text as empty, and **Save** stays disabled until something has actually changed.
 
@@ -747,12 +751,12 @@ A failed command does not undo the worktree. The worktree exists but may not be 
 From the task view, right-click a worktree row in the rail and use **Run command here** for a second way in. It lists that repository's commands and runs the one you pick in that worktree, opening its terminal in place. A repository with none yet reads **No commands yet** and offers **Create command…**. A command that's running shows on the run button and its menus, where you can stop it.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/create-command-for-repo-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/create-command-for-repo-aug-2026.png" class="help-center-img img-bordered" alt="The Commands section of the Edit repo modal, with a command flagged Run on worktree creation">
+  <a href="/wp-content/uploads/repo-commands-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/repo-commands-oct-2026.png" class="help-center-img img-bordered" alt="A command row in the Edit repo dialog, with a drag handle, a Name field, Run on worktree creation, and a command box whose Variables menu is open on REPOSITORY_PATH, REPOSITORY_NAME, SOURCE_PATH, and WORKTREE_PATH.">
   </a>
-  <figcaption style="text-align:center; color:#888">A repository's Commands.</figcaption>
+  <figcaption style="text-align:center; color:#888">A repository's Commands, with the Variables menu open.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — The repo dialog's Commands list at v0.12.0 — drag handles, the Runs on creation chip, and the Variables menu, with no Placeholders legend. -->
+<!-- TODO(screenshot): Optional re-take: two filled-in command rows, one showing the Runs on creation chip. -->
 
 ### Worktrees
 
@@ -765,7 +769,7 @@ From the task view, right-click a worktree row in the rail and use **Run command
 | **Select reclaimable** / **Select all** | Selects worktrees to delete |
 | **Delete worktrees** | Deletes the selected worktrees after a confirmation listing anything that would be lost, with **Also delete the branches** |
 
-Each worktree carries a status: **Active**, **Idle** (untouched for longer than the idle threshold, so it may still hold work), or **Reclaimable** (its branch is merged, its upstream is gone, or its PR is merged, with nothing uncommitted, unpushed, or still in use — safe to delete).
+Each worktree carries a status: **Active**, **Idle** (untouched for longer than the idle threshold, so it may still hold work), or **Reclaimable** (its branch is merged, its upstream is gone, or its PR is merged, with nothing uncommitted, unpushed, or still in use, so it's safe to delete).
 
 A lock Kepler itself left on a worktree, for a task this install knows or a task since deleted, is cleared and the worktree deleted. Kepler never deletes a repository's main checkout, and keeps any worktree that still has uncommitted or unpushed work, other tasks, running agent sessions, or a lock from another tool, saying why for each. Where forcing can help, the result offers **Force delete**, which discards the listed work and ends the agent sessions running there.
 
@@ -786,7 +790,7 @@ A lock Kepler itself left on a worktree, for a task this install knows or a task
 
 Selection and **Delete worktrees** work the same way as in Settings.
 
-<!-- TODO(screenshot): New — The full-width Worktrees view at v0.12.0, showing a repository group with Tasks, Pull request and Behind base columns. -->
+<!-- TODO(screenshot): New: The full-width Worktrees view at v0.12.0, showing a repository group with Tasks, Pull request and Behind base columns. -->
 
 ### Projects
 

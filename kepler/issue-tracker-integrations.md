@@ -24,13 +24,11 @@ Connect an issue tracker and the issues you're working on show up in [the Kepler
 Manage providers in **Settings → Integrations**, in the **Provider Integrations** section.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/provider-integrations-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/provider-integrations-aug-2026.png" class="help-center-img img-bordered" alt="Settings → Integrations → Provider Integrations, with GitHub and Jira connected, showing the Connected badge and Disconnect and Reconnect buttons">
+  <a href="/wp-content/uploads/provider-integrations-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/provider-integrations-oct-2026.png" class="help-center-img img-bordered" alt="Provider Integrations in Settings → Integrations, listing all twelve providers with Refresh at the top. GitHub and Jira show a Connected badge with Disconnect and Reconnect, and the rest offer Connect.">
   </a>
   <figcaption style="text-align:center; color:#888">Provider Integrations, in Settings → Integrations.</figcaption>
 </figure>
-
-<!-- TODO(screenshot): Replace — the provider list has twelve providers in 0.12 (Azure DevOps Server, Bitbucket Data Center, Jira Server / Data Center) and new warning states. -->
 
 ***
 
@@ -43,7 +41,7 @@ Ten of Kepler's twelve providers return issues:
 | **GitHub** | Yes |
 | **GitHub Enterprise** | Yes |
 | **GitLab** | Yes |
-| **GitLab Self-Managed** | Yes |
+| **GitLab Self-Hosted** | Yes |
 | **Azure DevOps** | Yes |
 | **Azure DevOps Server** | Yes |
 | **Jira** | No |
@@ -51,9 +49,9 @@ Ten of Kepler's twelve providers return issues:
 | **Linear** | No |
 | **Trello** | No |
 
-**Bitbucket** and **Bitbucket Data Center** are the other two. They return pull requests only — see [Pull Request Integrations](/kepler/pull-request-integrations).
+**Bitbucket** and **Bitbucket Data Center** are the other two. They return pull requests only. See [Pull Request Integrations](/kepler/pull-request-integrations).
 
-Self-hosted instances are first-class: **GitHub Enterprise**, **GitLab Self-Managed**, **Azure DevOps Server**, and **Jira Server / Data Center** read issues the same way their cloud counterparts do, and two servers of the same kind stay separate even when their issue keys overlap. Which fields come back depends on your server's version, and your machine needs to be able to reach the server.
+Self-hosted instances are first-class: **GitHub Enterprise**, **GitLab Self-Hosted**, **Azure DevOps Server**, and **Jira Server / Data Center** read issues the same way their cloud counterparts do, and two servers of the same kind stay separate even when their issue keys overlap. Which fields come back depends on your server's version, and your machine needs to be able to reach the server.
 
 Kepler trusts the certificates installed in your operating system's certificate store, so a server signed by your company's own certificate authority, or a network that re-signs HTTPS traffic, works without extra setup.
 
@@ -77,7 +75,7 @@ Three controls sit on a connected provider's row:
 | Control | What it does |
 |---|---|
 | **Reconnect** | Re-runs authorization. Use it when a sign-in has expired |
-| **Disconnect** | Removes the provider's primary connection — see below |
+| **Disconnect** | Removes the provider's primary connection (see below) |
 | **Refresh** | At the top of the section, re-checks every provider |
 
 A provider's row can also carry a warning:
