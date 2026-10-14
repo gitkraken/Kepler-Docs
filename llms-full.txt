@@ -4453,7 +4453,7 @@ Eight of Kepler's twelve providers return pull requests:
 
 Jira, Jira Server / Data Center, Linear, and Trello are the other four. They return issues only. See [Issue Tracker Integrations](/kepler/issue-tracker-integrations).
 
-Self-hosted instances are supported. **GitHub Enterprise**, **GitLab Self-Hosted**, **Azure DevOps Server**, and **Bitbucket Data Center** read pull requests and merge requests the same way their cloud counterparts do, and two servers of the same kind stay separate; which fields come back depends on your server's version. Your machine needs to be able to reach the instance. Kepler trusts the certificates in your operating system's certificate store, so a server signed by your company's own certificate authority works without extra setup.
+Self-hosted instances are supported. **GitHub Enterprise**, **GitLab Self-Hosted**, **Azure DevOps Server**, and **Bitbucket Data Center** read pull requests and merge requests the same way their cloud counterparts do, and two servers of the same kind stay separate; which fields come back depends on your server's version. The instance must be reachable both from your machine and from gitkraken.dev, since connecting goes through GitKraken's website, so a server that's only reachable inside your network or VPN can't be connected. Kepler trusts the certificates in your operating system's certificate store, so a server signed by your company's own certificate authority works without extra setup.
 
 GitLab merge requests appear as pull requests throughout Kepler. There is one list, not two.
 
