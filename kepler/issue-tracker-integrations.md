@@ -21,14 +21,15 @@ taxonomy:
 
 Connect an issue tracker and the issues you're working on show up in [the Kepler interface](/kepler/kepler-interface), alongside your pull requests and the tasks you already have running. Starting work on one becomes picking a row rather than describing the work from scratch.
 
-Manage providers in **Settings → Integrations**, in the **Provider Integrations** section.
+Manage providers in **Settings → Integrations**, in the **Issues and pull requests** section.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/provider-integrations-oct-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/provider-integrations-oct-2026.png" class="help-center-img img-bordered" alt="Provider Integrations in Settings → Integrations, listing all twelve providers with Refresh at the top. GitHub and Jira show a Connected badge with Disconnect and Reconnect, and the rest offer Connect.">
   </a>
-  <figcaption style="text-align:center; color:#888">Provider Integrations, in Settings → Integrations.</figcaption>
+  <figcaption style="text-align:center; color:#888">Issues and pull requests, in Settings → Integrations.</figcaption>
 </figure>
+<!-- TODO(screenshot): Replace — The Issues and pull requests section of Settings → Integrations at 0.13.0, listing the providers with their Connected badges and Connect buttons. -->
 
 ***
 
@@ -62,9 +63,9 @@ Kepler trusts the certificates installed in your operating system's certificate 
 Connecting a tracker takes four steps:
 
 1. Open **Settings → Integrations**.
-2. Find the provider in **Provider Integrations** and click **Connect**.
+2. Find the provider in **Issues and pull requests** and click **Connect**.
 3. Authorize Kepler in the browser window that opens.
-4. Kepler returns to **Provider Integrations** and the provider shows a **Connected** badge.
+4. Kepler returns to **Issues and pull requests** and the provider shows a **Connected** badge.
 
 Your GitKraken account holds integrations, not this copy of Kepler, so a provider you connect here also becomes available to the `gk` command-line interface (CLI) and GitKraken Desktop. You need to sign in to a GitKraken account to manage them; Kepler prompts you if you are not signed in.
 
@@ -104,6 +105,8 @@ Each entry carries two independent controls:
 Switching either one clears that provider's saved filters (an organization or project from the old account need not exist on the new one) and re-fetches the list.
 
 The read account also authenticates git. Starting work on an issue in a repository you have never cloned makes Kepler clone that repository, using the same connection it reads through. See [Pull Request Integrations](/kepler/pull-request-integrations) for which hosts this covers and what happens on the hosts it does not.
+
+**Linear connections stay separate by workspace.** Each Linear account's entry shows *Workspace: {workspace}*, the Linear workspace that connection was granted. Two connections to different workspaces are separate accounts, so Kepler never reads one workspace's issues through another workspace's connection.
 
 ***
 
@@ -147,7 +150,7 @@ When an issue becomes a task, Kepler attaches what it read, so the agent starts 
 | **Assignees** | |
 | **Status** | The issue's current state, in the provider's own words (a Jira *To Verify* rather than a generic *open*), when the provider reports one |
 | **Last updated** | When the issue was last updated |
-| **Labels** | The provider's own labels. Kepler distinguishes "this issue has no labels" from "this provider cannot report labels" |
+| **Labels** | The provider's own labels, shown as badges in issue previews. Kepler distinguishes "this issue has no labels" from "this provider cannot report labels" |
 | **Project or board** | Jira projects, Linear teams, Azure DevOps areas. Git hosts hang issues off a repository instead |
 | **Iteration or sprint** | Azure DevOps iterations and Jira sprints. A Jira issue carried across sprints keeps them all |
 | **Repository** | Name, owner, and host, for the git hosts |
@@ -155,7 +158,7 @@ When an issue becomes a task, Kepler attaches what it read, so the agent starts 
 
 Kepler does not read an issue's priority, due date, milestone, Trello checklist, or Linear cycle. An agent can still find these by opening the issue's URL itself, but Kepler does not deliver them as attached context.
 
-Jira descriptions written in Jira's wiki markup are converted to Markdown, so headings, code blocks, and tables read the same in Kepler's previews and in the agent's context. Images embedded in an issue's description, including Jira attachments, display in Kepler's issue previews. The agent receives the description as text: Kepler does not pass the attachments or images themselves.
+Jira descriptions written in Jira's wiki markup are converted to Markdown, so headings, code blocks, and tables read the same in Kepler's previews and in the agent's context. Images embedded in an issue's description, including Jira and Azure DevOps attachments, display in Kepler's issue previews. The agent receives the description as text: Kepler does not pass the attachments or images themselves.
 
 ### Which issues Kepler lists
 
@@ -178,6 +181,11 @@ Your issues turn up in three places:
 | [Tasks and Resources](/kepler/tasks-and-resources) | An issue is a resource on a task, so you can attach one to work that already exists |
 
 The **Issue type**, **Label**, **Project**, and **Status** filters carry your provider's own vocabulary rather than a Kepler translation of it. Azure DevOps and Jira issues also filter by **Iteration** and **Sprint**, each named the way its tracker names it.
+
+Kepler recognizes an issue from its URL when you paste or attach one, including these work item URLs:
+
+- **GitLab** work items, at `/-/work_items/<number>` in a project. Kepler stores them as issues of that project. A group-level work item belongs to no repository, so it stays a plain URL.
+- **Azure DevOps** work items at the organization level, at `/<organization>/_workitems/edit/<number>`.
 
 **Linear lists by team.** Linear's own feed is only your issues, even under **All visible**. When the issue list in **Add resources** is showing Linear alone, a team picker appears: pick a team to see every open issue in it, whoever it's assigned to.
 

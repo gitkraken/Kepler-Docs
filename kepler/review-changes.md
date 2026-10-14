@@ -1,6 +1,6 @@
 ---
 title: Review Changes
-description: An agent finished. Read the diff in the Changes overlay, comment on it, stage and commit, update the branch from its base, and hand the rest to AI Sync or Compose.
+description: An agent finished. Read the diff in the Changes overlay, comment on it, stage and commit, update the branch from its base, resolve update conflicts with AI, and hand the rest to AI Sync or AI Compose.
 product: Kepler
 feature: Review Changes
 content_type: how-to
@@ -13,7 +13,7 @@ hosted_variant: both
 status: GA
 last_verified: 2026-10
 llms_include: true
-tags: [review, diff, changes-overlay, working-changes, commits, staging, amend, review-comments, merge-conflicts, merge-target, push, pull-requests, ai-sync, compose]
+tags: [review, diff, changes-overlay, working-changes, commits, staging, amend, review-comments, merge-conflicts, merge-target, push, force-push, pull-requests, ai-sync, ai-compose, ai-conflict-resolution, worktree-cleanup]
 taxonomy:
   category: kepler
 ---
@@ -42,7 +42,7 @@ Open a worktree from the rail's **Changes** group and it opens in a tab of its o
 
 | Control | What it does |
 |---|---|
-| The **branch pill** | The branch this checkout is on. Its chevron opens **Open changes**, **Copy branch name**, **Copy worktree path**, **Reveal in file manager**, **Refresh**, **Detach worktree…** and **Delete worktree…**. During a stopped rebase or merge it also holds **Continue {operation}** and **Abort {operation}…** |
+| The **branch pill** | The branch this checkout is on. Its chevron opens **Open changes**, **Copy branch name**, **Copy worktree path**, **Show in Finder** (macOS), **Show in Explorer** (Windows) or **Show in file manager** (Linux), **Refresh**, **Detach worktree…** and **Delete worktree…**. During a stopped rebase or merge it also holds **Continue {operation}** and **Abort {operation}…** |
 | The **sync control** | One button whose verb follows the branch's state (**Publish**, **Push**, **Pull**, **Fetch** or **Update**), with the counts beside it. See [Publishing and syncing the branch](#publishing-and-syncing-the-branch) |
 | **Open in** | Hands the checkout to another app. The split button runs your default; the chevron lists the rest, ending with **Open on {provider}** where the branch lives on a supported host |
 | **Run a command** | The repository's configured commands, and **Manage commands…**. See [Settings](/kepler/settings) |
@@ -119,7 +119,7 @@ The header counts what you are reading: **{index} of {total}**, and **{count} fi
 - A file that is unchanged in the current scope is drawn as **Unchanged in this scope** rather than hidden, so a **Show all files** browse reads the whole checkout.
 - A conflicted file is marked **!** in the tree and the viewer.
 
-Right-click a file row for its own menu: **Stage file** or **Unstage file**, **Discard changes**, **Delete**, **Open in editor**, and an **Open in** submenu with your editors, **Open in default app**, **Reveal in file manager** and **Open file on {provider}** where the file exists on a supported host. **Copy path** and **Copy relative path** end the menu. Select several rows and the items act on all of them.
+Right-click a file row for its own menu: **Stage file** or **Unstage file**, **Discard changes**, **Delete**, **Open in editor**, and an **Open in** submenu with your editors, **Open in default app**, **Show in Finder** (macOS), **Show in Explorer** (Windows) or **Show in file manager** (Linux), and **Open file on {provider}** where the file exists on a supported host. **Copy path** and **Copy relative path** end the menu. Select several rows and the items act on all of them.
 
 ### Editing in place
 
@@ -131,7 +131,7 @@ Editing a file reached through a symlink saves to the file it points at, and the
 
 ### Stacked or split
 
-**Stacked** puts removals and additions in one column; **Split** puts the old and new file side by side. The toggle sits on the viewer's header, and **Settings → Appearance → Diff View** sets what it starts on.
+**Stacked** puts removals and additions in one column; **Split** puts the old and new file side by side. The toggle sits on the viewer's header, and **Settings → Appearance → Diff view** sets what it starts on.
 
 Split needs room for two columns of code. Below roughly 640 pixels of viewer width the diff falls back to Stacked whatever the setting says. The header says **Too narrow for a split diff** rather than truncating both sides into noise.
 
@@ -234,7 +234,7 @@ Once nothing is conflicted, finish the operation. A stopped merge, cherry-pick o
 |---|---|
 | **Ask the agent** | The common case. The agent that wrote the change commits it, and you read the result |
 | **The worktree's terminal** | `git add`, `git commit`, your own aliases. **New terminal here** on the worktree's rail row opens one already in the right folder |
-| **Compose** | Hand an agent the tools to reorganize messy changes into clean, atomic commits. See [AI Sync and Compose](#ai-sync-and-compose) |
+| **AI Compose** | Hand an agent the tools to reorganize messy changes into clean, focused commits. See [Agent tools: AI Sync and AI Compose](#agent-tools-ai-sync-and-ai-compose) |
 
 ***
 
@@ -247,6 +247,7 @@ The strip's **sync control** is one button, and its verb is whatever the branch 
 | Behind or diverged from its merge target | **Update**, or **Review conflicts** when updating would conflict | Opens the update view in the worktree panel. See below |
 | No upstream | **Publish**, with *Creates {remote}/{branch} on the remote* | Publishes the branch |
 | Ahead | **Push**, with **{count} ahead** | Pushes |
+| Rebased by an applied update | **Force push**, with *Rebased onto {target} — force push to update the remote* | Replaces the remote's old commits after you confirm **Force push?** |
 | Behind | **Pull**, with **{count} behind** | Pulls. A branch that is both ahead and behind its upstream reads *Behind, pull first* on Push |
 | In step | **Fetch**, with **Up to date** | Updates your remote-tracking refs |
 
@@ -262,6 +263,8 @@ Counts only move on a fetch, so the control says when it last looked: **Checked 
 The chevron beside it lists **Push** (or **Publish**), **Pull** and **Fetch**, plus:
 
 - **Force push**: *Rewrites the remote branch*. Offered when the branch has diverged from its upstream, as a deliberate, separate click.
+
+After you apply a rebase, the remote still has the branch's old commits, so **Force push** becomes the main button instead of a menu item. The **Force push?** confirmation explains that the branch was rebased and that Kepler refuses the force push if someone else pushed in the meantime.
 - **Update**: where the branch stands against its merge target, and the way into the update view.
 
 <figure style="text-align:center">
@@ -282,12 +285,72 @@ The update view rebases or merges the branch onto its merge target. It works on 
   <figcaption style="text-align:center; color:#888">The update view, before a run.</figcaption>
 </figure>
 
-1. The title names the branch, with **from {branch}** under it. Kepler picks the detected base; choose another from the picker if you need to.
-2. Press **Rebase**, or choose **Merge** from its menu. **Stop** abandons a run in progress, and the branch is never touched.
-3. When the copy is ready, press **Apply**, or **Apply & push**, to move your branch to it. **Discard** throws it away.
-4. After applying, **Roll back** (or **Roll back & push**) returns the branch to where it was. The sync control's menu offers the same thing as **Roll back update**.
+To update the branch from its merge target, follow these steps:
 
-When updating would conflict, the button reads **Review conflicts** and the view lists the conflicting files instead of offering an update; pick one to see its conflicting hunks. To get through those conflicts, ask an agent with [AI Sync](#ai-sync-and-compose) turned on, or rebase in the terminal and resolve them in the [file tree](#resolving-merge-conflicts).
+1. Open the update view from the sync control. The title reads **Update {branch}**, with **from {branch}** under it. Kepler picks the detected base. To use another base, choose it from the picker.
+2. Press **Rebase**, or choose **Merge** from its menu. To abandon a run in progress, press **Stop**. Your branch is never touched.
+3. When the copy reaches **Ready to apply**, press **Apply** to move your branch to it, or press **Discard** to throw the copy away. If the branch can push, the **Apply** menu also offers **Apply & push**. After a rebase, **Apply & push** force-pushes, because the remote still has the old commits.
+4. To undo an applied update, press **Roll back**. The view returns to **Ready to apply** and keeps the result, so you can apply it again. The sync control's menu offers the same thing as **Roll back update**.
+
+The **Roll back** menu holds two more options:
+
+- **Roll back and discard**: returns the branch to where it was and throws the result away.
+- **Roll back & push**: rolls back and then force-pushes the restored branch. This option appears only when the branch can push.
+
+When updating would conflict, the sync control reads **Review conflicts**. The view title reads **Review conflicts in {branch}**, with **with {branch}** under it, and lists the conflicting files instead of offering a plain update. Pick a file to see its conflicting hunks.
+
+You have two ways through the conflicts:
+
+- **Resolve them with AI.** Press **Rebase with AI**, or choose **Merge with AI** from its menu. See [Resolve update conflicts with AI](#resolve-update-conflicts-with-ai).
+- **Resolve them yourself.** Rebase in the worktree's terminal and resolve each file in the [file tree](#resolving-merge-conflicts).
+
+### Resolve update conflicts with AI
+
+AI conflict resolution runs the rebase or merge on a copy and resolves each conflicted file for you. Your branch changes only when you apply the result.
+
+<!-- TODO(screenshot): New — The update view in its conflict state: "Review conflicts in {branch}" with the Rebase with AI button and its menu open on Merge with AI. -->
+
+AI conflict resolution needs all of the following:
+
+- A paid GitKraken plan. On the Community plan, the button shows a padlock and its tooltip reads *AI conflict resolution needs a paid plan.*
+- **AI Sync** turned on in **Settings → Agents → Agent tools**. While it's off, the tooltip reads *Turn on Sync in Settings → Agents → Agent tools to resolve conflicts with AI.*
+- A GitKraken sign-in. If you aren't signed in, the run stops with *Sign in to GitKraken to resolve conflicts with AI.*
+
+To resolve conflicts with AI, follow these steps:
+
+1. Open the update view from **Review conflicts** on the sync control.
+2. Check the base under the title. To use another base, choose it from the picker.
+3. Press **Rebase with AI**, or choose **Merge with AI** from its menu.
+4. Watch the progress line, which reads *Resolving conflicts · {count} files resolved*. To abandon the run, press **Stop**.
+5. Read the review when the run reaches **Ready to apply**. The next section describes what the review shows.
+6. Press **Apply**, or **Apply & push** if the branch can push. To throw the result away, press **Discard**.
+
+#### Read the AI review
+
+The review explains what the AI changed so you can decide whether to apply it. It contains the following parts:
+
+- **A verdict badge**: **No issues found**, **Needs review** or **Blocked**.
+- **A summary**: a short explanation of the run, followed by any *Check:* items that name a file and the reason to look at it, such as *low confidence*, *possible issue* or *left unresolved*.
+- **A summary line**: *AI resolved {count} files · confidence {confidence}%*.
+- **A card for each commit**: the commit's short SHA and subject, or **Merge** for a merge run, and its file count. A card shows **Resolving…** while the AI works on it.
+- **A row for each file**: the method used and a confidence badge, followed by the AI's reasoning for that file. A low confidence shows as a warning.
+
+Each file row shows one of the following methods:
+
+| Method | Meaning |
+|---|---|
+| **AI** | The AI wrote the resolution |
+| **Ours** | Kept this branch's version |
+| **Base** | Kept the base branch's version |
+| **Deleted** | Resolved by deleting the file |
+| **Auto** | Resolved mechanically, without the AI |
+| **Skipped** | Left unresolved |
+
+The review persists across reloads and windows, so you can close the view and come back to it before you apply.
+
+<!-- TODO(screenshot): New — An AI review at Ready to apply: the verdict badge, the "AI resolved {count} files · confidence {confidence}%" line, and commit cards with per-file methods and confidence badges. -->
+
+<!-- TODO(verify): Resolution method and persistence behavior verified against kepler v0.13.0 strings and src/ui/components/git/sync/; check against a live AI run before publishing. -->
 
 ***
 
@@ -308,6 +371,7 @@ A branch's **merge target** is the branch it will merge into: what its commits, 
 | Keep that comparison | Click **Save as merge target**, beside the pick. In a narrow panel it reads **Save**. Only remote branches can be saved |
 | Change it outright | **Change merge target…** from the merge target chip on the Dashboard, or from the worktree's menu in the task view. Remote branches only; choosing one saves it |
 | Go back to the detected one | **Reset to automatic ({ref})** in the picker |
+| Update the branch from its merge target | **Rebase onto {target}** or **Merge {target} into this branch** from the merge target chip's menu on the Dashboard. Both open the [update view](#updating-from-the-base) |
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/save-merge-target-oct-2026.png" target="_blank" rel="noopener noreferrer">
@@ -334,6 +398,10 @@ See [The Kepler Interface](/kepler/kepler-interface).
 
 A file path in a terminal is a link, too: one of its options shows the file in the Changes overlay's viewer, scrolled to the line.
 
+### Update many worktrees at once
+
+To bring several worktrees up to date with their bases in one pass, use **Update** in **Settings → Repositories → Worktree cleanup**. The **Update worktrees** panel checks each worktree and lists what it will update and what it skips, such as a worktree with uncommitted changes or one where an agent is working. Choose **Rebase** or **Merge**, then press **Update** or **Update + Push**. Nothing changes until you pick an action, and **Roll back** undoes a worktree's update. See [Settings](/kepler/settings).
+
 ***
 
 ## Opening a pull request
@@ -352,34 +420,35 @@ Attaching a pull request also unlocks the **Address Feedback** Action on that ta
 
 ***
 
-## AI Sync and Compose
+## Agent tools: AI Sync and AI Compose
 
-AI Sync and Compose are two shipped features that hand agents Git tooling they don't otherwise have. Both are off until you turn them on, and both need a **paid GitKraken subscription**. Enable them in **Settings → Agents → Features**:
+AI Sync and AI Compose give agents Git tools they don't otherwise have. Both are off until you turn them on, and both need a **paid GitKraken subscription**. Turn them on in **Settings → Agents → Agent tools**, which Kepler describes as *Kepler's own tools your agents can call, starting with rebasing, merging and cleaning up commits.* The section lists the following tools:
 
-| Feature | What it gives agents |
+| Tool | What it gives agents |
 |---|---|
-| **AI Sync** | *Gives agents tools to rebase or merge with automatic conflict resolution. Operations are safe and can be easily rolled back.* |
-| **Compose** | *Gives agents tools to reorganize messy changes into clean, atomic commits. Operations are safe and can be easily undone.* |
+| **AI Sync** | *Lets agents rebase or merge your branch and resolve conflicts for you. Every change can be undone.* |
+| **AI Compose** | *Lets agents turn messy changes into clean, focused commits. Every change can be undone.* |
 
-These are agent tools, not buttons in the interface. With one enabled, the agents in your sessions gain the matching tools and you ask for the work in the chat.
+With a tool turned on, the agents in your sessions gain the matching tools, and you ask for the work in the chat. AI Sync also powers the **Rebase with AI** and **Merge with AI** buttons in the update view. See [Resolve update conflicts with AI](#resolve-update-conflicts-with-ai).
 
-| Feature | How an agent uses it |
+| Tool | How an agent uses it |
 |---|---|
-| **AI Sync** | Updates the branch from its base with a rebase or merge, resolving conflicts as it goes. By default the result is prepared for review and the branch is left untouched until the agent applies it, so you can read the outcome first and have it applied or rolled back. AI Sync backs up every run. It also drops commits whose changes are already upstream: useful after a squash-merge. Tell the agent what matters (which side is authoritative, what must be preserved), and it passes that guidance to the conflict resolver |
-| **Compose** | Plans the reorganization first and applies it as a second step, so you can read the plan before anything moves. It can also split a multi-commit branch into a stack, and undo what it applied |
+| **AI Sync** | Updates the branch from its base with a rebase or merge, and resolves conflicts as it goes. By default, the agent prepares the result for review and leaves the branch untouched until it applies the result. You can read the outcome first and have it applied or rolled back. AI Sync backs up every run. It also drops commits whose changes are already upstream, which helps after a squash-merge. Tell the agent what matters, such as which side is authoritative and what it must preserve, and it passes that guidance to the conflict resolver |
+| **AI Compose** | Plans the reorganization first and applies it as a second step, so you can read the plan before anything moves. It can also split a multi-commit branch into a stack, and undo what it applied |
 
-Turning either one on confirms that **New agent sessions will pick up this change**. A session already running keeps the tools it started with, so start a new session to use them.
+When you turn either tool on, Kepler confirms that *New agent sessions will pick up this change.* A running session keeps the tools it started with. To use a new tool, start a new session.
 
-Both sets of tools default to the session's own worktree, and both can name another worktree attached to the same task instead, so one session can tidy a branch it is not itself sitting in.
+Both sets of tools default to the session's own worktree. Each can also name another worktree attached to the same task, so one session can tidy a branch it doesn't sit in.
 
-On a Free plan both rows still appear, with a padlock where the checkbox goes and the tooltip *"Not available on the Free plan. Upgrade to unlock."* Everything else on this page works on a free account.
+On the Community plan, both rows still appear, with a padlock and the tooltip *Not available on the Community plan. Upgrade to unlock.* Everything else on this page works on the Community plan, except AI conflict resolution.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/agent-features-oct-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/agent-features-oct-2026.png" class="help-center-img img-bordered" alt="The Features section of Settings → Agents, with five rows: AI Sync, Compose, Automatically name new tasks, Keep agents running across restarts and updates, and Use this app's interface in remote windows. AI Sync and Automatically name new tasks are ticked.">
   </a>
-  <figcaption style="text-align:center; color:#888">AI Sync and Compose, in Settings → Agents → Features.</figcaption>
+  <figcaption style="text-align:center; color:#888">AI Sync and Compose, in the agent settings.</figcaption>
 </figure>
+<!-- TODO(screenshot): Replace — The Agent tools section of Settings → Agents at 0.13.0, showing the AI Sync and AI Compose rows with their new help text. -->
 
 ***
 
@@ -389,6 +458,6 @@ On a Free plan both rows still appear, with a padlock where the checkbox goes an
 - [Tasks and Resources](/kepler/tasks-and-resources): worktrees, and detaching or deleting one safely
 - [Agent Sessions](/kepler/agent-sessions): directing the agent that produced these changes
 - [Actions](/kepler/actions): **Review** on a task reviews exactly this uncommitted work
-- [Settings](/kepler/settings): **Diff View**, and the **Features** section
+- [Settings](/kepler/settings): **Diff view**, **Agent tools**, and **Worktree cleanup**
 
 ---

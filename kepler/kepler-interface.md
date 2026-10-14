@@ -13,7 +13,7 @@ hosted_variant: both
 status: GA
 last_verified: 2026-10
 llms_include: true
-tags: [interface, dashboard, todo, tasks, issues, pull-requests, actions, sessions, panel, preview, worktrees, progress, keyboard, navigation, windows, updates]
+tags: [interface, dashboard, todo, tasks, draft-sessions, issues, pull-requests, actions, sessions, panel, preview, worktrees, progress, keyboard, navigation, windows, updates]
 taxonomy:
   category: kepler
 ---
@@ -34,7 +34,7 @@ Beyond this list, you'll find a task's own page, Settings, and remote connection
 - Settings
 - Your account
 
-When an update is ready, an **Update available** chip joins the trailing cluster. It opens a popover that says what a restart would do to running work (how many agents it stops, whether terminals close) and offers **Restart to update**. The same chip shows on every screen, so an update never waits on a banner you scrolled past.
+When an update is ready, an **Update available** chip joins the trailing cluster. It opens a popover that says what a restart would do to running work (how many agents it stops, whether terminals close) and offers **Restart to update**. When agents and terminals can survive the restart, the popover says *Running agents and open terminals keep going through the restart.* The same chip shows on every screen, so an update never waits on a banner you scrolled past.
 
 On **Windows and Linux** the native title bar is gone and Kepler draws its own. The menu button at the leading edge holds the full application menu (**File**, **Edit**, **View**, **Window**, **Help**), including **Settings**, **Check for Updates…**, and **About**. macOS keeps its native menu bar, and both menus open the same **About Kepler** dialog.
 
@@ -272,11 +272,16 @@ All of these defaults are editable. See [Actions](/kepler/actions).
   </a>
   <figcaption style="text-align:center; color:#888">The side panel, opened from a row.</figcaption>
 </figure>
+<!-- TODO(screenshot): Replace — Check against 0.13.0: the composer now sits in a draft session tab under What's running. -->
 
 - **Click a row** to select it and open the side panel. A plain click replaces whatever was open, except for panels you've pinned.
 - **Shift-click** a second row to open both side by side. The panel holds one column per open item, each with its own chat, so you can work several tasks at once without leaving the list.
 - **Cmd-click** (**Ctrl-click** on Windows and Linux) to add one row to the open set, or to close it again.
 - **Double-click a row** to open the item's full task page. From a Todo row that's the page of the task behind it, so a row with no task yet does not respond.
+
+A new task appears in the list as soon as you press **Start** in the Task Composer, before its worktrees are ready. Its row shows a **Preparing** pill while Kepler sets it up, or a **Failed** pill if setup fails. You can't drag or select a task that's still being prepared. If setup fails, its panel shows **Couldn't start this task** with **Edit and retry**, so you can change the task and start it again.
+
+<!-- TODO(screenshot): New — A pending task row with the Preparing pill, and its panel showing setup progress. -->
 
 Shift-clicking ranges from your last plain click, the way it does in Finder or VS Code. You can open up to 16 panels at once. Opening another closes the leftmost unpinned one.
 
@@ -340,20 +345,24 @@ Selecting a row opens a panel beside the list with everything about that item, a
   </a>
   <figcaption style="text-align:center; color:#888">The side panel, with its stack of collapsible sections.</figcaption>
 </figure>
+<!-- TODO(screenshot): Replace — The side panel at 0.13.0, with What's running holding a draft session tab instead of the removed Start a session section. -->
 
 Kepler does not draw a section that has nothing behind it.
 
 | Section | What's in it | When it's there |
 |---|---|---|
-| **Summary** | The issue or pull request description | An issue or pull request that has a description. Tasks carry none of their own |
+| **Summary** | The issue or pull request description, with its labels shown as badges. You can select and copy the description text | An issue or pull request that has a description. Tasks carry none of their own |
 | **Related ({count})** | Linked issues and pull requests, counted in the heading so a folded pane still says how many | There's at least one |
-| **Start a session** | A prompt box plus the same Actions | Nothing has run on this item yet |
-| **What's running** | The live agent conversation. This is the chat | A session exists. Resizable, but not foldable: it's what the panel is for |
+| **What's running** | Session tabs and draft session tabs. A session tab holds the live agent conversation; a draft tab holds a prompt box plus the same Actions. This is the chat | Always, on an item you can start work on. Resizable, but not foldable: it's what the panel is for |
 | **Plan** | The plan the conversation on screen has proposed | The agent produced one |
 | **Changes** | The checkout's commits, working changes, and file diffs | You opened a worktree's changes from its pill |
-| **Terminals** | Terminal tabs across the task's checkouts | A terminal is open. Its **✕** takes the section away without stopping the shells; the header's terminal control and **Cmd/Ctrl+J** are the way back |
+| **Terminals** | Terminal tabs across the task's checkouts. A shell tab shows its program's status, such as **Working**, **Needs you**, **Done** or **Failed**, when the program reports one | A terminal is open. Its **✕** takes the section away without stopping the shells; the header's terminal control and **Cmd/Ctrl+J** are the way back |
 
 Kepler sizes **Summary** and **Related** to their contents and then the chat takes whatever height is left over.
+
+To reorder the tabs in **What's running** or **Terminals**, drag a tab to a new place.
+
+If an agent fails after you start a session, **What's running** shows **{agent} couldn't start** with the agent's message. Press **Retry** to launch it again, or **Open agent settings** to fix the problem.
 
 For unstarted issues or PRs, the side panel's primary button follows that item's preferred Action (Plan, Implement vs Review, Address Feedback). 
 
@@ -402,8 +411,8 @@ Below the header, each of the task's checkouts is a **pill** with two rows: who 
 
 | Row | What it shows | What it does |
 |---|---|---|
-| **Top** | The branch and repository, the worktree's own pull request, and the upstream control | The branch opens the worktree's menu: copy branch or path, open its changes, detach, delete. The upstream control runs the verb its counts call for: **Pull** when behind, **Push** when ahead, **Publish** when the branch isn't on a remote yet, and **Force push** behind a confirmation only when the branch has diverged. **Fetch** is in its chevron |
-| **Bottom** | Chips for uncommitted files, commits, and the merge target, plus **Open in** and **Run** | Each chip opens what it counts: the working changes, the commits, or how the branch compares with its merge target. **Open in** opens the checkout in your default editor, with the rest in its chevron. **Run** runs one of the repository's commands |
+| **Top** | The branch and repository, the worktree's own pull request, and the upstream control | The branch opens the worktree's menu: copy branch or path, open its changes, detach, delete. The upstream control runs the verb its counts call for: **Pull** when behind, **Push** when ahead, **Publish** when the branch isn't on a remote yet, and **Force push** behind a confirmation when the branch has diverged or after you apply a rebase. **Fetch** is in its chevron |
+| **Bottom** | Chips for uncommitted files, commits, and the merge target, plus **Open in** and **Run** | Each chip opens what it counts: the working changes, the commits, or how the branch compares with its merge target. The merge target chip's menu also offers **Rebase onto {target}** and **Merge {target} into this branch**, which open the update view. See [Review Changes](/kepler/review-changes#updating-from-the-base). **Open in** opens the checkout in your default editor, with the rest in its chevron. **Run** runs one of the repository's commands |
 
 The pill says what needs doing rather than just counting: unpushed commits, a paused rebase or merge you can continue or abort from the pill, a merge target it couldn't read with a retry, a detached HEAD explained, and **No changes** only when there really are none. Hover any chip for a card that leads with what a click does; right-click it for its own menu. As the panel narrows, the chips shrink to their icons and counts rather than disappearing, and the branch name is cut last.
 

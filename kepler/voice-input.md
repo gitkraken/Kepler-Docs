@@ -11,13 +11,13 @@ git_hosts: [generic]
 integrations: [claude-code, codex-cli, copilot-cli, cursor, auggie, opencode, grok, pi, antigravity]
 hosted_variant: both
 status: GA
-last_verified: 2026-09
+last_verified: 2026-10
 llms_include: true
 tags: [voice-input, dictation, whisper, microphone, settings, agent-sessions]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: September 2026</kbd>
+<kbd>Last updated: October 2026</kbd>
 
 Voice input puts a microphone in the agent prompt so you can talk instead of typing. **Transcription runs on your device**, using a Whisper model Kepler downloads once. Kepler never uploads your audio.
 
@@ -28,7 +28,7 @@ Voice input puts a microphone in the agent prompt so you can talk instead of typ
   <figcaption style="text-align:center; color:#888">The composer's microphone icon.</figcaption>
 </figure>
 
-It is off until you turn it on. Enable it in **Settings → Voice Input** and download a model; the microphone in the prompt goes live when the model is ready.
+Voice input is off until you set it up. To set it up, open **Settings → Voice input** and click **Get started**. Kepler checks what your computer can run, then downloads a model. The microphone in the prompt goes live when the model is ready.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/voice-input-settings-aug-2026.png" target="_blank" rel="noopener noreferrer">
@@ -36,21 +36,21 @@ It is off until you turn it on. Enable it in **Settings → Voice Input** and do
   </a>
   <figcaption style="text-align:center; color:#888">Settings → Voice Input.</figcaption>
 </figure>
+<!-- TODO(screenshot): Replace — Settings → Voice input at 0.13.0, with the installed model, Use voice input in the chat prompt, and the When you stop talking options. -->
 
 ***
 
-## Two ways to talk
+## Choose what happens when you stop talking
 
-Voice input has two modes:
+To record, click **Start voice input** in the prompt, speak, then click **Stop and transcribe**.
 
-| Mode | How it works | Setting |
-|---|---|---|
-| **Push-to-talk** | Click **Start voice input**, speak, then click **Stop and transcribe**. The text lands in the prompt | The default |
-| Hands-free | The microphone stays open and each phrase is transcribed as you pause | **Continuous dictation** |
+To choose what Kepler does with what you say, go to **Settings → Voice input → When you stop talking** and pick one of these options:
 
-With push-to-talk you can also have Kepler send for you: **Submit after speaking** sends the prompt when you stop recording instead of inserting the text for you to review.
-
-The two are mutually exclusive. Continuous dictation keeps the microphone open, so no single stop exists to submit on. Kepler disables whichever option you didn't choose, with a hint explaining why.
+| Option | What it does |
+|---|---|
+| **Insert the text so you can edit it** | Puts the text in the prompt for you to review. This is the default |
+| **Send the prompt** | Sends the prompt as soon as you stop recording |
+| **Keep listening, transcribing each phrase as you pause** | Keeps the microphone open and transcribes each phrase as you pause |
 
 Kepler treats short, whole utterances as commands rather than dictation: saying "send", "cancel", or "clear" acts on the prompt instead of adding text to it. Kepler dictates anything longer verbatim.
 
@@ -58,25 +58,28 @@ While a transcription is in flight, the microphone shows **Transcribing…**. If
 
 ***
 
-## Settings → Voice Input
+## Set up voice input in Settings
 
-The page reveals one step at a time: each step appears only once it can do something.
+**Settings → Voice input** shows one step at a time. Each step appears only once it can do something.
 
-| Setting | What it controls | Default |
-|---|---|---|
-| **Enable voice input** | Adds the microphone to the agent chat prompt. Everything below stays hidden until this is on | Off |
-| **Check what this computer can run** | A one-time measurement of how fast this machine transcribes, so Kepler can recommend a quality. **Run the check** starts it | Not run |
-| Transcription quality | **Fast**, **Balanced**, **Accurate**, **Most accurate**, with the recommendation badged **Suggested**. **Download and set up** installs it | **Fast** preselected |
-| **Submit after speaking** | Sends the prompt when you stop recording, instead of inserting the text | Off |
-| **Continuous dictation** | Keeps the microphone open and transcribes each phrase as you pause | Off |
+To set up voice input, follow these steps:
 
-Once a model is installed, the page shows **Voice input is ready** with the model, its size on disk, and when it was added. From there:
+1. Open **Settings → Voice input**.
+2. Under **Set up voice input**, click **Get started**. Kepler checks what this machine can run. This check runs once.
+3. Under **Choose transcription quality**, pick **Fast**, **Balanced**, **Accurate**, or **Most accurate**. Kepler marks the best fit for this machine as **Suggested**.
+4. Click **Download and set up**.
 
-- **Change quality** reopens the picker.
-- **Remove** deletes the model and turns off the chat microphone.
-- **Technical details** shows the model ID, its revision, and the backend and data type it runs on.
+Setting up turns voice input on. Downloads keep going if you leave the page, and Kepler notifies you when the model is ready.
 
-Downloads keep going if you leave the page, and Kepler notifies you when the model is ready. For the full walkthrough of the setup sequence, see [Settings](/kepler/settings).
+Once a model is installed, the page shows the model and its size on this machine. The following table lists the settings you can change from there:
+
+| Setting | What it does |
+|---|---|
+| **Change quality** | Reopens the quality picker, so you can switch to another model |
+| **Remove voice input** | Deletes the model, frees its storage, and turns off the chat microphone. You can set it up again at any time |
+| **Technical details** | Shows the model ID, its revision, and the backend and data type it runs on |
+| **Use voice input in the chat prompt** | Turns the microphone on or off. Turn it off to pause voice input. The downloaded model stays on this machine |
+| **When you stop talking** | Chooses what happens to what you say. See [Choose what happens when you stop talking](#choose-what-happens-when-you-stop-talking) | For the full walkthrough of the setup sequence, see [Settings](/kepler/settings).
 
 ***
 
@@ -86,7 +89,7 @@ Hover the microphone, and its tooltip explains why:
 
 | Tooltip | What it means |
 |---|---|
-| *Voice input is off. Open Settings to enable it.* | Not enabled yet. Clicking opens Settings |
+| *Voice input is off. Turn it on in Settings.* | Not set up yet, or turned off. Clicking opens Settings |
 | *Voice input needs a one-time setup. Open Settings to finish it.* | Enabled, but no model is downloaded. Clicking opens Settings |
 | *Voice input requires a secure (https) connection* | Kepler is being used over plain HTTP, where the browser will not grant microphone access |
 | *Voice input is not supported in this environment* | This build or browser cannot run it |

@@ -21,14 +21,15 @@ taxonomy:
 
 Connect a Git host and the pull requests you authored, plus the ones waiting on your review, show up in [the Kepler interface](/kepler/kepler-interface). Kepler also matches them to the worktrees you already have, so a branch you are working on carries its pull request wherever you see it.
 
-Manage providers in **Settings → Integrations**, in the **Provider Integrations** section.
+Manage providers in **Settings → Integrations**, in the **Issues and pull requests** section.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/provider-integrations-oct-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/provider-integrations-oct-2026.png" class="help-center-img img-bordered" alt="Provider Integrations in Settings → Integrations, listing all twelve providers with Refresh at the top. GitHub and Jira show a Connected badge with Disconnect and Reconnect, and the rest offer Connect.">
   </a>
-  <figcaption style="text-align:center; color:#888">Provider Integrations, in Settings → Integrations.</figcaption>
+  <figcaption style="text-align:center; color:#888">Issues and pull requests, in Settings → Integrations.</figcaption>
 </figure>
+<!-- TODO(screenshot): Replace — The Issues and pull requests section of Settings → Integrations at 0.13.0, listing the providers with their Connected badges and Connect buttons. -->
 
 ***
 
@@ -60,9 +61,9 @@ GitLab merge requests appear as pull requests throughout Kepler. There is one li
 Connecting a Git host takes four steps:
 
 1. Open **Settings → Integrations**.
-2. Find the provider in **Provider Integrations** and click **Connect**.
+2. Find the provider in **Issues and pull requests** and click **Connect**.
 3. Authorize Kepler in the browser window that opens.
-4. Kepler returns to **Provider Integrations** and the provider shows a **Connected** badge.
+4. Kepler returns to **Issues and pull requests** and the provider shows a **Connected** badge.
 
 Your GitKraken account holds integrations, not this copy of Kepler, so a provider you connect here also becomes available to the `gk` command-line interface (CLI) and GitKraken Desktop. You need to sign in to a GitKraken account to manage them.
 
@@ -227,7 +228,12 @@ Your pull requests turn up in four places:
 
 **Review requests come from every host.** Pull requests waiting on your review show up from Azure DevOps, Azure DevOps Server, and Bitbucket Data Center as well as GitHub and GitLab. Bitbucket Cloud has no account-wide way to ask for them, so Kepler reads review requests repository by repository, starting with the repositories you have in Kepler and then the rest of your workspaces at a pace that stays inside Bitbucket's hourly request limits. On a large workspace they can take a while to appear.
 
-**Kepler loads what you're looking at.** Pull request and issue lists refresh while they're on screen, and again when you come back to the window, rather than downloading your whole account's lists in the background. A task's own pull requests refresh when an agent ends a turn, a branch is pushed, or a pull request is published.
+**Kepler loads what you're looking at.** Pull request and issue lists refresh while they're on screen, and again when you come back to the window, rather than downloading your whole account's lists in the background. A task's own pull requests refresh when an agent ends a turn, a branch is pushed, or a pull request is published. When one provider fails to load, the others keep loading, and the failed provider's last loaded pull requests stay in the list.
+
+**The pull request picker says why its list is empty.** When you attach a pull request from **Add resources**, the picker explains an empty list instead of showing *No matches*:
+
+- If the **No task yet** filter hides pull requests that already belong to a task, the picker says how many it hides and offers **Show all**.
+- If no connected provider can list pull requests, the picker says *Connect GitHub, GitLab, Bitbucket or Azure DevOps to list pull requests.* and offers **Connect a provider**.
 
 You can also start work on a pull request from GitLens or GitKraken Desktop. See [Create a Task](/kepler/create-task).
 

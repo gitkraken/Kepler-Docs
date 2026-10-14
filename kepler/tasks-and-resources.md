@@ -13,7 +13,7 @@ hosted_variant: both
 status: GA
 last_verified: 2026-10
 llms_include: true
-tags: [tasks, resources, worktrees, shared-context, notes, files, uploads, sessions, archive, mcp]
+tags: [tasks, resources, worktrees, shared-context, draft-sessions, notes, files, uploads, sessions, archive, mcp]
 taxonomy:
   category: kepler
 ---
@@ -101,6 +101,13 @@ This auto-attach behavior is deliberately narrow, because a wrong guess would pu
 
 Auto-attach only adds a link; it never removes one. Detach it yourself if you don't want it on the Task.
 
+**Work item URLs attach as issues.** When you or an agent attaches one of the following URLs, Kepler records it as an issue rather than a plain link:
+
+- A GitLab work item, such as `https://gitlab.com/{group}/{project}/-/work_items/{number}`
+- An organization-level Azure DevOps work item, such as `https://dev.azure.com/{organization}/_workitems/edit/{id}`
+
+A GitLab work item that belongs to a group rather than a project stays a plain link.
+
 ### Keeping them current
 
 A Task's pull requests and issues refresh themselves when something that could change them happens: an agent ends a turn, one of the Task's branches is pushed, or a pull request is published. Kepler re-reads only that Task, so a busy Task doesn't cost a refresh of your whole account. Each link is looked up in the repository it names, so two repositories with the same issue number don't get confused.
@@ -160,7 +167,7 @@ A fresh worktree is a clean checkout: no `node_modules`, no build output, nothin
   <figcaption style="text-align:center; color:#888">Run command here, from a worktree's right-click menu.</figcaption>
 </figure>
 
-Set them up in **Settings → Repos & Folders**, on the repository's own row. See [Settings](/kepler/settings) for the fields, the path placeholders, and what happens when one fails.
+Set them up in **Settings → Repositories**, on the repository's own page. See [Settings](/kepler/settings) for the fields, the path placeholders, and what happens when one fails.
 
 ***
 
@@ -185,14 +192,22 @@ What you wrote when you started the Task is a context item of its own: the **Pro
 
 ### Starting a session without the Task's context
 
-Sometimes you want an agent that forms its own view, such as a reviewer that shouldn't be steered by the implementer's brief. The **New session** menu carries a **Start with task context** checkbox, ticked by default. Untick it and the new session doesn't receive the Task's prompt or notes. It still gets the Task's worktrees, folders, files, and links, because it still needs to know where to work.
+Sometimes you want an agent that forms its own view, such as a reviewer that shouldn't be steered by the implementer's brief. To start a session without the Task's prompt and notes, follow these steps:
+
+1. Click **+** on the rail's **Sessions** group, or press **Cmd/Ctrl+T**. A draft session tab opens.
+2. Open **Agent settings** in the draft's composer.
+3. Turn off the **Task context** switch. It's on by default.
+4. Type your prompt and press **Start**.
+
+The new session doesn't receive the Task's prompt or notes. It still gets the Task's worktrees, folders, files, and links, because it still needs to know where to work. The switch belongs to that draft, so turning it off doesn't change your other sessions. See [The Task View](/kepler/task-view#starting-a-session).
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/start-with-task-context-oct-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/start-with-task-context-oct-2026.png" class="help-center-img img-bordered" alt="The New session menu opened from the + on the Sessions group header, with Start with task context ticked at the top.">
   </a>
-  <figcaption style="text-align:center; color:#888">Start with task context, ticked by default.</figcaption>
+  <figcaption style="text-align:center; color:#888">Task context, on by default.</figcaption>
 </figure>
+<!-- TODO(screenshot): Replace — A draft session tab with Agent settings open, showing the Task context switch turned on. The New session menu and its Start with task context checkbox no longer exist. -->
 
 ### Notes are how you give standing instructions
 

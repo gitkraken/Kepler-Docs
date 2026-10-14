@@ -169,7 +169,7 @@ A task's progress normally follows its git and pull-request evidence (see [Statu
 
 - **The progress control.** The stage word on a task row, in the preview header, and in the task page header opens a **Progress** menu: **Automatic** (*Updates as you work*), then **Exploration**, **In Development**, **In Review**, **On hold**, and **Done**. Where there's no room for the word, the control shrinks to the stage's icon rather than disappearing.
 - **The task menus.** A task's **⋮** and right-click menus carry the same choices under a **Progress** submenu, plus **Reopen** while the task is Done. Its hint says where the task will land (*Moves it to In Review*).
-- **Drag a card.** On the **Columns** layout grouped by **Progress**, drag a task's card to another column. On touch, press and hold to pick it up. Escape, or letting go over the card's own column, changes nothing.
+- **Drag a card.** On the **Columns** layout grouped by **Progress**, drag a task's card to another column. On touch, press and hold to pick it up. Escape, or letting go over the card's own column, changes nothing. You can't drag a task that Kepler is still preparing.
 - **From the keyboard.** With a card focused on that board, **Cmd/Ctrl+Shift+←** and **Cmd/Ctrl+Shift+→** step it one column, stopping at **Exploration** and **Done**.
 
 <figure style="text-align:center">
@@ -328,7 +328,7 @@ Archiving outranks everything else, so a task you filed away can't climb back in
 
 **Restore task** takes the place of **Archive task** in an archived task's **⋮** menu, and is on the task page's own header too. It puts the task straight back. Only one active task can hold a given pull request, so if restoring would archive another task that holds the same one, Kepler names that task and asks first.
 
-For more than one at a time, every section header on **Tasks in progress** carries a quiet **Select**. Press it, and that corner of the header becomes a bar: a select-all box, **{count} selected**, and the batch verbs. The section's rows also grow checkboxes. One section selects at a time, and while you're selecting, a click ticks a row rather than opening its panel.
+For more than one at a time, every section header on **Tasks in progress** carries a quiet **Select**. Press it, and that corner of the header becomes a bar: a select-all box, **{count} selected**, and the batch verbs. The section's rows also grow checkboxes. One section selects at a time, and while you're selecting, a click ticks a row rather than opening its panel. A task that Kepler is still preparing has no checkbox, and select-all skips it.
 
 | Button | What it does |
 |---|---|
@@ -339,6 +339,6 @@ For more than one at a time, every section header on **Tasks in progress** carri
 
 Both **Archive** and **Delete** confirm, and both offer **Also delete worktrees** and **Also delete branches**. The single-task dialog remembers what you ticked last time; the batch confirmation always starts with both unticked. The batch confirmation doesn't list each worktree's fate. Instead, any worktree that would lose work is kept, and a toast afterwards says which ones and why. Open a task's own **⋮** to see the list before you confirm.
 
-To clean up worktrees rather than tasks, including stale locks Kepler left behind, use the full-width Worktrees view, opened from the worktree list in Settings. See [Settings](/kepler/settings).
+To clean up worktrees rather than tasks, including stale locks Kepler left behind, open **Worktree cleanup** in **Settings → Repositories**. The same page can also **Update** many worktrees at once, bringing each branch up to date with its base. See [Settings](/kepler/settings).
 
 ---
