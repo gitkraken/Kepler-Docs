@@ -36,6 +36,122 @@ New to Kepler? [Getting Started with Kepler](/kepler/kepler-getting-started) tak
 
 ***
 
+<a id="v0-13-0"></a>
+## Version 0.13.0
+
+<kbd>Tuesday, October 13th, 2026</kbd>
+
+### Highlights
+
+- **Resolve update conflicts with AI.** When updating a branch would conflict, choose **Rebase with AI** or **Merge with AI** in the sync panel. You follow each commit's resolutions as they happen, and the AI's review, with a confidence score and reasoning for each file, stays with the branch.
+- **Keep shells running through updates and restarts.** Shell tabs survive a Kepler update and come back after a restart. Programs that report their status show it on the terminal tab and in the status bar, and notify you when they need you or finish.
+- **Find any setting faster.** Settings is organized around what each setting changes. The side rail links to each page's sections, and search matches what a setting does, not only its name.
+- **Start sessions without waiting.** A new session opens at once as a draft tab, and a new task appears on the Dashboard as soon as you press **Start**.
+- **Recover when a remote server is unreachable.** A full-screen recovery screen offers **Try again**, **Reconnect** or **Switch to local**, and a server you stop on purpose stays stopped.
+
+### Features
+
+#### Terminals
+
+- Shell tabs keep running through a Kepler update and come back after a restart. Choose **Quit** to end them, as you would in any terminal app.
+- A terminal program that reports its status shows it on the tab and in the status bar, and notifies you when it needs you or finishes.
+- A terminal session whose program reports its own status shows as working, blocked or done, with no extra setup.
+- On a remote machine, a dev server or build running in a terminal keeps the server up for up to 12 hours after every window disconnects.
+
+#### Sessions
+
+- **New session** opens a draft tab at once, in the tab strip and the task rail, in place of the old New session menu. Choose the branch or folder, agent and mode in the draft before you send. Right-click a draft to discard, move or pin it.
+- Drag session and terminal tabs on the Dashboard to reorder them.
+- A new task appears on the Dashboard as soon as you press **Start**, and shows its progress while Kepler prepares its worktrees.
+- When a session fails to start, Kepler says why and offers **Retry** and a link to the agent's settings.
+- A session that uses the **Default** model shows which model it runs on, and the chat notes when that model changes between turns.
+- The session modes are now called **Chat** (formerly Rich chat) and **Terminal**, and each has a short description:
+  - **Chat** runs the agent inside Kepler, with replies, diffs and plans you can read, review and search.
+  - **Terminal** runs the agent's own command-line app, with its usual commands, shortcuts and settings.
+
+#### Updating branches
+
+- When an update would conflict, choose **Rebase with AI** or **Merge with AI** in the sync panel, and follow each commit's resolutions as they happen.
+- The AI's review, including each file's confidence and reasoning, stays with the branch after a reload.
+- **Roll back** returns an applied update to **Ready to apply** without running the AI again. **Roll back and discard** undoes the update completely.
+- After a rebase rewrites a branch, Kepler offers **Force push** instead of a pull that would bring back the old commits.
+- Update several worktrees at once: select them in **Settings › Repositories › Worktree cleanup** and choose **Update** or **Update + Push**. You can roll back each row afterward.
+- **Rebase** and **Merge** on the Dashboard's merge-target chip now start an update.
+
+#### Remote
+
+- When a window can't reach its server, a full-screen recovery screen offers **Try again**, **Reconnect** or **Switch to local**.
+- A server you stop on purpose, from any device, stays stopped until someone starts it again.
+- Other windows follow a server update instead of disconnecting, and a failed update keeps the window's saved server.
+
+#### Settings
+
+- Settings is organized around what each setting changes, across new **Tasks**, **Notifications**, **Keyboard shortcuts** and **Updates** pages. The side rail links to each page's sections, and **Search settings** matches what a setting does.
+- Many settings moved. For example, the default agent is now in **Settings › Tasks › New tasks**, and **Repos & Folders** is now **Repositories**.
+- Repositories, custom agents, Actions, MCP servers and remote machines each have their own editing page. Pressing Escape asks before discarding your edits.
+- Choose which events notify you, such as **Replies**, **Questions**, **Permission requests** and **Errors**, and whether each one notifies you on the **Desktop** or **In Kepler**.
+- Copy an MCP server from one agent to another with **Also add to…** on the server's page.
+- Open the release notes from **Help** and **Updates**.
+
+#### For your agents
+
+- Agents can name and rename the sessions they start, and see what another session is waiting on.
+- The chat shows which session started a session and which session wrote a prompt.
+
+#### Smaller additions
+
+- Issue labels show in detail previews.
+- Azure DevOps images load in issue and pull request previews.
+- Linear reads the workspace from each connection.
+
+### Improvements
+
+#### Performance
+
+- Terminal and external sessions use far less memory, and long transcripts load without stalling the app.
+- Idle sessions no longer use CPU in the background.
+- Dashboard preview terminals load only when they're on screen.
+- Archived tasks no longer refresh their links on every update.
+
+#### Interface
+
+- Pickers and toggles in forms line up with the inputs around them.
+- Failed tool calls that the agent already moved past fold into the collapsed group.
+- The pull request picker explains why its list is empty.
+- Reveal actions name your operating system's file manager.
+
+### Fixes
+
+#### Agents and terminals
+
+- Kepler no longer throws away your typing after a connection drops. The terminal resumes on its own instead of waiting for **Continue**.
+- A Claude Code session stays in the working state while the model answers after a background task wakes it.
+- A Chat session that you opened but never prompted accepts its first message after going idle.
+- Questions and background tasks survive Kepler reconnecting to a running agent, and a full-screen agent redraws correctly afterward.
+- A very large agent message no longer freezes its session.
+- A terminal no longer receives stray input after a restart.
+
+#### Remote
+
+- Kepler retries the reconnection after an update or restart stops the server, and remembers a remote machine's operating system after the server stops.
+- **Show logs** on the crash screen works in remote windows.
+
+#### Providers
+
+- Kepler keeps Linear connections to different workspaces apart. Switching workspaces clears the previous workspace's teams and issues.
+- Kepler recognizes GitLab and Azure DevOps work item links attached to a task.
+- Pull requests from a working provider keep loading while another provider fails.
+
+#### Interface
+
+- **Open folder** works from the quick launcher.
+- You can select text in issue and pull request bodies and in task notes.
+- The mouse wheel scrolls the branch picker in **Add resources**, and a hover card no longer covers a menu opened from the same element.
+- If the agent kept answering while you were away, the chat returns to the prompt you sent.
+- Linux deb and rpm installs update again after an update restart.
+
+***
+
 <a id="v0-12-0"></a>
 ## Version 0.12.0
 
@@ -43,7 +159,7 @@ New to Kepler? [Getting Started with Kepler](/kepler/kepler-getting-started) tak
 
 ### Highlights
 
-- **More issue tracking and pr integrations.** Jira Server and Data Center join the Bitbucket and Azure DevOps servers added in 0.11.0. Bitbucket and Azure DevOps pull requests waiting on your review now show up, and Jira descriptions render with their images and wiki markup.
+- **More issue tracking and pull request integrations.** Jira Server and Data Center join the Bitbucket and Azure DevOps servers added in 0.11.0. Bitbucket and Azure DevOps pull requests waiting on your review now show up, and Jira descriptions render with their images and wiki markup.
 - **Save your Dashboard views.** Save a combination of segment, search, grouping, filters and layout under a name, and switch back to it from the Saved views chip next to the search box.
 - **Manually update task progress.** Drag a task between Exploration, In Development, In Review and Done, or put it On hold. Kepler moves a task to Done only once its branches have landed, including rebase- and squash-merged ones, and your agents can set the stage too.
 - **Review, edit, commit and resolve conflicts in Kepler.** Leave review comments on diff lines, then drop them all into your agent's prompt in one step. Amend the last commit, resolve merge conflicts from the file tree, and change a branch's merge target or compare against a different one.
@@ -139,7 +255,7 @@ New to Kepler? [Getting Started with Kepler](/kepler/kepler-getting-started) tak
 - The agent menu is grouped by agent, and an empty one explains why and offers the fix.
 - Headers, toolbars and the composer footer fit the window as it resizes.
 - Unsent composer drafts survive a reload.
-- Each pull request and issue state has its own icon and colour, and open buttons name the provider.
+- Each pull request and issue state has its own icon and color, and open buttons name the provider.
 
 ### Fixes
 
@@ -221,8 +337,8 @@ New to Kepler? [Getting Started with Kepler](/kepler/kepler-getting-started) tak
 
 #### Remote and hosts
 
-- Remote management moved into Settings. Each saved host gets a colour and can be muted, hosts can be added or edited by hand with WSL on par with SSH, and a startup reconnect failure explains why.
-- A host already open in another window is recognised and reached through that window.
+- Remote management moved into Settings. Each saved host gets a color and can be muted, hosts can be added or edited by hand with WSL on par with SSH, and a startup reconnect failure explains why.
+- A host already open in another window is recognized and reached through that window.
 - New Window opens on the same connection as the window it came from.
 - The connection popover was redesigned, and a connected server can be restarted or updated from the host chip, which says what the update will stop.
 
@@ -230,7 +346,7 @@ New to Kepler? [Getting Started with Kepler](/kepler/kepler-getting-started) tak
 
 - File paths in a terminal are links: relative paths, line suffixes and paths wrapped across lines. Open them in an editor at their line, in the default app, in the Changes viewer, or preview a markdown file rendered.
 - A terminal session shows its model, effort and mode read-only in chat.
-- Terminals answer a TUI's background-colour query and re-theme a running TUI when you change themes.
+- Terminals answer a TUI's background-color query and re-theme a running TUI when you change themes.
 
 #### Chat
 
@@ -259,7 +375,7 @@ New to Kepler? [Getting Started with Kepler](/kepler/kepler-getting-started) tak
 #### Agents and harnesses
 
 - Antigravity is supported through its ACP server, and OpenCode v1 and v2 work side by side.
-- Each agent account can have its own colour tinting the agent icon, and accounts appear on the agent card.
+- Each agent account can have its own color tinting the agent icon, and accounts appear on the agent card.
 
 #### Smaller additions
 
@@ -484,7 +600,7 @@ New to Kepler? [Getting Started with Kepler](/kepler/kepler-getting-started) tak
 #### Terminal sessions
 
 - Terminal sessions keep their identity across a restart, survive idle shutdown while busy and come back on reopen, launch in the mode shown when you started them, run under the Claude account you selected, and report the CLI's own error when a launch fails.
-- An interrupt is recognised whether it arrives as Escape or Ctrl+C. A turn counts as cancelled once both its hooks and its output go quiet, so a stopped session no longer lingers as though it were still working.
+- An interrupt is recognized whether it arrives as Escape or Ctrl+C. A turn counts as canceled once both its hooks and its output go quiet, so a stopped session no longer lingers as though it were still working.
 - A Claude terminal session honors its Default model and Manual mode picks.
 - A terminal session keeps its row when its worktree is cleaned up.
 - Terminal input state is reconstructed after a long-running session scrolls past its startup, so Shift+Enter and pasted newlines keep working.
@@ -599,7 +715,7 @@ New to Kepler? [Getting Started with Kepler](/kepler/kepler-getting-started) tak
 - Worktrees an agent creates are now attributed to the session and task that made them.
 - The task page's working-changes tree shows added and removed line counts per file and per section.
 - Attention toasts opened from the Dashboard now show the task in a side panel instead of navigating away from your list, panels and scroll position.
-- Issue and pull request refresh no longer stalls for a minute or more on large organisations.
+- Issue and pull request refresh no longer stalls for a minute or more on large organizations.
 
 ### Fixes
 
@@ -867,7 +983,7 @@ New to Kepler? [Getting Started with Kepler](/kepler/kepler-getting-started) tak
 - Copilot agent sessions no longer fail to start on Windows when Copilot is installed as a global npm package.
 - Bundled agent sessions no longer flash console windows on Windows.
 - Pull requests where you're a reviewer no longer disappear when filtering by repository.
-- Clicking "Chat about this" on an agent prompt now declines it cleanly instead of cancelling the session.
+- Clicking "Chat about this" on an agent prompt now declines it cleanly instead of canceling the session.
 - Bitbucket connection warnings are now handled gracefully.
 - Issues now resolve to the correct repository.
 - Long edges in the commit graph route around intermediate lanes for a cleaner layout.
