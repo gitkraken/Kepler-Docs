@@ -11,13 +11,13 @@ git_hosts: [generic]
 integrations: [claude-code, codex, copilot, cursor, auggie, opencode, grok, pi, antigravity]
 hosted_variant: both
 status: GA
-last_verified: 2026-09
+last_verified: 2026-10
 llms_include: true
 tags: [agent-graph, dashboard, sessions, subagents, tool-calls, monitoring]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: September 2026</kbd>
+<kbd>Last updated: October 2026</kbd>
 
 Running several agents at once is easy. Knowing what they're all doing is the hard part.
 
@@ -176,7 +176,7 @@ The calls broken down by kind, with a bar and a count each: the fastest read on 
 
 ### Usage windows
 
-Your agent subscription windows, one bar per window per agent. This panel appears only once you've turned on **Show token usage** in [Settings](/kepler/settings).
+Your agent subscription windows, one bar per window per agent. This panel appears only after you turn on **Show plan usage for Claude Code, Codex and Augment** in **Settings → Agents → Usage limits**. See [Settings](/kepler/settings).
 
 ### What was folded away
 

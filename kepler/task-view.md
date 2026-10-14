@@ -1,6 +1,6 @@
 ---
 title: The Task View
-description: Open a Task to see its resources, agent sessions, changes, and files side by side. Learn the header, the rail, columns and free-form tabs, the file viewer, and how to start sessions and terminals.
+description: Open a Task to see its resources, agent sessions, changes, and files side by side. Learn the header, the rail, columns and free-form tabs, the file viewer, and how to start sessions from a draft tab and open terminals.
 product: Kepler
 feature: Tasks
 content_type: how-to
@@ -13,7 +13,7 @@ hosted_variant: both
 status: GA
 last_verified: 2026-10
 llms_include: true
-tags: [tasks, task-page, sessions, terminals, worktrees, resources, tabs, tab-groups, split-panes, drawer, file-viewer, keyboard-shortcuts]
+tags: [tasks, task-page, sessions, draft-sessions, terminals, worktrees, resources, tabs, tab-groups, split-panes, drawer, file-viewer, keyboard-shortcuts]
 taxonomy:
   category: kepler
 ---
@@ -89,7 +89,8 @@ The worktree group is called **Changes**. Its rows carry each checkout's real st
 **The rail can be put away.** **Hide context panel** collapses it and hands the width to the content area; **Show context panel** brings it back. While it's hidden the control carries the task's own session status, so a session that needs you is still visible from a collapsed rail. Drag its edge to resize it.
 
 - **Add resource** sits at the bottom of the rail and opens the **Add resources** dialog.
-- The **+** on a group header adds straight into that group: **Add issues**, **Add notes**, and so on. On **Changes** it reads **Add worktree**, because that's what actually lands there. On **Sessions** the **+** is **New session** instead.
+- The **+** on a group header adds straight into that group: **Add issues**, **Add notes**, and so on. On **Changes** it reads **Add worktree**, because that's what actually lands there. On **Sessions** the **+** is **New session** instead, which opens a draft session. See [Starting a session](#starting-a-session).
+- A session you haven't started yet shows as a **Draft** row in **Sessions**. Right-click it for **Discard draft**.
 - Every session that isn't live (archived ones, and ones that ended) collects under a **{count} archived** fold beneath the live ones. It starts collapsed. Clicking an archived session brings it back and opens it in one gesture; **Restore** in its menu does the same.
 
 ### What a row shows
@@ -141,11 +142,11 @@ Right-click any row. Every row opens with **Open**, followed by **Open to the si
 |---|---|
 | A worktree that's on disk | **New session here**, **New terminal here**, **Run command here**, **Rename branch**, **Change merge target…**, your default editor, **Open in**, **Copy path**, **Copy branch name**, **Copy remote URL** |
 | A folder | **New session here**, **New terminal here**, your default editor, **Open in**, **Copy path** |
-| A file | **Open in default app**, **Reveal in file manager**, **Save as…**, **Copy path** |
+| A file | **Open in default app**, **Show in Finder** (macOS), **Show in Explorer** (Windows) or **Show in file manager** (Linux), **Save as…**, **Copy path** |
 | A session | **Rename session**, **New session from this one**, **Open source session** on a session started from another, **Copy session reference**, **Restart agent**, **Shut down agent**, **Show Agent Graph** |
 | A pull request or issue | **Open in browser**, **Copy link**, **Copy title**, **Copy number**, and **Copy branch name** on a pull request |
 
-**Run command here**, and the **Run a command** control on the row and the worktree's own strip, lists the repository's commands (configured in **Settings → Repos & Folders**) and runs the one you pick in that worktree, revealing its terminal in the drawer without taking your focus. Each command row leads with its state: a play glyph, a spinner while it warms up, or **Stop** while it runs, and picking a running command stops it rather than starting a second copy. A repository with none reads **No commands yet**, and the menu ends with **Create command…** so you can add one from where you noticed you wanted it, plus **Manage commands…**, which deep-links to that repository's own settings.
+**Run command here**, and the **Run a command** control on the row and the worktree's own strip, lists the repository's commands (configured on the repository's own page in **Settings → Repositories**) and runs the one you pick in that worktree, revealing its terminal in the drawer without taking your focus. Each command row leads with its state: a play glyph, a spinner while it warms up, or **Stop** while it runs, and picking a running command stops it rather than starting a second copy. A repository with none reads **No commands yet**, and the menu ends with **Create command…** so you can add one from where you noticed you wanted it, plus **Manage commands…**, which deep-links to that repository's own settings.
 
 **Open in** works the same way, with your default editor hoisted above the list rather than buried in it. On a worktree the list ends with **Open on {provider}**, which opens the branch on its git host, or the repository's home page when the branch has no upstream.
 
@@ -153,7 +154,7 @@ Right-click any row. Every row opens with **Open**, followed by **Open to the si
 
 **Rename branch** opens a dialog with the branch's own name field and **Also rename remote branch**, which renames the branch on its remote too rather than just locally. **Change merge target…** opens a picker of remote branches; see [Review Changes](/kepler/review-changes).
 
-**Rename session** names a Rich chat session yourself; automatic titling never overwrites a name you chose.
+**Rename session** names a Chat session yourself; automatic titling never overwrites a name you chose.
 
 **Option/Alt-click** a resource row to open it in your browser instead of in Kepler.
 
@@ -163,7 +164,7 @@ The last entry is how the row leaves the Task, and it differs by kind: **Detach 
 
 ## Columns or tabs
 
-The content area takes one of two shapes, set by **Show tabs on the task page** in **Settings → General**:
+The content area takes one of two shapes, set by **Show tabs on the task page** in **Settings → Tasks → Task page**:
 
 | Setting | What the content area does |
 |---|---|
@@ -174,8 +175,9 @@ The content area takes one of two shapes, set by **Show tabs on the task page** 
   <a href="/wp-content/uploads/show-tabs-on-task-page-oct-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/show-tabs-on-task-page-oct-2026.png" class="help-center-img img-bordered" alt="The Show tabs on the task page setting in Settings → General, unticked, with help text explaining that it's off by default and that turning it on keeps sessions, worktrees, and resources open as tabs.">
   </a>
-  <figcaption style="text-align:center; color:#888">The Show tabs on the task page setting, in Settings → General.</figcaption>
+  <figcaption style="text-align:center; color:#888">The Show tabs on the task page setting.</figcaption>
 </figure>
+<!-- TODO(screenshot): Replace — The Task page section of Settings → Tasks at 0.13.0, showing Show tabs on the task page and Preview tabs. -->
 
 Either way, terminals live in the [drawer](#the-terminal-drawer) beneath the content area, never in a column or a tab, so opening a shell never evicts the changes or the conversation you were reading. And either way, closing something is a view change: it detaches nothing, and it doesn't stop a session. The rail still has it all.
 
@@ -194,7 +196,7 @@ With tabs off, the content area is fixed slots, not free-form panes. A rail row'
 
 | Column | What opens here |
 |---|---|
-| **Sessions** | Agent conversations, whether they run as rich chat or in a terminal |
+| **Sessions** | Agent conversations, whether they run in Chat or in a terminal, and draft sessions you haven't started yet |
 | **Changes** | A worktree: a strip of verbs over its changed files. See [Review Changes](/kepler/review-changes) |
 | **Resources** | Folders, files, pull requests, issues, links, notes |
 
@@ -232,12 +234,16 @@ With tabs on, anything you open from the rail (sessions, worktrees, files, and e
 <!-- TODO(screenshot): Replace: Names are blurred. Re-take with two tab groups side by side and a pinned tab as well as the preview tab. -->
 
 - **Drag a tab** to reorder it, onto another group to move it there, or to a group's edge to split off a new group there. Drag the sash between groups to resize them.
-- **A single click opens a preview.** A resource opened with one click shows in an italic preview tab that the next single click replaces, so browsing the rail doesn't pile up tabs. Double-click a row, or start editing in the tab, to keep it open. A session always opens as a tab you keep. Turn **Preview tabs** off in **Settings → General** to have every click keep its tab.
+- **A single click opens a preview.** A resource opened with one click shows in an italic preview tab that the next single click replaces, so browsing the rail doesn't pile up tabs. Double-click a row, or start editing in the tab, to keep it open. A session always opens as a tab you keep. Turn **Preview tabs** off in **Settings → Tasks → Task page** to have every click keep its tab.
 - **Cmd-click a rail row** (Ctrl-click on Windows and Linux), or pick **Open beside** in its menu, to open it in a new group beside the one you're reading.
 - **Shift-click opens a range** of rows, each as its own tab.
 - Clicking the row of something already open just brings its tab forward. Close a tab from the tab itself.
 
 A tab's **Tab actions** chevron and its right-click menu hold everything the thing's rail row offers, plus **Rename** on a file or folder tab. They lead with the tab's own verbs: **Keep open** on a preview, **Pin tab** or **Unpin tab**, **Close tab**, **Close others**, **Close to the right**, **Close all**, and **Close group** when there's more than one group. A pinned tab shrinks to its icon at the front of its group and has no close control; unpin it to close it.
+
+A draft session's tab reads **(draft)** after its name. Right-click a draft tab for **Discard draft**, plus **Move left** and **Move right** where the tab can move. With tabs on, the menu also holds **Pin tab**, **Keep open**, **Open beside** and **Close tab**. Closing a draft that has text in it asks **Discard new session?** first, because *Your draft prompt and attachments will be removed.*
+
+<!-- TODO(screenshot): New — A draft session tab marked (draft) with its right-click menu open on Discard draft, Move left and Move right, and a Draft row in the rail's Sessions group. -->
 
 A session tab swaps its close control for the session's status dot while the session has something unread or needs you, so a group's tabs say which conversation wants attention.
 
@@ -257,7 +263,7 @@ When every tab is closed, the content area offers **New session** and the extern
 | **Cmd/Ctrl+Alt+[** and **Cmd/Ctrl+Alt+]** | Move the focused tab left or right. Also **Ctrl+Shift+PageUp** and **Ctrl+Shift+PageDown** on Windows and Linux |
 | **Cmd/Ctrl+W** | Close the focused tab |
 | **Cmd/Ctrl+Shift+T** | Reopen the last closed tab (tabs on) |
-| **Cmd/Ctrl+T** | New session |
+| **Cmd/Ctrl+T** | New session, which opens a draft tab |
 | **Cmd/Ctrl+J** | Show or hide the terminal drawer |
 | **Cmd/Ctrl+Shift+J** | Maximize the terminal drawer, opening it first if it's hidden |
 | **Cmd/Ctrl+O** / **Cmd/Ctrl+P** | **Open File…** / **Go to File…**. See [Opening a file](#opening-a-file) |
@@ -269,28 +275,44 @@ With tabs off, the column strips' **Tab actions** menus also hold **Move left** 
 
 ## Starting a session
 
-**New session** starts an agent in one of the Task's working directories.
+**New session** opens a draft session in its own tab, marked **(draft)**. The draft holds the prompt composer, so you choose where the agent works and how it runs before anything starts. To open a draft, click the **+** on the rail's **Sessions** group, or press **Cmd/Ctrl+T**.
 
-| Where it can run | When you'd use it |
+To start a session from a draft, follow these steps:
+
+1. Click **+** on **Sessions**, or press **Cmd/Ctrl+T**. A draft tab opens, and a **Draft** row joins the rail.
+2. Choose where the agent works from the target chip at the bottom of the composer. The chip names the current folder, worktree or branch.
+3. Open **Agent settings** to choose the **Agent** and how to **Start in**, along with the agent's own options, such as **Permission mode**.
+4. Type your prompt.
+5. Press **Start**.
+
+The target chip's menu has a **Search branches and folders** field and the following groups:
+
+| Group | What it lists |
 |---|---|
-| **All worktrees and folders** | *Runs in the task folder and has access to all worktrees and folders*: for work that spans the Task rather than one checkout. Always first in the menu. On a Task with nothing attached yet it reads **Task folder** |
-| A specific **worktree** or **folder** | The normal case: the agent works in that checkout. A worktree that's gone from disk reads **not on disk**, and Kepler recreates it before the session starts |
+| **Attached to this task** | The Task's folders and worktrees, led by **All worktrees and folders**. That row runs the session in the task folder with access to every worktree and folder. On a Task with nothing attached yet, it reads **Task folder** |
+| **Branches** | Other branches in the Task's repositories |
 
-With a single place to run, the menu lists the agents directly instead of asking twice. With many, it grows a **Search worktrees and folders** field. **Cmd/Ctrl+T** starts a session on your default agent when there's only one place to run, and opens this menu when there are several. If no agents are connected you'll see **No agents available**. Connect one in [Agent Integrations](/kepler/agent-integrations).
+Point at a branch row for **Use this branch**, or for **New branch from this**, which cuts a new branch from it. The chip then reads *new branch from {base}*, and you can type a branch name or let Kepler name it for you.
+
+If a worktree is gone from disk, Kepler asks **Recreate the worktree and start the session?** before the session starts.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/new-session-flyout-oct-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/new-session-flyout-oct-2026.png" class="help-center-img img-bordered" alt="The New session menu with Start with task context checked at the top, then All worktrees and folders and two worktrees. One worktree's flyout is open, with Start on another branch above the agent rows, each row ending in a button that starts it in the other mode.">
   </a>
-  <figcaption style="text-align:center; color:#888">The New session menu, with a worktree's agents open.</figcaption>
+  <figcaption style="text-align:center; color:#888">Choosing where a new session runs.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace: Account names are blurred. Re-take with Start on another branch ticked and the branch picker open. -->
+<!-- TODO(screenshot): Replace — A draft session tab at 0.13.0 with the target chip's menu open, showing Search branches and folders, Attached to this task and Branches. The New session menu in the current image no longer exists. -->
 
-**Each agent row can start either run mode.** The row itself launches that agent in its default mode; the trailing button on the row starts the other one: **Start in Terminal**, or **Start in Rich chat** on an agent that already defaults to Terminal. An agent that offers only one mode shows no second control. See [Agent Sessions](/kepler/agent-sessions#how-a-session-runs).
+**Task context** is a switch in **Agent settings**. It's on by default and *Gives the agent the task’s saved prompt and notes. Updates are included in subsequent messages.* Turn it off for a session that forms its own view instead.
 
-**Start on another branch** sits above a worktree's agents. Check it and pick a branch, either an existing one or a new one cut **From** a base with an optional **Branch name** (left empty, it's *Named for you*). The same agent rows then start the session there instead: in a fresh worktree, or in the repository's own checkout switched in place.
+If no agents are connected, **Agent settings** reads **No agents available**. Connect one in [Agent Integrations](/kepler/agent-integrations).
 
-**Start with task context** is checked by default, so the session receives the Task's shared context. Uncheck it for a session that forms its own view instead. It resets each time the menu closes, so a one-off opt-out never carries over.
+**Start a session in a specific checkout without a draft.** Right-click a worktree or folder row and point at **New session here**. The submenu lists your agents. Each agent row starts that agent in its default mode, and the trailing button starts the other mode: **Start in Terminal**, or **Start in Chat** on an agent that defaults to Terminal. An agent that offers only one mode shows no second button. See [Agent Sessions](/kepler/agent-sessions#how-a-session-runs).
+
+**When a session can't start.** If the agent fails after launch, the task page shows **{agent} couldn't start** with the agent's message. Press **Retry** to launch it again, or **Open agent settings** to fix the problem. **Dismiss** hides the notice in that window.
+
+<!-- TODO(verify): Draft tab, target chip, Agent settings and start-failure labels verified against kepler v0.13.0. -->
 
 **Start from an existing session.** **New session from this one**, on a session's row or tab menu, picks an agent and starts a session in the same working directory that can read the source conversation. **New session from here**, on a message in a conversation, does the same but cuts the source off at that message. The new session shows a **Continues from** divider naming its source; **Open source session** in its menu takes you back.
 
@@ -324,7 +346,7 @@ A path that's already one of the Task's files opens that file's own tab rather t
 - **Code and text**, highlighted, scrolled to and marking the line you opened it at. **Wrap lines** toggles soft wrapping.
 - **Markdown**, rendered, with a **Preview** / **Source** toggle.
 - **Images and SVG**, fitted to the pane, with **Fit** and **100%**.
-- Anything else gets a **No preview for this file** card with the ways out the window allows: **Open in default app**, **Reveal in file manager**, and **Copy path**.
+- Anything else gets a **No preview for this file** card with the ways out the window allows: **Open in default app**, **Show in Finder** (macOS), **Show in Explorer** (Windows) or **Show in file manager** (Linux), and **Copy path**.
 
 **An open file follows the disk.** When it changes, the viewer updates in place without moving you, and says **Updated just now**, or **Updated just now by** the session that changed it when Kepler saw the edit. **Show changes** shows what changed since the file was first shown; **Back to file** returns. A deleted file keeps showing the last version Kepler read, and says so.
 
@@ -372,6 +394,10 @@ Each tab carries **one glyph** that says both what the tab is and how it ended, 
 | **Agent** | A session running an agent in Terminal mode. See [Agent Sessions](/kepler/agent-sessions#how-a-session-runs) |
 | **Command run** | One of the repository's commands |
 
+A shell tab also shows what its program reports, when the program reports a status: **Working**, **Needs you**, **Done** or **Failed**. Hover the tab to see the state, the app that reported it, its message and progress, and the terminal it came from. An agent tab keeps its own glyph, because its session owns its status.
+
+When a shell's program needs you or finishes, Kepler sends a notification that names the terminal and its Task, such as *Approve it in {terminal}* or *Finished in {terminal}*. Kepler stays quiet while that terminal is on screen in the focused window. These notifications follow the same notification settings as agent sessions, in **Settings → Notifications**.
+
 A finished command run shows a **result bar** rather than leaving you to read the scrollback: **Exited with code {code}**, **Exited by signal {signal}**, or **Stopped**, with **Run again** and **Close** beside it. A still-running one offers **Stop**.
 
 ### File paths are links
@@ -386,7 +412,9 @@ Closing a terminal with something running in it confirms first, naming the job y
 
 > **Close terminal?** *Stops {command}, which is still running in this terminal.*
 
-**Close terminal** goes ahead. A terminal already closing offers only **Force close**. Quitting Kepler counts busy terminals alongside busy sessions and asks before it takes them down.
+**Close terminal** goes ahead. A terminal already closing offers only **Force close**.
+
+Shell tabs survive a Kepler update and come back after a restart. A plain **Quit** ends them, the way quitting any terminal app does. Quitting Kepler counts busy terminals alongside busy sessions and asks before it takes them down.
 
 ***
 
@@ -398,8 +426,8 @@ Closing a terminal with something running in it confirms first, naming the job y
 | **Worktree**, missing | A metadata card instead: **Current branch**, **Base branch**, and the **Recorded path**, flagged **not on disk** or **gone** when it's been removed outside Kepler. A worktree that has gone stays bound to the Task, and Kepler offers to recreate it rather than quietly dropping it |
 | **Folder** | Path, plus an editable name and description |
 | **File** | The file itself, in the [file viewer](#opening-a-file), with its description, where it came from, and its size on the viewer's toolbar. **Rename** is in **File actions**. An uploaded copy says it's a copy in the task folder |
-| **Pull request** / **Issue** | Author, assignee, and status. *Full description lives in the provider — open the link above to view it.* |
+| **Pull request** / **Issue** | Author, assignee, status, the item's description and its labels. You can select and copy the description text. When Kepler can't read a description, the pane shows *Full description lives in the provider — open the link above to view it.* instead |
 | **Link** | Last synced time, or **not synced** |
-| **Note** | The note itself, editable in place. The **Prompt** note edits the Task's prompt |
+| **Note** | The note itself. To edit it, press **Edit**. Double-clicking selects a word. The **Prompt** note edits the Task's prompt |
 
 ---

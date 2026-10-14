@@ -11,13 +11,13 @@ git_hosts: [github, github-enterprise, gitlab, gitlab-self-hosted, bitbucket, az
 integrations: [claude-code, codex-cli, copilot-cli, cursor, auggie, opencode, grok, pi, antigravity]
 hosted_variant: both
 status: GA
-last_verified: 2026-09
+last_verified: 2026-10
 llms_include: true
 tags: [actions, prompts, agents, tasks, issues, pull-requests, settings, customization]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: September 2026</kbd>
+<kbd>Last updated: October 2026</kbd>
 
 An **Action** is a named prompt you fire at a task, issue, or pull request to start agent work.
 
@@ -55,6 +55,7 @@ You can edit and reset built-in Actions, but you can't delete them. What an Acti
   </a>
   <figcaption style="text-align:center; color:#888">A built-in Action's row: reset and edit, no delete.</figcaption>
 </figure>
+<!-- TODO(screenshot): Replace — A built-in Action's row under All Actions in Settings → Actions at 0.13.0, showing Restore default after the Action was edited, with no edit or delete icon. -->
 
 ***
 
@@ -109,7 +110,7 @@ The number of issues or pull requests attached to the task doesn't change what t
 
 Picking an Action from the chevron list always goes on to ask where to run it, whenever there is anything at all to choose, including new-session-vs-current on a task with a single worktree, which the left half answers silently.
 
-At the bottom of the list, **Manage actions…** opens **Settings → Actions**.
+At the bottom of the list, **Manage Actions…** opens **Settings → Actions**.
 
 ### Choosing where it runs
 
@@ -150,13 +151,13 @@ Firing into a live session **queues** the prompt behind whatever the agent is cu
 
 ## Set your preferred Actions
 
-Open **Settings → Actions → Preferred actions**. 
+To set your preferred Actions, open **Settings → Actions → Preferred Actions**.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/preferred-actions-settings-sep-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/preferred-actions-settings-sep-2026.png" class="help-center-img img-bordered" alt="The Preferred actions settings, with a row per item kind and its default Action">
+    <img src="/wp-content/uploads/preferred-actions-settings-sep-2026.png" class="help-center-img img-bordered" alt="The Preferred Actions settings, with a row per item kind and its default Action">
   </a>
-  <figcaption style="text-align:center; color:#888">The Preferred actions settings.</figcaption>
+  <figcaption style="text-align:center; color:#888">The Preferred Actions settings.</figcaption>
 </figure>
 
 Each row sets the Action that the left half of the button runs for that kind of item.
@@ -194,7 +195,7 @@ Any slot can be set to **None**. This simplifies the action button to only displ
 
 ## Edit an Action
 
-In **Settings → Actions**, click the **Edit** (pencil) icon on any Action.
+To edit an Action, go to **Settings → Actions** and click the Action's row under **All Actions**. The editor opens as its own page.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/actions-settings-built-in-sep-2026.png" target="_blank" rel="noopener noreferrer">
@@ -202,8 +203,11 @@ In **Settings → Actions**, click the **Edit** (pencil) icon on any Action.
   </a>
   <figcaption style="text-align:center; color:#888">The Edit icon on an Action row in Settings.</figcaption>
 </figure>
+<!-- TODO(screenshot): Replace — The All Actions list in Settings → Actions at 0.13.0, with clickable rows and no pencil icon, and the Built in and Custom labels shown because a custom Action exists. -->
 
-Built-in Actions appear under **Built in**; your own appear under **Custom**.
+Once you have a custom Action, the list splits into **Built in** and **Custom**. Until then, it shows the built-in Actions without labels.
+
+The editor has these fields:
 
 | Field | What it does |
 |---|---|
@@ -214,7 +218,7 @@ Built-in Actions appear under **Built in**; your own appear under **Custom**.
 
 ### Create your own
 
-Click **New action**.
+To create an Action, click **New Action** in **Settings → Actions**.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/new-custom-action-aug-2026.png" target="_blank" rel="noopener noreferrer">
@@ -234,20 +238,20 @@ Custom Actions work exactly like the built-in ones, and they're the point of the
 
 ### Restore defaults
 
-**Restore default** on a row, or **Restore all defaults** at the bottom of the list.
+To undo your edits to one Action, click **Restore default** on its row. The row shows **Restore default** only after you edit the Action. To undo your edits to every Action at once, click **Restore all defaults** in the **All Actions** section header.
 
 Kepler stores **only what you changed**, not a copy of the whole Action. This creates the following considerations when restoring defaults:
 
 - An Action you've never edited picks up improved wording in a future Kepler release.
 - **Restore default** works by forgetting your edit. Editing an Action back to its original wording has the same effect.
 
-Deleting a custom Action that a preferred-Action slot points to is the same as setting it to **None**. You will see rows with only the chevron, instead of the preferred-Action + the chevron. Revisit the Actions setting to set a new preference. 
+Deleting a custom Action that a preferred-Action slot points to is the same as setting it to **None**. You will see rows with only the chevron, instead of the preferred-Action + the chevron. Revisit the Actions setting to set a new preference.
 
 ***
 
 ## Setting an Action's agent
 
-By default an Action runs on your **default agent**, configured in **Settings → Agents**. The **Agent** field in the Action editor reads **Inherit** until you name one.
+By default an Action runs on your **default agent**, configured in **Settings → Tasks → New tasks → Default agent**. The **Agent** field in the Action editor reads **Inherit** until you name one.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/inherit-default-agent-setting-aug-2026.png" target="_blank" rel="noopener noreferrer">

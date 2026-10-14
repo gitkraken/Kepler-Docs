@@ -112,9 +112,15 @@ The primary button shows a sending state from the moment you click it, so a slow
 
 The chevron beside the primary button opens the rest: **Prepare**, which creates the session without starting work yet, and every Action that applies to what you've attached. Firing an Action sends that Action's prompt, with anything you typed appended as a refinement.
 
-A Task that has its prompt but no session yet, such as one an agent created for you, says so in its Dashboard preview: *Start with the task prompt, or describe something else…*. Press **Start** on the empty box to send the Task's prompt as written.
+A Task that has its prompt but no session yet, such as one an agent created for you, says so in a draft session tab: *Start with the task prompt, or describe something else…*. To send the Task's prompt as written, press **Start** on the empty box.
 
-If the Task can't start, you'll see **Failed to start the task**.
+The Task appears in the list as soon as you press **Start**, before its worktrees exist. Until setup finishes, the row carries a **Preparing** pill, and the Task's panel shows its progress under **Getting your task ready**, such as *Cloning {repo}…* or *Setting up worktrees…*.
+
+<!-- TODO(screenshot): New — A pending Task row in Tasks in progress with the Preparing pill and its spinner, at Kepler 0.13.0. -->
+
+If setup fails, the row's pill reads **Failed** and the panel reads **Couldn't start this task**. To change the Task and try again, click **Edit and retry**. If the request itself can't be sent, you see **Failed to start the task**.
+
+If the Task starts but its agent session doesn't, the task page and the Dashboard panel show **{agent} couldn't start**, with **Retry**. See [Agent Sessions](/kepler/agent-sessions#when-a-session-drops).
 
 ### Configuring a repository
 
@@ -131,7 +137,7 @@ Each attached repository gets a chip with three segments:
 - **Branch name**: the new branch's own name, suggested from your prompt as you type and editable in place. See below.
 - **Isolated worktree**: the worktree segment, a direct on/off toggle rather than a menu. On by default, giving the Task its own working copy: *Runs in its own working copy of the repository*. Turning it off means the Task shares your repository folder: *Uses the repository's own folder, so a branch switch here moves your checkout*. See [Tasks and Resources](/kepler/tasks-and-resources).
 
-**What a newly attached repository starts on is a setting.** These three segments open on **Settings → General → Default Task Mode**: **Isolated worktree** (the default), **New branch**, or **Current branch**. Changing it changes the starting point only; every segment above still overrides it per repository, per Task. See [Settings](/kepler/settings#default-task-mode).
+**What a newly attached repository starts on is a setting.** These three segments open on **Settings → Tasks → New tasks → Where new tasks make changes**: **Isolated worktree** (the default), **New branch**, or **Current branch**. Changing it changes the starting point only; every segment above still overrides it per repository, per Task. See [Settings](/kepler/settings).
 
 Picking **New branch** or **Current branch** means the Task runs in the repository's own checkout rather than an isolated one, so only one Task can use that checkout at a time. If another Task already has it, the branch menu says so, *{task} is working in this checkout.*, with a button to switch that one repository to an isolated worktree instead.
 
@@ -145,13 +151,13 @@ Kepler names a Task's branch from what the Task is actually about, rather than f
 - **A name you type is yours verbatim.** The prefix applies to automatic names only, which is how a repository with an enforced `feat/` or `fix/` push rule still works.
 - **Your repository's own branch-naming policy is applied** where the host publishes one.
 
-The prefix is configurable in two places: **Settings → General → Branch prefix** for the app, and per repository under **Settings → Repos & Folders**, where the card offers **App setting**, **None**, or **Custom** and shows an example of what a branch will actually look like. Leave the app setting empty for no prefix at all. If a repository already has a branch literally named `kepler`, Kepler says so rather than creating an impossible ref: *This repository has a branch named {branch}, so the {prefix} prefix can't be used here.*
+You can set the prefix in two places: **Settings → Tasks → New tasks → Branch prefix** for the app, and per repository in **Settings → Repositories**, on the repository's own page. The repository's page offers **Default ({value})**, **None**, or **Custom**, and shows an example of what a branch will actually look like. Leave the app setting empty for no prefix at all. If a repository already has a branch literally named `kepler`, Kepler says so rather than creating an impossible ref: *This repository has a branch named {branch}, so the {prefix} prefix can't be used here.*
 
 Kepler intentionally forks from the remote by default. If no remote default resolves (no remote, a shallow clone, or no network connection), Kepler falls back to the current HEAD rather than failing the launch.
 
 A repository linked to a pull request always opens in its own isolated working copy, and the toggle is locked: *This repository is linked to a pull request and always opens in its own isolated working copy.*
 
-Kepler clones a repository you haven't cloned yet when the Task starts, into your **Default Repositories Folder**: *This repository is cloned when you start the task.* Its branch is locked until then (*its branches become available after cloning*) because Kepler doesn't yet know what branches it has, and the chip reads **default branch** in the meantime.
+Kepler clones a repository you haven't cloned yet when the Task starts, into your **Repositories folder**: *This repository is cloned when you start the task.* Its branch is locked until then (*its branches become available after cloning*) because Kepler doesn't yet know what branches it has, and the chip reads **default branch** in the meantime.
 
 Attaching the same repository twice gives the Task two independent worktrees on it: useful for comparing two approaches, or a mistake if you didn't mean it. Two chips that would resolve to the *same* worktree get a **Duplicate worktree** marker instead, and Kepler creates only one of them. If a chip works in place on a branch another chip has already claimed for an isolated worktree, Kepler marks it **Superseded by a worktree** and skips it; git can't check one branch out in two places.
 
@@ -208,7 +214,7 @@ You can jump into Kepler from other GitKraken products, such as GitLens and GitK
 
 ## After the Task starts
 
-The Task appears in **Tasks in progress**. Click it for the side panel, or double-click to open [the task view](/kepler/task-view).
+The Task appears in **Tasks in progress** right away, with the **Preparing** pill until its setup finishes. Click it for the side panel, or double-click to open [the task view](/kepler/task-view).
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/full-task-view-oct-2026.png" target="_blank" rel="noopener noreferrer">
