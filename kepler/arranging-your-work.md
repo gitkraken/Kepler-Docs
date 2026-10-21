@@ -211,7 +211,7 @@ The **Filter** menu holds one flyout per facet.
   <a href="/wp-content/uploads/filter-todo-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/filter-todo-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Filter menu on Todo, with Type, Status, Your role and Provider, then a GitHub section with Repository, Assignee and Label, each set to Any. The Provider flyout lists GitHub with its count of 5, and Manage integrations.">
   </a>
-  <figcaption style="text-align:center; color:#888">The Filter menu on Todo, with a section per provider.</figcaption>
+  <figcaption style="text-align:center; color:#888">The Filter menu on Todo. Each connected provider gets its own section, here GitHub.</figcaption>
 </figure>
 
 Kepler hides facets with nothing to offer, so a single-repo setup won't show a Repository facet at all.
