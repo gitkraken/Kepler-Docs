@@ -41,7 +41,7 @@ When an update is ready, an **Update available** chip takes its place. It opens 
 On **Windows and Linux** the native title bar is gone and Kepler draws its own. The menu button at the leading edge holds the full application menu (**File**, **Edit**, **View**, **Window**, **Help**), including **Settings**, **Check for Updates…**, and **About**. macOS keeps its native menu bar, and both menus open the same **About Kepler** dialog.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-task-button-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/new-task-button-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/new-task-button-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The New task split button at the left end of the Kepler top bar, after the application menu, the window switcher and the Back and Forward buttons.">
   </a>
   <figcaption style="text-align:center; color:#888">The top bar's leading edge.</figcaption>
@@ -55,7 +55,7 @@ On **Windows and Linux** the native title bar is gone and Kepler draws its own. 
 </figure>
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/update-available-chip-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/update-available-chip-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/update-available-chip-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The right end of the Kepler top bar with a green Update available chip before the Local environment chip, Feedback, Settings, and the account avatar.">
   </a>
   <figcaption style="text-align:center; color:#888">The trailing cluster when an update is ready.</figcaption>
@@ -70,7 +70,7 @@ Menu items and button tooltips show a command's keyboard shortcut beside it, whe
 **Windows** in the top bar lists every open Kepler window and what its agents are doing, so you don't have to go and look. Its trigger carries the reason to: **Windows · {count} waiting elsewhere**, or **{count} running elsewhere**. **This window** marks the one you're in, and **New window** (**Cmd/Ctrl+Shift+N**) opens another on the same connection as the window you're in. From a remote window, **New local window** opens one on this computer instead. The same list is on the tray icon.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/window-switcher-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/window-switcher-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/window-switcher-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The window switcher open under its top bar button, listing This window with a check mark, a second window named Local, and New window with its Ctrl+Shift+N shortcut.">
   </a>
   <figcaption style="text-align:center; color:#888">The window switcher, open.</figcaption>
@@ -139,13 +139,13 @@ A row reads differently depending on whether it holds a tracked issue or pull re
 ### Todo rows: issues and pull requests
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/todo-row-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/todo-row-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/todo-row-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Two pull request rows, #51 and #49, each marked Changes requested with the Address Feedback action, and two issue rows, #42 with the Mentioned badge and #38, with the Plan action. Each row shows its reference, title, repository, Open status, assignee where there is one, and age.">
   </a>
   <figcaption style="text-align:center; color:#888">Todo rows for pull requests and issues.</figcaption>
 </figure>
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ade-todo-mentioned-badge-01.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/ade-todo-mentioned-badge-01-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/ade-todo-mentioned-badge-01-v2@2x.png" class="help-center-img img-bordered" alt="The Issue group of the Todo list: GitHub issue #42, Gift card codes are case-sensitive at checkout, with the muted Mentioned badge, then #38, Cart total ignores discounts when tax is applied, assigned to you, and #45, Add a wishlist to product pages. Each row shows its repository, Open status, age and the Plan action.">
   </a>
   <figcaption style="text-align:center; color:#888">An issue listed because it mentions you, with the Mentioned badge.</figcaption>
@@ -227,7 +227,7 @@ The progress control on a task row is also a menu: click it to set the stage you
 Beside the pill sits one dot per distinct **session state**, with a count of each.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/session-dots-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/session-dots-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/session-dots-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A task row's acme-web repo label and In Development progress pill beside its session dot pill, an orange dot for one session, with a tooltip reading 1 Waiting; the next row shows below.">
   </a>
   <figcaption style="text-align:center; color:#888">The status pill and session-state dots, with the breakdown on hover.</figcaption>
@@ -274,7 +274,7 @@ All of these defaults are editable. See [Actions](/kepler/actions).
 ### Open a panel
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/open-a-task-panel-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/open-a-task-panel-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/open-a-task-panel-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Todo list, with two pull requests above three issues, with GitHub issue #42 selected and its side panel open on the right: the issue header with Plan, the GITHUB, ISSUE #42 and Mentioned chips, Open in acme-web by sam-ortiz, the Summary with its labels and description, and a composer at the bottom, with #42 attached, for starting a task from it.">
   </a>
   <figcaption style="text-align:center; color:#888">The side panel, opened from a row.</figcaption>
@@ -288,7 +288,7 @@ All of these defaults are editable. See [Actions](/kepler/actions).
 A new task appears in the list as soon as you press **Start** in the Task Composer, before its worktrees are ready. Its row shows a **Preparing** pill while Kepler sets it up, or a **Failed** pill if setup fails. You can't drag or select a task that's still being prepared. Its panel shows **Getting your task ready**, with *Cloning {repo}…* or *Setting up worktrees…*, and **Cancel** while a repository clones. If setup fails, the panel shows **Couldn't start this task** (or **Task not started** after you cancel) with **Edit and retry**, so you can change the task and start it again, and **Dismiss**. When a task starts without some of its repositories, Kepler warns *Some repositories weren't added* and names them.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ade-task-preparing-panel-01.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/ade-task-preparing-panel-01-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/ade-task-preparing-panel-01-v2@2x.png" class="help-center-img img-bordered" alt="Tasks in progress with a new task, Add a gift-card field to checkout, in Recent with the Preparing pill and its spinner. Its side panel, also marked Preparing, reads Getting your task ready and Setting up worktrees….">
   </a>
   <figcaption style="text-align:center; color:#888">A new task while Kepler prepares it, in the list and in its panel.</figcaption>
@@ -299,7 +299,7 @@ Shift-clicking ranges from your last plain click, the way it does in Finder or V
 Every open panel gets its own column straight away. Until its item loads, the column shows a placeholder that says it's loading, that the item is gone, or that it couldn't load, with **Try again** when retrying can help. A pull request or issue opened while you're signed out reads *Sign in to see this pull request* (or issue) with **Sign in**, and a session panel that needs external-session detection says it's off. Every placeholder can be closed.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/multi-task-panels-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/multi-task-panels-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/multi-task-panels-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Two task panels open side by side beside the Tasks in progress list: Fix the cart total (In Development, pinned) and Upgrade the payment SDK (In Review), each with its own header, worktree pill, session tab and chat.">
   </a>
   <figcaption style="text-align:center; color:#888">Several panels open side by side, each with its own chat.</figcaption>
@@ -322,7 +322,7 @@ When the list reorders under you (a session finishes, or a task moves bucket), t
 ### Pin a panel
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/pin-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/pin-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/pin-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A task panel's Task actions menu open from its header, with Pin panel highlighted.">
   </a>
   <figcaption style="text-align:center; color:#888">Pin panel, in a panel's ⋮ menu.</figcaption>
@@ -338,7 +338,7 @@ A panel is a place you're browsing until you pin it. **Pin panel**, in the panel
 One slot always stays unpinned so browsing never has to evict a pin; once every other panel is pinned, the menu row reads **Keep one panel unpinned for browsing** and will not take another. A pinned panel shows **Unpin panel** in its header to release it.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/unpin-panel-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/unpin-panel-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/unpin-panel-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A pinned panel's header for Fix the cart total, with the Unpin panel button showing its tooltip between Terminal and the close button, above the task's worktree pill.">
   </a>
   <figcaption style="text-align:center; color:#888">Unpin panel, in a pinned panel's header.</figcaption>
@@ -351,7 +351,7 @@ One slot always stays unpinned so browsing never has to evict a pin; once every 
 Selecting a row opens a panel beside the list with everything about that item, as a stack of collapsible, resizable sections.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/issue-side-panel-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/issue-side-panel-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/issue-side-panel-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The side panel for GitHub issue #42: a header with the title, Open in browser, the ⋮ menu, Plan and Close; the GITHUB, ISSUE #42 and Mentioned chips; Open, acme-web, author sam-ortiz; a collapsible Summary with the bug and checkout labels and the issue description; and a composer with #42 attached, Issues, Add PR and Add context above it, and acme-web, default branch and worktree below.">
   </a>
   <figcaption style="text-align:center; color:#888">The side panel, with its stack of collapsible sections.</figcaption>
@@ -383,7 +383,7 @@ A task you created with a prompt but haven't started reads *Start with the task 
 The header carries:
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/task-preview-header-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/task-preview-header-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/task-preview-header-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A task's side panel header: the fold chevron, the task title Upgrade the payment SDK, Open task page, the ⋮ Task actions menu, the In Review progress control, the Terminal button and Close, above its worktree pill with the kepler/payment-sdk-v5 branch in acme-web, 1 uncommitted file and the main merge target.">
   </a>
   <figcaption style="text-align:center; color:#888">The side panel's header, on a task.</figcaption>
@@ -401,7 +401,7 @@ The header carries:
 Each pull request, issue, or artifact linked to a task has a chip under the header; hover one for its card, or click it to read it in the panel. A pull request whose branch name was used before reads *Opened from an earlier branch with the same name*. The **Resources** chip lists the task's notes, files, folders, and links, and a note opens in the panel with **Copy note**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/artifact-chip-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/artifact-chip-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/artifact-chip-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The artifact attached to the task as a link chip, Acme gift cards, under the task's worktree pill, with its hover card open showing the artifact's title, its link, Open and Copy link.">
   </a>
   <figcaption style="text-align:center; color:#888">A linked item's chip under the header, with its hover card.</figcaption>
@@ -422,7 +422,7 @@ An archived task reads **Archived** where its progress control would be, in both
 Below the header, each of the task's checkouts is a **pill** with two rows: who it is on top, and what's in it below.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/task-preview-header-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/task-preview-header-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/task-preview-header-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A task's side panel header: the fold chevron, the task title Upgrade the payment SDK, Open task page, the ⋮ Task actions menu, the In Review progress control, the Terminal button and Close, above its worktree pill with the kepler/payment-sdk-v5 branch in acme-web, 1 uncommitted file and the main merge target.">
   </a>
   <figcaption style="text-align:center; color:#888">A task's worktree pill, below the header.</figcaption>

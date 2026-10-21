@@ -24,7 +24,7 @@ Connect a Git host and the pull requests you authored, plus the ones waiting on 
 Manage providers in **Settings → Integrations**, in the **Issues and pull requests** section.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/provider-integrations-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/provider-integrations-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/provider-integrations-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Issues and pull requests section of Settings › Integrations, with GitHub and Azure DevOps (two accounts) connected and the other providers listed with Connect buttons.">
   </a>
   <figcaption style="text-align:center; color:#888">Issues and pull requests, in Settings → Integrations.</figcaption>
@@ -122,7 +122,7 @@ Switching either one clears that provider's saved filters (a repository from the
 Click **Disconnect** on the provider's row in **Settings → Integrations** and confirm.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/disconnect-provider-aug-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/disconnect-provider-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/disconnect-provider-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="GitHub's row in Settings › Integrations, with its Connected badge, Disconnect and Reconnect.">
   </a>
   <figcaption style="text-align:center; color:#888">A connected provider's row.</figcaption>

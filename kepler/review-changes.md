@@ -156,13 +156,13 @@ A failed read says so rather than standing in for an empty one: **Couldn't load 
 Read the diff, mark what needs fixing, and hand the whole list to the agent in one go.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/review-comment-draft-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/review-comment-draft-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/review-comment-draft-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Changes overlay with lines 3 and 4 of cart.js selected and a review comment draft open beneath them, reading Pull the discount and rounding into one helper, with Cancel and Comment buttons.">
   </a>
   <figcaption style="text-align:center; color:#888">A review comment draft, under the lines it's about.</figcaption>
 </figure>
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ade-review-comments-01.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/ade-review-comments-01-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/ade-review-comments-01-v2@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total with cart.js open. Two posted review comments sit under the diff lines they are about, on line 3 and line 4, each with Edit, Delete and Add to prompt, and the overlay header reads 2 comments beside Add to prompt.">
   </a>
   <figcaption style="text-align:center; color:#888">Two posted comments, with Add to prompt in the viewer header.</figcaption>
@@ -191,7 +191,7 @@ Typed text is never thrown away: **Escape** only leaves a draft's field, and a d
 In **Working changes**, the tree is where you stage and the commit box beneath it is where you commit. The panel and the overlay share one commit box per worktree, so a message you start in one is waiting in the other, and it's kept when the overlay closes.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/staging-commit-box-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/staging-commit-box-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/staging-commit-box-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Working changes in a worktree's Changes column, with a checkbox on each file row and cart.js ticked. The header box is partly checked and its badge reads 1 of 2 staged. Below the files sits the commit box, with Commit message, Amend last commit, and Commit.">
   </a>
   <figcaption style="text-align:center; color:#888">Staging files in Working changes, above the commit box.</figcaption>
@@ -273,7 +273,7 @@ The chevron beside it lists **Push** (or **Publish**), **Pull** and **Fetch**, p
 After you apply a rebase, the remote still has the branch's old commits, so **Force push** becomes the main button instead of a menu item. The **Force push?** confirmation explains that the branch was rebased and that Kepler refuses the force push if someone else pushed in the meantime.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/sync-control-menu-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/sync-control-menu-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/sync-control-menu-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The sync control's chevron menu open beside the Publish button of a branch with no upstream yet, listing Publish (Choose where to publish), Pull, unavailable until it is published, and Fetch, then Update.">
   </a>
   <figcaption style="text-align:center; color:#888">The sync control's chevron menu.</figcaption>
@@ -284,7 +284,7 @@ After you apply a rebase, the remote still has the branch's old commits, so **Fo
 The update view rebases or merges the branch onto its merge target. It works on a copy first, and your branch changes only when you apply the result.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/update-view-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/update-view-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/update-view-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The update view for kepler/fix-cart-total, updating from main, reporting No conflicts with main, with the Rebase button's menu open on Merge and a note that the rebase or merge runs on a copy first.">
   </a>
   <figcaption style="text-align:center; color:#888">The update view, before a run.</figcaption>
@@ -314,7 +314,7 @@ You have two ways through the conflicts:
 AI conflict resolution runs the rebase or merge on a copy and resolves each conflicted file for you. Your branch changes only when you apply the result.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ade-sync-ai-conflicts-01.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/ade-sync-ai-conflicts-01-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/ade-sync-ai-conflicts-01-v2@2x.png" class="help-center-img img-bordered" alt="The update view for kepler/fix-cart-total in its conflict state: Review conflicts in kepler/fix-cart-total, with main, 1 file conflicts with main, and cart.js with 1 conflict region. The Rebase with AI button's menu is open on Merge with AI.">
   </a>
   <figcaption style="text-align:center; color:#888">The update view on a conflicting branch, with Rebase with AI and Merge with AI.</figcaption>
@@ -359,7 +359,7 @@ Each file row shows one of the following methods:
 The review persists across reloads and windows, so you can close the view and come back to it before you apply.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ade-sync-ai-review-01.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/ade-sync-ai-review-01-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/ade-sync-ai-review-01-v2@2x.png" class="help-center-img img-bordered" alt="The update view for kepler/fix-cart-total after an AI rebase: Ready to apply with Apply and Discard, a Needs review badge over the AI's summary and the check &quot;cart.js — low confidence&quot;, the line AI resolved 1 file · confidence 75%, and a commit card for Apply the discount before tax listing cart.js with its AI method, a 75% confidence badge and what the AI did.">
   </a>
   <figcaption style="text-align:center; color:#888">An AI review at Ready to apply.</figcaption>
@@ -458,7 +458,7 @@ Both sets of tools default to the session's own worktree. Each can also name ano
 On the Community plan, both rows still appear, with a padlock and the tooltip *Not available on the Community plan. Upgrade to unlock.* Everything else on this page works on the Community plan, except AI conflict resolution.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-features-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/agent-features-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/agent-features-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Agent tools section of Settings › Agents, with AI Sync (lets agents rebase or merge your branch and resolve conflicts) and AI Compose (lets agents turn messy changes into focused commits), both off.">
   </a>
   <figcaption style="text-align:center; color:#888">AI Sync and Compose, in the agent settings.</figcaption>

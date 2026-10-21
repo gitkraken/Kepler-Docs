@@ -24,7 +24,7 @@ Connect an issue tracker and the issues you're working on show up in [the Kepler
 Manage providers in **Settings → Integrations**, in the **Issues and pull requests** section.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/provider-integrations-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/provider-integrations-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/provider-integrations-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Issues and pull requests section of Settings › Integrations, with GitHub and Azure DevOps (two accounts) connected and the other providers listed with Connect buttons.">
   </a>
   <figcaption style="text-align:center; color:#888">Issues and pull requests, in Settings → Integrations.</figcaption>

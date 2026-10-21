@@ -31,7 +31,7 @@ Voice input puts a microphone in the agent prompt so you can talk instead of typ
 Voice input is off until you set it up. To set it up, open **Settings → Voice input** and click **Get started**. Kepler checks what your computer can run, then downloads a model. The microphone in the prompt goes live when the model is ready.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/voice-input-settings-aug-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/voice-input-settings-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/voice-input-settings-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="Settings › Voice input with a model installed: the Fast model, about 42 MB on this machine, with Change quality, Remove voice input and a collapsed Technical details; Use voice input in the chat prompt turned on; and When you stop talking set to Insert the text so you can edit it, with Send the prompt and Keep listening, transcribing each phrase as you pause.">
   </a>
   <figcaption style="text-align:center; color:#888">Settings → Voice Input.</figcaption>

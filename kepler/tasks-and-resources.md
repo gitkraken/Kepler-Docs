@@ -73,7 +73,7 @@ The **Files** group holds two kinds of file, and Kepler treats them differently 
 A file attached to a prompt that Kepler copies into the Task when you send it is an uploaded copy too. In a window connected to another machine, the file picker on the **Files** tab of **Add resources** also offers **Upload from this machine**, which copies files from the machine you're sitting at into the Task's folder. Either kind can be written somewhere else with **Save as…** from its menu.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/files-group-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/files-group-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/files-group-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Files group in the task rail, holding two files: checkout-style-guide.md, a linked file whose row reads its path on disk, /srv/acme/brand/checkout-style-guide.md, and checkout-copy-draft.md, an uploaded copy whose row reads Task folder.">
   </a>
   <figcaption style="text-align:center; color:#888">A linked file in the Files group.</figcaption>
@@ -160,7 +160,7 @@ A fresh worktree is a clean checkout: no `node_modules`, no build output, nothin
 **Commands** solve that problem. Save a repository's setup steps once (`pnpm install`, a codegen step, whatever your project needs) and tick **Run on worktree creation**. Kepler runs them in the new worktree's folder every time it makes one for that repository, in order, before the agent starts. Commands you don't flag stay on demand: right-click a worktree in the task view rail and pick **Run command here**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/worktree-row-menu-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/worktree-row-menu-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/worktree-row-menu-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A worktree row's right-click menu in the task rail, with Run command here open on No commands yet and Create command…. The menu also lists Open, Open changes, Open in, New session here, New terminal here, Rename branch, Change merge target…, the copy actions, and Detach worktree… last, unavailable while a session is using the worktree.">
   </a>
   <figcaption style="text-align:center; color:#888">Run command here, from a worktree's right-click menu.</figcaption>
@@ -203,7 +203,7 @@ Sometimes you want an agent that forms its own view, such as a reviewer that sho
 The new session doesn't receive the Task's prompt or notes. It still gets the Task's worktrees, folders, files, and links, because it still needs to know where to work. The switch belongs to that draft, so turning it off doesn't change your other sessions. See [The Task View](/kepler/task-view#starting-a-session).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/start-with-task-context-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/start-with-task-context-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/start-with-task-context-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Agent settings menu of a draft session tab: Agent OpenCode, Start in with Chat selected beside Terminal, Model Docs Model, Permission mode Build or Plan, the Task context switch turned on, MCP servers with Manage, and Use default agent.">
   </a>
   <figcaption style="text-align:center; color:#888">Task context, on by default.</figcaption>
@@ -227,7 +227,7 @@ Attach a **Note** for anything every agent on the Task should follow: a style ru
 Most of what you remove from a Task isn't destroyed. The menu says which you're doing: **Detach** for something that lives elsewhere, **Delete** for something only the Task holds.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/detach-resource-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/detach-resource-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/detach-resource-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A linked file's right-click menu in the task rail, open on checkout-style-guide.md, with Open, Open to the side, Save as…, Copy path, and Detach file… at the bottom.">
   </a>
   <figcaption style="text-align:center; color:#888">Removing a resource from its context menu in the rail.</figcaption>
@@ -249,7 +249,7 @@ The Task's **Prompt** has no remove action.
 Worktrees get more care, because deleting one can lose work.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/detach-worktree-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/detach-worktree-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/detach-worktree-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Detach worktree? dialog for kepler/payment-sdk-docs, a worktree only this task uses. Under an Also delete branch checkbox it lists the worktree as Safe to delete, with No uncommitted changes and Branch kept, above the Cancel, Delete worktree, and Detach worktree buttons.">
   </a>
   <figcaption style="text-align:center; color:#888">Detaching or deleting a worktree.</figcaption>
@@ -286,7 +286,7 @@ A worktree that would lose work is **kept**, not deleted, unless you tick the ex
 ## Renaming, archiving, and deleting a Task
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/rename-task-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/rename-task-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/rename-task-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Task actions menu open from a task's side-panel header, with Rename task and its F2 shortcut highlighted among Open task page, Pin panel, the Progress submenu (In Development), Mark as unread, Copy task prompt, Add resource…, Shut down all agents, Archive task and Delete task.">
   </a>
   <figcaption style="text-align:center; color:#888">The Task actions menu, open from the header.</figcaption>
@@ -312,13 +312,13 @@ From the **Task actions** (**⋮**) menu, on the task's row or in the task view'
 Ticking **Also delete branches** re-reads the list, so a worktree that was safe a moment ago can turn into a warning. If the check is slow you can confirm anyway; any worktree that would lose work is kept.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/archive-task-dialog-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/archive-task-dialog-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/archive-task-dialog-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Archive task? dialog for Upgrade the payment SDK, saying the task moves to the Archived section, its sessions and resources are kept, it can be restored any time, and its worktrees and branches stay on disk unless you tick the boxes. Also delete worktrees is unticked, and Also delete branches is unavailable until it is. Cancel and Archive task close the dialog.">
   </a>
   <figcaption style="text-align:center; color:#888">The Archive task? dialog, before you tick anything.</figcaption>
 </figure>
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ade-archive-task-worktrees-01.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/ade-archive-task-worktrees-01-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/ade-archive-task-worktrees-01-v2@2x.png" class="help-center-img img-bordered" alt="The Archive task? dialog for Upgrade the payment SDK with Also delete worktrees ticked. Its Worktrees list reads 1 of 2 will be deleted: kepler/payment-sdk-v5 with 1 uncommitted file is kept because deleting it would lose work, and kepler/payment-sdk-docs with no uncommitted changes will be deleted. Below it, an unticked box offers to also delete kepler/payment-sdk-v5, losing 1 uncommitted file.">
   </a>
   <figcaption style="text-align:center; color:#888">The same dialog with Also delete worktrees ticked: one worktree goes, one is kept.</figcaption>

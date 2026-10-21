@@ -24,7 +24,7 @@ Settings has 15 pages, each with its own sections. This page documents every one
 Open Settings from the gear icon in the top bar, or with **⌘ ,** (**Ctrl ,** on Windows and Linux). The same shortcut closes Settings again, the way the gear button does.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/settings-general-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/settings-general-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/settings-general-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Settings open on Repositories. The left rail starts with Search settings and Setup, then lists Account; Agents, Tasks, Repositories, Integrations and Actions; General, Notifications, Appearance, Voice input and Keyboard shortcuts; Remote environments and Remote Access; and Updates and Help, with Repositories' section links expanded under it.">
   </a>
   <figcaption style="text-align:center; color:#888">Settings, open on General.</figcaption>
@@ -133,7 +133,7 @@ A paywall also asks **Already upgraded?** with **Check again**, for a plan you'v
 The Agents page has five sections: **Your agents**, **Custom agents**, **MCP servers**, **Agent tools**, and **Usage limits**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-settings-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/agent-settings-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/agent-settings-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Settings › Agents: the page description, New tasks use Claude Code with Change in Tasks, and Your agents with Update all and Re-scan above the Claude Code card, which shows its account (alex.lee@example.com, Acme, Default), New sessions start in set to Chat, Let artifact comments start turns, and a collapsed Program and data folder.">
   </a>
   <figcaption style="text-align:center; color:#888">Settings → Agents.</figcaption>
@@ -353,7 +353,7 @@ For example, `<REPOSITORY_PATH>/.worktrees/<REPOSITORY_NAME>` nests each worktre
 Per-repository commands have a **Variables** menu of their own, with two more variables. See [Per-repository commands](#per-repository-commands).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/folder-fields-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/folder-fields-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/folder-fields-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The New tasks section of Settings › Tasks with the Variables menu open beside Worktrees folder, offering REPOSITORY_PATH and REPOSITORY_NAME; the Tasks folder field below has no Variables menu.">
   </a>
   <figcaption style="text-align:center; color:#888">The three folder fields, with the Variables menu open.</figcaption>
@@ -436,7 +436,7 @@ Click a repository's row to open its **Edit repo** page. The page shows the repo
 **Name** and **Description** are optional. Kepler stores whitespace-only text as empty.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/edit-repo-dialog-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/edit-repo-dialog-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/edit-repo-dialog-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Edit repo sub-page for acme-web in Settings › Repositories: the breadcrumb back to Repositories, its path and branches, Name, Description, Branch prefix set to Default (kepler/), the Commands section with Add command and two saved commands, and the MCP servers section.">
   </a>
   <figcaption style="text-align:center; color:#888">The Edit repo page.</figcaption>
@@ -492,7 +492,7 @@ A failed command does not undo the worktree. The worktree exists but may not be 
 To run a command from the task view, right-click a worktree row in the rail and use **Run command here**. It lists that repository's commands and runs the one you pick in that worktree, opening its terminal in place. A repository with none yet reads **No commands yet** and offers **Create command…**. A command that's running shows on the run button and its menus, where you can stop it.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/repo-commands-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/repo-commands-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/repo-commands-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Commands section of the Edit repo page for acme-web: Add command, Install deps (pnpm install) with the Runs on creation chip, and Dev server open for editing with its Variables menu listing REPOSITORY_PATH, REPOSITORY_NAME, SOURCE_PATH and WORKTREE_PATH.">
   </a>
   <figcaption style="text-align:center; color:#888">A repository's Commands, with the Variables menu open.</figcaption>
@@ -523,7 +523,7 @@ Each worktree shows how long since it was touched, why it may be finished (**mer
 A lock Kepler itself left on a worktree, for a task this install knows or a task since deleted, is cleared and the worktree deleted. Kepler never deletes a repository's main checkout. It keeps any worktree that still has uncommitted or unpushed work, other tasks, running agent sessions, or a lock from another tool, and says why for each. Where forcing can help, the result offers **Force delete**, which discards the listed work and ends the agent sessions running there.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ade-worktree-cleanup-01.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/ade-worktree-cleanup-01-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/ade-worktree-cleanup-01-v2@2x.png" class="help-center-img img-bordered" alt="The Worktree cleanup page after a check: 4 worktrees in 1 repo, 2 look safe to delete, with Idle after 14 days and Re-check. Show worktrees is set to Safe to delete, and the acme-web group lists kepler/old-banner and kepler/promo-page, both merged into main, untouched for weeks and tagged with their archived task, Spring sale banner, both selected. The selection bar reads 2 selected with Update, Delete 2 worktrees and Clear.">
   </a>
   <figcaption style="text-align:center; color:#888">The Worktree cleanup sub-page, after a check.</figcaption>
@@ -542,14 +542,14 @@ To bring several worktrees up to date with their base branch at once:
 While the update runs, each row shows its status: **Waiting**, **Updating…**, **Updated**, **Up to date**, **Skipped**, **Conflict**, or **Failed**. When it finishes, you can undo one row with **Roll back**, or every row with **Roll back all**. If you didn't push during the update, **Push** and **Push all** push the updated branches.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ade-worktree-batch-update-01.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/ade-worktree-batch-update-01-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/ade-worktree-batch-update-01-v2@2x.png" class="help-center-img img-bordered" alt="The Update worktrees dialog with How to update set to Rebase. It plans three worktrees: kepler/gift-card-ui is Up to date, kepler/old-banner Will update · 3 commits behind, and kepler/wishlist is Skipped · uncommitted changes. The footer reads 1 worktree to update beside Cancel and the Update button with its menu.">
   </a>
   <figcaption style="text-align:center; color:#888">The Update worktrees plan, before you pick an action.</figcaption>
 </figure>
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ade-worktree-batch-update-02.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/ade-worktree-batch-update-02-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/ade-worktree-batch-update-02-v2@2x.png" class="help-center-img img-bordered" alt="The finished update: Update finished, 1 updated, with Push all, Roll back all and Dismiss in its header, and kepler/old-banner marked Updated with Push and Roll back on its row.">
   </a>
   <figcaption style="text-align:center; color:#888">The finished update, with Roll back and Push on each row.</figcaption>
@@ -715,7 +715,7 @@ Two more settings sit under the grid:
 To silence desktop notifications from one remote machine only, use **Mute notifications from {host}** on that machine in [Remote environments](#remote-environments).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ade-settings-notifications.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/ade-settings-notifications-01-01-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/ade-settings-notifications-01-01-v2@2x.png" class="help-center-img img-bordered" alt="Settings › Notifications: a grid of events (Replies, Questions, Permission requests, Errors) against Desktop and In Kepler, at their defaults, with Play a sound with desktop notifications and Notify even for the task you're looking at below it.">
   </a>
   <figcaption style="text-align:center; color:#888">What to notify you about, in Settings → Notifications.</figcaption>

@@ -35,7 +35,7 @@ Get here by double-clicking a row in [the Kepler interface](/kepler/kepler-inter
 ## The header
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/task-header-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/task-header-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/task-header-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The left side of the task header: the context panel toggle, the back chevron, the Fix the cart total task chip with its switcher chevron, the ⋮ Task actions menu, and the In Development progress control.">
   </a>
   <figcaption style="text-align:center; color:#888">The left side of the task header. Terminal sits at the far right.</figcaption>
@@ -57,7 +57,7 @@ When a Task looks finished, a **Ready to archive?** prompt joins the header with
 **Rename task**, or **F2** anywhere on the page outside a text field, turns the name into an editable field in place. The field carries **Auto-name** (*Suggest a name from the task's prompt and resources*), which fills the field with a suggestion for you to accept or edit. It never renames on its own: **Enter** or the check mark saves, **Escape** or the **×** cancels.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/rename-inline-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/rename-inline-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/rename-inline-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The task name turned into an editable field in the header with Fix the cart total selected, followed by the Auto-name button, × to cancel, and a check mark to save.">
   </a>
   <figcaption style="text-align:center; color:#888">Renaming a task in place.</figcaption>
@@ -132,7 +132,7 @@ Every rail row draws a selected fill when it's the one on screen, and the column
 Right-click any row. Every row opens with **Open**, followed by **Open to the side** with tabs off or **Open beside** with tabs on (see [Columns or tabs](#columns-or-tabs)), when there's somewhere for it to go. A worktree row adds **Open changes**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/worktree-row-menu-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/worktree-row-menu-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/worktree-row-menu-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A worktree row's right-click menu in the task rail, with Run command here open on No commands yet and Create command…. The menu also lists Open, Open changes, Open in, New session here, New terminal here, Rename branch, Change merge target…, the copy actions, and Detach worktree… last, unavailable while a session is using the worktree.">
   </a>
   <figcaption style="text-align:center; color:#888">A worktree row's context menu.</figcaption>
@@ -175,7 +175,7 @@ The content area takes one of two shapes, set by **Show tabs on the task page** 
 | **On** | Free-form **tabs** you can pin, drag between groups, and arrange side by side |
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/show-tabs-on-task-page-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/show-tabs-on-task-page-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/show-tabs-on-task-page-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Task page section of Settings › Tasks, with Show tabs on the task page and Preview tabs.">
   </a>
   <figcaption style="text-align:center; color:#888">The Show tabs on the task page setting.</figcaption>
@@ -186,7 +186,7 @@ Either way, terminals live in the [drawer](#the-terminal-drawer) beneath the con
 ### The columns
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/task-columns-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/task-columns-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/task-columns-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The task page for Fix the cart total with tabs off: the rail on the left with Sessions, Changes and Notes, then two columns side by side, the session's conversation (thinking, plan, a Read cart.js tool call and the agent's replies) and the kepler/fix-cart-total worktree's Working changes with cart.js modified and cart.test.js added above the commit box.">
   </a>
   <figcaption style="text-align:center; color:#888">The three content columns: Sessions, Changes, and Resources.</figcaption>
@@ -227,7 +227,7 @@ A session's control on its strip is named for what it does: **Archive session** 
 With tabs on, anything you open from the rail (sessions, worktrees, files, and every other resource) becomes a tab, and tabs live in **groups** you arrange freely, the way editor tabs work in VS Code.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/tabs-preview-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/tabs-preview-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/tabs-preview-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The task page for Fix the cart total with tabs on and two tab groups side by side. The left group starts with the pinned session tab, shrunk to its icon, beside the Prompt note in an italic preview tab; the right group holds the kepler/fix-cart-total worktree tab showing its two working changes, cart.js and cart.test.js.">
   </a>
   <figcaption style="text-align:center; color:#888">An italic preview tab beside a session tab.</figcaption>
@@ -244,7 +244,7 @@ A tab's **Tab actions** chevron and its right-click menu hold everything the thi
 A draft session's tab reads **(draft)** after its name. With tabs off, right-click a draft tab for **Discard draft**, plus **Move left** and **Move right** where the tab can move. With tabs on, its menu holds the tab's own verbs instead: **Keep open** while it's a preview, **Pin tab** or **Unpin tab**, and **Close tab**, which is a draft's only close. Closing a draft that has text in it asks **Discard new session?** first, because *Your draft prompt and attachments will be removed.*
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ade-draft-session-tab-menu.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/ade-draft-session-tab-menu-01-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/ade-draft-session-tab-menu-01-v2@2x.png" class="help-center-img img-bordered" alt="The top of a task's side panel with a New session (draft) tab beside the task's first session, and the draft tab's right-click menu open on Move left, with its Ctrl+Alt+[ shortcut, and Discard draft.">
   </a>
   <figcaption style="text-align:center; color:#888">A draft session's tab and its right-click menu.</figcaption>
@@ -302,7 +302,7 @@ Point at a branch row for **Use this branch**, or for **New branch from this**, 
 If a worktree is gone from disk, Kepler asks **Recreate the worktree and start the session?** before the session starts.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-session-flyout-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/new-session-flyout-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/new-session-flyout-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A task's side panel with a New session (draft) tab and its target chip's menu open: Search branches and folders, Attached to this task with kepler/fix-cart-total, and Branches with the repository's other branches and main.">
   </a>
   <figcaption style="text-align:center; color:#888">Choosing where a new session runs.</figcaption>

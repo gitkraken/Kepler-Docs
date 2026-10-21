@@ -22,7 +22,7 @@ taxonomy:
 Kepler has one interface rather than a set of views, so you shape it instead of switching away from it. Four controls do most of the work: the grouping, the sort, the filters, and the layout. Each segment remembers its own, and a combination you come back to can be saved under a name.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/arrange-work-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/arrange-work-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/arrange-work-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The dashboard toolbar: the Todo, Tasks in progress and Agent Graph segments, the search box, Saved views, Group: Inbox, Sort: Updated, Filter, the List and Columns view switch, and Refresh.">
   </a>
   <figcaption style="text-align:center; color:#888">The saved views, grouping, sort, filter, and layout controls.</figcaption>
@@ -202,13 +202,13 @@ Agents can set the stage too, and put a task on hold, through Kepler's workspace
 The **Filter** menu holds one flyout per facet.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/filter-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/filter-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/filter-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The dashboard's Filter menu, its chip reading In Development and the search box showing 3 hidden. Progress is open on In Development (ticked, 2), On hold, In Review and Exploration, with On hold's exclude button hovered and its tooltip reading Exclude On hold with Shift+Enter.">
   </a>
   <figcaption style="text-align:center; color:#888">The Filter menu, with a facet's flyout open.</figcaption>
 </figure>
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/filter-todo-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/filter-todo-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/filter-todo-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Filter menu on Todo, with Type, Status, Your role and Provider, then a GitHub section with Repository, Assignee and Label, each set to Any. The Provider flyout lists GitHub with its count of 5, and Manage integrations.">
   </a>
   <figcaption style="text-align:center; color:#888">The Filter menu on Todo, with a section per provider.</figcaption>
@@ -240,7 +240,7 @@ External sessions stay listed under a filter that has no way to answer for them,
 The search box matches on **title, reference, or repository**: *Search title, ref, or repo…*.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/search-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/search-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/search-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Tasks in progress searched for cart: the search box holds the query and the match count reads 1 of 5, and the list shows only the matching task, Fix the cart total.">
   </a>
   <figcaption style="text-align:center; color:#888">The search box, with its search and filter pills.</figcaption>

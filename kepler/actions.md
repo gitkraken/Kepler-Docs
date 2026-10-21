@@ -50,7 +50,7 @@ Every Action declares **what it can be aimed at**, which is why **Address Feedba
 You can edit and reset built-in Actions, but you can't delete them. What an Action applies to already controls where it shows up, so deleting one would be a weaker version of the same control.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/reset-action-to-default-aug-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/reset-action-to-default-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/reset-action-to-default-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="The built-in Review Action's row in Settings › Actions after it was edited, with a restore icon beside its chevron and no edit or delete icon.">
   </a>
   <figcaption style="text-align:center; color:#888">A built-in Action's row: reset and edit, no delete.</figcaption>
@@ -144,7 +144,7 @@ A task with no worktree runs the Action in a folder attached to it, or else in t
 Firing into a live session **queues** the prompt behind whatever the agent is currently doing. Nothing is dropped and nothing is cancelled, and Kepler takes you to the session the prompt went into.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/firing-into-a-running-session-aug-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/firing-into-a-running-session-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/firing-into-a-running-session-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="A running session in a task's side panel: the agent's plan at 1 of 3, its turn still running on Run npm test, and below it 1 queued with Interrupt & send and Clear queue, holding the prompt Also cover gift card codes with surrounding spaces. The composer reads Type a message to queue….">
   </a>
   <figcaption style="text-align:center; color:#888">A prompt queued into a running session.</figcaption>
@@ -157,7 +157,7 @@ Firing into a live session **queues** the prompt behind whatever the agent is cu
 To set your preferred Actions, open **Settings → Actions → Preferred Actions**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/preferred-actions-settings-sep-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/preferred-actions-settings-sep-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/preferred-actions-settings-sep-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Preferred Actions section of Settings › Actions, with one Action picked for Tasks, Issues, Pull requests I authored and Pull requests from others.">
   </a>
   <figcaption style="text-align:center; color:#888">The Preferred Actions settings.</figcaption>
@@ -201,7 +201,7 @@ Any slot can be set to **None**. This simplifies the action button to only displ
 To edit an Action, go to **Settings → Actions** and click the Action's row under **All Actions**. The editor opens as its own page.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/actions-settings-built-in-sep-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/actions-settings-built-in-sep-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/actions-settings-built-in-sep-2026-v2@2x.png" class="help-center-img img-bordered" alt="The All Actions list in Settings › Actions, with Built in and Custom groups: Plan, Implement, the edited Review and Address Feedback, then the custom Write Tests.">
   </a>
   <figcaption style="text-align:center; color:#888">The Edit icon on an Action row in Settings.</figcaption>
@@ -223,7 +223,7 @@ The editor has these fields:
 To create an Action, click **New Action** in **Settings → Actions**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-custom-action-aug-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/new-custom-action-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/new-custom-action-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="The New Action sub-page in Settings › Actions, with empty Title and Prompt fields, Applies to with Tasks ticked, the Agent field reading Inherit, and Cancel and Save.">
   </a>
   <figcaption style="text-align:center; color:#888">The New action editor.</figcaption>
@@ -232,7 +232,7 @@ To create an Action, click **New Action** in **Settings → Actions**.
 Custom Actions work exactly like the built-in ones, and they're the point of the feature: if you'd do something more than once (backport a fix, write the migration, audit a dependency bump), it should be a button rather than a prompt you retype.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-custom-action-config-aug-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/new-custom-action-config-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/new-custom-action-config-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="A custom Action being created: Title Backport a fix, the prompt Run the skill /backport, Applies to with Tasks and Pull requests ticked, and the Agent field reading Inherit.">
   </a>
   <figcaption style="text-align:center; color:#888">A custom Action's configuration.</figcaption>
@@ -256,7 +256,7 @@ Deleting a custom Action that a preferred-Action slot points to is the same as s
 By default an Action runs on your **default agent**, configured in **Settings → Tasks → New tasks → Default agent**. The **Agent** field in the Action editor reads **Inherit** until you name one.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/inherit-default-agent-setting-aug-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/inherit-default-agent-setting-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/inherit-default-agent-setting-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Agent field in the Action editor, reading Inherit.">
   </a>
   <figcaption style="text-align:center; color:#888">The Agent field, reading Inherit.</figcaption>

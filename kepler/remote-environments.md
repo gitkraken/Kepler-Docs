@@ -95,7 +95,7 @@ Clicking a **Switch to** row moves this window. Hold **Cmd** (macOS) or **Ctrl**
 A connect that a *different* window starts never takes over this window's chip.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-popover-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/remote-popover-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/remote-popover-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The environment chip's popover in a local window: Working locally, Switch to dev-server (SSH, alex@dev.acme.example), Remote Access (Inactive) with Turn on Remote Access, and Manage remote environments… with its Ctrl+Shift+R shortcut.">
   </a>
   <figcaption style="text-align:center; color:#888">The popover, connected to a host.</figcaption>
@@ -117,7 +117,7 @@ A connect that a *different* window starts never takes over this window's chip.
 **Settings → Remote environments** is the full management surface. In a local window, **Your machines** lists your saved machines. Each row shows the host's type, **Connected** or *Not connected*, and *Open in N windows* when other windows already use it. **Connect** connects this window, the window icon connects in a new window, and **Show window** replaces **Connect** for a host open elsewhere. Click a row to drill into the host's page.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-environments-hosts-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/remote-environments-hosts-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/remote-environments-hosts-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Settings › Remote environments: Add machine, Your machines with dev-server (SSH, not connected, alex@dev.acme.example) and Connect, Found on this machine listing build-box and staging-db from the SSH config with Add and hide buttons and Show hidden (1), and the Remote windows option.">
   </a>
   <figcaption style="text-align:center; color:#888">Settings → Remote Environments, with a saved host.</figcaption>
@@ -137,7 +137,7 @@ A host's page puts its actions in a card at the top: **Connect** (**Cmd/Ctrl**-c
 | **Sessions** | Labeled *survive disconnect, resumable anywhere*. Each row is a live agent session on that host, and clicking one opens it. For a host nobody is connected to, **Check** opens a short-lived connection to ask its server what is running |
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-host-page-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/remote-host-page-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/remote-host-page-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The dev-server machine's page in Settings › Remote environments, not connected: Connect, Stop server, the Connection fields (host dev.acme.example, port 22, user alex, identity file), Color, Mute notifications from dev-server, and Sessions with Check.">
   </a>
   <figcaption style="text-align:center; color:#888">A saved host's page.</figcaption>
@@ -202,7 +202,7 @@ The unedited diagnostic appears underneath either way.
 When the failure happens while you're adding a host, the wizard shows it in place: *Something went wrong.*, the headline and hint, the **Diagnostic**, a **Copy** button for each, and **Try again**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-auth-rejected-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/remote-auth-rejected-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/remote-auth-rejected-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Add machine wizard's failure step: Authentication rejected, The machine refused the credentials Kepler offered, a Diagnostic with Copy, and Cancel and Try again.">
   </a>
   <figcaption style="text-align:center; color:#888">A failed connection while adding a host.</figcaption>
@@ -247,7 +247,7 @@ The SSH wizard walks five steps.
 | *Ready to save.* | **Add** saves the host and opens its page. Nothing connects until you press **Connect**; a password the wizard verified is reused for that first connect |
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-new-host-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/remote-new-host-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/remote-new-host-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The first step of the Add machine wizard in Settings › Remote environments: its description, Name (optional) filled in from the host as dev.acme.example, Host dev.acme.example, Port 22 and User alex, with Cancel and Continue.">
   </a>
   <figcaption style="text-align:center; color:#888">The first step of adding an SSH host.</figcaption>
@@ -262,7 +262,7 @@ The SSH wizard walks five steps.
 **Generate key** needs `ssh-keygen` on your machine; the chip reads **ssh-keygen missing** when ssh-keygen is absent.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-auth-mode-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/remote-auth-mode-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/remote-auth-mode-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Add machine wizard asking how Kepler should authenticate to dev.acme.example, with Existing key (1 key found) selected and its identity file /home/alex/.ssh/id_ed25519, beside Password and Generate key.">
   </a>
   <figcaption style="text-align:center; color:#888">Choosing how Kepler signs in to the host.</figcaption>
@@ -271,7 +271,7 @@ The SSH wizard walks five steps.
 If you pick **Password**, the wizard then offers **Set up a key for this machine?** **Generate and copy key** generates a fresh ed25519 key, copies it to the host, and uses it for future connects, so you don't need the password again. **Skip** keeps the host on password sign-in.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-key-offer-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/remote-key-offer-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/remote-key-offer-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Add machine wizard asking Set up a key for this machine?: Kepler generates a fresh ed25519 key, copies it to dev.acme.example and uses it for future connects, with Cancel, Skip and Generate and copy key.">
   </a>
   <figcaption style="text-align:center; color:#888">The offer to replace a password with a key.</figcaption>
@@ -481,7 +481,7 @@ A window whose page comes from a server on a different build shows a full-screen
 Configure it in **Settings → Remote Access**, or turn it on from the title-bar popover.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-access-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/remote-access-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/remote-access-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Settings › Remote Access while it is off: the Inactive badge and Turn on Remote Access, what it lets you do, the three steps of how it works, a note that only you can connect, and that this machine stays awake while Remote Access is on.">
   </a>
   <figcaption style="text-align:center; color:#888">Remote Access, active, in Settings → Remote Access.</figcaption>

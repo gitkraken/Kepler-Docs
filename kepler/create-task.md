@@ -69,7 +69,7 @@ Kepler names Tasks automatically from what you started them with. Rename one whe
 Click **New task** or press **Cmd/Ctrl+N**. To start one without switching to Kepler first, press **Shift+Alt+N** to open the quick launcher from anywhere, including when Kepler isn't the focused window.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-task-button-oct-2026.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/new-task-button-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/new-task-button-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The New task split button at the left end of the Kepler top bar, after the application menu, the window switcher and the Back and Forward buttons.">
   </a>
   <figcaption style="text-align:center; color:#888">The New task button, available from anywhere in Kepler.</figcaption>
@@ -117,7 +117,7 @@ A Task that has its prompt but no session yet, such as one an agent created for 
 The Task appears in the list as soon as you press **Start**, before its worktrees exist. Until setup finishes, the row carries a **Preparing** pill, and the Task's panel shows its progress under **Getting your task ready**, such as *Cloning {repo}…* or *Setting up worktrees…*. **Cancel** stops a launch while a repository is still cloning. When the new branch is being updated from its base, the session area reads **Preparing branch**: *Updating from the base branch before the session starts.*
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ade-task-preparing-row-01.png" target="_blank" rel="noopener noreferrer">
+  <a href="/wp-content/uploads/ade-task-preparing-row-01-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/ade-task-preparing-row-01-v2@2x.png" class="help-center-img img-bordered" alt="The Recent group of Tasks in progress: Write the 2.4 release notes, then a new task, Add a gift-card field to checkout, with acme-web, the Preparing pill and its spinner.">
   </a>
   <figcaption style="text-align:center; color:#888">A new task in the list while Kepler prepares it.</figcaption>
