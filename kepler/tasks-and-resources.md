@@ -76,7 +76,7 @@ A file attached to a prompt that Kepler copies into the Task when you send it is
   <a href="/wp-content/uploads/files-group-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/files-group-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Files group in the task rail, holding two files: checkout-style-guide.md, a linked file whose row reads its path on disk, /srv/acme/brand/checkout-style-guide.md, and checkout-copy-draft.md, an uploaded copy whose row reads Task folder.">
   </a>
-  <figcaption style="text-align:center; color:#888">A linked file in the Files group.</figcaption>
+  <figcaption style="text-align:center; color:#888">A linked file and an uploaded copy in the Files group.</figcaption>
 </figure>
 
 ### Issues and pull requests attach themselves
@@ -197,14 +197,14 @@ Sometimes you want an agent that forms its own view, such as a reviewer that sho
 
 1. Click **+** on the rail's **Sessions** group, or press **Cmd/Ctrl+T**. A draft session tab opens.
 2. Open **Agent settings** in the draft's composer.
-3. Turn off the **Task context** switch. It's on by default.
+3. Untick **Task context**. It's on by default.
 4. Type your prompt and press **Start**.
 
 The new session doesn't receive the Task's prompt or notes. It still gets the Task's worktrees, folders, files, and links, because it still needs to know where to work. The switch belongs to that draft, so turning it off doesn't change your other sessions. See [The Task View](/kepler/task-view#starting-a-session).
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/start-with-task-context-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/start-with-task-context-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Agent settings menu of a draft session tab: Agent OpenCode, Start in with Chat selected beside Terminal, Model Docs Model, Permission mode Build or Plan, the Task context switch turned on, MCP servers with Manage, and Use default agent.">
+    <img src="/wp-content/uploads/start-with-task-context-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Agent settings menu of a draft session tab: Agent OpenCode, Start in with Chat selected beside Terminal, Model Docs Model, Permission mode Build or Plan, Task context ticked, MCP servers with Manage, and Use default agent.">
   </a>
   <figcaption style="text-align:center; color:#888">Task context, on by default.</figcaption>
 </figure>

@@ -308,7 +308,7 @@ If a worktree is gone from disk, Kepler asks **Recreate the worktree and start t
   <figcaption style="text-align:center; color:#888">Choosing where a new session runs.</figcaption>
 </figure>
 
-**Task context** is a switch in **Agent settings**. It's on by default and *Gives the agent the task’s saved prompt and notes. Updates are included in subsequent messages.* Turn it off for a session that forms its own view instead.
+**Task context** is a checkbox in **Agent settings**. It's on by default and *Gives the agent the task’s saved prompt and notes. Updates are included in subsequent messages.* Turn it off for a session that forms its own view instead.
 
 If no agents are connected, **Agent settings** reads **No agents available**, and its menu offers **Connect an AI agent**: an **Install** row per agent, **See all {count} agents in Settings**, and **Check again** for one you installed yourself. See [Agent Integrations](/kepler/agent-integrations). An agent that's signed out reads *Sign in to {agent} to start a session*. When an agent doesn't share its options, the menu says *You can still start a session. It uses {agent}'s own model and mode.*
 

@@ -134,7 +134,7 @@ A host's page puts its actions in a card at the top: **Connect** (**Cmd/Ctrl**-c
 | **Connection** | Edit the address in place: **Host**, **Port**, **User**, and **Identity file** for SSH, or **Distro** for WSL. **Save** keeps the same saved host. Disconnect first; a connected host's fields are locked |
 | **Color** | **None**, **Rose**, **Amber**, **Lime**, **Cyan**, **Blue**, or **Violet**. Tints the host's chip, its rows, and the top bar of its windows |
 | **Mute notifications from *machine*** | *Kepler won't show desktop notifications for sessions on machine. Alerts still appear inside its windows.* |
-| **Sessions** | Labeled *survive disconnect, resumable anywhere*. Each row is a live agent session on that host, and clicking one opens it. For a host nobody is connected to, **Check** opens a short-lived connection to ask its server what is running |
+| **Sessions** | Labeled *survive disconnect, resumable anywhere* while the machine is connected. Each row is a live agent session on that host, and clicking one opens it. For a host nobody is connected to, **Check** opens a short-lived connection to ask its server what is running |
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/remote-host-page-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -484,7 +484,7 @@ Configure it in **Settings → Remote Access**, or turn it on from the title-bar
   <a href="/wp-content/uploads/remote-access-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/remote-access-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Settings › Remote Access while it is off: the Inactive badge and Turn on Remote Access, what it lets you do, the three steps of how it works, a note that only you can connect, and that this machine stays awake while Remote Access is on.">
   </a>
-  <figcaption style="text-align:center; color:#888">Remote Access, active, in Settings → Remote Access.</figcaption>
+  <figcaption style="text-align:center; color:#888">Settings → Remote Access, before you turn it on.</figcaption>
 </figure>
 
 ### Before you start

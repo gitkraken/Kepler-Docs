@@ -53,7 +53,7 @@ You can edit and reset built-in Actions, but you can't delete them. What an Acti
   <a href="/wp-content/uploads/reset-action-to-default-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/reset-action-to-default-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="The built-in Review Action's row in Settings › Actions after it was edited, with a restore icon beside its chevron and no edit or delete icon.">
   </a>
-  <figcaption style="text-align:center; color:#888">A built-in Action's row: reset and edit, no delete.</figcaption>
+  <figcaption style="text-align:center; color:#888">An edited built-in Action's row: Restore default, no delete.</figcaption>
 </figure>
 
 ***
@@ -204,7 +204,7 @@ To edit an Action, go to **Settings → Actions** and click the Action's row und
   <a href="/wp-content/uploads/actions-settings-built-in-sep-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/actions-settings-built-in-sep-2026-v2@2x.png" class="help-center-img img-bordered" alt="The All Actions list in Settings › Actions, with Built in and Custom groups: Plan, Implement, the edited Review and Address Feedback, then the custom Write Tests.">
   </a>
-  <figcaption style="text-align:center; color:#888">The Edit icon on an Action row in Settings.</figcaption>
+  <figcaption style="text-align:center; color:#888">The All Actions list. Click a row to edit that Action.</figcaption>
 </figure>
 
 Once you have a custom Action, the list splits into **Built in** and **Custom**. Until then, it shows the built-in Actions without labels.

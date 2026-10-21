@@ -27,7 +27,7 @@ Open Settings from the gear icon in the top bar, or with **⌘ ,** (**Ctrl ,** o
   <a href="/wp-content/uploads/settings-general-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/settings-general-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Settings open on Repositories. The left rail starts with Search settings and Setup, then lists Account; Agents, Tasks, Repositories, Integrations and Actions; General, Notifications, Appearance, Voice input and Keyboard shortcuts; Remote environments and Remote Access; and Updates and Help, with Repositories' section links expanded under it.">
   </a>
-  <figcaption style="text-align:center; color:#888">Settings, open on General.</figcaption>
+  <figcaption style="text-align:center; color:#888">Settings, open on Repositories.</figcaption>
 </figure>
 
 ***
@@ -158,7 +158,7 @@ The card body holds the rest:
 
 | Control | What it does |
 |---|---|
-| **Accounts** | Runs multiple logins side by side, each with its own credentials and history but sharing your skills, agents, commands, and settings. **Add account** asks whether its conversations **Keep separate** or **Share with the CLI**. Each account row has a color picker that tints the agent icon wherever that account runs (the default account stays uncolored), plus **Sign in** and an account menu with **Rename**, **Share history with the CLI**, **Sign in another way**, **Sign out**, and **Remove account**. Removing an account stops its running sessions and deletes the sessions stored only in it, unless you first **Move to CLI account**; see [Agent Sessions](/kepler/agent-sessions#several-accounts-for-one-agent). Available for Claude Code, Codex, GitHub Copilot, Auggie, and Grok Build |
+| **Accounts** | Runs multiple logins side by side, each with its own credentials and history but sharing your skills, agents, commands, and settings. **Add account** asks whether its conversations **Keep separate** or **Share with the CLI**. Each account row has a color picker that tints the agent icon wherever that account runs (the default account stays uncolored, so its picker shows the ⊘ **No color** mark), plus **Sign in** and an account menu with **Rename**, **Share history with the CLI**, **Sign in another way**, **Sign out**, and **Remove account**. Removing an account stops its running sessions and deletes the sessions stored only in it, unless you first **Move to CLI account**; see [Agent Sessions](/kepler/agent-sessions#several-accounts-for-one-agent). Available for Claude Code, Codex, GitHub Copilot, Auggie, and Grok Build |
 | **Account** | On an agent with a single login: who is signed in, with **Sign in** or **Sign out**. Signing out deletes the stored credentials |
 | **New sessions start in** | The default mode for new sessions. See below |
 | **Let artifact comments start turns** | Claude Code only. See below |
@@ -356,7 +356,7 @@ Per-repository commands have a **Variables** menu of their own, with two more va
   <a href="/wp-content/uploads/folder-fields-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/folder-fields-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The New tasks section of Settings › Tasks with the Variables menu open beside Worktrees folder, offering REPOSITORY_PATH and REPOSITORY_NAME; the Tasks folder field below has no Variables menu.">
   </a>
-  <figcaption style="text-align:center; color:#888">The three folder fields, with the Variables menu open.</figcaption>
+  <figcaption style="text-align:center; color:#888">The Worktrees and Tasks folder fields in Settings → Tasks, with the Variables menu open.</figcaption>
 </figure>
 
 #### Automatically name new tasks

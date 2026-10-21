@@ -157,7 +157,7 @@ Read the diff, mark what needs fixing, and hand the whole list to the agent in o
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/review-comment-draft-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/review-comment-draft-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Changes overlay with lines 3 and 4 of cart.js selected and a review comment draft open beneath them, reading Pull the discount and rounding into one helper, with Cancel and Comment buttons.">
+    <img src="/wp-content/uploads/review-comment-draft-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Changes overlay with text selected across lines 3 and 4 of cart.js and a review comment draft open beneath them, reading Pull the discount and rounding into one helper, with Cancel and Comment buttons.">
   </a>
   <figcaption style="text-align:center; color:#888">A review comment draft, under the lines it's about.</figcaption>
 </figure>

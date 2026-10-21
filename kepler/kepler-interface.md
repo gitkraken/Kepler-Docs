@@ -396,7 +396,7 @@ The header carries:
 - **Restore panel**, when the panel is maximized
 - **Unpin panel**, when the panel is pinned
 - **Close**
-- **Panel actions** (**⋮**): **Close**, **Open task page**, **Open on {provider}** for an issue or pull request, **Pin panel**, **Maximize panel**, **Move panel left**, and **Move panel right**
+- **Panel actions** (**⋮**): **Close**, **Open task page**, **Open on {provider}** for an issue or pull request, **Pin panel**, **Maximize panel**, **Move panel left**, and **Move panel right**. On a task, these rows join its **Task actions** menu. **Maximize panel** and the moves appear only once more than one panel is open
 
 Each pull request, issue, or artifact linked to a task has a chip under the header; hover one for its card, or click it to read it in the panel. A pull request whose branch name was used before reads *Opened from an earlier branch with the same name*. The **Resources** chip lists the task's notes, files, folders, and links, and a note opens in the panel with **Copy note**.
 

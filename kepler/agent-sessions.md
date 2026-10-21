@@ -79,7 +79,7 @@ To choose where the session runs, open the draft's target picker. It offers the 
 
 Every session sees the Task's attached resources regardless of where it runs, so what sets **All worktrees and folders** apart is only its working directory.
 
-A session receives the Task's shared context by default. To start a session that forms its own view instead, open **Agent settings** in the draft's composer and turn off **Task context**: *Gives the agent the task’s saved prompt and notes. Updates are included in subsequent messages.*
+A session receives the Task's shared context by default. To start a session that forms its own view instead, open **Agent settings** in the draft's composer and untick **Task context**: *Gives the agent the task’s saved prompt and notes. Updates are included in subsequent messages.*
 
 Right-click a draft tab or its rail row for these actions:
 
@@ -162,7 +162,7 @@ Claude Code, Codex, GitHub Copilot, Auggie, and Grok Build can each hold more th
 | **Account name** | Rename a row in place. The name is what you pick from later |
 | **Sign in** / **Sign out** | Authenticates or clears that account alone |
 | **Remove account** | Signs the account out and deletes its local data. Your shared skills, agents, and settings are untouched. Sessions whose conversations are stored only in that account are deleted with it; see below |
-| Colour swatch | At the left of each added account's row: *Pick a color to tell agents on different accounts apart*. **Rose**, **Amber**, **Lime**, **Cyan**, **Blue**, **Violet**, or **No color**. *The default account stays uncolored* |
+| Colour swatch | At the left of each added account's row: *Pick a color to tell agents on different accounts apart*. **Rose**, **Amber**, **Lime**, **Cyan**, **Blue**, **Violet**, or **No color**. *The default account stays uncolored*: its picker shows the ⊘ **No color** mark, which doesn't mean the account is off |
 
 An account's colour tints the agent icon on session tabs, the task rail, and the terminal status bar, so sessions on different accounts are told apart at a glance.
 
