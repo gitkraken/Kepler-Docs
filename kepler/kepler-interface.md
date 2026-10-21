@@ -26,7 +26,7 @@ Kepler pulls every issue and pull request assigned to you across your connected 
 Beyond this list, you'll find a task's own page, Settings, and remote connections. The top bar displays the following at all times, leading edge first:
 
 - The window switcher
-- **Back** and **Forward**
+- **Back** and **Forward**, in the desktop app only
 - New task
 - Your setup progress
 - The remote indicator
@@ -34,7 +34,9 @@ Beyond this list, you'll find a task's own page, Settings, and remote connection
 - Settings
 - Your account
 
-When an update is ready, an **Update available** chip joins the trailing cluster. It opens a popover that says what a restart would do to running work (how many agents it stops, whether terminals close) and offers **Restart to update**. When agents and terminals can survive the restart, the popover says *Running agents and open terminals keep going through the restart.* The same chip shows on every screen, so an update never waits on a banner you scrolled past.
+While an update downloads, a chip in the trailing cluster shows its progress as a ring and a percentage. Hover it for **Downloading update** (then **Verifying update**), the version, how much has arrived and about how long is left, and *Keep working. Kepler will let you know when the update is ready to install.*
+
+When an update is ready, an **Update available** chip takes its place. It opens a popover that says what a restart would do to running work (how many agents it stops, whether terminals close) and offers **Restart to update**. When agents and terminals can survive the restart, the popover says *Running agents and open terminals keep going through the restart.* The same chip shows on every screen, so an update never waits on a banner you scrolled past.
 
 On **Windows and Linux** the native title bar is gone and Kepler draws its own. The menu button at the leading edge holds the full application menu (**File**, **Edit**, **View**, **Window**, **Help**), including **Settings**, **Check for Updates…**, and **About**. macOS keeps its native menu bar, and both menus open the same **About Kepler** dialog.
 
@@ -99,6 +101,8 @@ The control at the top left switches between 3 views of your work.
 | **Tasks in progress** | The tasks you already have running in Kepler |
 | **Agent Graph** | A live visualization of every task, session, turn, tool call, and file. See [The Agent Graph](/kepler/agent-graph) |
 
+The **Related to me** chip in Todo's header states that rule; hover it to read it. To browse issues beyond it, use **New task** → **Issues** → **All visible**.
+
 Todo is where a working session starts; **Tasks in progress** is where it lives while underway. The **Agent Graph** is a segment of its own rather than a way of arranging the list, because it replaces the list instead of laying it out. It scopes over every task, narrowed by your search and filters, and the **Group** and **View** controls step aside while it's on.
 
 When launching the app, Kepler opens on **Tasks in progress**. When you start Kepler for the first time (like on a new machine), you get a **Welcome to Kepler** screen, with a summary of what's already set up and 3 options:
@@ -118,10 +122,9 @@ Above the list sits an **External sessions** section: the agent conversations ru
 |---|---|
 | The header | **{count} live** and **{count} waiting** |
 | **Show past sessions** | Extends the section to conversations found on disk, not just ones running now |
-| **Show {count} more** | The section keeps itself short; this opens the rest |
 | A row | Opens the conversation read-only, where you can fork it, continue it here, or adopt it into a task |
 
-With detection off, the section says so rather than sitting empty: *Sessions you start in your terminal can appear here. Kepler detects them through the agent's hooks.* **Turn on detection** sits beside the message. With detection on and nothing to show, it reads **No sessions running outside Kepler right now.**
+With detection off, the section says so rather than sitting empty: *External sessions are not detected*, with **Turn on in Integrations**, which opens the detection setting. With detection on and nothing to show, it reads **No sessions running outside Kepler right now.**
 
 External sessions stay listed under a filter that has no way to answer for them, rather than vanishing because a facet couldn't classify them.
 
@@ -141,7 +144,12 @@ A row reads differently depending on whether it holds a tracked issue or pull re
   </a>
   <figcaption style="text-align:center; color:#888">Todo rows for pull requests and issues.</figcaption>
 </figure>
-<!-- TODO(screenshot): New: An issue row with the muted **Mentioned** badge; ideally a Jira or Linear issue so its pill shows the tracker's own state, such as *In Progress*. -->
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/ade-todo-mentioned-badge-01.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ade-todo-mentioned-badge-01.png" class="help-center-img img-bordered" alt="The Issue group of the Todo list: GitHub issue #42, Gift card codes are case-sensitive at checkout, with the muted Mentioned badge, then #38, Cart total ignores discounts when tax is applied, assigned to you, and #45, Add a wishlist to product pages. Each row shows its repository, Open status, age and the Plan action.">
+  </a>
+  <figcaption style="text-align:center; color:#888">An issue listed because it mentions you, with the Mentioned badge.</figcaption>
+</figure>
 
 Each row shows, left to right:
 
@@ -224,7 +232,6 @@ Beside the pill sits one dot per distinct **session state**, with a count of eac
   </a>
   <figcaption style="text-align:center; color:#888">The status pill and session-state dots, with the breakdown on hover.</figcaption>
 </figure>
-<!-- TODO(screenshot): Optional re-take: the On hold stage, and the session dots for Working in background and Reconnecting. -->
 
 This shows what the *agents* are doing, a separate question from where the work stands. The vocabulary is the agent's own:
 
@@ -272,20 +279,24 @@ All of these defaults are editable. See [Actions](/kepler/actions).
   </a>
   <figcaption style="text-align:center; color:#888">The side panel, opened from a row.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — Check against 0.13.0: the composer now sits in a draft session tab under What's running. -->
 
 - **Click a row** to select it and open the side panel. A plain click replaces whatever was open, except for panels you've pinned.
 - **Shift-click** a second row to open both side by side. The panel holds one column per open item, each with its own chat, so you can work several tasks at once without leaving the list.
 - **Cmd-click** (**Ctrl-click** on Windows and Linux) to add one row to the open set, or to close it again.
-- **Double-click a row** to open the item's full task page. From a Todo row that's the page of the task behind it, so a row with no task yet does not respond.
+- **Double-click a row** to open the item's full task page. From a Todo row that's the page of the task behind it. A row with no task yet has no page, so a double-click opens its panel with the cursor in the prompt box instead.
 
-A new task appears in the list as soon as you press **Start** in the Task Composer, before its worktrees are ready. Its row shows a **Preparing** pill while Kepler sets it up, or a **Failed** pill if setup fails. You can't drag or select a task that's still being prepared. If setup fails, its panel shows **Couldn't start this task** with **Edit and retry**, so you can change the task and start it again.
+A new task appears in the list as soon as you press **Start** in the Task Composer, before its worktrees are ready. Its row shows a **Preparing** pill while Kepler sets it up, or a **Failed** pill if setup fails. You can't drag or select a task that's still being prepared. Its panel shows **Getting your task ready**, with *Cloning {repo}…* or *Setting up worktrees…*, and **Cancel** while a repository clones. If setup fails, the panel shows **Couldn't start this task** (or **Task not started** after you cancel) with **Edit and retry**, so you can change the task and start it again, and **Dismiss**. When a task starts without some of its repositories, Kepler warns *Some repositories weren't added* and names them.
 
-<!-- TODO(screenshot): New — A pending task row with the Preparing pill, and its panel showing setup progress. -->
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/ade-task-preparing-panel-01.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ade-task-preparing-panel-01.png" class="help-center-img img-bordered" alt="Tasks in progress with a new task, Add a gift-card field to checkout, in Recent with the Preparing pill and its spinner. Its side panel, also marked Preparing, reads Getting your task ready and Setting up worktrees….">
+  </a>
+  <figcaption style="text-align:center; color:#888">A new task while Kepler prepares it, in the list and in its panel.</figcaption>
+</figure>
 
 Shift-clicking ranges from your last plain click, the way it does in Finder or VS Code. You can open up to 16 panels at once. Opening another closes the leftmost unpinned one.
 
-Every open panel gets its own column straight away. Until its item loads, the column shows a placeholder that says it's loading, that the item is gone, or that it couldn't load, with **Try again** when retrying can help. Every placeholder can be closed.
+Every open panel gets its own column straight away. Until its item loads, the column shows a placeholder that says it's loading, that the item is gone, or that it couldn't load, with **Try again** when retrying can help. A pull request or issue opened while you're signed out reads *Sign in to see this pull request* (or issue) with **Sign in**, and a session panel that needs external-session detection says it's off. Every placeholder can be closed.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/multi-task-panels-oct-2026.png" target="_blank" rel="noopener noreferrer">
@@ -345,7 +356,6 @@ Selecting a row opens a panel beside the list with everything about that item, a
   </a>
   <figcaption style="text-align:center; color:#888">The side panel, with its stack of collapsible sections.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — The side panel at 0.13.0, with What's running holding a draft session tab instead of the removed Start a session section. -->
 
 Kepler does not draw a section that has nothing behind it.
 
@@ -388,6 +398,8 @@ The header carries:
 - **Close**
 - **Panel actions** (**⋮**): **Close**, **Open task page**, **Open on {provider}** for an issue or pull request, **Pin panel**, **Maximize panel**, **Move panel left**, and **Move panel right**
 
+Each pull request, issue, or artifact linked to a task has a chip under the header; hover one for its card, or click it to read it in the panel. A pull request whose branch name was used before reads *Opened from an earlier branch with the same name*. The **Resources** chip lists the task's notes, files, folders, and links, and a note opens in the panel with **Copy note**.
+
 Hover a task's title to read its prompt, with a button to copy it. The prompt is a context item of its own, labelled **Prompt**, shown first among the task's notes in the card, the preview, and the task page's rail, and it can't be deleted.
 
 To rename a task, choose **Rename task** from its **⋮** menu or press **F2** on its focused panel, and edit the name in place. Enter commits the change; Escape or clicking away discards it.
@@ -423,7 +435,6 @@ From the keyboard, a pill is two tab stops (its changes and its actions), with t
 The terminal strip's **+** becomes a chooser listing the task's checkouts by branch when the task has more than one.
 
 An issue or pull request keeps a status line as well, with its provider state, session dots, repository, assignee, and last activity. A task does not, because the row you clicked already showed that information.
-<!-- TODO(verify): the preview header was rebuilt in 0.11; confirm an issue/PR preview still shows a status line with exactly these facts. -->
 
 ***
 
