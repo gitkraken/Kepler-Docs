@@ -36,7 +36,7 @@ Get here by double-clicking a row in [the Kepler interface](/kepler/kepler-inter
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/task-header-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-header-oct-2026.png" class="help-center-img img-bordered" alt="The left side of the task header: the context panel toggle, the back chevron, the task name chip, the ⋮ Task actions menu, and the In Development progress control.">
+    <img src="/wp-content/uploads/task-header-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The left side of the task header: the context panel toggle, the back chevron, the Fix the cart total task chip with its switcher chevron, the ⋮ Task actions menu, and the In Development progress control.">
   </a>
   <figcaption style="text-align:center; color:#888">The left side of the task header. Terminal sits at the far right.</figcaption>
 </figure>
@@ -58,7 +58,7 @@ When a Task looks finished, a **Ready to archive?** prompt joins the header with
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/rename-inline-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/rename-inline-oct-2026.png" class="help-center-img img-bordered" alt="The task name turned into an editable field in the header, with its text selected, followed by the Auto-name button, × to cancel, and a check mark to save.">
+    <img src="/wp-content/uploads/rename-inline-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The task name turned into an editable field in the header with Fix the cart total selected, followed by the Auto-name button, × to cancel, and a check mark to save.">
   </a>
   <figcaption style="text-align:center; color:#888">Renaming a task in place.</figcaption>
 </figure>
@@ -133,7 +133,7 @@ Right-click any row. Every row opens with **Open**, followed by **Open to the si
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/worktree-row-menu-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/worktree-row-menu-oct-2026.png" class="help-center-img img-bordered" alt="A worktree row's right-click menu in the task rail, with Run command here open on No commands yet and Create command. The menu also lists the Open actions, New session here, New terminal here, Rename branch, Change merge target, the copy actions, and Detach worktree last.">
+    <img src="/wp-content/uploads/worktree-row-menu-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A worktree row's right-click menu in the task rail, with Run command here open on No commands yet and Create command…. The menu also lists Open, Open changes, Open in, New session here, New terminal here, Rename branch, Change merge target…, the copy actions, and Detach worktree… last, unavailable while a session is using the worktree.">
   </a>
   <figcaption style="text-align:center; color:#888">A worktree row's context menu.</figcaption>
 </figure>
@@ -176,7 +176,7 @@ The content area takes one of two shapes, set by **Show tabs on the task page** 
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/show-tabs-on-task-page-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/show-tabs-on-task-page-oct-2026.png" class="help-center-img img-bordered" alt="The Show tabs on the task page setting in Settings → General, unticked, with help text explaining that it's off by default and that turning it on keeps sessions, worktrees, and resources open as tabs.">
+    <img src="/wp-content/uploads/show-tabs-on-task-page-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Task page section of Settings › Tasks, with Show tabs on the task page and Preview tabs.">
   </a>
   <figcaption style="text-align:center; color:#888">The Show tabs on the task page setting.</figcaption>
 </figure>
@@ -187,7 +187,7 @@ Either way, terminals live in the [drawer](#the-terminal-drawer) beneath the con
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/task-columns-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-columns-oct-2026.png" class="help-center-img img-bordered" alt="The task page with tabs off: the rail on the left, then three columns side by side, a session conversation in Sessions, a worktree's changed files in Changes, and a pull request's details in Resources.">
+    <img src="/wp-content/uploads/task-columns-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The task page for Fix the cart total with tabs off: the rail on the left with Sessions, Changes and Notes, then two columns side by side, the session's conversation (thinking, plan, a Read cart.js tool call and the agent's replies) and the kepler/fix-cart-total worktree's Working changes with cart.js modified and cart.test.js added above the commit box.">
   </a>
   <figcaption style="text-align:center; color:#888">The three content columns: Sessions, Changes, and Resources.</figcaption>
 </figure>
@@ -228,7 +228,7 @@ With tabs on, anything you open from the rail (sessions, worktrees, files, and e
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/tabs-preview-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/tabs-preview-oct-2026.png" class="help-center-img img-bordered" alt="The task page with tabs on. A pull request opened with one click sits in an italic preview tab, and beside it a session tab shows an orange status dot in place of its close control.">
+    <img src="/wp-content/uploads/tabs-preview-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The task page for Fix the cart total with tabs on and two tab groups side by side. The left group starts with the pinned session tab, shrunk to its icon, beside the Prompt note in an italic preview tab; the right group holds the kepler/fix-cart-total worktree tab showing its two working changes, cart.js and cart.test.js.">
   </a>
   <figcaption style="text-align:center; color:#888">An italic preview tab beside a session tab.</figcaption>
 </figure>
@@ -245,7 +245,7 @@ A draft session's tab reads **(draft)** after its name. With tabs off, right-cli
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/ade-draft-session-tab-menu.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ade-draft-session-tab-menu.png" class="help-center-img img-bordered" alt="The top of a task's side panel with a New session (draft) tab beside the task's first session, and the draft tab's right-click menu open on Move left, with its Ctrl+Alt+[ shortcut, and Discard draft.">
+    <img src="/wp-content/uploads/ade-draft-session-tab-menu-01-v2@2x.png" class="help-center-img img-bordered" alt="The top of a task's side panel with a New session (draft) tab beside the task's first session, and the draft tab's right-click menu open on Move left, with its Ctrl+Alt+[ shortcut, and Discard draft.">
   </a>
   <figcaption style="text-align:center; color:#888">A draft session's tab and its right-click menu.</figcaption>
 </figure>
@@ -303,7 +303,7 @@ If a worktree is gone from disk, Kepler asks **Recreate the worktree and start t
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/new-session-flyout-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-session-flyout-oct-2026.png" class="help-center-img img-bordered" alt="The New session menu with Start with task context checked at the top, then All worktrees and folders and two worktrees. One worktree's flyout is open, with Start on another branch above the agent rows, each row ending in a button that starts it in the other mode.">
+    <img src="/wp-content/uploads/new-session-flyout-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A task's side panel with a New session (draft) tab and its target chip's menu open: Search branches and folders, Attached to this task with kepler/fix-cart-total, and Branches with the repository's other branches and main.">
   </a>
   <figcaption style="text-align:center; color:#888">Choosing where a new session runs.</figcaption>
 </figure>

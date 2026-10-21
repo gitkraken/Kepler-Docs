@@ -109,7 +109,7 @@ Repeated calls of the same kind fold into one node badged **Group**, which keeps
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/node-details-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/node-details-aug-2026.png" class="help-center-img img-bordered" alt="A node's details panel open beside the graph">
+    <img src="/wp-content/uploads/node-details-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Agent Graph with the Edit cart.js tool-call node of Fix the cart total selected and its chain highlighted, and the node's details panel open beside the graph: Tool call, Done, Edit cart.js, the path Fix the cart total › its session › Turn 1, Last activity, Status Done and the file it touched, cart.js. The graph's stats rail shows Working, Blocked, Thinking, Unread, Needs attention, Throughput and Tool spectrum.">
   </a>
   <figcaption style="text-align:center; color:#888">A node's details, open beside the graph.</figcaption>
 </figure>

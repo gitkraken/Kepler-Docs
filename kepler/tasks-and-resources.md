@@ -74,7 +74,7 @@ A file attached to a prompt that Kepler copies into the Task when you send it is
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/files-group-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/files-group-oct-2026.png" class="help-center-img img-bordered" alt="The Files group in the task rail, holding one linked file whose row reads its path on disk.">
+    <img src="/wp-content/uploads/files-group-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Files group in the task rail, holding two files: checkout-style-guide.md, a linked file whose row reads its path on disk, /srv/acme/brand/checkout-style-guide.md, and checkout-copy-draft.md, an uploaded copy whose row reads Task folder.">
   </a>
   <figcaption style="text-align:center; color:#888">A linked file in the Files group.</figcaption>
 </figure>
@@ -161,7 +161,7 @@ A fresh worktree is a clean checkout: no `node_modules`, no build output, nothin
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/worktree-row-menu-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/worktree-row-menu-oct-2026.png" class="help-center-img img-bordered" alt="A worktree row's right-click menu in the task rail, with Run command here open on No commands yet and Create command. The menu also lists the Open actions, New session here, New terminal here, Rename branch, Change merge target, the copy actions, and Detach worktree last.">
+    <img src="/wp-content/uploads/worktree-row-menu-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A worktree row's right-click menu in the task rail, with Run command here open on No commands yet and Create command…. The menu also lists Open, Open changes, Open in, New session here, New terminal here, Rename branch, Change merge target…, the copy actions, and Detach worktree… last, unavailable while a session is using the worktree.">
   </a>
   <figcaption style="text-align:center; color:#888">Run command here, from a worktree's right-click menu.</figcaption>
 </figure>
@@ -204,7 +204,7 @@ The new session doesn't receive the Task's prompt or notes. It still gets the Ta
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/start-with-task-context-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/start-with-task-context-oct-2026.png" class="help-center-img img-bordered" alt="The New session menu opened from the + on the Sessions group header, with Start with task context ticked at the top.">
+    <img src="/wp-content/uploads/start-with-task-context-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Agent settings menu of a draft session tab: Agent OpenCode, Start in with Chat selected beside Terminal, Model Docs Model, Permission mode Build or Plan, the Task context switch turned on, MCP servers with Manage, and Use default agent.">
   </a>
   <figcaption style="text-align:center; color:#888">Task context, on by default.</figcaption>
 </figure>
@@ -228,7 +228,7 @@ Most of what you remove from a Task isn't destroyed. The menu says which you're 
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/detach-resource-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/detach-resource-oct-2026.png" class="help-center-img img-bordered" alt="A pull request row's right-click menu in the task rail, with Open, Open to the side, Open in browser, the copy actions, and Detach pull request at the bottom.">
+    <img src="/wp-content/uploads/detach-resource-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A linked file's right-click menu in the task rail, open on checkout-style-guide.md, with Open, Open to the side, Save as…, Copy path, and Detach file… at the bottom.">
   </a>
   <figcaption style="text-align:center; color:#888">Removing a resource from its context menu in the rail.</figcaption>
 </figure>
@@ -250,7 +250,7 @@ Worktrees get more care, because deleting one can lose work.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/detach-worktree-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/detach-worktree-oct-2026.png" class="help-center-img img-bordered" alt="The Detach worktree? dialog for a worktree only this task uses. It lists the worktree as Safe to delete, with No uncommitted changes and Branch kept, above an Also delete branch checkbox and the Cancel, Delete worktree, and Detach worktree buttons.">
+    <img src="/wp-content/uploads/detach-worktree-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Detach worktree? dialog for kepler/payment-sdk-docs, a worktree only this task uses. Under an Also delete branch checkbox it lists the worktree as Safe to delete, with No uncommitted changes and Branch kept, above the Cancel, Delete worktree, and Detach worktree buttons.">
   </a>
   <figcaption style="text-align:center; color:#888">Detaching or deleting a worktree.</figcaption>
 </figure>
@@ -287,7 +287,7 @@ A worktree that would lose work is **kept**, not deleted, unless you tick the ex
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/rename-task-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/rename-task-oct-2026.png" class="help-center-img img-bordered" alt="The Task actions menu open from a task panel's header, with Rename task and its F2 shortcut highlighted among Open task page, Open in new window, Pin panel, the Progress submenu, Mark as unread, Copy task prompt, Add resource, Archive task, and Delete task.">
+    <img src="/wp-content/uploads/rename-task-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Task actions menu open from a task's side-panel header, with Rename task and its F2 shortcut highlighted among Open task page, Pin panel, the Progress submenu (In Development), Mark as unread, Copy task prompt, Add resource…, Shut down all agents, Archive task and Delete task.">
   </a>
   <figcaption style="text-align:center; color:#888">The Task actions menu, open from the header.</figcaption>
 </figure>
@@ -313,13 +313,13 @@ Ticking **Also delete branches** re-reads the list, so a worktree that was safe 
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/archive-task-dialog-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/archive-task-dialog-oct-2026.png" class="help-center-img img-bordered" alt="The Archive task? dialog, saying the task moves to the Archived section and its worktrees and branches stay on disk unless you tick the boxes. Also delete worktrees is unticked, and Also delete branches is unavailable until it is.">
+    <img src="/wp-content/uploads/archive-task-dialog-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Archive task? dialog for Upgrade the payment SDK, saying the task moves to the Archived section, its sessions and resources are kept, it can be restored any time, and its worktrees and branches stay on disk unless you tick the boxes. Also delete worktrees is unticked, and Also delete branches is unavailable until it is. Cancel and Archive task close the dialog.">
   </a>
   <figcaption style="text-align:center; color:#888">The Archive task? dialog, before you tick anything.</figcaption>
 </figure>
 <figure style="text-align:center">
   <a href="/wp-content/uploads/ade-archive-task-worktrees-01.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ade-archive-task-worktrees-01.png" class="help-center-img img-bordered" alt="The Archive task? dialog for Upgrade the payment SDK with Also delete worktrees ticked. Its Worktrees list reads 1 of 2 will be deleted: kepler/payment-sdk-v5 with 1 uncommitted file is kept because deleting it would lose work, and kepler/payment-sdk-docs with no uncommitted changes will be deleted. Below it, an unticked box offers to also delete kepler/payment-sdk-v5, losing 1 uncommitted file.">
+    <img src="/wp-content/uploads/ade-archive-task-worktrees-01-v2@2x.png" class="help-center-img img-bordered" alt="The Archive task? dialog for Upgrade the payment SDK with Also delete worktrees ticked. Its Worktrees list reads 1 of 2 will be deleted: kepler/payment-sdk-v5 with 1 uncommitted file is kept because deleting it would lose work, and kepler/payment-sdk-docs with no uncommitted changes will be deleted. Below it, an unticked box offers to also delete kepler/payment-sdk-v5, losing 1 uncommitted file.">
   </a>
   <figcaption style="text-align:center; color:#888">The same dialog with Also delete worktrees ticked: one worktree goes, one is kept.</figcaption>
 </figure>

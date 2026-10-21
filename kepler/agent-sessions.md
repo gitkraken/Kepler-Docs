@@ -63,7 +63,7 @@ You can start a session from any of the following places:
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/ade-draft-session-target-picker.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ade-draft-session-target-picker.png" class="help-center-img img-bordered" alt="A task's side panel with a New session (draft) tab beside its first session. The draft's target picker is open over the composer: Search branches and folders, Attached to this task with kepler/fix-cart-total, and Branches listing kepler/checkout-copy, kepler/payment-sdk-v5, kepler/product-search and main, with the attached branch's submenu offering Use this branch and New branch from this.">
+    <img src="/wp-content/uploads/ade-draft-session-target-picker-01-v2@2x.png" class="help-center-img img-bordered" alt="A task's side panel with a New session (draft) tab beside its first session. The draft's target picker is open over the composer: Search branches and folders, Attached to this task with kepler/fix-cart-total, and Branches listing kepler/checkout-copy, kepler/payment-sdk-v5, kepler/product-search and main, with the attached branch's submenu offering Use this branch and New branch from this.">
   </a>
   <figcaption style="text-align:center; color:#888">A draft session tab, with its target picker open.</figcaption>
 </figure>
@@ -98,7 +98,7 @@ With **Show tabs on the task page** turned on, the draft's menu is a tab's inste
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/agent-settings-from-composer-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-settings-from-composer-oct-2026.png" class="help-center-img img-bordered" alt="The Agent settings menu open from the New task composer, with rows for Agent, Plan usage, Runs as, Model, Effort, Mode, and Fast mode, and an MCP servers row reading 1 of 1 enabled with a Manage button.">
+    <img src="/wp-content/uploads/agent-settings-from-composer-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Agent settings open above a new session's composer: Agent OpenCode, Start in with Chat selected beside Terminal, Model Docs Model, Permission mode Build or Plan, the Task context switch turned on, MCP servers with Manage, and Use default agent.">
   </a>
   <figcaption style="text-align:center; color:#888">The Agent settings pill, opened from the composer.</figcaption>
 </figure>
@@ -147,7 +147,7 @@ Claude Code, Codex, GitHub Copilot, Auggie, and Grok Build can each hold more th
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/agent-accounts-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-accounts-oct-2026.png" class="help-center-img img-bordered" alt="The Claude Code card in Settings → Agents, with its version, Update, and Enabled in the title line. Its Accounts section lists the uncolored default account and a second account, Claude Code (Personal), marked with a blue colour swatch.">
+    <img src="/wp-content/uploads/agent-accounts-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Claude Code card in Settings › Agents, with its version, Update, and Enabled in the title line. Its Accounts section lists the uncoloured default account, Claude Code CLI (alex.lee@example.com, Acme, Default, Check usage), and a second account, Personal, Signed in, marked with a blue colour swatch.">
   </a>
   <figcaption style="text-align:center; color:#888">The Accounts section, in Settings → Agents.</figcaption>
 </figure>
@@ -180,7 +180,7 @@ With two or more accounts signed in, the **Agent** list expands to one row per a
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/account-multiple-selector-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/account-multiple-selector-oct-2026.png" class="help-center-img img-bordered" alt="The Agent list open in the composer, grouped by agent. Under a Claude Code heading sit two account rows, CLI and Claude Code (Personal), followed by Codex CLI and the other agents, then Add another account and Install another agent.">
+    <img src="/wp-content/uploads/account-multiple-selector-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Agent list open in the New task composer, grouped by agent. Under a Claude Code heading sit two account rows, CLI (alex.lee@example.com, Acme) with a check mark and Personal (Not signed in), followed by Codex CLI, GitHub Copilot CLI, Cursor, Antigravity, OpenCode and the other agents, then Add another account and Install another agent.">
   </a>
   <figcaption style="text-align:center; color:#888">The Agent list, with one row per account.</figcaption>
 </figure>
@@ -223,7 +223,7 @@ A session runs one of two ways, and the choice is no longer Claude Code's alone.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/opens-in-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/opens-in-oct-2026.png" class="help-center-img img-bordered" alt="The Claude Code card in Settings → Agents, with its Opens in control set to Rich chat rather than Terminal, below the Accounts section and above Let artifact comments start turns.">
+    <img src="/wp-content/uploads/opens-in-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Claude Code card in Settings › Agents, with New sessions start in set to Chat and the help text You can pick the other one when you start a session.">
   </a>
   <figcaption style="text-align:center; color:#888">New sessions start in, on an agent's card in Settings → Agents.</figcaption>
 </figure>
@@ -433,7 +433,7 @@ Everything you send during one turn is merged and handed over together, so two q
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/firing-into-a-running-session-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/firing-into-a-running-session-aug-2026.png" class="help-center-img img-bordered" alt="The queue banner with one queued prompt, and Interrupt & send and Clear queue controls visible">
+    <img src="/wp-content/uploads/firing-into-a-running-session-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="A running session in a task's side panel: the agent's plan at 1 of 3, its turn still running on Run npm test, and below it 1 queued with Interrupt & send and Clear queue, holding the prompt Also cover gift card codes with surrounding spaces. The composer reads Type a message to queue….">
   </a>
   <figcaption style="text-align:center; color:#888">A prompt queued behind an agent's current work.</figcaption>
 </figure>
@@ -506,20 +506,20 @@ Anyone with edit access to a published artifact can comment on it, and by defaul
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/artifact-card-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/artifact-card-oct-2026.png" class="help-center-img img-bordered" alt="A published artifact shown as a card in a Claude Code Chat session, with its title, Private, Open, and a copy link button, followed by the Artifact comments can start turns notice with Keep on and Turn off.">
+    <img src="/wp-content/uploads/artifact-card-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A published artifact shown as a card in a session's chat: its icon and title, Acme gift cards, with Preview, Open and a copy link button.">
   </a>
   <figcaption style="text-align:center; color:#888">An artifact card, and the notice the first publish shows.</figcaption>
 </figure>
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/artifact-chip-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/artifact-chip-oct-2026.png" class="help-center-img img-bordered" alt="The artifact attached to the task as a link on the task's pill, with its popover open showing the artifact's title, its link, Open, and Copy link.">
+    <img src="/wp-content/uploads/artifact-chip-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The artifact attached to the task as a link chip, Acme gift cards, under the task's worktree pill, with its hover card open showing the artifact's title, its link, Open and Copy link.">
   </a>
   <figcaption style="text-align:center; color:#888">The published artifact, attached to the task as a link.</figcaption>
 </figure>
 <figure style="text-align:center">
   <a href="/wp-content/uploads/ade-artifact-preview-01.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ade-artifact-preview-01.png" class="help-center-img img-bordered" alt="A session with an Acme gift cards artifact card (Preview, Open) in its chat, and the artifact's Preview pane docked beside the chat: the rendered gift-card landing page under a header with Local preview, Reload, Open and Close preview.">
+    <img src="/wp-content/uploads/ade-artifact-preview-01-v2@2x.png" class="help-center-img img-bordered" alt="A session with an Acme gift cards artifact card (Preview, Open) in its chat, and the artifact's Preview pane docked beside the chat: the rendered gift-card landing page under a header with Local preview, Reload, Open and Close preview.">
   </a>
   <figcaption style="text-align:center; color:#888">An artifact's Preview pane, docked beside the chat.</figcaption>
 </figure>
@@ -617,7 +617,7 @@ Two different readouts, and they measure different things.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/usage-indicators-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/usage-indicators-oct-2026.png" class="help-center-img img-bordered" alt="The Context window card open above the composer's context ring, at 68%, listing tokens Used, Available, and Total, and the Estimated cost at API rates.">
+    <img src="/wp-content/uploads/usage-indicators-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Context window card open above the composer's context ring, at 68%, listing 136K tokens Used, 64K Available and 200K Total, and the Estimated cost at API rates, $0.42.">
   </a>
   <figcaption style="text-align:center; color:#888">The Context window card, from the context ring.</figcaption>
 </figure>
@@ -633,7 +633,7 @@ A Claude Code or Codex session reports its own **5h** and **7d** readings as it 
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/show-token-usage-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/show-token-usage-aug-2026.png" class="help-center-img img-bordered" alt="The Show token usage setting, with Enable checked and its explanatory hint">
+    <img src="/wp-content/uploads/show-token-usage-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Usage limits section of Settings › Agents, with Show plan usage for Claude Code, Codex and Augment and Resume after the usage limit resets, both off, each with its help text.">
   </a>
   <figcaption style="text-align:center; color:#888">Show plan usage for Claude Code, Codex and Augment, in Settings → Agents → Usage limits.</figcaption>
 </figure>
@@ -794,7 +794,7 @@ If a session fails to start after you launch it, the task page and the Dashboard
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/ade-task-start-failed-notice-01.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ade-task-start-failed-notice-01.png" class="help-center-img img-bordered" alt="The top of the task page for Fix the cart total with the OpenCode couldn't start notice: the message Session not initialized, Retry, Open agent settings, and a close button that dismisses it.">
+    <img src="/wp-content/uploads/ade-task-start-failed-notice-01-v2@2x.png" class="help-center-img img-bordered" alt="The top of the task page for Fix the cart total with the OpenCode couldn't start notice: the message Session not initialized, Retry, Open agent settings, and a close button that dismisses it.">
   </a>
   <figcaption style="text-align:center; color:#888">A session that couldn't start, on the task page.</figcaption>
 </figure>
@@ -824,7 +824,7 @@ To choose which events notify you, and whether each one appears as a **Desktop**
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/ade-settings-notifications.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ade-settings-notifications.png" class="help-center-img img-bordered" alt="Settings › Notifications: a grid of events (Replies, Questions, Permission requests, Errors) against Desktop and In Kepler, at their defaults, with Play a sound with desktop notifications and Notify even for the task you're looking at below it.">
+    <img src="/wp-content/uploads/ade-settings-notifications-01-01-v2@2x.png" class="help-center-img img-bordered" alt="Settings › Notifications: a grid of events (Replies, Questions, Permission requests, Errors) against Desktop and In Kepler, at their defaults, with Play a sound with desktop notifications and Notify even for the task you're looking at below it.">
   </a>
   <figcaption style="text-align:center; color:#888">What to notify you about, in Settings → Notifications.</figcaption>
 </figure>

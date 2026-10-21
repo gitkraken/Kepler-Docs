@@ -27,7 +27,7 @@ All of it lives in **Settings → Agents**.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/agent-settings-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-settings-oct-2026.png" class="help-center-img img-bordered" alt="Settings → Agents, with Update all and Re-scan above the agent cards. The Claude Code card shows its version, Update, and Enabled in the title line, then Accounts, New sessions start in set to Chat, Let artifact comments start turns, and a collapsed Advanced section.">
+    <img src="/wp-content/uploads/agent-settings-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Settings › Agents: the page description, New tasks use Claude Code with Change in Tasks, and Your agents with Update all and Re-scan above the Claude Code card, which shows its account (alex.lee@example.com, Acme, Default), New sessions start in set to Chat, Let artifact comments start turns, and a collapsed Program and data folder.">
   </a>
   <figcaption style="text-align:center; color:#888">Settings → Agents.</figcaption>
 </figure>
@@ -127,7 +127,7 @@ Two buttons sit above the agent cards in **Settings → Agents**: **Re-scan** re
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/agent-maintenance-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-maintenance-oct-2026.png" class="help-center-img img-bordered" alt="Update all and Re-scan above the Claude Code card in Settings → Agents.">
+    <img src="/wp-content/uploads/agent-maintenance-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Update all and Re-scan beside the Your agents heading, above the Claude Code card in Settings › Agents: version 2.1.145 with Update and Enabled, its Accounts (alex.lee@example.com, Acme, Default), New sessions start in, Let artifact comments start turns, and Program and data folder.">
   </a>
   <figcaption style="text-align:center; color:#888">Update all and Re-scan, above the agent cards.</figcaption>
 </figure>

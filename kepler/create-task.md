@@ -70,7 +70,7 @@ Click **New task** or press **Cmd/Ctrl+N**. To start one without switching to Ke
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/new-task-button-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-task-button-oct-2026.png" class="help-center-img img-bordered" alt="The New task split button at the left end of the Kepler top bar, after the window switcher and the Back and Forward buttons.">
+    <img src="/wp-content/uploads/new-task-button-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The New task split button at the left end of the Kepler top bar, after the application menu, the window switcher and the Back and Forward buttons.">
   </a>
   <figcaption style="text-align:center; color:#888">The New task button, available from anywhere in Kepler.</figcaption>
 </figure>
@@ -118,7 +118,7 @@ The Task appears in the list as soon as you press **Start**, before its worktree
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/ade-task-preparing-row-01.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ade-task-preparing-row-01.png" class="help-center-img img-bordered" alt="The Recent group of Tasks in progress: Write the 2.4 release notes, then a new task, Add a gift-card field to checkout, with acme-web, the Preparing pill and its spinner.">
+    <img src="/wp-content/uploads/ade-task-preparing-row-01-v2@2x.png" class="help-center-img img-bordered" alt="The Recent group of Tasks in progress: Write the 2.4 release notes, then a new task, Add a gift-card field to checkout, with acme-web, the Preparing pill and its spinner.">
   </a>
   <figcaption style="text-align:center; color:#888">A new task in the list while Kepler prepares it.</figcaption>
 </figure>

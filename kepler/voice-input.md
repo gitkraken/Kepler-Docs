@@ -32,7 +32,7 @@ Voice input is off until you set it up. To set it up, open **Settings → Voice 
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/voice-input-settings-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/voice-input-settings-aug-2026.png" class="help-center-img img-bordered" alt="The Settings → Voice Input page, with Enable voice input on, the downloaded model's status, and Dictation options">
+    <img src="/wp-content/uploads/voice-input-settings-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="Settings › Voice input with a model installed: the Fast model, about 42 MB on this machine, with Change quality, Remove voice input and a collapsed Technical details; Use voice input in the chat prompt turned on; and When you stop talking set to Insert the text so you can edit it, with Send the prompt and Keep listening, transcribing each phrase as you pause.">
   </a>
   <figcaption style="text-align:center; color:#888">Settings → Voice Input.</figcaption>
 </figure>

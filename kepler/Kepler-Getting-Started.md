@@ -58,7 +58,7 @@ In a window connected to another machine, the screen says *Finish signing in in 
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/sign-in-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/sign-in-aug-2026.png" class="help-center-img img-bordered" alt="Kepler's welcome screen with the Sign in with GitKraken button">
+    <img src="/wp-content/uploads/sign-in-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="Kepler's sign-in screen: the Kepler Quick Start Tour video card with Watch now on the left, and on the right Kepler with its Public Preview badge, Run any agent, on any repo, from plan to merge, the description, Sign in with GitKraken, and New to GitKraken? You'll create an account in the next step. Version 0.13.0 sits top right.">
   </a>
   <figcaption style="text-align:center; color:#888">The welcome screen on first launch.</figcaption>
 </figure>
@@ -130,7 +130,7 @@ Click **New task** or press **Cmd/Ctrl+N**. From outside Kepler, **Shift+Alt+N**
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/new-task-button-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-task-button-oct-2026.png" class="help-center-img img-bordered" alt="The New task split button at the left end of the Kepler top bar, after the window switcher and the Back and Forward buttons.">
+    <img src="/wp-content/uploads/new-task-button-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The New task split button at the left end of the Kepler top bar, after the application menu, the window switcher and the Back and Forward buttons.">
   </a>
   <figcaption style="text-align:center; color:#888">The New task button, available from anywhere in Kepler.</figcaption>
 </figure>

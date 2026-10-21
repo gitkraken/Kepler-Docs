@@ -25,7 +25,7 @@ Manage providers in **Settings → Integrations**, in the **Issues and pull requ
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/provider-integrations-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/provider-integrations-oct-2026.png" class="help-center-img img-bordered" alt="Provider Integrations in Settings → Integrations, listing all twelve providers with Refresh at the top. GitHub and Jira show a Connected badge with Disconnect and Reconnect, and the rest offer Connect.">
+    <img src="/wp-content/uploads/provider-integrations-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Issues and pull requests section of Settings › Integrations, with GitHub and Azure DevOps (two accounts) connected and the other providers listed with Connect buttons.">
   </a>
   <figcaption style="text-align:center; color:#888">Issues and pull requests, in Settings → Integrations.</figcaption>
 </figure>
@@ -123,7 +123,7 @@ Click **Disconnect** on the provider's row in **Settings → Integrations** and 
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/disconnect-provider-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/disconnect-provider-aug-2026.png" class="help-center-img img-bordered" alt="A connected provider's row, with Connected badge, Disconnect, and Reconnect">
+    <img src="/wp-content/uploads/disconnect-provider-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="GitHub's row in Settings › Integrations, with its Connected badge, Disconnect and Reconnect.">
   </a>
   <figcaption style="text-align:center; color:#888">A connected provider's row.</figcaption>
 </figure>

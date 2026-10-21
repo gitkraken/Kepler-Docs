@@ -63,7 +63,7 @@ Each row is a server. The switch on a row turns the server on or off, and clicki
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/mcp-servers-dialog-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/mcp-servers-dialog-oct-2026.png" class="help-center-img img-bordered" alt="The MCP servers dialog for Claude Code on the gitkraken-client repository. The User group holds the GitKraken server and the Project group holds playwright-electron, both turned on, with Add server below.">
+    <img src="/wp-content/uploads/mcp-servers-dialog-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The MCP servers dialog for Claude Code in acme-web, with Open repo settings. Added by you lists acme-issues and acme-analytics, marked Sign in needed; In this repo, shared with your team lists acme-design-system marked Sign in needed, and storybook. Each row has a switch, turned on, and opens its details; Add server is at the bottom.">
   </a>
   <figcaption style="text-align:center; color:#888">The MCP servers dialog for one repository.</figcaption>
 </figure>
@@ -76,7 +76,7 @@ In a session or in the New task composer, open the **Agent settings** pill. Its 
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/mcp-agent-settings-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/mcp-agent-settings-oct-2026.png" class="help-center-img img-bordered" alt="The Agent settings menu from the New task composer, with the MCP servers row at the bottom reading 2 of 2 enabled beside a Manage button.">
+    <img src="/wp-content/uploads/mcp-agent-settings-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Agent settings menu from the New task composer with Claude Code CLI chosen for alex.lee@example.com: Start in (Chat or Terminal), a notice that Claude Code didn't share its options with Retry, and the MCP servers row reading 4 of 4 enabled beside a Manage button, above Use default agent.">
   </a>
   <figcaption style="text-align:center; color:#888">The MCP servers row in the Agent settings menu.</figcaption>
 </figure>
@@ -93,7 +93,7 @@ To turn off one tool, open the server's page and turn off the tool's switch. *Tu
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/ade-mcp-server-detail.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ade-mcp-server-detail.png" class="help-center-img img-bordered" alt="The acme-issues MCP server's page for Claude Code: Also add to… and Remove server, Runs as a command acme-issues-mcp, Let Claude Code use this server switched on (applies in every repo), and the Tools list with a switch on each of search_issues, get_issue, create_issue and add_comment.">
+    <img src="/wp-content/uploads/ade-mcp-server-detail-01-v2@2x.png" class="help-center-img img-bordered" alt="The acme-issues MCP server's page for Claude Code: Also add to… and Remove server, Runs as a command acme-issues-mcp, Let Claude Code use this server switched on (applies in every repo), and the Tools list with a switch on each of search_issues, get_issue, create_issue and add_comment.">
   </a>
   <figcaption style="text-align:center; color:#888">A server's page, with a switch for each of its tools.</figcaption>
 </figure>
@@ -110,7 +110,7 @@ Turning off a single tool works for Claude Code, Codex, and Grok Build. For the 
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/mcp-global-defaults-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/mcp-global-defaults-oct-2026.png" class="help-center-img img-bordered" alt="The MCP servers section of Settings → Agents, with a tab for each agent and Claude Code selected. Under User, a GitKraken server is turned on, with Add server below it.">
+    <img src="/wp-content/uploads/mcp-global-defaults-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The MCP servers section of Settings › Agents for Claude Code CLI (alex.lee@example.com, Acme): Add server, the Agent picker, Added by you with acme-issues, docs-search and acme-analytics each switched on, and Keep the GitKraken MCP server installed in every agent.">
   </a>
   <figcaption style="text-align:center; color:#888">Global MCP server defaults, in Settings → Agents.</figcaption>
 </figure>
@@ -140,7 +140,7 @@ To add a server, click **Add server** at the foot of the manager. The **Add MCP 
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/mcp-add-server-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/mcp-add-server-oct-2026.png" class="help-center-img img-bordered" alt="The Add server form in Settings → Agents → MCP servers for Claude Code, with Name, Transport set to Command, Command, Arguments, and Environment variables fields, and Cancel and Add server buttons.">
+    <img src="/wp-content/uploads/mcp-add-server-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Add MCP server page for Claude Code: Name, Runs as set to Command (beside URL and URL (SSE)), Command, Arguments, Environment variables with Add, and Cancel and Save.">
   </a>
   <figcaption style="text-align:center; color:#888">Adding a command server.</figcaption>
 </figure>
