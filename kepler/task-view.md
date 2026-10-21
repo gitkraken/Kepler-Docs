@@ -244,8 +244,8 @@ A tab's **Tab actions** chevron and its right-click menu hold everything the thi
 A draft session's tab reads **(draft)** after its name. With tabs off, right-click a draft tab for **Discard draft**, plus **Move left** and **Move right** where the tab can move. With tabs on, its menu holds the tab's own verbs instead: **Keep open** while it's a preview, **Pin tab** or **Unpin tab**, and **Close tab**, which is a draft's only close. Closing a draft that has text in it asks **Discard new session?** first, because *Your draft prompt and attachments will be removed.*
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ade-draft-session-tab-menu-01.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ade-draft-session-tab-menu-01.png" class="help-center-img img-bordered" alt="The top of a task's side panel with a New session (draft) tab beside the task's first session, and the draft tab's right-click menu open on Move left, with its Ctrl+Alt+[ shortcut, and Discard draft.">
+  <a href="/wp-content/uploads/ade-draft-session-tab-menu.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ade-draft-session-tab-menu.png" class="help-center-img img-bordered" alt="The top of a task's side panel with a New session (draft) tab beside the task's first session, and the draft tab's right-click menu open on Move left, with its Ctrl+Alt+[ shortcut, and Discard draft.">
   </a>
   <figcaption style="text-align:center; color:#888">A draft session's tab and its right-click menu.</figcaption>
 </figure>
