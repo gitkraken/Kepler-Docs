@@ -119,6 +119,8 @@ Selecting a node opens details beside the graph. What you see depends on what yo
 - **Session**: the agent, state, model, mode, context used, cost, where it's running, and its stop reason.
 - **Tool call**: the tool, the exact input, the files and paths it touched, how long it took, and how many calls failed.
 - **Subagent**: its type, its prompt, and its own calls.
+- **Task**: its status (**Active**, **On hold**, or **Archived**), its sessions, and its resources.
+- **File**: a preview of the file. For a large file, the preview reads only its beginning.
 
 **Duration is only shown when Kepler actually watched the call happen.** Replayed history can't tell you how long something took, so the graph leaves it out rather than estimating.
 

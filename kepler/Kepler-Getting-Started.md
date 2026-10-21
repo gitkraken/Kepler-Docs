@@ -44,11 +44,17 @@ Kepler is in **public preview**. A free GitKraken account is all you need.
 2. Run it.
 3. Launch Kepler.
 
+**If you open an older copy of Kepler** than the one that last used your data, Kepler stops at **Kepler is out of date** before it opens, because the older copy can't read everything the newer one saved; sessions in particular may look like they have disappeared. The dialog names the version your data needs, and offers **Open Newer Version** when a newer copy is installed, or **Update and Restart** when this copy can update itself, plus **Quit** and **Open Anyway**. A Snap install doesn't offer **Update and Restart**.
+
 ***
 
 ## Sign in
 
 Kepler opens on a welcome screen. Click **Sign in with GitKraken**. If you do not have an account, you'll create one in the next step.
+
+The screen's top corner shows Kepler's version. When an update has downloaded, it reads **Update ready to install** with **Update and restart**, so you can update before you sign in.
+
+In a window connected to another machine, the screen says *Finish signing in in your browser, or paste the code in the Kepler window on this machine.* If that window can't be signed in, it says *Couldn't sign this window in with your Kepler account. Reconnect it and try again.*
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/sign-in-aug-2026.png" target="_blank" rel="noopener noreferrer">

@@ -24,7 +24,7 @@ taxonomy:
 | What you're looking for | Where it is now |
 |---|---|
 | Default repositories folder | [Settings](/kepler/settings) → Repositories |
-| Default worktrees folder, path placeholders | [Settings](/kepler/settings) → Tasks |
+| Worktrees folder, and the **Variables** it can use | [Settings](/kepler/settings) → Tasks |
 | Repository commands, and running them on worktree creation | [Settings](/kepler/settings) → Repositories |
 | Embedded terminals | [Settings](/kepler/settings) → Appearance |
 | First-run setup | [Getting Started](/kepler/kepler-getting-started) |

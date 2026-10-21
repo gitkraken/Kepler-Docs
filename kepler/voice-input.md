@@ -36,7 +36,6 @@ Voice input is off until you set it up. To set it up, open **Settings → Voice 
   </a>
   <figcaption style="text-align:center; color:#888">Settings → Voice Input.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — Settings → Voice input at 0.13.0, with the installed model, Use voice input in the chat prompt, and the When you stop talking options. -->
 
 ***
 
@@ -79,7 +78,9 @@ Once a model is installed, the page shows the model and its size on this machine
 | **Remove voice input** | Deletes the model, frees its storage, and turns off the chat microphone. You can set it up again at any time |
 | **Technical details** | Shows the model ID, its revision, and the backend and data type it runs on |
 | **Use voice input in the chat prompt** | Turns the microphone on or off. Turn it off to pause voice input. The downloaded model stays on this machine |
-| **When you stop talking** | Chooses what happens to what you say. See [Choose what happens when you stop talking](#choose-what-happens-when-you-stop-talking) | For the full walkthrough of the setup sequence, see [Settings](/kepler/settings).
+| **When you stop talking** | Chooses what happens to what you say. See [Choose what happens when you stop talking](#choose-what-happens-when-you-stop-talking) |
+
+For the full walkthrough of the setup sequence, see [Settings](/kepler/settings).
 
 ***
 
