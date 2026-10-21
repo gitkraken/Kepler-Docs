@@ -31,7 +31,6 @@ All of it lives in **Settings → Agents**.
   </a>
   <figcaption style="text-align:center; color:#888">Settings → Agents.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — Settings → Agents at Kepler 0.13.0: the page description and the New tasks use {agent}. pointer with Change in Tasks, then the Your agents cards (Claude Code card showing Accounts and New sessions start in set to Chat), followed by the Custom agents, MCP servers, Agent tools, and Usage limits sections. Rewrite the alt text to match the new image. -->
 
 ***
 
@@ -80,7 +79,7 @@ Kepler checks both before it starts a session and tells you to update rather tha
 
 ## Install an agent
 
-When an agent is not installed, its section reads **Not installed** and offers **Install**. Kepler runs the install command on your behalf and streams the output, so you can read a failure rather than guess at one.
+When an agent is not installed, its section reads **Not installed** and offers **Install**. Kepler runs the install command on your behalf and streams the output, so you can read a failure rather than guess at one. **Cancel** stops an install in progress (*Install cancelled: {name}*). Installs and updates run one at a time: start a second while one is running and it waits its turn. One that produces no result for 20 minutes stops on its own and says so in the output.
 
 Kepler declares install methods per operating system, so the list you see depends on the machine you're on:
 
@@ -106,7 +105,7 @@ Kepler doesn't close the install output pane automatically when the install fini
 
 Kepler resolves each agent's binary the way your shell does: the first match on your `PATH`, so it agrees with `which`. Beyond `PATH`, it also sweeps your login shell's environment and well-known install directories. That's how Kepler finds an agent installed by nvm or Homebrew, even when you didn't launch Kepler from a terminal.
 
-Each agent's card in **Settings → Agents** shows what Kepler resolved. The version and **Install** sit in the card's title line; **Binary** and **Data directory** sit under **Advanced**:
+Each agent's card in **Settings → Agents** shows what Kepler resolved. The version and **Install** sit in the card's title line; **Binary**, **Components** and **Data folder** sit under **Program and data folder**:
 
 | Control | What it does |
 |---|---|
@@ -117,7 +116,7 @@ Each agent's card in **Settings → Agents** shows what Kepler resolved. The ver
 | **Custom path…** | Pins an absolute path of your own. Kepler validates it and refuses a directory or a path that is not a file |
 | **Clear custom** | Drops the pinned path and goes back to automatic resolution. Shown only while a custom path is set |
 | **Installed versions** | A picker listing every install Kepler found, with an **Auto** row. Appears only when Kepler finds more than one |
-| **Data directory** | Overrides the agent's own data and config directory. Leave it empty for the agent default |
+| **Data folder** | Overrides the agent's own data and config directory. Leave it empty for the agent default |
 | **Enabled** | Whether Kepler offers this agent when you start a session |
 
 If Kepler can't read an installed agent's version, its section shows a **Version unknown** badge rather than plain **Installed**: *Kepler couldn't read {name}'s version. Features that depend on the version stay off, such as sending a new session's first message automatically. Reinstalling or updating {name} usually fixes this.*
