@@ -161,7 +161,12 @@ Read the diff, mark what needs fixing, and hand the whole list to the agent in o
   </a>
   <figcaption style="text-align:center; color:#888">A review comment draft, under the lines it's about.</figcaption>
 </figure>
-<!-- TODO(screenshot): New: Two posted comment cards under diff lines, with the "2 comments · Add to prompt" control in the viewer header. -->
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/ade-review-comments-01.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ade-review-comments-01.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total with cart.js open. Two posted review comments sit under the diff lines they are about, on line 3 and line 4, each with Edit, Delete and Add to prompt, and the overlay header reads 2 comments beside Add to prompt.">
+  </a>
+  <figcaption style="text-align:center; color:#888">Two posted comments, with Add to prompt in the viewer header.</figcaption>
+</figure>
 
 | To comment on | Do this |
 |---|---|
@@ -263,9 +268,9 @@ Counts only move on a fetch, so the control says when it last looked: **Checked 
 The chevron beside it lists **Push** (or **Publish**), **Pull** and **Fetch**, plus:
 
 - **Force push**: *Rewrites the remote branch*. Offered when the branch has diverged from its upstream, as a deliberate, separate click.
+- **Update**: where the branch stands against its merge target, and the way into the update view.
 
 After you apply a rebase, the remote still has the branch's old commits, so **Force push** becomes the main button instead of a menu item. The **Force push?** confirmation explains that the branch was rebased and that Kepler refuses the force push if someone else pushed in the meantime.
-- **Update**: where the branch stands against its merge target, and the way into the update view.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/sync-control-menu-oct-2026.png" target="_blank" rel="noopener noreferrer">
@@ -308,7 +313,12 @@ You have two ways through the conflicts:
 
 AI conflict resolution runs the rebase or merge on a copy and resolves each conflicted file for you. Your branch changes only when you apply the result.
 
-<!-- TODO(screenshot): New — The update view in its conflict state: "Review conflicts in {branch}" with the Rebase with AI button and its menu open on Merge with AI. -->
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/ade-sync-ai-conflicts-01.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ade-sync-ai-conflicts-01.png" class="help-center-img img-bordered" alt="The update view for kepler/fix-cart-total in its conflict state: Review conflicts in kepler/fix-cart-total, with main, 1 file conflicts with main, and cart.js with 1 conflict region. The Rebase with AI button's menu is open on Merge with AI.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The update view on a conflicting branch, with Rebase with AI and Merge with AI.</figcaption>
+</figure>
 
 AI conflict resolution needs all of the following:
 
@@ -348,7 +358,12 @@ Each file row shows one of the following methods:
 
 The review persists across reloads and windows, so you can close the view and come back to it before you apply.
 
-<!-- TODO(screenshot): New — An AI review at Ready to apply: the verdict badge, the "AI resolved {count} files · confidence {confidence}%" line, and commit cards with per-file methods and confidence badges. -->
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/ade-sync-ai-review-01.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ade-sync-ai-review-01.png" class="help-center-img img-bordered" alt="The update view for kepler/fix-cart-total after an AI rebase: Ready to apply with Apply and Discard, a Needs review badge over the AI's summary and the check cart.js — low confidence, the line AI resolved 1 file · confidence 75%, and a commit card for Apply the discount before tax listing cart.js with its AI method, a 75% confidence badge and what the AI did.">
+  </a>
+  <figcaption style="text-align:center; color:#888">An AI review at Ready to apply.</figcaption>
+</figure>
 
 <!-- TODO(verify): Resolution method and persistence behavior verified against kepler v0.13.0 strings and src/ui/components/git/sync/; check against a live AI run before publishing. -->
 
@@ -448,7 +463,6 @@ On the Community plan, both rows still appear, with a padlock and the tooltip *N
   </a>
   <figcaption style="text-align:center; color:#888">AI Sync and Compose, in the agent settings.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — The Agent tools section of Settings → Agents at 0.13.0, showing the AI Sync and AI Compose rows with their new help text. -->
 
 ***
 
