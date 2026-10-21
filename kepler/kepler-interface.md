@@ -400,6 +400,13 @@ The header carries:
 
 Each pull request, issue, or artifact linked to a task has a chip under the header; hover one for its card, or click it to read it in the panel. A pull request whose branch name was used before reads *Opened from an earlier branch with the same name*. The **Resources** chip lists the task's notes, files, folders, and links, and a note opens in the panel with **Copy note**.
 
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/artifact-chip-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/artifact-chip-oct-2026.png" class="help-center-img img-bordered" alt="The artifact attached to the task as a link chip, Acme gift cards, under the task's worktree pill, with its hover card open showing the artifact's title, its link, Open and Copy link.">
+  </a>
+  <figcaption style="text-align:center; color:#888">A linked item's chip under the header, with its hover card.</figcaption>
+</figure>
+
 Hover a task's title to read its prompt, with a button to copy it. The prompt is a context item of its own, labelled **Prompt**, shown first among the task's notes in the card, the preview, and the task page's rail, and it can't be deleted.
 
 To rename a task, choose **Rename task** from its **⋮** menu or press **F2** on its focused panel, and edit the name in place. Enter commits the change; Escape or clicking away discards it.
