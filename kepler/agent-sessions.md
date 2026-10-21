@@ -509,8 +509,9 @@ Anyone with edit access to a published artifact can comment on it, and by defaul
   <a href="/wp-content/uploads/artifact-card-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/artifact-card-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A published artifact shown as a card in a session's chat: its icon and title, Acme gift cards, with Preview, Open and a copy link button.">
   </a>
-  <figcaption style="text-align:center; color:#888">An artifact card, and the notice the first publish shows.</figcaption>
+  <figcaption style="text-align:center; color:#888">A published artifact's card in the chat.</figcaption>
 </figure>
+<!-- TODO(screenshot): New: The Artifact comments can start turns notice under a Claude Code Chat session's first artifact card, with Keep on and Turn off. -->
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/artifact-chip-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
