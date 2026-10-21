@@ -36,7 +36,8 @@ Everything up to [Remote Access](#remote-access-reach-kepler-from-another-device
 
 <div class="note" markdown="1">
 
-**Remote environments need a paid plan.** Every paid plan includes it, with no limit on how many environments you can add. Unpaid plans see a banner offering a free trial where one is available, and **Switch to {organization}** when another organization you belong to already includes it.
+**Remote environments need a paid plan.** Every paid plan except Student includes it, with no limit on how many environments you can add. Other plans see a banner offering a free trial where one is available, and, when another organization you belong to already includes it, names that organization with **Switch to organization**. If you've just upgraded, **Already upgraded?** with **Check again** re-reads your plan; when nothing has changed, it says so briefly: *Still on {plan}*.
+<!-- TODO(verify): Confirm with the product team that Student is the only paid plan without remote environments (src/ui/components/auth/plan.ts at v0.13.0 names Student alone). -->
 
 </div>
 
@@ -52,6 +53,7 @@ Kepler binds each window to one environment at a time, and the title-bar chip sh
   </a>
   <figcaption style="text-align:center; color:#888">The chip on a host colored Violet, with the popover header peeking on hover.</figcaption>
 </figure>
+<!-- TODO(screenshot): Replace — The title-bar chip at 0.13.0 on a connected machine tinted with its color, with the popover header peeking on hover: Connected, latency, the versions, Disconnect, and the restart and stop server buttons. -->
 
 | Chip | What it means |
 |---|---|
@@ -120,9 +122,8 @@ A connect that a *different* window starts never takes over this window's chip.
   </a>
   <figcaption style="text-align:center; color:#888">Settings → Remote Environments, with a saved host.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — Settings → Remote environments at 0.13.0, with Add machine, Your machines listing a saved machine, and Found on this machine with Show hidden (N). -->
 
-**Found on this machine** lists machines from your `~/.ssh/config` and WSL distributions you have not saved yet. **Add** saves one. Kepler shows three at first, with **Show *N* more** for the rest. The eye icon hides a machine you never want offered, and **Show hidden (*N*)** brings them back.
+**Found on this machine** lists machines from your `~/.ssh/config` and WSL distributions you have not saved yet. **Add** saves one. On a plan without remote environments, it reads **Try free and add** where a trial is open, or **Upgrade to add**, which opens the plan page and saves nothing. Kepler shows three at first, with **Show *N* more** for the rest. The eye icon hides a machine you never want offered, and **Show hidden (*N*)** brings them back.
 
 ### Host details
 
@@ -141,7 +142,6 @@ A host's page puts its actions in a card at the top: **Connect** (**Cmd/Ctrl**-c
   </a>
   <figcaption style="text-align:center; color:#888">A saved host's page.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — A saved machine's page at 0.13.0, with Sessions labeled survive disconnect, resumable anywhere. -->
 
 Changing the address of a host the SSH wizard created first fetches the new address's host key, under **New host key**. **Trust and save** pins that key and saves the host in one step, and every new host or port gets its own scan. Any address change notes that an install at the old address stays there.
 
@@ -179,7 +179,7 @@ The window that stops its own server, or that disconnects, goes local without th
 
 ### From a remote window
 
-Settings in a window that is on a remote shows that host only: its connected card with the server controls, **Auto-shutdown when idle**, **Color** and mute, its **Ports** (SSH), and your other saved hosts to switch to. A remote window never sees the other hosts' addresses. Renaming, editing a connection, adding, and removing happen in a local window: **Open in a local window** takes you there.
+Settings in a window that is on a remote shows that host only: its connected card with the server controls, **Auto-shutdown when idle**, **Color** and mute, its **Ports** (SSH), and your other saved hosts to switch to. A remote window never sees the other hosts' addresses. Renaming, editing a connection, adding, and removing happen in a local window: **Open in a local window** takes you there. Switching to a host that needs a password does too: its row reads *Connect to machine from a local window*, with **Open in a local window**.
 
 ### Connection failures
 
@@ -193,6 +193,9 @@ Common SSH failures get a plain-language headline and a hint. Kepler recognizes:
 - **Hostname could not be resolved**
 - **Connection timed out**
 - **Host key verification failed**
+- **Update remote Kepler server**, when the host's server is too old to take your GitKraken sign-in. Update the Kepler install on the host and try again
+
+A WSL distro that no longer exists reads *The {distro} distro wasn't found on this machine.*
 
 The unedited diagnostic appears underneath either way.
 
@@ -204,7 +207,6 @@ When the failure happens while you're adding a host, the wizard shows it in plac
   </a>
   <figcaption style="text-align:center; color:#888">A failed connection while adding a host.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — The SSH wizard's failure step at 0.13.0, reading The machine refused the credentials Kepler offered. -->
 
 For Kepler's own log file, use **Settings → Help → Logs**.
 
@@ -250,7 +252,6 @@ The SSH wizard walks five steps.
   </a>
   <figcaption style="text-align:center; color:#888">The first step of adding an SSH host.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — The first step of the SSH wizard at 0.13.0, under Add machine. -->
 
 | Authentication mode | What it means |
 |---|---|
@@ -275,7 +276,6 @@ If you pick **Password**, the wizard then offers **Set up a key for this machine
   </a>
   <figcaption style="text-align:center; color:#888">The offer to replace a password with a key.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — The Set up a key for this machine? step of the SSH wizard at 0.13.0. -->
 
 If the host rejects a key-based connect, Kepler does not leave you stuck: the host's page opens a password row so you can retry with a password, and, when no key is saved for that host yet, offers to install one at the same time. A connect from the popover that needs a password opens a password dialog instead.
 
@@ -468,6 +468,10 @@ Kepler downloads each layer cache-first, retries with backoff, and writes it ato
 
 The payload carries its own Node runtime, so the host needs nothing pre-installed beyond an SSH or WSL transport. Kepler couples desktop and server versions: your Kepler always knows which server build it needs. **Kepler never installs over a running server.** On connect, it replaces an out-of-date server on its own only when nobody would lose anything: no running agents, open terminals, or other connected windows. Otherwise the server keeps running and the chip offers **Restart server to update**. Only one client replaces a server at a time; the rest wait.
 
+### When the server and the window disagree
+
+A window whose page comes from a server on a different build shows a full-screen screen instead of the app: *This remote server is out of date*, or *This remote server is newer than this window*, with *Server {server}, this window {app}*. An out-of-date server offers **Update server**; retrying won't help until it's updated. Otherwise **Try again** loads the matching version; if the screen keeps coming back, restart the server. **Switch to local** moves the window back to this computer.
+
 ***
 
 ## Remote access: reach Kepler from another device
@@ -482,7 +486,6 @@ Configure it in **Settings → Remote Access**, or turn it on from the title-bar
   </a>
   <figcaption style="text-align:center; color:#888">Remote Access, active, in Settings → Remote Access.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — Settings → Remote Access at 0.13.0, with Turn on Remote Access or Turn off Remote Access, the QR code, and Connected devices. -->
 
 ### Before you start
 
