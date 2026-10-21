@@ -55,7 +55,6 @@ You can edit and reset built-in Actions, but you can't delete them. What an Acti
   </a>
   <figcaption style="text-align:center; color:#888">A built-in Action's row: reset and edit, no delete.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — A built-in Action's row under All Actions in Settings → Actions at 0.13.0, showing Restore default after the Action was edited, with no edit or delete icon. -->
 
 ***
 
@@ -81,7 +80,7 @@ Firing an Action from a Todo row is also how an issue or pull request that isn't
   <figcaption style="text-align:center; color:#888">The split button on a Todo row: the row's kind of item decides which Action fills the left half.</figcaption>
 </figure>
 
-Inside a task, Actions live under the **chevron on the composer's send button** rather than on a split button of their own: type a refinement, then pick the Action to fire it with. See [Create a Task](/kepler/create-task).
+Inside a task, Actions live under the **chevron on the composer's send button** rather than on a split button of their own: type a refinement, then pick the Action to fire it with. In a composer that starts something new, such as the Task Composer or a panel's draft, picking an Action doesn't fire it: it sets the main button to that Action, and shows the Action's own agent in the agent pill if it names one, so you can check what will run before you press it. See [Create a Task](/kepler/create-task#from-the-task-composer).
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/inside-task-actions-button-aug-2026.png" target="_blank" rel="noopener noreferrer">
@@ -112,6 +111,8 @@ Picking an Action from the chevron list always goes on to ask where to run it, w
 
 At the bottom of the list, **Manage Actions…** opens **Settings → Actions**.
 
+From the keyboard, the two halves are separate **Tab** stops, the Action first. **Down Arrow** or **Alt+Down** on the Action opens the list too, and closing the list puts focus back on the Action. Every split button in Kepler (**Send**, **Open in**, **Run**) works the same way.
+
 ### Choosing where it runs
 
 The **Run in** view asks two independent questions, and both have small answers.
@@ -135,6 +136,8 @@ Two things worth knowing:
 - **Kepler navigates to the first destination you picked**, not to whichever session happened to start first.
 
 Worktree choices are resolved against worktrees that actually exist on disk, so a task that still names a worktree you've since removed won't silently run somewhere else.
+
+A task with no worktree runs the Action in a folder attached to it, or else in the task's own folder. With neither, Kepler says *This task has no folder or worktree to start a session in.*
 
 ### Firing into a running session
 
@@ -203,7 +206,6 @@ To edit an Action, go to **Settings → Actions** and click the Action's row und
   </a>
   <figcaption style="text-align:center; color:#888">The Edit icon on an Action row in Settings.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — The All Actions list in Settings → Actions at 0.13.0, with clickable rows and no pencil icon, and the Built in and Custom labels shown because a custom Action exists. -->
 
 Once you have a custom Action, the list splits into **Built in** and **Custom**. Until then, it shows the built-in Actions without labels.
 
@@ -211,9 +213,9 @@ The editor has these fields:
 
 | Field | What it does |
 |---|---|
-| **Title** | The name shown on the button and in the chevron list |
-| **Prompt** | Sent to the agent word for word. Point it at a skill you already maintain if you'd rather not paste a prompt |
-| **Applies to** | **Tasks**, **Issues**, **Pull requests**: controls where the Action is offered |
+| **Title** | The name shown on the button and in the chevron list. Required: *Title can't be empty.* |
+| **Prompt** | Sent to the agent word for word. It *Can be, or start with, one of your skills*: type **/** (or **$** for Codex) to pick one. Required: *Prompt can't be empty.* |
+| **Applies to** | **Tasks**, **Issues**, **Pull requests**: controls where the Action is offered. Pick at least one |
 | **Agent** | Which agent runs it. See below |
 
 ### Create your own
