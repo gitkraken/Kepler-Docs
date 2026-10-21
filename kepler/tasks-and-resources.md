@@ -70,7 +70,7 @@ The **Files** group holds two kinds of file, and Kepler treats them differently 
 | **Linked file** | Wherever it already was on disk. Kepler links to it by its path and never changes it | Its path | **Detach file…** leaves the file where it is |
 | **Uploaded copy** | Inside the Task's own folder, and belongs to this Task alone | **Task folder** | **Delete file…** deletes the copy |
 
-A file attached to a prompt that Kepler copies into the Task when you send it is an uploaded copy too. In a window connected to another machine, the file picker on the **Files** tab of **Add resources** also offers **Upload from this computer**, which copies files from the machine you're sitting at into the Task's folder. Either kind can be written somewhere else with **Save as…** from its menu.
+A file attached to a prompt that Kepler copies into the Task when you send it is an uploaded copy too. In a window connected to another machine, the file picker on the **Files** tab of **Add resources** also offers **Upload from this machine**, which copies files from the machine you're sitting at into the Task's folder. Either kind can be written somewhere else with **Save as…** from its menu.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/files-group-oct-2026.png" target="_blank" rel="noopener noreferrer">
@@ -78,7 +78,6 @@ A file attached to a prompt that Kepler copies into the Task when you send it is
   </a>
   <figcaption style="text-align:center; color:#888">A linked file in the Files group.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace: Add an uploaded copy (Task folder subtitle) beside the linked file, and use a file outside your home folder. -->
 
 ### Issues and pull requests attach themselves
 
@@ -104,7 +103,7 @@ Auto-attach only adds a link; it never removes one. Detach it yourself if you do
 **Work item URLs attach as issues.** When you or an agent attaches one of the following URLs, Kepler records it as an issue rather than a plain link:
 
 - A GitLab work item, such as `https://gitlab.com/{group}/{project}/-/work_items/{number}`
-- An organization-level Azure DevOps work item, such as `https://dev.azure.com/{organization}/_workitems/edit/{id}`
+- An Azure DevOps work item, such as `https://dev.azure.com/{organization}/{project}/_workitems/edit/{id}`, or the organization-level `https://dev.azure.com/{organization}/_workitems/edit/{id}`
 
 A GitLab work item that belongs to a group rather than a project stays a plain link.
 
@@ -167,13 +166,15 @@ A fresh worktree is a clean checkout: no `node_modules`, no build output, nothin
   <figcaption style="text-align:center; color:#888">Run command here, from a worktree's right-click menu.</figcaption>
 </figure>
 
-Set them up in **Settings → Repositories**, on the repository's own page. See [Settings](/kepler/settings) for the fields, the path placeholders, and what happens when one fails.
+Set them up in **Settings → Repositories**, on the repository's own page. See [Settings](/kepler/settings#per-repository-commands) for the fields, the **Variables** a command can use, and what happens when one fails.
 
 ***
 
 ## Shared context: how resources reach your agents
 
 Kepler sends everything attached to a Task to **every agent session in it** as *shared context*. That's what a prompt means when it says *"described in the shared context above"*: the Task's prompt, the issue body, the pull request, your notes, the links.
+
+The prompt goes in full. Each note goes as a reference, its title and size, and the agent reads the note's text when it needs it, through Kepler's MCP server. A session with no route to that server gets every note's text in full instead.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/shared-context-aug-2026.png" target="_blank" rel="noopener noreferrer">
@@ -207,11 +208,10 @@ The new session doesn't receive the Task's prompt or notes. It still gets the Ta
   </a>
   <figcaption style="text-align:center; color:#888">Task context, on by default.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — A draft session tab with Agent settings open, showing the Task context switch turned on. The New session menu and its Start with task context checkbox no longer exist. -->
 
 ### Notes are how you give standing instructions
 
-Attach a **Note** for anything every agent on the Task should follow: a style rule, a constraint, a decision you don't want re-litigated. Write it once and every session gets it, including sessions you start later.
+Attach a **Note** for anything every agent on the Task should follow: a style rule, a constraint, a decision you don't want re-litigated. Write it once and every session gets it, including sessions you start later. Because a session sees a note's title first and opens the note when it's relevant, give each note a title that says what it governs. A note can be up to 1 MB; a longer one is refused with *This note is too long. Notes can be up to 1 MB.*
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/add-note-aug-2026.png" target="_blank" rel="noopener noreferrer">
@@ -260,6 +260,8 @@ Worktrees get more care, because deleting one can lose work.
 - If the worktree is used by **other Tasks**: *This worktree is used by other tasks, so it can't be deleted — detaching only removes it from this task.* The dialog names them under **Also used by**.
 - If it's the repository's **main worktree**: *This is the repository's main worktree — it can't be deleted, only detached from the task.*
 - Otherwise: *This worktree is only used by this task. Detach it to keep it on disk, or delete it. A deleted worktree stays listed on this task as gone until you detach it.*
+
+**Delete worktree…** from the pill opens its own **Delete worktree?** dialog, with only **Delete** and the warning *Deletes the worktree folder from disk. This can’t be undone.*
 
 The dialog lists the worktree with what deleting it would cost, such as **No uncommitted changes** and **Branch kept**, under a verdict like **Safe to delete**. Tick **Also delete branch** to remove the branch along with the worktree.
 
@@ -315,7 +317,12 @@ Ticking **Also delete branches** re-reads the list, so a worktree that was safe 
   </a>
   <figcaption style="text-align:center; color:#888">The Archive task? dialog, before you tick anything.</figcaption>
 </figure>
-<!-- TODO(screenshot): New: The same dialog with Also delete worktrees ticked, listing one safe worktree and one kept because it would lose work. -->
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/ade-archive-task-worktrees-01.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ade-archive-task-worktrees-01.png" class="help-center-img img-bordered" alt="The Archive task? dialog for Upgrade the payment SDK with Also delete worktrees ticked. Its Worktrees list reads 1 of 2 will be deleted: kepler/payment-sdk-v5 with 1 uncommitted file is kept because deleting it would lose work, and kepler/payment-sdk-docs with no uncommitted changes will be deleted. Below it, an unticked box offers to also delete kepler/payment-sdk-v5, losing 1 uncommitted file.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The same dialog with Also delete worktrees ticked: one worktree goes, one is kept.</figcaption>
+</figure>
 
 **Restore task** appears in the task view's header as soon as the Task is archived. From a row in the main list, it appears only once you've filtered **Activity** to **Archived**. See [Arranging Your Work](/kepler/arranging-your-work).
 
@@ -341,9 +348,9 @@ Agents reach the Task through Kepler's own MCP (Model Context Protocol) server, 
 | Tool | What it does |
 |---|---|
 | `list_tasks` | Find Tasks in the workspace by name, prompt, note text or file name, with each one's stage and places to work. Archived Tasks only on request |
-| `list_sessions` | Find agent sessions by label, agent, Task name or worktree path, including which ones this session started and in what role |
+| `list_sessions` | Find agent sessions by label, agent, Task name or worktree path, including which ones this session started and in what role, and which are blocked waiting on a person for a permission or an answer |
 | `list_agents` | List the agents, models, modes and options a new session can be started with |
-| `session_read` | Read another session's conversation, at the level of detail the agent asks for, by a `kepler-session:` identifier from `list_sessions` or from **Copy session reference** on a session row |
+| `session_read` | Read another session's conversation, at the level of detail the agent asks for, by a `kepler-session:` identifier from `list_sessions` or from **Copy session reference** on a session row. For a running session it also reports the permission request or question the session is waiting on |
 
 **Links and notes**
 
@@ -382,11 +389,13 @@ Where AI Sync is available, the `sync_*` tools also let an agent update a branch
 | `create_task` | Create a *separate* Task beside this one, with its own prompt, locations, notes, links and files, for work that deserves tracking in its own right. The new Task is linked back to this one (as a sub-task, parent, follow-up, or just related). It creates the Task and starts nothing |
 | `create_session` | Start an agent session on a Task and send it a first message, in a place you name. It clones the calling session's agent and settings unless the agent names a different agent, model, mode or options from `list_agents`, and it can start without the Task's context, as a reviewer would. It records what the new session is for: a delegate, a reviewer, or a handoff |
 | `session_send` | Send a follow-up to another session |
+| `rename_session` | Rename a session. `create_session` can name the session it starts, too. Neither names a session that runs in the terminal |
 
 **Most tools act only on the agent's own Task**, which Kepler works out from who's calling rather than taking as an argument. The ones that can reach further are deliberate, and they check with you before touching someone else's work:
 
 - `set_task_stage`, `archive_task` and `unarchive_task` act on the agent's own Task without asking. Name another Task and the first call changes nothing: it reports what it would do, and the agent has to ask you before calling again with your confirmation.
 - `session_send` sends straight away to another session on the same Task, or to a session the agent itself started. A message to any other Task's session, or from a started session back to the one that started it, goes through the same ask-first step.
+- `rename_session` renames a session on the agent's own Task straight away. For another Task's session it reports what it would rename and asks first.
 - `create_session` refuses to start in a worktree or folder that's gone from disk until you agree to recreate it.
 - `create_task` makes something new and independent; the link back to this Task is metadata only.
 
