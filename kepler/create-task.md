@@ -25,7 +25,7 @@ Kepler gives you several ways to start work, and the first is usually better: pi
 |---|---|
 | **Work assigned to you** | Fire an Action on an issue or pull request in the **Todo** segment of [the Kepler interface](/kepler/kepler-interface). One click, context attached |
 | **Something you're describing yourself** | **New task** opens the Task Composer, where you write the prompt and attach what it needs |
-| **A conversation you already started** | **New task → From an external session** wraps a task around an agent session you began in your own terminal |
+| **A conversation you already started** | **New task → New task from an external session** wraps a task around an agent session you began in your own terminal |
 | **Another GitKraken app** | A link from GitLens or GitKraken Desktop opens Kepler on the work you were looking at |
 
 ***
@@ -91,9 +91,9 @@ The Composer is one prompt box above a row of four buttons:
 | **Add PR** → **PRs** | Pull requests from your connected hosts |
 | **Add context** | Everything without a button of its own: folders, files, and links |
 
-In a window connected to another machine, picking a file through **Add context** also offers **Upload from this computer**. Uploads are kept with your draft and saved into the Task's own folder when it starts; if one expired before you pressed **Start**, Kepler names it rather than dropping it silently.
+In a window connected to another machine, picking a file through **Add context** also offers **Upload from this machine**. Uploads are kept with your draft and saved into the Task's own folder when it starts; if one expired before you pressed **Start**, Kepler names it rather than dropping it silently.
 
-**Repositories and folders come from one ranked list**, not two pickers (*Find a repository or folder…*), and the list learns. Kepler records how often you actually use each place and ranks the picker by it, so the repositories you work in daily are at the top on the day you start using them. The same list is behind the chip's own **Change repository or folder**.
+**Repositories and folders come from one ranked list**, not two pickers (*Find a repository or folder…*), and the list learns. Kepler records how often you actually use each place and ranks the picker by it, so the repositories you work in daily are at the top on the day you start using them. The same list is behind the chip's own **Change repository or folder**. Picking a folder that is one of a repository's existing worktrees attaches that worktree itself, and the chip reads **Worktree {branch}**. If the worktree disappears before the Task starts, the chip reads **Worktree not found**; pick the repository again to choose another working copy.
 
 Add as much or as little context as you wish. 
 
@@ -110,15 +110,20 @@ Add as much or as little context as you wish.
 
 The primary button shows a sending state from the moment you click it, so a slow start doesn't read as a dead button. It fires the Action that matches what you've attached, exactly as it would from a Todo row. A linked pull request resolves to **Address Feedback** or **Review**, depending on who wrote it; a linked issue resolves to **Plan**. With nothing attached, the button reads **Start** and starts the Task with your prompt as written.
 
-The chevron beside the primary button opens the rest: **Prepare**, which creates the session without starting work yet, and every Action that applies to what you've attached. Firing an Action sends that Action's prompt, with anything you typed appended as a refinement.
+The chevron beside the primary button opens the rest: **Prepare**, which creates the session without starting work yet, and every Action that applies to what you've attached. Picking one doesn't fire it here: it relabels the primary button, and an Action that names its own agent puts that agent in the agent pill, so you can check or change what will run before you press the button. The Action sends its prompt, with anything you typed appended as a refinement.
 
 A Task that has its prompt but no session yet, such as one an agent created for you, says so in a draft session tab: *Start with the task prompt, or describe something else…*. To send the Task's prompt as written, press **Start** on the empty box.
 
-The Task appears in the list as soon as you press **Start**, before its worktrees exist. Until setup finishes, the row carries a **Preparing** pill, and the Task's panel shows its progress under **Getting your task ready**, such as *Cloning {repo}…* or *Setting up worktrees…*.
+The Task appears in the list as soon as you press **Start**, before its worktrees exist. Until setup finishes, the row carries a **Preparing** pill, and the Task's panel shows its progress under **Getting your task ready**, such as *Cloning {repo}…* or *Setting up worktrees…*. **Cancel** stops a launch while a repository is still cloning. When the new branch is being updated from its base, the session area reads **Preparing branch**: *Updating from the base branch before the session starts.*
 
-<!-- TODO(screenshot): New — A pending Task row in Tasks in progress with the Preparing pill and its spinner, at Kepler 0.13.0. -->
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/ade-task-preparing-row-01.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ade-task-preparing-row-01.png" class="help-center-img img-bordered" alt="The Recent group of Tasks in progress: Write the 2.4 release notes, then a new task, Add a gift-card field to checkout, with acme-web, the Preparing pill and its spinner.">
+  </a>
+  <figcaption style="text-align:center; color:#888">A new task in the list while Kepler prepares it.</figcaption>
+</figure>
 
-If setup fails, the row's pill reads **Failed** and the panel reads **Couldn't start this task**. To change the Task and try again, click **Edit and retry**. If the request itself can't be sent, you see **Failed to start the task**.
+If setup fails, the row's pill reads **Failed** and the panel reads **Couldn't start this task**. To change the Task and try again, click **Edit and retry**, or **Dismiss** to clear it. A launch you cancelled reads **Task not started**. If the request itself can't be sent, you see **Failed to start the task**. A Task that starts without some of its repositories warns *Some repositories weren't added: The task started without {repos}.*
 
 If the Task starts but its agent session doesn't, the task page and the Dashboard panel show **{agent} couldn't start**, with **Retry**. See [Agent Sessions](/kepler/agent-sessions#when-a-session-drops).
 
@@ -139,7 +144,7 @@ Each attached repository gets a chip with three segments:
 
 **What a newly attached repository starts on is a setting.** These three segments open on **Settings → Tasks → New tasks → Where new tasks make changes**: **Isolated worktree** (the default), **New branch**, or **Current branch**. Changing it changes the starting point only; every segment above still overrides it per repository, per Task. See [Settings](/kepler/settings).
 
-Picking **New branch** or **Current branch** means the Task runs in the repository's own checkout rather than an isolated one, so only one Task can use that checkout at a time. If another Task already has it, the branch menu says so, *{task} is working in this checkout.*, with a button to switch that one repository to an isolated worktree instead.
+Picking **New branch** or **Current branch** means the Task runs in the repository's own checkout rather than an isolated one, so only one Task can use that checkout at a time. If another Task already has it, the chip shows an **Another task is working here** card naming that Task and why, such as *Both would edit the same files.*, with **Create a worktree for this task** to put this one repository in an isolated worktree instead.
 
 ### Naming the branch
 
@@ -155,7 +160,7 @@ You can set the prefix in two places: **Settings → Tasks → New tasks → Bra
 
 Kepler intentionally forks from the remote by default. If no remote default resolves (no remote, a shallow clone, or no network connection), Kepler falls back to the current HEAD rather than failing the launch.
 
-A repository linked to a pull request always opens in its own isolated working copy, and the toggle is locked: *This repository is linked to a pull request and always opens in its own isolated working copy.*
+A repository linked to a pull request always opens in its own isolated working copy, and the toggle is locked: *This repository is linked to a pull request and always opens in its own isolated working copy.* If the pull request's branch already exists on this machine with commits that aren't on the pull request, Kepler leaves that branch alone and starts the Task on a new branch tracking the pull request: *Kept your local branch {branch}*.
 
 Kepler clones a repository you haven't cloned yet when the Task starts, into your **Repositories folder**: *This repository is cloned when you start the task.* Its branch is locked until then (*its branches become available after cloning*) because Kepler doesn't yet know what branches it has, and the chip reads **default branch** in the meantime.
 
@@ -165,7 +170,7 @@ Attaching the same repository twice gives the Task two independent worktrees on 
 
 ## From a session you already started
 
-You may have begun the work in a terminal before deciding it deserved tracking. The chevron on **New task** holds **From an external session** (*Create a task from a session you started outside Kepler*), which opens a picker over every agent conversation Kepler can see.
+You may have begun the work in a terminal before deciding it deserved tracking. The chevron on **New task** holds **New task from an external session** (*Continue a session you started outside Kepler*), which opens a picker over every agent conversation Kepler can see.
 
 | Part | What it does |
 |---|---|
@@ -173,15 +178,15 @@ You may have begun the work in a terminal before deciding it deserved tracking. 
 | **Past sessions** | Conversations found on disk, from whenever |
 | **Find an external session…** | Searches across both groups |
 
-The picker reports what it actually swept, rather than implying it found everything: **Showing the newest {shown} of {scanned} sessions** when it capped the list, **Couldn't list sessions from {adapters}** when one agent's scan failed but the others didn't, and **Turn on session detection** when the setting is off.
+The picker reports what it actually swept, rather than implying it found everything: **Showing the newest {shown} of {scanned} sessions** when it capped the list, **Couldn't list sessions from {adapters}** when one agent's scan failed but the others didn't, and, when detection is off, *External sessions are not detected* with **Turn on in Integrations**, which opens the setting.
 
 ### When a task already covers that folder
 
 Kepler checks whether the conversation's working directory already belongs to a task, so you don't end up with two tasks over one folder:
 
-> **A task already covers this folder**: *"{task}" already owns {path}, the folder this conversation runs in.*
+> **Add to existing task?** *This conversation runs in {path}, which {task} already includes.*
 
-**Add to that task** binds the conversation there; **Create a new task** overrides. With several candidates, the dialog asks which one and marks the **closest**. Recording the conversation on a task can take a minute, and Kepler says so rather than appearing to hang.
+**Add to task** binds the conversation there; **Create a new task** overrides. When several tasks include the folder, the dialog lists each as a card (*includes {path}*), marks the **closest**, and **Add to task** waits until you pick one. Recording the conversation on a task can take a minute, and Kepler says so rather than appearing to hang.
 
 Because a task can be created in any plain folder, a conversation you had in a scratch directory can be adopted just like one in a checkout.
 
@@ -208,7 +213,7 @@ Or attach nothing. No repository, no folder, no issue. You get somewhere to thin
 
 ## From another GitKraken app
 
-You can jump into Kepler from other GitKraken products, such as GitLens and GitKraken Desktop. A link from one of them can open the Task Composer already filled in with the issue, pull request, or repository you were looking at, or open a task or session you already have. If the repository isn't on this machine, Kepler stages it to be cloned when the task starts. A link Kepler can't fully resolve still opens, with one clear warning about what it couldn't use.
+You can jump into Kepler from other GitKraken products, such as GitLens and GitKraken Desktop. A link from one of them can open the Task Composer already filled in with the issue, pull request, or repository you were looking at, or open a task or session you already have. A link can also carry a prompt and an Action into the Composer, start a new session on a task you already have, and start right away rather than waiting for you to press **Start**. A link for an item a task already holds says *You already have a task for this item*, with **Open task**. If the repository isn't on this machine, Kepler stages it to be cloned when the task starts. A link Kepler can't fully resolve still opens, with one clear warning about what it couldn't use.
 
 ***
 
