@@ -328,7 +328,7 @@ Archiving outranks everything else, so a task you filed away can't climb back in
 
 **Restore task** takes the place of **Archive task** in an archived task's **⋮** menu, and is on the task page's own header too. It puts the task straight back. Only one active task can hold a given pull request, so if restoring would archive another task that holds the same one, Kepler names that task and asks first.
 
-For more than one at a time, every section header on **Tasks in progress** carries a quiet **Select**. Press it, and that corner of the header becomes a bar: a select-all box, **{count} selected**, and the batch verbs. The section's rows also grow checkboxes. One section selects at a time, and while you're selecting, a click ticks a row rather than opening its panel. A task that Kepler is still preparing has no checkbox, and select-all skips it.
+For more than one at a time, every section header on **Tasks in progress** carries a quiet **Select**. Press it, and that corner of the header becomes a bar: a select-all box, **{count} selected**, and the batch verbs as icon buttons, each named by its tooltip. The section's rows also grow checkboxes. One section selects at a time, and while you're selecting, a click ticks a row rather than opening its panel. A task that Kepler is still preparing has no checkbox, and select-all skips it.
 
 | Button | What it does |
 |---|---|
@@ -337,7 +337,7 @@ For more than one at a time, every section header on **Tasks in progress** carri
 | **Delete** | Removes the selected tasks for good |
 | **Cancel** | Leaves selection mode and drops the set |
 
-Both **Archive** and **Delete** confirm, and both offer **Also delete worktrees** and **Also delete branches**. The single-task dialog remembers what you ticked last time; the batch confirmation always starts with both unticked. The batch confirmation doesn't list each worktree's fate. Instead, any worktree that would lose work is kept, and a toast afterwards says which ones and why. Open a task's own **⋮** to see the list before you confirm.
+Both **Archive** and **Delete** confirm, with **Archive tasks** or **Delete tasks** as the confirm button, and both offer **Also delete worktrees** and **Also delete branches**. Deleting can't be undone, and the confirmation says so. The single-task dialog remembers what you ticked last time; the batch confirmation always starts with both unticked. The batch confirmation doesn't list each worktree's fate. Instead, any worktree that would lose work is kept, and a toast afterwards says which ones and why. Open a task's own **⋮** to see the list before you confirm.
 
 To clean up worktrees rather than tasks, including stale locks Kepler left behind, open **Worktree cleanup** in **Settings → Repositories**. The same page can also **Update** many worktrees at once, bringing each branch up to date with its base. See [Settings](/kepler/settings).
 
