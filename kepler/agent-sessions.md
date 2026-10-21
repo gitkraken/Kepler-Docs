@@ -161,6 +161,7 @@ Claude Code, Codex, GitHub Copilot, Auggie, and Grok Build can each hold more th
 | **Add account** | Adds an isolated account with its own credentials and history |
 | **Account name** | Rename a row in place. The name is what you pick from later |
 | **Sign in** / **Sign out** | Authenticates or clears that account alone |
+| **Check usage** | Reads that account's plan usage. Greyed out until **Show plan usage for Claude Code, Codex and Augment** is on in **Settings → Agents → Usage limits**, which is off by default: *Turn on Show plan usage under Usage limits to check this account's usage.* |
 | **Remove account** | Signs the account out and deletes its local data. Your shared skills, agents, and settings are untouched. Sessions whose conversations are stored only in that account are deleted with it; see below |
 | Colour swatch | At the left of each added account's row: *Pick a color to tell agents on different accounts apart*. **Rose**, **Amber**, **Lime**, **Cyan**, **Blue**, **Violet**, or **No color**. *The default account stays uncolored*: its picker shows the ⊘ **No color** mark, which doesn't mean the account is off |
 
