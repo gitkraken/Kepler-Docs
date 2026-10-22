@@ -95,8 +95,8 @@ Clicking a **Switch to** row moves this window. Hold **Cmd** (macOS) or **Ctrl**
 A connect that a *different* window starts never takes over this window's chip.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-popover-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-popover-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The environment chip's popover in a local window: Working locally, Switch to dev-server (SSH, alex@dev.acme.example), Remote Access (Inactive) with Turn on Remote Access, and Manage remote environments… with its Ctrl+Shift+R shortcut.">
+  <a href="/wp-content/uploads/remote-popover-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-popover-oct-2026.png" class="help-center-img img-bordered" alt="The popover open under the dev-server chip. The header shows dev-server over SSH at localhost, Connected at 9 ms, server and app version 0.12.0, and a gear, with Disconnect and the restart and stop server buttons. Below are Switch to with Local (Work on this machine) and its window icon, Remote Access (Inactive) with Use dev-server anywhere and Turn on Remote Access, and Manage remote environments… with its shortcut.">
   </a>
   <figcaption style="text-align:center; color:#888">The popover, connected to a host.</figcaption>
 </figure>

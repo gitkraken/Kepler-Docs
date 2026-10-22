@@ -127,12 +127,12 @@ Plugin servers show in Settings but can't be changed there. Neither can Cursor s
 
 ## Adding and removing servers
 
-To add a server, click **Add server** at the foot of the manager. The **Add MCP server ({agent})** page opens with these fields:
+To add a server, click **Add server**: beside the section's heading in Settings, or at the foot of the list in the MCP servers dialog. The **Add MCP server ({agent})** page opens with these fields:
 
 | Field | What it takes |
 |---|---|
 | **Name** | Letters, numbers, `.`, `_`, or `-`, up to 64 characters, unique where it's saved |
-| **Applies to** | **Every repo**, **This repo only**, or **This repo, shared with your team**. The choices depend on the agent and on whether you're in a repository |
+| **Applies to** | **Every repo**, **This repo only**, or **This repo, shared with your team**. The choices depend on the agent and on whether you're in a repository, and the field shows only when there's more than one, as in a repository's **MCP servers** section |
 | **Runs as** | **Command** for a local server, or **URL** or **URL (SSE)** for a remote one |
 | **Command** and **Arguments** | For a command server, for example `npx -y @some/server` |
 | **URL** | For a remote server, an `http://` or `https://` address |
@@ -142,7 +142,7 @@ To add a server, click **Add server** at the foot of the manager. The **Add MCP 
   <a href="/wp-content/uploads/mcp-add-server-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/mcp-add-server-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Add MCP server page for Claude Code: Name, Runs as set to Command (beside URL and URL (SSE)), Command, Arguments, Environment variables with Add, and Cancel and Save.">
   </a>
-  <figcaption style="text-align:center; color:#888">Adding a command server.</figcaption>
+  <figcaption style="text-align:center; color:#888">Adding a command server from a repository's settings.</figcaption>
 </figure>
 
 Kepler writes the new server into the agent's own config file, in the format that agent uses, so the agent's CLI sees it too.
