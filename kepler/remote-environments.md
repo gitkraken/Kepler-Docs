@@ -100,6 +100,7 @@ A connect that a *different* window starts never takes over this window's chip.
   </a>
   <figcaption style="text-align:center; color:#888">The popover, connected to a host.</figcaption>
 </figure>
+<!-- TODO(screenshot): Replace — The popover at 0.13.0 on a window connected to dev-server: the header with Connected, latency and the server and app versions, Disconnect and the server buttons, Switch to with Local, Remote Access, and Manage remote environments…. The 0.12.0 figure stays until it's replaced. -->
 
 ***
 
