@@ -98,7 +98,7 @@ With **Show tabs on the task page** turned on, the draft's menu is a tab's inste
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/agent-settings-from-composer-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-settings-from-composer-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Agent settings open above a new session's composer: Agent OpenCode, Start in with Chat selected beside Terminal, Model Docs Model, Permission mode Build or Plan, the Task context switch turned on, MCP servers with Manage, and Use default agent.">
+    <img src="/wp-content/uploads/agent-settings-from-composer-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Agent settings open above a new session's composer: Agent OpenCode, Start in with Chat selected beside Terminal, Model Docs Model, Permission mode Build or Plan, Task context ticked, MCP servers with Manage, and Use default agent.">
   </a>
   <figcaption style="text-align:center; color:#888">The Agent settings pill, opened from the composer.</figcaption>
 </figure>
@@ -147,7 +147,7 @@ Claude Code, Codex, GitHub Copilot, Auggie, and Grok Build can each hold more th
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/agent-accounts-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-accounts-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Claude Code card in Settings › Agents, with its version, Update, and Enabled in the title line. Its Accounts section lists the uncoloured default account, Claude Code CLI (alex.lee@example.com, Acme, Default, Check usage), and a second account, Personal, Signed in, marked with a blue colour swatch.">
+    <img src="/wp-content/uploads/agent-accounts-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Claude Code card in Settings › Agents, with its version, Update, and Enabled in the title line. Its Accounts section lists the default account, Claude Code CLI (alex.lee@example.com, Acme, Default) with the No color mark, and a second account, Personal (alex.lee@example.com, Personal), with a blue colour swatch; Check usage is greyed on both until Show plan usage is on.">
   </a>
   <figcaption style="text-align:center; color:#888">The Accounts section, in Settings → Agents.</figcaption>
 </figure>
@@ -181,7 +181,7 @@ With two or more accounts signed in, the **Agent** list expands to one row per a
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/account-multiple-selector-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/account-multiple-selector-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Agent list open in the New task composer, grouped by agent. Under a Claude Code heading sit two account rows, CLI (alex.lee@example.com, Acme) with a check mark and Personal (Not signed in), followed by Codex CLI, GitHub Copilot CLI, Cursor, Antigravity, OpenCode and the other agents, then Add another account and Install another agent.">
+    <img src="/wp-content/uploads/account-multiple-selector-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Agent list open in the New task composer, grouped by agent. Under a Claude Code heading sit two account rows, CLI (alex.lee@example.com, Acme) with a check mark and Personal, followed by Codex CLI, GitHub Copilot CLI, Cursor, Antigravity, OpenCode and the other agents, then Add another account and Install another agent.">
   </a>
   <figcaption style="text-align:center; color:#888">The Agent list, with one row per account.</figcaption>
 </figure>
@@ -224,7 +224,7 @@ A session runs one of two ways, and the choice is no longer Claude Code's alone.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/opens-in-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/opens-in-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Claude Code card in Settings › Agents, with New sessions start in set to Chat and the help text You can pick the other one when you start a session.">
+    <img src="/wp-content/uploads/opens-in-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Claude Code card in Settings › Agents, with the New sessions start in row ringed, set to Chat, and the help text You can pick the other one when you start a session.">
   </a>
   <figcaption style="text-align:center; color:#888">New sessions start in, on an agent's card in Settings → Agents.</figcaption>
 </figure>
@@ -507,7 +507,7 @@ Anyone with edit access to a published artifact can comment on it, and by defaul
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/artifact-card-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/artifact-card-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A published artifact shown as a card in a session's chat: its icon and title, Acme gift cards, with Preview, Open and a copy link button.">
+    <img src="/wp-content/uploads/artifact-card-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A published artifact shown as a card in a session's chat: its icon, the title Acme gift cards with v1 beside it, a Private lock below, and Preview, Open and a copy link button.">
   </a>
   <figcaption style="text-align:center; color:#888">A published artifact's card in the chat.</figcaption>
 </figure>
@@ -521,7 +521,7 @@ Anyone with edit access to a published artifact can comment on it, and by defaul
 </figure>
 <figure style="text-align:center">
   <a href="/wp-content/uploads/ade-artifact-preview-01-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ade-artifact-preview-01-v2@2x.png" class="help-center-img img-bordered" alt="A session with an Acme gift cards artifact card (Preview, Open) in its chat, and the artifact's Preview pane docked beside the chat: the rendered gift-card landing page under a header with Local preview, Reload, Open and Close preview.">
+    <img src="/wp-content/uploads/ade-artifact-preview-01-v2@2x.png" class="help-center-img img-bordered" alt="A session with an Acme gift cards artifact card (v1, Private, Preview, Open) in its chat, and the artifact's Preview pane docked beside the chat: the rendered gift-card landing page under a header with Local preview, Reload, Open and Close preview.">
   </a>
   <figcaption style="text-align:center; color:#888">An artifact's Preview pane, docked beside the chat.</figcaption>
 </figure>

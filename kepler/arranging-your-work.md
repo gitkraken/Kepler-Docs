@@ -23,7 +23,7 @@ Kepler has one interface rather than a set of views, so you shape it instead of 
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/arrange-work-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/arrange-work-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The dashboard toolbar: the Todo, Tasks in progress and Agent Graph segments, the search box, Saved views, Group: Inbox, Sort: Updated, Filter, the List and Columns view switch, and Refresh.">
+    <img src="/wp-content/uploads/arrange-work-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The dashboard's arranging controls: the Saved views chip, Group: Inbox, Sort: Updated, Filter, the List and Columns view switch, and Refresh.">
   </a>
   <figcaption style="text-align:center; color:#888">The saved views, grouping, sort, filter, and layout controls.</figcaption>
 </figure>
@@ -203,7 +203,7 @@ The **Filter** menu holds one flyout per facet.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/filter-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/filter-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The dashboard's Filter menu, its chip reading In Development and the search box showing 3 hidden. Progress is open on In Development (ticked, 2), On hold, In Review and Exploration, with On hold's exclude button hovered and its tooltip reading Exclude On hold with Shift+Enter.">
+    <img src="/wp-content/uploads/filter-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The dashboard's Filter menu, its chip reading In Development and the search box showing 3 hidden. Progress is open on In Development (ticked, 2), On hold, In Review and Exploration, with Exploration's exclude button hovered and its tooltip reading Exclude Exploration with Shift+Enter.">
   </a>
   <figcaption style="text-align:center; color:#888">The Filter menu, with a facet's flyout open.</figcaption>
 </figure>
@@ -241,7 +241,7 @@ The search box matches on **title, reference, or repository**: *Search title, re
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/search-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/search-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Tasks in progress searched for cart: the search box holds the query and the match count reads 1 of 5, and the list shows only the matching task, Fix the cart total.">
+    <img src="/wp-content/uploads/search-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The search box holding the query the, with a 1 of 5 search pill and a 2 hidden filter pill, each with its own clear button, beside Saved views, Group: Inbox, Sort: Updated and the Filter chip reading In Development.">
   </a>
   <figcaption style="text-align:center; color:#888">The search box, with its search and filter pills.</figcaption>
 </figure>

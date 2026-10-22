@@ -187,7 +187,7 @@ Either way, terminals live in the [drawer](#the-terminal-drawer) beneath the con
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/task-columns-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-columns-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The task page for Fix the cart total with tabs off: the rail on the left with Sessions, Changes and Notes, then two columns side by side, the session's conversation (thinking, plan, a Read cart.js tool call and the agent's replies) and the kepler/fix-cart-total worktree's Working changes with cart.js modified and cart.test.js added above the commit box.">
+    <img src="/wp-content/uploads/task-columns-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The task page for Fix the cart total with tabs off: the rail on the left with Sessions, Changes and Notes, then three columns side by side: the session's conversation (thinking, plan, a Read cart.js tool call and the agent's replies), the kepler/fix-cart-total worktree's Working changes with cart.js modified and cart.test.js added above the commit box, and the task's Prompt note in Resources.">
   </a>
   <figcaption style="text-align:center; color:#888">The three content columns: Sessions, Changes, and Resources.</figcaption>
 </figure>
@@ -228,7 +228,7 @@ With tabs on, anything you open from the rail (sessions, worktrees, files, and e
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/tabs-preview-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/tabs-preview-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The task page for Fix the cart total with tabs on and two tab groups side by side. The left group starts with the pinned session tab, shrunk to its icon, beside the Prompt note in an italic preview tab; the right group holds the kepler/fix-cart-total worktree tab showing its two working changes, cart.js and cart.test.js.">
+    <img src="/wp-content/uploads/tabs-preview-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Two tab groups side by side on the task page for Fix the cart total, with the left group's tab strip ringed: it starts with the pinned session tab, shrunk to its icon, beside the Prompt note in an italic preview tab; the right group holds the kepler/fix-cart-total worktree tab showing its two working changes, cart.js and cart.test.js.">
   </a>
   <figcaption style="text-align:center; color:#888">An italic preview tab beside a session tab.</figcaption>
 </figure>
@@ -245,7 +245,7 @@ A draft session's tab reads **(draft)** after its name. With tabs off, right-cli
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/ade-draft-session-tab-menu-01-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ade-draft-session-tab-menu-01-v2@2x.png" class="help-center-img img-bordered" alt="The top of a task's side panel with a New session (draft) tab beside the task's first session, and the draft tab's right-click menu open on Move left, with its Ctrl+Alt+[ shortcut, and Discard draft.">
+    <img src="/wp-content/uploads/ade-draft-session-tab-menu-01-v2@2x.png" class="help-center-img img-bordered" alt="The top of a task's side panel with a New session (draft) tab beside the task's first session, and the draft tab's Tab actions menu open under it: Move left, with its Ctrl+Alt+[ shortcut, and Discard draft.">
   </a>
   <figcaption style="text-align:center; color:#888">A draft session's tab and its Tab actions menu, the same one a right-click opens.</figcaption>
 </figure>

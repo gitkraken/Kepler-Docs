@@ -140,7 +140,7 @@ A row reads differently depending on whether it holds a tracked issue or pull re
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/todo-row-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/todo-row-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Two pull request rows, #51 and #49, each marked Changes requested with the Address Feedback action, and two issue rows, #42 with the Mentioned badge and #38, with the Plan action. Each row shows its reference, title, repository, Open status, assignee where there is one, and age.">
+    <img src="/wp-content/uploads/todo-row-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The PR 2 group with pull requests #51 and #49, each marked Changes requested with the Address Feedback action, and the ISSUE 3 group with #42 (Mentioned badge), #38 and #45, each with the Plan action. Every row shows its reference, title, repository, Open status, assignee where there is one, and age.">
   </a>
   <figcaption style="text-align:center; color:#888">Todo rows for pull requests and issues.</figcaption>
 </figure>
@@ -228,7 +228,7 @@ Beside the pill sits one dot per distinct **session state**, with a count of eac
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/session-dots-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/session-dots-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A task row's acme-web repo label and In Development progress pill beside its session dot pill, an orange dot for one session, with a tooltip reading 1 Waiting; the next row shows below.">
+    <img src="/wp-content/uploads/session-dots-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A task row's acme-web repo label and In Development progress pill beside its session dot pill, an orange dot for one session, with its hover tooltip reading 1 Waiting.">
   </a>
   <figcaption style="text-align:center; color:#888">The status pill and session-state dots, with the breakdown on hover.</figcaption>
 </figure>
@@ -352,7 +352,7 @@ Selecting a row opens a panel beside the list with everything about that item, a
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/issue-side-panel-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/issue-side-panel-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The side panel for GitHub issue #42: a header with the title, Open in browser, the ⋮ menu, Plan and Close; the GITHUB, ISSUE #42 and Mentioned chips; Open, acme-web, author sam-ortiz; a collapsible Summary with the bug and checkout labels and the issue description; and a composer with #42 attached, Issues, Add PR and Add context above it, and acme-web, default branch and worktree below.">
+    <img src="/wp-content/uploads/issue-side-panel-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The side panel for GitHub issue #38, Cart total ignores discounts when tax is applied, as a stack of sections: its header with the GITHUB and ISSUE #38 chips, Open, acme-web and author jo-park; Summary with the bug label and the description; Related (1) listing the task Fix the cart total, In Development; and that task's session, open in What's running with its conversation and composer.">
   </a>
   <figcaption style="text-align:center; color:#888">The side panel, with its stack of collapsible sections.</figcaption>
 </figure>

@@ -127,7 +127,7 @@ Two buttons sit above the agent cards in **Settings → Agents**: **Re-scan** re
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/agent-maintenance-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-maintenance-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Update all and Re-scan beside the Your agents heading, above the Claude Code card in Settings › Agents: version 2.1.145 with Update and Enabled, its Accounts (alex.lee@example.com, Acme, Default), New sessions start in, Let artifact comments start turns, and Program and data folder.">
+    <img src="/wp-content/uploads/agent-maintenance-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Update all and Re-scan beside the Your agents heading in Settings › Agents, above the title row of the Claude Code card: version 2.1.145, Update and Enabled.">
   </a>
   <figcaption style="text-align:center; color:#888">Update all and Re-scan, above the agent cards.</figcaption>
 </figure>

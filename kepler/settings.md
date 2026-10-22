@@ -437,7 +437,7 @@ Click a repository's row to open its **Edit repo** page. The page shows the repo
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/edit-repo-dialog-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/edit-repo-dialog-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Edit repo sub-page for acme-web in Settings › Repositories: the breadcrumb back to Repositories, its path and branches, Name, Description, Branch prefix set to Default (kepler/), the Commands section with Add command and two saved commands, and the MCP servers section.">
+    <img src="/wp-content/uploads/edit-repo-dialog-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Edit repo sub-page for acme-web in Settings › Repositories: the breadcrumb back to Repositories, its path and branches, Name, Description, Branch prefix set to Default (kepler/), the Commands section with Add command and two saved commands, and the MCP servers section with Add server, the Agent picker on Claude Code CLI and the servers Added by you.">
   </a>
   <figcaption style="text-align:center; color:#888">The Edit repo page.</figcaption>
 </figure>

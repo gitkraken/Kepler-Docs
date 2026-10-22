@@ -203,7 +203,7 @@ When the failure happens while you're adding a host, the wizard shows it in plac
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/remote-auth-rejected-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-auth-rejected-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Add machine wizard's failure step: Authentication rejected, The machine refused the credentials Kepler offered, a Diagnostic with Copy, and Cancel and Try again.">
+    <img src="/wp-content/uploads/remote-auth-rejected-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Add machine wizard's failure step: Authentication rejected, The machine refused the credentials Kepler offered, and the Diagnostic open, reading alex@dev.acme.example: Permission denied (keyboard-interactive), each with Copy, above Cancel and Try again.">
   </a>
   <figcaption style="text-align:center; color:#888">A failed connection while adding a host.</figcaption>
 </figure>
