@@ -227,11 +227,12 @@ The progress control on a task row is also a menu: click it to set the stage you
 Beside the pill sits one dot per distinct **session state**, with a count of each.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/session-dots-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/session-dots-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A task row's acme-web repo label and In Development progress pill beside its session dot pill, an orange dot for one session, with its hover tooltip reading 1 Waiting.">
+  <a href="/wp-content/uploads/session-dots-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/session-dots-oct-2026.png" class="help-center-img img-bordered" alt="A task row's In Development pill beside two outlined session dots, an orange 2 and a blue 1, with a tooltip reading 2 Waiting (ended) and 1 Ready (ended).">
   </a>
   <figcaption style="text-align:center; color:#888">The status pill and session-state dots, with the breakdown on hover.</figcaption>
 </figure>
+<!-- TODO(screenshot): Replace — The session-state dots at 0.13.0 on a task with two or more session states and a count above 1, one of them dormant so its dot is an outline, with the hover breakdown (for example 2 Waiting (ended), 1 Ready). The current figure stays until it's replaced. -->
 
 This shows what the *agents* are doing, a separate question from where the work stands. The vocabulary is the agent's own:
 
