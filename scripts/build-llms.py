@@ -1,15 +1,22 @@
 #!/usr/bin/env python3
-"""Regenerate llms.txt and llms-full.txt from kepler/*.md.
+"""Regenerate llms.txt, llms-full.txt and sitemap.xml from kepler/*.md.
 
-Both files used to be hand-written, which is why they went stale. This derives
-them from the pages themselves. Section grouping comes from preview/nav.json,
-the one place the docs IA is written down, since the real help-center nav lives
-in WordPress.
+The llms files used to be hand-written, which is why they went stale. This
+derives them from the pages themselves. Section grouping comes from
+preview/nav.json, the one place the docs IA is written down, since the real
+help-center nav lives in WordPress.
+
+sitemap.xml lists the same pages as llms.txt, in nav order, in the format the
+other help-center docs repos use (monthly, 1.0 for Getting Started, 0.8 for
+the rest). Each <lastmod> is the date of the page's last content change in
+git; a commit that touched only the frontmatter doesn't count, and an
+uncommitted edit counts as today.
 
 Run:  python3 scripts/build-llms.py
 """
 import json
 import re
+import subprocess
 import sys
 from datetime import date
 from pathlib import Path
@@ -48,9 +55,33 @@ def parse(path):
 
 def clean(body):
     body = re.sub(r"<!--.*?-->\n?", "", body, flags=re.S)
-    body = re.sub(r"<figure>.*?</figure>\n?", "", body, flags=re.S)
+    # Pages write <figure style="text-align:center">, so match attributes too.
+    body = re.sub(r"<figure\b[^>]*>.*?</figure>\n?", "", body, flags=re.S)
     body = re.sub(r"^<kbd>.*?</kbd>\n+", "", body)
     return re.sub(r"\n{3,}", "\n\n", body).strip()
+
+
+def git(*args):
+    return subprocess.run(["git", "-C", str(REPO), *args], capture_output=True,
+                          text=True, encoding="utf-8").stdout
+
+
+def body_of(text):
+    m = FM_RE.match(text.replace("\r\n", "\n"))
+    return m.group(2) if m else text
+
+
+def lastmod(path):
+    """Date of the newest commit that changed the page's body, not just its frontmatter."""
+    rel = path.relative_to(REPO).as_posix()
+    if git("status", "--porcelain", "--", rel).strip():
+        if body_of(path.read_text(encoding="utf-8")) != body_of(git("show", f"HEAD:{rel}")):
+            return date.today().isoformat()
+    for line in git("log", "--format=%H %cs", "--", rel).splitlines():
+        sha, day = line.split()
+        if body_of(git("show", f"{sha}:{rel}")) != body_of(git("show", f"{sha}^:{rel}")):
+            return day
+    return date.today().isoformat()
 
 
 def write(path, text):
@@ -100,8 +131,20 @@ def main():
              f"Pages: {len(included)}", "Source: https://help.gitkraken.com/kepler/", ""]
     write(REPO / "llms-full.txt", "\n".join(fhead + full).rstrip() + "\n")
 
+    urls = ['<?xml version="1.0" encoding="UTF-8"?>',
+            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    for i, f in enumerate(included):
+        urls += ["  <url>",
+                 f"    <loc>https://help.gitkraken.com/kepler/{f[:-3].lower()}/</loc>",
+                 f"    <lastmod>{lastmod(PAGES / f)}</lastmod>",
+                 "    <changefreq>monthly</changefreq>",
+                 f"    <priority>{'1.0' if i == 0 else '0.8'}</priority>",
+                 "  </url>"]
+    urls.append("</urlset>")
+    write(REPO / "sitemap.xml", "\n".join(urls) + "\n")
+
     print(f"llms.txt: {len(included)} pages. llms-full.txt: "
-          f"{(REPO / 'llms-full.txt').stat().st_size} bytes.")
+          f"{(REPO / 'llms-full.txt').stat().st_size} bytes. sitemap.xml: {len(included)} URLs.")
     print(f"Excluded: {', '.join(sorted(excluded))}")
 
 
