@@ -24,12 +24,11 @@ Settings has 15 pages, each with its own sections. This page documents every one
 Open Settings from the gear icon in the top bar, or with **⌘ ,** (**Ctrl ,** on Windows and Linux). The same shortcut closes Settings again, the way the gear button does.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/settings-general-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/settings-general-oct-2026.png" class="help-center-img img-bordered" alt="Settings open on General at version 0.12.0. The left rail lists Setup, then Account, General, Appearance, Agents, Actions, Remote Access, Remote Environments, Integrations, Voice Input, Repos &amp; Folders, and Help.">
+  <a href="/wp-content/uploads/settings-general-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/settings-general-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Settings open on Repositories. The left rail starts with Search settings and Setup, then lists Account; Agents, Tasks, Repositories, Integrations and Actions; General, Notifications, Appearance, Voice input and Keyboard shortcuts; Remote environments and Remote Access; and Updates and Help, with Repositories' section links expanded under it.">
   </a>
-  <figcaption style="text-align:center; color:#888">Settings, open on General.</figcaption>
+  <figcaption style="text-align:center; color:#888">Settings, open on Repositories.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — Settings at 0.13.0 with the left rail showing Search settings, the Setup ring, and the 15 pages in their five groups (Account / Agents, Tasks, Repositories, Integrations, Actions / General, Notifications, Appearance, Voice input, Keyboard shortcuts / Remote environments, Remote Access / Updates, Help), with the current page's section links expanded under it. -->
 
 ***
 
@@ -76,7 +75,7 @@ Moving between pages replaces a single history entry. As a result, **Back** retu
 
 ### Settings in a remote window
 
-In a window connected to a remote environment, Settings shows that machine's settings, and its header names the machine. Each page states under its title where its settings are saved: **Saved on {machine}** or **Saved on this machine**. A section that saves somewhere other than its page carries its own badge. The **Saved on this machine** tooltip reads *Applies to every Kepler window on this machine, whichever machine it's connected to.*
+In a window connected to a remote environment, Settings shows that machine's settings, and its header names the machine. Each page states under its title where its settings are saved: **Saved on {machine}** or **Saved on this machine**. A section that saves somewhere other than its page carries its own badge. The **Saved on this machine** tooltip reads *Applies to every Kepler window on this machine, whichever machine it's connected to.* To change this machine's own settings from such a window, click **Open this machine's settings** in the header: it opens the same page in a local window.
 
 ### Deep links and section anchors
 
@@ -121,7 +120,9 @@ The Account page has three sections: **Account**, **Unlock more with Kepler**, a
 | **Unlock more with Kepler** | What this plan does and doesn't include. Shown only while something is left to unlock |
 | **GitKraken AI credits** | Your credit balance, with **Buy credits**. Shown only when there's a balance to show |
 
-When a feature is locked on the organization you're acting as but included on another one you belong to, Kepler says so and offers the switch rather than sending you to a paywall: *{organization} ({plan}) already includes this.*
+When a feature is locked on the organization you're acting as but included on another one you belong to, Kepler says so and offers the switch rather than sending you to a paywall: *{organization} ({plan}) already includes this.*, with **Switch to organization**.
+
+A paywall also asks **Already upgraded?** with **Check again**, for a plan you've just changed. If nothing has changed, it says so briefly: *Still on {plan}*.
 
 ***
 
@@ -132,12 +133,11 @@ When a feature is locked on the organization you're acting as but included on an
 The Agents page has five sections: **Your agents**, **Custom agents**, **MCP servers**, **Agent tools**, and **Usage limits**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-settings-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-settings-oct-2026.png" class="help-center-img img-bordered" alt="Settings → Agents, with Default agent at the top and Update all and Re-scan above the agent cards. The Claude Code card shows its version, Update, and Enabled in the title line, then Accounts, Opens in set to Rich chat, Let artifact comments start turns, and a collapsed Advanced section.">
+  <a href="/wp-content/uploads/agent-settings-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-settings-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Settings › Agents: the page description, New tasks use Claude Code with Change in Tasks, and Your agents with Update all and Re-scan above the Claude Code card, which shows its account (alex.lee@example.com, Acme, Default), New sessions start in set to Chat, Let artifact comments start turns, and a collapsed Program and data folder.">
   </a>
   <figcaption style="text-align:center; color:#888">Settings → Agents.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — Settings → Agents at 0.13.0: the "New tasks use {agent}." line with Change in Tasks, then Your agents with Update all and Re-scan in the header. The Claude Code card shows New sessions start in set to Chat, Let artifact comments start turns, and a collapsed Program and data folder disclosure. -->
 
 ### Your agents
 
@@ -151,14 +151,14 @@ Each card's title line carries the agent's name and these controls:
 |---|---|
 | Version | The installed version. **Not installed** when Kepler can't find the CLI. A warning-toned **Version unknown** means Kepler couldn't read it, which turns off features that depend on the version, such as sending a new session's first message automatically. Reinstalling or updating the agent usually fixes it |
 | **Update** | Runs the agent's updater and streams its output. Shown when Kepler has an updater for that agent |
-| **Install** | Runs an install method on your behalf and streams the output. Shown on a not-installed agent that has an installer for your OS |
+| **Install** | Runs an install method on your behalf and streams the output. Shown on a not-installed agent that has an installer for your OS. **Cancel** stops an install in progress: *Install cancelled: {name}* |
 | **Enabled** | *Off keeps it installed but hidden when you start work.* |
 
 The card body holds the rest:
 
 | Control | What it does |
 |---|---|
-| **Accounts** | Runs multiple logins side by side, each with its own credentials and history but sharing your skills, agents, commands, and settings. **Add account** asks whether its conversations **Keep separate** or **Share with the CLI**. Each account row has a color picker that tints the agent icon wherever that account runs (the default account stays uncolored), plus **Sign in** and an account menu with **Rename**, **Share history with the CLI**, **Sign in another way**, **Sign out**, and **Remove account**. Available for Claude Code, Codex, GitHub Copilot, Auggie, and Grok Build |
+| **Accounts** | Runs multiple logins side by side, each with its own credentials and history but sharing your skills, agents, commands, and settings. **Add account** asks whether its conversations **Keep separate** or **Share with the CLI**. Each account row has a color picker that tints the agent icon wherever that account runs (the default account stays uncolored, so its picker shows the ⊘ **No color** mark), plus **Sign in** and an account menu with **Rename**, **Share history with the CLI**, **Sign in another way**, **Sign out**, and **Remove account**. Removing an account stops its running sessions and deletes the sessions stored only in it, unless you first **Move to CLI account**; see [Agent Sessions](/kepler/agent-sessions#several-accounts-for-one-agent). Available for Claude Code, Codex, GitHub Copilot, Auggie, and Grok Build |
 | **Account** | On an agent with a single login: who is signed in, with **Sign in** or **Sign out**. Signing out deletes the stored credentials |
 | **New sessions start in** | The default mode for new sessions. See below |
 | **Let artifact comments start turns** | Claude Code only. See below |
@@ -238,7 +238,7 @@ This setting is about the MCP clients on your machine. It differs from the works
 - List the repositories and folders in your workspace.
 - Create, attach, detach, or discard one of the task's worktrees.
 - Find the workspace's tasks and sessions, archive and restore a task, and create a task with files attached.
-- Start a session on a task with the agent it chooses, and send follow-ups to existing sessions.
+- Start a session on a task with the agent it chooses, name it, rename it later, and send follow-ups to existing sessions.
 
 See [Tasks and Resources](/kepler/tasks-and-resources) for the full list and which of them ask permission first.
 
@@ -353,12 +353,11 @@ For example, `<REPOSITORY_PATH>/.worktrees/<REPOSITORY_NAME>` nests each worktre
 Per-repository commands have a **Variables** menu of their own, with two more variables. See [Per-repository commands](#per-repository-commands).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/folder-fields-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/folder-fields-oct-2026.png" class="help-center-img img-bordered" alt="The three folder fields in Settings → General, with the Variables menu open beside Default Worktrees Folder, offering REPOSITORY_PATH (Main repo folder) and REPOSITORY_NAME (Repo name). Default Tasks Folder has no Variables menu.">
+  <a href="/wp-content/uploads/folder-fields-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/folder-fields-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The New tasks section of Settings › Tasks with the Variables menu open beside Worktrees folder, offering REPOSITORY_PATH and REPOSITORY_NAME; the Tasks folder field below has no Variables menu.">
   </a>
-  <figcaption style="text-align:center; color:#888">The three folder fields, with the Variables menu open.</figcaption>
+  <figcaption style="text-align:center; color:#888">The Worktrees and Tasks folder fields in Settings → Tasks, with the Variables menu open.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — Settings → Tasks → New tasks at 0.13.0, with the Variables menu open beside Worktrees folder (REPOSITORY_PATH, REPOSITORY_NAME) under Where new tasks make changes, and Tasks folder below with no Variables menu. -->
 
 #### Automatically name new tasks
 
@@ -437,12 +436,11 @@ Click a repository's row to open its **Edit repo** page. The page shows the repo
 **Name** and **Description** are optional. Kepler stores whitespace-only text as empty.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/edit-repo-dialog-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/edit-repo-dialog-oct-2026.png" class="help-center-img img-bordered" alt="The Edit repo dialog for Kepler-Docs, showing its path, its GitHub repository, main and 6 branches, then Description, Branch prefix set to App setting (kepler/), and an empty Commands list with Add.">
+  <a href="/wp-content/uploads/edit-repo-dialog-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/edit-repo-dialog-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Edit repo sub-page for acme-web in Settings › Repositories: the breadcrumb back to Repositories, its path and branches, Name, Description, Branch prefix set to Default (kepler/), the Commands section with Add command and two saved commands, and the MCP servers section with Add server, the Agent picker on Claude Code CLI and the servers Added by you.">
   </a>
   <figcaption style="text-align:center; color:#888">The Edit repo page.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — The Edit repo sub-page at 0.13.0 for Kepler-Docs, with the breadcrumb back to Repositories, its path and branches, then Name, Description, Branch prefix set to Default (kepler/), the Commands section with Add command, and the MCP servers section. -->
 
 ##### Branch prefix, per repository
 
@@ -494,12 +492,11 @@ A failed command does not undo the worktree. The worktree exists but may not be 
 To run a command from the task view, right-click a worktree row in the rail and use **Run command here**. It lists that repository's commands and runs the one you pick in that worktree, opening its terminal in place. A repository with none yet reads **No commands yet** and offers **Create command…**. A command that's running shows on the run button and its menus, where you can stop it.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/repo-commands-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/repo-commands-oct-2026.png" class="help-center-img img-bordered" alt="A command row in the Edit repo dialog, with a drag handle, a Name field, Run on worktree creation, and a command box whose Variables menu is open on REPOSITORY_PATH, REPOSITORY_NAME, SOURCE_PATH, and WORKTREE_PATH.">
+  <a href="/wp-content/uploads/repo-commands-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/repo-commands-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Commands section of the Edit repo page for acme-web: Add command, Install deps (pnpm install) with the Runs on creation chip, and Dev server open for editing with its Variables menu listing REPOSITORY_PATH, REPOSITORY_NAME, SOURCE_PATH and WORKTREE_PATH.">
   </a>
   <figcaption style="text-align:center; color:#888">A repository's Commands, with the Variables menu open.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — The Commands section of the Edit repo page at 0.13.0, with its description, Add command, two filled-in command rows (one showing the Runs on creation chip), and the Variables menu open on REPOSITORY_PATH, REPOSITORY_NAME, SOURCE_PATH, and WORKTREE_PATH. -->
 
 ### Worktree cleanup
 
@@ -525,7 +522,12 @@ Each worktree shows how long since it was touched, why it may be finished (**mer
 
 A lock Kepler itself left on a worktree, for a task this install knows or a task since deleted, is cleared and the worktree deleted. Kepler never deletes a repository's main checkout. It keeps any worktree that still has uncommitted or unpushed work, other tasks, running agent sessions, or a lock from another tool, and says why for each. Where forcing can help, the result offers **Force delete**, which discards the listed work and ends the agent sessions running there.
 
-<!-- TODO(screenshot): New — The Worktree cleanup sub-page at 0.13.0 after a check, with the summary line, Show worktrees set to Safe to delete, Treat a worktree as idle after 14 days, one repository group expanded, and two worktrees selected with Delete 2 worktrees and Update. -->
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/ade-worktree-cleanup-01-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ade-worktree-cleanup-01-v2@2x.png" class="help-center-img img-bordered" alt="The Worktree cleanup page after a check: 4 worktrees in 1 repo, 2 look safe to delete, with Idle after 14 days and Re-check. Show worktrees is set to Safe to delete, and the acme-web group lists kepler/old-banner and kepler/promo-page, both merged into main, untouched for weeks and tagged with their archived task, Spring sale banner, both selected. The selection bar reads 2 selected with Update, Delete 2 worktrees and Clear.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The Worktree cleanup sub-page, after a check.</figcaption>
+</figure>
 
 #### Update worktrees
 
@@ -539,7 +541,19 @@ To bring several worktrees up to date with their base branch at once:
 
 While the update runs, each row shows its status: **Waiting**, **Updating…**, **Updated**, **Up to date**, **Skipped**, **Conflict**, or **Failed**. When it finishes, you can undo one row with **Roll back**, or every row with **Roll back all**. If you didn't push during the update, **Push** and **Push all** push the updated branches.
 
-<!-- TODO(screenshot): New — The Update worktrees dialog at 0.13.0, first with the plan (Will update · 3 commits behind, Up to date, Skipped · uncommitted changes) and How to update set to Rebase beside the Update / Update + Push button, then the finished run with Roll back on each row and Roll back all. -->
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/ade-worktree-batch-update-01-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ade-worktree-batch-update-01-v2@2x.png" class="help-center-img img-bordered" alt="The Update worktrees dialog with How to update set to Rebase. It plans three worktrees: kepler/gift-card-ui is Up to date, kepler/old-banner Will update · 3 commits behind, and kepler/wishlist is Skipped · uncommitted changes. The footer reads 1 worktree to update beside Cancel and the Update button with its menu.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The Update worktrees plan, before you pick an action.</figcaption>
+</figure>
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/ade-worktree-batch-update-02-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ade-worktree-batch-update-02-v2@2x.png" class="help-center-img img-bordered" alt="The finished update: Update finished, 1 updated, with Push all, Roll back all and Dismiss in its header, and kepler/old-banner marked Updated with Push and Roll back on its row.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The finished update, with Roll back and Push on each row.</figcaption>
+</figure>
 
 ### Projects
 
@@ -619,7 +633,7 @@ If Kepler stops receiving hook events from a running Claude session, every windo
 | **Preferred Actions** | *Pick which Action runs when you press the Action button on a task, issue or pull request.* One picker per kind of item: **Tasks**, **Issues**, **Pull requests I authored**, and **Pull requests from others**. Any slot can be **None** |
 | **All Actions** | The shipped Actions under **Built in** and yours under **Custom**. Click a row to edit it. A row also offers **Restore default** where you have edited it, and **Delete** on a custom row |
 
-The page header has **New Action**, which creates an Action, and **Restore all defaults**, which discards every edit. An Action you create or edit opens as a sub-page.
+The **All Actions** section header has **New Action**, which creates an Action, and **Restore all defaults**, which discards every edit. An Action you create or edit opens as a sub-page.
 
 Kepler ships four default Actions:
 
@@ -700,7 +714,12 @@ Two more settings sit under the grid:
 
 To silence desktop notifications from one remote machine only, use **Mute notifications from {host}** on that machine in [Remote environments](#remote-environments).
 
-<!-- TODO(screenshot): New — Settings → Notifications at 0.13.0, showing the What to notify you about grid (Event, Desktop, In Kepler columns; Replies, Questions, Permission requests, Errors rows) with Play a sound with desktop notifications and Notify even for the task you're looking at below it. -->
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/ade-settings-notifications-01-01-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ade-settings-notifications-01-01-v2@2x.png" class="help-center-img img-bordered" alt="Settings › Notifications: a grid of events (Replies, Questions, Permission requests, Errors) against Desktop and In Kepler, at their defaults, with Play a sound with desktop notifications and Notify even for the task you're looking at below it.">
+  </a>
+  <figcaption style="text-align:center; color:#888">What to notify you about, in Settings → Notifications.</figcaption>
+</figure>
 
 ***
 
@@ -722,6 +741,8 @@ The Appearance page has four sections: **Theme**, **Chat**, **Terminal**, and **
 **System** resolves to **Dark** because your OS says "light or dark" and nothing finer. Someone following the room is asking to follow the room, not to opt into the highest contrast Kepler can draw.
 
 Color mode is the only appearance choice in this section. No second, design-language picker exists.
+
+Terminals follow the theme too. A terminal program that asks, such as an agent's own command-line app, is told the terminal's background color as it starts, so it draws a palette that suits the theme you're on. One that asks to follow theme changes is redrawn when you switch, while it runs.
 
 ### Chat
 
@@ -938,7 +959,7 @@ The Remote environments page has three sections:
 | Section | What it holds |
 |---|---|
 | **Your machines** | Your saved machines, each row showing whether it's connected and how many windows have it open. **Connect** opens it here, and the second button opens it in a new window. **Add machine** adds one by hand. On Windows, **Machine type** chooses **SSH** or **WSL**. A WSL machine takes a **Distro** and an optional **Name** |
-| **Found on this machine** | *Machines from your SSH config and WSL that you haven't added yet.* Each has **Add**, or **Hide** to tuck it under **Show hidden ({count})**. Shown only while something is found |
+| **Found on this machine** | *Machines from your SSH config and WSL that you haven't added yet.* Each has **Add**, or **Hide** to tuck it under **Show hidden ({count})**. On a plan without remote environments, **Add** reads **Try free and add** where a trial is open, or **Upgrade to add**, which opens the plan page and saves nothing. Shown only while something is found |
 | **Remote windows** | How a window connected to another machine loads its interface. See below |
 
 Click a saved machine to open its page:

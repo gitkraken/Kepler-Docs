@@ -24,12 +24,11 @@ Connect a Git host and the pull requests you authored, plus the ones waiting on 
 Manage providers in **Settings → Integrations**, in the **Issues and pull requests** section.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/provider-integrations-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/provider-integrations-oct-2026.png" class="help-center-img img-bordered" alt="Provider Integrations in Settings → Integrations, listing all twelve providers with Refresh at the top. GitHub and Jira show a Connected badge with Disconnect and Reconnect, and the rest offer Connect.">
+  <a href="/wp-content/uploads/provider-integrations-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/provider-integrations-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Issues and pull requests section of Settings › Integrations, with GitHub and Azure DevOps (two accounts) connected and the other providers listed with Connect buttons.">
   </a>
   <figcaption style="text-align:center; color:#888">Issues and pull requests, in Settings → Integrations.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — The Issues and pull requests section of Settings → Integrations at 0.13.0, listing the providers with their Connected badges and Connect buttons. -->
 
 ***
 
@@ -123,8 +122,8 @@ Switching either one clears that provider's saved filters (a repository from the
 Click **Disconnect** on the provider's row in **Settings → Integrations** and confirm.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/disconnect-provider-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/disconnect-provider-aug-2026.png" class="help-center-img img-bordered" alt="A connected provider's row, with Connected badge, Disconnect, and Reconnect">
+  <a href="/wp-content/uploads/disconnect-provider-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/disconnect-provider-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="GitHub's row in Settings › Integrations, with its Connected badge, Disconnect and Reconnect.">
   </a>
   <figcaption style="text-align:center; color:#888">A connected provider's row.</figcaption>
 </figure>
@@ -210,6 +209,8 @@ Kepler pulls these fields from a pull request:
 <!-- TODO(verify): re-checked field by field against the shared PullRequest shape in src/shared/provider/pull-request.ts at kepler 7c31af83e. It's unchanged, and the table above is complete apart from the base-repo clone URLs, which only prefill the Clone form. The June 2026 version of this page also claimed Kepler pulls the diff, open review comments, and the current review state when you attach a pull request; none of those are fields on this shape. Confirm with engineering which path supplies review comments and the diff to a Review or Address Feedback run before documenting them. -->
 
 A merged pull request keeps its description and author for as long as a task, archived or not, still links it.
+
+On a self-hosted server (GitHub Enterprise, GitLab Self-Hosted, Azure DevOps Server, or Bitbucket Data Center), images embedded in a pull request's description stay blocked and don't display in Kepler's previews. The server's member avatars still load.
 
 Azure DevOps reports pull requests without a usable number, so Kepler identifies them by URL instead. You should not see a difference; identifying by URL is why a pull request you look up by link resolves correctly there.
 

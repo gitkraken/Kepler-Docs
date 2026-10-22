@@ -22,8 +22,8 @@ taxonomy:
 Kepler has one interface rather than a set of views, so you shape it instead of switching away from it. Four controls do most of the work: the grouping, the sort, the filters, and the layout. Each segment remembers its own, and a combination you come back to can be saved under a name.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/arrange-work-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/arrange-work-oct-2026.png" class="help-center-img img-bordered" alt="The control strip above Kepler's list: the Saved views menu, Group set to Progress, Sort set to Updated, Filter, the List and Columns layout switch, and a refresh button.">
+  <a href="/wp-content/uploads/arrange-work-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/arrange-work-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The dashboard's arranging controls: the Saved views chip, Group: Inbox, Sort: Updated, Filter, the List and Columns view switch, and Refresh.">
   </a>
   <figcaption style="text-align:center; color:#888">The saved views, grouping, sort, filter, and layout controls.</figcaption>
 </figure>
@@ -202,16 +202,16 @@ Agents can set the stage too, and put a task on hold, through Kepler's workspace
 The **Filter** menu holds one flyout per facet.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/filter-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/filter-oct-2026.png" class="help-center-img img-bordered" alt="The Filter menu on Tasks in progress, with the Repository flyout open. Kepler-Docs and gk-cli are checked, and hovering gk-cli shows its minus button with the tooltip Exclude gk-cli, Shift+Enter.">
+  <a href="/wp-content/uploads/filter-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/filter-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The dashboard's Filter menu, its chip reading In Development and the search box showing 3 hidden. Progress is open on In Development (ticked, 2), On hold, In Review and Exploration, with Exploration's exclude button hovered and its tooltip reading Exclude Exploration with Shift+Enter.">
   </a>
   <figcaption style="text-align:center; color:#888">The Filter menu, with a facet's flyout open.</figcaption>
 </figure>
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/filter-todo-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/filter-todo-oct-2026.png" class="help-center-img img-bordered" alt="The Filter menu on Todo, with Type, Linked work, Status, Your role, and Provider, then a GitHub section with Repository, Assignee, and Label and a Jira section with Assignee, Issue type, and Label. The Provider flyout lists GitHub and Jira with their counts.">
+  <a href="/wp-content/uploads/filter-todo-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/filter-todo-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Filter menu on Todo, with Type, Status, Your role and Provider, then a GitHub section with Repository, Assignee and Label, each set to Any. The Provider flyout lists GitHub with its count of 5, and Manage integrations.">
   </a>
-  <figcaption style="text-align:center; color:#888">The Filter menu on Todo, with a section per provider.</figcaption>
+  <figcaption style="text-align:center; color:#888">The Filter menu on Todo. Each connected provider gets its own section, here GitHub.</figcaption>
 </figure>
 
 Kepler hides facets with nothing to offer, so a single-repo setup won't show a Repository facet at all.
@@ -240,8 +240,8 @@ External sessions stay listed under a filter that has no way to answer for them,
 The search box matches on **title, reference, or repository**: *Search title, ref, or repo…*.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/search-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/search-oct-2026.png" class="help-center-img img-bordered" alt="The search box with the query create, showing the 2 of 34 search pill and the 0 hidden filter pill at its right end, above the two matching task cards.">
+  <a href="/wp-content/uploads/search-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/search-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The search box holding the query the, with a 1 of 5 search pill and a 2 hidden filter pill, each with its own clear button, beside Saved views, Group: Inbox, Sort: Updated and the Filter chip reading In Development.">
   </a>
   <figcaption style="text-align:center; color:#888">The search box, with its search and filter pills.</figcaption>
 </figure>
@@ -328,7 +328,7 @@ Archiving outranks everything else, so a task you filed away can't climb back in
 
 **Restore task** takes the place of **Archive task** in an archived task's **⋮** menu, and is on the task page's own header too. It puts the task straight back. Only one active task can hold a given pull request, so if restoring would archive another task that holds the same one, Kepler names that task and asks first.
 
-For more than one at a time, every section header on **Tasks in progress** carries a quiet **Select**. Press it, and that corner of the header becomes a bar: a select-all box, **{count} selected**, and the batch verbs. The section's rows also grow checkboxes. One section selects at a time, and while you're selecting, a click ticks a row rather than opening its panel. A task that Kepler is still preparing has no checkbox, and select-all skips it.
+For more than one at a time, every section header on **Tasks in progress** carries a quiet **Select**. Press it, and that corner of the header becomes a bar: a select-all box, **{count} selected**, and the batch verbs as icon buttons, each named by its tooltip. The section's rows also grow checkboxes. One section selects at a time, and while you're selecting, a click ticks a row rather than opening its panel. A task that Kepler is still preparing has no checkbox, and select-all skips it.
 
 | Button | What it does |
 |---|---|
@@ -337,7 +337,7 @@ For more than one at a time, every section header on **Tasks in progress** carri
 | **Delete** | Removes the selected tasks for good |
 | **Cancel** | Leaves selection mode and drops the set |
 
-Both **Archive** and **Delete** confirm, and both offer **Also delete worktrees** and **Also delete branches**. The single-task dialog remembers what you ticked last time; the batch confirmation always starts with both unticked. The batch confirmation doesn't list each worktree's fate. Instead, any worktree that would lose work is kept, and a toast afterwards says which ones and why. Open a task's own **⋮** to see the list before you confirm.
+Both **Archive** and **Delete** confirm, with **Archive tasks** or **Delete tasks** as the confirm button, and both offer **Also delete worktrees** and **Also delete branches**. Deleting can't be undone, and the confirmation says so. The single-task dialog remembers what you ticked last time; the batch confirmation always starts with both unticked. The batch confirmation doesn't list each worktree's fate. Instead, any worktree that would lose work is kept, and a toast afterwards says which ones and why. Open a task's own **⋮** to see the list before you confirm.
 
 To clean up worktrees rather than tasks, including stale locks Kepler left behind, open **Worktree cleanup** in **Settings → Repositories**. The same page can also **Update** many worktrees at once, bringing each branch up to date with its base. See [Settings](/kepler/settings).
 

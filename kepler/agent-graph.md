@@ -108,8 +108,8 @@ Repeated calls of the same kind fold into one node badged **Group**, which keeps
 ## Click any node for detail
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/node-details-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/node-details-aug-2026.png" class="help-center-img img-bordered" alt="A node's details panel open beside the graph">
+  <a href="/wp-content/uploads/node-details-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/node-details-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Agent Graph with the Edit cart.js tool-call node of Fix the cart total selected and its chain highlighted (the task, its session, Turn 1, Edit cart.js and cart.js), and the node's details panel open beside the graph: Tool call, Done, Edit cart.js, the path Fix the cart total › its session › Turn 1, Last activity just now, Status Done and the file it touched, cart.js.">
   </a>
   <figcaption style="text-align:center; color:#888">A node's details, open beside the graph.</figcaption>
 </figure>
@@ -119,6 +119,8 @@ Selecting a node opens details beside the graph. What you see depends on what yo
 - **Session**: the agent, state, model, mode, context used, cost, where it's running, and its stop reason.
 - **Tool call**: the tool, the exact input, the files and paths it touched, how long it took, and how many calls failed.
 - **Subagent**: its type, its prompt, and its own calls.
+- **Task**: its status (**Active**, **On hold**, or **Archived**), its sessions, and its resources.
+- **File**: a preview of the file. For a large file, the preview reads only its beginning.
 
 **Duration is only shown when Kepler actually watched the call happen.** Replayed history can't tell you how long something took, so the graph leaves it out rather than estimating.
 

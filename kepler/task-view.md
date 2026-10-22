@@ -35,8 +35,8 @@ Get here by double-clicking a row in [the Kepler interface](/kepler/kepler-inter
 ## The header
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/task-header-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-header-oct-2026.png" class="help-center-img img-bordered" alt="The left side of the task header: the context panel toggle, the back chevron, the task name chip, the ⋮ Task actions menu, and the In Development progress control.">
+  <a href="/wp-content/uploads/task-header-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-header-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The left side of the task header: the context panel toggle, the back chevron, the Fix the cart total task chip with its switcher chevron, the ⋮ Task actions menu, and the In Development progress control.">
   </a>
   <figcaption style="text-align:center; color:#888">The left side of the task header. Terminal sits at the far right.</figcaption>
 </figure>
@@ -57,8 +57,8 @@ When a Task looks finished, a **Ready to archive?** prompt joins the header with
 **Rename task**, or **F2** anywhere on the page outside a text field, turns the name into an editable field in place. The field carries **Auto-name** (*Suggest a name from the task's prompt and resources*), which fills the field with a suggestion for you to accept or edit. It never renames on its own: **Enter** or the check mark saves, **Escape** or the **×** cancels.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/rename-inline-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/rename-inline-oct-2026.png" class="help-center-img img-bordered" alt="The task name turned into an editable field in the header, with its text selected, followed by the Auto-name button, × to cancel, and a check mark to save.">
+  <a href="/wp-content/uploads/rename-inline-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/rename-inline-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The task name turned into an editable field in the header with Fix the cart total selected, followed by the Auto-name button, × to cancel, and a check mark to save.">
   </a>
   <figcaption style="text-align:center; color:#888">Renaming a task in place.</figcaption>
 </figure>
@@ -132,8 +132,8 @@ Every rail row draws a selected fill when it's the one on screen, and the column
 Right-click any row. Every row opens with **Open**, followed by **Open to the side** with tabs off or **Open beside** with tabs on (see [Columns or tabs](#columns-or-tabs)), when there's somewhere for it to go. A worktree row adds **Open changes**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/worktree-row-menu-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/worktree-row-menu-oct-2026.png" class="help-center-img img-bordered" alt="A worktree row's right-click menu in the task rail, with Run command here open on No commands yet and Create command. The menu also lists the Open actions, New session here, New terminal here, Rename branch, Change merge target, the copy actions, and Detach worktree last.">
+  <a href="/wp-content/uploads/worktree-row-menu-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/worktree-row-menu-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A worktree row's right-click menu in the task rail, with Run command here open on No commands yet and Create command…. The menu also lists Open, Open changes, Open in, New session here, New terminal here, Rename branch, Change merge target…, the copy actions, and Detach worktree… last, unavailable while a session is using the worktree.">
   </a>
   <figcaption style="text-align:center; color:#888">A worktree row's context menu.</figcaption>
 </figure>
@@ -143,7 +143,8 @@ Right-click any row. Every row opens with **Open**, followed by **Open to the si
 | A worktree that's on disk | **New session here**, **New terminal here**, **Run command here**, **Rename branch**, **Change merge target…**, your default editor, **Open in**, **Copy path**, **Copy branch name**, **Copy remote URL** |
 | A folder | **New session here**, **New terminal here**, your default editor, **Open in**, **Copy path** |
 | A file | **Open in default app**, **Show in Finder** (macOS), **Show in Explorer** (Windows) or **Show in file manager** (Linux), **Save as…**, **Copy path** |
-| A session | **Rename session**, **New session from this one**, **Open source session** on a session started from another, **Copy session reference**, **Restart agent**, **Shut down agent**, **Show Agent Graph** |
+| A session | **Rename session**, **New session from this one**, **Open source session** on a session started from another, **Copy session reference**, **Restart agent**, **Shut down agent**, **Show Agent Graph**, and **Use another copy…** when Kepler has more than one saved copy of the conversation |
+| A session started outside Kepler | **Open preview**, **Continue in this task**, **Create task**, **Copy session ID**, **Copy working directory path**, and a way to reveal the working directory in your file manager |
 | A pull request or issue | **Open in browser**, **Copy link**, **Copy title**, **Copy number**, and **Copy branch name** on a pull request |
 
 **Run command here**, and the **Run a command** control on the row and the worktree's own strip, lists the repository's commands (configured on the repository's own page in **Settings → Repositories**) and runs the one you pick in that worktree, revealing its terminal in the drawer without taking your focus. Each command row leads with its state: a play glyph, a spinner while it warms up, or **Stop** while it runs, and picking a running command stops it rather than starting a second copy. A repository with none reads **No commands yet**, and the menu ends with **Create command…** so you can add one from where you noticed you wanted it, plus **Manage commands…**, which deep-links to that repository's own settings.
@@ -155,6 +156,8 @@ Right-click any row. Every row opens with **Open**, followed by **Open to the si
 **Rename branch** opens a dialog with the branch's own name field and **Also rename remote branch**, which renames the branch on its remote too rather than just locally. **Change merge target…** opens a picker of remote branches; see [Review Changes](/kepler/review-changes).
 
 **Rename session** names a Chat session yourself; automatic titling never overwrites a name you chose.
+
+**Use another copy…** opens a dialog listing each saved copy of the conversation, when it was updated and how many messages it holds, with **In use** on the current one. Pick the one to continue when you resume. See [Agent Sessions](/kepler/agent-sessions).
 
 **Option/Alt-click** a resource row to open it in your browser instead of in Kepler.
 
@@ -172,25 +175,23 @@ The content area takes one of two shapes, set by **Show tabs on the task page** 
 | **On** | Free-form **tabs** you can pin, drag between groups, and arrange side by side |
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/show-tabs-on-task-page-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/show-tabs-on-task-page-oct-2026.png" class="help-center-img img-bordered" alt="The Show tabs on the task page setting in Settings → General, unticked, with help text explaining that it's off by default and that turning it on keeps sessions, worktrees, and resources open as tabs.">
+  <a href="/wp-content/uploads/show-tabs-on-task-page-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/show-tabs-on-task-page-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Task page section of Settings › Tasks, with Show tabs on the task page and Preview tabs.">
   </a>
   <figcaption style="text-align:center; color:#888">The Show tabs on the task page setting.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — The Task page section of Settings → Tasks at 0.13.0, showing Show tabs on the task page and Preview tabs. -->
 
 Either way, terminals live in the [drawer](#the-terminal-drawer) beneath the content area, never in a column or a tab, so opening a shell never evicts the changes or the conversation you were reading. And either way, closing something is a view change: it detaches nothing, and it doesn't stop a session. The rail still has it all.
 
 ### The columns
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/task-columns-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-columns-oct-2026.png" class="help-center-img img-bordered" alt="The task page with tabs off: the rail on the left, then three columns side by side, a session conversation in Sessions, a worktree's changed files in Changes, and a pull request's details in Resources.">
+  <a href="/wp-content/uploads/task-columns-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-columns-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The task page for Fix the cart total with tabs off: the rail on the left with Sessions, Changes and Notes, then three columns side by side: the session's conversation (thinking, plan, a Read cart.js tool call and the agent's replies), the kepler/fix-cart-total worktree's Working changes with cart.js modified and cart.test.js added above the commit box, and the task's Prompt note in Resources.">
   </a>
   <figcaption style="text-align:center; color:#888">The three content columns: Sessions, Changes, and Resources.</figcaption>
 </figure>
 
-<!-- TODO(screenshot): Replace: Layout is current and names are blurred. Optional re-take on a neutral task: the session column shows the PR #39 review conversation. -->
 
 With tabs off, the content area is fixed slots, not free-form panes. A rail row's kind decides which slot it opens into, so a session never lands next to a note and you never have to remember where you put something.
 
@@ -226,12 +227,11 @@ A session's control on its strip is named for what it does: **Archive session** 
 With tabs on, anything you open from the rail (sessions, worktrees, files, and every other resource) becomes a tab, and tabs live in **groups** you arrange freely, the way editor tabs work in VS Code.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/tabs-preview-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/tabs-preview-oct-2026.png" class="help-center-img img-bordered" alt="The task page with tabs on. A pull request opened with one click sits in an italic preview tab, and beside it a session tab shows an orange status dot in place of its close control.">
+  <a href="/wp-content/uploads/tabs-preview-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/tabs-preview-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Two tab groups side by side on the task page for Fix the cart total, with the left group's tab strip ringed: it starts with the pinned session tab, shrunk to its icon, beside the Prompt note in an italic preview tab; the right group holds the kepler/fix-cart-total worktree tab showing its two working changes, cart.js and cart.test.js.">
   </a>
   <figcaption style="text-align:center; color:#888">An italic preview tab beside a session tab.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace: Names are blurred. Re-take with two tab groups side by side and a pinned tab as well as the preview tab. -->
 
 - **Drag a tab** to reorder it, onto another group to move it there, or to a group's edge to split off a new group there. Drag the sash between groups to resize them.
 - **A single click opens a preview.** A resource opened with one click shows in an italic preview tab that the next single click replaces, so browsing the rail doesn't pile up tabs. Double-click a row, or start editing in the tab, to keep it open. A session always opens as a tab you keep. Turn **Preview tabs** off in **Settings → Tasks → Task page** to have every click keep its tab.
@@ -241,9 +241,14 @@ With tabs on, anything you open from the rail (sessions, worktrees, files, and e
 
 A tab's **Tab actions** chevron and its right-click menu hold everything the thing's rail row offers, plus **Rename** on a file or folder tab. They lead with the tab's own verbs: **Keep open** on a preview, **Pin tab** or **Unpin tab**, **Close tab**, **Close others**, **Close to the right**, **Close all**, and **Close group** when there's more than one group. A pinned tab shrinks to its icon at the front of its group and has no close control; unpin it to close it.
 
-A draft session's tab reads **(draft)** after its name. Right-click a draft tab for **Discard draft**, plus **Move left** and **Move right** where the tab can move. With tabs on, the menu also holds **Pin tab**, **Keep open**, **Open beside** and **Close tab**. Closing a draft that has text in it asks **Discard new session?** first, because *Your draft prompt and attachments will be removed.*
+A draft session's tab reads **(draft)** after its name. With tabs off, right-click a draft tab for **Discard draft**, plus **Move left** and **Move right** where the tab can move. With tabs on, its menu holds the tab's own verbs instead: **Keep open** while it's a preview, **Pin tab** or **Unpin tab**, and **Close tab**, which is a draft's only close. Closing a draft that has text in it asks **Discard new session?** first, because *Your draft prompt and attachments will be removed.*
 
-<!-- TODO(screenshot): New — A draft session tab marked (draft) with its right-click menu open on Discard draft, Move left and Move right, and a Draft row in the rail's Sessions group. -->
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/ade-draft-session-tab-menu-01-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ade-draft-session-tab-menu-01-v2@2x.png" class="help-center-img img-bordered" alt="The top of a task's side panel with a New session (draft) tab beside the task's first session, and the draft tab's Tab actions menu open under it: Move left, with its Ctrl+Alt+[ shortcut, and Discard draft.">
+  </a>
+  <figcaption style="text-align:center; color:#888">A draft session's tab and its Tab actions menu, the same one a right-click opens.</figcaption>
+</figure>
 
 A session tab swaps its close control for the session's status dot while the session has something unread or needs you, so a group's tabs say which conversation wants attention.
 
@@ -297,16 +302,15 @@ Point at a branch row for **Use this branch**, or for **New branch from this**, 
 If a worktree is gone from disk, Kepler asks **Recreate the worktree and start the session?** before the session starts.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-session-flyout-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-session-flyout-oct-2026.png" class="help-center-img img-bordered" alt="The New session menu with Start with task context checked at the top, then All worktrees and folders and two worktrees. One worktree's flyout is open, with Start on another branch above the agent rows, each row ending in a button that starts it in the other mode.">
+  <a href="/wp-content/uploads/new-session-flyout-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-session-flyout-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A task's side panel with a New session (draft) tab and its target chip's menu open: Search branches and folders, Attached to this task with kepler/fix-cart-total, and Branches with the repository's other branches and main.">
   </a>
   <figcaption style="text-align:center; color:#888">Choosing where a new session runs.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — A draft session tab at 0.13.0 with the target chip's menu open, showing Search branches and folders, Attached to this task and Branches. The New session menu in the current image no longer exists. -->
 
-**Task context** is a switch in **Agent settings**. It's on by default and *Gives the agent the task’s saved prompt and notes. Updates are included in subsequent messages.* Turn it off for a session that forms its own view instead.
+**Task context** is a checkbox in **Agent settings**. It's on by default and *Gives the agent the task’s saved prompt and notes. Updates are included in subsequent messages.* Turn it off for a session that forms its own view instead.
 
-If no agents are connected, **Agent settings** reads **No agents available**. Connect one in [Agent Integrations](/kepler/agent-integrations).
+If no agents are connected, **Agent settings** reads **No agents available**, and its menu offers **Connect an AI agent**: an **Install** row per agent, **See all {count} agents in Settings**, and **Check again** for one you installed yourself. See [Agent Integrations](/kepler/agent-integrations). An agent that's signed out reads *Sign in to {agent} to start a session*. When an agent doesn't share its options, the menu says *You can still start a session. It uses {agent}'s own model and mode.*
 
 **Start a session in a specific checkout without a draft.** Right-click a worktree or folder row and point at **New session here**. The submenu lists your agents. Each agent row starts that agent in its default mode, and the trailing button starts the other mode: **Start in Terminal**, or **Start in Chat** on an agent that defaults to Terminal. An agent that offers only one mode shows no second button. See [Agent Sessions](/kepler/agent-sessions#how-a-session-runs).
 
@@ -383,6 +387,15 @@ Terminals live in a drawer beneath the content area, spanning all of it, sized b
 Every terminal also has a row in the rail's **Terminals** group. Clicking it brings the drawer up on that terminal; clicking the row already showing puts the drawer away.
 
 **Maximize terminal pane**, or **Cmd/Ctrl+Shift+J**, takes the whole height; **Restore terminal pane** brings it back.
+
+### When a terminal reconnects
+
+A terminal reattaches to its running shell rather than starting a new one:
+
+- While it loads it reads **Loading terminal…**, and **Reconnecting to the terminal…** while the connection comes back. If it can't, **Couldn't restore this terminal** says *The terminal is still running. Retry to load its output again.*, with **Retry**.
+- One view types at a time. A terminal another view is driving, in another window or on a Remote Access device, reads **Another view is controlling this terminal**. **Take control** lets you type here and sizes the terminal to this view.
+- A terminal printing faster than the connection can show reads **Showing the latest output**: *This terminal is printing faster than this connection can show, so older lines are skipped.*
+- Input Kepler can't confirm is never resent. See [Agent Sessions](/kepler/agent-sessions#whats-different-in-terminal).
 
 ### Reading a tab
 

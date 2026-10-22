@@ -36,7 +36,8 @@ Everything up to [Remote Access](#remote-access-reach-kepler-from-another-device
 
 <div class="note" markdown="1">
 
-**Remote environments need a paid plan.** Every paid plan includes it, with no limit on how many environments you can add. Unpaid plans see a banner offering a free trial where one is available, and **Switch to {organization}** when another organization you belong to already includes it.
+**Remote environments need a paid plan.** Every paid plan except Student includes it, with no limit on how many environments you can add. Other plans see a banner offering a free trial where one is available, and, when another organization you belong to already includes it, names that organization with **Switch to organization**. If you've just upgraded, **Already upgraded?** with **Check again** re-reads your plan; when nothing has changed, it says so briefly: *Still on {plan}*.
+<!-- TODO(verify): Confirm with the product team that Student is the only paid plan without remote environments (src/ui/components/auth/plan.ts at v0.13.0 names Student alone). -->
 
 </div>
 
@@ -52,6 +53,7 @@ Kepler binds each window to one environment at a time, and the title-bar chip sh
   </a>
   <figcaption style="text-align:center; color:#888">The chip on a host colored Violet, with the popover header peeking on hover.</figcaption>
 </figure>
+<!-- TODO(screenshot): Replace — The title-bar chip at 0.13.0 on a connected machine tinted with its color, with the popover header peeking on hover: Connected, latency, the versions, Disconnect, and the restart and stop server buttons. -->
 
 | Chip | What it means |
 |---|---|
@@ -94,10 +96,11 @@ A connect that a *different* window starts never takes over this window's chip.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/remote-popover-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-popover-oct-2026.png" class="help-center-img img-bordered" alt="The popover open under the dev-server chip. The header shows dev-server over SSH at localhost, Connected at 9 ms, server and app version 0.12.0, and a gear, with Disconnect and the restart and stop server buttons. Below are Switch to with Local, Remote Access with Turn on Remote Access, and Manage remote environments… with its shortcut.">
+    <img src="/wp-content/uploads/remote-popover-oct-2026.png" class="help-center-img img-bordered" alt="The popover open under the dev-server chip. The header shows dev-server over SSH at localhost, Connected at 9 ms, server and app version 0.12.0, and a gear, with Disconnect and the restart and stop server buttons. Below are Switch to with Local (Work on this machine) and its window icon, Remote Access (Inactive) with Use dev-server anywhere and Turn on Remote Access, and Manage remote environments… with its shortcut.">
   </a>
   <figcaption style="text-align:center; color:#888">The popover, connected to a host.</figcaption>
 </figure>
+<!-- TODO(screenshot): Replace — The popover at 0.13.0 on a window connected to dev-server: the header with Connected, latency and the server and app versions, Disconnect and the server buttons, Switch to with Local, Remote Access, and Manage remote environments…. The 0.12.0 figure stays until it's replaced. -->
 
 ***
 
@@ -115,14 +118,13 @@ A connect that a *different* window starts never takes over this window's chip.
 **Settings → Remote environments** is the full management surface. In a local window, **Your machines** lists your saved machines. Each row shows the host's type, **Connected** or *Not connected*, and *Open in N windows* when other windows already use it. **Connect** connects this window, the window icon connects in a new window, and **Show window** replaces **Connect** for a host open elsewhere. Click a row to drill into the host's page.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-environments-hosts-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-environments-hosts-oct-2026.png" class="help-center-img img-bordered" alt="Settings → Remote Environments with Add a host and one saved host, dev-server, an SSH host at localhost marked Connected and Open in 1 window, with Show window and a new-window button.">
+  <a href="/wp-content/uploads/remote-environments-hosts-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-environments-hosts-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Settings › Remote environments: Add machine, Your machines with dev-server (SSH, not connected, alex@dev.acme.example) and Connect, Found on this machine listing build-box and staging-db from the SSH config with Add and hide buttons and Show hidden (1), and the Remote windows option.">
   </a>
   <figcaption style="text-align:center; color:#888">Settings → Remote Environments, with a saved host.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — Settings → Remote environments at 0.13.0, with Add machine, Your machines listing a saved machine, and Found on this machine with Show hidden (N). -->
 
-**Found on this machine** lists machines from your `~/.ssh/config` and WSL distributions you have not saved yet. **Add** saves one. Kepler shows three at first, with **Show *N* more** for the rest. The eye icon hides a machine you never want offered, and **Show hidden (*N*)** brings them back.
+**Found on this machine** lists machines from your `~/.ssh/config` and WSL distributions you have not saved yet. **Add** saves one. On a plan without remote environments, it reads **Try free and add** where a trial is open, or **Upgrade to add**, which opens the plan page and saves nothing. Kepler shows three at first, with **Show *N* more** for the rest. The eye icon hides a machine you never want offered, and **Show hidden (*N*)** brings them back.
 
 ### Host details
 
@@ -133,15 +135,14 @@ A host's page puts its actions in a card at the top: **Connect** (**Cmd/Ctrl**-c
 | **Connection** | Edit the address in place: **Host**, **Port**, **User**, and **Identity file** for SSH, or **Distro** for WSL. **Save** keeps the same saved host. Disconnect first; a connected host's fields are locked |
 | **Color** | **None**, **Rose**, **Amber**, **Lime**, **Cyan**, **Blue**, or **Violet**. Tints the host's chip, its rows, and the top bar of its windows |
 | **Mute notifications from *machine*** | *Kepler won't show desktop notifications for sessions on machine. Alerts still appear inside its windows.* |
-| **Sessions** | Labeled *survive disconnect, resumable anywhere*. Each row is a live agent session on that host, and clicking one opens it. For a host nobody is connected to, **Check** opens a short-lived connection to ask its server what is running |
+| **Sessions** | Labeled *survive disconnect, resumable anywhere* while the machine is connected. Each row is a live agent session on that host, and clicking one opens it. For a host nobody is connected to, **Check** opens a short-lived connection to ask its server what is running |
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-host-page-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-host-page-oct-2026.png" class="help-center-img img-bordered" alt="The page for dev-server, an SSH host that is connected in another window: Show window, Connect to dev-server in a new window, Stop server, and a trash icon at the top, then locked Connection fields with a note to disconnect first, the Color swatches with Violet picked, Mute notifications from dev-server, and Sessions labelled survive disconnect · resumable anywhere.">
+  <a href="/wp-content/uploads/remote-host-page-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-host-page-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The dev-server machine's page in Settings › Remote environments, not connected: Connect, Stop server, the Connection fields (host dev.acme.example, port 22, user alex, identity file), Color, Mute notifications from dev-server, and Sessions with Check.">
   </a>
   <figcaption style="text-align:center; color:#888">A saved host's page.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — A saved machine's page at 0.13.0, with Sessions labeled survive disconnect, resumable anywhere. -->
 
 Changing the address of a host the SSH wizard created first fetches the new address's host key, under **New host key**. **Trust and save** pins that key and saves the host in one step, and every new host or port gets its own scan. Any address change notes that an install at the old address stays there.
 
@@ -179,7 +180,7 @@ The window that stops its own server, or that disconnects, goes local without th
 
 ### From a remote window
 
-Settings in a window that is on a remote shows that host only: its connected card with the server controls, **Auto-shutdown when idle**, **Color** and mute, its **Ports** (SSH), and your other saved hosts to switch to. A remote window never sees the other hosts' addresses. Renaming, editing a connection, adding, and removing happen in a local window: **Open in a local window** takes you there.
+Settings in a window that is on a remote shows that host only: its connected card with the server controls, **Auto-shutdown when idle**, **Color** and mute, its **Ports** (SSH), and your other saved hosts to switch to. A remote window never sees the other hosts' addresses. Renaming, editing a connection, adding, and removing happen in a local window: **Open in a local window** takes you there. Switching to a host that needs a password does too: its row reads *Connect to machine from a local window*, with **Open in a local window**.
 
 ### Connection failures
 
@@ -193,18 +194,20 @@ Common SSH failures get a plain-language headline and a hint. Kepler recognizes:
 - **Hostname could not be resolved**
 - **Connection timed out**
 - **Host key verification failed**
+- **Update remote Kepler server**, when the host's server is too old to take your GitKraken sign-in. Update the Kepler install on the host and try again
+
+A WSL distro that no longer exists reads *The {distro} distro wasn't found on this machine.*
 
 The unedited diagnostic appears underneath either way.
 
 When the failure happens while you're adding a host, the wizard shows it in place: *Something went wrong.*, the headline and hint, the **Diagnostic**, a **Copy** button for each, and **Try again**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-auth-rejected-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-auth-rejected-oct-2026.png" class="help-center-img img-bordered" alt="The SSH wizard reporting Something went wrong: Authentication rejected, The host refused the credentials we offered, and a Diagnostic, each with a Copy button, and Cancel and Try again.">
+  <a href="/wp-content/uploads/remote-auth-rejected-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-auth-rejected-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Add machine wizard's failure step: Authentication rejected, The machine refused the credentials Kepler offered, and the Diagnostic open, reading alex@dev.acme.example: Permission denied (keyboard-interactive), each with Copy, above Cancel and Try again.">
   </a>
   <figcaption style="text-align:center; color:#888">A failed connection while adding a host.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — The SSH wizard's failure step at 0.13.0, reading The machine refused the credentials Kepler offered. -->
 
 For Kepler's own log file, use **Settings → Help → Logs**.
 
@@ -245,12 +248,11 @@ The SSH wizard walks five steps.
 | *Ready to save.* | **Add** saves the host and opens its page. Nothing connects until you press **Connect**; a password the wizard verified is reused for that first connect |
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-new-host-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-new-host-oct-2026.png" class="help-center-img img-bordered" alt="The first step of the SSH wizard, Remote environments › New host, with Name (optional), Host, Port set to 22, and User (optional) fields, and Cancel and Continue buttons.">
+  <a href="/wp-content/uploads/remote-new-host-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-new-host-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The first step of the Add machine wizard in Settings › Remote environments: its description, Name (optional) filled in from the host as dev.acme.example, Host dev.acme.example, Port 22 and User alex, with Cancel and Continue.">
   </a>
   <figcaption style="text-align:center; color:#888">The first step of adding an SSH host.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — The first step of the SSH wizard at 0.13.0, under Add machine. -->
 
 | Authentication mode | What it means |
 |---|---|
@@ -261,8 +263,8 @@ The SSH wizard walks five steps.
 **Generate key** needs `ssh-keygen` on your machine; the chip reads **ssh-keygen missing** when ssh-keygen is absent.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-auth-mode-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-auth-mode-oct-2026.png" class="help-center-img img-bordered" alt="The Choose authentication step of the SSH wizard for localhost, with Existing key unavailable because no keys were found in ~/.ssh, and Password and Generate key to pick from.">
+  <a href="/wp-content/uploads/remote-auth-mode-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-auth-mode-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Add machine wizard asking how Kepler should authenticate to dev.acme.example, with Existing key (1 key found) selected and its identity file /home/alex/.ssh/id_ed25519, beside Password and Generate key.">
   </a>
   <figcaption style="text-align:center; color:#888">Choosing how Kepler signs in to the host.</figcaption>
 </figure>
@@ -270,12 +272,11 @@ The SSH wizard walks five steps.
 If you pick **Password**, the wizard then offers **Set up a key for this machine?** **Generate and copy key** generates a fresh ed25519 key, copies it to the host, and uses it for future connects, so you don't need the password again. **Skip** keeps the host on password sign-in.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-key-offer-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-key-offer-oct-2026.png" class="help-center-img img-bordered" alt="The Set up a key for this host? step, explaining that Kepler generates an ed25519 key at ~/.ssh/id_ed25519_kepler_&lt;hash&gt; without overwriting existing keys, with Cancel, Skip, and Generate and copy key.">
+  <a href="/wp-content/uploads/remote-key-offer-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-key-offer-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Add machine wizard asking Set up a key for this machine?: Kepler generates a fresh ed25519 key, copies it to dev.acme.example and uses it for future connects, with Cancel, Skip and Generate and copy key.">
   </a>
   <figcaption style="text-align:center; color:#888">The offer to replace a password with a key.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — The Set up a key for this machine? step of the SSH wizard at 0.13.0. -->
 
 If the host rejects a key-based connect, Kepler does not leave you stuck: the host's page opens a password row so you can retry with a password, and, when no key is saved for that host yet, offers to install one at the same time. A connect from the popover that needs a password opens a password dialog instead.
 
@@ -468,6 +469,10 @@ Kepler downloads each layer cache-first, retries with backoff, and writes it ato
 
 The payload carries its own Node runtime, so the host needs nothing pre-installed beyond an SSH or WSL transport. Kepler couples desktop and server versions: your Kepler always knows which server build it needs. **Kepler never installs over a running server.** On connect, it replaces an out-of-date server on its own only when nobody would lose anything: no running agents, open terminals, or other connected windows. Otherwise the server keeps running and the chip offers **Restart server to update**. Only one client replaces a server at a time; the rest wait.
 
+### When the server and the window disagree
+
+A window whose page comes from a server on a different build shows a full-screen screen instead of the app: *This remote server is out of date*, or *This remote server is newer than this window*, with *Server {server}, this window {app}*. An out-of-date server offers **Update server**; retrying won't help until it's updated. Otherwise **Try again** loads the matching version; if the screen keeps coming back, restart the server. **Switch to local** moves the window back to this computer.
+
 ***
 
 ## Remote access: reach Kepler from another device
@@ -477,12 +482,11 @@ The payload carries its own Node runtime, so the host needs nothing pre-installe
 Configure it in **Settings → Remote Access**, or turn it on from the title-bar popover.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-access-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-access-oct-2026.png" class="help-center-img img-bordered" alt="Settings → Remote Access, marked Active, with Turn off Remote Access, a QR code to scan with your phone, the gitkraken.dev link with a copy button, and Connected Devices listing four phones, each with Revoke. The QR code and link are blurred.">
+  <a href="/wp-content/uploads/remote-access-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-access-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Settings › Remote Access while it is off: the Inactive badge and Turn on Remote Access, what it lets you do, the three steps of how it works, a note that only you can connect, and that this machine stays awake while Remote Access is on.">
   </a>
-  <figcaption style="text-align:center; color:#888">Remote Access, active, in Settings → Remote Access.</figcaption>
+  <figcaption style="text-align:center; color:#888">Settings → Remote Access, before you turn it on.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — Settings → Remote Access at 0.13.0, with Turn on Remote Access or Turn off Remote Access, the QR code, and Connected devices. -->
 
 ### Before you start
 

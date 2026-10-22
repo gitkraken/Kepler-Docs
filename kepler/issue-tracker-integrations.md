@@ -24,12 +24,11 @@ Connect an issue tracker and the issues you're working on show up in [the Kepler
 Manage providers in **Settings → Integrations**, in the **Issues and pull requests** section.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/provider-integrations-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/provider-integrations-oct-2026.png" class="help-center-img img-bordered" alt="Provider Integrations in Settings → Integrations, listing all twelve providers with Refresh at the top. GitHub and Jira show a Connected badge with Disconnect and Reconnect, and the rest offer Connect.">
+  <a href="/wp-content/uploads/provider-integrations-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/provider-integrations-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Issues and pull requests section of Settings › Integrations, with GitHub and Azure DevOps (two accounts) connected and the other providers listed with Connect buttons.">
   </a>
   <figcaption style="text-align:center; color:#888">Issues and pull requests, in Settings → Integrations.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — The Issues and pull requests section of Settings → Integrations at 0.13.0, listing the providers with their Connected badges and Connect buttons. -->
 
 ***
 
@@ -158,13 +157,13 @@ When an issue becomes a task, Kepler attaches what it read, so the agent starts 
 
 Kepler does not read an issue's priority, due date, milestone, Trello checklist, or Linear cycle. An agent can still find these by opening the issue's URL itself, but Kepler does not deliver them as attached context.
 
-Jira descriptions written in Jira's wiki markup are converted to Markdown, so headings, code blocks, and tables read the same in Kepler's previews and in the agent's context. Images embedded in an issue's description, including Jira and Azure DevOps attachments, display in Kepler's issue previews. The agent receives the description as text: Kepler does not pass the attachments or images themselves.
+Jira descriptions written in Jira's wiki markup are converted to Markdown, so headings, code blocks, and tables read the same in Kepler's previews and in the agent's context. Images embedded in an issue's description, including Jira and Azure DevOps attachments, display in Kepler's issue previews. On a self-hosted server (GitHub Enterprise, GitLab Self-Hosted, Azure DevOps Server, or Jira Server / Data Center) they stay blocked and don't display, though the server's member avatars do. The agent receives the description as text: Kepler does not pass the attachments or images themselves.
 
 ### Which issues Kepler lists
 
 Kepler lists open work. An issue that's finished or cancelled in its tracker (a Linear issue in *Done* or *Canceled*, for example) drops out of **Todo** and the issue pickers. An issue already attached to a task keeps showing on that task with its real state, finished or not.
 
-**Todo** shows issues you authored, are assigned to, or were mentioned in. An issue that's there only because you were mentioned is marked **Mentioned**, so you can tell it apart from work that's yours.
+**Todo** shows issues you authored, are assigned to, or were mentioned in. An issue that's there only because you were mentioned is marked **Mentioned**, so you can tell it apart from work that's yours. The **Related to me** chip in Todo's header repeats the rule when you hover it.
 
 To browse beyond that, use **All visible** in the issue list of **Add resources**: every issue across your organizations, including repositories you can read outside them, such as ones you're an outside collaborator on.
 
@@ -185,7 +184,7 @@ The **Issue type**, **Label**, **Project**, and **Status** filters carry your pr
 Kepler recognizes an issue from its URL when you paste or attach one, including these work item URLs:
 
 - **GitLab** work items, at `/-/work_items/<number>` in a project. Kepler stores them as issues of that project. A group-level work item belongs to no repository, so it stays a plain URL.
-- **Azure DevOps** work items at the organization level, at `/<organization>/_workitems/edit/<number>`.
+- **Azure DevOps** work items, at `/<organization>/<project>/_workitems/edit/<number>` or at the organization level, `/<organization>/_workitems/edit/<number>`.
 
 **Linear lists by team.** Linear's own feed is only your issues, even under **All visible**. When the issue list in **Add resources** is showing Linear alone, a team picker appears: pick a team to see every open issue in it, whoever it's assigned to.
 
