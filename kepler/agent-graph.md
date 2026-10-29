@@ -59,8 +59,8 @@ The graph is a **visualization**, not a workspace. To work in a session, open th
 ## How to read it
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/how-to-read-graph-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/how-to-read-graph-aug-2026.png" class="help-center-img img-bordered" alt="The Agent Graph for one task, read left to right: the task Fix the cart total and its session, both marked Needs you, then three turns. Turn 1 and Turn 2 are folded, each with a chevron and 3 hidden nodes (Turn 2 also shows one failed call); the latest turn is open on its tool calls, Read cart.test.js, Edit cart.js and Run npm test, with the files they touched, and a permission request marked Needs you.">
+  <a href="/wp-content/uploads/how-to-read-graph-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/how-to-read-graph-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Agent Graph for one task, read left to right: the task Fix the cart total and its session, both marked Needs you, then three turns. Turn 1 and Turn 2 are folded, each with a chevron and 3 hidden nodes (Turn 2 also shows one failed call); the latest turn is open on its tool calls, Read cart.test.js, Edit cart.js and Run npm test, with the files they touched, and a permission request marked Needs you.">
   </a>
   <figcaption style="text-align:center; color:#888">The graph's layers, from task to file, with past turns folded.</figcaption>
 </figure>
@@ -129,8 +129,8 @@ Selecting a node opens details beside the graph. What you see depends on what yo
 A node with children also gets a fold button in the details header, **Collapse what is under this node** or **Expand what is under this node**, which does the same as double-clicking the card. The stats rail keeps counting the whole graph, folded nodes included.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/graph-collapse-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/graph-collapse-oct-2026.png" class="help-center-img img-bordered" alt="The Agent Graph with the folded Turn 2 node selected, showing the failed call mark and a chevron with 3 hidden nodes, while the rest of the graph dims. Its details panel shows Turn, Done, Turn 2, the path Fix the cart total › Discount codes break the cart…, 1 failed call, Tool calls 2 and the prompt Add a test for the discount, with the back, Expand what is under this node and close buttons in its header.">
+  <a href="/wp-content/uploads/graph-collapse-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/graph-collapse-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Agent Graph with the folded Turn 2 node selected, showing the failed call mark and a chevron with 3 hidden nodes, while the rest of the graph dims. Its details panel shows Turn, Done, Turn 2, the path Fix the cart total › Discount codes break the cart…, 1 failed call, Tool calls 2 and the prompt Add a test for the discount, with the back, Expand what is under this node and close buttons in its header.">
   </a>
   <figcaption style="text-align:center; color:#888">A folded turn selected, with Expand what is under this node in its details header.</figcaption>
 </figure>

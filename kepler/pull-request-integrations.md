@@ -24,8 +24,8 @@ Connect a Git host and the pull requests you authored, plus the ones waiting on 
 Manage providers in **Settings → Integrations**, in the **Issues and pull requests** section.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/provider-integrations-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/provider-integrations-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Issues and pull requests section of Settings › Integrations. Azure DevOps and GitHub read Connected, each with Disconnect and Reconnect and a visibility line, Everything visible, with Choose what's visible…; Azure DevOps lists two accounts, Alex Lee (primary) and Alex Lee (Contoso). Azure DevOps Server, Bitbucket, Bitbucket Data Center, GitHub Enterprise, GitLab, GitLab Self-Hosted, Jira, Jira Server / Data Center, Linear and Trello each offer Connect.">
+  <a href="/wp-content/uploads/provider-integrations-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/provider-integrations-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Issues and pull requests section of Settings › Integrations. Azure DevOps and GitHub read Connected, each with Disconnect and Reconnect and a visibility line, Everything visible, with Choose what's visible…; Azure DevOps lists two accounts, Alex Lee (primary) and Alex Lee (Contoso). Azure DevOps Server, Bitbucket, Bitbucket Data Center, GitHub Enterprise, GitLab, GitLab Self-Hosted, Jira, Jira Server / Data Center, Linear and Trello each offer Connect.">
   </a>
   <figcaption style="text-align:center; color:#888">Issues and pull requests, in Settings → Integrations.</figcaption>
 </figure>
@@ -277,8 +277,8 @@ Hover the **Related to me** chip in Todo's header to see the rule for each integ
 Rows kept from the last good load carry a cloud mark on their provider chip, labeled *Not refreshed: shown from the last successful {provider} load.*
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/todo-provider-failure-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/todo-provider-failure-oct-2026.png" class="help-center-img img-bordered" alt="Todo when GitHub refuses its sign-in: Unable to load your work, over a warning that reads GitHub needs you to sign in again, so its work may be missing, with a Reconnect button.">
+  <a href="/wp-content/uploads/todo-provider-failure-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/todo-provider-failure-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Todo when GitHub refuses its sign-in: Unable to load your work, over a warning that reads GitHub needs you to sign in again, so its work may be missing, with a Reconnect button.">
   </a>
   <figcaption style="text-align:center; color:#888">Todo names a provider whose sign-in failed and offers Reconnect.</figcaption>
 </figure>

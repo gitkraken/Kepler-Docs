@@ -81,8 +81,8 @@ At phone width, such as a phone browser connected through [Remote Access](/keple
 - One segment each for **Sessions**, **Changes**, **Terminal**, and **Resources**. **Resources** drops first when the name would be cut off.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/phone-task-view-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/phone-task-view-oct-2026.png" class="help-center-img img-bordered" alt="The task page in a phone-width browser. One bar holds Back (with a dot, because another task needs you), the Fix the cart total chip, and the Sessions (1), Changes (2), Terminal and Resources (4) segments. Below it the details row reads In Review with Refresh and a fold chevron, then the checkout box for kepler/fix-cart-total (1/1, its #51 pull request with a red changes-requested dot, 2 uncommitted, origin/main) and the #51 Open and #38 Open chips, above the agent's session and its composer.">
+  <a href="/wp-content/uploads/phone-task-view-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/phone-task-view-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The task page in a phone-width browser. One bar holds Back (with a dot, because another task needs you), the Fix the cart total chip, and the Sessions (1), Changes (2), Terminal and Resources (4) segments. Below it the details row reads In Review with Refresh and a fold chevron, then the checkout box for kepler/fix-cart-total (1/1, its #51 pull request with a red changes-requested dot, 2 uncommitted, origin/main) and the #51 Open and #38 Open chips, above the agent's session and its composer.">
   </a>
   <figcaption style="text-align:center; color:#888">The task page on a phone, with its single bar and details row.</figcaption>
 </figure>
@@ -94,8 +94,8 @@ Below the bar, a details row holds the Progress control, **Refresh**, and a fold
 Pull down on the bar, or long-press a segment, to open **Everything in this task**. This sheet lists every session, checkout, terminal, and resource under the rail's headings, each with its own actions menu. It also offers **New session**, **Add resource**, **New terminal**, the archived sessions, and the sessions started outside Kepler. A long press opens it on that segment's group only.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/phone-context-sheet-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/phone-context-sheet-oct-2026.png" class="help-center-img img-bordered" alt="The Everything in this task sheet pulled up over the task page in a phone-width browser. Sessions (1) lists the agent's session, ticked as the one on screen, then New session and Import an external session; Changes (2) lists kepler/fix-cart-total and kepler/cart-rounding in acme-web; Terminals (0) offers New terminal; Resources (4) lists the pull request Apply discounts before tax in the cart total, the issue Cart total ignores discounts when tax is a…, note.md and Coding conventions. Each row has an actions menu.">
+  <a href="/wp-content/uploads/phone-context-sheet-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/phone-context-sheet-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Everything in this task sheet pulled up over the task page in a phone-width browser. Sessions (1) lists the agent's session, ticked as the one on screen, then New session and Import an external session; Changes (2) lists kepler/fix-cart-total and kepler/cart-rounding in acme-web; Terminals (0) offers New terminal; Resources (4) lists the pull request Apply discounts before tax in the cart total, the issue Cart total ignores discounts when tax is a…, note.md and Coding conventions. Each row has an actions menu.">
   </a>
   <figcaption style="text-align:center; color:#888">Everything in this task, the phone's stand-in for the rail.</figcaption>
 </figure>
@@ -111,8 +111,8 @@ The left rail lists everything attached to the Task, grouped by kind:
 **Sessions · Changes · Merged · Terminals · Folders · Files · Pull requests · Issues · Links · Notes · Related tasks**
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/task-rail-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-rail-oct-2026.png" class="help-center-img img-bordered" alt="The task rail: Sessions with the agent's session, Changes with the kepler/fix-cart-total worktree (2 uncommitted files), a folded Merged group (1) with Delete all…, Pull requests with Apply discounts before tax in… (#51, Open, Changes requested) and Issues with Cart total ignores discounts… (#38, Open, acme-web), each with refresh and add buttons, Notes with the Prompt and Coding conventions, and Related tasks with Add tests for discount codes (Sub-task) and Show the discount on the receipt (Follow-up), above Add resource.">
+  <a href="/wp-content/uploads/task-rail-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-rail-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The task rail: Sessions with the agent's session, Changes with the kepler/fix-cart-total worktree (2 uncommitted files), a folded Merged group (1) with Delete all…, Pull requests with Apply discounts before tax in… (#51, Open, Changes requested) and Issues with Cart total ignores discounts… (#38, Open, acme-web), each with refresh and add buttons, Notes with the Prompt and Coding conventions, and Related tasks with Add tests for discount codes (Sub-task) and Show the discount on the receipt (Follow-up), above Add resource.">
   </a>
   <figcaption style="text-align:center; color:#888">The rail, grouped by resource kind.</figcaption>
 </figure>
@@ -124,8 +124,8 @@ The worktree group is called **Changes**. Its rows carry each checkout's real st
 **Related tasks** lists the Tasks linked to this one, each with its stage, its relation, and its session dots: **Parent**, **Sub-task**, **Follows up on**, **Follow-up**, **Related**, or **Created from**. Point at a row for its relation and stage, plus the reason for the link, and click it to go to that Task.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/task-rail-merged-related-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-rail-merged-related-oct-2026.png" class="help-center-img img-bordered" alt="The task rail with the Merged group unfolded: kepler/cart-rounding, merged into origin/main, under Merged (1) with Delete all…, above the Pull requests row Apply discounts before tax in… (#51) and the Issues row Cart total ignores discounts… (#38). At the bottom, Related tasks lists Add tests for discount codes as a Sub-task and Show the discount on the receipt as a Follow-up; pointing at the follow-up shows its tip, Follow-up · Exploration, with the reason: once the total is right, the receipt should show the discount.">
+  <a href="/wp-content/uploads/task-rail-merged-related-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-rail-merged-related-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The task rail with the Merged group unfolded: kepler/cart-rounding, merged into origin/main, under Merged (1) with Delete all…, above the Pull requests row Apply discounts before tax in… (#51) and the Issues row Cart total ignores discounts… (#38). At the bottom, Related tasks lists Add tests for discount codes as a Sub-task and Show the discount on the receipt as a Follow-up; pointing at the follow-up shows its tip, Follow-up · Exploration, with the reason: once the total is right, the receipt should show the discount.">
   </a>
   <figcaption style="text-align:center; color:#888">The Merged and Related tasks groups, with a related task's tip.</figcaption>
 </figure>
@@ -148,8 +148,8 @@ The worktree group is called **Changes**. Its rows carry each checkout's real st
 Both of a row's lines truncate at rail width. Every row has a hover tip carrying its full name, plus the facts the row's lines had no room for:
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/rail-hovers-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/rail-hovers-aug-2026.png" class="help-center-img img-bordered" alt="The Files group of the task rail with the hover card of checkout-style-guide.md open beside its row: the file name, Size, Modified, Type, Path (/srv/acme/brand/checkout-style-guide.md) and Added.">
+  <a href="/wp-content/uploads/rail-hovers-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/rail-hovers-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Files group of the task rail with the hover card of checkout-style-guide.md open beside its row: the file name, Size, Modified, Type, Path (/srv/acme/brand/checkout-style-guide.md) and Added.">
   </a>
   <figcaption style="text-align:center; color:#888">A file row's hover card, showing what its truncated lines couldn't.</figcaption>
 </figure>
@@ -188,8 +188,8 @@ Every rail row draws a selected fill when it's the one on screen, and the column
 Right-click any row. Every row opens with **Open**, followed by **Open to the side** with tabs off or **Open beside** with tabs on (see [Columns or tabs](#columns-or-tabs)), when there's somewhere for it to go. A worktree row adds **Open changes**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/worktree-row-menu-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/worktree-row-menu-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A worktree row's right-click menu in the task rail, with its Branch submenu open on Rename branch, Set upstream, Change merge target… (main), Rebase onto main and Merge main into this branch. The menu also lists Open, Open changes, Open in, New session here, New terminal here, Run command here, Copy branch name, Copy worktree path, Copy remote URL, Refresh, and Detach worktree… and Delete worktree…, unavailable while a session is using the worktree.">
+  <a href="/wp-content/uploads/worktree-row-menu-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/worktree-row-menu-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="A worktree row's right-click menu in the task rail, with its Branch submenu open on Rename branch, Set upstream, Change merge target… (main), Rebase onto main and Merge main into this branch. The menu also lists Open, Open changes, Open in, New session here, New terminal here, Run command here, Copy branch name, Copy worktree path, Copy remote URL, Refresh, and Detach worktree… and Delete worktree…, unavailable while a session is using the worktree.">
   </a>
   <figcaption style="text-align:center; color:#888">A worktree row's context menu, with its Branch submenu open.</figcaption>
 </figure>
@@ -292,8 +292,8 @@ A session's control on its strip is named for what it does: **Archive session** 
 With tabs on, anything you open from the rail (sessions, worktrees, files, and every other resource) becomes a tab, and tabs live in **groups** you arrange freely, the way editor tabs work in VS Code.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/tabs-preview-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/tabs-preview-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Two tab groups side by side on the task page for Fix the cart total, with the left group's tab strip ringed: it starts with the pinned session tab, shrunk to its icon, beside the Prompt note in an italic preview tab, the note's text below with its Copy note and Edit buttons; the right group holds the kepler/fix-cart-total worktree tab showing Working changes 2, cart.js and cart.test.js. Each tab is a card rising to the top of its strip.">
+  <a href="/wp-content/uploads/tabs-preview-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/tabs-preview-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Two tab groups side by side on the task page for Fix the cart total, with the left group's tab strip ringed: it starts with the pinned session tab, shrunk to its icon, beside the Prompt note in an italic preview tab, the note's text below with its Copy note and Edit buttons; the right group holds the kepler/fix-cart-total worktree tab showing Working changes 2, cart.js and cart.test.js. Each tab is a card rising to the top of its strip.">
   </a>
   <figcaption style="text-align:center; color:#888">An italic preview tab beside a session tab.</figcaption>
 </figure>
@@ -309,8 +309,8 @@ A tab's **Tab actions** (**⋮**) button and its right-click menu hold everythin
 A draft session's tab reads **(draft)** after its name. With tabs off, right-click a draft tab for **Discard draft**, plus **Move left** and **Move right** where the tab can move. With tabs on, its menu holds the tab's own verbs instead: **Keep open** while it's a preview, **Pin tab** or **Unpin tab**, and **Close tab**, which is a draft's only close. Closing a draft that has text in it asks **Discard new session?** first, because *Your draft prompt and attachments will be removed.*
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ade-draft-session-tab-menu-01-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ade-draft-session-tab-menu-01-v2@2x.png" class="help-center-img img-bordered" alt="The top of a task's side panel with a New session draft tab beside the task's first session, and the draft tab's Tab actions menu open under it: Move left, with its Ctrl+Alt+[ shortcut, and Discard draft.">
+  <a href="/wp-content/uploads/ade-draft-session-tab-menu-01-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ade-draft-session-tab-menu-01-v3@2x.png" class="help-center-img img-bordered" alt="The top of a task's side panel with a New session draft tab beside the task's first session, and the draft tab's Tab actions menu open under it: Move left, with its Ctrl+Alt+[ shortcut, and Discard draft.">
   </a>
   <figcaption style="text-align:center; color:#888">A draft session's tab and its Tab actions menu, the same one a right-click opens.</figcaption>
 </figure>
@@ -375,8 +375,8 @@ The second segment picks the branch the session works on. The third is a checkbo
 A worktree that's gone from disk reads *Not on disk. Start recreates it.*, and Kepler asks **Recreate the worktree and start the session?** before the session starts. A Task with no place to run at all says **Add a worktree or folder to start a session**, with **Add worktree or folder**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-session-flyout-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-session-flyout-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A task's side panel with a New session draft tab and the place chip's menu open under its composer: Attached to this task with the kepler/fix-cart-total worktree, Repositories with acme-web, and Add a repository or folder. The chip reads acme-web, kepler/fix-cart-total and worktree.">
+  <a href="/wp-content/uploads/new-session-flyout-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-session-flyout-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="A task's side panel with a New session draft tab and the place chip's menu open under its composer: Attached to this task with the kepler/fix-cart-total worktree, Repositories with acme-web, and Add a repository or folder. The chip reads acme-web, kepler/fix-cart-total and worktree.">
   </a>
   <figcaption style="text-align:center; color:#888">Choosing where a new session runs.</figcaption>
 </figure>
@@ -404,8 +404,8 @@ To fire a preconfigured prompt instead of typing one, open the chevron beside th
 Any file can open on the task page, whether or not it's attached to the Task. It opens as a tab with tabs on, or in the **Resources** column with tabs off, in Kepler's file viewer. To see a worktree file alongside its changes instead, pick **Open in Changes** in its tab's menu, which opens it in the Changes overlay on File view. For what happens away from the task page, see [Outside the task page](#outside-the-task-page).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/markdown-file-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/markdown-file-oct-2026.png" class="help-center-img img-bordered" alt="checkout-style-guide.md open in a task page tab, rendered as Markdown: the Checkout style guide heading, a Buttons table of what to say and not to say, and Totals and Errors lists. The header shows Add a description, the folder /srv/acme/brand and the file size, the Preview and Source toggle, Wrap lines and File actions.">
+  <a href="/wp-content/uploads/markdown-file-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/markdown-file-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="checkout-style-guide.md open in a task page tab, rendered as Markdown: the Checkout style guide heading, a Buttons table of what to say and not to say, and Totals and Errors lists. The header shows Add a description, the folder /srv/acme/brand and the file size, the Preview and Source toggle, Wrap lines and File actions.">
   </a>
   <figcaption style="text-align:center; color:#888">A Markdown file in the file viewer, in Preview.</figcaption>
 </figure>
@@ -465,8 +465,8 @@ A file opened anywhere else, such as from the Dashboard or a conversation link o
 - Any other file opens in the file overlay, beside a file tree rooted at the attached folder or worktree that holds it, or else at the file's own folder.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/file-overlay-tree-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/file-overlay-tree-oct-2026.png" class="help-center-img img-bordered" alt="checkout-style-guide.md open in the file overlay, with the breadcrumb /, srv, acme, brand above it and the file tree of the brand folder beside it: the fonts and launch-2.4 folders, the logos folder opened on acme-mark-dark.svg and acme-mark.svg, then checkout-style-guide.md (selected), colors.json, README.txt and voice-and-tone.md. The viewer shows the guide rendered as Markdown, with the Preview and Source toggle and Wrap lines. The header holds Hide file tree, More file actions, Maximize and Close, and the tree pane a Filter files button.">
+  <a href="/wp-content/uploads/file-overlay-tree-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/file-overlay-tree-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="checkout-style-guide.md open in the file overlay, with the breadcrumb /, srv, acme, brand above it and the file tree of the brand folder beside it: the fonts and launch-2.4 folders, the logos folder opened on acme-mark-dark.svg and acme-mark.svg, then checkout-style-guide.md (selected), colors.json, README.txt and voice-and-tone.md. The viewer shows the guide rendered as Markdown, with the Preview and Source toggle and Wrap lines. The header holds Hide file tree, More file actions, Maximize and Close, and the tree pane a Filter files button.">
   </a>
   <figcaption style="text-align:center; color:#888">A file in the file overlay, with its folder's tree beside it.</figcaption>
 </figure>
@@ -487,8 +487,8 @@ In the file overlay:
 Terminals live in a drawer beneath the content area, spanning all of it, sized by a sash of its own. The **Terminal** control at the right edge of the header shows and hides it, and counts what's running.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-terminal-here-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-terminal-here-oct-2026.png" class="help-center-img img-bordered" alt="A worktree row's right-click menu in the task rail with New terminal here highlighted, below New session here and above Run command here, the copy actions, Refresh, and Detach worktree… and Delete worktree…. The Branch submenu sits above New session here.">
+  <a href="/wp-content/uploads/new-terminal-here-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-terminal-here-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A worktree row's right-click menu in the task rail with New terminal here highlighted, below New session here and above Run command here, the copy actions, Refresh, and Detach worktree… and Delete worktree…. The Branch submenu sits above New session here.">
   </a>
   <figcaption style="text-align:center; color:#888">New terminal here, on a worktree row's context menu.</figcaption>
 </figure>
@@ -580,8 +580,8 @@ A pull request's **People** section shows its author, its **Assignees**, and eac
 An issue from GitHub, GitHub Enterprise, GitLab, GitLab Self-Managed, Jira, or Jira Server also shows its discussion under **Comments · {count}**: the latest comments, each with its author, its age, and its text. **Show earlier comments** pages back, and **Refresh comments** reads them again. Kepler shows the comments for you to read; it doesn't hand them to the agent. When it can't read them, the section says why, such as *Sign in to read this issue’s comments.* or *Comments for {provider} issues aren’t available in Kepler yet.*
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/issue-comments-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/issue-comments-oct-2026.png" class="help-center-img img-bordered" alt="The Fix the cart total panel (In Review, its worktree card with #51 marked Changes requested, and the #51 Open and #38 Open chips) with GitHub issue #38 open in its side pane: Back to sessions, the issue title Cart total ignores discounts when tax is applied, the GITHUB and ISSUE #38 chips, Open, acme-web and the assignee alex-lee, the bug label and the description, then Comments · 3 with Refresh comments: jo-park, sam-ortiz and alex-lee, each with an avatar, an age and the comment text.">
+  <a href="/wp-content/uploads/issue-comments-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/issue-comments-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Fix the cart total panel (In Review, its worktree card with #51 marked Changes requested, and the #51 Open and #38 Open chips) with GitHub issue #38 open in its side pane: Back to sessions, the issue title Cart total ignores discounts when tax is applied, the GITHUB and ISSUE #38 chips, Open, acme-web and the assignee alex-lee, the bug label and the description, then Comments · 3 with Refresh comments: jo-park, sam-ortiz and alex-lee, each with an avatar, an age and the comment text.">
   </a>
   <figcaption style="text-align:center; color:#888">An issue's comments, in the same reader the task page uses, here in a Dashboard panel.</figcaption>
 </figure>
@@ -591,8 +591,8 @@ An issue from GitHub, GitHub Enterprise, GitLab, GitLab Self-Managed, Jira, or J
 **Notes.** A note has a name you rename in place: double-click it, press **F2** with the note focused, or pick **Rename note** from its row menu. **Enter** saves the name and **Escape** puts it back. Clearing the name leaves an **Untitled note**. The Prompt note can't be renamed. **Enter** on a focused note opens it for editing. A note with unsaved edits says **Unsaved draft**, and **Edit** reads **Resume draft**. Double-clicking the note's text selects a word.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/note-rename-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/note-rename-oct-2026.png" class="help-center-img img-bordered" alt="The Coding conventions note open in a task page pane, its name turned into an inline field with the name selected for renaming, above the note's two standing instructions: money is in cents until it is shown, and every cart change gets a test in cart.test.js.">
+  <a href="/wp-content/uploads/note-rename-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/note-rename-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Coding conventions note open in a task page pane, its name turned into an inline field with the name selected for renaming, above the note's two standing instructions: money is in cents until it is shown, and every cart change gets a test in cart.test.js.">
   </a>
   <figcaption style="text-align:center; color:#888">Renaming a note in place.</figcaption>
 </figure>

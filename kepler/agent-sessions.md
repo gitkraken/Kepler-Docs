@@ -99,8 +99,8 @@ With **Show tabs on the task page** turned on, the draft's menu is a tab's inste
 ## Agent, model, mode, and effort
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-settings-from-composer-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-settings-from-composer-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Agent settings open above a new session's composer: Agent OpenCode, Start in with Chat selected beside Terminal, Model Docs Model, Permission mode Build or Plan, MCP servers (No servers) with Manage, and Use default agent. Below it, the composer footer holds a ticked Task context chip beside Attach a file and the microphone, then the Docs Model Build pill and Start.">
+  <a href="/wp-content/uploads/agent-settings-from-composer-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-settings-from-composer-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Agent settings open above a new session's composer: Agent OpenCode, Start in with Chat selected beside Terminal, Model Docs Model, Permission mode Build or Plan, MCP servers (No servers) with Manage, and Use default agent. Below it, the composer footer holds a ticked Task context chip beside Attach a file and the microphone, then the Docs Model Build pill and Start.">
   </a>
   <figcaption style="text-align:center; color:#888">The Agent settings pill, opened from the composer, with the Task context chip in the footer.</figcaption>
 </figure>
@@ -148,8 +148,8 @@ Claude Code, Codex, Copilot CLI, Cursor, Auggie, OpenCode, Grok Build, Pi, and G
 Claude Code, Codex, GitHub Copilot, Auggie, and Grok Build can each hold more than one signed-in account. Open **Settings → Agents**, expand the agent, and find **Accounts**:
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-accounts-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-accounts-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Claude Code card in Settings › Agents with two accounts, the default Claude Code CLI (Acme, Default) with the No color mark and Personal with a blue colour swatch, each with Check usage and a row menu. Below them sit New sessions start in, Let artifact comments start turns, Artifacts in new sessions, and Program and data folder.">
+  <a href="/wp-content/uploads/agent-accounts-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-accounts-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Claude Code card in Settings › Agents with two accounts, the default Claude Code CLI (Acme, Default) with the No color mark and Personal with a blue colour swatch, each with Check usage and a row menu. Below them sit New sessions start in, Let artifact comments start turns, Artifacts in new sessions, and Program and data folder.">
   </a>
   <figcaption style="text-align:center; color:#888">The Accounts section, in Settings → Agents.</figcaption>
 </figure>
@@ -178,8 +178,8 @@ An account's colour tints the agent icon on session tabs, the task rail, and the
 - **Keep its own {item}** keeps the account's copy. **Share your {item} again** then moves to the account's row menu.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/account-config-drift-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/account-config-drift-oct-2026.png" class="help-center-img img-bordered" alt="The Claude Code card in Settings › Agents with two accounts. Under the second account, Personal, an open warning reads This account stopped sharing your settings, names its own copy of settings.json and your /home/alex/.claude/settings.json, and offers Share your settings again and Keep its own settings.">
+  <a href="/wp-content/uploads/account-config-drift-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/account-config-drift-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Claude Code card in Settings › Agents with two accounts. Under the second account, Personal, an open warning reads This account stopped sharing your settings, names its own copy of settings.json and your /home/alex/.claude/settings.json, and offers Share your settings again and Keep its own settings.">
   </a>
   <figcaption style="text-align:center; color:#888">An added account that stopped sharing your settings.</figcaption>
 </figure>
@@ -266,8 +266,8 @@ A session runs one of two ways, and the choice is no longer Claude Code's alone.
 To move a session that already exists, choose **Continue in Terminal** or **Continue in Chat** on its row or tab menu. The session resumes the same conversation in the other mode where the CLI can, and starts fresh where it can't. Kepler confirms **Continued in Terminal** or **Continued in Chat**, or reports **Unable to switch this session**. The item is locked while a turn runs (*This session is mid-turn. Wait for it to finish, or stop it first.*). A session started outside Kepler must be taken over first, and only a session on a task can move to Terminal.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/continue-in-terminal-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/continue-in-terminal-oct-2026.png" class="help-center-img img-bordered" alt="The menu of a Chat session, opened from its row on the task page rail: Open, Show Agent Graph, Rename session, Copy session link, New session from this one, Continue in Terminal, Restart agent, Shut down agent, Archive session and Delete session.">
+  <a href="/wp-content/uploads/continue-in-terminal-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/continue-in-terminal-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The menu of a Chat session, opened from its row on the task page rail: Open, Show Agent Graph, Rename session, Copy session link, New session from this one, Continue in Terminal, Restart agent, Shut down agent, Archive session and Delete session.">
   </a>
   <figcaption style="text-align:center; color:#888">Continue in Terminal, on a Chat session's row menu.</figcaption>
 </figure>
@@ -409,8 +409,8 @@ The sentence follows the badge. A running session reads *Follow along here. You 
 Kepler reads the transcripts of **Claude Code**, **Codex**, **GitHub Copilot**, **OpenCode**, **Auggie**, **Grok Build**, **Pi**, and the **Google Antigravity** CLI from each agent's own store on disk, without starting the agent. A **Cursor** row still appears and can still be adopted, with *Preview isn't available for {adapter} sessions yet.* in place of the conversation.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/external-past-session-preview-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/external-past-session-preview-oct-2026.png" class="help-center-img img-bordered" alt="The preview of a past Pi session started outside Kepler, marked Not running, with its folder, Import session and Create new task, and the replayed conversation: the prompt, the agent's replies, and its Read products.js call.">
+  <a href="/wp-content/uploads/external-past-session-preview-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/external-past-session-preview-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The preview of a past Pi session started outside Kepler, marked Not running, with its folder, Import session and Create new task, and the replayed conversation: the prompt, the agent's replies, and its Read products.js call.">
   </a>
   <figcaption style="text-align:center; color:#888">A past Pi session, previewed read-only from its transcript on disk.</figcaption>
 </figure>
@@ -445,8 +445,8 @@ A conversation picked up from disk starts the agent on your first message rather
 The composer sits at the bottom of the session.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/sending-a-prompt-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/sending-a-prompt-oct-2026.png" class="help-center-img img-bordered" alt="The session composer with a pasted image.png attached as a thumbnail chip and the draft @cart.js @README.md Does the check also cover these codes? Below the draft sit Attach a file and the microphone, then the Agent settings pill (Docs Model, Build, with its chevron), the context usage ring, and Send with its chevron.">
+  <a href="/wp-content/uploads/sending-a-prompt-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/sending-a-prompt-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The session composer with a pasted image.png attached as a thumbnail chip and the draft @cart.js @README.md Does the check also cover these codes? Below the draft sit Attach a file and the microphone, then the Agent settings pill (Docs Model, Build, with its chevron), the context usage ring, and Send with its chevron.">
   </a>
   <figcaption style="text-align:center; color:#888">The composer, at the bottom of the session.</figcaption>
 </figure>
@@ -465,8 +465,8 @@ The composer sits at the bottom of the session.
 **A pasted pull request or issue link becomes a chip.** Paste the URL of a pull request or issue from a connected GitHub, GitLab, Bitbucket, or Azure DevOps host, self-hosted included, or of a Jira or Linear issue. In a task's session composer or the new-task composer, Kepler turns the URL into a chip labelled with its number, such as **#49**, and puts the label in your text in its place. Hover the chip for the title and the URL. When you send, Kepler attaches the link to the task. A prompt that is a slash command keeps the URL as typed.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/pasted-link-chip-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/pasted-link-chip-oct-2026.png" class="help-center-img img-bordered" alt="A task session's composer after pasting a pull request link: a chip with the pull request icon and #49 sits above the prompt Does this conflict with #49?, and its tooltip shows the pull request's title, Round prices through a shared roundCents helper, over its GitHub URL.">
+  <a href="/wp-content/uploads/pasted-link-chip-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/pasted-link-chip-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A task session's composer after pasting a pull request link: a chip with the pull request icon and #49 sits above the prompt Does this conflict with #49?, and its tooltip shows the pull request's title, Round prices through a shared roundCents helper, over its GitHub URL.">
   </a>
   <figcaption style="text-align:center; color:#888">A pasted pull request link, turned into a chip.</figcaption>
 </figure>
@@ -572,8 +572,8 @@ In **Terminal** mode an interrupt is recognised whether it arrives as **Escape**
 - A turn that ended for a reason worth knowing carries a pill: **Reached token limit**, **Reached request limit**, **Refused to continue**, or **Cancelled**. A healthy turn shows nothing.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/compaction-row-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/compaction-row-oct-2026.png" class="help-center-img img-bordered" alt="A Chat transcript in which, after the Read checkout.js call and the agent's note, a Conversation compacted row is open on the summary the agent kept of the conversation so far, followed by Edit checkout.js and the agent's next message.">
+  <a href="/wp-content/uploads/compaction-row-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/compaction-row-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A Chat transcript in which, after the Read checkout.js call and the agent's note, a Conversation compacted row is open on the summary the agent kept of the conversation so far, followed by Edit checkout.js and the agent's next message.">
   </a>
   <figcaption style="text-align:center; color:#888">A compaction row, expanded to the summary the agent kept.</figcaption>
 </figure>
@@ -732,8 +732,8 @@ A restored session shows the question and the answers you gave as a read-only re
 When an agent in plan mode proposes a plan, Kepler opens it for review in a **Plan** panel beside the chat, with **Preview** and **Edit** tabs, and the transcript shows the plan with **Open plan**. Claude Code, Codex, GitHub Copilot, Cursor, and OpenCode Chat sessions offer plan review. Cursor holds its plan request open while you review it, so the session waits with the reason **Plan review**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/plan-review-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/plan-review-oct-2026.png" class="help-center-img img-bordered" alt="A Chat session with its Plan panel open beside the transcript. Step 2 of the plan, Fix the discount order in the cart total, is highlighted and carries a comment under Comments (1), with Request changes (1) and a greyed Approve & implement at the foot.">
+  <a href="/wp-content/uploads/plan-review-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/plan-review-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A Chat session with its Plan panel open beside the transcript. Step 2 of the plan, Fix the discount order in the cart total, is highlighted and carries a comment under Comments (1), with Request changes (1) and a greyed Approve & implement at the foot.">
   </a>
   <figcaption style="text-align:center; color:#888">A plan under review, with a comment on one step.</figcaption>
 </figure>
@@ -762,8 +762,8 @@ Some things an agent asks Kepler itself to do, through Kepler's workspace tools,
 The agent is told the request is waiting and can carry on; your answer reaches its inbox later. Meanwhile the session reads **Approval needed**, or **Approval needed, destructive**. The request is pinned above that session's composer as a card naming the action, such as **Delete worktree {worktree} and its branch**, with what's at stake (*At risk: {loss}*), **Approve**, and **Deny**. A card for an action that can lose work is amber; other cards are blue. Several requests page through with **{index} of {count}**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/approval-card-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/approval-card-oct-2026.png" class="help-center-img img-bordered" alt="An amber approval card pinned above the session composer, Delete worktree acme-web@kepler/cart-total-spike and its branch, At risk: 2 uncommitted files, with the Approve menu open on Approve all worktree deletes from this session and a greyed Always approve worktree deletes.">
+  <a href="/wp-content/uploads/approval-card-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/approval-card-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="An amber approval card pinned above the session composer, Delete worktree acme-web@kepler/cart-total-spike and its branch, At risk: 2 uncommitted files, with the Approve menu open on Approve all worktree deletes from this session and a greyed Always approve worktree deletes.">
   </a>
   <figcaption style="text-align:center; color:#888">An approval card for deleting a worktree, with the Approve menu open.</figcaption>
 </figure>
@@ -778,8 +778,8 @@ An approved request shows **Running** while Kepler carries it out, after checkin
 To review your standing rules, open **Settings → Agents → Approvals**: *Some actions your agents take wait for your approval. These rules approve them for you; anything not covered still asks.* Each rule under **Always approved** says when and where it was added and how often it has been used, with **Remove**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/settings-approvals-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/settings-approvals-oct-2026.png" class="help-center-img img-bordered" alt="The Approvals section of Settings › Agents, with one Always approved rule, Changes to other tasks, added from the Discount codes break the cart total session on Fix the cart total and not used yet, and Remove.">
+  <a href="/wp-content/uploads/settings-approvals-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/settings-approvals-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Approvals section of Settings › Agents, with one Always approved rule, Changes to other tasks, added from the Discount codes break the cart total session on Fix the cart total and not used yet, and Remove.">
   </a>
   <figcaption style="text-align:center; color:#888">Standing approval rules, in Settings → Agents → Approvals.</figcaption>
 </figure>
@@ -797,8 +797,8 @@ When an item arrives for an idle session, Kepler wakes the session to read its i
 A session with unread reports carries a reports badge with a count on its tab and rail row (*{agent} hasn't read {count} reports from other agents*), and the band above its composer offers **Have it read them**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-reports-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-reports-oct-2026.png" class="help-center-img img-bordered" alt="The task page for Fix the cart total, where the Discount codes break the cart total session carries a reports badge with 3 beside the reviewer it started. Its conversation shows a 2 new items to read row, and above the composer OpenCode hasn't read 3 reports from other agents, with Have it read them.">
+  <a href="/wp-content/uploads/agent-reports-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-reports-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The task page for Fix the cart total, where the Discount codes break the cart total session carries a reports badge with 3 beside the reviewer it started. Its conversation shows a 2 new items to read row, and above the composer OpenCode hasn't read 3 reports from other agents, with Have it read them.">
   </a>
   <figcaption style="text-align:center; color:#888">A session with unread reports from other agents.</figcaption>
 </figure>
@@ -814,8 +814,8 @@ In Terminal mode, only Claude Code, Pi, and OpenCode 2 sessions can be woken to 
 Two different readouts, and they measure different things.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/usage-indicators-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/usage-indicators-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Context window card open above the composer's context ring, which sits between the Agent settings pill (Docs Model, Build) and Send: 68%, with 136K tokens Used, 64K Available and 200K Total, and the Estimated cost at API rates, $0.42.">
+  <a href="/wp-content/uploads/usage-indicators-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/usage-indicators-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Context window card open above the composer's context ring, which sits between the Agent settings pill (Docs Model, Build) and Send: 68%, with 136K tokens Used, 64K Available and 200K Total, and the Estimated cost at API rates, $0.42.">
   </a>
   <figcaption style="text-align:center; color:#888">The Context window card, from the context ring.</figcaption>
 </figure>
@@ -830,8 +830,8 @@ While a session rests, the context ring warns about the prompt cache on its own:
 **Check plan usage with each agent's provider** fetches the full readout, including per-model limits and extra usage, from each agent's provider. It's on by default, in **Settings → Agents → Usage limits**:
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/show-token-usage-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/show-token-usage-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Usage limits section of Settings › Agents: Check plan usage with each agent's provider, ticked, with its help text on what Kepler asks the provider for and what it shows when off, and Resume after the usage limit resets, unticked.">
+  <a href="/wp-content/uploads/show-token-usage-aug-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/show-token-usage-aug-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Usage limits section of Settings › Agents: Check plan usage with each agent's provider, ticked, with its help text on what Kepler asks the provider for and what it shows when off, and Resume after the usage limit resets, unticked.">
   </a>
   <figcaption style="text-align:center; color:#888">Check plan usage with each agent's provider, in Settings → Agents → Usage limits.</figcaption>
 </figure>
@@ -1017,8 +1017,8 @@ In Terminal mode a dead process reads **Terminal exited. Resume to reattach to t
 If a session fails to start after you launch it, the task page and the Dashboard panel show **{agent} was unable to start** with the agent's message. Click **Retry** to try again, or **Open agent settings** to fix the agent's setup. **Dismiss** hides the notice in that window.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ade-task-start-failed-notice-01-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ade-task-start-failed-notice-01-v2@2x.png" class="help-center-img img-bordered" alt="The top of the task page for Fix the cart total with the OpenCode was unable to start notice: the message Session not initialized, Retry, Open agent settings, and a close button that dismisses it.">
+  <a href="/wp-content/uploads/ade-task-start-failed-notice-01-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ade-task-start-failed-notice-01-v3@2x.png" class="help-center-img img-bordered" alt="The top of the task page for Fix the cart total with the OpenCode was unable to start notice: the message Session not initialized, Retry, Open agent settings, and a close button that dismisses it.">
   </a>
   <figcaption style="text-align:center; color:#888">A session that couldn't start, on the task page.</figcaption>
 </figure>
@@ -1048,8 +1048,8 @@ By default, Kepler stays quiet about the work you are already watching: it sends
 To choose which events notify you, and whether each one appears as a **Desktop** notification, **In Kepler**, or both, open **Settings → Notifications**. The same page has **Play a sound with desktop notifications**. In the desktop app, every event except **Replies** notifies on the desktop until you change it; in a browser, desktop notifications start off. After your first session starts, the desktop app sends a one-time **Notifications are on** notification, and clicking it opens **Settings → Notifications**. See [Settings](/kepler/settings).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ade-settings-notifications-01-01-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ade-settings-notifications-01-01-v2@2x.png" class="help-center-img img-bordered" alt="Settings › Notifications, What to notify you about, at the desktop app's defaults: a grid of Replies, Questions, Permission requests, Approval requests and Errors against Desktop and In Kepler, with every box ticked except both Replies boxes; below it Play a sound with desktop notifications is ticked and Notify even for the task you're looking at is not.">
+  <a href="/wp-content/uploads/ade-settings-notifications-01-01-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ade-settings-notifications-01-01-v3@2x.png" class="help-center-img img-bordered" alt="Settings › Notifications, What to notify you about, at the desktop app's defaults: a grid of Replies, Questions, Permission requests, Approval requests and Errors against Desktop and In Kepler, with every box ticked except both Replies boxes; below it Play a sound with desktop notifications is ticked and Notify even for the task you're looking at is not.">
   </a>
   <figcaption style="text-align:center; color:#888">What to notify you about, in Settings → Notifications, at the desktop app's defaults.</figcaption>
 </figure>

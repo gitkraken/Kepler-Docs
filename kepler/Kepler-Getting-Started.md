@@ -53,8 +53,8 @@ Kepler is in **public preview**. A free GitKraken account is all you need.
 Kepler opens on a welcome screen, **Launch any agent. Land every PR.** Click **Sign in with GitKraken**. If you do not have an account, you'll create one in the next step.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/sign-in-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/sign-in-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="Kepler's sign-in screen over a night sky: on the left Kep says Hi, I'm Kep. Sign in, and your first task is moments away, above the Watch Quick Start Tour tile; on the right Kepler with its Public Preview badge, Launch any agent. Land every PR., the description, Sign in with GitKraken and New to GitKraken? You'll create an account in the next step. Version 0.15.0 sits top right.">
+  <a href="/wp-content/uploads/sign-in-aug-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/sign-in-aug-2026-v3@2x.png" class="help-center-img img-bordered" alt="Kepler's sign-in screen over a night sky: on the left Kep says Hi, I'm Kep. Sign in, and your first task is moments away, above the Watch Quick Start Tour tile; on the right Kepler with its Public Preview badge, Launch any agent. Land every PR., the description, Sign in with GitKraken and New to GitKraken? You'll create an account in the next step. Version 0.15.0 sits top right.">
   </a>
   <figcaption style="text-align:center; color:#888">The welcome screen on first launch.</figcaption>
 </figure>
@@ -76,8 +76,8 @@ After you sign in, a guided start takes you through two steps. It fills the whol
 **Choose your coding agents.** Kepler looks for the coding agents installed on this computer. Switch on the ones you want Kepler to use, install any that are missing, and make one the default. Under **New sessions start in**, pick **Chat**, Kepler's own view of the agent, or **Terminal**, the agent's own command-line app. **Next** waits until at least one agent is installed or switched on. If your code lives on another machine, **Work on another machine?** lists the machines Kepler found in your SSH configuration, in WSL, or saved in Kepler, and moves this window there. Remote environments need a paid plan, so that choice offers **Try free and connect** or **Upgrade to connect** where your plan doesn't include them.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/onboarding-agents-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/onboarding-agents-oct-2026.png" class="help-center-img img-bordered" alt="The guided start's first step, Choose your coding agents, under Welcome to Kepler and the 01 Agents / 02 Theme & notifications steps: Claude Code and Codex are switched on among the nine coding agents, the others offer an install button, and New sessions start in offers Chat (selected) or Terminal. Kep says Kepler found Claude Code and Codex, with I'll explore on my own and Next at the bottom.">
+  <a href="/wp-content/uploads/onboarding-agents-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/onboarding-agents-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The guided start's first step, Choose your coding agents, under Welcome to Kepler and the 01 Agents / 02 Theme & notifications steps: Claude Code and Codex are switched on among the nine coding agents, the others offer an install button, and New sessions start in offers Chat (selected) or Terminal. Kep says Kepler found Claude Code and Codex, with I'll explore on my own and Next at the bottom.">
   </a>
   <figcaption style="text-align:center; color:#888">The first step of the guided start, with two agents found and switched on.</figcaption>
 </figure>
@@ -91,8 +91,8 @@ After you sign in, a guided start takes you through two steps. It fills the whol
 **Send a test notification** shows what an alert looks like. You can change any of these later in [Settings](/kepler/settings). **Finish** takes you to **Tasks in progress** on the Dashboard, with the task composer open for your first task.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/onboarding-theme-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/onboarding-theme-oct-2026.png" class="help-center-img img-bordered" alt="The guided start's second step, Make it yours: Theme tiles Kepler Dark (selected), Midnight, Kepler Light and Theme gallery beside the System / Light / Dark switch on Dark, and Notify me presets Everything, When I'm needed (selected) and Only in Kepler, with Play a sound with desktop notifications ticked, Send a test notification, Back and Finish.">
+  <a href="/wp-content/uploads/onboarding-theme-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/onboarding-theme-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The guided start's second step, Make it yours: Theme tiles Kepler Dark (selected), Midnight, Kepler Light and Theme gallery beside the System / Light / Dark switch on Dark, and Notify me presets Everything, When I'm needed (selected) and Only in Kepler, with Play a sound with desktop notifications ticked, Send a test notification, Back and Finish.">
   </a>
   <figcaption style="text-align:center; color:#888">The second step, with the theme and notification choices.</figcaption>
 </figure>
@@ -162,8 +162,8 @@ Every one of those prompts is yours to change, and you can add your own. That's 
 Click **New task** or press **Cmd/Ctrl+N**. From outside Kepler, **Shift+Alt+N** opens the quick launcher. Write a prompt, attach a repository if the task needs one, and go. You can attach nothing at all and turn it into real work later. See [Create a Task](/kepler/create-task).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-task-button-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-task-button-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The New task button at the left end of the Kepler top bar, a single button with a plus sign, after the application menu, the window switcher and the Back and Forward buttons.">
+  <a href="/wp-content/uploads/new-task-button-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-task-button-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The New task button at the left end of the Kepler top bar, a single button with a plus sign, after the application menu, the window switcher and the Back and Forward buttons.">
   </a>
   <figcaption style="text-align:center; color:#888">The New task button, available from anywhere in Kepler.</figcaption>
 </figure>

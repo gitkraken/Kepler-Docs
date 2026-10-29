@@ -35,8 +35,8 @@ Kepler has two remote capabilities, and they work in opposite directions:
 Both start at the right end of the title bar. The environment chip comes first, and the **Remote Access** button, a monitor-and-phone icon, sits beside it.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/top-tool-bar-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/top-tool-bar-oct-2026.png" class="help-center-img img-bordered" alt="The right end of the Kepler top bar: the Local environment chip, the Remote Access button's monitor-and-phone icon in green because Remote Access is on, Ask Kepler, Feedback, Settings, and the account avatar.">
+  <a href="/wp-content/uploads/top-tool-bar-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/top-tool-bar-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The right end of the Kepler top bar: the Local environment chip, the Remote Access button's monitor-and-phone icon in green because Remote Access is on, Ask Kepler, Feedback, Settings, and the account avatar.">
   </a>
   <figcaption style="text-align:center; color:#888">The environment chip and the Remote Access button, in a local window.</figcaption>
 </figure>
@@ -57,8 +57,8 @@ Everything up to [Remote Access](#remote-access-reach-kepler-from-another-device
 Kepler binds each window to one environment at a time, and the title-bar chip shows which one. The chip leads with the environment's type icon, and a green dot on that icon means connected.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-chip-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-chip-oct-2026.png" class="help-center-img img-bordered" alt="The right end of the title bar in a window connected to dev-server: the environment chip reads dev-server on the host's violet tint, with a green dot on its type icon and a chevron, followed by the Remote Access button, Ask Kepler, Feedback, Settings and the account avatar.">
+  <a href="/wp-content/uploads/remote-chip-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-chip-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The right end of the title bar in a window connected to dev-server: the environment chip reads dev-server on the host's violet tint, with a green dot on its type icon and a chevron, followed by the Remote Access button, Ask Kepler, Feedback, Settings and the account avatar.">
   </a>
   <figcaption style="text-align:center; color:#888">The chip on a host colored Violet, connected.</figcaption>
 </figure>
@@ -99,8 +99,8 @@ The popover answers where you are and where else you can go, and hands anything 
 **Restart server to update** first asks the server what an update would stop. When nothing would stop, the update starts at once. Otherwise the **Update server?** confirmation names up to five agents and terminals, and adds *and N more* for the rest. When the server can't answer, the confirmation says so.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-update-confirm-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-update-confirm-oct-2026.png" class="help-center-img img-bordered" alt="The Update server? confirmation: Updating restarts the server on dev-server, a warning that Kepler is unable to check what is running on dev-server so agents and open terminals there may stop, and Cancel beside a red Update server button.">
+  <a href="/wp-content/uploads/remote-update-confirm-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-update-confirm-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Update server? confirmation: Updating restarts the server on dev-server, a warning that Kepler is unable to check what is running on dev-server so agents and open terminals there may stop, and Cancel beside a red Update server button.">
   </a>
   <figcaption style="text-align:center; color:#888">The update confirmation when the server can't report what is running.</figcaption>
 </figure>
@@ -112,8 +112,8 @@ Clicking a **Switch to** row moves this window. Hold **Cmd** (macOS) or **Ctrl**
 A connect that a *different* window starts never takes over this window's chip.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-popover-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-popover-oct-2026.png" class="help-center-img img-bordered" alt="The popover open under the dev-server chip, whose icon carries a green dot. The header shows dev-server over SSH as alex@dev.acme.example, Connected at 5 ms, the server and app version 0.15.0, and a gear, with Disconnect and the restart and stop server buttons. Below are Switch to with Local (Work on this machine) and its window icon, and Manage remote environments… with its Ctrl+Shift+R shortcut.">
+  <a href="/wp-content/uploads/remote-popover-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-popover-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The popover open under the dev-server chip, whose icon carries a green dot. The header shows dev-server over SSH as alex@dev.acme.example, Connected at 5 ms, the server and app version 0.15.0, and a gear, with Disconnect and the restart and stop server buttons. Below are Switch to with Local (Work on this machine) and its window icon, and Manage remote environments… with its Ctrl+Shift+R shortcut.">
   </a>
   <figcaption style="text-align:center; color:#888">The popover, connected to a host.</figcaption>
 </figure>
@@ -269,8 +269,8 @@ The SSH wizard walks five steps.
 | *Ready to save.* | **Add** saves the host and opens its page. Nothing connects until you press **Connect**; a password the wizard verified is reused for that first connect |
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-new-host-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-new-host-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The first step of Add machine under Remote environments in Settings: its description, then a card with Name (optional) filled in from the host as dev.acme.example, Host dev.acme.example, Port 22 and User (optional) alex, with Cancel and Continue below the card.">
+  <a href="/wp-content/uploads/remote-new-host-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-new-host-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The first step of Add machine under Remote environments in Settings: its description, then a card with Name (optional) filled in from the host as dev.acme.example, Host dev.acme.example, Port 22 and User (optional) alex, with Cancel and Continue below the card.">
   </a>
   <figcaption style="text-align:center; color:#888">The first step of adding an SSH host.</figcaption>
 </figure>
@@ -284,8 +284,8 @@ The SSH wizard walks five steps.
 **Generate key** needs `ssh-keygen` on your machine; the chip reads **ssh-keygen missing** when ssh-keygen is absent.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-auth-mode-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-auth-mode-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Add machine wizard's Choose authentication step asking how Kepler should authenticate to dev.acme.example: Existing key (1 key found) is selected over Password and Generate key, the Identity file reads /home/alex/.ssh/id_ed25519, and Back, Cancel and Continue sit below the card.">
+  <a href="/wp-content/uploads/remote-auth-mode-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-auth-mode-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Add machine wizard's Choose authentication step asking how Kepler should authenticate to dev.acme.example: Existing key (1 key found) is selected over Password and Generate key, the Identity file reads /home/alex/.ssh/id_ed25519, and Back, Cancel and Continue sit below the card.">
   </a>
   <figcaption style="text-align:center; color:#888">Choosing how Kepler signs in to the host.</figcaption>
 </figure>
@@ -293,8 +293,8 @@ The SSH wizard walks five steps.
 If you pick **Password**, the wizard then offers **Set up a key for this machine?** **Generate and copy key** generates a fresh ed25519 key, copies it to the host, and uses it for future connects, so you don't need the password again. **Skip** keeps the host on password sign-in.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-key-offer-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-key-offer-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Add machine wizard asking Set up a key for this machine?: Kepler generates a fresh ed25519 key, copies it to dev.acme.example and uses it for future connects, and never overwrites existing keys (the new key is named id_ed25519_kepler_ followed by a hash, in ~/.ssh), with Cancel, Skip and Generate and copy key.">
+  <a href="/wp-content/uploads/remote-key-offer-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-key-offer-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Add machine wizard asking Set up a key for this machine?: Kepler generates a fresh ed25519 key, copies it to dev.acme.example and uses it for future connects, and never overwrites existing keys (the new key is named id_ed25519_kepler_ followed by a hash, in ~/.ssh), with Cancel, Skip and Generate and copy key.">
   </a>
   <figcaption style="text-align:center; color:#888">The offer to replace a password with a key.</figcaption>
 </figure>
@@ -522,15 +522,15 @@ Configure it in **Settings → Remote Access**, or from the **Remote Access** bu
 - **Manage Remote Access…**, which opens **Settings → Remote Access**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-access-popover-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-access-popover-oct-2026.png" class="help-center-img img-bordered" alt="The Remote Access popover open under the title bar's Remote Access button: Remote Access with an Active badge, Use this machine anywhere, No paired devices yet, a QR code captioned Scan with your phone's camera to open this machine, the gitkraken.dev/integrations?connect= link with Copy link, Works in any browser signed in to your GitKraken account, Turn off Remote Access, and Manage Remote Access….">
+  <a href="/wp-content/uploads/remote-access-popover-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-access-popover-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Remote Access popover open under the title bar's Remote Access button: Remote Access with an Active badge, Use this machine anywhere, No paired devices yet, a QR code captioned Scan with your phone's camera to open this machine, the gitkraken.dev/integrations?connect= link with Copy link, Works in any browser signed in to your GitKraken account, Turn off Remote Access, and Manage Remote Access….">
   </a>
   <figcaption style="text-align:center; color:#888">The Remote Access popover, with Remote Access on.</figcaption>
 </figure>
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-access-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-access-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Settings › Remote Access while it is off: the Inactive badge and Turn on Remote Access, Your agents, wherever you are, the three steps of How it works, a note that only you can connect, Machines on your account with Manage machines on gitkraken.dev, and This machine stays awake while Remote Access is on, with Change in General.">
+  <a href="/wp-content/uploads/remote-access-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-access-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Settings › Remote Access while it is off: the Inactive badge and Turn on Remote Access, Your agents, wherever you are, the three steps of How it works, a note that only you can connect, Machines on your account with Manage machines on gitkraken.dev, and This machine stays awake while Remote Access is on, with Change in General.">
   </a>
   <figcaption style="text-align:center; color:#888">Settings → Remote Access, before you turn it on.</figcaption>
 </figure>
@@ -568,8 +568,8 @@ Once Remote Access is active, a QR code and a link appear in Settings and in the
 A pairing link works once and expires after 5 minutes. A spent or expired link shows *This pairing link no longer works*; open a new link from the computer running Kepler.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-access-phone-sep-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-access-phone-sep-2026.png" class="help-center-img img-bordered" alt="Kepler's Dashboard in a phone's browser, on the Tasks segment: one bar with Menu, the Todo and Tasks toggle, Search, Options and New task, over the task list grouped into Unread (Fix the cart total, In Review with its pull request and issue chips and Changes requested; Update checkout copy and Upgrade the payment SDK, each with New reply), Needs attention (Add product search, Approval needed) and Recent (Write the 2.4 release notes).">
+  <a href="/wp-content/uploads/remote-access-phone-sep-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-access-phone-sep-2026-v2@2x.png" class="help-center-img img-bordered" alt="Kepler's Dashboard in a phone's browser, on the Tasks segment: one bar with Menu, the Todo and Tasks toggle, Search, Options and New task, over the task list grouped into Unread (Fix the cart total, In Review with its pull request and issue chips and Changes requested; Update checkout copy and Upgrade the payment SDK, each with New reply), Needs attention (Add product search, Approval needed) and Recent (Write the 2.4 release notes).">
   </a>
   <figcaption style="text-align:center; color:#888">Once paired, a phone opens this Kepler in its browser, in the phone layout.</figcaption>
 </figure>
@@ -589,8 +589,8 @@ When you open Kepler in a phone's browser, it uses a phone layout: one bar at th
 - Your account row, with your plan or the days left in a trial
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/phone-drawer-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/phone-drawer-oct-2026.png" class="help-center-img img-bordered" alt="The Kepler drawer open over the Dashboard in a phone-width browser: Views with Todo (2) and Tasks (4), Recent tasks listing Fix the cart total, Add product search, Update checkout copy, Upgrade the payment SDK and Write the 2.4 release notes with their status dots, Feedback, Settings and Help buttons, and the account row for Alex Lee on Enterprise.">
+  <a href="/wp-content/uploads/phone-drawer-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/phone-drawer-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Kepler drawer open over the Dashboard in a phone-width browser: Views with Todo (2) and Tasks (4), Recent tasks listing Fix the cart total, Add product search, Update checkout copy, Upgrade the payment SDK and Write the 2.4 release notes with their status dots, Feedback, Settings and Help buttons, and the account row for Alex Lee on Enterprise.">
   </a>
   <figcaption style="text-align:center; color:#888">The phone menu, with what needs you counted beside each view.</figcaption>
 </figure>
@@ -600,8 +600,8 @@ When you open Kepler in a phone's browser, it uses a phone layout: one bar at th
 The Dashboard's bar holds **Menu**, a **Todo** and **Tasks** toggle, **Search**, **Options**, and **New task**. The Agent Graph has no tab on a phone. **Search** expands in the bar. **Options** shows how many filters are active, and opens a sheet with **Refresh**, the group, sort, filter, and saved-view choices, and, on **Todo**, **Related to me**. Right after a refresh, the **Refresh** row says *Refreshed recently. Try again in N s*.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/phone-dashboard-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/phone-dashboard-oct-2026.png" class="help-center-img img-bordered" alt="Kepler's Dashboard in a phone-width browser: one bar with Menu, the Todo and Tasks toggle (Todo selected), Search, Options and New task, above the Todo list grouped into PR (two pull requests marked Changes requested) and Issue (three issues, one marked Mentioned) for acme-web.">
+  <a href="/wp-content/uploads/phone-dashboard-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/phone-dashboard-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Kepler's Dashboard in a phone-width browser: one bar with Menu, the Todo and Tasks toggle (Todo selected), Search, Options and New task, above the Todo list grouped into PR (two pull requests marked Changes requested) and Issue (three issues, one marked Mentioned) for acme-web.">
   </a>
   <figcaption style="text-align:center; color:#888">The Dashboard's one bar on a phone, over the Todo list.</figcaption>
 </figure>
@@ -609,8 +609,8 @@ The Dashboard's bar holds **Menu**, a **Todo** and **Tasks** toggle, **Search**,
 Tapping an item opens it full screen, with a **Back to list** arrow at the left of the bar. A pull request or issue shows its title as a chip in the bar, with its own actions beside it. Tap the title to open **Switch item**, a sheet that lists every pull request and issue in your Todo list, in the same groups and order, with the current one checked. Tap another to open it in place.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/phone-dashboard-switch-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/phone-dashboard-switch-oct-2026.png" class="help-center-img img-bordered" alt="A pull request open full screen in a phone-width browser, dimmed behind the Switch item sheet. The bar above shows Back and the title chip for #51 Apply discounts before tax in the cart total. The sheet repeats the title with Open and More actions and lists the Todo items in their groups: PR with #51 checked and #49, and Issue with #42, #38 and #45.">
+  <a href="/wp-content/uploads/phone-dashboard-switch-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/phone-dashboard-switch-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A pull request open full screen in a phone-width browser, dimmed behind the Switch item sheet. The bar above shows Back and the title chip for #51 Apply discounts before tax in the cart total. The sheet repeats the title with Open and More actions and lists the Todo items in their groups: PR with #51 checked and #49, and Issue with #42, #38 and #45.">
   </a>
   <figcaption style="text-align:center; color:#888">Switching to another Todo item without going back to the list.</figcaption>
 </figure>
@@ -644,8 +644,8 @@ On a touch phone, every live terminal has a key row under it with the keys a pho
 Tap **Ctrl** once to hold it for the next key only, or double-tap it to lock it until you tap it again. Holding an arrow repeats it. **Hide keys** folds the row into a **Show keys** button, and this device remembers the choice. The phone keyboard rises only when you tap the terminal or **Keyboard**, not on every scroll.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/terminal-key-row-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/terminal-key-row-oct-2026.png" class="help-center-img img-bordered" alt="A task terminal in a phone-width browser after git status, with the terminal key row under it: Esc (Ctrl+C above it), Ctrl, Tab, the Left and Right arrows (Home and End above), Up and Down (PgUp and PgDn above), Enter, Keyboard, and the Hide keys chevron.">
+  <a href="/wp-content/uploads/terminal-key-row-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/terminal-key-row-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A task terminal in a phone-width browser after git status, with the terminal key row under it: Esc (Ctrl+C above it), Ctrl, Tab, the Left and Right arrows (Home and End above), Up and Down (PgUp and PgDn above), Enter, Keyboard, and the Hide keys chevron.">
   </a>
   <figcaption style="text-align:center; color:#888">The key row under a terminal on a phone.</figcaption>
 </figure>
@@ -653,8 +653,8 @@ Tap **Ctrl** once to hold it for the next key only, or double-tap it to lock it 
 To select text, long-press a word, and drag before you lift to extend the selection. A pill offers **Open** when you pressed a link or a file path, plus **Copy**, **Paste**, and **Select all**. A long press on blank space offers **Paste** and **Select all**. In a program that tracks the mouse, such as a menu in an agent's terminal app, a tap clicks.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/terminal-touch-select-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/terminal-touch-select-oct-2026.png" class="help-center-img img-bordered" alt="A task terminal in a phone-width browser after ls, with cart.js long-pressed: the word is highlighted and a pill under it offers Open, Copy, Paste and Select all. The terminal key row sits at the bottom.">
+  <a href="/wp-content/uploads/terminal-touch-select-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/terminal-touch-select-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A task terminal in a phone-width browser after ls, with cart.js long-pressed: the word is highlighted and a pill under it offers Open, Copy, Paste and Select all. The terminal key row sits at the bottom.">
   </a>
   <figcaption style="text-align:center; color:#888">Text selected with a long press, and its actions.</figcaption>
 </figure>

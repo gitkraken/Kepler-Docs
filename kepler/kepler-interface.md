@@ -45,22 +45,22 @@ When an update is ready, an **Update available** chip takes its place. It opens 
 On **Windows and Linux** the native title bar is gone and Kepler draws its own. The menu button at the leading edge holds the full application menu (**File**, **Edit**, **View**, **Window**, **Help**), including **Settings**, **Check for Updates…**, and **About**. macOS keeps its native menu bar, and both menus open the same **About Kepler** dialog.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-task-button-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-task-button-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The New task button at the left end of the Kepler top bar, a single button with a plus sign, after the application menu, the window switcher and the Back and Forward buttons.">
+  <a href="/wp-content/uploads/new-task-button-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-task-button-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The New task button at the left end of the Kepler top bar, a single button with a plus sign, after the application menu, the window switcher and the Back and Forward buttons.">
   </a>
   <figcaption style="text-align:center; color:#888">The top bar's leading edge.</figcaption>
 </figure>
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/top-tool-bar-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/top-tool-bar-oct-2026.png" class="help-center-img img-bordered" alt="The right end of the Kepler top bar: the Local environment chip, the Remote Access button's monitor-and-phone icon in green because Remote Access is on, Ask Kepler, Feedback, Settings, and the account avatar.">
+  <a href="/wp-content/uploads/top-tool-bar-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/top-tool-bar-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The right end of the Kepler top bar: the Local environment chip, the Remote Access button's monitor-and-phone icon in green because Remote Access is on, Ask Kepler, Feedback, Settings, and the account avatar.">
   </a>
   <figcaption style="text-align:center; color:#888">The top bar's trailing cluster.</figcaption>
 </figure>
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/update-available-chip-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/update-available-chip-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The right end of the Kepler top bar with a green Update available chip before the Local environment chip, Remote Access, Ask Kepler, Feedback, Settings, and the account avatar.">
+  <a href="/wp-content/uploads/update-available-chip-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/update-available-chip-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The right end of the Kepler top bar with a green Update available chip before the Local environment chip, Remote Access, Ask Kepler, Feedback, Settings, and the account avatar.">
   </a>
   <figcaption style="text-align:center; color:#888">The trailing cluster when an update is ready.</figcaption>
 </figure>
@@ -138,14 +138,14 @@ A row reads differently depending on whether it holds a tracked issue or pull re
 ### Todo rows: issues and pull requests
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/todo-row-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/todo-row-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The PR 2 group with pull requests #51 and #49, each marked Changes requested, and the ISSUE 3 group with #42 (Mentioned badge), #38 and #45. Each row shows its reference, title, repository and Open status; a pull request shows its author's avatar beside a reviewer whose ring is red for changes requested, issue #38 its assignee, and #51 and #38 the session dot of the task linked to them. Then the age and the outlined Action button: Address Feedback on the pull requests, Plan on the issues.">
+  <a href="/wp-content/uploads/todo-row-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/todo-row-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The PR 2 group with pull requests #51 and #49, each marked Changes requested, and the ISSUE 3 group with #42 (Mentioned badge), #38 and #45. Each row shows its reference, title, repository and Open status; a pull request shows its author's avatar beside a reviewer whose ring is red for changes requested, issue #38 its assignee, and #51 and #38 the session dot of the task linked to them. Then the age and the outlined Action button: Address Feedback on the pull requests, Plan on the issues.">
   </a>
   <figcaption style="text-align:center; color:#888">Todo rows for pull requests and issues.</figcaption>
 </figure>
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ade-todo-mentioned-badge-01-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ade-todo-mentioned-badge-01-v2@2x.png" class="help-center-img img-bordered" alt="The ISSUE 3 group of the Todo list: GitHub issue #42, Gift card codes are case-sensitive at checkout, with the muted Mentioned badge, then #38, Cart total ignores discounts when tax is applied, with its assignee's avatar, and #45, Add a wishlist to product pages. Each row shows its repository, Open status, age and the outlined Plan action.">
+  <a href="/wp-content/uploads/ade-todo-mentioned-badge-01-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ade-todo-mentioned-badge-01-v3@2x.png" class="help-center-img img-bordered" alt="The ISSUE 3 group of the Todo list: GitHub issue #42, Gift card codes are case-sensitive at checkout, with the muted Mentioned badge, then #38, Cart total ignores discounts when tax is applied, with its assignee's avatar, and #45, Add a wishlist to product pages. Each row shows its repository, Open status, age and the outlined Plan action.">
   </a>
   <figcaption style="text-align:center; color:#888">An issue listed because it mentions you, with the Mentioned badge.</figcaption>
 </figure>
@@ -191,8 +191,8 @@ When the list is narrow, each row folds onto two lines instead of dropping cells
 ### Task rows
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/task-row-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-row-oct-2026.png" class="help-center-img img-bordered" alt="The Unread group of Tasks in progress with three task rows: Fix the cart total, Update checkout copy and Upgrade the payment SDK. Each row shows its title, the acme-web repository, its progress stage (In Development, On hold, In Review), New reply, its blue session dot, its age and the ⋮ menu.">
+  <a href="/wp-content/uploads/task-row-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-row-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Unread group of Tasks in progress with three task rows: Fix the cart total, Update checkout copy and Upgrade the payment SDK. Each row shows its title, the acme-web repository, its progress stage (In Development, On hold, In Review), New reply, its blue session dot, its age and the ⋮ menu.">
   </a>
   <figcaption style="text-align:center; color:#888">Task rows.</figcaption>
 </figure>
@@ -208,8 +208,8 @@ Task rows show:
 - Time
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/task-row-needs-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-row-needs-oct-2026.png" class="help-center-img img-bordered" alt="Two task rows in Tasks in progress, grouped by progress. Under In Development, Add product search shows acme-web, In Development, Approval needed for Run npm test in orange and an orange session dot. Under In Review, Fix the cart total shows acme-web, a pull request chip #51 and an issue chip #38, In Review, Changes requested in red, its session dot and a square for one running terminal. Each row ends with its age and the ⋮ menu.">
+  <a href="/wp-content/uploads/task-row-needs-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-row-needs-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Two task rows in Tasks in progress, grouped by progress. Under In Development, Add product search shows acme-web, In Development, Approval needed for Run npm test in orange and an orange session dot. Under In Review, Fix the cart total shows acme-web, a pull request chip #51 and an issue chip #38, In Review, Changes requested in red, its session dot and a square for one running terminal. Each row ends with its age and the ⋮ menu.">
   </a>
   <figcaption style="text-align:center; color:#888">Task rows that say what they need from you, with pull request, issue and terminal chips.</figcaption>
 </figure>
@@ -383,8 +383,8 @@ When the list reorders under you (a session finishes, or a task moves bucket), t
 ### Lay panels out in a grid
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/dashboard-grid-formation-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/dashboard-grid-formation-oct-2026.png" class="help-center-img img-bordered" alt="The Dashboard with five task panels in a 3 by 2 grid beside a narrow task list. The Panel layout popover is open under the 3 × 2 toolbar button: a Columns and Grid switch with Grid selected, a grid of cells with the top-left 3 by 2 block highlighted, and 3 × 2, 6 panels, Up to 16 panels, fewer in smaller windows.">
+  <a href="/wp-content/uploads/dashboard-grid-formation-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/dashboard-grid-formation-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Dashboard with five task panels in a 3 by 2 grid beside a narrow task list. The Panel layout popover is open under the 3 × 2 toolbar button: a Columns and Grid switch with Grid selected, a grid of cells with the top-left 3 by 2 block highlighted, and 3 × 2, 6 panels, Up to 16 panels, fewer in smaller windows.">
   </a>
   <figcaption style="text-align:center; color:#888">Panels in a 3 × 2 grid, with the Panel layout popover open.</figcaption>
 </figure>
@@ -434,8 +434,8 @@ One slot always stays unpinned so browsing never has to evict a pin; once every 
 Selecting a row opens a panel beside the list with everything about that item, as a stack of collapsible, resizable sections.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/issue-side-panel-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/issue-side-panel-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The side panel for GitHub issue #38, Cart total ignores discounts when tax is applied, as a stack of sections: its header with the Open on GitHub, panel menu, Plan Action and Close buttons, the GITHUB and ISSUE #38 chips, Open, acme-web, the linked task's session dot, the age, and alex-lee as Assignee; Summary with the bug label and the description; Related (1) listing the task Fix the cart total, In Review; and that task's session with its conversation and composer.">
+  <a href="/wp-content/uploads/issue-side-panel-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/issue-side-panel-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The side panel for GitHub issue #38, Cart total ignores discounts when tax is applied, as a stack of sections: its header with the Open on GitHub, panel menu, Plan Action and Close buttons, the GITHUB and ISSUE #38 chips, Open, acme-web, the linked task's session dot, the age, and alex-lee as Assignee; Summary with the bug label and the description; Related (1) listing the task Fix the cart total, In Review; and that task's session with its conversation and composer.">
   </a>
   <figcaption style="text-align:center; color:#888">The side panel, with its stack of collapsible sections.</figcaption>
 </figure>
@@ -502,8 +502,8 @@ To rename a task, double-click its title, choose **Rename task** from its **⋮*
 ### The side pane
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/dashboard-side-pane-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/dashboard-side-pane-oct-2026.png" class="help-center-img img-bordered" alt="A wide task panel for Fix the cart total with the Prompt note open in its side pane, right of the session. The panel's header reads In Review and holds the worktree card (kepler/fix-cart-total, its #51 pull request marked Changes requested, 2 uncommitted, main) and the #51 Open and #38 Open chips; the session shows its conversation and composer; the side pane's title row holds the resource switcher on Prompt, Copy, Edit and Close side pane, with the note's text below.">
+  <a href="/wp-content/uploads/dashboard-side-pane-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/dashboard-side-pane-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A wide task panel for Fix the cart total with the Prompt note open in its side pane, right of the session. The panel's header reads In Review and holds the worktree card (kepler/fix-cart-total, its #51 pull request marked Changes requested, 2 uncommitted, main) and the #51 Open and #38 Open chips; the session shows its conversation and composer; the side pane's title row holds the resource switcher on Prompt, Copy, Edit and Close side pane, with the note's text below.">
   </a>
   <figcaption style="text-align:center; color:#888">A note open in a task panel's side pane, beside the session.</figcaption>
 </figure>
@@ -526,8 +526,8 @@ Kepler remembers the open pane for each item and the pane's width for each windo
 ### Issue comments
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/issue-comments-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/issue-comments-oct-2026.png" class="help-center-img img-bordered" alt="The Fix the cart total panel (In Review, its worktree card with #51 marked Changes requested, and the #51 Open and #38 Open chips) with GitHub issue #38 open in its side pane: Back to sessions, the issue title Cart total ignores discounts when tax is applied, the GITHUB and ISSUE #38 chips, Open, acme-web and the assignee alex-lee, the bug label and the description, then Comments · 3 with Refresh comments: jo-park, sam-ortiz and alex-lee, each with an avatar, an age and the comment text.">
+  <a href="/wp-content/uploads/issue-comments-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/issue-comments-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Fix the cart total panel (In Review, its worktree card with #51 marked Changes requested, and the #51 Open and #38 Open chips) with GitHub issue #38 open in its side pane: Back to sessions, the issue title Cart total ignores discounts when tax is applied, the GITHUB and ISSUE #38 chips, Open, acme-web and the assignee alex-lee, the bug label and the description, then Comments · 3 with Refresh comments: jo-park, sam-ortiz and alex-lee, each with an avatar, an age and the comment text.">
   </a>
   <figcaption style="text-align:center; color:#888">An issue's comments, under its summary in the side pane.</figcaption>
 </figure>
@@ -619,8 +619,8 @@ Each set of open panels gets its own history entry, so Back closes the set you j
 | **Unable to find this task** | The task you opened was deleted, or its link is from another machine: *It may have been deleted, or the link may be from another machine.* An archived task still opens |
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/tasks-empty-state-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/tasks-empty-state-oct-2026.png" class="help-center-img img-bordered" alt="The Tasks in progress empty state: the heading Your agents' work lives here and a line on what a task is, then Add issue, Add PR and Add context above the composer (Describe a task or ask a question…, the agent pill and Start), Add repo or folder below it, handwritten hints pointing at each, and a Continue an external session card under an or divider.">
+  <a href="/wp-content/uploads/tasks-empty-state-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/tasks-empty-state-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Tasks in progress empty state: the heading Your agents' work lives here and a line on what a task is, then Add issue, Add PR and Add context above the composer (Describe a task or ask a question…, the agent pill and Start), Add repo or folder below it, handwritten hints pointing at each, and a Continue an external session card under an or divider.">
   </a>
   <figcaption style="text-align:center; color:#888">Tasks in progress with no tasks yet.</figcaption>
 </figure>
@@ -630,8 +630,8 @@ Each set of open panels gets its own history entry, so Back closes the set you j
 Kep, Kepler's planet mascot, keeps empty and waiting screens company. He appears on the loading screen while Kepler starts, over a new session's empty chat, over empty views, in loading spinners, in the **About Kepler** dialog and What's New, and on the crash and sign-in error screens. When your search or filters empty the list, he sleeps above the message. On a crash screen, **Show details** reveals **Error details**, with **Copy details** for a bug report.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/kep-empty-chat-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/kep-empty-chat-oct-2026.png" class="help-center-img img-bordered" alt="A new session's empty chat in a task panel: Kep, Kepler's planet mascot, above What should the agent work on? and Describe the task, add a file with @, or type / for commands. Below them the draft composer reads Start with the task prompt, or describe something else…, with Task context, the agent pill and Start, and the Task folder picker under it.">
+  <a href="/wp-content/uploads/kep-empty-chat-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/kep-empty-chat-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A new session's empty chat in a task panel: Kep, Kepler's planet mascot, above What should the agent work on? and Describe the task, add a file with @, or type / for commands. Below them the draft composer reads Start with the task prompt, or describe something else…, with Task context, the agent pill and Start, and the Task folder picker under it.">
   </a>
   <figcaption style="text-align:center; color:#888">Kep over a new session's empty chat.</figcaption>
 </figure>

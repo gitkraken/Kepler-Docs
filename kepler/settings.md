@@ -129,8 +129,8 @@ The Account page has three sections: **Account**, **Unlock more with Kepler**, a
 **Your usage by feature** shows where your AI credits went. A stacked bar splits your use between your three most-used AI features and everything else as **Other**. Below the bar, each feature has a row with its share of your use as a percentage, such as **Commit Message**, **Conflict Resolution**, **Compose Changes**, or **Task & branch names**. Hover a feature's help icon for what it does. The breakdown appears only once you've used an AI feature.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ai-usage-breakdown-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ai-usage-breakdown-oct-2026.png" class="help-center-img img-bordered" alt="The GitKraken AI credits section of Settings › Account: Your weekly usage 412,500 / 3.2M (13%, resets Sun, Mar 8), Shared weekly credits 18.4M / 80M, and Your usage by feature, a stacked bar over Commit Message 38.3%, Conflict Resolution 27.2%, Compose Changes 18.5%, Task & branch names 9.9% and Pull Request 6.1%, each with a help icon, above Buy credits.">
+  <a href="/wp-content/uploads/ai-usage-breakdown-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ai-usage-breakdown-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The GitKraken AI credits section of Settings › Account: Your weekly usage 412,500 / 3.2M (13%, resets Sun, Mar 8), Shared weekly credits 18.4M / 80M, and Your usage by feature, a stacked bar over Commit Message 38.3%, Conflict Resolution 27.2%, Compose Changes 18.5%, Task & branch names 9.9% and Pull Request 6.1%, each with a help icon, above Buy credits.">
   </a>
   <figcaption style="text-align:center; color:#888">GitKraken AI credits, with your usage by feature.</figcaption>
 </figure>
@@ -366,8 +366,8 @@ Under **Default agent**, the following setting decides which agent the Task Comp
 With **Last used agent**, a task an agent created that has no session yet starts with the agent that created it. An Action's own agent isn't remembered as your last pick. If you choose **Default agent** with no default set, Kepler points you at the **Default agent** picker.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-sessions-start-with-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-sessions-start-with-oct-2026.png" class="help-center-img img-bordered" alt="The New tasks section of Settings › Tasks: New tasks use Claude Code CLI with Options and Clear default, its description, and New sessions start with offering Last used agent (The agent, model and mode you last picked) beside Default agent (Always the default agent above).">
+  <a href="/wp-content/uploads/new-sessions-start-with-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-sessions-start-with-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The New tasks section of Settings › Tasks: New tasks use Claude Code CLI with Options and Clear default, its description, and New sessions start with offering Last used agent (The agent, model and mode you last picked) beside Default agent (Always the default agent above).">
   </a>
   <figcaption style="text-align:center; color:#888">Default agent and New sessions start with, in Settings → Tasks.</figcaption>
 </figure>
@@ -442,8 +442,8 @@ For example, `<REPOSITORY_PATH>/.worktrees/<REPOSITORY_NAME>` nests each worktre
 Per-repository commands have a **Variables** menu of their own, with two more variables. See [Per-repository commands](#per-repository-commands).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/folder-fields-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/folder-fields-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Worktrees folder field in Settings › Tasks, set to /home/alex/kepler/worktrees, with its Variables menu open listing the REPOSITORY PATH tag (Main repo folder) and the REPOSITORY NAME tag (Repo name), each beside its raw token, and the Choose a folder button beside the field.">
+  <a href="/wp-content/uploads/folder-fields-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/folder-fields-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Worktrees folder field in Settings › Tasks, set to /home/alex/kepler/worktrees, with its Variables menu open listing the REPOSITORY PATH tag (Main repo folder) and the REPOSITORY NAME tag (Repo name), each beside its raw token, and the Choose a folder button beside the field.">
   </a>
   <figcaption style="text-align:center; color:#888">The Worktrees folder field in Settings → Tasks, with the Variables menu open.</figcaption>
 </figure>
@@ -530,8 +530,8 @@ Click a repository's row to open its **Edit repo** page. The page shows the repo
 **Name**, **Aliases**, and **Description** are optional. Kepler stores whitespace-only text as empty. The page has no **Save** button: each field saves on its own and shows its save status.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/edit-repo-dialog-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/edit-repo-dialog-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Edit repo page for acme-web in Settings › Repositories: its path and main · 2 branches, then Name, Aliases (empty, Short names for this repo when talking to agents, separated by commas), Description and Branch prefix on Default (kepler/) with the example kepler/fix-login-form; the Commands section with Add command, Install deps (Runs on creation) and Dev server; and MCP servers with Add server, Agent set to Claude Code CLI and acme-issues, docs-search and acme-analytics switched on.">
+  <a href="/wp-content/uploads/edit-repo-dialog-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/edit-repo-dialog-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Edit repo page for acme-web in Settings › Repositories: its path and main · 2 branches, then Name, Aliases (empty, Short names for this repo when talking to agents, separated by commas), Description and Branch prefix on Default (kepler/) with the example kepler/fix-login-form; the Commands section with Add command, Install deps (Runs on creation) and Dev server; and MCP servers with Add server, Agent set to Claude Code CLI and acme-issues, docs-search and acme-analytics switched on.">
   </a>
   <figcaption style="text-align:center; color:#888">The Edit repo page.</figcaption>
 </figure>
@@ -588,8 +588,8 @@ A failed command does not undo the worktree. The worktree exists but may not be 
 To run a command from the task view, right-click a worktree row in the rail and use **Run command here**. It lists that repository's commands and runs the one you pick in that worktree, opening its terminal in place. A repository with none yet reads **No commands yet** and offers **Create command…**, which opens this page and returns you to the task when you leave it. A command that's running shows on the run button and its menus, where you can stop it.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/repo-commands-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/repo-commands-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Commands section of the Edit repo page for acme-web: Add command, Install deps (pnpm install) with the Runs on creation chip, and Dev server open for editing with its name, Run on worktree creation, the command pnpm dev with Variables, and Cancel and Save, above the note that commands run in the worktree folder with your login shell.">
+  <a href="/wp-content/uploads/repo-commands-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/repo-commands-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Commands section of the Edit repo page for acme-web: Add command, Install deps (pnpm install) with the Runs on creation chip, and Dev server open for editing with its name, Run on worktree creation, the command pnpm dev with Variables, and Cancel and Save, above the note that commands run in the worktree folder with your login shell.">
   </a>
   <figcaption style="text-align:center; color:#888">A repository's Commands, with one row open for editing.</figcaption>
 </figure>
@@ -624,8 +624,8 @@ A row counts as one or more of the following:
 **Needs update** and **Conflicts** leave out rows that are safe to delete. Activity includes what Kepler recorded on the branch, not only changes in the worktree.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ade-worktree-cleanup-01-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ade-worktree-cleanup-01-v2@2x.png" class="help-center-img img-bordered" alt="Settings › Repositories › Worktrees and branches: 4 worktrees and 2 branches in 1 repo, 3 look safe to delete, with Stale after 14 days and Re-check; Search branch, path or repo, the Safe to delete (3), Needs update, Conflicts, Stale and All filters, and All / Worktrees only / Branches only. Under acme-web, kepler/old-banner and kepler/promo-page (worktrees tagged Spring sale banner) and kepler/summer-teaser (Not checked out) are each 3 behind main and merged into main; old-banner and summer-teaser are ticked, and the bar reads 2 selected with Clear, Update and Delete.">
+  <a href="/wp-content/uploads/ade-worktree-cleanup-01-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ade-worktree-cleanup-01-v3@2x.png" class="help-center-img img-bordered" alt="Settings › Repositories › Worktrees and branches: 4 worktrees and 2 branches in 1 repo, 3 look safe to delete, with Stale after 14 days and Re-check; Search branch, path or repo, the Safe to delete (3), Needs update, Conflicts, Stale and All filters, and All / Worktrees only / Branches only. Under acme-web, kepler/old-banner and kepler/promo-page (worktrees tagged Spring sale banner) and kepler/summer-teaser (Not checked out) are each 3 behind main and merged into main; old-banner and summer-teaser are ticked, and the bar reads 2 selected with Clear, Update and Delete.">
   </a>
   <figcaption style="text-align:center; color:#888">The Worktrees and branches sub-page, filtered to what is safe to delete.</figcaption>
 </figure>
@@ -638,8 +638,8 @@ Select rows, then click **Delete**. The confirmation, **Delete {count} items?**,
 - For local branches: *The local branches are deleted. Commits that exist only on them are lost.* When every branch's work has landed, it reads *Their work is already in the base branch, so nothing is lost.* instead. Each branch that isn't merged is marked **not merged**. **Force delete branches that are not merged** deletes those too, and **Also delete the branches on the remote** deletes the remote branches.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/worktree-branch-delete-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/worktree-branch-delete-oct-2026.png" class="help-center-img img-bordered" alt="The Delete 2 items? dialog for two local branches: The local branches are deleted, with Force delete branches that are not merged and Also delete the branches on the remote unticked, kepler/size-guide marked not merged, and Cancel and Delete 2 items.">
+  <a href="/wp-content/uploads/worktree-branch-delete-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/worktree-branch-delete-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Delete 2 items? dialog for two local branches: The local branches are deleted, with Force delete branches that are not merged and Also delete the branches on the remote unticked, kepler/size-guide marked not merged, and Cancel and Delete 2 items.">
   </a>
   <figcaption style="text-align:center; color:#888">Deleting two local branches, one of them not merged.</figcaption>
 </figure>
@@ -664,15 +664,15 @@ Kepler updates a local branch that has no worktree in place, from the repository
 While the update runs, each row shows its status: **Waiting**, **Updating…**, **Updated**, **Up to date**, **Skipped**, **Conflict**, or **Failed**. When it finishes, you can undo one row with **Roll back**, or every row with **Roll back all**. If you didn't push during the update, **Push** and **Push all** push the updated branches that have an upstream. A branch that moved since the update isn't pushed. The finished report stays in every window until you click **Dismiss**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ade-worktree-batch-update-01-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ade-worktree-batch-update-01-v2@2x.png" class="help-center-img img-bordered" alt="The Update worktrees dialog with How to update set to Rebase and Push after update ticked: kepler/gift-card-ui is Up to date, kepler/old-banner Will update · 3 commits behind with No upstream, update only, kepler/wishlist is Skipped · uncommitted changes, and kepler/summer-teaser Will update · 3 commits behind with Will push. The footer reads 2 worktrees to update beside Cancel and Update.">
+  <a href="/wp-content/uploads/ade-worktree-batch-update-01-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ade-worktree-batch-update-01-v3@2x.png" class="help-center-img img-bordered" alt="The Update worktrees dialog with How to update set to Rebase and Push after update ticked: kepler/gift-card-ui is Up to date, kepler/old-banner Will update · 3 commits behind with No upstream, update only, kepler/wishlist is Skipped · uncommitted changes, and kepler/summer-teaser Will update · 3 commits behind with Will push. The footer reads 2 worktrees to update beside Cancel and Update.">
   </a>
   <figcaption style="text-align:center; color:#888">The Update worktrees plan, with Push after update ticked.</figcaption>
 </figure>
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ade-worktree-batch-update-02-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ade-worktree-batch-update-02-v2@2x.png" class="help-center-img img-bordered" alt="The finished update on the Worktrees and branches page: Update finished, 2 updated · 1 pushed, with Roll back all and Dismiss; kepler/old-banner reads Not pushed: no upstream and Updated, kepler/summer-teaser Pushed and Updated, each with Roll back.">
+  <a href="/wp-content/uploads/ade-worktree-batch-update-02-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ade-worktree-batch-update-02-v3@2x.png" class="help-center-img img-bordered" alt="The finished update on the Worktrees and branches page: Update finished, 2 updated · 1 pushed, with Roll back all and Dismiss; kepler/old-banner reads Not pushed: no upstream and Updated, kepler/summer-teaser Pushed and Updated, each with Roll back.">
   </a>
   <figcaption style="text-align:center; color:#888">The finished update, with Roll back on each row.</figcaption>
 </figure>
@@ -855,8 +855,8 @@ Two more settings sit under the grid:
 To silence desktop notifications from one remote machine only, use **Mute notifications from {host}** on that machine in [Remote environments](#remote-environments).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ade-settings-notifications-01-01-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ade-settings-notifications-01-01-v2@2x.png" class="help-center-img img-bordered" alt="Settings › Notifications, What to notify you about, at the desktop app's defaults: a grid of Replies, Questions, Permission requests, Approval requests and Errors against Desktop and In Kepler, with every box ticked except both Replies boxes; below it Play a sound with desktop notifications is ticked and Notify even for the task you're looking at is not.">
+  <a href="/wp-content/uploads/ade-settings-notifications-01-01-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ade-settings-notifications-01-01-v3@2x.png" class="help-center-img img-bordered" alt="Settings › Notifications, What to notify you about, at the desktop app's defaults: a grid of Replies, Questions, Permission requests, Approval requests and Errors against Desktop and In Kepler, with every box ticked except both Replies boxes; below it Play a sound with desktop notifications is ticked and Notify even for the task you're looking at is not.">
   </a>
   <figcaption style="text-align:center; color:#888">What to notify you about, at the desktop app's defaults.</figcaption>
 </figure>
@@ -892,8 +892,8 @@ How you pick a tile depends on **Appearance**:
 The tile in use reads **In use now**. If you used **Midnight** in an earlier version of Kepler, Kepler switches **Appearance** to **Dark** and keeps **Midnight** as your dark theme.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/appearance-theme-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/appearance-theme-oct-2026.png" class="help-center-img img-bordered" alt="The Theme section of Settings › Appearance at its defaults: Appearance set to System (Follows your system), and under Theme the Kepler tile in use, its preview split between dark and light with a moon and a sun under it, Midnight with a moon, and Your themes with Browse gallery and Create a theme.">
+  <a href="/wp-content/uploads/appearance-theme-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/appearance-theme-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Theme section of Settings › Appearance at its defaults: Appearance set to System (Follows your system), and under Theme the Kepler tile in use, its preview split between dark and light with a moon and a sun under it, Midnight with a moon, and Your themes with Browse gallery and Create a theme.">
   </a>
   <figcaption style="text-align:center; color:#888">Appearance and Theme, at their defaults.</figcaption>
 </figure>
@@ -909,8 +909,8 @@ A theme file is a `.json` or `.jsonc` file, so comments are allowed. One file ca
 A tile whose file Kepler can't fully read shows **Has problems** or **Has warnings**. Click the badge to see each problem as *Line {line}, column {column}: {message}*, with **Open file** and **Create a task to fix it**. *Changes apply when you save.* A file with warnings still works. A theme that has errors is left out, and the other themes in its file still load. A tile's **More actions for {name}** menu has **Show in folder** and **Move to Trash** (**Move to Recycle Bin** on Windows).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/theme-problems-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/theme-problems-oct-2026.png" class="help-center-img img-bordered" alt="Your themes in Settings › Appearance with harbor.jsonc's problem badge open: Unable to load 1 theme from harbor.jsonc, because harbor-light has errors that must be fixed while the other themes in the file are not affected. It lists themes.1.extends: Invalid option and Unknown key &quot;accent&quot; was ignored, above Create a task to fix it.">
+  <a href="/wp-content/uploads/theme-problems-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/theme-problems-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Your themes in Settings › Appearance with harbor.jsonc's problem badge open: Unable to load 1 theme from harbor.jsonc, because harbor-light has errors that must be fixed while the other themes in the file are not affected. It lists themes.1.extends: Invalid option and Unknown key &quot;accent&quot; was ignored, above Create a task to fix it.">
   </a>
   <figcaption style="text-align:center; color:#888">A theme file's problems, with the line each one is on.</figcaption>
 </figure>
@@ -931,15 +931,15 @@ Click a theme to see its details card, drawn in the theme's own colors. The card
 If a theme you already have uses the same id, Kepler asks before it replaces that file, and moves the old file to the Trash. A gallery theme you installed and haven't edited offers **Update to {version}** on its tile when a newer version is published. The gallery's themes come from `gitkraken/kepler-themes` on GitHub, where you can also publish your own.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/theme-gallery-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/theme-gallery-oct-2026.png" class="help-center-img img-bordered" alt="The Theme gallery dialog: Search by name, author or color, the All / Dark / Light filter, Sort: Featured and 5 themes, and tiles for Amethyst, Blue Is the New Green, Third Impact, Quiet and Kepler Sky with their authors and a moon or sun for each variant. The selected Amethyst's details card shows Amethyst Dark by Eric Amodio with its description, Version, License and Updated, above Install and Try it.">
+  <a href="/wp-content/uploads/theme-gallery-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/theme-gallery-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Theme gallery dialog: Search by name, author or color, the All / Dark / Light filter, Sort: Featured and 5 themes, and tiles for Amethyst, Blue Is the New Green, Third Impact, Quiet and Kepler Sky with their authors and a moon or sun for each variant. The selected Amethyst's details card shows Amethyst Dark by Eric Amodio with its description, Version, License and Updated, above Install and Try it.">
   </a>
   <figcaption style="text-align:center; color:#888">The Theme gallery, with one theme's details open.</figcaption>
 </figure>
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/theme-gallery-try-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/theme-gallery-try-oct-2026.png" class="help-center-img img-bordered" alt="Settings › Appearance painted in the Amethyst theme while trying it from the gallery, with the preview bar at the bottom: Trying Amethyst Dark, a Dark / Light switch, Use Amethyst and Done.">
+  <a href="/wp-content/uploads/theme-gallery-try-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/theme-gallery-try-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Settings › Appearance painted in the Amethyst theme while trying it from the gallery, with the preview bar at the bottom: Trying Amethyst Dark, a Dark / Light switch, Use Amethyst and Done.">
   </a>
   <figcaption style="text-align:center; color:#888">Trying a gallery theme on the whole window before you use it.</figcaption>
 </figure>
@@ -949,8 +949,8 @@ If a theme you already have uses the same id, Kepler asks before it replaces tha
 **Create a theme** opens the new task launcher with a prompt already written for an agent, ending in *The theme I want:* for you to describe it. The agent reads and saves themes through Kepler's `theme_get` and `theme_save` tools, so it doesn't need the themes folder attached. Before `theme_save` saves a theme, it checks the file's format and that its colors reach the minimum contrast Kepler requires, and reports any problem back to the agent. **Create a task to fix it**, on a broken theme file, starts the same kind of task with that file's problems listed.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/create-a-theme-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/create-a-theme-oct-2026.png" class="help-center-img img-bordered" alt="The New task launcher opened from Create a theme, its prompt asking the agent to read theme_get, check a draft with theme_save using dryRun, then save it, and ending in The theme I want. Add issue, Add PR and Add context sit above the prompt, and the agent picker, Start and Add repo or folder below it.">
+  <a href="/wp-content/uploads/create-a-theme-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/create-a-theme-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The New task launcher opened from Create a theme, its prompt asking the agent to read theme_get, check a draft with theme_save using dryRun, then save it, and ending in The theme I want. Add issue, Add PR and Add context sit above the prompt, and the agent picker, Start and Add repo or folder below it.">
   </a>
   <figcaption style="text-align:center; color:#888">The launcher that Create a theme opens.</figcaption>
 </figure>
@@ -972,8 +972,8 @@ This section sets how a session's conversation scrolls and how wide it grows:
 Neither scrolling mode fights you: once you scroll up, the transcript stays where you put it. The conversation stays centered at every width, and an agent's answers span its full width.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/appearance-chat-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/appearance-chat-oct-2026.png" class="help-center-img img-bordered" alt="The Chat section of Settings › Appearance: Auto-scroll to the end, Conversation width with Narrow selected beside Wide and Full width, and Remember scroll position ticked.">
+  <a href="/wp-content/uploads/appearance-chat-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/appearance-chat-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Chat section of Settings › Appearance: Auto-scroll to the end, Conversation width with Narrow selected beside Wide and Full width, and Remember scroll position ticked.">
   </a>
   <figcaption style="text-align:center; color:#888">The Chat settings, at their defaults.</figcaption>
 </figure>

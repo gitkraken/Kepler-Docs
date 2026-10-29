@@ -86,8 +86,8 @@ In **All changes**, a file that also has uncommitted work carries a pencil mark,
 The header above the commit list says how far the branch has come: **{count} commits ahead of {branch}**, with **branched here** marking the merge base. Commits the upstream doesn't have yet are drawn with a green dot and line, and read **Not pushed**. Hover a commit for its card: the author, when it was committed, the full message with its lists and trailers, the short hash, its line changes and its file count. Right-click a commit for **Copy commit SHA**, **Copy commit message**, **Open commit on {provider}** and **Copy commit URL**. A commit that isn't pushed yet has no page on the host, so it leaves out the last two.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/changes-commit-row-tip-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/changes-commit-row-tip-oct-2026.png" class="help-center-img img-bordered" alt="The worktree column for kepler/fix-cart-total on Commits, where the two newest commits have green dots because they are not pushed, and Apply the discount before tax, which is, has a grey one. The pointer rests on Clamp the discount at the subtotal, and its hover card shows Alex Lee, committed 4h ago, the subject, a body with a two-item list and a Refs: #38 trailer, then the short hash, its line changes, 1 file and a Not pushed chip.">
+  <a href="/wp-content/uploads/changes-commit-row-tip-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/changes-commit-row-tip-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The worktree column for kepler/fix-cart-total on Commits, where the two newest commits have green dots because they are not pushed, and Apply the discount before tax, which is, has a grey one. The pointer rests on Clamp the discount at the subtotal, and its hover card shows Alex Lee, committed 4h ago, the subject, a body with a two-item list and a Refs: #38 trailer, then the short hash, its line changes, 1 file and a Not pushed chip.">
   </a>
   <figcaption style="text-align:center; color:#888">Unpushed commits, and the card for one of them.</figcaption>
 </figure>
@@ -101,8 +101,8 @@ A wholly untracked folder with hundreds of files, such as a build output nobody 
 Click a file, or **Open changes** from the worktree's menu, and the overlay opens over the page. It opens at a width sized for one column of code, or two when you last used **Split**, and you can drag its edges to resize it. When it's at that width, **Maximize** in its header fills the window, and **Restore size** brings it back.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/changes-overlay-maximize-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/changes-overlay-maximize-oct-2026.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total open over the task page at its default width, with the task page showing around it, and the pointer on the Maximize button in the overlay's header, whose tooltip reads Maximize.">
+  <a href="/wp-content/uploads/changes-overlay-maximize-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/changes-overlay-maximize-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total open over the task page at its default width, with the task page showing around it, and the pointer on the Maximize button in the overlay's header, whose tooltip reads Maximize.">
   </a>
   <figcaption style="text-align:center; color:#888">The Changes overlay at its default width, with Maximize in its header.</figcaption>
 </figure>
@@ -171,8 +171,8 @@ Right-click a file row for its own menu: **Stage file** or **Unstage file**, **D
 **Escape** closes the bar. Kepler remembers the three toggles, and a one-line selection fills the field when you open the bar.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/code-find-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/code-find-oct-2026.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total showing cart.js and cart.test.js stacked, 2 files shown. The find bar at the top right holds discount, with Match case on beside Match whole word and Use regular expression, and reads 5 of 6 with Previous match, Next match and Close find. Every match is highlighted in both files, the current one on line 4 of cart.js.">
+  <a href="/wp-content/uploads/code-find-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/code-find-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total showing cart.js and cart.test.js stacked, 2 files shown. The find bar at the top right holds discount, with Match case on beside Match whole word and Use regular expression, and reads 5 of 6 with Previous match, Next match and Close find. Every match is highlighted in both files, the current one on line 4 of cart.js.">
   </a>
   <figcaption style="text-align:center; color:#888">Finding across a stack of two files.</figcaption>
 </figure>
@@ -226,8 +226,8 @@ In a phone's browser, through Remote Access, the overlay drops its header and tr
 The overlay opens **Stacked** on a phone, with lines wrapped.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/phone-changes-bar-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/phone-changes-bar-oct-2026.png" class="help-center-img img-bordered" alt="The Changes overlay on a phone, showing cart.js with wrapped lines under one bar: Close, the file name cart.js with a chevron, Previous and Next file, and More actions, whose menu is open. It lists Change scope (Working changes, 2 ticked, Commits, All changes, All files), File view (File, Changes ticked), Diff layout (Stacked ticked, Split unavailable as Too narrow for a split diff), Wrap lines ticked, Comment on selection and Open in editor (both unavailable), Copy path and Copy relative path.">
+  <a href="/wp-content/uploads/phone-changes-bar-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/phone-changes-bar-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Changes overlay on a phone, showing cart.js with wrapped lines under one bar: Close, the file name cart.js with a chevron, Previous and Next file, and More actions, whose menu is open. It lists Change scope (Working changes, 2 ticked, Commits, All changes, All files), File view (File, Changes ticked), Diff layout (Stacked ticked, Split unavailable as Too narrow for a split diff), Wrap lines ticked, Comment on selection and Open in editor (both unavailable), Copy path and Copy relative path.">
   </a>
   <figcaption style="text-align:center; color:#888">The Changes overlay on a phone, with its menu open.</figcaption>
 </figure>
@@ -241,14 +241,14 @@ See [Remote Environments](/kepler/remote-environments).
 Read the diff, mark what needs fixing, and hand the whole list to the agent in one go.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/review-comment-draft-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/review-comment-draft-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total with cart.js open in the Changes view, its header holding File and Changes, Stacked and Split. Lines 3 and 4 are selected and a review comment draft is open beneath them, reading Pull the discount and rounding into one helper, with Cancel and Comment.">
+  <a href="/wp-content/uploads/review-comment-draft-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/review-comment-draft-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total with cart.js open in the Changes view, its header holding File and Changes, Stacked and Split. Lines 3 and 4 are selected and a review comment draft is open beneath them, reading Pull the discount and rounding into one helper, with Cancel and Comment.">
   </a>
   <figcaption style="text-align:center; color:#888">A review comment draft, under the lines it's about.</figcaption>
 </figure>
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ade-review-comments-01-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ade-review-comments-01-v2@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total with cart.js open in the Changes view. Two posted review comments sit under the diff lines they are about, on line 3 and line 4, each with Edit, Delete and Add to prompt. The file header and its tree row show a comment count of 2, and the overlay header reads 2 comments beside Add to prompt.">
+  <a href="/wp-content/uploads/ade-review-comments-01-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ade-review-comments-01-v3@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total with cart.js open in the Changes view. Two posted review comments sit under the diff lines they are about, on line 3 and line 4, each with Edit, Delete and Add to prompt. The file header and its tree row show a comment count of 2, and the overlay header reads 2 comments beside Add to prompt.">
   </a>
   <figcaption style="text-align:center; color:#888">Two posted comments, with Add to prompt in the overlay header.</figcaption>
 </figure>
@@ -276,8 +276,8 @@ Typed text is never thrown away: **Escape** only leaves a draft's field, and a d
 In **Working changes**, the tree is where you stage and the commit box beneath it is where you commit. The panel and the overlay share one commit box per worktree, so a message you start in one is waiting in the other, and it's kept when the overlay closes.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/staging-commit-box-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/staging-commit-box-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The worktree column for kepler/fix-cart-total on Working changes, beside Commits, All changes and All files. cart.js is ticked and cart.test.js is not, so the header box is partly checked and its badge reads 1 of 2 staged. Below the files sits the commit box, with Commit message, Amend last commit and Commit.">
+  <a href="/wp-content/uploads/staging-commit-box-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/staging-commit-box-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The worktree column for kepler/fix-cart-total on Working changes, beside Commits, All changes and All files. cart.js is ticked and cart.test.js is not, so the header box is partly checked and its badge reads 1 of 2 staged. Below the files sits the commit box, with Commit message, Amend last commit and Commit.">
   </a>
   <figcaption style="text-align:center; color:#888">Staging files in Working changes, above the commit box.</figcaption>
 </figure>
@@ -360,8 +360,8 @@ The chevron beside it opens a menu that leads with whatever the button runs. The
 After you apply a rebase, the remote still has the branch's old commits, so **Force push** becomes the main button instead of a menu item. The **Force push?** confirmation explains that the branch was rebased and that Kepler refuses the force push if someone else pushed in the meantime.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/sync-control-menu-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/sync-control-menu-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The sync control's chevron menu open beside the Publish button of kepler/fix-cart-total, a branch with no upstream yet: Publish (Choose where to publish), Pull, unavailable with Publish first, and Fetch, then Set upstream with a submenu arrow, then Update.">
+  <a href="/wp-content/uploads/sync-control-menu-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/sync-control-menu-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The sync control's chevron menu open beside the Publish button of kepler/fix-cart-total, a branch with no upstream yet: Publish (Choose where to publish), Pull, unavailable with Publish first, and Fetch, then Set upstream with a submenu arrow, then Update.">
   </a>
   <figcaption style="text-align:center; color:#888">The sync control's chevron menu on a branch with no upstream yet.</figcaption>
 </figure>
@@ -382,8 +382,8 @@ The picker lists every remote branch under **Search remote branches**:
 Any remote branch can be the upstream, whatever its name. Pick one and Kepler saves it at once: *Upstream set to {upstream}*. The picker lists only branches already fetched, so a branch someone else just pushed needs **Refresh branches**, beside the search field, which fetches from every remote.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/upstream-picker-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/upstream-picker-oct-2026.png" class="help-center-img img-bordered" alt="The sync control's chevron menu on kepler/fix-cart-total, which reads Push with 2 ahead, with Change upstream (origin/kepler/fix-cart-total) open beside it: a Search remote branches field with a Refresh branches button, Unset upstream pinned above the list, the tracked branch first and marked Current and Same name, then origin/docs/style-guide, origin/main and origin/release/2.4.">
+  <a href="/wp-content/uploads/upstream-picker-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/upstream-picker-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The sync control's chevron menu on kepler/fix-cart-total, which reads Push with 2 ahead, with Change upstream (origin/kepler/fix-cart-total) open beside it: a Search remote branches field with a Refresh branches button, Unset upstream pinned above the list, the tracked branch first and marked Current and Same name, then origin/docs/style-guide, origin/main and origin/release/2.4.">
   </a>
   <figcaption style="text-align:center; color:#888">Change upstream, from the sync control's menu.</figcaption>
 </figure>
@@ -414,8 +414,8 @@ The **Roll back** menu holds two more options:
 A result waiting to be applied doesn't lock the branch, so the branch or its base can move on in the meantime. You can also pick another base in the picker after a run. Either way, the result no longer matches, and the view reads *The last update result is out of date* with **Recalculate** and **Discard**. **Recalculate** runs the same update again. Kepler won't apply a result whose base moved.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/update-view-stale-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/update-view-stale-oct-2026.png" class="help-center-img img-bordered" alt="The update view for kepler/fix-cart-total, from release/2.4, reading The last update result is out of date: The branch or base changed after this update ran. Recalculate before applying the result. Recalculate and Discard sit beside the title.">
+  <a href="/wp-content/uploads/update-view-stale-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/update-view-stale-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The update view for kepler/fix-cart-total, from release/2.4, reading The last update result is out of date: The branch or base changed after this update ran. Recalculate before applying the result. Recalculate and Discard sit beside the title.">
   </a>
   <figcaption style="text-align:center; color:#888">An update result that's out of date, with Recalculate.</figcaption>
 </figure>
@@ -483,8 +483,8 @@ Each file row shows one of the following methods. **Ours** and **Theirs** are Gi
 The review persists across reloads and windows, so you can close the view and come back to it before you apply.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ade-sync-ai-review-01-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ade-sync-ai-review-01-v2@2x.png" class="help-center-img img-bordered" alt="The update view for kepler/fix-cart-total after an AI rebase: Ready to apply with Apply and Discard, a Needs review badge over the AI's summary and the check &quot;cart.js — low confidence&quot;, the line AI resolved 1 file · confidence 75%, and a commit card for Apply the discount before tax listing cart.js with its AI method, a 75% confidence badge and what the AI did.">
+  <a href="/wp-content/uploads/ade-sync-ai-review-01-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ade-sync-ai-review-01-v3@2x.png" class="help-center-img img-bordered" alt="The update view for kepler/fix-cart-total after an AI rebase: Ready to apply with Apply and Discard, a Needs review badge over the AI's summary and the check &quot;cart.js — low confidence&quot;, the line AI resolved 1 file · confidence 75%, and a commit card for Apply the discount before tax listing cart.js with its AI method, a 75% confidence badge and what the AI did.">
   </a>
   <figcaption style="text-align:center; color:#888">An AI review at Ready to apply.</figcaption>
 </figure>
@@ -497,8 +497,8 @@ Click a file row to review that file in full. Its review names the commit, the m
 **Show {count} more lines above** and **below**, or **Show all lines**, bring in the rest of the file around a conflict.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/sync-ai-file-review-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/sync-ai-file-review-oct-2026.png" class="help-center-img img-bordered" alt="The AI review of cart.js after a rebase onto main: commit 97c56d7 Apply the discount before tax, the AI method, a 75% badge and the AI's reasoning, with Conflict layout set to Conflict | Result beside Branches + ancestor. Below, Conflict 1 of 1 at Line 3 is marked Merged at 75% with the AI's reason, Main extracted roundCents; the branch reordered the discount. Combined both. The Conflict pane shows git's markers for main, the common ancestor and kepler/fix-cart-total, and the Result pane the merged code.">
+  <a href="/wp-content/uploads/sync-ai-file-review-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/sync-ai-file-review-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The AI review of cart.js after a rebase onto main: commit 97c56d7 Apply the discount before tax, the AI method, a 75% badge and the AI's reasoning, with Conflict layout set to Conflict | Result beside Branches + ancestor. Below, Conflict 1 of 1 at Line 3 is marked Merged at 75% with the AI's reason, Main extracted roundCents; the branch reordered the discount. Combined both. The Conflict pane shows git's markers for main, the common ancestor and kepler/fix-cart-total, and the Result pane the merged code.">
   </a>
   <figcaption style="text-align:center; color:#888">One file's AI review, conflict by conflict.</figcaption>
 </figure>
@@ -512,8 +512,8 @@ Click a file row to review that file in full. Its review names the commit, the m
 A branch's **merge target** is the branch it will merge into: what its commits, counts and **Update** are measured against. Kepler detects one, and you can change it.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/change-merge-target-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/change-merge-target-oct-2026.png" class="help-center-img img-bordered" alt="A worktree's right-click menu in the task view with Branch open, and Change merge target, reading origin/release/2.4, open beside it: a Search branches field with a Refresh branches button above a list of remote branches, with origin/main marked Automatic, origin/release/2.4 marked Saved, and Reset to automatic (origin/main) at the bottom.">
+  <a href="/wp-content/uploads/change-merge-target-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/change-merge-target-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A worktree's right-click menu in the task view with Branch open, and Change merge target, reading origin/release/2.4, open beside it: a Search branches field with a Refresh branches button above a list of remote branches, with origin/main marked Automatic, origin/release/2.4 marked Saved, and Reset to automatic (origin/main) at the bottom.">
   </a>
   <figcaption style="text-align:center; color:#888">Change merge target, from a worktree's Branch submenu.</figcaption>
 </figure>
@@ -528,8 +528,8 @@ A branch's **merge target** is the branch it will merge into: what its commits, 
 | Update the branch from its merge target | **Rebase onto {target}** or **Merge {target} into this branch** from the merge target chip's menu on the Dashboard, or from the worktree's **Branch** submenu. Both open the [update view](#updating-from-the-base) |
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/save-merge-target-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/save-merge-target-oct-2026.png" class="help-center-img img-bordered" alt="The worktree column for kepler/fix-cart-total on Commits, with All commits over three commits and origin/release/2.4 marked branched here. The counts row compares from origin/release/2.4, picked for this view only, with a Save as merge target button beside the picker, above cart.js and cart.test.js.">
+  <a href="/wp-content/uploads/save-merge-target-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/save-merge-target-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The worktree column for kepler/fix-cart-total on Commits, with All commits over three commits and origin/release/2.4 marked branched here. The counts row compares from origin/release/2.4, picked for this view only, with a Save as merge target button beside the picker, above cart.js and cart.test.js.">
   </a>
   <figcaption style="text-align:center; color:#888">A branch picked for this view only, with Save as merge target beside it.</figcaption>
 </figure>

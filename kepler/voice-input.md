@@ -37,8 +37,8 @@ Kepler has two transcription engines:
 Voice input is off until you set it up in **Settings → Voice input**: Kepler downloads a model, and the microphone in the prompt goes live when the model is ready.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/voice-input-settings-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/voice-input-settings-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="Settings › Voice input with Whisper set up: Use voice input in the chat prompt ticked; Transcription engine with the Whisper card selected and the note that Qwen3-ASR needs a graphics card with WebGPU, which is not available here, then the Fast model, About 42 MB on this machine, with Change quality, Remove Whisper and a collapsed Technical details; and When you stop talking set to Insert the text so you can edit it, with Send the prompt and Keep listening, transcribing each phrase as you pause.">
+  <a href="/wp-content/uploads/voice-input-settings-aug-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/voice-input-settings-aug-2026-v3@2x.png" class="help-center-img img-bordered" alt="Settings › Voice input with Whisper set up: Use voice input in the chat prompt ticked; Transcription engine with the Whisper card selected and the note that Qwen3-ASR needs a graphics card with WebGPU, which is not available here, then the Fast model, About 42 MB on this machine, with Change quality, Remove Whisper and a collapsed Technical details; and When you stop talking set to Insert the text so you can edit it, with Send the prompt and Keep listening, transcribing each phrase as you pause.">
   </a>
   <figcaption style="text-align:center; color:#888">Settings → Voice input on a computer without WebGPU, where Whisper transcribes.</figcaption>
 </figure>
@@ -75,8 +75,8 @@ Qwen3-ASR learns how you spell words it gets wrong. When you fix a single dictat
 Kepler stores only the words, on this device only, and keeps them after you sign out. Learning runs only while Qwen3-ASR dictates.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/voice-learned-words-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/voice-learned-words-oct-2026.png" class="help-center-img img-bordered" alt="The word sections of Settings › Voice input: Suggested words, Fixes you made in two sends, with Kepler heard as keplar and Approve and Dismiss; then Learned words with its description, Jira (In use · heard as gira) and pnpm (Added by you), each with a remove button, and Forget learned words.">
+  <a href="/wp-content/uploads/voice-learned-words-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/voice-learned-words-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The word sections of Settings › Voice input: Suggested words, Fixes you made in two sends, with Kepler heard as keplar and Approve and Dismiss; then Learned words with its description, Jira (In use · heard as gira) and pnpm (Added by you), each with a remove button, and Forget learned words.">
   </a>
   <figcaption style="text-align:center; color:#888">A suggested word waiting for approval, above the learned words.</figcaption>
 </figure>
@@ -163,8 +163,8 @@ Hover the microphone, and its tooltip explains why:
 | *Loading voice model…* / *Transcribing…* | Busy. The button is disabled for the moment |
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/voice-mic-tooltip-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/voice-mic-tooltip-oct-2026.png" class="help-center-img img-bordered" alt="The New task launcher with the microphone button showing a struck-through mic and its tooltip: The selected voice model needs WebGPU, which is not available here. Open Settings to choose Whisper.">
+  <a href="/wp-content/uploads/voice-mic-tooltip-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/voice-mic-tooltip-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The New task launcher with the microphone button showing a struck-through mic and its tooltip: The selected voice model needs WebGPU, which is not available here. Open Settings to choose Whisper.">
   </a>
   <figcaption style="text-align:center; color:#888">The microphone with a Qwen3-ASR model selected on a computer without WebGPU.</figcaption>
 </figure>

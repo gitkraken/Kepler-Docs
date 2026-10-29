@@ -77,8 +77,8 @@ The list works from the keyboard:
 Double-click a row to add just that one. The main button counts what you picked, as in **Add to task · 1**, and **Add & keep adding** adds the selection without closing the dialog.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/add-resources-issue-list-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/add-resources-issue-list-oct-2026.png" class="help-center-img img-bordered" alt="The Add to this task dialog on its Issues tab with the preview pane open. Under the search field and its Preview and Refresh buttons, filter pills read GitHub, Related to me, Any repo, Open, Last 90 days, Any label and No active task. Gift card codes are case-sensitive at checkout (42 · acme-web · GitHub, 1d) is ticked and focused, above Add a wishlist to product pages (45, 3d), and the preview shows issue #42 in acme/acme-web by sam-ortiz with its bug and checkout labels and description. The footer reads 1 selected, with Cancel, Add & keep adding and Add to task · 1.">
+  <a href="/wp-content/uploads/add-resources-issue-list-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/add-resources-issue-list-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Add to this task dialog on its Issues tab with the preview pane open. Under the search field and its Preview and Refresh buttons, filter pills read GitHub, Related to me, Any repo, Open, Last 90 days, Any label and No active task. Gift card codes are case-sensitive at checkout (42 · acme-web · GitHub, 1d) is ticked and focused, above Add a wishlist to product pages (45, 3d), and the preview shows issue #42 in acme/acme-web by sam-ortiz with its bug and checkout labels and description. The footer reads 1 selected, with Cancel, Add & keep adding and Add to task · 1.">
   </a>
   <figcaption style="text-align:center; color:#888">Picking an issue, with the preview open on the focused row.</figcaption>
 </figure>
@@ -93,8 +93,8 @@ When the lookup finds nothing, or can't reach the provider, Kepler says so and a
 - *Unable to look up that issue. It will be added as a plain link.*
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/add-link-issue-lookup-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/add-link-issue-lookup-oct-2026.png" class="help-center-img img-bordered" alt="The Add to this task dialog on its Links tab with a Linear issue URL pasted into Add a link. Under the field, Kepler has looked the link up: Adds Linear issue SHOP-128: Show saved cards at checkout. The footer offers Cancel, Add as plain link, Add & keep adding and Add link.">
+  <a href="/wp-content/uploads/add-link-issue-lookup-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/add-link-issue-lookup-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Add to this task dialog on its Links tab with a Linear issue URL pasted into Add a link. Under the field, Kepler has looked the link up: Adds Linear issue SHOP-128: Show saved cards at checkout. The footer offers Cancel, Add as plain link, Add & keep adding and Add link.">
   </a>
   <figcaption style="text-align:center; color:#888">A pasted Linear URL, resolved to the issue it points at.</figcaption>
 </figure>
@@ -204,8 +204,8 @@ A fresh worktree is a clean checkout: no `node_modules`, no build output, nothin
 The worktree's menu is the same wherever the worktree appears. Beside **Run command here** it holds **New session here**, which opens a draft session in that worktree, and **New terminal here**. Its **Branch** submenu holds **Rename branch**, the upstream, **Change merge target…**, and **Rebase onto {target}** or **Merge {target} into this branch**. Below them come the copy actions, **Refresh**, and **Detach worktree…** and **Delete worktree…**. See [Review Changes](/kepler/review-changes#publishing-and-syncing-the-branch) for the upstream and the update.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/worktree-row-menu-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/worktree-row-menu-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A worktree row's right-click menu in the task rail, with its Branch submenu open on Rename branch, Set upstream, Change merge target… (main), Rebase onto main and Merge main into this branch. The menu also lists Open, Open changes, Open in, New session here, New terminal here, Run command here, Copy branch name, Copy worktree path, Copy remote URL, Refresh, and Detach worktree… and Delete worktree…, unavailable while a session is using the worktree.">
+  <a href="/wp-content/uploads/worktree-row-menu-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/worktree-row-menu-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="A worktree row's right-click menu in the task rail, with its Branch submenu open on Rename branch, Set upstream, Change merge target… (main), Rebase onto main and Merge main into this branch. The menu also lists Open, Open changes, Open in, New session here, New terminal here, Run command here, Copy branch name, Copy worktree path, Copy remote URL, Refresh, and Detach worktree… and Delete worktree…, unavailable while a session is using the worktree.">
   </a>
   <figcaption style="text-align:center; color:#888">A worktree's right-click menu, with its Branch submenu open.</figcaption>
 </figure>
@@ -248,8 +248,8 @@ Sometimes you want an agent that forms its own view, such as a reviewer that sho
 The new session doesn't receive the Task's prompt or notes. It still gets the Task's worktrees, folders, files, and links, because it still needs to know where to work. The switch belongs to that draft, so turning it off doesn't change your other sessions. See [The Task View](/kepler/task-view#starting-a-session).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/start-with-task-context-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/start-with-task-context-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A draft session's composer with the Task context chip ticked in its footer, beside the attach and microphone buttons, and its tooltip open: Leave out the task context. Gives the agent the task's prompt and notes. Later changes reach it with your next message.">
+  <a href="/wp-content/uploads/start-with-task-context-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/start-with-task-context-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="A draft session's composer with the Task context chip ticked in its footer, beside the attach and microphone buttons, and its tooltip open: Leave out the task context. Gives the agent the task's prompt and notes. Later changes reach it with your next message.">
   </a>
   <figcaption style="text-align:center; color:#888">The Task context chip, on by default.</figcaption>
 </figure>
@@ -259,8 +259,8 @@ The new session doesn't receive the Task's prompt or notes. It still gets the Ta
 Attach a **Note** for anything every agent on the Task should follow: a style rule, a constraint, a decision you don't want re-litigated. Write it once and every session gets it, including sessions you start later. Because a session sees a note's title first and opens the note when it's relevant, give each note a title that says what it governs. A note can be up to 1 MB; a longer one is refused with *This note is too long. Notes can be up to 1 MB.*
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/add-note-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/add-note-aug-2026.png" class="help-center-img img-bordered" alt="The Add to this task dialog on its Notes tab, beside Repos & Folders, Issues, Pull requests, Links and Files. The note is titled Coding conventions, and its Markdown content lists three standing instructions. Cancel, Add & keep adding and Add note sit at the bottom.">
+  <a href="/wp-content/uploads/add-note-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/add-note-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Add to this task dialog on its Notes tab, beside Repos & Folders, Issues, Pull requests, Links and Files. The note is titled Coding conventions, and its Markdown content lists three standing instructions. Cancel, Add & keep adding and Add note sit at the bottom.">
   </a>
   <figcaption style="text-align:center; color:#888">Adding a Note with a title and Markdown content.</figcaption>
 </figure>
@@ -298,8 +298,8 @@ The Task's **Prompt** has no remove action.
 Worktrees get more care, because deleting one can lose work.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/detach-worktree-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/detach-worktree-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Detach worktree? dialog, saying the worktree stays on disk and is only removed from this task, with Cancel and Detach worktree buttons.">
+  <a href="/wp-content/uploads/detach-worktree-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/detach-worktree-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Detach worktree? dialog, saying the worktree stays on disk and is only removed from this task, with Cancel and Detach worktree buttons.">
   </a>
   <figcaption style="text-align:center; color:#888">Detaching a worktree leaves it on disk.</figcaption>
 </figure>
@@ -332,8 +332,8 @@ A worktree that would lose work is **kept**, not deleted, unless you tick the ex
 ## Renaming, archiving, and deleting a Task
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/rename-task-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/rename-task-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Task actions menu of the Fix the cart total row, unread with a New reply, with Rename task highlighted among Open task page, Progress (In Development), Mark as read, Copy task link, Copy task prompt, Add resource…, Refresh, Shut down all agents, Archive task and Delete task.">
+  <a href="/wp-content/uploads/rename-task-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/rename-task-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Task actions menu of the Fix the cart total row, unread with a New reply, with Rename task highlighted among Open task page, Progress (In Development), Mark as read, Copy task link, Copy task prompt, Add resource…, Refresh, Shut down all agents, Archive task and Delete task.">
   </a>
   <figcaption style="text-align:center; color:#888">The Task actions menu, open from a task's row.</figcaption>
 </figure>
@@ -369,14 +369,14 @@ Ticking **Also delete branches** re-reads the list, so a worktree that was safe 
 With **Also delete the branch on the remote** ticked, Kepler deletes each branch's remote copy after the local branch goes. It leaves the remote branch alone when deleting it could lose something, and a *Kept a branch on the remote* notice gives the reason: the branch has an open pull request, it has commits that are not on the remote, the remote has commits this branch does not, or the remote branch changed after it was checked.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/archive-task-dialog-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/archive-task-dialog-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Archive task? dialog for Upgrade the payment SDK, saying the task moves to the Archived section, its sessions and resources are kept, it can be restored any time, and its worktrees and branches stay on disk unless you tick the boxes below. Also delete worktrees is unticked, and Also delete branches and Also delete the branch on the remote are unavailable until the box above each is ticked. Cancel and Archive task close the dialog.">
+  <a href="/wp-content/uploads/archive-task-dialog-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/archive-task-dialog-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Archive task? dialog for Upgrade the payment SDK, saying the task moves to the Archived section, its sessions and resources are kept, it can be restored any time, and its worktrees and branches stay on disk unless you tick the boxes below. Also delete worktrees is unticked, and Also delete branches and Also delete the branch on the remote are unavailable until the box above each is ticked. Cancel and Archive task close the dialog.">
   </a>
   <figcaption style="text-align:center; color:#888">The Archive task? dialog, before you tick anything.</figcaption>
 </figure>
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ade-archive-task-worktrees-01-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ade-archive-task-worktrees-01-v2@2x.png" class="help-center-img img-bordered" alt="The Archive task? dialog for Upgrade the payment SDK with Also delete worktrees and Also delete branches ticked, and Also delete the branch on the remote unticked. Its Worktrees and branches list reads 1 of 2 will be deleted: kepler/payment-sdk-v5, with 1 uncommitted file, is kept because deleting it would lose work, and kepler/payment-sdk-docs, with no unpushed commits, will be deleted. Below it, an unticked box offers to also delete kepler/payment-sdk-v5, losing 1 uncommitted file.">
+  <a href="/wp-content/uploads/ade-archive-task-worktrees-01-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ade-archive-task-worktrees-01-v3@2x.png" class="help-center-img img-bordered" alt="The Archive task? dialog for Upgrade the payment SDK with Also delete worktrees and Also delete branches ticked, and Also delete the branch on the remote unticked. Its Worktrees and branches list reads 1 of 2 will be deleted: kepler/payment-sdk-v5, with 1 uncommitted file, is kept because deleting it would lose work, and kepler/payment-sdk-docs, with no unpushed commits, will be deleted. Below it, an unticked box offers to also delete kepler/payment-sdk-v5, losing 1 uncommitted file.">
   </a>
   <figcaption style="text-align:center; color:#888">The same dialog with worktrees and branches ticked: one worktree goes, one is kept.</figcaption>
 </figure>

@@ -24,8 +24,8 @@ Connect an issue tracker and the issues you're working on show up in [the Kepler
 Manage providers in **Settings → Integrations**, in the **Issues and pull requests** section.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/provider-integrations-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/provider-integrations-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Issues and pull requests section of Settings › Integrations. Azure DevOps and GitHub read Connected, each with Disconnect and Reconnect and a visibility line, Everything visible, with Choose what's visible…; Azure DevOps lists two accounts, Alex Lee (primary) and Alex Lee (Contoso). Azure DevOps Server, Bitbucket, Bitbucket Data Center, GitHub Enterprise, GitLab, GitLab Self-Hosted, Jira, Jira Server / Data Center, Linear and Trello each offer Connect.">
+  <a href="/wp-content/uploads/provider-integrations-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/provider-integrations-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Issues and pull requests section of Settings › Integrations. Azure DevOps and GitHub read Connected, each with Disconnect and Reconnect and a visibility line, Everything visible, with Choose what's visible…; Azure DevOps lists two accounts, Alex Lee (primary) and Alex Lee (Contoso). Azure DevOps Server, Bitbucket, Bitbucket Data Center, GitHub Enterprise, GitLab, GitLab Self-Hosted, Jira, Jira Server / Data Center, Linear and Trello each offer Connect.">
   </a>
   <figcaption style="text-align:center; color:#888">Issues and pull requests, in Settings → Integrations.</figcaption>
 </figure>
@@ -83,8 +83,8 @@ While you authorize, Kepler keeps a **Connect {provider} in your browser** dialo
 5. Click **Save connection**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/self-hosted-connect-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/self-hosted-connect-oct-2026.png" class="help-center-img img-bordered" alt="The Connect Jira Server / Data Center dialog: Register your server using a personal access token. Server URL holds https://jira.acme.example, with the hint to include the port and installation path when your server uses them, and Personal access token holds a masked token, with the hint to use a token with access to the repositories or issues you need. Cancel and Save connection sit at the bottom.">
+  <a href="/wp-content/uploads/self-hosted-connect-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/self-hosted-connect-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Connect Jira Server / Data Center dialog: Register your server using a personal access token. Server URL holds https://jira.acme.example, with the hint to include the port and installation path when your server uses them, and Personal access token holds a masked token, with the hint to use a token with access to the repositories or issues you need. Cancel and Save connection sit at the bottom.">
   </a>
   <figcaption style="text-align:center; color:#888">Connecting a Jira Server / Data Center instance with a personal access token.</figcaption>
 </figure>
@@ -123,8 +123,8 @@ To hide part of an integration:
 3. Click **Save**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/provider-visibility-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/provider-visibility-oct-2026.png" class="help-center-img img-bordered" alt="The Choose what GitHub brings in dialog: hidden items are left out of the dashboard, the launcher and pickers, and tasks and branches already linked to them keep resolving. Under a Filter field, Organizations lists acme ticked and acme-labs unticked, and Repositories lists acme-labs/checkout-experiments unticked and greyed, marked Hidden with its organization, then acme/acme-api, acme/acme-web, acme/design-system and alex-lee/dotfiles ticked. Cancel and Save sit at the bottom.">
+  <a href="/wp-content/uploads/provider-visibility-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/provider-visibility-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Choose what GitHub brings in dialog: hidden items are left out of the dashboard, the launcher and pickers, and tasks and branches already linked to them keep resolving. Under a Filter field, Organizations lists acme ticked and acme-labs unticked, and Repositories lists acme-labs/checkout-experiments unticked and greyed, marked Hidden with its organization, then acme/acme-api, acme/acme-web, acme/design-system and alex-lee/dotfiles ticked. Cancel and Save sit at the bottom.">
   </a>
   <figcaption style="text-align:center; color:#888">Hiding the acme-labs organization also hides its repositories.</figcaption>
 </figure>
@@ -237,8 +237,8 @@ Kepler lists open work. An issue that's finished or cancelled in its tracker (a 
 An issue that's there only because you were mentioned is marked **Mentioned**, so you can tell it apart from work that's yours. Hover the **Related to me** chip in Todo's header to see the rule for each integration you have connected.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/todo-scope-tooltip-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/todo-scope-tooltip-oct-2026.png" class="help-center-img img-bordered" alt="The Related to me chip on Todo with its tooltip: Related to me, Across every organization you belong to, then one block per connected integration. Azure DevOps lists Issues: Yours or assigned to you and Pull requests: Yours or awaiting your review; GitHub lists Issues: Yours, assigned to you or mentioning you and Pull requests: Yours, assigned to you or ones you review. It ends with To browse everything else, use New task → Issues → All visible.">
+  <a href="/wp-content/uploads/todo-scope-tooltip-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/todo-scope-tooltip-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Related to me chip on Todo with its tooltip: Related to me, Across every organization you belong to, then one block per connected integration. Azure DevOps lists Issues: Yours or assigned to you and Pull requests: Yours or awaiting your review; GitHub lists Issues: Yours, assigned to you or mentioning you and Pull requests: Yours, assigned to you or ones you review. It ends with To browse everything else, use New task → Issues → All visible.">
   </a>
   <figcaption style="text-align:center; color:#888">The Related to me tooltip states Todo's scope for each connected integration.</figcaption>
 </figure>

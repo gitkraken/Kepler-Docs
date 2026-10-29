@@ -135,8 +135,8 @@ When an installed version is known to misbehave, the agent's card carries a warn
 | **Codex** | *Codex {version} can show approval prompts that need no answer*. Update Codex to 0.163.0 or newer |
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-version-advisory-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-version-advisory-oct-2026.png" class="help-center-img img-bordered" alt="The Codex card in Settings › Agents, version 0.150.1 with Update and Enabled, and under its title a warning note: Codex 0.150.1 can show approval prompts that need no answer, advising to update Codex to 0.163.0 or newer. Below it are Accounts with Add account and the Codex CLI account (Not signed in, Sign in), New sessions start in with Chat selected beside Terminal, and Program and data folder.">
+  <a href="/wp-content/uploads/agent-version-advisory-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-version-advisory-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Codex card in Settings › Agents, version 0.150.1 with Update and Enabled, and under its title a warning note: Codex 0.150.1 can show approval prompts that need no answer, advising to update Codex to 0.163.0 or newer. Below it are Accounts with Add account and the Codex CLI account (Not signed in, Sign in), New sessions start in with Chat selected beside Terminal, and Program and data folder.">
   </a>
   <figcaption style="text-align:center; color:#888">A version warning on the Codex card.</figcaption>
 </figure>
@@ -182,8 +182,8 @@ To run Claude Code through your cloud provider rather than a Claude account, cli
 | **LLM gateway** | The gateway's URL (`ANTHROPIC_BASE_URL`) and the token it issues (`ANTHROPIC_AUTH_TOKEN`), plus any other `NAME=value` variables your gateway needs |
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/claude-provider-signin-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/claude-provider-signin-oct-2026.png" class="help-center-img img-bordered" alt="The Sign in to Claude Code dialog with More sign-in options expanded: Sign in with Claude.ai and Sign in with token (advanced), then Amazon Bedrock, Google Vertex AI, Microsoft Foundry and LLM gateway, each with a line on how it runs Claude.">
+  <a href="/wp-content/uploads/claude-provider-signin-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/claude-provider-signin-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Sign in to Claude Code dialog with More sign-in options expanded: Sign in with Claude.ai and Sign in with token (advanced), then Amazon Bedrock, Google Vertex AI, Microsoft Foundry and LLM gateway, each with a line on how it runs Claude.">
   </a>
   <figcaption style="text-align:center; color:#888">Claude Code's sign-in methods, with More sign-in options expanded.</figcaption>
 </figure>
@@ -202,8 +202,8 @@ The account then reads as the provider and its region, project, or resource, or 
 The agent's card then shows OpenCode as signed in.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/opencode-account-signin-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/opencode-account-signin-oct-2026.png" class="help-center-img img-bordered" alt="The Sign in to OpenCode dialog on the OpenCode account flow: Sign in to your OpenCode account in your browser, choosing the workspace with your Go subscription, then Open sign-in in browser, a One-time code box with KPLR-2468 and Copy code, Waiting for you to finish in the browser, and Back.">
+  <a href="/wp-content/uploads/opencode-account-signin-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/opencode-account-signin-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Sign in to OpenCode dialog on the OpenCode account flow: Sign in to your OpenCode account in your browser, choosing the workspace with your Go subscription, then Open sign-in in browser, a One-time code box with KPLR-2468 and Copy code, Waiting for you to finish in the browser, and Back.">
   </a>
   <figcaption style="text-align:center; color:#888">Signing OpenCode in to an OpenCode account with a one-time code.</figcaption>
 </figure>

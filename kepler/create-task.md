@@ -33,8 +33,8 @@ Kepler gives you several ways to start work, and the first is usually better: pi
 ## From an issue or pull request
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/action-button-todo-row-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/action-button-todo-row-aug-2026.png" class="help-center-img img-bordered" alt="The right end of a Todo issue row: acme-web, Open, the age 3d, and the Plan Action button at rest as an outline, its chevron on the right opening the list of Actions.">
+  <a href="/wp-content/uploads/action-button-todo-row-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/action-button-todo-row-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="The right end of a Todo issue row: acme-web, Open, the age 3d, and the Plan Action button at rest as an outline, its chevron on the right opening the list of Actions.">
   </a>
   <figcaption style="text-align:center; color:#888">The Action button on a Todo row, at rest.</figcaption>
 </figure>
@@ -71,8 +71,8 @@ Kepler names Tasks automatically from what you started them with. Rename one whe
 Click **New task** or press **Cmd/Ctrl+N**. To start one without switching to Kepler first, press **Shift+Alt+N** to open the quick launcher from anywhere, including when Kepler isn't the focused window.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-task-button-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-task-button-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The New task button at the left end of the Kepler top bar, a single button with a plus sign, after the application menu, the window switcher and the Back and Forward buttons.">
+  <a href="/wp-content/uploads/new-task-button-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-task-button-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The New task button at the left end of the Kepler top bar, a single button with a plus sign, after the application menu, the window switcher and the Back and Forward buttons.">
   </a>
   <figcaption style="text-align:center; color:#888">The New task button, available from anywhere in Kepler.</figcaption>
 </figure>
@@ -132,8 +132,8 @@ When the new branch is being updated from its base, the session area reads **Pre
 </figure>
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/task-launch-kep-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-launch-kep-oct-2026.png" class="help-center-img img-bordered" alt="The side panel of a task that is starting, Add a gift-card field to checkout, marked Preparing. Kep, the Kepler mascot, sits above the line Making your worktree. So your other work stays put. Below it, the launch steps list Setting up worktrees… (current), Starting OpenCode with your prompt and Opening the chat.">
+  <a href="/wp-content/uploads/task-launch-kep-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-launch-kep-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The side panel of a task that is starting, Add a gift-card field to checkout, marked Preparing. Kep, the Kepler mascot, sits above the line Making your worktree. So your other work stays put. Below it, the launch steps list Setting up worktrees… (current), Starting OpenCode with your prompt and Opening the chat.">
   </a>
   <figcaption style="text-align:center; color:#888">Kep narrating a task's launch in its panel.</figcaption>
 </figure>
@@ -188,8 +188,8 @@ Attaching the same repository twice gives the Task two independent worktrees on 
 You may have begun the work in a terminal before deciding it deserved tracking. Under the Task Composer, and on an empty Tasks list, **Continue an external session** flips the composer to a list of every agent conversation Kepler can see. **Start a new task** flips it back. It's there while external session detection is on.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/continue-external-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/continue-external-oct-2026.png" class="help-center-img img-bordered" alt="The New task launcher flipped to Continue an external session: a Find an external session… search field over Past sessions, listing the Pi session Why do product search results miss items tagged in uppercase? in …/repositories/acme-web with Continue. Below the panel, Start a new task switches back to the composer.">
+  <a href="/wp-content/uploads/continue-external-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/continue-external-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The New task launcher flipped to Continue an external session: a Find an external session… search field over Past sessions, listing the Pi session Why do product search results miss items tagged in uppercase? in …/repositories/acme-web with Continue. Below the panel, Start a new task switches back to the composer.">
   </a>
   <figcaption style="text-align:center; color:#888">Continuing an external session from the Task Composer.</figcaption>
 </figure>
@@ -256,8 +256,8 @@ Kepler sends each link to the window that can use it:
 If a link can't open on the machine it names, it opens on this computer instead, and nothing it asked to start runs on its own. The notice reads **Unable to open on {host}**: *It opened on this computer instead. It was not run automatically.* In a window on a remote machine, a link for something that isn't there reads **Not found on {host}**: *The link may be meant for this computer.*, with **Open on this computer**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/deeplink-offhost-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/deeplink-offhost-oct-2026.png" class="help-center-img img-bordered" alt="Kepler after a link meant for dev-server opened on this computer: the Task Composer is open with the prompt Fix the cart total rounding, and a notice at the top right reads Unable to open on dev-server, It opened on this computer instead.">
+  <a href="/wp-content/uploads/deeplink-offhost-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/deeplink-offhost-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Kepler after a link meant for dev-server opened on this computer: the Task Composer is open with the prompt Fix the cart total rounding, and a notice at the top right reads Unable to open on dev-server, It opened on this computer instead.">
   </a>
   <figcaption style="text-align:center; color:#888">A link for a remote machine that opened on this computer instead.</figcaption>
 </figure>

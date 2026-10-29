@@ -22,8 +22,8 @@ taxonomy:
 Kepler has one interface rather than a set of views, so you shape it instead of switching away from it. Four controls do most of the work: the grouping, the sort, the filters, and the layout. Each segment remembers its own, and a combination you come back to can be saved under a name.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/arrange-work-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/arrange-work-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The dashboard's arranging controls: the Saved views chip, Group: Inbox, Sort: Updated, Filter, Open all in panels, Panel layout, the List and Board view switch, and Refresh.">
+  <a href="/wp-content/uploads/arrange-work-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/arrange-work-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The dashboard's arranging controls: the Saved views chip, Group: Inbox, Sort: Updated, Filter, Open all in panels, Panel layout, the List and Board view switch, and Refresh.">
   </a>
   <figcaption style="text-align:center; color:#888">The saved views, grouping, sort, filter, panel, and layout controls.</figcaption>
 </figure>
@@ -39,8 +39,8 @@ When the window is too narrow for the whole strip, **Group**, **Sort**, **Filter
 ## Two layouts
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/view-options-sep-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/view-options-sep-2026.png" class="help-center-img img-bordered" alt="The layout switch on the dashboard: List, selected, and Board.">
+  <a href="/wp-content/uploads/view-options-sep-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/view-options-sep-2026-v2@2x.png" class="help-center-img img-bordered" alt="The layout switch on the dashboard: List, selected, and Board.">
   </a>
   <figcaption style="text-align:center; color:#888">The View control's layout options.</figcaption>
 </figure>
@@ -65,8 +65,8 @@ Every column on the board shares one width. Drag the gap after any column to res
 </div>
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/columns-progress-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/columns-progress-oct-2026.png" class="help-center-img img-bordered" alt="The Tasks in progress list on the Board layout, grouped by Progress: the Exploration, In Development, In Review, On hold and Done columns side by side, each with its count, Open in panels and Select. Each task is a card with its title, age, session and progress glyphs, its waiting state (New reply, or Approval needed for Run npm test), and its repository and branch; Done reads Nothing here. The toolbar above shows Group: Progress and Board selected.">
+  <a href="/wp-content/uploads/columns-progress-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/columns-progress-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Tasks in progress list on the Board layout, grouped by Progress: the Exploration, In Development, In Review, On hold and Done columns side by side, each with its count, Open in panels and Select. Each task is a card with its title, age, session and progress glyphs, its waiting state (New reply, or Approval needed for Run npm test), and its repository and branch; Done reads Nothing here. The toolbar above shows Group: Progress and Board selected.">
   </a>
   <figcaption style="text-align:center; color:#888">The Board layout, grouped by Progress.</figcaption>
 </figure>
@@ -86,8 +86,8 @@ The Progress board is also where you can move a task by hand. See [Set a task's 
 The **Group** dropdown reorganizes the list.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/group-options-tasks-sep-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/group-options-tasks-sep-2026.png" class="help-center-img img-bordered" alt="The Group menu open under Group: Inbox on Tasks in progress, listing Inbox (checked), Progress, Activity, Repository and None.">
+  <a href="/wp-content/uploads/group-options-tasks-sep-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/group-options-tasks-sep-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Group menu open under Group: Inbox on Tasks in progress, listing Inbox (checked), Progress, Activity, Repository and None.">
   </a>
   <figcaption style="text-align:center; color:#888">The Group dropdown on Tasks in progress.</figcaption>
 </figure>
@@ -202,15 +202,15 @@ Dates sort newest first; **Name** and **ID** sort ascending. **ID** compares ref
 - Choose **Move up**, **Move down**, or **Move to top of {section}** from the task's **⋮** or right-click menu. These rows appear only while the list is sorted by **Manual**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/manual-sort-drag-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/manual-sort-drag-oct-2026.png" class="help-center-img img-bordered" alt="Upgrade the payment SDK being dragged to the top of the Unread group: a green line with a dot sits above Fix the cart total where it will land, the lifted row floats beside it, its own row is dimmed in place, and the Mark as bar covers the controls strip with Read, Exploration, In Development, On hold, Done and Archive task.">
+  <a href="/wp-content/uploads/manual-sort-drag-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/manual-sort-drag-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Upgrade the payment SDK being dragged to the top of the Unread group: a green line with a dot sits above Fix the cart total where it will land, the lifted row floats beside it, its own row is dimmed in place, and the Mark as bar covers the controls strip with Read, Exploration, In Development, On hold, Done and Archive task.">
   </a>
   <figcaption style="text-align:center; color:#888">Dragging a task to a new place in its section.</figcaption>
 </figure>
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/manual-sort-menu-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/manual-sort-menu-oct-2026.png" class="help-center-img img-bordered" alt="The Task actions menu of Update checkout copy, the middle row of Unread, with the list sorted by Manual: after Mark as read and Rename task come Move up, Move down and Move to top of Unread, then Copy task link, Copy task prompt, Add resource…, Refresh, Shut down all agents, Archive task and Delete task.">
+  <a href="/wp-content/uploads/manual-sort-menu-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/manual-sort-menu-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Task actions menu of Update checkout copy, the middle row of Unread, with the list sorted by Manual: after Mark as read and Rename task come Move up, Move down and Move to top of Unread, then Copy task link, Copy task prompt, Add resource…, Refresh, Shut down all agents, Archive task and Delete task.">
   </a>
   <figcaption style="text-align:center; color:#888">The move rows in a task's menu, under the Manual sort.</figcaption>
 </figure>
@@ -220,8 +220,8 @@ You don't have to switch to **Manual** first. Drop a task in a new place in its 
 When you already have a saved **Manual** order, a drop under another sort would replace it, so Kepler asks first, in a popover beside the dropped task: *Replace your Manual order?* Choose **Switch and replace Manual** to keep the move, or **Cancel** (or press **Escape**, or click away) to put the task back.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/manual-sort-replace-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/manual-sort-replace-oct-2026.png" class="help-center-img img-bordered" alt="Tasks in progress after Upgrade the payment SDK was dropped at the top of Unread while sorted by Updated: the toolbar already reads Sort: Manual, the dropped row shows its drag grip, and a popover beside it asks Replace your Manual order? Keeping this move switches the sort to Manual and saves the list in the order you see now, with Cancel and Switch and replace Manual.">
+  <a href="/wp-content/uploads/manual-sort-replace-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/manual-sort-replace-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Tasks in progress after Upgrade the payment SDK was dropped at the top of Unread while sorted by Updated: the toolbar already reads Sort: Manual, the dropped row shows its drag grip, and a popover beside it asks Replace your Manual order? Keeping this move switches the sort to Manual and saves the list in the order you see now, with Cancel and Switch and replace Manual.">
   </a>
   <figcaption style="text-align:center; color:#888">Kepler asks before a drop replaces your saved Manual order.</figcaption>
 </figure>
@@ -248,8 +248,8 @@ A task's progress normally follows its git and pull-request evidence (see [Statu
 - **From the keyboard.** With a card focused on the **Board** grouped by **Progress**, **Cmd/Ctrl+Shift+←** and **Cmd/Ctrl+Shift+→** step it one column, stopping at **Exploration** and **Done**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/progress-drag-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/progress-drag-oct-2026.png" class="help-center-img img-bordered" alt="The Board grouped by Progress while Write the 2.4 release notes is dragged from Exploration into In Review: its card stays dimmed in Exploration, the lifted card hangs below Upgrade the payment SDK, In Review is filled and outlined as the drop target, the other columns (including Done and Archived, each reading Nothing here) have dashed outlines, and a Mark as bar over the toolbar offers In Development, In Review, On hold, Done and Archive task.">
+  <a href="/wp-content/uploads/progress-drag-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/progress-drag-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Board grouped by Progress while Write the 2.4 release notes is dragged from Exploration into In Review: its card stays dimmed in Exploration, the lifted card hangs below Upgrade the payment SDK, In Review is filled and outlined as the drop target, the other columns (including Done and Archived, each reading Nothing here) have dashed outlines, and a Mark as bar over the toolbar offers In Development, In Review, On hold, Done and Archive task.">
   </a>
   <figcaption style="text-align:center; color:#888">Dragging a card to another stage, with the Mark as bar over the toolbar.</figcaption>
 </figure>
@@ -257,8 +257,8 @@ A task's progress normally follows its git and pull-request evidence (see [Statu
 While you drag, the card stays where it was, faded, and a line shows where it would land. Each section that takes the card has a dashed outline that goes solid under the card; sections that refuse it fade and say why when you hover them. On the **Board**, a folded column springs open after you hold the card over it for half a second.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/drag-drop-bar-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/drag-drop-bar-oct-2026.png" class="help-center-img img-bordered" alt="Fix the cart total lifted off the Tasks in progress list. A Mark as bar covers the controls strip with Read, Exploration, In Review, On hold, Done and Archive task; the Unread and Recent groups have dashed outlines where the card can drop, Needs attention is faded, and the card's own row is dimmed in place.">
+  <a href="/wp-content/uploads/drag-drop-bar-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/drag-drop-bar-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Fix the cart total lifted off the Tasks in progress list. A Mark as bar covers the controls strip with Read, Exploration, In Review, On hold, Done and Archive task; the Unread and Recent groups have dashed outlines where the card can drop, Needs attention is faded, and the card's own row is dimmed in place.">
   </a>
   <figcaption style="text-align:center; color:#888">Dragging a task in the List grouped by Inbox, with the Mark as bar.</figcaption>
 </figure>
@@ -292,8 +292,8 @@ The **Filter** menu holds one flyout per facet.
   <figcaption style="text-align:center; color:#888">The Filter menu, with a facet's flyout open.</figcaption>
 </figure>
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/filter-todo-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/filter-todo-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Filter menu on Todo, with Type, Status, Needs my attention, Priority, Age, Your role and Provider, then a GitHub section with Repository, Assignee and Label, each set to Any. The Provider flyout lists GitHub with its count of 5, and Manage integrations.">
+  <a href="/wp-content/uploads/filter-todo-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/filter-todo-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Filter menu on Todo, with Type, Status, Needs my attention, Priority, Age, Your role and Provider, then a GitHub section with Repository, Assignee and Label, each set to Any. The Provider flyout lists GitHub with its count of 5, and Manage integrations.">
   </a>
   <figcaption style="text-align:center; color:#888">The Filter menu on Todo. Each connected provider gets its own section, here GitHub.</figcaption>
 </figure>
@@ -389,8 +389,8 @@ Saved views are the exception to per-segment memory: they're stored, named, and 
 **Archive task** files a task away. It leaves the live buckets for **Archived**, its rows and sessions survive, and Kepler stops only the agents whose checkout is about to disappear.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/archive-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/archive-oct-2026.png" class="help-center-img img-bordered" alt="The Task actions menu open from a task row's ⋮ button: Open task page; Progress, In Development; Mark as read, Rename task, Copy task link, Copy task prompt, Add resource… and Refresh; Shut down all agents; then Archive task and Delete task.">
+  <a href="/wp-content/uploads/archive-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/archive-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Task actions menu open from a task row's ⋮ button: Open task page; Progress, In Development; Mark as read, Rename task, Copy task link, Copy task prompt, Add resource… and Refresh; Shut down all agents; then Archive task and Delete task.">
   </a>
   <figcaption style="text-align:center; color:#888">Archive task, in the row's ⋮ menu.</figcaption>
 </figure>

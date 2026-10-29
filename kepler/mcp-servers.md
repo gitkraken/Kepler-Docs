@@ -62,8 +62,8 @@ Each row is a server. The switch on a row turns the server on or off, and clicki
 - **Locked**: *Kepler cannot edit this entry in the agent's config file*, such as a server your organization manages.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/mcp-servers-dialog-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/mcp-servers-dialog-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The MCP servers dialog for Claude Code in acme-web, with Open repo settings. Added by you lists acme-issues and acme-analytics, the second marked Sign in needed; In this repo, shared with your team lists acme-design-system marked Sign in needed, and storybook. Each row has a switch, turned on, and opens its details; Add server is at the bottom.">
+  <a href="/wp-content/uploads/mcp-servers-dialog-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/mcp-servers-dialog-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The MCP servers dialog for Claude Code in acme-web, with Open repo settings. Added by you lists acme-issues and acme-analytics, the second marked Sign in needed; In this repo, shared with your team lists acme-design-system marked Sign in needed, and storybook. Each row has a switch, turned on, and opens its details; Add server is at the bottom.">
   </a>
   <figcaption style="text-align:center; color:#888">The MCP servers dialog for one repository.</figcaption>
 </figure>
@@ -109,8 +109,8 @@ Turning off a single tool works for Claude Code, Codex, and Grok Build. For the 
 **Keep the GitKraken MCP server installed in every agent** is on by default. *Gives every command-line agent Git tools and your issues and pull requests through GitKraken. Turn off to manage it yourself.*
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/mcp-global-defaults-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/mcp-global-defaults-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The MCP servers section of Settings › Agents for Claude Code CLI (alex.lee@example.com, Acme): Add server, the Agent picker, Added by you with acme-issues, docs-search, acme-analytics and GitKraken (Kepler keeps this installed) each switched on, and Keep the GitKraken MCP server installed in every agent ticked.">
+  <a href="/wp-content/uploads/mcp-global-defaults-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/mcp-global-defaults-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The MCP servers section of Settings › Agents for Claude Code CLI (alex.lee@example.com, Acme): Add server, the Agent picker, Added by you with acme-issues, docs-search, acme-analytics and GitKraken (Kepler keeps this installed) each switched on, and Keep the GitKraken MCP server installed in every agent ticked.">
   </a>
   <figcaption style="text-align:center; color:#888">Global MCP server defaults, in Settings → Agents.</figcaption>
 </figure>
