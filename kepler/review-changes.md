@@ -87,7 +87,7 @@ The header above the commit list says how far the branch has come: **{count} com
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/changes-commit-row-tip-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/changes-commit-row-tip-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A worktree's column on Commits, where the two newest commits have green dots because they are not pushed, and Apply the discount before tax, which is pushed, has a grey one. The pointer rests on Clamp the discount at the subtotal, and its hover card shows Alex Lee, committed 4h ago, the subject, a body with a two-item list and a Refs: #38 trailer, then the short hash, its line changes, 1 file and a Not pushed chip.">
+    <img src="/wp-content/uploads/changes-commit-row-tip-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A worktree's column on Commits, where the two newest commits have green dots because they are not pushed, and Apply the discount before tax, which is pushed, has a grey one. Clamp the discount at the subtotal is hovered, and its hover card shows Alex Lee, committed 4h ago, the subject, a body with a two-item list and a Refs: #38 trailer, then the short hash, its line changes, 1 file and a Not pushed chip.">
   </a>
   <figcaption style="text-align:center; color:#888">Unpushed commits, and the card for one of them.</figcaption>
 </figure>

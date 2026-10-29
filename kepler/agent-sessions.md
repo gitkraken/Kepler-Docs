@@ -61,7 +61,7 @@ A quick question that belongs to no task goes to **Ask Kepler** instead, the cha
 
 ### Draft session tabs
 
-**New session** opens a draft tab rather than a menu. Nothing starts until you send the first message, so you can write the prompt, attach files, and pick the agent first. The tab takes its name from the first line of your prompt and is marked **(draft)** when the tab has room. In the task rail, the same row reads **Draft**.
+**New session** opens a draft tab rather than a menu. Nothing starts until you send the first message, so you can write the prompt, attach files, and pick the agent first. The tab takes its name from the first line of your prompt and is marked **(draft)** when the tab strip has room. In the task rail, the same row reads **Draft**.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/ade-draft-session-target-picker-01-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -909,7 +909,7 @@ Task and session rows add one line saying what a session needs from you, most pr
 
 ## Tabs, archiving, and restoring
 
-Open sessions form a tab strip. Each tab shows the agent, the account when more than one exists, and a status dot. Drafts sit in the same strip, marked **(draft)** when the tab has room.
+Open sessions form a tab strip. Each tab shows the agent, the account when more than one exists, and a status dot. Drafts sit in the same strip, marked **(draft)** when the strip has room.
 
 Hover a session's tab, its rail row, or a Terminal session's status bar for its card. Under the account, the card can add the following lines:
 

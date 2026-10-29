@@ -1663,7 +1663,7 @@ With tabs on, anything you open from the rail (sessions, worktrees, files, and e
 
 A tab's **Tab actions** (**⋮**) button and its right-click menu hold everything the thing's rail row offers, plus **Rename** on a file or folder tab. They lead with the tab's own verbs: **Keep open** on a preview, **Pin tab** or **Unpin tab**, **Close tab**, **Close others**, **Close to the right**, **Close all**, and **Close group** when there's more than one group. A pinned tab shrinks to its icon at the front of its group and has no close control; unpin it to close it.
 
-A draft session's tab reads **(draft)** after its name when the tab has room; a narrow tab shows the name alone. With tabs off, right-click a draft tab for **Discard draft**, plus **Move left** and **Move right** where the tab can move. With tabs on, its menu holds the tab's own verbs instead: **Keep open** while it's a preview, **Pin tab** or **Unpin tab**, and **Close tab**, which is a draft's only close. Closing a draft that has text in it asks **Discard new session?** first, because *Your draft prompt and attachments will be removed.*
+A draft session's tab reads **(draft)** after its name when the tab strip has room; in a crowded strip every tab drops its extra text, and a draft shows its name alone. With tabs off, right-click a draft tab for **Discard draft**, plus **Move left** and **Move right** where the tab can move. With tabs on, its menu holds the tab's own verbs instead: **Keep open** while it's a preview, **Pin tab** or **Unpin tab**, and **Close tab**, which is a draft's only close. Closing a draft that has text in it asks **Discard new session?** first, because *Your draft prompt and attachments will be removed.*
 
 A session tab swaps its close control for the session's status dot while the session has something unread or needs you, so a group's tabs say which conversation wants attention.
 
@@ -1702,7 +1702,7 @@ With tabs off, the column strips' **Tab actions** menus also hold **Move left** 
 
 ## Starting a session
 
-**New session** opens a draft session in its own tab, marked **(draft)** when the tab has room. The draft holds the prompt composer, so you choose where the agent works and how it runs before anything starts. To open a draft, click the **+** on the rail's **Sessions** group, or press **Cmd/Ctrl+T**.
+**New session** opens a draft session in its own tab, marked **(draft)** when the tab strip has room. The draft holds the prompt composer, so you choose where the agent works and how it runs before anything starts. To open a draft, click the **+** on the rail's **Sessions** group, or press **Cmd/Ctrl+T**.
 
 To start a session from a draft, follow these steps:
 
@@ -2294,7 +2294,7 @@ Kepler sends each link to the window that can use it:
 - A link that names a saved remote machine opens in a window on that machine. If none is open, Kepler opens one, and a notice reads **Connecting to {host} to open a link** while it connects.
 - Any other link goes to the window you used last.
 
-If a link can't open on the machine it names, it opens on this computer instead, and nothing it asked to start runs on its own. The notice reads **Unable to open on {host}**: *It opened on this computer instead. It was not run automatically.* In a window on a remote machine, a link for something that isn't there reads **Not found on {host}**: *The link may be meant for this computer.*, with **Open on this computer**.
+If a link can't open on the machine it names, it opens on this computer instead, and nothing it asked to start runs on its own. The notice reads **Unable to open on {host}**: *It opened on this computer instead.* When the link asked Kepler to start something, it adds *It was not run automatically.* In a window on a remote machine, a link for something that isn't there reads **Not found on {host}**: *The link may be meant for this computer.*, with **Open on this computer**.
 
 ### Opening an agent's own conversation
 
@@ -2367,7 +2367,7 @@ A quick question that belongs to no task goes to **Ask Kepler** instead, the cha
 
 ### Draft session tabs
 
-**New session** opens a draft tab rather than a menu. Nothing starts until you send the first message, so you can write the prompt, attach files, and pick the agent first. The tab takes its name from the first line of your prompt and is marked **(draft)** when the tab has room. In the task rail, the same row reads **Draft**.
+**New session** opens a draft tab rather than a menu. Nothing starts until you send the first message, so you can write the prompt, attach files, and pick the agent first. The tab takes its name from the first line of your prompt and is marked **(draft)** when the tab strip has room. In the task rail, the same row reads **Draft**.
 
 To choose where the session runs, open the draft's target picker. It offers the following:
 
@@ -3028,7 +3028,7 @@ Task and session rows add one line saying what a session needs from you, most pr
 
 ## Tabs, archiving, and restoring
 
-Open sessions form a tab strip. Each tab shows the agent, the account when more than one exists, and a status dot. Drafts sit in the same strip, marked **(draft)** when the tab has room.
+Open sessions form a tab strip. Each tab shows the agent, the account when more than one exists, and a status dot. Drafts sit in the same strip, marked **(draft)** when the strip has room.
 
 Hover a session's tab, its rail row, or a Terminal session's status bar for its card. Under the account, the card can add the following lines:
 

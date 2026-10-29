@@ -253,7 +253,7 @@ Kepler sends each link to the window that can use it:
 - A link that names a saved remote machine opens in a window on that machine. If none is open, Kepler opens one, and a notice reads **Connecting to {host} to open a link** while it connects.
 - Any other link goes to the window you used last.
 
-If a link can't open on the machine it names, it opens on this computer instead, and nothing it asked to start runs on its own. The notice reads **Unable to open on {host}**: *It opened on this computer instead. It was not run automatically.* In a window on a remote machine, a link for something that isn't there reads **Not found on {host}**: *The link may be meant for this computer.*, with **Open on this computer**.
+If a link can't open on the machine it names, it opens on this computer instead, and nothing it asked to start runs on its own. The notice reads **Unable to open on {host}**: *It opened on this computer instead.* When the link asked Kepler to start something, it adds *It was not run automatically.* In a window on a remote machine, a link for something that isn't there reads **Not found on {host}**: *The link may be meant for this computer.*, with **Open on this computer**.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/deeplink-offhost-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
