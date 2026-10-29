@@ -50,44 +50,77 @@ Kepler is in **public preview**. A free GitKraken account is all you need.
 
 ## Sign in
 
-Kepler opens on a welcome screen. Click **Sign in with GitKraken**. If you do not have an account, you'll create one in the next step.
-
-The screen's top corner shows Kepler's version. When an update has downloaded, it reads **Update ready to install** with **Update and restart**, so you can update before you sign in.
-
-In a window connected to another machine, the screen says *Finish signing in in your browser, or paste the code in the Kepler window on this machine.* If that window can't be signed in, it says *Couldn't sign this window in with your Kepler account. Reconnect it and try again.*
+Kepler opens on a welcome screen, **Launch any agent. Land every PR.** Click **Sign in with GitKraken**. If you do not have an account, you'll create one in the next step.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/sign-in-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/sign-in-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="Kepler's sign-in screen: the Kepler Quick Start Tour video card with Watch now on the left, and on the right Kepler with its Public Preview badge, Run any agent, on any repo, from plan to merge, the description, Sign in with GitKraken, and New to GitKraken? You'll create an account in the next step. Version 0.13.0 sits top right.">
+  <a href="/wp-content/uploads/sign-in-aug-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/sign-in-aug-2026-v3@2x.png" class="help-center-img img-bordered" alt="Kepler's sign-in screen over a night sky: on the left Kep says Hi, I'm Kep. Sign in, and your first task is moments away, above the Watch Quick Start Tour tile; on the right Kepler with its Public Preview badge, Launch any agent. Land every PR., the description, Sign in with GitKraken and New to GitKraken? You'll create an account in the next step. Version 0.15.0 sits top right.">
   </a>
   <figcaption style="text-align:center; color:#888">The welcome screen on first launch.</figcaption>
 </figure>
 
-A **Kepler Quick Start Tour** video appears on that screen if you'd rather watch first, or watch the <a href="https://www.youtube.com/playlist?list=PLXIji1KJqw9A" target="_blank" rel="noopener noreferrer">Kepler Quick Start Tour playlist</a> on YouTube.
+Kepler opens the sign-in page in your browser, and the button's place becomes a sign-in panel: *Continue in your browser*. Kepler continues on its own once you're signed in. If no browser opened, use **Reopen browser**, or **Copy link** and open it in any browser. You can also paste the code from your browser under **Or paste the code from your browser**, then click **Sign in**. If Kepler can't reach GitKraken, it says *Unable to reach GitKraken to start sign-in. Check your connection and try again.*
+
+The screen's top corner shows Kepler's version. Click it to check for updates: the corner shows **Checking…**, then **Up to date**, the download's progress, or *Unable to check for updates* with **Try again**. When an update has downloaded, it reads **Update ready to install** with **Update and restart**, so you can update before you sign in.
+
+In a window connected to another machine, the screen says *Continue in your other Kepler window*: sign-in happens in the Kepler window on this computer, and the remote window carries on once you finish there. If that window can't be signed in, it says *Unable to sign this window in with your Kepler account. Reconnect it and try again.*
+
+The **Watch Quick Start Tour** tile on that screen plays a short tour if you'd rather watch first, or watch the <a href="https://www.youtube.com/playlist?list=PLXIji1KJqw9A" target="_blank" rel="noopener noreferrer">Kepler Quick Start Tour playlist</a> on YouTube.
+
+***
+
+## Choose your agents and your look
+
+After you sign in, a guided start takes you through two steps. It fills the whole window, without the top bar. **I'll explore on my own** skips it at any point. Kepler also sends existing users through it once, with a *Welcome back* note that your tasks are where you left them.
+
+**Choose your coding agents.** Kepler looks for the coding agents installed on this computer. Switch on the ones you want Kepler to use, install any that are missing, and make one the default. Under **New sessions start in**, pick **Chat**, Kepler's own view of the agent, or **Terminal**, the agent's own command-line app. **Next** waits until at least one agent is installed or switched on. If your code lives on another machine, **Work on another machine?** lists the machines Kepler found in your SSH configuration, in WSL, or saved in Kepler, and moves this window there. Remote environments need a paid plan, so that choice offers **Try free and connect** or **Upgrade to connect** where your plan doesn't include them.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/onboarding-agents-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/onboarding-agents-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The guided start's first step, Choose your coding agents, under Welcome to Kepler and the 01 Agents / 02 Theme & notifications steps: Claude Code and Codex are switched on among the nine coding agents, the others offer an install button, and New sessions start in offers Chat (selected) or Terminal. Kep says Kepler found Claude Code and Codex, with I'll explore on my own and Next at the bottom.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The first step of the guided start, with two agents found and switched on.</figcaption>
+</figure>
+
+**Make it yours.** Pick a theme, or open the **Theme gallery**, and choose how Kepler gets your attention under **Notify me**:
+
+- **Everything**: every reply and request on the desktop as well
+- **When I'm needed**: questions, approvals, and errors on the desktop, while replies stay in Kepler. This is the default on the desktop
+- **Only in Kepler**: no desktop notifications
+
+**Send a test notification** shows what an alert looks like. You can change any of these later in [Settings](/kepler/settings). **Finish** takes you to **Tasks in progress** on the Dashboard, with the task composer open for your first task.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/onboarding-theme-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/onboarding-theme-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The guided start's second step, Make it yours: Theme tiles Kepler Dark (selected), Midnight, Kepler Light and Theme gallery beside the System / Light / Dark switch on Dark, and Notify me presets Everything, When I'm needed (selected) and Only in Kepler, with Play a sound with desktop notifications ticked, Send a test notification, Back and Finish.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The second step, with the theme and notification choices.</figcaption>
+</figure>
+
+During the guided start, Kepler also adds the repositories you already work in, so your repository picker isn't empty: the folders of agent sessions you ran outside Kepler, and the repositories GitKraken Desktop, GitLens, and the GitKraken CLI remember.
 
 ***
 
 ## Finish the setup checklist
 
-The **Setup** entry in the toolbar tracks 5 things, and shows **Setup · N/5** until they're done. Open it for **Finish setting up Kepler** and a progress readout.
+After the guided start, the **Setup** entry in the toolbar tracks 2 things, and shows **Setup · N/2** until they're done. Open it for **Finish setting up Kepler** and a progress readout. Once both are done, the **Setup** entry leaves the toolbar.
 
 | # | Item | What it does |
 |---|---|---|
-| 1 | **Sign in to GitKraken** | Done when you signed in above |
-| 2 | **Connect an AI agent** | At least one coding agent. See [Agent Integrations](/kepler/agent-integrations) |
-| 3 | **Connect issue & PR trackers** | Any provider. This is what fills your Todo list. See [Issue Tracker Integrations](/kepler/issue-tracker-integrations) and [Pull Request Integrations](/kepler/pull-request-integrations) |
-| 4 | **Set a default repositories folder** | Where Kepler clones repositories it does not find locally |
-| 5 | **Set a default worktree folder** | Where Kepler creates one worktree per repository, per Task |
+| 1 | **Connect an AI agent** | At least one coding agent. See [Agent Integrations](/kepler/agent-integrations) |
+| 2 | **Connect issue & PR trackers** | Any provider. This is what fills your Todo list. See [Issue Tracker Integrations](/kepler/issue-tracker-integrations) and [Pull Request Integrations](/kepler/pull-request-integrations) |
 
-Expand **More setup options** for 3 optional items:
+Expand **More setup options** for optional items:
 
-- **Connect a remote environment**, covered in [Remote Environments](/kepler/remote-environments)
+- **Set a default repositories folder**: where Kepler clones repositories it does not find locally
+- **Set a default worktree folder**: where Kepler creates one worktree per repository, per Task
+- **Connect a remote environment**, covered in [Remote Environments](/kepler/remote-environments), where your plan can use it
 - **Control Kepler remotely**, also in [Remote Environments](/kepler/remote-environments)
-- **Add repo commands**
+- **Add repo commands**, once you have a repository
 
 **Add repo commands** is worth doing early if your project needs a setup step. Save a repository's install or build command once and Kepler can run it automatically every time it creates a worktree, so an agent never starts in a checkout it cannot build. See [Tasks and Resources](/kepler/tasks-and-resources).
 
-Folder paths and everything else live in [Settings](/kepler/settings). You can hide the checklist from the toolbar and still reach it there.
+Folder paths and everything else live in [Settings](/kepler/settings). **Hide from toolbar (still available in Settings)** hides the checklist from the toolbar, and you can still reach it there.
 
 ***
 
@@ -129,8 +162,8 @@ Every one of those prompts is yours to change, and you can add your own. That's 
 Click **New task** or press **Cmd/Ctrl+N**. From outside Kepler, **Shift+Alt+N** opens the quick launcher. Write a prompt, attach a repository if the task needs one, and go. You can attach nothing at all and turn it into real work later. See [Create a Task](/kepler/create-task).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-task-button-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-task-button-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The New task split button at the left end of the Kepler top bar, after the application menu, the window switcher and the Back and Forward buttons.">
+  <a href="/wp-content/uploads/new-task-button-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-task-button-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The New task button at the left end of the Kepler top bar, a single button with a plus sign, after the application menu, the window switcher and the Back and Forward buttons.">
   </a>
   <figcaption style="text-align:center; color:#888">The New task button, available from anywhere in Kepler.</figcaption>
 </figure>

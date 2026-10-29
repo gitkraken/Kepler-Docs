@@ -43,22 +43,24 @@ Each agent gets its own section in **Settings → Agents**, in this order:
 | **Claude Code** | Claude Code | Your installed `claude` CLI | Chat or Terminal | Yes |
 | **Codex** | Codex | Your installed `codex` CLI | Chat or Terminal | Yes |
 | **GitHub Copilot** | GitHub Copilot | Your installed `copilot` CLI in ACP mode (`--acp`) | Chat or Terminal | Yes |
-| **Cursor** | Cursor | Your installed `cursor-agent` CLI in ACP mode (`acp`) | Chat or Terminal | No |
-| **OpenCode** | OpenCode | Your installed `opencode` CLI, v1 or v2, in ACP mode (`acp`) | Chat or Terminal | No |
-| **Auggie** | Auggie | Your installed `auggie` CLI in ACP mode (`--acp`) | Chat or Terminal | Yes |
-| **Grok Build** | Grok Build | Your installed `grok` CLI in ACP mode (`agent stdio`) | Chat or Terminal | Yes |
+| **OpenCode** | OpenCode | Your installed `opencode` CLI, v2, in ACP mode (`acp`) | Chat or Terminal | No |
 | **Pi** | Pi | Your installed `pi` CLI, in its own terminal interface | Terminal only | No |
+| **Auggie** | Auggie | Your installed `auggie` CLI in ACP mode (`--acp`) | Chat or Terminal | Yes |
 | **Google Antigravity** | Antigravity | Your installed `agy` CLI in a terminal, or Google's separate Antigravity ACP server (`agy_acp_server`) for Chat | Terminal (default) or Chat | No |
+| **Cursor** | Cursor | Your installed `cursor-agent` CLI in ACP mode (`acp`) | Chat or Terminal | No |
+| **Grok Build** | Grok Build | Your installed `grok` CLI in ACP mode (`agent stdio`) | Chat or Terminal | Yes |
 
-**Auggie** is Augment's coding agent. It runs over the same ACP path as the rest, and its model and mode pickers work like any other agent's. It is also one of the three agents that report plan usage back to Kepler, alongside Claude Code and Codex. Auggie reports a billing cycle and a credit balance rather than rolling windows. See [Agent Sessions](/kepler/agent-sessions#usage-indicators) for the plan usage meter and the opt-in it needs: **Show plan usage for Claude Code, Codex and Augment**, in **Settings → Agents → Usage limits**.
+**Auggie** is Augment's coding agent. It runs over the same ACP path as the rest, and its model and mode pickers work like any other agent's. It is also one of the three agents that report plan usage back to Kepler, alongside Claude Code and Codex. Auggie reports only its credit balance, with the credits your plan includes, rather than usage windows. See [Agent Sessions](/kepler/agent-sessions#usage-indicators) for the plan usage meter. Kepler asks each agent's provider for plan usage while **Check plan usage with each agent's provider** is on, which it is by default, in **Settings → Agents → Usage limits**.
 
 **Grok Build** is xAI's coding agent. It signs in through your browser, or you can supply an xAI API key. Its data lives under `~/.grok`, which is what lets Kepler keep several accounts apart.
 
-**Google Antigravity runs two separate binaries.** Terminal mode runs the `agy` CLI. Chat mode runs Google's Antigravity ACP server, which is a separate download with its own version. The agent's section in **Settings → Agents** lists both under **Components**: **Antigravity CLI** (*Needed for Terminal mode.*) and **ACP server** (*Rich-text (ACP) mode. Installed separately from the Antigravity CLI.*). Each has its own **Install** or **Update to {version}**. Either one alone is enough to use the agent in that mode. Sessions stay in Terminal until you pick **Chat** for Antigravity, because the ACP server signs in separately from the CLI. Google publishes no ACP server for Intel Macs, so there it reads **Not available for this platform**.
+**Google Antigravity runs two separate binaries.** Terminal mode runs the `agy` CLI. Chat mode runs Google's Antigravity ACP server, which is a separate download with its own version. The agent's section in **Settings → Agents** lists both under **Components**: **Antigravity CLI** (*Needed for Terminal mode.*) and **ACP server** (*Rich-text (ACP) mode. Installed separately from the Antigravity CLI.*). Each has its own **Install** or **Update to {version}**. Either one alone is enough to use the agent in that mode. Sessions stay in Terminal until you pick **Chat** for Antigravity, because the ACP server signs in separately from the CLI.
 
-**Pi is terminal-only.** Its CLI has no ACP mode, so Kepler runs its own interface in a terminal inside the task instead of leaving it out. Kepler does no auth probing for Pi: it uses its own sign-in (`/login`, or the provider API-key environment variables it reads directly).
+**Pi is terminal-only.** Its CLI has no ACP mode, so Kepler runs its own interface in a terminal inside the task instead of leaving it out. Kepler does no auth probing for Pi: it uses its own sign-in (`/login`, or the provider API-key environment variables it reads directly). With Pi 1.x, Kepler loads its own extension for each launch, which gives the session the task's context and Kepler's workspace tools and leaves your `APPEND_SYSTEM.md` and `~/.pi/agent` untouched. Other Pi versions get the task's context pasted in instead. A Pi session resumes by its own session ID, and Pi doesn't ask again whether to trust a worktree of a repository you already trust.
 
-**OpenCode v1 and v2 both work**, side by side. A conversation resumes with the version it was started on, and Kepler refuses to resume it on the other rather than guess.
+**OpenCode needs version 2.** Kepler reads and resumes only OpenCode 2's sessions and won't start a session on an OpenCode 1 binary: its card warns *OpenCode {version} is not supported*. A conversation you started under OpenCode 1 resumes from OpenCode 2's copy of it.
+
+**Inbox wake in Terminal mode.** Kepler can wake an idle **Terminal** session to read its inbox for Claude Code, Pi, and OpenCode 2.1.1 or newer. Pi gets the wake through Kepler's per-launch extension and OpenCode through a plugin Kepler loads for each launch, and neither touches your own config. Kepler delivers the wake as a queued follow-up prompt. Other agents in Terminal mode can't use Kepler's workspace tools or inbox, and Kepler suggests **Continue in Chat** from the session menu instead.
 
 **Claude Code folder trust** is read where the CLI records your answer, so a worktree inherits the trust you already gave its repository and a session doesn't stall on the trust prompt.
 
@@ -90,10 +92,12 @@ Kepler declares install methods per operating system, so the list you see depend
 | **GitHub Copilot** | Native installer, Homebrew, npm (global) | Native installer, Homebrew, npm (global) | winget, npm (global) |
 | **Cursor CLI** | Native installer, Homebrew | Native installer | Native installer |
 | **Auggie** | npm (global) | npm (global) | npm (global) |
-| **OpenCode** | Native installer, Homebrew, and npm, each for v1 or v2 | Native installer, Homebrew, and npm, each for v1 or v2; pacman | scoop, Chocolatey, npm (global), npm (v2) |
+| **OpenCode** | Native installer, Homebrew, npm (global) | Native installer, Homebrew, npm (global), pacman | npm (global) |
 | **Grok Build** | Native installer | Native installer | Native installer |
 | **Pi** | npm (global) | npm (global) | npm (global) |
-| **Google Antigravity** | Native installer, plus the ACP server component (Apple Silicon only) | Native installer, plus the ACP server component | Native installer, plus the ACP server component |
+| **Google Antigravity** | Native installer, plus the ACP server component | Native installer, plus the ACP server component | Native installer, plus the ACP server component |
+
+Every OpenCode method installs OpenCode 2. Windows offers only npm, because Scoop's and Chocolatey's `opencode` packages still install OpenCode 1.
 
 If an agent offers no install method for your OS, Kepler says so and points you at the custom binary path instead.
 
@@ -103,7 +107,7 @@ Kepler doesn't close the install output pane automatically when the install fini
 
 ## Binary detection
 
-Kepler resolves each agent's binary the way your shell does: the first match on your `PATH`, so it agrees with `which`. Beyond `PATH`, it also sweeps your login shell's environment and well-known install directories. That's how Kepler finds an agent installed by nvm or Homebrew, even when you didn't launch Kepler from a terminal.
+Kepler resolves each agent's binary the way your shell does: the first match on your `PATH`, so it agrees with `which`. Beyond `PATH`, it also sweeps your login shell's environment and well-known install directories. That's how Kepler finds an agent installed by nvm or Homebrew, even when you didn't launch Kepler from a terminal. Kepler reads your login shell again on **Restart agent**, **Re-scan**, or a retry, so an environment variable you add, change, or remove in your shell's startup files reaches the restarted agent without restarting Kepler.
 
 Each agent's card in **Settings → Agents** shows what Kepler resolved. The version and **Install** sit in the card's title line; **Binary**, **Components** and **Data folder** sit under **Program and data folder**:
 
@@ -119,7 +123,23 @@ Each agent's card in **Settings → Agents** shows what Kepler resolved. The ver
 | **Data folder** | Overrides the agent's own data and config directory. Leave it empty for the agent default |
 | **Enabled** | Whether Kepler offers this agent when you start a session |
 
-If Kepler can't read an installed agent's version, its section shows a **Version unknown** badge rather than plain **Installed**: *Kepler couldn't read {name}'s version. Features that depend on the version stay off, such as sending a new session's first message automatically. Reinstalling or updating {name} usually fixes this.*
+If Kepler can't read an installed agent's version, its section shows a **Version unknown** badge rather than plain **Installed**: *Kepler was unable to read {name}'s version. Features that depend on the version stay off, such as sending a new session's first message automatically. Reinstalling or updating {name} usually fixes this.*
+
+When an installed version is known to misbehave, the agent's card carries a warning note under its title line that names the version and what to do:
+
+| Agent | Warning |
+|---|---|
+| **OpenCode** | *OpenCode {version} is not supported*. Sessions with it don't start; install OpenCode 2 or pick an OpenCode 2 binary |
+| **Auggie** | *Auggie {version} may not load your MCP servers in chat* |
+| **Google Antigravity** | *ACP server {version} can fail to start on Linux*. Reinstall the ACP server under **Program and data folder** |
+| **Codex** | *Codex {version} can show approval prompts that need no answer*. Update Codex to 0.163.0 or newer |
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/agent-version-advisory-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-version-advisory-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Codex card in Settings › Agents, version 0.150.1 with Update and Enabled, and under its title a warning note: Codex 0.150.1 can show approval prompts that need no answer, advising to update Codex to 0.163.0 or newer. Below it are Accounts with Add account and the Codex CLI account (Not signed in, Sign in), New sessions start in with Chat selected beside Terminal, and Program and data folder.">
+  </a>
+  <figcaption style="text-align:center; color:#888">A version warning on the Codex card.</figcaption>
+</figure>
 
 If a pinned path later disappears (for example, when an auto-updater cleans up an old version), Kepler falls back to automatic resolution instead of reporting the agent as missing.
 
@@ -140,15 +160,53 @@ An installed agent shows **Sign in** until it has a credential, and **Sign out**
 
 | Agent | How you sign in |
 |---|---|
-| **Claude Code** | Browser sign-in. Kepler runs the sign-in for you and your browser opens; you paste a code back only if the browser callback cannot reach Kepler |
+| **Claude Code** | Browser sign-in. Kepler runs the sign-in for you and your browser opens; you paste a code back only if the browser callback cannot reach Kepler. **More sign-in options** adds **Amazon Bedrock**, **Google Vertex AI**, **Microsoft Foundry**, and **LLM gateway** |
 | **Codex** | Sign in with a ChatGPT account through your browser, or enter an API key. On a remote, **ChatGPT (device code)** |
 | **GitHub Copilot** | **Sign in with GitHub**: Kepler's own device flow. Open `github.com/login/device` and enter the one-time code |
-| **Cursor CLI** | Cursor's own browser sign-in, driven from the modal. You can instead set `CURSOR_API_KEY` |
+| **Cursor CLI** | Cursor's own browser sign-in, driven from the modal, or **Paste an API key** from the Cursor dashboard. On a remote, only the API key works |
 | **Auggie** | **Sign in with browser**, or **Paste session token** |
-| **OpenCode** | Nothing to do in Kepler. OpenCode resolves providers from its own config file and provider environment variables |
+| **OpenCode** | **OpenCode account (Go or Console)**: sign in through your browser with a one-time code. OpenCode also resolves providers from its own config file and provider environment variables |
 | **Grok Build** | Browser sign-in, or **Paste an API key** for a deployment with no local browser |
 | **Google Antigravity** | **Google OAuth**, **Google Cloud project**, or **Google Cloud project (SSO)**, driven from the modal. The ACP server used for Chat keeps its own sign-in, so Kepler checks whichever one the mode you picked uses |
 | **Pi** | Nothing to do in Kepler. Sign in inside the CLI itself, or set the provider environment variables it reads |
+
+### Claude Code through a cloud provider or gateway
+
+To run Claude Code through your cloud provider rather than a Claude account, click **More sign-in options** in the **Sign in to Claude Code** modal and pick a method:
+
+| Method | What you enter |
+|---|---|
+| **Amazon Bedrock** | A Bedrock API key (`AWS_BEARER_TOKEN_BEDROCK`) and the AWS region (`AWS_REGION`) |
+| **Google Vertex AI** | The project (`ANTHROPIC_VERTEX_PROJECT_ID`) and region (`CLOUD_ML_REGION`), and optionally a credentials file (`GOOGLE_APPLICATION_CREDENTIALS`). Leave the file empty to use application default credentials |
+| **Microsoft Foundry** | The resource name only (`ANTHROPIC_FOUNDRY_RESOURCE`), and optionally an API key and your Opus, Sonnet, and Haiku deployment names. Without a key, it signs in with Microsoft Entra ID credentials on this machine |
+| **LLM gateway** | The gateway's URL (`ANTHROPIC_BASE_URL`) and the token it issues (`ANTHROPIC_AUTH_TOKEN`), plus any other `NAME=value` variables your gateway needs |
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/claude-provider-signin-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/claude-provider-signin-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Sign in to Claude Code dialog with More sign-in options expanded: Sign in with Claude.ai and Sign in with token (advanced), then Amazon Bedrock, Google Vertex AI, Microsoft Foundry and LLM gateway, each with a line on how it runs Claude.">
+  </a>
+  <figcaption style="text-align:center; color:#888">Claude Code's sign-in methods, with More sign-in options expanded.</figcaption>
+</figure>
+
+The account then reads as the provider and its region, project, or resource, or as the gateway's host. Kepler shows no plan usage for it, since the plan belongs to your cloud provider. Saving one method clears the values stored for the others, and **Sign out** clears the provider. You can set a gateway's extra variables only on the computer running Kepler, not from a paired device.
+
+### OpenCode account
+
+**OpenCode account (Go or Console)** signs OpenCode in to your OpenCode account:
+
+1. Click **Sign in** on OpenCode's card and pick **OpenCode account (Go or Console)**.
+2. Click **Open sign-in in browser** and enter the **One-time code** the modal shows.
+3. Choose the workspace with your Go subscription.
+4. Select a Go model to use your plan.
+
+The agent's card then shows OpenCode as signed in.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/opencode-account-signin-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/opencode-account-signin-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Sign in to OpenCode dialog on the OpenCode account flow: Sign in to your OpenCode account in your browser, choosing the workspace with your Go subscription, then Open sign-in in browser, a One-time code box with KPLR-2468 and Copy code, Waiting for you to finish in the browser, and Back.">
+  </a>
+  <figcaption style="text-align:center; color:#888">Signing OpenCode in to an OpenCode account with a one-time code.</figcaption>
+</figure>
 
 ### Browser sign-in, including on a remote
 
@@ -158,6 +216,9 @@ That holds on a [remote environment](/kepler/remote-environments) too:
 
 - **Claude Code** on a remote offers **Sign in with browser**, which opens the sign-in page in your *local* browser and takes the code you paste back. The credential lands on the remote machine.
 - **Codex** on a remote offers **ChatGPT (device code)**: *Sign in with a one-time code in your browser. Works on any remote.* Kepler shows the sign-in link and a **One-time code**; the remote CLI waits for you to finish and writes the token there. Some ChatGPT workspaces turn device sign-in off, and Kepler then points you at the alternatives.
+- **Cursor CLI** on a remote offers only **Paste an API key**, since its browser sign-in can't complete there.
+
+When a sign-in runs in a terminal on a remote and the browser page won't load after you sign in, paste that page's address into the box under the terminal (*Browser page won't load after you sign in? Paste its address here.*) and click **Send**. Kepler requests the address on the remote machine, and only when the sign-in itself printed it. You then finish in the terminal.
 
 **Import local Codex login** is the other remote route, in the desktop app: it copies this machine's `~/.codex/auth.json` to the remote target, and asks you to confirm on this machine before it reads the file. Treat this import as handing over a credential: anyone with access to that remote machine can send Codex requests on your account until you sign out.
 
@@ -197,9 +258,9 @@ To start one session in the other mode without changing the default, set **Start
 
 ### Detecting sessions started outside Kepler
 
-**Settings → Integrations → Your terminal → Show sessions started outside Kepler** is a separate, cross-agent setting, **on out of the box**. It installs GitKraken hooks so sessions you start in your own terminal show up in Kepler, and it covers every agent Kepler can track that way: **Claude Code**, **Codex**, **Cursor**, **GitHub Copilot**, and **OpenCode**. See [Agent Sessions](/kepler/agent-sessions#sessions-started-outside-kepler).
+**Settings → Integrations → Your terminal → Show sessions started outside Kepler** is a separate, cross-agent setting, **on out of the box**. It installs GitKraken hooks so sessions you start in your own terminal show up in Kepler, and it covers every agent Kepler can track that way: **Claude Code**, **Codex**, **Cursor**, **GitHub Copilot**, **OpenCode**, **Auggie**, **Grok Build**, and **Pi**. Google Antigravity isn't tracked this way. See [Agent Sessions](/kepler/agent-sessions#sessions-started-outside-kepler).
 
-Kepler also follows its own Claude Code **Terminal** sessions through those hooks. If a live Claude terminal session keeps reporting status but its hook events stop arriving, Kepler warns *Claude sessions aren't reporting to Kepler* and offers **Repair** to reconnect Claude to Kepler. Until then, status and notifications may be out of date. Restart any Claude session that still isn't responding afterwards.
+Kepler also follows its own **Terminal** sessions through those hooks. If a live terminal session keeps reporting status but its hook events stop arriving, Kepler warns *Agent sessions aren't reporting to Kepler*, because status and notifications may be out of date. **Repair** reinstalls the reporting configuration. Restart any session that still doesn't report afterwards. A window that only views another computer's sessions gets the warning without **Repair**, because you repair reporting on the computer running the sessions.
 
 ### Programs that report their own status
 

@@ -25,7 +25,7 @@ Kepler gives you several ways to start work, and the first is usually better: pi
 |---|---|
 | **Work assigned to you** | Fire an Action on an issue or pull request in the **Todo** segment of [the Kepler interface](/kepler/kepler-interface). One click, context attached |
 | **Something you're describing yourself** | **New task** opens the Task Composer, where you write the prompt and attach what it needs |
-| **A conversation you already started** | **New task → New task from an external session** wraps a task around an agent session you began in your own terminal |
+| **A conversation you already started** | **Continue an external session**, under the Task Composer, wraps a task around an agent session you began in your own terminal |
 | **Another GitKraken app** | A link from GitLens or GitKraken Desktop opens Kepler on the work you were looking at |
 
 ***
@@ -33,10 +33,10 @@ Kepler gives you several ways to start work, and the first is usually better: pi
 ## From an issue or pull request
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/action-button-todo-row-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/action-button-todo-row-aug-2026.png" class="help-center-img img-bordered" alt="The Action split button on a Todo row, reading Plan">
+  <a href="/wp-content/uploads/action-button-todo-row-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/action-button-todo-row-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="The right end of a Todo issue row: acme-web, Open, the age 3d, and the Plan Action button at rest as an outline, its chevron on the right opening the list of Actions.">
   </a>
-  <figcaption style="text-align:center; color:#888">The Action button on a Todo row.</figcaption>
+  <figcaption style="text-align:center; color:#888">The Action button on a Todo row, at rest.</figcaption>
 </figure>
 
 This is the shortest path, and the reason Kepler opens on your work. Find the item in **Todo** and click its **Action** button. Kepler then:
@@ -52,7 +52,9 @@ Defaults depend on what you're acting on:
 - **Address Feedback** for a pull request you authored.
 - **Review** for someone else's pull request.
 
-All of these are editable. See [Actions](/kepler/actions).
+All of these are editable. In the list under the button's chevron, point at an Action to read its prompt. See [Actions](/kepler/actions).
+
+The button rests as a quiet outline and fills in when you point at or select its row. On a narrow card it shrinks to a play icon. On a phone it becomes a single **⋮** menu, **Actions for {title}**, that lists every Action.
 
 Kepler names Tasks automatically from what you started them with. Rename one whenever the name stops fitting: **Rename task** in the **⋮** menu, whose field also has an **Auto-name** button that suggests a name from the Task's prompt and resources. See [Tasks and Resources](/kepler/tasks-and-resources).
 
@@ -69,8 +71,8 @@ Kepler names Tasks automatically from what you started them with. Rename one whe
 Click **New task** or press **Cmd/Ctrl+N**. To start one without switching to Kepler first, press **Shift+Alt+N** to open the quick launcher from anywhere, including when Kepler isn't the focused window.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-task-button-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-task-button-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The New task split button at the left end of the Kepler top bar, after the application menu, the window switcher and the Back and Forward buttons.">
+  <a href="/wp-content/uploads/new-task-button-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-task-button-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The New task button at the left end of the Kepler top bar, a single button with a plus sign, after the application menu, the window switcher and the Back and Forward buttons.">
   </a>
   <figcaption style="text-align:center; color:#888">The New task button, available from anywhere in Kepler.</figcaption>
 </figure>
@@ -91,6 +93,8 @@ The Composer is one prompt box above a row of four buttons:
 | **Add PR** → **PRs** | Pull requests from your connected hosts |
 | **Add context** | Everything without a button of its own: folders, files, and links |
 
+**Paste a link to attach it.** Paste a pull request or issue URL into the prompt, from a connected host or from Jira or Linear, and it becomes a chip naming the item. The chip attaches the item the same way **Add issue** or **Add PR** would, along with its repository.
+
 In a window connected to another machine, picking a file through **Add context** also offers **Upload from this machine**. Uploads are kept with your draft and saved into the Task's own folder when it starts; if one expired before you pressed **Start**, Kepler names it rather than dropping it silently.
 
 **Repositories and folders come from one ranked list**, not two pickers (*Find a repository or folder…*), and the list learns. Kepler records how often you actually use each place and ranks the picker by it, so the repositories you work in daily are at the top on the day you start using them. The same list is behind the chip's own **Change repository or folder**. Picking a folder that is one of a repository's existing worktrees attaches that worktree itself, and the chip reads **Worktree {branch}**. If the worktree disappears before the Task starts, the chip reads **Worktree not found**; pick the repository again to choose another working copy.
@@ -110,11 +114,15 @@ Add as much or as little context as you wish.
 
 The primary button shows a sending state from the moment you click it, so a slow start doesn't read as a dead button. It fires the Action that matches what you've attached, exactly as it would from a Todo row. A linked pull request resolves to **Address Feedback** or **Review**, depending on who wrote it; a linked issue resolves to **Plan**. With nothing attached, the button reads **Start** and starts the Task with your prompt as written.
 
-The chevron beside the primary button opens the rest: **Prepare**, which creates the session without starting work yet, and every Action that applies to what you've attached. Picking one doesn't fire it here: it relabels the primary button, and an Action that names its own agent puts that agent in the agent pill, so you can check or change what will run before you press the button. The Action sends its prompt, with anything you typed appended as a refinement.
+The chevron beside the primary button opens the rest: **Prepare**, which creates the session without starting work yet, and every Action that applies to what you've attached. Picking one doesn't fire it here: it relabels the primary button, and an Action that names its own agent puts that agent in the agent pill, so you can check or change what will run before you press the button. To pick one and fire it at once, hold Cmd/Ctrl as you click it. The Action sends its prompt, with anything you typed appended as a refinement.
+
+**Shift+Tab** in the prompt cycles the primary button through the same list. Until you first use it, a hint beside the prompt reads **Shift Tab · Cycle action**.
 
 A Task that has its prompt but no session yet, such as one an agent created for you, says so in a draft session tab: *Start with the task prompt, or describe something else…*. To send the Task's prompt as written, press **Start** on the empty box.
 
-The Task appears in the list as soon as you press **Start**, before its worktrees exist. Until setup finishes, the row carries a **Preparing** pill, and the Task's panel shows its progress under **Getting your task ready**, such as *Cloning {repo}…* or *Setting up worktrees…*. **Cancel** stops a launch while a repository is still cloning. When the new branch is being updated from its base, the session area reads **Preparing branch**: *Updating from the base branch before the session starts.*
+The Task appears in the list as soon as you press **Start**, before its worktrees exist. Until setup finishes, the row carries a **Preparing** pill, and the Task's panel shows its progress. Kep, the Kepler mascot, narrates each stage, such as **Fetching {repo}.**, **Making your worktree.**, **Starting {agent}.**, and **Opening the chat.**, above a list of the launch steps. Where Kep isn't shown, the panel lists the steps under **Getting your task ready** instead, such as *Cloning {repo}…* or *Setting up worktrees…*. **Cancel** stops a launch while a repository is still cloning.
+
+When the new branch is being updated from its base, the session area reads **Preparing branch**: *Updating from the base branch before the session starts.* Then, until the first session is ready, it reads **Starting your session**: *It opens here as soon as it's ready.*
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/ade-task-preparing-row-01-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -123,9 +131,16 @@ The Task appears in the list as soon as you press **Start**, before its worktree
   <figcaption style="text-align:center; color:#888">A new task in the list while Kepler prepares it.</figcaption>
 </figure>
 
-If setup fails, the row's pill reads **Failed** and the panel reads **Couldn't start this task**. To change the Task and try again, click **Edit and retry**, or **Dismiss** to clear it. A launch you cancelled reads **Task not started**. If the request itself can't be sent, you see **Failed to start the task**. A Task that starts without some of its repositories warns *Some repositories weren't added: The task started without {repos}.*
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/task-launch-kep-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-launch-kep-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The side panel of a task that is starting, Add a gift-card field to checkout, marked Preparing. Kep, the Kepler mascot, sits above the line Making your worktree. So your other work stays put. Below it, the launch steps list Setting up worktrees… (current), Starting OpenCode with your prompt and Opening the chat.">
+  </a>
+  <figcaption style="text-align:center; color:#888">Kep narrating a task's launch in its panel.</figcaption>
+</figure>
 
-If the Task starts but its agent session doesn't, the task page and the Dashboard panel show **{agent} couldn't start**, with **Retry**. See [Agent Sessions](/kepler/agent-sessions#when-a-session-drops).
+If setup fails, the row's pill reads **Failed** and the panel reads **Unable to start this task**. To change the Task and try again, click **Edit and retry**, or **Dismiss** to clear it. A launch you cancelled reads **Task not started**. If the request itself can't be sent, you see **Failed to start the task**. A Task that starts without some of its repositories warns *Some repositories weren't added: The task started without {repos}.*
+
+If the Task starts but its agent session doesn't, the task page and the Dashboard panel show **{agent} was unable to start**, with **Retry**. See [Agent Sessions](/kepler/agent-sessions#when-a-session-drops).
 
 ### Configuring a repository
 
@@ -160,7 +175,7 @@ You can set the prefix in two places: **Settings → Tasks → New tasks → Bra
 
 Kepler intentionally forks from the remote by default. If no remote default resolves (no remote, a shallow clone, or no network connection), Kepler falls back to the current HEAD rather than failing the launch.
 
-A repository linked to a pull request always opens in its own isolated working copy, and the toggle is locked: *This repository is linked to a pull request and always opens in its own isolated working copy.* If the pull request's branch already exists on this machine with commits that aren't on the pull request, Kepler leaves that branch alone and starts the Task on a new branch tracking the pull request: *Kept your local branch {branch}*.
+A repository linked to a pull request always opens in its own isolated working copy, and the toggle is locked: *This repository is linked to a pull request and always opens in its own isolated working copy.* If the pull request's branch already exists on this machine with commits that aren't on the pull request, Kepler leaves that branch alone and starts the Task on a new branch tracking the pull request: *Kept your local branch {branch}*. A pull request from a fork never takes over your own branch of the same name, even one with no extra commits, unless that branch already tracks the fork. Kepler puts the pull request on another name instead: the head branch's name with each `/` turned into `-`, with `-2`, `-3`, and so on added when that name is taken.
 
 Kepler clones a repository you haven't cloned yet when the Task starts, into your **Repositories folder**: *This repository is cloned when you start the task.* Its branch is locked until then (*its branches become available after cloning*) because Kepler doesn't yet know what branches it has, and the chip reads **default branch** in the meantime.
 
@@ -170,19 +185,34 @@ Attaching the same repository twice gives the Task two independent worktrees on 
 
 ## From a session you already started
 
-You may have begun the work in a terminal before deciding it deserved tracking. The chevron on **New task** holds **New task from an external session** (*Continue a session you started outside Kepler*), which opens a picker over every agent conversation Kepler can see.
+You may have begun the work in a terminal before deciding it deserved tracking. Under the Task Composer, and on an empty Tasks list, **Continue an external session** flips the composer to a list of every agent conversation Kepler can see. **Start a new task** flips it back. It's there while external session detection is on.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/continue-external-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/continue-external-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The New task launcher flipped to Continue an external session: a Find an external session… search field over Past sessions, listing the Pi session Why do product search results miss items tagged in uppercase? in …/repositories/acme-web with Continue. Below the panel, Start a new task switches back to the composer.">
+  </a>
+  <figcaption style="text-align:center; color:#888">Continuing an external session from the Task Composer.</figcaption>
+</figure>
 
 | Part | What it does |
 |---|---|
-| **Running now** | Sessions live in a terminal right now |
+| **Live now** | Sessions live in a terminal right now |
 | **Past sessions** | Conversations found on disk, from whenever |
 | **Find an external session…** | Searches across both groups |
 
-The picker reports what it actually swept, rather than implying it found everything: **Showing the newest {shown} of {scanned} sessions** when it capped the list, **Couldn't list sessions from {adapters}** when one agent's scan failed but the others didn't, and, when detection is off, *External sessions are not detected* with **Turn on in Integrations**, which opens the setting.
+The list reports what it actually swept, rather than implying it found everything. It says *Showing {shown} of {scanned} sessions, the newest from each agent* when it capped the list, and **Unable to list sessions from {adapters}** when one agent's scan failed but the others didn't.
+
+Picking a conversation carries it on in a new task, reading *Opening in a new task…* while it does:
+
+- A past conversation resumes.
+- A live one that's idle in its terminal is taken over, after Kepler warns you to close it in your terminal first so that two clients don't write the same conversation.
+- A live one that's mid-turn can't be taken over yet. **Open it read-only** opens it to watch.
 
 ### When a task already covers that folder
 
-Kepler checks whether the conversation's working directory already belongs to a task, so you don't end up with two tasks over one folder:
+Kepler checks whether the conversation's working directory already belongs to a task, so you don't end up with two tasks over one folder. It asks under the list rather than in a separate dialog: *{folder} already has a task: {task}*. **Add it to that task** binds the conversation there, and **Make a new task** overrides.
+
+Starting a task from an external session anywhere else, such as from a Kepler link, asks the same question in a dialog:
 
 > **Add to existing task?** *This conversation runs in {path}, which {task} already includes.*
 
@@ -215,6 +245,27 @@ Or attach nothing. No repository, no folder, no issue. You get somewhere to thin
 
 You can jump into Kepler from other GitKraken products, such as GitLens and GitKraken Desktop. A link from one of them can open the Task Composer already filled in with the issue, pull request, or repository you were looking at, or open a task or session you already have. A link can also carry a prompt and an Action into the Composer, start a new session on a task you already have, and start right away rather than waiting for you to press **Start**. A link for an item a task already holds says *You already have a task for this item*, with **Open task**. If the repository isn't on this machine, Kepler stages it to be cloned when the task starts. A link Kepler can't fully resolve still opens, with one clear warning about what it couldn't use.
 
+### Which window a link opens in
+
+Kepler sends each link to the window that can use it:
+
+- A link for a task opens in the window already showing that task.
+- A link that names a saved remote machine opens in a window on that machine. If none is open, Kepler opens one, and a notice reads **Connecting to {host} to open a link** while it connects.
+- Any other link goes to the window you used last.
+
+If a link can't open on the machine it names, it opens on this computer instead, and nothing it asked to start runs on its own. The notice reads **Unable to open on {host}**: *It opened on this computer instead.* When the link asked Kepler to start something, it adds *It was not run automatically.* In a window on a remote machine, a link for something that isn't there reads **Not found on {host}**: *The link may be meant for this computer.*, with **Open on this computer**.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/deeplink-offhost-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/deeplink-offhost-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Kepler after a link meant for dev-server opened on this computer: the Task Composer is open with the prompt Fix the cart total rounding, and a notice at the top right reads Unable to open on dev-server, It opened on this computer instead.">
+  </a>
+  <figcaption style="text-align:center; color:#888">A link for a remote machine that opened on this computer instead.</figcaption>
+</figure>
+
+### Opening an agent's own conversation
+
+A session link can name a conversation by the agent's own ID rather than Kepler's: `kepler://session?agent=<agent>&id=<conversation id>&cwd=<folder>`. The `agent` must be one of Kepler's built-in agents, and `cwd` is only a hint about where to look. If a Kepler session already holds that conversation, the link opens it. Otherwise Kepler adds the conversation to a task the way **Continue an external session** does. That needs external session detection: with detection off, the link reads **External sessions are not detected**: *Turn on detection to find that session in its agent.* A link with a required part missing reads **Part of this link is missing**.
+
 ***
 
 ## After the Task starts
@@ -238,5 +289,7 @@ Both paths send the same Action prompt, but they attach different amounts of det
 |---|---|
 | **A row in Todo** | The full issue or pull request body, attached as shared context |
 | **The Task Composer** | A reference (identifier, title, and URL) which the agent fetches the detail from itself |
+
+Either way, Kepler reads each linked issue fresh when the Task launches and saves its description as a note titled *Issue {identifier}: {title}*, headed by the issue's URL. Each note holds up to 8 KB, and all of them together up to 16 KB. A longer description is cut off with a pointer to the URL. Kepler hands these notes to the agent as third-party background, to treat as information rather than as instructions. It frames the Task's prompt as background too, so the agent acts on the messages you send in its session. Pull request descriptions aren't saved this way.
 
 ---

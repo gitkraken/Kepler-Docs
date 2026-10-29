@@ -24,11 +24,13 @@ Connect a Git host and the pull requests you authored, plus the ones waiting on 
 Manage providers in **Settings → Integrations**, in the **Issues and pull requests** section.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/provider-integrations-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/provider-integrations-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Issues and pull requests section of Settings › Integrations, with GitHub and Azure DevOps (two accounts) connected and the other providers listed with Connect buttons.">
+  <a href="/wp-content/uploads/provider-integrations-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/provider-integrations-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Issues and pull requests section of Settings › Integrations. Azure DevOps and GitHub read Connected, each with Disconnect and Reconnect and a visibility line, Everything visible, with Choose what's visible…; Azure DevOps lists two accounts, Alex Lee (primary) and Alex Lee (Contoso). Azure DevOps Server, Bitbucket, Bitbucket Data Center, GitHub Enterprise, GitLab, GitLab Self-Hosted, Jira, Jira Server / Data Center, Linear and Trello each offer Connect.">
   </a>
   <figcaption style="text-align:center; color:#888">Issues and pull requests, in Settings → Integrations.</figcaption>
 </figure>
+
+Each connected Git host carries a visibility line under its row, which reads **Everything visible** or how many items you've hidden. Click **Choose what's visible…** to leave organizations or repositories out of Todo, the lists, and the pickers. See [Choose what Kepler brings in](/kepler/issue-tracker-integrations#choose-what-kepler-brings-in).
 
 ***
 
@@ -49,7 +51,7 @@ Eight of Kepler's twelve providers return pull requests:
 
 Jira, Jira Server / Data Center, Linear, and Trello are the other four. They return issues only. See [Issue Tracker Integrations](/kepler/issue-tracker-integrations).
 
-Self-hosted instances are supported. **GitHub Enterprise**, **GitLab Self-Hosted**, **Azure DevOps Server**, and **Bitbucket Data Center** read pull requests and merge requests the same way their cloud counterparts do, and two servers of the same kind stay separate; which fields come back depends on your server's version. The instance must be reachable both from your machine and from gitkraken.dev, since connecting goes through GitKraken's website, so a server that's only reachable inside your network or VPN can't be connected. Kepler trusts the certificates in your operating system's certificate store, so a server signed by your company's own certificate authority works without extra setup.
+Self-hosted instances are supported. **GitHub Enterprise**, **GitLab Self-Hosted**, **Azure DevOps Server**, and **Bitbucket Data Center** read pull requests and merge requests the same way their cloud counterparts do, and two servers of the same kind stay separate; which fields come back depends on your server's version. You connect a self-hosted instance inside Kepler with its address and a personal access token, and Kepler checks the token against the server from your machine (see [Connect a Git host](#connect-a-git-host)). The instance must be reachable both from your machine and from gitkraken.dev, so a server that's only reachable inside your network or VPN can't be connected. <!-- TODO(verify): v0.15 checks the personal access token from this machine; confirm with engineering whether syncing it to the account still needs gitkraken.dev to reach the server --> Kepler trusts the certificates in your operating system's certificate store, so a server signed by your company's own certificate authority works without extra setup.
 
 GitLab merge requests appear as pull requests throughout Kepler. There is one list, not two.
 
@@ -57,18 +59,41 @@ GitLab merge requests appear as pull requests throughout Kepler. There is one li
 
 ## Connect a Git host
 
-Connecting a Git host takes four steps:
+Connecting a cloud Git host (**GitHub**, **GitLab**, **Bitbucket**, or **Azure DevOps**) takes four steps:
 
 1. Open **Settings → Integrations**.
 2. Find the provider in **Issues and pull requests** and click **Connect**.
 3. Authorize Kepler in the browser window that opens.
-4. Kepler returns to **Issues and pull requests** and the provider shows a **Connected** badge.
+4. Return to Kepler, where the provider shows a **Connected** badge in **Issues and pull requests**.
 
 Your GitKraken account holds integrations, not this copy of Kepler, so a provider you connect here also becomes available to the `gk` command-line interface (CLI) and GitKraken Desktop. You need to sign in to a GitKraken account to manage them.
 
-**Connect** hands the whole authorization to GitKraken's website. Kepler opens `/connect` there in your system browser, names the provider, and includes a redirect back into Kepler. Kepler has no in-app form for a host URL or a personal access token, so you supply a self-hosted instance's address and whatever credential it needs directly in the browser. When you return, Kepler refetches your providers instead of reusing its cached list.
+**Connect** hands the authorization for a cloud host to GitKraken's website. Kepler opens `/connect` there in your system browser, names the provider, and includes a redirect back into Kepler. When you return, Kepler refetches your providers instead of reusing its cached list.
 
-<!-- TODO(verify): re-confirmed at kepler 7c31af83e and on the current checkout: the redirect-only flow and the absence of an in-app form are settled (src/backend/auth/auth.ts:227 builds only websiteUrl + /connect with product, optional provider, and redirect_uri; src/ui/data/auth.ts:68 hands that off to openExternalUrl; Settings and onboarding provider buttons only call connect.mutate({ providerId }), with no host/token/scope fields anywhere in-app). No per-provider token scopes are declared in this repo either. What's still open: the browser-side steps and the scopes each provider asks for live on GitKraken's website (see help.gitkraken.com/kepler/pull-request-integrations and help.gitkraken.com/gk-dev/gk-dev-integrations), which is website-owned content outside this repo. Remains unresolved until the web team confirms the live /connect steps and provider scopes for GitHub Enterprise, GitLab Self-Managed, Bitbucket, and Azure DevOps. -->
+While you authorize, Kepler keeps a **Connect {provider} in your browser** dialog open, with the provider's name in place of {provider}. If your browser didn't open, copy the **Connection link** from the dialog and open it in a browser yourself. **Try again** makes a fresh link, since each link works once. The dialog closes by itself as soon as the new connection appears, and Kepler checks for it again whenever you come back to a Kepler window. If Kepler can't start the connection, the dialog reads **Unable to connect {provider}** and says why. **Reconnect** runs through the same dialog.
+
+<!-- TODO(verify): the browser-side steps and the scopes each cloud provider asks for live on GitKraken's website (see help.gitkraken.com/gk-dev/gk-dev-integrations), outside the Kepler repo. Confirm the live /connect steps and provider scopes for GitHub, GitLab, Bitbucket, and Azure DevOps with the web team. Self-hosted providers no longer use this flow at v0.15 (src/ui/components/settings/SelfHostedProviderDialog.tsx). -->
+
+### Connect a self-hosted instance
+
+**GitHub Enterprise**, **GitLab Self-Hosted**, **Azure DevOps Server**, and **Bitbucket Data Center** connect inside Kepler with a personal access token rather than through the browser:
+
+1. Open **Settings → Integrations**.
+2. Find the provider in **Issues and pull requests** and click **Connect**. The **Connect {name}** dialog opens.
+3. In **Server URL**, enter the server's address, including the port and installation path when your server uses them.
+4. In **Personal access token**, paste a token with access to the repositories you need.
+5. Click **Save connection**.
+
+Kepler accepts only an `http` or `https` address without credentials, a query, or a fragment. It checks the token against the server from your machine, keeps it in a protected credential store on this device, and syncs the connection to your GitKraken account. The dialog reports how the check went:
+
+| Message | What it means |
+|---|---|
+| *Credentials verified with the server.* | The server accepted the token |
+| *Credentials saved. Unable to verify the server certificate. Check its TLS configuration.* | Kepler saved the token but couldn't verify the server's certificate |
+| *Credentials saved without verification. Unable to reach the server.* | Kepler saved the token without checking it |
+| *The server refused this token. Check its value and permissions.* | Fix the token and save again |
+
+Until the upload to your account lands, the provider's row shows **Cloud sync pending**, and you can't make that connection the primary. If Kepler can't reach GitKraken, it retries when you refresh your providers. **Reconnect** on a self-hosted provider opens the same dialog, so you can replace an expired or rejected token there.
 
 Three controls sit on a connected provider's row:
 
@@ -222,19 +247,60 @@ Your pull requests turn up in four places:
 
 | Surface | What it gives you |
 |---|---|
-| [The Kepler interface](/kepler/kepler-interface) | The **Todo** segment lists every pull request you authored and every one you are a reviewer on, with your role on each |
+| [The Kepler interface](/kepler/kepler-interface) | The **Todo** segment lists the pull requests related to you on each connected host, with your role on each |
 | [Actions](/kepler/actions) | The **Action** button hands the pull request to an agent. **Review** and **Address Feedback** are the two built-in Actions aimed at pull requests, and Kepler picks between them by who authored it |
 | [Review Changes](/kepler/review-changes) | Reading the diff and the commits behind a pull request |
 | [Tasks and Resources](/kepler/tasks-and-resources) | A pull request is a resource on a task, so you can attach one to work that already exists |
+
+**Todo's scope differs by host.** Each provider answers a different set of questions about you, so Todo lists a different set of pull requests from each:
+
+| Host | Pull requests Todo lists |
+|---|---|
+| **GitHub**, **GitHub Enterprise** | Yours, assigned to you, or ones you review |
+| **GitLab**, **GitLab Self-Hosted**, **Azure DevOps**, **Azure DevOps Server**, **Bitbucket Data Center** | Yours or awaiting your review |
+| **Bitbucket** | Yours, or awaiting your review in your workspaces and repositories added to Kepler |
+
+Hover the **Related to me** chip in Todo's header to see the rule for each integration you have connected. See [Issue Tracker Integrations](/kepler/issue-tracker-integrations#which-issues-kepler-lists) for the issue side.
 
 **Review requests come from every host.** Pull requests waiting on your review show up from Azure DevOps, Azure DevOps Server, and Bitbucket Data Center as well as GitHub and GitLab. Bitbucket Cloud has no account-wide way to ask for them, so Kepler reads review requests repository by repository, starting with the repositories you have in Kepler and then the rest of your workspaces at a pace that stays inside Bitbucket's hourly request limits. On a large workspace they can take a while to appear.
 
 **Kepler loads what you're looking at.** Pull request and issue lists refresh while they're on screen, and again when you come back to the window, rather than downloading your whole account's lists in the background. A task's own pull requests refresh when an agent ends a turn, a branch is pushed, or a pull request is published. When one provider fails to load, the others keep loading, and the failed provider's last loaded pull requests stay in the list.
 
+**A failing provider is named, with its fix.** When a connected provider's read fails, Todo, the **Add resources** lists, and a link preview show a warning that names the provider and what went wrong, such as *GitHub needs you to sign in again, so its work may be missing.* On Todo the warning sits under **Unable to load your work**. Each warning offers one fix:
+
+| What went wrong | The fix offered |
+|---|---|
+| The sign-in needs renewing | **Reconnect**, or **Reconnect in settings** for a self-hosted provider, which needs a new token |
+| The provider refused part of the request, so some organizations or repositories may be missing | **Open settings** |
+| Rate limiting, an unreachable server, an unreadable answer, or a temporary problem | **Retry** |
+
+Rows kept from the last good load carry a cloud mark on their provider chip, labeled *Not refreshed: shown from the last successful {provider} load.*
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/todo-provider-failure-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/todo-provider-failure-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Todo when GitHub refuses its sign-in: Unable to load your work, over a warning that reads GitHub needs you to sign in again, so its work may be missing, with a Reconnect button.">
+  </a>
+  <figcaption style="text-align:center; color:#888">Todo names a provider whose sign-in failed and offers Reconnect.</figcaption>
+</figure>
+
 **The pull request picker says why its list is empty.** When you attach a pull request from **Add resources**, the picker explains an empty list instead of showing *No matches*:
 
-- If the **No task yet** filter hides pull requests that already belong to a task, the picker says how many it hides and offers **Show all**.
-- If no connected provider can list pull requests, the picker says *Connect GitHub, GitLab, Bitbucket or Azure DevOps to list pull requests.* and offers **Connect a provider**.
+- If the **Linked work** filter hides pull requests, the picker says how many it hides and which filter hides them, and offers **Show all**.
+- If no connected provider can list pull requests, the picker reads **Connect your code host** and lists the providers that can fill the tab, each with **Connect**.
+
+The **Linked work** filter defaults to **No active task**. A task counts as active until you archive it, so Done and on-hold tasks count. The filter has five options:
+
+| Option | Shows pull requests |
+|---|---|
+| **Any** | Whatever their task history |
+| **No active task** | With no task, or with archived tasks only. This default keeps earlier work findable, so you don't duplicate it |
+| **No tasks ever** | Never linked to a task |
+| **Has an active task** | Linked to at least one task that isn't archived |
+| **Archived tasks only** | Linked only to archived tasks |
+
+A row with task history carries a badge: **Task** or **{count} tasks** when one of them is active, **Archived task** or **{count} archived tasks** when all are archived.
+
+When nothing you have connected can list issues or pull requests, **Add resources** opens on a connect view, **Connect where your work lives**, with a tile for each provider. Connect each one you use, then click **Continue**. The provider filter's menu also offers **Connect another provider…**, which opens the same view with a **Back** button.
 
 You can also start work on a pull request from GitLens or GitKraken Desktop. See [Create a Task](/kepler/create-task).
 
