@@ -906,13 +906,13 @@ Terminals follow the theme too. A terminal program that asks, such as an agent's
 
 A theme file is a `.json` or `.jsonc` file, so comments are allowed. One file can hold a family of up to 8 themes, such as a dark and a light version. Each theme has an id and a name, and `extends` one of Kepler's base themes, `midnight`, `dark`, or `light`. It then overrides that base's colors, and can add code colors and a `terminal` block. The `terminal` block sets the terminal's background, foreground, cursor, selection, and 16 ANSI colors. Kepler reads up to 64 theme files and reloads a file each time you save it.
 
-A tile whose file Kepler can't fully read shows **Has problems** or **Has warnings**. Click the badge to see each problem as *Line {line}, column {column}: {message}*, with **Open file** and **Create a task to fix it**. *Changes apply when you save.* A file with warnings still works. A theme that has errors is left out, and the other themes in its file still load. A tile's **More actions for {name}** menu has **Show in folder** and **Move to Trash** (**Move to Recycle Bin** on Windows).
+A tile whose file Kepler can't fully read shows **Has problems** or **Has warnings**. Click the badge to see what's wrong. A file that isn't valid JSON shows *Line {line}, column {column}: {message}*; a problem with a theme's values names the setting it's in, such as *themes.1.extends*. Below the list, **Create a task to fix it** hands the file to an agent, and in the desktop app **Open file** opens it in your editor, at the error's line when there is one. *Changes apply when you save.* A file with warnings still works. A theme that has errors is left out, and the other themes in its file still load. A tile's **More actions for {name}** menu has **Show in folder** and **Move to Trash** (**Move to Recycle Bin** on Windows).
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/theme-problems-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/theme-problems-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Your themes in Settings › Appearance with harbor.jsonc's problem badge open: Unable to load 1 theme from harbor.jsonc, because harbor-light has errors that must be fixed while the other themes in the file are not affected. It lists themes.1.extends: Invalid option and Unknown key &quot;accent&quot; was ignored, above Create a task to fix it.">
   </a>
-  <figcaption style="text-align:center; color:#888">A theme file's problems, with the line each one is on.</figcaption>
+  <figcaption style="text-align:center; color:#888">A theme file's problems, each named by the setting it's in.</figcaption>
 </figure>
 
 #### Theme gallery

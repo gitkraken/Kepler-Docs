@@ -306,7 +306,7 @@ With tabs on, anything you open from the rail (sessions, worktrees, files, and e
 
 A tab's **Tab actions** (**⋮**) button and its right-click menu hold everything the thing's rail row offers, plus **Rename** on a file or folder tab. They lead with the tab's own verbs: **Keep open** on a preview, **Pin tab** or **Unpin tab**, **Close tab**, **Close others**, **Close to the right**, **Close all**, and **Close group** when there's more than one group. A pinned tab shrinks to its icon at the front of its group and has no close control; unpin it to close it.
 
-A draft session's tab reads **(draft)** after its name. With tabs off, right-click a draft tab for **Discard draft**, plus **Move left** and **Move right** where the tab can move. With tabs on, its menu holds the tab's own verbs instead: **Keep open** while it's a preview, **Pin tab** or **Unpin tab**, and **Close tab**, which is a draft's only close. Closing a draft that has text in it asks **Discard new session?** first, because *Your draft prompt and attachments will be removed.*
+A draft session's tab reads **(draft)** after its name when the tab has room; a narrow tab shows the name alone. With tabs off, right-click a draft tab for **Discard draft**, plus **Move left** and **Move right** where the tab can move. With tabs on, its menu holds the tab's own verbs instead: **Keep open** while it's a preview, **Pin tab** or **Unpin tab**, and **Close tab**, which is a draft's only close. Closing a draft that has text in it asks **Discard new session?** first, because *Your draft prompt and attachments will be removed.*
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/ade-draft-session-tab-menu-01-v3@2x.png" target="_blank" rel="noopener noreferrer">
@@ -352,7 +352,7 @@ With tabs off, the column strips' **Tab actions** menus also hold **Move left** 
 
 ## Starting a session
 
-**New session** opens a draft session in its own tab, marked **(draft)**. The draft holds the prompt composer, so you choose where the agent works and how it runs before anything starts. To open a draft, click the **+** on the rail's **Sessions** group, or press **Cmd/Ctrl+T**.
+**New session** opens a draft session in its own tab, marked **(draft)** when the tab has room. The draft holds the prompt composer, so you choose where the agent works and how it runs before anything starts. To open a draft, click the **+** on the rail's **Sessions** group, or press **Cmd/Ctrl+T**.
 
 To start a session from a draft, follow these steps:
 
@@ -376,7 +376,7 @@ A worktree that's gone from disk reads *Not on disk. Start recreates it.*, and K
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/new-session-flyout-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-session-flyout-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="A task's side panel with a New session draft tab and the place chip's menu open under its composer: Attached to this task with the kepler/fix-cart-total worktree, Repositories with acme-web, and Add a repository or folder. The chip reads acme-web, kepler/fix-cart-total and worktree.">
+    <img src="/wp-content/uploads/new-session-flyout-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="A task's side panel with a New session draft tab and the place chip's menu open under its composer: Attached to this task with the kepler/fix-cart- total worktree, Repositories with acme-web, and Add a repository or folder.">
   </a>
   <figcaption style="text-align:center; color:#888">Choosing where a new session runs.</figcaption>
 </figure>

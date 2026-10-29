@@ -87,7 +87,7 @@ The header above the commit list says how far the branch has come: **{count} com
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/changes-commit-row-tip-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/changes-commit-row-tip-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The worktree column for kepler/fix-cart-total on Commits, where the two newest commits have green dots because they are not pushed, and Apply the discount before tax, which is, has a grey one. The pointer rests on Clamp the discount at the subtotal, and its hover card shows Alex Lee, committed 4h ago, the subject, a body with a two-item list and a Refs: #38 trailer, then the short hash, its line changes, 1 file and a Not pushed chip.">
+    <img src="/wp-content/uploads/changes-commit-row-tip-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A worktree's column on Commits, where the two newest commits have green dots because they are not pushed, and Apply the discount before tax, which is pushed, has a grey one. The pointer rests on Clamp the discount at the subtotal, and its hover card shows Alex Lee, committed 4h ago, the subject, a body with a two-item list and a Refs: #38 trailer, then the short hash, its line changes, 1 file and a Not pushed chip.">
   </a>
   <figcaption style="text-align:center; color:#888">Unpushed commits, and the card for one of them.</figcaption>
 </figure>
@@ -102,7 +102,7 @@ Click a file, or **Open changes** from the worktree's menu, and the overlay open
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/changes-overlay-maximize-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/changes-overlay-maximize-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total open over the task page at its default width, with the task page showing around it, and the pointer on the Maximize button in the overlay's header, whose tooltip reads Maximize.">
+    <img src="/wp-content/uploads/changes-overlay-maximize-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total open over the task page at its default width, with the task page showing around it, and the Maximize button in the overlay's header hovered, its tooltip reading Maximize.">
   </a>
   <figcaption style="text-align:center; color:#888">The Changes overlay at its default width, with Maximize in its header.</figcaption>
 </figure>

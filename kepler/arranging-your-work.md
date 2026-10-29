@@ -66,7 +66,7 @@ Every column on the board shares one width. Drag the gap after any column to res
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/columns-progress-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/columns-progress-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Tasks in progress list on the Board layout, grouped by Progress: the Exploration, In Development, In Review, On hold and Done columns side by side, each with its count, Open in panels and Select. Each task is a card with its title, age, session and progress glyphs, its waiting state (New reply, or Approval needed for Run npm test), and its repository and branch; Done reads Nothing here. The toolbar above shows Group: Progress and Board selected.">
+    <img src="/wp-content/uploads/columns-progress-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Tasks in progress list on the Board layout, grouped by Progress: the Exploration, In Development, In Review, On hold and Done columns side by side, each with its count, Open in panels and Select. Each task is a card with its title, age, session and progress glyphs, its waiting state (New reply, or Approval needed for Run npm test), and, for a task with a worktree, its repository and branch; Done reads Nothing here. The toolbar above shows Group: Progress and Board selected.">
   </a>
   <figcaption style="text-align:center; color:#888">The Board layout, grouped by Progress.</figcaption>
 </figure>

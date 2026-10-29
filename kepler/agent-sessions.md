@@ -61,7 +61,7 @@ A quick question that belongs to no task goes to **Ask Kepler** instead, the cha
 
 ### Draft session tabs
 
-**New session** opens a draft tab rather than a menu. Nothing starts until you send the first message, so you can write the prompt, attach files, and pick the agent first. The tab takes its name from the first line of your prompt and is marked **(draft)**. In the task rail, the same row reads **Draft**.
+**New session** opens a draft tab rather than a menu. Nothing starts until you send the first message, so you can write the prompt, attach files, and pick the agent first. The tab takes its name from the first line of your prompt and is marked **(draft)** when the tab has room. In the task rail, the same row reads **Draft**.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/ade-draft-session-target-picker-01-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -733,7 +733,7 @@ When an agent in plan mode proposes a plan, Kepler opens it for review in a **Pl
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/plan-review-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/plan-review-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A Chat session with its Plan panel open beside the transcript. Step 2 of the plan, Fix the discount order in the cart total, is highlighted and carries a comment under Comments (1), with Request changes (1) and a greyed Approve & implement at the foot.">
+    <img src="/wp-content/uploads/plan-review-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A Chat session with its Plan panel open beside the transcript for the plan Fix the discount order in the cart total. Step 2, Round once, at the end, to two decimal places, is highlighted and carries a comment under Comments (1), with Request changes (1) and a greyed Approve & implement at the foot.">
   </a>
   <figcaption style="text-align:center; color:#888">A plan under review, with a comment on one step.</figcaption>
 </figure>
@@ -909,7 +909,7 @@ Task and session rows add one line saying what a session needs from you, most pr
 
 ## Tabs, archiving, and restoring
 
-Open sessions form a tab strip. Each tab shows the agent, the account when more than one exists, and a status dot. Drafts sit in the same strip, marked **(draft)**.
+Open sessions form a tab strip. Each tab shows the agent, the account when more than one exists, and a status dot. Drafts sit in the same strip, marked **(draft)** when the tab has room.
 
 Hover a session's tab, its rail row, or a Terminal session's status bar for its card. Under the account, the card can add the following lines:
 

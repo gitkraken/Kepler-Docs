@@ -1663,7 +1663,7 @@ With tabs on, anything you open from the rail (sessions, worktrees, files, and e
 
 A tab's **Tab actions** (**⋮**) button and its right-click menu hold everything the thing's rail row offers, plus **Rename** on a file or folder tab. They lead with the tab's own verbs: **Keep open** on a preview, **Pin tab** or **Unpin tab**, **Close tab**, **Close others**, **Close to the right**, **Close all**, and **Close group** when there's more than one group. A pinned tab shrinks to its icon at the front of its group and has no close control; unpin it to close it.
 
-A draft session's tab reads **(draft)** after its name. With tabs off, right-click a draft tab for **Discard draft**, plus **Move left** and **Move right** where the tab can move. With tabs on, its menu holds the tab's own verbs instead: **Keep open** while it's a preview, **Pin tab** or **Unpin tab**, and **Close tab**, which is a draft's only close. Closing a draft that has text in it asks **Discard new session?** first, because *Your draft prompt and attachments will be removed.*
+A draft session's tab reads **(draft)** after its name when the tab has room; a narrow tab shows the name alone. With tabs off, right-click a draft tab for **Discard draft**, plus **Move left** and **Move right** where the tab can move. With tabs on, its menu holds the tab's own verbs instead: **Keep open** while it's a preview, **Pin tab** or **Unpin tab**, and **Close tab**, which is a draft's only close. Closing a draft that has text in it asks **Discard new session?** first, because *Your draft prompt and attachments will be removed.*
 
 A session tab swaps its close control for the session's status dot while the session has something unread or needs you, so a group's tabs say which conversation wants attention.
 
@@ -1702,7 +1702,7 @@ With tabs off, the column strips' **Tab actions** menus also hold **Move left** 
 
 ## Starting a session
 
-**New session** opens a draft session in its own tab, marked **(draft)**. The draft holds the prompt composer, so you choose where the agent works and how it runs before anything starts. To open a draft, click the **+** on the rail's **Sessions** group, or press **Cmd/Ctrl+T**.
+**New session** opens a draft session in its own tab, marked **(draft)** when the tab has room. The draft holds the prompt composer, so you choose where the agent works and how it runs before anything starts. To open a draft, click the **+** on the rail's **Sessions** group, or press **Cmd/Ctrl+T**.
 
 To start a session from a draft, follow these steps:
 
@@ -2367,7 +2367,7 @@ A quick question that belongs to no task goes to **Ask Kepler** instead, the cha
 
 ### Draft session tabs
 
-**New session** opens a draft tab rather than a menu. Nothing starts until you send the first message, so you can write the prompt, attach files, and pick the agent first. The tab takes its name from the first line of your prompt and is marked **(draft)**. In the task rail, the same row reads **Draft**.
+**New session** opens a draft tab rather than a menu. Nothing starts until you send the first message, so you can write the prompt, attach files, and pick the agent first. The tab takes its name from the first line of your prompt and is marked **(draft)** when the tab has room. In the task rail, the same row reads **Draft**.
 
 To choose where the session runs, open the draft's target picker. It offers the following:
 
@@ -3028,7 +3028,7 @@ Task and session rows add one line saying what a session needs from you, most pr
 
 ## Tabs, archiving, and restoring
 
-Open sessions form a tab strip. Each tab shows the agent, the account when more than one exists, and a status dot. Drafts sit in the same strip, marked **(draft)**.
+Open sessions form a tab strip. Each tab shows the agent, the account when more than one exists, and a status dot. Drafts sit in the same strip, marked **(draft)** when the tab has room.
 
 Hover a session's tab, its rail row, or a Terminal session's status bar for its card. Under the account, the card can add the following lines:
 
@@ -5695,7 +5695,7 @@ Terminals follow the theme too. A terminal program that asks, such as an agent's
 
 A theme file is a `.json` or `.jsonc` file, so comments are allowed. One file can hold a family of up to 8 themes, such as a dark and a light version. Each theme has an id and a name, and `extends` one of Kepler's base themes, `midnight`, `dark`, or `light`. It then overrides that base's colors, and can add code colors and a `terminal` block. The `terminal` block sets the terminal's background, foreground, cursor, selection, and 16 ANSI colors. Kepler reads up to 64 theme files and reloads a file each time you save it.
 
-A tile whose file Kepler can't fully read shows **Has problems** or **Has warnings**. Click the badge to see each problem as *Line {line}, column {column}: {message}*, with **Open file** and **Create a task to fix it**. *Changes apply when you save.* A file with warnings still works. A theme that has errors is left out, and the other themes in its file still load. A tile's **More actions for {name}** menu has **Show in folder** and **Move to Trash** (**Move to Recycle Bin** on Windows).
+A tile whose file Kepler can't fully read shows **Has problems** or **Has warnings**. Click the badge to see what's wrong. A file that isn't valid JSON shows *Line {line}, column {column}: {message}*; a problem with a theme's values names the setting it's in, such as *themes.1.extends*. Below the list, **Create a task to fix it** hands the file to an agent, and in the desktop app **Open file** opens it in your editor, at the error's line when there is one. *Changes apply when you save.* A file with warnings still works. A theme that has errors is left out, and the other themes in its file still load. A tile's **More actions for {name}** menu has **Show in folder** and **Move to Trash** (**Move to Recycle Bin** on Windows).
 
 #### Theme gallery
 
