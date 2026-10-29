@@ -36,6 +36,270 @@ New to Kepler? [Getting Started with Kepler](/kepler/kepler-getting-started) tak
 
 ***
 
+<a id="v0-16-0"></a>
+## Version 0.16.0
+
+<kbd>Thursday, October 29th, 2026</kbd>
+
+### Highlights
+
+- **Sort your tasks into your own groups.** Make task groups with a name and a color, and group the Dashboard list and board by them, alone or nested with Inbox, Progress, Activity or Repository.
+- **Comment on any line of a diff and send it to an agent.** Leave a comment on any diff or file view, then queue it for a session or send it right away. Agents reply in a thread and can resolve your comments.
+- **Find, change or link to any setting.** A new **Advanced** page lists every setting, `kepler://settings` links open Settings at the setting itself, and Ask Kepler and your agents can change settings for you.
+
+### Features
+
+#### Task groups
+
+- Make your own task groups, each with a name and a color, and group the Dashboard list and board by them, alone or nested with **Inbox**, **Progress**, **Activity** or **Repository**.
+- Add tasks to a group from the task menu or by dragging them onto it. Reorder, recolor, archive or delete a group from its header.
+- Select several tasks and act on them together from the right-click menu, or drag them together.
+- Agents can read and change task groups too.
+
+#### Review comments
+
+- Leave a comment on any line of any diff or file view, then queue it for a session or send it right away.
+- Agents reply to your comments in a thread and can resolve them. A comments list shows every comment on a task, by file or by status.
+- A comment stays in place as the code changes, or is marked **Outdated** when its lines are gone.
+
+#### Settings
+
+- A new **Advanced** page lists every setting, and typing `@id:` in **Search settings** jumps to one setting.
+- `kepler://settings` links open Settings right at the setting's control.
+- Ask Kepler and your agents can find and change Kepler settings for you.
+
+#### Ask Kepler
+
+- A docked mode makes room for the panel instead of covering the page.
+- Cmd/Ctrl+K also toggles Ask Kepler, unless a terminal has focus.
+- Attach files to a new chat's first message.
+- The top bar button shows whether a panel chat is working or needs you.
+- Ask Kepler keeps its own default agent, separate from the one your tasks use.
+
+#### Tray icon
+
+- The tray icon shows the most urgent agent state: needs you, failed, unread or working.
+- Clicking it opens the window that needs attention, and its menu lists your windows and opens a new one.
+
+#### Smaller additions
+
+- Copilot account usage shows in Kepler, and an exhausted quota is clearly marked.
+- Approve or deny any approval from its alert, and on macOS from the desktop notification.
+- Create a task from the worktrees and branches you selected in Settings.
+- Pick a Linear project in **Add resources**.
+- Jira issues link from commits and branches.
+- Several active tasks can share the same pull request.
+
+### Improvements
+
+#### Dashboard
+
+- Collapse the task list beside open panels. Hover its toggle to peek at it, or press Cmd/Ctrl+Shift+B to float it.
+- A row's pull request and issue chips open their link card, which lists every linked item.
+- Todo pull requests and issues show the tasks already started from them.
+- Folded group sections stay folded after a restart, and groups follow the selected sort.
+- Dragging rows and opening a selection feel quicker.
+
+#### Agents
+
+- **Continue as another account** and switching between **Chat** and **Terminal** now ask before stopping a session that looks busy, instead of refusing.
+- A session with only background work running shows as idle, not running.
+- A live session picked from another app opens read-only, with **Continue here** and **Fork live** on its task tab.
+- If the browser can't open for sign-in, Kepler shows a link you can copy.
+
+#### Updating branches
+
+- Choose between rebase and merge when updating a branch. A clean merge applies and pushes by default.
+- A failed push offers clear ways to recover, and undo keeps working after Git restores files.
+
+#### Interface
+
+- The task page rail shows the worktree's state, a detached HEAD and errors.
+- A Linear issue synced with GitHub shows once, and both copies share the same tasks.
+- Large text pastes in the composer become attachments.
+
+### Fixes
+
+#### Agents
+
+- Claude browser sign-in completes even when `ANTHROPIC_API_KEY` is set, and signed-in Claude accounts stay signed in.
+- A signed-in agent account is no longer asked to sign in again.
+- A usage limit hit by one sub-agent no longer leaves its session stuck as running.
+- An npm-installed agent CLI that's missing its native binary shows as not installed.
+- Repositories that use Husky.Net run their own commit hooks again in agent worktrees.
+
+#### Windows
+
+- Copilot CLI installed with the MSI installer is found, and VS Code's Copilot launcher is no longer mistaken for it.
+- npm-installed agents and agent installers start correctly.
+
+#### Tasks and composer
+
+- A pasted pull request launches in its own repository, and a link that can't be read no longer stops the launch.
+- A Linear issue looked up from the Dashboard starts in its GitHub copy's repository.
+- The **Commits** tab no longer hangs when a branch has no base, and says **No commits** when the branch is level with it.
+- Settings closes in one click from any sub-page.
+
+***
+
+<a id="v0-15-0"></a>
+## Version 0.15.0
+
+<kbd>Tuesday, October 27th, 2026</kbd>
+
+### Highlights
+
+- **Ask Kepler from any page.** The Ask Kepler side panel opens over any page with a chat that knows what you have on screen, plus quick terminals. See [Ask Kepler](/kepler/ask-kepler).
+- **Work on up to 16 tasks side by side.** Open Dashboard items as panels in a grid of up to 16, with resizable rows and columns, and open every visible row at once.
+- **Browse, install or create your own themes.** Try and install themes from the theme gallery, load your own from a folder, or ask an agent to create one. Themes now color terminals, diffs and code blocks too.
+- **Approve what your agents do.** Before an agent starts a session, rewrites a branch or changes a task's notes, Kepler shows the whole request as a card and runs it only once you approve it.
+
+### Features
+
+#### Ask Kepler
+
+- The Ask Kepler side panel opens over any page from the Kepler mark in the top bar or with Cmd/Ctrl+L, with a chat that knows what you have on screen.
+- The panel keeps quick terminals too, opened with Ctrl+&#96;, and docks on the left or right.
+- Past panel chats stay in a history picker, and a chat can continue as a new task.
+
+#### Dashboard
+
+- Open items as panels laid out in a grid of up to 16, with resizable rows and columns, and open every visible row at once.
+- A **Manual** sort lets you drag tasks into your own order, and task cards can be dragged between groups on every Tasks grouping.
+- Rows say what a task needs from you and show its linked pull request or issue, its sessions and its running terminals.
+- A task preview has a side pane for its resources and its worktree's changes, toggled with Cmd/Ctrl+Shift+E and Cmd/Ctrl+Shift+G.
+- Board columns fold to a rail and resize together from any column's edge.
+- Drive the list and panels from the keyboard: Cmd/Ctrl+W closes the active panel, and Ctrl+Tab lists recently replaced ones.
+- Todo pull request and issue rows have a right-click menu, and a finished task's row offers **Archive**.
+
+#### Approvals and agent teamwork
+
+- Before an agent starts a session, rewrites a branch or changes a task's notes, Kepler shows the whole request as a card and runs it only once you approve it: once, for the session or always.
+- A session waiting on an approval shows as waiting on its row, its tab and the window title, and you can approve simple requests from the alert.
+- Each session has an inbox of reports from the sessions it works with, and an idle agent wakes up to read them.
+- Stop or message one sub-agent without stopping the turn, and see what a running sub-agent is doing.
+- Copy a task or session as a Kepler link. Links and ids in chat and the terminal open the task or session, and agents accept them too.
+
+#### Themes
+
+- Browse, try and install themes from the theme gallery, and update them when a new version is published.
+- Pick an appearance and a dark and a light theme from theme tiles. The appearance follows your system by default.
+- Load your own themes from a folder and see edits live, or ask an agent to create one. The agent checks the theme's contrast before saving it.
+- Themes now color terminals, diffs and code blocks.
+
+#### Changes and files
+
+- An **All changes** tab shows committed and uncommitted work together, **All files** browses the whole worktree, ignored files included, and **Commits** lists the branch's commits.
+- The file overlay has a file tree and a breadcrumb to browse folders.
+- Cmd/Ctrl+click a file path in chat or a terminal to open it in Kepler, or Cmd/Ctrl+Shift+click to open it in your editor.
+- Find text across every file of a code view, and select and copy across long files.
+- Stage and discard with Space and Delete, and move between changes from the keyboard.
+
+#### Agents
+
+- Run Claude Code through Amazon Bedrock, Google Vertex, Microsoft Foundry or an LLM gateway.
+- Past sessions from Pi, OpenCode, Copilot, Grok, Auggie and Antigravity CLI are listed and can be previewed.
+- Move a session to another account, or continue as another account when one reaches its usage limit.
+- Move a session between **Chat** and **Terminal** from its menu.
+- Copilot, Cursor and OpenCode get plan review in chat, and their sub-agents' work nests under the call that started it.
+- Terminal launches offer each CLI's own options, such as Grok modes, Pi thinking and reasoning effort, and more CLIs get the first prompt at launch.
+- Chat shows when the context is compacted and offers Fast mode as a toggle. Codex's and Cursor's own questions show in Kepler.
+
+#### Voice dictation
+
+- A new on-device dictation engine, Qwen3-ASR, is the default for new users. It detects the language you speak and supports all of its languages. See [Voice input](/kepler/voice-input).
+- Dictation learns the words you correct and suggests them for your approval.
+
+#### Smaller additions
+
+- Settings manages worktrees and branches together in one list, with search, filters and each branch's tasks, sessions and pull requests.
+- A code font size for every code and diff view, and a **Conversation width** setting for the chat.
+- Hide organizations, repositories and projects per integration.
+- Connect self-hosted code hosts and trackers with a URL and a personal access token.
+- Pasted Jira, Linear, Azure DevOps, Bitbucket and self-hosted links turn into chips in the composer.
+- Browse Jira project backlogs in **Add resources**.
+- Set, change or unset a branch's upstream from its menu.
+- Rename a task or a note by double-clicking its name.
+- Antigravity IDE, Kiro and Trae are offered as editors.
+
+### Improvements
+
+#### Getting started
+
+- New users get a guided start through agents, theme, repositories and a first task, and existing users see it once.
+- Kep, Kepler's mascot, keeps you company on loading, empty and launch screens.
+
+#### Agents and terminals
+
+- Agents keep running through app restarts and updates by default, and so do Run-command terminals.
+- **Restart agent** picks up changes to your login shell's environment.
+- Usage bars show your pace against the time elapsed, turn amber above 75% and red above 90%, and refresh when a usage window resets.
+- Code blocks in chat collapse and keep their controls in view, and the transcript remembers where you scrolled.
+- Desktop notifications when an agent needs you are on by default.
+
+#### Phone and tablet
+
+- The phone layout is rebuilt around one bar per screen, bottom sheets, touch-sized controls and a task switcher you can swipe.
+- Phone terminals have a key row, long-press to paste and open links, and tap to click in full-screen programs.
+
+#### Updating branches
+
+- Review each AI-resolved file's versions, with the reason for every resolution, before you apply.
+- Batch update also covers local branches with no worktree, and pushes updated branches that have an upstream.
+- Update again or recalculate a stale result without discarding the last one.
+
+#### Performance
+
+- Kepler's background service idles while no window or session needs it.
+- Kepler watches and refreshes only the checkouts you have open, so large workspaces stay responsive.
+- The Changes overlay opens at once, and diffs are highlighted for files up to 20,000 lines.
+- Long agent terminal histories use less memory.
+
+#### Interface
+
+- The **Add resources** dialog is rebuilt around a list of issues and pull requests, with filter presets.
+- Pull requests, issues and worktrees have the same menu wherever they appear.
+- Overlays can be resized from either edge, and the Changes and file overlays have a maximize toggle.
+- Remote Access has its own button in the title bar and asks before turning off.
+
+### Fixes
+
+#### Agents
+
+- OpenCode sign-in works and shows as signed in, with browser sign-in for OpenCode Go.
+- A second Copilot account no longer signs in as another user, and a Codex login lands in the account being signed in.
+- A slow-starting agent CLI gets more time to connect, and agents find PowerShell on Windows.
+- A linked issue's description reaches the agent when a task launches.
+
+#### Git and worktrees
+
+- Deleted remote branches are pruned on fetch, and an SSH key that needs a PIN can fetch.
+- A worktree whose branch and base were both deleted can be recreated, and a folder still in use says so instead of failing.
+- A fork's pull request is no longer matched to your own branch of the same name, and a retargeted pull request follows its new base.
+
+#### Providers
+
+- Moved Jira and Linear issues are followed to their new key.
+- Azure DevOps work item descriptions render, and branches match their work items by project.
+- **Reconnect** fixes the failing connection instead of the primary one.
+
+#### Terminals and remote
+
+- A terminal keeps its size and stays readable through a dropped connection, and one shown off screen no longer resizes it.
+- A remote server reconnects once and brings back all its windows after a drop, an update or a relaunch.
+- The SSH wizard lists a private key that has no matching .pub file.
+
+#### Interface
+
+- A window reopens maximized on the monitor it was moved to, and Linux windows no longer flash light before the theme loads.
+- A clicked notification opens in the window already showing its work.
+
+### Breaking changes
+
+- Kepler's workspace tools for agents have new names. If an agent's settings allow-list `mcp__kepler-workspace__` tools by name, update them to the new names. See [Tasks and resources](/kepler/tasks-and-resources) for the full list.
+
+***
+
 <a id="v0-13-0"></a>
 ## Version 0.13.0
 
