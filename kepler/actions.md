@@ -73,9 +73,13 @@ You fire Actions from a **split button**. The left half runs your preferred Acti
 
 Firing an Action from a Todo row is also how an issue or pull request that isn't tracked yet **becomes** a task in Kepler.
 
+On a Todo row, the button rests as a quiet outline and fills in only while you hover or select its row, so a column of buttons doesn't compete with the rows. On a narrow card it shrinks to a play icon. On a phone, a row has a single **⋮** menu instead (**Actions for {title}**) that lists every Action, the preferred one included, and the side panel has no Action button.
+
+In the list of Actions, hover a row, or move focus to it, to read that Action's prompt, line breaks included.
+
 <figure style="text-align:center">
   <a href="/wp-content/uploads/action-button-todo-row-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/action-button-todo-row-aug-2026.png" class="help-center-img img-bordered" alt="The Action split button, closed, on a Todo row">
+    <img src="/wp-content/uploads/action-button-todo-row-aug-2026.png" class="help-center-img img-bordered" alt="The right end of a Todo issue row: acme-web, Open, the age 3d, and the Plan Action button at rest as an outline, its chevron on the right opening the list of Actions.">
   </a>
   <figcaption style="text-align:center; color:#888">The split button on a Todo row: the row's kind of item decides which Action fills the left half.</figcaption>
 </figure>

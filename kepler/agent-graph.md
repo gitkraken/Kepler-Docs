@@ -48,7 +48,7 @@ The graph is a segment of its own, beside **Todo** and **Tasks in progress**, ra
 | **The whole fleet** | The top-left control: switch to the **Agent Graph** segment. Kepler remembers your choice across restarts |
 | **One session** | The task view's rail carries a per-session toggle on each session row, which docks that one session's graph beside its transcript |
 
-See [Arranging Your Work](/kepler/arranging-your-work) for **Todo** and **Tasks in progress**, and for the **List** and **Columns** views those two segments offer. The Agent Graph has no page of its own, but rather it's a segment of the main list and a pane within the task view.
+See [Arranging Your Work](/kepler/arranging-your-work) for **Todo** and **Tasks in progress**, and for the **List** and **Board** layouts those two segments offer. The Agent Graph has no page of its own, but rather it's a segment of the main list and a pane within the task view.
 
 When opened from the main list, the graph draws exactly what the list normally shows including your search and filter(s). Opened on a session, the graph starts fully expanded and grows downward (or to the right) with the conversation's tool calls and subagents.
 
@@ -60,9 +60,9 @@ The graph is a **visualization**, not a workspace. To work in a session, open th
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/how-to-read-graph-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/how-to-read-graph-aug-2026.png" class="help-center-img img-bordered" alt="The layered Agent Graph: a task and session at the top, turn nodes below, then tool-call nodes including a group, an error, and nodes needing you, down to file nodes">
+    <img src="/wp-content/uploads/how-to-read-graph-aug-2026.png" class="help-center-img img-bordered" alt="The Agent Graph for one task, read left to right: the task Fix the cart total and its session, both marked Needs you, then three turns. Turn 1 and Turn 2 are folded, each with a chevron and 3 hidden nodes (Turn 2 also shows one failed call); the latest turn is open on its tool calls, Read cart.test.js, Edit cart.js and Run npm test, with the files they touched, and a permission request marked Needs you.">
   </a>
-  <figcaption style="text-align:center; color:#888">The graph's layers, from task down to file.</figcaption>
+  <figcaption style="text-align:center; color:#888">The graph's layers, from task to file, with past turns folded.</figcaption>
 </figure>
 
 The graph is layered. Depth grows away from the root.
@@ -76,7 +76,11 @@ The graph is layered. Depth grows away from the root.
 | **Subagent** | A subagent the agent spawned, with its own tool calls beneath it |
 | **File** | The files a call touched: the bottom layer, and where you notice two sessions converging on the same file |
 
-Sessions that don't belong to a task (external ones Kepler observed rather than started) collect under **Unscoped sessions**.
+The graph draws only sessions that belong to a task. An external session Kepler observed but no task owns has nowhere to hang from, so the graph leaves it out.
+
+### Past turns start folded
+
+On the main list's graph, each session shows its latest turn open and folds every earlier one, so a long session reads as its current work. A folded card carries a chevron and the number of nodes beneath it, and its tooltip says how many nodes are folded away. Double-click a folded turn to unfold it. Double-click any card with children, such as a session, a turn, or a subagent, to fold what's beneath it again. A session's own graph pane starts with every turn open.
 
 Two node kinds are worth spotting immediately, because nothing moves until you act: **Permission needed** and **Question for you**.
 
@@ -101,7 +105,7 @@ Three states get a word on the card rather than a colour, because they're asking
 
 This is the fastest read on the graph. A task that's all **Read** is still orienting; a wall of **Edit** means it's committing to an approach.
 
-Repeated calls of the same kind fold into one node badged **Group**, which keeps the kind as its name and reports the count and how many distinct files it spans. That way, a **Read** node reading *9 calls · 4 files* doesn't read as the same file nine times. Click a group to unfold it, and click again to fold it back up.
+Repeated calls of the same kind fold into one node badged **Group**, which keeps the kind as its name and reports the count and how many distinct files it spans. That way, a **Read** node reading *9 calls · 4 files* doesn't read as the same file nine times. Double-click a group to unfold it, and double-click again to fold it back up. A single click only selects a node, so inspecting a group never reshuffles the graph.
 
 ***
 
@@ -121,6 +125,15 @@ Selecting a node opens details beside the graph. What you see depends on what yo
 - **Subagent**: its type, its prompt, and its own calls.
 - **Task**: its status (**Active**, **On hold**, or **Archived**), its sessions, and its resources.
 - **File**: a preview of the file. For a large file, the preview reads only its beginning.
+
+A node with children also gets a fold button in the details header, **Collapse what is under this node** or **Expand what is under this node**, which does the same as double-clicking the card. The stats rail keeps counting the whole graph, folded nodes included.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/graph-collapse-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/graph-collapse-oct-2026.png" class="help-center-img img-bordered" alt="The Agent Graph with the folded Turn 2 node selected, showing the failed call mark and a chevron with 3 hidden nodes, while the rest of the graph dims. Its details panel shows Turn, Done, Turn 2, the path Fix the cart total › Discount codes break the cart…, 1 failed call, Tool calls 2 and the prompt Add a test for the discount, with the back, Expand what is under this node and close buttons in its header.">
+  </a>
+  <figcaption style="text-align:center; color:#888">A folded turn selected, with Expand what is under this node in its details header.</figcaption>
+</figure>
 
 **Duration is only shown when Kepler actually watched the call happen.** Replayed history can't tell you how long something took, so the graph leaves it out rather than estimating.
 
@@ -178,7 +191,9 @@ The calls broken down by kind, with a bar and a count each: the fastest read on 
 
 ### Usage windows
 
-Your agent subscription windows, one bar per window per agent. This panel appears only after you turn on **Show plan usage for Claude Code, Codex and Augment** in **Settings → Agents → Usage limits**. See [Settings](/kepler/settings).
+Your agent subscription windows, one bar per window per agent, each with the share used. The panel appears once there's something to show. With **Check plan usage with each agent's provider** on, which is the default in **Settings → Agents → Usage limits**, Kepler asks each agent's provider for your usage. With it off, the panel shows only readings your agents report themselves, dimmed once they're out of date, and stays hidden until an agent reports one. See [Settings](/kepler/settings).
+
+The bars here show only how much of each window you've used. Whether you're on pace for a window, and when it runs out at your current rate, shows in a session's usage meter. See [Usage indicators](/kepler/agent-sessions#usage-indicators).
 
 ### What was folded away
 
@@ -211,7 +226,7 @@ The graph's header carries a search box, an **Options** menu, the depth slider, 
 | **Zoom to selection** | Options | Frames a picked node with its tree, ancestors, and siblings; holds still when it's already in view. Two nested settings say when the camera may move again: **Follow the tree as it grows** (zooms out as far as it takes rather than stopping once cards get too small to make out) and **Re-frame when the space changes** (reframes when a panel opens beside the graph or the window resizes) |
 | **Compact stats** | Options | Same numbers in half the room: circular meters and denser tiles, for a smaller window |
 | **Group repeated tool calls** | Options | On by default. Off draws every call as its own node |
-| **Only active sessions** | Options | Hide everything that isn't running |
+| **Only active sessions** | Options | Hide sessions that have ended, while idle ones stay. On by default on the main list, where the **Options** badge counts it once you turn it off, and off by default in a session's own graph pane |
 | **Agent** / **Repo** | Options | Narrow to one agent or repository. Not offered on the main list, whose own facets already do it |
 | **Detail depth** | Header | How many layers deep the graph draws: up to five, four by default |
 | **Zoom in** / **Zoom out** / **Fit to view** | Canvas | Move around. You can also pan by dragging, and press Escape to drop a selection |

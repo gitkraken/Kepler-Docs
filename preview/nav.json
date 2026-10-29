@@ -24,6 +24,7 @@
       "pages": [
         "create-task.md",
         "agent-sessions.md",
+        "ask-kepler.md",
         "review-changes.md",
         "voice-input.md"
       ]
