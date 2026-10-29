@@ -2,7 +2,7 @@
 
 > Kepler is GitKraken's Agentic Development Environment (ADE). It pulls every issue and pull request assigned to you into one place, then hands any of it to the coding agent you already use (Claude Code, Codex, Copilot, Cursor, Auggie, OpenCode, Grok Build, Pi, or Google Antigravity) with the context already attached.
 
-Scope: 18 pages included. Excluded (3): environment-and-setup.md, kepler-New-Page-Template.md, workflow-views.md.
+Scope: 19 pages included. Excluded (3): environment-and-setup.md, kepler-New-Page-Template.md, workflow-views.md.
 
 ## Getting Started
 
@@ -21,8 +21,9 @@ Scope: 18 pages included. Excluded (3): environment-and-setup.md, kepler-New-Pag
 
 - [Create a Task](https://help.gitkraken.com/kepler/create-task/): Start a Task from an issue, a pull request, or nothing at all, with the repository, branch, and context already attached.
 - [Agent Sessions](https://help.gitkraken.com/kepler/agent-sessions/): An agent session is one running conversation with a coding agent inside a Task. Learn how to start one, pick the agent and account, queue prompts, answer the agent's questions, track usage limits, and keep sessions running through restarts.
+- [Ask Kepler](https://help.gitkraken.com/kepler/ask-kepler/): Ask Kepler is a chat and a terminal in a panel beside whatever you're looking at. Ask what needs you, have it check on your tasks and sessions, hand a chat on to a new task, or open a quick shell that belongs to no task.
 - [Review Changes](https://help.gitkraken.com/kepler/review-changes/): An agent finished. Read the diff in the Changes overlay, comment on it, stage and commit, update the branch from its base, resolve update conflicts with AI, and hand the rest to AI Sync or AI Compose.
-- [Voice Input](https://help.gitkraken.com/kepler/voice-input/): Dictate to an agent instead of typing. Voice input transcribes on your device with Whisper, works push-to-talk or hands-free, and is available in remote windows.
+- [Voice Input](https://help.gitkraken.com/kepler/voice-input/): Dictate to an agent instead of typing. Voice input transcribes on your device with Qwen3-ASR, or with Whisper where WebGPU is unavailable, learns the words you fix, works push-to-talk or hands-free, and is available in remote windows.
 
 ## Integrations
 
@@ -33,7 +34,7 @@ Scope: 18 pages included. Excluded (3): environment-and-setup.md, kepler-New-Pag
 
 ## Configuration
 
-- [Settings](https://help.gitkraken.com/kepler/settings/): A reference for every setting in Kepler across the 15 Settings pages, plus folder locations, branch prefixes, the Variables menu, per-repository commands, worktree cleanup, MCP server defaults, notifications, and the keyboard shortcut list.
+- [Settings](https://help.gitkraken.com/kepler/settings/): A reference for every setting in Kepler across the 15 Settings pages, plus folder locations, branch prefixes, the Variables menu, per-repository commands, worktrees and branches, themes, MCP server defaults, notifications, and the keyboard shortcut list.
 - [Remote Environments](https://help.gitkraken.com/kepler/remote-environments/): Run your agents on another machine over SSH or in WSL, switch environments from the title bar, manage machines in Settings, forward an SSH host's ports to this computer, and open this Kepler from another device with Remote Access.
 
 ## Release Notes
