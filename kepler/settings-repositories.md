@@ -158,9 +158,13 @@ The following table lists the sub-page's controls:
 | **Stale after** *n* **days** | How many days without activity before a worktree or branch counts as stale. Defaults to 14 |
 | **Re-check** | Fetches every repository's remotes, then inspects the list again. A repository whose fetch failed says so beside its name: *Unable to fetch: {reason}; numbers may be stale* |
 | **Select all safe to delete** / **Select all that need an update** / **Select all with conflicts** / **Select all stale** / **Select all** | Selects the rows in the current view |
-| Selection bar | Reads *{count} selected*, or *{count} selected · {hidden} hidden by filters*, with **Clear**, **Update**, and **Delete**. **Update** and **Delete** act only on the selected rows you can see |
+| Selection bar | Reads *{count} selected*, or *{count} selected · {hidden} hidden by filters*, with **Clear**, **Create task**, **Update**, and **Delete**. **Update** and **Delete** act only on the selected rows you can see |
+
+**Create task** opens the Task Composer with the selected worktrees and branches already added: each worktree as it is, and each branch without a worktree as a branch to work on. Nothing is created until you start or prepare the task. See [Create a Task](/kepler/create-task).
 
 Each row shows how it stands with its upstream: commits to push (↑) and pull (↓), **No upstream**, or **Upstream gone**. Badges then compare it with its base: **{count} behind {base}**, **Conflicts with {base}**, or **Up to date with {base}**, plus how many files are uncommitted. A row also says how long since it was touched and why it may be finished, such as being merged into its base. On the right, it shows the tasks using it, an **External** count for sessions started outside Kepler, and its pull request. A branch row shows the tasks, sessions, and pull requests tied to that branch.
+
+With a Jira or Jira Server account connected, a row whose branch name references a Jira issue shows a chip for that issue under the branch name. Click the chip to open the issue in your browser; its tooltip shows the issue's URL. When Kepler can't match every reference, the row reads **Issue reference matching limit reached**. See [Issue Tracker Integrations](/kepler/issue-tracker-integrations).
 
 A row counts as one or more of the following:
 

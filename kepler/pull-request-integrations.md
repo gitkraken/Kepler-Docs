@@ -201,7 +201,7 @@ A pull request you open outside Kepler (from a terminal `gh`, from GitKraken, fr
 
 Whenever fresh pull-request data arrives, Kepler looks over your active tasks that hold no pull request yet and attaches one whose head branch matches a worktree's branch. It then behaves like a pull request you attached yourself: it sits in the task's resources, and it reaches the agent as context. See [Tasks and Resources](/kepler/tasks-and-resources).
 
-Auto-attaching is deliberately stricter than the matching above, because Kepler saves an attached resource and sends it to an agent, where a read-time match only draws a card. Auto-attach follows five rules:
+Auto-attaching is deliberately stricter than the matching above, because Kepler saves an attached resource and sends it to an agent, where a read-time match only draws a card. Auto-attach follows four rules:
 
 | Rule | Why |
 |---|---|
@@ -209,7 +209,8 @@ Auto-attaching is deliberately stricter than the matching above, because Kepler 
 | Open pull requests only | A merged pull request cannot claim a branch name that gets reused later |
 | The head branch has to live in the same repository | Branch matching keys on the head branch name, and the author of a fork picks that name freely. An attached resource reaches your agent, so a stranger's pull request must not claim your branch |
 | One pull request per task per pass | A task drops out of the next pass as soon as it holds one |
-| A pull request another active task already holds is left alone | One active task per pull request, without taking it off the task that has it |
+
+A pull request another active task already holds attaches all the same: several active tasks can share one pull request. Attaching it to one task leaves it on the other, and restoring an archived task that holds it archives nothing.
 
 Auto-attach never archives anything and never replaces anything. A branch match is a guess, so it never supersedes work you started deliberately, and it never removes a link because a pull request briefly dropped out of a read.
 

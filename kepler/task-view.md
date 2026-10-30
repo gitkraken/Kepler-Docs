@@ -136,7 +136,7 @@ The worktree group is called **Changes**. Its rows carry each checkout's real st
 
 **Files** holds both files linked from disk and copies uploaded to the Task. An uploaded copy reads **Task folder** under its name where a linked file shows its path.
 
-**The rail can be put away.** **Hide context panel** collapses it and hands the width to the content area; **Show context panel** brings it back. While it's hidden the control carries the task's own session status, so a session that needs you is still visible from a collapsed rail. Drag its edge to resize it.
+**The rail can be put away.** **Hide context panel** collapses it and hands the width to the content area; **Show context panel** brings it back. **Cmd/Ctrl+B** does the same from anywhere on the page, except in the single-column layout; on Windows and Linux a focused shell keeps **Ctrl+B** for itself. While it's hidden the control carries the task's own session status, so a session that needs you is still visible from a collapsed rail. Hover the control to peek at the rail floating over the content. It stays up while the pointer or focus is inside it, and **Escape** puts it away; click the control while peeking to keep the rail open. Drag its edge to resize it.
 
 - **Add resource** sits at the bottom of the rail and opens the **Add resources** dialog.
 - The **+** on a group header adds straight into that group: **Add issues**, **Add notes**, and so on. On **Changes** it reads **Add worktree**, because that's what actually lands there. On **Sessions** the **+** is **New session** instead, which opens a draft session. See [Starting a session](#starting-a-session).
@@ -168,8 +168,17 @@ Some kinds of row show more:
 - A **file** row's card adds **Size**, **Modified**, and **Type**, plus when it was added. An image file shows its own thumbnail as the row's icon.
 - A **terminal** row's tip adds **Started** and, once it has finished, **Ended**.
 
-- A **Changes** row's subtitle is a run of glyph-and-number chips reading the checkout's real state: uncommitted files, commits on the branch, behind and ahead of the upstream, behind the merge target, with conflicts and an unpublished branch drawn as glyphs alone. A checkout with nothing to report reads **Up to date**; one that has been deleted says so. Its tooltip is a two-column table of the same facts (the branch, the repository, the path, the working tree, the commits, the upstream and the merge target), with the numbers aligned so they never wrap.
+- A **Changes** row's subtitle is a run of glyph-and-number chips reading the checkout's real state: uncommitted files, commits on the branch, behind and ahead of the upstream, and how far it's behind the merge target, named after the count. Conflicts and an unpublished branch are drawn as glyphs alone, and a merge target Kepler can't compare with reads *Can't compare with the merge target*. A checkout with nothing to report reads **Up to date**; one that has been deleted says so. When the task's worktrees span more than one repository, each row also names its repository.
+- A checkout in an unusual state leads its subtitle with that state instead of the chips: **Unable to read git status** when Kepler couldn't read it, a paused rebase or merge (in red when it has conflicts), or **Detached** for a detached HEAD, which also titles the row with the commit's short hash instead of a branch.
+- A **Changes** row's hover tip is a list of lines, each marked with an icon: the branch in bold, then the repository and the path, then any state (such as **Gone from disk**, a paused operation, or *Detached · {commit}*), then the pull request the branch owns with its state or review decision, then the commits, the working tree, the upstream, and the merge target. A merged pull request leaves the upstream and merge-target lines out. A worktree's tab, with tabs on, shows the same tip.
 - A **session** row leads with its state, and names which **Account** it runs under once a harness has more than one configured: the provider logo plus an ordinal, on the row, its tab, and its collapsed strip alike.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/task-rail-detached-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-rail-detached-oct-2026.png" class="help-center-img img-bordered" alt="The task rail's Changes group, above the Notes header, with a worktree on a detached HEAD: the row is titled cd919f0, the commit it sits on, with Detached in amber in its subtitle, and its hover card beside it lists cd919f0, acme-web and the worktree's path, then Detached · cd919f0 and Not published yet.">
+  </a>
+  <figcaption style="text-align:center; color:#888">A worktree on a detached HEAD, with its hover tip.</figcaption>
+</figure>
 
 The end of the subtitle line carries the row's controls, always visible rather than revealed on hover:
 
@@ -220,7 +229,14 @@ The worktree's **Branch** submenu gathers what changes the branch itself: **Rena
 
 **Copy session link** copies a Kepler link that opens the session. When the window is connected to a remote machine, the link names that machine, so it opens there. With the row focused, **Cmd/Ctrl+C** copies the same link. See [Agent Sessions](/kepler/agent-sessions#pointing-an-agent-at-another-session).
 
-**Continue as** moves the conversation to another signed-in account of the same agent, restarting the agent with the conversation as that account. **Continue in Terminal** and **Continue in Chat** move it between the two ways a session runs, keeping the conversation. While the session is mid-turn, these entries are locked: *This session is mid-turn. Wait for it to finish, or stop it first.* See [Moving a session to another account](/kepler/agent-sessions#moving-a-session-to-another-account) and [How a session runs](/kepler/agent-sessions#how-a-session-runs).
+**Continue as** moves the conversation to another signed-in account of the same agent, restarting the agent with the conversation as that account. **Continue in Terminal** and **Continue in Chat** move it between the two ways a session runs, keeping the conversation. When the session is still running a turn or background work, Kepler asks first, for example **Stop this session and continue in Terminal?** (or **Stop this session and continue as {login}?**), and warns when queued messages would be discarded. **Stop and switch** stops the session and moves it. See [Moving a session to another account](/kepler/agent-sessions#moving-a-session-to-another-account) and [How a session runs](/kepler/agent-sessions#how-a-session-runs).
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/switch-mode-confirm-oct-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/switch-mode-confirm-oct-2026.png" class="help-center-img img-bordered" alt="The Stop this session and continue in Terminal? dialog, warning that the session looks like it's still running and that switching stops it and resumes the conversation in Terminal, with a close button, Cancel and Stop and switch.">
+  </a>
+  <figcaption style="text-align:center; color:#888">Switching a running session to Terminal asks first.</figcaption>
+</figure>
 
 **Use another copy…** opens a dialog listing each saved copy of the conversation, when it was updated and how many messages it holds, with **In use** on the current one. Pick the one to continue when you resume. See [Agent Sessions](/kepler/agent-sessions).
 
@@ -337,6 +353,7 @@ The importer lists the agent conversations Kepler found outside it, under **Live
 | **Delete** | Close the focused tab, the way its **×** does |
 | **Cmd/Ctrl+Shift+T** | Reopen the last closed tab (tabs on) |
 | **Cmd/Ctrl+T** | New session, which opens a draft tab |
+| **Cmd/Ctrl+B** | Show or hide the context panel (the rail) |
 | **Cmd/Ctrl+J** | Show or hide the terminal drawer |
 | **Cmd/Ctrl+Shift+J** | Maximize the terminal drawer, opening it first if it's hidden |
 | **Cmd/Ctrl+O** / **Cmd/Ctrl+P** | **Open File…** / **Go to File…**. See [Opening a file](#opening-a-file) |
@@ -439,6 +456,8 @@ A path that's already one of the Task's files opens that file's own tab rather t
 </figure>
 
 A very large file shows its start first, labeled *Showing the first {shown} of {total}*, with **Load the rest**.
+
+**Review comments work in the file viewer too.** Hover a line for the gutter's **+** (**Comment on line {line}**) to leave a comment, the same way you do in the Changes overlay. The tab's actions then lead with the file's comment count and **Send comments**. Comments on a file in one of the task's worktrees are kept with that worktree, alongside the ones you write in its changes. A file outside the task's worktrees keeps them with the conversation you opened it from; opened any other way, including a tab restored after a reload, it reads *Open this file from a conversation to send comments*. See [Review comments](/kepler/review-changes#review-comments).
 
 **Open in** on the viewer's header is an icon button that opens the file in your pinned editor, or else the one you used last, with its chevron listing the rest. Your computer's default app is one of the targets, listed as **Default app**, and like any editor it can be pinned as your default with **Set as default**.
 
@@ -561,7 +580,7 @@ Shell tabs survive a Kepler update and come back after a restart. With **Keep ag
 
 | Resource | Details |
 |---|---|
-| **Worktree**, on disk | A strip of verbs (the branch, the sync control, **Open in**, **Run a command**) over its changed files, which lead into the Changes overlay. See [Review Changes](/kepler/review-changes) |
+| **Worktree**, on disk | A strip of verbs (the branch, the sync control, **Open in**, **Run a command**) over its changed files, which lead into the Changes overlay, plus a **Comments** view that lists the task's review comments with how many are open and unread. See [Review Changes](/kepler/review-changes) |
 | **Worktree**, missing | A metadata card instead: **Current branch**, **Base branch**, and the **Recorded path**, flagged **not on disk** or **gone** when it's been removed outside Kepler. A worktree that has gone stays bound to the Task, and Kepler offers to recreate it rather than quietly dropping it |
 | **Folder** | Path, plus an editable name and description |
 | **File** | The file itself, in the [file viewer](#opening-a-file), with its description, where it came from, and its size on the viewer's toolbar. **Rename** is in **File actions**, and an uploaded copy says it's a copy in the task folder |

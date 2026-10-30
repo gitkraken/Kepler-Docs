@@ -25,7 +25,7 @@ Kepler gives you several ways to start work, and the first is usually better: pi
 |---|---|
 | **Work assigned to you** | Fire an Action on an issue or pull request in the **Todo** segment of [the Kepler interface](/kepler/kepler-interface). One click, context attached |
 | **Something you're describing yourself** | **New task** opens the Task Composer, where you write the prompt and attach what it needs |
-| **A conversation you already started** | **Continue an external session**, under the Task Composer, wraps a task around an agent session you began in your own terminal |
+| **A conversation you already started** | **Open an external session**, under the Task Composer, wraps a task around an agent session you began in your own terminal |
 | **Another GitKraken app** | A link from GitLens or GitKraken Desktop opens Kepler on the work you were looking at |
 
 ***
@@ -89,11 +89,13 @@ The Composer is one prompt box above a row of four buttons:
 | Control | What it attaches |
 |---|---|
 | **Add repo or folder** | A repository to work in, or a plain folder |
-| **Add issue** → **Issues** | Issues from your connected trackers. With only Linear in the list, a team picker shows every open issue in the team you pick, not just yours |
+| **Add issue** → **Issues** | Issues from your connected trackers. With only Linear in the list, a team picker and a **Project** picker show every open issue in the team or Linear project you pick, not just yours |
 | **Add PR** → **PRs** | Pull requests from your connected hosts |
 | **Add context** | Everything without a button of its own: folders, files, and links |
 
-**Paste a link to attach it.** Paste a pull request or issue URL into the prompt, from a connected host or from Jira or Linear, and it becomes a chip naming the item. The chip attaches the item the same way **Add issue** or **Add PR** would, along with its repository.
+**Paste a link to attach it.** Paste a pull request or issue URL into the prompt, from a connected host or from Jira or Linear, and it becomes a chip naming the item. The chip attaches the item the same way **Add issue** or **Add PR** would, along with its repository, so a pull request from another repository launches in that repository, on its branch. If the repository isn't in Kepler yet, it's cloned when the Task starts.
+
+While Kepler works out where a link belongs, the repository chip reads **Finding {name}…**; remove it to stop looking. Picking a repository yourself takes precedence over the link's. If the link can't be read yet, the composer says *Unable to read {link}. Start will try again.* At **Start**, a link that still can't be read doesn't stop the Task: it starts with whatever was staged, and a notice says the agent has the link to pick up from there. Only when the link staged nothing does the Task not start (*Unable to read {link}, so the task wasn't started.*).
 
 In a window connected to another machine, picking a file through **Add context** also offers **Upload from this machine**. Uploads are kept with your draft and saved into the Task's own folder when it starts; if one expired before you pressed **Start**, Kepler names it rather than dropping it silently.
 
@@ -120,7 +122,7 @@ The chevron beside the primary button opens the rest: **Prepare**, which creates
 
 A Task that has its prompt but no session yet, such as one an agent created for you, says so in a draft session tab: *Start with the task prompt, or describe something else…*. To send the Task's prompt as written, press **Start** on the empty box.
 
-The Task appears in the list as soon as you press **Start**, before its worktrees exist. Until setup finishes, the row carries a **Preparing** pill, and the Task's panel shows its progress. Kep, the Kepler mascot, narrates each stage, such as **Fetching {repo}.**, **Making your worktree.**, **Starting {agent}.**, and **Opening the chat.**, above a list of the launch steps. Where Kep isn't shown, the panel lists the steps under **Getting your task ready** instead, such as *Cloning {repo}…* or *Setting up worktrees…*. **Cancel** stops a launch while a repository is still cloning.
+The Task appears in the list as soon as you press **Start**, before its worktrees exist. Until setup finishes, the row carries a **Preparing** pill, and the Task's panel shows its progress. Kep, the Kepler mascot, narrates each stage, such as **Reading {link}.**, **Fetching {repo}.**, **Making your worktree.**, **Starting {agent}.**, and **Opening the chat.**, above a list of the launch steps. **Reading {link}** comes first when a pasted link was still being read at **Start**, to find the repository and branch it belongs to; if it can't be read, the step shows *Unable to read {link}* as skipped and the launch carries on. Where Kep isn't shown, the panel lists the steps under **Getting your task ready** instead, such as *Reading {link}…*, *Cloning {repo}…*, or *Setting up worktrees…*. **Cancel** stops a launch while it's reading a link or cloning a repository.
 
 When the new branch is being updated from its base, the session area reads **Preparing branch**: *Updating from the base branch before the session starts.* Then, until the first session is ready, it reads **Starting your session**: *It opens here as soon as it's ready.*
 
@@ -185,13 +187,13 @@ Attaching the same repository twice gives the Task two independent worktrees on 
 
 ## From a session you already started
 
-You may have begun the work in a terminal before deciding it deserved tracking. Under the Task Composer, and on an empty Tasks list, **Continue an external session** flips the composer to a list of every agent conversation Kepler can see. **Start a new task** flips it back. It's there while external session detection is on.
+You may have begun the work in a terminal before deciding it deserved tracking. Under the Task Composer, and on an empty Tasks list, **Open an external session** flips the composer to a list of every agent conversation Kepler can see. **Start a new task** flips it back. It's there while external session detection is on.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/continue-external-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/continue-external-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The New task launcher flipped to Continue an external session: a Find an external session… search field over Past sessions, listing the Pi session Why do product search results miss items tagged in uppercase? in …/repositories/acme-web with Continue. Below the panel, Start a new task switches back to the composer.">
   </a>
-  <figcaption style="text-align:center; color:#888">Continuing an external session from the Task Composer.</figcaption>
+  <figcaption style="text-align:center; color:#888">Opening an external session from the Task Composer.</figcaption>
 </figure>
 
 | Part | What it does |
@@ -205,8 +207,7 @@ The list reports what it actually swept, rather than implying it found everythin
 Picking a conversation carries it on in a new task, reading *Opening in a new task…* while it does:
 
 - A past conversation resumes.
-- A live one that's idle in its terminal is taken over, after Kepler warns you to close it in your terminal first so that two clients don't write the same conversation.
-- A live one that's mid-turn can't be taken over yet. **Open it read-only** opens it to watch.
+- A live one opens read-only in its task, so you can follow it while it keeps running in your terminal. Picking it never takes the conversation over. Once it's idle, **Continue here** in the session carries it on in Kepler, after asking you to close it in your terminal first so that two clients don't write the same conversation; until then, **Continue here** and **Fork** stay shown but unavailable.
 
 ### When a task already covers that folder
 
@@ -264,7 +265,7 @@ If a link can't open on the machine it names, it opens on this computer instead,
 
 ### Opening an agent's own conversation
 
-A session link can name a conversation by the agent's own ID rather than Kepler's: `kepler://session?agent=<agent>&id=<conversation id>&cwd=<folder>`. The `agent` must be one of Kepler's built-in agents, and `cwd` is only a hint about where to look. If a Kepler session already holds that conversation, the link opens it. Otherwise Kepler adds the conversation to a task the way **Continue an external session** does. That needs external session detection: with detection off, the link reads **External sessions are not detected**: *Turn on detection to find that session in its agent.* A link with a required part missing reads **Part of this link is missing**.
+A session link can name a conversation by the agent's own ID rather than Kepler's: `kepler://session?agent=<agent>&id=<conversation id>&cwd=<folder>`. The `agent` must be one of Kepler's built-in agents, and `cwd` is only a hint about where to look. If a Kepler session already holds that conversation, the link opens it. Otherwise Kepler adds the conversation to a task the way **Open an external session** does. That needs external session detection: with detection off, the link reads **External sessions are not detected**: *Turn on detection to find that session in its agent.* A link with a required part missing reads **Part of this link is missing**.
 
 ***
 

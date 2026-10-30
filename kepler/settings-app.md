@@ -217,7 +217,19 @@ If a theme you already have uses the same id, Kepler asks before it replaces tha
 
 #### Themes in a remote window
 
-Themes belong to this computer, as your choice of theme does. Every window, including one connected to a remote environment, lists and installs themes in this computer's themes folder and gallery. In a window connected to another machine, the picker adds an **On {host}** group with that machine's themes that this computer doesn't have. Each one offers **Install {name} on this computer**, or **Update {name} from {host}** for a copy you installed from it earlier.
+Themes belong to this computer, as your choice of theme does. Every window, including one connected to a remote environment, lists and installs themes in this computer's themes folder and gallery. In a window connected to another machine, the picker adds an **On {host}** group with that machine's themes, compared with the copies on this computer:
+
+| The theme on {host} | The picker offers |
+|---|---|
+| Not on this computer | **Install {name} on this computer** |
+| A copy you installed from {host} earlier, changed since | **Update {name} from {host}**, which updates it at once |
+| A later version of your own copy | **Update {name} to {version} from {host}**, marked **Update to {version}** |
+| An earlier version of your own copy | **Replace {name} on this computer with the copy on {host}**, marked **Older than yours** |
+| A copy that differs from yours in another way | **Replace {name} on this computer with the copy on {host}**, marked **Differs from yours** |
+
+Updating or replacing your own copy asks first: **Update {name} to {version}?** or **Replace {name} on this computer?**. Your copy moves to the Trash (the Recycle Bin on Windows), and Kepler confirms *Your previous copy is in the {bin}.* Where Kepler can't use a Trash, the replace is blocked: *To use this version, remove the copy on this computer first*. A host update to your own copy also shows on its tile in **Your themes**.
+
+Kepler's background theme sync never overwrites a copy you installed from the picker. When the host's copy changes, the picker offers the update instead, and it waits until you choose it.
 
 ### Chat
 
@@ -374,6 +386,7 @@ The **General** group holds app-wide shortcuts:
 |---|---|---|
 | Open settings | ⌘ , | Ctrl + , |
 | Toggle Ask Kepler chat | ⌘ L | Ctrl + L |
+| Toggle Ask Kepler chat | ⌘ K | Ctrl + K |
 | Toggle Ask Kepler terminal | ⌃ ` | Ctrl + ` |
 | New task | ⌘ N | Ctrl + N |
 | Open quick launcher (global) | ⇧ ⌥ N | Shift + Alt + N |
@@ -405,6 +418,7 @@ The **Navigation** group moves you between tabs and regions:
 | Move tab right | ⌘ ⌥ ] | Ctrl + Alt + ] or Ctrl + Shift + PageDown |
 | Close tab or panel | ⌘ W | Ctrl + W or Ctrl + F4 |
 | Toggle terminal | ⌘ J | Ctrl + J |
+| Dock or hide the task list or context panel | ⌘ B | Ctrl + B |
 | Next region | F6 | F6 |
 | Previous region | ⇧ F6 | Shift + F6 |
 
@@ -428,6 +442,7 @@ The **Dashboard** group works on the Dashboard's tasks and detail panels:
 | Maximize panel terminals | ⌘ ⇧ J | Ctrl + Shift + J |
 | Show or hide changes in detail panel | ⌘ ⇧ G | Ctrl + Shift + G |
 | Switch detail panels between columns and grid | ⌘ ⇧ L | Ctrl + Shift + L |
+| Show the task list floating over the panels, or hide it | ⌘ ⇧ B | Ctrl + Shift + B |
 | Show or hide resources in detail panel | ⌘ ⇧ E | Ctrl + Shift + E |
 | Find in dashboard | ⌘ F | Ctrl + F |
 
@@ -490,6 +505,7 @@ Some keys do different things depending on where you are:
 - **⌘ 1**, **⌘ 2**, and **⌘ 3** focus a detail panel on the Dashboard but a column on the task page.
 - **⌃ Tab** switches detail panels on the Dashboard and sessions on the task page.
 - **⌘ ⇧ J** maximizes the panel's terminals on the Dashboard and the terminal drawer on the task page.
+- **⌘ B** shows or hides the changes panel in the Changes view, docks or hides the task list on the Dashboard, and docks or hides the context panel on the task page.
 - **⌘ P** filters changed files in the Changes view and opens **Go to file** elsewhere.
 - **⌘ F** finds in the Dashboard from its list or header, finds in a file or diff in a code view, and finds in the conversation elsewhere.
 - **⌘ ⇧ G** shows or hides changes in a Dashboard detail panel, and, on macOS, moves to the previous match in a code view.
@@ -497,7 +513,7 @@ Some keys do different things depending on where you are:
 
 Kepler registers **Open quick launcher** with the OS, so it works while Kepler is in the background. Its row carries a **Global** badge. **Quit**, **Ctrl + F4**, and the **PageUp** / **PageDown** tab keys are Windows and Linux shortcuts only. Kepler hides those rows on macOS, which quits through the native **⌘ Q** menu role. **Close tab or panel** works only in the desktop app.
 
-On Windows and Linux, a focused terminal keeps **Ctrl + W** and **Ctrl + L** for the shell. **Ctrl + `** always toggles the Ask Kepler terminal, even from a terminal.
+On Windows and Linux, a focused terminal keeps **Ctrl + W**, **Ctrl + L** and **Ctrl + B** for the shell. **Ctrl + K** is the way to toggle the Ask Kepler chat from a terminal: the shell gives it up. **Ctrl + `** always toggles the Ask Kepler terminal, even from a terminal.
 
 **Back** and **Forward** are split by platform on purpose. **Alt + ←** is the Windows and Linux convention but moves by word on macOS, and **⌘ [** is the macOS convention (Safari, Finder) but not the Windows one. Holding either walks the history.
 

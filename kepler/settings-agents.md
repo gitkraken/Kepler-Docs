@@ -19,7 +19,9 @@ taxonomy:
 ---
 <kbd>Last updated: October 2026</kbd>
 
-*The coding agents that work on your tasks: install them, sign in, choose how you work with each, and give them more tools.* The page opens with a line that names your default agent, *New tasks use {agent}.*, and a **Change in Tasks** link to [Default agent](/kepler/settings-tasks#default-agent).
+*The coding agents that work on your tasks: install them, sign in, choose how you work with each, and give them more tools.* The page opens with a line that names your default agent, *New tasks use {agent}.* (or *No default agent for new tasks.*), and a **Change in Tasks** link to [Default agent](/kepler/settings-tasks#default-agent).
+
+Under it, the **Ask Kepler uses** row picks the **Ask Kepler default agent**, separate from the one for tasks: *Used when Ask Kepler has no earlier pick to go on and whenever you choose Use default agent there.* It lists only the agents that can answer in the Ask Kepler panel, which are those that run in **Chat**. If the agent you picked stops being available, the row says *Pick another agent for Ask Kepler: {name} is not available.* See [Ask Kepler](/kepler/ask-kepler#which-agents-can-answer).
 
 The Agents page has six sections: **Your agents**, **Custom agents**, **MCP servers**, **Agent tools**, **Approvals**, and **Usage limits**.
 
@@ -121,7 +123,7 @@ The following setting is on Claude Code's card:
 |---|---|---|
 | **Let artifact comments start turns** | Anyone with edit access to an artifact a Chat session publishes can start a turn in that session by sending a comment to Claude. A reply is posted automatically | On |
 
-Running sessions keep the value they started with. When you change it, the card lists the sessions still using the previous value, marking those that **Published an artifact** or have a **Turn in progress**, with **Restart all** and **Restart selected ({count})**. Restarting keeps each conversation. A turn in progress is interrupted, and a restarted session stops watching artifacts it published before.
+Running sessions keep the value they started with. When you change it, the card lists the sessions still using the previous value, marking those that **Published an artifact**, have a **Turn in progress**, or have **Background work running**, with **Restart all** and **Restart selected ({count})**. A session that is mid-turn or has background work starts unticked. Restarting keeps each conversation. A turn in progress is interrupted and background work stops, and a restarted session stops watching artifacts it published before.
 
 ## Custom agents
 
@@ -181,13 +183,13 @@ Every workspace tool runs without the agent's own permission prompt, in Chat and
 | **AI Sync** | *Lets agents rebase or merge your branch and resolve conflicts for you. Every change can be undone.* | Off |
 | **AI Compose** | *Lets agents turn messy changes into clean, focused commits. Every change can be undone.* | Off |
 
-**AI Sync** and **AI Compose** add their tools to the workspace MCP server. Both require a paid GitKraken subscription. On the Community plan, they show a lock: *Not available on the Community plan. Upgrade to unlock.* Turning either on confirms that *New agent sessions will pick up this change.* Sessions already running keep the tools they started with.
+**AI Sync** and **AI Compose** add their tools to the workspace MCP server. Both require a paid GitKraken subscription to turn on. On the Community plan, when you're signed out, or with no organization, a setting that is off shows a lock in place of its checkbox: *Not available on the Community plan. Upgrade to unlock.* A setting that is already on keeps its checkbox, so you can still turn it off. Turning either on confirms that *New agent sessions will pick up this change.* Sessions already running keep the tools they started with.
 
 ## Approvals
 
 *Some actions your agents take wait for your approval. These rules approve them for you; anything not covered still asks.*
 
-When an agent asks, through Kepler's workspace tools, to do something that needs your say, Kepler pins an approval card above that session's message box. Examples include deleting a worktree, sending a prompt to another session, or rewriting a branch. The card's **Approve** menu offers **Always approve** for that kind of action. Kepler doesn't offer it for actions that can lose work. See [Agent Sessions](/kepler/agent-sessions).
+When an agent asks, through Kepler's workspace tools, to do something that needs your say, Kepler pins an approval card above that session's message box. Examples include deleting a worktree, sending a prompt to another session, or rewriting a branch. The card's **Approve** menu offers **Always approve** for that kind of action. Kepler doesn't offer it for actions that can lose work, or for a setting change that Ask Kepler asks to make. See [Agent Sessions](/kepler/agent-sessions).
 
 Each rule you create this way is listed under **Always approved**. A rule's row says when and where you added it, *Added {date} from {session} on {task}.*, and how often it has run, *Used {count} times, last {when}.* or *Not used yet.* **Remove** deletes the rule, so that kind of action asks again. With no rules, the section reads *No rules yet. When an agent asks, choose Always approve on its request to stop being asked about actions like it.*
 

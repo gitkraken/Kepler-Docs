@@ -240,12 +240,14 @@ Beyond this list, you'll find a task's own page, Settings, and remote connection
 - Your setup progress, only until the primary setup steps are done
 - The remote indicator, the environment chip for the machine this window works on
 - **Remote Access**, a monitor-and-phone button whose colour shows whether Remote Access is on. Hover it to turn Remote Access on or off and, while it's on, scan its QR code or copy its link. See [Remote access](/kepler/remote-environments#remote-access-reach-kepler-from-another-device).
-- **Ask Kepler** (**Cmd/Ctrl+L**), which opens a chat and quick terminals in a panel beside the page. See [Ask Kepler](/kepler/ask-kepler).
+- **Ask Kepler** (**Cmd/Ctrl+L** or **Cmd/Ctrl+K**), Kep with the word **Ask**, which opens a chat and quick terminals in a panel beside the page. See [Ask Kepler](/kepler/ask-kepler).
 - Feedback
 - Settings
 - Your account
 
 The guided first-run flow owns the whole window, so Kepler doesn't draw the top bar there.
+
+The **Ask Kepler** button also reports on the panel's chats. When one needs you, has a new reply, or failed, the button becomes a **Needs you**, **New reply**, or **Failed** pill that opens that chat. A focused shell keeps **Ctrl+L** but gives up **Ctrl+K**, and a narrow window shows Kep alone. See [Ask Kepler](/kepler/ask-kepler).
 
 While an update downloads, a chip in the trailing cluster shows its progress as a ring and a percentage. Hover it for **Downloading update** (then **Verifying update**), the version, how much has arrived and about how long is left, and *Keep working. Kepler will let you know when the update is ready to install.*
 
@@ -259,13 +261,34 @@ Menu items and button tooltips show a command's keyboard shortcut beside it, whe
 
 ### The window switcher
 
-**Windows** in the top bar lists every open Kepler window and what its agents are doing, so you don't have to go and look. Its trigger carries the reason to: **Windows · {count} waiting elsewhere**, or **{count} running elsewhere**. **This window** marks the one you're in, and **New window** (**Cmd/Ctrl+Shift+N**) opens another on the same connection as the window you're in. From a remote window, **New local window** opens one on this computer instead. The same list is on the tray icon.
+**Windows** in the top bar lists every open Kepler window and what its agents are doing, so you don't have to go and look. Its trigger carries the reason to: **Windows · {count} waiting elsewhere**, or **{count} running elsewhere**. **This window** marks the one you're in, and **New window** (**Cmd/Ctrl+Shift+N**) opens another on the same connection as the window you're in. From a remote window, **New local window** opens one on this computer instead. The same list is on the [tray icon](#the-tray-icon).
 
 Each window's own title leads with the remote it's connected to and how many of its sessions are waiting on you. Each window keeps its own layout, and if you close the last window while Kepler keeps running, the next one opens where that window was.
 
+### The tray icon
+
+Kepler's icon in the system tray (the menu bar on macOS) shows the most urgent thing your agents are doing, even with no window open. It counts every agent session Kepler runs on this computer, and on each remote machine an open window is connected to, at one level each, most urgent first:
+
+| Level | Which sessions |
+|---|---|
+| Needs your answer | Waiting on your answer or on an approval |
+| Failed | A turn that ended in an error and that you haven't opened |
+| Finished | A finished turn you haven't read |
+| Working | Running a turn |
+
+Idle sessions, sessions started outside Kepler, plain terminals, and archived sessions aren't counted, and neither is a session whose only work is a background task.
+
+Hover the icon for a status line under the app's name, such as *2 agents need your answer, 1 failed, 3 working*, or *No agents running*. On macOS a count of the agents that want a look (waiting, failed, or finished) sits beside the icon, in red while any is waiting or failed. The icon follows your taskbar's light or dark theme on Windows and the system theme on Linux.
+
+Click the icon (on Windows and Linux) to open the window that needs you: the one you used last among those on the machine with the most urgent agent, or else the window you used last. Its menu holds:
+
+- **Open Kepler**
+- **Windows**, a submenu with **New Window**, **New Local Window** when the window you used last is remote, and every open window, with a check beside the one you used last
+- **Quit** and **Quit & End Sessions**
+
 ### New task
 
-**New task** (**Cmd/Ctrl+N**) opens the Task Composer. To start a task from a conversation you began outside Kepler, use **Continue an external session** in the composer. See [Create a Task](/kepler/create-task#from-a-session-you-already-started).
+**New task** (**Cmd/Ctrl+N**) opens the Task Composer. To start a task from a conversation you began outside Kepler, use **Open an external session** in the composer. A session that's still live in its terminal opens read-only in its task; **Continue here** and **Fork** wait until it's idle. See [Create a Task](/kepler/create-task#from-a-session-you-already-started).
 
 ***
 
@@ -299,7 +322,7 @@ To populate the Todo tab, first connect at least one provider. See [Issue Tracke
 
 ### External sessions
 
-Todo lists only issues and pull requests. Agent conversations running outside Kepler no longer have a section of their own in the list, and they don't open as panels. To pick one up, open **New task** and use **Continue an external session** in the Task Composer. See [Create a Task](/kepler/create-task#from-a-session-you-already-started).
+Todo lists only issues and pull requests. Agent conversations running outside Kepler no longer have a section of their own in the list, and they don't open as panels. To pick one up, open **New task** and use **Open an external session** in the Task Composer. See [Create a Task](/kepler/create-task#from-a-session-you-already-started).
 
 For what those sessions are and what you can do with one, see [Agent Sessions](/kepler/agent-sessions#sessions-started-outside-kepler).
 
@@ -317,6 +340,7 @@ Each row shows, left to right:
 - A type badge (Issue or PR) with the reference (issue key or PR number)
 - The title
 - Your role on a pull request
+- A **Task** badge (or **{count} tasks**) when tasks were already started from the item, or **Archived task** (**{count} archived tasks**) when every one of them is archived
 - The repository
 - A status pill
 - Any session activity: the session dots of the task linked to the item, and that task's running terminals
@@ -327,6 +351,8 @@ Each row shows, left to right:
 Hover the people for one card that names everyone on the item and where each reviewer's review stands.
 
 An issue that's on your list only because it mentions you carries a muted **Mentioned** badge, so you can tell it apart from work assigned to you.
+
+A Linear issue that's synced with a GitHub issue shows once, as the Linear row, when both copies are listed. The two copies share one task history, so a task started from either one counts as the issue's task, and a task started from the Linear row works in the GitHub copy's repository. Filter the list down to GitHub and the GitHub copy shows on its own.
 
 When a provider fails to load, Kepler keeps showing the rows from its last successful load and marks each one's provider chip with a dashed outline and a crossed-out cloud. Hover the chip for *Not refreshed: shown from the last successful {provider} load.*
 
@@ -356,6 +382,7 @@ Task rows show:
 - The title
 - The repository, or every repository when the task spans several (*app, api +2* beyond two)
 - The task's pull request and issue as chips, each with its state, and *+N* when there are more
+- Its group, when it's in one and the list isn't already grouped by your groups: a coloured bar in the row's gutter on the **List** layout, or a chip after the title on a **Board** card
 - A progress control
 - What the task needs from you
 - Session activity, and a pill for its running terminals
@@ -371,6 +398,10 @@ The needs cell gives one reason, the most pressing first:
 - **New reply**
 
 A task with a terminal waiting on you shows its title in bold, like one with a session waiting. The terminals pill draws a square for each running shell and a triangle for each running repository command, in the session-state colours. Hover it for **Open terminals**, or click it to open the most urgent terminal. Click the session dots to open the most urgent session.
+
+Hover a pull request or issue chip for the same card its chip shows in the task's panel, and click the chip to keep the card open; clicking it doesn't select the row. When the task has more than one link of that kind, the card lists them all under **Pull requests** or **Issues**, and choosing one shows its card. Right-click the chip for the link's menu.
+
+A board card's group chip, **Group: {name}**, sums up the group's tasks on hover, such as *4 tasks: 1 needs you, 2 running*. Click it for **Open group**, **Show only this group**, **Group by your groups** (or **{axis} within your groups**), and **Remove from group**. See [Arranging Your Work](/kepler/arranging-your-work).
 
 A Done task that's ready to archive also gets an **Archive task** button on its row. When the list is narrow, each row folds onto two lines: the title and time on top, and the rest below.
 
@@ -392,6 +423,10 @@ The task's own operations sit behind the **⋮** menu, and on a right-click:
 - **Shut down all agents**
 - **Archive task**, or **Restore task** when the task is already archived
 - **Delete task**
+
+**Act on several tasks at once.** Open two or more tasks with **Shift-click** or **Cmd/Ctrl-click** (see [Open a panel](#open-a-panel)), then right-click any of them. The menu acts on the whole selection, with each label counted: **New group with {count} tasks…**, **Add {count} tasks to group**, **Remove {count} tasks from group**, **Archive {count} tasks**, **Restore {count} tasks**, and **Delete {count} tasks**. Only the rows that apply are shown, and archived tasks sit out of grouping. The rows the menu acts on are outlined until it closes. **Archive**, **Restore**, and **Delete** ask first, with the same confirmation as a section's **Select** bar. Right-clicking a task outside the selection, or using a row's **⋮**, acts on that task alone.
+
+Dragging a task in the selection carries the whole selection, to another section or column or, under **Manual** sort, to a new place in the list. Press **Escape** to cancel. Each task goes only where it can, and Kepler says how many moved and how many stayed where they were.
 
 Task rows deliberately have no reference column and no Action button. A task's reference is the head of its identifier and names nothing you'd recognize, so the title takes that cell instead. Firing an Action from a *Todo* row is how an untracked issue or pull request becomes a task in the first place; you manage a task that already exists from its **⋮** menu.
 
@@ -423,11 +458,13 @@ This shows what the *agents* are doing, a separate question from where the work 
 - **Unread**
 - **Waiting**
 - **Error**
-- **Working in background**
+- **Background task running**
 - **Reconnecting**
 - **Ended**
 
 A waiting session also says what it's waiting on: **Permission**, **Question**, **Plan review**, or **Prompt not sent**. A session with a Kepler approval request nobody has answered counts as waiting, even while its agent keeps working, and reads **Approval needed** (or **Approval needed, destructive**). A live session resting after a failed turn, such as a rate limit, an exhausted quota, or an overloaded agent, reads **Error**.
+
+A session whose turn ended while something it started keeps going in the background, such as a shell or a monitor, reads **Background task running**. It's drawn idle (a grey dot with a green ring that doesn't pulse), has its own count in the hover card rather than joining **Running**, and doesn't keep the machine awake. See [Agent Sessions](/kepler/agent-sessions).
 
 A dormant session draws as an outline rather than a filled dot. Hover the dots for a card titled with the number of agent sessions, then a count of each state, most urgent first; a state held by only one session names it. A dormant session is marked *(ended)*, as in *2 Waiting (ended)*.
 
@@ -489,7 +526,17 @@ Starting a task from **New task** while you're on the list opens the new task as
 
 When the list reorders under you (a session finishes, or a task moves bucket), the row you have selected glides to its new position rather than jumping, so you can see where it went.
 
-**Open several at once.** **Open all**, in the controls strip (or in **Options** when the window is narrow), opens every listed row in panels, up to the panel limit. Each section's header has the same button for that section alone, **Open all {count} in this section in panels**. When not everything fits, the button reads **Open {opened} of {total} in panels**, and Kepler tells you how many didn't fit.
+**Open several at once.** Each section's header has a button that opens that section's rows in panels, up to the panel limit: **Open all {count} in this section in panels**. When not everything fits, the button reads **Open {opened} of {total} in this section in panels**, and Kepler tells you how many didn't fit. A group's chip offers **Open group** for its tasks. There's no longer an **Open all** for the whole list.
+
+**Hide the list.** With at least one panel open, the toggle at the start of the Dashboard header, **Hide list** (**Cmd/Ctrl+B**), takes the list away so the panels get the full width. With no panel open, the toggle is locked: *Open a task to hide the list*. While the list is hidden:
+
+- Hover the toggle, now **Dock list**, to see the list float over the panels as the **Task list** (or **Todo list**). **Cmd/Ctrl+Shift+B** shows the floating list or hides it again.
+- Click a row in the floating list to open it. The list closes and focus moves into that panel; **Escape** closes the list while focus is in it.
+- Drag the floating list's edge (**Resize list**) to resize it, and double-click the edge to reset it.
+- When a task the hidden list holds needs you and has no panel open, the toggle carries its status dot and reads **Dock list ({status})**.
+- **Dock list**, or **Cmd/Ctrl+B** again, brings the list back beside the panels.
+
+A hidden list always uses the **List** layout. Kepler remembers per window whether the list is hidden and how wide it floats. **Cmd/Ctrl+B** works from a terminal on macOS only; on Windows and Linux a focused shell keeps **Ctrl+B**.
 
 ### Lay panels out in a grid
 
@@ -528,7 +575,7 @@ Kepler does not draw a section that has nothing behind it.
 | Section | What's in it | When it's there |
 |---|---|---|
 | **Summary** | The issue or pull request description, with its labels shown as badges. You can select and copy the description text | An issue or pull request that has a description. Tasks carry none of their own |
-| **Related ({count})** | Linked issues and pull requests, counted in the heading so a folded pane still says how many | There's at least one |
+| **Related ({count})** | Every task ever linked to the issue or pull request, archived ones included, counted in the heading so a folded pane still says how many. Click a live task to open it in the panel, or an archived one to open its task page without restoring it | An issue or pull request with at least one linked task; a task shows its own pull requests and issues as chips instead |
 | **What's running** | Session tabs and draft session tabs. A session tab holds the live agent conversation; a draft tab holds a prompt box plus the same Actions. This is the chat | Always, on an item you can start work on. Resizable, but not foldable: it's what the panel is for |
 | **Plan** | The plan the conversation on screen has proposed | The agent produced one |
 | **Changes** | The checkout's commits, working changes, and file diffs, in the [side pane](#the-side-pane) | You opened a worktree's changes from its pill |
@@ -562,7 +609,7 @@ The header carries:
 - **Close panel** (**Cmd/Ctrl+W** on the focused panel)
 - **Panel actions** (**⋮**): **Close panel**, **Open task page**, **Open on {provider}** for an issue or pull request, **Pin panel**, **Maximize panel**, **Move panel left**, **Move panel right**, **Close other panels**, and **Close all panels**. On a task, these rows join its **Task actions** menu. **Maximize panel**, the moves, and the two close-many rows appear only once more than one panel is open
 
-Each pull request, issue, or artifact linked to a task has a chip under the header; hover one for its card, or click it to read it in the side pane. A pull request whose branch name was used before reads *Opened from an earlier branch with the same name*. The **Resources** chip lists the task's notes, files, folders, and links, plus a **Related tasks** group, and every row opens in the side pane.
+Each pull request, issue, or artifact linked to a task has a chip under the header; hover one for its card, or click it to read it in the side pane. A pull request whose branch name was used before reads *Opened from an earlier branch with the same name*. The **Resources** chip opens the task's **Resources** list in the [side pane](#the-side-pane), or closes it.
 
 Hover a task's title to read its prompt, cut off after 10 lines, with the hint *Double-click to rename*. To copy the whole prompt, use **Copy task prompt** in the **⋮** menu. The prompt is a context item of its own, labelled **Prompt**, shown first among the task's notes in the card, the preview, and the task page's rail, and it can't be deleted.
 
@@ -573,15 +620,17 @@ To rename a task, double-click its title, choose **Rename task** from its **⋮*
 A task panel reads its linked items, resources, and changes in a **side pane**, so you don't have to leave the list for the task page. These open in it:
 
 - A linked pull request or issue chip
-- A row of the **Resources** chip: a note, a file, a folder, a related task, or the task's links as one list
+- The **Resources** list, from the **Resources** chip, and any row in it
 - The uncommitted or commits chip on a worktree pill
+
+The **Resources** list holds everything the task carries, in the order of the header: **Pull requests** (those that need your action first, with *Checks failing* where they are), **Issues**, notes, files, folders, links, and **Related tasks**. Each group's heading folds it, and a folded **Pull requests** heading still says how many need your action. Rows have a **⋮** menu, and a link row has **Open in browser**. With nothing in it, the list reads *Keep notes, files and links with this task.* with **Add resource…**.
 
 When the panel is at least 960 pixels wide, the pane opens beside the sessions. Drag its edge (**Resize side pane**) to resize it, and close it with **Close side pane** or **Escape**. In a narrower panel, the pane takes the sessions' place, with **Back to sessions** to return. The pane shows the same view of the item as the task page does.
 
-Click the same chip again to close the pane. The switcher in the pane's title row moves between the task's linked items and resources without closing it. Two shortcuts toggle it on the focused panel:
+Click the same chip again to close the pane. The switcher in the pane's title row moves between the task's linked items and resources without closing it, and its menu starts with **All resources** and ends with **Add resource…**. Two shortcuts toggle it on the focused panel:
 
 - **Cmd/Ctrl+Shift+G** shows or hides the worktree's changes.
-- **Cmd/Ctrl+Shift+E** shows or hides the last resource the panel showed.
+- **Cmd/Ctrl+Shift+E** shows or hides the **Resources** list, even when the task holds nothing yet.
 
 Kepler remembers the open pane for each item and the pane's width for each window.
 
@@ -595,9 +644,9 @@ An issue you open in a side pane, or on the task page, shows its discussion unde
 
 Comments work for GitHub, GitHub Enterprise, GitLab, GitLab Self-Hosted, Jira, and Jira Server issues. For other providers, when you're signed out, or when the connected account can't read the issue's comments, the section says so instead. Kepler shows comments to you; it doesn't hand them to the agent as task context.
 
-The header folds down to its title row with the chevron beside it, for a task, a pull request, or an issue. A folded pull request still shows its number and review decision. Each segment remembers its own fold.
+The header folds down to its title row with the chevron beside it, for a task, a pull request, or an issue. A folded pull request still shows its number and review decision. A folded task header shows a row of glyphs for the task's changes, pull request, issue, and resources. Each one opens its view in the side pane (**Show changes**, **Show pull request**, **Show issue**, **Show resources**) and reads as pressed while that view shows: the changes of the worktree on its pill, the pull request that asks the most of you, the unfinished issue updated last, or the **Resources** list. In the tightest panels they fold into one paperclip that opens the **Resources** list. Each segment remembers its own fold.
 
-A Done task with no unpushed work and no agent working or waiting on you shows *Ready to archive?* in its header. See [Arranging Your Work](/kepler/arranging-your-work).
+A Done task with no unpushed work and no agent working, waiting on you, or keeping background work alive (such as a dev server) shows *Ready to archive?* in its header. See [Arranging Your Work](/kepler/arranging-your-work).
 
 An archived task reads **Archived** where its progress control would be, in both its preview and its detail header, so you can't mistake a filed task for a live one.
 
@@ -646,7 +695,7 @@ Back follows one rule: **it leaves the place or mode you're in.** It never retra
 
 The **Back** and **Forward** buttons in the top bar do the same, as do a mouse's side buttons. On macOS, a two- or three-finger sideways swipe on a trackpad or Magic Mouse goes back and forward too, wherever nothing under the pointer scrolls sideways. A sideways scroll or a mouse's tilt wheel never goes Back on Windows and Linux, so a stray scroll can't throw you out of what you were reading.
 
-Each set of open panels gets its own history entry, so Back closes the set you just opened rather than the whole visit. Moving between Settings sub-pages replaces a single entry, so Back from Settings returns you to what you were doing before you opened it.
+Each set of open panels gets its own history entry, so Back closes the set you just opened rather than the whole visit. Each Settings page you open gets its own entry too, so Back walks through the Settings pages you visited. To leave Settings in one step, use the back arrow in the Settings header, which returns you to what you were doing before you opened it.
 
 ***
 
@@ -654,7 +703,7 @@ Each set of open panels gets its own history entry, so Back closes the set you j
 
 | What you see | What it means |
 |---|---|
-| **Your agents' work lives here** | You have no tasks. **Tasks in progress** shows the Task Composer, with hints to add an issue, a pull request, or a repository or folder, to start from a saved Action, or to **Continue an external session**. After the guided setup it reads *You're set up* above the heading |
+| **Your agents' work lives here** | You have no tasks. **Tasks in progress** shows the Task Composer, with hints to add an issue, a pull request, or a repository or folder, to start from a saved Action, or to **Open an external session**. After the guided setup it reads *You're set up* above the heading |
 | **No tasks yet** | The Tasks list is empty |
 | **No assigned PRs or issues** | Providers are connected, but nothing related to you is open. Hover **Related to me** for what Todo lists |
 | **Nothing matches your search** | Your search, with or without filters, excludes everything. On Todo it adds *Todo only searches work related to you.* Use the button beneath it: **Clear search** or **Clear search and filters** |
@@ -689,9 +738,9 @@ Kepler has one interface rather than a set of views, so you shape it instead of 
 
 This page assumes you know what's on screen; see [The Kepler Interface](/kepler/kepler-interface) for that.
 
-Two more controls sit in the strip. **Open all** opens every listed row in panels, and **Panel layout** lays open panels out side by side (**Columns**) or in a **Grid**. See [Open a panel](/kepler/kepler-interface#open-a-panel). **Group** and **Sort** open as menus that grow to fit the window, so a long list of groupings is never cut off.
+One more control sits in the strip: **Panel layout** lays open panels out side by side (**Columns**) or in a **Grid**. See [Open a panel](/kepler/kepler-interface#open-a-panel). The strip has no button that opens every listed row; to open many at once, use a section header's own open button, or **Open group** on one of [your groups](#your-groups). **Group** and **Sort** open as menus that grow to fit the window, so a long list of groupings is never cut off.
 
-When the window is too narrow for the whole strip, **Group**, **Sort**, **Filter**, the layout switch, **Panel layout**, and **Open all** fold into a single **Options** button, followed by the saved views and finally the search box. A count on **Options** says how many searches and filters are still narrowing the list, so a narrowed list never hides behind a closed popover.
+When the window is too narrow for the whole strip, **Group**, **Sort**, **Filter**, the layout switch, and **Panel layout** fold into a single **Options** button, followed by the saved views and finally the search box. A count on **Options** says how many searches and filters are still narrowing the list, so a narrowed list never hides behind a closed popover.
 
 ***
 
@@ -706,7 +755,9 @@ The **View** control decides how Kepler draws the list.
 
 **List** is the default, and each segment remembers its own choice across restarts, so Todo can stay a list while Tasks in progress stays a board. Both layouts respect the grouping and filters below.
 
-**Board** draws the sections of the *current* grouping as columns side by side, so what the columns are is up to the **Group** control. Grouped by **Progress**, the columns are the lifecycle stages: **Exploration**, **In Development**, **In Review**, and **Done**. They stay put as work moves between them rather than appearing and vanishing under the pointer, and an empty one reads **Nothing here**. **On hold** and **Archived** are the exceptions: each appears when something is filed there, and both appear while you drag a card so you can drop onto them. On every other grouping, Kepler doesn't draw a section with nothing in it.
+**Board** draws the sections of the *current* grouping as columns side by side, so what the columns are is up to the **Group** control. Grouped by **Progress**, the columns are the lifecycle stages: **Exploration**, **In Development**, **In Review**, and **Done**. They stay put as work moves between them rather than appearing and vanishing under the pointer, and an empty one reads **Nothing here**. **On hold** and **Archived** are the exceptions: each appears when something is filed there, and both appear while you drag a card so you can drop onto them. On every other grouping, Kepler doesn't draw a section with nothing in it, except your own groups, which stay as places to drop a task.
+
+With **Your groups** on and another grouping chosen, the **Board** becomes a grid: one lane per group, running down the side, and the grouping's sections as columns across every lane. See [Your groups](#your-groups).
 
 Every column on the board shares one width. Drag the gap after any column to resize them all at once, or focus it and use the arrow keys, with **Home** and **End** for the narrowest and widest. Double-click the gap to return to the default width. Each segment remembers its own column width. When a column has more to load, **Load more** sits at its foot. From the keyboard, **←** and **→** cross to the nearest column with a card.
 
@@ -735,7 +786,9 @@ The available groupings differ by segment.
 | Segment | Group by | Default |
 |---|---|---|
 | **Todo** | Type, Needs my attention, Priority, Age, Your role, Assignee, Provider, Repository, Status, None | Type |
-| **Tasks in progress** | Inbox, Progress, Activity, Repository, None | Inbox |
+| **Tasks in progress** | Inbox, Progress, Activity, Repository, None, and the **Your groups** switch above them | Inbox |
+
+On **Tasks in progress**, the **Your groups** switch at the top of the menu files tasks under groups you make yourself, alone or with another grouping inside each group. See [Your groups](#your-groups).
 
 ### Inbox
 
@@ -806,17 +859,69 @@ On Todo, **Status** groups issues by their tracker's own workflow state, such as
 
 Items with no repository or provider collect under **No repository** and **No provider**. A pull request whose provider didn't say who authored it groups under **Unattributed**; an issue, which has no author-or-reviewer axis at all, groups under **Not applicable**.
 
+### Your groups
+
+The other axes sort tasks by what Kepler can see. A group is your own filing: a name and a color you give to tasks that belong together, such as the tasks for one feature or one release. A task sits in one group at a time, and groups belong to the **Tasks in progress** segment.
+
+**Create a group.** The **New group** form asks for a **Group name** and a **Color**, one of eight: **Gray**, **Blue**, **Pink**, **Yellow**, **Green**, **Purple**, **Cyan**, and **Orange**. It starts on the color your groups use least, so new groups tell apart without your picking. Choose **Create group** to save it. A group needs a name (*Give the group a name*), and two live groups can't share one, whatever the case (*A group with this name already exists*). An archived group's name is free to reuse. What you type survives pressing **Escape** or clicking away until you close the window, so a half-named group isn't lost; only **Cancel** or saving clears it.
+
+**Put tasks in a group.** There are four ways in:
+
+- **From a task's menu.** A task's **⋮** and right-click menus, on the dashboard and on the task page, carry **Add to group**. Its submenu lists your groups with their colors, the task's current group checked, then **New group…**, which opens the form with this task already in it, and **Remove from group** for a task that has a group. A task with sub-tasks also offers **Group with its {count} sub-tasks**, which opens the form named after the task with the task and its sub-tasks in it.
+- **By dragging one task onto another.** Rest a dragged task on another task for half a second and a pill appears on the task underneath: **Create group** when that task has no group, or **Add to {group}** in its group's color. Drop on the pill. **Create group** opens the form with both tasks in it and the other task's title as the name. The pill needs a pointer; from the keyboard, use the menu.
+- **From a selection.** Right-click inside a selection of two or more tasks for **New group with {count} tasks…**, **Add {count} tasks to group**, and **Remove {count} tasks from group**. See [Act on several tasks at once](#act-on-several-tasks-at-once).
+- **By dropping into a group's section.** With the list grouped by your groups, drag a task into another group's section to move it there, or onto **Ungrouped** to take it out of its group.
+
+An archived task can't join a group until you restore it.
+
+**See a task's group.** Under any grouping, a task in a group wears its group's color: a bar in the left edge of a **List** row, or a chip with the group's name after a **Board** card's title. Hover it for the group's name and a summary (*3 tasks: 1 needs you, 2 unread*). Press it to open the group's menu without opening the task:
+
+| Item | What it does |
+|---|---|
+| **Open group** | Opens every live task in the group in panels. Offered when the group has more than one |
+| **Show only this group** | Sets the **Group** filter to this group |
+| **Group by your groups** | Turns on the **Your groups** switch, keeping the current grouping inside each group |
+| **Remove from group** | Takes this task out of the group |
+| **Edit group…**, **Archive group**, **Delete group…** | Act on the group itself, as from its header (below) |
+
+**Group the list by your groups.** Turn on the **Your groups** switch in the **Group** menu. The line under it says what you'll get:
+
+- **With None chosen** (*Shows a section per group*), each group is a section, in your own order whatever the sort, followed by **Ungrouped** for tasks without one. Each group's archived tasks sit in an **Archived** section just after it, folded to start with. A group with no tasks still gets its section, so you can drop tasks into it.
+- **With another grouping chosen** (*Shows {axis} within each group*), the control reads, for example, **Your groups › Inbox**, and each group holds its own **Inbox** sections, which fold on their own. On the **Board**, each group becomes a lane and the grouping's sections become columns across every lane.
+
+Until you have a group, the switch says *Drag a task onto another to group them*.
+
+**A group's header.** Each group's header leads with its color and name, then its count of live tasks and a dot for each state its tasks' sessions are in, so a folded group still shows whether something in it needs you. **Select** on a group header covers every task in the group. As the header narrows, it drops the session dots first, then shortens **Select** to an icon, so the name stays readable.
+
+Right-click the header, or use its **⋮**, for the group's menu. It acts on the group, never on its tasks:
+
+| Item | What it does |
+|---|---|
+| **Edit group…** | Renames the group or changes its color, in the same form |
+| **Change group color** | Picks one of the eight colors directly |
+| **Move group up**, **Move group down** | Moves the group one place in your order |
+| **Archive group** | Files the group away. Offered only when every task in it is archived |
+| **Delete group…** | Removes the group after a confirmation, *Its {count} tasks stay, ungrouped.* |
+
+You can also drag a group's header to move it before or after another group. **Ungrouped**, and sections inside a group, stay where they are.
+
+**Archive or delete a group.** Archive a group once its work is done and every task in it is archived: the group leaves every view and its name is free again. Restoring one of its tasks brings the group back with it, and the task keeps its group. Deleting a group never deletes its tasks; they stay where they are, ungrouped.
+
+Agents can file tasks into groups too, through Kepler's workspace tools. See [What an agent can do with a Task's resources](/kepler/tasks-and-resources#what-an-agent-can-do-with-a-tasks-resources).
+
 ### Fold a section
 
 Every group header is a fold toggle, with the section's count beside its name.
 
-Folding one unmounts its rows, so a long **Done** list stops costing anything to keep around. On the **Board** layout, a folded column shrinks to a narrow rail with its name and count, marked when it holds the open item; click the rail to expand it. **Archived** starts folded when you group by Activity or Inbox, since it's the section that work is filed *into*, and so does **On hold** in the Inbox. Folds last only for the current run; Kepler doesn't write them to disk.
+Folding one unmounts its rows, so a long **Done** list stops costing anything to keep around. On the **Board** layout, a folded column shrinks to a narrow rail with its name and count, marked when it holds the open item; click the rail to expand it. **Archived** starts folded when you group by Activity or Inbox, since it's the section that work is filed *into*, and so does **On hold** in the Inbox. Under **Your groups**, folding a group hides the sections inside it, and each of those folds on its own too.
+
+Folds are remembered across restarts, for each segment and grouping, so a section you folded stays folded and one you unfolded, such as **Archived**, stays open.
 
 ***
 
 ## Sort
 
-The **Sort** control orders the items inside each group without changing the order of the groups themselves.
+The **Sort** control orders the items inside each group. It leaves the order of most groupings' sections alone, with two exceptions: **Repository** sections follow the sort, each placed by its first task, and your own groups always keep the order you gave them.
 
 | Segment | Sort by | Default |
 |---|---|---|
@@ -831,6 +936,7 @@ Dates sort newest first; **Name** and **ID** sort ascending. **ID** compares ref
 
 - Drag its row or card to a place in its own section. A line with a dot shows where it will land, and under **Manual** a row shows a drag grip on hover.
 - Choose **Move up**, **Move down**, or **Move to top of {section}** from the task's **⋮** or right-click menu. These rows appear only while the list is sorted by **Manual**.
+- Drag one task of a selection to move all of them together. They land as one block, in the order they were listed. See [Act on several tasks at once](#act-on-several-tasks-at-once).
 
 You don't have to switch to **Manual** first. Drop a task in a new place in its own section while the list is sorted another way, and Kepler saves the order you see, with your move, as the **Manual** order and switches the sort to **Manual**. Switching to **Manual** yourself also keeps the current order, so nothing jumps.
 
@@ -846,7 +952,7 @@ A task's progress normally follows its git and pull-request evidence (see [Statu
 
 - **The progress control.** The stage word on a task row, in the preview header, and in the task page header opens a **Progress** menu: **Automatic** (*Updates as you work*), then **Exploration**, **In Development**, **In Review**, **On hold**, and **Done**. Where there's no room for the word, the control shrinks to the stage's icon rather than disappearing.
 - **The task menus.** A task's **⋮** and right-click menus carry the same choices under a **Progress** submenu, plus **Reopen** while the task is Done. Its hint says where the task will land (*Moves it to In Review*).
-- **Drag a card.** In any grouping, on **List** or **Board**, drag a task's card or row. Grouped by **Progress**, drop it on another stage. On touch, press and hold to pick it up. Escape changes nothing, and dropping it in its own section reorders it (see [Put tasks in your own order](#put-tasks-in-your-own-order)). You can't drag a task that Kepler is still preparing.
+- **Drag a card.** In any grouping, on **List** or **Board**, drag a task's card or row. Grouped by **Progress**, drop it on another stage. On touch, press and hold to pick it up. Escape changes nothing, and dropping it in its own section reorders it (see [Put tasks in your own order](#put-tasks-in-your-own-order)). You can't drag a task that Kepler is still preparing. Resting the card on another task instead offers to group the two (see [Your groups](#your-groups)), and dragging a task inside a selection carries the whole selection.
 - **The Mark as bar.** While you drag, a **Mark as** bar floats over the controls strip with chips for what the card can become: **Read** or **Unread**, the stages, **Reopen** for a Done task, and **Archive task**, or only **Restore** for an archived one. Drop the card on a chip.
 - **From the keyboard.** With a card focused on the **Board** grouped by **Progress**, **Cmd/Ctrl+Shift+←** and **Cmd/Ctrl+Shift+→** step it one column, stopping at **Exploration** and **Done**.
 
@@ -879,11 +985,13 @@ Kepler hides facets with nothing to offer, so a single-repo setup won't show a R
 | Segment | Facets |
 |---|---|
 | **Todo** | Type · Linked work · Status · Needs my attention · Priority · Age · Your role · Provider, then one section per connected provider with its own Repository · Assignee · Issue type · Label · Project · Iteration or Sprint |
-| **Tasks in progress** | Progress · Activity · Repository · Agent · Session · Linked work |
+| **Tasks in progress** | Progress · Activity · Repository · Agent · Session · Linked work · Group |
 
 **Issue type**, **Label**, **Project**, and **Iteration** carry your provider's own vocabulary (a Jira issue type, your team's tags, a board name), not a Kepler-side translation of them. Azure DevOps calls the last one **Iteration** and Jira calls it **Sprint**, so the facet uses each tracker's word.
 
-**Linked work** filters by whether an item is connected to work on the other side: *Has a task* in Todo, and *Has a PR or issue* in Tasks in progress. **Session** offers *Has a session* and *Has a live session*. To find the items *without* one, exclude the value.
+**Linked work** filters by whether an item is connected to work on the other side. In Todo, it sorts each pull request or issue by its task history: *Has an active task*, *Archived tasks only* (worked on before, but every task is archived), or *No tasks ever*. In Tasks in progress, it offers *Has a PR or issue*. **Session** offers *Has a session* and *Has a live session*. To find tasks *without* a pull request, issue, or session, exclude the value.
+
+**Group** lists each of [your groups](#your-groups), including empty ones, and **Ungrouped** for tasks in none. A filter that still names a group since deleted or archived shows it as **Removed group**. Grouped by your groups, the facet also limits which group sections show.
 
 **Include or exclude any value.** Click a value to include it. Hover a value and press its minus button (or **Shift+Enter** from the keyboard) to exclude it instead; an excluded value reads *not {value}*. On Todo, excluding a provider's value only subtracts from that provider's items, so excluding a GitHub label never hides a Jira issue.
 
@@ -920,7 +1028,7 @@ A view captures:
 
 - The segment
 - The search text
-- The grouping
+- The grouping, including whether **Your groups** is on
 - The filters
 - The layout (**List** or **Board**)
 
@@ -940,7 +1048,7 @@ A dot on the chip means you've edited the applied view since you picked it. View
 
 ## What Kepler remembers
 
-Each segment remembers its own search, grouping, sort, filters, and layout, since they differ enough that sharing them would be meaningless. Kepler restores the segment you left along with its view. Kepler also remembers which panels were open, but only for the length of a run, so a round trip to the other segment doesn't cost you the panel you were reading. Panel widths are remembered per window across reloads and restarts; the set of open panels is not, so a relaunch never opens a panel for a task since deleted.
+Each segment remembers its own search, grouping, sort, filters, layout, and folded sections, since they differ enough that sharing them would be meaningless. Kepler restores the segment you left along with its view. Kepler also remembers which panels were open, but only for the length of a run, so a round trip to the other segment doesn't cost you the panel you were reading. Panel widths are remembered per window across reloads and restarts; the set of open panels is not, so a relaunch never opens a panel for a task since deleted.
 
 Saved views are the exception to per-segment memory: they're stored, named, and shared across windows until you delete them.
 
@@ -950,7 +1058,7 @@ Saved views are the exception to per-segment memory: they're stored, named, and 
 
 **Archive task** files a task away. It leaves the live buckets for **Archived**, its rows and sessions survive, and Kepler stops only the agents whose checkout is about to disappear.
 
-When a task is settled at **Done**, none of its worktrees holds unpushed work, and no agent is working or waiting on you, the preview and task page headers suggest it: *Ready to archive?* with **Archive** beside it. **Archive** opens the usual confirmation; the **X** dismisses the suggestion for that task in every window.
+When a task is settled at **Done**, none of its worktrees holds unpushed work, no agent is working or waiting on you, and no session is keeping background work running (a dev server, for example), the preview and task page headers suggest it: *Ready to archive?* with **Archive** beside it. **Archive** opens the usual confirmation; the **X** dismisses the suggestion for that task in every window.
 
 The confirmation offers the same cascades the delete does: **Also delete worktrees**, **Also delete branches** (once worktrees is ticked), and **Also delete the branch on the remote** (once branches is ticked). This way, finishing with a task doesn't have to mean deleting it to clean it off the disk. With **Also delete worktrees** ticked, the dialog lists each worktree, riskiest first, with what will happen to it (*Merged into main*, *2 uncommitted files*, *In open PR #42*). It also names the ones it keeps: the repository's main worktree, and worktrees another task still uses. A worktree that would lose work is kept unless you tick the extra box that names exactly what would be lost, and a row at risk can open its changes so you can judge first.
 
@@ -958,7 +1066,7 @@ With **Also delete the branch on the remote** ticked, Kepler deletes each branch
 
 Archiving outranks everything else, so a task you filed away can't climb back into a live section because a shell is still open on it.
 
-**Restore task** takes the place of **Archive task** in an archived task's **⋮** menu, and is on the task page's own header too. It puts the task straight back. Only one active task can hold a given pull request, so if restoring would archive another task that holds the same one, Kepler names that task and asks first.
+**Restore task** takes the place of **Archive task** in an archived task's **⋮** menu, and is on the task page's own header too. It puts the task straight back, without asking, even when another active task holds the same pull request: several tasks can share one. A restored task keeps its group, and if that group was archived, it comes back too.
 
 For more than one at a time, every section header on **Tasks in progress** carries a quiet **Select**. Press it, and that corner of the header becomes a bar: a select-all box, **{count} selected**, and the batch verbs as icon buttons, each named by its tooltip. The section's rows also grow checkboxes. One section selects at a time, and while you're selecting, a click ticks a row rather than opening its panel. A task that Kepler is still preparing has no checkbox, and select-all skips it.
 
@@ -970,6 +1078,14 @@ For more than one at a time, every section header on **Tasks in progress** carri
 | **Cancel** | Leaves selection mode and drops the set |
 
 Both **Archive** and **Delete** confirm, with **Archive tasks** or **Delete tasks** as the confirm button, and both offer **Also delete worktrees**, **Also delete branches**, and **Also delete the branch on the remote**. Deleting can't be undone, and the confirmation says so. The single-task dialog remembers what you ticked last time; the batch confirmation always starts with all three unticked. The batch confirmation doesn't list each worktree's fate. Instead, any worktree that would lose work is kept, and a toast afterwards says which ones and why. Open a task's own **⋮** to see the list before you confirm.
+
+### Act on several tasks at once
+
+The tasks you open with **Shift**-click or **Cmd/Ctrl**-click (see [Open a panel](/kepler/kepler-interface#open-a-panel)) are also a selection you can act on. Right-click or drag any one of them, while two or more are listed, and the action covers all of them. Right-click or drag a task outside the selection and it acts on that task alone; a row's **⋮** always acts on its own row.
+
+Right-clicking inside the selection opens a selection menu in place of the task menu, each item counting what it acts on: **New group with {count} tasks…**, **Add {count} tasks to group**, **Remove {count} tasks from group**, **Archive {count} tasks**, **Restore {count} tasks**, and **Delete {count} tasks**. Items with nothing to act on are left out, and archived tasks sit out of the group items. While the menu is open, the rows it acts on are outlined. **Archive**, **Restore**, and **Delete** open the same batch confirmation as a section's **Select** bar.
+
+Dragging a selected task carries the whole selection. Each target says how many of the tasks it takes (*2 of 3 tasks*), and afterwards Kepler reports what moved and how many stayed where they were. Under the **Manual** sort, the tasks land together as one block.
 
 To clean up worktrees and local branches rather than tasks, open **Manage worktrees and branches** in **Settings → Repositories**. The **Worktrees and branches** page lists every worktree and every local branch no worktree holds, filtered by **Safe to delete**, **Needs update**, **Conflicts**, **Stale**, or **All**. From it you can **Update** many worktrees at once, bringing each branch up to date with its base, and delete worktrees and branches, including their copies on the remote. See [Settings](/kepler/settings-repositories#worktrees-and-branches).
 
@@ -1295,7 +1411,7 @@ This auto-attach behavior is deliberately narrow, because a wrong guess would pu
 
 - The branch names must match exactly. A near-miss doesn't count.
 - Kepler attaches only open pull requests whose head branch lives in the same repository. A pull request from a fork never auto-attaches.
-- If another active Task already owns the pull request, Kepler leaves it there.
+- A pull request another active Task already holds attaches all the same. Several Tasks can share one pull request, and attaching it never archives or detaches it from the other Task.
 
 **Issues attach the same way.** An issue whose branch matches one of the Task's checkouts is correlated and attached on its own, so a Task started from a branch name finds the ticket behind it.
 
@@ -1461,13 +1577,14 @@ From the **Task actions** (**⋮**) menu, on the task's row or in the task view'
 |---|---|
 | **Mark as read** / **Mark as unread** | **Mark as read** appears while any of the Task's sessions is unread, and marks them all read. Otherwise the menu offers **Mark as unread** |
 | **Rename task** | Tasks name themselves when they're created; rename when the name stops fitting. The name becomes an editable field in place; its **Auto-name** button suggests one from the Task's prompt and resources, into the field, for you to accept or edit; on the task page, double-clicking the Task's name does the same |
+| **Add to group** | Files the Task in one of [your groups](/kepler/arranging-your-work#your-groups), starts a **New group…** with it, or offers **Remove from group** when it has one; a Task with sub-tasks also offers **Group with its {count} sub-tasks**. Not offered on an archived Task |
 | **Copy task link** | Copies a Kepler link to the Task. **Cmd/Ctrl+C** on a focused task row copies it too |
 | **Refresh** | Re-reads the Task's worktrees and its pull request and issue links. Shortly after a refresh, the providers can't be read again yet, so the row is locked and says when you can try again |
 | **Archive task** | Takes it out of the active list and keeps it as history. Its sessions and resources are kept, and nothing is destroyed unless you ask for it |
-| **Restore task** | On an archived Task, in place of **Archive task**. It goes straight back, unless another active Task now holds the same pull request; then Kepler asks first, because restoring archives that one |
+| **Restore task** | On an archived Task, in place of **Archive task**. It goes straight back, even when another active Task holds the same pull request (several Tasks can share one), and keeps its group, bringing an archived group back with it |
 | **Delete task** | Removes the Task along with its sessions and resources |
 
-**Kepler suggests archiving a finished Task.** Once a Task reaches **Done**, with no unpushed work in its worktrees and no session still working or waiting on you, its header asks *Ready to archive?* with an **Archive** button. Dismiss it and that Task stops asking.
+**Kepler suggests archiving a finished Task.** Once a Task reaches **Done**, with no unpushed work in its worktrees and no session still working, waiting on you, or keeping background work running, its header asks *Ready to archive?* with an **Archive** button. Dismiss it and that Task stops asking.
 
 **Archive** and **Delete** ask the same three questions, in the same dialog, because they're the same act. Each box stays unavailable until the one above it is ticked, and Kepler remembers your choices for next time:
 
@@ -1501,15 +1618,16 @@ Agents reach the Task through Kepler's own MCP (Model Context Protocol) server, 
 
 </div>
 
-The tools name things by id, and each id carries its kind: `task:`, `session:`, `repo:`, `worktree:`, `folder:`, `note:`, `file:` and `account:`. A Kepler link to a Task or a session that you paste into the chat works as its id. Wherever a tool takes a repository, the agent can also name it by one of its **Aliases**, set on the repository's page in **Settings → Repositories**. See [Settings](/kepler/settings-repositories#edit-a-repository).
+The tools name things by id, and each id carries its kind: `task:`, `session:`, `repo:`, `worktree:`, `folder:`, `note:`, `file:`, `account:`, `group:` and `comment:`. A Kepler link to a Task or a session that you paste into the chat works as its id. Wherever a tool takes a repository, the agent can also name it by one of its **Aliases**, set on the repository's page in **Settings → Repositories**. See [Settings](/kepler/settings-repositories#edit-a-repository).
 
 **Reading Tasks and notes**
 
 | Tool | What it does |
 |---|---|
-| `task_get` | Read a Task: its stage, its worktrees and folders, notes, files, links, related Tasks and newest sessions. On the agent's own Task, later calls return only what changed, and `refresh` re-reads pull request and issue state, the disk and Git first |
-| `task_list` | Find Tasks by name, prompt, note text or file name, filtered by stage, hold, repository, or whether they belong to the agent's own work. Archived Tasks only on request |
+| `task_get` | Read a Task: its stage, its group, its worktrees and folders, notes, files, links, related Tasks, newest sessions, and how many of your review comments are still open. On the agent's own Task, later calls return only what changed, and `refresh` re-reads pull request and issue state, the disk and Git first |
+| `task_list` | Find Tasks by name, prompt, note text or file name, filtered by stage, hold, repository, [group](/kepler/arranging-your-work#your-groups), or whether they belong to the agent's own work. Each Task shows its group, and the first page lists every group you have, empty ones included. Archived Tasks only on request |
 | `task_note_read` | Read one note's full text. Notes otherwise arrive as references (title and size) |
+| `task_comment_read` | Read the [review comments](/kepler/review-changes#review-comments) you sent on a Task's code: the open ones, those still waiting on an agent's answer first, each with its file, lines, the code it sits on, and its replies; or one comment by id, resolved or not. Comments you haven't sent can't be read |
 
 **Finding sessions, agents and places**
 
@@ -1526,6 +1644,7 @@ The tools name things by id, and each id carries its kind: `task:`, `session:`, 
 |---|---|
 | `task_note_write` | Create a note, or edit one: replace the whole note, replace the section under one heading, or add to the end. A replace carries the version the agent last read, so a note changed underneath it is refused rather than overwritten |
 | `task_note_delete` | Delete a note. The Task's **Prompt** can't be deleted |
+| `task_comment_reply` | Reply on a review comment you sent, so the answer shows on the comment's card in Kepler, and resolve it once the request is done. You can reopen it |
 | `task_link_update` | Attach or detach issue, pull request and other links. Kepler classifies each URL and fetches its title and status when it can, and an agent that starts a server you're meant to open (a dev server, Storybook, a preview) attaches its local URL so it shows on the Task, and detaches it when it stops the server for good |
 | `task_file_attach` | Attach files by path, linked rather than copied. A file the agent wrote in a temporary folder can be attached as a copy saved with the Task instead, up to 10 MiB |
 | `task_file_detach` | Detach files. A linked file stays on disk; an uploaded copy is deleted |
@@ -1546,8 +1665,8 @@ Where AI Sync and AI Compose are turned on, the `sync_*` and `compose_*` tools a
 
 | Tool | What it does |
 |---|---|
-| `task_create` | Create a *separate* Task beside this one, with its own prompt, places, notes, links and files, for work that deserves tracking in its own right. It's linked back to this one (as a sub-task, parent, follow-up, or just related), and nothing starts on it |
-| `task_update` | Set the stage your board shows (**Exploration**, **In Development**, **In Review**, **Done**), put the Task on hold or lift the hold, rename it, or restore it from the archive, or hand the stage back to Kepler's own reading of Git and pull requests. If it replaces a stage or a hold you set, it tells you |
+| `task_create` | Create a *separate* Task beside this one, with its own prompt, places, notes, links and files, for work that deserves tracking in its own right. It's linked back to this one (as a sub-task, parent, follow-up, or just related), and nothing starts on it. It can put the new Task in a group, creating the group for a new name |
+| `task_update` | Set the stage your board shows (**Exploration**, **In Development**, **In Review**, **Done**), put the Task on hold or lift the hold, rename it, move it into a group (a new name creates the group) or out of one, or restore it from the archive, or hand the stage back to Kepler's own reading of Git and pull requests. If it replaces a stage or a hold you set, it tells you |
 | `task_archive` | Archive a Task, which alone stops nothing and deletes nothing. With cleanup, it also deletes the Task's worktrees and their merged branches |
 
 **Starting and coordinating work**
@@ -1572,8 +1691,8 @@ The following wait for your approval:
 
 - Sending a prompt to any session other than one the agent started itself, or a message to a session outside its own work
 - Stopping or renaming a session outside its own work, or archiving any session other than one it started
-- Changing a Task outside its own work: its stage, hold, name, links or notes, or detaching its files
-- Restoring a Task when another active Task holds the same pull request
+- Changing a Task outside its own work: its stage, hold, name, group, links or notes, or detaching its files. A group change reads on the card as *Put it in the group "{name}"*, *Create the group "{name}" and put it there*, or *Take it out of its group*
+- Changing a Kepler setting that reaches your accounts, privacy, other tools, what runs, or where files go. Only [Ask Kepler](/kepler/ask-kepler) can change settings, never a Task's agent. The card names the setting and its change, *From {from} to {to}*, and offers no wider approval, so each change is approved on its own. See [Approval requests](/kepler/agent-sessions#approval-requests)
 - Deleting any note
 - Detaching an uploaded file, because its saved copy is deleted
 - Archiving a Task outside its own work or with other live sessions, and any archive that also deletes worktrees
@@ -1679,7 +1798,7 @@ The worktree group is called **Changes**. Its rows carry each checkout's real st
 
 **Files** holds both files linked from disk and copies uploaded to the Task. An uploaded copy reads **Task folder** under its name where a linked file shows its path.
 
-**The rail can be put away.** **Hide context panel** collapses it and hands the width to the content area; **Show context panel** brings it back. While it's hidden the control carries the task's own session status, so a session that needs you is still visible from a collapsed rail. Drag its edge to resize it.
+**The rail can be put away.** **Hide context panel** collapses it and hands the width to the content area; **Show context panel** brings it back. **Cmd/Ctrl+B** does the same from anywhere on the page, except in the single-column layout; on Windows and Linux a focused shell keeps **Ctrl+B** for itself. While it's hidden the control carries the task's own session status, so a session that needs you is still visible from a collapsed rail. Hover the control to peek at the rail floating over the content. It stays up while the pointer or focus is inside it, and **Escape** puts it away; click the control while peeking to keep the rail open. Drag its edge to resize it.
 
 - **Add resource** sits at the bottom of the rail and opens the **Add resources** dialog.
 - The **+** on a group header adds straight into that group: **Add issues**, **Add notes**, and so on. On **Changes** it reads **Add worktree**, because that's what actually lands there. On **Sessions** the **+** is **New session** instead, which opens a draft session. See [Starting a session](#starting-a-session).
@@ -1704,7 +1823,9 @@ Some kinds of row show more:
 - A **file** row's card adds **Size**, **Modified**, and **Type**, plus when it was added. An image file shows its own thumbnail as the row's icon.
 - A **terminal** row's tip adds **Started** and, once it has finished, **Ended**.
 
-- A **Changes** row's subtitle is a run of glyph-and-number chips reading the checkout's real state: uncommitted files, commits on the branch, behind and ahead of the upstream, behind the merge target, with conflicts and an unpublished branch drawn as glyphs alone. A checkout with nothing to report reads **Up to date**; one that has been deleted says so. Its tooltip is a two-column table of the same facts (the branch, the repository, the path, the working tree, the commits, the upstream and the merge target), with the numbers aligned so they never wrap.
+- A **Changes** row's subtitle is a run of glyph-and-number chips reading the checkout's real state: uncommitted files, commits on the branch, behind and ahead of the upstream, and how far it's behind the merge target, named after the count. Conflicts and an unpublished branch are drawn as glyphs alone, and a merge target Kepler can't compare with reads *Can't compare with the merge target*. A checkout with nothing to report reads **Up to date**; one that has been deleted says so. When the task's worktrees span more than one repository, each row also names its repository.
+- A checkout in an unusual state leads its subtitle with that state instead of the chips: **Unable to read git status** when Kepler couldn't read it, a paused rebase or merge (in red when it has conflicts), or **Detached** for a detached HEAD, which also titles the row with the commit's short hash instead of a branch.
+- A **Changes** row's hover tip is a list of lines, each marked with an icon: the branch in bold, then the repository and the path, then any state (such as **Gone from disk**, a paused operation, or *Detached · {commit}*), then the pull request the branch owns with its state or review decision, then the commits, the working tree, the upstream, and the merge target. A merged pull request leaves the upstream and merge-target lines out. A worktree's tab, with tabs on, shows the same tip.
 - A **session** row leads with its state, and names which **Account** it runs under once a harness has more than one configured: the provider logo plus an ordinal, on the row, its tab, and its collapsed strip alike.
 
 The end of the subtitle line carries the row's controls, always visible rather than revealed on hover:
@@ -1749,7 +1870,7 @@ The worktree's **Branch** submenu gathers what changes the branch itself: **Rena
 
 **Copy session link** copies a Kepler link that opens the session. When the window is connected to a remote machine, the link names that machine, so it opens there. With the row focused, **Cmd/Ctrl+C** copies the same link. See [Agent Sessions](/kepler/agent-sessions#pointing-an-agent-at-another-session).
 
-**Continue as** moves the conversation to another signed-in account of the same agent, restarting the agent with the conversation as that account. **Continue in Terminal** and **Continue in Chat** move it between the two ways a session runs, keeping the conversation. While the session is mid-turn, these entries are locked: *This session is mid-turn. Wait for it to finish, or stop it first.* See [Moving a session to another account](/kepler/agent-sessions#moving-a-session-to-another-account) and [How a session runs](/kepler/agent-sessions#how-a-session-runs).
+**Continue as** moves the conversation to another signed-in account of the same agent, restarting the agent with the conversation as that account. **Continue in Terminal** and **Continue in Chat** move it between the two ways a session runs, keeping the conversation. When the session is still running a turn or background work, Kepler asks first, for example **Stop this session and continue in Terminal?** (or **Stop this session and continue as {login}?**), and warns when queued messages would be discarded. **Stop and switch** stops the session and moves it. See [Moving a session to another account](/kepler/agent-sessions#moving-a-session-to-another-account) and [How a session runs](/kepler/agent-sessions#how-a-session-runs).
 
 **Use another copy…** opens a dialog listing each saved copy of the conversation, when it was updated and how many messages it holds, with **In use** on the current one. Pick the one to continue when you resume. See [Agent Sessions](/kepler/agent-sessions).
 
@@ -1830,6 +1951,7 @@ The importer lists the agent conversations Kepler found outside it, under **Live
 | **Delete** | Close the focused tab, the way its **×** does |
 | **Cmd/Ctrl+Shift+T** | Reopen the last closed tab (tabs on) |
 | **Cmd/Ctrl+T** | New session, which opens a draft tab |
+| **Cmd/Ctrl+B** | Show or hide the context panel (the rail) |
 | **Cmd/Ctrl+J** | Show or hide the terminal drawer |
 | **Cmd/Ctrl+Shift+J** | Maximize the terminal drawer, opening it first if it's hidden |
 | **Cmd/Ctrl+O** / **Cmd/Ctrl+P** | **Open File…** / **Go to File…**. See [Opening a file](#opening-a-file) |
@@ -1909,6 +2031,8 @@ A path that's already one of the Task's files opens that file's own tab rather t
 **An open file follows the disk.** When it changes, the viewer updates in place without moving you, and says **Updated just now**, or **Updated just now by** the session that changed it when Kepler saw the edit. **Show changes** shows what changed since the file was first shown; **Back to file** returns. A deleted file keeps showing the last version Kepler read, and says so.
 
 A very large file shows its start first, labeled *Showing the first {shown} of {total}*, with **Load the rest**.
+
+**Review comments work in the file viewer too.** Hover a line for the gutter's **+** (**Comment on line {line}**) to leave a comment, the same way you do in the Changes overlay. The tab's actions then lead with the file's comment count and **Send comments**. Comments on a file in one of the task's worktrees are kept with that worktree, alongside the ones you write in its changes. A file outside the task's worktrees keeps them with the conversation you opened it from; opened any other way, including a tab restored after a reload, it reads *Open this file from a conversation to send comments*. See [Review comments](/kepler/review-changes#review-comments).
 
 **Open in** on the viewer's header is an icon button that opens the file in your pinned editor, or else the one you used last, with its chevron listing the rest. Your computer's default app is one of the targets, listed as **Default app**, and like any editor it can be pinned as your default with **Set as default**.
 
@@ -2016,7 +2140,7 @@ Shell tabs survive a Kepler update and come back after a restart. With **Keep ag
 
 | Resource | Details |
 |---|---|
-| **Worktree**, on disk | A strip of verbs (the branch, the sync control, **Open in**, **Run a command**) over its changed files, which lead into the Changes overlay. See [Review Changes](/kepler/review-changes) |
+| **Worktree**, on disk | A strip of verbs (the branch, the sync control, **Open in**, **Run a command**) over its changed files, which lead into the Changes overlay, plus a **Comments** view that lists the task's review comments with how many are open and unread. See [Review Changes](/kepler/review-changes) |
 | **Worktree**, missing | A metadata card instead: **Current branch**, **Base branch**, and the **Recorded path**, flagged **not on disk** or **gone** when it's been removed outside Kepler. A worktree that has gone stays bound to the Task, and Kepler offers to recreate it rather than quietly dropping it |
 | **Folder** | Path, plus an editable name and description |
 | **File** | The file itself, in the [file viewer](#opening-a-file), with its description, where it came from, and its size on the viewer's toolbar. **Rename** is in **File actions**, and an uploaded copy says it's a copy in the task folder |
@@ -2265,7 +2389,7 @@ Kepler gives you several ways to start work, and the first is usually better: pi
 |---|---|
 | **Work assigned to you** | Fire an Action on an issue or pull request in the **Todo** segment of [the Kepler interface](/kepler/kepler-interface). One click, context attached |
 | **Something you're describing yourself** | **New task** opens the Task Composer, where you write the prompt and attach what it needs |
-| **A conversation you already started** | **Continue an external session**, under the Task Composer, wraps a task around an agent session you began in your own terminal |
+| **A conversation you already started** | **Open an external session**, under the Task Composer, wraps a task around an agent session you began in your own terminal |
 | **Another GitKraken app** | A link from GitLens or GitKraken Desktop opens Kepler on the work you were looking at |
 
 ***
@@ -2308,11 +2432,13 @@ The Composer is one prompt box above a row of four buttons:
 | Control | What it attaches |
 |---|---|
 | **Add repo or folder** | A repository to work in, or a plain folder |
-| **Add issue** → **Issues** | Issues from your connected trackers. With only Linear in the list, a team picker shows every open issue in the team you pick, not just yours |
+| **Add issue** → **Issues** | Issues from your connected trackers. With only Linear in the list, a team picker and a **Project** picker show every open issue in the team or Linear project you pick, not just yours |
 | **Add PR** → **PRs** | Pull requests from your connected hosts |
 | **Add context** | Everything without a button of its own: folders, files, and links |
 
-**Paste a link to attach it.** Paste a pull request or issue URL into the prompt, from a connected host or from Jira or Linear, and it becomes a chip naming the item. The chip attaches the item the same way **Add issue** or **Add PR** would, along with its repository.
+**Paste a link to attach it.** Paste a pull request or issue URL into the prompt, from a connected host or from Jira or Linear, and it becomes a chip naming the item. The chip attaches the item the same way **Add issue** or **Add PR** would, along with its repository, so a pull request from another repository launches in that repository, on its branch. If the repository isn't in Kepler yet, it's cloned when the Task starts.
+
+While Kepler works out where a link belongs, the repository chip reads **Finding {name}…**; remove it to stop looking. Picking a repository yourself takes precedence over the link's. If the link can't be read yet, the composer says *Unable to read {link}. Start will try again.* At **Start**, a link that still can't be read doesn't stop the Task: it starts with whatever was staged, and a notice says the agent has the link to pick up from there. Only when the link staged nothing does the Task not start (*Unable to read {link}, so the task wasn't started.*).
 
 In a window connected to another machine, picking a file through **Add context** also offers **Upload from this machine**. Uploads are kept with your draft and saved into the Task's own folder when it starts; if one expired before you pressed **Start**, Kepler names it rather than dropping it silently.
 
@@ -2339,7 +2465,7 @@ The chevron beside the primary button opens the rest: **Prepare**, which creates
 
 A Task that has its prompt but no session yet, such as one an agent created for you, says so in a draft session tab: *Start with the task prompt, or describe something else…*. To send the Task's prompt as written, press **Start** on the empty box.
 
-The Task appears in the list as soon as you press **Start**, before its worktrees exist. Until setup finishes, the row carries a **Preparing** pill, and the Task's panel shows its progress. Kep, the Kepler mascot, narrates each stage, such as **Fetching {repo}.**, **Making your worktree.**, **Starting {agent}.**, and **Opening the chat.**, above a list of the launch steps. Where Kep isn't shown, the panel lists the steps under **Getting your task ready** instead, such as *Cloning {repo}…* or *Setting up worktrees…*. **Cancel** stops a launch while a repository is still cloning.
+The Task appears in the list as soon as you press **Start**, before its worktrees exist. Until setup finishes, the row carries a **Preparing** pill, and the Task's panel shows its progress. Kep, the Kepler mascot, narrates each stage, such as **Reading {link}.**, **Fetching {repo}.**, **Making your worktree.**, **Starting {agent}.**, and **Opening the chat.**, above a list of the launch steps. **Reading {link}** comes first when a pasted link was still being read at **Start**, to find the repository and branch it belongs to; if it can't be read, the step shows *Unable to read {link}* as skipped and the launch carries on. Where Kep isn't shown, the panel lists the steps under **Getting your task ready** instead, such as *Reading {link}…*, *Cloning {repo}…*, or *Setting up worktrees…*. **Cancel** stops a launch while it's reading a link or cloning a repository.
 
 When the new branch is being updated from its base, the session area reads **Preparing branch**: *Updating from the base branch before the session starts.* Then, until the first session is ready, it reads **Starting your session**: *It opens here as soon as it's ready.*
 
@@ -2383,7 +2509,7 @@ Attaching the same repository twice gives the Task two independent worktrees on 
 
 ## From a session you already started
 
-You may have begun the work in a terminal before deciding it deserved tracking. Under the Task Composer, and on an empty Tasks list, **Continue an external session** flips the composer to a list of every agent conversation Kepler can see. **Start a new task** flips it back. It's there while external session detection is on.
+You may have begun the work in a terminal before deciding it deserved tracking. Under the Task Composer, and on an empty Tasks list, **Open an external session** flips the composer to a list of every agent conversation Kepler can see. **Start a new task** flips it back. It's there while external session detection is on.
 
 | Part | What it does |
 |---|---|
@@ -2396,8 +2522,7 @@ The list reports what it actually swept, rather than implying it found everythin
 Picking a conversation carries it on in a new task, reading *Opening in a new task…* while it does:
 
 - A past conversation resumes.
-- A live one that's idle in its terminal is taken over, after Kepler warns you to close it in your terminal first so that two clients don't write the same conversation.
-- A live one that's mid-turn can't be taken over yet. **Open it read-only** opens it to watch.
+- A live one opens read-only in its task, so you can follow it while it keeps running in your terminal. Picking it never takes the conversation over. Once it's idle, **Continue here** in the session carries it on in Kepler, after asking you to close it in your terminal first so that two clients don't write the same conversation; until then, **Continue here** and **Fork** stay shown but unavailable.
 
 ### When a task already covers that folder
 
@@ -2441,7 +2566,7 @@ If a link can't open on the machine it names, it opens on this computer instead,
 
 ### Opening an agent's own conversation
 
-A session link can name a conversation by the agent's own ID rather than Kepler's: `kepler://session?agent=<agent>&id=<conversation id>&cwd=<folder>`. The `agent` must be one of Kepler's built-in agents, and `cwd` is only a hint about where to look. If a Kepler session already holds that conversation, the link opens it. Otherwise Kepler adds the conversation to a task the way **Continue an external session** does. That needs external session detection: with detection off, the link reads **External sessions are not detected**: *Turn on detection to find that session in its agent.* A link with a required part missing reads **Part of this link is missing**.
+A session link can name a conversation by the agent's own ID rather than Kepler's: `kepler://session?agent=<agent>&id=<conversation id>&cwd=<folder>`. The `agent` must be one of Kepler's built-in agents, and `cwd` is only a hint about where to look. If a Kepler session already holds that conversation, the link opens it. Otherwise Kepler adds the conversation to a task the way **Open an external session** does. That needs external session detection: with detection off, the link reads **External sessions are not detected**: *Turn on detection to find that session in its agent.* A link with a required part missing reads **Part of this link is missing**.
 
 ***
 
@@ -2632,7 +2757,9 @@ To move a session to another account, use whichever of these is nearest:
 - **Continue as {login}** on the usage-limit banner. See [When you hit a usage limit](#when-you-hit-a-usage-limit).
 - The **Resume** or **Restart** split button on a dormant session, when another account could take the conversation.
 
-Each list shows the agent's other accounts with their login, colour, and usage, and checks the current one. Picking one restarts the agent with this conversation as that account (*Restarts {name} with this conversation as {login}.*), and Kepler confirms **Continued as {login}**. An account that keeps its own history is greyed out as **Separate history**: *This account keeps its own history, so it can't read this conversation. Change that in Settings > Agents.* An account with no login offers **Sign in…**, and the accounts are locked while a turn is running.
+Each list shows the agent's other accounts with their login, colour, and usage, and checks the current one. Picking one restarts the agent with this conversation as that account (*Restarts {name} with this conversation as {login}.*), and Kepler confirms **Continued as {login}**. An account that keeps its own history is greyed out as **Separate history**: *This account keeps its own history, so it can't read this conversation. Change that in Settings > Agents.* An account that is signed out offers **Sign in…**. An account signed in with an API key or a token, which carries no login name, reads **Signed in** and can be picked like any other.
+
+If the session is busy, with a turn running or work still going in the background, picking an account asks first: **Stop this session and continue as {login}?** **Stop and switch** stops the session and resumes the conversation on the new account. A session that is still restarting asks you to try again in a moment.
 
 ***
 
@@ -2645,7 +2772,7 @@ Claude Code and Codex both sign in through a browser without dropping you into a
 | Local | Kepler runs the sign-in, your browser opens, and Kepler shows a status line instead of a terminal | Browser sign-in with your ChatGPT account |
 | Remote or SSH | **Sign in with browser**: *Open Claude sign-in in your local browser, then paste the code it returns. Signs in the remote target directly.* | **ChatGPT (device code)**: *Sign in with a one-time code in your browser. Works on any remote.* |
 
-Locally, **Open sign-in in browser** is there if the browser did not open on its own; if the callback cannot complete, Kepler reveals **Paste the code from your browser** with **Paste from clipboard** and **Submit code**. A rejected code says so: *That code was rejected. Copy the full code and try again.* On a remote, Codex shows the link and a **One-time code** to enter there; if your ChatGPT workspace turns device sign-in off, use **Import local Codex login** or an API key instead.
+Locally, **Open sign-in in browser** is there if the browser did not open on its own. Beside it, the **Sign-in link** field holds the same address with **Copy link**, so you can open it in another browser or profile; it stays even after the browser opens, since a browser can open where you can't see it. If the callback cannot complete, Kepler reveals **Paste the code from your browser** with **Paste from clipboard** and **Submit code**. A rejected code says so: *That code was rejected. Copy the full code and try again.* On a remote, the same button and **Sign-in link** field sit above the code: Codex shows a **One-time code** to enter there, and Claude Code a field for the code your browser returns; if your ChatGPT workspace turns device sign-in off, use **Import local Codex login** or an API key instead.
 
 Auggie signs in the same way locally, and on a remote target asks you to paste the JSON it returns. Copilot uses a device code: **Sign in with GitHub**, then enter a one-time code at `github.com/login/device`.
 
@@ -2666,7 +2793,7 @@ A session runs one of two ways, and the choice is no longer Claude Code's alone.
 
 **Settings → Agents → *your agent* → New sessions start in** sets the default per agent, so Claude Code can default to Chat while Codex defaults to Terminal. To start one session the other way without changing the default, set **Start in** in the draft's **Agent settings**. Where a menu lists agents, such as **New session here** on a rail row, an agent that offers both modes also has a **Start in Terminal** or **Start in Chat** button. An agent that offers only one mode shows no switch at all.
 
-To move a session that already exists, choose **Continue in Terminal** or **Continue in Chat** on its row or tab menu. The session resumes the same conversation in the other mode where the CLI can, and starts fresh where it can't. Kepler confirms **Continued in Terminal** or **Continued in Chat**, or reports **Unable to switch this session**. The item is locked while a turn runs (*This session is mid-turn. Wait for it to finish, or stop it first.*). A session started outside Kepler must be taken over first, and only a session on a task can move to Terminal.
+To move a session that already exists, choose **Continue in Terminal** or **Continue in Chat** on its row or tab menu. The session resumes the same conversation in the other mode where the CLI can, and starts fresh where it can't. Kepler confirms **Continued in Terminal** or **Continued in Chat**, or reports **Unable to switch this session**. If the session is busy, with a turn running or work still going in the background, Kepler asks first: **Stop this session and continue in Terminal?** (or **in Chat?**). Moving to Terminal also warns when the session has queued messages, since they are discarded. **Stop and switch** stops the session and resumes the conversation in the other mode. A session started outside Kepler must be taken over first, and only a session on a task can move to Terminal.
 
 | Agent | Modes |
 |---|---|
@@ -2744,6 +2871,7 @@ The composer's **Agent settings** pill reports the model, effort, and mode the t
 
 More differences worth knowing:
 
+- **Queued review comments wait in a bar** when the composer is hidden. It reads **{count} comments to send**, with the comments chip, **Add a message** to open the composer with the comments attached, and **Send comments** to send them on their own. **Send comments** waits while the terminal is starting (*Send once the terminal has started*), while another message is going out, and after the session exits (*Resume the session to send these comments*).
 - **Paste an image** into a Claude Code or Codex terminal and Kepler hands it to the CLI the way a paste into its own terminal would, so the agent reads it as an image rather than as a path it has to go and open.
 - **A terminal session's conversation is recorded**, so quitting Kepler, an idle shutdown, a restart, or a reboot doesn't lose it. Reopening reattaches to the same conversation with its scrollback intact, and the session keeps running through a context compaction.
 - **A first message Kepler can't type in safely at launch** waits in the composer as a ready-to-send draft instead: *Your message is ready to send. {name} starts without it, so send it once the terminal is ready.*
@@ -2792,15 +2920,15 @@ An outside session opens read-only, marked **(external)** and **External**, with
 | **Ended** | The process finished |
 | **Not running** | Found on disk, with nothing running it anywhere |
 
-The sentence follows the badge. A running session reads *Follow along here. You can fork it or continue it here once it goes idle.* A waiting one reads *It's asking you something in the terminal where it's running. Answer it there.* Kepler will not answer a prompt it doesn't own, but it does notify you that the session is waiting, whichever agent it is.
+Picking a live outside session from **Open an external session** always opens it this way, read-only in its task; picking it never takes the conversation over. The sentence follows the badge. A running session reads *Follow along here.* A waiting one reads *Answer it in your terminal.* Kepler will not answer a prompt it doesn't own, but it does notify you that the session is waiting, whichever agent it is.
 
-Kepler reads the transcripts of **Claude Code**, **Codex**, **GitHub Copilot**, **OpenCode**, **Auggie**, **Grok Build**, **Pi**, and the **Google Antigravity** CLI from each agent's own store on disk, without starting the agent. A **Cursor** row still appears and can still be adopted, with *Preview isn't available for {adapter} sessions yet.* in place of the conversation.
+Kepler reads the transcripts of **Claude Code**, **Codex**, **GitHub Copilot**, **OpenCode**, **Auggie**, **Grok Build**, **Pi**, and the **Google Antigravity** CLI from each agent's own store on disk, without starting the agent. A GitHub Copilot autopilot run ends with its completion summary shown as the agent's answer, and a Copilot session run in **Chat** has a transcript on disk once it has run a turn. A **Cursor** row still appears and can still be adopted, with *Preview isn't available for {adapter} sessions yet.* in place of the conversation.
 
 Some conversations are left out of the list: OpenCode's archived and subagent sessions, and Grok Build and Antigravity conversations with no messages yet. An Antigravity conversation is replayed but not followed live. A transcript Kepler can't read says which problem it hit rather than showing an empty conversation:
 
 | What you see | What it means |
 |---|---|
-| **No transcript to show** | Kepler couldn't find the file. It may predate detection, or the agent stores it somewhere Kepler doesn't know to look, or never wrote one, as with a GitHub Copilot session started in Chat mode |
+| **No transcript to show** | Kepler couldn't find the file. It may predate detection, or the agent stores it somewhere Kepler doesn't know to look, or never wrote one, as with a session that never ran a turn |
 | **Kepler can't read this session's transcript** | The file exists but couldn't be opened. Check its permissions; Kepler keeps retrying |
 | **Waiting for activity…** | Nothing has been written yet |
 
@@ -2813,9 +2941,9 @@ Two verbs, and they differ in what happens to the terminal you started it in.
 | Verb | What it does |
 |---|---|
 | **Fork** | *Copies this conversation into a new Kepler session. Your terminal keeps the original.* Both carry on independently |
-| **Continue here** | *Picks up this conversation in Kepler where your terminal left off.* One conversation, now Kepler's |
+| **Continue here** | *Carries on this conversation in Kepler.* One conversation, now Kepler's |
 
-On a session a terminal still owns, **Continue here** first asks **Continue this conversation in Kepler?**, because two clients writing the same conversation corrupts it: *Close it in your terminal first, or two clients will write the same conversation.* Both verbs unlock once the session goes idle; neither is offered mid-turn.
+Both buttons stay on screen while the session works, but wait until it goes idle: hover one for *Available once it is idle.*, or *Answer it in your terminal first.* while it waits on you. On a session a terminal still owns, **Continue here** first asks **Continue this conversation here?**, because two clients writing the same conversation corrupts it: *If your terminal is still open, both will write to this conversation. Close it there first.* Once Kepler has it, the view announces *Ready to continue here.*
 
 A conversation picked up from disk starts the agent on your first message rather than the moment you take it, so adopting one costs nothing.
 
@@ -2836,7 +2964,11 @@ The composer sits at the bottom of the session.
 
 **Attaching a file sends a path, not a copy, wherever it can.** A file the session's machine can already read (one you drop, paste, or pick on the same machine, or pick from the remote in a remote window) goes as a pointer, and its chip reads *File on this machine* or *File on the machine*. Anything else is uploaded once into the task and its chip reads *Copied to the task when you send*. A send is all or nothing: if an upload fails, the message isn't sent (*Unable to upload {name}. Your message wasn't sent.*). An attached file's card on the task page offers **Open in default app** and **Show in Finder** (macOS), **Show in Explorer** (Windows), or **Show in file manager** (Linux), where the window can reach that machine.
 
+**A long paste becomes an attachment.** Paste more than 32 KB of text, such as a long log, and Kepler attaches it as a text file named for its length, such as `pasted-text-800-lines.txt`, and puts the file name in your prompt where the text would have gone. Remove the chip to drop it. A paste larger than the attachment limit is refused as too large, and nothing is pasted. This works in every composer that takes attachments, including the new-task composer and Ask Kepler.
+
 **A pasted pull request or issue link becomes a chip.** Paste the URL of a pull request or issue from a connected GitHub, GitLab, Bitbucket, or Azure DevOps host, self-hosted included, or of a Jira or Linear issue. In a task's session composer or the new-task composer, Kepler turns the URL into a chip labelled with its number, such as **#49**, and puts the label in your text in its place. Hover the chip for the title and the URL. When you send, Kepler attaches the link to the task. A prompt that is a slash command keeps the URL as typed.
+
+**Review comments wait in a chip until you send.** Comments you queue for a session while reviewing its changes collect in one chip on its composer, such as **2 comments**. Click the chip to list them by file and line; click one to open its place in the file, or use its **X** to remove it from the queue. The chip's own **X** removes them all. Your next message carries the queued comments first, ahead of what you typed, and you can send them with an empty prompt too. A slash command goes alone, and the comments wait for the next message. See [Review Changes](/kepler/review-changes).
 
 **Tab** moves from the prompt to **Send**, then to its chevron, and a draft you haven't sent survives a reload. **Down Arrow** or **Alt+Down** on **Send** opens the chevron's menu too, and closing the menu returns focus to **Send**.
 
@@ -2933,7 +3065,7 @@ In **Terminal** mode an interrupt is recognised whether it arrives as **Escape**
 
 Subagent work is attributed rather than mixed into the main thread. A subagent's own tool calls nest inside its card under **Operations** instead of appearing flat alongside the main agent's, and its narration renders in an indented lane of its own, marked **Subagent**, so you can see where it starts and stops even when it interleaves with the main agent's text. A subagent can start subagents of its own: their cards nest inside it, the outer card counts every permission request waiting anywhere beneath it, and a request from a nested subagent shows on the outer card under a path of subagent names, such as **Parent › Child**. While a turn is running, that turn's subagent cards pin to the top of the session and drop back into the conversation when the turn ends; a card you expanded stays expanded for the rest of the turn.
 
-**Open subagent transcript** on a subagent card, or on its running chip above the composer, opens that subagent's own transcript: its prompt, then its narration and tool calls in the order they happened, then its result. It updates live while the subagent runs, and the card and chip show the step in progress. In a wide pane it docks beside the chat; in a narrow one it covers the chat, with **Back to {title}** to return. A permission request raised inside the subagent is answered in that pane while it's open.
+**Open subagent transcript** on a subagent card, or on its running chip above the composer, opens that subagent's own transcript: its prompt, then its narration and tool calls in the order they happened, then its result. It updates live while the subagent runs, and the card and chip show the step in progress. The pane's subtitle shows the current step on one line; when the step is longer, **Show full step** expands all of it and **Hide full step** folds it again. In a wide pane it docks beside the chat; in a narrow one it covers the chat, with **Back to {title}** to return. A permission request raised inside the subagent is answered in that pane while it's open.
 
 In a Claude Code or Codex Chat session, you can also direct one subagent from its pane rather than the whole turn:
 
@@ -2942,7 +3074,7 @@ In a Claude Code or Codex Chat session, you can also direct one subagent from it
 
 For other agents, the pane is marked **read-only**.
 
-A Claude Code session can keep **background tasks** running after its turn ends, such as a monitor or a backgrounded shell. In any Chat or Terminal session, another agent's CLI that the session starts for its own work, such as a `claude` or `codex` run from the agent's shell, is listed among its background tasks while it's busy, as the agent's name and the start of its prompt. While one runs, the session reads **Working in background** rather than **Idle**, the task's card reads **Running in background**, and **Stop background task** on the card or its chip stops that one task without touching the session.
+A Claude Code session can keep **background tasks** running after its turn ends, such as a monitor or a backgrounded shell. In any Chat or Terminal session, another agent's CLI that the session starts for its own work, such as a `claude` or `codex` run from the agent's shell, is listed among its background tasks while it's busy, as the agent's name and the start of its prompt. Work the turn still depends on, such as a subagent, a workflow, or a busy child agent, keeps the session **Running**. Work the agent left running on its own, such as a backgrounded shell or a monitor, doesn't: the turn ends, and the session rests idle and reads **Background task running**. A background task's card reads **Running in background**, and **Stop background task** on the card or its chip stops that one task without touching the session.
 
 Code blocks carry a **line-wrap toggle**, so a long line can be read without scrolling sideways, and take their syntax colours from your Kepler theme. A code block longer than 15 lines folds to a 15-line preview with **Show {count} more lines** and **Show less**; a match from **Find in conversation** inside it opens it. Numbered lists stay continuous rather than restarting at 1 after an interruption.
 
@@ -3065,13 +3197,14 @@ Some things an agent asks Kepler itself to do, through Kepler's workspace tools,
 - Starting a session in a more permissive mode than the asking session's own.
 - Syncing a branch with its target, or rewriting its commits.
 - Overwriting a theme file.
+- Changing a Kepler setting that reaches your accounts, your privacy, other tools, what runs, or where files go. Only **Ask Kepler** can change settings. See [Ask Kepler](/kepler/ask-kepler#finding-and-changing-settings).
 
-The agent is told the request is waiting and can carry on; your answer reaches its inbox later. Meanwhile the session reads **Approval needed**, or **Approval needed, destructive**. The request is pinned above that session's composer as a card naming the action, such as **Delete worktree {worktree} and its branch**, with what's at stake (*At risk: {loss}*), **Approve**, and **Deny**. A card for an action that can lose work is amber; other cards are blue. Several requests page through with **{index} of {count}**.
+The agent is told the request is waiting and can carry on; your answer reaches its inbox later. Meanwhile the session reads **Approval needed**, or **Approval needed, destructive**. The request is pinned above that session's composer as a card naming the action, such as **Delete worktree {worktree} and its branch**, with what's at stake (*At risk: {loss}*), **Approve**, and **Deny**. A card for an action that can lose work is amber; other cards are blue. Several requests page through with **{index} of {count}**. A setting change reads **Change the setting {setting}**, with **From {from} to {to}** beneath, or **To {to}, on your computer** for a setting kept on your own computer.
 
 The **Approve** chevron offers two wider answers:
 
 - **Approve all {label} from this session** approves this kind of request for the rest of the session.
-- **Always approve {label}** adds a standing rule. It isn't offered for an action that can lose work (*Not offered for actions that can lose work.*) or for starting a session.
+- **Always approve {label}** adds a standing rule. It isn't offered for an action that can lose work (*Not offered for actions that can lose work.*) or for starting a session. A setting change offers neither: each one asks on its own.
 
 An approved request shows **Running** while Kepler carries it out, after checking that it still applies. One that fails shows **Not done: {summary}**, with **Dismiss**. A waiting request expires when its session is archived.
 
@@ -3102,7 +3235,7 @@ Two different readouts, and they measure different things.
 | Readout | What it shows | Availability |
 |---|---|---|
 | **Context window** | How much of *this session's* context window is used, as a ring. Hover for tokens used, available, and total, the **Estimated cost at API rates**, and the **Prompt cache**: when it expires, and how much of the session's input came from it (*{percent}% cached*) | Whenever the agent reports it |
-| **Plan usage** | Your provider plan's windows (**5h** and **7d**) as **Used** and **Resets** columns, plus whatever else the provider reports about the plan | Claude Code and Codex sessions report their own 5-hour and 7-day limits. The full readout, and Auggie, need **Check plan usage with each agent's provider**, which is on by default |
+| **Plan usage** | Your provider plan's windows (**5h** and **7d**) as **Used** and **Resets** columns, plus whatever else the provider reports about the plan | Claude Code and Codex sessions report their own 5-hour and 7-day limits. The full readout, Auggie, and GitHub Copilot need **Check plan usage with each agent's provider**, which is on by default |
 
 While a session rests, the context ring warns about the prompt cache on its own: an hourglass with the time the cache has left, or **Expiring** or **Expired**. The context card then leads with the cache and warns *The next message re-reads most of the context.* With no context reading, the ring is drawn as a dashed circle, and its card still shows the cost when the agent reports one.
 
@@ -3121,8 +3254,9 @@ A usage bar is judged by pace: the share of the window you've used against the s
 | **Claude Code** | The **5h** and **7d** windows, and an **Extra usage** pool with credits used against any monthly limit |
 | **Codex** | The same two windows, plus **Usage limit resets**: earned resets that clear an active limit early, each with its expiry |
 | **Auggie** | No windows, only the plan's credit balance: a plan line naming the plan with what is left of it, *{remaining} / {included} credits left*, or *{remaining} credits left* on an unmetered plan |
+| **GitHub Copilot** | The plan's monthly **Premium**, **Chat**, and **Completions** quotas, each with when it resets (an unlimited one is left out), and **{count} credits used** on token-based billing. A spent premium quota reads **Premium quota exhausted** with a warning mark and when it resets, or **Premium quota status unknown** once that reset has passed |
 
-An account on a third-party Claude provider shows no usage. If the figures cannot be fetched, the meter says which problem it hit rather than showing a stale number, for example *Sign in to {agent} to see usage data.* or *This agent doesn't expose usage data.* It adds *Your sessions aren't affected.* where that applies.
+An account on a third-party Claude provider shows no usage. If the figures cannot be fetched, the meter says which problem it hit rather than showing a stale number, for example *Sign in to {agent} to see usage data.*, *Sign in to Copilot through Kepler to see usage data.*, or *This agent doesn't expose usage data.* It adds *Your sessions aren't affected.* where that applies.
 
 ### When you hit a usage limit
 
@@ -3156,7 +3290,7 @@ Each session carries a state, shown as a coloured dot on its tab and rows.
 | **Waiting** | Blocked on you, and it says on what: **Permission**, **Question**, **Plan review**, or **Prompt not sent**. A pending Kepler approval also counts, as **Approval needed** or **Approval needed, destructive**, even while the agent keeps working |
 | **Unread** | Finished a turn you have not looked at |
 | **Idle** | Connected, nothing running |
-| **Working in background** | The turn ended, but a Claude Code background task is still running. Shown like **Running**, and it keeps the machine awake |
+| **Background task running** | The turn ended, but work the agent left running on its own, such as a backgrounded shell or a monitor, is still going. Drawn as idle, a grey dot with a green ring that doesn't pulse, and it doesn't keep the machine awake |
 | **Reconnecting** | Kepler is reattaching to a session that kept running while Kepler restarted |
 | **Error** | The turn or the process failed. A live session whose last turn failed on a rate limit, an exhausted quota, or an overloaded provider reads **Error** too |
 | **Ended** | The agent process isn't running. The conversation is kept, and a dormant session reads *{state} (ended)*, its last state, until your next message starts it again |
@@ -3229,9 +3363,9 @@ Deleting a task or removing its repository ends that task's live sessions.
 
 | | Switch on (the default) | Switch off |
 |---|---|---|
-| **Quit** | Agent sessions keep running, and Kepler reattaches to them when it comes back. Shell tabs end, as they do when you quit any terminal app | Asks first when sessions are running, and warns that each one will stop. Busy *terminals* are counted too |
+| **Quit** | Agent sessions keep running, and Kepler reattaches to them when it comes back. Shell tabs end, as they do when you quit any terminal app | Asks first when sessions are running or still have live work behind them, such as a busy subagent or a dev server left running, and warns that each one will stop. Busy *terminals* are counted too |
 | **Updating Kepler** | Warns only about agents the update would actually interrupt. Shell tabs keep running and come back after the restart | Warns how many agent sessions the restart will stop |
-| **Quit & End Sessions** | In the app and tray menus, including when only shell tabs are open. Ends the sessions on the way out; asks first only if one is mid-turn (**End Sessions and Quit**). Each can be continued again from its task | Not applicable |
+| **Quit & End Sessions** | In the app and tray menus, including when only shell tabs are open. Ends the sessions on the way out; asks first only if one is mid-turn or still has live work behind it (**End Sessions and Quit**). Each can be continued again from its task | Not applicable |
 
 While Kepler reattaches, an overlay covers the session, and the session offers no actions until it's back. The overlay reads *Reconnecting to the agent…*, then *Restoring conversation history…*. If the reattach fails, the session falls back to its saved conversation: *Unable to reconnect to the agent. Resume to pick up from the saved conversation.* A session whose background process dies keeps its conversation the same way, rather than starting a new one.
 
@@ -3294,7 +3428,9 @@ Kepler tells you when a session replies, needs you, or fails. Each notification 
 
 A Terminal or external session blocked on a prompt in its own CLI notifies you too, for every agent. Sessions started outside Kepler notify only once they're on a task.
 
-Titles read **{status}: {task}**, with the agent and the repository or branch beneath (*{adapter} on {repo}/{branch}*), and clicking one takes you to the session. Kepler shows it in the window already showing that session or its task, or else in the window you used last. An approval notification is titled with its status alone, with the action and *Asked by {session}* beneath.
+Titles read **{status}: {task}**, with the agent and the repository or branch beneath (*{adapter} on {repo}/{branch}*), and clicking one takes you to the session. Kepler shows it in the window already showing that session or its task, or else in the window you used last. An approval notification is titled with its status alone, with the action, what a destructive one would put at risk, and *Asked by {session}* beneath.
+
+You can answer an approval request from its alert. The in-app alert carries **Approve** and **Deny** for every request, destructive ones included, followed by **View**, which opens the request in its session. On macOS, the desktop notification has **Approve** and **Deny** buttons too, which answer the request without opening a window; Windows and Linux notifications have no buttons. A button pressed after the request was answered elsewhere does nothing.
 
 By default, Kepler stays quiet about the work you are already watching: it sends no notification for the task open in the window you're using. To change that, turn on **Notify even for the task you're looking at**. While you're working in any Kepler window on a computer, that computer posts no desktop notifications; the window you're in shows them in Kepler instead, and several windows on one computer post a single alert. A cancelled turn is not a completion, and a session reconnecting is not a completion either, so neither notifies.
 
@@ -3345,18 +3481,22 @@ You can open **Ask Kepler** from anywhere in Kepler in one of these ways:
 
 | How | Opens |
 |---|---|
-| The **Ask Kepler** button (the Kepler mark) in the top bar | The panel, on the section you used last |
-| **Cmd/Ctrl+L** (**Toggle Ask Kepler chat**) | The **Chat** section |
+| The **Ask Kepler** button (Kep, the planet mascot, with the word **Ask**) in the top bar | The panel, on the section you used last |
+| **Cmd/Ctrl+L** or **Cmd/Ctrl+K** (**Toggle Ask Kepler chat**) | The **Chat** section |
 | **Ctrl+&#96;** on every platform, macOS included (**Toggle Ask Kepler terminal**) | The **Terminal** section, starting a shell if none is open |
 
-Press the same shortcut again while focus is still inside the panel to put it away. On Windows and Linux, a focused shell keeps **Ctrl+L** for itself, so press it outside the terminal to toggle the chat.
+Press the same shortcut again while focus is still inside the panel to put it away. On Windows and Linux, a focused shell keeps **Ctrl+L** for itself as its clear-screen key, but gives up **Ctrl+K**, so press **Ctrl+K** to toggle the chat from inside a terminal.
 
-The panel floats as a card over the left or right edge of the page, under the top bar. Nothing dims behind it, so the page underneath stays usable. Its header holds the open section, a button for the other section, and the panel's own controls:
+**The top bar button reports on your chats.** While a panel chat you aren't looking at is working, Kep's eye takes the working colour. When a chat needs something from you, the button turns into a pill that reads **Needs you** (a question or an approval waits), **New reply**, or **Failed**, and clicking it opens the panel on that chat instead of toggling the panel. Hover it for which chat, such as *{title} needs you* or *New reply in {title}*, or a count when several chats are in the same state. In a narrow window, the button drops its word and shows Kep alone.
 
-- **Move to the left** or **Move to the right** docks the panel to the other edge of the window.
+**Floating or docked.** By default the panel floats as a card over the left or right edge of the page, under the top bar. Nothing dims behind it, so the page underneath stays usable. Docked, the panel becomes a column of the window instead, and the page narrows beside it rather than sitting under it; a docked panel opens and closes without sliding. Its header holds the open section, a button for the other section, and the panel's own controls:
+
+- **Dock panel** switches between floating and docked. It shows as pressed while the panel is docked.
 - **Close Ask Kepler** puts it away.
 
-**Resize.** Drag the panel's inner edge (**Resize Ask Kepler**) to change its width, or focus the edge and use the arrow keys. Double-click the edge to return to the default width. The panel is never narrower than 360 pixels or wider than 60% of the window. Kepler remembers the width and the side on this computer, for every window.
+Right-click the panel's header, or press the keyboard's context-menu key on it, for the panel's menu: **Dock panel**, checked while docked, and **Move to the left** or **Move to the right**, which moves the panel to the other edge of the window.
+
+**Resize.** Drag the panel's inner edge (**Resize Ask Kepler**) to change its width, or focus the edge and use the arrow keys. Double-click the edge to return to the default width. The panel is never narrower than 360 pixels or wider than 60% of the window. Docked, it also leaves the page at least 620 pixels; in a window too narrow for that, the panel floats until the window widens, then docks again at the width you set. Kepler remembers the width, the side, and whether the panel is docked on this computer, for every window.
 
 **Escape** also closes the panel, unless the key means something else where you are: a text field that holds a draft, a find bar, a shell (where the program owns the key), or a chat whose agent is still answering, where **Escape** stops the turn instead.
 
@@ -3368,15 +3508,18 @@ Closing only hides the panel. A half-typed question, the open chat, and every sh
 
 The **Chat** section is a conversation with an agent that works for you across Kepler rather than inside one task. A new chat opens on **Ask Kepler anything**, *Ask a quick question, or have Kepler check on and manage your tasks and sessions.*, and a composer that reads *Ask anything*. Pick the agent from the pill in the composer, type your question, and send it.
 
+You can attach files to a chat from its first message on: use **Attach a file**, drop files onto the composer, or paste them. Kepler keeps a chat's attachments in the chat's own folder and lets the agent read it. If a file you attached is gone by the time the chat starts, Kepler leaves it out and tells you which one.
+
 ### Starter prompts
 
 A new chat offers starting points you can send with one click:
 
 - **What needs me right now?**
+- **Find or change a setting**. See [Finding and changing settings](#finding-and-changing-settings)
 - **Summarize this task**, only while you're on a task's page
 - **What changed across my tasks today?**
 
-A starter goes out as the chat's first message and leaves anything you already typed in the composer alone.
+A starter goes out as the chat's first message on its own, and leaves anything you already typed or attached in the composer alone.
 
 ### What the chat knows
 
@@ -3388,11 +3531,23 @@ The chat keeps up with what you have on screen. With each message, Kepler tells 
 
 So a question such as *what's this one stuck on?* reads against the task in front of you. Kepler also tells it which sessions are waiting on you, such as approvals, permission requests, questions, and failed or unread sessions, and asks it to bring these up only when you ask. Ask **What needs me right now?** to get that list.
 
-The agent can read your tasks and sessions and act on them through Kepler's own tools. Before it starts a session on a task that it didn't create, Kepler asks you first. When it mentions a task or a session, it names it as a link you can click.
+The agent can read your tasks and sessions and act on them through Kepler's own tools. Before it starts a session on a task that it didn't create, Kepler asks you first. When it mentions a task, a session, or a setting, it names it as a link you can click; a setting link shows the setting's name and opens it in **Settings**.
+
+### Finding and changing settings
+
+The chat can look up Kepler's settings for you. Ask where something is set, or what a setting is set to, and the agent finds the setting, tells you its current value and what it can be set to, and links to it. These settings tools belong to **Ask Kepler** alone: an agent working in a task never gets them.
+
+The agent changes a setting only when you ask it to. Some settings it can find and link to, but not set, such as secrets, actions, and settings that take a list. A paid feature can't be turned on without a paid plan, and the agent tells you why when it refuses.
+
+A change to a setting that reaches your accounts, your privacy, other tools, what runs, or where files go waits for your approval, on a card that reads **Change the setting {setting}** with **From {from} to {to}**. Each such change asks on its own: the card offers no wider approval. See [Approval requests](/kepler/agent-sessions#approval-requests).
+
+Some settings, such as the theme, the language, or the terminal font, are kept on your own computer. When you use Kepler in a browser or a remote window, the window you asked from applies such a change and shows **Ask Kepler changed {label} from {from} to {to}.** with **Undo**. See [Settings](/kepler/settings).
 
 ### Which agents can answer
 
 A panel chat always runs over the **Agent Client Protocol** (**ACP**), so the agent pill lists only agents that Kepler can drive over ACP. An agent that runs only in a terminal, such as Pi, can't answer in the panel. See [Agent Integrations](/kepler/agent-integrations) for which agents run in **Chat**.
+
+**Ask Kepler keeps its own agent, separate from tasks.** A new chat opens on the agent you picked last in the panel; picking an agent here never changes what a new task starts with, and the other way round. When the panel has no earlier pick to go on, or when you choose **Use default agent** on the pill, it uses Ask Kepler's default agent, set in **Settings → Agents** on the **Ask Kepler uses** row. See [Settings: Agents](/kepler/settings-agents).
 
 ### Past chats and new chats
 
@@ -3460,7 +3615,7 @@ Open a worktree from the rail's **Changes** group and it opens in a tab of its o
 | Control | What it does |
 |---|---|
 | The **branch** | The branch this checkout is on. **⋮** beside it, or a right-click, opens the worktree's menu, the same menu the worktree has in the rail and on the Dashboard. On a task with several worktrees, the branch name also switches between them |
-| The **sync control** | One button whose verb follows the branch's state (**Publish**, **Push**, **Pull**, **Fetch** or **Update**), with the counts beside it. See [Publishing and syncing the branch](#publishing-and-syncing-the-branch) |
+| The **sync control** | One button whose verb follows the branch's state (**Publish**, **Push**, **Pull**, **Fetch**, **Update** or **Sync**), with the counts beside it. See [Publishing and syncing the branch](#publishing-and-syncing-the-branch) |
 | **Open in** | Hands the checkout to another app. The split button runs your default; the chevron lists the rest, ending with **Open on {provider}** where the branch lives on a supported host |
 | **Run a command** | The repository's configured commands, and **Manage commands…**. See [Settings](/kepler/settings-repositories#per-repository-commands) |
 
@@ -3489,6 +3644,7 @@ The panel is a row of views over a list of files, with the commit box under the 
 | **Commits** | What the branch adds against its merge target, with a count. The commit list leads with **All commits**; click a commit to narrow to it, or **Shift**-click another to take a range |
 | **All changes** | Both together: everything from the merge target to the files on disk. With no merge target it reads *No base branch, so this shows uncommitted changes* |
 | **All files** | Every file in the worktree, not only what changed |
+| **Comments** | The task's review comments, with a count of the open ones and a dot for unread replies. See [Review comments](#review-comments) |
 | The counts | Commits, files and the line delta, then **from {branch}**: the merge target the counts are measured against; in **Commits** and **All changes**, click it to compare against another branch. See [Merge targets](#merge-targets) |
 | **View as tree** / **View as list** | How the files are drawn |
 | **Filter files** | Narrows the list |
@@ -3500,7 +3656,9 @@ In **All changes**, a file that also has uncommitted work carries a pencil mark,
 
 **All files** reads the whole worktree. Changed files read as they do in **All changes**, and a file you didn't change opens as it is. Files and folders that Git ignores are set apart and marked **Ignored**, and symbolic links are marked **Symbolic link**. A folder lists its contents when you open it, and a very large one shows only its first items (*Showing the first {countText} items*).
 
-The header above the commit list says how far the branch has come: **{count} commits ahead of {branch}**, with **branched here** marking the merge base. Commits the upstream doesn't have yet are drawn with a green dot and line, and read **Not pushed**. Hover a commit for its card: the author, when it was committed, the full message with its lists and trailers, the short hash, its line changes and its file count. Right-click a commit for **Copy commit SHA**, **Copy commit message**, **Open commit on {provider}** and **Copy commit URL**. A commit that isn't pushed yet has no page on the host, so it leaves out the last two.
+The header above the commit list says how far the branch has come: **{count} commits ahead of {branch}**, with **branched here** marking the merge base. Commits the upstream doesn't have yet are drawn with a green dot and line, and read **Not pushed**. Hover a commit for its card: the author, when it was committed, the full message with its lists and trailers, the short hash, its line changes and its file count. Right-click a commit for **Copy commit SHA**, **Copy commit message**, **Open commit on {provider}** and **Copy commit URL**. A commit that isn't pushed yet has no page on the host, so it leaves out the last two. **Shift+F10**, or the context menu key, opens the same menu from the keyboard.
+
+With a Jira or Jira Server account connected, Jira issue keys in a commit's message become links. The commit's right-click menu then adds **Open issue {issue}** and **Copy issue URL for {issue}** for each issue the message references. When a message references too many issues, the menu reads **Issue reference matching limit reached**. When a message is too large to read, it reads **Issue references unavailable: commit message is too large**. See [Issue Tracker Integrations](/kepler/issue-tracker-integrations).
 
 A wholly untracked folder with hundreds of files, such as a build output nobody ignored or a test sandbox, shows as one muted row with its file count instead of thousands of rows. **Show** on the row lists them. Untracked files never carry line counts, and a line total that leaves out a collapsed folder's files is marked **partial**. Staging, discarding and committing take the folder as a whole, and the confirmation names its file count.
 
@@ -3520,7 +3678,7 @@ Click a file, or **Open changes** from the worktree's menu, and the overlay open
 
 | Part | What it holds |
 |---|---|
-| The tree | The same file tree the panel had, over the same view, with its own view and layout controls. In **Working changes**, each row has a staging checkbox and the commit box sits beneath the list |
+| The tree | The same file tree the panel had, over the same view, with its own view and layout controls. In **Working changes**, each row has a staging checkbox and the commit box sits beneath the list. In **Comments**, the tree gives way to the task's [comment list](#the-comments-view) |
 | The viewer | The diff, or several diffs stacked when you opened a folder or a selection. A single file can show as **File**, the whole file with its changes marked in the gutter, or **Changes**, the diff |
 
 **Hide changes panel**, or **Cmd/Ctrl+B**, collapses the tree and hands its width to the viewer. With the tree hidden, the view picker and a **Jump to file…** switcher move onto the viewer's own header, so you never lose the way back.
@@ -3608,7 +3766,7 @@ Diffs normalize line endings, so a file that changed from CRLF to LF does not re
 
 ### When a scope can't be read
 
-A failed read says so rather than standing in for an empty one: **Unable to load these changes**, with **Try again**, and *Git did not say why.* when Git offered no reason. An empty view reads **No working changes** or **No changes in this scope**; a branch with no base yet reads **No base branch to compare against yet**.
+A failed read says so rather than standing in for an empty one: **Unable to load these changes**, with **Try again**, and *Git did not say why.* when Git offered no reason. An empty view reads **No working changes** or **No changes in this scope**. In **Commits**, a branch with nothing to measure against, such as a detached HEAD or a default branch with no upstream, reads **No base branch to compare against yet**. A branch level with its base, or one with no commit yet, reads **No commits**.
 
 ### On a phone
 
@@ -3627,7 +3785,9 @@ See [Remote Environments](/kepler/remote-environments).
 
 ## Review comments
 
-Read the diff, mark what needs fixing, and hand the whole list to the agent in one go.
+Read the diff, mark what needs fixing, and send your notes to the agent, one at a time or as a batch. The agent can answer each comment in a thread of its own.
+
+Comments are saved with the task, so they're still there after a reload and in every window. Nothing is posted to your Git host.
 
 | To comment on | Do this |
 |---|---|
@@ -3635,15 +3795,67 @@ Read the diff, mark what needs fixing, and hand the whole list to the agent in o
 | A range | Click the **+** on the first line, then **Shift**-click the last, or extend with **Shift+↑** / **Shift+↓** |
 | What you selected in the editor | **Cmd/Ctrl+Shift+C**, which also works on the line the caret is on |
 
-A draft opens under the last line. Type your note and press **Comment**, or **Cmd/Ctrl+Enter**. Each comment becomes a card under its lines, with **Edit** and **Delete comment**. Comments work on every diffed file in a stack, in **Working changes**, and in **Commits** once you pick a commit or a range. **All changes**, **All commits**, and a file shown whole, such as a new file, take none. The file header and its tree row show how many comments a file has.
+Comments work in every view: **Working changes**, **Commits**, **All changes** and **All files**, and on a file shown whole, such as a new file. A file you open in a file tab or the file viewer takes comments too. The file header and its tree row show how many comments a file has.
 
-Comments stay in Kepler. Nothing is posted to your Git host, and the agent doesn't see them until you send them.
+### Write and send a comment
 
-The overlay's header sums them up: **{count} comments**, **Add to prompt**, and a **Comment options** menu with **Discard all comments**. **Add to prompt** turns every comment into one block and adds it to the composer of the session running in that worktree. Each comment in the block carries its `path:lines`, the quoted code, and your note. It does not send: you read the prompt, add to it, and press Send yourself. Each card has its own **Add to prompt** for sending just that one. Sent comments are cleared from the diff.
+A draft opens under the last line, headed **Comment on line {line}** or **Comment on lines {start} to {end}**. Below the note, **To {agent} {name}** names the session the comment will go to; its chevron opens a chooser over the task's sessions, each marked **Chat** or **Terminal**, and **Task folder** for a session in the task's own folder. A session that isn't running reads *Comments wait here until it runs*.
 
-**Add to prompt** needs a session in this task running in the same worktree as the diff; the button's tooltip names the session it will write into. From the Dashboard, open the task first. In an overlay opened from outside a conversation, such as from a file path, the button is locked: *Open this file from a conversation to send comments*.
+To finish the draft, follow these steps:
 
-Typed text is never thrown away: **Escape** only leaves a draft's field, and a draft with text survives closing the overlay or moving to another file. A comment whose lines changed or whose file left the view is kept and listed as **{count} comments outside this diff** rather than drawn under the wrong code.
+1. Type your note. A comment with no note sends the selected lines as context.
+2. Choose how it goes:
+   - **Add comment**, or **Cmd/Ctrl+Enter**, adds it to that session's queue.
+   - **Send now**, or **Cmd/Ctrl+Shift+Enter**, sends it to the session at once.
+3. To send what's queued, press **Send comments ({count})** in the overlay's header, or send your next prompt in that session.
+
+Queued comments show as a **{count} comments** chip in that session's composer and go out with its next prompt. The header's **Send comments ({count})** sends every queued comment of the task, one prompt for each session. When the session isn't on screen, a notification says *Queued for {agent} session {name}* or *Comments are waiting in {agent} session {name}*, with **Open** to go to it. Each comment in a prompt carries its `path:lines`, the quoted code, and your note.
+
+On a task with no session yet, **Send now** reads **Start a session**. It opens a new session's draft with the comments as its first prompt. In an overlay opened from outside a conversation, such as from a file path, sending is locked: *Open this file from a conversation to send comments*.
+
+Each comment becomes a card under its lines. The card's status line says where the comment stands, and its actions follow from it:
+
+| Status | The card offers |
+|---|---|
+| **Not sent yet** | **Edit comment**, **Delete comment**, **Add to queue** and **Send now** |
+| **Queued for {agent} {name}** | **Edit comment**, **Delete comment**, **Remove from queue** and **Send now** |
+| **Sending to {agent} {name}** | Nothing, until the prompt has gone out |
+| **Sent to {agent} {name} {time}** | **Reply to {agent}**, **Resolve** and **Delete comment** |
+| **Resolved**, or **Resolved by {agent} {name}** | **Reopen** |
+
+Once a prompt has carried a comment, its wording is locked, since the agent has read it. The overlay's header shows **{count} comments**, which opens the [Comments view](#the-comments-view), and a **Comment options** menu with **Discard unsent comments**. Comments you've already sent stay.
+
+Typed text is never thrown away: **Escape** only leaves a draft's field, and a draft with text survives closing the overlay or moving to another file.
+
+### Replies and resolving
+
+The agent answers a comment you sent in a thread under it, and it can resolve the comment when the fix is done. The card reads as a conversation: your note, then each reply, oldest first, named **You** or with the agent and its session.
+
+- **Reply**: type in **Reply to {agent}** and press **Reply**, or **Cmd/Ctrl+Enter**. The reply goes to the session the comment was last sent to. If that session is gone, choose another: *Choose a session to reply to*.
+- **Resolve** closes the comment, and **Reopen** opens it again. A resolved card starts collapsed.
+- **Unread replies**: a card with replies you haven't read shows **{count} new replies** and marks each one **New**. The replies count as read once the card has been on screen for a moment. **Mark as read** and **Mark as unread** set it yourself.
+
+Any card collapses to a one-line row from the chevron beside its lines, and expands again from the row.
+
+### The Comments view
+
+**Comments**, after **All files** in the view picker of the panel and the overlay, lists every review comment of the task. Its button counts the open comments, with a dot when there are unread replies.
+
+Each row shows the comment's place, when it was written, the note and its status. Click a row to show the code it's on and move to its card; a comment whose worktree was removed reads *Its worktree was removed*. A row's own buttons and its right-click menu offer **Send now**, **Resolve**, **Reopen**, **Mark as read** and **Delete comment**, as its status allows.
+
+**View options** sets how the list reads:
+
+- **Group by**: **File**, **Status** or **None**. By status, the sections are **Unread replies**, **Not sent**, **Queued**, **Sent** and **Resolved**.
+- **Sort by**: **Line order** or **Latest activity**.
+- **Show resolved**: lists resolved comments too.
+
+With no comments, the view reads *To comment on code, press + beside a line number or select some text.*
+
+### When the code moves
+
+A comment follows its code. If the agent moves the lines it's on, the card moves with them. If the agent changes those lines, the card stays near where it was, marked **Outdated** (*The code changed after this comment*), and shows **Lines as they were when commented on**.
+
+A view of the files on disk shows every comment on a file, whichever commit it was written on, so a card survives the agent editing or committing. A pick in **Commits** shows only the comments written on that commit. Comments on files that aren't in the view are listed in the header as **{count} comments outside this diff**, or **{count} comments not shown here** in a file view. Opening a comment whose file has no changes in the view opens the file whole: *This file has no changes here now, so it opens as a whole file.*
 
 ***
 
@@ -3703,10 +3915,11 @@ The strip's **sync control** is one button, and its verb is whatever the branch 
 
 | State | The button reads | What it does |
 |---|---|---|
-| Behind or diverged from its merge target | **Update**, or **Review conflicts** with a warning icon when updating would conflict. After an applied update, **Update again** once the base has moved on | Opens the update view in the worktree panel. See below |
+| Behind or diverged from its merge target | **Update**, or **Review conflicts** with a warning icon when updating would conflict | Opens the Sync view in the worktree panel. See below |
+| Rebased by an applied sync, with the result not yet pushed | **Sync**, with *Open Sync to push this result* | Opens the Sync view, where you push the result or roll it back |
 | No upstream | **Publish**, with *Creates {remote}/{branch} on the remote* | Publishes the branch |
 | Ahead | **Push**, with **{count} ahead** | Pushes |
-| Rebased by an applied update | **Force push**, with *Rebased onto {target} — force push to update the remote* | Replaces the remote's old commits after you confirm **Force push?** |
+| Rebased outside the Sync view, so the remote has the old commits | **Force push**, with *Rebased onto {target} — force push to update the remote* | Replaces the remote's old commits after you confirm **Force push?** |
 | Behind | **Pull**, with **{count} behind** | Pulls. A branch that is both ahead and behind its upstream reads *Behind, pull first* on Push |
 | In step | **Fetch**, with **Up to date** | Updates your remote-tracking refs, and removes the ones whose branch was deleted on the remote, so deleted branches leave every branch picker |
 
@@ -3716,10 +3929,10 @@ The chevron beside it opens a menu that leads with whatever the button runs. The
 
 - **Push** (or **Publish**), **Pull** and **Fetch**. Each says where it goes: *To {upstream}*, *From {upstream}*, and *From {remote}* or *From all remotes: {remotes}*.
 - **Set upstream** or **Change upstream**, on any branch that isn't a detached HEAD. See [Set or change the upstream](#set-or-change-the-upstream).
-- **Force push**: *Rewrites the remote branch*. Offered when the branch has diverged from its upstream, as a deliberate, separate click.
-- **Update**: where the branch stands against its merge target, and the way into the update view. It reads **Review conflicts**, **Roll back update** or **Update again** when one of those applies.
+- **Force push**: *Rewrites the remote branch*. Offered when the branch has diverged from its upstream, as a deliberate, separate click. While an applied sync result is waiting to be pushed, the menu leaves it out, unless the branch changed after the sync.
+- **Update**: where the branch stands against its merge target, and the way into the Sync view. It reads **Review conflicts** when updating would conflict, and **Sync** after an applied sync.
 
-After you apply a rebase, the remote still has the branch's old commits, so **Force push** becomes the main button instead of a menu item. The **Force push?** confirmation explains that the branch was rebased and that Kepler refuses the force push if someone else pushed in the meantime.
+After you apply a rebase, the remote still has the branch's old commits. The main button then reads **Sync** and opens the Sync view, where **Push** sends the result. See [Updating from the base](#updating-from-the-base). For a branch rebased some other way, **Force push** becomes the main button instead. The **Force push?** confirmation explains that the branch was rebased and that Kepler refuses the force push if someone else pushed in the meantime.
 
 **SSH keys that ask for a PIN or passphrase.** On macOS and Linux, a fetch you start yourself, such as **Fetch** or **Refresh branches**, can use your `SSH_ASKPASS` helper, so a key that needs a PIN or passphrase, such as a security key, can fetch. Kepler allows at most three prompts per connection, and 60 seconds for each. Fetches Kepler runs in the background never prompt. Kepler never prompts on Windows; use an SSH agent there.
 
@@ -3738,31 +3951,38 @@ Any remote branch can be the upstream, whatever its name. Pick one and Kepler sa
 
 ### Updating from the base
 
-The update view rebases or merges the branch onto its merge target. It works on a copy first, and your branch changes only when you apply the result.
+The Sync view rebases or merges the branch onto its merge target. It works on a copy first, and your branch changes only when you apply the result: *Sync prepares a result to review before applying it.*
 
-To update the branch from its merge target, follow these steps:
+To sync the branch with its merge target, follow these steps:
 
-1. Open the update view from the sync control. The title reads **Update {branch}**, with **from {branch}** under it. Kepler picks the detected base. To use another base, choose it from the picker. **Refresh branches**, beside the picker's search field, fetches from every remote first.
-2. Press **Rebase**, or choose **Merge** from its menu. To abandon a run in progress, press **Stop**. Your branch is never touched.
-3. When the copy reaches **Ready to apply**, press **Apply** to move your branch to it, or press **Discard** to throw the copy away. If the branch can push, the **Apply** menu also offers **Apply & push**. After a rebase, **Apply & push** force-pushes, because the remote still has the old commits.
-4. To undo an applied update, press **Roll back**. The view returns to **Ready to apply** and keeps the result, so you can apply it again. The sync control's menu offers the same thing as **Roll back update**.
+1. Open the Sync view from the sync control. The title reads **Sync {branch}**, with **from {branch}** under it. Kepler picks the detected base. To use another base, choose it from the picker. **Refresh branches**, beside the picker's search field, fetches from every remote first.
+2. Choose **Rebase** or **Merge** in the **Sync method** control beside the base.
+3. Press **Sync**. The view reads *Preparing the sync result…* while it works. To abandon a run in progress, press **Stop**. Your branch is never touched, and any earlier result stays available.
+4. When the copy reaches **Ready to apply**, apply it:
+   - For a clean result (no conflicts, nothing resolved by AI) on a branch that can push, the main button is **Apply & push**, with **Apply** in its menu.
+   - Otherwise the main button is **Apply**, with **Apply & push** in its menu when the branch can push.
 
-The **Roll back** menu holds two more options:
+**Apply** moves your branch to the result, and the view reads **Branch synced**. If the branch can push, **Push** then sends it, so you can apply first and push once you've checked the branch. After a rebase, the push replaces the remote's old commits. Kepler pins every push from the Sync view to the local and remote commits you saw, so it never overwrites work someone else pushed in the meantime.
 
-- **Roll back and discard**: returns the branch to where it was and throws the result away.
-- **Roll back & push**: rolls back and then force-pushes the restored branch. This option appears only when the branch can push.
+To undo an applied sync, press **Roll back**: *Restore the branch to before sync and keep this result ready to apply again.* When the remote holds exactly the applied result, **Roll back & push** is offered too. It asks **Roll back and push?** first, because it replaces the published branch with the restored one, and the push stops if someone else changed the remote branch.
 
-A result waiting to be applied doesn't lock the branch, so the branch or its base can move on in the meantime. You can also pick another base in the picker after a run. Either way, the result no longer matches, and the view reads *The last update result is out of date* with **Recalculate** and **Discard**. **Recalculate** runs the same update again. Kepler won't apply a result whose base moved.
+When a push from the Sync view fails, your local result is kept:
 
-After an applied update, when the base moves on again, the view reads *Another update is available for {base}. Run another update to include it.* and offers **Update again**. If your branch changed after the update instead, it reads *Your branch changed after the update. You can discard the saved result.*
+- If the remote branch moved, the view reads *The remote branch changed. Sync with it before pushing; your local result is preserved.* It fetches and points the base at the remote branch, so the next **Sync** brings in the remote's changes.
+- If your local branch changed, it reads *The local branch changed. Refresh and review it before retrying Push.*
+- For any other failure, **Push** stays offered so you can try again. If a **Roll back & push** restored the branch but the push failed, the view keeps that push offered until it goes through.
 
-A run that fails says why, with **Try again** and **Dismiss**.
+A result waiting to be applied doesn't lock the branch, so the branch or its base can move on in the meantime. You can also pick another base or switch the method after a run. Either way, the result no longer matches. The view reads *The last update result is out of date*, and **Sync** becomes the main button to prepare a new one. Kepler won't apply a result whose base moved.
 
-When updating would conflict, the sync control reads **Review conflicts**. The view title reads **Review conflicts in {branch}**, with **with {branch}** under it, and lists the conflicting files instead of offering a plain update. Pick a file to see its conflicting hunks.
+After an applied sync, when the branch or its base moves on, the view reads *The branch or {base} changed. Sync to prepare the next result.* If your branch changed after the sync instead, it reads *Your branch changed after the update. Sync to prepare a new result.* If a new base needs nothing from your branch, the view says so and keeps your earlier result.
+
+A run that fails says why, under **Sync failed**. Press **Sync** to try again.
+
+When syncing would conflict, the sync control reads **Review conflicts**. The view title reads **Sync {branch} with conflicts**, with **with {branch}** under it, and lists the conflicting files. Pick a file to see its conflicting hunks.
 
 You have two ways through the conflicts:
 
-- **Resolve them with AI.** Press **Rebase with AI**, or choose **Merge with AI** from its menu. See [Resolve update conflicts with AI](#resolve-update-conflicts-with-ai).
+- **Resolve them with AI.** Press **Sync**: on a conflicting branch, it resolves the conflicts with AI. See [Resolve update conflicts with AI](#resolve-update-conflicts-with-ai).
 - **Resolve them yourself.** Rebase in the worktree's terminal and resolve each file in the [file tree](#resolving-merge-conflicts).
 
 ### Resolve update conflicts with AI
@@ -3777,12 +3997,12 @@ AI conflict resolution needs all of the following:
 
 To resolve conflicts with AI, follow these steps:
 
-1. Open the update view from **Review conflicts** on the sync control.
+1. Open the Sync view from **Review conflicts** on the sync control.
 2. Check the base under the title. To use another base, choose it from the picker.
-3. Press **Rebase with AI**, or choose **Merge with AI** from its menu.
+3. Choose **Rebase** or **Merge** in the **Sync method** control, then press **Sync**.
 4. Watch the progress line, which reads *Resolving conflicts · {count} files resolved*. To abandon the run, press **Stop**.
 5. Read the review when the run reaches **Ready to apply**. The next section describes what the review shows.
-6. Press **Apply**, or **Apply & push** if the branch can push. To throw the result away, press **Discard**.
+6. Press **Apply**. If the branch can push, **Apply & push** is in its menu. To leave the result unapplied, close the view; your branch stays as it was.
 
 If the AI can't finish some files, the run stops without touching your branch: *Your branch wasn't changed. The AI was unable to finish these files, so the update stopped.* Each file is listed with the reason, such as a binary file, or a conflict Git can't merge as text, which you resolve by hand.
 
@@ -3794,7 +4014,7 @@ The review explains what the AI changed so you can decide whether to apply it. I
 - **A summary**: a short explanation of the run, followed by any *Check:* items that name a file and the reason to look at it, such as *low confidence*, *possible issue* or *left unresolved*.
 - **A summary line**: *AI resolved {count} files · confidence {confidence}%*.
 - **A card for each commit**: the commit's short SHA and subject, or **Merge** for a merge run, and its file count. A card shows **Resolving…** while the AI works on it.
-- **A row for each file**: the method used and a confidence badge, followed by the AI's reasoning for that file. A low confidence shows as a warning.
+- **A row for each file**: the method used and a confidence badge, followed by the AI's reasoning for that file. A low confidence shows as a warning. A file the run stopped on before the AI finished it is marked **Incomplete** with a warning icon, and neither it nor a **Skipped** file carries a confidence badge.
 
 Each file row shows one of the following methods. **Ours** and **Theirs** are Git's names for the two sides of the conflict. In a merge, **Ours** is your branch and **Theirs** is the base. In a rebase they swap: **Ours** is the branch you're rebasing onto, and **Theirs** is your branch.
 
@@ -3829,7 +4049,7 @@ A branch's **merge target** is the branch it will merge into: what its commits, 
 | Change it outright | **Change merge target…** from the merge target chip on the Dashboard, or from the worktree's **Branch** submenu, which shows the target in force beside it. Remote branches only; choosing one saves it |
 | Go back to the detected one | **Reset to automatic ({ref})** in the picker |
 | Find a branch someone else just pushed | **Refresh branches**, beside the picker's search field, fetches from every remote. The pickers list only branches already fetched |
-| Update the branch from its merge target | **Rebase onto {target}** or **Merge {target} into this branch** from the merge target chip's menu on the Dashboard, or from the worktree's **Branch** submenu. Both open the [update view](#updating-from-the-base) |
+| Update the branch from its merge target | **Rebase onto {target}** or **Merge {target} into this branch** from the merge target chip's menu on the Dashboard, or from the worktree's **Branch** submenu. Both open the [Sync view](#updating-from-the-base) with that method chosen |
 
 Kepler and GitLens share a branch's merge target, so a change made in GitLens shows up in Kepler while it's running.
 
@@ -3882,7 +4102,7 @@ AI Sync and AI Compose give agents Git tools they don't otherwise have. Both are
 | **AI Sync** | *Lets agents rebase or merge your branch and resolve conflicts for you. Every change can be undone.* |
 | **AI Compose** | *Lets agents turn messy changes into clean, focused commits. Every change can be undone.* |
 
-With a tool turned on, the agents in your sessions gain the matching tools, and you ask for the work in the chat. AI Sync also powers the **Rebase with AI** and **Merge with AI** buttons in the update view. See [Resolve update conflicts with AI](#resolve-update-conflicts-with-ai).
+With a tool turned on, the agents in your sessions gain the matching tools, and you ask for the work in the chat. AI Sync also powers the Sync view's **Sync** button when the branch has conflicts. See [Resolve update conflicts with AI](#resolve-update-conflicts-with-ai).
 
 | Tool | How an agent uses it |
 |---|---|
@@ -4259,6 +4479,8 @@ That holds on a [remote environment](/kepler/remote-environments) too:
 - **Claude Code** on a remote offers **Sign in with browser**, which opens the sign-in page in your *local* browser and takes the code you paste back. The credential lands on the remote machine.
 - **Codex** on a remote offers **ChatGPT (device code)**: *Sign in with a one-time code in your browser. Works on any remote.* Kepler shows the sign-in link and a **One-time code**; the remote CLI waits for you to finish and writes the token there. Some ChatGPT workspaces turn device sign-in off, and Kepler then points you at the alternatives.
 - **Cursor CLI** on a remote offers only **Paste an API key**, since its browser sign-in can't complete there.
+
+Wherever Kepler opens a browser sign-in for Claude Code, Codex, or Antigravity, **Open sign-in in browser** sits beside a read-only **Sign-in link** field with **Copy link**. Copy the link to open it in another browser or profile. The field stays after the browser opens, because a browser can open somewhere you can't see it, and it goes away if the sign-in attempt fails.
 
 When a sign-in runs in a terminal on a remote and the browser page won't load after you sign in, paste that page's address into the box under the terminal (*Browser page won't load after you sign in? Paste its address here.*) and click **Send**. Kepler requests the address on the remote machine, and only when the sign-in itself printed it. You then finish in the terminal.
 
@@ -4727,7 +4949,9 @@ An issue that's there only because you were mentioned is marked **Mentioned**, s
 To browse beyond that, use **All visible** in the issue list of **Add resources**. For GitHub and Azure DevOps it reads every issue across your organizations, including repositories you can read outside them, such as ones you're an outside collaborator on, and it loads more slowly. Jira and Linear show only your issues there until you pick a project or a team:
 
 - **Jira**: when the issue list shows Jira alone, a project picker appears, starting with **All projects**. Pick a project to see every open issue in it. Kepler remembers the pick for each Jira connection.
-- **Linear**: when the issue list shows Linear alone, a team picker appears. Pick a team to see every open issue in it, whoever it's assigned to.
+- **Linear**: when the issue list shows Linear alone, a team picker and a **Project** picker appear. Pick a team, a Linear project, or both, to see every open issue in them, whoever it's assigned to. The **Project** picker starts at **All projects** and lists your Linear workspace's projects by name with their state (**Backlog**, **Planned**, **Started**, **Paused**, **Completed**, or **Canceled**), closed ones included. A Linear project can span teams, so the two pickers narrow together. Changing the team clears the project pick.
+
+**A Linear issue synced with GitHub shows once.** When Linear's GitHub Issues sync keeps a two-way copy of a Linear issue on GitHub, Kepler pairs the two and lists them as one row, the Linear issue, with the filter counts to match. Open the GitHub copy's own panel and it lists on its own again. The pair shares one task history, so a task started from either copy is the issue's task, whichever copy you look at. Starting work from the Linear issue uses the repository of its GitHub copy, when exactly one repository you have in Kepler matches it; otherwise the Linear issue's own repository choice applies. Kepler pairs a copy only on GitHub or GitHub Enterprise Cloud that you're connected to, never GitHub Enterprise Server, and only one-to-one: a Linear issue synced with several GitHub issues, or two Linear issues claiming one copy, isn't paired.
 
 ***
 
@@ -4749,6 +4973,8 @@ Kepler recognizes an issue from its URL when you paste or attach one, including 
 - **Azure DevOps** work items, at `/<organization>/<project>/_workitems/edit/<number>` or at the organization level, `/<organization>/_workitems/edit/<number>`.
 
 **Search by key or link.** In the issue list of **Add resources**, type a Jira or Linear issue key, such as `OPS-42`, or paste a Jira Cloud, Jira Server / Data Center, Linear, or Azure DevOps work item link. Kepler looks that issue up directly from its tracker, whatever its state, rather than only filtering the rows already loaded. A Jira Server / Data Center link resolves when it points at an installation you have connected.
+
+**Jira keys in commits and branches.** With Jira or Jira Server / Data Center connected, Kepler matches issue keys in commit messages and branch names against your Jira sites' own key patterns, so `OPS-42` in a commit message links to that issue. Right-click a commit in a worktree's commit list for **Open issue {issue}** and **Copy issue URL for {issue}** (see [Review Changes](/kepler/review-changes#the-changes-panel)), and the **Worktrees and branches** page shows the keys as chips on branch and worktree rows (see [Settings](/kepler/settings-repositories#worktrees-and-branches)). When two connected sites share a key, the label adds the site's address. Only Jira keys are linked this way; other trackers' issue references in a commit aren't.
 
 **Pick from the list with the keyboard.** The issue list in **Add resources** has a preview pane and keyboard picking: arrows move between rows, **Space** selects, and **Enter** or a double-click adds. See [Picking issues and pull requests](/kepler/tasks-and-resources#picking-issues-and-pull-requests).
 
@@ -4935,7 +5161,7 @@ A pull request you open outside Kepler (from a terminal `gh`, from GitKraken, fr
 
 Whenever fresh pull-request data arrives, Kepler looks over your active tasks that hold no pull request yet and attaches one whose head branch matches a worktree's branch. It then behaves like a pull request you attached yourself: it sits in the task's resources, and it reaches the agent as context. See [Tasks and Resources](/kepler/tasks-and-resources).
 
-Auto-attaching is deliberately stricter than the matching above, because Kepler saves an attached resource and sends it to an agent, where a read-time match only draws a card. Auto-attach follows five rules:
+Auto-attaching is deliberately stricter than the matching above, because Kepler saves an attached resource and sends it to an agent, where a read-time match only draws a card. Auto-attach follows four rules:
 
 | Rule | Why |
 |---|---|
@@ -4943,7 +5169,8 @@ Auto-attaching is deliberately stricter than the matching above, because Kepler 
 | Open pull requests only | A merged pull request cannot claim a branch name that gets reused later |
 | The head branch has to live in the same repository | Branch matching keys on the head branch name, and the author of a fork picks that name freely. An attached resource reaches your agent, so a stranger's pull request must not claim your branch |
 | One pull request per task per pass | A task drops out of the next pass as soon as it holds one |
-| A pull request another active task already holds is left alone | One active task per pull request, without taking it off the task that has it |
+
+A pull request another active task already holds attaches all the same: several active tasks can share one pull request. Attaching it to one task leaves it on the other, and restoring an archived task that holds it archives nothing.
 
 Auto-attach never archives anything and never replaces anything. A branch match is a guess, so it never supersedes work you started deliberately, and it never removes a link because a pull request briefly dropped out of a read.
 
@@ -5076,6 +5303,10 @@ The left rail starts with a **Search settings** field and [**Setup**](/kepler/se
 
 To find a setting by name, type in **Search settings**. Search matches section titles, control labels, help text, and common synonyms, so a word like *theme* or *notifications* finds the right section. With no match, the results read *No settings match "{query}"*.
 
+To go straight to one setting, type `@id:` followed by its id, such as `@id:terminal.font-size`. The id is matched in any case. The results show that one setting, named under its page and section, and choosing it opens the page on that control. An id this version doesn't have reads *No setting has that id.* Setting ids are the same ones [settings links](#deep-links-and-section-anchors) use.
+
+Ask Kepler and your agents can search Kepler's settings too, and change one when you ask. They link you to a setting with a [settings link](#deep-links-and-section-anchors). Some changes ask for your approval first, and settings that hold secrets, such as your account or integrations, can only be linked. See [Finding and changing settings](/kepler/ask-kepler#finding-and-changing-settings).
+
 Under the page you have open, the rail lists that page's main sections so you can jump to one. Under **Agents**, the rail also lists each supported agent below **Your agents**. A page with fewer than two listed sections shows no list.
 
 ### Sub-pages and unsaved changes
@@ -5091,11 +5322,13 @@ A form with a **Save** button keeps it in a footer with **Cancel**. While you ha
 
 Most fields outside those forms save themselves. Each one shows its own status beside it: **Saving**, **Saved**, or **Unable to save** with the reason. A switch shows only **Saving** and a failure. If a save fails after you've left the page, Kepler tells you which setting it was: *Unable to save {label}*.
 
-Moving between pages replaces a single history entry. As a result, **Back** returns you to whatever you were doing before you opened Settings, rather than walking back through every page you visited.
+Each page, sub-page, or search result you open in Settings is a step of its own, so **Back**, or your mouse's back button, walks back through the pages you visited. To leave Settings in one click from any page or sub-page, use the back arrow in the Settings header, the gear icon, or **⌘ ,** (**Ctrl ,**). Each returns you to whatever you were doing before you opened Settings.
 
 ### Settings in a remote window
 
 In a window connected to a remote environment, Settings shows that machine's settings, and its header names the machine. Each page states under its title where its settings are saved: **Saved on {machine}** or **Saved on this machine**. A section that saves somewhere other than its page carries its own badge. The **Saved on this machine** tooltip reads *Applies to every Kepler window on this machine, whichever machine it's connected to.* To change this machine's own settings from such a window, click **Open this machine's settings** in the header: it opens the same page in a local window.
+
+Some settings are kept on your own computer, such as the language, the default editor, the themes, the terminal and code fonts, and the diff layout. When Ask Kepler or an agent in a remote window changes one of these, the window applies the change on your computer, the same as its Settings page would. A notification names the change, with **Undo**. See [Finding and changing settings](/kepler/ask-kepler#finding-and-changing-settings).
 
 ### Deep links and section anchors
 
@@ -5108,7 +5341,7 @@ The following table lists each page's path with its section anchors, in page ord
 | Page path | Section anchors, in page order |
 |---|---|
 | `/settings/account` | `account`, `plan-features`, `ai-credits` |
-| `/settings/agents` | `agents`, `custom-agents`, `mcp-servers`, `agent-git-tools`, `approvals`, `usage-limits` |
+| `/settings/agents` | `agents`, `ask-kepler`, `custom-agents`, `mcp-servers`, `agent-git-tools`, `approvals`, `usage-limits` |
 | `/settings/tasks` | `new-tasks`, `default-agent`, `task-page` |
 | `/settings/repositories` | `repositories-root`, `repositories`, `worktrees`, `projects` |
 | `/settings/integrations` | `provider-integrations`, `agent-options` |
@@ -5125,7 +5358,26 @@ The following table lists each page's path with its section anchors, in page ord
 
 `default-agent` sits inside **New tasks** rather than being a section of its own. From the rail or search, `worktrees` opens the **Worktrees and branches** sub-page instead of scrolling to its row. Each agent also gets its own anchor on the Agents page, `agent-<agent-id>`, for example `agent-claude-code`, and each custom agent gets `custom-agent-row-<id>`.
 
-When search, or a pointer on another page, sends you to one setting, Kepler marks that setting as you arrive, then fades the mark, and moves focus to it.
+Likewise, `ask-kepler` isn't a section of its own: it marks the default agent picker for Ask Kepler at the top of the [Agents page](/kepler/settings-agents).
+
+Each setting's control has an anchor of its own, `setting-<id>`, where `<id>` is the setting's id, for example `/settings/appearance#setting-terminal.font-size`.
+
+When search, a link, or a pointer on another page sends you to one setting, Kepler waits for its control to load, marks it as you arrive, then fades the mark, and moves focus to it. If the control sits in a collapsed part of the page, such as an agent's program and data folder, Kepler opens that part first. If the control doesn't appear, Kepler explains why instead:
+
+- An agent setting the agent's card doesn't show reads *This agent shows that setting only when it is turned on and supports it.*
+- A setting that depends on something else reads *This setting appears once what it depends on is set up.*
+- Otherwise, Kepler fills **Search settings** with `@id:<id>`, so you can see where the setting lives.
+
+#### Settings links
+
+A `kepler://` link opens Settings from anywhere: another app, a terminal, or an agent's reply in Kepler, where it's clickable.
+
+| Link | Opens |
+|---|---|
+| `kepler://settings` | Settings |
+| `kepler://settings/<id>` | Settings on one setting's control, for example `kepler://settings/terminal.font-size` |
+
+A setting id is a list of lowercase words separated by dots, and a link matches it in any case. A settings link only opens Settings: it never changes a setting, and a value added to the link is ignored. A link to an id this version of Kepler doesn't have opens Settings with *That setting isn't in this version of Kepler.*
 
 ---
 
@@ -5184,7 +5436,9 @@ plan_required: all
 status: GA
 last_verified: 2026-10
 
-*The coding agents that work on your tasks: install them, sign in, choose how you work with each, and give them more tools.* The page opens with a line that names your default agent, *New tasks use {agent}.*, and a **Change in Tasks** link to [Default agent](/kepler/settings-tasks#default-agent).
+*The coding agents that work on your tasks: install them, sign in, choose how you work with each, and give them more tools.* The page opens with a line that names your default agent, *New tasks use {agent}.* (or *No default agent for new tasks.*), and a **Change in Tasks** link to [Default agent](/kepler/settings-tasks#default-agent).
+
+Under it, the **Ask Kepler uses** row picks the **Ask Kepler default agent**, separate from the one for tasks: *Used when Ask Kepler has no earlier pick to go on and whenever you choose Use default agent there.* It lists only the agents that can answer in the Ask Kepler panel, which are those that run in **Chat**. If the agent you picked stops being available, the row says *Pick another agent for Ask Kepler: {name} is not available.* See [Ask Kepler](/kepler/ask-kepler#which-agents-can-answer).
 
 The Agents page has six sections: **Your agents**, **Custom agents**, **MCP servers**, **Agent tools**, **Approvals**, and **Usage limits**.
 
@@ -5279,7 +5533,7 @@ The following setting is on Claude Code's card:
 |---|---|---|
 | **Let artifact comments start turns** | Anyone with edit access to an artifact a Chat session publishes can start a turn in that session by sending a comment to Claude. A reply is posted automatically | On |
 
-Running sessions keep the value they started with. When you change it, the card lists the sessions still using the previous value, marking those that **Published an artifact** or have a **Turn in progress**, with **Restart all** and **Restart selected ({count})**. Restarting keeps each conversation. A turn in progress is interrupted, and a restarted session stops watching artifacts it published before.
+Running sessions keep the value they started with. When you change it, the card lists the sessions still using the previous value, marking those that **Published an artifact**, have a **Turn in progress**, or have **Background work running**, with **Restart all** and **Restart selected ({count})**. A session that is mid-turn or has background work starts unticked. Restarting keeps each conversation. A turn in progress is interrupted and background work stops, and a restarted session stops watching artifacts it published before.
 
 ## Custom agents
 
@@ -5339,13 +5593,13 @@ Every workspace tool runs without the agent's own permission prompt, in Chat and
 | **AI Sync** | *Lets agents rebase or merge your branch and resolve conflicts for you. Every change can be undone.* | Off |
 | **AI Compose** | *Lets agents turn messy changes into clean, focused commits. Every change can be undone.* | Off |
 
-**AI Sync** and **AI Compose** add their tools to the workspace MCP server. Both require a paid GitKraken subscription. On the Community plan, they show a lock: *Not available on the Community plan. Upgrade to unlock.* Turning either on confirms that *New agent sessions will pick up this change.* Sessions already running keep the tools they started with.
+**AI Sync** and **AI Compose** add their tools to the workspace MCP server. Both require a paid GitKraken subscription to turn on. On the Community plan, when you're signed out, or with no organization, a setting that is off shows a lock in place of its checkbox: *Not available on the Community plan. Upgrade to unlock.* A setting that is already on keeps its checkbox, so you can still turn it off. Turning either on confirms that *New agent sessions will pick up this change.* Sessions already running keep the tools they started with.
 
 ## Approvals
 
 *Some actions your agents take wait for your approval. These rules approve them for you; anything not covered still asks.*
 
-When an agent asks, through Kepler's workspace tools, to do something that needs your say, Kepler pins an approval card above that session's message box. Examples include deleting a worktree, sending a prompt to another session, or rewriting a branch. The card's **Approve** menu offers **Always approve** for that kind of action. Kepler doesn't offer it for actions that can lose work. See [Agent Sessions](/kepler/agent-sessions).
+When an agent asks, through Kepler's workspace tools, to do something that needs your say, Kepler pins an approval card above that session's message box. Examples include deleting a worktree, sending a prompt to another session, or rewriting a branch. The card's **Approve** menu offers **Always approve** for that kind of action. Kepler doesn't offer it for actions that can lose work, or for a setting change that Ask Kepler asks to make. See [Agent Sessions](/kepler/agent-sessions).
 
 Each rule you create this way is listed under **Always approved**. A rule's row says when and where you added it, *Added {date} from {session} on {task}.*, and how often it has run, *Used {count} times, last {when}.* or *Not used yet.* **Remove** deletes the rule, so that kind of action asks again. With no rules, the section reads *No rules yet. When an agent asks, choose Always approve on its request to stop being asked about actions like it.*
 
@@ -5404,7 +5658,7 @@ Under **Default agent**, the following setting decides which agent the Task Comp
 | **Last used agent** | *The agent, model and mode you last picked.* The default |
 | **Default agent** | *Always the default agent above.* |
 
-With **Last used agent**, a task an agent created that has no session yet starts with the agent that created it. An Action's own agent isn't remembered as your last pick. If you choose **Default agent** with no default set, Kepler points you at the **Default agent** picker.
+With **Last used agent**, a task an agent created that has no session yet starts with the agent that created it. An Action's own agent isn't remembered as your last pick. If you choose **Default agent** with no default set, Kepler points you at the **Default agent** picker. Neither setting applies to Ask Kepler, which keeps its own last pick and its own default in [Settings → Agents](/kepler/settings-agents).
 
 ### Where new tasks make changes
 
@@ -5483,7 +5737,7 @@ The following setting names new tasks for you:
 |---|---|---|
 | **Automatically name new tasks** | *Names a new task with AI from its prompt and attached resources. A task created from a single issue or PR keeps that item's name.* | On |
 
-This setting requires a paid GitKraken subscription. On the Community plan, it shows a lock. A change takes effect on the next task you create.
+This setting requires a paid GitKraken subscription to turn on. On the Community plan, when you're signed out, or with no organization, the lock replaces its checkbox only while the setting is off. Since the setting starts on, you see a ticked checkbox until you turn it off, and you can always turn it off. A change takes effect on the next task you create.
 
 ## Task page
 
@@ -5634,9 +5888,13 @@ The following table lists the sub-page's controls:
 | **Stale after** *n* **days** | How many days without activity before a worktree or branch counts as stale. Defaults to 14 |
 | **Re-check** | Fetches every repository's remotes, then inspects the list again. A repository whose fetch failed says so beside its name: *Unable to fetch: {reason}; numbers may be stale* |
 | **Select all safe to delete** / **Select all that need an update** / **Select all with conflicts** / **Select all stale** / **Select all** | Selects the rows in the current view |
-| Selection bar | Reads *{count} selected*, or *{count} selected · {hidden} hidden by filters*, with **Clear**, **Update**, and **Delete**. **Update** and **Delete** act only on the selected rows you can see |
+| Selection bar | Reads *{count} selected*, or *{count} selected · {hidden} hidden by filters*, with **Clear**, **Create task**, **Update**, and **Delete**. **Update** and **Delete** act only on the selected rows you can see |
+
+**Create task** opens the Task Composer with the selected worktrees and branches already added: each worktree as it is, and each branch without a worktree as a branch to work on. Nothing is created until you start or prepare the task. See [Create a Task](/kepler/create-task).
 
 Each row shows how it stands with its upstream: commits to push (↑) and pull (↓), **No upstream**, or **Upstream gone**. Badges then compare it with its base: **{count} behind {base}**, **Conflicts with {base}**, or **Up to date with {base}**, plus how many files are uncommitted. A row also says how long since it was touched and why it may be finished, such as being merged into its base. On the right, it shows the tasks using it, an **External** count for sessions started outside Kepler, and its pull request. A branch row shows the tasks, sessions, and pull requests tied to that branch.
+
+With a Jira or Jira Server account connected, a row whose branch name references a Jira issue shows a chip for that issue under the branch name. Click the chip to open the issue in your browser; its tooltip shows the issue's URL. When Kepler can't match every reference, the row reads **Issue reference matching limit reached**. See [Issue Tracker Integrations](/kepler/issue-tracker-integrations).
 
 A row counts as one or more of the following:
 
@@ -5960,7 +6218,19 @@ If a theme you already have uses the same id, Kepler asks before it replaces tha
 
 #### Themes in a remote window
 
-Themes belong to this computer, as your choice of theme does. Every window, including one connected to a remote environment, lists and installs themes in this computer's themes folder and gallery. In a window connected to another machine, the picker adds an **On {host}** group with that machine's themes that this computer doesn't have. Each one offers **Install {name} on this computer**, or **Update {name} from {host}** for a copy you installed from it earlier.
+Themes belong to this computer, as your choice of theme does. Every window, including one connected to a remote environment, lists and installs themes in this computer's themes folder and gallery. In a window connected to another machine, the picker adds an **On {host}** group with that machine's themes, compared with the copies on this computer:
+
+| The theme on {host} | The picker offers |
+|---|---|
+| Not on this computer | **Install {name} on this computer** |
+| A copy you installed from {host} earlier, changed since | **Update {name} from {host}**, which updates it at once |
+| A later version of your own copy | **Update {name} to {version} from {host}**, marked **Update to {version}** |
+| An earlier version of your own copy | **Replace {name} on this computer with the copy on {host}**, marked **Older than yours** |
+| A copy that differs from yours in another way | **Replace {name} on this computer with the copy on {host}**, marked **Differs from yours** |
+
+Updating or replacing your own copy asks first: **Update {name} to {version}?** or **Replace {name} on this computer?**. Your copy moves to the Trash (the Recycle Bin on Windows), and Kepler confirms *Your previous copy is in the {bin}.* Where Kepler can't use a Trash, the replace is blocked: *To use this version, remove the copy on this computer first*. A host update to your own copy also shows on its tile in **Your themes**.
+
+Kepler's background theme sync never overwrites a copy you installed from the picker. When the host's copy changes, the picker offers the update instead, and it waits until you choose it.
 
 ### Chat
 
@@ -6110,6 +6380,7 @@ The **General** group holds app-wide shortcuts:
 |---|---|---|
 | Open settings | ⌘ , | Ctrl + , |
 | Toggle Ask Kepler chat | ⌘ L | Ctrl + L |
+| Toggle Ask Kepler chat | ⌘ K | Ctrl + K |
 | Toggle Ask Kepler terminal | ⌃ ` | Ctrl + ` |
 | New task | ⌘ N | Ctrl + N |
 | Open quick launcher (global) | ⇧ ⌥ N | Shift + Alt + N |
@@ -6141,6 +6412,7 @@ The **Navigation** group moves you between tabs and regions:
 | Move tab right | ⌘ ⌥ ] | Ctrl + Alt + ] or Ctrl + Shift + PageDown |
 | Close tab or panel | ⌘ W | Ctrl + W or Ctrl + F4 |
 | Toggle terminal | ⌘ J | Ctrl + J |
+| Dock or hide the task list or context panel | ⌘ B | Ctrl + B |
 | Next region | F6 | F6 |
 | Previous region | ⇧ F6 | Shift + F6 |
 
@@ -6164,6 +6436,7 @@ The **Dashboard** group works on the Dashboard's tasks and detail panels:
 | Maximize panel terminals | ⌘ ⇧ J | Ctrl + Shift + J |
 | Show or hide changes in detail panel | ⌘ ⇧ G | Ctrl + Shift + G |
 | Switch detail panels between columns and grid | ⌘ ⇧ L | Ctrl + Shift + L |
+| Show the task list floating over the panels, or hide it | ⌘ ⇧ B | Ctrl + Shift + B |
 | Show or hide resources in detail panel | ⌘ ⇧ E | Ctrl + Shift + E |
 | Find in dashboard | ⌘ F | Ctrl + F |
 
@@ -6226,6 +6499,7 @@ Some keys do different things depending on where you are:
 - **⌘ 1**, **⌘ 2**, and **⌘ 3** focus a detail panel on the Dashboard but a column on the task page.
 - **⌃ Tab** switches detail panels on the Dashboard and sessions on the task page.
 - **⌘ ⇧ J** maximizes the panel's terminals on the Dashboard and the terminal drawer on the task page.
+- **⌘ B** shows or hides the changes panel in the Changes view, docks or hides the task list on the Dashboard, and docks or hides the context panel on the task page.
 - **⌘ P** filters changed files in the Changes view and opens **Go to file** elsewhere.
 - **⌘ F** finds in the Dashboard from its list or header, finds in a file or diff in a code view, and finds in the conversation elsewhere.
 - **⌘ ⇧ G** shows or hides changes in a Dashboard detail panel, and, on macOS, moves to the previous match in a code view.
@@ -6233,7 +6507,7 @@ Some keys do different things depending on where you are:
 
 Kepler registers **Open quick launcher** with the OS, so it works while Kepler is in the background. Its row carries a **Global** badge. **Quit**, **Ctrl + F4**, and the **PageUp** / **PageDown** tab keys are Windows and Linux shortcuts only. Kepler hides those rows on macOS, which quits through the native **⌘ Q** menu role. **Close tab or panel** works only in the desktop app.
 
-On Windows and Linux, a focused terminal keeps **Ctrl + W** and **Ctrl + L** for the shell. **Ctrl + `** always toggles the Ask Kepler terminal, even from a terminal.
+On Windows and Linux, a focused terminal keeps **Ctrl + W**, **Ctrl + L** and **Ctrl + B** for the shell. **Ctrl + K** is the way to toggle the Ask Kepler chat from a terminal: the shell gives it up. **Ctrl + `** always toggles the Ask Kepler terminal, even from a terminal.
 
 **Back** and **Forward** are split by platform on purpose. **Alt + ←** is the Windows and Linux convention but moves by word on macOS, and **⌘ [** is the macOS convention (Safari, Finder) but not the Windows one. Holding either walks the history.
 
@@ -6685,7 +6959,7 @@ Kepler runs agent sign-in on the host. Claude Code, Codex, and Auggie all sign i
 
 </div>
 
-**Themes belong to this computer.** Every window, including one on a remote machine, lists and installs themes from this computer's themes folder and gallery, and every window opens already painted in the theme you chose. In a remote window, the theme picker adds an **On *machine*** group for themes the host has and this computer doesn't. Each one has a button, **Install on this computer**, that copies it here. For a theme you copied from that host before, the button reads **Update the copy on this computer**. Kepler refuses a host theme that clashes with a theme already on this computer, and it refuses an install when the themes folder is full or after too many installs in a minute. See [Settings](/kepler/settings-app#themes-in-a-remote-window).
+**Themes belong to this computer.** Every window, including one on a remote machine, lists and installs themes from this computer's themes folder and gallery, and every window opens already painted in the theme you chose. In a remote window, the theme picker adds an **On *machine*** group for themes the host has and this computer doesn't. Each one has a button, **Install on this computer**, that copies it here. For a theme you copied from that host before, the button reads **Update the copy on this computer**. When this computer has its own copy of the same theme, the host's copy says how it compares, **Update to {version}**, **Older than yours**, or **Differs from yours**, and installing it asks first (**Update {name} to {version}?** or **Replace {name} on this computer?**). Your copy then moves to the Trash (the Recycle Bin on Windows). A copy you installed from the picker stays as it is until you update it yourself; Kepler's background sync doesn't write over it. Kepler still refuses a host theme that clashes with a built-in theme or with another theme on this computer, and it refuses an install when the themes folder is full or after too many installs in a minute. See [Settings](/kepler/settings-app#themes-in-a-remote-window).
 
 ***
 

@@ -132,7 +132,7 @@ This auto-attach behavior is deliberately narrow, because a wrong guess would pu
 
 - The branch names must match exactly. A near-miss doesn't count.
 - Kepler attaches only open pull requests whose head branch lives in the same repository. A pull request from a fork never auto-attaches.
-- If another active Task already owns the pull request, Kepler leaves it there.
+- A pull request another active Task already holds attaches all the same. Several Tasks can share one pull request, and attaching it never archives or detaches it from the other Task.
 
 **Issues attach the same way.** An issue whose branch matches one of the Task's checkouts is correlated and attached on its own, so a Task started from a branch name finds the ticket behind it.
 
@@ -354,13 +354,14 @@ From the **Task actions** (**⋮**) menu, on the task's row or in the task view'
 |---|---|
 | **Mark as read** / **Mark as unread** | **Mark as read** appears while any of the Task's sessions is unread, and marks them all read. Otherwise the menu offers **Mark as unread** |
 | **Rename task** | Tasks name themselves when they're created; rename when the name stops fitting. The name becomes an editable field in place; its **Auto-name** button suggests one from the Task's prompt and resources, into the field, for you to accept or edit; on the task page, double-clicking the Task's name does the same |
+| **Add to group** | Files the Task in one of [your groups](/kepler/arranging-your-work#your-groups), starts a **New group…** with it, or offers **Remove from group** when it has one; a Task with sub-tasks also offers **Group with its {count} sub-tasks**. Not offered on an archived Task |
 | **Copy task link** | Copies a Kepler link to the Task. **Cmd/Ctrl+C** on a focused task row copies it too |
 | **Refresh** | Re-reads the Task's worktrees and its pull request and issue links. Shortly after a refresh, the providers can't be read again yet, so the row is locked and says when you can try again |
 | **Archive task** | Takes it out of the active list and keeps it as history. Its sessions and resources are kept, and nothing is destroyed unless you ask for it |
-| **Restore task** | On an archived Task, in place of **Archive task**. It goes straight back, unless another active Task now holds the same pull request; then Kepler asks first, because restoring archives that one |
+| **Restore task** | On an archived Task, in place of **Archive task**. It goes straight back, even when another active Task holds the same pull request (several Tasks can share one), and keeps its group, bringing an archived group back with it |
 | **Delete task** | Removes the Task along with its sessions and resources |
 
-**Kepler suggests archiving a finished Task.** Once a Task reaches **Done**, with no unpushed work in its worktrees and no session still working or waiting on you, its header asks *Ready to archive?* with an **Archive** button. Dismiss it and that Task stops asking.
+**Kepler suggests archiving a finished Task.** Once a Task reaches **Done**, with no unpushed work in its worktrees and no session still working, waiting on you, or keeping background work running, its header asks *Ready to archive?* with an **Archive** button. Dismiss it and that Task stops asking.
 
 **Archive** and **Delete** ask the same three questions, in the same dialog, because they're the same act. Each box stays unavailable until the one above it is ticked, and Kepler remembers your choices for next time:
 
@@ -407,15 +408,16 @@ Agents reach the Task through Kepler's own MCP (Model Context Protocol) server, 
 
 </div>
 
-The tools name things by id, and each id carries its kind: `task:`, `session:`, `repo:`, `worktree:`, `folder:`, `note:`, `file:` and `account:`. A Kepler link to a Task or a session that you paste into the chat works as its id. Wherever a tool takes a repository, the agent can also name it by one of its **Aliases**, set on the repository's page in **Settings → Repositories**. See [Settings](/kepler/settings-repositories#edit-a-repository).
+The tools name things by id, and each id carries its kind: `task:`, `session:`, `repo:`, `worktree:`, `folder:`, `note:`, `file:`, `account:`, `group:` and `comment:`. A Kepler link to a Task or a session that you paste into the chat works as its id. Wherever a tool takes a repository, the agent can also name it by one of its **Aliases**, set on the repository's page in **Settings → Repositories**. See [Settings](/kepler/settings-repositories#edit-a-repository).
 
 **Reading Tasks and notes**
 
 | Tool | What it does |
 |---|---|
-| `task_get` | Read a Task: its stage, its worktrees and folders, notes, files, links, related Tasks and newest sessions. On the agent's own Task, later calls return only what changed, and `refresh` re-reads pull request and issue state, the disk and Git first |
-| `task_list` | Find Tasks by name, prompt, note text or file name, filtered by stage, hold, repository, or whether they belong to the agent's own work. Archived Tasks only on request |
+| `task_get` | Read a Task: its stage, its group, its worktrees and folders, notes, files, links, related Tasks, newest sessions, and how many of your review comments are still open. On the agent's own Task, later calls return only what changed, and `refresh` re-reads pull request and issue state, the disk and Git first |
+| `task_list` | Find Tasks by name, prompt, note text or file name, filtered by stage, hold, repository, [group](/kepler/arranging-your-work#your-groups), or whether they belong to the agent's own work. Each Task shows its group, and the first page lists every group you have, empty ones included. Archived Tasks only on request |
 | `task_note_read` | Read one note's full text. Notes otherwise arrive as references (title and size) |
+| `task_comment_read` | Read the [review comments](/kepler/review-changes#review-comments) you sent on a Task's code: the open ones, those still waiting on an agent's answer first, each with its file, lines, the code it sits on, and its replies; or one comment by id, resolved or not. Comments you haven't sent can't be read |
 
 **Finding sessions, agents and places**
 
@@ -432,6 +434,7 @@ The tools name things by id, and each id carries its kind: `task:`, `session:`, 
 |---|---|
 | `task_note_write` | Create a note, or edit one: replace the whole note, replace the section under one heading, or add to the end. A replace carries the version the agent last read, so a note changed underneath it is refused rather than overwritten |
 | `task_note_delete` | Delete a note. The Task's **Prompt** can't be deleted |
+| `task_comment_reply` | Reply on a review comment you sent, so the answer shows on the comment's card in Kepler, and resolve it once the request is done. You can reopen it |
 | `task_link_update` | Attach or detach issue, pull request and other links. Kepler classifies each URL and fetches its title and status when it can, and an agent that starts a server you're meant to open (a dev server, Storybook, a preview) attaches its local URL so it shows on the Task, and detaches it when it stops the server for good |
 | `task_file_attach` | Attach files by path, linked rather than copied. A file the agent wrote in a temporary folder can be attached as a copy saved with the Task instead, up to 10 MiB |
 | `task_file_detach` | Detach files. A linked file stays on disk; an uploaded copy is deleted |
@@ -452,8 +455,8 @@ Where AI Sync and AI Compose are turned on, the `sync_*` and `compose_*` tools a
 
 | Tool | What it does |
 |---|---|
-| `task_create` | Create a *separate* Task beside this one, with its own prompt, places, notes, links and files, for work that deserves tracking in its own right. It's linked back to this one (as a sub-task, parent, follow-up, or just related), and nothing starts on it |
-| `task_update` | Set the stage your board shows (**Exploration**, **In Development**, **In Review**, **Done**), put the Task on hold or lift the hold, rename it, or restore it from the archive, or hand the stage back to Kepler's own reading of Git and pull requests. If it replaces a stage or a hold you set, it tells you |
+| `task_create` | Create a *separate* Task beside this one, with its own prompt, places, notes, links and files, for work that deserves tracking in its own right. It's linked back to this one (as a sub-task, parent, follow-up, or just related), and nothing starts on it. It can put the new Task in a group, creating the group for a new name |
+| `task_update` | Set the stage your board shows (**Exploration**, **In Development**, **In Review**, **Done**), put the Task on hold or lift the hold, rename it, move it into a group (a new name creates the group) or out of one, or restore it from the archive, or hand the stage back to Kepler's own reading of Git and pull requests. If it replaces a stage or a hold you set, it tells you |
 | `task_archive` | Archive a Task, which alone stops nothing and deletes nothing. With cleanup, it also deletes the Task's worktrees and their merged branches |
 
 **Starting and coordinating work**
@@ -478,8 +481,8 @@ The following wait for your approval:
 
 - Sending a prompt to any session other than one the agent started itself, or a message to a session outside its own work
 - Stopping or renaming a session outside its own work, or archiving any session other than one it started
-- Changing a Task outside its own work: its stage, hold, name, links or notes, or detaching its files
-- Restoring a Task when another active Task holds the same pull request
+- Changing a Task outside its own work: its stage, hold, name, group, links or notes, or detaching its files. A group change reads on the card as *Put it in the group "{name}"*, *Create the group "{name}" and put it there*, or *Take it out of its group*
+- Changing a Kepler setting that reaches your accounts, privacy, other tools, what runs, or where files go. Only [Ask Kepler](/kepler/ask-kepler) can change settings, never a Task's agent. The card names the setting and its change, *From {from} to {to}*, and offers no wider approval, so each change is approved on its own. See [Approval requests](/kepler/agent-sessions#approval-requests)
 - Deleting any note
 - Detaching an uploaded file, because its saved copy is deleted
 - Archiving a Task outside its own work or with other live sessions, and any archive that also deletes worktrees

@@ -12,7 +12,7 @@ Scope: 29 pages included. Excluded (3): environment-and-setup.md, kepler-New-Pag
 ## Core Concepts
 
 - [The Kepler Interface](https://help.gitkraken.com/kepler/kepler-interface/): Kepler opens on your work - every issue and pull request assigned to you, alongside the tasks you already have running. Learn how to read it, work several items side by side, and start work from it.
-- [Arranging Your Work](https://help.gitkraken.com/kepler/arranging-your-work/): One interface means you shape it rather than switch away from it. Choose an arrangement, group, sort and filter the list, save a combination as a named view, set a task's progress, and archive in bulk.
+- [Arranging Your Work](https://help.gitkraken.com/kepler/arranging-your-work/): One interface means you shape it rather than switch away from it. Choose an arrangement, group, sort and filter the list, file tasks into your own groups, save a combination as a named view, set a task's progress, and archive in bulk.
 - [Actions](https://help.gitkraken.com/kepler/actions/): Actions are editable named prompts you fire at a task, issue, or pull request. Learn the four built-in Actions, how to change them, how to write your own, and how to have a different agent review the code than the one that wrote it.
 - [Tasks and Resources](https://help.gitkraken.com/kepler/tasks-and-resources/): A Task is the unit of work in Kepler. Learn what a Task holds, how worktrees work, and how everything attached to a Task reaches your agents.
 - [The Task View](https://help.gitkraken.com/kepler/task-view/): Open a Task to see its resources, agent sessions, changes, and files side by side. Learn the header, the rail, columns and free-form tabs, the file viewer, and how to start sessions from a draft tab and open terminals.
@@ -35,7 +35,7 @@ Scope: 29 pages included. Excluded (3): environment-and-setup.md, kepler-New-Pag
 
 ## Configuration
 
-- [Settings](https://help.gitkraken.com/kepler/settings/): An overview of Kepler's Settings, covering the 15 Settings pages and where each is documented, finding a setting, sub-pages and unsaved changes, settings in a remote window, and deep links with section anchors.
+- [Settings](https://help.gitkraken.com/kepler/settings/): An overview of Kepler's Settings, covering the 15 Settings pages and where each is documented, finding a setting by name or id, sub-pages and unsaved changes, settings in a remote window, and deep links, setting anchors and kepler://settings links.
 - [Setup and Account Settings](https://help.gitkraken.com/kepler/settings-setup-account/): The Setup and Account entries at the top of Kepler's Settings, covering the first-run setup checklist, who you're signed in as, your organization and plan, what your plan unlocks, GitKraken AI credits and usage by feature, and trials.
 - [Agent Settings](https://help.gitkraken.com/kepler/settings-agents/): The Agents page of Kepler's Settings, covering your agents and their accounts, default session mode, artifacts, custom agents, MCP servers, agent tools, approvals, and usage limits.
 - [Task Settings](https://help.gitkraken.com/kepler/settings-tasks/): The Tasks page of Kepler's Settings, covering the default agent, what new sessions start with, where new tasks make changes, branch prefix, folder locations and the Variables menu, task naming, and the task page.

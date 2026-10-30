@@ -246,7 +246,11 @@ An issue that's there only because you were mentioned is marked **Mentioned**, s
 To browse beyond that, use **All visible** in the issue list of **Add resources**. For GitHub and Azure DevOps it reads every issue across your organizations, including repositories you can read outside them, such as ones you're an outside collaborator on, and it loads more slowly. Jira and Linear show only your issues there until you pick a project or a team:
 
 - **Jira**: when the issue list shows Jira alone, a project picker appears, starting with **All projects**. Pick a project to see every open issue in it. Kepler remembers the pick for each Jira connection.
-- **Linear**: when the issue list shows Linear alone, a team picker appears. Pick a team to see every open issue in it, whoever it's assigned to.
+- **Linear**: when the issue list shows Linear alone, a team picker and a **Project** picker appear. Pick a team, a Linear project, or both, to see every open issue in them, whoever it's assigned to. The **Project** picker starts at **All projects** and lists your Linear workspace's projects by name with their state (**Backlog**, **Planned**, **Started**, **Paused**, **Completed**, or **Canceled**), closed ones included. A Linear project can span teams, so the two pickers narrow together. Changing the team clears the project pick.
+
+<!-- TODO(screenshot): New — ade-linear-project-picker-01: the Add to this task dialog on its Issues tab with Linear selected and the Project picker open on All projects and the workspace's projects, each with its state. -->
+
+**A Linear issue synced with GitHub shows once.** When Linear's GitHub Issues sync keeps a two-way copy of a Linear issue on GitHub, Kepler pairs the two and lists them as one row, the Linear issue, with the filter counts to match. Open the GitHub copy's own panel and it lists on its own again. The pair shares one task history, so a task started from either copy is the issue's task, whichever copy you look at. Starting work from the Linear issue uses the repository of its GitHub copy, when exactly one repository you have in Kepler matches it; otherwise the Linear issue's own repository choice applies. Kepler pairs a copy only on GitHub or GitHub Enterprise Cloud that you're connected to, never GitHub Enterprise Server, and only one-to-one: a Linear issue synced with several GitHub issues, or two Linear issues claiming one copy, isn't paired.
 
 ***
 
@@ -268,6 +272,8 @@ Kepler recognizes an issue from its URL when you paste or attach one, including 
 - **Azure DevOps** work items, at `/<organization>/<project>/_workitems/edit/<number>` or at the organization level, `/<organization>/_workitems/edit/<number>`.
 
 **Search by key or link.** In the issue list of **Add resources**, type a Jira or Linear issue key, such as `OPS-42`, or paste a Jira Cloud, Jira Server / Data Center, Linear, or Azure DevOps work item link. Kepler looks that issue up directly from its tracker, whatever its state, rather than only filtering the rows already loaded. A Jira Server / Data Center link resolves when it points at an installation you have connected.
+
+**Jira keys in commits and branches.** With Jira or Jira Server / Data Center connected, Kepler matches issue keys in commit messages and branch names against your Jira sites' own key patterns, so `OPS-42` in a commit message links to that issue. Right-click a commit in a worktree's commit list for **Open issue {issue}** and **Copy issue URL for {issue}** (see [Review Changes](/kepler/review-changes#the-changes-panel)), and the **Worktrees and branches** page shows the keys as chips on branch and worktree rows (see [Settings](/kepler/settings-repositories#worktrees-and-branches)). When two connected sites share a key, the label adds the site's address. Only Jira keys are linked this way; other trackers' issue references in a commit aren't.
 
 **Pick from the list with the keyboard.** The issue list in **Add resources** has a preview pane and keyboard picking: arrows move between rows, **Space** selects, and **Enter** or a double-click adds. See [Picking issues and pull requests](/kepler/tasks-and-resources#picking-issues-and-pull-requests).
 

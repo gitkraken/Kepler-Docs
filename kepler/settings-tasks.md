@@ -50,7 +50,7 @@ Under **Default agent**, the following setting decides which agent the Task Comp
 | **Last used agent** | *The agent, model and mode you last picked.* The default |
 | **Default agent** | *Always the default agent above.* |
 
-With **Last used agent**, a task an agent created that has no session yet starts with the agent that created it. An Action's own agent isn't remembered as your last pick. If you choose **Default agent** with no default set, Kepler points you at the **Default agent** picker.
+With **Last used agent**, a task an agent created that has no session yet starts with the agent that created it. An Action's own agent isn't remembered as your last pick. If you choose **Default agent** with no default set, Kepler points you at the **Default agent** picker. Neither setting applies to Ask Kepler, which keeps its own last pick and its own default in [Settings → Agents](/kepler/settings-agents).
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/new-sessions-start-with-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -143,7 +143,7 @@ The following setting names new tasks for you:
 |---|---|---|
 | **Automatically name new tasks** | *Names a new task with AI from its prompt and attached resources. A task created from a single issue or PR keeps that item's name.* | On |
 
-This setting requires a paid GitKraken subscription. On the Community plan, it shows a lock. A change takes effect on the next task you create.
+This setting requires a paid GitKraken subscription to turn on. On the Community plan, when you're signed out, or with no organization, the lock replaces its checkbox only while the setting is off. Since the setting starts on, you see a ticked checkbox until you turn it off, and you can always turn it off. A change takes effect on the next task you create.
 
 ## Task page
 

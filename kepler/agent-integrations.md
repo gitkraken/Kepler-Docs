@@ -218,6 +218,8 @@ That holds on a [remote environment](/kepler/remote-environments) too:
 - **Codex** on a remote offers **ChatGPT (device code)**: *Sign in with a one-time code in your browser. Works on any remote.* Kepler shows the sign-in link and a **One-time code**; the remote CLI waits for you to finish and writes the token there. Some ChatGPT workspaces turn device sign-in off, and Kepler then points you at the alternatives.
 - **Cursor CLI** on a remote offers only **Paste an API key**, since its browser sign-in can't complete there.
 
+Wherever Kepler opens a browser sign-in for Claude Code, Codex, or Antigravity, **Open sign-in in browser** sits beside a read-only **Sign-in link** field with **Copy link**. Copy the link to open it in another browser or profile. The field stays after the browser opens, because a browser can open somewhere you can't see it, and it goes away if the sign-in attempt fails.
+
 When a sign-in runs in a terminal on a remote and the browser page won't load after you sign in, paste that page's address into the box under the terminal (*Browser page won't load after you sign in? Paste its address here.*) and click **Send**. Kepler requests the address on the remote machine, and only when the sign-in itself printed it. You then finish in the terminal.
 
 **Import local Codex login** is the other remote route, in the desktop app: it copies this machine's `~/.codex/auth.json` to the remote target, and asks you to confirm on this machine before it reads the file. Treat this import as handing over a credential: anyone with access to that remote machine can send Codex requests on your account until you sign out.
