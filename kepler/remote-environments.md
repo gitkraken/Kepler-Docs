@@ -1,6 +1,6 @@
 ---
 title: Remote Environments
-description: Run your agents on another machine over SSH or in WSL, switch environments from the title bar, manage machines in Settings, forward an SSH host's ports to this computer, and open this Kepler from another device with Remote Access.
+description: Run your agents on another machine over SSH or in WSL, switch environments from the title bar, manage machines in Settings, forward an SSH host's ports to this computer, and open this Kepler from another device, including your phone, with Remote Access.
 product: Kepler
 feature: Remote Environments
 content_type: how-to

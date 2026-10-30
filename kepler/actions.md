@@ -1,6 +1,6 @@
 ---
 title: Actions
-description: Actions are editable named prompts you fire at a task, issue, or pull request. Learn the four built-in Actions, how to change them, and how to write your own.
+description: Actions are editable named prompts you fire at a task, issue, or pull request. Learn the four built-in Actions, how to change them, how to write your own, and how to have a different agent review the code than the one that wrote it.
 product: Kepler
 feature: Actions
 content_type: how-to
@@ -273,5 +273,21 @@ Three rules govern which agent actually runs:
 - A model belongs to its provider, so a pinned model never runs on a different agent.
 - If an Action names an agent you don't have installed, the override falls back **whole** to your default agent.
 - **An agent you pick explicitly at the point of firing beats an Action's override.**
+
+### Review with a different agent
+
+You can have one agent write the code and a different agent review it. A reviewer that didn't write the code is less likely to repeat the author's mistakes.
+
+To give **Review** its own agent, take the following steps:
+
+1. Go to **Settings → Actions**, and click **Review** under **All Actions**.
+2. Name a different agent in the **Agent** field from the one that writes your code. **Implement** uses your default agent unless you've changed it.
+3. Click **Save**.
+
+**Review** now runs on that agent, whether you fire it at a Task's uncommitted work or at an attached pull request. The override is all-or-nothing, so it also pins that agent's account, model, and mode.
+
+To use a different reviewer just once, pick the agent when you fire **Review**. An agent you pick at that point beats the Action's override.
+
+The review is a report, not an approval. You read it in the session and decide what to change before you commit.
 
 ---

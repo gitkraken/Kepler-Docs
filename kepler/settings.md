@@ -1,6 +1,6 @@
 ---
 title: Settings
-description: A reference for every setting in Kepler across the 15 Settings pages, plus folder locations, branch prefixes, the Variables menu, per-repository commands, worktrees and branches, themes, MCP server defaults, notifications, and the keyboard shortcut list.
+description: A reference for every setting in Kepler across the 15 Settings pages, plus folder locations, branch prefixes, the Variables menu, per-repository commands (including setup commands that run on every new worktree), worktrees and branches, themes, MCP server defaults, notifications, and the keyboard shortcut list.
 product: Kepler
 feature: Settings
 content_type: reference

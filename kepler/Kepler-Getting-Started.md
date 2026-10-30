@@ -1,6 +1,6 @@
 ---
 title: Getting Started with Kepler
-description: Install Kepler, connect an agent and your trackers, and put an agent on real work in a few minutes.
+description: Install Kepler on Windows, macOS, or Linux, connect an agent and your trackers, and put an agent on real work in a few minutes.
 product: Kepler
 feature: Getting Started
 content_type: how-to
@@ -182,5 +182,6 @@ Click **New task** or press **Cmd/Ctrl+N**. From outside Kepler, **Shift+Alt+N**
 | Reshape the list to fit how you work | [Arranging Your Work](/kepler/arranging-your-work) |
 | Review and ship what an agent wrote | [Review Changes](/kepler/review-changes) |
 | Run agents on another machine or in WSL | [Remote Environments](/kepler/remote-environments) |
+| Find a quick answer to a common question | [Quick Answers](/kepler/quick-answers) |
 
 ---

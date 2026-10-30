@@ -1,6 +1,6 @@
 ---
 title: Agent Sessions
-description: An agent session is one running conversation with a coding agent inside a Task. Learn how to start one, pick the agent and account, queue prompts, answer the agent's questions, track usage limits, and keep sessions running through restarts.
+description: An agent session is one running conversation with a coding agent inside a Task. Learn how to start one, pick the agent and account (including several accounts of the same agent), queue prompts, answer the agent's questions and permission requests, track usage limits, and keep sessions running through restarts.
 product: Kepler
 feature: Agent Sessions
 content_type: how-to
