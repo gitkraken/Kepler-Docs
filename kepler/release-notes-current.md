@@ -21,6 +21,8 @@ taxonomy:
 
 Kepler is GitKraken's **Agentic Development Environment (ADE)**: one place to direct coding agents across every issue and pull request assigned to you, in as many repositories as you need, at the same time. You bring the agent; Kepler attaches the context and carries the result through to a reviewed, mergeable change.
 
+<img src="/wp-content/uploads/release-notes-hero-amethyst-oct-2026@2x.png" class="help-center-img img-bordered" alt="Kepler's top toolbar in the Amethyst theme, with the Update available button highlighted next to the Local environment picker, beside the Kepler planet logo.">
+
 This release notes page tracks what's new and changing in the current version of Kepler, including new features, improvements, bug fixes, and breaking changes. Use it to see what shipped in the most recent release, confirm when a capability became available, or review changes before upgrading.
 
 **Requirements and limits**
