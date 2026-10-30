@@ -19,9 +19,14 @@ taxonomy:
 ---
 <kbd>Last updated: October 2026</kbd>
 
-Your coding agents load Model Context Protocol (MCP) servers from their own config files. Kepler reads those files and lists exactly the servers each agent will load, so you can see them, turn a server or one of its tools off where you don't want it, add or remove a server, and sign in to a server that needs it. You don't have to edit the agent's config by hand.
+Your coding agents load **Model Context Protocol** (**MCP**) servers from their own config files. Kepler reads those files and lists exactly the servers each agent loads. From Kepler, without editing the agent's config by hand, you can:
 
-You manage them in three places:
+- See the servers each agent loads.
+- Turn a server, or one of its tools, off where you do not want it.
+- Add or remove a server.
+- Sign in to a server that needs it.
+
+You manage MCP servers in 3 places:
 
 - Per repository, from the composer's **Agent settings** pill
 - Per repository, in **Settings → Repositories →** *repository* **→ MCP servers**
@@ -29,9 +34,9 @@ You manage them in three places:
 
 **Requirements and limits**
 
-- Works for **Claude Code**, **Codex**, **GitHub Copilot**, **Cursor**, **OpenCode**, **Auggie**, and **Grok Build**. Pi, Antigravity, and custom agents don't expose their MCP servers to Kepler; their manager reads *This agent does not expose its MCP servers to Kepler.*
+- Works for **Claude Code**, **Codex**, **GitHub Copilot**, **Cursor**, **OpenCode**, **Auggie**, and **Grok Build**. Pi, Antigravity, and custom agents do not expose their MCP servers to Kepler. For these agents, the manager reads *This agent does not expose its MCP servers to Kepler.*
 - The agent must be installed. Settings lists only the agents that answer.
-- Kepler shows the servers the agent's config files define. Servers that don't live on disk, such as claude.ai connectors, aren't listed.
+- Kepler shows the servers the agent's config files define. Kepler does not list servers that are not stored on disk, such as claude.ai connectors.
 
 ***
 
@@ -45,7 +50,7 @@ You manage them in three places:
 
 The **MCP servers** dialog in the composer includes **Open repo settings**, which opens the same list in **Settings → Repositories**.
 
-Every place shows the same manager. It groups servers by where they're defined:
+Every place shows the same manager. It groups servers by where they are defined:
 
 | Group | Where the server comes from |
 |---|---|
@@ -72,7 +77,12 @@ Each row is a server. The switch on a row turns the server on or off, and clicki
 
 ## Per repository
 
-In a session or in the New task composer, open the **Agent settings** pill. Its **MCP servers** row reads *{enabled} of {total} enabled*; **Manage** opens the **MCP servers** dialog. Its subtitle reads *{agent} in {repo}*, the agent and the repository it applies to. When you open a server's page, **All servers** takes you back to the list.
+To manage the servers for one repository:
+
+1. In a session or in the **New task** composer, open the **Agent settings** pill. Its **MCP servers** row reads *{enabled} of {total} enabled*.
+2. Click **Manage**. The **MCP servers** dialog opens. Its subtitle reads *{agent} in {repo}*, the agent and the repository the dialog applies to.
+
+When you open a server's page, **All servers** takes you back to the list.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/mcp-agent-settings-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -83,11 +93,11 @@ In a session or in the New task composer, open the **Agent settings** pill. Its 
 
 A change here applies to that repository only. Worktrees of one checkout share the setting, so a server you turn off in a repository stays off in every task's worktree of it.
 
-If a server is off in Settings and you haven't turned it on here, it says *Off for every repo in Settings. Turn it on to use it here.*, with **Open Settings** to go to the global default. Turning it on in the dialog turns it on for this repository only.
+If a server is off in Settings and you have not turned it on here, the server says *Off for every repo in Settings. Turn it on to use it here.*, with **Open Settings** to go to the global default. Turning it on in the dialog turns it on for this repository only.
 
 ### Turn off a single tool
 
-A server's page lists its **Tools** under the **Let {agent} use this server** switch. Kepler connects to the server to ask for its tools, so the list can take a moment (*Asking the server for its tools…*). If the server needs authentication first, the list reads *Sign in to this server to see its tools.*
+A server's page lists its **Tools** under the **Let {agent} use this server** switch. Kepler connects to the server to ask for its tools, so the list can take a moment to load (*Asking the server for its tools…*). If the server needs authentication first, the list reads *Sign in to this server to see its tools.*
 
 To turn off one tool, open the server's page and turn off the tool's switch. *Turn a tool off to keep {agent} from calling it.*
 
@@ -115,24 +125,24 @@ Turning off a single tool works for Claude Code, Codex, and Grok Build. For the 
   <figcaption style="text-align:center; color:#888">Global MCP server defaults, in Settings → Agents.</figcaption>
 </figure>
 
-The two levels combine like this:
+The repository and global levels combine like this:
 
 - A repository uses the global value until you change that server in its own dialog.
 - A repository's choice wins over the global one, in either direction: a repository can turn off a server that's on globally, or turn on a server that's off globally.
 - Kepler stores a choice only while it differs from the level beneath it, so switching a server back to match the global default hands control back to the default.
 
-Plugin servers show in Settings but can't be changed there. Neither can Cursor servers: Cursor keeps its on and off state per project, so switch a Cursor server from a repository's dialog instead.
+You cannot change plugin servers or Cursor servers in Settings, although plugin servers are listed there. Cursor keeps its on and off state per project, so switch a Cursor server from a repository's dialog instead.
 
 ***
 
-## Adding and removing servers
+## Add and remove servers
 
 To add a server, click **Add server**: beside the section's heading in Settings, or at the foot of the list in the MCP servers dialog. The **Add MCP server ({agent})** page opens with these fields:
 
 | Field | What it takes |
 |---|---|
-| **Name** | Letters, numbers, `.`, `_`, or `-`, up to 64 characters, unique where it's saved |
-| **Applies to** | **Every repo**, **This repo only**, or **This repo, shared with your team**. The choices depend on the agent and on whether you're in a repository, and the field shows only when there's more than one, as in a repository's **MCP servers** section |
+| **Name** | Letters, numbers, `.`, `_`, or `-`, up to 64 characters, unique where it is saved |
+| **Applies to** | **Every repo**, **This repo only**, or **This repo, shared with your team**. The choices depend on the agent and on whether you are in a repository, and the field shows only when there is more than 1 choice, as in a repository's **MCP servers** section |
 | **Runs as** | **Command** for a local server, or **URL** or **URL (SSE)** for a remote one |
 | **Command** and **Arguments** | For a command server, for example `npx -y @some/server` |
 | **URL** | For a remote server, an `http://` or `https://` address |
@@ -147,7 +157,13 @@ To add a server, click **Add server**: beside the section's heading in Settings,
 
 Kepler writes the new server into the agent's own config file, in the format that agent uses, so the agent's CLI sees it too.
 
-To remove a server, open the server's page and click **Remove server**. Kepler deletes the server from the agent's config. You can't undo this. Plugin and managed servers can't be removed from Kepler. A GitHub Copilot server defined in a repository can't be removed from Kepler either; only Copilot servers in your own config can.
+To remove a server, open the server's page and click **Remove server**. Kepler deletes the server from the agent's config. You cannot undo this.
+
+You cannot remove these servers from Kepler:
+
+- Plugin servers.
+- Managed servers.
+- GitHub Copilot servers defined in a repository. You can remove only the Copilot servers in your own config.
 
 ***
 
@@ -162,15 +178,15 @@ To use a server you already set up with another agent or account, copy it instea
 
 Kepler adds the server to each destination in turn. If one copy fails, the others still go ahead, and the failed destination stays selected with its error.
 
-Servers from plugins can't be copied, so their page doesn't show **Also add to…**.
+You cannot copy servers from plugins, so their page does not show **Also add to…**.
 
 ***
 
-## Signing in
+## Sign in to a server
 
-For a server that needs authentication, its page has a **Sign-in** section. It offers **Sign in**, or **Re-authenticate** once you're signed in, and **Clear authentication** to sign it out. Kepler runs the agent's own CLI to do it, under the same account the session uses, so the credentials end up where the agent looks for them. Sign-in is available for Claude Code, Codex, OpenCode, and Cursor servers.
+For a server that needs authentication, its page has a **Sign-in** section. It offers **Sign in**, or **Re-authenticate** once you are signed in, and **Clear authentication** to sign the server out. Kepler signs in by running the agent's own CLI, under the same account the session uses, so the credentials end up where the agent looks for them. Sign-in is available for Claude Code, Codex, OpenCode, and Cursor servers.
 
-In a local window, **Open sign-in page** opens your browser and Kepler finishes when you're done (*Finish signing in in your browser*). In a window connected to a remote environment, sign in on that page, then paste the URL you land on into **Redirect URL**.
+In a local window, **Open sign-in page** opens your browser, and Kepler finishes when you are done (*Finish signing in in your browser*). In a window connected to a remote environment, sign in on that page, then paste the URL you land on into **Redirect URL**.
 
 ***
 
@@ -180,9 +196,15 @@ In a local window, **Open sign-in page** opens your browser and Kepler finishes 
 |---|---|
 | A Claude Code **Chat** session | Straight away. Kepler reconnects the session with the new servers and keeps the conversation and your model and mode picks |
 | A terminal session, or any other agent's session | On restart. The **Agent settings** pill and the dialog show *{count} MCP changes apply when the agent restarts.* with **Restart agent** |
-| The New task composer | The session you start comes up with that state |
+| The **New task** composer | The session you start comes up with that state |
 
-Turning a server or tool off doesn't edit the agent's config for Claude Code, Codex, OpenCode, or GitHub Copilot: Kepler keeps the choice itself and passes it to the agent when it launches, so the same agent run from your own terminal is unaffected. The one exception is turning on a Claude Code server that Claude's own config lists as disabled, which Kepler can only do by editing that list. For Cursor and Grok Build, Kepler writes the change into the agent's own files, which their CLIs also read. Auggie servers are listed but have no switch: Auggie offers no way to turn a server off, so edit its config to stop using one. Adding and removing a server always edits the config file.
+Where Kepler saves an on or off choice depends on the agent:
+
+- **Claude Code, Codex, OpenCode, and GitHub Copilot**: Kepler does not edit the agent's config. Kepler keeps the choice itself and passes it to the agent when the agent launches, so the same agent run from your own terminal is not affected. The one exception is turning on a Claude Code server that Claude's own config lists as disabled: Kepler can do this only by editing that list.
+- **Cursor and Grok Build**: Kepler writes the change into the agent's own files, which their CLIs also read.
+- **Auggie**: Kepler lists the servers without a switch, because Auggie has no way to turn a server off. To stop using a server, edit Auggie's config.
+
+Adding and removing a server always edits the config file.
 
 Each agent account keeps its own MCP setup. When Kepler launches a Claude Code account other than the default one, it first copies in the default account's servers.
 
@@ -190,7 +212,7 @@ Each agent account keeps its own MCP setup. When Kepler launches a Claude Code a
 
 ## Related
 
-- [Settings](/kepler/settings): **Settings → Agents**, including the **MCP servers** section.
+- [Agent Settings](/kepler/settings-agents#mcp-servers): **Settings → Agents**, including the **MCP servers** section.
 - [Agent Integrations](/kepler/agent-integrations): the agents Kepler runs and how to set them up.
 - [Agent Sessions](/kepler/agent-sessions): the composer's **Agent settings** pill, and restarting a session.
 

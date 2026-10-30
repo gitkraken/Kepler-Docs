@@ -1,6 +1,6 @@
 ---
 title: Issue Tracker Integrations
-description: Connect your issue trackers to Kepler, cloud or self-hosted, so the issues you're working on land in one list, with everything an agent needs already attached.
+description: Connect your issue trackers to Kepler, cloud or self-hosted, so the issues you're working on appear in one list and reach your agent with their details attached.
 product: Kepler
 feature: Issue Tracker Integrations
 content_type: how-to
@@ -19,9 +19,9 @@ taxonomy:
 ---
 <kbd>Last updated: October 2026</kbd>
 
-Connect an issue tracker and the issues you're working on show up in [the Kepler interface](/kepler/kepler-interface), alongside your pull requests and the tasks you already have running. Starting work on one becomes picking a row rather than describing the work from scratch.
+Connect an issue tracker to see the issues you are working on in [the Kepler interface](/kepler/kepler-interface), alongside your pull requests and the tasks you already have running. To start work on an issue, you pick its row instead of describing the work from scratch.
 
-Manage providers in **Settings → Integrations**, in the **Issues and pull requests** section.
+You manage providers in the **Issues and pull requests** section of **Settings → Integrations**.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/provider-integrations-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
@@ -34,7 +34,7 @@ Manage providers in **Settings → Integrations**, in the **Issues and pull requ
 
 ## Trackers Kepler can read issues from
 
-Ten of Kepler's twelve providers return issues:
+Of Kepler's 12 providers, 10 return issues:
 
 | Provider | Also returns pull requests |
 |---|---|
@@ -49,9 +49,9 @@ Ten of Kepler's twelve providers return issues:
 | **Linear** | No |
 | **Trello** | No |
 
-**Bitbucket** and **Bitbucket Data Center** are the other two. They return pull requests only. See [Pull Request Integrations](/kepler/pull-request-integrations).
+The other 2 providers, **Bitbucket** and **Bitbucket Data Center**, return pull requests only. See [Pull Request Integrations](/kepler/pull-request-integrations).
 
-Self-hosted instances are first-class: **GitHub Enterprise**, **GitLab Self-Hosted**, **Azure DevOps Server**, and **Jira Server / Data Center** read issues the same way their cloud counterparts do, and two servers of the same kind stay separate even when their issue keys overlap. Which fields come back depends on your server's version, and your machine needs to be able to reach the server. You connect a self-hosted instance inside Kepler with its address and a personal access token. See [Connect a self-hosted tracker](#connect-a-self-hosted-tracker).
+Kepler supports self-hosted instances. **GitHub Enterprise**, **GitLab Self-Hosted**, **Azure DevOps Server**, and **Jira Server / Data Center** read issues the same way their cloud counterparts do, and 2 servers of the same kind stay separate even when their issue keys overlap. Which fields come back depends on your server's version, and your machine needs to be able to reach the server. You connect a self-hosted instance inside Kepler with its address and a personal access token. See [Connect a self-hosted tracker](#connect-a-self-hosted-tracker).
 
 Kepler trusts the certificates installed in your operating system's certificate store, so a server signed by your company's own certificate authority, or a network that re-signs HTTPS traffic, works without extra setup.
 
@@ -59,18 +59,20 @@ Kepler trusts the certificates installed in your operating system's certificate 
 
 ## Connect a tracker
 
-Connecting a cloud tracker (**GitHub**, **GitLab**, **Azure DevOps**, **Jira**, **Linear**, or **Trello**) takes four steps:
+To connect a cloud tracker (**GitHub**, **GitLab**, **Azure DevOps**, **Jira**, **Linear**, or **Trello**), follow these steps:
 
 1. Open **Settings → Integrations**.
 2. Find the provider in **Issues and pull requests** and click **Connect**.
 3. Authorize Kepler in the browser window that opens.
 4. Return to Kepler, where the provider shows a **Connected** badge in **Issues and pull requests**.
 
-Your GitKraken account holds integrations, not this copy of Kepler, so a provider you connect here also becomes available to the `gk` command-line interface (CLI) and GitKraken Desktop. You need to sign in to a GitKraken account to manage them; Kepler prompts you if you are not signed in.
+Integrations belong to your GitKraken account, not to this copy of Kepler, so a provider you connect here is also available to the `gk` command-line interface (CLI) and GitKraken Desktop. To manage integrations, sign in to a GitKraken account. Kepler prompts you if you are not signed in.
 
-**Connect** hands the authorization for a cloud tracker to GitKraken's website. Kepler opens `/connect` there in your system browser, names the provider, and includes a redirect back into Kepler. When you return, Kepler refetches your providers instead of reusing its cached list.
+For a cloud tracker, **Connect** sends you to GitKraken's website to authorize. Kepler opens `/connect` there in your system browser, names the provider, and includes a redirect back into Kepler. When you return, Kepler fetches your providers again instead of reusing its cached list.
 
-While you authorize, Kepler keeps a **Connect {provider} in your browser** dialog open, with the provider's name in place of {provider}. If your browser didn't open, copy the **Connection link** from the dialog and open it in a browser yourself. **Try again** makes a fresh link, since each link works once. The dialog closes by itself as soon as the new connection appears, and Kepler checks for it again whenever you come back to a Kepler window. If Kepler can't start the connection, the dialog reads **Unable to connect {provider}** and says why.
+While you authorize, Kepler keeps a **Connect {provider} in your browser** dialog open, with the provider's name in place of {provider}. If your browser did not open, copy the **Connection link** from the dialog and open it in a browser yourself. **Try again** makes a new link, because each link works once.
+
+The dialog closes by itself as soon as the new connection appears, and Kepler checks for it again whenever you come back to a Kepler window. If Kepler cannot start the connection, the dialog reads **Unable to connect {provider}** and says why.
 
 ### Connect a self-hosted tracker
 
@@ -89,32 +91,38 @@ While you authorize, Kepler keeps a **Connect {provider} in your browser** dialo
   <figcaption style="text-align:center; color:#888">Connecting a Jira Server / Data Center instance with a personal access token.</figcaption>
 </figure>
 
-Kepler checks the token against the server from your machine, keeps it in a protected credential store on this device, and syncs the connection to your GitKraken account. The dialog reports whether the server accepted the token, whether Kepler saved it without being able to reach the server or verify its certificate, or whether the server refused it (*The server refused this token. Check its value and permissions.*). Until the upload to your account lands, the provider's row shows **Cloud sync pending**. **Reconnect** on a self-hosted provider opens the same dialog, so you can replace an expired or rejected token there. See [Pull Request Integrations](/kepler/pull-request-integrations#connect-a-self-hosted-instance) for every message the dialog shows.
+Kepler checks the token against the server from your machine, keeps it in a protected credential store on this device, and syncs the connection to your GitKraken account. The dialog reports one of these results:
 
-Three controls sit on a connected provider's row:
+- The server accepted the token.
+- Kepler saved the token without being able to reach the server or verify its certificate.
+- The server refused the token: *The server refused this token. Check its value and permissions.*
+
+For every message the dialog shows, see [Pull Request Integrations](/kepler/pull-request-integrations#connect-a-self-hosted-instance). Until Kepler finishes syncing the connection to your account, the provider's row shows **Cloud sync pending**. **Reconnect** on a self-hosted provider opens the same dialog, so you can replace an expired or rejected token there.
+
+Use these controls to manage connected providers:
 
 | Control | What it does |
 |---|---|
-| **Reconnect** | Re-runs authorization. Use it when a sign-in has expired |
-| **Disconnect** | Removes the provider's primary connection (see below) |
-| **Refresh** | At the top of the section, re-checks every provider |
+| **Reconnect** | Runs authorization again. Use it when a sign-in has expired |
+| **Disconnect** | Removes the provider's primary connection. See [Disconnect a provider](#disconnect-a-provider) |
+| **Refresh** | At the top of the section, checks every provider again |
 
-A provider's row can also carry a warning:
+A provider's row can also show a warning:
 
 | Warning | What it means | What to do |
 |---|---|---|
-| **Sign-in expired** | The provider's sign-in has expired | Kepler tries to refresh the token on its own; **Reconnect** is the manual fix |
-| **Cannot connect to server** | Kepler couldn't reach the provider's server. The integration is still connected | Nothing to reconnect. Check that the server is up and reachable from your network or VPN; the warning clears once it answers |
-| **Unexpected response** | The provider answered with data Kepler couldn't read, so some of its items may be missing. The integration is still connected | Reconnecting won't fix it. If it persists, check for a proxy or gateway between Kepler and the provider |
-| An organization named under the row | One organization refuses Kepler's access, so its items are left out while everything else still loads. GitHub organizations that restrict OAuth app access, for example, are named with a **Request access on GitHub** link | Follow the row's own advice, which names who can lift the block |
+| **Sign-in expired** | The provider's sign-in has expired | Kepler tries to refresh the token on its own; **Reconnect** refreshes it by hand |
+| **Cannot connect to server** | Kepler could not reach the provider's server. The integration is still connected | You do not need to reconnect. Check that the server is up and reachable from your network or VPN; the warning clears once the server answers |
+| **Unexpected response** | The provider answered with data Kepler could not read, so some of its items may be missing. The integration is still connected | Reconnecting does not fix it. If the warning stays, check for a proxy or gateway between Kepler and the provider |
+| An organization named under the row | One organization refuses Kepler's access, so its items are left out while everything else still loads. For example, Kepler names a GitHub organization that restricts OAuth app access, with a **Request access on GitHub** link | Follow the advice on the row, which names who can remove the restriction |
 
-You don't have to open Settings to find a failing provider. Todo, the **Add resources** lists, and a link preview name it too, with the one fix that applies: **Reconnect**, **Reconnect in settings** for a self-hosted provider, **Open settings**, or **Retry**. See [Pull Request Integrations](/kepler/pull-request-integrations#where-your-pull-requests-turn-up) for each warning.
+You do not have to open Settings to find a failing provider. Todo, the **Add resources** lists, and a link preview name it too, with the one fix that applies: **Reconnect**, **Reconnect in settings** for a self-hosted provider, **Open settings**, or **Retry**. See [Pull Request Integrations](/kepler/pull-request-integrations#where-your-pull-requests-turn-up) for each warning.
 
 ***
 
 ## Choose what Kepler brings in
 
-Each connected integration carries a visibility line under its row in **Settings → Integrations**. The line reads **Everything visible**, or **{count} hidden** with the number of items you've hidden. Trello has no visibility line.
+Each connected integration has a visibility line under its row in **Settings → Integrations**. The line reads **Everything visible**, or **{count} hidden** with the number of items you have hidden. Trello has no visibility line.
 
 To hide part of an integration:
 
@@ -124,7 +132,7 @@ To hide part of an integration:
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/provider-visibility-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/provider-visibility-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Choose what GitHub brings in dialog: hidden items are left out of the dashboard, the launcher and pickers, and tasks and branches already linked to them keep resolving. Under a Filter field, Organizations lists acme ticked and acme-labs unticked, and Repositories lists acme-labs/checkout-experiments unticked and greyed, marked Hidden with its organization, then acme/acme-api, acme/acme-web, acme/design-system and alex-lee/dotfiles ticked. Cancel and Save sit at the bottom.">
+    <img src="/wp-content/uploads/provider-visibility-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Choose what GitHub brings in dialog: hidden items are left out of the dashboard, the launcher and pickers, and tasks and branches already linked to them keep resolving. Under a Filter field, Organizations lists acme ticked and acme-labs unticked, and Repositories lists acme-labs/checkout-experiments unticked and grayed, marked Hidden with its organization, then acme/acme-api, acme/acme-web, acme/design-system and alex-lee/dotfiles ticked. Cancel and Save sit at the bottom.">
   </a>
   <figcaption style="text-align:center; color:#888">Hiding the acme-labs organization also hides its repositories.</figcaption>
 </figure>
@@ -137,7 +145,7 @@ What the dialog lists depends on the provider:
 | **Azure DevOps**, **Azure DevOps Server** | **Organizations**, **Repositories**, and **Projects** |
 | **Jira**, **Jira Server / Data Center**, **Linear** | **Projects** |
 
-A ticked item is visible. Hiding an organization also hides its repositories, which show *Hidden with its organization* and can't be ticked on their own. A hidden project leaves the issue lists but stays in the project pickers, and a project with no issue returned yet may be missing from the list.
+A ticked item is visible. Hiding an organization also hides its repositories, which show *Hidden with its organization* and cannot be ticked on their own. A hidden project leaves the issue lists but stays in the project pickers. A project that has not returned any issues yet may be missing from the dialog's list.
 
 Hidden items are left out of Todo, the issue and pull request lists, and the pickers. Tasks and branches already linked to a hidden item keep resolving. Kepler stores the choice on your GitKraken account, so it follows you to other machines where you sign in.
 
@@ -154,13 +162,13 @@ Each entry carries two independent controls:
 | **Read from this account** | Which account Kepler reads this provider's issues and pull requests from | Kepler only, and non-destructive |
 | **Set as primary** / **Primary** | The provider's primary account | Everywhere: other Kepler windows, the `gk` CLI, and GitKraken Desktop |
 
-**Browsing a secondary account does not change your primary.** Selecting **Read from this account** on a second account switches what Kepler shows you and leaves the primary alone. That's why **Read from this account** is a radio control rather than a button. The primary is the default read account, so a provider with no override reads through it.
+**Browsing a secondary account does not change your primary.** Selecting **Read from this account** on a second account switches what Kepler shows you and leaves the primary as it is. That is why **Read from this account** is a radio control instead of a button. The primary is the default read account, so a provider with no override reads through it.
 
-Switching either one clears that provider's saved filters (an organization or project from the old account need not exist on the new one) and re-fetches the list.
+Changing either one clears that provider's saved filters, because an organization or project from the old account might not exist on the new one. Kepler then fetches the list again.
 
-**Reconnect keeps your choices.** When one account's sign-in fails, **Reconnect** renews that account's connection without disconnecting it first. Once the same account comes back, its new connection takes the old one's place, as primary or as the read account if it was either, and Kepler removes the old one. Another account of the provider never becomes primary by accident.
+**Reconnect keeps your choices.** When one account's sign-in fails, **Reconnect** renews that account's connection without disconnecting it first. When the same account connects again, its new connection takes the old one's place, as primary or as the read account if it was either, and Kepler removes the old one. Another account of the provider never becomes primary by accident.
 
-The read account also authenticates git. Starting work on an issue in a repository you have never cloned makes Kepler clone that repository, using the same connection it reads through. See [Pull Request Integrations](/kepler/pull-request-integrations) for which hosts this covers and what happens on the hosts it does not.
+The read account also authenticates Git. When you start work on an issue in a repository you have never cloned, Kepler clones that repository with the same connection it reads through. See [Pull Request Integrations](/kepler/pull-request-integrations) for which hosts this covers and what happens on the hosts it does not.
 
 **Linear connections stay separate by workspace.** Each Linear account's entry shows *Workspace: {workspace}*, the Linear workspace that connection was granted. Two connections to different workspaces are separate accounts, so Kepler never reads one workspace's issues through another workspace's connection.
 
@@ -170,10 +178,10 @@ The read account also authenticates git. Starting work on an issue in a reposito
 
 Click **Disconnect** on the provider's row in **Settings → Integrations** and confirm.
 
-Disconnecting reaches further than Kepler: it removes the connection from your GitKraken account, so the `gk` CLI and GitKraken Desktop lose it too. What happens to the provider depends on whether you have another account connected:
+Disconnecting affects more than Kepler: it removes the connection from your GitKraken account, so the `gk` CLI and GitKraken Desktop lose it too. What happens to the provider depends on whether you have another account connected:
 
 - **With another account connected**, Kepler promotes it to primary and the provider stays connected under it. Nothing else changes.
-- **With no other account connected**, the provider is removed entirely. Kepler drops its saved filters and its rows from your lists, so nothing lingers behind pointing at a provider you no longer have.
+- **With no other account connected**, Kepler removes the provider entirely. Kepler drops its saved filters and its rows from your lists, so nothing in Kepler still points to a provider you no longer have.
 
 You can reconnect at any time.
 
@@ -181,20 +189,18 @@ You can reconnect at any time.
 
 ## Jira, Linear, and Trello have no pull requests
 
-Kepler keeps two separate lists of what each provider can return: which providers can list issues, and which can list pull requests. Jira (Cloud, Server, and Data Center), Linear, and Trello are on the first list only.
+Kepler keeps 2 separate lists of what each provider can return: providers that can list issues, and providers that can list pull requests. Jira (Cloud, Server, and Data Center), Linear, and Trello are on the issues list only. As a result:
 
-Two consequences you will notice:
+- **Kepler never asks them for pull requests.** Kepler leaves them out of the pull-request read instead of querying them and ignoring the result.
+- **The interface hides filters that cannot match.** A provider filter only offers providers that can return results for what you are looking at, so Jira never appears as a pull-request filter. Kepler also builds the list's facets from the rows actually loaded, so a facet with nothing to match never appears.
 
-- **Kepler never asks them for pull requests.** Kepler excludes them from the pull-request read instead of querying and ignoring them.
-- **The interface hides the dead filters.** A provider filter only offers providers that can return results for what you are looking at, so Jira never appears as a pull-request filter. In the list, Kepler builds facets from the rows actually loaded, so a facet with nothing to offer never appears.
-
-The same rule runs the other way for Bitbucket and Bitbucket Data Center, which have no issues.
+The same rule applies the other way to Bitbucket and Bitbucket Data Center, which have no issues.
 
 ***
 
 ## What Kepler reads from an issue
 
-When an issue becomes a task, Kepler attaches what it read, so the agent starts with that context instead of asking for it. Kepler pulls these fields from the issue:
+When an issue becomes a task, Kepler attaches what it read, so the agent starts with that context instead of asking for it. Kepler reads these fields from the issue:
 
 | Field | Notes |
 |---|---|
@@ -207,26 +213,28 @@ When an issue becomes a task, Kepler attaches what it read, so the agent starts 
 | **Status** | The issue's current state, in the provider's own words (a Jira *To Verify* rather than a generic *open*), when the provider reports one |
 | **Last updated** | When the issue was last updated |
 | **Labels** | The provider's own labels, shown as badges in issue previews. Kepler distinguishes "this issue has no labels" from "this provider cannot report labels" |
-| **Project or board** | Jira projects, Linear teams, Azure DevOps areas. Git hosts hang issues off a repository instead |
+| **Project or board** | Jira projects, Linear teams, Azure DevOps areas. Git hosts attach issues to a repository instead |
 | **Iteration or sprint** | Azure DevOps iterations and Jira sprints. A Jira issue carried across sprints keeps them all |
 | **Repository** | Name, owner, and host, for the git hosts |
 | **URL** | Used by the open control, which names the provider: **Open on GitHub**, **Open on Jira**, and so on |
 
-Kepler does not read an issue's priority field, due date, milestone, Trello checklist, or Linear cycle. An agent can still find these by opening the issue's URL itself, but Kepler does not deliver them as attached context. Todo's **Priority** grouping and filter come from labels instead: a label such as `P1`, `priority: high`, `blocker`, or `critical` sets the level, and the most urgent label wins. Jira and Linear keep priority in a field Kepler doesn't read, so their issues show as **Unprioritised** unless a label says otherwise. See [Arranging Your Work](/kepler/arranging-your-work).
+Kepler does not read an issue's priority field, due date, milestone, Trello checklist, or Linear cycle. An agent can still find these by opening the issue's URL itself, but Kepler does not deliver them as attached context. Todo's **Priority** grouping and filter come from labels instead: a label such as `P1`, `priority: high`, `blocker`, or `critical` sets the level, and the most urgent label wins. Jira and Linear keep priority in a field Kepler does not read, so their issues show as **Unprioritised** unless a label sets a priority. See [Arranging Your Work](/kepler/arranging-your-work).
 
-Kepler converts descriptions to Markdown when the provider stores them in another format: Jira's wiki markup and Azure DevOps work items' HTML. Headings, code blocks, and tables then read the same in Kepler's previews and in the agent's context. Images embedded in an issue's description, including Jira and Azure DevOps attachments, display in Kepler's issue previews. On a self-hosted server (GitHub Enterprise, GitLab Self-Hosted, Azure DevOps Server, or Jira Server / Data Center) they stay blocked and don't display, though the server's member avatars do. The agent receives the description as text: Kepler does not pass the attachments or images themselves.
+Kepler converts descriptions to Markdown when the provider stores them in another format: Jira's wiki markup and Azure DevOps work items' HTML. Headings, code blocks, and tables then look the same in Kepler's previews and in the agent's context.
+
+Images embedded in an issue's description, including Jira and Azure DevOps attachments, display in Kepler's issue previews. On a self-hosted server (GitHub Enterprise, GitLab Self-Hosted, Azure DevOps Server, or Jira Server / Data Center), these images are blocked and do not display, though the server's member avatars do. The agent receives the description as text: Kepler does not pass the attachments or images themselves.
 
 ### Comments
 
-When you open an issue in a reader, either the task panel's side pane or the issue's pane on the task page, a **Comments** section under the summary shows its discussion. Kepler reads comments for **GitHub**, **GitHub Enterprise**, **GitLab**, **GitLab Self-Hosted**, **Jira**, and **Jira Server / Data Center**, through the same connection it reads the issue with. For other providers the section says comments for that provider aren't available in Kepler yet.
+When you open an issue in a reader, either the task panel's side pane or the issue's pane on the task page, a **Comments** section under the summary shows its discussion. Kepler reads comments for **GitHub**, **GitHub Enterprise**, **GitLab**, **GitLab Self-Hosted**, **Jira**, and **Jira Server / Data Center**, through the same connection it reads the issue with. For other providers, the section says that comments for that provider are not available in Kepler yet.
 
-Kepler reads up to the newest 100 comments, shows the latest ones with the newest at the bottom, and offers **Show earlier comments** for the rest it read. **Refresh comments** reads the discussion again. Each comment shows its author, when it was posted, and its body as Markdown. Comments are for you to read: Kepler shows them in the reader but doesn't attach them to the task or hand them to the agent.
+Kepler reads up to the newest 100 comments, shows the latest ones with the newest at the bottom, and offers **Show earlier comments** for the rest it read. **Refresh comments** reads the discussion again. Each comment shows its author, when it was posted, and its body as Markdown. Comments are for you to read: Kepler shows them in the reader but does not attach them to the task or pass them to the agent.
 
 ### Which issues Kepler lists
 
-Kepler lists open work. An issue that's finished or cancelled in its tracker (a Linear issue in *Done* or *Canceled*, for example) drops out of **Todo** and the issue pickers. An issue already attached to a task keeps showing on that task with its real state, finished or not.
+Kepler lists open work. An issue that is finished or canceled in its tracker (a Linear issue in *Done* or *Canceled*, for example) leaves **Todo** and the issue pickers. An issue already attached to a task keeps showing on that task with its real state, finished or not.
 
-**Todo** shows the issues related to you on each connected integration, across every organization you belong to. Providers answer different questions about you, so what counts as related differs:
+**Todo** shows the issues related to you on each connected integration, across every organization you belong to. Each provider reports a different set of issues related to you:
 
 | Provider | Issues Todo lists |
 |---|---|
@@ -234,7 +242,7 @@ Kepler lists open work. An issue that's finished or cancelled in its tracker (a 
 | **GitLab**, **GitLab Self-Hosted**, **Azure DevOps**, **Azure DevOps Server** | Yours or assigned to you |
 | **Jira**, **Jira Server / Data Center**, **Linear**, **Trello** | Assigned to you |
 
-An issue that's there only because you were mentioned is marked **Mentioned**, so you can tell it apart from work that's yours. Hover the **Related to me** chip in Todo's header to see the rule for each integration you have connected.
+An issue listed only because you were mentioned is marked **Mentioned**, so you can tell it apart from work that is yours. Hover the **Related to me** chip in Todo's header to see the rule for each integration you have connected.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/todo-scope-tooltip-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -243,24 +251,30 @@ An issue that's there only because you were mentioned is marked **Mentioned**, s
   <figcaption style="text-align:center; color:#888">The Related to me tooltip states Todo's scope for each connected integration.</figcaption>
 </figure>
 
-To browse beyond that, use **All visible** in the issue list of **Add resources**. For GitHub and Azure DevOps it reads every issue across your organizations, including repositories you can read outside them, such as ones you're an outside collaborator on, and it loads more slowly. Jira and Linear show only your issues there until you pick a project or a team:
+To browse beyond that, use **All visible** in the issue list of **Add resources**. For GitHub and Azure DevOps, **All visible** reads every issue across your organizations, including repositories you can read outside them, such as ones where you are an outside collaborator. It loads more slowly. Jira and Linear show only your issues there until you pick a project or a team:
 
 - **Jira**: when the issue list shows Jira alone, a project picker appears, starting with **All projects**. Pick a project to see every open issue in it. Kepler remembers the pick for each Jira connection.
-- **Linear**: when the issue list shows Linear alone, a team picker appears. Pick a team to see every open issue in it, whoever it's assigned to.
+- **Linear**: when the issue list shows Linear alone, a team picker and a **Project** picker appear. Pick a team, a Linear project, or both, to see every open issue in them, whoever it is assigned to. The **Project** picker starts at **All projects** and lists your Linear workspace's projects by name with their state (**Backlog**, **Planned**, **Started**, **Paused**, **Completed**, or **Canceled**), closed ones included. A Linear project can span teams, so the two pickers narrow together. Changing the team clears the project pick.
+
+<!-- TODO(screenshot): New — ade-linear-project-picker-01: the Add to this task dialog on its Issues tab with Linear selected and the Project picker open on All projects and the workspace's projects, each with its state. -->
+
+**A Linear issue synced with GitHub shows once.** When Linear's GitHub Issues sync keeps a two-way copy of a Linear issue on GitHub, Kepler pairs the 2 and lists them as one row, the Linear issue, with filter counts to match. In the GitHub copy's own panel, the copy is listed on its own again. The pair shares one task history, so a task started from either copy is the issue's task, whichever copy you look at.
+
+When you start work from the Linear issue, Kepler uses the repository of its GitHub copy if exactly one repository you have in Kepler matches it. Otherwise, the Linear issue's own repository choice applies. Kepler pairs a copy only on GitHub or GitHub Enterprise Cloud that you are connected to, never on GitHub Enterprise Server. Pairing is also one-to-one only: Kepler does not pair a Linear issue synced with several GitHub issues, or 2 Linear issues that claim the same copy.
 
 ***
 
 ## Where your issues turn up
 
-Your issues turn up in three places:
+Your issues appear in 3 places:
 
 | Surface | What it gives you |
 |---|---|
 | [The Kepler interface](/kepler/kepler-interface) | The **Todo** segment lists your issues across every connected tracker, grouped and filtered how you like |
-| [Actions](/kepler/actions) | The **Action** button on a row hands the issue to an agent with its context attached. Firing an Action on an untracked issue is also how it becomes a task |
+| [Actions](/kepler/actions) | The **Action** button on a row hands the issue to an agent with its context attached. Running an Action on an issue that has no task also turns it into a task |
 | [Tasks and Resources](/kepler/tasks-and-resources) | An issue is a resource on a task, so you can attach one to work that already exists |
 
-The **Issue type**, **Label**, **Project**, and **Status** filters carry your provider's own vocabulary rather than a Kepler translation of it. Azure DevOps and Jira issues also filter by **Iteration** and **Sprint**, each named the way its tracker names it.
+The **Issue type**, **Label**, **Project**, and **Status** filters use your provider's own terms, not Kepler's. Azure DevOps and Jira issues also filter by **Iteration** and **Sprint**, each named the way its tracker names it.
 
 Kepler recognizes an issue from its URL when you paste or attach one, including these work item URLs:
 
@@ -268,6 +282,8 @@ Kepler recognizes an issue from its URL when you paste or attach one, including 
 - **Azure DevOps** work items, at `/<organization>/<project>/_workitems/edit/<number>` or at the organization level, `/<organization>/_workitems/edit/<number>`.
 
 **Search by key or link.** In the issue list of **Add resources**, type a Jira or Linear issue key, such as `OPS-42`, or paste a Jira Cloud, Jira Server / Data Center, Linear, or Azure DevOps work item link. Kepler looks that issue up directly from its tracker, whatever its state, rather than only filtering the rows already loaded. A Jira Server / Data Center link resolves when it points at an installation you have connected.
+
+**Jira keys in commits and branches.** With Jira or Jira Server / Data Center connected, Kepler matches issue keys in commit messages and branch names against your Jira sites' own key patterns, so `OPS-42` in a commit message links to that issue. Right-click a commit in a worktree's commit list for **Open issue {issue}** and **Copy issue URL for {issue}** (see [Review Changes](/kepler/review-changes#the-changes-panel)), and the **Worktrees and branches** page shows the keys as chips on branch and worktree rows (see [Settings](/kepler/settings-repositories#worktrees-and-branches)). When 2 connected sites share a key, the label adds the site's address. Only Jira keys are linked this way; Kepler does not link other trackers' issue references in a commit.
 
 **Pick from the list with the keyboard.** The issue list in **Add resources** has a preview pane and keyboard picking: arrows move between rows, **Space** selects, and **Enter** or a double-click adds. See [Picking issues and pull requests](/kepler/tasks-and-resources#picking-issues-and-pull-requests).
 

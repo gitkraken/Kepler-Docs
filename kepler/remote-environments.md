@@ -25,27 +25,27 @@ A **remote environment** runs your agents, worktrees, and terminals on another m
 
 ## Two remote features
 
-Kepler has two remote capabilities, and they work in opposite directions:
+Kepler has 2 remote features, and they work in opposite directions:
 
 | Feature | Direction | Where it lives |
 |---|---|---|
 | **Remote environments** | Kepler on your desktop reaches **out** to another machine, and your work runs there | The title-bar chip, and **Settings → Remote environments** |
 | **Remote Access** | Another device reaches **in** to this Kepler, and your work stays here | The **Remote Access** button in the title bar, and **Settings → Remote Access** |
 
-Both start at the right end of the title bar. The environment chip comes first, and the **Remote Access** button, a monitor-and-phone icon, sits beside it.
+You open both from the right end of the title bar: first the environment chip, then the **Remote Access** button, which shows a monitor-and-phone icon.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/top-tool-bar-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/top-tool-bar-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The right end of the Kepler top bar: the Local environment chip, the Remote Access button's monitor-and-phone icon in green because Remote Access is on, Ask Kepler, Feedback, Settings, and the account avatar.">
+  <a href="/wp-content/uploads/top-tool-bar-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/top-tool-bar-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The right end of the Kepler top bar: the Local environment chip, the Remote Access button's monitor-and-phone icon in green because Remote Access is on, the Ask button with Kep, Feedback, Settings, and the account avatar.">
   </a>
   <figcaption style="text-align:center; color:#888">The environment chip and the Remote Access button, in a local window.</figcaption>
 </figure>
 
-Everything up to [Remote Access](#remote-access-reach-kepler-from-another-device) describes connecting *to* another machine.
+To let another device reach this Kepler, rather than connecting *to* another machine, see [Remote Access](#remote-access-reach-kepler-from-another-device).
 
 <div class="note" markdown="1">
 
-**Remote environments need a paid plan.** Every paid plan except Student includes it, with no limit on how many environments you can add. Other plans see a banner offering a free trial where one is available, and, when another organization you belong to already includes it, names that organization with **Switch to organization**. If you've just upgraded, **Already upgraded?** with **Check again** re-reads your plan; when nothing has changed, it says so briefly: *Still on {plan}*.
+**Remote environments need a paid plan.** Every paid plan except Student includes them, with no limit on how many environments you can add. On other plans, a banner offers a free trial when one is available. If another organization you belong to includes remote environments, the banner names that organization and offers **Switch to organization**. If you have just upgraded, click **Check again** under **Already upgraded?** to reload your plan. If nothing has changed, Kepler briefly shows *Still on {plan}*.
 <!-- TODO(verify): Confirm with the product team that Student is the only paid plan without remote environments (src/ui/components/auth/plan.ts at v0.13.0 names Student alone). -->
 
 </div>
@@ -57,8 +57,8 @@ Everything up to [Remote Access](#remote-access-reach-kepler-from-another-device
 Kepler binds each window to one environment at a time, and the title-bar chip shows which one. The chip leads with the environment's type icon, and a green dot on that icon means connected.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-chip-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-chip-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The right end of the title bar in a window connected to dev-server: the environment chip reads dev-server on the host's violet tint, with a green dot on its type icon and a chevron, followed by the Remote Access button, Ask Kepler, Feedback, Settings and the account avatar.">
+  <a href="/wp-content/uploads/remote-chip-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-chip-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The right end of the title bar in a window connected to dev-server: the environment chip reads dev-server on the host's violet tint, with a green dot on its type icon and a chevron, followed by the Remote Access button, the Ask button with Kep, Feedback, Settings and the account avatar.">
   </a>
   <figcaption style="text-align:center; color:#888">The chip on a host colored Violet, connected.</figcaption>
 </figure>
@@ -76,27 +76,28 @@ Kepler binds each window to one environment at a time, and the title-bar chip sh
 
 Remote Access has its own button beside the chip, so the chip shows only this window's environment. See [Remote Access](#remote-access-reach-kepler-from-another-device).
 
-**Hover the chip to peek.** After a short pause, the popover's header appears with its buttons live. Move the pointer into it and the rest of the popover grows in below. Click the chip, or focus it and press **Enter** or **Down Arrow**, to open the whole popover pinned.
+**Hover over the chip to preview the popover.** After a short pause, the popover's header appears, and its buttons work. Move the pointer into the header to show the rest of the popover. To open the whole popover and keep it open, click the chip, or focus it and press **Enter** or **Down Arrow**.
 
-Kepler hides the chip in a browser client, which cannot manage connections at all.
+In a browser client, Kepler hides the chip, because a browser client cannot manage connections.
 
 ### The popover
 
-The popover answers where you are and where else you can go, and hands anything heavier to Settings.
+Use the popover to see which machine this window is on, switch to another machine, and open Settings to manage your machines.
 
 | Part | What it does |
 |---|---|
-| Header | The current machine, with its address, latency, and the server and app versions, or *Working locally* when the window is local. The gear (**Machine settings**) opens the machine's Settings page, and this window's own connect progress or failure shows here |
-| **Restart server to update** | Appears when a newer server build is ready. The line beneath says what the update will stop, for example *Updating restarts the server and stops 2 running agents. Agent sessions can be resumed afterward.* When the update would stop anything, clicking opens the **Update server?** confirmation. See [Server controls](#server-controls) |
-| **Disconnect** | Releases this window only. The server keeps its sessions running |
+| Header | The current machine, with its address, latency, and the server and app versions, or *Working locally* when the window is local. It also shows this window's own connection progress or failure |
+| Gear (**Machine settings**) | Opens the machine's Settings page |
+| **Restart server to update** | Appears when a newer server build is ready. See [Server controls](#server-controls) |
+| **Disconnect** | Disconnects this window only. The server keeps its sessions running |
 | **Restart server** (circular arrow) | Restarts a connected server when no update is pending. See [Server controls](#server-controls) |
-| **Stop server** | Stops the server on the machine. Every other window connected to it moves to the [recovery screen](#the-recovery-screen), and the server stays stopped until you start it again. See [When you stop a server](#when-you-stop-a-server) |
+| **Stop server** | Stops the server on the machine until you start it again. Every other window connected to it moves to the [recovery screen](#the-recovery-screen) ([When you stop a server](#when-you-stop-a-server)) |
 | Forwarded ports | *Port 3000 forwarded*, or a count followed by the ports, such as *2 ports forwarded 3000, 5173*. Opens the host's **Ports** list |
 | **Switch to** | Every other saved host, plus **Local** (*Work on this machine*) when this window is on a remote |
 | **Found on this machine** | WSL distributions found on this PC, offered for one-click connect while you have no saved hosts |
 | **Manage remote environments…** | Opens **Settings → Remote environments**. **⌘ ⇧ R** on macOS, **Ctrl + Shift + R** elsewhere |
 
-**Restart server to update** first asks the server what an update would stop. When nothing would stop, the update starts at once. Otherwise the **Update server?** confirmation names up to five agents and terminals, and adds *and N more* for the rest. When the server can't answer, the confirmation says so.
+The line under **Restart server to update** says what the update will stop, for example *Updating restarts the server and stops 2 running agents. Agent sessions can be resumed afterward.* When you click the button, Kepler first asks the server what an update would stop. If nothing would stop, the update starts at once. Otherwise, the **Update server?** confirmation names up to 5 agents and terminals, and adds *and N more* for the rest. If the server cannot answer, the confirmation says so.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/remote-update-confirm-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -105,11 +106,11 @@ The popover answers where you are and where else you can go, and hands anything 
   <figcaption style="text-align:center; color:#888">The update confirmation when the server can't report what is running.</figcaption>
 </figure>
 
-When this app, rather than the server, is the side that is behind, the header offers this app's own update instead, and says that sessions on the host keep running.
+If this app is older than the server, the header offers an update for this app instead, and says that sessions on the host keep running.
 
-Clicking a **Switch to** row moves this window. Hold **Cmd** (macOS) or **Ctrl** to open that host in a new window instead, leaving this window where it is. The trailing window icon on each row does the same thing with a single click. A host already open in another window is marked **Connected**, and clicking its row brings that window forward rather than opening a second connection.
+To move this window to another host, click the host's row under **Switch to**. To open the host in a new window and leave this window where it is, hold **Cmd** (macOS) or **Ctrl** while you click, or click the window icon at the end of the row. A host already open in another window is marked **Connected**. Clicking its row brings that window to the front instead of opening a second connection.
 
-A connect that a *different* window starts never takes over this window's chip.
+If a *different* window starts a connection, this window's chip does not change.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/remote-popover-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -123,16 +124,25 @@ A connect that a *different* window starts never takes over this window's chip.
 ## Windows on a remote host
 
 - **New Window opens on the same host.** **File → New Window** (**⌘ ⇧ N** on macOS, **Ctrl + Shift + N** elsewhere) from a remote window opens a second window on that host. A remote window also offers **File → New Local Window** when you want a local one. If the new window cannot reach the host, it opens on the [recovery screen](#the-recovery-screen) with the reason. A new window you open from the popover or the connection picker does the same when it fails to connect.
-- **Windows on one SSH host share a connection.** They ride one SSH connection and one tunnel, so a second window opens without a fresh handshake, and every window on a host shares the same storage.
+- **Windows on one SSH host share a connection.** They use one SSH connection and one tunnel, so a second window opens without a new handshake. Every window on a host shares the same storage.
 - **A host open in another window is reached through that window.** The popover and Settings show it as connected, offer **Show window**, and read its latency, versions, and sessions through that window's connection.
-- **The last closed remote window reopens on its host.** With no window open, the dock, the tray, or launching Kepler again reconnects to the host the last window was on. Closing a window that was still waiting on an unreachable host leaves the next reopen local, and with **Restore windows on launch** off, a launch stays local.
-- **A `kepler://` link opens on the machine it names.** A link that carries `host=` with a saved machine opens in a window on that machine. When no window is open there, Kepler opens one and shows *Connecting to machine to open a link*. A link that names no machine goes to the window you used last. When a link can't open on the machine it names, it opens on this computer instead with a notice, *Unable to open on machine*, and doesn't start anything by itself. When the item isn't found on that machine, the notice reads *Not found on machine* and offers **Open on this computer**.
+- **The last closed remote window reopens on its host.** With no window open, the dock, the tray, or launching Kepler again reconnects to the host the last window was on. If you close a window that was still waiting on an unreachable host, the next window opens locally. If **Restore windows on launch** is off, Kepler launches locally.
+- **A `kepler://` link opens on the machine it names.** A link that carries `host=` with a saved machine opens in a window on that machine:
+  - If no window is open on that machine, Kepler opens one and shows *Connecting to machine to open a link*.
+  - A link that names no machine opens in the window you used last.
+  - If a link cannot open on the machine it names, it opens on this computer instead, with the notice *Unable to open on machine*, and does not start anything by itself.
+  - If the item is not found on that machine, the notice reads *Not found on machine* and offers **Open on this computer**.
 
 ***
 
 ## Managing machines in Settings
 
-**Settings → Remote environments** is the full management surface. In a local window, **Your machines** lists your saved machines. Each row shows the host's type, **Connected** or *Not connected*, and *Open in N windows* when other windows already use it. **Connect** connects this window, the window icon connects in a new window, and **Show window** replaces **Connect** for a host open elsewhere. Click a row to drill into the host's page.
+Use **Settings → Remote environments** to add, connect, edit, and remove machines. In a local window, **Your machines** lists your saved machines. Each row shows the host's type, **Connected** or *Not connected*, and *Open in N windows* when other windows already use it. From a row, you can do the following:
+
+- To connect this window, click **Connect**.
+- To connect in a new window, click the window icon.
+- To bring forward a host that is open in another window, click **Show window**, which replaces **Connect** for that host.
+- To open the host's page, click the row.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/remote-environments-hosts-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -141,18 +151,25 @@ A connect that a *different* window starts never takes over this window's chip.
   <figcaption style="text-align:center; color:#888">Settings → Remote Environments, with a saved host.</figcaption>
 </figure>
 
-**Found on this machine** lists machines from your `~/.ssh/config` and WSL distributions you have not saved yet. **Add** saves one. On a plan without remote environments, it reads **Try free and add** where a trial is open, or **Upgrade to add**, which opens the plan page and saves nothing. Kepler shows three at first, with **Show *N* more** for the rest. The eye icon hides a machine you never want offered, and **Show hidden (*N*)** brings them back.
+**Found on this machine** lists machines from your `~/.ssh/config` and WSL distributions you have not saved yet. To save one, click **Add**. If your plan does not include remote environments, **Add** reads **Try free and add** when a trial is available. Otherwise it reads **Upgrade to add**, which opens the plan page and saves nothing. Kepler shows 3 machines at first, with **Show *N* more** for the rest. To stop Kepler from offering a machine, click its eye icon to hide it. To bring hidden machines back, click **Show hidden (*N*)**.
 
 ### Host details
 
-A host's page puts its actions in a card at the top: **Connect** (**Cmd/Ctrl**-click for a new window; while a connect runs, the same button cancels it), or **Show window** and **Connect to *machine* in a new window** when another window already has it, plus **Stop server** and a red trash icon (**Remove *machine*…**). The pencil beside the name renames the saved connection; nothing on the host changes.
+A host's page has a card of actions at the top:
+
+- **Connect**. To connect in a new window, **Cmd/Ctrl**-click it. While a connection is in progress, the same button cancels it.
+- **Show window** and **Connect to *machine* in a new window**, in place of **Connect**, when another window already has the host open.
+- **Stop server**.
+- **Remove *machine*…**, the red trash icon.
+
+To rename the saved connection, click the pencil beside the name. Renaming changes nothing on the host.
 
 | Group | What it does |
 |---|---|
-| **Connection** | Edit the address in place: **Host**, **Port**, **User**, and **Identity file** for SSH, or **Distro** for WSL. **Save** keeps the same saved host. Disconnect first; a connected host's fields are locked |
+| **Connection** | Edit the address in place: **Host**, **Port**, **User**, and **Identity file** for SSH, or **Distro** for WSL. **Save** keeps the same saved host, and the fields are locked while the host is connected, so disconnect first |
 | **Color** | **None**, **Rose**, **Amber**, **Lime**, **Cyan**, **Blue**, or **Violet**. Tints the host's chip, its rows, and the top bar of its windows |
 | **Mute notifications from *machine*** | *Kepler won't show desktop notifications for sessions on machine. Alerts still appear inside its windows.* |
-| **Sessions** | Labeled *survive disconnect, resumable anywhere* while the machine is connected. Each row is a live agent session on that host, and clicking one opens it. For a host nobody is connected to, **Check** opens a short-lived connection to ask its server what is running |
+| **Sessions** | Lists each live agent session on that host, labeled *survive disconnect, resumable anywhere* while the machine is connected, and opens one when you click it. For a host nobody is connected to, **Check** opens a short-lived connection to ask its server what is running |
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/remote-host-page-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -161,9 +178,9 @@ A host's page puts its actions in a card at the top: **Connect** (**Cmd/Ctrl**-c
   <figcaption style="text-align:center; color:#888">A saved host's page.</figcaption>
 </figure>
 
-Changing the address of a host the SSH wizard created first fetches the new address's host key, under **New host key**. **Trust and save** pins that key and saves the host in one step, and every new host or port gets its own scan. Any address change notes that an install at the old address stays there.
+When you change the address of a host that the SSH wizard created, Kepler first fetches the new address's host key and shows it under **New host key**. **Trust and save** pins that key and saves the host in one step. Each new host or port gets its own scan. When you change any address, Kepler notes that an install at the old address stays there.
 
-**Kepler reads your own `~/.ssh/config` before it offers to write to it.** A host you have already configured (its user, port, identity file, jump host, whatever you set) is used as you configured it, and Kepler offers to edit the file only when there is genuinely nothing there to reuse. **Open in → VS Code** on an SSH environment opens through that same host alias, so VS Code's own Remote-SSH resolves it exactly the way your terminal does.
+**Kepler reads your own `~/.ssh/config` before it offers to write to it.** Kepler uses a host you have already configured exactly as you configured it, including its user, port, identity file, jump host, and any other settings. Kepler offers to edit the file only when it has nothing there to reuse. **Open in → VS Code** on an SSH environment opens through that same host alias, so VS Code's own Remote-SSH resolves it exactly the way your terminal does.
 
 ### Server controls
 
@@ -177,19 +194,22 @@ The restart and update controls act on the server a window is connected to, so t
 | **Auto-shutdown when idle** | Stops the server after *N* *minutes with no window connected and nothing running.* Off by default. The timeout defaults to 30 minutes |
 | **Stop anyway after** | Stops the server after *N* *hours with no window connected, even if agents or terminal commands are running.* Defaults to 12 hours |
 
-**Auto-shutdown when idle** counts an agent that is working, or a terminal that is running a command, as something running. A shell that waits at its prompt doesn't count. **Stop anyway after** caps how long running work can keep the server up, so a forgotten dev server doesn't keep it running forever. The hours count from when the last window disconnects, and start over when a window connects.
+**Auto-shutdown when idle** counts an agent that is working, or a terminal that is running a command, as something running. A shell that waits at its prompt does not count. **Stop anyway after** limits how long running work can keep the server up, so a dev server you forgot about does not keep it running indefinitely. The hours count from when the last window disconnects, and start over when a window connects.
 
 Kepler stores both settings on the machine, not locally, so they apply to every client of that server. You set them from a window connected to the machine. A local window shows *Idle shutdown is set from a window connected to machine.*
 
-Both confirmations ask the server what a restart would stop. **Update server?** lists the agents and terminals by name: *This stops when the server restarts:*, then each **Agent** or **Terminal**, and *Agent sessions can be resumed afterward.* when agents are among them. **Restart server?** first shows *Checking what is running on the server...*, and keeps **Restart server** unavailable until the server answers. It then says *Running agents and terminals keep going.*, lists what stops, or warns *Running agents and open terminals may stop.*, and ends with *This window reconnects. Other windows on this server disconnect.*
+Both confirmations ask the server what a restart would stop:
 
-While an update or restart runs on a server, from any window, the other server controls wait and say why, for example *Another window is updating this server. Wait for it to finish.*
+- **Update server?** lists the agents and terminals by name: *This stops when the server restarts:*, then each **Agent** or **Terminal**. If agents are among them, it adds *Agent sessions can be resumed afterward.*
+- **Restart server?** first shows *Checking what is running on the server...*, and keeps **Restart server** unavailable until the server answers. It then says *Running agents and terminals keep going.*, lists what stops, or warns *Running agents and open terminals may stop.* It ends with *This window reconnects. Other windows on this server disconnect.*
 
-**Keep agents and terminals running across restarts and updates**, in **Settings → General → Keep agents running**, is on by default. The setting is still experimental, and a build that can't keep agents running shows it off and unavailable. While it's on, running agents keep going through a restart or update, and the confirmation says so. **Stop server** ends them either way.
+While an update or restart runs on a server, whichever window started it, the other server controls wait and say why, for example *Another window is updating this server. Wait for it to finish.*
+
+**Keep agents and terminals running across restarts and updates**, in **Settings → General → Keep agents running**, is on by default. The setting is still experimental. In a build that cannot keep agents running, the setting is off and unavailable. While the setting is on, running agents keep going through a restart or update, and the confirmation says so. **Stop server** ends them either way.
 
 ### When you stop a server
 
-A server that you stop on purpose stays stopped. This applies whether you stop it from this window, another window, Settings, or another device. Kepler doesn't start it again on its own, even when an automatic reconnect, a launch, or reopening the last window would otherwise connect to it. Those windows land on the [recovery screen](#the-recovery-screen) with *The server on machine was stopped. Reconnect to start it again.*
+A server that you stop on purpose stays stopped. This applies whether you stop it from this window, another window, Settings, or another device. Kepler does not start it again on its own, even when an automatic reconnect, a launch, or reopening the last window would otherwise connect to it. Those windows open on the [recovery screen](#the-recovery-screen) with *The server on machine was stopped. Reconnect to start it again.*
 
 The server starts again only when you choose one of these actions:
 
@@ -197,15 +217,23 @@ The server starts again only when you choose one of these actions:
 - **File → New Window** on that machine
 - **Restart server to update**
 
-The window that stops its own server, or that disconnects, goes local without the recovery screen.
+If a window stops its own server or disconnects, the window switches to local without showing the recovery screen.
 
 ### From a remote window
 
-Settings in a window that is on a remote shows that host only: its connected card with the server controls, **Auto-shutdown when idle**, **Color** and mute, its **Ports** (SSH), and your other saved hosts to switch to. A remote window never sees the other hosts' addresses. Renaming, editing a connection, adding, and removing happen in a local window: **Open in a local window** takes you there. Switching to a host that needs a password does too: its row reads *Connect to machine from a local window*, with **Open in a local window**.
+In a window that is on a remote, Settings shows only that host:
+
+- Its connected card with the server controls
+- **Auto-shutdown when idle**
+- **Color** and mute
+- Its **Ports** (SSH)
+- Your other saved hosts to switch to
+
+A remote window never shows the other hosts' addresses. To rename a host, edit a connection, or add or remove a host, click **Open in a local window**. You also need a local window to switch to a host that needs a password: its row reads *Connect to machine from a local window*, with **Open in a local window**.
 
 ### Connection failures
 
-A failed connect renders an **Unable to connect to *machine*** alert with the raw SSH diagnostic as selectable text and a **Copy error** button, so it can go into a bug report unedited. When the failure is on a machine other than the one this window is connected to, Kepler adds *You're still connected to machine; this didn't drop it.*
+A failed connection shows an **Unable to connect to *machine*** alert with the raw SSH diagnostic as selectable text and a **Copy error** button, so you can paste the diagnostic into a bug report unedited. When the failure is on a machine other than the one this window is connected to, Kepler adds *You're still connected to machine; this didn't drop it.*
 
 Common SSH failures get a plain-language headline and a hint. Kepler recognizes:
 
@@ -217,11 +245,9 @@ Common SSH failures get a plain-language headline and a hint. Kepler recognizes:
 - **Host key verification failed**
 - **Update remote Kepler server**, when the host's server is too old to take your GitKraken sign-in. Update the Kepler install on the host and try again
 
-A WSL distro that no longer exists reads *The {distro} distro wasn't found on this machine.* Any other failure on a WSL machine reads **Connection failed**, since SSH's headlines don't apply to it.
+A WSL distro that no longer exists reads *The {distro} distro wasn't found on this machine.* Any other failure on a WSL machine reads **Connection failed**, because SSH's headlines do not apply to WSL. In both cases, the unedited diagnostic appears underneath.
 
-The unedited diagnostic appears underneath either way.
-
-When the failure happens while you're adding a host, the wizard shows it in place: *Something went wrong.*, the headline and hint, the **Diagnostic**, a **Copy** button for each, and **Try again**.
+If the failure happens while you are adding a host, the wizard shows it in place: *Something went wrong.*, the headline and hint, the **Diagnostic**, a **Copy** button for each, and **Try again**.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/remote-auth-rejected-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -234,7 +260,7 @@ For Kepler's own log file, use **Settings → Help → Logs**.
 
 ### Removing a connection
 
-**Remove *machine*…** deletes the saved entry on this desktop. When the SSH wizard created the entry, Kepler also offers to clean up after itself:
+**Remove *machine*…** deletes the saved entry on this desktop. If the SSH wizard created the entry, Kepler also offers to remove what the wizard set up:
 
 | Cleanup option | What it does | Default |
 |---|---|---|
@@ -243,9 +269,9 @@ For Kepler's own log file, use **Settings → Help → Logs**.
 | **Uninstall Kepler server on the machine** | Stops the server and removes its install folder on the machine | On, unless the server is in use |
 | **Remove deployed key from remote authorized_keys** | Removes the key the wizard installed on the host | Off |
 
-Removing a WSL host offers **Uninstall Kepler server on the machine** for the distro. A distro that no longer exists reads as nothing to uninstall.
+Removing a WSL host offers **Uninstall Kepler server on the machine** for the distro. For a distro that no longer exists, Kepler shows nothing to uninstall.
 
-If the server reports live sessions or connected clients, Kepler disables the uninstall until you select **Uninstall anyway, I understand sessions on this machine may be lost**. If the host is unreachable, or needs a password Kepler does not have, Kepler suppresses the host-side options, and the dialog states which of the two reasons applies.
+If the server reports live sessions or connected clients, Kepler disables the uninstall until you select **Uninstall anyway, I understand sessions on this machine may be lost**. If the host is unreachable, or needs a password Kepler does not have, Kepler hides the host-side options, and the dialog states which of the two reasons applies.
 
 
 ***
@@ -258,7 +284,7 @@ A host taken from `~/.ssh/config` inherits your system SSH configuration, includ
 
 ### The wizard
 
-The SSH wizard walks five steps.
+The SSH wizard has 5 steps:
 
 | Step | What you do |
 |---|---|
@@ -277,7 +303,7 @@ The SSH wizard walks five steps.
 
 | Authentication mode | What it means |
 |---|---|
-| **Existing key** | Use one of the keys already in `~/.ssh`. Kepler counts what it finds; with exactly one candidate it preselects it. With none, it reads *No keys found in ~/.ssh* and can't be picked |
+| **Existing key** | Use one of the keys already in `~/.ssh`. Kepler counts the keys it finds and preselects the key when it finds exactly 1, and if it finds none, the mode reads *No keys found in ~/.ssh* and you cannot pick it |
 | **Password** | *Re-prompt every connect.* The password is never stored |
 | **Generate key** | *Keyless after first connect.* Kepler uses the password once to install a fresh ed25519 key at `~/.ssh/id_ed25519_kepler_<hash>`. Your existing keys are never overwritten |
 
@@ -290,7 +316,7 @@ The SSH wizard walks five steps.
   <figcaption style="text-align:center; color:#888">Choosing how Kepler signs in to the host.</figcaption>
 </figure>
 
-If you pick **Password**, the wizard then offers **Set up a key for this machine?** **Generate and copy key** generates a fresh ed25519 key, copies it to the host, and uses it for future connects, so you don't need the password again. **Skip** keeps the host on password sign-in.
+If you pick **Password**, the wizard then offers **Set up a key for this machine?** **Generate and copy key** generates a fresh ed25519 key, copies it to the host, and uses it for future connections, so you do not need the password again. **Skip** keeps the host on password sign-in.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/remote-key-offer-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
@@ -299,7 +325,7 @@ If you pick **Password**, the wizard then offers **Set up a key for this machine
   <figcaption style="text-align:center; color:#888">The offer to replace a password with a key.</figcaption>
 </figure>
 
-If the host rejects a key-based connect, Kepler does not leave you stuck: the host's page opens a password row so you can retry with a password, and, when no key is saved for that host yet, offers to install one at the same time. A connect from the popover that needs a password opens a password dialog instead.
+If the host rejects a key-based connection, the host's page shows a password row so you can retry with a password. If no key is saved for that host yet, the page also offers to install one at the same time. If a connection from the popover needs a password, Kepler opens a password dialog instead.
 
 ### SSH to a Windows machine
 
@@ -307,18 +333,18 @@ Kepler connects to Windows hosts over SSH as well as POSIX (Portable Operating S
 
 Nothing changes in the wizard. If the host authenticates but its shell rejects Kepler's commands, the diagnostic reads **Remote shell was unable to run the command**, and the hint points at the OpenSSH default shell. Windows 10 and 11 ship PowerShell, so a changed default shell is the usual cause.
 
-The host-side cleanup offered by **Remove *machine*…** does not run on a Windows host; see **Known limitations** below.
+The host-side cleanup offered by **Remove *machine*…** does not run on a Windows host. See [Known limitations](#known-limitations).
 
 ***
 
 ## WSL environments
 
-On Windows, a WSL 2 distro is a remote environment like any other, and the cheapest one to start with: no credentials, no fingerprint to verify.
+On Windows, a WSL 2 distro is a remote environment like any other, and the simplest one to set up: it needs no credentials and no fingerprint check.
 
 - Kepler detects WSL by asking `wsl.exe` for its status, then lists your **version 2** distros. Kepler does not offer WSL 1 distros, or Docker Desktop's own `docker-desktop` and `docker-desktop-data` distros.
-- Detected distros appear under **Found on this machine** in Settings, and in the popover while you have no saved hosts, one click from connected. Picking one in the popover saves the distro as a host and connects to it, so the connection survives a disconnect.
+- Detected distros appear under **Found on this machine** in Settings, and in the popover while you have no saved hosts, where one click connects to it. Picking one in the popover saves the distro as a host and connects to it, so the connection survives a disconnect.
 - To add one by hand, choose **Add machine**, then **WSL** under **Machine type**, and enter its **Distro** (and an optional **Name**). A WSL host is edited, checked, and removed exactly like an SSH one.
-- WSL needs no tunnel. Kepler reaches the server inside the distro through Windows' localhost passthrough, and waits for the passthrough to catch up before the window loads.
+- WSL needs no tunnel. Kepler reaches the server inside the distro through Windows' localhost passthrough, and waits for the passthrough to be ready before the window loads.
 
 ***
 
@@ -327,12 +353,12 @@ On Windows, a WSL 2 distro is a remote environment like any other, and the cheap
 When an agent or a terminal starts a dev server on an SSH host, its `http://localhost:3000` link points at the host, not at this computer. Kepler forwards that port over your SSH connection so the link opens here.
 
 - **Click the link.** In an SSH window, **Cmd/Ctrl**-click a `localhost`, `127.0.0.1`, or `0.0.0.0` link in a terminal, or click one in the agent transcript. Kepler forwards the port to the host's `localhost`, then opens the local URL. If that port is already taken on this computer, Kepler picks a free one.
-- **Open it from the task.** A `localhost` link attached to a task opens through forwarding too, from the task sidebar, the link's detail, or the Dashboard's resources list. Agents attach the URL of a dev server they start for you to open.
-- **Add one by hand.** **Settings → Remote environments → Ports**, in the SSH window, lists this window's forwards as remote port → local URL. Enter a **Port** and click **Add**; **Stop** ends one, and **Stop all** appears when more than one is forwarded.
+- **Open it from the task.** A `localhost` link attached to a task opens through forwarding too, from the task's context panel, the link's detail, or the Dashboard's resources list. Agents attach the URL of a dev server they start for you to open.
+- **Add one by hand.** **Settings → Remote environments → Ports**, in the SSH window, lists this window's forwards as remote port → local URL. To add a forward, enter a **Port** and click **Add**. **Stop** ends one forward, and **Stop all** appears when more than one is forwarded.
 
 While anything is forwarded, the chip shows a radio-tower glyph and the popover adds a summary row that opens the **Ports** list.
 
-Forwards belong to the window that made them. Disconnecting, closing, reconnecting, or switching hosts tears them down, and they are not restored. A forward that fails opens nothing rather than reaching a service on this computer. Local and WSL windows open `localhost` links unchanged, since WSL already passes localhost through.
+Forwards belong to the window that made them. Disconnecting, closing, reconnecting, or switching hosts ends them, and Kepler does not restore them. A forward that fails opens nothing rather than reaching a service on this computer. Local and WSL windows open `localhost` links unchanged, since WSL already passes localhost through.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/remote-ports-oct-2026.png" target="_blank" rel="noopener noreferrer">
@@ -360,9 +386,9 @@ Forwards belong to the window that made them. Disconnecting, closing, reconnecti
 | The interface itself | Served by this computer by default, or by the host's Kepler server when you turn that off (below) |
 | Themes, and your choice of theme | Your local machine |
 
-**Agent sessions belong to the server, not to your window.** Close the window, lose the network, or put the laptop to sleep, and the sessions keep running. Reconnect (from this machine or a different one) and they are listed and resumable. If the server itself goes away, Kepler re-spawns the agent and re-attaches to the same conversation from the session Kepler saved.
+**Agent sessions belong to the server, not to your window.** If you close the window, lose the network, or put the laptop to sleep, the sessions keep running. When you reconnect, from this machine or a different one, the sessions are listed and you can resume them. If the server itself goes away, Kepler re-spawns the agent and re-attaches to the same conversation from the session Kepler saved.
 
-Kepler runs agent sign-in on the host. Claude Code, Codex, and Auggie all sign in to a remote target: Kepler starts the flow on the host, the sign-in page opens in your *local* browser, and the resulting credential lands on the host. Claude Code and Auggie take back a code or a JSON blob you paste. Codex signs in with **ChatGPT (device code)**, which *works on any machine*, with an API key, or with **Import local Codex login**. See [Agent Integrations](/kepler/agent-integrations).
+Kepler runs agent sign-in on the host. Claude Code, Codex, and Auggie all sign in to a remote target: Kepler starts the flow on the host, the sign-in page opens in your *local* browser, and Kepler saves the credential on the host. For Claude Code and Auggie, you paste back a code or a JSON blob. Codex signs in with **ChatGPT (device code)**, which *works on any machine*, with an API key, or with **Import local Codex login**. See [Agent Integrations](/kepler/agent-integrations).
 
 <div class="note" markdown="1">
 
@@ -370,13 +396,21 @@ Kepler runs agent sign-in on the host. Claude Code, Codex, and Auggie all sign i
 
 </div>
 
-**Themes belong to this computer.** Every window, including one on a remote machine, lists and installs themes from this computer's themes folder and gallery, and every window opens already painted in the theme you chose. In a remote window, the theme picker adds an **On *machine*** group for themes the host has and this computer doesn't. Each one has a button, **Install on this computer**, that copies it here. For a theme you copied from that host before, the button reads **Update the copy on this computer**. Kepler refuses a host theme that clashes with a theme already on this computer, and it refuses an install when the themes folder is full or after too many installs in a minute. See [Settings](/kepler/settings).
+**Themes belong to this computer.** Every window, including one on a remote machine, lists and installs themes from this computer's themes folder and gallery. Every window opens in the theme you chose.
+
+In a remote window, the theme picker adds an **On *machine*** group for themes the host has and this computer does not:
+
+- To copy a theme to this computer, click **Install on this computer**. For a theme you copied from that host before, the button reads **Update the copy on this computer**.
+- When this computer has its own copy of the same theme, the host's copy says how it compares: **Update to {version}**, **Older than yours**, or **Differs from yours**. Installing it asks first (**Update {name} to {version}?** or **Replace {name} on this computer?**). Your copy then moves to the Trash (the Recycle Bin on Windows).
+- A copy you installed from the picker stays as it is until you update it yourself. Kepler's background sync does not overwrite it.
+
+Kepler refuses a host theme that conflicts with a built-in theme or with another theme on this computer. It also refuses an install when the themes folder is full or after too many installs in a minute. See [Themes in a remote window](/kepler/settings-app#themes-in-a-remote-window).
 
 ***
 
 ## What you see while connecting
 
-A first connect to an untouched host uploads the server bundle, so it takes minutes rather than seconds. The chip, the popover, and the host's Settings page all name the current stage, with a progress bar whenever the total is known.
+The first connection to a host where Kepler is not installed uploads the server bundle, so it takes minutes rather than seconds. The chip, the popover, and the host's Settings page all name the current stage, with a progress bar whenever the total is known.
 
 | Stage | What it means |
 |---|---|
@@ -393,9 +427,9 @@ A first connect to an untouched host uploads the server bundle, so it takes minu
 
 **Cancel** stops the attempt, from the popover or from the host's own **Connect** button.
 
-A warm reconnect skips most of this: the server is already installed and already running, so Kepler reads its details and opens a tunnel.
+Reconnecting to a host whose server is already installed and running skips most of these stages: Kepler reads the server's details and opens a tunnel.
 
-When Kepler launches straight onto a remote window, that window opens in place. It appears only if the connect takes more than a moment, as a *Connecting…* splash with the live stage and **Cancel**. When Kepler restores several windows on the same machine, it connects once: the first window connects, and the others wait as splashes and follow it. **Cancel** on one of those splashes stops the restore for that machine only.
+If Kepler launches directly into a remote window, that window opens in place. If connecting takes more than a moment, the window shows a *Connecting…* screen with the live stage and **Cancel**. When Kepler restores several windows on the same machine, it connects once: the first window connects, and the others wait on their *Connecting…* screens and follow it. **Cancel** on one of those screens stops the restore for that machine only.
 
 A window that Kepler opens to show a `kepler://` link names the reason while it connects: *Connecting to machine to open a link*. See [Windows on a remote host](#windows-on-a-remote-host).
 
@@ -403,27 +437,27 @@ A window that Kepler opens to show a `kepler://` link names the reason while it 
 
 ## Recovery after restart or sleep
 
-Kepler expects connections to break and rebuilds them.
+When a connection breaks, Kepler rebuilds it.
 
 | Event | What Kepler does |
 |---|---|
-| **The connection degrades** | Health checks run every 10 seconds. Three consecutive failures flip the chip to **Reconnecting…** and start a rebuild: up to five attempts with backoff from 1 second to a 30-second ceiling |
+| **The connection degrades** | Health checks run every 10 seconds. After 3 failures in a row, the chip changes to **Reconnecting…** and Kepler starts a rebuild: up to 5 attempts, with backoff from 1 second up to 30 seconds |
 | **Several windows share the connection** | Kepler rebuilds the connection once for all of them. Every window shows the progress, and the others follow the first one back |
-| **The machine wakes from sleep** | Rather than waiting for health checks to accumulate, Kepler probes each connection at once and rebuilds only the ones that are genuinely unreachable |
+| **The machine wakes from sleep** | Rather than waiting for health checks to accumulate, Kepler probes each connection at once and rebuilds only the ones that are unreachable |
 | **The connection is rebuilt to the same server** | The page stays as it was, with your drafts, scroll position, and terminal scrollback. Kepler reloads it only if the server itself changed |
 | **The server restarts or updates** | The window reloads onto the view it was on, not a bare Dashboard. When another window updates or restarts the server, this window waits through the restart and reconnects as soon as the server is back. If the update fails, the window keeps its saved server, so it reopens on that machine after Kepler restarts |
 | **Kepler restarts** | Kepler restores every window (geometry, route, and connection) so a remote window comes back on its remote |
 | **A reconnect cannot finish** | Usually a host that needs interactive auth. The window shows the full-screen [recovery screen](#the-recovery-screen), and keeps its saved machine until it reconnects or you switch to local |
 
-A rebuild is not cosmetic: Kepler tears down the dead tunnel, opens a new one, and re-propagates your GitKraken sign-in to the host, so the window comes back signed in rather than at a sign-in screen. SSH connections keep a stable local port per host, so a reconnect returns to the same origin and your interface preferences, drafts, and notification permission survive it.
+When Kepler rebuilds a connection, it closes the dead tunnel, opens a new one, and passes your GitKraken sign-in to the host again, so the window comes back signed in rather than at a sign-in screen. SSH connections keep a stable local port per host, so a reconnect returns to the same origin and your interface preferences, drafts, and notification permission survive it.
 
 ### The recovery screen
 
-When a window can't get back to its machine, it shows a full-screen recovery screen. The screen names what happened, shows the reason it failed, and offers one way back plus **Switch to local**. The window keeps its saved machine until it reconnects or you choose **Switch to local**.
+When a window cannot reconnect to its machine, it shows a full-screen recovery screen. The screen names what happened, shows the reason it failed, and offers one action to reconnect, plus **Switch to local**. The window keeps its saved machine until it reconnects or you choose **Switch to local**.
 
-A rebuild that gives up, or that you cancel from any of its windows, puts every window on that machine on the recovery screen together. When any window reconnects to the machine, the windows waiting on the recovery screen follow it back on their own. When a later automatic connect fails, the screen updates its reason.
+If a rebuild gives up, or you cancel it from any of its windows, every window on that machine moves to the recovery screen. When any window reconnects to the machine, the windows waiting on the recovery screen reconnect too. If a later automatic connection attempt fails, the screen updates its reason.
 
-The following table lists what the screen shows in each case. In each title, *machine* is the name of the saved machine:
+The screen's title and action depend on what happened. In each title, *machine* is the name of the saved machine:
 
 | What happened | Title | Action |
 |---|---|---|
@@ -431,13 +465,15 @@ The following table lists what the screen shows in each case. In each title, *ma
 | The server was stopped from another window or device | *Disconnected from machine*, with *The server on machine was stopped. Reconnect to start it again.* | **Reconnect** |
 | A server update failed | *Unable to finish updating machine* | **Try again** |
 | A server restart failed | *Unable to restart machine* | **Try again** |
-| A new window couldn't connect | *Unable to open machine in this window* | **Try again** |
-| Kepler launched onto a remote window that couldn't connect | *Unable to connect to machine*, or *Not connected to machine* | **Connect** |
+| A new window could not connect | *Unable to open machine in this window* | **Try again** |
+| Kepler launched into a remote window that could not connect | *Unable to connect to machine*, or *Not connected to machine* | **Connect** |
 | The saved machine was removed, or was never saved | *machine is no longer saved*, or *machine isn't saved* | **Open Remote environments** |
 
 A failed update or restart leaves the server stopped. **Try again** installs the update and starts the server. If the machine needs a password, the screen asks for it.
 
-**If your plan doesn't include remote environments**, the screen has a different title, whatever brought the window there: *Your plan doesn't include remote environments*. The body names the machine and the way forward, for example *To connect to machine, upgrade to plan, or switch to local to keep working on this machine.*, where *plan* is the plan that includes remote environments. Its main button reads **Upgrade to *plan*** when Kepler knows that plan, or offers a free trial when one is available. An account card shows who is signed in and the organization in use. You can switch to another organization marked *Includes remote environments*, or sign out. **Check again** re-reads your plan. Once your plan allows it, the window connects by itself, and after a trial starts, the connecting screen says that your trial has started.
+**If your plan does not include remote environments**, the screen has a different title, whatever brought the window there: *Your plan doesn't include remote environments*. The body names the machine and what you can do, for example *To connect to machine, upgrade to plan, or switch to local to keep working on this machine.*, where *plan* is the plan that includes remote environments. Its main button reads **Upgrade to *plan*** when Kepler knows that plan, or offers a free trial when one is available.
+
+An account card shows who is signed in and the organization in use. You can switch to another organization marked *Includes remote environments*, or sign out. **Check again** re-reads your plan. Once your plan allows it, the window connects by itself, and after a trial starts, the connecting screen says that your trial has started.
 
 <!-- TODO(screenshot): Replace — ade-remote-recovery-plan-gate-01: the full-window recovery screen for dev-server on an account without remote environments, reading Your plan doesn't include remote environments, with Upgrade to plan, the signed-in account card, and Switch to local. -->
 <!-- TODO(screenshot): New — The full-screen remote recovery screen at 0.15.0, for example "Disconnected from dev-server" with the reason line, Reconnect, and Switch to local. -->
@@ -446,17 +482,17 @@ A failed update or restart leaves the server stopped. **Try again** installs the
 
 ## Local conveniences that still work
 
-Some things have to happen on the machine in front of you. Kepler routes those through the desktop app rather than executing them on the host.
+Some things have to happen on the machine in front of you. Kepler runs those through the desktop app rather than on the host.
 
 | Feature | Behavior over a remote connection |
 |---|---|
 | **Open in…** and **Show in Finder** (**Show in Explorer** on Windows, **Show in file manager** on Linux) | Run on your desktop machine, not on the host. Kepler reports which of them can reach the current binding and hides the rest, so no buttons fail |
-| **Desktop notifications** | Shown by your local desktop when an agent finishes, needs you, or errors. Kepler decides per machine: while you're in any window on that machine, the alert shows inside Kepler instead. Windows on one machine alert once, and a muted host shows none. Clicking one shows its task or session in the window already showing it, or else in the window on that machine you used last |
+| **Desktop notifications** | Shown by your local desktop when an agent finishes, needs you, or errors. Kepler decides per machine: while you are in any window on that machine, the alert shows inside Kepler instead. Windows on one machine alert once, and a muted host shows none. Clicking one shows its task or session in the window already showing it, or else in the window on that machine you used last |
 | **Voice input** | Captured by the local app. See [Voice Input](/kepler/voice-input) |
-| **Copying from Codex** | A copy Codex makes in a remote window lands on your local clipboard, not the host's |
+| **Copying from Codex** | A copy Codex makes in a remote window goes to your local clipboard, not the host's |
 | **Folder pickers** | Browse the host's filesystem, since that is where the work lives |
 
-Seven editors open a remote folder through their own remote extension, which is the only way a locally-installed editor can reach an SSH host's worktree:
+These 7 editors open a remote folder through their own remote extension, which is the only way a locally installed editor can reach an SSH host's worktree:
 
 | Editor | Authority Kepler passes |
 |---|---|
@@ -466,11 +502,11 @@ Seven editors open a remote folder through their own remote extension, which is 
 | **Devin** (formerly Windsurf) | Same |
 | **Antigravity IDE** | Same |
 | **Trae** | Same |
-| **Kiro** | `--remote ssh-remote+[user@]host[:port]` only. Kiro doesn't open WSL folders this way |
+| **Kiro** | `--remote ssh-remote+[user@]host[:port]` only. Kiro does not open WSL folders this way |
 
-The editor resolves the host and authenticates through its own machinery. For SSH that means your own SSH configuration, so a host Kepler reaches with a custom identity file may still prompt in the editor.
+The editor resolves the host and authenticates by itself. For SSH, the editor uses your own SSH configuration, so a host Kepler reaches with a custom identity file may still prompt in the editor.
 
-Other editors, and the file manager, rely on the path being reachable from Windows, which WSL provides, as `\\wsl$`, but an SSH host does not. When no route exists, the affordance does not appear.
+Other editors, and the file manager, need a path that Windows can reach. WSL provides one, `\\wsl$`, but an SSH host does not. When no such path exists, Kepler does not show the option.
 
 ***
 
@@ -478,13 +514,13 @@ Other editors, and the file manager, rely on the path being reachable from Windo
 
 The desktop installer does not carry a server bundle for every architecture. Kepler fetches what it needs when you connect, and caches it per user.
 
-The payload is not one tarball. Kepler splits it into four layers instead, each a separate archive with its own cache key:
+Kepler splits the payload into 4 layers, each a separate archive with its own cache key:
 <!-- TODO(verify): Agent Integrations says Kepler now runs your own Codex CLI instead of a bundled codex-acp engine. Confirm whether the remote server still ships a codex layer, and drop this row if not. -->
 
 | Layer | What it holds |
 |---|---|
 | `node` | The vendored Node runtime |
-| `codex` | The bundled Codex engine. Optional: a build without it ships three layers |
+| `codex` | The bundled Codex engine. Optional: a build without it ships 3 layers |
 | `deps` | The server's dependencies |
 | `app` | The server and the interface |
 
@@ -496,9 +532,9 @@ The payload is not one tarball. Kepler splits it into four layers instead, each 
 
 The architecture token is one of `linux-x64`, `linux-arm64`, `darwin-x64`, `darwin-arm64`, `win32-x64`, `win32-arm64`.
 
-**A connect downloads only the layers the host is actually missing.** Kepler reads the small manifest first (no payload bytes) and compares each layer's key against what the host has already installed. A version bump that changes only the app leaves your Node and Codex layers alone on both sides, so an upgrade pulls a fraction of what a first connect pulls. This holds on every transport: SSH to a POSIX host, SSH to a Windows host, and WSL.
+**A connection downloads only the layers the host is missing.** Kepler reads the small manifest first (no payload bytes) and compares each layer's key against what the host has already installed. A version bump that changes only the app leaves your Node and Codex layers alone on both sides, so an upgrade pulls a fraction of what a first connect pulls. This holds on every transport: SSH to a POSIX host, SSH to a Windows host, and WSL.
 
-Two cases still fetch everything. A host with no layer stamps at all (a first connect) has nothing to diff against. And when the missing layers come to three quarters or more of the payload, Kepler ships the whole thing rather than assembling a subset that saves little.
+Two cases still fetch everything. A host with no layer stamps at all (a first connect) has nothing to diff against. And when the missing layers come to 75% or more of the payload, Kepler downloads the whole payload rather than assembling a subset that saves little.
 
 Kepler downloads each layer cache-first, retries with backoff, and writes it atomically, so an interrupted download is never mistaken for a cached layer. When a layer cannot be fetched at all, the connect fails with **Unable to download the remote-server *version* for *arch*. Check your internet connection.**
 
@@ -506,7 +542,7 @@ The payload carries its own Node runtime, so the host needs nothing pre-installe
 
 ### When the server and the window disagree
 
-A window whose page comes from a server on a different build shows a full-screen screen instead of the app: *This remote server is out of date*, or *This remote server is newer than this window*, with *Server {server}, this window {app}*. An out-of-date server offers **Update server**; retrying won't help until it's updated. Otherwise **Try again** loads the matching version; if the screen keeps coming back, restart the server. **Switch to local** moves the window back to this computer.
+A window whose page comes from a server on a different build shows a full-screen message instead of the app: *This remote server is out of date*, or *This remote server is newer than this window*, with *Server {server}, this window {app}*. An out-of-date server offers **Update server**, and retrying does not help until the server is updated. Otherwise, **Try again** loads the matching version. If the message keeps coming back, restart the server. **Switch to local** moves the window back to this computer.
 
 ***
 
@@ -514,7 +550,7 @@ A window whose page comes from a server on a different build shows a full-screen
 
 **Remote Access** is the other direction. It opens this Kepler window from another device, such as a second computer or a phone, over a secure tunnel relayed through your GitKraken account. Your work still runs here; the other device only sees the interface.
 
-Configure it in **Settings → Remote Access**, or from the **Remote Access** button in the title bar. The button's monitor-and-phone icon shows the status: green while active, amber while connecting, reconnecting, or waiting to reconnect, red on an error, and plain while off. Hover it to open its popover, which works on the machine the window is on:
+Configure it in **Settings → Remote Access**, or from the **Remote Access** button in the title bar. The button's monitor-and-phone icon shows the status: green while active, amber while connecting, reconnecting, or waiting to reconnect, red on an error, and plain while off. Hover over it to open its popover, which works on the machine the window is on:
 
 - **Use this machine anywhere**, or **Use *machine* anywhere** in a remote window, with how many devices are paired and online, or *No paired devices yet*.
 - While active, a QR code captioned *Scan with your phone's camera to open this machine*, the link with **Copy link**, and *Works in any browser signed in to your GitKraken account.*
@@ -537,9 +573,9 @@ Configure it in **Settings → Remote Access**, or from the **Remote Access** bu
 
 ### Before you start
 
-You need a GitKraken account signed in to Kepler, on a paid GitKraken plan. Remote Access is not available on the free Community edition.
+You need a GitKraken account signed in to Kepler, on a paid GitKraken plan. Remote Access is not available on the free Community plan.
 
-When you sign out of Kepler, each remote machine your windows are connected to learns that you signed out, and turns its Remote Access off. A sign-in that expires on its own doesn't turn Remote Access off.
+When you sign out of Kepler, each remote machine your windows are connected to learns that you signed out, and turns its Remote Access off. A sign-in that expires on its own does not turn Remote Access off.
 
 ### Turning on Remote Access
 
@@ -549,7 +585,7 @@ When you sign out of Kepler, each remote machine your windows are connected to l
 
 Kepler generates a private key for this machine the first time you enable Remote Access. The key never leaves the machine; Kepler uses it to prove the machine's identity to GitKraken each time it reconnects.
 
-**Remote Access stays on until you turn it off.** Only you, a deliberate sign-out, or a different account signing in turns it off. When Kepler restarts, it turns Remote Access back on only for the account that turned it on. When the connection fails, Kepler retries quickly a few times. After that, the status reads **Waiting to reconnect**, with *Unable to connect* and the reason. *Kepler retries every 5 minutes.*, and **Retry now** tries at once. Paired devices stay paired through the wait. Two other cases wait too:
+**Remote Access stays on until you turn it off.** Only you, a deliberate sign-out, or a different account signing in turns it off. When Kepler restarts, it turns Remote Access back on only for the account that turned it on. When the connection fails, Kepler retries quickly a few times. After that, the status reads **Waiting to reconnect**, with *Unable to connect* and the reason. *Kepler retries every 5 minutes.*, and **Retry now** tries at once. Paired devices stay paired through the wait. Remote Access also waits in these 2 cases:
 
 - With no GitKraken sign-in, the status reads *Waiting for a GitKraken sign-in. Remote Access connects as soon as one is available.*
 - When your account already has its limit of machines with Remote Access on, the status reads *Your account has reached its limit of machines with Remote Access on. Remove one you no longer use, then retry.*, with **Manage machines on gitkraken.dev**.
@@ -560,12 +596,12 @@ To turn it off, click **Turn off Remote Access** in Settings or in the popover. 
 
 ### Pairing another device
 
-Once Remote Access is active, a QR code and a link appear in Settings and in the popover.
+When Remote Access is active, a QR code and a link appear in Settings and in the popover.
 
-- **Scan with your phone camera to open** is the fast path. Otherwise, copy the link.
+- To pair a phone, scan the QR code (**Scan with your phone camera to open**). Otherwise, copy the link.
 - The link opens **gitkraken.dev/integrations**, where you approve the connection with your GitKraken account.
 
-A pairing link works once and expires after 5 minutes. A spent or expired link shows *This pairing link no longer works*; open a new link from the computer running Kepler.
+A pairing link works once and expires after 5 minutes. A used or expired link shows *This pairing link no longer works*. To pair, open a new link from the computer running Kepler.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/remote-access-phone-sep-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -576,7 +612,7 @@ A pairing link works once and expires after 5 minutes. A spent or expired link s
 
 ### Using Kepler on a phone
 
-When you open Kepler in a phone's browser, it uses a phone layout: one bar at the top of each screen in place of the desktop top bar and headers. The phone layout applies to any browser window as narrow as a phone; the desktop app never uses it. On a touch screen, Kepler also keeps the phone awake while you watch an agent that is working without needing you, or a terminal that is printing output, because a phone that locks drops the connection. When the on-screen keyboard is up, the screen fits above it.
+When you open Kepler in a phone's browser, it uses a phone layout: one bar at the top of each screen in place of the desktop top bar and headers. The phone layout applies to any browser window as narrow as a phone; the desktop app never uses it. On a touch screen, Kepler also keeps the phone awake while you watch an agent that is working without needing you, or a terminal that is printing output, because a phone that locks drops the connection. When the on-screen keyboard is open, Kepler fits the screen above it.
 
 #### The menu
 
@@ -584,7 +620,7 @@ When you open Kepler in a phone's browser, it uses a phone layout: one bar at th
 
 - **Views**: **Todo** and **Tasks**, each with an orange count of what needs you
 - **Saved views**, when you have any
-- **Recent tasks**: the five most recently active tasks, each with a dot when it is waiting on you
+- **Recent tasks**: the 5 most recently active tasks, each with a dot when it is waiting on you
 - **Feedback**, **Settings**, and **Help**
 - Your account row, with your plan or the days left in a trial
 
@@ -623,7 +659,7 @@ A task's bar has **Back**, the task's name, and one icon each for **Sessions**, 
 - **Tap the task's name** to open **Switch task**, a sheet of every task in the Dashboard's order. Swipe sideways on the name to go back to the previous task.
 - **Pull down on the bar** for a sheet of everything in the task: sessions, checkouts, terminals, and resources, with each row's actions.
 
-Under the bar, a details row holds the task's stage and a summary. Unfold it for the checkout and the task's pull request and issue. The row folds away while a terminal or the changes fill the screen.
+Under the bar, a details row shows the task's stage and a summary. Expand it to see the checkout and the task's pull request and issue. The row collapses while a terminal or the changes fill the screen.
 
 **Add resource** opens as a sheet that lists the kinds of resource, and steps into one at a time, with **Back to resource types** to step out. Filters, branch choice, and cloning each open as a further step, and a single **Add** button adds what you picked.
 
@@ -641,7 +677,7 @@ On a touch phone, every live terminal has a key row under it with the keys a pho
 | Left and Right arrows | **Home** and **End** |
 | Up and Down arrows | **Page up** and **Page down** |
 
-Tap **Ctrl** once to hold it for the next key only, or double-tap it to lock it until you tap it again. Holding an arrow repeats it. **Hide keys** folds the row into a **Show keys** button, and this device remembers the choice. The phone keyboard rises only when you tap the terminal or **Keyboard**, not on every scroll.
+Tap **Ctrl** once to hold it for the next key only, or double-tap it to lock it until you tap it again. Holding an arrow repeats it. **Hide keys** replaces the row with a **Show keys** button, and this device remembers the choice. The phone keyboard opens only when you tap the terminal or **Keyboard**, not on every scroll.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/terminal-key-row-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -690,16 +726,16 @@ You can also manage the current machine's connections locally, in **Settings →
 | Limitation | Detail |
 |---|---|
 | **Commit and tag signing** | Signing does not work over a remote connection. Kepler says so rather than failing quietly: *Commit signing isn't available over a remote connection yet. Disable commit.gpgsign for this repo on the remote, or run the commit from a terminal there.* |
-| **Remote-connection management in a browser client** | Inherently local. A browser client shows **Remote environments need the desktop app** and hides the title-bar chip, because adding hosts, connecting, and stopping servers all run through the desktop app |
-| **Auto-update in a browser client** | A no-op. A browser cannot update itself; update the desktop app, or the host's server from a desktop window |
+| **Remote-connection management in a browser client** | Desktop app only. A browser client shows **Remote environments need the desktop app** and hides the title-bar chip, because adding hosts, connecting, and stopping servers all run through the desktop app |
+| **Auto-update in a browser client** | Does nothing, because a browser cannot update itself. Update the desktop app, or update the host's server from a desktop window |
 | **Port forwarding from a Windows client** | Each forward opens its own SSH connection, so a password host asks for the password again per forward. Only `localhost`, `127.0.0.1`, and `0.0.0.0` links forward |
-| **Host-side cleanup on a Windows host** | Of the four options **Remove *machine*…** offers, two act on the host (**Uninstall Kepler server on the machine** and **Remove deployed key from remote authorized_keys**) and both run through a POSIX shell, so neither works on a Windows host. The two local options are unaffected. Delete `~/.kepler-server` and the `authorized_keys` entry on the host yourself |
+| **Host-side cleanup on a Windows host** | Of the 4 options **Remove *machine*…** offers, 2 act on the host (**Uninstall Kepler server on the machine** and **Remove deployed key from remote authorized_keys**) and both run through a POSIX shell, so neither works on a Windows host. The 2 local options are unaffected. Delete `~/.kepler-server` and the `authorized_keys` entry on the host yourself |
 
 ***
 
 ## Related
 
-- [Settings](/kepler/settings): the **Remote environments** and **Remote Access** pages, and the shortcut list
+- [Settings](/kepler/settings-environment): the **Remote environments** and **Remote Access** pages, and [the shortcut list](/kepler/settings-app#keyboard-shortcuts)
 - [Agent Integrations](/kepler/agent-integrations): signing agents in, including on a remote target
 - [Review Changes](/kepler/review-changes): reviewing and shipping the work a remote agent produced
 

@@ -84,7 +84,7 @@ In the list of Actions, hover a row, or move focus to it, to read that Action's 
   <figcaption style="text-align:center; color:#888">The split button on a Todo row: the row's kind of item decides which Action fills the left half.</figcaption>
 </figure>
 
-Inside a task, Actions live under the **chevron on the composer's send button** rather than on a split button of their own: type a refinement, then pick the Action to fire it with. In a composer that starts something new, such as the Task Composer or a panel's draft, picking an Action doesn't fire it: it sets the main button to that Action, and shows the Action's own agent in the agent pill if it names one, so you can check what will run before you press it. See [Create a Task](/kepler/create-task#from-the-task-composer).
+Inside a task, Actions live under the **chevron on the composer's send button** rather than on a split button of their own: type a refinement, then pick the Action to fire it with. In a composer that starts something new, such as the **New task** composer or a panel's draft, picking an Action doesn't fire it: it sets the main button to that Action, and shows the Action's own agent in the agent pill if it names one, so you can check what will run before you press it. See [Create a task](/kepler/create-task#from-the-new-task-composer).
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/inside-task-actions-button-aug-2026.png" target="_blank" rel="noopener noreferrer">
@@ -145,7 +145,7 @@ A task with no worktree runs the Action in a folder attached to it, or else in t
 
 ### Firing into a running session
 
-Firing into a live session **queues** the prompt behind whatever the agent is currently doing. Nothing is dropped and nothing is cancelled, and Kepler takes you to the session the prompt went into.
+Firing into a live session **queues** the prompt behind whatever the agent is currently doing. Nothing is dropped and nothing is canceled, and Kepler takes you to the session the prompt went into.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/firing-into-a-running-session-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -285,7 +285,7 @@ End the description with this line:
 If the worktree has uncommitted changes, stop and tell me.
 ```
 
-The agent opens the pull request with the tools it has, such as your Git host's command-line tool. When it publishes the pull request, Kepler attaches it to the Task. See [Review Changes](/kepler/review-changes#opening-a-pull-request).
+The agent opens the pull request with the tools it has, such as your Git host's command-line tool. When it publishes the pull request, Kepler attaches it to the task. See [Review Changes](/kepler/review-changes#opening-a-pull-request).
 
 ### Restore defaults
 
@@ -329,7 +329,7 @@ To give **Review** its own agent, take the following steps:
 2. Name a different agent in the **Agent** field from the one that writes your code. **Implement** uses your default agent unless you've changed it.
 3. Click **Save**.
 
-**Review** now runs on that agent, whether you fire it at a Task's uncommitted work or at an attached pull request. The override is all-or-nothing, so it also pins that agent's account, model, and mode.
+**Review** now runs on that agent, whether you fire it at a task's uncommitted work or at an attached pull request. The override is all-or-nothing, so it also pins that agent's account, model, and mode.
 
 To use a different reviewer just once, pick the agent when you fire **Review**. An agent you pick at that point beats the Action's override.
 
