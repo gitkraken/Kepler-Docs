@@ -174,8 +174,8 @@ Some kinds of row show more:
 - A **session** row leads with its state, and names which **Account** it runs under once a harness has more than one configured: the provider logo plus an ordinal, on the row, its tab, and its collapsed strip alike.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/task-rail-detached-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-rail-detached-oct-2026.png" class="help-center-img img-bordered" alt="The task rail's Changes group, above the Notes header, with a worktree on a detached HEAD: the row is titled cd919f0, the commit it sits on, with Detached in amber in its subtitle, and its hover card beside it lists cd919f0, acme-web and the worktree's path, then Detached · cd919f0 and Not published yet.">
+  <a href="/wp-content/uploads/task-rail-detached-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-rail-detached-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The task rail's Changes group, above the Notes header, with a worktree on a detached HEAD: the row is titled cd919f0, the commit it sits on, with Detached in amber in its subtitle, and its hover card beside it lists cd919f0, acme-web and the worktree's path, then Detached · cd919f0 and Not published yet.">
   </a>
   <figcaption style="text-align:center; color:#888">A worktree on a detached HEAD, with its hover tip.</figcaption>
 </figure>
@@ -232,8 +232,8 @@ The worktree's **Branch** submenu gathers what changes the branch itself: **Rena
 **Continue as** moves the conversation to another signed-in account of the same agent, restarting the agent with the conversation as that account. **Continue in Terminal** and **Continue in Chat** move it between the two ways a session runs, keeping the conversation. When the session is still running a turn or background work, Kepler asks first, for example **Stop this session and continue in Terminal?** (or **Stop this session and continue as {login}?**), and warns when queued messages would be discarded. **Stop and switch** stops the session and moves it. See [Moving a session to another account](/kepler/agent-sessions#moving-a-session-to-another-account) and [How a session runs](/kepler/agent-sessions#how-a-session-runs).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/switch-mode-confirm-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/switch-mode-confirm-oct-2026.png" class="help-center-img img-bordered" alt="The Stop this session and continue in Terminal? dialog, warning that the session looks like it's still running and that switching stops it and resumes the conversation in Terminal, with a close button, Cancel and Stop and switch.">
+  <a href="/wp-content/uploads/switch-mode-confirm-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/switch-mode-confirm-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Stop this session and continue in Terminal? dialog, warning that the session looks like it's still running and that switching stops it and resumes the conversation in Terminal, with a close button, Cancel and Stop and switch.">
   </a>
   <figcaption style="text-align:center; color:#888">Switching a running session to Terminal asks first.</figcaption>
 </figure>

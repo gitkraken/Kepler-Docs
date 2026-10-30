@@ -246,8 +246,8 @@ Read the diff, mark what needs fixing, and send your notes to the agent, one at 
 Comments are saved with the task, so they're still there after a reload and in every window. Nothing is posted to your Git host.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/review-comment-draft-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/review-comment-draft-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total with cart.js open in the Changes view, its header holding File and Changes, Stacked and Split. Lines 3 and 4 are selected and a review comment draft is open beneath them, reading Pull the discount and rounding into one helper, with Cancel and Comment.">
+  <a href="/wp-content/uploads/review-comment-draft-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/review-comment-draft-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total with cart.js open in the Changes view. Lines 3 and 4 are selected and a review comment draft is open beneath them: Comment on lines 3 to 4 above the note Pull the discount and rounding into one helper, then the target To OpenCode Fix the cart total: discounts should apply before tax. with its chevron, Cancel, Add comment and Send now.">
   </a>
   <figcaption style="text-align:center; color:#888">A review comment draft, under the lines it's about.</figcaption>
 </figure>
@@ -276,8 +276,8 @@ Queued comments show as a **{count} comments** chip in that session's composer a
 On a task with no session yet, **Send now** reads **Start a session**. It opens a new session's draft with the comments as its first prompt. In an overlay opened from outside a conversation, such as from a file path, sending is locked: *Open this file from a conversation to send comments*.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ade-review-comments-01-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ade-review-comments-01-v3@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total with cart.js open in the Changes view. Two posted review comments sit under the diff lines they are about, on line 3 and line 4, each with Edit, Delete and Add to prompt. The file header and its tree row show a comment count of 2, and the overlay header reads 2 comments beside Add to prompt.">
+  <a href="/wp-content/uploads/ade-review-comments-01-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ade-review-comments-01-v4@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total with cart.js open in the Changes view and three review comments under the lines they are about. The comment on line 2 reads Not sent yet, with Add to queue and Send now; the comments on lines 3 and 4 read Queued for OpenCode Fix the cart total: discounts should apply before tax., with Remove from queue and Send now. Each card opens with You, just now and its note, and has Edit comment and Delete comment icons. Line 2 is picked in the gutter. The overlay header reads 3 comments and Send comments (2), with the Comment options menu open on Discard unsent comments.">
   </a>
   <figcaption style="text-align:center; color:#888">Comments not sent and queued, with Send comments in the overlay header.</figcaption>
 </figure>
@@ -301,8 +301,8 @@ Typed text is never thrown away: **Escape** only leaves a draft's field, and a d
 The agent answers a comment you sent in a thread under it, and it can resolve the comment when the fix is done. The card reads as a conversation: your note, then each reply, oldest first, named **You** or with the agent and its session.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/review-comment-thread-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/review-comment-thread-oct-2026.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total with cart.js open and a sent review comment under line 3, its status Sent to OpenCode Fix the cart total: discounts should apply before tax. just now. The card reads as a conversation: You with the note Clamp the discounted subtotal at zero so a large discount cannot make the total negative, then OpenCode's reply under the session's name, Agreed. I'll clamp it with Math.max(0, subtotal - discount) and add a test for a discount larger than the order. Below them sit the Reply to OpenCode box, Resolve and Reply.">
+  <a href="/wp-content/uploads/review-comment-thread-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/review-comment-thread-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total with cart.js open and a sent review comment under line 3, its status Sent to OpenCode Fix the cart total: discounts should apply before tax. just now. The card reads as a conversation: You with the note Clamp the discounted subtotal at zero so a large discount cannot make the total negative, then OpenCode's reply under the session's name, Agreed. I'll clamp it with Math.max(0, subtotal - discount) and add a test for a discount larger than the order. Below them sit the Reply to OpenCode box, Resolve and Reply.">
   </a>
   <figcaption style="text-align:center; color:#888">A sent comment with the agent's reply.</figcaption>
 </figure>
@@ -318,8 +318,8 @@ Any card collapses to a one-line row from the chevron beside its lines, and expa
 **Comments**, after **All files** in the view picker of the panel and the overlay, lists every review comment of the task. Its button counts the open comments, with a dot when there are unread replies.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/review-comments-list-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/review-comments-list-oct-2026.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total on its Comments view, its header reading 3 comments and Send comment. The side list reads 3 comments with View options, then the comments grouped by status: Not sent (cart.js:2), Queued (cart.js:4) and Sent (cart.js:3), each row with its place, just now, its note and its status. Beside it, cart.js shows the three cards: line 2 Not sent yet with Add to queue and Send now, line 3 Sent to OpenCode with the Reply to OpenCode box, Resolve and Reply, and line 4 Queued for OpenCode with Remove from queue and Send now.">
+  <a href="/wp-content/uploads/review-comments-list-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/review-comments-list-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total on its Comments view, its header reading 3 comments and Send comment. The side list reads 3 comments with View options, then the comments grouped by status: Not sent (cart.js:2), Queued (cart.js:4) and Sent (cart.js:3), each row with its place, just now, its note and its status. Beside it, cart.js shows the three cards: line 2 Not sent yet with Add to queue and Send now, line 3 Sent to OpenCode with the Reply to OpenCode box, Resolve and Reply, and line 4 Queued for OpenCode with Remove from queue and Send now.">
   </a>
   <figcaption style="text-align:center; color:#888">The Comments view, grouped by status.</figcaption>
 </figure>
@@ -465,8 +465,8 @@ Any remote branch can be the upstream, whatever its name. Pick one and Kepler sa
 The Sync view rebases or merges the branch onto its merge target. It works on a copy first, and your branch changes only when you apply the result: *Sync prepares a result to review before applying it.*
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/update-view-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/update-view-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The update view for kepler/fix-cart-total, updating from main, reporting No conflicts with main, with the Rebase button's menu open on Merge and a note that the rebase or merge runs on a copy first.">
+  <a href="/wp-content/uploads/update-view-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/update-view-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The sync view titled Sync kepler/fix-cart-total, from origin/main with Rebase selected in the Rebase and Merge control, at Ready to apply: The rebase onto origin/main is ready. Apply updates your branch. Sync sits beside Apply & push and its chevron.">
   </a>
   <figcaption style="text-align:center; color:#888">The sync view with a clean result, ready to apply and push.</figcaption>
 </figure>
@@ -493,8 +493,8 @@ When a push from the Sync view fails, your local result is kept:
 A result waiting to be applied doesn't lock the branch, so the branch or its base can move on in the meantime. You can also pick another base or switch the method after a run. Either way, the result no longer matches. The view reads *The last update result is out of date*, and **Sync** becomes the main button to prepare a new one. Kepler won't apply a result whose base moved.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/update-view-stale-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/update-view-stale-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The update view for kepler/fix-cart-total, from release/2.4, reading The last update result is out of date: The branch or base changed after this update ran. Recalculate before applying the result. Recalculate and Discard sit beside the title.">
+  <a href="/wp-content/uploads/update-view-stale-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/update-view-stale-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The sync view for kepler/fix-cart-total, from main with Merge now selected in the Rebase and Merge control, reading The last update result is out of date: The branch, base, or selected method no longer matches this result. Sync before applying a result. Sync is the only action beside the title, next to the close button.">
   </a>
   <figcaption style="text-align:center; color:#888">A sync result that's out of date. Sync prepares a new one.</figcaption>
 </figure>
@@ -515,8 +515,8 @@ You have two ways through the conflicts:
 AI conflict resolution runs the rebase or merge on a copy and resolves each conflicted file for you. Your branch changes only when you apply the result.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ade-sync-ai-conflicts-01-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ade-sync-ai-conflicts-01-v2@2x.png" class="help-center-img img-bordered" alt="The update view for kepler/fix-cart-total in its conflict state: Review conflicts in kepler/fix-cart-total, with main, 1 file conflicts with main, and cart.js with 1 conflict region. The Rebase with AI button's menu is open on Merge with AI.">
+  <a href="/wp-content/uploads/ade-sync-ai-conflicts-01-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ade-sync-ai-conflicts-01-v3@2x.png" class="help-center-img img-bordered" alt="The sync view for kepler/fix-cart-total in its conflict state: Sync kepler/fix-cart-total with conflicts, with main and the Rebase and Merge control (Rebase selected), the Sync button, 1 file conflicts with main, and cart.js with 1 conflict region.">
   </a>
   <figcaption style="text-align:center; color:#888">The sync view on a conflicting branch. Sync resolves the conflicts with AI.</figcaption>
 </figure>
@@ -562,8 +562,8 @@ Each file row shows one of the following methods. **Ours** and **Theirs** are Gi
 The review persists across reloads and windows, so you can close the view and come back to it before you apply.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ade-sync-ai-review-01-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ade-sync-ai-review-01-v3@2x.png" class="help-center-img img-bordered" alt="The update view for kepler/fix-cart-total after an AI rebase: Ready to apply with Apply and Discard, a Needs review badge over the AI's summary and the check &quot;cart.js — low confidence&quot;, the line AI resolved 1 file · confidence 75%, and a commit card for Apply the discount before tax listing cart.js with its AI method, a 75% confidence badge and what the AI did.">
+  <a href="/wp-content/uploads/ade-sync-ai-review-01-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ade-sync-ai-review-01-v4@2x.png" class="help-center-img img-bordered" alt="The sync view for kepler/fix-cart-total after an AI rebase: Sync kepler/fix-cart-total with conflicts, with main and Rebase selected, Ready to apply with Sync and Apply, a Needs review badge over the AI's summary and the check &quot;cart.js — low confidence&quot;, the line AI resolved 1 file · confidence 75%, and a commit card for Apply the discount before tax listing cart.js with its AI method, a 75% confidence badge and what the AI did.">
   </a>
   <figcaption style="text-align:center; color:#888">An AI review at Ready to apply.</figcaption>
 </figure>

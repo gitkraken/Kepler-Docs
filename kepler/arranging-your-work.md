@@ -22,8 +22,8 @@ taxonomy:
 Kepler has one interface rather than a set of views, so you shape it instead of switching away from it. Four controls do most of the work: the grouping, the sort, the filters, and the layout. Each segment remembers its own, and a combination you come back to can be saved under a name.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/arrange-work-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/arrange-work-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The dashboard's arranging controls: the Saved views chip, Group: Inbox, Sort: Updated, Filter, Open all in panels, Panel layout, the List and Board view switch, and Refresh.">
+  <a href="/wp-content/uploads/arrange-work-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/arrange-work-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The dashboard's arranging controls: the Saved views chip, Group: Inbox, Sort: Updated, Filter, Panel layout, the List and Board view switch, and Refresh.">
   </a>
   <figcaption style="text-align:center; color:#888">The saved views, grouping, sort, filter, panel, and layout controls.</figcaption>
 </figure>
@@ -88,8 +88,8 @@ The Progress board is also where you can move a task by hand. See [Set a task's 
 The **Group** dropdown reorganizes the list.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/group-options-tasks-sep-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/group-options-tasks-sep-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Group menu open under Group: Inbox on Tasks in progress, listing Inbox (checked), Progress, Activity, Repository and None.">
+  <a href="/wp-content/uploads/group-options-tasks-sep-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/group-options-tasks-sep-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Group menu open under Group: Your groups on Tasks in progress: the Your groups switch, on, with &quot;Shows a section per group&quot; under it, then Inbox, Progress, Activity, Repository and None, with None checked.">
   </a>
   <figcaption style="text-align:center; color:#888">The Group dropdown on Tasks in progress.</figcaption>
 </figure>
@@ -179,8 +179,8 @@ The other axes sort tasks by what Kepler can see. A group is your own filing: a 
 **Create a group.** The **New group** form asks for a **Group name** and a **Color**, one of eight: **Gray**, **Blue**, **Pink**, **Yellow**, **Green**, **Purple**, **Cyan**, and **Orange**. It starts on the color your groups use least, so new groups tell apart without your picking. Choose **Create group** to save it. A group needs a name (*Give the group a name*), and two live groups can't share one, whatever the case (*A group with this name already exists*). An archived group's name is free to reuse. What you type survives pressing **Escape** or clicking away until you close the window, so a half-named group isn't lost; only **Cancel** or saving clears it.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-task-group-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-task-group-oct-2026.png" class="help-center-img img-bordered" alt="The New group form: Search typed in the Group name field, the Color row of eight swatches with purple chosen, and the Cancel and Create group buttons.">
+  <a href="/wp-content/uploads/new-task-group-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-task-group-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The New group form: Search typed in the Group name field, the Color row of eight swatches with purple chosen, and the Cancel and Create group buttons.">
   </a>
   <figcaption style="text-align:center; color:#888">The New group form.</figcaption>
 </figure>
@@ -195,8 +195,8 @@ The other axes sort tasks by what Kepler can see. A group is your own filing: a 
 An archived task can't join a group until you restore it.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/add-to-group-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/add-to-group-oct-2026.png" class="help-center-img img-bordered" alt="The Task actions menu of Fix the cart total with Add to group open: its submenu lists Checkout, with a blue swatch and checked, and Payments, with a green swatch, then New group… and Remove from group. In the list behind, Fix the cart total and Update checkout copy carry a blue bar for Checkout and Upgrade the payment SDK a green bar for Payments.">
+  <a href="/wp-content/uploads/add-to-group-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/add-to-group-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Task actions menu of Fix the cart total with Add to group open: its submenu lists Checkout, with a blue swatch and checked, and Payments, with a green swatch, then New group… and Remove from group. In the list behind, Fix the cart total and Update checkout copy carry a blue bar for Checkout and Upgrade the payment SDK a green bar for Payments.">
   </a>
   <figcaption style="text-align:center; color:#888">Add to group, in a task's menu.</figcaption>
 </figure>
@@ -219,8 +219,8 @@ An archived task can't join a group until you restore it.
 Until you have a group, the switch says *Drag a task onto another to group them*.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/task-groups-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-groups-oct-2026.png" class="help-center-img img-bordered" alt="Tasks in progress grouped by your groups: the Checkout section, marked blue, holds Fix the cart total and Update checkout copy; the Payments section, marked green, holds Upgrade the payment SDK; and the Ungrouped section holds Add product search and Write the 2.4 release notes. Each group's header shows its color, name, task count and its tasks' session dots, with Open in panels, Select and a ⋮ menu at its end.">
+  <a href="/wp-content/uploads/task-groups-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-groups-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Tasks in progress grouped by your groups: the Checkout section, marked blue, holds Fix the cart total and Update checkout copy; the Payments section, marked green, holds Upgrade the payment SDK; and the Ungrouped section holds Add product search and Write the 2.4 release notes. Each group's header shows its color, name, task count and its tasks' session dots, with Open in panels, Select and a ⋮ menu at its end.">
   </a>
   <figcaption style="text-align:center; color:#888">Tasks in progress, grouped by your groups.</figcaption>
 </figure>
@@ -240,8 +240,8 @@ Right-click the header, or use its **⋮**, for the group's menu. It acts on the
 You can also drag a group's header to move it before or after another group. **Ungrouped**, and sections inside a group, stay where they are.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/task-group-menu-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-group-menu-oct-2026.png" class="help-center-img img-bordered" alt="Tasks in progress grouped by your groups, with the menu of the Search group's header open from its ⋮ button: Edit group…, Change group color, Move group up, Move group down and Delete group…. Below the yellow Search header with Add product search come the green Payments section with Upgrade the payment SDK and the Ungrouped section with Write the 2.4 release notes.">
+  <a href="/wp-content/uploads/task-group-menu-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-group-menu-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Tasks in progress grouped by your groups, with the menu of the Search group's header open from its ⋮ button: Edit group…, Change group color, Move group up, Move group down and Delete group…. Below the yellow Search header with Add product search come the green Payments section with Upgrade the payment SDK and the Ungrouped section with Write the 2.4 release notes.">
   </a>
   <figcaption style="text-align:center; color:#888">A group header's menu.</figcaption>
 </figure>
@@ -294,8 +294,8 @@ Dates sort newest first; **Name** and **ID** sort ascending. **ID** compares ref
 </figure>
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/manual-sort-menu-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/manual-sort-menu-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Task actions menu of Update checkout copy, the middle row of Unread, with the list sorted by Manual: after Mark as read and Rename task come Move up, Move down and Move to top of Unread, then Copy task link, Copy task prompt, Add resource…, Refresh, Shut down all agents, Archive task and Delete task.">
+  <a href="/wp-content/uploads/manual-sort-menu-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/manual-sort-menu-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Task actions menu of an on-hold task row with a New reply, with the list sorted by Manual: Open task page; Progress, On hold; Mark as read and Rename task; Move up, Move down and Move to top of Unread; then Add to group, Copy task link, Copy task prompt, Add resource…, Refresh, Shut down all agents, Archive task and Delete task.">
   </a>
   <figcaption style="text-align:center; color:#888">The move rows in a task's menu, under the Manual sort.</figcaption>
 </figure>
@@ -476,8 +476,8 @@ Saved views are the exception to per-segment memory: they're stored, named, and 
 **Archive task** files a task away. It leaves the live buckets for **Archived**, its rows and sessions survive, and Kepler stops only the agents whose checkout is about to disappear.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/archive-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/archive-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Task actions menu open from a task row's ⋮ button: Open task page; Progress, In Development; Mark as read, Rename task, Copy task link, Copy task prompt, Add resource… and Refresh; Shut down all agents; then Archive task and Delete task.">
+  <a href="/wp-content/uploads/archive-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/archive-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Task actions menu open from a task row's ⋮ button: Open task page; Progress, In Development; Mark as read, Rename task, Add to group, Copy task link, Copy task prompt, Add resource… and Refresh; Shut down all agents; then Archive task and Delete task.">
   </a>
   <figcaption style="text-align:center; color:#888">Archive task, in the row's ⋮ menu.</figcaption>
 </figure>

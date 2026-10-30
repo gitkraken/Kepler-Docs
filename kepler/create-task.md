@@ -190,8 +190,8 @@ Attaching the same repository twice gives the Task two independent worktrees on 
 You may have begun the work in a terminal before deciding it deserved tracking. Under the Task Composer, and on an empty Tasks list, **Open an external session** flips the composer to a list of every agent conversation Kepler can see. **Start a new task** flips it back. It's there while external session detection is on.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/continue-external-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/continue-external-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The New task launcher flipped to Continue an external session: a Find an external session… search field over Past sessions, listing the Pi session Why do product search results miss items tagged in uppercase? in …/repositories/acme-web with Continue. Below the panel, Start a new task switches back to the composer.">
+  <a href="/wp-content/uploads/continue-external-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/continue-external-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The New task launcher flipped to Open an external session: a Find an external session… search field over Past sessions, listing the Pi session Why do product search results miss items tagged in uppercase? in …/repositories/acme-web, highlighted with Continue. Below the panel, Start a new task switches back to the composer.">
   </a>
   <figcaption style="text-align:center; color:#888">Opening an external session from the Task Composer.</figcaption>
 </figure>

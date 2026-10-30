@@ -63,8 +63,8 @@ To find a setting by name, type in **Search settings**. Search matches section t
 To go straight to one setting, type `@id:` followed by its id, such as `@id:terminal.font-size`. The id is matched in any case. The results show that one setting, named under its page and section, and choosing it opens the page on that control. An id this version doesn't have reads *No setting has that id.* Setting ids are the same ones [settings links](#deep-links-and-section-anchors) use.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/settings-search-id-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/settings-search-id-oct-2026.png" class="help-center-img img-bordered" alt="The Settings rail's Search settings field holding @id:terminal.font-size beside its Clear search button, with a single result in place of the page list: Font size, under Appearance › Terminal.">
+  <a href="/wp-content/uploads/settings-search-id-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/settings-search-id-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Settings rail's Search settings field holding @id:terminal.font-size beside its Clear search button, with a single result in place of the page list: Font size, under Appearance › Terminal.">
   </a>
   <figcaption style="text-align:center; color:#888">Finding one setting by its id.</figcaption>
 </figure>

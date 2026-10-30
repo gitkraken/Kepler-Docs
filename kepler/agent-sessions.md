@@ -468,8 +468,8 @@ The composer sits at the bottom of the session.
 **A long paste becomes an attachment.** Paste more than 32 KB of text, such as a long log, and Kepler attaches it as a text file named for its length, such as `pasted-text-800-lines.txt`, and puts the file name in your prompt where the text would have gone. Remove the chip to drop it. A paste larger than the attachment limit is refused as too large, and nothing is pasted. This works in every composer that takes attachments, including the new-task composer and Ask Kepler.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/pasted-text-attachment-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/pasted-text-attachment-oct-2026.png" class="help-center-img img-bordered" alt="A task session's composer after pasting a long test log: the text became an attachment chip, pasted-text-800-lines.txt with a remove button, above the prompt Why does the cart test fail in this log? pasted-text-800-lines.txt, with the attach and microphone buttons, the Docs Model Build pill and Send.">
+  <a href="/wp-content/uploads/pasted-text-attachment-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/pasted-text-attachment-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A task session's composer after pasting a long test log: the text became an attachment chip, pasted-text-800-lines.txt with a remove button, above the prompt Why does the cart test fail in this log? pasted-text-800-lines.txt, with the attach and microphone buttons, the Docs Model Build pill and Send.">
   </a>
   <figcaption style="text-align:center; color:#888">A long paste, attached as a text file.</figcaption>
 </figure>
@@ -486,8 +486,8 @@ The composer sits at the bottom of the session.
 **Review comments wait in a chip until you send.** Comments you queue for a session while reviewing its changes collect in one chip on its composer, such as **2 comments**. Click the chip to list them by file and line; click one to open its place in the file, or use its **X** to remove it from the queue. The chip's own **X** removes them all. Your next message carries the queued comments first, ahead of what you typed, and you can send them with an empty prompt too. A slash command goes alone, and the comments wait for the next message. See [Review Changes](/kepler/review-changes).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/queued-comments-chip-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/queued-comments-chip-oct-2026.png" class="help-center-img img-bordered" alt="A session composer with the 2 comments chip open above it: the Queued comments list holds cart.js:3 over Clamp at zero so a discount larger than t… and cart.js:4 over Pull 100 into a CENTS constant; the sam…, each with an X to remove it from the queue. The chip has its own X to remove all comments from the queue; below it sit Type a message..., Attach, the microphone, the Docs Model and Build agent settings, and Send.">
+  <a href="/wp-content/uploads/queued-comments-chip-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/queued-comments-chip-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A session composer with the 2 comments chip open above it: the Queued comments list holds cart.js:3 over Clamp at zero so a discount larger than t… and cart.js:4 over Pull 100 into a CENTS constant; the sam…, each with an X to remove it from the queue. The chip has its own X to remove all comments from the queue; below it sit Type a message..., Attach, the microphone, the Docs Model and Build agent settings, and Send.">
   </a>
   <figcaption style="text-align:center; color:#888">Two review comments queued for the next message.</figcaption>
 </figure>
@@ -1069,8 +1069,8 @@ Titles read **{status}: {task}**, with the agent and the repository or branch be
 You can answer an approval request from its alert. The in-app alert carries **Approve** and **Deny** for every request, destructive ones included, followed by **View**, which opens the request in its session. On macOS, the desktop notification has **Approve** and **Deny** buttons too, which answer the request without opening a window; Windows and Linux notifications have no buttons. A button pressed after the request was answered elsewhere does nothing.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/approval-alert-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/approval-alert-oct-2026.png" class="help-center-img img-bordered" alt="An in-app alert with an amber edge and shield, Approval needed for a destructive action, for the task Fix the cart total: Delete worktree acme-web@kepler/cart-total-spike and its branch, At risk: 2 uncommitted files, and Asked by Discount codes break the cart total on Fix the cart total, with Approve, Deny and View buttons and a close button.">
+  <a href="/wp-content/uploads/approval-alert-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/approval-alert-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="An in-app alert with an amber edge and shield, Approval needed for a destructive action, for the task Fix the cart total: Delete worktree acme-web@kepler/cart-total-spike and its branch, At risk: 2 uncommitted files, and Asked by Discount codes break the cart total on Fix the cart total, with Approve, Deny and View buttons and a close button.">
   </a>
   <figcaption style="text-align:center; color:#888">An approval alert, answered in place with Approve or Deny.</figcaption>
 </figure>

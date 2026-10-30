@@ -24,8 +24,8 @@ taxonomy:
 This page covers opening and arranging the panel, the chat, and the panel's terminals. For the agent sessions that run inside a task, see [Agent Sessions](/kepler/agent-sessions).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ask-kepler-chat-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ask-kepler-chat-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Ask Kepler panel open on the right of the Dashboard, under the top bar. Its header holds New chat with a chevron for past chats, the New chat button, Terminal, Move to the left and Close. Kep, the planet mascot, sits over Ask Kepler anything and the line Ask a quick question, or have Kepler check on and manage your tasks and sessions, with the starters What needs me right now? and What changed across my tasks today?, and the Ask anything composer at the bottom with the agent pill.">
+  <a href="/wp-content/uploads/ask-kepler-chat-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ask-kepler-chat-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Ask Kepler panel open over the right of the Dashboard, under the top bar, whose Ask button (Kep and the word Ask) is highlighted beside Feedback, Settings and the account avatar. The panel header holds New chat with a chevron for past chats, the New chat button, Terminal, Dock panel and Close. Kep, the planet mascot, sits over Ask Kepler anything and the line Ask a quick question, or have Kepler check on and manage your tasks and sessions, with the starters What needs me right now?, Find or change a setting and What changed across my tasks today?, and the Ask anything composer at the bottom with the attach and microphone buttons and the OpenCode agent pill.">
   </a>
   <figcaption style="text-align:center; color:#888">Ask Kepler, open on a new chat over the Dashboard.</figcaption>
 </figure>
@@ -54,8 +54,8 @@ Press the same shortcut again while focus is still inside the panel to put it aw
 Right-click the panel's header, or press the keyboard's context-menu key on it, for the panel's menu: **Dock panel**, checked while docked, and **Move to the left** or **Move to the right**, which moves the panel to the other edge of the window.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ask-kepler-docked-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ask-kepler-docked-oct-2026.png" class="help-center-img img-bordered" alt="The Ask Kepler panel docked on the right of the window, with the Dashboard's task list narrowed beside it rather than covered, its Dock panel button pressed and its header's right-click menu open: Dock panel, checked, and Move to the left. The panel shows Kep over Ask Kepler anything, the three starters and the Ask anything composer.">
+  <a href="/wp-content/uploads/ask-kepler-docked-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ask-kepler-docked-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Ask Kepler panel docked on the right of the window, with the Dashboard's task list narrowed beside it rather than covered, its Dock panel button pressed and its header's right-click menu open: Dock panel, checked, and Move to the left. The panel shows Kep over Ask Kepler anything, the three starters and the Ask anything composer.">
   </a>
   <figcaption style="text-align:center; color:#888">Ask Kepler docked beside the Dashboard, with the header's menu open.</figcaption>
 </figure>
@@ -134,8 +134,8 @@ A panel chat belongs to no task, so when a task's session links back to the chat
 ## Quick terminals
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ask-kepler-terminal-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ask-kepler-terminal-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Ask Kepler panel on the right of the Dashboard, open on its Terminal section: the header strip holds Chat, the Terminal 1 tab with its menu and close buttons, and New terminal, then Move to the left and Close. The shell runs in the home folder and shows a git log of acme-web's last three commits.">
+  <a href="/wp-content/uploads/ask-kepler-terminal-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ask-kepler-terminal-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Ask Kepler panel over the right of the Dashboard, open on its Terminal section, under the top bar's highlighted Ask button: the header strip holds Chat, the Terminal 1 tab with its menu and trash buttons, and New terminal, then Dock panel and Close. The shell runs in the home folder and shows a git log of acme-web's last three commits.">
   </a>
   <figcaption style="text-align:center; color:#888">The Terminal section, with one shell in the home folder.</figcaption>
 </figure>

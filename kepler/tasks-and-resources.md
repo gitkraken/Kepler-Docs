@@ -342,8 +342,8 @@ A worktree that would lose work is **kept**, not deleted, unless you tick the ex
 ## Renaming, archiving, and deleting a Task
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/rename-task-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/rename-task-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Task actions menu of the Fix the cart total row, unread with a New reply, with Rename task highlighted among Open task page, Progress (In Development), Mark as read, Copy task link, Copy task prompt, Add resource…, Refresh, Shut down all agents, Archive task and Delete task.">
+  <a href="/wp-content/uploads/rename-task-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/rename-task-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Task actions menu of the Fix the cart total row, unread with a New reply, with Rename task highlighted among Open task page, Progress (In Development), Mark as read, Add to group, Copy task link, Copy task prompt, Add resource…, Refresh, Shut down all agents, Archive task and Delete task.">
   </a>
   <figcaption style="text-align:center; color:#888">The Task actions menu, open from a task's row.</figcaption>
 </figure>

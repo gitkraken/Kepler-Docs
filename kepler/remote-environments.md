@@ -35,8 +35,8 @@ Kepler has two remote capabilities, and they work in opposite directions:
 Both start at the right end of the title bar. The environment chip comes first, and the **Remote Access** button, a monitor-and-phone icon, sits beside it.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/top-tool-bar-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/top-tool-bar-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The right end of the Kepler top bar: the Local environment chip, the Remote Access button's monitor-and-phone icon in green because Remote Access is on, Ask Kepler, Feedback, Settings, and the account avatar.">
+  <a href="/wp-content/uploads/top-tool-bar-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/top-tool-bar-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The right end of the Kepler top bar: the Local environment chip, the Remote Access button's monitor-and-phone icon in green because Remote Access is on, the Ask button with Kep, Feedback, Settings, and the account avatar.">
   </a>
   <figcaption style="text-align:center; color:#888">The environment chip and the Remote Access button, in a local window.</figcaption>
 </figure>
@@ -57,8 +57,8 @@ Everything up to [Remote Access](#remote-access-reach-kepler-from-another-device
 Kepler binds each window to one environment at a time, and the title-bar chip shows which one. The chip leads with the environment's type icon, and a green dot on that icon means connected.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-chip-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-chip-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The right end of the title bar in a window connected to dev-server: the environment chip reads dev-server on the host's violet tint, with a green dot on its type icon and a chevron, followed by the Remote Access button, Ask Kepler, Feedback, Settings and the account avatar.">
+  <a href="/wp-content/uploads/remote-chip-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-chip-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The right end of the title bar in a window connected to dev-server: the environment chip reads dev-server on the host's violet tint, with a green dot on its type icon and a chevron, followed by the Remote Access button, the Ask button with Kep, Feedback, Settings and the account avatar.">
   </a>
   <figcaption style="text-align:center; color:#888">The chip on a host colored Violet, connected.</figcaption>
 </figure>

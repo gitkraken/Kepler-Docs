@@ -54,15 +54,15 @@ On **Windows and Linux** the native title bar is gone and Kepler draws its own. 
 </figure>
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/top-tool-bar-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/top-tool-bar-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The right end of the Kepler top bar: the Local environment chip, the Remote Access button's monitor-and-phone icon in green because Remote Access is on, Ask Kepler, Feedback, Settings, and the account avatar.">
+  <a href="/wp-content/uploads/top-tool-bar-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/top-tool-bar-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The right end of the Kepler top bar: the Local environment chip, the Remote Access button's monitor-and-phone icon in green because Remote Access is on, the Ask button with Kep, Feedback, Settings, and the account avatar.">
   </a>
   <figcaption style="text-align:center; color:#888">The top bar's trailing cluster.</figcaption>
 </figure>
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/update-available-chip-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/update-available-chip-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The right end of the Kepler top bar with a green Update available chip before the Local environment chip, Remote Access, Ask Kepler, Feedback, Settings, and the account avatar.">
+  <a href="/wp-content/uploads/update-available-chip-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/update-available-chip-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The right end of the Kepler top bar with a green Update available chip before the Local environment chip, Remote Access, the Ask button with Kep, Feedback, Settings, and the account avatar.">
   </a>
   <figcaption style="text-align:center; color:#888">The trailing cluster when an update is ready.</figcaption>
 </figure>
@@ -163,8 +163,8 @@ A row reads differently depending on whether it holds a tracked issue or pull re
 ### Todo rows: issues and pull requests
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/todo-row-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/todo-row-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The PR 2 group with pull requests #51 and #49, each marked Changes requested, and the ISSUE 3 group with #42 (Mentioned badge), #38 and #45. Each row shows its reference, title, repository and Open status; a pull request shows its author's avatar beside a reviewer whose ring is red for changes requested, issue #38 its assignee, and #51 and #38 the session dot of the task linked to them. Then the age and the outlined Action button: Address Feedback on the pull requests, Plan on the issues.">
+  <a href="/wp-content/uploads/todo-row-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/todo-row-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The PR 2 group with pull requests #51 and #49, each marked Changes requested, and the ISSUE 3 group with #42 (Mentioned badge), #38 and #45. Each row shows its reference, title, repository and Open status; #51 and #38 also carry a Task badge for the task already started from them, with that task's session dot. A pull request shows its author's avatar beside a reviewer whose ring is red for changes requested, issue #38 its assignee. Then the age and the outlined Action button: Address Feedback on the pull requests, Plan on the issues.">
   </a>
   <figcaption style="text-align:center; color:#888">Todo rows for pull requests and issues.</figcaption>
 </figure>
@@ -282,8 +282,8 @@ The task's own operations sit behind the **⋮** menu, and on a right-click:
 **Act on several tasks at once.** Open two or more tasks with **Shift-click** or **Cmd/Ctrl-click** (see [Open a panel](#open-a-panel)), then right-click any of them. The menu acts on the whole selection, with each label counted: **New group with {count} tasks…**, **Add {count} tasks to group**, **Remove {count} tasks from group**, **Archive {count} tasks**, **Restore {count} tasks**, and **Delete {count} tasks**. Only the rows that apply are shown, and archived tasks sit out of grouping. The rows the menu acts on are outlined until it closes. **Archive**, **Restore**, and **Delete** ask first, with the same confirmation as a section's **Select** bar. Right-clicking a task outside the selection, or using a row's **⋮**, acts on that task alone.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/task-selection-menu-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-selection-menu-oct-2026.png" class="help-center-img img-bordered" alt="Tasks in progress grouped by your groups, with Add product search and Write the 2.4 release notes selected and outlined in the Ungrouped section, and the selection's right-click menu open below them: New group with 2 tasks…, Add 2 tasks to group, Archive 2 tasks and Delete 2 tasks. Above are the Checkout and Payments sections.">
+  <a href="/wp-content/uploads/task-selection-menu-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-selection-menu-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Tasks in progress grouped by your groups, with Add product search and Write the 2.4 release notes selected and outlined in the Ungrouped section, and the selection's right-click menu open below them: New group with 2 tasks…, Add 2 tasks to group, Archive 2 tasks and Delete 2 tasks. Above are the Checkout and Payments sections.">
   </a>
   <figcaption style="text-align:center; color:#888">The menu for two selected tasks.</figcaption>
 </figure>
@@ -437,8 +437,8 @@ When the list reorders under you (a session finishes, or a task moves bucket), t
 A hidden list always uses the **List** layout. Kepler remembers per window whether the list is hidden and how wide it floats. **Cmd/Ctrl+B** works from a terminal on macOS only; on Windows and Linux a focused shell keeps **Ctrl+B**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/task-list-floating-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-list-floating-oct-2026.png" class="help-center-img img-bordered" alt="The dashboard with the task list hidden and an open task panel taking the window: hovering the Dock list button at the start of the header floats the task list over the panel, with Fix the cart total highlighted as the open task, and the button's tooltip reads Dock list, Ctrl+B, and Ctrl+Shift+B shows it floating.">
+  <a href="/wp-content/uploads/task-list-floating-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-list-floating-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The dashboard with the task list hidden and an open task panel taking the window: hovering the Dock list button at the start of the header floats the task list over the panel, with Fix the cart total highlighted as the open task, and the button's tooltip reads Dock list, Ctrl+B, and Ctrl+Shift+B shows it floating.">
   </a>
   <figcaption style="text-align:center; color:#888">The hidden task list, floating over a panel from the Dock list button.</figcaption>
 </figure>
@@ -684,8 +684,8 @@ Each set of open panels gets its own history entry, so Back closes the set you j
 | **Unable to find this task** | The task you opened was deleted, or its link is from another machine: *It may have been deleted, or the link may be from another machine.* An archived task still opens |
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/tasks-empty-state-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/tasks-empty-state-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Tasks in progress empty state: the heading Your agents' work lives here and a line on what a task is, then Add issue, Add PR and Add context above the composer (Describe a task or ask a question…, the agent pill and Start), Add repo or folder below it, handwritten hints pointing at each, and a Continue an external session card under an or divider.">
+  <a href="/wp-content/uploads/tasks-empty-state-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/tasks-empty-state-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Tasks in progress empty state: the heading Your agents' work lives here and a line on what a task is, then Add issue, Add PR and Add context above the composer (Describe a task or ask a question…, the agent pill and Start), Add repo or folder below it, handwritten hints pointing at each, and an Open an external session card under an or divider.">
   </a>
   <figcaption style="text-align:center; color:#888">Tasks in progress with no tasks yet.</figcaption>
 </figure>
