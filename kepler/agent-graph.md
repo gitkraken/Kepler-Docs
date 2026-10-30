@@ -255,8 +255,8 @@ The play/pause button's tooltip says what it does next: *Hold this moment on scr
 Your agents keep working while you hold a frame, and Kepler keeps recording, so the readout shows the picture falling further behind. Kepler records only while something is happening: a session is running or thinking, or a tool call or subagent is running. While every agent is idle, the graph has nothing to replay, and the timeline's controls are unavailable.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/freeze-button-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/freeze-button-aug-2026.png" class="help-center-img img-bordered" alt="The Freeze the graph button">
+  <a href="/wp-content/uploads/freeze-button-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/freeze-button-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Agent Graph with its replay timeline held on a frame: under the graph's nodes, Play, Previous frame, Next frame, the scrubber, a -0s readout, and Back to live in place of the Live pill.">
   </a>
   <figcaption style="text-align:center; color:#888">The timeline under the graph, holding a frame.</figcaption>
 </figure>
