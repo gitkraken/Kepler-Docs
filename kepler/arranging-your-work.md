@@ -295,7 +295,7 @@ Dates sort newest first; **Name** and **ID** sort ascending. **ID** compares ref
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/manual-sort-menu-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/manual-sort-menu-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Task actions menu of an on-hold task row with a New reply, including the move rows the Manual sort adds: Open task page; Progress, On hold; Mark as read and Rename task; Move up, Move down and Move to top of Unread; then Add to group, Copy task link, Copy task prompt, Add resource…, Refresh, Shut down all agents, Archive task and Delete task.">
+    <img src="/wp-content/uploads/manual-sort-menu-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Task actions menu of Update checkout copy, an on-hold task with a New reply and a drag handle, including the move rows the Manual sort adds: Open task page; Progress, On hold; Mark as read and Rename task; Move up, Move down and Move to top of Unread; then Add to group, Copy task link, Copy task prompt, Add resource…, Refresh, Shut down all agents, Archive task and Delete task.">
   </a>
   <figcaption style="text-align:center; color:#888">The move rows in a task's menu, under the Manual sort.</figcaption>
 </figure>
@@ -477,7 +477,7 @@ Saved views are the exception to per-segment memory: they're stored, named, and 
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/archive-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/archive-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Task actions menu open from a task row's ⋮ button: Open task page; Progress, In Development; Mark as read, Rename task, Add to group, Copy task link, Copy task prompt, Add resource… and Refresh; Shut down all agents; then Archive task and Delete task.">
+    <img src="/wp-content/uploads/archive-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Task actions menu open from Fix the cart total's ⋮ button, beside the task list: Open task page; Progress, In Development; Mark as read, Rename task, Add to group, Copy task link, Copy task prompt, Add resource… and Refresh; Shut down all agents; then Archive task and Delete task.">
   </a>
   <figcaption style="text-align:center; color:#888">Archive task, in the row's ⋮ menu.</figcaption>
 </figure>
