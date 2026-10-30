@@ -1,6 +1,6 @@
 ---
 title: Setup and Account Settings
-description: The Setup and Account entries at the top of Kepler's Settings, covering the first-run setup checklist, who you're signed in as, your organization and plan, what your plan unlocks, GitKraken AI credits and usage by feature, and trials.
+description: Reopen Kepler's first-run setup checklist, see who you are signed in as, switch organizations, check what your plan unlocks, and track your GitKraken AI credits, usage by feature, and trials.
 product: Kepler
 feature: Settings
 content_type: reference
@@ -19,28 +19,30 @@ taxonomy:
 ---
 <kbd>Last updated: October 2026</kbd>
 
-The first two entries of the Settings rail are about you rather than the app: **Setup** and **Account**.
+Use **Setup** to get back to Kepler's first-run checklist. Use **Account** to see who you are signed in as, which organization you are acting as, what your plan includes, and how you are using your GitKraken AI credits.
 
 ## Setup
 
-**Setup** sits at the top of the rail, under **Search settings**. Its progress ring shows how much of the first-run checklist is done, and clicking it reopens the checklist. For what the checklist asks you to do, and how to hide it from the toolbar, see [Getting Started → Finish the setup checklist](/kepler/kepler-getting-started#finish-the-setup-checklist).
+To reopen the first-run checklist, click **Setup** at the top of the Settings sidebar, under **Search settings**. Its progress ring shows how much of the checklist is done. For what the checklist asks you to do, and how to hide it from the toolbar, see [Getting Started → Finish the setup checklist](/kepler/kepler-getting-started#finish-the-setup-checklist).
 
 ***
 
 ## Account
 
-The Account page has three sections: **Account**, **Unlock more with Kepler**, and **GitKraken AI credits**. The following table lists its controls:
+The **Account** page has these controls:
 
 | Control | What it does |
 |---|---|
-| **Account** | Who you're signed in as, with your name and email |
-| Organization | Your active organization and its plan. When your GitKraken account belongs to more than one organization, this line becomes a switcher. What a feature costs, and whether it's unlocked at all, follows the organization you're acting as |
-| **Refresh account status** | Re-reads your plan. Kepler also picks up a purchase or plan change made outside the app on its own, with no restart |
+| **Account** | Who you are signed in as, with your name and email |
+| Organization | Your active organization and its plan. If your GitKraken account belongs to more than 1 organization, this line is a switcher |
+| **Refresh account status** | Reads your plan again. Kepler also picks up a purchase or plan change you make outside the app by itself, without a restart |
 | **Manage account** / **Manage subscription** | Opens your GitKraken account or subscription on gitkraken.dev |
-| **Unlock more with Kepler** | What this plan does and doesn't include. Shown only while something is left to unlock |
-| **GitKraken AI credits** | Your credit balance, with **Buy credits**, and **Your usage by feature**. Shown only when there's a balance to show |
+| **Unlock more with Kepler** | What this plan includes and what it does not. Shown only while something is left to unlock |
+| **GitKraken AI credits** | Your credit balance, with **Buy credits**, and **Your usage by feature**. Shown only when there is a balance to show |
 
-**Your usage by feature** shows where your AI credits went. A stacked bar splits your use between your three most-used AI features and everything else as **Other**. Below the bar, each feature has a row with its share of your use as a percentage, such as **Commit Message**, **Conflict Resolution**, **Compose Changes**, or **Task & branch names**. Hover a feature's help icon for what it does. The breakdown appears only once you've used an AI feature.
+The organization you are acting as decides what a feature costs and whether it is unlocked at all.
+
+**Your usage by feature** shows where your AI credits went. It appears once you have used an AI feature. A stacked bar splits your use between your 3 most-used AI features and everything else, shown as **Other**. Below the bar, each feature has a row with its share of your use as a percentage, such as **Commit Message**, **Conflict Resolution**, **Compose Changes**, or **Task & branch names**. To see what a feature does, hover its help icon.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/ai-usage-breakdown-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -49,12 +51,16 @@ The Account page has three sections: **Account**, **Unlock more with Kepler**, a
   <figcaption style="text-align:center; color:#888">GitKraken AI credits, with your usage by feature.</figcaption>
 </figure>
 
-When a feature is locked on the organization you're acting as but included on another one you belong to, Kepler says so and offers the switch rather than sending you to a paywall: *{organization} ({plan}) already includes this.*, with **Switch to organization**.
+### When a feature is locked
 
-A paywall also asks **Already upgraded?** with **Check again**, for a plan you've just changed. If nothing has changed, it says so briefly: *Still on {plan}*. A paywall that covers the whole window also shows an account card: **Signed in as**, your **Current organization**, and a **Switch** button for each other organization whose plan includes the feature.
+If a feature is locked on the organization you are acting as but included on another organization you belong to, Kepler offers to switch instead of showing a paywall: *{organization} ({plan}) already includes this.*, with **Switch to organization**.
+
+If you just changed your plan, use **Check again** under **Already upgraded?** on the paywall. If nothing has changed, the paywall reads *Still on {plan}*. A paywall that covers the whole window also shows an account card with **Signed in as**, your **Current organization**, and a **Switch** button for each other organization whose plan includes the feature.
 
 ### Trials
 
-When a trial starts, a dialog reads **You just opened up all of Kepler**, with a pill showing how many days are free (*{count} days free*). It lists what the trial unlocks: *Every feature below is yours until {date}.* When the trial ends, a dialog reads **Your trial has ended** and lists **What your trial included**. It offers an upgrade or, when your account can start the trial again, a way to pick up where you left off.
+When a trial starts, a dialog reads **You just opened up all of Kepler**, with a pill that shows how many days are free (*{count} days free*). It lists what the trial unlocks: *Every feature below is yours until {date}.*
+
+When the trial ends, a dialog reads **Your trial has ended** and lists **What your trial included**. It offers an upgrade or, if your account can start the trial again, a way to continue where you stopped.
 
 ---

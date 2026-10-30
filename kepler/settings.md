@@ -1,6 +1,6 @@
 ---
 title: Settings
-description: An overview of Kepler's Settings, covering the 15 Settings pages and where each is documented, finding a setting by name or id, sub-pages and unsaved changes, settings in a remote window, and deep links, setting anchors and kepler://settings links.
+description: Open Kepler's Settings, find a setting by name or id, keep or discard unsaved changes, change settings in a remote window, and link straight to any setting with an anchor or a kepler://settings link.
 product: Kepler
 feature: Settings
 content_type: reference
@@ -19,13 +19,13 @@ taxonomy:
 ---
 <kbd>Last updated: October 2026</kbd>
 
-Settings has 15 pages, each with its own sections. These docs follow the rail's groups: one page for Setup and Account, one for each page of the work group, one for the app pages, one for the environment pages, and one for Updates and Help. Each describes what every setting controls, what it defaults to, and what changes when you change it. This page covers what the pages share.
+Use Settings to change how Kepler, your agents, and your tasks work. Settings has 15 pages. For what each setting on a page does, its default, and what changes when you change it, open that page's reference from [The Settings pages](#the-settings-pages).
 
-Open Settings from the gear icon in the top bar, or with **⌘ ,** (**Ctrl ,** on Windows and Linux). The same shortcut closes Settings again, the way the gear button does.
+To open Settings, click the gear icon in the top bar, or press **⌘ ,** (**Ctrl ,** on Windows and Linux). To close it, click the gear icon or press the same shortcut again.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/settings-general-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/settings-general-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Settings open on Repositories. The left rail starts with Search settings and Setup, then lists Account; Agents, Tasks, Repositories, Integrations and Actions; General, Notifications, Appearance, Voice input and Keyboard shortcuts; Remote environments and Remote Access; and Updates and Help, with Repositories' section links expanded under it.">
+    <img src="/wp-content/uploads/settings-general-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Settings open on Repositories. The Settings sidebar starts with Search settings and Setup, then lists Account; Agents, Tasks, Repositories, Integrations and Actions; General, Notifications, Appearance, Voice input and Keyboard shortcuts; Remote environments and Remote Access; and Updates and Help, with Repositories' section links expanded under it.">
   </a>
   <figcaption style="text-align:center; color:#888">Settings, open on Repositories.</figcaption>
 </figure>
@@ -34,7 +34,7 @@ Open Settings from the gear icon in the top bar, or with **⌘ ,** (**Ctrl ,** o
 
 ## The Settings pages
 
-The left rail starts with a **Search settings** field and [**Setup**](/kepler/settings-setup-account#setup), a progress ring that reopens the first-run checklist. Below them, the rail lists the pages in five unlabeled groups, separated by thin lines. The following table lists the pages in rail order:
+The Settings sidebar, down the left of Settings, starts with a **Search settings** field and [**Setup**](/kepler/settings-setup-account#setup), a progress ring that reopens the first-run checklist. Below them, the sidebar lists the following pages, in this order:
 
 | Page | What it covers |
 |---|---|
@@ -54,43 +54,48 @@ The left rail starts with a **Search settings** field and [**Setup**](/kepler/se
 | [**Updates**](/kepler/settings-updates-help#updates) | The installed version and app updates |
 | [**Help**](/kepler/settings-updates-help#help) | The docs, release notes, onboarding guides, and Kepler's logs |
 
-**Account** is first because it's the only page about the *person* rather than the app, and it's where the account menu hands off to.
+**Account** is the only page about you rather than the app. The account menu opens it.
 
 ### Find a setting
 
 To find a setting by name, type in **Search settings**. Search matches section titles, control labels, help text, and common synonyms, so a word like *theme* or *notifications* finds the right section. With no match, the results read *No settings match "{query}"*.
 
-To go straight to one setting, type `@id:` followed by its id, such as `@id:terminal.font-size`. The id is matched in any case. The results show that one setting, named under its page and section, and choosing it opens the page on that control. An id this version doesn't have reads *No setting has that id.* Setting ids are the same ones [settings links](#deep-links-and-section-anchors) use.
+To go straight to one setting, type `@id:` followed by its id, such as `@id:terminal.font-size`. Case does not matter. The results show that one setting under its page and section. Choose it to open the page on that control. If this version of Kepler has no setting with that id, the results read *No setting has that id.* [Settings links](#deep-links-and-section-anchors) use the same ids.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/settings-search-id-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/settings-search-id-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Settings rail's Search settings field holding @id:terminal.font-size beside its Clear search button, with a single result in place of the page list: Font size, under Appearance › Terminal.">
+    <img src="/wp-content/uploads/settings-search-id-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Search settings field in the Settings sidebar holding @id:terminal.font-size beside its Clear search button, with a single result in place of the page list: Font size, under Appearance › Terminal.">
   </a>
   <figcaption style="text-align:center; color:#888">Finding one setting by its id.</figcaption>
 </figure>
 
-Ask Kepler and your agents can search Kepler's settings too, and change one when you ask. They link you to a setting with a [settings link](#deep-links-and-section-anchors). Some changes ask for your approval first, and settings that hold secrets, such as your account or integrations, can only be linked. See [Finding and changing settings](/kepler/ask-kepler#finding-and-changing-settings).
+Ask Kepler and your agents can also search Kepler's settings, and change one when you ask. They link you to a setting with a [settings link](#deep-links-and-section-anchors). Some changes need your approval first. Settings that hold secrets, such as your account or integrations, can only be linked. See [Finding and changing settings](/kepler/ask-kepler#finding-and-changing-settings).
 
-Under the page you have open, the rail lists that page's main sections so you can jump to one. Under **Agents**, the rail also lists each supported agent below **Your agents**. A page with fewer than two listed sections shows no list.
+To jump to a section, use the section links the Settings sidebar shows under the page you have open. Under **Agents**, the sidebar also lists each supported agent below **Your agents**. A page with fewer than 2 listed sections shows no section links.
 
 ### Sub-pages and unsaved changes
 
-Item editors open as sub-pages inside their Settings page, with a breadcrumb back to the page. Examples include a repository, a project, a custom agent, an MCP server, and an Action.
+When you open an item to edit it, such as a repository, a project, a custom agent, an MCP server, or an Action, it opens as a sub-page inside its Settings page, with a breadcrumb back to the page.
 
-If you leave a sub-page with unsaved changes, Kepler asks before it discards anything. It asks on every way out: **Escape**, **Back**, the form's own **Cancel**, a page in the Settings rail, or a link elsewhere in the app:
+If you leave a sub-page with unsaved changes, Kepler asks before it discards anything. It asks however you leave: **Escape**, **Back**, the form's own **Cancel**, a page in the Settings sidebar, or a link elsewhere in the app:
 
 - A form that can save asks **Save your changes?**, with **Cancel**, **Don't save**, and **Save**.
 - A form that has nothing to save yet, such as a step-by-step add flow, asks **Discard your changes?**, with **Keep editing** and **Discard**.
 
-A form with a **Save** button keeps it in a footer with **Cancel**. While you have unsaved edits, the footer reads *Unsaved changes*. If a save fails, the footer shows why and keeps your edits on the form. A save that succeeds confirms with *Saved {name}*.
+A form with a **Save** button keeps it in a footer with **Cancel**. While you have unsaved edits, the footer reads *Unsaved changes*. If a save fails, the footer shows why and keeps your edits on the form. When a save succeeds, Kepler confirms with *Saved {name}*.
 
 Most fields outside those forms save themselves. Each one shows its own status beside it: **Saving**, **Saved**, or **Unable to save** with the reason. A switch shows only **Saving** and a failure. If a save fails after you've left the page, Kepler tells you which setting it was: *Unable to save {label}*.
 
-Each page, sub-page, or search result you open in Settings is a step of its own, so **Back**, or your mouse's back button, walks back through the pages you visited. To leave Settings in one click from any page or sub-page, use the back arrow in the Settings header, the gear icon, or **⌘ ,** (**Ctrl ,**). Each returns you to whatever you were doing before you opened Settings.
+**Back**, or your mouse's back button, steps back through each page, sub-page, and search result you opened in Settings. To leave Settings in one click from any page or sub-page, use the back arrow in the Settings header, the gear icon, or **⌘ ,** (**Ctrl ,**). Each one returns you to what you were doing before you opened Settings.
 
 ### Settings in a remote window
 
-In a window connected to a remote environment, Settings shows that machine's settings, and its header names the machine. Each page states under its title where its settings are saved: **Saved on {machine}** or **Saved on this machine**. A section that saves somewhere other than its page carries its own badge. The **Saved on this machine** tooltip reads *Applies to every Kepler window on this machine, whichever machine it's connected to.* To change this machine's own settings from such a window, click **Open this machine's settings** in the header: it opens the same page in a local window.
+In a window connected to a remote environment, Settings shows that machine's settings, and its header names the machine. Under its title, each page says where its settings are saved:
+
+- **Saved on {machine}**: on the remote machine.
+- **Saved on this machine**: on your own computer. Its tooltip reads *Applies to every Kepler window on this machine, whichever machine it's connected to.*
+
+A section that saves somewhere other than its page has its own badge. To change this machine's own settings from a remote window, click **Open this machine's settings** in the header. The same page opens in a local window.
 
 Some settings are kept on your own computer, such as the language, the default editor, the themes, the terminal and code fonts, and the diff layout. When Ask Kepler or an agent in a remote window changes one of these, the window applies the change on your computer, the same as its Settings page would. A notification names the change, with **Undo**. See [Finding and changing settings](/kepler/ask-kepler#finding-and-changing-settings).
 
@@ -98,7 +103,7 @@ Some settings are kept on your own computer, such as the language, the default e
 
 Every section has a stable anchor id. A link of the form `/settings/<page>#<section-id>` opens that page and scrolls to the section.
 
-A bare `/settings` opens the last page that window had open, or **Agents** if there's none. Legacy links of the form `/settings#<section-id>` still work: Kepler resolves the id to the page that owns that section and keeps the hash. An id that no page owns anymore, such as `general`, `windows-and-notifications`, `keyboard-shortcuts`, or `features`, opens **Agents**.
+`/settings` on its own opens the last page that window had open, or **Agents** if it had none. Older links of the form `/settings#<section-id>` still work: Kepler finds the page that owns that section and keeps the hash. An id that no page owns anymore, such as `general`, `windows-and-notifications`, `keyboard-shortcuts`, or `features`, opens **Agents**.
 
 The following table lists each page's path with its section anchors, in page order:
 
@@ -120,15 +125,17 @@ The following table lists each page's path with its section anchors, in page ord
 | `/settings/updates` | `updates` |
 | `/settings/help` | `onboarding-help`, `logs` |
 
-`default-agent` sits inside **New tasks** rather than being a section of its own. From the rail or search, `worktrees` opens the **Worktrees and branches** sub-page instead of scrolling to its row. Each agent also gets its own anchor on the Agents page, `agent-<agent-id>`, for example `agent-claude-code`, and each custom agent gets `custom-agent-row-<id>`.
+A few anchors work differently, and some items have anchors of their own:
 
-Likewise, `ask-kepler` isn't a section of its own: it marks the default agent picker for Ask Kepler at the top of the [Agents page](/kepler/settings-agents).
+- `default-agent` is inside **New tasks**, not a section of its own.
+- `ask-kepler` is not a section of its own either. It marks the default agent picker for Ask Kepler at the top of the [Agents page](/kepler/settings-agents).
+- From the Settings sidebar or search, `worktrees` opens the **Worktrees and branches** sub-page instead of scrolling to its row.
+- Each agent has an anchor on the Agents page, `agent-<agent-id>`, for example `agent-claude-code`. Each custom agent has `custom-agent-row-<id>`.
+- Each setting's control has the anchor `setting-<id>`, where `<id>` is the setting's id, for example `/settings/appearance#setting-terminal.font-size`.
 
-Each setting's control has an anchor of its own, `setting-<id>`, where `<id>` is the setting's id, for example `/settings/appearance#setting-terminal.font-size`.
+When search, a link, or a pointer on another page sends you to one setting, Kepler waits for its control to load, highlights it, and moves focus to it. The highlight then fades. If the control is in a collapsed part of the page, such as an agent's program and data folder, Kepler opens that part first. If the control does not appear, Kepler explains why instead:
 
-When search, a link, or a pointer on another page sends you to one setting, Kepler waits for its control to load, marks it as you arrive, then fades the mark, and moves focus to it. If the control sits in a collapsed part of the page, such as an agent's program and data folder, Kepler opens that part first. If the control doesn't appear, Kepler explains why instead:
-
-- An agent setting the agent's card doesn't show reads *This agent shows that setting only when it is turned on and supports it.*
+- An agent setting the agent's card does not show reads *This agent shows that setting only when it is turned on and supports it.*
 - A setting that depends on something else reads *This setting appears once what it depends on is set up.*
 - Otherwise, Kepler fills **Search settings** with `@id:<id>`, so you can see where the setting lives.
 
@@ -141,6 +148,6 @@ A `kepler://` link opens Settings from anywhere: another app, a terminal, or an 
 | `kepler://settings` | Settings |
 | `kepler://settings/<id>` | Settings on one setting's control, for example `kepler://settings/terminal.font-size` |
 
-A setting id is a list of lowercase words separated by dots, and a link matches it in any case. A settings link only opens Settings: it never changes a setting, and a value added to the link is ignored. A link to an id this version of Kepler doesn't have opens Settings with *That setting isn't in this version of Kepler.*
+A setting id is a list of lowercase words separated by dots, and a link matches it in any case. A settings link only opens Settings: it never changes a setting, and a value added to the link is ignored. A link to an id this version of Kepler does not have opens Settings with *That setting isn't in this version of Kepler.*
 
 ---
