@@ -242,6 +242,51 @@ Custom Actions work exactly like the built-in ones, and they're the point of the
   <figcaption style="text-align:center; color:#888">A custom Action's configuration.</figcaption>
 </figure>
 
+#### Example: Prepare for review
+
+This Action asks the agent to gather the evidence a reviewer needs before you read the diff, so you start from what the agent did and what it didn't check. To create it, click **New Action** in **Settings → Actions** and fill in the following fields:
+
+| Field | Value |
+|---|---|
+| **Title** | Prepare for review |
+| **Applies to** | **Tasks** |
+| **Agent** | Inherit, or a different agent from the one that wrote the code |
+
+Use the following text for **Prompt**:
+
+```text
+Before I review this work, write a review summary in this session. Include:
+- What the change is supposed to do, in one or two sentences
+- Each file you changed, and why
+- The commands you ran to test the change, and their results
+- What you didn't test, and anything you're unsure about
+Don't change any files.
+```
+
+The summary is the agent's own account. Check it against the diff in [Review Changes](/kepler/review-changes) before you commit.
+
+#### Example: Open a pull request
+
+Kepler has no "create pull request" button, so the agent or you open one. This Action has the agent open it, with a note in the description that an agent helped write the change. Fire it after you've reviewed and committed the work. To create it, click **New Action** in **Settings → Actions** and fill in the following fields:
+
+| Field | Value |
+|---|---|
+| **Title** | Open a pull request |
+| **Applies to** | **Tasks** |
+| **Agent** | Inherit |
+
+Use the following text for **Prompt**:
+
+```text
+Push this worktree's branch and open a pull request against its base branch.
+Write a title and a description that say what changed and why.
+End the description with this line:
+"An AI coding agent helped write this change, and a person reviewed it."
+If the worktree has uncommitted changes, stop and tell me.
+```
+
+The agent opens the pull request with the tools it has, such as your Git host's command-line tool. When it publishes the pull request, Kepler attaches it to the Task. See [Review Changes](/kepler/review-changes#opening-a-pull-request).
+
 ### Restore defaults
 
 To undo your edits to one Action, click **Restore default** on its row. The row shows **Restore default** only after you edit the Action. To undo your edits to every Action at once, click **Restore all defaults** in the **All Actions** section header.

@@ -413,7 +413,7 @@ body.hide-todo .todo{display:none}
 </tbody>
 </table>
 <hr></article>
-<article id="quick-answers" data-slug="quick-answers" hidden><div class="meta"><span class="chip">feature: Quick Answers</span><span class="chip">content_type: how-to</span><span class="chip">status: GA</span><span class="chip bad">last_verified: 2026-10</span><span class="chip">llms_include: true</span><span class="chip">875 words · ~4 min</span></div><p class="desc">Short answers to common Kepler questions, each linked to the full page. Run agents on Windows, in WSL, or on another machine, use several accounts of one agent, check on agents from your phone, set up every new worktree automatically, and have a second agent review the work.</p><p><kbd>Last updated: October 2026</kbd></p>
+<article id="quick-answers" data-slug="quick-answers" hidden><div class="meta"><span class="chip">feature: Quick Answers</span><span class="chip">content_type: how-to</span><span class="chip">status: GA</span><span class="chip bad">last_verified: 2026-10</span><span class="chip">llms_include: true</span><span class="chip">1030 words · ~5 min</span></div><p class="desc">Short answers to common Kepler questions, each linked to the full page. Run agents on Windows, in WSL, or on another machine, use several accounts of one agent, check on agents from your phone, set up every new worktree automatically, and have a second agent review the work.</p><p><kbd>Last updated: October 2026</kbd></p>
 <p><strong>Quick Answers</strong> collects the questions people ask most about Kepler, answers each in a sentence or two, and links to the section with the full detail. Start here when you know what you want to do but not which page covers it.</p>
 <hr>
 <h2 id="run-agents-where-you-work">Run agents where you work</h2>
@@ -456,7 +456,7 @@ body.hide-todo .todo{display:none}
 </table>
 <hr>
 <h2 id="start-work">Start work</h2>
-<p>You can start a Task from an issue in your tracker or from nothing at all. The following table covers starting work and getting each new worktree ready:</p>
+<p>You can start a Task from an issue in your tracker or from nothing at all. The following table covers starting work, giving agents your rules, and getting each new worktree ready:</p>
 <table>
 <thead>
 <tr>
@@ -477,9 +477,19 @@ body.hide-todo .todo{display:none}
 <td><a href="/kepler/kepler-getting-started#start-something-that-is-not-tracked-yet">Getting Started → Start something that is not tracked yet</a></td>
 </tr>
 <tr>
+<td>Give every agent on a Task your team's rules</td>
+<td>Attach a <strong>Note</strong> to the Task with the rule, constraint, or decision. Every session on the Task gets it, including sessions you start later.</td>
+<td><a href="/kepler/tasks-and-resources#notes-are-how-you-give-standing-instructions">Tasks and Resources → Notes</a></td>
+</tr>
+<tr>
 <td>Install dependencies or copy <code>.env</code> files into every new worktree</td>
 <td>Add a per-repository command and turn on <strong>Run on worktree creation</strong>. For example, <code>pnpm install</code> installs dependencies, and <code>cp "&lt;SOURCE_PATH&gt;/.env" .env</code> copies your <code>.env</code> file from the main repository.</td>
 <td><a href="/kepler/settings#per-repository-commands">Settings → Per-repository commands</a></td>
+</tr>
+<tr>
+<td>Keep agents in different worktrees from colliding on ports or databases</td>
+<td>A worktree separates files, not ports, databases, or caches. Use a command that runs on worktree creation to give each worktree its own settings, such as its own port or database name.</td>
+<td><a href="/kepler/tasks-and-resources#what-a-worktree-doesnt-separate">Tasks and Resources → What a worktree doesn't separate</a></td>
 </tr>
 </tbody>
 </table>
@@ -530,6 +540,11 @@ body.hide-todo .todo{display:none}
 </thead>
 <tbody>
 <tr>
+<td>Have the agent prepare its work for review</td>
+<td>Create an Action that asks the agent to summarize what it changed, what it tested, and what it didn't test. The example <strong>Prepare for review</strong> Action shows the prompt.</td>
+<td><a href="/kepler/actions#example-prepare-for-review">Actions → Example: Prepare for review</a></td>
+</tr>
+<tr>
 <td>Read what an agent changed</td>
 <td>Open the Task's worktree and read the diff in the <strong>Changes</strong> overlay. From there you can comment, stage, and commit.</td>
 <td><a href="#review-changes">Review Changes</a></td>
@@ -551,8 +566,8 @@ body.hide-todo .todo{display:none}
 </tr>
 <tr>
 <td>Open a pull request</td>
-<td>Kepler has no "create pull request" button, so the agent opens it, or you open it from a terminal or your Git host's website. Kepler attaches it to the Task once it exists.</td>
-<td><a href="/kepler/review-changes#opening-a-pull-request">Review Changes → Opening a pull request</a></td>
+<td>Kepler has no "create pull request" button, so the agent or you open it, and Kepler attaches it to the Task once it exists. The example <strong>Open a pull request</strong> Action has the agent open it, with a note that an agent helped write the change.</td>
+<td><a href="/kepler/review-changes#opening-a-pull-request">Review Changes → Opening a pull request</a>, <a href="/kepler/actions#example-open-a-pull-request">Actions → Example: Open a pull request</a></td>
 </tr>
 </tbody>
 </table>
@@ -1765,7 +1780,7 @@ body.hide-todo .todo{display:none}
 <p>Both <strong>Archive</strong> and <strong>Delete</strong> confirm, with <strong>Archive tasks</strong> or <strong>Delete tasks</strong> as the confirm button, and both offer <strong>Also delete worktrees</strong>, <strong>Also delete branches</strong>, and <strong>Also delete the branch on the remote</strong>. Deleting can't be undone, and the confirmation says so. The single-task dialog remembers what you ticked last time; the batch confirmation always starts with all three unticked. The batch confirmation doesn't list each worktree's fate. Instead, any worktree that would lose work is kept, and a toast afterwards says which ones and why. Open a task's own <strong>⋮</strong> to see the list before you confirm.</p>
 <p>To clean up worktrees and local branches rather than tasks, open <strong>Manage worktrees and branches</strong> in <strong>Settings → Repositories</strong>. The <strong>Worktrees and branches</strong> page lists every worktree and every local branch no worktree holds, filtered by <strong>Safe to delete</strong>, <strong>Needs update</strong>, <strong>Conflicts</strong>, <strong>Stale</strong>, or <strong>All</strong>. From it you can <strong>Update</strong> many worktrees at once, bringing each branch up to date with its base, and delete worktrees and branches, including their copies on the remote. See <a href="#settings">Settings</a>.</p>
 <hr></article>
-<article id="actions" data-slug="actions" hidden><div class="meta"><span class="chip">feature: Actions</span><span class="chip">content_type: how-to</span><span class="chip">status: GA</span><span class="chip bad">last_verified: 2026-10</span><span class="chip">llms_include: true</span><span class="chip">1977 words · ~9 min</span></div><p class="desc">Actions are editable named prompts you fire at a task, issue, or pull request. Learn the four built-in Actions, how to change them, how to write your own, and how to have a different agent review the code than the one that wrote it.</p><p><kbd>Last updated: October 2026</kbd></p>
+<article id="actions" data-slug="actions" hidden><div class="meta"><span class="chip">feature: Actions</span><span class="chip">content_type: how-to</span><span class="chip">status: GA</span><span class="chip bad">last_verified: 2026-10</span><span class="chip">llms_include: true</span><span class="chip">2306 words · ~10 min</span></div><p class="desc">Actions are editable named prompts you fire at a task, issue, or pull request. Learn the four built-in Actions, how to change them, how to write your own, and how to have a different agent review the code than the one that wrote it.</p><p><kbd>Last updated: October 2026</kbd></p>
 <p>An <strong>Action</strong> is a named prompt you fire at a task, issue, or pull request to start agent work.</p>
 <figure style="text-align:center">
   <a href="/wp-content/uploads/actions-drop-down.png" target="_blank" rel="noopener noreferrer">
@@ -2010,6 +2025,71 @@ body.hide-todo .todo{display:none}
   <figcaption style="text-align:center; color:#888">A custom Action's configuration.</figcaption>
 </figure>
 
+<h4 id="example-prepare-for-review">Example: Prepare for review</h4>
+<p>This Action asks the agent to gather the evidence a reviewer needs before you read the diff, so you start from what the agent did and what it didn't check. To create it, click <strong>New Action</strong> in <strong>Settings → Actions</strong> and fill in the following fields:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Title</strong></td>
+<td>Prepare for review</td>
+</tr>
+<tr>
+<td><strong>Applies to</strong></td>
+<td><strong>Tasks</strong></td>
+</tr>
+<tr>
+<td><strong>Agent</strong></td>
+<td>Inherit, or a different agent from the one that wrote the code</td>
+</tr>
+</tbody>
+</table>
+<p>Use the following text for <strong>Prompt</strong>:</p>
+<pre><code class="language-text">Before I review this work, write a review summary in this session. Include:
+- What the change is supposed to do, in one or two sentences
+- Each file you changed, and why
+- The commands you ran to test the change, and their results
+- What you didn't test, and anything you're unsure about
+Don't change any files.
+</code></pre>
+<p>The summary is the agent's own account. Check it against the diff in <a href="#review-changes">Review Changes</a> before you commit.</p>
+<h4 id="example-open-a-pull-request">Example: Open a pull request</h4>
+<p>Kepler has no "create pull request" button, so the agent or you open one. This Action has the agent open it, with a note in the description that an agent helped write the change. Fire it after you've reviewed and committed the work. To create it, click <strong>New Action</strong> in <strong>Settings → Actions</strong> and fill in the following fields:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Title</strong></td>
+<td>Open a pull request</td>
+</tr>
+<tr>
+<td><strong>Applies to</strong></td>
+<td><strong>Tasks</strong></td>
+</tr>
+<tr>
+<td><strong>Agent</strong></td>
+<td>Inherit</td>
+</tr>
+</tbody>
+</table>
+<p>Use the following text for <strong>Prompt</strong>:</p>
+<pre><code class="language-text">Push this worktree's branch and open a pull request against its base branch.
+Write a title and a description that say what changed and why.
+End the description with this line:
+&quot;An AI coding agent helped write this change, and a person reviewed it.&quot;
+If the worktree has uncommitted changes, stop and tell me.
+</code></pre>
+<p>The agent opens the pull request with the tools it has, such as your Git host's command-line tool. When it publishes the pull request, Kepler attaches it to the Task. See <a href="/kepler/review-changes#opening-a-pull-request">Review Changes</a>.</p>
 <h3 id="restore-defaults">Restore defaults</h3>
 <p>To undo your edits to one Action, click <strong>Restore default</strong> on its row. The row shows <strong>Restore default</strong> only after you edit the Action. To undo your edits to every Action at once, click <strong>Restore all defaults</strong> in the <strong>All Actions</strong> section header.</p>
 <p>Kepler stores <strong>only what you changed</strong>, not a copy of the whole Action. This creates the following considerations when restoring defaults:</p>
@@ -2047,7 +2127,7 @@ body.hide-todo .todo{display:none}
 <p>To use a different reviewer just once, pick the agent when you fire <strong>Review</strong>. An agent you pick at that point beats the Action's override.</p>
 <p>The review is a report, not an approval. You read it in the session and decide what to change before you commit.</p>
 <hr></article>
-<article id="tasks-and-resources" data-slug="tasks-and-resources" hidden><div class="meta"><span class="chip">feature: Tasks</span><span class="chip">content_type: concept</span><span class="chip">status: GA</span><span class="chip bad">last_verified: 2026-10</span><span class="chip">llms_include: true</span><span class="chip">6116 words · ~28 min</span></div><p class="desc">A Task is the unit of work in Kepler. Learn what a Task holds, how worktrees work, and how everything attached to a Task reaches your agents.</p><p><kbd>Last updated: October 2026</kbd></p>
+<article id="tasks-and-resources" data-slug="tasks-and-resources" hidden><div class="meta"><span class="chip">feature: Tasks</span><span class="chip">content_type: concept</span><span class="chip">status: GA</span><span class="chip bad">last_verified: 2026-10</span><span class="chip">llms_include: true</span><span class="chip">6282 words · ~29 min</span></div><p class="desc">A Task is the unit of work in Kepler. Learn what a Task holds, how worktrees work, and how everything attached to a Task reaches your agents.</p><p><kbd>Last updated: October 2026</kbd></p>
 <p>A <strong>Task</strong> is the unit of work in Kepler. It's one thing you're trying to get done, plus everything the agents working on it need: the repositories, the issue or pull request it came from, the branches, the notes, and every agent session you've run against it.</p>
 <p>A Task doesn't have to start with much. You can start one from an issue in <a href="#kepler-interface">the Kepler interface</a> and it arrives with the repository and issue body already attached, or you can start one with nothing at all (no repository, no branch), chase an idea, and attach the real work to it later.</p>
 <figure style="text-align:center">
@@ -2282,6 +2362,14 @@ body.hide-todo .todo{display:none}
 </figure>
 
 <p>Set them up in <strong>Settings → Repositories</strong>, on the repository's own page. See <a href="/kepler/settings#per-repository-commands">Settings</a> for the fields, the <strong>Variables</strong> a command can use, and what happens when one fails.</p>
+<h3 id="what-a-worktree-doesnt-separate">What a worktree doesn't separate</h3>
+<p>A worktree gives each Task its own copy of the files, not its own copy of everything else. Anything outside the worktree's folder is still shared between Tasks:</p>
+<ul>
+<li><strong>Ports.</strong> Two worktrees that start the same dev server on the same port collide, and the second server fails to start.</li>
+<li><strong>Databases and other local services.</strong> Agents in different worktrees that point at the same database read and write the same data.</li>
+<li><strong>Caches and files outside the repository.</strong> A global package cache or a file in your home folder is the same for every worktree.</li>
+</ul>
+<p>To keep Tasks apart, give each worktree its own settings when Kepler creates it. Add a per-repository command that runs on worktree creation and writes those settings, such as a port or a database name, into a local config file in the new worktree. The command runs in the new worktree's folder, and its <strong>Variables</strong> menu can insert the worktree's path. See <a href="/kepler/settings#per-repository-commands">Settings</a>.</p>
 <hr>
 <h2 id="shared-context-how-resources-reach-your-agents">Shared context: how resources reach your agents</h2>
 <p>Kepler sends everything attached to a Task to <strong>every agent session in it</strong> as <em>shared context</em>. That's what a prompt means when it says <em>"described in the shared context above"</em>: the Task's prompt, the issue body, the pull request, your notes, the links.</p>

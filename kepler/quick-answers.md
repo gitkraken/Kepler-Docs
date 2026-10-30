@@ -39,13 +39,15 @@ Kepler runs agents on your computer, in WSL, or on another machine. Remote envir
 
 ## Start work
 
-You can start a Task from an issue in your tracker or from nothing at all. The following table covers starting work and getting each new worktree ready:
+You can start a Task from an issue in your tracker or from nothing at all. The following table covers starting work, giving agents your rules, and getting each new worktree ready:
 
 | What you want to do | Short answer | Full details |
 |---|---|---|
 | Start an agent from a Jira, Linear, or GitHub issue | Connect your tracker, then fire an Action from the issue's row. The issue becomes a Task, and Kepler attaches what it read, so the agent starts with that context. | [Issue Tracker Integrations](/kepler/issue-tracker-integrations), [Actions](/kepler/actions) |
 | Start without an issue | Click **New task** or press **Cmd/Ctrl+N**, then write a prompt. You can attach nothing at all and turn the Task into real work later. | [Getting Started → Start something that is not tracked yet](/kepler/kepler-getting-started#start-something-that-is-not-tracked-yet) |
+| Give every agent on a Task your team's rules | Attach a **Note** to the Task with the rule, constraint, or decision. Every session on the Task gets it, including sessions you start later. | [Tasks and Resources → Notes](/kepler/tasks-and-resources#notes-are-how-you-give-standing-instructions) |
 | Install dependencies or copy `.env` files into every new worktree | Add a per-repository command and turn on **Run on worktree creation**. For example, `pnpm install` installs dependencies, and `cp "<SOURCE_PATH>/.env" .env` copies your `.env` file from the main repository. | [Settings → Per-repository commands](/kepler/settings#per-repository-commands) |
+| Keep agents in different worktrees from colliding on ports or databases | A worktree separates files, not ports, databases, or caches. Use a command that runs on worktree creation to give each worktree its own settings, such as its own port or database name. | [Tasks and Resources → What a worktree doesn't separate](/kepler/tasks-and-resources#what-a-worktree-doesnt-separate) |
 
 ***
 
@@ -68,10 +70,11 @@ An agent finishing isn't the same as work that's ready to ship. The following ta
 
 | What you want to do | Short answer | Full details |
 |---|---|---|
+| Have the agent prepare its work for review | Create an Action that asks the agent to summarize what it changed, what it tested, and what it didn't test. The example **Prepare for review** Action shows the prompt. | [Actions → Example: Prepare for review](/kepler/actions#example-prepare-for-review) |
 | Read what an agent changed | Open the Task's worktree and read the diff in the **Changes** overlay. From there you can comment, stage, and commit. | [Review Changes](/kepler/review-changes) |
 | Undo an agent's change to a file | Use **Discard changes**, which asks first. Your current version goes to the Trash (the Recycle Bin on Windows), so you can get it back. | [Review Changes → Staging and committing](/kepler/review-changes#staging-and-committing) |
 | Have a different agent review the work | Set the **Review** Action to a different agent from the one that wrote the code. | [Actions → Review with a different agent](/kepler/actions#review-with-a-different-agent) |
 | Apply the review comments on a pull request | Fire **Address Feedback** on the pull request. It triages the comments, applies what's worth applying, and pushes back on the rest. | [Actions → The four built-in Actions](/kepler/actions#the-four-built-in-actions) |
-| Open a pull request | Kepler has no "create pull request" button, so the agent opens it, or you open it from a terminal or your Git host's website. Kepler attaches it to the Task once it exists. | [Review Changes → Opening a pull request](/kepler/review-changes#opening-a-pull-request) |
+| Open a pull request | Kepler has no "create pull request" button, so the agent or you open it, and Kepler attaches it to the Task once it exists. The example **Open a pull request** Action has the agent open it, with a note that an agent helped write the change. | [Review Changes → Opening a pull request](/kepler/review-changes#opening-a-pull-request), [Actions → Example: Open a pull request](/kepler/actions#example-open-a-pull-request) |
 
 ---

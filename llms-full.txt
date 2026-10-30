@@ -177,13 +177,15 @@ Kepler runs agents on your computer, in WSL, or on another machine. Remote envir
 
 ## Start work
 
-You can start a Task from an issue in your tracker or from nothing at all. The following table covers starting work and getting each new worktree ready:
+You can start a Task from an issue in your tracker or from nothing at all. The following table covers starting work, giving agents your rules, and getting each new worktree ready:
 
 | What you want to do | Short answer | Full details |
 |---|---|---|
 | Start an agent from a Jira, Linear, or GitHub issue | Connect your tracker, then fire an Action from the issue's row. The issue becomes a Task, and Kepler attaches what it read, so the agent starts with that context. | [Issue Tracker Integrations](/kepler/issue-tracker-integrations), [Actions](/kepler/actions) |
 | Start without an issue | Click **New task** or press **Cmd/Ctrl+N**, then write a prompt. You can attach nothing at all and turn the Task into real work later. | [Getting Started → Start something that is not tracked yet](/kepler/kepler-getting-started#start-something-that-is-not-tracked-yet) |
+| Give every agent on a Task your team's rules | Attach a **Note** to the Task with the rule, constraint, or decision. Every session on the Task gets it, including sessions you start later. | [Tasks and Resources → Notes](/kepler/tasks-and-resources#notes-are-how-you-give-standing-instructions) |
 | Install dependencies or copy `.env` files into every new worktree | Add a per-repository command and turn on **Run on worktree creation**. For example, `pnpm install` installs dependencies, and `cp "<SOURCE_PATH>/.env" .env` copies your `.env` file from the main repository. | [Settings → Per-repository commands](/kepler/settings#per-repository-commands) |
+| Keep agents in different worktrees from colliding on ports or databases | A worktree separates files, not ports, databases, or caches. Use a command that runs on worktree creation to give each worktree its own settings, such as its own port or database name. | [Tasks and Resources → What a worktree doesn't separate](/kepler/tasks-and-resources#what-a-worktree-doesnt-separate) |
 
 ***
 
@@ -206,11 +208,12 @@ An agent finishing isn't the same as work that's ready to ship. The following ta
 
 | What you want to do | Short answer | Full details |
 |---|---|---|
+| Have the agent prepare its work for review | Create an Action that asks the agent to summarize what it changed, what it tested, and what it didn't test. The example **Prepare for review** Action shows the prompt. | [Actions → Example: Prepare for review](/kepler/actions#example-prepare-for-review) |
 | Read what an agent changed | Open the Task's worktree and read the diff in the **Changes** overlay. From there you can comment, stage, and commit. | [Review Changes](/kepler/review-changes) |
 | Undo an agent's change to a file | Use **Discard changes**, which asks first. Your current version goes to the Trash (the Recycle Bin on Windows), so you can get it back. | [Review Changes → Staging and committing](/kepler/review-changes#staging-and-committing) |
 | Have a different agent review the work | Set the **Review** Action to a different agent from the one that wrote the code. | [Actions → Review with a different agent](/kepler/actions#review-with-a-different-agent) |
 | Apply the review comments on a pull request | Fire **Address Feedback** on the pull request. It triages the comments, applies what's worth applying, and pushes back on the rest. | [Actions → The four built-in Actions](/kepler/actions#the-four-built-in-actions) |
-| Open a pull request | Kepler has no "create pull request" button, so the agent opens it, or you open it from a terminal or your Git host's website. Kepler attaches it to the Task once it exists. | [Review Changes → Opening a pull request](/kepler/review-changes#opening-a-pull-request) |
+| Open a pull request | Kepler has no "create pull request" button, so the agent or you open it, and Kepler attaches it to the Task once it exists. The example **Open a pull request** Action has the agent open it, with a note that an agent helped write the change. | [Review Changes → Opening a pull request](/kepler/review-changes#opening-a-pull-request), [Actions → Example: Open a pull request](/kepler/actions#example-open-a-pull-request) |
 
 ---
 
@@ -1122,6 +1125,51 @@ To create an Action, click **New Action** in **Settings → Actions**.
 
 Custom Actions work exactly like the built-in ones, and they're the point of the feature: if you'd do something more than once (backport a fix, write the migration, audit a dependency bump), it should be a button rather than a prompt you retype.
 
+#### Example: Prepare for review
+
+This Action asks the agent to gather the evidence a reviewer needs before you read the diff, so you start from what the agent did and what it didn't check. To create it, click **New Action** in **Settings → Actions** and fill in the following fields:
+
+| Field | Value |
+|---|---|
+| **Title** | Prepare for review |
+| **Applies to** | **Tasks** |
+| **Agent** | Inherit, or a different agent from the one that wrote the code |
+
+Use the following text for **Prompt**:
+
+```text
+Before I review this work, write a review summary in this session. Include:
+- What the change is supposed to do, in one or two sentences
+- Each file you changed, and why
+- The commands you ran to test the change, and their results
+- What you didn't test, and anything you're unsure about
+Don't change any files.
+```
+
+The summary is the agent's own account. Check it against the diff in [Review Changes](/kepler/review-changes) before you commit.
+
+#### Example: Open a pull request
+
+Kepler has no "create pull request" button, so the agent or you open one. This Action has the agent open it, with a note in the description that an agent helped write the change. Fire it after you've reviewed and committed the work. To create it, click **New Action** in **Settings → Actions** and fill in the following fields:
+
+| Field | Value |
+|---|---|
+| **Title** | Open a pull request |
+| **Applies to** | **Tasks** |
+| **Agent** | Inherit |
+
+Use the following text for **Prompt**:
+
+```text
+Push this worktree's branch and open a pull request against its base branch.
+Write a title and a description that say what changed and why.
+End the description with this line:
+"An AI coding agent helped write this change, and a person reviewed it."
+If the worktree has uncommitted changes, stop and tell me.
+```
+
+The agent opens the pull request with the tools it has, such as your Git host's command-line tool. When it publishes the pull request, Kepler attaches it to the Task. See [Review Changes](/kepler/review-changes#opening-a-pull-request).
+
 ### Restore defaults
 
 To undo your edits to one Action, click **Restore default** on its row. The row shows **Restore default** only after you edit the Action. To undo your edits to every Action at once, click **Restore all defaults** in the **All Actions** section header.
@@ -1312,6 +1360,16 @@ A fresh worktree is a clean checkout: no `node_modules`, no build output, nothin
 The worktree's menu is the same wherever the worktree appears. Beside **Run command here** it holds **New session here**, which opens a draft session in that worktree, and **New terminal here**. Its **Branch** submenu holds **Rename branch**, the upstream, **Change merge target…**, and **Rebase onto {target}** or **Merge {target} into this branch**. Below them come the copy actions, **Refresh**, and **Detach worktree…** and **Delete worktree…**. See [Review Changes](/kepler/review-changes#publishing-and-syncing-the-branch) for the upstream and the update.
 
 Set them up in **Settings → Repositories**, on the repository's own page. See [Settings](/kepler/settings#per-repository-commands) for the fields, the **Variables** a command can use, and what happens when one fails.
+
+### What a worktree doesn't separate
+
+A worktree gives each Task its own copy of the files, not its own copy of everything else. Anything outside the worktree's folder is still shared between Tasks:
+
+- **Ports.** Two worktrees that start the same dev server on the same port collide, and the second server fails to start.
+- **Databases and other local services.** Agents in different worktrees that point at the same database read and write the same data.
+- **Caches and files outside the repository.** A global package cache or a file in your home folder is the same for every worktree.
+
+To keep Tasks apart, give each worktree its own settings when Kepler creates it. Add a per-repository command that runs on worktree creation and writes those settings, such as a port or a database name, into a local config file in the new worktree. The command runs in the new worktree's folder, and its **Variables** menu can insert the worktree's path. See [Settings](/kepler/settings#per-repository-commands).
 
 ***
 
