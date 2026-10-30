@@ -190,7 +190,7 @@ Each agent account keeps its own MCP setup. When Kepler launches a Claude Code a
 
 ## Related
 
-- [Settings](/kepler/settings): **Settings → Agents**, including the **MCP servers** section.
+- [Settings](/kepler/settings-agents#mcp-servers): **Settings → Agents**, including the **MCP servers** section.
 - [Agent Integrations](/kepler/agent-integrations): the agents Kepler runs and how to set them up.
 - [Agent Sessions](/kepler/agent-sessions): the composer's **Agent settings** pill, and restarting a session.
 

@@ -45,7 +45,7 @@ Open a worktree from the rail's **Changes** group and it opens in a tab of its o
 | The **branch** | The branch this checkout is on. **⋮** beside it, or a right-click, opens the worktree's menu, the same menu the worktree has in the rail and on the Dashboard. On a task with several worktrees, the branch name also switches between them |
 | The **sync control** | One button whose verb follows the branch's state (**Publish**, **Push**, **Pull**, **Fetch** or **Update**), with the counts beside it. See [Publishing and syncing the branch](#publishing-and-syncing-the-branch) |
 | **Open in** | Hands the checkout to another app. The split button runs your default; the chevron lists the rest, ending with **Open on {provider}** where the branch lives on a supported host |
-| **Run a command** | The repository's configured commands, and **Manage commands…**. See [Settings](/kepler/settings) |
+| **Run a command** | The repository's configured commands, and **Manage commands…**. See [Settings](/kepler/settings-repositories#per-repository-commands) |
 
 The worktree's menu holds the following:
 
@@ -556,7 +556,7 @@ A file or folder in a worktree opens in the Changes overlay too, wherever you op
 
 To bring several worktrees and local branches up to date with their bases in one pass, use **Update** in **Settings → Repositories → Worktrees and branches**. The **Update worktrees** panel checks each one and lists what it will update and what it skips, such as a worktree with uncommitted changes, one where an agent is working, or a branch already checked out in a worktree. A local branch with no worktree is updated in place, without being checked out.
 
-Choose **Rebase** or **Merge**, and tick **Push after update** to push each updated branch too. Branches with no upstream are updated but not pushed, and say *No upstream, update only*. Nothing changes until **Update** is pressed, and **Roll back** undoes a worktree's update. See [Settings](/kepler/settings).
+Choose **Rebase** or **Merge**, and tick **Push after update** to push each updated branch too. Branches with no upstream are updated but not pushed, and say *No upstream, update only*. Nothing changes until **Update** is pressed, and **Roll back** undoes a worktree's update. See [Settings](/kepler/settings-repositories#update-worktrees).
 
 ***
 
@@ -613,6 +613,6 @@ On the Community plan, both rows still appear, with a padlock and the tooltip *N
 - [Tasks and Resources](/kepler/tasks-and-resources): worktrees, and detaching or deleting one safely
 - [Agent Sessions](/kepler/agent-sessions): directing the agent that produced these changes
 - [Actions](/kepler/actions): **Review** on a task reviews exactly this uncommitted work
-- [Settings](/kepler/settings): **Diff view**, **Agent tools**, and **Worktrees and branches**
+- [Settings](/kepler/settings): [**Diff view**](/kepler/settings-app#diff-view), [**Agent tools**](/kepler/settings-agents#agent-tools), and [**Worktrees and branches**](/kepler/settings-repositories#worktrees-and-branches)
 
 ---

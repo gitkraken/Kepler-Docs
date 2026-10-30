@@ -144,7 +144,7 @@ On Linux, Kepler turns WebGPU on so Qwen3-ASR can use the graphics card:
 
 If Kepler's first window hangs or never draws with WebGPU on, Kepler turns WebGPU off for later launches and restarts. Without WebGPU, use Whisper.
 
-For the full walkthrough of the setup sequence, see [Settings](/kepler/settings).
+For the full walkthrough of the setup sequence, see [Settings](/kepler/settings-app#voice-input).
 
 ***
 

@@ -191,7 +191,7 @@ The calls broken down by kind, with a bar and a count each: the fastest read on 
 
 ### Usage windows
 
-Your agent subscription windows, one bar per window per agent, each with the share used. The panel appears once there's something to show. With **Check plan usage with each agent's provider** on, which is the default in **Settings → Agents → Usage limits**, Kepler asks each agent's provider for your usage. With it off, the panel shows only readings your agents report themselves, dimmed once they're out of date, and stays hidden until an agent reports one. See [Settings](/kepler/settings).
+Your agent subscription windows, one bar per window per agent, each with the share used. The panel appears once there's something to show. With **Check plan usage with each agent's provider** on, which is the default in **Settings → Agents → Usage limits**, Kepler asks each agent's provider for your usage. With it off, the panel shows only readings your agents report themselves, dimmed once they're out of date, and stays hidden until an agent reports one. See [Settings](/kepler/settings-agents#usage-limits).
 
 The bars here show only how much of each window you've used. Whether you're on pace for a window, and when it runs out at your current rate, shows in a session's usage meter. See [Usage indicators](/kepler/agent-sessions#usage-indicators).
 

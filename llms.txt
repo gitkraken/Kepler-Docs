@@ -2,7 +2,7 @@
 
 > Kepler is GitKraken's Agentic Development Environment (ADE). It pulls every issue and pull request assigned to you into one place, then hands any of it to the coding agent you already use (Claude Code, Codex, Copilot, Cursor, Auggie, OpenCode, Grok Build, Pi, or Google Antigravity) with the context already attached.
 
-Scope: 20 pages included. Excluded (3): environment-and-setup.md, kepler-New-Page-Template.md, workflow-views.md.
+Scope: 29 pages included. Excluded (3): environment-and-setup.md, kepler-New-Page-Template.md, workflow-views.md.
 
 ## Getting Started
 
@@ -35,7 +35,16 @@ Scope: 20 pages included. Excluded (3): environment-and-setup.md, kepler-New-Pag
 
 ## Configuration
 
-- [Settings](https://help.gitkraken.com/kepler/settings/): A reference for every setting in Kepler across the 15 Settings pages, plus folder locations, branch prefixes, the Variables menu, per-repository commands (including setup commands that run on every new worktree), worktrees and branches, themes, MCP server defaults, notifications, and the keyboard shortcut list.
+- [Settings](https://help.gitkraken.com/kepler/settings/): An overview of Kepler's Settings, covering the 15 Settings pages and where each is documented, finding a setting, sub-pages and unsaved changes, settings in a remote window, and deep links with section anchors.
+- [Setup and Account Settings](https://help.gitkraken.com/kepler/settings-setup-account/): The Setup and Account entries at the top of Kepler's Settings, covering the first-run setup checklist, who you're signed in as, your organization and plan, what your plan unlocks, GitKraken AI credits and usage by feature, and trials.
+- [Agent Settings](https://help.gitkraken.com/kepler/settings-agents/): The Agents page of Kepler's Settings, covering your agents and their accounts, default session mode, artifacts, custom agents, MCP servers, agent tools, approvals, and usage limits.
+- [Task Settings](https://help.gitkraken.com/kepler/settings-tasks/): The Tasks page of Kepler's Settings, covering the default agent, what new sessions start with, where new tasks make changes, branch prefix, folder locations and the Variables menu, task naming, and the task page.
+- [Repository Settings](https://help.gitkraken.com/kepler/settings-repositories/): The Repositories page of Kepler's Settings, covering the repositories folder, adding and editing repositories, per-repository branch prefixes and commands, cleaning up and updating worktrees and branches, and Projects.
+- [Integration Settings](https://help.gitkraken.com/kepler/settings-integrations/): The Integrations page of Kepler's Settings, covering issue tracker and Git host connections, and sessions started in your own terminal.
+- [Action Settings](https://help.gitkraken.com/kepler/settings-actions/): The Actions page of Kepler's Settings, covering preferred Actions per kind of item and the Action list, with a link to the full Actions guide.
+- [App Settings](https://help.gitkraken.com/kepler/settings-app/): The app pages of Kepler's Settings, covering General (language, windows, default editor, keeping agents running), Notifications, Appearance (themes, chat, terminal, code, diff view), Voice input, and Keyboard shortcuts.
+- [Environment Settings](https://help.gitkraken.com/kepler/settings-environment/): The Remote environments and Remote Access pages of Kepler's Settings, covering the machines your agents can run on over SSH or WSL, remote windows, and opening this Kepler from another device.
+- [Update and Help Settings](https://help.gitkraken.com/kepler/settings-updates-help/): The Updates and Help pages of Kepler's Settings, covering the installed version and app updates, the docs, release notes, onboarding guides, and Kepler's logs.
 - [Remote Environments](https://help.gitkraken.com/kepler/remote-environments/): Run your agents on another machine over SSH or in WSL, switch environments from the title bar, manage machines in Settings, forward an SSH host's ports to this computer, and open this Kepler from another device, including your phone, with Remote Access.
 
 ## Release Notes

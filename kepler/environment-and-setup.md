@@ -23,8 +23,8 @@ taxonomy:
 
 | What you're looking for | Where it is now |
 |---|---|
-| Default repositories folder | [Settings](/kepler/settings) → Repositories |
-| Worktrees folder, and the **Variables** it can use | [Settings](/kepler/settings) → Tasks |
-| Repository commands, and running them on worktree creation | [Settings](/kepler/settings) → Repositories |
-| Embedded terminals | [Settings](/kepler/settings) → Appearance |
+| Default repositories folder | [Settings](/kepler/settings-repositories#repositories-folder) → Repositories |
+| Worktrees folder, and the **Variables** it can use | [Settings](/kepler/settings-tasks#folder-locations) → Tasks |
+| Repository commands, and running them on worktree creation | [Settings](/kepler/settings-repositories#per-repository-commands) → Repositories |
+| Embedded terminals | [Settings](/kepler/settings-app#embedded-terminals) → Appearance |
 | First-run setup | [Getting Started](/kepler/kepler-getting-started) |

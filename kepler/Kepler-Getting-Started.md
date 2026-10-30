@@ -88,7 +88,7 @@ After you sign in, a guided start takes you through two steps. It fills the whol
 - **When I'm needed**: questions, approvals, and errors on the desktop, while replies stay in Kepler. This is the default on the desktop
 - **Only in Kepler**: no desktop notifications
 
-**Send a test notification** shows what an alert looks like. You can change any of these later in [Settings](/kepler/settings). **Finish** takes you to **Tasks in progress** on the Dashboard, with the task composer open for your first task.
+**Send a test notification** shows what an alert looks like. You can change any of these later in [Settings](/kepler/settings-app#notifications). **Finish** takes you to **Tasks in progress** on the Dashboard, with the task composer open for your first task.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/onboarding-theme-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -120,7 +120,7 @@ Expand **More setup options** for optional items:
 
 **Add repo commands** is worth doing early if your project needs a setup step. Save a repository's install or build command once and Kepler can run it automatically every time it creates a worktree, so an agent never starts in a checkout it cannot build. See [Tasks and Resources](/kepler/tasks-and-resources).
 
-Folder paths and everything else live in [Settings](/kepler/settings). **Hide from toolbar (still available in Settings)** hides the checklist from the toolbar, and you can still reach it there.
+Folder paths and everything else live in [Settings](/kepler/settings-setup-account#setup). **Hide from toolbar (still available in Settings)** hides the checklist from the toolbar, and you can still reach it there.
 
 ***
 

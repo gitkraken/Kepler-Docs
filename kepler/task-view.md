@@ -383,7 +383,7 @@ A worktree that's gone from disk reads *Not on disk. Start recreates it.*, and K
 
 **Task context** is a checkbox chip in the composer's footer, beside the place chip. It's on by default and *Gives the agent the task’s prompt and notes. Later changes reach it with your next message.* Its tooltip reads **Leave out the task context** while it's on and **Include the task context** while it's off. Turn it off for a session that forms its own view instead.
 
-**Which agent a draft starts with is a setting.** **New sessions start with**, in **Settings → Tasks → New tasks**, is **Last used agent** by default (*The agent, model and mode you last picked*), or **Default agent** to always start with the default agent. See [Settings](/kepler/settings).
+**Which agent a draft starts with is a setting.** **New sessions start with**, in **Settings → Tasks → New tasks**, is **Last used agent** by default (*The agent, model and mode you last picked*), or **Default agent** to always start with the default agent. See [Settings](/kepler/settings-tasks#new-sessions-start-with).
 
 If no agents are connected, **Agent settings** reads **No agents available**, and its menu offers **Connect an AI agent**: an **Install** row per agent, **See all {count} agents in Settings**, and **Check again** for one you installed yourself. See [Agent Integrations](/kepler/agent-integrations). An agent that's signed out reads *Sign in to {agent} to start a session*. When an agent doesn't share its options, the menu says *You can still start a session. It uses {agent}'s own model and mode.*
 

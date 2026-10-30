@@ -210,7 +210,7 @@ The worktree's menu is the same wherever the worktree appears. Beside **Run comm
   <figcaption style="text-align:center; color:#888">A worktree's right-click menu, with its Branch submenu open.</figcaption>
 </figure>
 
-Set them up in **Settings → Repositories**, on the repository's own page. See [Settings](/kepler/settings#per-repository-commands) for the fields, the **Variables** a command can use, and what happens when one fails.
+Set them up in **Settings → Repositories**, on the repository's own page. See [Settings](/kepler/settings-repositories#per-repository-commands) for the fields, the **Variables** a command can use, and what happens when one fails.
 
 ### What a worktree doesn't separate
 
@@ -220,7 +220,7 @@ A worktree gives each Task its own copy of the files, not its own copy of everyt
 - **Databases and other local services.** Agents in different worktrees that point at the same database read and write the same data.
 - **Caches and files outside the repository.** A global package cache or a file in your home folder is the same for every worktree.
 
-To keep Tasks apart, give each worktree its own settings when Kepler creates it. Add a per-repository command that runs on worktree creation and writes those settings, such as a port or a database name, into a local config file in the new worktree. The command runs in the new worktree's folder, and its **Variables** menu can insert the worktree's path. See [Settings](/kepler/settings#per-repository-commands).
+To keep Tasks apart, give each worktree its own settings when Kepler creates it. Add a per-repository command that runs on worktree creation and writes those settings, such as a port or a database name, into a local config file in the new worktree. The command runs in the new worktree's folder, and its **Variables** menu can insert the worktree's path. See [Settings](/kepler/settings-repositories#per-repository-commands).
 
 ***
 
@@ -407,7 +407,7 @@ Agents reach the Task through Kepler's own MCP (Model Context Protocol) server, 
 
 </div>
 
-The tools name things by id, and each id carries its kind: `task:`, `session:`, `repo:`, `worktree:`, `folder:`, `note:`, `file:` and `account:`. A Kepler link to a Task or a session that you paste into the chat works as its id. Wherever a tool takes a repository, the agent can also name it by one of its **Aliases**, set on the repository's page in **Settings → Repositories**. See [Settings](/kepler/settings).
+The tools name things by id, and each id carries its kind: `task:`, `session:`, `repo:`, `worktree:`, `folder:`, `note:`, `file:` and `account:`. A Kepler link to a Task or a session that you paste into the chat works as its id. Wherever a tool takes a repository, the agent can also name it by one of its **Aliases**, set on the repository's page in **Settings → Repositories**. See [Settings](/kepler/settings-repositories#edit-a-repository).
 
 **Reading Tasks and notes**
 

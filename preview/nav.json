@@ -43,6 +43,15 @@
       "title": "Configuration",
       "pages": [
         "settings.md",
+        "settings-setup-account.md",
+        "settings-agents.md",
+        "settings-tasks.md",
+        "settings-repositories.md",
+        "settings-integrations.md",
+        "settings-actions.md",
+        "settings-app.md",
+        "settings-environment.md",
+        "settings-updates-help.md",
         "remote-environments.md"
       ]
     },

@@ -135,7 +135,7 @@ The menu says when it can't offer a normal choice:
 
 With more than one account, the **Agent** list groups accounts under their agent and ends with **Add another account** and **Install another agent**.
 
-By default, a new task, the Dashboard composer, and a new draft tab start with the agent, model, and mode you last picked. To always start with one agent instead, open **Settings → Tasks → New tasks**, set **Default agent**, and set **New sessions start with** to **Default agent** (*Always the default agent above*) rather than **Last used agent** (*The agent, model and mode you last picked*). **Use default agent** in the launcher picks the default agent for one session. See [Settings](/kepler/settings).
+By default, a new task, the Dashboard composer, and a new draft tab start with the agent, model, and mode you last picked. To always start with one agent instead, open **Settings → Tasks → New tasks**, set **Default agent**, and set **New sessions start with** to **Default agent** (*Always the default agent above*) rather than **Last used agent** (*The agent, model and mode you last picked*). **Use default agent** in the launcher picks the default agent for one session. See [Settings](/kepler/settings-tasks#new-tasks).
 
 ### Which agents are available
 
@@ -981,7 +981,7 @@ A terminal session kept running this way also keeps its keyboard and paste modes
 
 A session kept running this way can stop taking output if it reaches a storage or log limit. It then shows **Agent output paused**: *Kepler stopped accepting agent output after reaching a storage or log limit. Your draft is preserved while output is paused.*
 
-Your computer will not go to sleep out from under a running agent. While any session is spawning, running, or waiting on you, Kepler holds the machine awake, and lets go as soon as the last one settles. It is on out of the box and turned off in **Settings → General → Keep agents running → Keep this machine awake while agents work**. See [Settings](/kepler/settings).
+Your computer will not go to sleep out from under a running agent. While any session is spawning, running, or waiting on you, Kepler holds the machine awake, and lets go as soon as the last one settles. It is on out of the box and turned off in **Settings → General → Keep agents running → Keep this machine awake while agents work**. See [Settings](/kepler/settings-app#keep-agents-running).
 
 ***
 
@@ -1045,7 +1045,7 @@ Titles read **{status}: {task}**, with the agent and the repository or branch be
 
 By default, Kepler stays quiet about the work you are already watching: it sends no notification for the task open in the window you're using. To change that, turn on **Notify even for the task you're looking at**. While you're working in any Kepler window on a computer, that computer posts no desktop notifications; the window you're in shows them in Kepler instead, and several windows on one computer post a single alert. A cancelled turn is not a completion, and a session reconnecting is not a completion either, so neither notifies.
 
-To choose which events notify you, and whether each one appears as a **Desktop** notification, **In Kepler**, or both, open **Settings → Notifications**. The same page has **Play a sound with desktop notifications**. In the desktop app, every event except **Replies** notifies on the desktop until you change it; in a browser, desktop notifications start off. After your first session starts, the desktop app sends a one-time **Notifications are on** notification, and clicking it opens **Settings → Notifications**. See [Settings](/kepler/settings).
+To choose which events notify you, and whether each one appears as a **Desktop** notification, **In Kepler**, or both, open **Settings → Notifications**. The same page has **Play a sound with desktop notifications**. In the desktop app, every event except **Replies** notifies on the desktop until you change it; in a browser, desktop notifications start off. After your first session starts, the desktop app sends a one-time **Notifications are on** notification, and clicking it opens **Settings → Notifications**. See [Settings](/kepler/settings-app#notifications).
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/ade-settings-notifications-01-01-v3@2x.png" target="_blank" rel="noopener noreferrer">

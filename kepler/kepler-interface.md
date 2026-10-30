@@ -67,7 +67,7 @@ On **Windows and Linux** the native title bar is gone and Kepler draws its own. 
 
 The top bar sheds controls as the window narrows based on the room actually available, rather than at fixed widths, so a control disappears only when it will not fit.
 
-Menu items and button tooltips show a command's keyboard shortcut beside it, wherever the item does exactly what the key does. The full list is in [Settings](/kepler/settings).
+Menu items and button tooltips show a command's keyboard shortcut beside it, wherever the item does exactly what the key does. The full list is in [Settings](/kepler/settings-app#keyboard-shortcuts).
 
 ### The window switcher
 

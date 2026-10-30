@@ -370,7 +370,7 @@ Kepler runs agent sign-in on the host. Claude Code, Codex, and Auggie all sign i
 
 </div>
 
-**Themes belong to this computer.** Every window, including one on a remote machine, lists and installs themes from this computer's themes folder and gallery, and every window opens already painted in the theme you chose. In a remote window, the theme picker adds an **On *machine*** group for themes the host has and this computer doesn't. Each one has a button, **Install on this computer**, that copies it here. For a theme you copied from that host before, the button reads **Update the copy on this computer**. Kepler refuses a host theme that clashes with a theme already on this computer, and it refuses an install when the themes folder is full or after too many installs in a minute. See [Settings](/kepler/settings).
+**Themes belong to this computer.** Every window, including one on a remote machine, lists and installs themes from this computer's themes folder and gallery, and every window opens already painted in the theme you chose. In a remote window, the theme picker adds an **On *machine*** group for themes the host has and this computer doesn't. Each one has a button, **Install on this computer**, that copies it here. For a theme you copied from that host before, the button reads **Update the copy on this computer**. Kepler refuses a host theme that clashes with a theme already on this computer, and it refuses an install when the themes folder is full or after too many installs in a minute. See [Settings](/kepler/settings-app#themes-in-a-remote-window).
 
 ***
 
@@ -699,7 +699,7 @@ You can also manage the current machine's connections locally, in **Settings →
 
 ## Related
 
-- [Settings](/kepler/settings): the **Remote environments** and **Remote Access** pages, and the shortcut list
+- [Settings](/kepler/settings-environment): the **Remote environments** and **Remote Access** pages, and [the shortcut list](/kepler/settings-app#keyboard-shortcuts)
 - [Agent Integrations](/kepler/agent-integrations): signing agents in, including on a remote target
 - [Review Changes](/kepler/review-changes): reviewing and shipping the work a remote agent produced
 
