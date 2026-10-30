@@ -366,7 +366,7 @@ Kepler downloads each model from the internet once. Transcription then runs enti
 
 Mac symbols are shown first. On Windows and Linux, **⌘** is **Ctrl** and **⌥** is **Alt**, and **⌃** is **Ctrl** on every platform.
 
-### General
+### General shortcuts
 
 The **General** group holds app-wide shortcuts:
 
@@ -393,7 +393,7 @@ The **General** group holds app-wide shortcuts:
 | Back | ⌘ [ | Alt + ← |
 | Forward | ⌘ ] | Alt + → |
 
-### Navigation
+### Navigation shortcuts
 
 The **Navigation** group moves you between tabs and regions:
 
@@ -408,7 +408,7 @@ The **Navigation** group moves you between tabs and regions:
 | Next region | F6 | F6 |
 | Previous region | ⇧ F6 | Shift + F6 |
 
-### Dashboard
+### Dashboard shortcuts
 
 The **Dashboard** group works on the Dashboard's tasks and detail panels:
 
@@ -433,7 +433,7 @@ The **Dashboard** group works on the Dashboard's tasks and detail panels:
 
 The earlier **Move panel left** and **Move panel right** keys, **⌘ ⌥ ←** and **⌘ ⌥ →**, still work but aren't listed.
 
-### Task page
+### Task page shortcuts
 
 The **Task page** group works on a task's page:
 
@@ -446,7 +446,7 @@ The **Task page** group works on a task's page:
 | Switch sessions, oldest first | ⌃ ⇧ Tab | Ctrl + Shift + Tab |
 | Maximize terminal drawer | ⌘ ⇧ J | Ctrl + Shift + J |
 
-### Chat
+### Chat shortcuts
 
 The **Chat** group works in a session's conversation:
 
@@ -457,7 +457,7 @@ The **Chat** group works in a session's conversation:
 | Next message | ⌘ ⌥ ↓ | Ctrl + Alt + ↓ |
 | Interrupt & send | ⌘ ⇧ ⏎ | Ctrl + Shift + ⏎ |
 
-### Changes and code views
+### Changes and code view shortcuts
 
 This section has two lists. The **Changes** list works in the Changes view:
 
