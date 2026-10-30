@@ -24,8 +24,8 @@ Each task has its own screen, the **task page**. The context panel lists everyth
 To open the task page, double-click a task's row in [the Kepler interface](/kepler/kepler-interface), or click **Open task page** in the task's side panel. For what a task is and what you can attach to one, see [Tasks and Resources](/kepler/tasks-and-resources).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/full-task-view-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/full-task-view-oct-2026.png" class="help-center-img img-bordered" alt="The task page, its header holding the task name, the ⋮ menu, the In Development progress control, and Terminal at the right edge. The context panel lists Sessions, Changes, Pull requests, and Notes led by Prompt, and a session on the right is waiting on a command approval.">
+  <a href="/wp-content/uploads/full-task-view-oct-2026-v2.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/full-task-view-oct-2026-v2.png" class="help-center-img img-bordered" alt="The task page, its header holding the task name, the ⋮ menu, the In Development progress control, and Terminal at the right edge. The context panel lists Sessions, Changes, Pull requests, and Notes led by Prompt, and a session on the right is waiting on a command approval.">
   </a>
   <figcaption style="text-align:center; color:#888">The task page, with the context panel beside an open session.</figcaption>
 </figure>
@@ -172,7 +172,7 @@ Each row has 2 lines, which are cut off at the width of the context panel. Hover
   <a href="/wp-content/uploads/rail-hovers-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/rail-hovers-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Files group of the context panel with the hover card of checkout-style-guide.md open beside its row: the file name, Size, Modified, Type, Path (/srv/acme/brand/checkout-style-guide.md) and Added.">
   </a>
-  <figcaption style="text-align:center; color:#888">A file row's hover card, showing the details its truncated lines leave out.</figcaption>
+  <figcaption style="text-align:center; color:#888">A file row's hover card, with details the row has no room for.</figcaption>
 </figure>
 
 - **Path**

@@ -445,7 +445,7 @@ The counts change only when Kepler fetches, so the control shows when it last ch
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/sync-control-push-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/sync-control-push-oct-2026.png" class="help-center-img img-bordered" alt="The sync control in the worktree tab's header reading Push with 2 commits ahead, and its card open: Push 2 commits, the remote branch it pushes to, 2 ahead, and Checked just now.">
+    <img src="/wp-content/uploads/sync-control-push-oct-2026.png" class="help-center-img img-bordered" alt="The sync control in the worktree's header reading Push with 2 commits ahead, and its card open: Push 2 commits, the remote branch it pushes to, 2 ahead, and Checked just now.">
   </a>
   <figcaption style="text-align:center; color:#888">The sync control on a branch that's ahead of its upstream.</figcaption>
 </figure>

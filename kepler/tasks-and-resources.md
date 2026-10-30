@@ -138,7 +138,7 @@ You do not have to attach a task's pull request yourself. If a task holds no pul
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/prs-attach-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/prs-attach-aug-2026.png" class="help-center-img img-bordered" alt="A Pull requests group in the task's context panel, auto-populated with an open pull request matching the worktree's branch">
+    <img src="/wp-content/uploads/prs-attach-aug-2026.png" class="help-center-img img-bordered" alt="A Pull requests group in the task's context panel holding one open pull request, feat: create action to fetch product page updates as resou…, on the resources-from-website-pages branch.">
   </a>
   <figcaption style="text-align:center; color:#888">A pull request Kepler attached on its own, matched by branch.</figcaption>
 </figure>

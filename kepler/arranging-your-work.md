@@ -549,7 +549,7 @@ When a task meets all of these conditions, the preview header and the task page 
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/ready-to-archive-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ready-to-archive-oct-2026.png" class="help-center-img img-bordered" alt="A Done task's preview header with the Ready to archive? suggestion below it, offering Archive and an X to dismiss. The task's worktree button reads No changes, and its pull request #33 is merged.">
+    <img src="/wp-content/uploads/ready-to-archive-oct-2026.png" class="help-center-img img-bordered" alt="A Done task's header in the side panel, with the Ready to archive? suggestion below it, offering Archive and an X to dismiss. The task's worktree button reads No changes, and its pull request #33 is merged.">
   </a>
   <figcaption style="text-align:center; color:#888">The Ready to archive? suggestion on a Done task.</figcaption>
 </figure>
