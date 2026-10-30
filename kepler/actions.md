@@ -1,6 +1,6 @@
 ---
 title: Actions
-description: Actions are editable named prompts you fire at a task, issue, or pull request. Learn the four built-in Actions, how to change them, and how to write your own.
+description: Actions are editable named prompts you fire at a task, issue, or pull request. Learn the four built-in Actions, how to change them, how to write your own, and how to have a different agent review the code than the one that wrote it.
 product: Kepler
 feature: Actions
 content_type: how-to
@@ -242,6 +242,51 @@ Custom Actions work exactly like the built-in ones, and they're the point of the
   <figcaption style="text-align:center; color:#888">A custom Action's configuration.</figcaption>
 </figure>
 
+#### Example: Prepare for review
+
+This Action asks the agent to gather the evidence a reviewer needs before you read the diff, so you start from what the agent did and what it didn't check. To create it, click **New Action** in **Settings → Actions** and fill in the following fields:
+
+| Field | Value |
+|---|---|
+| **Title** | Prepare for review |
+| **Applies to** | **Tasks** |
+| **Agent** | Inherit, or a different agent from the one that wrote the code |
+
+Use the following text for **Prompt**:
+
+```text
+Before I review this work, write a review summary in this session. Include:
+- What the change is supposed to do, in one or two sentences
+- Each file you changed, and why
+- The commands you ran to test the change, and their results
+- What you didn't test, and anything you're unsure about
+Don't change any files.
+```
+
+The summary is the agent's own account. Check it against the diff in [Review Changes](/kepler/review-changes) before you commit.
+
+#### Example: Open a pull request
+
+Kepler has no "create pull request" button, so the agent or you open one. This Action has the agent open it, with a note in the description that an agent helped write the change. Fire it after you've reviewed and committed the work. To create it, click **New Action** in **Settings → Actions** and fill in the following fields:
+
+| Field | Value |
+|---|---|
+| **Title** | Open a pull request |
+| **Applies to** | **Tasks** |
+| **Agent** | Inherit |
+
+Use the following text for **Prompt**:
+
+```text
+Push this worktree's branch and open a pull request against its base branch.
+Write a title and a description that say what changed and why.
+End the description with this line:
+"An AI coding agent helped write this change, and a person reviewed it."
+If the worktree has uncommitted changes, stop and tell me.
+```
+
+The agent opens the pull request with the tools it has, such as your Git host's command-line tool. When it publishes the pull request, Kepler attaches it to the Task. See [Review Changes](/kepler/review-changes#opening-a-pull-request).
+
 ### Restore defaults
 
 To undo your edits to one Action, click **Restore default** on its row. The row shows **Restore default** only after you edit the Action. To undo your edits to every Action at once, click **Restore all defaults** in the **All Actions** section header.
@@ -273,5 +318,21 @@ Three rules govern which agent actually runs:
 - A model belongs to its provider, so a pinned model never runs on a different agent.
 - If an Action names an agent you don't have installed, the override falls back **whole** to your default agent.
 - **An agent you pick explicitly at the point of firing beats an Action's override.**
+
+### Review with a different agent
+
+You can have one agent write the code and a different agent review it. A reviewer that didn't write the code is less likely to repeat the author's mistakes.
+
+To give **Review** its own agent, take the following steps:
+
+1. Go to **Settings → Actions**, and click **Review** under **All Actions**.
+2. Name a different agent in the **Agent** field from the one that writes your code. **Implement** uses your default agent unless you've changed it.
+3. Click **Save**.
+
+**Review** now runs on that agent, whether you fire it at a Task's uncommitted work or at an attached pull request. The override is all-or-nothing, so it also pins that agent's account, model, and mode.
+
+To use a different reviewer just once, pick the agent when you fire **Review**. An agent you pick at that point beats the Action's override.
+
+The review is a report, not an approval. You read it in the session and decide what to change before you commit.
 
 ---

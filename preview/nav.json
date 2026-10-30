@@ -5,7 +5,8 @@
     {
       "title": "Getting Started",
       "pages": [
-        "Kepler-Getting-Started.md"
+        "Kepler-Getting-Started.md",
+        "quick-answers.md"
       ]
     },
     {
