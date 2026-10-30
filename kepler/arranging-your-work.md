@@ -295,7 +295,7 @@ Dates sort newest first; **Name** and **ID** sort ascending. **ID** compares ref
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/manual-sort-menu-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/manual-sort-menu-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Task actions menu of an on-hold task row with a New reply, with the list sorted by Manual: Open task page; Progress, On hold; Mark as read and Rename task; Move up, Move down and Move to top of Unread; then Add to group, Copy task link, Copy task prompt, Add resource…, Refresh, Shut down all agents, Archive task and Delete task.">
+    <img src="/wp-content/uploads/manual-sort-menu-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Task actions menu of an on-hold task row with a New reply, including the move rows the Manual sort adds: Open task page; Progress, On hold; Mark as read and Rename task; Move up, Move down and Move to top of Unread; then Add to group, Copy task link, Copy task prompt, Add resource…, Refresh, Shut down all agents, Archive task and Delete task.">
   </a>
   <figcaption style="text-align:center; color:#888">The move rows in a task's menu, under the Manual sort.</figcaption>
 </figure>
