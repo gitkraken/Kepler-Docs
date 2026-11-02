@@ -11,13 +11,13 @@ git_hosts: [github, github-enterprise, gitlab, gitlab-self-hosted, bitbucket, bi
 integrations: []
 hosted_variant: both
 status: GA
-last_verified: 2026-10
+last_verified: 2026-11
 llms_include: true
 tags: [settings, repositories, worktrees, branches, per-repository-commands, projects, aliases]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: October 2026</kbd>
+<kbd>Last updated: November 2026</kbd>
 
 Use **Settings → Repositories** to choose where Kepler clones repositories, add and edit the repositories and folders Kepler tracks, update and clean up worktrees and branches, and group repositories into projects.
 
@@ -71,17 +71,17 @@ Click a repository's row to open its **Edit repo** page. The page shows the repo
 | Part | What it holds |
 |---|---|
 | **Name** | The name Kepler shows wherever it names this repository. Leave it empty to use the folder name, which is the field's placeholder |
-| **Aliases** | *Short names for this repo when talking to agents, separated by commas.* An agent can use an alias wherever Kepler's workspace tools take a repository, and finds the repository by alias when it lists your repositories |
+| **Aliases** | *Short names for this repo when talking to agents, separated by commas.* |
 | **Description** | Free text. Its placeholder reads *What this repo is for. Agents working in it read this.* |
 | **Branch prefix** | Overrides the prefix from **Settings → Tasks** for this repository only. See below |
 | **Commands** | Shell commands for this repository. See [Per-repository commands](#per-repository-commands) |
 | **MCP servers** | *Extra tools your agents get in this repo, on top of their own lists. Changes here apply right away.* See [MCP Servers](/kepler/mcp-servers) |
 
-**Name**, **Aliases**, and **Description** are optional, and Kepler stores text that is only spaces as empty. The page has no **Save** button: each field saves on its own and shows its save status. Some fields have more rules:
+**Name**, **Aliases**, and **Description** are optional. The page has no **Save** button: each field saves on its own and shows its save status. Some fields have more rules:
 
-- A repository you name keeps that name exactly, and Kepler no longer adds a suffix to tell it apart from folders with the same name.
+- A repository you name keeps that name exactly.
 - An alias cannot contain a colon, or repeat another repository's alias or name.
-- Kepler adds the description to the repository's line in the resource list it gives a session, so a full sentence helps more than a single label.
+- Agents working in this repo read the description, so write a full sentence.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/edit-repo-dialog-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
@@ -184,7 +184,7 @@ A row counts as one or more of the following:
 - **Conflicts**: behind the base branch, and merging the base in would conflict, so you have to update it by hand.
 - **Stale**: no activity for longer than the stale threshold, but nothing proves the work landed. It may still hold uncommitted or unpushed work, so deleting it can lose something.
 
-**Needs update** and **Conflicts** leave out rows that are safe to delete. Activity includes what Kepler recorded on the branch, not only changes in the worktree.
+**Needs update** and **Conflicts** leave out rows that are safe to delete.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/ade-worktree-cleanup-01-v4@2x.png" target="_blank" rel="noopener noreferrer">
@@ -209,7 +209,7 @@ Select rows, then click **Delete**. The confirmation, **Delete {count} items?**,
 
 Kepler keeps any branch it cannot delete safely and says why, for example *Checked out in {path}. Remove that worktree first.* or *Its work is not in the base branch, so it was kept.*
 
-Kepler never deletes a repository's main checkout. It keeps any worktree that still has uncommitted or unpushed work, other tasks, running agent sessions, or a lock from another tool, and says why for each one. If Kepler itself locked a worktree, for a task this install knows or a task since deleted, Kepler clears the lock and deletes the worktree. Where forcing can help, the result offers **Force delete**, which discards the listed work and ends the agent sessions running there.
+Kepler never deletes a repository's main checkout. It keeps any worktree that still has uncommitted or unpushed work, other tasks, running agent sessions, or a lock from another tool, and says why for each one. Where forcing can help, the result offers **Force delete**, which discards the listed work and ends the agent sessions running there.
 
 ### Update worktrees
 
@@ -222,7 +222,7 @@ To bring several worktrees and local branches up to date with their base branch 
 5. To push each updated branch too, tick **Push after update**. Each row that will update then reads **Will push**, or **No upstream, update only** for a branch with no upstream.
 6. Click **Update**.
 
-Kepler updates a local branch that has no worktree in place, from the repository's main checkout, without checking it out. It skips such a branch when a worktree holds it, or when the main checkout has uncommitted changes. If Kepler prepared an update but could not apply it automatically, Kepler keeps it for you to review instead of discarding it.
+A branch with no worktree is updated in place; it is skipped if a worktree holds it or the main checkout has uncommitted changes. If Kepler prepared an update but could not apply it automatically, Kepler keeps it for you to review instead of discarding it.
 
 While the update runs, each row shows its status: **Waiting**, **Updating…**, **Updated**, **Up to date**, **Skipped**, **Conflict**, or **Failed**. When it finishes, you can undo one row with **Roll back**, or every row with **Roll back all**. If you did not push during the update, **Push** and **Push all** push the updated branches that have an upstream. Kepler does not push a branch that moved since the update. The finished report stays in every window until you click **Dismiss**.
 

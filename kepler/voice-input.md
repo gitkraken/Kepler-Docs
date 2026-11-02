@@ -11,13 +11,13 @@ git_hosts: [generic]
 integrations: [claude-code, codex-cli, copilot-cli, cursor, auggie, opencode, grok, pi, antigravity]
 hosted_variant: both
 status: GA
-last_verified: 2026-10
+last_verified: 2026-11
 llms_include: true
 tags: [voice-input, dictation, qwen3-asr, whisper, webgpu, microphone, settings, agent-sessions]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: October 2026</kbd>
+<kbd>Last updated: November 2026</kbd>
 
 Voice input adds a microphone to the agent prompt, so you can dictate instead of typing. **Transcription runs on your device**, using a model Kepler downloads once. Kepler never uploads your audio.
 
@@ -65,7 +65,7 @@ While a transcription is in progress, the microphone shows **Transcribing…**. 
 
 ### Teach dictation your words
 
-Qwen3-ASR learns how you spell words it gets wrong. When you fix a single dictated word in the prompt before you send it, Kepler notes the fix. Kepler learns from a fix only after the prompt is sent and the agent has finished its turn. After you make the same fix in 2 sends, Kepler suggests the word, with a notice: *A dictated word fix is ready to review*. **Review** opens Settings. Dictation uses a suggested word only after you approve it.
+Qwen3-ASR learns how you spell words it gets wrong. When you fix a single dictated word in the prompt before you send it, Kepler notes the fix. After you make the same fix in 2 sends, Kepler suggests the word, with a notice: *A dictated word fix is ready to review*. **Review** opens Settings. Dictation uses a suggested word only after you approve it.
 
 **Settings → Voice input** lists the words in 2 groups:
 
@@ -128,7 +128,7 @@ If you use Whisper and never chose an engine, on a computer that can run Qwen3-A
 
 ### Dictation language
 
-With Qwen3-ASR, **Dictation language** is **Auto-detect** by default, or 1 of 30 languages, each listed by its own name. Choose a language to always dictate in it. **Auto-detect** picks among your system's preferred languages and the app language, or among all languages when those name fewer than 2. It also favors the languages this device has reliably dictated in before. Whisper ignores this setting.
+With Qwen3-ASR, **Dictation language** is **Auto-detect** by default, or 1 of 30 languages, each listed by its own name. Choose a language to always dictate in it. **Auto-detect** picks among your system's preferred languages and the app language. It also favors the languages this device has reliably dictated in before. Whisper ignores this setting.
 
 ### Model updates
 
@@ -204,12 +204,9 @@ Voice settings belong to each computer:
 - A Remote Access browser uses the settings of the Kepler it's connected to.
 - Neither the settings nor the models sync between devices.
 
-Kepler caches downloaded models per browser storage context:
+A remote window or a Remote Access browser may need to download the model once. A different browser, device, or private window downloads it again.
 
-- **A remote Electron window** reuses its model across reconnects and restarts, as long as you're returning to the same saved remote connection from the same desktop app. A different machine, a different profile, or a connection that falls back to a different port needs its own download. Until a Qwen3-ASR model is verified in that window, dictation there uses an installed Whisper model rather than failing or starting a download on its own.
-- **Browser-based Remote Access** caches the model per browser, device, and profile. A different browser, device, or a private window needs its own download. The same browser returning to the same address can reuse what it already has, unless that browser has since cleared its storage.
-
-Learned words and the languages this device has dictated in stay in the same storage, on the device in front of you, and never go to the remote machine.
+Learned words and the languages this device has dictated in stay on the device in front of you, and never go to the remote machine.
 
 See [Remote Environments](/kepler/remote-environments).
 

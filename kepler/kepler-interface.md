@@ -11,13 +11,13 @@ git_hosts: [github, github-enterprise, gitlab, gitlab-self-hosted, bitbucket, az
 integrations: [github, github-enterprise, gitlab, gitlab-self-hosted, bitbucket, azure-devops, jira, linear, trello]
 hosted_variant: both
 status: GA
-last_verified: 2026-10
+last_verified: 2026-11
 llms_include: true
 tags: [interface, dashboard, todo, tasks, draft-sessions, issues, pull-requests, actions, sessions, panel, preview, worktrees, progress, keyboard, navigation, windows, updates]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: October 2026</kbd>
+<kbd>Last updated: November 2026</kbd>
 
 Kepler opens on your work: every issue and pull request assigned to you across your connected trackers and Git hosts, in one list beside the tasks you already have running. To start work, pick an item from that list instead of describing it from scratch.
 
@@ -46,7 +46,7 @@ The **Ask Kepler** button also shows the state of the panel's chats. When a chat
 
 While an update downloads, a chip near the trailing end of the top bar shows its progress as a ring and a percentage. Hover the chip to see **Downloading update** (then **Verifying update**), the version, how much has downloaded, about how long is left, and *Keep working. Kepler will let you know when the update is ready to install.*
 
-When the update is ready, an **Update available** chip replaces the progress chip. It opens a popover that says what a restart does to running work, such as how many agents it stops and whether terminals close, and offers **Restart to update**. When agents and terminals can survive the restart, the popover says *Running agents and open terminals keep going through the restart.* The chip shows on every screen, so you cannot miss the update by scrolling past a banner.
+When the update is ready, an **Update available** chip replaces the progress chip. It opens a popover that says what a restart does to running work, such as how many agents it stops and whether terminals close, and offers **Restart to update**. When agents and terminals can survive the restart, the popover says *Running agents and open terminals keep going through the restart.* The chip shows on every screen.
 
 On Windows and Linux, Kepler replaces the native title bar with its own. The menu button at the leading edge holds the full application menu (**File**, **Edit**, **View**, **Window**, **Help**), including **Settings**, **Check for Updates…**, and **About**. macOS keeps its native menu bar. Both menus open the same **About Kepler** dialog.
 
@@ -71,7 +71,7 @@ On Windows and Linux, Kepler replaces the native title bar with its own. The men
   <figcaption style="text-align:center; color:#888">The trailing cluster when an update is ready.</figcaption>
 </figure>
 
-As the window narrows, the top bar hides the controls that no longer fit. It measures the room actually available rather than using fixed widths, so a control disappears only when it will not fit.
+As the window narrows, the top bar hides the controls that no longer fit.
 
 Menu items and button tooltips show a command's keyboard shortcut when the item does exactly what the key does. For the full list, see [Keyboard shortcuts](/kepler/settings-app#keyboard-shortcuts).
 
@@ -109,7 +109,7 @@ The icon does not count idle sessions, sessions started outside Kepler, plain te
 
 Hover the icon to see a status line under the app's name, such as *2 agents need your answer, 1 failed, 3 working* or *No agents running*. On macOS, a count of the agents that need a look (waiting, failed, or finished) appears beside the icon. The count is red while any of them is waiting or failed. On Windows, the icon follows your taskbar's light or dark theme. On Linux, it follows the system theme.
 
-On Windows and Linux, click the icon to open the window that needs you. Kepler picks the window you used last on the machine with the most urgent agent, or else the window you used last overall. The icon's menu holds:
+On Windows and Linux, click the icon to open the window that needs you. The icon's menu holds:
 
 - **Open Kepler**
 - **Windows**, a submenu with **New Window**, **New Local Window** when the window you used last is remote, and every open window, with a check beside the one you used last
@@ -270,12 +270,6 @@ On a **Board** card, hover the group chip, **Group: {name}**, to see a summary o
 
 A Done task that's ready to archive also gets an **Archive task** button on its row.
 
-Task rows have no type badge, no reference column, and no Action button:
-
-- Everything in **Tasks in progress** is a task, so a type badge would add nothing. As a row narrows, it drops other cells before it drops the time.
-- A task's reference is the start of its identifier and names nothing you'd recognize, so the title takes that cell instead.
-- An Action on a Todo row is what turns an untracked issue or pull request into a task. To manage a task that already exists, use its **⋮** menu.
-
 When the list is narrow, each task row wraps onto 2 lines: the title and time on top, and the rest below. When the list is grouped by repository, a task that spans several repositories appears under **each** of them, rather than under only the first one.
 
 To manage a task, open its **⋮** menu or right-click its row. The menu holds:
@@ -326,16 +320,16 @@ Each pull request and issue state has its own icon and color, so you can read a 
 
 Kepler derives a task's stage from this evidence:
 
-- **In Development**: uncommitted changes, or commits ahead of the branch's recorded base.
+- **In Development**: uncommitted changes, or commits not yet merged into the base branch.
 - **In Review**: an open or draft pull request of the task's own.
 - **Done**: at least one of the task's branches has landed, the task has no open pull request of its own, and no checkout still carries commits that have not landed.
 - **On hold** and **Archived**: filing decisions, not evidence.
 
-A task sits at the furthest stage any of its checkouts reached, except **Done**, which follows its own rule. A sibling checkout you never touched does not hold a task back.
+A task sits at the furthest stage any of its checkouts reached, except **Done**, which follows its own rule.
 
 **Done** waits for the work to land, however it got there: a pull request merged normally, by rebase, or by squash; a branch that diverged locally after its pull request merged; or a branch merged into its base with no pull request at all. A task that's done but still has uncommitted changes or unpushed commits in a checkout reads **Done · local changes**, so you can decide whether to keep them before you archive.
 
-When Kepler bases a task's stage on cached uncommitted changes rather than a live check, the progress control's tooltip says when it read them: *Uncommitted changes as of {time}. Open the task to refresh them.*
+When a task's stage comes from uncommitted changes Kepler read earlier, the progress control's tooltip says when: *Uncommitted changes as of {time}. Open the task to refresh them.*
 
 To set the stage yourself, or to put the task on hold, click the progress control on its row. A stage you set stays until the evidence catches up or moves past it. See [Arranging Your Work](/kepler/arranging-your-work).
 
@@ -436,7 +430,7 @@ If setup fails, Kep says *That didn't go through.* (or *Task not started.* after
 
 Shift-click selects a range from your last plain click, as it does in Finder or VS Code. You can open up to 16 panels at once. In the **Columns** panel layout, opening another closes the leftmost unpinned one. For **Grid**, see [Lay panels out in a grid](#lay-panels-out-in-a-grid).
 
-Each panel gets its own column as soon as you open it. Until its item loads, the column shows a placeholder that says the item is loading, is gone, or could not be loaded, with **Try again** when retrying can help. A pull request or issue opened while you're signed out reads *Sign in to see this pull request* (or issue) with **Sign in**. You can close any placeholder. If Kepler remembers a panel for a task that has since been deleted, that panel closes on its own.
+Each panel gets its own column as soon as you open it. Until its item loads, the column shows a placeholder that says the item is loading, is gone, or could not be loaded, with **Try again** when retrying can help. A pull request or issue opened while you're signed out reads *Sign in to see this pull request* (or issue) with **Sign in**. You can close any placeholder.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/multi-task-panels-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -449,16 +443,13 @@ Each panel gets its own column as soon as you open it. Until its item loads, the
 
 **Scroll.** Once the panel strip grows wider than the window, it scrolls instead of squeezing the columns below a readable width. Scroll it sideways with **Shift** and the mouse wheel, or a sideways trackpad swipe, even over a terminal.
 
-**Reorder.** Drag a panel by its header to a new place in the strip. A panel's **Panel actions** menu (**⋮**) offers **Move panel left** and **Move panel right**, and so do **Cmd/Ctrl+Alt+Shift+←** and **Cmd/Ctrl+Alt+Shift+→**. The older **Cmd/Ctrl+Alt+←** and **Cmd/Ctrl+Alt+→** still work.
+**Reorder.** Drag a panel by its header to a new place in the strip. A panel's **Panel actions** menu (**⋮**) offers **Move panel left** and **Move panel right**, and so do **Cmd/Ctrl+Alt+Shift+←** and **Cmd/Ctrl+Alt+Shift+→**.
 
 **Maximize.** Once 2 or more panels are open, **Maximize panel** in the **⋮** menu (or **Cmd/Ctrl+Shift+M**, or a double-click on empty header space) widens one panel across the strip, leaving a narrow edge of each neighbour in view. Click anywhere outside it, or use the **Restore panel** button in its header, to put the layout back exactly as it was. If you switch to another panel from the keyboard, that panel is maximized instead, so you can read panels one after another at full size.
 
 **Move between panels.** **Ctrl+Tab** opens **Recent panels**, a switcher of your open panels and the ones a plain click replaced since, most recently used first, so you can switch back to an item you moved away from. **Delete** or **Backspace** closes the highlighted panel, or removes a panel that's no longer open from the list (**Remove from recent panels**). With 2 or more unpinned panels open, the switcher moves among the open ones only. **Cmd/Ctrl+1** through **Cmd/Ctrl+8** jump to a panel by its position from the left, and **Cmd/Ctrl+9** to the last.
 
 If you start a task from **New task** while you're on the list, the new task opens as a panel and the list stays where it was, instead of switching to the task's page.
-
-When the list reorders under you, such as when a session finishes or a task moves to another section, the row you have selected slides to its new position rather than jumping, so you can see where it went.
-
 **Open several at once.** Each section's header has a button that opens that section's rows in panels, up to the panel limit: **Open all {count} in this section in panels**. When not everything fits, the button reads **Open {opened} of {total} in this section in panels**, and Kepler tells you how many did not fit. A group's chip offers **Open group** for its tasks. The whole list has no **Open all** button.
 
 **Hide the list.** With at least one panel open, the toggle at the start of the Dashboard header, **Hide list** (**Cmd/Ctrl+B**), hides the list so the panels get the full width. With no panel open, the toggle is locked: *Open a task to hide the list*. While the list is hidden:
@@ -631,7 +622,7 @@ A task panel opens its linked items, resources, and changes in a **side pane**, 
 
 The **Resources** list holds everything the task carries, in the order of the header: **Pull requests** (those that need your action first, with *Checks failing* where they are), **Issues**, notes, files, folders, links, and **Related tasks**. Click a group's heading to fold the group. A folded **Pull requests** heading still says how many need your action. Each row has a **⋮** menu, and a link row has **Open in browser**. When the task has no resources, the list reads *Keep notes, files and links with this task.* with **Add resource…**.
 
-When the panel is at least 960 pixels wide, the pane opens beside the sessions. Drag its edge (**Resize side pane**) to resize it, and close it with **Close side pane** or **Escape**. In a narrower panel, the pane takes the sessions' place, with **Back to sessions** to return. The pane shows the same view of the item as the task page does.
+In a wide panel, the pane opens beside the sessions. Drag its edge (**Resize side pane**) to resize it, and close it with **Close side pane** or **Escape**. In a narrower panel, the pane takes the sessions' place, with **Back to sessions** to return. The pane shows the same view of the item as the task page does.
 
 Click the same chip again to close the pane. To move between the task's linked items and resources without closing the pane, use the switcher in the pane's title row. Its menu starts with **All resources** and ends with **Add resource…**. On the focused panel, 2 shortcuts show or hide the pane:
 
@@ -649,7 +640,7 @@ Kepler remembers the open pane for each item and the pane's width for each windo
   <figcaption style="text-align:center; color:#888">An issue's comments, under its summary in the side pane.</figcaption>
 </figure>
 
-An issue you open in a side pane, or on the task page, shows its discussion under the summary as **Comments**, with the count in the heading. Each comment has the author's avatar and name, how long ago it was posted, and its text. Kepler reads the newest 100 comments through the same connection it uses for the issue. In the **Comments** section:
+An issue you open in a side pane, or on the task page, shows its discussion under the summary as **Comments**, with the count in the heading. Each comment has the author's avatar and name, how long ago it was posted, and its text. Kepler loads the newest 100 comments. In the **Comments** section:
 
 - **Show earlier comments** reveals older ones that Kepler already loaded. When the issue has more than that, the section says that more may be available on the provider.
 - **Refresh comments** reads them again.

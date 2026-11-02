@@ -11,13 +11,13 @@ git_hosts: [generic]
 integrations: [claude-code, codex-cli, copilot-cli, cursor, auggie, opencode, grok, antigravity]
 hosted_variant: both
 status: GA
-last_verified: 2026-10
+last_verified: 2026-11
 llms_include: true
 tags: [ask-kepler, chat, assistant, terminal, side-panel, keyboard, agent-sessions]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: October 2026</kbd>
+<kbd>Last updated: November 2026</kbd>
 
 **Ask Kepler** is a panel with 2 sections: a **Chat** with an agent that can see what's on your screen and check on your tasks and sessions, and a **Terminal** of quick shells that belong to no task. Use it for a question that does not need a task of its own, or to find out what needs you without leaving the page you're on.
 
@@ -60,7 +60,7 @@ Right-click the panel's header, or press the keyboard's context-menu key on it, 
   <figcaption style="text-align:center; color:#888">Ask Kepler docked beside the Dashboard, with the header's menu open.</figcaption>
 </figure>
 
-**Resize.** Drag the panel's inner edge (**Resize Ask Kepler**) to change its width, or focus the edge and use the arrow keys. Double-click the edge to return to the default width. The panel is never narrower than 360 pixels or wider than 60% of the window. A docked panel also leaves the page at least 620 pixels. In a window too narrow for that, the panel floats until the window widens, then docks again at the width you set. Kepler remembers the width, the side, and whether the panel is docked on this computer, for every window.
+**Resize.** Drag the panel's inner edge (**Resize Ask Kepler**) to change its width, or focus the edge and use the arrow keys. Double-click the edge to return to the default width. In a narrow window, a docked panel floats until there is room, then docks again at the width you set. Kepler remembers the width, the side, and whether the panel is docked on this computer, for every window.
 
 **Escape** also closes the panel, except where the key does something else:
 
@@ -77,7 +77,7 @@ Closing only hides the panel. A half-typed question, the open chat, and every sh
 
 The **Chat** section is a conversation with an agent that works for you across Kepler rather than inside one task. A new chat opens on **Ask Kepler anything**, *Ask a quick question, or have Kepler check on and manage your tasks and sessions.*, and a composer that reads *Ask anything*. Pick the agent from the pill in the composer, type your question, and send it.
 
-You can attach files to a chat from its first message on: use **Attach a file**, drop files onto the composer, or paste them. Kepler keeps a chat's attachments in the chat's own folder and lets the agent read it. If a file you attached is gone by the time the chat starts, Kepler leaves it out and tells you which one.
+You can attach files to a chat from its first message on: use **Attach a file**, drop files onto the composer, or paste them. If a file you attached is gone by the time the chat starts, Kepler leaves it out and tells you which one.
 
 ### Starter prompts
 
@@ -92,19 +92,19 @@ A starter goes out on its own as the chat's first message. It does not change an
 
 ### What the chat knows
 
-The chat keeps up with what you have on screen. With each message, Kepler tells the agent where you are when that has changed since its last message:
+The chat keeps up with what you have on screen. With each message, the agent knows:
 
 - The page you're on: the Dashboard, a task, Settings, or somewhere else
 - The task you're looking at, and its checkouts
 - The sessions on screen
 
-As a result, the agent answers a question such as *what's this one stuck on?* about the task in front of you. Kepler also tells the agent which sessions are waiting on you, such as approvals, permission requests, questions, and failed or unread sessions, and asks it to mention these only when you ask. To get that list, ask **What needs me right now?**
+As a result, the agent answers a question such as *what's this one stuck on?* about the task in front of you. Kepler also tells the agent which sessions are waiting on you, such as approvals, permission requests, questions, and failed or unread sessions. To get that list, ask **What needs me right now?**
 
 The agent can read your tasks and sessions and act on them through Kepler's own tools. Before the agent starts a session on a task that it did not create, Kepler asks you first. When it mentions a task, a session, or a setting, it names it as a link you can click; a setting link shows the setting's name and opens it in **Settings**.
 
 ### Finding and changing settings
 
-The chat can look up Kepler's settings for you. Ask where something is set, or what a setting is set to, and the agent finds the setting, tells you its current value and what it can be set to, and links to it. Only **Ask Kepler** has these settings tools. An agent working in a task never gets them.
+The chat can look up Kepler's settings for you. Ask where something is set, or what a setting is set to, and the agent finds the setting, tells you its current value and what it can be set to, and links to it. Click the link to open **Settings** at that setting. Only **Ask Kepler** can find and change settings; agents in tasks cannot.
 
 The agent changes a setting only when you ask it to. It can find and link to some settings but not change them, such as secrets, actions, and settings that take a list. The agent cannot turn on a paid feature without a paid plan, and it tells you why when it refuses.
 
@@ -114,7 +114,7 @@ Kepler keeps some settings, such as the theme, the language, or the terminal fon
 
 ### Which agents can answer
 
-A panel chat always runs over the **Agent Client Protocol** (**ACP**), so the agent pill lists only agents that Kepler can drive over ACP. An agent that runs only in a terminal, such as Pi, cannot answer in the panel. See [Agent Integrations](/kepler/agent-integrations) for which agents run in **Chat**.
+The agent pill lists only agents that run in **Chat**. An agent that runs only in a terminal, such as Pi, cannot answer in the panel. See [Agent Integrations](/kepler/agent-integrations) for which agents run in **Chat**.
 
 **Ask Kepler keeps its own agent, separate from tasks.** A new chat opens on the agent you picked last in the panel. Picking an agent here never changes the agent a new task starts with, and picking an agent for a task never changes Ask Kepler's agent. When you have not picked an agent in the panel yet, or when you choose **Use default agent** on the pill, it uses Ask Kepler's default agent, set in **Settings → Agents** on the **Ask Kepler uses** row. See [Settings: Agents](/kepler/settings-agents).
 

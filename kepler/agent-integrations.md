@@ -11,13 +11,13 @@ git_hosts: [generic]
 integrations: [claude-code, codex-cli, copilot-cli, cursor, auggie, opencode, grok, pi, antigravity]
 hosted_variant: both
 status: GA
-last_verified: 2026-10
+last_verified: 2026-11
 llms_include: true
 tags: [agent-integrations, claude-code, codex, copilot, cursor, auggie, opencode, grok, pi, antigravity, acp, terminal, custom-agents, setup, settings, mcp-servers]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: October 2026</kbd>
+<kbd>Last updated: November 2026</kbd>
 
 Use **Settings → Agents** to install the coding agents you already use, sign in to them, and choose how they run in Kepler. You sign in with your own agent account, and Kepler adds no markup on the agents you bring.
 
@@ -40,33 +40,33 @@ Each agent gets its own section in **Settings → Agents**, in this order:
 |---|---|---|---|---|
 | **Claude Code** | Claude Code | Your installed `claude` CLI | Chat or Terminal | Yes |
 | **Codex** | Codex | Your installed `codex` CLI | Chat or Terminal | Yes |
-| **GitHub Copilot** | GitHub Copilot | Your installed `copilot` CLI in ACP mode (`--acp`) | Chat or Terminal | Yes |
-| **OpenCode** | OpenCode | Your installed `opencode` CLI, v2, in ACP mode (`acp`) | Chat or Terminal | No |
+| **GitHub Copilot** | GitHub Copilot | Your installed `copilot` CLI | Chat or Terminal | Yes |
+| **OpenCode** | OpenCode | Your installed `opencode` CLI, v2 | Chat or Terminal | No |
 | **Pi** | Pi | Your installed `pi` CLI, in its own terminal interface | Terminal only | No |
-| **Auggie** | Auggie | Your installed `auggie` CLI in ACP mode (`--acp`) | Chat or Terminal | Yes |
-| **Google Antigravity** | Antigravity | Your installed `agy` CLI in a terminal, or Google's separate Antigravity ACP server (`agy_acp_server`) for Chat | Terminal (default) or Chat | No |
-| **Cursor** | Cursor | Your installed `cursor-agent` CLI in ACP mode (`acp`) | Chat or Terminal | No |
-| **Grok Build** | Grok Build | Your installed `grok` CLI in ACP mode (`agent stdio`) | Chat or Terminal | Yes |
+| **Auggie** | Auggie | Your installed `auggie` CLI | Chat or Terminal | Yes |
+| **Google Antigravity** | Antigravity | Your installed `agy` CLI in a terminal, or Google's separate Antigravity ACP server for Chat | Terminal (default) or Chat | No |
+| **Cursor** | Cursor | Your installed `cursor-agent` CLI | Chat or Terminal | No |
+| **Grok Build** | Grok Build | Your installed `grok` CLI | Chat or Terminal | Yes |
 
 **Auggie** is Augment's coding agent. It runs over ACP like the other agents, and its model and mode pickers work like any other agent's. Auggie is also one of the 3 agents that report plan usage back to Kepler, with Claude Code and Codex. Auggie reports only its credit balance, with the credits your plan includes, rather than usage windows. To learn about the plan usage meter, see [Agent Sessions](/kepler/agent-sessions#usage-indicators).
 
 Kepler asks each agent's provider for plan usage while **Check plan usage with each agent's provider** is on. This setting is in **Settings → Agents → Usage limits**, and it is on by default.
 
-**Grok Build** is xAI's coding agent. It signs in through your browser, or you can supply an xAI API key. Grok Build keeps its data under `~/.grok`, and Kepler uses that folder to keep several accounts apart.
+**Grok Build** is xAI's coding agent. It signs in through your browser, or you can supply an xAI API key.
 
 **Google Antigravity runs 2 separate binaries.** Terminal mode runs the `agy` CLI. Chat mode runs Google's Antigravity ACP server, which is a separate download with its own version. The agent's section in **Settings → Agents** lists both under **Components**: **Antigravity CLI** (*Needed for Terminal mode.*) and **ACP server** (*Rich-text (ACP) mode. Installed separately from the Antigravity CLI.*). Each has its own **Install** or **Update to {version}**. Either one alone is enough to use the agent in that mode. Sessions stay in Terminal until you pick **Chat** for Antigravity, because the ACP server signs in separately from the CLI.
 
-**Pi is terminal-only.** Its CLI has no ACP mode, so Kepler runs Pi's own interface in a terminal inside the task instead of leaving Pi out. Kepler does not check Pi's sign-in. Pi uses its own sign-in (`/login`, or the provider API-key environment variables it reads directly).
+**Pi is terminal-only.** Kepler runs Pi's own interface in a terminal inside the task. Kepler does not check Pi's sign-in. Pi uses its own sign-in (`/login`, or the provider API-key environment variables it reads directly).
 
-With Pi 1.x, Kepler loads its own extension for each launch. The extension gives the session the task's context and Kepler's workspace tools, and leaves your `APPEND_SYSTEM.md` and `~/.pi/agent` untouched. With other Pi versions, Kepler pastes the task's context in instead. A Pi session resumes by its own session ID, and Pi does not ask again whether to trust a worktree of a repository you already trust.
+With Pi 1.x, a session gets the task's context and Kepler's workspace tools, and your own Pi configuration stays untouched. With other Pi versions, Kepler pastes the task's context in instead. A Pi session resumes where it left off, and Pi does not ask again whether to trust a worktree of a repository you already trust.
 
 **OpenCode needs version 2.** Kepler reads and resumes only OpenCode 2's sessions and will not start a session on an OpenCode 1 binary: its card warns *OpenCode {version} is not supported*. A conversation you started under OpenCode 1 resumes from OpenCode 2's copy of it.
 
-**Inbox wake in Terminal mode.** Kepler can wake an idle **Terminal** session to read its inbox for Claude Code, Pi, and OpenCode 2.1.1 or newer. Pi gets the wake through Kepler's per-launch extension and OpenCode through a plugin Kepler loads for each launch, and neither touches your own config. Kepler delivers the wake as a queued follow-up prompt. Other agents in Terminal mode cannot use Kepler's workspace tools or inbox, and Kepler suggests **Continue in Chat** from the session menu instead.
+**Inbox wake in Terminal mode.** Kepler can wake an idle **Terminal** session to read its inbox for Claude Code, Pi, and OpenCode 2.1.1 or newer, without changing your own config. Other agents in Terminal mode cannot use Kepler's workspace tools or inbox: *{name} can't use Kepler's workspace tools or inbox in a terminal. Choose Continue in Chat from the session menu to give it access.*
 
-**Claude Code folder trust.** Kepler reads folder trust where the Claude Code CLI records your answer. A worktree inherits the trust you already gave its repository, so a session does not stop at the trust prompt.
+**Claude Code folder trust.** A worktree inherits the trust you already gave its repository, so a session does not stop at the trust prompt.
 
-**Codex now runs your own CLI.** Earlier builds shipped a bundled `codex-acp` engine. Kepler now finds and starts the `codex` you have installed, like every other agent, so its section reads **Installed** and it has a binary picker.
+**Codex runs your own CLI.** Kepler finds and starts the `codex` you have installed, like every other agent, so its section reads **Installed** and it has a binary picker.
 
 You set the mode the same way for every agent that offers both. **Settings → Agents → *your agent* → New sessions start in** picks between **Chat** and **Terminal**, per agent. To start one session the other way, use **Start in** in the composer's **Agent settings**. See [Agent Sessions](/kepler/agent-sessions#how-a-session-runs).
 
@@ -74,8 +74,8 @@ These 2 agents need a recent build to run over ACP:
 
 | Agent | Minimum |
 |---|---|
-| **GitHub Copilot** | CLI v1.0 or newer. Older builds reject `--acp` |
-| **Cursor CLI** | A build that exposes the `acp` command, added in early 2026 |
+| **GitHub Copilot** | CLI v1.0 or newer |
+| **Cursor CLI** | A build from early 2026 or newer |
 
 Kepler checks both before it starts a session and tells you to update rather than failing with a protocol error.
 
@@ -260,6 +260,8 @@ Most agents run in 2 modes, and each agent keeps its own default. To pick the de
 
 To start one session in the other mode without changing the default, set **Start in** in the composer's **Agent settings** before you send the first message. An agent that offers only one mode shows no switch at all. See [Agent Sessions](/kepler/agent-sessions#how-a-session-runs).
 
+Chat sessions show up as Kepler in places such as your Anthropic dashboard.
+
 ### Detecting sessions started outside Kepler
 
 **Settings → Integrations → Your terminal → Show sessions started outside Kepler** is a separate setting that applies to all agents, and it is **on by default**. It installs GitKraken hooks so sessions you start in your own terminal show up in Kepler. It covers every agent Kepler can track that way: **Claude Code**, **Codex**, **Cursor**, **GitHub Copilot**, **OpenCode**, **Auggie**, **Grok Build**, and **Pi**. Kepler does not track Google Antigravity this way. See [Agent Sessions](/kepler/agent-sessions#sessions-started-outside-kepler).
@@ -268,7 +270,7 @@ Kepler also follows its own **Terminal** sessions through those hooks. If a live
 
 ### Programs that report their own status
 
-Some terminal programs report their own status to Kepler (through the OSC 7501 escape sequence). When an agent's terminal program does this, Kepler shows the session as working, blocked, or done from what the program reports, without hooks. If hook events also arrive, the hooks take precedence. See [Agent Sessions](/kepler/agent-sessions#whats-different-in-terminal).
+Some terminal programs report their own status to Kepler. When an agent's terminal program does this, Kepler shows the session as working, blocked, or done from what the program reports. See [Agent Sessions](/kepler/agent-sessions#whats-different-in-terminal).
 
 ***
 
@@ -298,21 +300,13 @@ If your agent is not one of the 9 supported agents, you can add it by its comman
 
 Kepler treats environment values as secrets: it encrypts them at rest, hides them after you save, and never sends them to any client. When you edit a custom agent, leaving a value empty (`KEY=`) keeps the stored secret, and typing a new value replaces it.
 
-Custom agents appear alongside the built-in agents everywhere you can choose an agent. A custom agent that runs in **Terminal** works the same way: Kepler works out what terminal mode can offer from the command's own flags rather than from a list of agent names, so your own agent degrades exactly the way a built-in one does.
+Custom agents appear alongside the built-in agents everywhere you can choose an agent. A custom agent that runs in **Terminal** works the same way as a built-in one.
 
 ***
 
 ## MCP servers
 
 Kepler lists the MCP servers each agent loads, and lets you add, remove, sign in to, and turn off servers or single tools, per repository from the composer's **Agent settings** pill or as defaults in **Settings → Agents → MCP servers**. See [MCP Servers](/kepler/mcp-servers).
-
-***
-
-## What Kepler tells the agent about itself
-
-Agent CLIs report **Kepler** as the client name, so your sessions show up as Kepler in places like your Anthropic dashboard rather than as an unlabeled non-interactive run.
-
-This labeling applies to the sessions Kepler drives over ACP. **Terminal** mode deliberately leaves the label alone, because overriding it there would break key handling in the embedded terminal.
 
 ***
 
