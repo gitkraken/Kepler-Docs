@@ -11,13 +11,13 @@ git_hosts: [generic]
 integrations: [claude-code, codex, copilot, cursor, antigravity, opencode, pi, auggie, grok]
 hosted_variant: both
 status: GA
-last_verified: 2026-10
+last_verified: 2026-11
 llms_include: true
 tags: [settings, agents, custom-agents, mcp-servers, agent-tools, approvals, usage-limits, artifacts]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: October 2026</kbd>
+<kbd>Last updated: November 2026</kbd>
 
 Use **Settings → Agents** to install and update the coding agents that work on your tasks, sign in to them, choose how each one starts, and give them more tools.
 
@@ -54,7 +54,7 @@ If the installed version of an agent, or of one of its components, has a known p
 | Note | What it means |
 |---|---|
 | *OpenCode {version} is not supported* | Sessions with this version do not start. Install OpenCode 2, or choose an OpenCode 2 binary under **Program and data folder** |
-| *Auggie {version} may not load your MCP servers in chat* | Kepler's fix for how Auggie loads MCP servers covers only the Auggie versions it was built for |
+| *Auggie {version} may not load your MCP servers in chat* | With this version, Chat sessions may skip the MCP servers in Auggie's own settings, and a server whose path contains spaces or parentheses may fail to start |
 | *ACP server {version} can fail to start on Linux* | Antigravity's Chat server can be killed at startup on some Linux systems. Reinstall it under **Program and data folder** |
 | *Codex {version} can show approval prompts that need no answer* | Update Codex to 0.163.0 or newer |
 
@@ -77,7 +77,7 @@ Under **Program and data folder**:
 | **Components** | Extra pieces an agent can need, such as its CLI for Terminal mode (*Needed for Terminal mode.*), each with **Install** or **Update to {version}** | None |
 | **Data folder** | *Overrides the agent's default data and config folder.* | Empty, meaning the agent's own default |
 
-**Codex runs your own CLI.** Like every other agent, Kepler finds and runs the `codex` you have installed. For usage figures, Kepler reads the OAuth token from `~/.codex/auth.json`, or from `CODEX_HOME/auth.json` when you have set a custom data folder.
+**Codex runs your own CLI.** Like every other agent, Kepler finds and runs the `codex` you have installed. To show usage figures, Kepler uses your Codex sign-in.
 
 **OpenCode needs version 2.** Kepler reads and resumes only OpenCode 2's sessions. A session does not start on an OpenCode 1 binary, and the card shows *OpenCode {version} is not supported*. If you have both versions installed, point **Binary** at OpenCode 2. A conversation you started under OpenCode 1 resumes from OpenCode 2's copy of it.
 
@@ -180,7 +180,7 @@ Below the list, one more setting applies across every agent:
 |---|---|---|
 | **Keep the GitKraken MCP server installed in every agent** | *Gives every command-line agent Git tools and your issues and pull requests through GitKraken. Turn off to manage it yourself.* | On |
 
-This setting affects the MCP clients on your machine. Separately, Kepler attaches its own workspace MCP server to every session it starts. The workspace MCP server is always on and has no setting. Its tools are named for what they act on, such as `task_get`, `session_start`, or `worktree_create`. They let the agent:
+This setting affects the MCP clients on your machine. Separately, Kepler attaches its own workspace MCP server to every session it starts. The workspace MCP server is always on and has no setting. Its tools let the agent:
 
 - Read a task and its resources, find tasks, create a task, change its Progress stage, name, or hold, and archive it.
 - Read, write, and delete the task's notes.
@@ -203,7 +203,7 @@ Use **Agent tools** to let your agents call Kepler's own tools for rebasing, mer
 | **AI Sync** | *Lets agents rebase or merge your branch and resolve conflicts for you. Every change can be undone.* | Off |
 | **AI Compose** | *Lets agents turn messy changes into clean, focused commits. Every change can be undone.* | Off |
 
-**AI Sync** and **AI Compose** add their tools to the workspace MCP server. You need a paid GitKraken subscription to turn either one on. On the Community plan, when you are signed out, or with no organization, a setting that is off shows a lock in place of its checkbox: *Not available on the Community plan. Upgrade to unlock.* A setting that is already on keeps its checkbox, so you can still turn it off.
+You need a paid GitKraken subscription to turn either one on. On the Community plan, when you are signed out, or with no organization, a setting that is off shows a lock in place of its checkbox: *Not available on the Community plan. Upgrade to unlock.* A setting that is already on keeps its checkbox, so you can still turn it off.
 
 When you turn either setting on, Kepler confirms that *New agent sessions will pick up this change.* Sessions already running keep the tools they started with.
 

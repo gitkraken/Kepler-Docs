@@ -11,13 +11,13 @@ git_hosts: [github, github-enterprise, gitlab, gitlab-self-hosted, bitbucket, az
 integrations: [github, github-enterprise, gitlab, gitlab-self-hosted, bitbucket, azure-devops, jira, linear, trello]
 hosted_variant: both
 status: GA
-last_verified: 2026-10
+last_verified: 2026-11
 llms_include: true
 tags: [arrangements, inbox, list, columns, grouping, task-groups, multi-select, sorting, filters, search, saved-views, progress, on-hold, archive, cleanup]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: October 2026</kbd>
+<kbd>Last updated: November 2026</kbd>
 
 Arrange the lists on the dashboard so they show the work you need to see. Use these controls in the toolbar above the list:
 
@@ -40,7 +40,7 @@ The toolbar has these other controls:
 - **Panel layout** arranges open panels side by side (**Columns**) or in a **Grid**. See [Open a panel](/kepler/kepler-interface#open-a-panel).
 - **Saved views** and the search box. See [Saved views](#saved-views) and [Search](#search).
 
-To open several tasks at once, use the open button on a section header, or **Open group** on one of [your groups](#your-groups). The toolbar has no button that opens every row in the list. **Group** and **Sort** open as menus that grow to fit the window, so a long list of groupings is never cut off.
+To open several tasks at once, use the open button on a section header, or **Open group** on one of [your groups](#your-groups). The toolbar has no button that opens every row in the list.
 
 If the window is too narrow for the whole toolbar, **Group**, **Sort**, **Filter**, the layout switch and **Panel layout** move into a single **Options** button. If the window is narrower still, the saved views move into it next, and then the search box. A count on **Options** shows how many searches and filters are narrowing the list, so you can see that the list is narrowed while the menu is closed.
 
@@ -155,11 +155,9 @@ A session stays marked **unseen** until you look at it, so a turn that finished 
 
 To see what a drag looks like, see [Set a task's progress](#set-a-tasks-progress).
 
-A task stays in **Running** for 10 seconds after its work stops, so it does not leave the section between one prompt and the next. Running tasks keep the order they started in, instead of changing places as they work. Moves into **Unread** and **Needs attention** happen at once, because they mean something changed.
+A task stays in **Running** briefly between turns, so it does not jump between sections. Running tasks keep the order they started in, instead of changing places as they work. Moves into **Unread** and **Needs attention** happen at once, because they mean something changed.
 
 **On hold** is for tasks you do not want to work on now, so a held task stays there even while an agent works on it. A held task still moves up when something needs you: an unread turn or a blocked prompt lists it under **Unread** or **Needs attention**.
-
-The 24-hour window for **Recent** is fixed, not a setting, because the Inbox grouping is meant for a quick daily review.
 
 ### The other groupings
 
@@ -185,7 +183,7 @@ On Todo, **Needs my attention** groups each item by what it needs from you now, 
 - **Filed by me, unassigned**
 - **No action needed**, last, so it never pushes items that need you further down the list
 
-Each section header has a **?** button (**About {label}**) that explains what the section holds. For example, **Ready to merge** is *Yours, approved, no open feedback and no blockers the provider can see. It only needs merging.* **Needs my attention** is a grouping rather than a pinned section, so it follows the same rules as every other grouping: one section per state, collapsible headers, and no row shown twice.
+Each section header has a **?** button (**About {label}**) that explains what the section holds. For example, **Ready to merge** is *Yours, approved, no open feedback and no blockers the provider can see. It only needs merging.*
 
 On Todo, **Priority** reads an item's priority from its labels: names such as *P0* to *P4*, a *priority:* prefix, or a bare *blocker*, *critical*, *urgent*, *highest*, or *lowest*. When an item has several, the most urgent label counts. The sections are **Urgent**, **High**, **Medium**, **Low**, and **Unprioritised**, and every pull request goes under **Not applicable**. Kepler does not read a tracker's own priority field, so an issue with no priority label is **Unprioritised**.
 
@@ -288,7 +286,7 @@ To fold or unfold a section, click its header. The header shows the section's co
   <figcaption style="text-align:center; color:#888">A group header, with its fold toggle and count.</figcaption>
 </figure>
 
-A folded section does not draw its rows, so a long **Done** list does not slow Kepler down. On the **Board** layout, a folded column shrinks to a narrow strip with its name and count, and is marked when it holds the open item. Click the strip to expand the column.
+On the **Board** layout, a folded column shrinks to a narrow strip with its name and count, and is marked when it holds the open item. Click the strip to expand the column.
 
 Some sections start folded:
 
@@ -497,7 +495,7 @@ A view captures:
 - The filters
 - The layout (**List** or **Board**)
 
-When you choose a view, Kepler restores all of these settings and switches to the view's segment. The chip then reads **View:** and the view's name, and a checkmark marks the view in the menu. Open preview panels are not part of a view, so applying a view never reopens a task or pull request that no longer exists.
+When you choose a view, Kepler restores all of these settings and switches to the view's segment. The chip then reads **View:** and the view's name, and a checkmark marks the view in the menu. Open preview panels are not part of a view.
 
 The menu has these items:
 
@@ -521,9 +519,9 @@ Each segment remembers its own search, grouping, sort, filters, layout, and fold
 - **Which panels were open**, until you quit Kepler. If you switch to the other segment and back, the panel you were reading is still open.
 - **Panel widths**, for each window, across reloads and restarts.
 
-Kepler does not remember the set of open panels across restarts, so a relaunch never opens a panel for a task that was deleted.
+Kepler does not remember the set of open panels across restarts.
 
-Saved views work differently from these per-segment settings. Kepler stores them by name and shares them across windows until you delete them.
+Saved views are shared across windows until you delete them.
 
 ***
 

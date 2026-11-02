@@ -11,13 +11,13 @@ git_hosts: [github, github-enterprise, gitlab, gitlab-self-hosted, bitbucket, az
 integrations: [claude-code, codex-cli, copilot-cli, cursor, auggie, opencode, grok, pi, antigravity]
 hosted_variant: both
 status: GA
-last_verified: 2026-10
+last_verified: 2026-11
 llms_include: true
 tags: [actions, prompts, agents, tasks, issues, pull-requests, settings, customization]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: October 2026</kbd>
+<kbd>Last updated: November 2026</kbd>
 
 An **Action** is a named prompt you fire at a task, issue, or pull request to start agent work.
 
@@ -43,11 +43,9 @@ Kepler ships with four Actions. Every one of them is editable.
 | **Review** | Review the pull request if one is attached, otherwise the uncommitted work in the worktree | Tasks, Pull requests |
 | **Address Feedback** | Triage the review comments, apply what's worth applying, and push back on the rest instead of applying every suggestion blindly | Pull requests |
 
-**Kepler deliberately offers Review on plain tasks.** Reviewing your own uncommitted work before you push is the obvious thing to want from a worktree. One flexible Review covers both cases, rather than splitting the list into "review a pull request" and "review my changes."
+**Address Feedback** never appears on a task with no pull request.
 
-Every Action declares **what it can be aimed at**, which is why **Address Feedback** never appears on a task with no pull request.
-
-You can edit and reset built-in Actions, but you can't delete them. What an Action applies to already controls where it shows up, so deleting one would be a weaker version of the same control.
+You can edit and reset built-in Actions, but you cannot delete them.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/reset-action-to-default-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -139,7 +137,7 @@ Two things worth knowing:
 - **A worktree with no session open still runs** under *Current session*. It starts one there, so *all worktrees* always means all of them.
 - **Kepler navigates to the first destination you picked**, not to whichever session happened to start first.
 
-Worktree choices are resolved against worktrees that actually exist on disk, so a task that still names a worktree you've since removed won't silently run somewhere else.
+An Action never runs in a worktree you have removed.
 
 A task with no worktree runs the Action in a folder attached to it, or else in the task's own folder. With neither, Kepler says *This task has no folder or worktree to start a session in.*
 
@@ -180,7 +178,7 @@ Each row sets the Action that the left half of the button runs for that kind of 
 
 </div>
 
-Pull requests split by **who wrote them**, not by what you want to do with them. Kepler works out review-vs-address-feedback from authorship, so the settings name the *kind of pull request* rather than the intent. When you want the other one, it's one click away in the chevron.
+Pull requests split by **who wrote them**, not by what you want to do with them. When you want the other Action, it is one click away in the chevron.
 
 Any slot can be set to **None**. This simplifies the action button to only display the chevron icon.
 
@@ -291,10 +289,7 @@ The agent opens the pull request with the tools it has, such as your Git host's 
 
 To undo your edits to one Action, click **Restore default** on its row. The row shows **Restore default** only after you edit the Action. To undo your edits to every Action at once, click **Restore all defaults** in the **All Actions** section header.
 
-Kepler stores **only what you changed**, not a copy of the whole Action. This creates the following considerations when restoring defaults:
-
-- An Action you've never edited picks up improved wording in a future Kepler release.
-- **Restore default** works by forgetting your edit. Editing an Action back to its original wording has the same effect.
+An Action you have never edited picks up new default wording when Kepler updates. **Restore default** discards your edit.
 
 Deleting a custom Action that a preferred-Action slot points to is the same as setting it to **None**. You will see rows with only the chevron, instead of the preferred-Action + the chevron. Revisit the Actions setting to set a new preference.
 

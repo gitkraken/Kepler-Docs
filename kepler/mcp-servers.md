@@ -11,13 +11,13 @@ git_hosts: [generic]
 integrations: [claude-code, codex-cli, copilot-cli, cursor, opencode, auggie, grok]
 hosted_variant: both
 status: GA
-last_verified: 2026-10
+last_verified: 2026-11
 llms_include: true
 tags: [mcp, mcp-servers, model-context-protocol, tools, agents, claude-code, codex, opencode, copilot, cursor, auggie, grok, settings, composer]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: October 2026</kbd>
+<kbd>Last updated: November 2026</kbd>
 
 Your coding agents load **Model Context Protocol** (**MCP**) servers from their own config files. Kepler reads those files and lists exactly the servers each agent loads. From Kepler, without editing the agent's config by hand, you can:
 
@@ -97,7 +97,7 @@ If a server is off in Settings and you have not turned it on here, the server sa
 
 ### Turn off a single tool
 
-A server's page lists its **Tools** under the **Let {agent} use this server** switch. Kepler connects to the server to ask for its tools, so the list can take a moment to load (*Asking the server for its tools…*). If the server needs authentication first, the list reads *Sign in to this server to see its tools.*
+A server's page lists its **Tools** under the **Let {agent} use this server** switch. The list can take a moment to load (*Asking the server for its tools…*). If the server needs authentication first, the list reads *Sign in to this server to see its tools.*
 
 To turn off one tool, open the server's page and turn off the tool's switch. *Turn a tool off to keep {agent} from calling it.*
 
@@ -129,7 +129,7 @@ The repository and global levels combine like this:
 
 - A repository uses the global value until you change that server in its own dialog.
 - A repository's choice wins over the global one, in either direction: a repository can turn off a server that's on globally, or turn on a server that's off globally.
-- Kepler stores a choice only while it differs from the level beneath it, so switching a server back to match the global default hands control back to the default.
+- Switching a server back to match the global default makes it follow the default again.
 
 You cannot change plugin servers or Cursor servers in Settings, although plugin servers are listed there. Cursor keeps its on and off state per project, so switch a Cursor server from a repository's dialog instead.
 
@@ -184,7 +184,7 @@ You cannot copy servers from plugins, so their page does not show **Also add to�
 
 ## Sign in to a server
 
-For a server that needs authentication, its page has a **Sign-in** section. It offers **Sign in**, or **Re-authenticate** once you are signed in, and **Clear authentication** to sign the server out. Kepler signs in by running the agent's own CLI, under the same account the session uses, so the credentials end up where the agent looks for them. Sign-in is available for Claude Code, Codex, OpenCode, and Cursor servers.
+For a server that needs authentication, its page has a **Sign-in** section. It offers **Sign in**, or **Re-authenticate** once you are signed in, and **Clear authentication** to sign the server out. Kepler signs in under the same account the session uses. Credentials are saved where the agent itself looks for them. Sign-in is available for Claude Code, Codex, OpenCode, and Cursor servers.
 
 In a local window, **Open sign-in page** opens your browser, and Kepler finishes when you are done (*Finish signing in in your browser*). In a window connected to a remote environment, sign in on that page, then paste the URL you land on into **Redirect URL**.
 
@@ -206,7 +206,7 @@ Where Kepler saves an on or off choice depends on the agent:
 
 Adding and removing a server always edits the config file.
 
-Each agent account keeps its own MCP setup. When Kepler launches a Claude Code account other than the default one, it first copies in the default account's servers.
+Each agent account keeps its own MCP setup. Other Claude Code accounts start with the default account's servers.
 
 ***
 

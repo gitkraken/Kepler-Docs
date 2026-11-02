@@ -11,13 +11,13 @@ git_hosts: [github, github-enterprise, gitlab, gitlab-self-hosted, bitbucket, az
 integrations: [github, github-enterprise, gitlab, gitlab-self-hosted, bitbucket, azure-devops, jira, linear, trello]
 hosted_variant: both
 status: GA
-last_verified: 2026-10
+last_verified: 2026-11
 llms_include: true
 tags: [tasks, resources, worktrees, shared-context, draft-sessions, notes, files, uploads, sessions, archive, mcp]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: October 2026</kbd>
+<kbd>Last updated: November 2026</kbd>
 
 A **task** is the unit of work in Kepler. It is one thing you want to get done, plus everything the agents working on it need: the repositories, the issue or pull request it came from, the branches, the notes, and every agent session you have run on it.
 
@@ -143,7 +143,7 @@ You do not have to attach a task's pull request yourself. If a task holds no pul
   <figcaption style="text-align:center; color:#888">A pull request Kepler attached on its own, matched by branch.</figcaption>
 </figure>
 
-Kepler limits automatic attachment to these cases, because a wrong match would put someone else's work into your agent's context:
+Kepler limits automatic attachment to these cases:
 
 - The branch names must match exactly. A similar name does not match.
 - Kepler attaches only open pull requests whose head branch is in the same repository. A pull request from a fork is never attached automatically.
@@ -168,11 +168,11 @@ Kepler refreshes a task's pull requests and issues when something happens that c
 - Someone pushes one of the task's branches.
 - Someone publishes a pull request.
 
-Kepler re-reads only that task, so a busy task does not trigger a refresh of your whole account. Kepler looks up each link where it lives: in the repository it names, or on the Jira site or Linear workspace in its URL. As a result, 2 repositories with the same issue number, or 2 Jira sites with the same key, stay separate.
+Issues with the same number in different repositories or Jira sites stay separate.
 
 A Jira or Linear issue that moves to a new key stays attached under the link you added, and Kepler keeps refreshing it from that link.
 
-To refresh by hand, click the refresh button on the **Pull requests** or **Issues** group header, or choose **Refresh** in the task's **⋮** menu. A refresh you ask for re-reads the provider instead of showing what Kepler already had. It re-reads every stored link in full, including merged pull requests.
+To refresh by hand, click the refresh button on the **Pull requests** or **Issues** group header, or choose **Refresh** in the task's **⋮** menu. A manual refresh fetches the latest from your providers.
 
 ***
 
@@ -212,7 +212,7 @@ Each option says where the work will happen, such as *Branch off {branch} in a n
 - A local base starts from its upstream.
 - If the local base has commits you have not pushed, the new branch starts from your local tip instead, so it includes those commits.
 
-If Kepler cannot resolve a remote default branch (no remote, a shallow clone, or offline with nothing cached), it starts the branch from the current HEAD instead of refusing to start.
+With no remote default branch available, the new branch starts from your current commit.
 
 Kepler suggests branch names from the task's own context. A suggested name starts with the issue identifier when the task has one, and sits under the `kepler/` prefix unless you configure another prefix. See [Create a task](/kepler/create-task#naming-the-branch).
 
@@ -222,13 +222,7 @@ Kepler suggests branch names from the task's own context. A suggested name start
 
 A worktree deleted outside Kepler **stays bound to its task**, so the task keeps its record of where the work was, even after a `git worktree prune`. The row is flagged **Gone from disk**, and the pane shows the details Kepler recorded: **Current branch**, **Base branch**, and **Recorded path**.
 
-To bring the worktree back, click **Recreate worktree** on the pane, or choose it from the worktree's menu. Kepler recreates the worktree at the recorded path. If the branch was deleted too, Kepler rebuilds it in this order:
-
-1. If the branch's last commit still exists in the repository, Kepler restores the branch at that commit, with its history.
-2. Otherwise, Kepler creates the branch again from the recorded base branch.
-3. If the base branch is gone too, as it usually is after its pull request merges, Kepler creates the branch from the repository's default branch.
-
-Kepler tells you which branch it started from. Recreating one worktree clears only that worktree's stale Git entry. Other missing worktrees, such as ones on an unplugged drive, keep their entries.
+To bring the worktree back, click **Recreate worktree** on the pane, or choose it from the worktree's menu. Kepler recreates the worktree at the recorded path. If the branch was deleted too, Kepler restores the branch where it can, otherwise recreates it from its base, and tells you which.
 
 An attached folder that was removed stays on the task the same way. If you start a new session in a worktree or folder that is gone, Kepler asks first (*Recreate the worktree and start the session?*). It then rebuilds the worktree or folder before the session starts, so the agent never starts in a directory that does not exist. A task with no repository or folder starts its sessions in the task's own folder.
 
@@ -272,9 +266,9 @@ Kepler sends everything attached to a task to **every agent session in the task*
 Kepler sends each kind of item differently:
 
 - **The task's prompt** goes in full, as background to the work rather than as an instruction. The agent acts on the messages you send it.
-- **Each note** goes as a reference, with its title and size. The agent reads the note's text through Kepler's Model Context Protocol (MCP) server when it needs it. A session that cannot reach that server gets the full text of every note instead.
+- **Each note** goes as a reference, with its title and size. The agent reads the note's text through Kepler's Model Context Protocol (MCP) server when it needs it.
 
-**Launching a task saves its issues' descriptions as notes.** When you launch a task with linked issues, Kepler reads each issue again and saves its description as a note titled *Issue {identifier}: {title}*, with the issue's URL at the top. Each description is limited to 8 KB, and all of them together to 16 KB. Kepler cuts a longer description short and adds a pointer to the URL. Kepler tells agents that the text comes from a third party, so they treat it as information rather than instructions.
+**Launching a task saves its issues' descriptions as notes.** When you launch a task with linked issues, Kepler reads each issue again and saves its description as a note titled *Issue {identifier}: {title}*, with the issue's URL at the top. A long description is cut short, with a link to the issue.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/shared-context-aug-2026.png" target="_blank" rel="noopener noreferrer">
@@ -370,7 +364,7 @@ The **Delete worktree?** dialog lists the worktree with what deleting it would c
 
 You cannot detach or delete a worktree while a session is still running in it. The menu tells you how many sessions to archive first. If another program has the folder open, the delete fails with *Kepler could not delete {path} because another program is using it. Close any editors, terminals or file explorers that have the folder open, then try again.*
 
-Below the worktree, a live check shows what deleting would cost. Kepler reads this from the worktree when the dialog opens. When you tick **Also delete branch**, the check runs again, because deleting the branch can lose different work. Each worktree has short tags that show what you could lose:
+Below the worktree, a live check shows what deleting would cost. The check updates when you tick **Also delete branch**. Each worktree has short tags that show what you could lose:
 
 | Tag | What it means |
 |---|---|
@@ -403,7 +397,7 @@ To rename, archive or delete a task, open the **Task actions** (**⋮**) menu on
 | **Rename task** | Turns the name, which Kepler set when you created the task, into a field (on the task page, double-clicking the name does the same). **Auto-name** puts a suggestion based on the task's prompt and resources into the field, for you to accept or edit |
 | **Add to group** | Puts the task in one of [your groups](/kepler/arranging-your-work#your-groups), starts a **New group…** with it, or offers **Remove from group** when the task is in a group. A task with sub-tasks also offers **Group with its {count} sub-tasks**, and an archived task does not offer **Add to group** |
 | **Copy task link** | Copies a Kepler link to the task. **Cmd/Ctrl+C** on a focused task row also copies it |
-| **Refresh** | Reads the task's worktrees and its pull request and issue links again. For a short time after a refresh, Kepler cannot read the providers again, so the row is locked and says when you can try again |
+| **Refresh** | Reads the task's worktrees and its pull request and issue links again. For a short time after a refresh, **Refresh** is unavailable, and its tooltip says when you can try again |
 | **Archive task** | Removes the task from the active list and keeps it as history. Kepler keeps its sessions and resources, and deletes nothing unless you ask it to |
 | **Restore task** | Replaces **Archive task** on an archived task, and returns it to the active list, even when another active task holds the same pull request (several tasks can share one). The task stays in its group, and restores the group too if the group was archived |
 | **Delete task** | Removes the task along with its sessions and resources |
@@ -466,13 +460,13 @@ Agents work with tasks through Kepler's own MCP server, `kepler-workspace`. With
 
 </div>
 
-The tools refer to things by id, and each id starts with its kind: `task:`, `session:`, `repo:`, `worktree:`, `folder:`, `note:`, `file:`, `account:`, `group:` and `comment:`. If you paste a Kepler link to a task or a session into the chat, the agent can use it as the id. Wherever a tool takes a repository, the agent can also name the repository by one of its **Aliases**, which you set on the repository's page in **Settings → Repositories**. See [Settings](/kepler/settings-repositories#edit-a-repository).
+If you paste a Kepler link to a task or a session into the chat, the agent can use it to find that task or session. Wherever a tool takes a repository, the agent can also name the repository by one of its **Aliases**, which you set on the repository's page in **Settings → Repositories**. See [Settings](/kepler/settings-repositories#edit-a-repository).
 
 **Reading tasks and notes**
 
 | Tool | What it does |
 |---|---|
-| `task_get` | Read a task: its stage, group, worktrees and folders, notes, files, links, related tasks, newest sessions, and how many of your review comments are still open. On the agent's own task, later calls return only what changed, and `refresh` first reads the pull request and issue state, the disk and Git again |
+| `task_get` | Read a task: its stage, group, worktrees and folders, notes, files, links, related tasks, newest sessions, and how many of your review comments are still open. On the agent's own task, later calls return only what changed, and the agent can re-read the pull request, issue, and Git state first |
 | `task_list` | Find tasks by name, prompt, note text or file name, filtered by stage, hold, repository, [group](/kepler/arranging-your-work#your-groups), or whether they belong to the agent's own work. Each task shows its group, the first page lists every group you have, including empty ones, and archived tasks appear only on request |
 | `task_note_read` | Read one note's full text. Otherwise, notes arrive as references (title and size) |
 | `task_comment_read` | Read the open [review comments](/kepler/review-changes#review-comments) you sent on a task's code (those still waiting on an agent's answer first, each with its file, lines, the code it is on, and its replies), or read one comment by id, resolved or not. Comments you have not sent cannot be read |
@@ -482,7 +476,7 @@ The tools refer to things by id, and each id starts with its kind: `task:`, `ses
 | Tool | What it does |
 |---|---|
 | `session_list` | Find agent sessions by name, task, agent or place, with each session's state and what it is waiting on: a permission, an answer, or an approval. It can list only the sessions that need you |
-| `session_read` | Read another session's conversation, at the level of detail the agent asks for, by its id or a link from **Copy session link**. It returns the newest messages, or only the last reply with `limit:1`, and reports what a running session waits on, including a plan it is holding for your review |
+| `session_read` | Read another session's conversation, at the level of detail the agent asks for, by its id or a link from **Copy session link**. It returns the newest messages, or only the last reply, and reports what a running session waits on, including a plan it is holding for your review |
 | `agent_list` | List the agents, accounts, models and effort values a new session can start with, and the modes each agent supports |
 | `repo_list` | List the repositories and folders where work can happen, and mark the ones this task uses. It finds one by name, path or alias |
 
@@ -490,7 +484,7 @@ The tools refer to things by id, and each id starts with its kind: `task:`, `ses
 
 | Tool | What it does |
 |---|---|
-| `task_note_write` | Create a note, or edit one: replace the whole note, replace the section under one heading, or add to the end. A replace includes the version the agent last read, so if the note changed since then, Kepler refuses the replace rather than overwriting the note |
+| `task_note_write` | Create a note, or edit one: replace the whole note, replace the section under one heading, or add to the end. It never overwrites edits made since the agent read the note |
 | `task_note_delete` | Delete a note. The task's **Prompt** cannot be deleted |
 | `task_comment_reply` | Reply on a review comment you sent, so the answer shows on the comment's card in Kepler, and resolve the comment once the request is done. You can reopen it |
 | `task_link_update` | Attach or detach issue, pull request and other links, which Kepler classifies, fetching each one's title and status when it can. An agent that starts a server for you to open (a dev server, Storybook, a preview) attaches its local URL to the task, and detaches it when it stops the server for good |
@@ -503,7 +497,7 @@ The tools refer to things by id, and each id starts with its kind: `task:`, `ses
 |---|---|
 | `worktree_create` | Create a worktree on a new branch and bind it to the task. The branch starts from the repository's remote default branch or from a base the agent names |
 | `worktree_attach` | Bind a worktree or folder that already exists on disk to the task, without changing any files |
-| `worktree_detach` | Remove a binding without touching the worktree, the branch, the files, or the sessions running there. The agent cannot detach the task's own folder or the place it runs in |
+| `worktree_detach` | Detach a worktree or folder from the task without touching the worktree, the branch, the files, or the sessions running there. The agent cannot detach the task's own folder or the place it runs in |
 | `worktree_update` | Record a new merge target after the agent rebased a stacked branch or moved it onto another branch. A merge target you saved yourself takes precedence |
 | `worktree_delete` | Delete a worktree from disk. Its branch goes too when Kepler finds it merged; an unmerged branch is kept unless the agent asks to delete it |
 
@@ -553,7 +547,7 @@ These requests wait for your approval:
 - Overwriting a theme file when there is no Trash to keep the old one
 - The AI Sync and Compose tools that change a repository or rewrite its history
 
-Kepler compares modes on 3 levels, plan, edit and auto, and maps them onto each agent's own permission modes. A session that an agent starts cannot run in a higher mode than the session that started it unless you approve. The request says *More permissive than the asking session, which is in {mode} mode.*
+A session that an agent starts cannot run in a higher mode than the session that started it unless you approve. The request says *More permissive than the asking session, which is in {mode} mode.*
 
 The request appears as an approval card above the asking session's composer, with **Approve** and **Deny**. The **Approve** menu can approve every request of that kind from the session, or always. A rule you make with **Always approve** is listed under **Settings → Agents → Approvals**, where **Remove** deletes it. **Always approve** is not offered for actions that can lose work. See [Agent Sessions](/kepler/agent-sessions#when-the-agent-asks-you-something).
 
@@ -569,7 +563,7 @@ Each session has an **inbox** for what other agents send it:
 - Changes in the state of a session it started
 - The outcomes of its approval requests
 
-When an item arrives for an idle session, Kepler wakes the session to read it. A busy session reads it when its turn ends. Kepler wakes sessions running in Terminal the same way. A session whose agent cannot reach Kepler's workspace tools does not receive state changes.
+When an item arrives for an idle session, Kepler wakes the session to read it. A busy session reads it when its turn ends. Kepler wakes sessions running in Terminal the same way.
 
 A session with unread reports has a badge with their count on its tab and on its row in the context panel. To have the agent read them now, click **Have it read them** above its composer.
 

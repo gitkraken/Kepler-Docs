@@ -11,13 +11,13 @@ git_hosts: [github, github-enterprise, gitlab, gitlab-self-hosted, bitbucket, az
 integrations: [github, github-enterprise, gitlab, gitlab-self-hosted, bitbucket, azure-devops]
 hosted_variant: both
 status: GA
-last_verified: 2026-10
+last_verified: 2026-11
 llms_include: true
 tags: [review, diff, changes-overlay, working-changes, commits, staging, amend, review-comments, merge-conflicts, merge-target, push, force-push, pull-requests, ai-sync, ai-compose, ai-conflict-resolution, worktree-cleanup]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: October 2026</kbd>
+<kbd>Last updated: November 2026</kbd>
 
 When an agent stops and says it is done, read what it actually changed.
 
@@ -292,7 +292,7 @@ To finish the draft, follow these steps:
    - **Send now**, or **Cmd/Ctrl+Shift+Enter**, sends it to the session at once.
 3. To send the queued comments, press **Send comments ({count})** in the overlay's header, or send your next prompt in that session.
 
-Queued comments show as a **{count} comments** chip in that session's composer and go out with its next prompt. The header's **Send comments ({count})** sends every queued comment on the task, in one prompt for each session. When the session is not on screen, a notification says *Queued for {agent} session {name}* or *Comments are waiting in {agent} session {name}*, with **Open** to go to it. Each comment in a prompt carries its `path:lines`, the quoted code, and your note.
+Queued comments show as a **{count} comments** chip in that session's composer and go out with its next prompt. The header's **Send comments ({count})** sends every queued comment on the task, in one prompt for each session. When the session is not on screen, a notification says *Queued for {agent} session {name}* or *Comments are waiting in {agent} session {name}*, with **Open** to go to it. Each comment reaches the agent with its file, lines, the code, and your note.
 
 On a task with no session yet, **Send now** reads **Start a session**, which opens a new session's draft with the comments as its first prompt. In an overlay opened from outside a conversation, such as from a file path, you cannot send comments: *Open this file from a conversation to send comments*.
 
@@ -466,7 +466,7 @@ After you apply a rebase, the remote still has the branch's old commits. The mai
   <figcaption style="text-align:center; color:#888">The sync control's chevron menu on a branch with no upstream yet.</figcaption>
 </figure>
 
-**SSH keys that ask for a PIN or passphrase.** On macOS and Linux, a fetch you start yourself, such as **Fetch** or **Refresh branches**, can use your `SSH_ASKPASS` helper, so a key that needs a PIN or passphrase, such as a security key, can fetch. Kepler allows at most 3 prompts per connection, and 60 seconds for each. Fetches that Kepler runs in the background never prompt. On Windows, Kepler never prompts, so use an SSH agent.
+**SSH keys that ask for a PIN or passphrase.** On macOS and Linux, a fetch you start yourself, such as **Fetch** or **Refresh branches**, can use your `SSH_ASKPASS` helper, so a key that needs a PIN or passphrase, such as a security key, can fetch. Fetches that Kepler runs in the background never prompt. On Windows, Kepler never prompts, so use an SSH agent.
 
 ### Set or change the upstream
 
@@ -610,8 +610,6 @@ To see more of the file around a conflict, use **Show {count} more lines above**
   <figcaption style="text-align:center; color:#888">One file's AI review, conflict by conflict.</figcaption>
 </figure>
 
-<!-- TODO(verify): Resolution method and persistence behavior verified against kepler v0.15.0 strings and src/ui/components/git/sync/; check against a live AI run before publishing. -->
-
 ***
 
 ## Merge targets
@@ -673,11 +671,11 @@ Choose **Rebase** or **Merge**, and tick **Push after update** to push each upda
 
 | Path | What happens |
 |---|---|
-| **The agent publishes it** | When an agent publishes a pull request, Kepler reads the result, checks that it belongs to one of the worktree's remotes, and attaches it to the task. You do not need to do anything |
-| **The agent attaches it** | Agents can attach a link to the task themselves with Kepler's workspace tools. Kepler works out from the URL whether it is a pull request, an issue, or a plain link, and fetches its title and status where it can, attaching the link even when that lookup fails. The same tools detach a link, including one you attached yourself |
+| **The agent publishes it** | When an agent publishes a pull request on one of the worktree's remotes, Kepler attaches it to the task. You do not need to do anything |
+| **The agent attaches it** | Agents can attach links to the task, or detach them, themselves, including a link you attached. Kepler shows each one as a pull request, an issue, or a plain link, with its title and status where it can |
 | **You attach an existing one** | **Add resource → Pull requests** in the task view searches your connected hosts. **Add to task** attaches what you pick |
 
-Kepler asks an agent to attach only the pull request the task is actually about, not every URL it reads while investigating. Anything the agent attaches shows up in the task right away.
+Only the task's own pull request is attached, not every link the agent reads along the way. Anything the agent attaches shows up in the task right away.
 
 Attaching a pull request also unlocks the **Address Feedback** Action on that task. See [Actions](/kepler/actions) and [Pull Request Integrations](/kepler/pull-request-integrations).
 

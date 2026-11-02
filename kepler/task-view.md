@@ -11,13 +11,13 @@ git_hosts: [github, github-enterprise, gitlab, gitlab-self-hosted, bitbucket, az
 integrations: [claude-code, codex-cli, copilot-cli, cursor, auggie, opencode]
 hosted_variant: both
 status: GA
-last_verified: 2026-10
+last_verified: 2026-11
 llms_include: true
 tags: [tasks, task-page, sessions, draft-sessions, terminals, worktrees, resources, tabs, tab-groups, split-panes, drawer, file-viewer, keyboard-shortcuts]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: October 2026</kbd>
+<kbd>Last updated: November 2026</kbd>
 
 Each task has its own screen, the **task page**. The context panel lists everything attached to the task. Beside it, the content area shows the sessions, working copies, files, and details you open.
 
@@ -325,11 +325,11 @@ With tabs off, the content area has fixed columns, not free-form panes. The kind
 | **Changes** | A worktree: a strip of actions over its changed files. See [Review Changes](/kepler/review-changes) |
 | **Resources** | Folders, files, pull requests, issues, links, notes |
 
-To resize columns, drag the divider between them. Kepler keeps the size you set. The 3 content columns share the width the context panel leaves. They split it equally until you drag a divider, and in the proportions you set from then on. Kepler stores proportions, not pixels, so your layout survives a window resize and a column opening or closing.
+To resize columns, drag the divider between them. Kepler keeps the size you set. The 3 content columns share the width the context panel leaves. They split it equally until you drag a divider. Your column sizes are kept when you resize the window or open and close columns.
 
 **Clicking a row toggles it.** Click a row to open it in its column. Click the row that's already on screen to close it again. A column with nothing open disappears, and the other columns take its space.
 
-When you open the task page, it shows a conversation and the checkout that conversation works in, so the **Changes** column is not empty on every visit. Kepler picks the checkout from the session or terminal it opened automatically.
+When you open the task page, it shows a conversation and the checkout that conversation works in, so the **Changes** column is not empty on every visit.
 
 To close a column, click **Close panel** (**X**) on its strip.
 
@@ -390,7 +390,7 @@ Closing a tab only hides it. You can close a tab in any of these ways:
 
 When every tab is closed, the content area offers **New session** and the external-session picker, so you can start something right away. With tabs on, those 2 controls also sit in the header, beside **Terminal**.
 
-The external-session picker lists the agent conversations Kepler found outside it, under **Live now** and **Past sessions**. Each row shows the agent's logo, a status dot, the folder it ran in, and when it was last active; point at one for its session card. **Show past sessions** and **Show sessions from every folder** widen the list. Sessions older than an agent's listing window are left out, and the picker names the window for each agent: *{adapter} sessions older than {days} days aren't listed*.
+The external-session picker lists the agent conversations Kepler found outside it, under **Live now** and **Past sessions**. Each row shows the agent's logo, a status dot, the folder it ran in, and when it was last active; point at one for its session card. **Show past sessions** and **Show sessions from every folder** widen the list. Sessions older than an agent's listing window are left out, and the picker names the window for each agent: *{agent} sessions older than {days} days aren't listed*.
 
 ### Keyboard
 
@@ -416,7 +416,7 @@ The task page has these keyboard shortcuts:
 | **F2** | Rename the task, or the note whose pane or tab has focus |
 | **Cmd/Ctrl+C** | Copy what the focused row names, such as a session's link or a file's path |
 | **Cmd/Ctrl+Shift+W** | Close the window |
-| **Tab** to a divider, then the arrow keys | Move the divider between panes, columns, or tab groups 16 pixels per press, or 64 with **Shift**. A screen reader announces each divider as *Resize {first} and {second}* with its size |
+| **Tab** to a divider, then the arrow keys | Move the divider between panes, columns, or tab groups. Hold **Shift** for bigger steps |
 
 With tabs off, the column strips' **Tab actions** menus also hold **Move left** and **Move right**.
 
@@ -462,8 +462,6 @@ If no agents are connected, **Agent settings** reads **No agents available**, an
 **Start a draft in a specific checkout.** Right-click a worktree or folder row and pick **New session here**. A draft opens with that checkout already chosen as its place, ready for your prompt.
 
 **When a session cannot start.** If the agent fails after launch, the task page shows **{agent} was unable to start** with the agent's message. Press **Retry** to launch it again, or **Open agent settings** to fix the problem. **Dismiss** hides the notice in that window.
-
-<!-- TODO(verify): Draft tab, target chip, Agent settings and start-failure labels verified against kepler v0.13.0. -->
 
 **Start from an existing session.** **New session from this one**, on a session's row or tab menu, picks an agent and starts a session in the same working directory that can read the source conversation. **New session from here**, on a message in a conversation, does the same but cuts the source off at that message. The new session shows a **Continues from** divider naming its source; **Open source session** in its menu takes you back.
 
@@ -516,7 +514,7 @@ The file viewer shows each kind of file in its own way:
 
 A very large file shows its start first, labeled *Showing the first {shown} of {total}*, with **Load the rest**.
 
-**Review comments work in the file viewer too.** Hover a line for the gutter's **+** (**Comment on line {line}**) to leave a comment, the same way you do in the Changes overlay. The tab's actions then lead with the file's comment count and **Send comments**. Comments on a file in one of the task's worktrees are kept with that worktree, alongside the ones you write in its changes. A file outside the task's worktrees keeps them with the conversation you opened it from; opened any other way, including a tab restored after a reload, it reads *Open this file from a conversation to send comments*. See [Review comments](/kepler/review-changes#review-comments).
+**Review comments work in the file viewer too.** Hover a line for the gutter's **+** (**Comment on line {line}**) to leave a comment, the same way you do in the Changes overlay. The tab's actions then lead with the file's comment count and **Send comments**. Comments on a file in one of the task's worktrees are kept with that worktree, alongside the ones you write in its changes. To send comments on a file outside the task's worktrees, open it from the conversation. Opened any other way, it reads *Open this file from a conversation to send comments*. See [Review comments](/kepler/review-changes#review-comments).
 
 **Open in** on the viewer's header is an icon button that opens the file in your pinned editor, or else the one you used last, with its chevron listing the rest. Your computer's default app is one of the targets, listed as **Default app**, and like any editor it can be pinned as your default with **Set as default**.
 
@@ -590,11 +588,10 @@ On a phone, a terminal takes the whole column, with a row of the keys a phone ke
 
 A terminal reattaches to its running shell rather than starting a new one:
 
-- While it loads it reads **Loading terminal…**. When the connection drops, nothing shows for the first second. After that, a **Reconnecting to the terminal…** strip leaves the last screen readable and scrollable, and only after 5 seconds does it cover the terminal. If it cannot reconnect, **Unable to restore this terminal** says *The terminal is still running. Retry to load its output again.*, with **Retry**.
+- While it loads it reads **Loading terminal…**. While it reconnects, a **Reconnecting to the terminal…** strip keeps the last screen readable. If it cannot reconnect, **Unable to restore this terminal** says *The terminal is still running. Retry to load its output again.*, with **Retry**.
 - What you type while it reconnects is held and sent once the terminal is back. If the program printed something in the meantime, Kepler drops it instead and says **The terminal changed while reconnecting**: *Nothing you typed was sent. Type it again.* Typing that could not reach the terminal at all reads **Unable to send what you typed**.
 - Only 1 view can type in a terminal at a time. A terminal another view is driving, in another window or on a Remote Access device, reads **Another view is controlling this terminal**. **Take control** lets you type here and sizes the terminal to this view.
 - A terminal printing faster than the connection can show reads **Showing the latest output**: *This terminal is printing faster than this connection can show, so older lines are skipped.*
-- Input Kepler cannot confirm is never resent. See [Agent Sessions](/kepler/agent-sessions#whats-different-in-terminal).
 
 ### Reading a tab
 

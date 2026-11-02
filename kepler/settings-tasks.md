@@ -11,13 +11,13 @@ git_hosts: [generic]
 integrations: [claude-code, codex, copilot, cursor, antigravity, opencode, pi, auggie, grok]
 hosted_variant: both
 status: GA
-last_verified: 2026-10
+last_verified: 2026-11
 llms_include: true
 tags: [settings, tasks, default-agent, worktrees, branch-prefix, folder-locations, variables]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: October 2026</kbd>
+<kbd>Last updated: November 2026</kbd>
 
 Use **Settings → Tasks** to choose how new tasks start and how a task's page looks. A task is one piece of work: its prompt, the agent sessions working on it, and the worktree or folder they work in.
 
@@ -101,7 +101,7 @@ Kepler uses 3 folder settings to decide where to put things. The first 2 are und
 | **Tasks folder** | Tasks → New tasks | *Each task gets a folder here for its attachments and files.* | `~/kepler/tasks` |
 | **Repositories folder** | [Repositories](/kepler/settings-repositories#repositories-folder) | Where Kepler clones repositories, and where it looks for repositories to add | `~/kepler/repositories` |
 
-All 3 are unset out of the box. Until you set one, Kepler uses the default under your home folder without saving it, so the setting stays unset.
+Until you set one, Kepler uses the default shown.
 
 Type a path directly, or click **Choose a folder** beside the field to browse. An edit saves when you leave the field, so there is no **Save** button. The field shows its save status.
 
@@ -120,7 +120,7 @@ A folder field that can contain a dynamic variable has a **Variables** menu besi
 | **Repositories folder** | `<REPOSITORY_NAME>` |
 | **Tasks folder** | None |
 
-For example, `<REPOSITORY_PATH>/.worktrees/<REPOSITORY_NAME>` nests each worktree inside the repository it belongs to. Kepler collapses any `..` segments you write.
+For example, `<REPOSITORY_PATH>/.worktrees/<REPOSITORY_NAME>` nests each worktree inside the repository it belongs to.
 
 **Tasks folder** takes no variables. A task folder has no repository behind it, so nothing would ever fill one in. Kepler does not save such a value: *Dynamic variables cannot be used here. A task folder has no repository behind it, so nothing would ever fill one in. This value was not saved.*
 

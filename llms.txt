@@ -35,7 +35,7 @@ Scope: 29 pages included. Excluded (3): environment-and-setup.md, kepler-New-Pag
 
 ## Configuration
 
-- [Settings](https://help.gitkraken.com/kepler/settings/): Open Kepler's Settings, find a setting by name or id, keep or discard unsaved changes, change settings in a remote window, and link straight to any setting with an anchor or a kepler://settings link.
+- [Settings](https://help.gitkraken.com/kepler/settings/): Open Kepler's Settings, find a setting by name, keep or discard unsaved changes, and change settings in a remote window.
 - [Setup and Account Settings](https://help.gitkraken.com/kepler/settings-setup-account/): Reopen Kepler's first-run setup checklist, see who you are signed in as, switch organizations, check what your plan unlocks, and track your GitKraken AI credits, usage by feature, and trials.
 - [Agent Settings](https://help.gitkraken.com/kepler/settings-agents/): Install, update, and sign in to your coding agents in Kepler, choose how their sessions start, and set up custom agents, MCP servers, agent tools, approval rules, and usage limits.
 - [Task Settings](https://help.gitkraken.com/kepler/settings-tasks/): Choose how new Kepler tasks start, including the default agent, where tasks make changes, the branch prefix, folder locations, and automatic task names, and how a task's page looks.

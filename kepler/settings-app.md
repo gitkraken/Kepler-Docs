@@ -11,13 +11,13 @@ git_hosts: [generic]
 integrations: []
 hosted_variant: both
 status: GA
-last_verified: 2026-10
+last_verified: 2026-11
 llms_include: true
 tags: [settings, language, windows, default-editor, keep-awake, notifications, appearance, themes, voice-input, keyboard-shortcuts]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: October 2026</kbd>
+<kbd>Last updated: November 2026</kbd>
 
 Use these Settings pages to change how Kepler itself looks and behaves:
 
@@ -52,7 +52,7 @@ These settings set how windows work on this machine:
 | **Restore windows on launch** | *Reopens the windows you had open, with their size, page and connection. Turn off to start with one window.* | On |
 | **Always use the custom folder picker** | Local windows open your system's folder dialog, and windows connected to another machine use Kepler's own folder picker, which can browse that machine. Turn this on to use Kepler's picker in every window | Off |
 
-Kepler reads **Restore windows on launch** only when it starts, so a change takes effect the next time you start Kepler.
+A change to **Restore windows on launch** takes effect the next time you start Kepler.
 
 ### Default editor
 
@@ -73,11 +73,11 @@ These settings keep agent work running when the machine would otherwise stop it.
 | **Keep this machine awake while agents work** | Blocks sleep and standby while an agent session is starting, running, or waiting for your input. It also blocks sleep while Remote Access is on, because sleeping would drop the connection, but not while Remote Access is waiting to reconnect | On |
 | **Keep agents and terminals running across restarts and updates** | *Agent sessions and terminals stay alive while Kepler restarts or updates, and reconnect afterwards. Experimental.* | On |
 
-To keep the machine awake, Kepler uses the platform's own method: `caffeinate` on macOS, an execution-state assertion on Windows, and `systemd-inhibit` on Linux. The screen can still turn off. If Kepler cannot keep the machine awake, the setting says so under the switch, for example *Can't stay awake: there is no sleep-blocking mechanism available on this platform.* On Linux, the setting can say that the system's polkit policy refuses the request, and give a rule an administrator can install.
+The screen can still turn off. If Kepler cannot keep the machine awake, the setting says so under the switch, for example *Can't stay awake: there is no sleep-blocking mechanism available on this platform.* On Linux, the setting can say that the system's polkit policy refuses the request, and give a rule an administrator can install.
 
 The setting counts Claude Code sessions detected outside Kepler as well as Kepler's own sessions. Kepler lets the machine sleep again as soon as the last of those sessions settles.
 
-**Keep agents and terminals running across restarts and updates** applies from the next session you start. With it on, a ready update's popover says *Running agents and open terminals keep going through the restart.* On a build that does not include the runtime this setting needs, the switch shows off, is disabled, and says so: *This build can't keep agents running across restarts.*
+**Keep agents and terminals running across restarts and updates** applies from the next session you start. With it on, a ready update's popover says *Running agents and open terminals keep going through the restart.* On a build that does not support this setting, the switch shows off, is disabled, and says so: *This build can't keep agents running across restarts.*
 
 ***
 
@@ -154,7 +154,7 @@ The tile in use reads **In use now**. If you used **Midnight** in an earlier ver
   <figcaption style="text-align:center; color:#888">Appearance and Theme, at their defaults.</figcaption>
 </figure>
 
-Terminals follow the theme too. When a terminal program asks, such as an agent's own command-line app, Kepler tells it the terminal's background color as it starts, so the program can draw colors that suit your theme. If a running program asks to follow theme changes, Kepler redraws it when you switch themes.
+Terminals follow the theme too. Agent CLIs and other terminal programs that support it match your theme.
 
 #### Your themes
 
@@ -216,7 +216,7 @@ If a theme you already have uses the same id, Kepler asks before it replaces tha
 
 #### Create a theme
 
-**Create a theme** opens the new task launcher with a prompt already written for an agent, ending in *The theme I want:* for you to describe it. The agent reads and saves themes through Kepler's `theme_get` and `theme_save` tools, so it does not need the themes folder attached. Before `theme_save` saves a theme, it checks the file's format and that its colors reach the minimum contrast Kepler requires, and reports any problem back to the agent. **Create a task to fix it**, on a broken theme file, starts the same kind of task with that file's problems listed.
+**Create a theme** opens the new task launcher with a prompt already written for an agent, ending in *The theme I want:* for you to describe it. The agent reads and saves themes through Kepler's `theme_get` and `theme_save` tools, so it does not need the themes folder attached. The agent checks the theme's format and contrast before saving. **Create a task to fix it**, on a broken theme file, starts the same kind of task with that file's problems listed.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/create-a-theme-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -239,7 +239,7 @@ Themes belong to this computer, as your choice of theme does. Every window, incl
 
 Updating or replacing your own copy asks first: **Update {name} to {version}?** or **Replace {name} on this computer?**. Your copy moves to the Trash (the Recycle Bin on Windows), and Kepler confirms *Your previous copy is in the {bin}.* Where Kepler cannot use a Trash, it does not replace your copy: *To use this version, remove the copy on this computer first*. A host update to your own copy also shows on its tile in **Your themes**.
 
-Kepler's background theme sync never overwrites a copy you installed from the picker. When the host's copy changes, the picker offers the update instead, and it waits until you choose it.
+Kepler never replaces your copy on its own; an update from {host} waits until you choose it.
 
 ### Chat
 
@@ -345,7 +345,7 @@ Whisper offers 4 quality levels:
 | **Accurate** | Accents, names, and background noise. Expect a short pause after speaking on machines without a modern graphics card |
 | **Most accurate** | The best quality available, including for languages other than English. Worth it on Apple Silicon or a recent graphics card, and slow on anything older |
 
-Each option shows its approximate download size, calculated for the runtime your hardware check measured, so the size you see before installing is the size you download. A download continues if you leave the page, and Kepler notifies you when the model is ready.
+Each option shows its approximate download size. A download continues if you leave the page, and Kepler notifies you when the model is ready.
 
 Once you have installed a Whisper model, use these controls to manage it:
 
@@ -454,8 +454,6 @@ The **Dashboard** group works on the Dashboard's tasks and detail panels:
 | Show or hide resources in detail panel | ⌘ ⇧ E | Ctrl + Shift + E |
 | Find in dashboard | ⌘ F | Ctrl + F |
 
-The earlier **Move panel left** and **Move panel right** keys, **⌘ ⌥ ←** and **⌘ ⌥ →**, still work, but the page does not list them.
-
 ### Task page shortcuts
 
 The **Task page** group works on a task's page:
@@ -519,11 +517,11 @@ Some keys do different things depending on where you are:
 - **⌘ ⇧ G** shows or hides changes in a Dashboard detail panel, and, on macOS, moves to the previous match in a code view.
 - **⌘ C** copies what a focused row, chip, or link names, such as a task's Kepler link, a pull request or issue link, a file path, or a commit hash, without opening a menu. In a text field, the message box, a terminal, or a text selection, it copies as usual.
 
-Kepler registers **Open quick launcher** with the OS, so it works while Kepler is in the background. Its row has a **Global** badge. **Quit**, **Ctrl + F4**, and the **PageUp** / **PageDown** tab keys are Windows and Linux shortcuts only. Kepler hides those rows on macOS, where you quit with the native **⌘ Q** menu item. **Close tab or panel** works only in the desktop app.
+**Open quick launcher** works while Kepler is in the background. Its row has a **Global** badge. **Quit**, **Ctrl + F4**, and the **PageUp** / **PageDown** tab keys are Windows and Linux shortcuts only. Kepler hides those rows on macOS, where you quit with the native **⌘ Q** menu item. **Close tab or panel** works only in the desktop app.
 
 On Windows and Linux, a focused terminal passes **Ctrl + W**, **Ctrl + L**, and **Ctrl + B** to the shell. To toggle the Ask Kepler chat from a terminal, press **Ctrl + K**: the shell does not keep that key. **Ctrl + `** always toggles the Ask Kepler terminal, even from a terminal.
 
-**Back** and **Forward** use different keys on each platform on purpose. **Alt + ←** is the Windows and Linux convention but moves by word on macOS, and **⌘ [** is the macOS convention (Safari, Finder) but not the Windows one. Hold either key to keep moving through your history.
+**Back** and **Forward** use different keys on each platform. Hold either key to keep moving through your history.
 
 **Send feedback**, **Show release notes**, **Show About**, **Check for updates**, and **Clean up worktrees** have no default key, so the page does not list them. You can open the first 4 from the app menu.
 

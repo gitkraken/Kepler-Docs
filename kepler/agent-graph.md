@@ -11,13 +11,13 @@ git_hosts: [generic]
 integrations: [claude-code, codex, copilot, cursor, auggie, opencode, grok, pi, antigravity]
 hosted_variant: both
 status: GA
-last_verified: 2026-10
+last_verified: 2026-11
 llms_include: true
 tags: [agent-graph, dashboard, sessions, subagents, tool-calls, monitoring]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: October 2026</kbd>
+<kbd>Last updated: November 2026</kbd>
 
 When several agents run at once, use the **Agent Graph** to see what each one is doing. The graph shows every task, the sessions in each task, each turn, every tool call, every subagent, and the files the agents touch. It updates live, and new nodes appear as the agents work. The Agent Graph shows agent work the way the Commit Graph in GitKraken Desktop shows a repository's history.
 
@@ -46,7 +46,7 @@ You can open the Agent Graph for all your agents or for a single session. It has
 | **All your agents** | In the control at the top left, switch to the **Agent Graph** segment, beside **Todo** and **Tasks in progress**. Kepler remembers your choice across restarts |
 | **One session** | On the task page, open the menu of the session's row in the context panel and choose **Show Agent Graph**. The session's graph opens beside its transcript, and **Hide Agent Graph** closes it |
 
-The Agent Graph is a segment, not a layout of the list, because it replaces the list instead of arranging it. To learn about **Todo**, **Tasks in progress**, and their **List** and **Board** layouts, see [Arranging Your Work](/kepler/arranging-your-work).
+To learn about **Todo**, **Tasks in progress**, and their **List** and **Board** layouts, see [Arranging Your Work](/kepler/arranging-your-work).
 
 When you open the graph from the main list, it shows exactly what the list would show, including your search and filters. When you open it on a session, the graph starts fully expanded, and grows downward (or to the right) as the conversation adds tool calls and subagents.
 
@@ -74,7 +74,7 @@ The graph has layers. Each layer is one level further from the root:
 | **Subagent** | A subagent the agent started, with its own tool calls beneath it |
 | **File** | The files a call touched. This is the bottom layer, where you can see when 2 sessions work on the same file |
 
-The graph shows only sessions that belong to a task. Kepler leaves out an external session that it can see but that no task owns, because the session has no task to attach to.
+The graph shows only sessions that belong to a task, so an external session that no task owns does not appear.
 
 ### Past turns start folded
 
@@ -135,7 +135,7 @@ For a node with children, the details header also has a fold button, **Collapse 
   <figcaption style="text-align:center; color:#888">A folded turn selected, with Expand what is under this node in its details header.</figcaption>
 </figure>
 
-**The graph shows a call's duration only when Kepler watched the call happen.** Replayed history does not record how long a call took, so the graph leaves the duration out instead of estimating it.
+Some calls show no duration.
 
 From the details, click **Open task** or **Open session** to go to the work, or **Copy** to copy any input or prompt.
 
@@ -152,7 +152,7 @@ The stats column, on the right side of the graph, shows numbers about all your a
   <figcaption style="text-align:center; color:#888">The stats column.</figcaption>
 </figure>
 
-The stats column uses the same data as the graph, so its numbers always match what the graph shows. On the dashboard, the stats column hides while a panel is open.
+On the dashboard, the stats column hides while a panel is open.
 
 ### The counters
 
@@ -167,7 +167,7 @@ The top of the stats column has 6 tiles, 2 across:
 | **Subagents** | Subagents running now |
 | **Failed calls** | Tool calls that ended with an error, across the graph shown |
 
-**Working** and **Thinking** are separate counters because they describe different situations. Agents that are all waiting on the model need something different from agents that are all running commands, and a single "busy" number cannot tell you which you have. **Blocked** and **Unread** are the counters that tell you to act.
+**Blocked** and **Unread** are the counters that tell you to act.
 
 ### Needs attention
 
@@ -267,11 +267,11 @@ Your agents keep working while you hold a frame, and Kepler keeps recording, so 
 
 The graph does not show everything about your agents' work:
 
-- **No token counts per turn.** Agents report a total for the context window, not the tokens in and out of each turn. The graph shows how full the context window is, and the cost, instead.
-- **No durations for calls Kepler did not watch.** See [Click any node for detail](#click-any-node-for-detail).
-- **No cost or time per subagent.** No agent reports them.
-- **No activity for external and terminal sessions.** Kepler can see that these sessions exist but not what they are doing, so the graph shows each one as a single node with a badge, instead of showing it as idle.
-- **No history after Kepler restarts.** Kepler keeps a session's history in memory only while it runs, so after a restart the nodes beneath a session are empty, though the session node remains.
+- **No token counts per turn.** The graph shows how full the context window is, and the cost, instead.
+- **No durations for some calls.** See [Click any node for detail](#click-any-node-for-detail).
+- **No cost or time per subagent.**
+- **No activity for external and terminal sessions.** The graph shows each one as a single node with a badge, instead of showing it as idle.
+- **No history after Kepler restarts.** After a restart, the nodes beneath a session are empty, though the session node remains.
 
 When nothing is running, the graph reads **Nothing running yet**, with the hint *Start an agent session and its activity appears here in real time.* When sessions exist but your filters exclude all of them, the hint changes to *No sessions match the current filters.*
 

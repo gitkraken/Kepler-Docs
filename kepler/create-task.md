@@ -11,13 +11,13 @@ git_hosts: [github, github-enterprise, gitlab, gitlab-self-hosted, bitbucket, az
 integrations: [github, github-enterprise, gitlab, gitlab-self-hosted, bitbucket, azure-devops, jira, linear, trello]
 hosted_variant: both
 status: GA
-last_verified: 2026-10
+last_verified: 2026-11
 llms_include: true
 tags: [tasks, create-task, composer, worktrees, branches, folders, issues, pull-requests, actions, gitlens, gitkraken-desktop]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: October 2026</kbd>
+<kbd>Last updated: November 2026</kbd>
 
 You can start a task in several ways. Starting from work that is already assigned to you is usually the best choice:
 
@@ -174,17 +174,15 @@ Kepler names a task's branch from what the task is about, rather than from the t
 
 - **The name is suggested from your prompt** and appears on the chip as you type: *Suggested from your prompt. Click to edit.* Clicking it opens the field (**Enter keeps, Esc restores the suggestion**), and an edited name reads *Named by you.*
 - **An issue identifier leads the name** when the task came from one, so `KEP-421-fix-the-import-path` rather than a slug with the ticket buried in it.
-- **Automatic names are namespaced under `kepler/`.** That way a `git branch` listing in any other tool says where the branch came from, and a hand-made `feat/x` can never collide with one.
-- **A name you type is yours verbatim.** The prefix applies to automatic names only, which is how a repository with an enforced `feat/` or `fix/` push rule still works.
+- **Automatic names are namespaced under `kepler/`.**
+- **A name you type is yours verbatim.** The prefix applies to automatic names only.
 - **Your repository's own branch-naming policy is applied** where the host publishes one.
 
 You can set the prefix in 2 places: **Settings → Tasks → New tasks → Branch prefix** for the app, and per repository in **Settings → Repositories**, on the repository's own page. The repository's page offers **Default ({value})**, **None**, or **Custom**, and shows an example of what a branch will actually look like. Leave the app setting empty for no prefix at all. If a repository already has a branch literally named `kepler`, Kepler says so rather than creating a branch that Git cannot create: *This repository has a branch named {branch}, so the {prefix} prefix can't be used here.*
 
-By default, Kepler forks the new branch from the remote. If no remote default branch resolves (no remote, a shallow clone, or no network connection), Kepler falls back to the current HEAD rather than failing the launch.
+A repository linked to a pull request always opens in its own isolated working copy, and the toggle is locked: *This repository is linked to a pull request and always opens in its own isolated working copy.* If the pull request's branch already exists on this machine with commits that are not on the pull request, Kepler leaves that branch alone and starts the task on a new branch tracking the pull request: *Kept your local branch {branch}*. A pull request from a fork never takes over your own branch of the same name, even one with no extra commits, unless that branch already tracks the fork. Kepler puts the pull request on a branch with a different name.
 
-A repository linked to a pull request always opens in its own isolated working copy, and the toggle is locked: *This repository is linked to a pull request and always opens in its own isolated working copy.* If the pull request's branch already exists on this machine with commits that are not on the pull request, Kepler leaves that branch alone and starts the task on a new branch tracking the pull request: *Kept your local branch {branch}*. A pull request from a fork never takes over your own branch of the same name, even one with no extra commits, unless that branch already tracks the fork. Kepler puts the pull request on another name instead: the head branch's name with each `/` turned into `-`, with `-2`, `-3`, and so on added when that name is taken.
-
-When the task starts, Kepler clones a repository you have not cloned yet into your **Repositories folder**: *This repository is cloned when you start the task.* Until then, the branch segment is locked (*its branches become available after cloning*), because Kepler does not yet know what branches the repository has. Meanwhile, the chip reads **default branch**.
+When the task starts, Kepler clones a repository you have not cloned yet into your **Repositories folder**: *This repository is cloned when you start the task.* Until then, the branch segment is locked (*its branches become available after cloning*). Meanwhile, the chip reads **default branch**.
 
 Attaching the same repository twice gives the task 2 independent worktrees on it. This is useful for comparing 2 approaches, but make sure you meant to attach it twice. Two chips that would resolve to the *same* worktree get a **Duplicate worktree** marker instead, and Kepler creates only 1 of them. If a chip works in place on a branch that another chip has already claimed for an isolated worktree, Kepler marks it **Superseded by a worktree** and skips it, because Git cannot check out 1 branch in 2 places.
 
@@ -279,10 +277,6 @@ If a link cannot open on the machine it names, it opens on this computer instead
   <figcaption style="text-align:center; color:#888">A link for a remote machine that opened on this computer instead.</figcaption>
 </figure>
 
-### Opening an agent's own conversation
-
-A session link can name a conversation by the agent's own ID rather than Kepler's: `kepler://session?agent=<agent>&id=<conversation id>&cwd=<folder>`. The `agent` must be one of Kepler's built-in agents, and `cwd` is only a hint about where to look. If a Kepler session already holds that conversation, the link opens it. Otherwise Kepler adds the conversation to a task the way **Open an external session** does. That needs external session detection: with detection off, the link reads **External sessions are not detected**: *Turn on detection to find that session in its agent.* A link with a required part missing reads **Part of this link is missing**.
-
 ***
 
 ## After the task starts
@@ -307,6 +301,6 @@ Starting from **Todo** and starting from the **New task** composer send the same
 | **A row in Todo** | The full issue or pull request body, attached as shared context |
 | **The New task composer** | A reference (identifier, title, and URL) which the agent fetches the detail from itself |
 
-Either way, Kepler reads each linked issue fresh when the task launches and saves its description as a note titled *Issue {identifier}: {title}*, headed by the issue's URL. Each note holds up to 8 KB, and all of them together up to 16 KB. A longer description is cut off with a pointer to the URL. Kepler hands these notes to the agent as third-party background, to treat as information rather than as instructions. It frames the task's prompt as background too, so the agent acts on the messages you send in its session. Kepler does not save pull request descriptions this way.
+Either way, Kepler saves each linked issue's description as a note titled *Issue {identifier}: {title}*; long descriptions are shortened with a link to the issue. Kepler does not save pull request descriptions this way.
 
 ---
