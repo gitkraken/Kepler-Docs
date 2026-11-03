@@ -118,7 +118,7 @@ A provider's row can also show a warning:
 | **Unexpected response** | The provider answered with data Kepler could not read, so some of its items may be missing. The integration is still connected | Reconnecting does not fix it. If the warning stays, check for a proxy or gateway between Kepler and the provider |
 | An organization named under the row | One organization refuses Kepler's access, so its items are left out while everything else still loads. For example, Kepler names a GitHub organization that restricts OAuth app access, with a **Request access on GitHub** link | Follow the advice on the row, which names who can remove the restriction |
 
-You do not have to open Settings to find a failing provider. Todo, the **Add resources** lists, and a link preview name it too, with the one fix that applies: **Reconnect**, **Reconnect in settings** for a self-hosted provider, **Open settings**, or **Retry**. See [Pull Request Integrations](/kepler/pull-request-integrations#where-your-pull-requests-turn-up) for each warning.
+You do not have to open Settings to find a failing provider. Todo, the **Resources** screen's lists, and a link preview name it too, with the one fix that applies: **Reconnect**, **Reconnect in settings** for a self-hosted provider, **Open settings**, or **Retry**. See [Pull Request Integrations](/kepler/pull-request-integrations#where-your-pull-requests-turn-up) for each warning.
 
 ***
 
@@ -166,6 +166,8 @@ Each entry carries two independent controls:
 
 **Browsing a secondary account does not change your primary.** Selecting **Read from this account** on a second account switches what Kepler shows you and leaves the primary as it is. The primary is the default read account, so a provider with no override reads through it.
 
+**Agents keep acting as the primary account.** Your agents' GitKraken MCP server always uses the primary connection of your GitKraken account. When Kepler reads a provider through another account, a warning under the provider's accounts says so: *Agents' GitKraken MCP server acts as {account}, the primary connection on your GitKraken account.*
+
 Changing either one clears that provider's saved filters.
 
 **Reconnect keeps your choices.** When one account's sign-in fails, **Reconnect** renews that account's connection and keeps your primary and read choices.
@@ -209,7 +211,9 @@ When an issue becomes a task, Kepler attaches what it read, so the agent starts 
 | **Repository** | Name, owner, and host, for the git hosts |
 | **URL** | Used by the open control, which names the provider: **Open on GitHub**, **Open on Jira**, and so on |
 
-Kepler does not read an issue's priority field, due date, milestone, Trello checklist, or Linear cycle. An agent can still find these by opening the issue's URL itself, but Kepler does not deliver them as attached context. Todo's **Priority** grouping and filter come from labels instead: a label such as `P1`, `priority: high`, `blocker`, or `critical` sets the level, and the most urgent label wins. Jira and Linear keep priority in a field Kepler does not read, so their issues show as **Unprioritised** unless a label sets a priority. See [Arranging Your Work](/kepler/arranging-your-work).
+Kepler does not read an issue's priority field, due date, milestone, Trello checklist, or Linear cycle. An agent can still find these by opening the issue's URL itself, but Kepler does not deliver them as attached context.
+
+Todo's **Priority** grouping and filter come from labels instead: a label such as `P1`, `priority: high`, `blocker`, or `critical` sets the level, and the most urgent label wins. Jira and Linear keep priority in a field Kepler does not read, so their issues show as **Unprioritised** unless a label sets a priority. See [Arranging Your Work](/kepler/arranging-your-work).
 
 Kepler converts descriptions to Markdown when the provider stores them in another format: Jira's wiki markup and Azure DevOps work items' HTML. Headings, code blocks, and tables then look the same in Kepler's previews and in the agent's context.
 
@@ -217,7 +221,7 @@ Images embedded in an issue's description, including Jira and Azure DevOps attac
 
 ### Comments
 
-When you open an issue in a reader, either the task panel's side pane or the issue's pane on the task page, a **Comments** section under the summary shows its discussion. Kepler reads comments for **GitHub**, **GitHub Enterprise**, **GitLab**, **GitLab Self-Hosted**, **Jira**, and **Jira Server / Data Center**, through the same connection it reads the issue with. For other providers, the section says that comments for that provider are not available in Kepler yet.
+When you open an issue in a reader, either the task panel's side pane or the issue's pane on the task page, a **Comments** section under the summary shows its discussion. Kepler reads comments for **GitHub**, **GitHub Enterprise**, **GitLab**, **GitLab Self-Hosted**, **Jira**, and **Jira Server / Data Center**. For other providers, the section says that comments for that provider are not available in Kepler yet.
 
 Kepler reads up to the newest 100 comments, shows the latest ones with the newest at the bottom, and offers **Show earlier comments** for the rest it read. **Refresh comments** reads the discussion again. Each comment shows its author, when it was posted, and its body as Markdown. Comments are for you to read: Kepler shows them in the reader but does not attach them to the task or pass them to the agent.
 
@@ -225,7 +229,16 @@ Kepler reads up to the newest 100 comments, shows the latest ones with the newes
 
 Kepler lists open work. An issue that is finished or canceled in its tracker (a Linear issue in *Done* or *Canceled*, for example) leaves **Todo** and the issue pickers. An issue already attached to a task keeps showing on that task with its real state, finished or not.
 
-**Todo** shows the issues related to you on each connected integration, across every organization you belong to. Each provider reports a different set of issues related to you:
+A Todo view has 2 scopes, set in its **View** menu under **Scope**:
+
+- **Mine**: *Created by you, assigned to you, mentioning you, or awaiting your review*, across every organization you belong to.
+- **All**: *Everything open in Kepler's repos, plus your work elsewhere*. It adds the open issues of the repositories added to Kepler on GitHub, GitHub Enterprise, GitLab, and GitLab Self-Hosted. On other providers, including Azure DevOps and Azure DevOps Server, it lists the same issues as **Mine**.
+
+Under **All**, **Repos** narrows the view to **All repos in Kepler** or a **Custom** list, and **Updated** to **Last 7 days**, **Last 30 days**, **Last 90 days** (the default), or **Last year**.
+
+**All repos in Kepler** skips a very large repository and says so in Todo, for example *Skipping {repo}: {count} open pull requests. Add it under Repos to load it anyway.*, with **Choose repos**. Ticking a very large repository under **Custom** warns that Kepler lists only its most recently updated items and that loading it can make the provider pause Kepler's reads for a few minutes. While repositories are still loading, Todo reads *Still loading {count} repos. They fill in over the next few minutes.*
+
+Under **Mine**, each provider reports a different set of issues related to you:
 
 | Provider | Issues Todo lists |
 |---|---|
@@ -233,16 +246,22 @@ Kepler lists open work. An issue that is finished or canceled in its tracker (a 
 | **GitLab**, **GitLab Self-Hosted**, **Azure DevOps**, **Azure DevOps Server** | Yours or assigned to you |
 | **Jira**, **Jira Server / Data Center**, **Linear**, **Trello** | Assigned to you |
 
-An issue listed only because you were mentioned is marked **Mentioned**, so you can tell it apart from work that is yours. Hover the **Related to me** chip in Todo's header to see the rule for each integration you have connected.
+An issue listed only because you were mentioned is marked **Mentioned**, so you can tell it apart from work that is yours. Under **All**, the **Your role** filter and grouping also offer **Not mine**, for the work that is not related to you.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/todo-scope-tooltip-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/todo-scope-tooltip-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Related to me chip on Todo with its tooltip: Related to me, Across every organization you belong to, then one block per connected integration. Azure DevOps lists Issues: Yours or assigned to you and Pull requests: Yours or awaiting your review; GitHub lists Issues: Yours, assigned to you or mentioning you and Pull requests: Yours, assigned to you or ones you review. It ends with To browse everything else, use New task → Issues → All visible.">
+    <img src="/wp-content/uploads/todo-scope-tooltip-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Todo's View menu, opened from the toolbar's View button (Type, Updated, All). It switches List or Board, and the scope Mine or All, here All: Kepler repos, last 90 days, with Repos (All) and Updated (90 days). Below are Group by (Type), Sort by (Updated) and the Filters Needs my attention, Type, Linked work, Priority, Age and Provider, each Any.">
   </a>
-  <figcaption style="text-align:center; color:#888">The Related to me tooltip states Todo's scope for each connected integration.</figcaption>
+  <figcaption style="text-align:center; color:#888">A Todo view's scope, set in its View menu.</figcaption>
 </figure>
 
-To browse beyond that, use **All visible** in the issue list of **Add resources**. For GitHub and Azure DevOps, **All visible** reads every issue across your organizations, including repositories you can read outside them, such as ones where you are an outside collaborator. It loads more slowly. Jira and Linear show only your issues there until you pick a project or a team:
+To find issues to add to a task, the issue list on a task's **Resources** screen has its own scope menu:
+
+- **Related to me**: *Issues you authored, are assigned, or were mentioned in*.
+- **All in my repos**: *Every open issue in the repos added to Kepler, updated in the last year*. A line under the list names the providers that fill it, such as *Open issues in your repos on GitHub and GitLab*, or reads *None of your connected providers lists the open issues in your repos.*
+- **All visible**: issues beyond your own, as follows.
+
+For GitHub and Azure DevOps, **All visible** reads every issue across your organizations, including repositories you can read outside them, such as ones where you are an outside collaborator. It loads more slowly. Jira and Linear show only your issues there until you pick a project or a team:
 
 - **Jira**: when the issue list shows Jira alone, a project picker appears, starting with **All projects**. Pick a project to see every open issue in it. Kepler remembers the pick for each Jira connection.
 - **Linear**: when the issue list shows Linear alone, a team picker and a **Project** picker appear. Pick a team, a Linear project, or both, to see every open issue in them, whoever it is assigned to. The **Project** picker starts at **All projects** and lists your Linear workspace's projects by name with their state (**Backlog**, **Planned**, **Started**, **Paused**, **Completed**, or **Canceled**), closed ones included. A Linear project can span teams, so the two pickers narrow together. Changing the team clears the project pick.
@@ -261,7 +280,7 @@ Your issues appear in 3 places:
 
 | Surface | What it gives you |
 |---|---|
-| [The Kepler interface](/kepler/kepler-interface) | The **Todo** segment lists your issues across every connected tracker, grouped and filtered how you like |
+| [The Kepler interface](/kepler/kepler-interface) | A **Todo** view lists your issues across every connected tracker, grouped and filtered how you like |
 | [Actions](/kepler/actions) | The **Action** button on a row hands the issue to an agent with its context attached. Running an Action on an issue that has no task also turns it into a task |
 | [Tasks and Resources](/kepler/tasks-and-resources) | An issue is a resource on a task, so you can attach one to work that already exists |
 
@@ -272,13 +291,13 @@ Kepler recognizes an issue from its URL when you paste or attach one, including 
 - **GitLab** work items, at `/-/work_items/<number>` in a project. A group-level work item stays a plain link.
 - **Azure DevOps** work items, at `/<organization>/<project>/_workitems/edit/<number>` or at the organization level, `/<organization>/_workitems/edit/<number>`.
 
-**Search by key or link.** In the issue list of **Add resources**, type a Jira or Linear issue key, such as `OPS-42`, or paste a Jira Cloud, Jira Server / Data Center, Linear, or Azure DevOps work item link. Kepler finds that issue in its tracker, whatever its state, even when it is not in the list. A Jira Server / Data Center link resolves when it points at an installation you have connected.
+**Search by key or link.** In the issue list of a task's **Resources** screen, type a Jira or Linear issue key, such as `OPS-42`, or paste a Jira Cloud, Jira Server / Data Center, Linear, or Azure DevOps work item link. Kepler finds that issue in its tracker, whatever its state, even when it is not in the list. A Jira Server / Data Center link resolves when it points at an installation you have connected.
 
 **Jira keys in commits and branches.** With Jira or Jira Server / Data Center connected, Kepler links Jira issue keys in commit messages and branch names, so `OPS-42` in a commit message links to that issue. Right-click a commit in a worktree's commit list for **Open issue {issue}** and **Copy issue URL for {issue}** (see [Review Changes](/kepler/review-changes#the-changes-panel)), and the **Worktrees and branches** page shows the keys as chips on branch and worktree rows (see [Settings](/kepler/settings-repositories#worktrees-and-branches)). When 2 connected sites share a key, the label adds the site's address. Only Jira keys are linked this way; Kepler does not link other trackers' issue references in a commit.
 
-**Pick from the list with the keyboard.** The issue list in **Add resources** has a preview pane and keyboard picking: arrows move between rows, **Space** selects, and **Enter** or a double-click adds. See [Picking issues and pull requests](/kepler/tasks-and-resources#picking-issues-and-pull-requests).
+**Add from the list with the keyboard.** In the issue list on the **Resources** screen, the arrows move between rows, and **Enter** or a double-click presses the row's **Add**. Each issue is added at once. **Show preview** in the screen's header (**Cmd/Ctrl+Shift+P**) shows the picked row beside the list. See [Picking issues and pull requests](/kepler/tasks-and-resources#picking-issues-and-pull-requests).
 
-**Paste a link on the Links tab.** An issue URL pasted on the **Links** tab of **Add resources** is looked up and added as that issue, with **Add as plain link** to keep it a plain link. See [Pasting an issue link](/kepler/tasks-and-resources#pasting-an-issue-link).
+**Paste a link on the Links tab.** An issue URL pasted on the **Links** tab of the **Resources** screen is looked up and added as that issue, with **Add as plain link** to keep it a plain link. See [Pasting an issue link](/kepler/tasks-and-resources#pasting-an-issue-link).
 
 **Paste a link into a prompt.** Paste an issue or pull request URL into a session's or a new task's composer and it becomes a link chip, which Kepler attaches to the task when you send. See [Sending a prompt](/kepler/agent-sessions#sending-a-prompt).
 

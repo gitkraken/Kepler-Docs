@@ -11,13 +11,13 @@ git_hosts: [generic]
 integrations: []
 hosted_variant: both
 status: GA
-last_verified: 2026-10
+last_verified: 2026-11
 llms_include: true
 tags: [settings, remote-environments, ssh, wsl, remote-access, gitkraken-dev]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: October 2026</kbd>
+<kbd>Last updated: November 2026</kbd>
 
 Use **Settings → Remote environments** to save the machines your agents can run on over SSH or WSL, and to choose how remote windows load. Use **Settings → Remote Access** to open this computer's Kepler from a browser or your phone. To learn how to work in a remote environment day to day, see [Remote Environments](/kepler/remote-environments).
 
@@ -74,13 +74,13 @@ If a window cannot reconnect to its machine, it shows a full-screen recovery scr
 
 ### Remote windows
 
-The following setting is saved on this machine:
+A window connected to another machine uses this app's interface when that machine runs the same version of Kepler, and the machine's own interface when the versions differ. The following setting changes what happens when they differ. It is saved on this machine, in the desktop app only:
 
 | Setting | What it controls | Default |
 |---|---|---|
-| **Use this app's interface in remote windows** | *Windows connected to another machine load their interface from this app instead of from that machine, so only your data crosses the connection. If that machine runs a different version of Kepler, its own interface is used.* Experimental, desktop app only | On |
+| **Always use this app's interface** | *When the server runs a different version, offer to update the server or this app instead of showing the server's interface. An outdated server then updates when you connect, even while other devices are using it.* | Off |
 
-A change to this setting takes effect the next time you connect to a machine that has no other window open.
+With it on, a server that is newer than this app shows **This remote server is newer than this window**: *Update this app to keep working with this server, which runs a newer version of Kepler.*
 
 To learn how to connect, forward ports, and how sessions behave on a machine, see [Remote environments](/kepler/remote-environments).
 
@@ -129,7 +129,7 @@ These 2 reasons tell you how to fix them:
 
 The section notes: *Only you can connect, signed in to your GitKraken account. Turning Remote Access off disconnects every device, and you can revoke any single device under Connected devices.*
 
-A pairing link works once and expires after 5 minutes. A used link shows *This pairing link no longer works*. To pair again, open a new link from the computer running Kepler. To learn about prerequisites, pairing, and managing sessions from gitkraken.dev, see [Remote environments](/kepler/remote-environments).
+A pairing link works once and expires after 5 minutes. A used link shows *This pairing link no longer works*. To pair again, open a new link from the computer running Kepler. If you open a machine's saved address later, such as a bookmark, after its browser session has ended, Kepler shows *Signing you in with GitKraken…* and takes you to gitkraken.dev to sign in and connect to the machine again. To learn about prerequisites, pairing, and managing sessions from gitkraken.dev, see [Remote environments](/kepler/remote-environments).
 
 ***
 

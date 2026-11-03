@@ -25,7 +25,7 @@ For the agent sessions that run inside a task, see [Agent Sessions](/kepler/agen
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/ask-kepler-chat-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ask-kepler-chat-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Ask Kepler panel under the top bar, whose Ask button (Kep and the word Ask) is highlighted beside Feedback, Settings and the account avatar. The panel header holds New chat with a chevron for past chats, the New chat button, Terminal, Dock panel and Close. Kep, the planet mascot, sits over Ask Kepler anything and the line Ask a quick question, or have Kepler check on and manage your tasks and sessions, with the starters What needs me right now?, Find or change a setting and What changed across my tasks today?, and the Ask anything composer at the bottom with the attach and microphone buttons and the agent pill.">
+    <img src="/wp-content/uploads/ask-kepler-chat-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Ask Kepler panel under the top bar's highlighted Ask button, its header holding New chat with a chevron for past chats, Archive (unavailable on a new chat), the New chat button, Terminal, Dock panel and Close. Kep, the planet mascot, sits over Ask Kepler anything and the starters What needs me right now?, Find or change a setting and What changed across my tasks today?, above the Ask anything composer with the attach and microphone buttons and the Default agent pill.">
   </a>
   <figcaption style="text-align:center; color:#888">Ask Kepler, open on a new chat.</figcaption>
 </figure>
@@ -41,10 +41,11 @@ You can open **Ask Kepler** from anywhere in Kepler in one of these ways:
 | The **Ask Kepler** button (Kep, the planet mascot, with the word **Ask**) in the top bar | The panel, on the section you used last |
 | **Cmd/Ctrl+L** or **Cmd/Ctrl+K** (**Toggle Ask Kepler chat**) | The **Chat** section |
 | **Ctrl+&#96;** on every platform, macOS included (**Toggle Ask Kepler terminal**) | The **Terminal** section, starting a shell if none is open |
+| **Cmd/Ctrl+Shift+K** or **Cmd/Ctrl+Shift+L** (**New Ask Kepler chat**) | A new chat, with its composer ready to type in, even when the panel is closed or on the **Terminal** section |
 
 To close the panel, press the same shortcut again while focus is inside it. On Windows and Linux, a focused shell uses **Ctrl+L** to clear its screen, so press **Ctrl+K** to open or close the chat from inside a terminal.
 
-**The top bar button shows the state of your chats.** While a panel chat you are not looking at is working, Kep's eye changes to the working colour. When a chat needs something from you, the button becomes a pill that reads **Needs you** (a question or an approval is waiting), **New reply**, or **Failed**. Click the pill to open the panel on that chat. Hover the pill to see which chat it means, such as *{title} needs you* or *New reply in {title}*, or a count when several chats are in the same state. In a narrow window, the button hides the word **Ask** and shows Kep alone.
+**The top bar button shows the state of your chats.** While a panel chat you are not looking at is working, Kep's eye changes to the working color. When a chat needs something from you, the button becomes a pill that reads **Needs you** (a question or an approval is waiting), **New reply**, or **Failed**. Click the pill to open the panel on that chat. Hover the pill to see which chat it means, such as *{title} needs you* or *New reply in {title}*, or a count when several chats are in the same state. In a narrow window, the button hides the word **Ask** and shows Kep alone.
 
 **Floating or docked.** By default, the panel floats as a card over the left or right edge of the page, under the top bar. The page behind it does not dim, so you can still use it. When you dock the panel, it becomes a column of the window, and the page narrows beside it instead of sitting under it. A docked panel opens and closes without sliding. The panel's header holds the open section, a button for the other section, and the panel's own controls:
 
@@ -95,7 +96,7 @@ A starter goes out on its own as the chat's first message. It does not change an
 The chat keeps up with what you have on screen. With each message, the agent knows:
 
 - The page you're on: the Dashboard, a task, Settings, or somewhere else
-- The task you're looking at, and its checkouts
+- The task you're looking at, and its worktrees and folders
 - The sessions on screen
 
 As a result, the agent answers a question such as *what's this one stuck on?* about the task in front of you. Kepler also tells the agent which sessions are waiting on you, such as approvals, permission requests, questions, and failed or unread sessions. To get that list, ask **What needs me right now?**
@@ -116,7 +117,7 @@ Kepler keeps some settings, such as the theme, the language, or the terminal fon
 
 The agent pill lists only agents that run in **Chat**. An agent that runs only in a terminal, such as Pi, cannot answer in the panel. See [Agent Integrations](/kepler/agent-integrations) for which agents run in **Chat**.
 
-**Ask Kepler keeps its own agent, separate from tasks.** A new chat opens on the agent you picked last in the panel. Picking an agent here never changes the agent a new task starts with, and picking an agent for a task never changes Ask Kepler's agent. When you have not picked an agent in the panel yet, or when you choose **Use default agent** on the pill, it uses Ask Kepler's default agent, set in **Settings → Agents** on the **Ask Kepler uses** row. See [Settings: Agents](/kepler/settings-agents).
+**Ask Kepler keeps its own agent, separate from tasks.** A new chat opens on the agent you picked last in the panel. Picking an agent here never changes the agent a new task starts with, and picking an agent for a task never changes Ask Kepler's agent. When you have not picked an agent in the panel yet, or when you choose **Use defaults** on the pill, it uses Ask Kepler's default agent and preset, set in **Settings → Agents** on the **Ask Kepler uses** and **Ask Kepler uses preset** rows. As in every composer, the pill also offers a **Preset**. See [Agent, model, mode, and effort](/kepler/agent-sessions#agent-model-mode-and-effort) and [Settings: Agents](/kepler/settings-agents).
 
 ### Past chats and new chats
 
@@ -124,13 +125,21 @@ To switch chats, open the chat's title in the panel header. It lists:
 
 - **New chat**, which returns the section to a fresh chat
 - **Continue in a new task**, for the chat that's open
-- **Past chats**, newest activity first, each with when it was last active. Click one to open it again, or use **Archive {title}** beside it to put it away. With none yet, the list reads **No past chats yet**.
+- Your open chats, grouped under **Unread**, **Needs attention**, **Running**, and **Recent**. Each chat has a status dot and when it was last active. Click one to open it again, or use **Archive {title}** beside it to put it away. With none, the list reads **No open chats**.
+- **Show archived**, with a count, which lists your **Archived chats**. Click one, or its **Restore {title}** button, to restore the chat and open it. **Hide archived** folds the list again.
 
-The **New chat** button beside the title does the same as the picker's first row.
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/ask-kepler-chat-picker-nov-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ask-kepler-chat-picker-nov-2026.png" class="help-center-img img-bordered" alt="Ask Kepler's chat picker open under the panel header: New chat, then Unread (Summarize the merged P…, blue dot), Needs attention (Run the checkout tests, orange dot), Running (Watch CI on PR 51, green dot) and Recent (Which tasks are blocked on…, gray dot), each with when it was last active and an Archive button. Hide archived (1) is open below them, listing Which worktrees can I clean u… with a Restore button.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The chat picker, with the archived chats shown.</figcaption>
+</figure>
+
+The **New chat** button beside the title does the same as the picker's first row. Its tooltip shows the **New Ask Kepler chat** shortcut, **Cmd/Ctrl+Shift+K** or **Cmd/Ctrl+Shift+L**, which works from anywhere in the desktop app. The **Archive** button before it archives the chat that's open and leaves the panel on a new chat.
 
 ### Continue in a new task
 
-When an answer turns out to be the start of real work, choose **Continue in a new task**, under the chat's latest reply or in the past-chats picker. It opens the **New task** composer with the prompt *Pick up where the chat left off.*, the chat attached as the session the task continues from, and the same agent, account, model, and mode the chat used. Edit anything you like before you start the task. See [Create a task](/kepler/create-task).
+When an answer turns out to be the start of real work, choose **Continue in a new task**, under the chat's latest reply or in the chat picker. It opens the **New task** composer with the prompt *Pick up where the chat left off.*, the chat attached as the session the task continues from, and the same agent, account, model, and mode the chat used. Edit anything you like before you start the task. See [Create a task](/kepler/create-task).
 
 A panel chat belongs to no task, so when a task's session links back to the chat it continued from, the chat opens in the panel. A notification from a panel chat also opens the panel on that chat.
 
@@ -149,8 +158,8 @@ The **Terminal** section holds shells that belong to no task, in the same tab st
 
 Where a new shell opens depends on where you are:
 
-- On a task's page, a new shell opens in one of that task's checkouts.
-- Anywhere else, or on a task with no checkouts, it opens in your **Home folder**.
+- On a task's page, a new shell opens in one of that task's worktrees or folders.
+- Anywhere else, or on a task with no worktrees or folders, it opens in your **Home folder**.
 
 The panel's shells belong to the panel. They never move to a task's terminal drawer, and they keep running when you move between pages or close the panel. While the **Terminal** section is open, its tab strip is also the panel header, with **Chat** as a button at its leading edge.
 

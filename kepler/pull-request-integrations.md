@@ -150,6 +150,8 @@ Each entry carries two independent controls:
 
 **Browsing a secondary account does not change your primary.** Selecting **Read from this account** on a second account switches what Kepler shows you and leaves the primary alone. The primary is the default read account, so a provider with no override reads through it.
 
+**Agents keep acting as the primary account.** Your agents' GitKraken MCP server always uses the primary connection of your GitKraken account. When Kepler reads a provider through another account, a warning under the provider's accounts says so: *Agents' GitKraken MCP server acts as {account}, the primary connection on your GitKraken account.*
+
 Changing either one clears that provider's saved filters.
 
 ***
@@ -218,12 +220,14 @@ Your pull requests appear in 4 places:
 
 | Surface | What it gives you |
 |---|---|
-| [The Kepler interface](/kepler/kepler-interface) | The **Todo** segment lists the pull requests related to you on each connected host, with your role on each |
+| [The Kepler interface](/kepler/kepler-interface) | A **Todo** view lists the pull requests related to you on each connected host, with your role on each, or every open pull request in the repositories added to Kepler |
 | [Actions](/kepler/actions) | The **Action** button hands the pull request to an agent. **Review** and **Address Feedback** are the 2 built-in Actions for pull requests, and Kepler picks one based on who authored the pull request |
 | [Review Changes](/kepler/review-changes) | Reading the diff and the commits behind a pull request |
 | [Tasks and Resources](/kepler/tasks-and-resources) | A pull request is a resource on a task, so you can attach one to work that already exists |
 
-**Todo's scope differs by host.** Each provider reports a different set of pull requests related to you, so Todo lists these from each:
+**Todo's scope.** A Todo view's **View** menu sets its **Scope**: **Mine**, the work related to you, or **All**, *Everything open in Kepler's repos, plus your work elsewhere*, narrowed by **Repos** and **Updated**. **All** adds the open pull requests of the repositories added to Kepler on all 8 Git hosts above, self-hosted ones included. See [Which issues Kepler lists](/kepler/issue-tracker-integrations#which-issues-kepler-lists).
+
+Under **Mine**, each provider reports a different set of pull requests related to you, so Todo lists these from each:
 
 | Host | Pull requests Todo lists |
 |---|---|
@@ -231,30 +235,30 @@ Your pull requests appear in 4 places:
 | **GitLab**, **GitLab Self-Hosted**, **Azure DevOps**, **Azure DevOps Server**, **Bitbucket Data Center** | Yours or awaiting your review |
 | **Bitbucket** | Yours, or awaiting your review in your workspaces and repositories added to Kepler |
 
-Hover the **Related to me** chip in Todo's header to see the rule for each integration you have connected. See [Issue Tracker Integrations](/kepler/issue-tracker-integrations#which-issues-kepler-lists) for the issue side.
+The pull request list on a task's **Resources** screen has its own scope menu: **Related to me** (*Pull requests you authored, are assigned, or were asked to review*) or **All in my repos** (*Every open pull request in the repos added to Kepler, updated in the last year*). Under **All in my repos**, a line names the providers that fill the list, such as *Open pull requests in your repos on GitHub*.
 
-**Review requests come from every host.** Pull requests waiting on your review show up from Azure DevOps, Azure DevOps Server, and Bitbucket Data Center as well as GitHub and GitLab. Bitbucket Cloud review requests appear repository by repository, starting with the repositories you have in Kepler, so on a large workspace they can take a while to appear.
+**Review requests come from every host.** Pull requests waiting on your review show up from Azure DevOps, Azure DevOps Server, and Bitbucket Data Center as well as GitHub and GitLab. Bitbucket review requests appear repository by repository, starting with the repositories you have in Kepler, so on a large workspace they can take a while to appear.
 
 **Kepler loads the lists you are looking at.** Pull request and issue lists refresh while they are on screen, and again when you come back to the window. When one provider fails to load, the others keep loading, and the failed provider's last loaded pull requests stay in the list.
 
-**A failing provider is named, with its fix.** When a connected provider's read fails, Todo, the **Add resources** lists, and a link preview show a warning that names the provider and what went wrong, such as *GitHub needs you to sign in again, so its work may be missing.* On Todo the warning sits under **Unable to load your work**. Each warning offers one fix:
+**A failing provider is named, with its fix.** When a connected provider's read fails, Todo, the **Resources** screen's lists, and a link preview show a warning that names the provider and the fix, such as *Sign in to GitHub again to load its work.* On Todo the warning sits under **Unable to load your work**. Each warning offers one fix:
 
 | What went wrong | The fix offered |
 |---|---|
 | The sign-in needs renewing | **Reconnect**, or **Reconnect in settings** for a self-hosted provider, which needs a new token |
-| The provider refused part of the request, so some organizations or repositories may be missing | **Open settings** |
+| The provider refused part of the request, so some organizations or repositories are missing | **Open settings** |
 | Rate limiting, an unreachable server, an unreadable answer, or a temporary problem | **Retry** |
 
-Rows kept from the last good load show a cloud mark on their provider chip, labeled *Not refreshed: shown from the last successful {provider} load.*
+Rows kept from the last good load show a cloud mark on their provider chip, labeled *Not refreshed: shown from the last successful {provider} load.* When a provider's warning shows above such rows, it adds *Rows with a cloud are from the last load.*
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/todo-provider-failure-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/todo-provider-failure-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Todo when GitHub refuses its sign-in: Unable to load your work, over a warning that reads GitHub needs you to sign in again, so its work may be missing, with a Reconnect button.">
+    <img src="/wp-content/uploads/todo-provider-failure-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Todo when GitHub refuses its sign-in: Unable to load your work, over a warning that reads Sign in to GitHub again to load its work, with a Reconnect button.">
   </a>
   <figcaption style="text-align:center; color:#888">Todo names a provider whose sign-in failed and offers Reconnect.</figcaption>
 </figure>
 
-**The pull request picker says why its list is empty.** When you attach a pull request from **Add resources**, the picker explains an empty list instead of showing *No matches*:
+**The pull request picker says why its list is empty.** When you add a pull request from the **Resources** screen, the picker explains an empty list instead of showing *No matches*:
 
 - If the **Linked work** filter hides pull requests, the picker says how many it hides and which filter hides them, and offers **Show all**.
 - If no connected provider can list pull requests, the picker reads **Connect your code host** and lists the providers that can fill the tab, each with **Connect**.
@@ -271,7 +275,7 @@ The **Linked work** filter defaults to **No active task**. A task counts as acti
 
 A row with task history carries a badge: **Task** or **{count} tasks** when one of them is active, **Archived task** or **{count} archived tasks** when all are archived.
 
-When nothing you have connected can list issues or pull requests, **Add resources** opens on a connect view, **Connect where your work lives**, with a tile for each provider. Connect each one you use, then click **Continue**. The provider filter's menu also offers **Connect another provider…**, which opens the same view with a **Back** button.
+When nothing you have connected can list issues or pull requests, **Add issue** and **Add PR** in the **New task** composer open on a connect view, **Connect where your work lives**, with a tile for each provider. Connect each one you use, then click **Continue**. On the **Resources** screen, an empty list shows **Connect your code host** or **Connect your issue tracker** instead. In both, the provider filter's menu offers **Connect another provider…**, which opens the connect view with a **Back** button.
 
 You can also start work on a pull request from GitLens or GitKraken Desktop. See [Create a task](/kepler/create-task).
 

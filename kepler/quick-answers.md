@@ -1,6 +1,6 @@
 ---
 title: Quick Answers
-description: Short answers to common Kepler questions, each linked to the full page. Run agents on Windows, in WSL, or on another machine, use several accounts of one agent, check on agents from your phone, set up every new worktree automatically, and have a second agent review the work.
+description: Short answers to common Kepler questions, each linked to the full page. Run agents on Windows, in WSL, or on another machine, use several accounts of one agent, check on agents from your phone, set up and copy files into every new worktree automatically, and have a second agent review the work.
 product: Kepler
 feature: Quick Answers
 content_type: how-to
@@ -11,13 +11,13 @@ git_hosts: [github, github-enterprise, gitlab, gitlab-self-hosted, bitbucket, az
 integrations: [claude-code, codex-cli, copilot-cli, cursor, auggie, opencode, grok, pi, antigravity]
 hosted_variant: both
 status: GA
-last_verified: 2026-10
+last_verified: 2026-11
 llms_include: true
 tags: [quick-answers, windows, wsl, ssh, accounts, remote-access, phone, worktrees, setup-commands, permissions, review, actions, pull-requests]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: October 2026</kbd>
+<kbd>Last updated: November 2026</kbd>
 
 Find a short answer to a common Kepler question, then follow its link for the full details. Start here when you know what you want to do but not where to find it.
 
@@ -50,7 +50,8 @@ Common questions about starting work, giving agents your rules, and preparing ea
 | Start an agent from a Jira, Linear, or GitHub issue | Connect your tracker, then run an Action from the issue's row. The issue becomes a task, and Kepler attaches what it read, so the agent starts with that context. | [Issue Tracker Integrations](/kepler/issue-tracker-integrations), [Actions](/kepler/actions) |
 | Start without an issue | Click **New task** or press **Cmd/Ctrl+N**, then write a prompt. You can attach nothing at all and turn the task into real work later. | [Getting Started → Start something that is not tracked yet](/kepler/kepler-getting-started#start-something-that-is-not-tracked-yet) |
 | Give every agent on a task your team's rules | Attach a **Note** to the task with the rule, constraint, or decision. Every session on the task gets it, including sessions you start later. | [Tasks and Resources → Notes](/kepler/tasks-and-resources#notes-are-how-you-give-standing-instructions) |
-| Install dependencies or copy `.env` files into every new worktree | Add a per-repository command and turn on **Run on worktree creation**. For example, `pnpm install` installs dependencies, and `cp "<SOURCE_PATH>/.env" .env` copies your `.env` file from the main repository. | [Settings → Per-repository commands](/kepler/settings-repositories#per-repository-commands) |
+| Copy `.env` files into every new worktree | List them, such as `.env`, in a `.worktreeinclude` file at the repository's root, in `.gitignore` syntax. Kepler copies the matching Git-ignored files from your checkout into each new worktree before any setup command runs, and never overwrites a file that is already there. | [Tasks and Resources → Make a new worktree ready to build](/kepler/tasks-and-resources#make-a-new-worktree-ready-to-build) |
+| Install dependencies in every new worktree | Add a per-repository command, such as `pnpm install`, and turn on **Run on worktree creation**. | [Settings → Per-repository commands](/kepler/settings-repositories#per-repository-commands) |
 | Keep agents in different worktrees from colliding on ports or databases | A worktree separates files, not ports, databases, or caches. Use a command that runs on worktree creation to give each worktree its own settings, such as its own port or database name. | [Tasks and Resources → What a worktree does not separate](/kepler/tasks-and-resources#what-a-worktree-does-not-separate) |
 
 ***

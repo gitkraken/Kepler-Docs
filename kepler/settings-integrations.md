@@ -11,13 +11,13 @@ git_hosts: [github, github-enterprise, gitlab, gitlab-self-hosted, bitbucket, bi
 integrations: [github, gitlab, bitbucket, azure-devops, jira, jira-data-center, linear, trello]
 hosted_variant: both
 status: GA
-last_verified: 2026-10
+last_verified: 2026-11
 llms_include: true
 tags: [settings, integrations, issue-trackers, git-hosts, terminal]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: October 2026</kbd>
+<kbd>Last updated: November 2026</kbd>
 
 Use **Settings → Integrations** to connect the issue trackers and Git hosts you start tasks from, and to follow agent sessions you run in your own terminal.
 
@@ -60,7 +60,7 @@ A self-hosted provider, such as GitHub Enterprise, Azure DevOps Server, Bitbucke
 
 To hide organizations, repositories, or tracker projects you do not want in Kepler, use **Choose what's visible…**. Every connected provider except Trello has it, on a line that reads **Everything visible** or **{count} hidden**. In **Choose what {name} brings in**, untick the items to hide. *Hidden items are left out of the dashboard, the launcher and pickers. Tasks and branches already linked to them keep resolving.* Kepler saves the choice on your GitKraken account. See [Issue Tracker Integrations](/kepler/issue-tracker-integrations).
 
-When a provider has more than 1 account, an **Accounts** block lists them. **Set as primary** chooses which account Kepler acts as, and **Read from this account** chooses which account Kepler reads issues and pull requests from. These can be different accounts.
+When a provider has more than 1 account, an **Accounts** block lists them. **Set as primary** chooses which account Kepler acts as, and **Read from this account** chooses which account Kepler reads issues and pull requests from. These can be different accounts. Agents' GitKraken MCP server always acts as the primary account, so when you read from another account, the block warns you: *Agents' GitKraken MCP server acts as {account}, the primary connection on your GitKraken account.*
 
 When an organization refuses a working connection, because it blocks third-party OAuth apps or has not approved GitKraken, the row names the organization and says that its items are not shown. The row links to a fix, such as **Request access on GitHub**.
 
@@ -78,7 +78,7 @@ The following setting lets you follow agent sessions you start outside Kepler:
 
 To do this, Kepler installs GitKraken hooks. The switch covers every agent that reports through hooks, and its help text names those agents. See [Agent Sessions](/kepler/agent-sessions#sessions-started-outside-kepler).
 
-If Kepler stops receiving hook events from a running agent session, every window shows *Agent sessions aren't reporting to Kepler*, with a **Repair** button. **Repair** installs the reporting configuration again. A running CLI does not reload its hooks, so restart any session that still does not report. A window that only views another computer's sessions shows the warning without **Repair**, and tells you to repair reporting from the computer running those sessions.
+If a running agent session stops reporting to Kepler, every window shows *Agent sessions aren't reporting to Kepler*, with a **Repair** button. **Repair** installs the reporting configuration again. A session that is already running may keep its old configuration, so restart any session that still does not report. A window that only views another computer's sessions shows the warning without **Repair**, and tells you to repair reporting from the computer running those sessions.
 
 ***
 

@@ -21,7 +21,7 @@ taxonomy:
 
 Use Settings to change how Kepler, your agents, and your tasks work. Settings has 15 pages. For what each setting on a page does, its default, and what changes when you change it, open that page's reference from [The Settings pages](#the-settings-pages).
 
-To open Settings, click the gear icon in the top bar, or press **⌘ ,** (**Ctrl ,** on Windows and Linux). To close it, click the gear icon or press the same shortcut again.
+To open Settings, click the gear icon in the top bar (at the foot of the Dashboard's views when they sit along the left side), or press **⌘ ,** (**Ctrl ,** on Windows and Linux). To close it, click the gear icon or press the same shortcut again.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/settings-general-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -46,7 +46,7 @@ The Settings sidebar, down the left of Settings, starts with a **Search settings
 | [**Actions**](/kepler/settings-actions) | Preferred Actions per item kind, and the Action list |
 | [**General**](/kepler/settings-app#general) | Language, windows, the default editor, and keeping agents running |
 | [**Notifications**](/kepler/settings-app#notifications) | Which agent events notify you, on the desktop and in Kepler |
-| [**Appearance**](/kepler/settings-app#appearance) | Light or dark appearance and themes, the chat, the terminal font, code font size, and diff layout |
+| [**Appearance**](/kepler/settings-app#appearance) | Light or dark appearance and themes, the Dashboard's views, the chat, the terminal font, and code: its font family, its size, and the diff layout |
 | [**Voice input**](/kepler/settings-app#voice-input) | On-device speech-to-text, its transcription engine, and learned words |
 | [**Keyboard shortcuts**](/kepler/settings-app#keyboard-shortcuts) | Kepler's keyboard shortcuts |
 | [**Remote environments**](/kepler/settings-environment#remote-environments) | The machines your agents can run on, over SSH or WSL |
@@ -58,7 +58,13 @@ The Settings sidebar, down the left of Settings, starts with a **Search settings
 
 ### Find a setting
 
-To find a setting by name, type in **Search settings**. Search matches section titles, control labels, help text, and common synonyms, so a word like *theme* or *notifications* finds the right section. With no match, the results read *No settings match "{query}"*.
+To find a setting by name, type in **Search settings**. When you open Settings from the gear icon or the shortcut, the field already has focus, so you can start typing at once. The field waits for you to click or tap it in these cases:
+
+- The window is narrow, as on a phone.
+- You use Kepler in a browser on a touch screen.
+- A link or a search result opens Settings at a particular setting or item.
+
+The field stays at the top of the Settings sidebar while the list of pages scrolls under it. Search matches section titles, control labels, help text, and common synonyms, so a word like *theme* or *notifications* finds the right section. With no match, the results read *No settings match "{query}"*.
 
 When a search result or an Ask Kepler link takes you to a setting, Kepler highlights its control and moves focus to it. If the setting is not shown, Kepler says why, such as *This agent shows that setting only when it is turned on and supports it.* or *This setting appears once what it depends on is set up.*
 

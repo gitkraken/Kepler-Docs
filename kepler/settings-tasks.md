@@ -1,6 +1,6 @@
 ---
 title: Task Settings
-description: Choose how new Kepler tasks start, including the default agent, where tasks make changes, the branch prefix, folder locations, and automatic task names, and how a task's page looks.
+description: Choose how new Kepler tasks start, including the default agent, where tasks make changes, the branch prefix, folder locations, and automatic task names, how a task's page looks, and your task groups.
 product: Kepler
 feature: Settings
 content_type: reference
@@ -19,7 +19,7 @@ taxonomy:
 ---
 <kbd>Last updated: November 2026</kbd>
 
-Use **Settings → Tasks** to choose how new tasks start and how a task's page looks. A task is one piece of work: its prompt, the agent sessions working on it, and the worktree or folder they work in.
+Use **Settings → Tasks** to choose how new tasks start and how a task's page looks, and to manage your task groups. A task is one piece of work: its prompt, the agent sessions working on it, and the worktree or folder they work in.
 
 ## New tasks
 
@@ -27,13 +27,12 @@ Use **Settings → Tasks** to choose how new tasks start and how a task's page l
 
 ### Default agent
 
-**Default agent** picks the agent, account, model, mode, and thinking effort that Kepler preselects for a new task. Its description reads *Used when new sessions start with the default agent, when Kepler has no earlier pick to go on, and whenever you choose Use default agent in the launcher.* The following table lists its controls:
+**Default agent** picks the agent, account, and agent preset that Kepler preselects for a new task. Its description reads *Used when new sessions start with the default agent, when Kepler has no earlier pick to go on, and whenever you choose Use default agent in the launcher.* In the launcher, that button reads **Use defaults**. The following table lists its controls:
 
 | Control | What it does |
 |---|---|
-| **New tasks use** | Chooses the agent, and the account when that agent supports more than one |
-| Options | Model, mode, and the agent's own configuration options. Available once an agent is picked |
-| **Clear default** | Removes the saved default. Appears only once one is set |
+| **New tasks use** | Chooses the agent, and the account when that agent supports more than one. **Use last used agent**, in the same picker, removes the saved default |
+| **New tasks use preset** | The [agent preset](/kepler/settings-agents#agent-presets) new tasks start with: **Default**, which holds the default agent's own model, mode, and options, or one of your presets |
 
 No default agent is set out of the box. If no agent is installed, Kepler hides the control. If you later uninstall the agent you saved, the row warns you: *Your default agent, {name}, is no longer installed. Pick another.*
 
@@ -46,13 +45,13 @@ Under **Default agent**, the following setting decides which agent the **New tas
 | Option | What it does |
 |---|---|
 | **Last used agent** | *The agent, model and mode you last picked.* The default |
-| **Default agent** | *Always the default agent above.* |
+| **Default agent** | *Always the default agent.* |
 
 With **Last used agent**, a task that an agent created and that has no session yet starts with the agent that created it. Kepler does not remember an Action's own agent as your last pick. If you choose **Default agent** with no default set, Kepler points you to the **Default agent** picker. Neither setting applies to Ask Kepler, which keeps its own last pick and its own default in [Settings → Agents](/kepler/settings-agents).
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/new-sessions-start-with-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-sessions-start-with-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The New tasks section of Settings › Tasks: New tasks use Claude Code CLI with Options and Clear default, its description, and New sessions start with offering Last used agent (The agent, model and mode you last picked) beside Default agent (Always the default agent above).">
+    <img src="/wp-content/uploads/new-sessions-start-with-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The New tasks section of Settings › Tasks: New tasks use Claude Code CLI (alex.lee@example.com, Acme), New tasks use preset set to Default, their description, and New sessions start with offering Last used agent (The agent, model and mode you last picked), selected, beside Default agent (Always the default agent).">
   </a>
   <figcaption style="text-align:center; color:#888">Default agent and New sessions start with, in Settings → Tasks.</figcaption>
 </figure>
@@ -69,7 +68,7 @@ The setting has these options:
 
 | Option | What it does |
 |---|---|
-| **Isolated worktree** | *Own folder, agents run side by side.* Forks a new branch into its own worktree |
+| **Isolated worktree** | *A separate copy of the repo, so agents can work in parallel.* Forks a new branch into its own worktree |
 | **New branch** | *Switches your repo to a new branch.* Forks a new branch directly in the repository's own checkout, with no worktree |
 | **Current branch** | *Works on whatever is checked out.* Runs on the repository's own checkout, on whichever branch it currently has, with no new branch created |
 
@@ -77,7 +76,7 @@ This setting is only the default. For a single task, the repository chip's own *
 
 **Commits made on the current branch land on whichever branch is checked out at the time.** This applies to both **New branch** and **Current branch**, because both run in the repository's own checkout instead of an isolated one. If another task is already working in that checkout, Kepler says so and offers to switch that repository to an isolated worktree instead.
 
-**Branch prefix** and **Worktrees folder** appear under **Where new tasks make changes**, because they apply only when Kepler creates a branch or a worktree.
+**Branch prefix**, **Worktrees folder**, and **Tasks folder** follow **Where new tasks make changes**. You can edit them whichever option you choose, because a single task can still ask for a new branch or a worktree.
 
 ### Branch prefix
 
@@ -122,7 +121,7 @@ A folder field that can contain a dynamic variable has a **Variables** menu besi
 
 For example, `<REPOSITORY_PATH>/.worktrees/<REPOSITORY_NAME>` nests each worktree inside the repository it belongs to.
 
-**Tasks folder** takes no variables. A task folder has no repository behind it, so nothing would ever fill one in. Kepler does not save such a value: *Dynamic variables cannot be used here. A task folder has no repository behind it, so nothing would ever fill one in. This value was not saved.*
+**Tasks folder** takes no variables, and Kepler does not save a value that has one: *Dynamic variables cannot be used here. A task folder has no repository behind it, so nothing would ever fill one in. This value was not saved.*
 
 Per-repository commands have a **Variables** menu of their own, with 2 more variables. See [Per-repository commands](/kepler/settings-repositories#per-repository-commands).
 
@@ -153,6 +152,26 @@ You need a paid GitKraken subscription to turn this setting on. On the Community
 | **Preview tabs** | *A single click opens a preview that the next click replaces. Double-click, or edit, to keep it open.* | On |
 
 **Preview tabs** works only with **Show tabs on the task page** turned on. Sessions always open as permanent tabs. See [The task view](/kepler/task-view).
+
+## Groups
+
+**Groups** lists every one of your task groups, including archived groups and groups the Dashboard hides because of a filter. To open it from the Dashboard, choose **Manage groups…** in a group header's menu. With no groups, it reads *Groups organize tasks into sections on the Dashboard. Make one to start sorting your work.*
+
+Each group's row shows its color, its name, and how many tasks it holds, counting archived tasks too. Use the row to manage the group:
+
+- To edit a group's name or color, click its name.
+- To reorder groups, drag a row by its grip. From the keyboard, focus the grip and press **Alt + ↑** or **Alt + ↓**.
+- To move, archive, or delete a group, use its **⋮** menu. **Archive group** appears once every task in the group is archived.
+- To add a group, click **New group** in the section header.
+
+Archived groups are listed under **Archived**. Each one's menu has **Restore group** and **Delete group…**. Deleting a group never deletes its tasks: *Its {count} tasks stay, ungrouped.* See [Your groups](/kepler/arranging-your-work#your-groups).
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/task-groups-settings-nov-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-groups-settings-nov-2026.png" class="help-center-img img-bordered" alt="The Groups section of Settings › Tasks with New group: Checkout (blue, 2 tasks), Search (yellow, 1 task) and Payments (green, 1 task), each with a drag grip and a menu, then Archived with Holiday sale (pink, 1 task) and its menu.">
+  </a>
+  <figcaption style="text-align:center; color:#888">3 groups and 1 archived group, in Settings → Tasks.</figcaption>
+</figure>
 
 ***
 

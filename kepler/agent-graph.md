@@ -34,21 +34,21 @@ When several agents run at once, use the **Agent Graph** to see what each one is
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/agent-graph-toggle-sep-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-graph-toggle-sep-2026.png" class="help-center-img img-bordered" alt="The top-left control's three segments: Todo, Tasks in progress, and Agent Graph selected">
+    <img src="/wp-content/uploads/agent-graph-toggle-sep-2026.png" class="help-center-img img-bordered" alt="The Dashboard's row of views: Todo, Tasks, and Agent Graph, selected, then New view. Tasks and Agent Graph carry an orange mark on their icons for a task waiting on you.">
   </a>
-  <figcaption style="text-align:center; color:#888">The Agent Graph segment, beside Todo and Tasks in progress.</figcaption>
+  <figcaption style="text-align:center; color:#888">The Agent Graph view, beside Todo and Tasks.</figcaption>
 </figure>
 
 You can open the Agent Graph for all your agents or for a single session. It has no page of its own:
 
 | To see | Do this |
 |---|---|
-| **All your agents** | In the control at the top left, switch to the **Agent Graph** segment, beside **Todo** and **Tasks in progress**. Kepler remembers your choice across restarts |
+| **All your agents** | Select the **Agent Graph** view among the Dashboard's views. It's a **Tasks** view drawn in the **Graph** layout, so you can also switch any **Tasks** view to **Graph** in its **View** menu, or add another graph view with **New view** |
 | **One session** | On the task page, open the menu of the session's row in the context panel and choose **Show Agent Graph**. The session's graph opens beside its transcript, and **Hide Agent Graph** closes it |
 
-To learn about **Todo**, **Tasks in progress**, and their **List** and **Board** layouts, see [Arranging Your Work](/kepler/arranging-your-work).
+To learn about the Dashboard's views and their **List**, **Board** and **Graph** layouts, see [Arranging Your Work](/kepler/arranging-your-work).
 
-When you open the graph from the main list, it shows exactly what the list would show, including your search and filters. When you open it on a session, the graph starts fully expanded, and grows downward (or to the right) as the conversation adds tool calls and subagents.
+A graph view shows the tasks that the view's search and filters let through. When you open the graph on a session, it starts fully expanded, and grows downward (or to the right) as the conversation adds tool calls and subagents.
 
 The graph is for viewing, not for working. To work in a session, open the session from its task. The node details in the graph link directly to it. To watch several agents at once and answer them, **Shift**-click sessions to open them side by side. See [the task page](/kepler/task-view).
 
@@ -78,7 +78,7 @@ The graph shows only sessions that belong to a task, so an external session that
 
 ### Past turns start folded
 
-On the main list's graph, each session shows its latest turn unfolded and folds every earlier turn, so a long session shows its current work first. A folded card has a chevron and the number of nodes beneath it, and its tooltip says how many nodes are folded. To unfold a folded turn, double-click it. To fold what is beneath any card with children, such as a session, a turn or a subagent, double-click the card. A session's own graph starts with every turn unfolded.
+In a Dashboard graph view, each session shows its latest turn unfolded and folds every earlier turn, so a long session shows its current work first. A folded card has a chevron and the number of nodes beneath it, and its tooltip says how many nodes are folded. To unfold a folded turn, double-click it. To fold what is beneath any card with children, such as a session, a turn or a subagent, double-click the card. A session's own graph starts with every turn unfolded.
 
 Look out for 2 kinds of node, because the agent cannot continue until you respond: **Permission needed** and **Question for you**.
 
@@ -121,9 +121,9 @@ Repeated calls of the same kind fold into one node marked **Group**. The node ke
 When you select a node, its details open beside the graph. The details depend on the kind of node:
 
 - **Session**: the agent, state, model, mode, context used, cost, where it is running, and its stop reason.
-- **Tool call**: the tool, the exact input, the files and paths it touched, how long it took, and how many calls failed.
+- **Tool call**: the tool, the exact input, the files and paths it touched, how long it took (some calls show no duration), and how many calls failed.
 - **Subagent**: its type, its prompt, and its own calls.
-- **Task**: its status (**Active**, **On hold**, or **Archived**), its sessions, and its resources.
+- **Task**: its status (**Active**, **On hold**, **Later**, or **Archived**), its sessions, and its resources.
 - **File**: a preview of the file. For a large file, the preview reads only its beginning.
 
 For a node with children, the details header also has a fold button, **Collapse what is under this node** or **Expand what is under this node**. It does the same as double-clicking the card. The stats column still counts the whole graph, including folded nodes.
@@ -134,8 +134,6 @@ For a node with children, the details header also has a fold button, **Collapse 
   </a>
   <figcaption style="text-align:center; color:#888">A folded turn selected, with Expand what is under this node in its details header.</figcaption>
 </figure>
-
-Some calls show no duration.
 
 From the details, click **Open task** or **Open session** to go to the work, or **Copy** to copy any input or prompt.
 
@@ -152,7 +150,7 @@ The stats column, on the right side of the graph, shows numbers about all your a
   <figcaption style="text-align:center; color:#888">The stats column.</figcaption>
 </figure>
 
-On the dashboard, the stats column hides while a panel is open.
+On the Dashboard, the stats column hides while a panel is open.
 
 ### The counters
 
@@ -209,38 +207,38 @@ At the bottom of the stats column, a note counts what Kepler left out of the gra
 - Sessions Kepler can see but not trace.
 - Tasks with no session.
 
-Kepler shows this note so that you know the graph is not showing everything.
-
 ***
 
 ## Finding things in a busy graph
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/agent-graph-header-sep-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-graph-header-sep-2026.png" class="help-center-img img-bordered" alt="The Agent Graph's header, with the search box, and the Options menu open showing Layout, Zoom to selection, Compact stats, and Group repeated tool calls">
+    <img src="/wp-content/uploads/agent-graph-header-sep-2026.png" class="help-center-img img-bordered" alt="The Agent Graph view's View menu, open from the View button (Graph glyph, Depth 4, 1 filter) beside the search box and its Active sessions pill: the List, Board and Graph switch with Graph selected, Detail depth at 4/5, Direction, Left to right, open on Left to right (checked) and Top to bottom, Zoom, Group repeated tool calls ticked, Compact stats, then Filters with Sessions set to Active and Progress, Activity, Repository, Agent, Session and Linked work at Any, and Clear filters. The graph's nodes show behind it.">
   </a>
-  <figcaption style="text-align:center; color:#888">The graph's header controls, with the Options menu open.</figcaption>
+  <figcaption style="text-align:center; color:#888">An Agent Graph view's View menu, with the graph's settings and filters.</figcaption>
 </figure>
 
-The graph's header has a search box, an **Options** menu, and the depth slider. The zoom controls are on the graph itself, and the timeline is under it (see [Pause and replay the graph](#pause-and-replay-the-graph)):
+In a Dashboard graph view, the Dashboard's search box narrows the graph, and the view's **View** menu holds the graph's settings. The button names the depth, such as **Depth 4**. In a session's own graph, the same settings sit in the graph's header: a search box (*Filter tasks, sessions, agents…*), an **Options** menu, and the depth slider. In both, the zoom buttons and the replay bar float over the bottom of the graph (see [Pause and replay the graph](#pause-and-replay-the-graph)):
 
-| Control | Where | What it does |
-|---|---|---|
-| *Filter tasks, sessions, agents…* | Header | Narrows the graph by task, session or agent name |
-| **Layout** | Options | Draws the tree **Left to right** or **Top to bottom** |
-| **Zoom to selection** | Options | Zooms to a selected node with its tree, ancestors and siblings, and does not move when the node is already in view. 2 nested settings set when the view can move again: **Follow the tree as it grows** zooms out as far as needed instead of stopping when cards get too small to read, and **Re-frame when the space changes** zooms again when a panel opens beside the graph or the window changes size |
-| **Compact stats** | Options | Shows the same numbers in half the space, with circular meters and smaller tiles, for a smaller window |
-| **Group repeated tool calls** | Options | On by default. When off, every call is its own node |
-| **Only active sessions** | Options | Hides sessions that have ended, but keeps idle ones. On by default on the main list, where the **Options** badge counts it when you turn it off, and off by default in a session's own graph |
-| **Agent** / **Repo** | Options | Narrows the graph to 1 agent or repository. Not offered on the main list, because the list's own filters do this |
-| **Detail depth** | Header | How many layers deep the graph goes: up to 5, and 4 by default |
-| **Zoom in** / **Zoom out** / **Fit to view** | Graph | Moves the view. You can also drag to pan, and press **Escape** to clear a selection |
+| Control | What it does |
+|---|---|
+| **Detail depth** | How many layers deep the graph goes: up to 5, and 4 by default |
+| **Direction** | Draws the tree **Left to right** or **Top to bottom** |
+| **Zoom to selection** | Zooms to a selected node with its tree, ancestors and siblings, and does not move when the node is already in view. The **While zoomed** settings below it set when the view can move again |
+| **Group repeated tool calls** | On by default. When off, every call is its own node |
+| **Compact stats** | Shows the same numbers in half the space, with circular meters and smaller tiles, for a smaller window. Offered where the graph shows its stats column |
+| **Sessions** | On the Dashboard, under **Filters**, and shown in the search box as an **Active sessions** or **Ended sessions** pill. **Active**, the default, hides sessions that have ended: exclude it to see only ended sessions, or clear it to see them all |
+| **Only active sessions** | In a session's own graph, hides sessions that have ended but keeps idle ones. Off by default, so the session stays in view after it ends |
+| **Agent** / **Repo** | In a session's own graph, when it has more than 1: narrows the graph to 1 agent or repository. On the Dashboard, the view's own filters do this |
+| **Zoom in** / **Zoom out** / **Fit to view** | Moves the view. You can also drag to pan, and press **Escape** to clear a selection |
 
-Kepler remembers the depth and layout separately for the main list and for each session's graph, so changing them on the main list does not change how a session's graph opens.
+Under **While zoomed**, **Follow the tree as it grows** zooms out as far as needed instead of stopping when cards get too small to read, and **Re-frame when the space changes** zooms again when a panel opens beside the graph or the window changes size. While **Zoom to selection** is off, these 2 stay listed but dimmed. On the Dashboard, all 3 are in the **View** menu's **Zoom** submenu.
+
+Each graph view keeps its own settings, so 2 graph views can show the same work in different ways. A session's graph always opens fully expanded and top to bottom.
 
 ### Pause and replay the graph
 
-A live graph changes while you read it. To hold the picture still, or to look back at what just happened, use the timeline under the graph:
+A live graph changes while you read it. To hold the picture still, or to look back at what just happened, use the replay bar that floats over the bottom of the graph, beside the zoom buttons:
 
 | Control | What it does |
 |---|---|
@@ -252,13 +250,13 @@ A live graph changes while you read it. To hold the picture still, or to look ba
 
 The play/pause button's tooltip says what it does next: *Hold this moment on screen*, *Play the recording from here*, or *Pause the replay*. To see the time of the last update, hover over **Live**.
 
-Your agents keep working while you hold a frame, and Kepler keeps recording, so the readout shows the picture falling further behind. Kepler records only while something is happening: a session is running or thinking, or a tool call or subagent is running. While every agent is idle, the graph has nothing to replay, and the timeline's controls are unavailable.
+Your agents keep working while you hold a frame, and Kepler keeps recording, so the readout shows the picture falling further behind. Kepler records only while something is happening: a session is running or thinking, or a tool call or subagent is running. While every agent is idle, the graph has nothing to replay, and the replay bar's controls are unavailable.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/freeze-button-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/freeze-button-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Agent Graph with its replay timeline held on a frame: under the graph's nodes, Play, Previous frame, Next frame, the scrubber, a -0s readout, and Back to live in place of the Live pill.">
+    <img src="/wp-content/uploads/freeze-button-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Agent Graph with its replay held on a frame: over the bottom of the graph's nodes floats the replay bar with Play, Previous frame, Next frame, the scrubber, a -0s readout and Back to live in place of the Live pill, and beside it the zoom buttons at 80% with Fit.">
   </a>
-  <figcaption style="text-align:center; color:#888">The timeline under the graph, holding a frame.</figcaption>
+  <figcaption style="text-align:center; color:#888">The replay bar over the bottom of the graph, holding a frame.</figcaption>
 </figure>
 
 ***

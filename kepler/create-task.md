@@ -19,11 +19,11 @@ taxonomy:
 ---
 <kbd>Last updated: November 2026</kbd>
 
-You can start a task in several ways. Starting from work that is already assigned to you is usually the best choice:
+You can start a task in 4 ways. The shortest starts from work that is already assigned to you:
 
 | Start from | How |
 |---|---|
-| **Work assigned to you** | Run an Action on an issue or pull request in the **Todo** segment of [the Kepler interface](/kepler/kepler-interface). One click starts the task with its context attached |
+| **Work assigned to you** | Run an Action on an issue or pull request in the **Todo** view of [the Kepler interface](/kepler/kepler-interface). One click starts the task with its context attached |
 | **Something you're describing yourself** | **New task** opens the **New task** composer, where you write the prompt and attach what it needs |
 | **A conversation you already started** | **Open an external session**, under the **New task** composer, wraps a task around an agent session you began in your own terminal |
 | **Another GitKraken app** | A link from GitLens or GitKraken Desktop opens Kepler on the work you were looking at |
@@ -91,7 +91,9 @@ The **New task** composer is a prompt box above a row of 4 buttons:
 | **Add repo or folder** | A repository to work in, or a plain folder |
 | **Add issue** → **Issues** | Issues from your connected trackers. With only Linear in the list, a team picker and a **Project** picker show every open issue in the team or Linear project you pick, not just yours |
 | **Add PR** → **PRs** | Pull requests from your connected hosts |
-| **Add context** | Everything without a button of its own: folders, files, and links |
+| **Add context** | Files and links the agent can read. A folder to work in goes through **Add repo or folder** |
+
+Each picker lists what you have already attached of its kind, where you can also remove it. Its footer counts what you added, such as **2 added**, and **Done** closes it.
 
 **Paste a link to attach it.** Paste a pull request or issue URL into the prompt, from a connected host or from Jira or Linear, and it becomes a chip naming the item. The chip attaches the item the same way **Add issue** or **Add PR** would, along with its repository, so a pull request from another repository launches in that repository, on its branch. If the repository is not in Kepler yet, Kepler clones it when the task starts.
 
@@ -112,7 +114,7 @@ You can attach as much or as little context as you want. To create a task from t
 
 **The composer also remembers an unsent draft.** If you close the dialog with a prompt half written, the prompt is still there when you reopen it. Once you have started writing a task, Kepler asks before it discards the draft, so pressing Escape by accident does not lose your work.
 
-**Kepler also remembers which repositories you pick for a tracker project.** When you attach a Jira, Linear, or Azure issue, Kepler preselects the repositories you chose for that project last time. Each one is marked **Suggested from this tracker project** when the tracker named it, or **From history** when Kepler inferred it from where that project's issues were worked on before.
+**Kepler also remembers which repositories you pick for a tracker project.** When you pick a Jira, Linear, or Azure issue, a line under its row says what adding it also does, such as *Also creates a worktree for {repo} on a new branch from {base}*. Its **Repository** chip holds the repository Kepler picked: marked **suggested** when you chose it for that project before, or **from history** when Kepler inferred it from where that project's issues were worked on. The chip's menu lets you choose another repository, **Clone {repo}**, or **No repository**, which reads *Adds the issue without a repository*. A row whose repository Kepler could not find offers **Add its repo…**.
 
 The primary button shows a sending state from the moment you click it, so you can tell a slow start from a button that did nothing. It runs the Action that matches what you've attached, exactly as it would from a Todo row. A linked pull request resolves to **Address Feedback** or **Review**, depending on who wrote it; a linked issue resolves to **Plan**. With nothing attached, the button reads **Start** and starts the task with your prompt as written.
 
@@ -126,14 +128,14 @@ The task appears in the list as soon as you press **Start**, before its worktree
 
 - Kep, the Kepler mascot, names each stage, such as **Reading {link}.**, **Fetching {repo}.**, **Making your worktree.**, **Starting {agent}.**, and **Opening the chat.**, above a list of the launch steps.
 - **Reading {link}** comes first when Kepler was still reading a pasted link at **Start**, to find the repository and branch the link belongs to. If Kepler cannot read the link, the step shows *Unable to read {link}* as skipped and the launch continues.
-- Where Kep is not shown, the panel lists the steps under **Getting your task ready** instead, such as *Reading {link}…*, *Cloning {repo}…*, or *Setting up worktrees…*.
+- While the new branch updates from its base, Kep's **Starting {agent}.** line reads *Once your branch is up to date with its base.*
 - **Cancel** stops a launch while Kepler is reading a link or cloning a repository.
 
-When the new branch is being updated from its base, the session area reads **Preparing branch**: *Updating from the base branch before the session starts.* Then, until the first session is ready, it reads **Starting your session**: *It opens here as soon as it's ready.*
+The task page shows the same launch view in its session area until the first session is ready.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/ade-task-preparing-row-01-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ade-task-preparing-row-01-v2@2x.png" class="help-center-img img-bordered" alt="The Recent group of Tasks in progress: Write the 2.4 release notes, then a new task, Add a gift-card field to checkout, with acme-web, the Preparing pill and its spinner.">
+    <img src="/wp-content/uploads/ade-task-preparing-row-01-v2@2x.png" class="help-center-img img-bordered" alt="The Recent group of the Tasks view: Write the 2.4 release notes, then a new task, Add a gift-card field to checkout, with acme-web, the Preparing pill and its spinner.">
   </a>
   <figcaption style="text-align:center; color:#888">A new task in the list while Kepler prepares it.</figcaption>
 </figure>
@@ -145,7 +147,7 @@ When the new branch is being updated from its base, the session area reads **Pre
   <figcaption style="text-align:center; color:#888">Kep narrating a task's launch in its panel.</figcaption>
 </figure>
 
-If setup fails, the row's pill reads **Failed** and the panel reads **Unable to start this task**. To change the task and try again, click **Edit and retry**, or **Dismiss** to clear it. A launch you canceled reads **Task not started**. If the request itself cannot be sent, you see **Failed to start the task**. A task that starts without some of its repositories warns *Some repositories weren't added: The task started without {repos}.*
+If setup fails, the row's pill reads **Failed** and Kep says **That didn’t go through.** *Here’s what went wrong.* above the error. To change the task and try again, click **Edit and retry**, or **Dismiss** to clear it. A launch you canceled reads **Task not started.** *Nothing was changed.* If the request itself cannot be sent, you see **Failed to start the task**. A task that starts without some of its repositories warns *Some repositories weren't added: The task started without {repos}.*
 
 If the task starts but its agent session does not, the task page and the Dashboard panel show **{agent} was unable to start**, with **Retry**. See [Agent Sessions](/kepler/agent-sessions#when-a-session-drops).
 
@@ -176,7 +178,7 @@ Kepler names a task's branch from what the task is about, rather than from the t
 - **An issue identifier leads the name** when the task came from one, so `KEP-421-fix-the-import-path` rather than a slug with the ticket buried in it.
 - **Automatic names are namespaced under `kepler/`.**
 - **A name you type is yours verbatim.** The prefix applies to automatic names only.
-- **Your repository's own branch-naming policy is applied** where the host publishes one.
+- **Kepler applies your repository's own branch-naming policy** where the host publishes one.
 
 You can set the prefix in 2 places: **Settings → Tasks → New tasks → Branch prefix** for the app, and per repository in **Settings → Repositories**, on the repository's own page. The repository's page offers **Default ({value})**, **None**, or **Custom**, and shows an example of what a branch will actually look like. Leave the app setting empty for no prefix at all. If a repository already has a branch literally named `kepler`, Kepler says so rather than creating a branch that Git cannot create: *This repository has a branch named {branch}, so the {prefix} prefix can't be used here.*
 
@@ -281,7 +283,7 @@ If a link cannot open on the machine it names, it opens on this computer instead
 
 ## After the task starts
 
-The task appears in **Tasks in progress** right away, with the **Preparing** pill until its setup finishes. Click it to open its side panel, or double-click it to open [the task page](/kepler/task-view).
+The task appears in the **Tasks** view right away, with the **Preparing** pill until its setup finishes. Click it to open its side panel, or double-click it to open [the task page](/kepler/task-view).
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/full-task-view-oct-2026-v2.png" target="_blank" rel="noopener noreferrer">

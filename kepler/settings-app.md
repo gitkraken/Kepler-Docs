@@ -1,6 +1,6 @@
 ---
 title: App Settings
-description: Change how Kepler looks and behaves, including its language, windows, default editor, notifications, themes, chat, terminal and diff settings, voice input, and keyboard shortcuts.
+description: Change how Kepler looks and behaves, including its language, windows, default editor, notifications, themes, the Dashboard's views, chat, terminal and code settings, voice input, and keyboard shortcuts.
 product: Kepler
 feature: Settings
 content_type: reference
@@ -21,9 +21,9 @@ taxonomy:
 
 Use these Settings pages to change how Kepler itself looks and behaves:
 
-- [General](#general): language, windows, the default editor, and keeping agents running
+- [General](#general): language, windows and dialogs, the default editor, and keeping agents running
 - [Notifications](#notifications): which agent events notify you, on the desktop and in Kepler
-- [Appearance](#appearance): light or dark appearance and themes, the chat, the terminal font, code font size, and diff layout
+- [Appearance](#appearance): light or dark appearance and themes, the Dashboard's views, the chat, the terminal font, and the code font and diff layout
 - [Voice input](#voice-input): on-device speech-to-text, its transcription engine, and learned words
 - [Keyboard shortcuts](#keyboard-shortcuts): Kepler's keyboard shortcuts
 
@@ -43,9 +43,9 @@ Use **General** to choose Kepler's language, how its windows open, which editor 
 
 The language also applies to native dialogs, not only to the in-app interface.
 
-### Windows
+### Windows and dialogs
 
-These settings set how windows work on this machine:
+These settings set how windows and folder dialogs work on this machine:
 
 | Setting | What it controls | Default |
 |---|---|---|
@@ -72,12 +72,22 @@ These settings keep agent work running when the machine would otherwise stop it.
 |---|---|---|
 | **Keep this machine awake while agents work** | Blocks sleep and standby while an agent session is starting, running, or waiting for your input. It also blocks sleep while Remote Access is on, because sleeping would drop the connection, but not while Remote Access is waiting to reconnect | On |
 | **Keep agents and terminals running across restarts and updates** | *Agent sessions and terminals stay alive while Kepler restarts or updates, and reconnect afterwards. Experimental.* | On |
+| **Put idle agents to sleep** | How long an agent in a chat view can stay quiet, while you are not looking at it, before Kepler stops it: **After 5 minutes**, **After 15 minutes**, **After 30 minutes**, **After 1 hour**, or **Never** | After 15 minutes |
 
 The screen can still turn off. If Kepler cannot keep the machine awake, the setting says so under the switch, for example *Can't stay awake: there is no sleep-blocking mechanism available on this platform.* On Linux, the setting can say that the system's polkit policy refuses the request, and give a rule an administrator can install.
 
 The setting counts Claude Code sessions detected outside Kepler as well as Kepler's own sessions. Kepler lets the machine sleep again as soon as the last of those sessions settles.
 
 **Keep agents and terminals running across restarts and updates** applies from the next session you start. With it on, a ready update's popover says *Running agents and open terminals keep going through the restart.* On a build that does not support this setting, the switch shows off, is disabled, and says so: *This build can't keep agents running across restarts.*
+
+**Put idle agents to sleep** stops the chat sessions you have left alone. A sleeping session's status reads **Asleep**, or **Asleep, unread reply** when a reply you have not read waits in it. Your next message wakes it, and the conversation carries on. Agents that are working, waiting on you, running background work, or still running agents they started stay awake, and agents in a terminal never sleep. See [Session status](/kepler/agent-sessions#session-status).
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/agents-idle-sleep-nov-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agents-idle-sleep-nov-2026.png" class="help-center-img img-bordered" alt="The Put idle agents to sleep setting set to After 15 minutes, with help text on when an agent in a chat view sleeps, what wakes it, and which agents stay awake.">
+  </a>
+  <figcaption style="text-align:center; color:#888">Put idle agents to sleep, at its default.</figcaption>
+</figure>
 
 ***
 
@@ -92,7 +102,7 @@ Use **Notifications** to choose which agent events Kepler tells you about, and w
 | Event | When it fires | Desktop | In Kepler |
 |---|---|---|---|
 | **Replies** | *An agent finished replying and it's your turn.* | Off | Off |
-| **Questions** | *An agent asks you something and waits for your answer.* | On | On |
+| **Questions** | *An agent asks you something and waits for your answer.* A plan waiting for your review also notifies you here, as **Plan ready for review** | On | On |
 | **Permission requests** | *An agent wants permission to do something.* | On | On |
 | **Approval requests** | *An agent asks to do something in Kepler only you can approve, like deleting a worktree or rewriting a branch.* See [Approvals](/kepler/settings-agents#approvals) | On | On |
 | **Errors** | *A session stops because something went wrong.* | On | On |
@@ -121,7 +131,7 @@ To silence desktop notifications from one remote machine only, use **Mute notifi
 
 ## Appearance
 
-Use **Appearance** to choose light or dark and a theme, and to set up the chat, the terminal, code text, and diffs. Kepler saves these settings on this machine.
+Use **Appearance** to choose light or dark and a theme, and to set up the Dashboard's views, the chat, the terminal, code text, and diffs. Kepler saves these settings on this machine.
 
 ### Theme
 
@@ -241,21 +251,42 @@ Updating or replacing your own copy asks first: **Update {name} to {version}?** 
 
 Kepler never replaces your copy on its own; an update from {host} waits until you choose it.
 
+### Dashboard
+
+These settings set where the Dashboard's views sit and how they look:
+
+| Setting | What it controls | Default | Options |
+|---|---|---|---|
+| **Views** | *Where the Dashboard's views sit in the window.* | Below the title bar | In the title bar, Below the title bar, Along the left side |
+| **View style** | *How the Dashboard's views are drawn.* Used when views are in or below the title bar | Tabs | Tabs, Pills |
+| **Size** | *How big the views along the left side are.* Used when views are along the left side | Default | Default, Compact |
+| **Counts on views** | *Each view with filters shows how many tasks match them.* | On | On, Off |
+| **Search box** | How wide the Dashboard's search box is. *Full width stretches it across the space the toolbar leaves free.* | Grows as you type | Grows as you type, Full width |
+
+A setting that the current **Views** choice does not use is marked **Title bar only** or **Left side only**. With **Along the left side**, the **Settings** button moves from the top bar to the bottom of the views.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/settings-appearance-dashboard-nov-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/settings-appearance-dashboard-nov-2026.png" class="help-center-img img-bordered" alt="The Dashboard section of Settings › Appearance at its defaults: Views, with picture tiles for In the title bar, Below the title bar (chosen) and Along the left side; View style, with Tabs chosen over Pills; Size, Default or Compact, marked Left side only; Counts on views, switched on; and Search box, Grows as you type chosen over Full width. Each row has its help line.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The Dashboard settings, at their defaults.</figcaption>
+</figure>
+
 ### Chat
 
-These settings set how a session's conversation scrolls and how wide it grows:
+These settings set how wide a session's conversation grows and how it scrolls:
 
 | Setting | What it controls | Default |
 |---|---|---|
-| **Chat auto-scroll** | **Auto-scroll to the end** *keeps the newest output in view. Scroll up to stop.* **Stay on my message** *keeps your message in view. The transcript doesn't scroll on its own.* | Auto-scroll to the end |
-| **Conversation width** | *How wide the conversation grows in a wide pane. The message box keeps its width.* **Narrow**, **Wide**, or **Full width** | Narrow |
-| **Remember scroll position** | *Return to where you left off when you come back to a session.* | On |
+| **Conversation width** | How wide the conversation grows. *In a wide pane. The message box keeps its width.* **Narrow**, **Wide**, or **Full width** | Narrow |
+| **Scrolling** › **While an agent replies** | **Follow new output** *follows the newest output until you scroll up.* **Stay on my message** *keeps your message in view. The transcript doesn't scroll on its own.* | Follow new output |
+| **Scrolling** › **Return to where I left off when I reopen a session** | Whether a session you come back to opens where you left it | On |
 
 In either scrolling mode, once you scroll up, the transcript stays where you put it. The conversation stays centered at every width, and an agent's answers span its full width.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/appearance-chat-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/appearance-chat-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Chat section of Settings › Appearance: Auto-scroll to the end, Conversation width with Narrow selected beside Wide and Full width, and Remember scroll position ticked.">
+    <img src="/wp-content/uploads/appearance-chat-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Chat section of Settings › Appearance: Conversation width with Narrow selected beside Wide and Full width, then Scrolling, with While an agent replies set to Follow new output and Return to where I left off when I reopen a session ticked.">
   </a>
   <figcaption style="text-align:center; color:#888">The Chat settings, at their defaults.</figcaption>
 </figure>
@@ -266,12 +297,12 @@ These settings control Kepler's embedded terminals:
 
 | Setting | What it controls | Default |
 |---|---|---|
-| **Font family** | *Separate fonts with commas. The terminal uses the first one installed on this machine.* | Empty, which uses your platform's standard monospace fonts |
-| **Font size** | Terminal font size in pixels, from 8 to 32. Kepler changes a smaller or larger value to the nearest limit | 13 |
-| **Line height** | Vertical spacing between lines, to 1 decimal place, from 1 to 2. Kepler changes a smaller or larger value to the nearest limit | 1.2 |
-| **Show the message box under terminal sessions** | *Adds Kepler's message box under an agent's terminal, for attachments and voice. You can also switch it from the terminal's status bar.* | Off |
+| **Font** › **Family** | *Separate fonts with commas. The terminal uses the first one installed on this machine.* | Empty, which uses your platform's standard monospace fonts |
+| **Font** › **Size** | Terminal font size in pixels, from 8 to 32. Kepler changes a smaller or larger value to the nearest limit | 13 |
+| **Font** › **Line height** | Vertical spacing between lines, to 1 decimal place, from 1 to 2. Kepler changes a smaller or larger value to the nearest limit | 1.2 |
+| **Show the message box under terminal sessions** | Adds Kepler's message box under an agent's terminal. *For attachments and voice. You can also switch it from the terminal's status bar.* | Off |
 
-The grayed text in the **Font family** field (`Fira Code, JetBrains Mono, Menlo`) is an example of the format, not the value in effect. If you name a font Kepler cannot find on this machine, the field says so and keeps your text. The terminal uses the next name in your list instead. **Font family** and **Font size** save when you press **Enter** or **Escape**, or leave the field, and show their save status.
+The grayed text in the **Family** field (`Fira Code, JetBrains Mono, Menlo`) is an example of the format, not the value in effect. If you name a font Kepler cannot find on this machine, the field says so and keeps your text. The terminal uses the next name in your list instead. **Family** and **Size** save when you press **Enter** or **Escape**, or leave the field, and show their save status. Code views use the terminal's family too, unless you set one under [Code](#code).
 
 #### Embedded terminals
 
@@ -281,21 +312,17 @@ Use terminals for work next to an agent session: running tests while the agent w
 
 ### Code
 
-**Code** has 1 setting:
+These settings set how diffs and code look:
 
 | Setting | What it controls | Default |
 |---|---|---|
-| **Font size** | *Size of text in diffs and file views.* From 10 to 24. Kepler changes a smaller or larger value to the nearest limit, and the field says the size can be 10 to 24 | 13 |
+| **Diff layout** | *How changes are laid out in diffs.* **Stacked** or **Split**, each drawn as a picture tile | Stacked |
+| **Font** › **Family** | The font for diffs, file views, and code in chat. *Separate fonts with commas, or leave it empty to use the terminal's font.* | Empty |
+| **Font** › **Size** | The size of text in diffs and file views, from 10 to 24. Kepler changes a smaller or larger value to the nearest limit, and the field says the size can be 10 to 24 | 13 |
 
-### Diff view
+When **Family** is empty, its grayed text shows the font in effect: your terminal's font family if you set one, otherwise `SF Mono, Monaco, Consolas`. As in the terminal, if you name a font Kepler cannot find on this machine, the field says so.
 
-**Diff view** has 1 setting:
-
-| Setting | What it controls | Default | Options |
-|---|---|---|---|
-| **Diff view** | The layout diffs open in | Stacked | Stacked, Split |
-
-This setting sets the layout a diff opens in. To switch a single diff without changing the default, use the **Stacked** / **Split** toggle on the Changes overlay's viewer header. See [Review changes](/kepler/review-changes).
+**Diff layout** sets the layout a diff opens in. To switch a single diff without changing the default, use the layout button on a file's header in the Changes overlay. Its tooltip reads **Diff layout: Stacked** or **Diff layout: Split**, and it opens a menu with both. See [Review changes](/kepler/review-changes).
 
 ***
 
@@ -396,6 +423,8 @@ The **General** group holds app-wide shortcuts:
 | Toggle Ask Kepler chat | ⌘ L | Ctrl + L |
 | Toggle Ask Kepler chat | ⌘ K | Ctrl + K |
 | Toggle Ask Kepler terminal | ⌃ ` | Ctrl + ` |
+| New Ask Kepler chat | ⌘ ⇧ K | Ctrl + Shift + K |
+| New Ask Kepler chat | ⌘ ⇧ L | Ctrl + Shift + L |
 | New task | ⌘ N | Ctrl + N |
 | Open quick launcher (global) | ⇧ ⌥ N | Shift + Alt + N |
 | New window | ⌘ ⇧ N | Ctrl + Shift + N |
@@ -407,6 +436,7 @@ The **General** group holds app-wide shortcuts:
 | Close window | ⌘ ⇧ W | Ctrl + Shift + W |
 | New session | ⌘ T | Ctrl + T |
 | Rename task | F2 | F2 |
+| Delete task | ⌘ ⇧ Backspace | Ctrl + Shift + Backspace |
 | Manage remote environments | ⌘ ⇧ R | Ctrl + Shift + R |
 | Open file | ⌘ O | Ctrl + O |
 | Go to file | ⌘ P | Ctrl + P |
@@ -444,12 +474,14 @@ The **Dashboard** group works on the Dashboard's tasks and detail panels:
 | Move task to the next Progress stage | ⌘ ⇧ → | Ctrl + Shift + → |
 | Focus detail panel 1–8 | ⌘ 1–8 | Ctrl + 1–8 |
 | Focus last detail panel | ⌘ 9 | Ctrl + 9 |
+| Open previous item in the list | ⌥ ⇧ ↑ | Alt + Shift + ↑ |
+| Open next item in the list | ⌥ ⇧ ↓ | Alt + Shift + ↓ |
 | Switch detail panels | ⌃ Tab | Ctrl + Tab |
 | Switch detail panels, oldest first | ⌃ ⇧ Tab | Ctrl + Shift + Tab |
 | Maximize detail panel | ⌘ ⇧ M | Ctrl + Shift + M |
 | Maximize panel terminals | ⌘ ⇧ J | Ctrl + Shift + J |
 | Show or hide changes in detail panel | ⌘ ⇧ G | Ctrl + Shift + G |
-| Switch detail panels between columns and grid | ⌘ ⇧ L | Ctrl + Shift + L |
+| Switch detail panels between columns and grid | ⌘ \ | Ctrl + \ |
 | Show the task list floating over the panels, or hide it | ⌘ ⇧ B | Ctrl + Shift + B |
 | Show or hide resources in detail panel | ⌘ ⇧ E | Ctrl + Shift + E |
 | Find in dashboard | ⌘ F | Ctrl + F |
@@ -492,6 +524,7 @@ This group has 2 lists. The **Changes** list works in the Changes view:
 | Show or hide changes panel | ⌘ B | Ctrl + B |
 | Open all changes | ⌘ ⇧ A | Ctrl + Shift + A |
 | Comment on selection | ⌘ ⇧ C | Ctrl + Shift + C |
+| Edit working copy | ⌘ E | Ctrl + E |
 
 The **Code views** list works in any code view, such as a diff or a file you have opened:
 
@@ -510,6 +543,7 @@ Some keys do different things depending on where you are:
 
 - **⌘ 1**, **⌘ 2**, and **⌘ 3** focus a detail panel on the Dashboard but a column on the task page.
 - **⌃ Tab** switches detail panels on the Dashboard and sessions on the task page.
+- **⌘ ⇧ [** and **⌘ ⇧ ]** (**Previous tab** and **Next tab**) step through the Dashboard's views on the Dashboard, and through a panel's own tabs once focus is in that panel or on the task page. **⌘ ⌥ [** and **⌘ ⌥ ]** (**Move tab left** and **Move tab right**) move the shown view or tab the same way.
 - **⌘ ⇧ J** maximizes the panel's terminals on the Dashboard and the terminal drawer on the task page.
 - **⌘ B** shows or hides the changes panel in the Changes view, docks or hides the task list on the Dashboard, and docks or hides the context panel on the task page.
 - **⌘ P** filters changed files in the Changes view and opens **Go to file** elsewhere.
@@ -517,9 +551,11 @@ Some keys do different things depending on where you are:
 - **⌘ ⇧ G** shows or hides changes in a Dashboard detail panel, and, on macOS, moves to the previous match in a code view.
 - **⌘ C** copies what a focused row, chip, or link names, such as a task's Kepler link, a pull request or issue link, a file path, or a commit hash, without opening a menu. In a text field, the message box, a terminal, or a text selection, it copies as usual.
 
+**New Ask Kepler chat** opens the Ask Kepler panel on a new chat, with the message box ready for you to type. **Delete task** opens the delete confirmation for the task on the task page or in the Dashboard's active panel. **Open previous item in the list** and **Open next item in the list** open the item above or below in the Dashboard list, even while you type in the open panel's chat, and repeat while you hold them.
+
 **Open quick launcher** works while Kepler is in the background. Its row has a **Global** badge. **Quit**, **Ctrl + F4**, and the **PageUp** / **PageDown** tab keys are Windows and Linux shortcuts only. Kepler hides those rows on macOS, where you quit with the native **⌘ Q** menu item. **Close tab or panel** works only in the desktop app.
 
-On Windows and Linux, a focused terminal passes **Ctrl + W**, **Ctrl + L**, and **Ctrl + B** to the shell. To toggle the Ask Kepler chat from a terminal, press **Ctrl + K**: the shell does not keep that key. **Ctrl + `** always toggles the Ask Kepler terminal, even from a terminal.
+On Windows and Linux, a focused terminal passes **Ctrl + W**, **Ctrl + L**, **Ctrl + B**, and **Ctrl + \\** to the shell. To toggle the Ask Kepler chat from a terminal, press **Ctrl + K**: the shell does not keep that key. **Ctrl + `** always toggles the Ask Kepler terminal, even from a terminal.
 
 **Back** and **Forward** use different keys on each platform. Hold either key to keep moving through your history.
 
