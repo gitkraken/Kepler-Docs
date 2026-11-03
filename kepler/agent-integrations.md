@@ -24,8 +24,8 @@ Use **Settings → Agents** to install the coding agents you already use, sign i
 Kepler supports 9 agents. You can also add any other agent that speaks the Agent Client Protocol (ACP), or whose command-line interface you want to run inside a task.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-settings-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-settings-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Settings › Agents: the page description, New tasks use Claude Code with Change in Tasks, Ask Kepler uses set to Claude Code CLI (alex.lee@example.com, Acme), Ask Kepler uses preset set to Default, and their help text. Your agents has Update all and Rescan above the Claude Code card, which shows its account (Default) with Check usage, New sessions start in set to Chat, Let artifact comments start turns (on), Artifacts in new sessions (off), and a collapsed Program and data folder.">
+  <a href="/wp-content/uploads/agent-settings-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-settings-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="Settings › Agents: the page description, New tasks use Claude Code with Change in Tasks, Ask Kepler uses set to Claude Code CLI (alex.lee@example.com, Acme), Ask Kepler uses preset set to Default, and their help text. Your agents has Update all and Rescan above the Claude Code card, which shows its account (Default) with Check usage, New sessions start in set to Chat, Let artifact comments start turns (on), Artifacts in new sessions (off), and a collapsed Program and data folder.">
   </a>
   <figcaption style="text-align:center; color:#888">Settings → Agents.</figcaption>
 </figure>
@@ -111,8 +111,8 @@ If you already installed the agent somewhere Kepler did not find it, tell Kepler
 Kepler saves the path as the agent's **Binary** and checks that the agent runs. If it does, the dialog closes. If it does not, Kepler says *Unable to run {name} from this file.* and keeps the path you had before. A path that is not a file reads *Not a file on this machine* or *Path is a directory, not a binary*.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-setup-dialog-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-setup-dialog-nov-2026.png" class="help-center-img img-bordered" alt="The Set up Claude Code dialog: Install it with one of these, or tell Kepler where your copy is., the Native installer (curl -fsSL https://claude.ai/install.sh | bash) and npm (global) (npm install -g @anthropic-ai/claude-code) methods, then Already installed? with a Full path to Claude Code field, Browse… and Use this.">
+  <a href="/wp-content/uploads/agent-setup-dialog-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-setup-dialog-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Set up Claude Code dialog: Install it with one of these, or tell Kepler where your copy is., the Native installer (curl -fsSL https://claude.ai/install.sh | bash) and npm (global) (npm install -g @anthropic-ai/claude-code) methods, then Already installed? with a Full path to Claude Code field, Browse… and Use this.">
   </a>
   <figcaption style="text-align:center; color:#888">The Set up dialog, with its install methods and the Already installed? path field.</figcaption>
 </figure>
@@ -162,8 +162,8 @@ If a pinned path later disappears (for example, when an auto-updater cleans up a
 Above the agent cards in **Settings → Agents**, **Rescan** re-detects every agent at once, and **Update all** runs each installed agent's own updater.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-maintenance-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-maintenance-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Update all and Rescan beside the Your agents heading in Settings › Agents, above the title row of the Claude Code card: version 2.1.145, Update and Enabled.">
+  <a href="/wp-content/uploads/agent-maintenance-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-maintenance-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Update all and Rescan beside the Your agents heading in Settings › Agents, above the title row of the Claude Code card: version 2.1.145, Update and Enabled.">
   </a>
   <figcaption style="text-align:center; color:#888">Update all and Rescan, above the agent cards.</figcaption>
 </figure>

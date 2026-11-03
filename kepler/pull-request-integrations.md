@@ -252,8 +252,8 @@ The pull request list on a task's **Resources** screen has its own scope menu: *
 Rows kept from the last good load show a cloud mark on their provider chip, labeled *Not refreshed: shown from the last successful {provider} load.* When a provider's warning shows above such rows, it adds *Rows with a cloud are from the last load.*
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/todo-provider-failure-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/todo-provider-failure-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Todo when GitHub refuses its sign-in: Unable to load your work, over a warning that reads Sign in to GitHub again to load its work, with a Reconnect button.">
+  <a href="/wp-content/uploads/todo-provider-failure-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/todo-provider-failure-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Todo when GitHub refuses its sign-in: Unable to load your work, over a warning that reads Sign in to GitHub again to load its work, with a Reconnect button.">
   </a>
   <figcaption style="text-align:center; color:#888">Todo names a provider whose sign-in failed and offers Reconnect.</figcaption>
 </figure>

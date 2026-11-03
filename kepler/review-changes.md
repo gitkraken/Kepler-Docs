@@ -107,8 +107,8 @@ A wholly untracked folder with hundreds of files, such as a build output nobody 
 To open the Changes overlay, click a file, or choose **Open changes** from the worktree's menu. The overlay opens over the page at a width for one column of code, or two if you last used **Split**. Drag its edges to resize it. At that default width, **Maximize** in its header fills the window, and **Restore size** returns it to the default width.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/changes-overlay-maximize-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/changes-overlay-maximize-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total open over the task page at its default width, with the task page showing around it, and the Maximize button in the overlay's header hovered, its tooltip reading Maximize.">
+  <a href="/wp-content/uploads/changes-overlay-maximize-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/changes-overlay-maximize-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total open over the task page at its default width, with the task page showing around it, and the Maximize button in the overlay's header hovered, its tooltip reading Maximize. The header also reads from main and Up to date, and the context panel behind ends with Manage resources.">
   </a>
   <figcaption style="text-align:center; color:#888">The Changes overlay at its default width, with Maximize in its header.</figcaption>
 </figure>
@@ -197,8 +197,8 @@ Use these keys in the find bar:
 **Escape** closes the bar. Kepler remembers the 3 toggles. If you select text on one line before you open the bar, the selection fills the search field.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/code-find-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/code-find-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total showing cart.js and cart.test.js stacked, 2 files shown. The find bar at the top right holds discount, with Match case on beside Match whole word and Use regular expression, and reads 5 of 6 with Previous match, Next match and Close find. Every match is highlighted in both files, the current one on line 4 of cart.js.">
+  <a href="/wp-content/uploads/code-find-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/code-find-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total showing cart.js and cart.test.js stacked, 2 files shown. The find bar at the top right holds discount, with Match case on beside Match whole word and Use regular expression, and reads 5 of 6 with Previous match, Next match and Close find. Every match is highlighted in both files, the current one on line 4 of cart.js. The overlay header reads from main and Up to date, and the stack bar ends with the Diff layout and Wrap lines buttons.">
   </a>
   <figcaption style="text-align:center; color:#888">Finding across a stack of two files.</figcaption>
 </figure>
@@ -216,8 +216,8 @@ An unsaved edit shows **Unsaved** with **Save** and **Discard** beside it. Keple
 The file then opens in **File** view, marked **Working**, and diffed from where the commit view started: a chip reads **Since {base}** with **All commits** picked, or **Since before {sha}** with a commit or range picked, which includes every later commit. Kepler keeps your place in the file. **Stop editing** returns to the file as committed, and so does moving to another file or view.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/changes-edit-working-copy-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/changes-edit-working-copy-nov-2026.png" class="help-center-img img-bordered" alt="The Changes overlay on the Commits view of kepler/fix-cart-total, with the commit Apply the discount before tax selected above main (branched here) and its file cart.js. The viewer has switched cart.js from the commit to the working copy: its header reads 1 of 1, M, cart.js and Working, with Stop editing beside the File and Changes switch, and the file is open for editing in File view.">
+  <a href="/wp-content/uploads/changes-edit-working-copy-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/changes-edit-working-copy-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Changes overlay on the Commits view of kepler/fix-cart-total, with the commit Apply the discount before tax selected above main (branched here) and its file cart.js. The viewer has switched cart.js from the commit to the working copy: its header reads 1 of 1, M, cart.js and Working, with Stop editing beside the File and Changes switch, and the file is open for editing in File view.">
   </a>
   <figcaption style="text-align:center; color:#888">A file from a commit switched to its working copy, ready to edit.</figcaption>
 </figure>
@@ -287,8 +287,8 @@ Read the diff, mark what needs fixing, and send your notes to the agent, one at 
 Kepler saves comments with the task, so they stay after a reload and appear in every window. Kepler does not post them to your Git host.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/review-comment-draft-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/review-comment-draft-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total with cart.js open in the Changes view. Lines 3 and 4 are selected and a review comment draft is open beneath them: Comment on lines 3 to 4 above the note Pull the discount and rounding into one helper, then the target To OpenCode Fix the cart total: discounts should apply before tax. with its chevron, Cancel, Add comment and Send now.">
+  <a href="/wp-content/uploads/review-comment-draft-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/review-comment-draft-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total with cart.js open in the Changes view. Lines 3 and 4 are selected and a review comment draft is open beneath them: Comment on lines 3 to 4 above the note Pull the discount and rounding into one helper, then the target To OpenCode Fix the cart total: discounts should apply before tax. with its chevron, Cancel, Add comment and Send now. The overlay header reads from main and Up to date; the file header holds File and Changes, then Find, Diff layout, Wrap lines and More actions.">
   </a>
   <figcaption style="text-align:center; color:#888">A review comment draft, under the lines it's about.</figcaption>
 </figure>
@@ -321,8 +321,8 @@ Queued comments show as a **{count} comments** chip in that session's composer a
 On a task with no session yet, **Send now** reads **Start a session**, which opens a new session's draft with the comments as its first prompt. In an overlay opened from outside a conversation, such as from a file path, you cannot send comments: *Open this file from a conversation to send comments*.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ade-review-comments-01-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ade-review-comments-01-v4@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total with cart.js open in the Changes view and three review comments under the lines they are about. The comment on line 2 reads Not sent yet, with Add to queue and Send now; the comments on lines 3 and 4 read Queued for OpenCode Fix the cart total: discounts should apply before tax., with Remove from queue and Send now. Each card opens with You, just now and its note, and has Edit comment and Delete comment icons. Line 2 is picked in the gutter. The overlay header reads 3 comments and Send comments (2), with the Comment options menu open on Discard unsent comments.">
+  <a href="/wp-content/uploads/ade-review-comments-01-v5@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ade-review-comments-01-v5@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total with cart.js open in the Changes view and three review comments under the lines they are about. The comment on line 2 reads Not sent yet, with Add to queue and Send now; the comments on lines 3 and 4 read Queued for OpenCode Fix the cart total: discounts should apply before tax., with Remove from queue and Send now. Each card opens with You, just now and its note, and has Edit comment and Delete comment icons. Line 2 is picked in the gutter. The overlay header reads 3 comments and Send comments (2), with the Comment options menu open on Discard unsent comments, beside from main and Up to date.">
   </a>
   <figcaption style="text-align:center; color:#888">Comments not sent and queued, with Send comments in the overlay header.</figcaption>
 </figure>
@@ -346,8 +346,8 @@ Kepler keeps what you type. **Escape** only moves focus out of a draft's field, 
 The agent answers a comment you sent in a thread under it, and it can resolve the comment when the fix is done. The card shows the conversation in order: your note, then each reply, oldest first, labeled **You** or with the agent and its session.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/review-comment-thread-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/review-comment-thread-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total with cart.js open and a sent review comment under line 3, its status Sent to OpenCode Fix the cart total: discounts should apply before tax. just now. The card reads as a conversation: You with the note Clamp the discounted subtotal at zero so a large discount cannot make the total negative, then OpenCode's reply under the session's name, Agreed. I'll clamp it with Math.max(0, subtotal - discount) and add a test for a discount larger than the order. Below them sit the Reply to OpenCode box, Resolve and Reply.">
+  <a href="/wp-content/uploads/review-comment-thread-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/review-comment-thread-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total with cart.js open and a sent review comment under line 3, its status Sent to OpenCode Fix the cart total: discounts should apply before tax. just now. The card reads as a conversation: You with the note Clamp the discounted subtotal at zero so a large discount cannot make the total negative, then OpenCode's reply under the session's name, Agreed. I'll clamp it with Math.max(0, subtotal - discount) and add a test for a discount larger than the order. Below them sit the Reply to OpenCode box, Resolve and Reply. The overlay header reads from main, Up to date and 1 comment.">
   </a>
   <figcaption style="text-align:center; color:#888">A sent comment with the agent's reply.</figcaption>
 </figure>
@@ -363,8 +363,8 @@ To collapse a card to a one-line row, click the chevron beside its lines. Click 
 The **Comments** view lists every review comment on the task. Open it from the view picker in the changes panel or the overlay, after **All files**. Its button shows the number of open comments, with a dot when there are unread replies.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/review-comments-list-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/review-comments-list-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total on its Comments view, its header reading 3 comments and Send comment. The side list reads 3 comments with View options, then the comments grouped by status: Not sent (cart.js:2), Queued (cart.js:4) and Sent (cart.js:3), each row with its place, just now, its note and its status. Beside it, cart.js shows the three cards: line 2 Not sent yet with Add to queue and Send now, line 3 Sent to OpenCode with the Reply to OpenCode box, Resolve and Reply, and line 4 Queued for OpenCode with Remove from queue and Send now.">
+  <a href="/wp-content/uploads/review-comments-list-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/review-comments-list-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total on its Comments view, its header reading 3 comments and Send comment. The side list reads 3 comments with View options, then the comments grouped by status: Not sent (cart.js:2), Queued (cart.js:4) and Sent (cart.js:3), each row with its place, just now, its note and its status. Beside it, cart.js shows the three cards: line 2 Not sent yet with Add to queue and Send now, line 3 Sent to OpenCode with the Reply to OpenCode box, Resolve and Reply, and line 4 Queued for OpenCode with Remove from queue and Send now. The header also reads from main and Up to date.">
   </a>
   <figcaption style="text-align:center; color:#888">The Comments view, grouped by status.</figcaption>
 </figure>
@@ -392,8 +392,8 @@ A view of the files on disk shows every comment on a file, whichever commit it w
 In **Working changes**, you stage files in the tree and commit them from the commit box below it. The changes panel and the overlay share one commit box per worktree, so a message you start in one appears in the other, and Kepler keeps it when the overlay closes.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/staging-commit-box-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/staging-commit-box-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The worktree column for kepler/fix-cart-total on Working changes, beside Commits, All changes and All files. cart.js is ticked and cart.test.js is not, so the header box is partly checked and its badge reads 1 of 2 staged. Below the files sits the commit box, with Commit message, Amend last commit and Commit.">
+  <a href="/wp-content/uploads/staging-commit-box-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/staging-commit-box-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The worktree column for kepler/fix-cart-total on Working changes, beside Commits, All changes, All files and Comments. cart.js is ticked and cart.test.js is not, so the header box is partly checked and its badge reads 1 of 2 staged. The file list's toolbar starts with the Discard button. Below the files sits the commit box, with Commit message, Amend last commit and Commit.">
   </a>
   <figcaption style="text-align:center; color:#888">Staging files in Working changes, above the commit box.</figcaption>
 </figure>
@@ -685,8 +685,8 @@ Before you update a branch, check what landed on its merge target since you bran
 - **Review changes**, which shows what landed in the overlay.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/changes-incoming-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/changes-incoming-nov-2026.png" class="help-center-img img-bordered" alt="The Changes overlay reviewing what is new on main for kepler/fix-cart-total. The header reads from where you branched, 2 new on main (pressed, with a close button) and Rebase onto main. On the left, Files to show offers Overlaps 1 and All 2; All new commits (2 commits) leads the list, then Use the 8.25% sales tax rate (8b89205, 1 file overlaps) and Mention gift cards in the README (2260509), over the changed files cart.js, marked as an overlap, and README.md. The viewer shows cart.js read-only, its tax rate changed from 0.08 to 0.0825.">
+  <a href="/wp-content/uploads/changes-incoming-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/changes-incoming-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Changes overlay reviewing what is new on main for kepler/fix-cart-total. The header reads from where you branched, 2 new on main (pressed, with a close button) and Rebase onto main. On the left, Files to show offers Overlaps 1 and All 2; All new commits (2 commits) leads the list, then Use the 8.25% sales tax rate (8b89205, 1 file overlaps) and Mention gift cards in the README (2260509), over the changed files cart.js, marked as an overlap, and README.md. The viewer shows cart.js read-only, its tax rate changed from 0.08 to 0.0825.">
   </a>
   <figcaption style="text-align:center; color:#888">Reviewing what landed on the merge target, with the file you also changed marked.</figcaption>
 </figure>

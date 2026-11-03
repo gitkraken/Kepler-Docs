@@ -40,8 +40,8 @@ You can start a task with as much or as little as you have:
 Everything attached to a task is a **resource**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/add-resource-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/add-resource-oct-2026.png" class="help-center-img img-bordered" alt="The Notes group in the task's context panel, led by the task's Prompt row, with a + on the group header and the Manage resources button below.">
+  <a href="/wp-content/uploads/add-resource-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/add-resource-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Notes group in the task's context panel, led by the task's Prompt row, with a + on the group header and the Manage resources button below.">
   </a>
   <figcaption style="text-align:center; color:#888">The + on a group header and the Manage resources button both open the Resources screen.</figcaption>
 </figure>
@@ -56,8 +56,8 @@ The **Resources** screen reads *What this task works from. Its agents can open a
 Drag the screen's edge to resize it, or click **Maximize**. **Escape** steps back one thing per press, such as text you typed or a selection, before it closes the screen. A click outside the screen does not close it.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/task-resources-screen-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-resources-screen-nov-2026.png" class="help-center-img img-bordered" alt="The Resources screen: What this task works from. Its agents can open and read all of it. Tabs read Repos & folders 2, Issues 1, Pull requests 1, Notes 2, Links and Files, with Preview, Maximize and Close at the top right. The Notes tab lists 2 notes, Coding conventions and Prompt, each with a checkbox, its age and a row menu, under a select-all box and a New note button.">
+  <a href="/wp-content/uploads/task-resources-screen-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-resources-screen-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Resources screen: What this task works from. Its agents can open and read all of it. Tabs read Repos & folders 2, Issues 1, Pull requests 1, Notes 2, Links and Files, with Preview, Maximize and Close at the top right. The Notes tab lists 2 notes, Coding conventions and Prompt, each with a checkbox, its age and a row menu, under a select-all box and a New note button.">
   </a>
   <figcaption style="text-align:center; color:#888">The Resources screen on its Notes tab.</figcaption>
 </figure>
@@ -105,8 +105,8 @@ You can use the list from the keyboard:
 | **Enter** | Adds the focused row |
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/add-resources-issue-list-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/add-resources-issue-list-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Resources screen on its Issues tab, adding from your issues, with the preview open. Under a back link to 1 issue on this task are the Search GitHub issues field, Refresh and the filter pills GitHub, Related to me, Any repo, Open, Last 90 days, Any label and No active task. Gift card codes are case-sensitive at checkout (#42, acme-web, GitHub, 1d) is focused with its Add button, Cart total ignores discounts when tax is applied (#38) has a check because it is already on the task, and Add a wishlist to product pages (#45) is Open. The preview shows #42 in acme/acme-web by sam-ortiz, its bug and checkout labels and its description.">
+  <a href="/wp-content/uploads/add-resources-issue-list-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/add-resources-issue-list-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Resources screen on its Issues tab, adding from your issues, with the preview open. Under a back link to 1 issue on this task are the Search GitHub issues field, Refresh and the filter pills GitHub, Related to me, Any repo, Open, Last 90 days, Any label and No active task. Gift card codes are case-sensitive at checkout (#42, acme-web, GitHub, 1d) is focused with its Add button, Cart total ignores discounts when tax is applied (#38) has a check because it is already on the task, and Add a wishlist to product pages (#45) is Open. The preview shows #42 in acme/acme-web by sam-ortiz, its bug and checkout labels and its description.">
   </a>
   <figcaption style="text-align:center; color:#888">Adding an issue, with the preview open on the focused row.</figcaption>
 </figure>
@@ -123,8 +123,8 @@ If the lookup finds nothing, or cannot reach the provider, Kepler shows one of t
 - *Unable to look up that issue. It will be added as a plain link.*
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/add-link-issue-lookup-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/add-link-issue-lookup-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Resources screen on its Links tab with a Linear issue URL pasted into the link field. Under it, Kepler has looked the link up: Adds Linear issue SHOP-128: Show saved cards at checkout, beside an Add as plain link button. The tab reads No links on this task yet.">
+  <a href="/wp-content/uploads/add-link-issue-lookup-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/add-link-issue-lookup-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Resources screen on its Links tab with a Linear issue URL pasted into the link field. Under it, Kepler has looked the link up: Adds Linear issue SHOP-128: Show saved cards at checkout, beside an Add as plain link button. The tab reads No links on this task yet.">
   </a>
   <figcaption style="text-align:center; color:#888">A pasted Linear URL, resolved to the issue it points at.</figcaption>
 </figure>
@@ -220,8 +220,8 @@ The chip's menu holds the **Isolated worktree** toggle, which sets whether the t
 If the branch you picked is already checked out somewhere, Git cannot check it out a second time. The toggle locks and says where the task will work instead: *Uses {worktree}, which already has this branch.* or *Uses your repository folder, which already has this branch.* With isolation off, the chip ends in **in place**, as in **New branch from {base}, in place**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/isolated-worktree-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/isolated-worktree-aug-2026.png" class="help-center-img img-bordered" alt="The Resources screen on its Repos & folders tab, adding from your repos and folders, with Open folder… and Clone…, the search field and the repositories folder /home/alex/kepler/repositories with Scan and Change. The acme-web row is selected, and under it a confirm line offers New worktree from main, reads Creates a worktree on a new branch from main, and has Cancel and Create worktree.">
+  <a href="/wp-content/uploads/isolated-worktree-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/isolated-worktree-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Resources screen on its Repos & folders tab, adding from your repos and folders, with Open folder… and Clone…, the search field and the repositories folder /home/alex/kepler/repositories with Scan and Change. The acme-web row is selected, and under it a confirm line offers New worktree from main, reads Creates a worktree on a new branch from main, and has Cancel and Create worktree.">
   </a>
   <figcaption style="text-align:center; color:#888">The confirm line under a repository, before it is added.</figcaption>
 </figure>
@@ -343,8 +343,8 @@ Attach a **Note** for anything every agent on the task should follow, such as a 
 To add a note, click **New note** on the **Notes** tab of the **Resources** screen, then type a title and the text (*Write the note. Markdown works.*). The note saves when you click away, press **Cmd/Ctrl+Enter** or **Escape**, or click **Save note**. A note needs some text: a title alone is refused with *Add some text to save this note.* A note you are still typing is saved when you close the screen.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/add-note-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/add-note-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Resources screen on its Notes tab with a new note being written: the title reads Coding conventions, and the body lists three standing instructions (money stays in cents until it is shown, every cart change gets a test in cart.test.js, never change the checkout copy without the style guide), with Save note below. Under it the tab lists 1 note, the Prompt, beside New note.">
+  <a href="/wp-content/uploads/add-note-aug-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/add-note-aug-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Resources screen on its Notes tab with a new note being written: the title reads Coding conventions, and the body lists three standing instructions (money stays in cents until it is shown, every cart change gets a test in cart.test.js, never change the checkout copy without the style guide), with Save note below. Under it the tab lists 1 note, the Prompt, beside New note.">
   </a>
   <figcaption style="text-align:center; color:#888">Writing a note with a title and Markdown content.</figcaption>
 </figure>
@@ -398,8 +398,8 @@ To set a resource aside without removing it, open the **Resources** screen and c
 To see what is archived, click **Archived** in the tab's toolbar, which shows the count. The tab reads *Archived items are hidden from the task and from agents. Restore one to bring it back.* Click **Restore** on a row to put it back on the task. Adding an archived link again restores it too.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/task-resources-archive-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-resources-archive-nov-2026.png" class="help-center-img img-bordered" alt="The Resources screen on its Notes tab with the Archived toggle on: Archived items are hidden from the task and from agents. Restore one to bring it back. Beside Archived 1 and New note, the list holds the archived note Coding conventions with a Restore button. The Notes tab counts 1 note.">
+  <a href="/wp-content/uploads/task-resources-archive-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-resources-archive-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Resources screen on its Notes tab with the Archived toggle on: Archived items are hidden from the task and from agents. Restore one to bring it back. Beside Archived 1 and New note, the list holds the archived note Coding conventions with a Restore button. The Notes tab counts 1 note.">
   </a>
   <figcaption style="text-align:center; color:#888">The archived items on the Notes tab, each with Restore.</figcaption>
 </figure>
@@ -451,8 +451,8 @@ Kepler **keeps** a worktree that would lose work, unless you tick the extra box 
 ## Renaming, archiving, and deleting a task
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/rename-task-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/rename-task-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Task actions menu of the Fix the cart total row, unread with a New reply, with Rename task highlighted. It runs Open task page; Progress (In Development), Mark as read and Star; Rename task and Add to group; Manage resources and Refresh; Copy task link and Copy task prompt; then Shut down all agents, Archive task and Delete task.">
+  <a href="/wp-content/uploads/rename-task-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/rename-task-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The Task actions menu of the Fix the cart total row, unread with a New reply, with Rename task highlighted. It runs Open task page; Progress (In Development), Mark as read and Star; Rename task and Add to group; Manage resources and Refresh; Copy task link and Copy task prompt; then Shut down all agents, Archive task and Delete task.">
   </a>
   <figcaption style="text-align:center; color:#888">The Task actions menu, open from a task's row.</figcaption>
 </figure>
@@ -509,8 +509,8 @@ When **Also delete the branch on the remote** is ticked, Kepler deletes each bra
   <figcaption style="text-align:center; color:#888">The Archive task? dialog, before you tick anything.</figcaption>
 </figure>
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ade-archive-task-worktrees-01-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ade-archive-task-worktrees-01-v3@2x.png" class="help-center-img img-bordered" alt="The Archive task? dialog for Upgrade the payment SDK with Also delete worktrees and Also delete branches ticked, and Also delete the branch on the remote unticked. Its Worktrees and branches list reads 1 of 2 will be deleted: kepler/payment-sdk-v5, with 1 uncommitted file, is kept because deleting it would lose work, and kepler/payment-sdk-docs, with no unpushed commits, will be deleted. Below it, an unticked box offers to Delete kepler/payment-sdk-v5 anyway, losing 1 uncommitted file. With Also delete worktrees ticked, the dialog also reads Ends 1 running agent.">
+  <a href="/wp-content/uploads/ade-archive-task-worktrees-01-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ade-archive-task-worktrees-01-v4@2x.png" class="help-center-img img-bordered" alt="The Archive task? dialog for Upgrade the payment SDK with Also delete worktrees and Also delete branches ticked, and Also delete the branch on the remote unticked. Its Worktrees and branches list reads 1 of 2 will be deleted: kepler/payment-sdk-v5, with 1 uncommitted file, is kept because deleting it would lose work, and kepler/payment-sdk-docs, with no unpushed commits, will be deleted. Below it, an unticked box offers to Delete kepler/payment-sdk-v5 anyway, losing 1 uncommitted file. With Also delete worktrees ticked, the dialog also reads Ends 1 running agent.">
   </a>
   <figcaption style="text-align:center; color:#888">The same dialog with worktrees and branches ticked: one worktree goes, one is kept.</figcaption>
 </figure>

@@ -305,8 +305,8 @@ By default an Action runs on your **default agent**, configured in **Settings â†
 | **Preset** | The **Default** preset, one of your agent presets, or **Custom agent settings**. **Custom agent settings** shows the model and mode pickers in the editor, so you set them for this Action alone |
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/inherit-default-agent-setting-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/inherit-default-agent-setting-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Agent field in the Action editor, reading Use default agent, with the Preset field below it set to Default.">
+  <a href="/wp-content/uploads/inherit-default-agent-setting-aug-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/inherit-default-agent-setting-aug-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Agent field in the Action editor, reading Use default agent, with the Preset field below it set to Default.">
   </a>
   <figcaption style="text-align:center; color:#888">The Agent field, reading Use default agent, with its preset.</figcaption>
 </figure>

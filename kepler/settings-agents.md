@@ -28,8 +28,8 @@ To choose the agent Ask Kepler uses, set the **Ask Kepler uses** row. This **Ask
 The **Ask Kepler uses** row lists only the agents that can answer in the Ask Kepler panel, which are the agents that run in **Chat**. If the agent you picked stops being available, the row reads *Pick another agent for Ask Kepler: {name} is not available.* See [Ask Kepler](/kepler/ask-kepler#which-agents-can-answer).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-settings-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-settings-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Settings › Agents: the page description, New tasks use Claude Code with Change in Tasks, Ask Kepler uses set to Claude Code CLI (alex.lee@example.com, Acme), Ask Kepler uses preset set to Default, and their help text. Your agents has Update all and Rescan above the Claude Code card, which shows its account (Default) with Check usage, New sessions start in set to Chat, Let artifact comments start turns (on), Artifacts in new sessions (off), and a collapsed Program and data folder.">
+  <a href="/wp-content/uploads/agent-settings-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-settings-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="Settings › Agents: the page description, New tasks use Claude Code with Change in Tasks, Ask Kepler uses set to Claude Code CLI (alex.lee@example.com, Acme), Ask Kepler uses preset set to Default, and their help text. Your agents has Update all and Rescan above the Claude Code card, which shows its account (Default) with Check usage, New sessions start in set to Chat, Let artifact comments start turns (on), Artifacts in new sessions (off), and a collapsed Program and data folder.">
   </a>
   <figcaption style="text-align:center; color:#888">Settings → Agents.</figcaption>
 </figure>
@@ -181,8 +181,8 @@ The list starts with **Default**, which holds the default agent's own options. T
 - Each preset you added has a menu, **Options for {name}**, with **Duplicate**, **Move up**, **Move down**, and **Delete**. **Duplicate** opens a copy named *{name} copy*.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-presets-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-presets-nov-2026.png" class="help-center-img img-bordered" alt="The Agent presets section of Settings › Agents with New preset: the built-in Default preset (Claude Code), then Quick fix (Claude Code, Codex), Careful review (Claude Code) and Docs pass (Claude Code, Codex, OpenCode), each of the three with its options menu.">
+  <a href="/wp-content/uploads/agent-presets-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-presets-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Agent presets section of Settings › Agents with New preset: the built-in Default preset (Claude Code), then Quick fix (Claude Code, Codex), Careful review (Claude Code) and Docs pass (Claude Code, Codex, OpenCode), each of the three with its options menu.">
   </a>
   <figcaption style="text-align:center; color:#888">The Default preset, and 3 presets with the agents each one has settings for.</figcaption>
 </figure>

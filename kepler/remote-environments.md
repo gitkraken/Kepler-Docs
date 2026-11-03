@@ -56,8 +56,8 @@ To let another device reach this Kepler, rather than connecting *to* another mac
 Each window works on one environment at a time, and the title-bar chip shows which one. The chip leads with the environment's type icon, and a green dot on that icon means connected.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-chip-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-chip-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The right end of the title bar in a window connected to dev-server: the environment chip reads dev-server on the host's purple tint, with a green dot on its type icon, followed by the Remote Access button, the Ask button with Kep, Feedback, Settings and the account avatar.">
+  <a href="/wp-content/uploads/remote-chip-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-chip-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The right end of the title bar in a window connected to dev-server: the environment chip reads dev-server on the host's purple tint, with a green dot on its type icon, followed by the Remote Access button, the Ask button with Kep, Feedback, Settings and the account avatar.">
   </a>
   <figcaption style="text-align:center; color:#888">The chip on a host colored Purple, connected.</figcaption>
 </figure>
@@ -144,8 +144,8 @@ Use **Settings → Remote environments** to add, connect, edit, and remove machi
 - To open the host's page, click the row.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-environments-hosts-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-environments-hosts-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Settings › Remote environments: Add machine, Your machines with dev-server (SSH, not connected, alex@dev.acme.example) and Connect, Found on this machine listing build-box and staging-db from the SSH config with Add and hide buttons and Show hidden (1), and the Remote windows option.">
+  <a href="/wp-content/uploads/remote-environments-hosts-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-environments-hosts-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Settings › Remote environments: Add machine, Your machines with dev-server (SSH, not connected, alex@dev.acme.example) and Connect, Found on this machine listing build-box and staging-db from the SSH config with Add and hide buttons and Show hidden (1), and Remote windows with the option Always use this app's interface, off.">
   </a>
   <figcaption style="text-align:center; color:#888">Settings → Remote Environments, with a saved host.</figcaption>
 </figure>
@@ -173,8 +173,8 @@ To rename the saved connection, click the pencil beside the name. Renaming chang
 A host saved with a color the picker no longer offers shows the nearest one.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-host-page-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-host-page-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The dev-server machine's page in Settings › Remote environments, not connected: Connect, Stop server, the Connection fields (host dev.acme.example, port 22, user alex, identity file), Color, Mute notifications from dev-server, and Sessions with Check.">
+  <a href="/wp-content/uploads/remote-host-page-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-host-page-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The dev-server machine's page in Settings › Remote environments, not connected: Connect, Stop server, the Connection fields (host dev.acme.example, port 22, user alex, identity file), Color with None selected ahead of twelve swatches (gray, blue, pink, yellow, green, purple, cyan, orange, teal, indigo, brown and red), Mute notifications from dev-server, and Sessions with Check.">
   </a>
   <figcaption style="text-align:center; color:#888">A saved host's page.</figcaption>
 </figure>
@@ -589,8 +589,8 @@ A pairing link works once and expires after 5 minutes. A used or expired link sh
 You can bookmark the address a paired browser opens on. If that browser's connection has ended or you revoked it, opening the address again reads *Signing you in with GitKraken…* and takes you to gitkraken.dev to sign in and pair it again.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-access-phone-sep-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-access-phone-sep-2026-v2@2x.png" class="help-center-img img-bordered" alt="Kepler's Dashboard in a phone's browser, on the Tasks view: one bar with Menu, the view picker showing Tasks with a chevron and an orange dot, Search, Options and New task, over the task list grouped into Needs attention (Add product search, In Development, Approval needed), Unread (Fix the cart total, In Review with its pull request and issue chips and Changes requested; Update checkout copy, On Hold, and Upgrade the payment SDK, In Review, each with New reply) and a folded Not started (1).">
+  <a href="/wp-content/uploads/remote-access-phone-sep-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-access-phone-sep-2026-v3@2x.png" class="help-center-img img-bordered" alt="Kepler's Dashboard in a phone's browser, on the Tasks view: one bar with Menu, the view picker showing Tasks with a chevron and an orange dot, Search, Options and New task, over the task list grouped into Needs attention (Add product search, In Development, Approval needed), Unread (Fix the cart total, In Review with its pull request and issue chips and Changes requested; Update checkout copy, On Hold, and Upgrade the payment SDK, In Review, each with New reply) and a folded Not started (1).">
   </a>
   <figcaption style="text-align:center; color:#888">Once paired, a phone opens this Kepler in its browser, in the phone layout.</figcaption>
 </figure>
@@ -609,8 +609,8 @@ When you open Kepler in a phone's browser, it uses a phone layout: one bar at th
 - Your account row, with your plan or the days left in a trial
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/phone-drawer-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/phone-drawer-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The phone menu open over the Dashboard: Kepler with Close at the top, then Views listing Todo (type Todo, highlighted as the current view), Tasks (type Tasks) and Agent Graph (type Tasks), the last two with an orange needs-you mark on their icons. Recent tasks lists Fix the cart total, Add product search, Update checkout copy, Upgrade the payment SDK and Write the 2.4 release notes with their status dots, above the Feedback, Settings and Help buttons and Alex Lee (Enterprise).">
+  <a href="/wp-content/uploads/phone-drawer-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/phone-drawer-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The phone menu open over the Dashboard: Kepler with Close at the top, then Views listing Todo (type Todo, highlighted as the current view), Tasks (type Tasks) and Agent Graph (type Tasks), the last two with an orange needs-you mark on their icons. Recent tasks lists Fix the cart total, Add product search, Update checkout copy, Upgrade the payment SDK and Write the 2.4 release notes with their status dots, above the Feedback, Settings and Help buttons and Alex Lee (Enterprise).">
   </a>
   <figcaption style="text-align:center; color:#888">The phone menu, listing your Dashboard views.</figcaption>
 </figure>
@@ -620,8 +620,8 @@ When you open Kepler in a phone's browser, it uses a phone layout: one bar at th
 The Dashboard's bar holds **Menu**, a view picker, **Search**, **Options**, and **New task**. The view picker names the view on screen and lists every Dashboard view, with **New view** and the current view's own actions. Press and hold a view in the list for its menu. **Search** expands in the bar. **Options** shows how many filters are active, and opens a sheet with **Refresh** and the view's settings: its layout, grouping, sort and filters, and, on a Todo view, **Scope** (**Mine** or **All**), with **Repos** and **Updated** under **All**. Right after a refresh, the **Refresh** row says *Refreshed recently. Try again in N s*.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/phone-dashboard-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/phone-dashboard-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Kepler's Dashboard in a phone-width browser: one bar with Menu, the view picker showing the Todo view with a chevron and an orange dot, Search, Options and New task, above the Todo list grouped into PR (two pull requests marked Changes requested, #51 with a Task badge) and Issue (three issues, one marked Mentioned and #38 with a Task badge) for acme-web.">
+  <a href="/wp-content/uploads/phone-dashboard-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/phone-dashboard-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Kepler's Dashboard in a phone-width browser: one bar with Menu, the view picker showing the Todo view with a chevron and an orange dot, Search, Options and New task, above the Todo list grouped into PR (two pull requests marked Changes requested, #51 with a Task badge) and Issue (three issues, one marked Mentioned and #38 with a Task badge) for acme-web.">
   </a>
   <figcaption style="text-align:center; color:#888">The Dashboard's one bar on a phone, over the Todo list.</figcaption>
 </figure>

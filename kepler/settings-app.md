@@ -83,8 +83,8 @@ The setting counts Claude Code sessions detected outside Kepler as well as Keple
 **Put idle agents to sleep** stops the chat sessions you have left alone. A sleeping session's status reads **Asleep**, or **Asleep, unread reply** when a reply you have not read waits in it. Your next message wakes it, and the conversation carries on. Agents that are working, waiting on you, running background work, or still running agents they started stay awake, and agents in a terminal never sleep. See [Session status](/kepler/agent-sessions#session-status).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agents-idle-sleep-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agents-idle-sleep-nov-2026.png" class="help-center-img img-bordered" alt="The Put idle agents to sleep setting set to After 15 minutes, with help text on when an agent in a chat view sleeps, what wakes it, and which agents stay awake.">
+  <a href="/wp-content/uploads/agents-idle-sleep-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agents-idle-sleep-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Put idle agents to sleep setting set to After 15 minutes, with help text on when an agent in a chat view sleeps, what wakes it, and which agents stay awake.">
   </a>
   <figcaption style="text-align:center; color:#888">Put idle agents to sleep, at its default.</figcaption>
 </figure>
@@ -266,8 +266,8 @@ These settings set where the Dashboard's views sit and how they look:
 A setting that the current **Views** choice does not use is marked **Title bar only** or **Left side only**. With **Along the left side**, the **Settings** button moves from the top bar to the bottom of the views.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/settings-appearance-dashboard-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/settings-appearance-dashboard-nov-2026.png" class="help-center-img img-bordered" alt="The Dashboard section of Settings › Appearance at its defaults: Views, with picture tiles for In the title bar, Below the title bar (chosen) and Along the left side; View style, with Tabs chosen over Pills; Size, Default or Compact, marked Left side only; Counts on views, switched on; and Search box, Grows as you type chosen over Full width. Each row has its help line.">
+  <a href="/wp-content/uploads/settings-appearance-dashboard-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/settings-appearance-dashboard-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Dashboard section of Settings › Appearance at its defaults: Views, with picture tiles for In the title bar, Below the title bar (chosen) and Along the left side; View style, with Tabs chosen over Pills; Size, Default or Compact, marked Left side only; Counts on views, switched on; and Search box, Grows as you type chosen over Full width. Each row has its help line.">
   </a>
   <figcaption style="text-align:center; color:#888">The Dashboard settings, at their defaults.</figcaption>
 </figure>
@@ -285,8 +285,8 @@ These settings set how wide a session's conversation grows and how it scrolls:
 In either scrolling mode, once you scroll up, the transcript stays where you put it. The conversation stays centered at every width, and an agent's answers span its full width.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/appearance-chat-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/appearance-chat-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Chat section of Settings › Appearance: Conversation width with Narrow selected beside Wide and Full width, then Scrolling, with While an agent replies set to Follow new output and Return to where I left off when I reopen a session ticked.">
+  <a href="/wp-content/uploads/appearance-chat-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/appearance-chat-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Chat section of Settings › Appearance: Conversation width with Narrow selected beside Wide and Full width, then Scrolling, with While an agent replies set to Follow new output and Return to where I left off when I reopen a session ticked.">
   </a>
   <figcaption style="text-align:center; color:#888">The Chat settings, at their defaults.</figcaption>
 </figure>

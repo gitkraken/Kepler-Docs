@@ -103,8 +103,8 @@ To give a session your own name, choose **Rename session** on its row menu. Agen
 ## Agent, model, mode, and effort
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-settings-from-composer-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-settings-from-composer-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Agent settings open above a new session's composer: Agent OpenCode, Preset Custom, Start in with Chat selected beside Terminal, Model Docs Model, Permission mode Build or Plan, MCP servers (No servers) with Manage, and Use defaults. Below it, the composer footer holds Attach a file, the microphone and a ticked Task context chip, then the Docs Model Build pill and Start.">
+  <a href="/wp-content/uploads/agent-settings-from-composer-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-settings-from-composer-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="Agent settings open above a new session's composer: Agent OpenCode, Preset Custom, Start in with Chat selected beside Terminal, Model Docs Model, Permission mode Build or Plan, MCP servers (No servers) with Manage, and Use defaults. Below it, the composer footer holds Attach a file, the microphone and a ticked Task context chip, then the Docs Model Build pill and Start.">
   </a>
   <figcaption style="text-align:center; color:#888">The Agent settings pill, opened from the composer, with the Task context chip in the footer.</figcaption>
 </figure>
@@ -146,8 +146,8 @@ The same menu lists the MCP servers the agent loads for this repository. To chan
 If the install fails, the dialog reads *Unable to install {component}. Try again, or install it in Settings under Agents.*
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-install-component-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-install-component-nov-2026.png" class="help-center-img img-bordered" alt="The Install ACP server dialog: Chat needs the ACP server for Antigravity, a separate download., with Cancel and Install and switch.">
+  <a href="/wp-content/uploads/agent-install-component-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-install-component-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Install ACP server dialog: Chat needs the ACP server for Antigravity, a separate download., with Cancel and Install and switch.">
   </a>
   <figcaption style="text-align:center; color:#888">Picking Chat for an agent whose Chat component is not installed yet.</figcaption>
 </figure>
@@ -223,8 +223,8 @@ Expand the warning to see which file the account copied, with the paths of **Thi
 - **Keep its own {item}**: keeps the account's copy. **Share your {item} again** then moves to the account's row menu.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/account-config-drift-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/account-config-drift-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Claude Code card in Settings › Agents with two accounts. Under the second account, Personal, an open warning reads This account stopped sharing your settings, names its own copy of settings.json and your /home/alex/.claude/settings.json, and offers Ask Kepler to resolve, Share your settings again and Keep its own settings.">
+  <a href="/wp-content/uploads/account-config-drift-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/account-config-drift-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Claude Code card in Settings › Agents with two accounts. Under the second account, Personal, an open warning reads This account stopped sharing your settings, names its own copy of settings.json and your /home/alex/.claude/settings.json, and offers Ask Kepler to resolve, Share your settings again and Keep its own settings.">
   </a>
   <figcaption style="text-align:center; color:#888">An added account that stopped sharing your settings.</figcaption>
 </figure>
@@ -707,8 +707,8 @@ A session's conversation shows your prompts, the agent's replies, and the agent'
 **A long conversation opens on its latest turns.** To read further back, click **Show earlier messages** at the top of the transcript (*Loads the previous part of this conversation*). Each click loads the part before it, and Kepler keeps your place. While it loads, the button reads **Loading earlier messages…**. If loading fails, it reads **Unable to load earlier messages**, with **Try again**. The button goes away once the start of the conversation is loaded.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/transcript-earlier-messages-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/transcript-earlier-messages-nov-2026.png" class="help-center-img img-bordered" alt="A task's Chat session reopened on its latest turn: under the prompt strip (2/2 Unify the button label on every step.), Show earlier messages heads the transcript, above Today 2:30 PM, the prompt Unify the button label on every step., an Edit templates/checkout/step-3.html tool row and the reply Done: every step now says &quot;Place order&quot;, and &quot;basket&quot; is &quot;cart&quot; throughout., each with its copy button and time.">
+  <a href="/wp-content/uploads/transcript-earlier-messages-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/transcript-earlier-messages-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="A task's Chat session reopened on its latest turn: under the prompt strip (2/2 Unify the button label on every step.), Show earlier messages heads the transcript, above Today 2:30 PM, the prompt Unify the button label on every step., an Edit templates/checkout/step-3.html tool row and the reply Done: every step now says &quot;Place order&quot;, and &quot;basket&quot; is &quot;cart&quot; throughout., each with its copy button and time.">
   </a>
   <figcaption style="text-align:center; color:#888">A long conversation, opened on its latest turn.</figcaption>
 </figure>

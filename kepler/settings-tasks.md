@@ -50,8 +50,8 @@ Under **Default agent**, the following setting decides which agent the **New tas
 With **Last used agent**, a task that an agent created and that has no session yet starts with the agent that created it. Kepler does not remember an Action's own agent as your last pick. If you choose **Default agent** with no default set, Kepler points you to the **Default agent** picker. Neither setting applies to Ask Kepler, which keeps its own last pick and its own default in [Settings → Agents](/kepler/settings-agents).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-sessions-start-with-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-sessions-start-with-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The New tasks section of Settings › Tasks: New tasks use Claude Code CLI (alex.lee@example.com, Acme), New tasks use preset set to Default, their description, and New sessions start with offering Last used agent (The agent, model and mode you last picked), selected, beside Default agent (Always the default agent).">
+  <a href="/wp-content/uploads/new-sessions-start-with-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-sessions-start-with-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The New tasks section of Settings › Tasks: New tasks use Claude Code CLI (alex.lee@example.com, Acme), New tasks use preset set to Default, their description, and New sessions start with offering Last used agent (The agent, model and mode you last picked), selected, beside Default agent (Always the default agent).">
   </a>
   <figcaption style="text-align:center; color:#888">Default agent and New sessions start with, in Settings → Tasks.</figcaption>
 </figure>
@@ -167,8 +167,8 @@ Each group's row shows its color, its name, and how many tasks it holds, countin
 Archived groups are listed under **Archived**. Each one's menu has **Restore group** and **Delete group…**. Deleting a group never deletes its tasks: *Its {count} tasks stay, ungrouped.* See [Your groups](/kepler/arranging-your-work#your-groups).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/task-groups-settings-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-groups-settings-nov-2026.png" class="help-center-img img-bordered" alt="The Groups section of Settings › Tasks with New group: Checkout (blue, 2 tasks), Search (yellow, 1 task) and Payments (green, 1 task), each with a drag grip and a menu, then Archived with Holiday sale (pink, 1 task) and its menu.">
+  <a href="/wp-content/uploads/task-groups-settings-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-groups-settings-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Groups section of Settings › Tasks with New group: Checkout (blue, 2 tasks), Search (yellow, 1 task) and Payments (green, 1 task), each with a drag grip and a menu, then Archived with Holiday sale (pink, 1 task) and its menu.">
   </a>
   <figcaption style="text-align:center; color:#888">3 groups and 1 archived group, in Settings → Tasks.</figcaption>
 </figure>

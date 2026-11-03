@@ -33,8 +33,8 @@ When several agents run at once, use the **Agent Graph** to see what each one is
 ## Open the Agent Graph
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-graph-toggle-sep-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-graph-toggle-sep-2026.png" class="help-center-img img-bordered" alt="The Dashboard's row of views: Todo, Tasks, and Agent Graph, selected, then New view. Tasks and Agent Graph carry an orange mark on their icons for a task waiting on you.">
+  <a href="/wp-content/uploads/agent-graph-toggle-sep-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-graph-toggle-sep-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Dashboard's row of views: Todo, Tasks, and Agent Graph, selected, then New view. Tasks and Agent Graph carry an orange mark on their icons for a task waiting on you.">
   </a>
   <figcaption style="text-align:center; color:#888">The Agent Graph view, beside Todo and Tasks.</figcaption>
 </figure>
@@ -129,8 +129,8 @@ When you select a node, its details open beside the graph. The details depend on
 For a node with children, the details header also has a fold button, **Collapse what is under this node** or **Expand what is under this node**. It does the same as double-clicking the card. The stats column still counts the whole graph, including folded nodes.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/graph-collapse-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/graph-collapse-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Agent Graph with the folded Turn 2 node selected, showing the failed call mark and a chevron with 3 hidden nodes, while the rest of the graph dims. Its details panel shows Turn, Done, Turn 2, the path Fix the cart total › Discount codes break the cart…, 1 failed call, Tool calls 2 and the prompt Add a test for the discount, with the back, Expand what is under this node and close buttons in its header.">
+  <a href="/wp-content/uploads/graph-collapse-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/graph-collapse-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Agent Graph with the folded Turn 2 node selected, showing the failed call mark and a chevron with 3 hidden nodes, while the rest of the graph dims. Its details panel shows Turn, Done, Turn 2, the path Fix the cart total › Discount codes break the cart…, 1 failed call, Tool calls 2 and the prompt Add a test for the discount, with the back, Expand what is under this node and close buttons in its header. Over the bottom of the graph float the replay bar (pause, previous and next frame, the scrubber and Live) and, beside it, the zoom buttons at 100%.">
   </a>
   <figcaption style="text-align:center; color:#888">A folded turn selected, with Expand what is under this node in its details header.</figcaption>
 </figure>
@@ -212,8 +212,8 @@ At the bottom of the stats column, a note counts what Kepler left out of the gra
 ## Finding things in a busy graph
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-graph-header-sep-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-graph-header-sep-2026.png" class="help-center-img img-bordered" alt="The Agent Graph view's View menu, open from the View button (Graph glyph, Depth 4, 1 filter) beside the search box and its Active sessions pill: the List, Board and Graph switch with Graph selected, Detail depth at 4/5, Direction, Left to right, open on Left to right (checked) and Top to bottom, Zoom, Group repeated tool calls ticked, Compact stats, then Filters with Sessions set to Active and Progress, Activity, Repository, Agent, Session and Linked work at Any, and Clear filters. The graph's nodes show behind it.">
+  <a href="/wp-content/uploads/agent-graph-header-sep-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-graph-header-sep-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Agent Graph view's View menu, open from the View button (Graph glyph, Depth 4, 1 filter) beside the search box and its Active sessions pill: the List, Board and Graph switch with Graph selected, Detail depth at 4/5, Direction, Left to right, open on Left to right (checked) and Top to bottom, Zoom, Group repeated tool calls ticked, Compact stats, then Filters with Sessions set to Active and Progress, Activity, Repository, Agent, Session and Linked work at Any, and Clear filters. The graph's nodes show behind it.">
   </a>
   <figcaption style="text-align:center; color:#888">An Agent Graph view's View menu, with the graph's settings and filters.</figcaption>
 </figure>
@@ -253,8 +253,8 @@ The play/pause button's tooltip says what it does next: *Hold this moment on scr
 Your agents keep working while you hold a frame, and Kepler keeps recording, so the readout shows the picture falling further behind. Kepler records only while something is happening: a session is running or thinking, or a tool call or subagent is running. While every agent is idle, the graph has nothing to replay, and the replay bar's controls are unavailable.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/freeze-button-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/freeze-button-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Agent Graph with its replay held on a frame: over the bottom of the graph's nodes floats the replay bar with Play, Previous frame, Next frame, the scrubber, a -0s readout and Back to live in place of the Live pill, and beside it the zoom buttons at 80% with Fit.">
+  <a href="/wp-content/uploads/freeze-button-aug-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/freeze-button-aug-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Agent Graph with its replay held on a frame: over the bottom of the graph's nodes floats the replay bar with Play, Previous frame, Next frame, the scrubber, a -0s readout and Back to live in place of the Live pill, and beside it the zoom buttons at 80% with Fit.">
   </a>
   <figcaption style="text-align:center; color:#888">The replay bar over the bottom of the graph, holding a frame.</figcaption>
 </figure>

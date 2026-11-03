@@ -24,8 +24,8 @@ taxonomy:
 For the agent sessions that run inside a task, see [Agent Sessions](/kepler/agent-sessions).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ask-kepler-chat-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ask-kepler-chat-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Ask Kepler panel under the top bar's highlighted Ask button, its header holding New chat with a chevron for past chats, Archive (unavailable on a new chat), the New chat button, Terminal, Dock panel and Close. Kep, the planet mascot, sits over Ask Kepler anything and the starters What needs me right now?, Find or change a setting and What changed across my tasks today?, above the Ask anything composer with the attach and microphone buttons and the Default agent pill.">
+  <a href="/wp-content/uploads/ask-kepler-chat-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ask-kepler-chat-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Ask Kepler panel under the top bar's highlighted Ask button, its header holding New chat with a chevron for past chats, Archive (unavailable on a new chat), the New chat button, Terminal, Dock panel and Close. Kep, the planet mascot, sits over Ask Kepler anything and the starters What needs me right now?, Find or change a setting and What changed across my tasks today?, above the Ask anything composer with the attach and microphone buttons and the Default agent pill.">
   </a>
   <figcaption style="text-align:center; color:#888">Ask Kepler, open on a new chat.</figcaption>
 </figure>
@@ -55,8 +55,8 @@ To close the panel, press the same shortcut again while focus is inside it. On W
 Right-click the panel's header, or press the keyboard's context-menu key on it, for the panel's menu: **Dock panel**, checked while docked, and **Move to the left** or **Move to the right**, which moves the panel to the other edge of the window.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ask-kepler-docked-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ask-kepler-docked-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Ask Kepler panel docked on the right of the window, with the Dashboard's task list narrowed beside it rather than covered, its Dock panel button pressed and its header's right-click menu open: Dock panel, checked, and Move to the left. The panel shows Kep over Ask Kepler anything, the three starters and the Ask anything composer.">
+  <a href="/wp-content/uploads/ask-kepler-docked-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ask-kepler-docked-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Ask Kepler panel docked on the right of the window, with the Dashboard's Tasks view narrowed beside it rather than covered: Needs attention (Add product search, Approval needed for Run npm test), Unread (Fix the cart total, Update checkout copy and Upgrade the payment SDK, each with New reply) and a folded Not started. The panel's Dock panel button is pressed and its header's right-click menu is open: Dock panel, checked, and Move to the left. The panel shows Kep over Ask Kepler anything, the three starters and the Ask anything composer with the Default pill.">
   </a>
   <figcaption style="text-align:center; color:#888">Ask Kepler docked beside the Dashboard, with the header's menu open.</figcaption>
 </figure>
@@ -129,8 +129,8 @@ To switch chats, open the chat's title in the panel header. It lists:
 - **Show archived**, with a count, which lists your **Archived chats**. Click one, or its **Restore {title}** button, to restore the chat and open it. **Hide archived** folds the list again.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ask-kepler-chat-picker-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ask-kepler-chat-picker-nov-2026.png" class="help-center-img img-bordered" alt="Ask Kepler's chat picker open under the panel header: New chat, then Unread (Summarize the merged P…, blue dot), Needs attention (Run the checkout tests, orange dot), Running (Watch CI on PR 51, green dot) and Recent (Which tasks are blocked on…, gray dot), each with when it was last active and an Archive button. Hide archived (1) is open below them, listing Which worktrees can I clean u… with a Restore button.">
+  <a href="/wp-content/uploads/ask-kepler-chat-picker-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ask-kepler-chat-picker-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="Ask Kepler's chat picker open under the panel header: New chat, then Unread (Summarize the merged P…, blue dot), Needs attention (Run the checkout tests, orange dot), Running (Watch CI on PR 51, green dot) and Recent (Which tasks are blocked on…, gray dot), each with when it was last active and an Archive button. Hide archived (1) is open below them, listing Which worktrees can I clean u… with a Restore button.">
   </a>
   <figcaption style="text-align:center; color:#888">The chat picker, with the archived chats shown.</figcaption>
 </figure>

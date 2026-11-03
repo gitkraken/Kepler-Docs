@@ -122,8 +122,8 @@ The context panel, on the left of the task page, lists everything attached to th
 **Sessions · Changes · Merged · Terminals · Folders · Files · Pull requests · Issues · Links · Notes · Related tasks**
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/task-rail-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-rail-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The context panel: Sessions with the agent's session, Changes with the kepler/fix-cart-total worktree (2 uncommitted files), a folded Merged group (1) with Delete all…, Pull requests with Apply discounts before tax in… (#51, Open, Changes requested) and Issues with Cart total ignores discounts… (#38, Open, acme-web), each with refresh and add buttons, Notes with the Prompt and Coding conventions, and Related tasks with Add tests for discount codes (Sub-task) and Show the discount on the receipt (Follow-up), above Manage resources.">
+  <a href="/wp-content/uploads/task-rail-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-rail-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The context panel: Sessions with the agent's session, Changes with the kepler/fix-cart-total worktree (2 uncommitted files), a folded Merged group (1) with Delete all…, Pull requests with Apply discounts before tax in… (#51, Open, Changes requested) and Issues with Cart total ignores discounts… (#38, Open, acme-web), each with refresh and add buttons, Notes with the Prompt and Coding conventions, and Related tasks with Add tests for discount codes (Sub-task) and Show the discount on the receipt (Follow-up), above Manage resources.">
   </a>
   <figcaption style="text-align:center; color:#888">The context panel, grouped by resource kind.</figcaption>
 </figure>
@@ -133,8 +133,8 @@ The task's worktrees are listed under **Changes**. Each row shows the checkout's
 **A planned worktree waits for the first session.** When an agent creates a task with a repository to work in on a new branch, Kepler makes the worktree when the task's first session starts. Until then, **Changes** shows a planned row with the repository and the branch name, reading **Created when a session starts**. Its tip says *A new worktree for this repository, created when the first session starts.* If Kepler fails to create it, the row reads **Unable to create the worktree**, its tip gives the reason, and Kepler tries again at the next session start. To drop the plan, click the row's remove button, or right-click it and pick **Remove planned worktree**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/task-planned-worktree-row-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-planned-worktree-row-nov-2026.png" class="help-center-img img-bordered" alt="The task page's context panel. Under Sessions is a New session draft; under Changes, a planned row for acme-web on kepler/receipt-discount reads Created when a session starts, with a remove button. Its tip reads acme-web, Branch: kepler/receipt-discount, A new worktree for this repository, created when the first session starts. Below are Notes with the Prompt, and Related tasks with Fix the cart total (Follows up on).">
+  <a href="/wp-content/uploads/task-planned-worktree-row-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-planned-worktree-row-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The task page's context panel. Under Sessions is a New session draft; under Changes, a planned row for acme-web on kepler/receipt-discount reads Created when a session starts, with a remove button. Its tip reads acme-web, Branch: kepler/receipt-discount, A new worktree for this repository, created when the first session starts. Below are Notes with the Prompt, and Related tasks with Fix the cart total (Follows up on).">
   </a>
   <figcaption style="text-align:center; color:#888">A planned worktree, made when the task's first session starts.</figcaption>
 </figure>
@@ -146,8 +146,8 @@ The task's worktrees are listed under **Changes**. Each row shows the checkout's
 Hover a row to see its relation, its stage, and the reason for the link. Click the row to go to that task.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/task-rail-merged-related-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-rail-merged-related-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The context panel with the Merged group unfolded: kepler/cart-rounding, merged into origin/main, under Merged (1) with Delete all…, above the Pull requests row Apply discounts before tax in… (#51) and the Issues row Cart total ignores discounts… (#38). At the bottom, Related tasks lists Add tests for discount codes as a Sub-task and Show the discount on the receipt as a Follow-up; pointing at the follow-up shows its tip, Follow-up · Exploration, with the reason: once the total is right, the receipt should show the discount.">
+  <a href="/wp-content/uploads/task-rail-merged-related-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-rail-merged-related-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The context panel with the Merged group unfolded: kepler/cart-rounding, merged into origin/main, under Merged (1) with Delete all…, above the Pull requests row Apply discounts before tax in… (#51) and the Issues row Cart total ignores discounts… (#38). At the bottom, Related tasks lists Add tests for discount codes as a Sub-task and Show the discount on the receipt as a Follow-up; pointing at the follow-up shows its tip, Follow-up · Exploration, with the reason: once the total is right, the receipt should show the discount.">
   </a>
   <figcaption style="text-align:center; color:#888">The Merged and Related tasks groups, with a related task's tip.</figcaption>
 </figure>

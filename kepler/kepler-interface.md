@@ -129,8 +129,8 @@ On Windows and Linux, click the icon to open the window that needs you. The icon
 The Dashboard shows your work in views. To move between them, click a view in the row of views, which sits below the top bar by default.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/todo-task-in-progress-agent-graph-sep-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/todo-task-in-progress-agent-graph-sep-2026.png" class="help-center-img img-bordered" alt="The Dashboard's row of views below the title bar: Todo, Tasks, selected, and Agent Graph, each with its icon, then New view. Tasks and Agent Graph carry an orange mark on their icons for a task waiting on you.">
+  <a href="/wp-content/uploads/todo-task-in-progress-agent-graph-sep-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/todo-task-in-progress-agent-graph-sep-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Dashboard's row of views below the title bar: Todo, Tasks, selected, and Agent Graph, each with its icon, then New view. Tasks and Agent Graph carry an orange mark on their icons for a task waiting on you.">
   </a>
   <figcaption style="text-align:center; color:#888">The Dashboard's starting views: Todo, Tasks, and Agent Graph.</figcaption>
 </figure>
@@ -258,8 +258,8 @@ The **Your role** grouping and filter sort items by your part in them:
 ### Task rows
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/task-row-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-row-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Unread group of the Tasks view with three task rows: Fix the cart total, Update checkout copy and Upgrade the payment SDK. Each row shows its title, the acme-web repository, its progress stage (In Development, On hold, In Review), New reply, its blue session dot, its age and the ⋮ menu. Fix the cart total is starred, so its filled Star button stays in view.">
+  <a href="/wp-content/uploads/task-row-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-row-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Unread group of the Tasks view with three task rows: Fix the cart total, Update checkout copy and Upgrade the payment SDK. Each row shows its title, the acme-web repository, its progress stage (In Development, On hold, In Review), New reply, its blue session dot, its age and the ⋮ menu. Fix the cart total is starred, so its filled Star button stays in view.">
   </a>
   <figcaption style="text-align:center; color:#888">Task rows, one of them starred.</figcaption>
 </figure>
@@ -303,8 +303,8 @@ A failed turn, failing CI, a new **Changes requested** review, or a hold that li
 Hover **Approval needed for {tool}** to answer the permission request itself, without opening the task. The request opens below the row with the agent's message and its answers, such as **Allow** and **Reject**, and the task's other reasons under it.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/task-row-answer-permission-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-row-answer-permission-nov-2026.png" class="help-center-img img-bordered" alt="Add product search's row in Needs attention with its Approval needed for Run npm test reason hovered, which opens the permission request itself below the row: the agent's message, the Run npm test call marked Needs approval, then Allow, Allow for this session, Allow always and Reject, and the task's other reason, New reply, under them. The hovered row shows its Star button.">
+  <a href="/wp-content/uploads/task-row-answer-permission-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-row-answer-permission-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="Add product search's row in Needs attention with its Approval needed for Run npm test reason hovered, which opens the permission request itself below the row: the agent's message, the Run npm test call marked Needs approval, then Allow, Allow for this session, Allow always and Reject, and the task's other reason, New reply, under them. The hovered row shows its Star button.">
   </a>
   <figcaption style="text-align:center; color:#888">A permission request answered from its task row.</figcaption>
 </figure>
@@ -440,8 +440,8 @@ You can change all of these defaults. See [Actions](/kepler/actions).
 ### Open a panel
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/open-a-task-panel-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/open-a-task-panel-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Todo list, with two pull requests above three issues, with GitHub issue #42 selected and its side panel open on the right: the issue header with Plan, the GITHUB, ISSUE #42 and Mentioned chips, Open in acme-web by sam-ortiz, the Summary with its labels and description, and a composer at the bottom, with #42 attached, for starting a task from it.">
+  <a href="/wp-content/uploads/open-a-task-panel-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/open-a-task-panel-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Todo view, with two pull requests above three issues, GitHub issue #42 selected and its side panel open on the right: the issue header with Plan, the GITHUB, ISSUE #42 and Mentioned chips, its Summary with the bug and checkout labels and description, and a composer at the bottom, with #42 attached, for starting a task from it. Above are the row of views, with Todo selected, and the toolbar with the View button reading Type, Updated and Mine.">
   </a>
   <figcaption style="text-align:center; color:#888">The side panel, opened from a row.</figcaption>
 </figure>
@@ -478,8 +478,8 @@ A new task appears in the list as soon as you press **Start** in the **New task*
 If setup fails, Kep says *That didn't go through.* (or *Task not started.* after you cancel). Choose **Edit and retry** to change the task and start it again, or **Dismiss**. When a task starts without some of its repositories, Kepler warns *Some repositories weren't added* and names them.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ade-task-preparing-panel-01-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ade-task-preparing-panel-01-v2@2x.png" class="help-center-img img-bordered" alt="The Tasks view with a new task, Add a gift-card field to checkout, in Recent with the Preparing pill and its spinner. Its side panel, also marked Preparing, shows Kep narrating the launch: Making your worktree. So your other work stays put., over the task's steps, Setting up worktrees… (in progress), Starting OpenCode with your prompt and Opening the chat.">
+  <a href="/wp-content/uploads/ade-task-preparing-panel-01-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ade-task-preparing-panel-01-v3@2x.png" class="help-center-img img-bordered" alt="The Tasks view with a new task, Add a gift-card field to checkout, in Recent with the Preparing pill and its spinner. Its side panel, also marked Preparing, shows Kep narrating the launch: Making your worktree. So your other work stays put., over the task's steps, Setting up worktrees… (in progress), Starting OpenCode with your prompt and Opening the chat.">
   </a>
   <figcaption style="text-align:center; color:#888">A new task while Kepler prepares it, with Kep narrating in its panel.</figcaption>
 </figure>
@@ -489,8 +489,8 @@ Shift-click selects a range from your last plain click, as it does in Finder or 
 Each panel gets its own column as soon as you open it. Until its item loads, the column shows a placeholder that says the item is loading, is gone, or could not be loaded, with **Try again** when retrying can help. A pull request or issue opened while you're signed out reads *Sign in to see this pull request* (or issue) with **Sign in**. You can close any placeholder.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/multi-task-panels-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/multi-task-panels-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Two task panels open side by side beside the Tasks list: Fix the cart total (In Development, pinned, with its Unpin panel button) and Upgrade the payment SDK (In Review, the active panel, outlined), each with its worktree card, session tab, conversation and message box. Both tasks are highlighted in the list's Recent group, and the row of views and the toolbar run across the top.">
+  <a href="/wp-content/uploads/multi-task-panels-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/multi-task-panels-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Two task panels open side by side beside the Tasks list: Fix the cart total (In Development, pinned, with its Unpin panel button) and Upgrade the payment SDK (In Review, the active panel, outlined), each with its worktree card, session tab, conversation and message box. Both tasks are highlighted in the list's Recent group, and the row of views and the toolbar run across the top.">
   </a>
   <figcaption style="text-align:center; color:#888">Several panels open side by side, each with its own chat.</figcaption>
 </figure>
@@ -520,8 +520,8 @@ If you start a task from **New task** while you're on the list, the new task ope
 A hidden list always uses the **List** layout. Kepler remembers per window whether the list is hidden and how wide it floats. **Cmd/Ctrl+B** works from a terminal on macOS only; on Windows and Linux a focused shell keeps **Ctrl+B**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/task-list-floating-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-list-floating-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The dashboard with the task list hidden and an open task panel taking the window: hovering the Dock list button at the start of the header floats the task list over the panel, with Fix the cart total highlighted as the open task, and the button's tooltip reads Dock list, Ctrl+B, and Ctrl+Shift+B shows it floating.">
+  <a href="/wp-content/uploads/task-list-floating-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-list-floating-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Dashboard with the task list hidden and an open task panel taking the window: hovering the Dock list button at the start of the toolbar floats the task list over the panel, with Fix the cart total highlighted as the open task in Recent, and the button's tooltip reads Dock list, Ctrl+B, and Ctrl+Shift+B shows it floating. Above are the row of views and the search box and View button.">
   </a>
   <figcaption style="text-align:center; color:#888">The hidden task list, floating over a panel from the Dock list button.</figcaption>
 </figure>
@@ -529,8 +529,8 @@ A hidden list always uses the **List** layout. Kepler remembers per window wheth
 ### Lay panels out in a grid
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/dashboard-grid-formation-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/dashboard-grid-formation-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Dashboard with four task panels in a 2 by 2 grid beside a narrow task list grouped by Repository (acme-web, 4, and No repository, 1). The Panel layout popover is open under the 3 × 2 toolbar button: Columns and Grid, with Grid chosen, a 3 by 2 block highlighted, and 3 × 2, 6 panels, Up to 16 panels, fewer in smaller windows.">
+  <a href="/wp-content/uploads/dashboard-grid-formation-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/dashboard-grid-formation-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Dashboard with four task panels in a 2 by 2 grid beside a narrow task list grouped by Repository (acme-web, 4, and No repository, 1). The Panel layout popover is open under the 3 × 2 toolbar button: Columns and Grid, with Grid chosen, a 3 by 2 block highlighted, and 3 × 2, 6 panels, Up to 16 panels, fewer in smaller windows.">
   </a>
   <figcaption style="text-align:center; color:#888">Panels in a grid, with the Panel layout popover open.</figcaption>
 </figure>
@@ -551,8 +551,8 @@ In a grid:
 ### Pin a panel
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/pin-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/pin-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A task panel's Task actions menu open from the ⋮ beside its title, Fix the cart total: Open task page; Progress, In Development, Mark as unread and Star; Rename task (F2) and Add to group; Manage resources and Refresh; Copy task link and Copy task prompt; Panel, open on its submenu with Pin panel highlighted; then Shut down all agents, Archive task and Delete task.">
+  <a href="/wp-content/uploads/pin-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/pin-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="A task panel's Task actions menu open from the ⋮ beside its title, Fix the cart total: Open task page; Progress, In Development, Mark as unread and Star; Rename task (F2) and Add to group; Manage resources and Refresh; Copy task link and Copy task prompt; Panel, open on its submenu with Pin panel highlighted; then Shut down all agents, Archive task and Delete task.">
   </a>
   <figcaption style="text-align:center; color:#888">Pin panel, in the Panel submenu of a task panel's ⋮ menu.</figcaption>
 </figure>
