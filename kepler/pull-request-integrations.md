@@ -150,7 +150,7 @@ Each entry carries two independent controls:
 
 **Browsing a secondary account does not change your primary.** Selecting **Read from this account** on a second account switches what Kepler shows you and leaves the primary alone. The primary is the default read account, so a provider with no override reads through it.
 
-**Agents keep acting as the primary account.** Your agents' GitKraken MCP server always uses the primary connection of your GitKraken account. When Kepler reads a provider through another account, a warning under the provider's accounts says so: *Agents' GitKraken MCP server acts as {account}, the primary connection on your GitKraken account.*
+**Agents keep acting as the primary account.** Your agents' GitKraken MCP server always uses the primary connection of your GitKraken account, even when Kepler reads a provider through another account.
 
 Changing either one clears that provider's saved filters.
 
@@ -220,12 +220,12 @@ Your pull requests appear in 4 places:
 
 | Surface | What it gives you |
 |---|---|
-| [The Kepler interface](/kepler/kepler-interface) | A **Todo** view lists the pull requests related to you on each connected host, with your role on each, or every open pull request in the repositories added to Kepler |
+| [The Kepler interface](/kepler/kepler-interface) | A **Todo** view lists the pull requests related to you on each connected host, or every open one in the repositories added to Kepler |
 | [Actions](/kepler/actions) | The **Action** button hands the pull request to an agent. **Review** and **Address Feedback** are the 2 built-in Actions for pull requests, and Kepler picks one based on who authored the pull request |
 | [Review Changes](/kepler/review-changes) | Reading the diff and the commits behind a pull request |
 | [Tasks and Resources](/kepler/tasks-and-resources) | A pull request is a resource on a task, so you can attach one to work that already exists |
 
-**Todo's scope.** A Todo view's **View** menu sets its **Scope**: **Mine**, the work related to you, or **All**, *Everything open in Kepler's repos, plus your work elsewhere*, narrowed by **Repos** and **Updated**. **All** adds the open pull requests of the repositories added to Kepler on all 8 Git hosts above, self-hosted ones included. See [Which issues Kepler lists](/kepler/issue-tracker-integrations#which-issues-kepler-lists).
+**Todo's scope.** A Todo view's **View** menu sets its **Scope**: **Mine**, the work related to you, or **All**, which adds the open pull requests of the repositories added to Kepler on every Git host above. See [Which issues Kepler lists](/kepler/issue-tracker-integrations#which-issues-kepler-lists).
 
 Under **Mine**, each provider reports a different set of pull requests related to you, so Todo lists these from each:
 
@@ -235,7 +235,7 @@ Under **Mine**, each provider reports a different set of pull requests related t
 | **GitLab**, **GitLab Self-Hosted**, **Azure DevOps**, **Azure DevOps Server**, **Bitbucket Data Center** | Yours or awaiting your review |
 | **Bitbucket** | Yours, or awaiting your review in your workspaces and repositories added to Kepler |
 
-The pull request list on a task's **Resources** screen has its own scope menu: **Related to me** (*Pull requests you authored, are assigned, or were asked to review*) or **All in my repos** (*Every open pull request in the repos added to Kepler, updated in the last year*). Under **All in my repos**, a line names the providers that fill the list, such as *Open pull requests in your repos on GitHub*.
+The pull request list on a task's **Resources** screen has its own scope menu: **Related to me** or **All in my repos**.
 
 **Review requests come from every host.** Pull requests waiting on your review show up from Azure DevOps, Azure DevOps Server, and Bitbucket Data Center as well as GitHub and GitLab. Bitbucket review requests appear repository by repository, starting with the repositories you have in Kepler, so on a large workspace they can take a while to appear.
 
@@ -249,7 +249,7 @@ The pull request list on a task's **Resources** screen has its own scope menu: *
 | The provider refused part of the request, so some organizations or repositories are missing | **Open settings** |
 | Rate limiting, an unreachable server, an unreadable answer, or a temporary problem | **Retry** |
 
-Rows kept from the last good load show a cloud mark on their provider chip, labeled *Not refreshed: shown from the last successful {provider} load.* When a provider's warning shows above such rows, it adds *Rows with a cloud are from the last load.*
+Rows kept from the last good load show a cloud mark on their provider chip, labeled *Not refreshed: shown from the last successful {provider} load.*
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/todo-provider-failure-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
@@ -275,7 +275,7 @@ The **Linked work** filter defaults to **No active task**. A task counts as acti
 
 A row with task history carries a badge: **Task** or **{count} tasks** when one of them is active, **Archived task** or **{count} archived tasks** when all are archived.
 
-When nothing you have connected can list issues or pull requests, **Add issue** and **Add PR** in the **New task** composer open on a connect view, **Connect where your work lives**, with a tile for each provider. Connect each one you use, then click **Continue**. On the **Resources** screen, an empty list shows **Connect your code host** or **Connect your issue tracker** instead. In both, the provider filter's menu offers **Connect another provider…**, which opens the connect view with a **Back** button.
+When nothing you have connected can list issues or pull requests, **Add issue** and **Add PR** in the **New task** composer open on a connect view, **Connect where your work lives**. Connect each provider you use, then click **Continue**. On the **Resources** screen, an empty list offers **Connect your code host** or **Connect your issue tracker** instead.
 
 You can also start work on a pull request from GitLens or GitKraken Desktop. See [Create a task](/kepler/create-task).
 

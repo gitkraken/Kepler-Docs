@@ -166,7 +166,7 @@ Each entry carries two independent controls:
 
 **Browsing a secondary account does not change your primary.** Selecting **Read from this account** on a second account switches what Kepler shows you and leaves the primary as it is. The primary is the default read account, so a provider with no override reads through it.
 
-**Agents keep acting as the primary account.** Your agents' GitKraken MCP server always uses the primary connection of your GitKraken account. When Kepler reads a provider through another account, a warning under the provider's accounts says so: *Agents' GitKraken MCP server acts as {account}, the primary connection on your GitKraken account.*
+**Agents keep acting as the primary account.** Your agents' GitKraken MCP server always uses the primary connection of your GitKraken account, even when Kepler reads a provider through another account.
 
 Changing either one clears that provider's saved filters.
 
@@ -231,12 +231,10 @@ Kepler lists open work. An issue that is finished or canceled in its tracker (a 
 
 A Todo view has 2 scopes, set in its **View** menu under **Scope**:
 
-- **Mine**: *Created by you, assigned to you, mentioning you, or awaiting your review*, across every organization you belong to.
-- **All**: *Everything open in Kepler's repos, plus your work elsewhere*. It adds the open issues of the repositories added to Kepler on GitHub, GitHub Enterprise, GitLab, and GitLab Self-Hosted. On other providers, including Azure DevOps and Azure DevOps Server, it lists the same issues as **Mine**.
+- **Mine**: the issues related to you, across every organization you belong to.
+- **All**: also adds the open issues of the repositories added to Kepler on GitHub, GitHub Enterprise, GitLab, and GitLab Self-Hosted. On other providers, it lists the same issues as **Mine**.
 
-Under **All**, **Repos** narrows the view to **All repos in Kepler** or a **Custom** list, and **Updated** to **Last 7 days**, **Last 30 days**, **Last 90 days** (the default), or **Last year**.
-
-**All repos in Kepler** skips a very large repository and says so in Todo, for example *Skipping {repo}: {count} open pull requests. Add it under Repos to load it anyway.*, with **Choose repos**. Ticking a very large repository under **Custom** warns that Kepler lists only its most recently updated items and that loading it can make the provider pause Kepler's reads for a few minutes. While repositories are still loading, Todo reads *Still loading {count} repos. They fill in over the next few minutes.*
+Under **All**, **Repos** and **Updated** narrow the view by repository and by how recently each issue was updated. **All repos in Kepler** skips a very large repository and says so, with **Choose repos** to add it anyway.
 
 Under **Mine**, each provider reports a different set of issues related to you:
 
@@ -246,7 +244,7 @@ Under **Mine**, each provider reports a different set of issues related to you:
 | **GitLab**, **GitLab Self-Hosted**, **Azure DevOps**, **Azure DevOps Server** | Yours or assigned to you |
 | **Jira**, **Jira Server / Data Center**, **Linear**, **Trello** | Assigned to you |
 
-An issue listed only because you were mentioned is marked **Mentioned**, so you can tell it apart from work that is yours. Under **All**, the **Your role** filter and grouping also offer **Not mine**, for the work that is not related to you.
+An issue listed only because you were mentioned is marked **Mentioned**, so you can tell it apart from work that is yours. Under **All**, the **Your role** filter also offers **Not mine**.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/todo-scope-tooltip-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
@@ -255,11 +253,7 @@ An issue listed only because you were mentioned is marked **Mentioned**, so you 
   <figcaption style="text-align:center; color:#888">A Todo view's scope, set in its View menu.</figcaption>
 </figure>
 
-To find issues to add to a task, the issue list on a task's **Resources** screen has its own scope menu:
-
-- **Related to me**: *Issues you authored, are assigned, or were mentioned in*.
-- **All in my repos**: *Every open issue in the repos added to Kepler, updated in the last year*. A line under the list names the providers that fill it, such as *Open issues in your repos on GitHub and GitLab*, or reads *None of your connected providers lists the open issues in your repos.*
-- **All visible**: issues beyond your own, as follows.
+To find issues to add to a task, the issue list on a task's **Resources** screen has its own scope menu: **Related to me**, **All in my repos** (the open issues in the repositories added to Kepler), or **All visible**.
 
 For GitHub and Azure DevOps, **All visible** reads every issue across your organizations, including repositories you can read outside them, such as ones where you are an outside collaborator. It loads more slowly. Jira and Linear show only your issues there until you pick a project or a team:
 
@@ -295,7 +289,7 @@ Kepler recognizes an issue from its URL when you paste or attach one, including 
 
 **Jira keys in commits and branches.** With Jira or Jira Server / Data Center connected, Kepler links Jira issue keys in commit messages and branch names, so `OPS-42` in a commit message links to that issue. Right-click a commit in a worktree's commit list for **Open issue {issue}** and **Copy issue URL for {issue}** (see [Review Changes](/kepler/review-changes#the-changes-panel)), and the **Worktrees and branches** page shows the keys as chips on branch and worktree rows (see [Settings](/kepler/settings-repositories#worktrees-and-branches)). When 2 connected sites share a key, the label adds the site's address. Only Jira keys are linked this way; Kepler does not link other trackers' issue references in a commit.
 
-**Add from the list with the keyboard.** In the issue list on the **Resources** screen, the arrows move between rows, and **Enter** or a double-click presses the row's **Add**. Each issue is added at once. **Show preview** in the screen's header (**Cmd/Ctrl+Shift+P**) shows the picked row beside the list. See [Picking issues and pull requests](/kepler/tasks-and-resources#picking-issues-and-pull-requests).
+**Add from the list with the keyboard.** In the issue list on the **Resources** screen, the arrows move between rows, and **Enter** or a double-click adds the row. **Show preview** in the screen's header shows the picked row beside the list. See [Picking issues and pull requests](/kepler/tasks-and-resources#picking-issues-and-pull-requests).
 
 **Paste a link on the Links tab.** An issue URL pasted on the **Links** tab of the **Resources** screen is looked up and added as that issue, with **Add as plain link** to keep it a plain link. See [Pasting an issue link](/kepler/tasks-and-resources#pasting-an-issue-link).
 

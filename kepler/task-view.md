@@ -47,7 +47,7 @@ The header holds these controls, from left to right:
 - **Back to dashboard**, a back chevron, which returns you to the Dashboard exactly as you left it: the same view, grouping, filters, and selection.
 - **The task switcher**, the task's name as a chip, which jumps to another task without going back first. It searches as you type, and each row shows the same session status dots as the task list. Right-click the name for the same actions as the **⋮** menu, or double-click it to rename the task.
 - **⋮ Task actions**, a menu of actions on the whole task. See [Task actions](#task-actions).
-- **The Progress control**, which shows where the work stands: **Exploration**, **In Development**, **In Review**, **On hold**, **Later**, or **Done**. Click it to set the stage yourself or to set it back to **Automatic**. **On hold** opens a submenu, where the hold lasts **Indefinitely** or until a condition, such as **Until CI finishes on {pr}** or **For 1 hour**, and then lifts by itself. An archived task shows **Archived** here instead. See [Arranging your work](/kepler/arranging-your-work).
+- **The Progress control**, which shows where the work stands: **Exploration**, **In Development**, **In Review**, **On hold**, **Later**, or **Done**. Click it to set the stage yourself or to set it back to **Automatic**. A hold can last until a condition, such as **Until CI finishes on {pr}**, and then lifts by itself. An archived task shows **Archived** here instead. See [Arranging your work](/kepler/arranging-your-work).
 - **Terminal**, at the right edge, which shows and hides the [terminal drawer](#the-terminal-drawer) and counts the terminals running in it.
 
 When a task looks finished, the header shows a **Ready to archive?** prompt with **Archive** beside it. The prompt stays until you archive the task or dismiss the prompt.
@@ -64,7 +64,7 @@ The **⋮ Task actions** menu holds these items:
 - **Refresh**, which reads the task's worktrees and its pull requests and issues again. Right after a refresh, **Refresh** is unavailable for a short time, and its tooltip says when you can try again.
 - **Copy task link**, which copies a Kepler link that opens this task, and **Copy task prompt**.
 - **Shut down all agents**, while any are running.
-- **Archive task** and **Delete task**. On an already-archived task, **Restore task** replaces **Archive task**. To delete the task from the keyboard, press **Cmd/Ctrl+Shift+Backspace**.
+- **Archive task** and **Delete task**. On an already-archived task, **Restore task** replaces **Archive task**.
 
 ### Rename a task
 
@@ -130,7 +130,7 @@ The context panel, on the left of the task page, lists everything attached to th
 
 The task's worktrees are listed under **Changes**. Each row shows the checkout's current state, and opening it opens the checkout's diff review.
 
-**A planned worktree waits for the first session.** When an agent creates a task with a repository to work in on a new branch, Kepler makes the worktree when the task's first session starts. Until then, **Changes** shows a planned row with the repository and the branch name, reading **Created when a session starts**. Its tip says *A new worktree for this repository, created when the first session starts.* If Kepler fails to create it, the row reads **Unable to create the worktree**, its tip gives the reason, and Kepler tries again at the next session start. To drop the plan, click the row's remove button, or right-click it and pick **Remove planned worktree**.
+**A planned worktree waits for the first session.** When an agent creates a task on a new branch, Kepler makes its worktree when the task's first session starts. Until then, **Changes** shows a row reading **Created when a session starts**. To drop the plan, right-click the row and pick **Remove planned worktree**.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/task-planned-worktree-row-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -160,8 +160,8 @@ Hover a row to see its relation, its stage, and the reason for the link. Click t
 
 The context panel also has these controls and rows:
 
-- **Manage resources**, at the bottom of the context panel, opens the task's **Resources** screen, where you see, add, archive, and remove what the task holds. See [What a task holds](/kepler/tasks-and-resources#what-a-task-holds).
-- The **+** on a group header opens that kind's tab of the **Resources** screen, ready to add, for example **Add issues** or **Add notes**. On **Changes**, the **+** is **Add worktree**. On **Sessions**, it's **New session**, which opens a draft session. See [Starting a session](#starting-a-session).
+- **Manage resources**, at the bottom of the context panel, opens the task's **Resources** screen. See [What a task holds](/kepler/tasks-and-resources#what-a-task-holds).
+- The **+** on a group header opens that kind's tab of the **Resources** screen, for example **Add issues** or **Add notes**. On **Changes**, the **+** is **Add worktree**. On **Sessions**, it's **New session**, which opens a draft session. See [Starting a session](#starting-a-session).
 - A session you have not started yet shows as a **Draft** row in **Sessions**. Right-click it for **Discard draft**.
 - Sessions that are not live, because they're archived or have ended, collect under a **{count} archived** fold below the live ones. The fold starts collapsed. Click an archived session to restore and open it in a single step, or pick **Restore** in its menu.
 
@@ -250,7 +250,7 @@ Each kind of row adds its own items to the menu:
 | A folder | **New session here**, **New terminal here**, your default editor, **Open in**, **Copy path** |
 | A file | **Open in default app**, **Show in Finder** (macOS), **Show in Explorer** (Windows) or **Show in file manager** (Linux), **Save as…**, **Copy path** |
 | A note | **Rename note**, which opens the note with its name ready to edit, and **Copy note** |
-| A session | **New session from this one**, **Mark as read** on an unread session or else **Mark as unread**, **Rename session**, **Copy session link**, **Open source session** on a session started from another, **Show Agent Graph**, **Continue as**, **Continue in Terminal** or **Continue in Chat**, **Use another copy…** when Kepler has more than 1 saved copy of the conversation, **Restart agent**, and **Shut down agent** |
+| A session | **New session from this one**, **Mark as read** or **Mark as unread**, **Rename session**, **Copy session link**, **Open source session** on a session started from another, **Show Agent Graph**, **Continue as**, **Continue in Terminal** or **Continue in Chat**, **Use another copy…** when Kepler has more than 1 saved copy of the conversation, **Restart agent**, and **Shut down agent** |
 | A session started outside Kepler | **Open preview**, **Continue in this task**, **Create task**, **Copy session ID**, **Copy working directory path**, and a way to reveal the working directory in your file manager |
 | A pull request or issue | **Open**, which opens it in Kepler, then **Open on {provider}**, **Copy link**, **Copy title**, **Copy number**, **Copy branch name** on a pull request, **Refresh**, and **Go to worktree** on a pull request whose branch is checked out |
 | A plain link | **Open in browser** and the copy actions |
@@ -424,7 +424,7 @@ The task page has these keyboard shortcuts:
 | **Cmd/Ctrl+O** / **Cmd/Ctrl+P** | **Open File…** / **Go to File…**. See [Opening a file](#opening-a-file) |
 | **Cmd/Ctrl+F** | Find in the focused file or diff. See [Finding text in a file](#finding-text-in-a-file) |
 | **F2** | Rename the task, or the note whose pane or tab has focus |
-| **Cmd/Ctrl+Shift+Backspace** | Delete the task: opens the **Delete task?** confirmation, even from the chat composer. **Cancel** returns focus to where you were |
+| **Cmd/Ctrl+Shift+Backspace** | Delete the task, after you confirm |
 | **Cmd/Ctrl+C** | Copy what the focused row names, such as a session's link or a file's path |
 | **Cmd/Ctrl+Shift+W** | Close the window |
 | **Tab** to a divider, then the arrow keys | Move the divider between panes, columns, or tab groups. Hold **Shift** for bigger steps |
@@ -455,7 +455,7 @@ The place chip has 3 segments. The first segment opens a menu of places in these
 
 The second segment picks the branch the session works on. The third is a checkbox: tick it to start on a new branch in a new worktree of the session's own, or leave it clear to work in the place as it is.
 
-A worktree that's gone from disk reads *Not on disk. Start recreates it.*, and Kepler asks **Recreate the worktree and start the session?** before the session starts. A task with no place to run at all says **Add a worktree or folder to start a session**, with **Add worktree or folder**. On a task with a [planned worktree](#the-context-panel), a new draft starts on that repository, on the planned new branch in a worktree of its own, until you pick another place.
+A worktree that's gone from disk reads *Not on disk. Start recreates it.*, and Kepler asks **Recreate the worktree and start the session?** before the session starts. A task with no place to run at all says **Add a worktree or folder to start a session**, with **Add worktree or folder**. On a task with a [planned worktree](#the-context-panel), a new draft starts on the planned branch.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/new-session-flyout-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
@@ -468,7 +468,7 @@ A worktree that's gone from disk reads *Not on disk. Start recreates it.*, and K
 
 **Which agent a draft starts with is a setting.** **New sessions start with**, in **Settings → Tasks → New tasks**, is **Last used agent** by default (*The agent, model and mode you last picked*), or **Default agent** to always start with the default agent. See [Settings](/kepler/settings-tasks#new-sessions-start-with).
 
-If no agent is set up, the agent control reads **Set up an agent**, and **Start** opens its setup panel instead of starting. The panel, **Set up a coding agent**, says *Install one, or tell Kepler where yours is.* Each agent has an **Install or locate {name}** button, 5 at first and then **Show {count} more**, and **Rescan**, beside the title, finds an agent you installed yourself. When Kepler finds agents on another machine, **Your agents on another machine?** offers **Choose**. **Agent settings** opens the agents page in Settings. See [Agent Integrations](/kepler/agent-integrations). An agent that's signed out reads *Sign in to {agent} to start a session*. When an agent does not share its options, the menu says *You can still start a session. It uses {agent}'s own model and mode.*
+If no agent is set up, the agent control reads **Set up an agent**, and **Start** opens a panel where you can install an agent or tell Kepler where yours is. See [Agent Integrations](/kepler/agent-integrations). An agent that's signed out reads *Sign in to {agent} to start a session*.
 
 **Start a draft in a specific checkout.** Right-click a worktree or folder row and pick **New session here**. A draft opens with that checkout already chosen as its place, ready for your prompt.
 
@@ -525,7 +525,7 @@ The file viewer shows each kind of file in its own way:
 
 A very large file shows its start first, labeled *Showing the first {shown} of {total}*, with **Load the rest**.
 
-**Review comments work in the file viewer too.** Hover a line for the gutter's **+** (**Comment on line {line}**) to leave a comment, the same way you do in the Changes overlay. The tab's actions then lead with the file's comment count and **Send comments**. From the keyboard, with focus on the code, **↑** and **↓** move a line highlight, **Shift** with an arrow extends it into a range, and **C** comments on it. Comments on a file in one of the task's worktrees are kept with that worktree, alongside the ones you write in its changes. To send comments on a file outside the task's worktrees, open it from the conversation. Opened any other way, it reads *Open this file from a conversation to send comments*. See [Review comments](/kepler/review-changes#review-comments).
+**Review comments work in the file viewer too.** Hover a line for the gutter's **+** (**Comment on line {line}**) to leave a comment, the same way you do in the Changes overlay. The tab's actions then lead with the file's comment count and **Send comments**. From the keyboard, move to a line with **↑** and **↓**, hold **Shift** to select a range, and press **C** to comment. Comments on a file in one of the task's worktrees are kept with that worktree, alongside the ones you write in its changes. To send comments on a file outside the task's worktrees, open it from the conversation. Opened any other way, it reads *Open this file from a conversation to send comments*. See [Review comments](/kepler/review-changes#review-comments).
 
 **Open in** on the viewer's header is an icon button that opens the file in your pinned editor, or else the one you used last, with its chevron listing the rest. Your computer's default app is one of the targets, listed as **Default app**, and like any editor it can be pinned as your default with **Set as default**.
 
@@ -540,7 +540,7 @@ Every code view, the file viewer and the diffs in the Changes overlay alike, has
 | **Match whole word** | **Alt+W**, or **Cmd+Option+W** on macOS |
 | **Use regular expression** | **Alt+R**, or **Cmd+Option+R** on macOS |
 
-**Escape** closes the bar. In the file overlay, the next **Escape** clears the match the bar left selected, and the one after closes the overlay. In a diff, the search runs across every file in the stack but skips the unchanged lines that are folded away. A file that has only partly loaded says it searched the first part, with **Load the rest**.
+**Escape** closes the bar. In a diff, the search runs across every file in the stack but skips the unchanged lines that are folded away. A file that has only partly loaded says it searched the first part, with **Load the rest**.
 
 Selecting text works across the whole file, not only the lines on screen. Drag or select all and copy, and Kepler loads the rest of the file if it needs to. Double-click selects a word.
 
@@ -660,7 +660,7 @@ Each kind of resource opens in its own pane:
 
 **The worktree strip.** The **⋮** beside the branch, **Worktree actions for {branch}**, and a right-click on the branch both open the worktree's full [row menu](#the-row-menu). With more than 1 worktree, the branch name also switches between the task's worktrees. **Detach worktree…** only detaches: *The worktree stays on disk — it’s only removed from this task.* **Delete worktree…** is its own entry, never offered on the repository's main worktree.
 
-**Files.** A description you edit saves as you type, and **Done** closes the field. **Rename** on an uploaded copy renames its file on disk, extension included, with the name before the extension selected. Kepler refuses a name it cannot use and says why, such as *Another file in this folder already has that name.* or *This name is not allowed on every operating system.* A linked file has no **Rename**, because it points at a file Kepler does not own.
+**Files.** A description you edit saves as you type, and **Done** closes the field. **Rename** on an uploaded copy renames its file on disk. A linked file has no **Rename**.
 
 **Pull requests and issues.** You can select and copy the description text. When Kepler cannot read a description, the pane says where to read it, such as *To read the full description, open it on {provider}.* When the read from the provider fails, the pane says *Unable to read this from {provider}, so its details may be missing.*, with a way to fix it.
 

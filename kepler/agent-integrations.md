@@ -48,7 +48,7 @@ Each agent gets its own section in **Settings → Agents**, in this order:
 | **Cursor** | Cursor | Your installed `cursor-agent` CLI | Chat or Terminal | No |
 | **Grok Build** | Grok Build | Your installed `grok` CLI | Chat or Terminal | Yes |
 
-**Auggie** is Augment's coding agent. Its model and mode pickers work like any other agent's. Auggie is also one of the 3 agents that report plan usage back to Kepler, with Claude Code and Codex. Auggie reports only its credit balance, with the credits your plan includes, rather than usage windows. To learn about the plan usage meter, see [Agent Sessions](/kepler/agent-sessions#usage-indicators).
+**Auggie** is Augment's coding agent. Like Claude Code and Codex, it reports plan usage back to Kepler, but only as a credit balance rather than usage windows. To learn about the plan usage meter, see [Agent Sessions](/kepler/agent-sessions#usage-indicators).
 
 Kepler asks each agent's provider for plan usage while **Check plan usage with each agent's provider** is on. This setting is in **Settings → Agents → Usage limits**, and it is on by default.
 
@@ -83,7 +83,7 @@ Kepler checks the build before it starts a session, and tells you to update if i
 
 ## Install an agent
 
-When an agent is not installed, its section reads **Not installed** and offers **Install**, which opens **Set up {name}**: *Install it with one of these, or tell Kepler where your copy is.* Pick an install method, and Kepler runs the install command for you and shows the output as it runs, so you can read a failure rather than guess at one. **Cancel** stops an install in progress (*Install cancelled: {name}*). Installs and updates run one at a time. If you start a second one while one is running, it waits. An install or update that produces no result for 20 minutes stops on its own and says so in the output.
+When an agent is not installed, its section reads **Not installed** and offers **Install**, which opens **Set up {name}**. Pick an install method, and Kepler runs the install command for you and shows its output. **Cancel** stops an install in progress. Installs and updates run one at a time.
 
 The install methods depend on the operating system of the machine you are on:
 
@@ -108,7 +108,7 @@ If you already installed the agent somewhere Kepler did not find it, tell Kepler
 1. Under **Already installed?**, type the program's full path in the **Full path to {name}** field, or click **Browse…** to pick it.
 2. Click **Use this**, or press **Enter**.
 
-Kepler saves the path as the agent's **Binary** and checks that the agent runs. If it does, the dialog closes. If it does not, Kepler says *Unable to run {name} from this file.* and keeps the path you had before. A path that is not a file reads *Not a file on this machine* or *Path is a directory, not a binary*.
+Kepler saves the path as the agent's **Binary** if the agent runs from it. If it does not, Kepler keeps the path you had before.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/agent-setup-dialog-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -123,7 +123,7 @@ Kepler does not close the install output pane automatically when the install fin
 
 ## Binary detection
 
-Kepler resolves each agent's binary the way your shell does: the first match on your `PATH`, so it agrees with `which`. Beyond `PATH`, it also searches your login shell's environment and well-known install directories. This is how Kepler finds an agent installed by nvm or Homebrew, even when you did not launch Kepler from a terminal. Kepler reads your login shell again on **Restart agent**, **Rescan**, or a retry, so an environment variable you add, change, or remove in your shell's startup files reaches the restarted agent without restarting Kepler.
+Kepler resolves each agent's binary the way your shell does: the first match on your `PATH`, so it agrees with `which`. Beyond `PATH`, it also searches your login shell's environment and well-known install directories. This is how Kepler finds an agent installed by nvm or Homebrew, even when you did not launch Kepler from a terminal. Kepler reads your login shell again on **Restart agent**, **Rescan**, or a retry, so a change to your shell's startup files reaches the restarted agent without restarting Kepler.
 
 Each agent's card in **Settings → Agents** shows what Kepler resolved. The version and **Install** are in the card's title line. **Binary**, **Components**, and **Data folder** are under **Program and data folder**:
 
@@ -269,16 +269,15 @@ Every agent except Pi runs in 2 modes, and each agent keeps its own default. To 
 
 | Mode | What you get |
 |---|---|
-| **Chat** | *{agent} built into Kepler, with replies, diffs and plans you can read, review and search.* Kepler shows the conversation in its own chat. This is the default |
-| **Terminal** | *{agent}'s own command-line app, with its commands, shortcuts and settings, just as you use it today.* It runs in an embedded terminal inside the task |
+| **Chat** | Kepler shows the conversation itself, with replies, diffs, and plans you can read, review, and search. This is the default |
+| **Terminal** | The agent's own command-line app, with its commands, shortcuts, and settings, in a terminal inside the task |
 
 To start one session in the other mode without changing the default, set **Start in** in the composer's **Agent settings** before you send the first message. An agent that offers only one mode shows no switch at all. See [Agent Sessions](/kepler/agent-sessions#how-a-session-runs).
 
-**New sessions start in** also offers **Chat** for an agent whose Chat component is not installed yet, such as Google Antigravity's ACP server:
+Some agents need a separate download for **Chat**, such as Google Antigravity's ACP server. To make **Chat** the default for one of them:
 
-1. Pick **Chat**. Kepler explains *Chat needs the {component} for {agent}, a separate download.*, with **Install and switch** and **Cancel**. Nothing is saved yet.
-2. Click **Install and switch**. While the component installs, the row reads **Installing {component}…**. If the install fails, it reads *Unable to install {component}. Try again.*
-3. Once the install succeeds, Kepler saves **Chat** as the default and reads *Chat is ready. Sign in to start a chat session.* Click **Sign in** to sign in to the agent for Chat.
+1. Under **New sessions start in**, pick **Chat**, then click **Install and switch**.
+2. Once the install finishes, click **Sign in** to sign in to the agent for Chat.
 
 Chat sessions show up as Kepler in places such as your Anthropic dashboard.
 
@@ -286,7 +285,7 @@ Chat sessions show up as Kepler in places such as your Anthropic dashboard.
 
 **Settings → Integrations → Your terminal → Show sessions started outside Kepler** is a separate setting that applies to all agents, and it is **on by default**. It installs GitKraken hooks so sessions you start in your own terminal show up in Kepler. It covers every agent Kepler can track that way: **Claude Code**, **Codex**, **Cursor**, **GitHub Copilot**, **OpenCode**, **Auggie**, **Grok Build**, and **Pi**. Kepler does not track Google Antigravity this way. See [Agent Sessions](/kepler/agent-sessions#sessions-started-outside-kepler).
 
-Kepler also follows its own **Terminal** sessions this way. If a running Terminal session stops reporting to Kepler, Kepler warns *Agent sessions aren't reporting to Kepler*, because status and notifications may be out of date. **Repair** reinstalls the reporting configuration. Restart any session that still does not report afterward. A window that only views another computer's sessions gets the warning without **Repair**, because you repair reporting on the computer running the sessions.
+Kepler also follows its own **Terminal** sessions this way. If a running Terminal session stops reporting to Kepler, Kepler warns that **Agent sessions aren't reporting to Kepler**. Click **Repair**, then restart any session that still does not report. To repair sessions running on another computer, use Kepler on that computer.
 
 ### Programs that report their own status
 
@@ -296,7 +295,7 @@ Some terminal programs report their own status to Kepler. When an agent's termin
 
 ## Your default agent
 
-**Settings → Tasks → New tasks → Default agent** sets which agent, account, and [agent preset](/kepler/settings-agents#agent-presets) are preselected when you start work. The preset supplies the model, mode, and options, such as effort, that a new session starts with.
+**Settings → Tasks → New tasks → Default agent** sets which agent, account, and [agent preset](/kepler/settings-agents#agent-presets) are preselected when you start work. The preset supplies a new session's model, mode, and options.
 
 Kepler saves agent options **per account**. Picking a different account of the same agent brings up that account's own saved model and options, so a larger model you chose on your work account does not carry over to your personal one.
 

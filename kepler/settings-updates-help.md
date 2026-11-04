@@ -29,15 +29,10 @@ The **Updates** page has these rows:
 |---|---|
 | **Current version** | The installed version, with **Release notes** beside it to open what's new in that release |
 | **Check for updates** | Checks for a newer release and downloads it in the background. Reads **Up to date** when there is nothing newer, and becomes **Check again** |
-| Download progress | While a release downloads: **Downloading** with a percentage, how much has arrived out of the total and the speed (*{done} of {total} at {rate}/s*), and the time left (*About {count} min left*). Before it can install, a **Verifying** step follows, then on Windows a **Preparing** step, *Unpacking the update so the restart is quick…* |
+| Download progress | While a release downloads: **Downloading**, with its progress and the time left. A **Verifying** step follows, and on Windows a **Preparing** step |
 | **New version** | Appears once a release is ready, with **Restart to update** beside it, and how many running agents a restart would stop |
 
-When an update is ready, a chip also appears in the top bar on every screen. Its popover reads **Update ready to install** and says what a restart does to running work. If agents are in the middle of a tool call when you restart, Kepler waits up to 30 seconds for them to finish, then restarts. While it waits:
-
-- The popover reads *Preparing to restart. Waiting for {count} agent actions in Kepler to finish…*
-- On the **Updates** page, the **New version** row reads *Preparing to restart. Finishing {count} active tool calls…*
-
-To skip the wait, click **Restart now** in the popover or on the **Updates** page. Tool calls that are still running may be interrupted.
+When an update is ready, a chip also appears in the top bar on every screen. Its popover reads **Update ready to install** and says what a restart does to running work. If agents are in the middle of a tool call when you restart, Kepler waits up to 30 seconds for them to finish. To skip the wait, click **Restart now**, which may interrupt tool calls that are still running.
 
 **Check for updates** in the app menu shows its result where you are, without opening Settings. The top bar shows **Checking…**, then **Up to date** or the download. On the welcome screen, click the version in the corner to check. If that check fails, it reads **Unable to check for updates** with **Try again**.
 

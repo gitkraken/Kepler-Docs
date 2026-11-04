@@ -41,11 +41,11 @@ You can open **Ask Kepler** from anywhere in Kepler in one of these ways:
 | The **Ask Kepler** button (Kep, the planet mascot, with the word **Ask**) in the top bar | The panel, on the section you used last |
 | **Cmd/Ctrl+L** or **Cmd/Ctrl+K** (**Toggle Ask Kepler chat**) | The **Chat** section |
 | **Ctrl+&#96;** on every platform, macOS included (**Toggle Ask Kepler terminal**) | The **Terminal** section, starting a shell if none is open |
-| **Cmd/Ctrl+Shift+K** or **Cmd/Ctrl+Shift+L** (**New Ask Kepler chat**) | A new chat, with its composer ready to type in, even when the panel is closed or on the **Terminal** section |
+| **Cmd/Ctrl+Shift+K** or **Cmd/Ctrl+Shift+L** (**New Ask Kepler chat**) | A new chat, from anywhere in the desktop app |
 
 To close the panel, press the same shortcut again while focus is inside it. On Windows and Linux, a focused shell uses **Ctrl+L** to clear its screen, so press **Ctrl+K** to open or close the chat from inside a terminal.
 
-**The top bar button shows the state of your chats.** While a panel chat you are not looking at is working, Kep's eye changes to the working color. When a chat needs something from you, the button becomes a pill that reads **Needs you** (a question or an approval is waiting), **New reply**, or **Failed**. Click the pill to open the panel on that chat. Hover the pill to see which chat it means, such as *{title} needs you* or *New reply in {title}*, or a count when several chats are in the same state. In a narrow window, the button hides the word **Ask** and shows Kep alone.
+**The top bar button shows the state of your chats.** When a chat needs something from you, the button becomes a pill that reads **Needs you**, **New reply**, or **Failed**. Click the pill to open the panel on that chat.
 
 **Floating or docked.** By default, the panel floats as a card over the left or right edge of the page, under the top bar. The page behind it does not dim, so you can still use it. When you dock the panel, it becomes a column of the window, and the page narrows beside it instead of sitting under it. A docked panel opens and closes without sliding. The panel's header holds the open section, a button for the other section, and the panel's own controls:
 
@@ -117,7 +117,7 @@ Kepler keeps some settings, such as the theme, the language, or the terminal fon
 
 The agent pill lists only agents that run in **Chat**. An agent that runs only in a terminal, such as Pi, cannot answer in the panel. See [Agent Integrations](/kepler/agent-integrations) for which agents run in **Chat**.
 
-**Ask Kepler keeps its own agent, separate from tasks.** A new chat opens on the agent you picked last in the panel. Picking an agent here never changes the agent a new task starts with, and picking an agent for a task never changes Ask Kepler's agent. When you have not picked an agent in the panel yet, or when you choose **Use defaults** on the pill, it uses Ask Kepler's default agent and preset, set in **Settings → Agents** on the **Ask Kepler uses** and **Ask Kepler uses preset** rows. As in every composer, the pill also offers a **Preset**. See [Agent, model, mode, and effort](/kepler/agent-sessions#agent-model-mode-and-effort) and [Settings: Agents](/kepler/settings-agents).
+**Ask Kepler keeps its own agent, separate from tasks.** A new chat opens on the agent you picked last in the panel, and picking an agent here never changes a task's agent, or the reverse. Until you pick one, or when you choose **Use defaults** on the pill, it uses the agent and preset set in **Settings → Agents** under **Ask Kepler uses** and **Ask Kepler uses preset**. See [Settings: Agents](/kepler/settings-agents).
 
 ### Past chats and new chats
 
@@ -125,8 +125,8 @@ To switch chats, open the chat's title in the panel header. It lists:
 
 - **New chat**, which returns the section to a fresh chat
 - **Continue in a new task**, for the chat that's open
-- Your open chats, grouped under **Unread**, **Needs attention**, **Running**, and **Recent**. Each chat has a status dot and when it was last active. Click one to open it again, or use **Archive {title}** beside it to put it away. With none, the list reads **No open chats**.
-- **Show archived**, with a count, which lists your **Archived chats**. Click one, or its **Restore {title}** button, to restore the chat and open it. **Hide archived** folds the list again.
+- Your open chats, grouped by state, such as **Unread** and **Running**. Click one to open it, or click **Archive {title}** beside it to put it away.
+- **Show archived**, which lists your archived chats. Click one to restore and open it.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/ask-kepler-chat-picker-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -135,7 +135,7 @@ To switch chats, open the chat's title in the panel header. It lists:
   <figcaption style="text-align:center; color:#888">The chat picker, with the archived chats shown.</figcaption>
 </figure>
 
-The **New chat** button beside the title does the same as the picker's first row. Its tooltip shows the **New Ask Kepler chat** shortcut, **Cmd/Ctrl+Shift+K** or **Cmd/Ctrl+Shift+L**, which works from anywhere in the desktop app. The **Archive** button before it archives the chat that's open and leaves the panel on a new chat.
+The **New chat** button beside the title starts a new chat. The **Archive** button before it archives the chat that's open.
 
 ### Continue in a new task
 

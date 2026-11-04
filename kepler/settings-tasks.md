@@ -27,12 +27,12 @@ Use **Settings → Tasks** to choose how new tasks start and how a task's page l
 
 ### Default agent
 
-**Default agent** picks the agent, account, and agent preset that Kepler preselects for a new task. Its description reads *Used when new sessions start with the default agent, when Kepler has no earlier pick to go on, and whenever you choose Use default agent in the launcher.* In the launcher, that button reads **Use defaults**. The following table lists its controls:
+**Default agent** picks the agent, account, and agent preset that Kepler preselects for a new task. To go back to it from the launcher, click **Use defaults**. The following table lists its controls:
 
 | Control | What it does |
 |---|---|
 | **New tasks use** | Chooses the agent, and the account when that agent supports more than one. **Use last used agent**, in the same picker, removes the saved default |
-| **New tasks use preset** | The [agent preset](/kepler/settings-agents#agent-presets) new tasks start with: **Default**, which holds the default agent's own model, mode, and options, or one of your presets |
+| **New tasks use preset** The [agent preset](/kepler/settings-agents#agent-presets) new tasks start with: **Default** or one of your presets |
 
 No default agent is set out of the box. If no agent is installed, Kepler hides the control. If you later uninstall the agent you saved, the row warns you: *Your default agent, {name}, is no longer installed. Pick another.*
 
@@ -76,7 +76,7 @@ This setting is only the default. For a single task, the repository chip's own *
 
 **Commits made on the current branch land on whichever branch is checked out at the time.** This applies to both **New branch** and **Current branch**, because both run in the repository's own checkout instead of an isolated one. If another task is already working in that checkout, Kepler says so and offers to switch that repository to an isolated worktree instead.
 
-**Branch prefix**, **Worktrees folder**, and **Tasks folder** follow **Where new tasks make changes**. You can edit them whichever option you choose, because a single task can still ask for a new branch or a worktree.
+You can edit **Branch prefix**, **Worktrees folder**, and **Tasks folder** whichever option you choose, because a single task can still ask for a new branch or a worktree.
 
 ### Branch prefix
 
@@ -121,7 +121,7 @@ A folder field that can contain a dynamic variable has a **Variables** menu besi
 
 For example, `<REPOSITORY_PATH>/.worktrees/<REPOSITORY_NAME>` nests each worktree inside the repository it belongs to.
 
-**Tasks folder** takes no variables, and Kepler does not save a value that has one: *Dynamic variables cannot be used here. A task folder has no repository behind it, so nothing would ever fill one in. This value was not saved.*
+**Tasks folder** takes no variables, because a task folder has no repository behind it.
 
 Per-repository commands have a **Variables** menu of their own, with 2 more variables. See [Per-repository commands](/kepler/settings-repositories#per-repository-commands).
 
@@ -155,16 +155,14 @@ You need a paid GitKraken subscription to turn this setting on. On the Community
 
 ## Groups
 
-**Groups** lists every one of your task groups, including archived groups and groups the Dashboard hides because of a filter. To open it from the Dashboard, choose **Manage groups…** in a group header's menu. With no groups, it reads *Groups organize tasks into sections on the Dashboard. Make one to start sorting your work.*
+**Groups** lists all your task groups, including archived ones. To open it from the Dashboard, choose **Manage groups…** in a group header's menu.
 
-Each group's row shows its color, its name, and how many tasks it holds, counting archived tasks too. Use the row to manage the group:
-
-- To edit a group's name or color, click its name.
-- To reorder groups, drag a row by its grip. From the keyboard, focus the grip and press **Alt + ↑** or **Alt + ↓**.
-- To move, archive, or delete a group, use its **⋮** menu. **Archive group** appears once every task in the group is archived.
 - To add a group, click **New group** in the section header.
+- To edit a group's name or color, click its name.
+- To reorder groups, drag a row by its grip.
+- To archive or delete a group, use its **⋮** menu. You can archive a group once all its tasks are archived.
 
-Archived groups are listed under **Archived**. Each one's menu has **Restore group** and **Delete group…**. Deleting a group never deletes its tasks: *Its {count} tasks stay, ungrouped.* See [Your groups](/kepler/arranging-your-work#your-groups).
+Archived groups are listed under **Archived**, where their menu has **Restore group**. Deleting a group never deletes its tasks; they stay, ungrouped. See [Your groups](/kepler/arranging-your-work#your-groups).
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/task-groups-settings-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">

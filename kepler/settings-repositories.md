@@ -49,7 +49,7 @@ If the folder does not exist yet, the field says that Kepler creates it when you
 
 With nothing tracked, the section reads *Add a repository or folder to manage it here.*
 
-If a folder you added later becomes a Git repository, because you ran `git init` in it or cloned into it, Kepler turns it into a repository on its own. Its row then opens **Edit repo**, and the tasks that hold it show it as a repository. While an agent session or a terminal is running in the folder, Kepler waits until it stops.
+If a folder you added later becomes a Git repository, for example after `git init`, Kepler treats it as a repository from then on.
 
 Removing a repository deletes its sessions, terminals, and configured commands, and ends any live agent and terminal sessions tied to it. Kepler asks you to confirm first.
 
@@ -72,9 +72,9 @@ Click a repository's row to open its **Edit repo** page. The page shows the repo
 
 | Part | What it holds |
 |---|---|
-| **Name** | *How this repo is listed in Kepler.* Leave it empty to use the folder name, which is the field's placeholder |
-| **Aliases** | *Short names for this repo when talking to agents, separated by commas.* For example, `api, backend` |
-| **Description** | *What this repo is for. Agents working in it read this.* |
+| **Name** | How this repo is listed in Kepler. Leave it empty to use the folder name |
+| **Aliases** | Short names for this repo when talking to agents, separated by commas, such as `api, backend` |
+| **Description** | What this repo is for. Agents working in it read this |
 | **Branch prefix** | Overrides the prefix from **Settings → Tasks** for this repository only. See below |
 | **Commands** | Shell commands for this repository. See [Per-repository commands](#per-repository-commands) |
 | **MCP servers** | *Extra tools your agents get in this repo, on top of their own lists. Changes here apply right away.* See [MCP Servers](/kepler/mcp-servers) |
@@ -152,12 +152,7 @@ To run a command from the task view, right-click a worktree row in the task's co
 
 ### Copy ignored files into new worktrees
 
-A new worktree starts without your repository's git-ignored files, such as `.env`. To copy some of them, list them in a `.worktreeinclude` file at the repository's root, in the same format as `.gitignore`. Kepler skips `#` comments and lines that start with `!`. When Kepler creates a worktree, it copies each listed file or folder that git ignores, from the main checkout or from the worktree it forks. The copy finishes before any command set to run on worktree creation starts. These rules keep the copy safe:
-
-- Kepler copies a file only if git also ignores it in the new worktree, so a copied secret cannot be committed by mistake.
-- Kepler never overwrites a file that is already in the worktree.
-- Kepler skips folders that hold a Git repository of their own.
-- A file that fails to copy does not stop the worktree from being created.
+A new worktree starts without your repository's git-ignored files, such as `.env`. To copy some of them, list them in a `.worktreeinclude` file at the repository's root, in the same format as `.gitignore`. Kepler copies them before any command set to run on worktree creation starts. It copies only files that git also ignores in the new worktree, so a copied secret cannot be committed by mistake, and it never overwrites a file already there.
 
 ## Worktrees and branches
 

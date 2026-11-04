@@ -91,7 +91,7 @@ When you open a server's page, **All servers** takes you back to the list.
   <figcaption style="text-align:center; color:#888">The MCP servers row in the Agent settings menu.</figcaption>
 </figure>
 
-A change here applies to that repository only. Every worktree of the repository shares the setting, so a server you turn off in a repository stays off in each task's worktree of it.
+A change here applies to that repository and all of its worktrees.
 
 If a server is off in Settings and you have not turned it on here, the server says *Off for every repo in Settings. Turn it on to use it here.*, with **Open Settings** to go to the global default. Turning it on in the dialog turns it on for this repository only.
 
@@ -188,7 +188,7 @@ For a server that needs authentication, its page has a **Sign-in** section. It o
 
 In a local window, **Open sign-in page** opens your browser, and Kepler finishes when you are done (*Finish signing in in your browser*). In a window connected to a remote environment, sign in on that page, then paste the URL you land on into **Redirect URL**.
 
-If your organization pushes managed settings to the agent, sign-in first asks you to approve them: *Before it signs in, the agent needs you to approve your organization's managed settings:*, followed by the settings themselves. Click **Approve and continue** to go on to the sign-in page, or **Decline** to stop. *Your approval is saved for this account. Decline if you don't recognize these settings.*
+If your organization manages the agent's settings, sign-in first lists them for your approval. Click **Approve and continue** to sign in, or **Decline** if you do not recognize them. Kepler saves your approval for this account.
 
 ***
 
@@ -202,7 +202,7 @@ If your organization pushes managed settings to the agent, sign-in first asks yo
 
 Where Kepler saves an on or off choice depends on the agent:
 
-- **Claude Code, Codex, OpenCode, and GitHub Copilot**: Kepler does not edit the agent's config. The choice applies to the agent's sessions in Kepler only, so the same agent run from your own terminal is not affected. The one exception is turning on a Claude Code server that Claude's own config lists as disabled: Kepler can do this only by editing that list.
+- **Claude Code, Codex, OpenCode, and GitHub Copilot**: Kepler does not edit the agent's config, so the same agent run from your own terminal is not affected. The one exception is turning on a Claude Code server that Claude's own config lists as disabled: Kepler can do this only by editing that list.
 - **Cursor and Grok Build**: Kepler writes the change into the agent's own files, which their CLIs also read.
 - **Auggie**: Kepler lists the servers without a switch, because Auggie has no way to turn a server off. To stop using a server, edit Auggie's config.
 

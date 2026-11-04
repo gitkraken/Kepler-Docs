@@ -48,12 +48,10 @@ Everything attached to a task is a **resource**.
 
 To see and change what a task holds, use one of these controls on the task page:
 
-- **Manage resources**, at the bottom of the context panel or in the **Task actions** (**⋮**) menu, opens the **Resources** screen. It reopens on the tab you last used for that task, or else on the kind of the task's newest item.
-- The **+** on a group header in the context panel opens the same screen on that kind's tab, ready to add.
+- **Manage resources**, at the bottom of the context panel or in the **Task actions** (**⋮**) menu, opens the **Resources** screen.
+- The **+** on a group header in the context panel opens the same screen on that kind's tab.
 
-The **Resources** screen reads *What this task works from. Its agents can open and read all of it.* It has a tab for each kind of resource, **Repos & folders**, **Issues**, **Pull requests**, **Notes**, **Links** and **Files**, and each tab shows its count. A tab lists what the task already holds, newest first, above the way to add more. Everything you add goes onto the task at once, and its row reads **Just added**.
-
-Drag the screen's edge to resize it, or click **Maximize**. **Escape** steps back one thing per press, such as text you typed or a selection, before it closes the screen. A click outside the screen does not close it.
+The **Resources** screen has a tab for each kind of resource: **Repos & folders**, **Issues**, **Pull requests**, **Notes**, **Links** and **Files**. Each tab lists what the task already holds, above the way to add more. Everything you add goes onto the task at once.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/task-resources-screen-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -69,7 +67,7 @@ A task can hold these kinds of resource:
 | **Sessions** | Agent conversations that run on this task |
 | **Terminals** | Shells opened in one of the task's working directories |
 | **Worktrees** | Git working copies that the agents change. The context panel lists them under **Changes**, because you go there to read the changes |
-| **Folders** | A directory that is not a Git repository, which the agent works on in place. If you later run `git init` in it or clone into it, Kepler turns it into a repository once nothing is running in it, and the task lists it under **Changes** |
+| **Folders** | A directory that is not a Git repository, which the agent works on in place. If you later make it a Git repository, the task lists it under **Changes** |
 | **Files** | A single file, when you need the file rather than its whole folder. A file is either linked from disk by its path or uploaded to the task as a copy |
 | **Pull requests** | Pull requests from your connected Git hosts |
 | **Issues** | Issues from your connected trackers |
@@ -82,19 +80,19 @@ To learn how the task page is laid out (the context panel, columns, split panes 
 
 ### Picking issues and pull requests
 
-The **Issues** and **Pull requests** tabs first list the items already on the task. To add more, click **Add issues** or **Add pull requests**. The tab turns into **Add from your issues** or **Add from your pull requests**: work from your connected providers, under a search field and a row of filters. The link above it, such as **1 issue on this task**, takes you back. A tab with nothing on the task opens straight on the list. Each row shows the item's title, a line with its identifier, repository and provider, and its age.
+The **Issues** and **Pull requests** tabs first list the items already on the task. To add more, click **Add issues** or **Add pull requests** to search the work on your connected providers.
 
-The scope filter sets which items the list reads:
+The scope filter sets which items the list shows:
 
 | Scope | What it lists |
 |---|---|
-| **Related to me** | *Issues you authored, are assigned, or were mentioned in*. On **Pull requests**: *Pull requests you authored, are assigned, or were asked to review* |
-| **All in my repos** | *Every open issue in the repos added to Kepler, updated in the last year*, or every open pull request on **Pull requests**. A line names the providers it covers, as in *Open issues in your repos on {providers}*, or says *None of your connected providers lists the open issues in your repos.* |
-| **All visible** | Issues only: *GitHub and Azure organizations (slower); pick a project or team for Jira and Linear* |
+| **Related to me** | Items you authored, are assigned, or were mentioned in or asked to review |
+| **All in my repos** | Every open item in the repositories added to Kepler |
+| **All visible** | Issues only: your GitHub and Azure organizations, or a Jira or Linear project or team you pick |
 
-Each row has its own **Add**. A click selects a row and shows it in the preview, but never adds it. To add the selected row, click **Add**, press **Enter**, or double-click the row. The row shows a spinner, then a check once the item is on the task. **Remove** takes it off again, and a failed add keeps **Retry** on the row.
+To add an item, select its row and click **Add**, press **Enter**, or double-click the row. **Remove** takes it off again.
 
-To see more about an item before you add it, click **Show preview** in the screen's header, or press **Cmd/Ctrl+Shift+P**. The list splits to show a preview of the focused item: its repository, author, labels and description. The same toggle previews notes and files beside their list. Kepler remembers this choice on this computer. When the screen is too narrow for the preview, the toggle is hidden.
+To see more about an item before you add it, click **Show preview** in the screen's header, or press **Cmd/Ctrl+Shift+P**.
 
 You can use the list from the keyboard:
 
@@ -113,14 +111,9 @@ You can use the list from the keyboard:
 
 ### Pasting an issue link
 
-To add a link, click **Add link** on the **Links** tab, paste a URL into *Paste a link and press Enter*, and press **Enter**. Kepler adds it at once. Text that is not a web address is refused with *Enter a web address, like example.com*. To change a web link's label later, click the pencil on its row, or press **F2**.
+To add a link, click **Add link** on the **Links** tab, paste a URL, and press **Enter**. To change a web link's label later, click the pencil on its row, or press **F2**.
 
-When you paste an issue's URL, Kepler looks up the issue (*Looking up issue…*) before you can add it. If Kepler finds the issue, the field reads *Adds {provider} issue {key}: {title}*, and Kepler adds the link as that issue, under the issue's title, rather than as a plain link. To add it as a plain link anyway, click **Add as plain link**.
-
-If the lookup finds nothing, or cannot reach the provider, Kepler shows one of these messages and adds a plain link instead:
-
-- *No issue found for that link. It may not exist or you may not have access; it will be added as a plain link.*
-- *Unable to look up that issue. It will be added as a plain link.*
+When you paste an issue's URL, Kepler looks up the issue and adds the link as that issue, under its title. To add it as a plain link anyway, click **Add as plain link**. If Kepler cannot find the issue, it adds a plain link instead.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/add-link-issue-lookup-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
@@ -138,12 +131,12 @@ The **Files** group holds 2 kinds of file. Kepler removes them differently, beca
 | **Linked file** | Where it already was on disk. Kepler links to it by its path and never changes it | Its path | **Detach file…** leaves the file where it is |
 | **Uploaded copy** | In the task's own folder. It belongs to this task only | **Task folder** | **Delete file…** deletes the copy |
 
-To add a file, click **Add file** on the **Files** tab of the **Resources** screen. Kepler attaches what you pick in the file picker at once, and opens the new row's description, *Add a description for agents*. An upload shows **Uploading…** on its row. A failed one reads *Unable to add: {reason}*, with **Retry** and **Dismiss**. To edit a file's description later, or an uploaded copy's name, click the pencil on its row, or press **F2**.
+To add a file, click **Add file** on the **Files** tab of the **Resources** screen and pick it. Kepler attaches it at once and opens its description, so you can tell agents what it is for. To edit a file's description later, or an uploaded copy's name, click the pencil on its row, or press **F2**.
 
 Other ways files reach a task:
 
 - When you attach a file to a prompt, Kepler copies it into the task when you send the prompt. That copy is an uploaded copy too.
-- In a window connected to another machine, the file picker on the **Files** tab also offers **Upload from this machine**. It copies files from the machine you are using into the task's folder.
+- In a window connected to another machine, the **Files** tab also offers **Upload from this machine**, which copies files from the machine you are using.
 
 To save either kind of file somewhere else, choose **Save as…** from its menu.
 
@@ -202,22 +195,16 @@ To refresh by hand, click the refresh button on the **Pull requests** or **Issue
 
 A **worktree** is a private Git working copy for one task. Agents make their changes in the worktree, so nothing they do touches the checkout you work in, and several agents can run at once without changing each other's files. Use a worktree for most work.
 
-To add a repository to a task, open the **Repos & folders** tab of the **Resources** screen. If the task already holds some, click **Add repos or folders**. A repository row has no **Add**. Select the row, or press **Enter** on it, to open a confirm line under it:
+To add a repository to a task, open the **Repos & folders** tab of the **Resources** screen, and click **Add repos or folders** if the task already holds some. Select a repository's row to open a confirm line under it. Its chip says how the task gets the repository, such as **New worktree from {base}**, and a button such as **Create worktree** adds it. A folder's row has an **Add** that adds it at once.
 
-- A chip says how the task gets the repository, such as **New worktree from {base}**, **New branch from {base}, in place**, **Worktree on {branch}**, **{branch}, in place**, or **Work on {branch}**.
-- A sentence says what will happen, such as *Creates a worktree on a new branch from {base}* or *Checks out {branch} in the repository folder*.
-- **Create worktree**, **Create branch**, or **Check out {branch}** adds the repository, and **Cancel** closes the line.
-
-A folder has nothing to choose, so its row keeps an **Add** that adds it at once. Once a repository is on the task, **Add another** adds a second checkout of it.
-
-The chip's menu holds the **Isolated worktree** toggle, which sets whether the task gets a worktree, and the branch choice. When you create a task, the repository chip in the **New task** composer offers the same choice, with a branch-name field. See [Create a task](/kepler/create-task#configuring-a-repository).
+The chip's menu holds the **Isolated worktree** toggle, which sets whether the task gets a worktree, and the branch choice. The **New task** composer offers the same choice. See [Create a task](/kepler/create-task#configuring-a-repository).
 
 | Setting | What it says |
 |---|---|
 | **On** | *Its own folder. Nothing else can switch its branch.* |
 | **Off** | *Uses your repository folder. Anything that switches its branch switches it here too.* |
 
-If the branch you picked is already checked out somewhere, Git cannot check it out a second time. The toggle locks and says where the task will work instead: *Uses {worktree}, which already has this branch.* or *Uses your repository folder, which already has this branch.* With isolation off, the chip ends in **in place**, as in **New branch from {base}, in place**.
+If the branch you picked is already checked out somewhere, Git cannot check it out a second time. The toggle locks and says where the task will work instead.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/isolated-worktree-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -244,7 +231,7 @@ Each option says where the work will happen, such as *Branch off {branch} in a n
 
 With no remote default branch available, the new branch starts from your current commit.
 
-**Starting a session brings an older worktree up to date.** When you start a session in one of the task's existing worktrees, Kepler first fetches the branch's merge target and moves the branch up to it, if the branch is clean, has no commits of its own, and has no copy on the remote. Kepler never moves the repository's own checkout, a branch with uncommitted changes or commits of its own, or a published branch. The session starts either way.
+**Starting a session brings an older worktree up to date.** When you start a session in an existing worktree whose branch has no changes or commits of its own and is not published, Kepler first moves the branch up to its merge target. Kepler never moves a branch that holds work.
 
 Kepler suggests branch names from the task's own context. A suggested name starts with the issue identifier when the task has one, and sits under the `kepler/` prefix unless you configure another prefix. See [Create a task](/kepler/create-task#naming-the-branch).
 
@@ -264,7 +251,7 @@ A new worktree is a clean checkout. It has no `node_modules`, no build output, a
 
 To prepare new worktrees automatically, use **Commands**. Save a repository's setup steps once, such as `pnpm install` or a code generation step, and tick **Run on worktree creation**. Each time Kepler creates a worktree for that repository, it runs those commands in order in the new worktree's folder, before the agent starts. To run a command that is not set to run on creation, right-click a worktree in the context panel and choose **Run command here**.
 
-**Copy ignored files such as `.env` into new worktrees.** A new worktree has none of the Git-ignored files in your checkout. List the ones a worktree needs in a `.worktreeinclude` file at the repository's root, in `.gitignore` syntax. Each time Kepler creates a worktree, it copies the matching ignored files from your checkout, and whole folders when a folder matches, before any **Run on worktree creation** command runs. Kepler copies a file only if Git also ignores it in the new worktree, never overwrites a file that is already there, and skips nested repositories. Lines that start with `#` are comments, and lines that start with `!` are skipped.
+**Copy ignored files such as `.env` into new worktrees.** A new worktree has none of the Git-ignored files in your checkout. List the ones a worktree needs in a `.worktreeinclude` file at the repository's root, in `.gitignore` syntax. Kepler copies the matching files from your checkout into each new worktree, before any **Run on worktree creation** command runs, and never overwrites a file that is already there. Lines that start with `!` are skipped.
 
 The worktree's menu has the same entries wherever the worktree appears:
 
@@ -313,7 +300,7 @@ Kepler sends each kind of item differently:
 
 In the conversation, shared context appears as a collapsible row with a count of the items included. The row reads **Task context added** the first time, and **Task context updated** each time the context changes. Expand the row to see exactly what the agent received.
 
-You do not edit shared context directly. To change it, attach, detach, archive or edit resources. An archived resource is left out of the shared context until you restore it. Each session receives the change with its next prompt, so the change does not interrupt an agent during a turn.
+You do not edit shared context directly. To change it, attach, detach, archive or edit resources. Each session receives the change with its next prompt.
 
 ### The task's prompt is context too
 
@@ -340,7 +327,7 @@ The new session does not receive the task's prompt or notes. It still gets the t
 
 Attach a **Note** for anything every agent on the task should follow, such as a style rule, a constraint, or a decision you do not want reopened. Write it once, and every session gets it, including sessions you start later. A session sees a note's title first and opens the note when it is relevant, so give each note a title that says what it covers. A note can be up to 1 MB. Kepler refuses a longer note with *This note is too long. Notes can be up to 1 MB.*
 
-To add a note, click **New note** on the **Notes** tab of the **Resources** screen, then type a title and the text (*Write the note. Markdown works.*). The note saves when you click away, press **Cmd/Ctrl+Enter** or **Escape**, or click **Save note**. A note needs some text: a title alone is refused with *Add some text to save this note.* A note you are still typing is saved when you close the screen.
+To add a note, click **New note** on the **Notes** tab of the **Resources** screen, then type a title and the text, in Markdown. The note saves when you click away or click **Save note**.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/add-note-aug-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
@@ -383,19 +370,15 @@ Removing a resource from a task usually leaves the resource itself intact. The m
 
 The task's **Prompt** has no remove action.
 
-**On the Resources screen, a removal can be undone.** When you remove a note, a file, or a web link there, its row folds to *{title} deleted* or *{title} removed*, with **Undo** and a ring that counts down. Pointing at the row or focusing it holds the countdown.
+**On the Resources screen, a removal can be undone.** When you remove a note, a file, or a web link there, Kepler asks you to confirm, then its row shows **Undo** for a short time. A folder, an issue, or a pull request goes at once, with no Undo, because you can add it back from the screen's lists.
 
-Before a note, an uploaded copy, or a web link goes, Kepler asks *Delete “{title}”?*, or *Delete {count} items?* or *Delete {deleted} and remove {removed}?* for several. The dialog lists what is **Deleted for good** and what is **Removed from this task**, and warns *Deleted items cannot be recovered once the Undo window closes.*
-
-A folder, an issue, or a pull request goes from the screen at once, with no Undo, because you can add it back from the screen's own lists.
-
-To remove several resources at once, tick their checkboxes, or tick **Select all** above the list. The header turns into a selection bar with *{count} selected*, **Archive {count}**, and **Remove {count}**, **Detach {count}**, or **Delete {count}**. A selected worktree goes through the worktree's own dialog.
+To remove several resources at once, tick their checkboxes, or tick **Select all**, then use the buttons in the selection bar.
 
 ### Archiving a resource
 
-To set a resource aside without removing it, open the **Resources** screen and choose **Archive** from its row's menu, or **Archive {count}** for a selection. An archived note, file, link, folder, issue, or pull request leaves the context panel and the task's shared context, and new sessions cannot work in an archived folder.
+To set a resource aside without removing it, open the **Resources** screen and choose **Archive** from its row's menu. An archived resource leaves the context panel and the task's shared context.
 
-To see what is archived, click **Archived** in the tab's toolbar, which shows the count. The tab reads *Archived items are hidden from the task and from agents. Restore one to bring it back.* Click **Restore** on a row to put it back on the task. Adding an archived link again restores it too.
+To see what is archived, click **Archived** in the tab's toolbar. Click **Restore** on a row to put it back on the task.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/task-resources-archive-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -404,13 +387,9 @@ To see what is archived, click **Archived** in the tab's toolbar, which shows th
   <figcaption style="text-align:center; color:#888">The archived items on the Notes tab, each with Restore.</figcaption>
 </figure>
 
-Some resources cannot be archived, and Kepler says why: worktrees (*A worktree cannot be archived.*), the task's **Prompt**, and the task's own folder. A folder a session works in can be archived once you archive that session: *Archive the session working in this folder first.*
+You cannot archive a worktree, the task's **Prompt**, or the task's own folder. To archive a folder a session works in, archive that session first.
 
-A tab can also offer a one-click cleanup, with a tooltip that names every item it covers:
-
-- **Archive {count} merged**, for merged pull requests
-- **Archive {count} closed**, for closed issues
-- **Remove {count} missing**, for files and folders that are gone from disk
+A tab can also offer a one-click cleanup, such as **Archive {count} merged** for merged pull requests, or **Remove {count} missing** for files and folders that are gone from disk.
 
 ### Deleting a worktree
 
@@ -444,7 +423,7 @@ Below the worktree, a live check shows what deleting would cost. The check updat
 
 Kepler treats a branch that was merged through a rebase merge or a squash merge as merged. When you clean up such a branch, Kepler does not warn about commits that are already in its target.
 
-Kepler **keeps** a worktree that would lose work, unless you tick the extra box that names the worktree and what it would lose: *Delete {branch} anyway, losing {what}*. Without that confirmation, Kepler refuses the delete. Whatever requests the delete, Kepler never deletes uncommitted or unpushed work without your confirmation.
+Kepler **keeps** a worktree that would lose work, unless you tick the extra box that names the worktree and what it would lose. Kepler never deletes uncommitted or unpushed work without your confirmation.
 
 ***
 
@@ -467,9 +446,9 @@ To rename, archive or delete a task, open the **Task actions** (**⋮**) menu on
 | **Manage resources** | Opens the task's **Resources** screen. See [What a task holds](#what-a-task-holds) |
 | **Copy task link** | Copies a Kepler link to the task. **Cmd/Ctrl+C** on a focused task row also copies it |
 | **Refresh** | Reads the task's worktrees and its pull request and issue links again. For a short time after a refresh, **Refresh** is unavailable, and its tooltip says when you can try again |
-| **Archive task** | Moves the task out of the active list and keeps it as history: Kepler stops its running agents, keeps their sessions so you can resume them, keeps its resources, and deletes nothing unless you ask it to. Prompting, resuming, or starting a session in an archived task puts the task back in the active list |
+| **Archive task** | Moves the task out of the active list, stops its running agents, and keeps its sessions and resources. Prompting an archived task puts it back in the active list |
 | **Restore task** | Replaces **Archive task** on an archived task, and returns it to the active list, even when another active task holds the same pull request (several tasks can share one). The task stays in its group, and restores the group too if the group was archived |
-| **Delete task** | Removes the task along with its sessions and resources. **Cmd/Ctrl+Shift+Backspace** opens the same confirmation for the task on the task page or in the Dashboard's open panel, even from the chat composer. **Cancel** returns focus to where you pressed it |
+| **Delete task** | Removes the task along with its sessions and resources. On the task page, **Cmd/Ctrl+Shift+Backspace** does the same |
 
 **Kepler suggests archiving a finished task.** When a task meets all of these conditions, its header asks *Ready to archive?* with an **Archive** button:
 
@@ -485,7 +464,7 @@ If you dismiss the suggestion, Kepler stops suggesting it for that task.
 - **Also delete branches**
 - **Also delete the branch on the remote**
 
-Until you tick a box, the dialog reads *Worktrees and branches stay on disk unless you tick the boxes below.* When the task has agents running, the archive dialog also says what happens to them: *Stops {count} running agents. Their sessions are kept.* With **Also delete worktrees** ticked, every agent of the task ends, and the dialog reads *Ends {count} running agents.*
+Until you tick a box, worktrees and branches stay on disk. With **Also delete worktrees** ticked, every agent of the task ends.
 
 When you tick **Also delete worktrees**, Kepler lists every worktree with the same tags that a single worktree delete shows, and says what will happen to each:
 
@@ -537,41 +516,41 @@ If you paste a Kepler link to a task or a session into the chat, the agent can u
 
 | Tool | What it does |
 |---|---|
-| `task_get` | Read a task: its stage, group, worktrees and folders, including planned worktrees, notes, files, links, related tasks, newest sessions, and how many of your review comments are still open. It includes archived files, links, notes and folders when the agent asks for them |
-| `task_list` | Find tasks by name, prompt, note text or file name, filtered by stage, hold, repository, [group](/kepler/arranging-your-work#your-groups), or whether they belong to the agent's own work. It shows each task's group and every group you have, including empty ones, and archived tasks when the agent asks for them |
-| `task_note_read` | Read one note's full text. Otherwise, notes arrive as references (title and size) |
-| `task_comment_read` | Read the open [review comments](/kepler/review-changes#review-comments) you sent on a task's code, those waiting on an agent's answer first, each with its file, lines, the code it is on, and its replies. It can also read a resolved comment, but never one you have not sent |
+| `task_get` | Read a task: its stage, group, places to work, notes, files, links, related tasks and sessions |
+| `task_list` | Find tasks by name, prompt, notes or files, filtered by stage, hold, repository or [group](/kepler/arranging-your-work#your-groups) |
+| `task_note_read` | Read one note's full text |
+| `task_comment_read` | Read the [review comments](/kepler/review-changes#review-comments) you sent on a task's code, with their replies |
 
 **Finding sessions, agents and places**
 
 | Tool | What it does |
 |---|---|
-| `session_list` | Find agent sessions by name, task, agent or place, with each session's state and what it is waiting on: a permission, an answer, or an approval. It can list only the sessions that need you |
-| `session_read` | Read another session's conversation, including one you point it at with a link from **Copy session link**: the newest messages, or only the last reply. It also reports what a running session waits on, including a plan it is holding for your review |
-| `agent_list` | List the agents, accounts, models and effort values a new session can start with, the modes each agent supports, and the presets you saved for each agent |
-| `repo_list` | List the repositories and folders where work can happen, and mark the ones this task uses. It finds one by name, path or alias |
+| `session_list` | Find agent sessions, with each one's state and what it is waiting on |
+| `session_read` | Read another session's conversation, including one you link with **Copy session link** |
+| `agent_list` | List the agents, accounts, models, modes and saved presets a new session can start with |
+| `repo_list` | List the repositories and folders where work can happen |
 
 **Notes, links and files**
 
 | Tool | What it does |
 |---|---|
-| `task_note_write` | Create a note, or edit one: replace the whole note, replace the section under one heading, or add to the end. It never overwrites edits made since the agent read the note |
-| `task_note_delete` | Delete a note. The task's **Prompt** cannot be deleted |
-| `task_comment_reply` | Reply on a review comment you sent, so the answer shows on the comment's card in Kepler, and resolve the comment once the request is done. You can reopen it |
-| `task_link_update` | Attach or detach issue, pull request and other links. Kepler shows each issue or pull request with its title and status when it can read them, and attaching an archived link again restores it. An agent that starts a server for you to open (a dev server, Storybook, a preview) attaches its local URL to the task, and detaches it when it stops the server for good |
-| `task_file_attach` | Attach files by path, linked rather than copied, or save a file the agent wrote as an uploaded copy on the task, up to 200 MiB. Attaching an archived file again restores it |
-| `task_file_detach` | Detach files. A linked file stays on disk, and an uploaded copy is deleted |
-| `task_resource_archive` | [Archive](#archiving-a-resource) a task's files, folders, links and notes, hiding them from the task and its agents, or restore them. The task's **Prompt**, its worktrees, its own folder and a folder a session runs in are never archived |
+| `task_note_write` | Create or edit a note. It never overwrites edits made since the agent read the note |
+| `task_note_delete` | Delete a note |
+| `task_comment_reply` | Reply on a review comment you sent, and resolve it once the request is done |
+| `task_link_update` | Attach or detach issues, pull requests and other links, such as the local URL of a dev server the agent started for you |
+| `task_file_attach` | Attach files by path, or save a file the agent wrote as an uploaded copy, up to 200 MiB |
+| `task_file_detach` | Detach files. An uploaded copy is deleted |
+| `task_resource_archive` | [Archive](#archiving-a-resource) or restore a task's files, folders, links and notes |
 
 **Worktrees**
 
 | Tool | What it does |
 |---|---|
-| `worktree_create` | Create a worktree on a new branch and bind it to the task. The branch starts from the repository's remote default branch or from a base the agent names |
-| `worktree_attach` | Bind a worktree or folder that already exists on disk to the task, without changing any files |
-| `worktree_detach` | Detach a worktree or folder from the task without touching the worktree, the branch, the files, or the sessions running there. The agent cannot detach the task's own folder or the place it runs in. Detaching a planned worktree drops it, so it is never made |
-| `worktree_update` | Record a new merge target after the agent rebased a stacked branch or moved it onto another branch. A merge target you saved yourself takes precedence |
-| `worktree_delete` | Delete a worktree from disk. Its branch goes too when Kepler finds it merged; an unmerged branch is kept unless the agent asks to delete it |
+| `worktree_create` | Create a worktree on a new branch and bind it to the task |
+| `worktree_attach` | Bind an existing worktree or folder to the task |
+| `worktree_detach` | Detach a worktree or folder from the task, leaving it on disk |
+| `worktree_update` | Record a branch's new merge target, such as after a rebase onto another branch |
+| `worktree_delete` | Delete a worktree from disk. An unmerged branch is kept unless the agent asks to delete it |
 
 Where AI Sync and AI Compose are turned on, the `sync_*` and `compose_*` tools also let an agent update a branch from its base with a rebase or merge, and reorganize its commits. See [Review Changes](/kepler/review-changes#agent-tools-ai-sync-and-ai-compose).
 
@@ -579,20 +558,20 @@ Where AI Sync and AI Compose are turned on, the `sync_*` and `compose_*` tools a
 
 | Tool | What it does |
 |---|---|
-| `task_create` | Create a *separate* task for work that needs its own tracking, with its own prompt, places to work, notes, links and files, in a group if the agent names one (a new name creates the group). Kepler links it back to this task as a sub-task, parent, follow-up, or related task, and nothing starts on it. A worktree on a new branch shows as [planned](/kepler/task-view#the-context-panel) until the task's first session starts |
-| `task_update` | Set the stage your board shows (**Exploration**, **In Development**, **In Review**, **Done**) or set it back to **Automatic**, which follows Git and pull requests, put the task on hold or lift the hold, set it aside for **Later** or take it out, rename it, move it into or out of a group (a new name creates the group), or restore it from the archive. A hold can lift by itself: when CI finishes on a linked open pull request, a review arrives on it, it merges or closes, another task is done, or at a set time. If it replaces a stage or a hold you set, it tells you |
-| `task_archive` | Archive a task: Kepler stops the task's running agents, other than the agent's own session, and keeps their sessions. The agent can also have Kepler delete the task's worktrees and their merged branches, which ends every session of the task |
+| `task_create` | Create a *separate* task, linked back to this one as a sub-task, follow-up or related task. Nothing starts on it |
+| `task_update` | Set the task's stage or hold, set it aside for **Later**, rename it, move it to a group, or restore it from the archive. A hold can lift by itself, such as when CI finishes on the task's pull request |
+| `task_archive` | Archive a task and keep its sessions. It can also delete the task's worktrees and merged branches |
 
 **Starting and coordinating work**
 
 | Tool | What it does |
 |---|---|
-| `session_start` | Start an agent session on a task, such as a delegate, a reviewer, or a handoff, and send it a first message. It runs in a place the agent names or in a new worktree, with the same agent, account, model, mode and effort, unless the agent picks others or one of your saved presets, and it can start without the task's context, as a reviewer would |
-| `session_send` | Send another session a prompt to act on, or a message for its inbox, or stop its running turn. A session reports back to the session that started it on its progress, or when it is done, blocked or has failed |
-| `session_update` | Rename a session. Sessions that run in the terminal or outside Kepler cannot be renamed |
-| `session_archive` | Archive a session: its history stays and its agent stops. A session cannot archive itself |
-| `inbox_read` | Read this session's inbox, or wait up to 60 seconds for reports from the sessions it started |
-| `approval_list` | List every request waiting on your approval. It cannot approve or deny anything |
+| `session_start` | Start an agent session on a task, such as a delegate or a reviewer, with a first message. It can start without the task's context |
+| `session_send` | Send another session a prompt or a message, or stop its running turn |
+| `session_update` | Rename a session |
+| `session_archive` | Archive a session. A session cannot archive itself |
+| `inbox_read` | Read this session's inbox, or wait for reports from the sessions it started |
+| `approval_list` | List the requests waiting on your approval. It cannot approve or deny anything |
 | `theme_get` / `theme_save` | Read Kepler's theme format, then check a theme file and install it into the themes folder |
 
 ### What runs at once, and what asks you
@@ -609,12 +588,12 @@ These requests wait for your approval:
 
 - Sending a prompt to any session other than one the agent started itself, or a message to a session outside its own work
 - Stopping or renaming a session outside its own work, or archiving any session other than one it started
-- Changing a task outside its own work: its stage, hold, name, group, links or notes, detaching its files, or archiving or restoring its resources (*Archive resources on {task}*, *Restore archived resources on {task}*). A hold that waits for a condition reads as that condition, such as *Hold until CI finishes on {pr}*. A group change reads on the card as *Put it in the group "{name}"*, *Create the group "{name}" and put it there*, or *Take it out of its group*
-- Changing a Kepler setting that affects your accounts, privacy, other tools, what runs, or where files go. Only [Ask Kepler](/kepler/ask-kepler) can change settings, never a task's agent. The card names the setting and its change, *From {from} to {to}*, and offers no wider approval, so you approve each change on its own. See [Approval requests](/kepler/agent-sessions#approval-requests)
+- Changing a task outside its own work, such as its stage, hold, name, group, links or notes, detaching its files, or archiving its resources
+- Changing a Kepler setting that affects your accounts, privacy, other tools, what runs, or where files go. Only [Ask Kepler](/kepler/ask-kepler) can change settings, and you approve each change on its own. See [Approval requests](/kepler/agent-sessions#approval-requests)
 - Deleting any note
 - Detaching an uploaded file, because Kepler deletes its saved copy
 - Archiving a task outside its own work or with other live sessions, and any archive that also deletes worktrees
-- Setting a task aside for later while its other sessions are working (*Set it aside for later*)
+- Setting a task aside for later while its other sessions are working
 - Deleting a worktree that has something to lose (uncommitted changes, unpushed commits on a branch being deleted, commits on a detached HEAD, a status Kepler cannot read), or that another task is bound to
 - Starting a session in a more permissive mode than the agent's own, or on a task outside its own work
 - Overwriting a theme file when there is no Trash to keep the old one

@@ -26,7 +26,7 @@ Use **Settings → Actions** to save the prompts you use often and run them on a
 | **Preferred Actions** | Which Action runs when you press the Action button on a task, issue, or pull request: one picker each for **Tasks**, **Issues**, **Pull requests I authored**, and **Pull requests from others**. Any picker can be **None** |
 | **All Actions** | The built-in Actions under **Built in**, and yours under **Custom**. Click a row to edit it, use **Restore default** on a row you have edited, or use **Delete** on a custom row |
 
-An Action can run with one of your [agent presets](/kepler/settings-agents#agent-presets). If that preset has no settings for the agent the Action would run on, the Action's row and its entry in the **Preferred Actions** pickers show **Preset unavailable for this agent**, and the Action runs without the preset's settings. To fix it, add settings for that agent to the preset, or choose another preset in the Action's editor.
+An Action can run with one of your [agent presets](/kepler/settings-agents#agent-presets). If the preset has no settings for the Action's agent, the Action shows **Preset unavailable for this agent** and runs without them. To fix it, add settings for that agent to the preset, or choose another preset in the Action's editor.
 
 To create an Action, click **New Action** in the **All Actions** section header. **Restore all defaults**, beside it, discards every edit. An Action you create or edit opens as a sub-page.
 

@@ -166,11 +166,9 @@ To rename the saved connection, click the pencil beside the name. Renaming chang
 | Group | What it does |
 |---|---|
 | **Connection** | Edit the address in place: **Host**, **Port**, **User**, and **Identity file** for SSH, or **Distro** for WSL. **Save** keeps the same saved host, and the fields are locked while the host is connected, so disconnect first |
-| **Color** | **None**, or one of the 12 colors that task groups use: **Gray**, **Blue**, **Pink**, **Yellow**, **Green**, **Purple**, **Cyan**, **Orange**, **Teal**, **Indigo**, **Brown**, or **Red**. Tints the host's chip, its rows, and the top bar of its windows |
+| **Color** | **None**, or one of the 12 colors that task groups use. Tints the host's chip, its rows, and the top bar of its windows |
 | **Mute notifications from *machine*** | *Kepler won't show desktop notifications for sessions on machine. Alerts still appear inside its windows.* |
 | **Sessions** | Lists each live agent session on that host, labeled *survive disconnect, resumable anywhere* while the machine is connected, and opens one when you click it. For a host nobody is connected to, **Check** shows what is running there |
-
-A host saved with a color the picker no longer offers shows the nearest one.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/remote-host-page-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
@@ -392,7 +390,7 @@ Kepler runs agent sign-in on the host. Claude Code, Codex, and Auggie all sign i
 
 <div class="note" markdown="1">
 
-**Remote windows use this app's interface.** When the host runs the same version of Kepler, a remote window shows this app's interface. If the host runs a different version, the window shows the host's own interface. To keep this app's interface even then, turn on **Settings → Remote environments → Remote windows → Always use this app's interface**: *When the server runs a different version, offer to update the server or this app instead of showing the server's interface. An outdated server then updates when you connect, even while other devices are using it.* It is off by default.
+**Remote windows use this app's interface.** When the host runs the same version of Kepler, a remote window shows this app's interface. Otherwise, it shows the host's own interface. To keep this app's interface even then, turn on **Settings → Remote environments → Remote windows → Always use this app's interface**, and Kepler offers to update the server or this app instead. It is off by default.
 
 </div>
 
@@ -444,7 +442,7 @@ When a connection breaks, Kepler rebuilds it.
 | **The connection degrades** | The chip reads **Reconnecting…** and Kepler retries a few times |
 | **Several windows share the connection** | Kepler rebuilds the connection once for all of them. Every window shows the progress, and the others follow the first one back |
 | **The machine wakes from sleep** | Kepler reconnects right away to any machine it lost |
-| **The window's page fails to load** | Kepler tries loading it again a few times. If the server is down, Kepler reconnects; if the server is up, the window shows the [recovery screen](#the-recovery-screen) |
+| **The window's page fails to load** | Kepler tries again. If it keeps failing, the window shows the [recovery screen](#the-recovery-screen) |
 | **The connection is rebuilt to the same server** | The page stays as it was, with your drafts, scroll position, and terminal scrollback. Kepler reloads it only if the server itself changed |
 | **The server restarts or updates** | The window reloads onto the view it was on, not a bare Dashboard. When another window updates or restarts the server, this window waits through the restart and reconnects as soon as the server is back. If the update fails, the window keeps its saved server, so it reopens on that machine after Kepler restarts |
 | **Kepler restarts** | Kepler restores every window's size, position, the view it was on, and its machine, so a remote window comes back on its remote |
@@ -517,14 +515,14 @@ Other editors, and the file manager, need a path that Windows can reach. WSL pro
 
 The first connection to a machine downloads the Kepler server, so it takes minutes. Later updates download only what changed. The host needs nothing pre-installed beyond SSH or WSL, and Kepler installs itself to `~/.kepler-server`. If the download fails, the connection fails with **Unable to download the remote-server *version* for *arch*. Check your internet connection.**
 
-**Kepler never installs over a running server.** On connect, it replaces an out-of-date server on its own only when no running agents, open terminals, or other connected windows would be affected. Otherwise the server keeps running and the chip offers **Restart server to update**. With **Always use this app's interface** on, other connected windows and devices no longer hold the update back; only running agents and open terminals do.
+**Kepler never installs over a running server.** On connect, it replaces an out-of-date server on its own only when no running agents, open terminals, or other connected windows would be affected. Otherwise the server keeps running and the chip offers **Restart server to update**. With **Always use this app's interface** on, other connected windows and devices no longer hold the update back.
 
 ### When the server and the window disagree
 
-When a remote window and its server run different versions, the window can show a full-screen message instead of the app, with *Server {server}, this window {app}*. With **Always use this app's interface** on, a window shows this message instead of the server's interface.
+When a remote window and its server run different versions, the window can show a full-screen message instead of the app:
 
-- *This remote server is out of date* offers **Update server**. Retrying does not help until the server is updated.
-- *This remote server is newer than this window* says *Update this app to keep working with this server, which runs a newer version of Kepler.*
+- *This remote server is out of date*: click **Update server**.
+- *This remote server is newer than this window*: update this app.
 - Otherwise, **Try again** loads the matching version. If the message keeps coming back, restart the server.
 
 **Switch to local** moves the window back to this computer.
@@ -586,7 +584,7 @@ When Remote Access is active, a QR code and a link appear in Settings and in the
 
 A pairing link works once and expires after 5 minutes. A used or expired link shows *This pairing link no longer works*. To pair, open a new link from the computer running Kepler.
 
-You can bookmark the address a paired browser opens on. If that browser's connection has ended or you revoked it, opening the address again reads *Signing you in with GitKraken…* and takes you to gitkraken.dev to sign in and pair it again.
+You can bookmark the address a paired browser opens on. If that browser's connection has ended, opening the address again takes you to gitkraken.dev to sign in and pair it again.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/remote-access-phone-sep-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
@@ -603,7 +601,7 @@ When you open Kepler in a phone's browser, it uses a phone layout: one bar at th
 
 **Menu**, the first button in the bar, opens the **Kepler** drawer:
 
-- **Views**: your Dashboard views, each with its icon, its type (**Todo** or **Tasks**), a mark when something in it needs you, and its count. The current view is highlighted. Tap a view to show it, or press and hold it for its menu
+- **Views**: your Dashboard views, each with its count. Tap a view to show it, or press and hold it for its menu
 - **Recent tasks**: the 5 most recently active tasks, each with a dot when it is waiting on you
 - **Feedback**, **Settings**, and **Help**
 - Your account row, with your plan or the days left in a trial
@@ -617,7 +615,7 @@ When you open Kepler in a phone's browser, it uses a phone layout: one bar at th
 
 #### The Dashboard
 
-The Dashboard's bar holds **Menu**, a view picker, **Search**, **Options**, and **New task**. The view picker names the view on screen and lists every Dashboard view, with **New view** and the current view's own actions. Press and hold a view in the list for its menu. **Search** expands in the bar. **Options** shows how many filters are active, and opens a sheet with **Refresh** and the view's settings: its layout, grouping, sort and filters, and, on a Todo view, **Scope** (**Mine** or **All**), with **Repos** and **Updated** under **All**. Right after a refresh, the **Refresh** row says *Refreshed recently. Try again in N s*.
+The Dashboard's bar holds **Menu**, a view picker, **Search**, **Options**, and **New task**. The view picker switches between your Dashboard views and has **New view**. **Search** expands in the bar. **Options** opens a sheet with **Refresh** and the view's settings, such as its grouping, sort and filters.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/phone-dashboard-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
@@ -645,7 +643,7 @@ A task's bar has **Back**, the task's name, and one icon each for **Sessions**, 
 
 Under the bar, a details row shows the task's stage and a summary. Expand it to see the checkout and the task's pull request and issue. The row collapses while a terminal or the changes fill the screen.
 
-**Add resource** opens as a sheet that lists the kinds of resource, and steps into one at a time, with **Back to resource types** to step out. Each kind lists what the task already holds, with the **Archived** toggle and that kind's add control, such as **Add issues**. **Select** lets you pick rows, or **Select all**, to **Archive** or **Remove** them, and **Done** ends it. Filters, branch choice, and cloning each open as a further step. Each item is added as soon as you pick it.
+**Add resource** opens as a sheet that lists the kinds of resource, and steps into one at a time, with **Back to resource types** to step out. Each kind lists what the task already holds, with that kind's add control, such as **Add issues**, and **Select** to archive or remove several at once. Each item is added as soon as you pick it.
 
 **Changes** opens with one bar: **Close**, the file's name, and **Previous** and **Next**. Tap the name for the list of changed files. Everything else, from which changes to show to saving an edit, is in the bar's overflow menu.
 

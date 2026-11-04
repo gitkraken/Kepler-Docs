@@ -23,9 +23,9 @@ Use **Settings → Agents** to install and update the coding agents that work on
 
 At the top of the page, a line names the agent new tasks use: *New tasks use {agent}.* or *No default agent for new tasks.* To change it, click **Change in Tasks**, which opens [Default agent](/kepler/settings-tasks#default-agent).
 
-To choose the agent Ask Kepler uses, set the **Ask Kepler uses** row. This **Ask Kepler default agent** is separate from the default for tasks. Its help text reads *Used when Ask Kepler has no earlier pick to go on and whenever you choose Use default agent there.* To pick the agent's [agent preset](#agent-presets), use **Ask Kepler uses preset**. To have Ask Kepler start with the agent you last picked instead, choose **Use last used agent** in the agent picker.
+To choose the agent Ask Kepler uses, set **Ask Kepler uses**. It is separate from the default for tasks. To pick its [agent preset](#agent-presets), use **Ask Kepler uses preset**. To have Ask Kepler start with the agent you last picked instead, choose **Use last used agent** in the agent picker.
 
-The **Ask Kepler uses** row lists only the agents that can answer in the Ask Kepler panel, which are the agents that run in **Chat**. If the agent you picked stops being available, the row reads *Pick another agent for Ask Kepler: {name} is not available.* See [Ask Kepler](/kepler/ask-kepler#which-agents-can-answer).
+**Ask Kepler uses** lists only the agents that run in **Chat**, because only they can answer in the Ask Kepler panel. See [Ask Kepler](/kepler/ask-kepler#which-agents-can-answer).
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/agent-settings-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
@@ -46,10 +46,10 @@ Each agent has a card. The card's title line shows the agent's name and these co
 |---|---|
 | Version | The installed version, or **Not installed** when Kepler cannot find the CLI. **Version unknown**, in a warning tone, means Kepler could not read the version |
 | **Update** | Runs the agent's updater and streams its output. Shown when Kepler has an updater for that agent |
-| **Install** | Opens **Set up {name}**: *Install it with one of these, or tell Kepler where your copy is.* Pick an install method, and Kepler runs it and streams the output. Shown on an agent that is not installed and has an installer for your OS. **Cancel** stops an install in progress: *Install cancelled: {name}* |
+| **Install** | Opens **Set up {name}**, where you pick an install method and Kepler runs it. Shown when the agent is not installed and has an installer for your OS |
 | **Enabled** | *Off keeps it installed but hidden when you start work.* |
 
-If you already installed the agent yourself, use **Already installed?** in the same dialog. Type the program's full path, or click **Browse…** to find it, then click **Use this**. Kepler saves the path as the agent's **Binary** and closes the dialog once the agent runs. If it cannot run the file, it says *Unable to run {name} from this file.* and keeps your earlier **Binary**.
+If you installed the agent yourself, use **Already installed?** in the same dialog: enter or browse to the program, then click **Use this**.
 
 When the version is unknown, Kepler turns off features that depend on the version, such as sending a new session's first message automatically. Reinstalling or updating the agent usually fixes this.
 
@@ -105,7 +105,7 @@ Removing an account stops its running sessions and deletes the sessions stored o
 
 An added account shares your own settings, instructions, skills, agents, commands, and other configuration by linking to your files. If the agent saves a change while signed in to that account, the agent can write its own copy in place of the link. The account then stops following your file. Kepler shows this under the account's row: *This account stopped sharing your {items}*. Expand the message to see both paths, **This account's copy** and **Your {item}**, and choose one of the following:
 
-- **Ask Kepler to resolve** opens a new Ask Kepler chat with a prompt already written, which you can edit before you send it. The prompt asks the agent to compare the 2 copies, copy anything worth keeping into your shared copy, and then tell you to press **Share your {item} again**. On a phone, this button does not appear.
+- **Ask Kepler to resolve** opens an Ask Kepler chat with a ready-made prompt, which you can edit, asking the agent to copy what is worth keeping into your shared copy.
 - **Share your {item} again** asks first, then links the account back to your file. *Its own copy is saved as a backup next to it, so nothing is lost.*
 - **Keep its own {item}** keeps the account's copy. The row's menu then offers **Share your {item} again** if you change your mind.
 
@@ -120,7 +120,7 @@ An added account shares your own settings, instructions, skills, agents, command
 
 ### Default mode for new sessions
 
-Every agent that can run in both Chat and Terminal has this setting, including an agent whose Chat needs a component you have not installed yet:
+Every agent that can run in both Chat and Terminal has this setting:
 
 | Setting | What it controls | Default |
 |---|---|---|
@@ -128,7 +128,7 @@ Every agent that can run in both Chat and Terminal has this setting, including a
 
 Kepler saves the choice per agent, so one agent can default to Terminal while another stays on Chat. The setting is only a default. As its help text says, *You can pick the other one when you start a session.* A terminal-only agent shows **Terminal** with no switch. See [Agent Sessions](/kepler/agent-sessions#how-a-session-runs).
 
-If you pick **Chat** and its component is not installed, Kepler saves nothing yet and says *Chat needs the {component} for {agent}, a separate download.* To install the component, click **Install and switch**, or click **Cancel** to keep the current mode. While it installs, the row reads *Installing {component}…*. If the install fails, the row says *Unable to install {component}. Try again.* Once it succeeds, Kepler switches the setting to **Chat** and says *Chat is ready. Sign in to start a chat session.*, with **Sign in**. Picking the mode in the composer works the same way: **Install {component}** asks first, with **Install and switch**.
+If Chat needs a separate component you have not installed, picking **Chat** offers **Install and switch**. Kepler installs the component, then switches the setting to **Chat**. Picking the mode in the composer works the same way.
 
 ### Artifacts in new sessions
 
@@ -172,13 +172,13 @@ Kepler encrypts environment values at rest and hides existing values when you ed
 
 ## Agent presets
 
-An agent preset saves a model, a mode, and an agent's other options, such as effort, under a name. Pick a preset when you start a session, and you skip choosing each option by hand. A preset can hold settings for several agents, and the badges beside its name show which agents it has settings for.
+An agent preset saves a model, a mode, and an agent's other options, such as effort, under a name, so you can pick them all at once when you start a session. A preset can hold settings for several agents, shown as badges beside its name.
 
-The list starts with **Default**, which holds the default agent's own options. The presets you add follow it:
+The list starts with **Default**, which holds the default agent's own options:
 
 - To add a preset, click **New preset** in the section header.
 - To edit a preset, including **Default**, click its row.
-- Each preset you added has a menu, **Options for {name}**, with **Duplicate**, **Move up**, **Move down**, and **Delete**. **Duplicate** opens a copy named *{name} copy*.
+- To duplicate, reorder, or delete a preset you added, use its menu.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/agent-presets-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -191,18 +191,18 @@ A preset opens as a sub-page with these fields:
 
 | Field | What it takes |
 |---|---|
-| **Name** | The preset's name. Each preset needs its own name, and *Default is a reserved name.* |
-| **Agent harness** | A tab for each enabled agent, with that agent's **Model**, **Mode**, and other options. Each field has **Reset**, and **Reset all fields** clears the whole tab |
+| **Name** | A name no other preset uses |
+| **Agent harness** | A tab for each enabled agent, with that agent's **Model**, **Mode**, and other options |
 
 You can use a preset in these places:
 
-- **A session's agent settings.** In the composer, the **Preset** row offers **Default**, your presets, and **Custom**. With a preset chosen, the composer shows the preset's name and hides the model, mode, and effort rows. Choose **Custom** to set them yourself. **Manage presets**, at the bottom of the menu, opens this section. See [Agent Sessions](/kepler/agent-sessions#agent-model-mode-and-effort).
+- **A session's agent settings.** In the composer, pick it in the **Preset** row, or choose **Custom** to set the model, mode, and effort yourself. See [Agent Sessions](/kepler/agent-sessions#agent-model-mode-and-effort).
 - **The default agents.** **New tasks use preset** on [Default agent](/kepler/settings-tasks#default-agent), and **Ask Kepler uses preset** at the top of this page.
 - **Actions.** Each Action's **Preset**, in the Action's editor. See [Actions](/kepler/actions).
 
-If an Action uses the preset you delete, **Delete {name}?** lists it and asks you to choose a replacement under **Replace with…**.
+If an Action uses a preset you delete, Kepler asks you to choose a replacement.
 
-When you change a preset, running sessions that use it keep the earlier version. Below the list, Kepler then says *{count} running sessions use an older version of their preset.* and lists those sessions, marking each one that must restart with **Restart needed**. To apply the change, click **Update all** or **Update selected ({count})**. *Updating keeps each conversation. A session that needs a restart is restarted: a turn in progress is interrupted and background work stops.* In the session itself, the agent settings show **{name} settings changed** with **Apply**.
+When you change a preset, running sessions that use it keep the earlier version until you update them. To apply the change, click **Update all** below the list. Updating keeps each conversation, but a session that needs a restart interrupts any turn in progress.
 
 ## MCP servers
 

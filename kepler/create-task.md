@@ -93,7 +93,7 @@ The **New task** composer is a prompt box above a row of 4 buttons:
 | **Add PR** → **PRs** | Pull requests from your connected hosts |
 | **Add context** | Files and links the agent can read. A folder to work in goes through **Add repo or folder** |
 
-Each picker lists what you have already attached of its kind, where you can also remove it. Its footer counts what you added, such as **2 added**, and **Done** closes it.
+Each picker lists what you have already attached of its kind, where you can also remove it.
 
 **Paste a link to attach it.** Paste a pull request or issue URL into the prompt, from a connected host or from Jira or Linear, and it becomes a chip naming the item. The chip attaches the item the same way **Add issue** or **Add PR** would, along with its repository, so a pull request from another repository launches in that repository, on its branch. If the repository is not in Kepler yet, Kepler clones it when the task starts.
 
@@ -114,7 +114,7 @@ You can attach as much or as little context as you want. To create a task from t
 
 **The composer also remembers an unsent draft.** If you close the dialog with a prompt half written, the prompt is still there when you reopen it. Once you have started writing a task, Kepler asks before it discards the draft, so pressing Escape by accident does not lose your work.
 
-**Kepler also remembers which repositories you pick for a tracker project.** When you pick a Jira, Linear, or Azure issue, a line under its row says what adding it also does, such as *Also creates a worktree for {repo} on a new branch from {base}*. Its **Repository** chip holds the repository Kepler picked: marked **suggested** when you chose it for that project before, or **from history** when Kepler inferred it from where that project's issues were worked on. The chip's menu lets you choose another repository, **Clone {repo}**, or **No repository**, which reads *Adds the issue without a repository*. A row whose repository Kepler could not find offers **Add its repo…**.
+**Kepler also remembers which repositories you pick for a tracker project.** When you pick a Jira, Linear, or Azure issue, its **Repository** chip holds the repository you chose for that project before, or one Kepler inferred from where that project's issues were worked on. To use another repository, or **No repository**, choose it from the chip's menu.
 
 The primary button shows a sending state from the moment you click it, so you can tell a slow start from a button that did nothing. It runs the Action that matches what you've attached, exactly as it would from a Todo row. A linked pull request resolves to **Address Feedback** or **Review**, depending on who wrote it; a linked issue resolves to **Plan**. With nothing attached, the button reads **Start** and starts the task with your prompt as written.
 
@@ -124,14 +124,7 @@ The chevron beside the primary button lists the other choices: **Prepare**, whic
 
 A task that has its prompt but no session yet, such as one an agent created for you, says so in a draft session tab: *Start with the task prompt, or describe something else…*. To send the task's prompt as written, press **Start** on the empty box.
 
-The task appears in the list as soon as you press **Start**, before its worktrees exist. Until setup finishes, the row shows a **Preparing** pill, and the task's panel shows its progress:
-
-- Kep, the Kepler mascot, names each stage, such as **Reading {link}.**, **Fetching {repo}.**, **Making your worktree.**, **Starting {agent}.**, and **Opening the chat.**, above a list of the launch steps.
-- **Reading {link}** comes first when Kepler was still reading a pasted link at **Start**, to find the repository and branch the link belongs to. If Kepler cannot read the link, the step shows *Unable to read {link}* as skipped and the launch continues.
-- While the new branch updates from its base, Kep's **Starting {agent}.** line reads *Once your branch is up to date with its base.*
-- **Cancel** stops a launch while Kepler is reading a link or cloning a repository.
-
-The task page shows the same launch view in its session area until the first session is ready.
+The task appears in the list as soon as you press **Start**, with a **Preparing** pill until setup finishes. The task's panel, and the task page, show each launch step until the first session is ready. **Cancel** stops a launch while Kepler is reading a link or cloning a repository.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/ade-task-preparing-row-01-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -147,7 +140,7 @@ The task page shows the same launch view in its session area until the first ses
   <figcaption style="text-align:center; color:#888">Kep narrating a task's launch in its panel.</figcaption>
 </figure>
 
-If setup fails, the row's pill reads **Failed** and Kep says **That didn’t go through.** *Here’s what went wrong.* above the error. To change the task and try again, click **Edit and retry**, or **Dismiss** to clear it. A launch you canceled reads **Task not started.** *Nothing was changed.* If the request itself cannot be sent, you see **Failed to start the task**. A task that starts without some of its repositories warns *Some repositories weren't added: The task started without {repos}.*
+If setup fails, the row's pill reads **Failed** and the panel shows the error. To change the task and try again, click **Edit and retry**, or **Dismiss** to clear it. A task that starts without some of its repositories warns you which ones it left out.
 
 If the task starts but its agent session does not, the task page and the Dashboard panel show **{agent} was unable to start**, with **Retry**. See [Agent Sessions](/kepler/agent-sessions#when-a-session-drops).
 

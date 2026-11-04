@@ -71,7 +71,7 @@ You fire Actions from a **split button**. The left half runs your preferred Acti
 
 Firing an Action from a Todo row is also how an issue or pull request that is not tracked yet **becomes** a task in Kepler.
 
-On a Todo row, the button rests as a quiet outline and fills in only while you hover or select its row, so a column of buttons does not compete with the rows. On a narrow card it shrinks to a play icon. On a phone, a row has a single **⋮** menu instead (**Actions for {title}**) that lists every Action, the preferred one included, and the side panel has no Action button.
+On a narrow card, the button shrinks to a play icon. On a phone, a row has a single **⋮** menu instead (**Actions for {title}**) that lists every Action.
 
 In the list of Actions, hover a row, or move focus to it, to read that Action's prompt, line breaks included.
 
@@ -82,7 +82,7 @@ In the list of Actions, hover a row, or move focus to it, to read that Action's 
   <figcaption style="text-align:center; color:#888">The split button on a Todo row: the row's kind of item decides which Action fills the left half.</figcaption>
 </figure>
 
-Inside a task, Actions live under the **chevron on the composer's send button** rather than on a split button of their own: type a refinement, then pick the Action to fire it with. In a composer that starts something new, such as the **New task** composer or a panel's draft, picking an Action does not fire it: it sets the main button to that Action, and shows the Action's own agent in the agent pill if it names one, so you can check what will run before you press it. See [Create a task](/kepler/create-task#from-the-new-task-composer).
+Inside a task, Actions live under the **chevron on the composer's send button** rather than on a split button of their own: type a refinement, then pick the Action to fire it with. In a composer that starts something new, such as the **New task** composer or a panel's draft, picking an Action does not fire it. It sets the main button to that Action and shows the Action's own agent, if it names one, in the agent pill. See [Create a task](/kepler/create-task#from-the-new-task-composer).
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/inside-task-actions-button-aug-2026.png" target="_blank" rel="noopener noreferrer">
@@ -301,8 +301,8 @@ By default an Action runs on your **default agent**, configured in **Settings �
 
 | Field | Choices |
 |---|---|
-| **Agent** | **Use default agent** (*Uses your default agent configuration*), or the agent to run the Action on |
-| **Preset** | The **Default** preset, one of your agent presets, or **Custom agent settings**. **Custom agent settings** shows the model and mode pickers in the editor, so you set them for this Action alone |
+| **Agent** | **Use default agent**, or the agent to run the Action on |
+| **Preset** | **Default**, one of your agent presets, or **Custom agent settings**, which sets the model and mode for this Action alone |
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/inherit-default-agent-setting-aug-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
@@ -311,7 +311,7 @@ By default an Action runs on your **default agent**, configured in **Settings �
   <figcaption style="text-align:center; color:#888">The Agent field, reading Use default agent, with its preset.</figcaption>
 </figure>
 
-An agent preset is a named set of model, mode, effort, and options that you save in **Settings → Agents → Agent presets**; see [Settings](/kepler/settings-agents#agent-presets). Pick a cheap, fast preset for triage and review, and a heavier one for implementation. A preset can hold settings for some agents and not others. If an Action's preset has none for the agent it would run on, its row in **Settings → Actions**, and its entry in the preferred-Action picker, show **Preset unavailable for this agent**.
+You save agent presets in **Settings → Agents → Agent presets**; see [Settings](/kepler/settings-agents#agent-presets). For example, pick a cheap, fast preset for triage and review, and a heavier one for implementation. If an Action's preset has no settings for the agent it would run on, the Action shows **Preset unavailable for this agent**.
 
 **Custom agent settings** is an **all-or-nothing override**: it pins the provider, account, model, mode, and options together, rather than changing one of them and inheriting the rest.
 
