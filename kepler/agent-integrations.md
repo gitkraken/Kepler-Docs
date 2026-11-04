@@ -24,8 +24,8 @@ Use **Settings → Agents** to install the coding agents you already use, sign i
 Kepler supports 9 agents. You can also add any other agent that speaks the Agent Client Protocol (ACP), or whose command-line interface you want to run inside a task.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-settings-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-settings-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Settings › Agents: the page description, New tasks use Claude Code with Change in Tasks, the Ask Kepler uses row set to Claude Code CLI (alex.lee@example.com, Acme) with Options and Clear default and its help text, and Your agents with Update all and Re-scan above the Claude Code card, which shows its account (Default), New sessions start in set to Chat, Let artifact comments start turns (on), Artifacts in new sessions (off), and a collapsed Program and data folder.">
+  <a href="/wp-content/uploads/agent-settings-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-settings-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="Settings › Agents: the page description, New tasks use Claude Code with Change in Tasks, Ask Kepler uses set to Claude Code CLI (alex.lee@example.com, Acme), Ask Kepler uses preset set to Default, and their help text. Your agents has Update all and Rescan above the Claude Code card, which shows its account (Default) with Check usage, New sessions start in set to Chat, Let artifact comments start turns (on), Artifacts in new sessions (off), and a collapsed Program and data folder.">
   </a>
   <figcaption style="text-align:center; color:#888">Settings → Agents.</figcaption>
 </figure>
@@ -48,7 +48,7 @@ Each agent gets its own section in **Settings → Agents**, in this order:
 | **Cursor** | Cursor | Your installed `cursor-agent` CLI | Chat or Terminal | No |
 | **Grok Build** | Grok Build | Your installed `grok` CLI | Chat or Terminal | Yes |
 
-**Auggie** is Augment's coding agent. It runs over ACP like the other agents, and its model and mode pickers work like any other agent's. Auggie is also one of the 3 agents that report plan usage back to Kepler, with Claude Code and Codex. Auggie reports only its credit balance, with the credits your plan includes, rather than usage windows. To learn about the plan usage meter, see [Agent Sessions](/kepler/agent-sessions#usage-indicators).
+**Auggie** is Augment's coding agent. Like Claude Code and Codex, it reports plan usage back to Kepler, but only as a credit balance rather than usage windows. To learn about the plan usage meter, see [Agent Sessions](/kepler/agent-sessions#usage-indicators).
 
 Kepler asks each agent's provider for plan usage while **Check plan usage with each agent's provider** is on. This setting is in **Settings → Agents → Usage limits**, and it is on by default.
 
@@ -70,20 +70,20 @@ With Pi 1.x, a session gets the task's context and Kepler's workspace tools, and
 
 You set the mode the same way for every agent that offers both. **Settings → Agents → *your agent* → New sessions start in** picks between **Chat** and **Terminal**, per agent. To start one session the other way, use **Start in** in the composer's **Agent settings**. See [Agent Sessions](/kepler/agent-sessions#how-a-session-runs).
 
-These 2 agents need a recent build to run over ACP:
+These 2 agents need a recent build to run in **Chat**:
 
 | Agent | Minimum |
 |---|---|
 | **GitHub Copilot** | CLI v1.0 or newer |
 | **Cursor CLI** | A build from early 2026 or newer |
 
-Kepler checks both before it starts a session and tells you to update rather than failing with a protocol error.
+Kepler checks the build before it starts a session, and tells you to update if it is too old.
 
 ***
 
 ## Install an agent
 
-When an agent is not installed, its section reads **Not installed** and offers **Install**. Kepler runs the install command for you and shows the output as it runs, so you can read a failure rather than guess at one. **Cancel** stops an install in progress (*Install cancelled: {name}*). Installs and updates run one at a time. If you start a second one while one is running, it waits. An install or update that produces no result for 20 minutes stops on its own and says so in the output.
+When an agent is not installed, its section reads **Not installed** and offers **Install**, which opens **Set up {name}**. Pick an install method, and Kepler runs the install command for you and shows its output. **Cancel** stops an install in progress. Installs and updates run one at a time.
 
 The install methods depend on the operating system of the machine you are on:
 
@@ -103,13 +103,27 @@ Every OpenCode method installs OpenCode 2. Windows offers only npm, because Scoo
 
 If an agent offers no install method for your OS, Kepler says so and points you to the custom binary path instead.
 
+If you already installed the agent somewhere Kepler did not find it, tell Kepler where it is from the same dialog:
+
+1. Under **Already installed?**, type the program's full path in the **Full path to {name}** field, or click **Browse…** to pick it.
+2. Click **Use this**, or press **Enter**.
+
+Kepler saves the path as the agent's **Binary** if the agent runs from it. If it does not, Kepler keeps the path you had before.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/agent-setup-dialog-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-setup-dialog-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Set up Claude Code dialog: Install it with one of these, or tell Kepler where your copy is., the Native installer (curl -fsSL https://claude.ai/install.sh | bash) and npm (global) (npm install -g @anthropic-ai/claude-code) methods, then Already installed? with a Full path to Claude Code field, Browse… and Use this.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The Set up dialog, with its install methods and the Already installed? path field.</figcaption>
+</figure>
+
 Kepler does not close the install output pane automatically when the install finishes. Errors during the install, such as a permissions failure, a partial install, or a post-install warning, appear only in that pane, so read them before you dismiss it.
 
 ***
 
 ## Binary detection
 
-Kepler resolves each agent's binary the way your shell does: the first match on your `PATH`, so it agrees with `which`. Beyond `PATH`, it also searches your login shell's environment and well-known install directories. This is how Kepler finds an agent installed by nvm or Homebrew, even when you did not launch Kepler from a terminal. Kepler reads your login shell again on **Restart agent**, **Re-scan**, or a retry, so an environment variable you add, change, or remove in your shell's startup files reaches the restarted agent without restarting Kepler.
+Kepler resolves each agent's binary the way your shell does: the first match on your `PATH`, so it agrees with `which`. Beyond `PATH`, it also searches your login shell's environment and well-known install directories. This is how Kepler finds an agent installed by nvm or Homebrew, even when you did not launch Kepler from a terminal. Kepler reads your login shell again on **Restart agent**, **Rescan**, or a retry, so a change to your shell's startup files reaches the restarted agent without restarting Kepler.
 
 Each agent's card in **Settings → Agents** shows what Kepler resolved. The version and **Install** are in the card's title line. **Binary**, **Components**, and **Data folder** are under **Program and data folder**:
 
@@ -118,7 +132,7 @@ Each agent's card in **Settings → Agents** shows what Kepler resolved. The ver
 | Version | The installed version, or **Not installed** |
 | **Install** | Runs one of the install methods above. Shown when the agent is not installed |
 | **Binary** | The resolved absolute path, or **Not found**, with where it came from (**PATH**, **Shell**, or **Common**) and its version |
-| **Re-scan** | Re-detects this agent's binary. Use it after installing or removing one outside Kepler |
+| **Rescan** | Re-detects this agent's binary. Use it after installing or removing one outside Kepler |
 | **Custom path…** | Pins an absolute path of your own. Kepler validates it and refuses a directory or a path that is not a file |
 | **Clear custom** | Drops the pinned path and goes back to automatic resolution. Shown only while a custom path is set |
 | **Installed versions** | A picker listing every install Kepler found, with an **Auto** row. Appears only when Kepler finds more than one |
@@ -145,13 +159,13 @@ When an installed version has a known problem, the agent's card shows a warning 
 
 If a pinned path later disappears (for example, when an auto-updater cleans up an old version), Kepler falls back to automatic resolution instead of reporting the agent as missing.
 
-Above the agent cards in **Settings → Agents**, **Re-scan** re-detects every agent at once, and **Update all** runs each installed agent's own updater.
+Above the agent cards in **Settings → Agents**, **Rescan** re-detects every agent at once, and **Update all** runs each installed agent's own updater.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-maintenance-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-maintenance-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Update all and Re-scan beside the Your agents heading in Settings › Agents, above the title row of the Claude Code card: version 2.1.145, Update and Enabled.">
+  <a href="/wp-content/uploads/agent-maintenance-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-maintenance-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Update all and Rescan beside the Your agents heading in Settings › Agents, above the title row of the Claude Code card: version 2.1.145, Update and Enabled.">
   </a>
-  <figcaption style="text-align:center; color:#888">Update all and Re-scan, above the agent cards.</figcaption>
+  <figcaption style="text-align:center; color:#888">Update all and Rescan, above the agent cards.</figcaption>
 </figure>
 
 ***
@@ -245,20 +259,25 @@ If you run Auggie's browser sign-in on this machine yourself, Kepler detects it 
 
 To give each added account its own color, pick one from the swatch at the left of its row: **Rose**, **Amber**, **Lime**, **Cyan**, **Blue**, or **Violet**. Kepler tints the agent icon with that color on session tabs, the task's context panel, and the terminal status bar, so you can tell sessions on different accounts apart. *The default account stays uncolored.* Accounts also appear on the agent's card in Settings.
 
-For **Auggie**, you can only add a second account with **Paste session token**. Its browser sign-in writes to one fixed file, so it would sign the second account into the first account's identity.
+For **Auggie**, you can only add a second account with **Paste session token**. Its browser sign-in would sign the second account in as the first.
 
 ***
 
 ## Run modes
 
-Most agents run in 2 modes, and each agent keeps its own default. To pick the default for an agent, open **Settings → Agents**, expand the agent, and set **New sessions start in**:
+Every agent except Pi runs in 2 modes, and each agent keeps its own default. To pick the default for an agent, open **Settings → Agents**, expand the agent, and set **New sessions start in**:
 
 | Mode | What you get |
 |---|---|
-| **Chat** | *{agent} built into Kepler, with replies, diffs and plans you can read, review and search.* Kepler drives the agent over ACP and renders the conversation itself. This is the default |
-| **Terminal** | *{agent}'s own command-line app, with its commands, shortcuts and settings, just as you use it today.* It runs in an embedded terminal inside the task |
+| **Chat** | Kepler shows the conversation itself, with replies, diffs, and plans you can read, review, and search. This is the default |
+| **Terminal** | The agent's own command-line app, with its commands, shortcuts, and settings, in a terminal inside the task |
 
 To start one session in the other mode without changing the default, set **Start in** in the composer's **Agent settings** before you send the first message. An agent that offers only one mode shows no switch at all. See [Agent Sessions](/kepler/agent-sessions#how-a-session-runs).
+
+Some agents need a separate download for **Chat**, such as Google Antigravity's ACP server. To make **Chat** the default for one of them:
+
+1. Under **New sessions start in**, pick **Chat**, then click **Install and switch**.
+2. Once the install finishes, click **Sign in** to sign in to the agent for Chat.
 
 Chat sessions show up as Kepler in places such as your Anthropic dashboard.
 
@@ -266,7 +285,7 @@ Chat sessions show up as Kepler in places such as your Anthropic dashboard.
 
 **Settings → Integrations → Your terminal → Show sessions started outside Kepler** is a separate setting that applies to all agents, and it is **on by default**. It installs GitKraken hooks so sessions you start in your own terminal show up in Kepler. It covers every agent Kepler can track that way: **Claude Code**, **Codex**, **Cursor**, **GitHub Copilot**, **OpenCode**, **Auggie**, **Grok Build**, and **Pi**. Kepler does not track Google Antigravity this way. See [Agent Sessions](/kepler/agent-sessions#sessions-started-outside-kepler).
 
-Kepler also follows its own **Terminal** sessions through those hooks. If a live terminal session keeps reporting status but its hook events stop arriving, Kepler warns *Agent sessions aren't reporting to Kepler*, because status and notifications may be out of date. **Repair** reinstalls the reporting configuration. Restart any session that still does not report afterward. A window that only views another computer's sessions gets the warning without **Repair**, because you repair reporting on the computer running the sessions.
+Kepler also follows its own **Terminal** sessions this way. If a running Terminal session stops reporting to Kepler, Kepler warns that **Agent sessions aren't reporting to Kepler**. Click **Repair**, then restart any session that still does not report. To repair sessions running on another computer, use Kepler on that computer.
 
 ### Programs that report their own status
 
@@ -276,7 +295,7 @@ Some terminal programs report their own status to Kepler. When an agent's termin
 
 ## Your default agent
 
-**Settings → Tasks → New tasks → Default agent** sets which agent is preselected when you start work, and supplies the model, mode, and thinking effort a new session starts with.
+**Settings → Tasks → New tasks → Default agent** sets which agent, account, and [agent preset](/kepler/settings-agents#agent-presets) are preselected when you start work. The preset supplies a new session's model, mode, and options.
 
 Kepler saves agent options **per account**. Picking a different account of the same agent brings up that account's own saved model and options, so a larger model you chose on your work account does not carry over to your personal one.
 
@@ -298,7 +317,7 @@ If your agent is not one of the 9 supported agents, you can add it by its comman
 | **Args (one per line)** | Arguments for the command. For a Chat agent, the arguments that put it into ACP mode, for example `--acp` |
 | **Environment variables (KEY=value, one per line)** | Variables merged into the agent's environment on every session |
 
-Kepler treats environment values as secrets: it encrypts them at rest, hides them after you save, and never sends them to any client. When you edit a custom agent, leaving a value empty (`KEY=`) keeps the stored secret, and typing a new value replaces it.
+Kepler treats environment values as secrets: it encrypts them at rest and hides them after you save. When you edit a custom agent, leaving a value empty (`KEY=`) keeps the stored secret, and typing a new value replaces it.
 
 Custom agents appear alongside the built-in agents everywhere you can choose an agent. A custom agent that runs in **Terminal** works the same way as a built-in one.
 

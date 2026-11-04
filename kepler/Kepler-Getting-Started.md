@@ -11,13 +11,13 @@ git_hosts: [generic]
 integrations: [claude-code, codex, copilot, cursor, auggie, opencode, grok, pi, antigravity]
 hosted_variant: both
 status: GA
-last_verified: 2026-10
+last_verified: 2026-11
 llms_include: true
 tags: [getting-started, install, setup, dashboard, actions, first-task]
 taxonomy:
   category: kepler
 ---
-<kbd>Last updated: October 2026</kbd>
+<kbd>Last updated: November 2026</kbd>
 
 Kepler is GitKraken's **agentic development environment** (**ADE**). Use it to direct coding agents on your real work, in as many repositories as you need, at the same time.
 
@@ -78,15 +78,22 @@ To watch a short tour before you start, click the **Watch Quick Start Tour** til
 
 ## Choose your agents and your look
 
-After you sign in, a guided start takes you through 2 steps. It fills the whole window, without the top bar. To skip it at any point, click **I'll explore on my own**. Existing users also see the guided start once, with a *Welcome back* note that their tasks are where they left them.
+After you sign in, a guided start walks you through setup. To skip it at any point, click **I'll explore on my own**.
 
-**Choose your coding agents.** Kepler looks for the coding agents installed on this computer. In this step:
+**Choose your coding agents.** Kepler finds the coding agents installed on this computer. In this step:
 
-- Switch on the agents you want Kepler to use, install any that are missing, and make one the default.
-- Under **New sessions start in**, pick **Chat**, Kepler's own view of the agent, or **Terminal**, the agent's own command-line app.
-- If your code is on another machine, use **Work on another machine?**. It lists the machines Kepler found in your SSH configuration, in WSL, or saved in Kepler, and moves this window to the one you pick. Remote environments need a paid plan, so if your plan does not include them, this option offers **Try free and connect** or **Upgrade to connect**.
+- Switch on the agents you want Kepler to use, and make one the default. To add a missing agent, click the download button on its row. See [Agent Integrations](/kepler/agent-integrations#install-an-agent).
+- Under **New sessions start in**, pick **Chat**, Kepler's own view of the agent, or **Terminal**, the agent's command-line app.
+- If your code is on another machine, use **Work on another machine?** to move this window there. Remote environments need a paid plan.
 
-**Next** stays unavailable until at least one agent is installed or switched on.
+If you installed an agent that Kepler did not find, click **Rescan**. To go on without an agent, click **Continue without an agent**. You can set one up later in **Settings → Agents**.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/onboarding-no-agent-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/onboarding-no-agent-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The guided start's first step, Choose your coding agents, with no agent found: the nine coding agents sit in a box headed Set up a coding agent to get started, with Rescan and the line Install one here, or Rescan if you installed one yourself., each agent with an install or locate button. Kep says Hmm, no agents here yet. Installed one yourself? Press Rescan., and the step ends with I'll explore on my own and Continue without an agent.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The first step of the guided start, with no agent found.</figcaption>
+</figure>
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/onboarding-agents-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -98,10 +105,10 @@ After you sign in, a guided start takes you through 2 steps. It fills the whole 
 **Make it yours.** Pick a theme, or open the **Theme gallery**, and choose how Kepler gets your attention under **Notify me**:
 
 - **Everything**: every reply and request on the desktop as well
-- **When I'm needed**: questions, approvals, and errors on the desktop, while replies stay in Kepler. This is the default on the desktop
+- **When I'm needed**: questions, approvals, and errors on the desktop, while replies stay in Kepler
 - **Only in Kepler**: no desktop notifications
 
-To see what an alert looks like, click **Send a test notification**. You can change any of these choices later in [Settings](/kepler/settings-app#notifications). Click **Finish** to go to **Tasks in progress** on the Dashboard, with the **New task** composer open for your first task.
+To try an alert, click **Send a test notification**. You can change these choices later in [Settings](/kepler/settings-app#notifications). Click **Finish** to open the **New task** composer on the Dashboard and start your first task.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/onboarding-theme-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -110,7 +117,7 @@ To see what an alert looks like, click **Send a test notification**. You can cha
   <figcaption style="text-align:center; color:#888">The second step, with the theme and notification choices.</figcaption>
 </figure>
 
-During the guided start, Kepler also adds the repositories you already work in, so your repository picker is not empty: the folders of agent sessions you ran outside Kepler, and the repositories GitKraken Desktop, GitLens, and the GitKraken CLI remember.
+Kepler also adds the repositories you already work in, including those GitKraken Desktop and GitLens know, to your repository picker.
 
 ***
 
@@ -139,7 +146,7 @@ You can set folder paths and everything else on the checklist in [Settings](/kep
 
 ## Put an agent on real work
 
-After you connect a tracker, the **Todo** segment of [the Kepler interface](/kepler/kepler-interface) fills with the issues and pull requests assigned to you.
+After you connect a tracker, the **Todo** view of [the Kepler interface](/kepler/kepler-interface) fills with the issues and pull requests related to you.
 
 1. Pick an item in **Todo**.
 2. Click its **Action** button.

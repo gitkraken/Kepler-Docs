@@ -23,11 +23,13 @@ Use **Settings → Agents** to install and update the coding agents that work on
 
 At the top of the page, a line names the agent new tasks use: *New tasks use {agent}.* or *No default agent for new tasks.* To change it, click **Change in Tasks**, which opens [Default agent](/kepler/settings-tasks#default-agent).
 
-To choose the agent Ask Kepler uses, set the **Ask Kepler uses** row. This **Ask Kepler default agent** is separate from the default for tasks. Its help text reads *Used when Ask Kepler has no earlier pick to go on and whenever you choose Use default agent there.* The row lists only the agents that can answer in the Ask Kepler panel, which are the agents that run in **Chat**. If the agent you picked stops being available, the row reads *Pick another agent for Ask Kepler: {name} is not available.* See [Ask Kepler](/kepler/ask-kepler#which-agents-can-answer).
+To choose the agent Ask Kepler uses, set **Ask Kepler uses**. It is separate from the default for tasks. To pick its [agent preset](#agent-presets), use **Ask Kepler uses preset**. To have Ask Kepler start with the agent you last picked instead, choose **Use last used agent** in the agent picker.
+
+**Ask Kepler uses** lists only the agents that run in **Chat**, because only they can answer in the Ask Kepler panel. See [Ask Kepler](/kepler/ask-kepler#which-agents-can-answer).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-settings-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-settings-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Settings › Agents: the page description, New tasks use Claude Code with Change in Tasks, the Ask Kepler uses row set to Claude Code CLI (alex.lee@example.com, Acme) with Options and Clear default and its help text, and Your agents with Update all and Re-scan above the Claude Code card, which shows its account (Default), New sessions start in set to Chat, Let artifact comments start turns (on), Artifacts in new sessions (off), and a collapsed Program and data folder.">
+  <a href="/wp-content/uploads/agent-settings-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-settings-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="Settings › Agents: the page description, New tasks use Claude Code with Change in Tasks, Ask Kepler uses set to Claude Code CLI (alex.lee@example.com, Acme), Ask Kepler uses preset set to Default, and their help text. Your agents has Update all and Rescan above the Claude Code card, which shows its account (Default) with Check usage, New sessions start in set to Chat, Let artifact comments start turns (on), Artifacts in new sessions (off), and a collapsed Program and data folder.">
   </a>
   <figcaption style="text-align:center; color:#888">Settings → Agents.</figcaption>
 </figure>
@@ -36,7 +38,7 @@ To choose the agent Ask Kepler uses, set the **Ask Kepler uses** row. This **Ask
 
 Kepler supports **Claude Code**, **Codex**, **GitHub Copilot**, **OpenCode**, **Pi**, **Auggie**, **Antigravity**, **Cursor**, and **Grok Build**. Settings lists the agents installed on this machine first, then the rest, each group in that order.
 
-In the section header, **Update all** runs each installed agent's own updater, and **Re-scan** looks again for the agent CLIs installed on this machine. If you install or remove an agent outside Kepler, click **Re-scan**.
+In the section header, **Update all** runs each installed agent's own updater, and **Rescan** looks again for the agent CLIs installed on this machine. If you install or remove an agent outside Kepler, click **Rescan**.
 
 Each agent has a card. The card's title line shows the agent's name and these controls:
 
@@ -44,8 +46,10 @@ Each agent has a card. The card's title line shows the agent's name and these co
 |---|---|
 | Version | The installed version, or **Not installed** when Kepler cannot find the CLI. **Version unknown**, in a warning tone, means Kepler could not read the version |
 | **Update** | Runs the agent's updater and streams its output. Shown when Kepler has an updater for that agent |
-| **Install** | Runs an installer for you and streams the output. Shown on an agent that is not installed and has an installer for your OS. **Cancel** stops an install in progress: *Install cancelled: {name}* |
+| **Install** | Opens **Set up {name}**, where you pick an install method and Kepler runs it. Shown when the agent is not installed and has an installer for your OS |
 | **Enabled** | *Off keeps it installed but hidden when you start work.* |
+
+If you installed the agent yourself, use **Already installed?** in the same dialog: enter or browse to the program, then click **Use this**.
 
 When the version is unknown, Kepler turns off features that depend on the version, such as sending a new session's first message automatically. Reinstalling or updating the agent usually fixes this.
 
@@ -73,7 +77,7 @@ Under **Program and data folder**:
 
 | Setting | What it controls | Default |
 |---|---|---|
-| **Binary** | The agent program Kepler runs. **Auto** finds it the way your shell does, as the first match on your `PATH`, so it matches `which`. To override it, pick a specific install or **Custom path…**, or click **Re-scan** to search again | Auto |
+| **Binary** | The agent program Kepler runs. **Auto** finds it the way your shell does, as the first match on your `PATH`, so it matches `which`. To override it, pick a specific install or **Custom path…**, or click **Rescan** to search again | Auto |
 | **Components** | Extra pieces an agent can need, such as its CLI for Terminal mode (*Needed for Terminal mode.*), each with **Install** or **Update to {version}** | None |
 | **Data folder** | *Overrides the agent's default data and config folder.* | Empty, meaning the agent's own default |
 
@@ -101,6 +105,7 @@ Removing an account stops its running sessions and deletes the sessions stored o
 
 An added account shares your own settings, instructions, skills, agents, commands, and other configuration by linking to your files. If the agent saves a change while signed in to that account, the agent can write its own copy in place of the link. The account then stops following your file. Kepler shows this under the account's row: *This account stopped sharing your {items}*. Expand the message to see both paths, **This account's copy** and **Your {item}**, and choose one of the following:
 
+- **Ask Kepler to resolve** opens an Ask Kepler chat with a ready-made prompt, which you can edit, asking the agent to copy what is worth keeping into your shared copy.
 - **Share your {item} again** asks first, then links the account back to your file. *Its own copy is saved as a backup next to it, so nothing is lost.*
 - **Keep its own {item}** keeps the account's copy. The row's menu then offers **Share your {item} again** if you change your mind.
 
@@ -122,6 +127,8 @@ Every agent that can run in both Chat and Terminal has this setting:
 | **New sessions start in** | **Chat**: *{agent} built into Kepler, with replies, diffs and plans you can read, review and search.* **Terminal**: *{agent}'s own command-line app, with its commands, shortcuts and settings, just as you use it today.* | Chat. Google Antigravity starts on Terminal, because its Chat server signs in separately |
 
 Kepler saves the choice per agent, so one agent can default to Terminal while another stays on Chat. The setting is only a default. As its help text says, *You can pick the other one when you start a session.* A terminal-only agent shows **Terminal** with no switch. See [Agent Sessions](/kepler/agent-sessions#how-a-session-runs).
+
+If Chat needs a separate component you have not installed, picking **Chat** offers **Install and switch**. Kepler installs the component, then switches the setting to **Chat**. Picking the mode in the composer works the same way.
 
 ### Artifacts in new sessions
 
@@ -162,6 +169,40 @@ Custom agents appear with the built-in agents wherever you pick an agent. With n
 Kepler encrypts environment values at rest and hides existing values when you edit an agent. To keep a stored secret, leave its value empty (`KEY=`). To replace it, type a new value.
 
 **Save** waits until Kepler has stored the agent. If the save fails, the form stays open with the reason: *Unable to save {name}: {reason}*. **Delete** asks first, with **Delete custom agent?**: *Deletes {name} and the environment values stored with it.* You cannot undo a delete.
+
+## Agent presets
+
+An agent preset saves a model, a mode, and an agent's other options, such as effort, under a name, so you can pick them all at once when you start a session. A preset can hold settings for several agents, shown as badges beside its name.
+
+The list starts with **Default**, which holds the default agent's own options:
+
+- To add a preset, click **New preset** in the section header.
+- To edit a preset, including **Default**, click its row.
+- To duplicate, reorder, or delete a preset you added, use its menu.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/agent-presets-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-presets-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Agent presets section of Settings › Agents with New preset: the built-in Default preset (Claude Code), then Quick fix (Claude Code, Codex), Careful review (Claude Code) and Docs pass (Claude Code, Codex, OpenCode), each of the three with its options menu.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The Default preset, and 3 presets with the agents each one has settings for.</figcaption>
+</figure>
+
+A preset opens as a sub-page with these fields:
+
+| Field | What it takes |
+|---|---|
+| **Name** | A name no other preset uses |
+| **Agent harness** | A tab for each enabled agent, with that agent's **Model**, **Mode**, and other options |
+
+You can use a preset in these places:
+
+- **A session's agent settings.** In the composer, pick it in the **Preset** row, or choose **Custom** to set the model, mode, and effort yourself. See [Agent Sessions](/kepler/agent-sessions#agent-model-mode-and-effort).
+- **The default agents.** **New tasks use preset** on [Default agent](/kepler/settings-tasks#default-agent), and **Ask Kepler uses preset** at the top of this page.
+- **Actions.** Each Action's **Preset**, in the Action's editor. See [Actions](/kepler/actions).
+
+If an Action uses a preset you delete, Kepler asks you to choose a replacement.
+
+When you change a preset, running sessions that use it keep the earlier version until you update them. To apply the change, click **Update all** below the list. Updating keeps each conversation, but a session that needs a restart interrupts any turn in progress.
 
 ## MCP servers
 

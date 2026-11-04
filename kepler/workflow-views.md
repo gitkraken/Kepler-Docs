@@ -19,11 +19,11 @@ taxonomy:
 ---
 <kbd>Last updated: November 2026</kbd>
 
-**Kepler retired this page.** Kepler no longer has separate List, Kanban, and Console views, or a view switcher. [One interface](/kepler/kepler-interface) covers all three:
+**Kepler retired this page.** Kepler no longer has separate List, Kanban, and Console views. [The Kepler interface](/kepler/kepler-interface) covers all three:
 
 | What you used | Where it is now |
 |---|---|
-| **List**: scanning everything in flight | The **List** view |
-| **Kanban**: work by stage | The **Board** view, grouped by **Progress**. See [Arranging your work](/kepler/arranging-your-work#two-layouts) |
-| **Console**: several agents at once | Shift-click to open sessions side by side, in [the task view](/kepler/task-view) or from the main list |
+| **List**: scanning everything in flight | The **List** layout |
+| **Kanban**: work by stage | The **Board** layout, grouped by **Progress**. See [Arranging Your Work](/kepler/arranging-your-work#layouts) |
+| **Console**: several agents at once | Shift-click to open sessions side by side, on [the task page](/kepler/task-view) or on the Dashboard |
 | Diffs, commits, and syncing branches | [Review Changes](/kepler/review-changes) |

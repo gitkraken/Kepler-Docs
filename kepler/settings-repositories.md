@@ -49,6 +49,8 @@ If the folder does not exist yet, the field says that Kepler creates it when you
 
 With nothing tracked, the section reads *Add a repository or folder to manage it here.*
 
+If a folder you added later becomes a Git repository, for example after `git init`, Kepler treats it as a repository from then on.
+
 Removing a repository deletes its sessions, terminals, and configured commands, and ends any live agent and terminal sessions tied to it. Kepler asks you to confirm first.
 
 ### Add a repository
@@ -70,9 +72,9 @@ Click a repository's row to open its **Edit repo** page. The page shows the repo
 
 | Part | What it holds |
 |---|---|
-| **Name** | The name Kepler shows wherever it names this repository. Leave it empty to use the folder name, which is the field's placeholder |
-| **Aliases** | *Short names for this repo when talking to agents, separated by commas.* |
-| **Description** | Free text. Its placeholder reads *What this repo is for. Agents working in it read this.* |
+| **Name** | How this repo is listed in Kepler. Leave it empty to use the folder name |
+| **Aliases** | Short names for this repo when talking to agents, separated by commas, such as `api, backend` |
+| **Description** | What this repo is for. Agents working in it read this |
 | **Branch prefix** | Overrides the prefix from **Settings → Tasks** for this repository only. See below |
 | **Commands** | Shell commands for this repository. See [Per-repository commands](#per-repository-commands) |
 | **MCP servers** | *Extra tools your agents get in this repo, on top of their own lists. Changes here apply right away.* See [MCP Servers](/kepler/mcp-servers) |
@@ -84,8 +86,8 @@ Click a repository's row to open its **Edit repo** page. The page shows the repo
 - Agents working in this repo read the description, so write a full sentence.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/edit-repo-dialog-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/edit-repo-dialog-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Edit repo page for acme-web in Settings › Repositories: its path and main · 2 branches, then Name, Aliases (empty, Short names for this repo when talking to agents, separated by commas), Description and Branch prefix on Default (kepler/) with the example kepler/fix-login-form; the Commands section with Add command, Install deps (Runs on creation) and Dev server; and MCP servers with Add server, Agent set to Claude Code CLI and acme-issues, docs-search and acme-analytics switched on.">
+  <a href="/wp-content/uploads/edit-repo-dialog-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/edit-repo-dialog-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Edit repo page for acme-web in Settings › Repositories: its path and main · 2 branches, then Name (How this repo is listed in Kepler.), Aliases (empty, placeholder api, backend; Short names for this repo when talking to agents, separated by commas.), Description (What this repo is for. Agents working in it read this.) and Branch prefix on Default (kepler/) with the example kepler/fix-login-form; the Commands section with Add command, Install deps (Runs on creation) and Dev server; and MCP servers with Add server, Agent set to Claude Code CLI and acme-issues, docs-search and acme-analytics switched on.">
   </a>
   <figcaption style="text-align:center; color:#888">The Edit repo page.</figcaption>
 </figure>
@@ -147,6 +149,10 @@ To run a command from the task view, right-click a worktree row in the task's co
   </a>
   <figcaption style="text-align:center; color:#888">A repository's Commands, with one row open for editing.</figcaption>
 </figure>
+
+### Copy ignored files into new worktrees
+
+A new worktree starts without your repository's git-ignored files, such as `.env`. To copy some of them, list them in a `.worktreeinclude` file at the repository's root, in the same format as `.gitignore`. Kepler copies them before any command set to run on worktree creation starts. It copies only files that git also ignores in the new worktree, so a copied secret cannot be committed by mistake, and it never overwrites a file already there.
 
 ## Worktrees and branches
 

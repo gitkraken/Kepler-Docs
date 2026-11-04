@@ -68,7 +68,7 @@ Each row is a server. The switch on a row turns the server on or off, and clicki
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/mcp-servers-dialog-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/mcp-servers-dialog-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The MCP servers dialog for Claude Code in acme-web, with Open repo settings. Added by you lists acme-issues and acme-analytics, the second marked Sign in needed; In this repo, shared with your team lists acme-design-system marked Sign in needed, and storybook. Each row has a switch, turned on, and opens its details; Add server is at the bottom.">
+    <img src="/wp-content/uploads/mcp-servers-dialog-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The MCP servers dialog for Claude Code in acme-web, with Open repo settings, and Add server at the bottom. Added by you lists acme-issues and acme-analytics (marked Sign in needed), and In this repo, shared with your team lists acme-design-system (marked Sign in needed) and storybook, each with its switch on.">
   </a>
   <figcaption style="text-align:center; color:#888">The MCP servers dialog for one repository.</figcaption>
 </figure>
@@ -85,13 +85,13 @@ To manage the servers for one repository:
 When you open a server's page, **All servers** takes you back to the list.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/mcp-agent-settings-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/mcp-agent-settings-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Agent settings menu from the New task composer with OpenCode chosen: Start in (Chat or Terminal), Model, Permission mode (Build or Plan), and the MCP servers row reading 2 of 2 enabled beside a Manage button, above Use default agent.">
+  <a href="/wp-content/uploads/mcp-agent-settings-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/mcp-agent-settings-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Agent settings menu from the New task composer with OpenCode chosen: Preset Default, Start in (Chat selected, or Terminal), and the MCP servers row reading 2 of 2 enabled beside a Manage button, above the agent settings gear and Use defaults.">
   </a>
   <figcaption style="text-align:center; color:#888">The MCP servers row in the Agent settings menu.</figcaption>
 </figure>
 
-A change here applies to that repository only. Worktrees of one checkout share the setting, so a server you turn off in a repository stays off in every task's worktree of it.
+A change here applies to that repository and all of its worktrees.
 
 If a server is off in Settings and you have not turned it on here, the server says *Off for every repo in Settings. Turn it on to use it here.*, with **Open Settings** to go to the global default. Turning it on in the dialog turns it on for this repository only.
 
@@ -188,6 +188,8 @@ For a server that needs authentication, its page has a **Sign-in** section. It o
 
 In a local window, **Open sign-in page** opens your browser, and Kepler finishes when you are done (*Finish signing in in your browser*). In a window connected to a remote environment, sign in on that page, then paste the URL you land on into **Redirect URL**.
 
+If your organization manages the agent's settings, sign-in first lists them for your approval. Click **Approve and continue** to sign in, or **Decline** if you do not recognize them. Kepler saves your approval for this account.
+
 ***
 
 ## When changes apply
@@ -200,7 +202,7 @@ In a local window, **Open sign-in page** opens your browser, and Kepler finishes
 
 Where Kepler saves an on or off choice depends on the agent:
 
-- **Claude Code, Codex, OpenCode, and GitHub Copilot**: Kepler does not edit the agent's config. Kepler keeps the choice itself and passes it to the agent when the agent launches, so the same agent run from your own terminal is not affected. The one exception is turning on a Claude Code server that Claude's own config lists as disabled: Kepler can do this only by editing that list.
+- **Claude Code, Codex, OpenCode, and GitHub Copilot**: Kepler does not edit the agent's config, so the same agent run from your own terminal is not affected. The one exception is turning on a Claude Code server that Claude's own config lists as disabled: Kepler can do this only by editing that list.
 - **Cursor and Grok Build**: Kepler writes the change into the agent's own files, which their CLIs also read.
 - **Auggie**: Kepler lists the servers without a switch, because Auggie has no way to turn a server off. To stop using a server, edit Auggie's config.
 
