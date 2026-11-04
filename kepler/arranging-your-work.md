@@ -426,14 +426,14 @@ Dates sort newest first. **Name** and **ID** sort in ascending order. **ID** com
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/manual-sort-drag-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/manual-sort-drag-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Upgrade the payment SDK being dragged to the top of the Unread group under the Manual sort: a green line with a dot sits above Fix the cart total where it will land, the lifted row floats beside it, its own row is dimmed in place, and the Mark as bar covers the toolbar with Read, Exploration, In Development, On hold, Later, Done and Archive task.">
+    <img src="/wp-content/uploads/manual-sort-drag-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Upgrade the payment SDK being dragged to the top of the Unread group under the Manual sort: a green line sits above Fix the cart total where it will land, with the dot at its start ringed in purple, the lifted row floats beside it, its own row is dimmed in place, and the Mark as bar covers the toolbar with Read, Exploration, In Development, On hold, Later, Done and Archive task.">
   </a>
   <figcaption style="text-align:center; color:#888">Dragging a task to a new place in its section.</figcaption>
 </figure>
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/manual-sort-menu-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/manual-sort-menu-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Task actions menu of Update checkout copy, an on-hold task with a New reply, a drag handle and its Star button, under the Manual sort: Open task page; Progress, On hold, Mark as read and Star; Rename task and Add to group; the move rows the Manual sort adds, Move up, Move down and Move to top of Unread; Manage resources and Refresh; Copy task link and Copy task prompt; then Shut down all agents, Archive task and Delete task.">
+    <img src="/wp-content/uploads/manual-sort-menu-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Task actions menu of Update checkout copy, an on-hold task with a New reply, under the Manual sort, with Move up highlighted: Open task page; Progress, On hold, Mark as read and Star; Rename task and Add to group; the move rows the Manual sort adds, Move up, Move down and Move to top of Unread; Manage resources and Refresh; Copy task link and Copy task prompt; then Shut down all agents, Archive task and Delete task.">
   </a>
   <figcaption style="text-align:center; color:#888">The move rows in a task's menu, under the Manual sort.</figcaption>
 </figure>
@@ -485,7 +485,7 @@ While you drag, the card stays faded in its original place, and a line shows whe
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/drag-drop-bar-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/drag-drop-bar-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Fix the cart total lifted off the Tasks view's list. A Mark as bar covers the toolbar with Read, Exploration, In Review, On hold, Later, Done and Archive task; the Unread group has a dashed outline where the card can drop, the card's own row is dimmed in place, and the lifted card floats near the bottom of the list.">
+    <img src="/wp-content/uploads/drag-drop-bar-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Fix the cart total lifted off the Tasks view's list. A Mark as bar covers the toolbar with Read, Exploration, In Review, On hold, Later, Done and Archive task; the Unread group has a dashed outline where the card can drop, the card's own row is dimmed in place, and the lifted card floats just below the Not started group.">
   </a>
   <figcaption style="text-align:center; color:#888">Dragging a task in the List grouped by Inbox, with the Mark as bar.</figcaption>
 </figure>
@@ -634,7 +634,7 @@ After a restart, each window reopens on the view it was showing, with that view'
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/archive-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/archive-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Task actions menu open from Fix the cart total's ⋮ button, beside the task list and the row's Star button: Open task page; Progress, In Development, Mark as read and Star; Rename task and Add to group; Manage resources and Refresh; Copy task link and Copy task prompt; then Shut down all agents, Archive task and Delete task.">
+    <img src="/wp-content/uploads/archive-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Task actions menu open from Fix the cart total's ⋮ button, beside the task list, with Archive task highlighted: Open task page; Progress, In Development, Mark as read and Star; Rename task and Add to group; Manage resources and Refresh; Copy task link and Copy task prompt; then Shut down all agents, Archive task and Delete task.">
   </a>
   <figcaption style="text-align:center; color:#888">Archive task, in the row's ⋮ menu.</figcaption>
 </figure>
