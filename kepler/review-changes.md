@@ -213,11 +213,11 @@ An unsaved edit shows **Unsaved** with **Save** and **Discard** beside it. Keple
 
 **Editing a file from a commit.** A file shown from **Commits**, from one commit or all of them, is read-only, but you can switch it to the file on disk. Click **Edit** (**Edit working copy**) in its header, choose **Edit working copy** from its row menu, or press **Cmd/Ctrl+E**. If you start typing in the commit's code, a card reads *Commits are read-only.*, with an **Edit working copy** button.
 
-The file then opens in **File** view, marked **Working**, and diffed from where the commit view started: a chip reads **Since {base}** with **All commits** picked, or **Since before {sha}** with a commit or range picked, which includes every later commit. Kepler keeps your place in the file. **Stop editing** returns to the file as committed, and so does moving to another file or view.
+The file then opens in **File** view, marked **Working**. In **Changes** view the diff counts from where the commit view started, and a chip says so: **Since {base}** with **All commits** picked, or **Since before {sha}** with a commit or range picked, which includes every later commit. Kepler keeps your place in the file. **Stop editing** returns to the file as committed, and so does moving to another file or view.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/changes-edit-working-copy-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/changes-edit-working-copy-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Changes overlay on the Commits view of kepler/fix-cart-total, with the commit Apply the discount before tax selected above main (branched here) and its file cart.js. The viewer has switched cart.js from the commit to the working copy: its header reads 1 of 1, M, cart.js and Working, with Stop editing beside the File and Changes switch, and the file is open for editing in File view.">
+    <img src="/wp-content/uploads/changes-edit-working-copy-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Changes overlay on the Commits view of kepler/fix-cart-total, with All commits picked above the commit Apply the discount before tax, main (branched here) and the file cart.js. The viewer has switched cart.js to the working copy: its header reads 1 of 1, M, cart.js and Working, with Stop editing beside the File and Changes switch, and the file is open for editing in File view.">
   </a>
   <figcaption style="text-align:center; color:#888">A file from a commit switched to its working copy, ready to edit.</figcaption>
 </figure>

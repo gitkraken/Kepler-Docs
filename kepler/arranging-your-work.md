@@ -426,7 +426,7 @@ Dates sort newest first. **Name** and **ID** sort in ascending order. **ID** com
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/manual-sort-drag-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/manual-sort-drag-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Upgrade the payment SDK being dragged to the top of the Unread group under the Manual sort: a green line with a dot sits above Fix the cart total where it will land, Fix the cart total shows a Create group pill for dropping the card onto it instead, the lifted row floats beside it, its own row is dimmed in place, and the Mark as bar covers the toolbar with Read, Exploration, In Development, On hold, Later, Done and Archive task.">
+    <img src="/wp-content/uploads/manual-sort-drag-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Upgrade the payment SDK being dragged to the top of the Unread group under the Manual sort: a green line with a dot sits above Fix the cart total where it will land, the lifted row floats beside it, its own row is dimmed in place, and the Mark as bar covers the toolbar with Read, Exploration, In Development, On hold, Later, Done and Archive task.">
   </a>
   <figcaption style="text-align:center; color:#888">Dragging a task to a new place in its section.</figcaption>
 </figure>
@@ -543,7 +543,7 @@ The **Filters** section at the end of the **View** menu has a submenu for each f
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/filter-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/filter-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The View menu's Filters section with Progress open on In Development (ticked, 2), and Exploration (1), In Review (1), On hold (1), Later, Done and Archived (each 0), every value listed with its count. Exploration's exclude button is hovered, and its tooltip reads Exclude Exploration with Shift+Enter. The View button counts 1 filter, the search box shows a 3 hidden pill, and the list behind holds Add product search and Fix the cart total.">
+    <img src="/wp-content/uploads/filter-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The View menu's Filters section with Progress open on In Development (ticked, 2), and Exploration (1), In Review (1), On hold (1), Later, Done and Archived (each 0), every value listed with its count. Archived's exclude button is hovered, and its tooltip reads Exclude Archived with Shift+Enter. The View button counts 1 filter, the search box shows a 3 hidden pill, and the list behind holds Add product search and Fix the cart total.">
   </a>
   <figcaption style="text-align:center; color:#888">The Filters section, with a facet's flyout open.</figcaption>
 </figure>
