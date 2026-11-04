@@ -686,7 +686,7 @@ Before you update a branch, check what landed on its merge target since you bran
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/changes-incoming-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/changes-incoming-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Changes overlay reviewing what is new on main for kepler/fix-cart-total. The header reads from where you branched, 2 new on main (pressed, with a close button) and Rebase onto main. On the left, Files to show offers Overlaps 1 and All 2; All new commits (2 commits) leads the list, then Use the 8.25% sales tax rate (8b89205, 1 file overlaps) and Mention gift cards in the README (2260509), over the changed files cart.js, marked as an overlap, and README.md. The viewer shows cart.js read-only, its tax rate changed from 0.08 to 0.0825.">
+    <img src="/wp-content/uploads/changes-incoming-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Changes overlay reviewing what is new on main for kepler/fix-cart-total. The header reads from where you branched, 2 new on main (pressed, with a close button) and Rebase onto main. On the left, the Overlaps 1 | All 2 switch; All new commits (2 commits) leads the list, then Use the 8.25% sales tax rate (8b89205, 1 file overlaps) and Mention gift cards in the README (2260509), over the changed files cart.js, marked as an overlap, and README.md. The viewer shows cart.js read-only, its tax rate changed from 0.08 to 0.0825.">
   </a>
   <figcaption style="text-align:center; color:#888">Reviewing what landed on the merge target, with the file you also changed marked.</figcaption>
 </figure>

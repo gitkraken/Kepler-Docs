@@ -130,7 +130,7 @@ To switch chats, open the chat's title in the panel header. It lists:
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/ask-kepler-chat-picker-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ask-kepler-chat-picker-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="Ask Kepler's chat picker open under the panel header: New chat, then Unread (Summarize the merged P…, blue dot), Needs attention (Run the checkout tests, orange dot), Running (Watch CI on PR 51, green dot) and Recent (Which tasks are blocked on…, gray dot), each with when it was last active and an Archive button. Hide archived (1) is open below them, listing Which worktrees can I clean u… with a Restore button.">
+    <img src="/wp-content/uploads/ask-kepler-chat-picker-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="Ask Kepler's chat picker open: New chat, then Unread (Summarize the merged P…, blue dot), Needs attention (Run the checkout tests, orange dot), Running (Watch CI on PR 51, green dot) and Recent (Which tasks are blocked on…, gray dot), each with when it was last active and an Archive button. Hide archived (1) is open below them, listing Which worktrees can I clean u… with a Restore button.">
   </a>
   <figcaption style="text-align:center; color:#888">The chat picker, with the archived chats shown.</figcaption>
 </figure>

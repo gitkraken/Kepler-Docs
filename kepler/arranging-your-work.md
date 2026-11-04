@@ -182,7 +182,7 @@ Each view remembers its own column width. When a column has more tasks to load, 
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/columns-progress-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/columns-progress-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Tasks view on the Board layout, grouped by Progress: the Exploration, In Development, In Review, On hold and Done columns side by side, each with its count, Open in panels and Select. Each task is a card with its title, age, session and progress glyphs, its waiting state (New reply, or Approval needed for Run npm test), and, for a task with a worktree, its repository and branch; Done reads Nothing here. Above, the toolbar holds the search box and the View button showing the Board glyph, Progress and Updated.">
+    <img src="/wp-content/uploads/columns-progress-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Tasks view on the Board layout, grouped by Progress: the Exploration, In Development, In Review, On hold and Done columns side by side, each with its count, and Open in panels and Select on every column that has tasks. Each task is a card with its title, age, session and progress glyphs, its waiting state (New reply, or Approval needed for Run npm test), and, for a task with a worktree, its repository and branch; Done reads Nothing here. Above, the toolbar holds the search box and the View button showing the Board glyph, Progress and Updated.">
   </a>
   <figcaption style="text-align:center; color:#888">The Board layout, grouped by Progress.</figcaption>
 </figure>
