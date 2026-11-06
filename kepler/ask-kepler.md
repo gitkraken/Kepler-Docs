@@ -16,6 +16,12 @@ llms_include: true
 tags: [ask-kepler, chat, assistant, terminal, side-panel, keyboard, agent-sessions]
 taxonomy:
   category: kepler
+custom_fields:
+    nav_category: "working-in-kepler"
+    nav_label: "Ask Kepler"
+    nav_order: 40
+    nav_parent: "working-in-kepler"
+    page_type: "content"
 ---
 <kbd>Last updated: November 2026</kbd>
 

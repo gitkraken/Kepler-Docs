@@ -16,6 +16,12 @@ llms_include: true
 tags: [agent-sessions, sessions, prompts, steering, queueing, accounts, models, modes, skills, notifications, voice-input, usage-limits, artifacts, session-recovery]
 taxonomy:
   category: kepler
+custom_fields:
+    nav_category: "working-in-kepler"
+    nav_label: "Agent Sessions"
+    nav_order: 20
+    nav_parent: "working-in-kepler"
+    page_type: "content"
 ---
 <kbd>Last updated: November 2026</kbd>
 

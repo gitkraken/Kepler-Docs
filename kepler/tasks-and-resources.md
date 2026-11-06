@@ -16,6 +16,12 @@ llms_include: true
 tags: [tasks, resources, worktrees, shared-context, draft-sessions, notes, files, uploads, sessions, archive, mcp]
 taxonomy:
   category: kepler
+custom_fields:
+    nav_category: "core-concepts"
+    nav_label: "Tasks and Resources"
+    nav_order: 40
+    nav_parent: "core-concepts"
+    page_type: "content"
 ---
 <kbd>Last updated: November 2026</kbd>
 

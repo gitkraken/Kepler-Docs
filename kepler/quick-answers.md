@@ -16,6 +16,12 @@ llms_include: true
 tags: [quick-answers, windows, wsl, ssh, accounts, remote-access, phone, worktrees, setup-commands, permissions, review, actions, pull-requests]
 taxonomy:
   category: kepler
+custom_fields:
+    nav_category: "quick-answers"
+    nav_label: "Quick Answers"
+    nav_order: 20
+    nav_parent: ""
+    page_type: "content"
 ---
 <kbd>Last updated: November 2026</kbd>
 

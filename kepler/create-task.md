@@ -16,6 +16,12 @@ llms_include: true
 tags: [tasks, create-task, composer, worktrees, branches, folders, issues, pull-requests, actions, gitlens, gitkraken-desktop]
 taxonomy:
   category: kepler
+custom_fields:
+    nav_category: "working-in-kepler"
+    nav_label: "Create a task"
+    nav_order: 10
+    nav_parent: "working-in-kepler"
+    page_type: "content"
 ---
 <kbd>Last updated: November 2026</kbd>
 

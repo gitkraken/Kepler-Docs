@@ -16,6 +16,12 @@ llms_include: true
 tags: [agent-graph, dashboard, sessions, subagents, tool-calls, monitoring]
 taxonomy:
   category: kepler
+custom_fields:
+    nav_category: "core-concepts"
+    nav_label: "The Agent Graph"
+    nav_order: 60
+    nav_parent: "core-concepts"
+    page_type: "content"
 ---
 <kbd>Last updated: November 2026</kbd>
 

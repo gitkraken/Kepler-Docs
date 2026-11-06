@@ -16,6 +16,12 @@ llms_include: true
 tags: [settings, language, windows, default-editor, keep-awake, notifications, appearance, themes, voice-input, keyboard-shortcuts]
 taxonomy:
   category: kepler
+custom_fields:
+    nav_category: "configuration"
+    nav_label: "App Settings"
+    nav_order: 30
+    nav_parent: "settings"
+    page_type: "content"
 ---
 <kbd>Last updated: November 2026</kbd>
 

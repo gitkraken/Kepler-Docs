@@ -16,6 +16,12 @@ llms_include: true
 tags: [mcp, mcp-servers, model-context-protocol, tools, agents, claude-code, codex, opencode, copilot, cursor, auggie, grok, settings, composer]
 taxonomy:
   category: kepler
+custom_fields:
+    nav_category: "integrations"
+    nav_label: "MCP Servers"
+    nav_order: 20
+    nav_parent: "integrations"
+    page_type: "content"
 ---
 <kbd>Last updated: November 2026</kbd>
 

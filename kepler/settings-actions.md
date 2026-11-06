@@ -16,6 +16,12 @@ llms_include: true
 tags: [settings, actions, preferred-actions]
 taxonomy:
   category: kepler
+custom_fields:
+    nav_category: "configuration"
+    nav_label: "Action Settings"
+    nav_order: 50
+    nav_parent: "behavior-and-integration-settings"
+    page_type: "content"
 ---
 <kbd>Last updated: November 2026</kbd>
 

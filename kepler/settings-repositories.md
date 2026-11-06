@@ -16,6 +16,12 @@ llms_include: true
 tags: [settings, repositories, worktrees, branches, per-repository-commands, projects, aliases]
 taxonomy:
   category: kepler
+custom_fields:
+    nav_category: "configuration"
+    nav_label: "Repository Settings"
+    nav_order: 30
+    nav_parent: "behavior-and-integration-settings"
+    page_type: "content"
 ---
 <kbd>Last updated: November 2026</kbd>
 

@@ -16,6 +16,12 @@ llms_include: true
 tags: [settings, agents, custom-agents, mcp-servers, agent-tools, approvals, usage-limits, artifacts]
 taxonomy:
   category: kepler
+custom_fields:
+    nav_category: "configuration"
+    nav_label: "Agent Settings"
+    nav_order: 10
+    nav_parent: "behavior-and-integration-settings"
+    page_type: "content"
 ---
 <kbd>Last updated: November 2026</kbd>
 

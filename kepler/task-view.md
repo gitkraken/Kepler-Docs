@@ -16,6 +16,12 @@ llms_include: true
 tags: [tasks, task-page, sessions, draft-sessions, terminals, worktrees, resources, tabs, tab-groups, split-panes, drawer, file-viewer, keyboard-shortcuts]
 taxonomy:
   category: kepler
+custom_fields:
+    nav_category: "core-concepts"
+    nav_label: "The Task View"
+    nav_order: 50
+    nav_parent: "core-concepts"
+    page_type: "content"
 ---
 <kbd>Last updated: November 2026</kbd>
 

@@ -16,6 +16,12 @@ llms_include: true
 tags: [integrations, pull-requests, github, gitlab, bitbucket, bitbucket-data-center, azure-devops, self-hosted, worktrees, accounts, settings]
 taxonomy:
   category: kepler
+custom_fields:
+    nav_category: "integrations"
+    nav_label: "Pull Request Integrations"
+    nav_order: 40
+    nav_parent: "integrations"
+    page_type: "content"
 ---
 <kbd>Last updated: November 2026</kbd>
 

@@ -16,6 +16,12 @@ llms_include: true
 tags: [voice-input, dictation, qwen3-asr, whisper, webgpu, microphone, settings, agent-sessions]
 taxonomy:
   category: kepler
+custom_fields:
+    nav_category: "working-in-kepler"
+    nav_label: "Voice Input"
+    nav_order: 50
+    nav_parent: "working-in-kepler"
+    page_type: "content"
 ---
 <kbd>Last updated: November 2026</kbd>
 
