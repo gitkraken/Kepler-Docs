@@ -16,6 +16,12 @@ llms_include: true
 tags: [settings, tasks, default-agent, worktrees, branch-prefix, folder-locations, variables]
 taxonomy:
   category: kepler
+custom_fields:
+    nav_category: "configuration"
+    nav_label: "Task Settings"
+    nav_order: 20
+    nav_parent: "behavior-and-integration-settings"
+    page_type: "content"
 ---
 <kbd>Last updated: November 2026</kbd>
 

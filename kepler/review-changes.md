@@ -16,6 +16,12 @@ llms_include: true
 tags: [review, diff, changes-overlay, working-changes, commits, staging, amend, review-comments, merge-conflicts, merge-target, push, force-push, pull-requests, ai-sync, ai-compose, ai-conflict-resolution, worktree-cleanup]
 taxonomy:
   category: kepler
+custom_fields:
+    nav_category: "working-in-kepler"
+    nav_label: "Review Changes"
+    nav_order: 30
+    nav_parent: "working-in-kepler"
+    page_type: "content"
 ---
 <kbd>Last updated: November 2026</kbd>
 

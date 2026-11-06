@@ -16,6 +16,12 @@ llms_include: true
 tags: [settings, setup, account, organization, plan, ai-credits, trials, gitkraken-dev]
 taxonomy:
   category: kepler
+custom_fields:
+    nav_category: "configuration"
+    nav_label: "Setup and Account Settings"
+    nav_order: 10
+    nav_parent: "settings"
+    page_type: "content"
 ---
 <kbd>Last updated: October 2026</kbd>
 

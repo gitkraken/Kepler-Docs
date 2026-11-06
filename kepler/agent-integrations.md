@@ -16,6 +16,12 @@ llms_include: true
 tags: [agent-integrations, claude-code, codex, copilot, cursor, auggie, opencode, grok, pi, antigravity, acp, terminal, custom-agents, setup, settings, mcp-servers]
 taxonomy:
   category: kepler
+custom_fields:
+    nav_category: "integrations"
+    nav_label: "Agent Integrations"
+    nav_order: 10
+    nav_parent: "integrations"
+    page_type: "content"
 ---
 <kbd>Last updated: November 2026</kbd>
 

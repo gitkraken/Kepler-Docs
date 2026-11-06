@@ -16,6 +16,12 @@ llms_include: true
 tags: [settings, updates, help, release-notes, onboarding, logs]
 taxonomy:
   category: kepler
+custom_fields:
+    nav_category: "configuration"
+    nav_label: "Update and Help Settings"
+    nav_order: 50
+    nav_parent: "settings"
+    page_type: "content"
 ---
 <kbd>Last updated: November 2026</kbd>
 

@@ -16,6 +16,12 @@ llms_include: true
 tags: [arrangements, views, inbox, list, columns, grouping, task-groups, multi-select, sorting, filters, search, progress, on-hold, later, archive, cleanup]
 taxonomy:
   category: kepler
+custom_fields:
+    nav_category: "core-concepts"
+    nav_label: "Arranging Your Work"
+    nav_order: 20
+    nav_parent: "core-concepts"
+    page_type: "content"
 ---
 <kbd>Last updated: November 2026</kbd>
 

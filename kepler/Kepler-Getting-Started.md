@@ -16,6 +16,12 @@ llms_include: true
 tags: [getting-started, install, setup, dashboard, actions, first-task]
 taxonomy:
   category: kepler
+custom_fields:
+    nav_category: "kepler-getting-started"
+    nav_label: "Getting Started with Kepler"
+    nav_order: 10
+    nav_parent: ""
+    page_type: "main-index"
 ---
 <kbd>Last updated: November 2026</kbd>
 

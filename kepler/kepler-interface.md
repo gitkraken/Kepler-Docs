@@ -16,6 +16,12 @@ llms_include: true
 tags: [interface, dashboard, todo, tasks, draft-sessions, issues, pull-requests, actions, sessions, panel, preview, worktrees, progress, keyboard, navigation, windows, updates]
 taxonomy:
   category: kepler
+custom_fields:
+    nav_category: "core-concepts"
+    nav_label: "The Kepler Interface"
+    nav_order: 10
+    nav_parent: "core-concepts"
+    page_type: "content"
 ---
 <kbd>Last updated: November 2026</kbd>
 

@@ -16,6 +16,12 @@ llms_include: true
 tags: [settings, configuration, keyboard-shortcuts, appearance, agents, tasks, notifications, updates, mcp-servers, actions, repositories, worktrees, terminal, voice-input, remote, remote-environments, remote-access, logs, gitkraken-dev, integrations, preferences]
 taxonomy:
   category: kepler
+custom_fields:
+    nav_category: "configuration"
+    nav_label: "Settings"
+    nav_order: 10
+    nav_parent: "configuration"
+    page_type: "content"
 ---
 <kbd>Last updated: November 2026</kbd>
 

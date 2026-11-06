@@ -16,6 +16,12 @@ llms_include: true
 tags: [settings, integrations, issue-trackers, git-hosts, terminal]
 taxonomy:
   category: kepler
+custom_fields:
+    nav_category: "configuration"
+    nav_label: "Integration Settings"
+    nav_order: 40
+    nav_parent: "behavior-and-integration-settings"
+    page_type: "content"
 ---
 <kbd>Last updated: November 2026</kbd>
 

@@ -16,6 +16,12 @@ llms_include: true
 tags: [integrations, issue-trackers, jira, jira-data-center, linear, trello, github, gitlab, azure-devops, self-hosted, accounts, settings]
 taxonomy:
     category: kepler
+custom_fields:
+    nav_category: "integrations"
+    nav_label: "Issue Tracker Integrations"
+    nav_order: 30
+    nav_parent: "integrations"
+    page_type: "content"
 ---
 <kbd>Last updated: November 2026</kbd>
 

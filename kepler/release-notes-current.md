@@ -16,6 +16,12 @@ llms_include: true
 tags: [release-notes, changelog, whats-new, upgrades, version-history]
 taxonomy:
   category: kepler
+custom_fields:
+    nav_category: "release-notes-current"
+    nav_label: "Release Notes"
+    nav_order: 70
+    nav_parent: ""
+    page_type: "content"
 ---
 <kbd>Last updated: October 2026</kbd>
 

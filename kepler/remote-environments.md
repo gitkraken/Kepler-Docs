@@ -16,6 +16,12 @@ llms_include: true
 tags: [remote-environments, ssh, wsl, windows, port-forwarding, settings, remote-access, qr-pairing, gitkraken-dev, diagnostics, notifications]
 taxonomy:
   category: kepler
+custom_fields:
+    nav_category: "configuration"
+    nav_label: "Remote Environments"
+    nav_order: 20
+    nav_parent: "configuration"
+    page_type: "content"
 ---
 <kbd>Last updated: November 2026</kbd>
 
