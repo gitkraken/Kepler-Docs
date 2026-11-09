@@ -10,7 +10,7 @@ os_support: [Windows, macOS, Linux]
 git_hosts: [generic]
 integrations: []
 hosted_variant: both
-status: GA
+status: preview
 last_verified: 2026-11
 llms_include: true
 tags: [settings, language, windows, default-editor, keep-awake, notifications, appearance, themes, voice-input, keyboard-shortcuts]

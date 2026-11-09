@@ -10,7 +10,7 @@ os_support: [Windows, macOS, Linux]
 git_hosts: [github, github-enterprise, gitlab, gitlab-self-managed, bitbucket, azure-devops]
 integrations: [claude-code, codex-cli, copilot-cli, cursor, auggie, opencode, grok, pi, antigravity]
 hosted_variant: both
-status: GA
+status: preview
 last_verified: 2026-11
 llms_include: true
 tags: [quick-answers, windows, wsl, ssh, accounts, remote-access, phone, worktrees, setup-commands, permissions, review, actions, pull-requests]

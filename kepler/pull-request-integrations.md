@@ -10,7 +10,7 @@ os_support: [Windows, macOS, Linux]
 git_hosts: [github, github-enterprise, gitlab, gitlab-self-managed, bitbucket, bitbucket-data-center, azure-devops, azure-devops-server]
 integrations: [github, github-enterprise, gitlab, gitlab-self-managed, bitbucket, bitbucket-data-center, azure-devops, azure-devops-server]
 hosted_variant: both
-status: GA
+status: preview
 last_verified: 2026-11
 llms_include: true
 tags: [integrations, pull-requests, github, gitlab, bitbucket, bitbucket-data-center, azure-devops, self-hosted, worktrees, accounts, settings]

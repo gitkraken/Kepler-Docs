@@ -10,7 +10,7 @@ os_support: [Windows, macOS, Linux]
 git_hosts: [generic]
 integrations: [claude-code, codex, auggie]
 hosted_variant: both
-status: GA
+status: preview
 last_verified: 2026-11
 llms_include: true
 tags: [remote-environments, ssh, wsl, windows, port-forwarding, settings, remote-access, qr-pairing, gitkraken-dev, diagnostics, notifications]

@@ -10,7 +10,7 @@ os_support: [Windows, macOS, Linux]
 git_hosts: [generic]
 integrations: [jira, linear, trello, github, github-enterprise, gitlab, gitlab-self-managed, azure-devops]
 hosted_variant: both
-status: GA
+status: preview
 last_verified: 2026-11
 llms_include: true
 tags: [integrations, issue-trackers, jira, jira-data-center, linear, trello, github, gitlab, azure-devops, self-hosted, accounts, settings]

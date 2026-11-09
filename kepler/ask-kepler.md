@@ -10,7 +10,7 @@ os_support: [Windows, macOS, Linux]
 git_hosts: [generic]
 integrations: [claude-code, codex-cli, copilot-cli, cursor, auggie, opencode, grok, antigravity]
 hosted_variant: both
-status: GA
+status: preview
 last_verified: 2026-11
 llms_include: true
 tags: [ask-kepler, chat, assistant, terminal, side-panel, keyboard, agent-sessions]
