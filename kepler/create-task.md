@@ -7,8 +7,8 @@ content_type: how-to
 audience: developer
 plan_required: all
 os_support: [Windows, macOS, Linux]
-git_hosts: [github, github-enterprise, gitlab, gitlab-self-hosted, bitbucket, azure-devops]
-integrations: [github, github-enterprise, gitlab, gitlab-self-hosted, bitbucket, azure-devops, jira, linear, trello]
+git_hosts: [github, github-enterprise, gitlab, gitlab-self-managed, bitbucket, azure-devops]
+integrations: [github, github-enterprise, gitlab, gitlab-self-managed, bitbucket, azure-devops, jira, linear, trello]
 hosted_variant: both
 status: GA
 last_verified: 2026-11
