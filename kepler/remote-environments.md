@@ -5,7 +5,7 @@ product: Kepler
 feature: Remote Environments
 content_type: how-to
 audience: developer
-plan_required: all
+plan_required: Pro
 os_support: [Windows, macOS, Linux]
 git_hosts: [generic]
 integrations: [claude-code, codex, auggie]
