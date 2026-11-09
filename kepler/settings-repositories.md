@@ -7,7 +7,7 @@ content_type: reference
 audience: developer
 plan_required: all
 os_support: [Windows, macOS, Linux]
-git_hosts: [github, github-enterprise, gitlab, gitlab-self-hosted, bitbucket, bitbucket-data-center, azure-devops, azure-devops-server]
+git_hosts: [github, github-enterprise, gitlab, gitlab-self-managed, bitbucket, bitbucket-data-center, azure-devops, azure-devops-server]
 integrations: []
 hosted_variant: both
 status: GA

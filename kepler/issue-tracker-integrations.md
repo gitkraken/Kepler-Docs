@@ -8,7 +8,7 @@ audience: developer
 plan_required: all
 os_support: [Windows, macOS, Linux]
 git_hosts: [generic]
-integrations: [jira, linear, trello, github, github-enterprise, gitlab, gitlab-self-hosted, azure-devops]
+integrations: [jira, linear, trello, github, github-enterprise, gitlab, gitlab-self-managed, azure-devops]
 hosted_variant: both
 status: GA
 last_verified: 2026-11

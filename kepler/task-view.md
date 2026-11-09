@@ -7,7 +7,7 @@ content_type: how-to
 audience: developer
 plan_required: all
 os_support: [Windows, macOS, Linux]
-git_hosts: [github, github-enterprise, gitlab, gitlab-self-hosted, bitbucket, azure-devops]
+git_hosts: [github, github-enterprise, gitlab, gitlab-self-managed, bitbucket, azure-devops]
 integrations: [claude-code, codex-cli, copilot-cli, cursor, auggie, opencode]
 hosted_variant: both
 status: GA

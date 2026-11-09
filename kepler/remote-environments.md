@@ -8,7 +8,7 @@ audience: developer
 plan_required: all
 os_support: [Windows, macOS, Linux]
 git_hosts: [generic]
-integrations: []
+integrations: [claude-code, codex, auggie]
 hosted_variant: both
 status: GA
 last_verified: 2026-11
