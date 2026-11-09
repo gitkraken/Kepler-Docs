@@ -10,7 +10,7 @@ os_support: [Windows, macOS, Linux]
 git_hosts: [generic]
 integrations: [claude-code, codex-cli, copilot-cli, cursor, opencode, auggie, grok]
 hosted_variant: both
-status: GA
+status: preview
 last_verified: 2026-11
 llms_include: true
 tags: [mcp, mcp-servers, model-context-protocol, tools, agents, claude-code, codex, opencode, copilot, cursor, auggie, grok, settings, composer]

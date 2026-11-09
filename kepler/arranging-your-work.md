@@ -10,7 +10,7 @@ os_support: [Windows, macOS, Linux]
 git_hosts: [github, github-enterprise, gitlab, gitlab-self-managed, bitbucket, azure-devops]
 integrations: [github, github-enterprise, gitlab, gitlab-self-managed, bitbucket, azure-devops, jira, linear, trello]
 hosted_variant: both
-status: GA
+status: preview
 last_verified: 2026-11
 llms_include: true
 tags: [arrangements, views, inbox, list, columns, grouping, task-groups, multi-select, sorting, filters, search, progress, on-hold, later, archive, cleanup]

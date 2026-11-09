@@ -10,7 +10,7 @@ os_support: [Windows, macOS, Linux]
 git_hosts: [github, github-enterprise, gitlab, gitlab-self-managed, bitbucket, azure-devops]
 integrations: [claude-code, codex-cli, copilot-cli, cursor, auggie, opencode]
 hosted_variant: both
-status: GA
+status: preview
 last_verified: 2026-10
 llms_include: true
 tags: [release-notes, changelog, whats-new, upgrades, version-history]
