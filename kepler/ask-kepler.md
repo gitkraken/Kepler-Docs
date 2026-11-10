@@ -47,12 +47,12 @@ To close the panel, press the same shortcut again while focus is inside it. On W
 
 **The top bar button shows the state of your chats.** When a chat needs something from you, the button becomes a pill that reads **Needs you**, **New reply**, or **Failed**. Click the pill to open the panel on that chat.
 
-**Floating or docked.** By default, the panel floats as a card over the left or right edge of the page, under the top bar. The page behind it does not dim, so you can still use it. When you dock the panel, it becomes a column of the window, and the page narrows beside it instead of sitting under it. A docked panel opens and closes without sliding. The panel's header holds the open section, a button for the other section, and the panel's own controls:
+**Floating or docked.** By default, the panel floats as a card over the left or right edge of the page, and you can still use the page behind it. When you dock the panel, it becomes a column of the window, and the page narrows beside it. The panel's header holds 2 controls of its own:
 
 - **Dock panel** switches between floating and docked. It shows as pressed while the panel is docked.
 - **Close Ask Kepler** puts it away.
 
-Right-click the panel's header, or press the keyboard's context-menu key on it, for the panel's menu: **Dock panel**, checked while docked, and **Move to the left** or **Move to the right**, which moves the panel to the other edge of the window.
+Right-click the panel's header, or press the keyboard's context-menu key on it, for the panel's menu: **Dock panel**, and **Move to the left** or **Move to the right** to move the panel to the other edge of the window.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/ask-kepler-docked-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
@@ -61,14 +61,9 @@ Right-click the panel's header, or press the keyboard's context-menu key on it, 
   <figcaption style="text-align:center; color:#888">Ask Kepler docked beside the Dashboard, with the header's menu open.</figcaption>
 </figure>
 
-**Resize.** Drag the panel's inner edge (**Resize Ask Kepler**) to change its width, or focus the edge and use the arrow keys. Double-click the edge to return to the default width. In a narrow window, a docked panel floats until there is room, then docks again at the width you set. Kepler remembers the width, the side, and whether the panel is docked on this computer, for every window.
+**Resize.** Drag the panel's inner edge (**Resize Ask Kepler**) to change its width, or focus the edge and use the arrow keys. Double-click the edge to return to the default width. Kepler remembers the width, the side, and whether the panel is docked on this computer, for every window.
 
-**Escape** also closes the panel, except where the key does something else:
-
-- In a text field that holds a draft
-- In a find bar
-- In a shell, where the program receives the key
-- In a chat whose agent is still answering, where **Escape** stops the turn instead
+**Escape** also closes the panel, except in a shell, a find bar, or a text field that holds a draft. In a chat whose agent is still answering, **Escape** stops the turn instead.
 
 Closing only hides the panel. A half-typed question, the open chat, and every shell's scrollback are still there the next time you open it.
 
@@ -76,9 +71,9 @@ Closing only hides the panel. A half-typed question, the open chat, and every sh
 
 ## The chat
 
-The **Chat** section is a conversation with an agent that works for you across Kepler rather than inside one task. A new chat opens on **Ask Kepler anything**, *Ask a quick question, or have Kepler check on and manage your tasks and sessions.*, and a composer that reads *Ask anything*. Pick the agent from the pill in the composer, type your question, and send it.
+The **Chat** section is a conversation with an agent that works for you across Kepler rather than inside one task. Pick the agent from the pill in the composer, type your question, and send it.
 
-You can attach files to a chat from its first message on: use **Attach a file**, drop files onto the composer, or paste them. If a file you attached is gone by the time the chat starts, Kepler leaves it out and tells you which one.
+You can attach files to a chat from its first message on: use **Attach a file**, drop files onto the composer, or paste them.
 
 ### Starter prompts
 
@@ -89,7 +84,7 @@ A new chat offers starting points you can send with one click:
 - **Summarize this task**, only while you're on a task's page
 - **What changed across my tasks today?**
 
-A starter goes out on its own as the chat's first message. It does not change anything you already typed or attached in the composer.
+A starter goes out on its own as the chat's first message, and it leaves your draft in the composer as it was.
 
 ### What the chat knows
 
@@ -99,7 +94,7 @@ The chat keeps up with what you have on screen. With each message, the agent kno
 - The task you're looking at, and its worktrees and folders
 - The sessions on screen
 
-As a result, the agent answers a question such as *what's this one stuck on?* about the task in front of you. Kepler also tells the agent which sessions are waiting on you, such as approvals, permission requests, questions, and failed or unread sessions. To get that list, ask **What needs me right now?**
+So you can ask *what's this one stuck on?* about the task in front of you. Kepler also tells the agent which sessions are waiting on you, such as approvals, permission requests, questions, and failed or unread sessions. To get that list, ask **What needs me right now?**
 
 The agent can read your tasks and sessions and act on them through Kepler's own tools. Before the agent starts a session on a task that it did not create, Kepler asks you first. When it mentions a task, a session, or a setting, it names it as a link you can click; a setting link shows the setting's name and opens it in **Settings**.
 
@@ -109,15 +104,15 @@ The chat can look up Kepler's settings for you. Ask where something is set, or w
 
 The agent changes a setting only when you ask it to. It can find and link to some settings but not change them, such as secrets, actions, and settings that take a list. The agent cannot turn on a paid feature without a paid plan, and it tells you why when it refuses.
 
-Some changes wait for your approval: a change to a setting that affects your accounts, your privacy, other tools, what runs, or where files go. The approval card reads **Change the setting {setting}** with **From {from} to {to}**. Kepler asks about each such change separately, and the card offers no way to approve more than that one change. See [Approval requests](/kepler/agent-sessions#approval-requests).
+Some changes wait for your approval: a change to a setting that affects your accounts, your privacy, other tools, what runs, or where files go. Kepler asks about each such change separately, and you approve it on its own. See [Approval requests](/kepler/agent-sessions#approval-requests).
 
-Kepler keeps some settings, such as the theme, the language, or the terminal font, on your own computer. When you use Kepler in a browser or a remote window, the window you asked from applies such a change and shows **Ask Kepler changed {label} from {from} to {to}.** with **Undo**. See [Settings](/kepler/settings).
+Kepler keeps some settings, such as the theme, the language, or the terminal font, on your own computer. When you use Kepler in a browser or a remote window, the window you asked from applies such a change and offers **Undo**. See [Settings](/kepler/settings).
 
 ### Which agents can answer
 
 The agent pill lists only agents that run in **Chat**. An agent that runs only in a terminal, such as Pi, cannot answer in the panel. See [Agent Integrations](/kepler/agent-integrations) for which agents run in **Chat**.
 
-**Ask Kepler keeps its own agent, separate from tasks.** A new chat opens on the agent you picked last in the panel, and picking an agent here never changes a task's agent, or the reverse. Until you pick one, or when you choose **Use defaults** on the pill, it uses the agent and preset set in **Settings → Agents** under **Ask Kepler uses** and **Ask Kepler uses preset**. See [Settings: Agents](/kepler/settings-agents).
+**Ask Kepler keeps its own agent, separate from tasks.** A new chat opens on the agent you picked last in the panel, and picking an agent here never changes a task's agent, or the reverse. Until you pick one, it uses the agent and settings set in **Settings → Agents** under **Ask Kepler uses**. See [Settings: Agents](/kepler/settings-agents).
 
 ### Past chats and new chats
 
@@ -125,7 +120,7 @@ To switch chats, open the chat's title in the panel header. It lists:
 
 - **New chat**, which returns the section to a fresh chat
 - **Continue in a new task**, for the chat that's open
-- Your open chats, grouped by state, such as **Unread** and **Running**. Click one to open it, or click **Archive {title}** beside it to put it away.
+- Your open chats, grouped by state, such as **Unread** and **Running**. Click one to open it, or click **Archive** beside it to put it away.
 - **Show archived**, which lists your archived chats. Click one to restore and open it.
 
 <figure style="text-align:center">
@@ -139,7 +134,7 @@ The **New chat** button beside the title starts a new chat. The **Archive** butt
 
 ### Continue in a new task
 
-When an answer turns out to be the start of real work, choose **Continue in a new task**, under the chat's latest reply or in the chat picker. It opens the **New task** composer with the prompt *Pick up where the chat left off.*, the chat attached as the session the task continues from, and the same agent, account, model, and mode the chat used. Edit anything you like before you start the task. See [Create a task](/kepler/create-task).
+When an answer turns out to be the start of real work, choose **Continue in a new task**, under the chat's latest reply or in the chat picker. It opens the **New task** composer with a prompt to pick up where the chat left off, the chat attached as the session the task continues from, and the same agent, account, model, and mode the chat used. Edit anything you like before you start the task. See [Create a task](/kepler/create-task).
 
 A panel chat belongs to no task, so when a task's session links back to the chat it continued from, the chat opens in the panel. A notification from a panel chat also opens the panel on that chat.
 
@@ -154,13 +149,13 @@ A panel chat belongs to no task, so when a task's session links back to the chat
   <figcaption style="text-align:center; color:#888">The Terminal section, with one shell in the home folder.</figcaption>
 </figure>
 
-The **Terminal** section holds shells that belong to no task, in the same tab strip a task page's terminal drawer uses. The first time you open the section, Kepler starts a shell so that the strip is not empty. If you press **Ctrl+&#96;** with no shell open, Kepler starts one, as the same key does in VS Code. After you close the last shell, the strip stays empty until you ask for another.
+The **Terminal** section holds shells that belong to no task, in the same tab strip a task page's terminal drawer uses. The first time you open the section, Kepler starts a shell. After you close the last shell, the strip stays empty until you click **New terminal** or press **Ctrl+&#96;**.
 
 Where a new shell opens depends on where you are:
 
 - On a task's page, a new shell opens in one of that task's worktrees or folders.
 - Anywhere else, or on a task with no worktrees or folders, it opens in your **Home folder**.
 
-The panel's shells belong to the panel. They never move to a task's terminal drawer, and they keep running when you move between pages or close the panel. While the **Terminal** section is open, its tab strip is also the panel header, with **Chat** as a button at its leading edge.
+The panel's shells belong to the panel. They never move to a task's terminal drawer, and they keep running when you move between pages or close the panel. To go back to the chat, click **Chat** at the start of the tab strip.
 
 ---

@@ -27,54 +27,34 @@ Use **Settings → Tasks** to choose how new tasks start and how a task's page l
 
 ### Default agent
 
-**Default agent** picks the agent, account, and agent preset that Kepler preselects for a new task. To go back to it from the launcher, click **Use defaults**. The following table lists its controls:
+**New tasks use** sets the agent that the **New task** composer, the Dashboard's composer, and a new draft session start with. It is the same agent-settings pill as in the composer: pick the agent and account, and optionally an [agent preset](/kepler/settings-agents#agent-presets), a model, and other options. Kepler saves each pick as you make it.
 
-| Control | What it does |
-|---|---|
-| **New tasks use** | Chooses the agent, and the account when that agent supports more than one. **Use last used agent**, in the same picker, removes the saved default |
-| **New tasks use preset** The [agent preset](/kepler/settings-agents#agent-presets) new tasks start with: **Default** or one of your presets |
+The pill's first row, **Use last used agent**, is the default. With it, every new session starts with the agent, model, and mode you last picked. A task that an agent created and that has no session yet starts with the agent that created it. Kepler does not remember an Action's own agent as your last pick.
 
-No default agent is set out of the box. If no agent is installed, Kepler hides the control. If you later uninstall the agent you saved, the row warns you: *Your default agent, {name}, is no longer installed. Pick another.*
+If no agent is installed, Kepler hides the control. If you later uninstall the agent you saved, the row warns you to pick another. This setting does not apply to Ask Kepler, which has its own default in [Settings → Agents](/kepler/settings-agents).
 
 An [Action](/kepler/actions) inherits this configuration unless it names an agent of its own.
 
-### New sessions start with
-
-Under **Default agent**, the following setting decides which agent the **New task** composer, the Dashboard's composer, and a new draft session preselect:
-
-| Option | What it does |
-|---|---|
-| **Last used agent** | *The agent, model and mode you last picked.* The default |
-| **Default agent** | *Always the default agent.* |
-
-With **Last used agent**, a task that an agent created and that has no session yet starts with the agent that created it. Kepler does not remember an Action's own agent as your last pick. If you choose **Default agent** with no default set, Kepler points you to the **Default agent** picker. Neither setting applies to Ask Kepler, which keeps its own last pick and its own default in [Settings → Agents](/kepler/settings-agents).
-
 <figure style="text-align:center">
   <a href="/wp-content/uploads/new-sessions-start-with-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-sessions-start-with-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The New tasks section of Settings › Tasks: New tasks use Claude Code CLI (alex.lee@example.com, Acme), New tasks use preset set to Default, their description, and New sessions start with offering Last used agent (The agent, model and mode you last picked), selected, beside Default agent (Always the default agent).">
+    <img src="/wp-content/uploads/new-sessions-start-with-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The New tasks section of Kepler's Settings › Tasks, with New tasks use set to Use last used agent and its description.">
   </a>
-  <figcaption style="text-align:center; color:#888">Default agent and New sessions start with, in Settings → Tasks.</figcaption>
+  <figcaption style="text-align:center; color:#888">The default agent for new tasks, in Settings → Tasks.</figcaption>
 </figure>
 
 ### Where new tasks make changes
 
-The following setting chooses what a repository starts on when you attach it to a new task:
-
-| Setting | What it controls | Default |
-|---|---|---|
-| **Where new tasks make changes** | What a newly attached repository starts on, in the **New task** composer | Isolated worktree |
-
-The setting has these options:
+**Where new tasks make changes** sets what a repository starts on when you attach it to a new task in the **New task** composer. It has these options:
 
 | Option | What it does |
 |---|---|
-| **Isolated worktree** | *A separate copy of the repo, so agents can work in parallel.* Forks a new branch into its own worktree |
-| **New branch** | *Switches your repo to a new branch.* Forks a new branch directly in the repository's own checkout, with no worktree |
-| **Current branch** | *Works on whatever is checked out.* Runs on the repository's own checkout, on whichever branch it currently has, with no new branch created |
+| **Isolated worktree** | The default. Creates a new branch in its own worktree, so agents can work in parallel |
+| **New branch** | Creates a new branch in the repository's own checkout, with no worktree |
+| **Current branch** | Works on whichever branch the repository's own checkout has |
 
 This setting is only the default. For a single task, the repository chip's own **Base branch** and **Isolated worktree** controls override it. See [Create a task](/kepler/create-task#configuring-a-repository).
 
-**Commits made on the current branch land on whichever branch is checked out at the time.** This applies to both **New branch** and **Current branch**, because both run in the repository's own checkout instead of an isolated one. If another task is already working in that checkout, Kepler says so and offers to switch that repository to an isolated worktree instead.
+**With New branch and Current branch, commits land on whichever branch is checked out at the time**, because both work in the repository's own checkout. If another task is already working in that checkout, Kepler says so and offers to switch that repository to an isolated worktree instead.
 
 You can edit **Branch prefix**, **Worktrees folder**, and **Tasks folder** whichever option you choose, because a single task can still ask for a new branch or a worktree.
 
@@ -86,13 +66,13 @@ The following setting starts the name of every branch Kepler creates:
 |---|---|---|
 | **Branch prefix** | *Starts the name of every branch Kepler creates. A repo can set its own in its settings.* | `kepler/` |
 
-The prefix applies to **automatic** names only. Kepler uses a branch name you type exactly as you typed it, so a repository with an enforced `feat/` or `fix/` push rule still works. If you type a prefix without a trailing separator, Kepler adds a `/`, so typing `team` stores `team/`. A prefix that already ends in a separator, such as `ea-`, stays exactly as you typed it. The prefix saves when you press **Enter** or **Escape**, or leave the field, and the field shows its save status.
+The prefix applies to **automatic** names only. Kepler uses a branch name you type exactly as you typed it, so a repository with an enforced `feat/` or `fix/` push rule still works. If your prefix does not end in a separator, Kepler adds a `/`, so `team` becomes `team/`, while `ea-` stays as you typed it.
 
-To override the prefix for one repository, use its [Edit repo](/kepler/settings-repositories#edit-a-repository) page under **Settings → Repositories**. If a repository already has a branch named exactly like the prefix, Kepler names the branch and points you to that page: *Can't be used in {repo}: it has a branch named {branch}. Set a different prefix for that repository under Repositories.*
+To override the prefix for one repository, use its [Edit repo](/kepler/settings-repositories#edit-a-repository) page under **Settings → Repositories**. If a repository already has a branch named exactly like the prefix, Kepler names that branch and points you to the same page.
 
 ### Folder locations
 
-Kepler uses 3 folder settings to decide where to put things. The first 2 are under **Tasks → New tasks**, and the third is on the **Repositories** page:
+Kepler uses 3 folder settings to decide where to put things:
 
 | Setting | Where it is | What it controls | Default |
 |---|---|---|---|
@@ -100,18 +80,16 @@ Kepler uses 3 folder settings to decide where to put things. The first 2 are und
 | **Tasks folder** | Tasks → New tasks | *Each task gets a folder here for its attachments and files.* | `~/kepler/tasks` |
 | **Repositories folder** | [Repositories](/kepler/settings-repositories#repositories-folder) | Where Kepler clones repositories, and where it looks for repositories to add | `~/kepler/repositories` |
 
-Until you set one, Kepler uses the default shown.
-
-Type a path directly, or click **Choose a folder** beside the field to browse. An edit saves when you leave the field, so there is no **Save** button. The field shows its save status.
+Type a path, or click **Choose a folder** beside the field to browse. An edit saves when you leave the field.
 
 The fields also warn you about paths that do not work the way you might expect:
 
-- If a **Worktrees folder** has text before `<REPOSITORY_PATH>`, Kepler adds each repository's full path after that text. The field tells you so, *Each repo's full path is added after this folder.*, and shows where an example repository would go. It also suggests 2 templates: one for worktrees next to each repository, and one for a subfolder per repository. On Windows, such a path is invalid, so Kepler does not save it: *Not saved: adding each repo's full path after this folder creates an invalid path.*
-- If the **Repositories folder** does not exist yet, the field reads *This folder doesn't exist yet. Kepler creates it when you clone.*
+- If a **Worktrees folder** has text before `<REPOSITORY_PATH>`, Kepler adds each repository's full path after that text. The field shows where an example repository would go, and suggests 2 templates: worktrees next to each repository, or a subfolder per repository. On Windows, such a path is invalid, and Kepler does not save it.
+- If the **Repositories folder** does not exist yet, the field tells you that Kepler creates it when you clone.
 
 ### The Variables menu
 
-A folder field that can contain a dynamic variable has a **Variables** menu beside it. The menu shows each variable as a named tag, such as **REPOSITORY PATH**, beside its raw token. When you pick a variable, Kepler inserts it at the cursor. Kepler fills in the variable when it creates the folder, so one pattern works for every repository. Each field offers only the variables it can fill in:
+A folder field that takes variables has a **Variables** menu beside it. Pick a variable, such as **REPOSITORY PATH**, to insert it at the cursor. Kepler fills it in when it creates the folder, so one pattern works for every repository. Each field offers only the variables it can fill in:
 
 | Field | Variables offered |
 |---|---|
@@ -120,8 +98,6 @@ A folder field that can contain a dynamic variable has a **Variables** menu besi
 | **Tasks folder** | None |
 
 For example, `<REPOSITORY_PATH>/.worktrees/<REPOSITORY_NAME>` nests each worktree inside the repository it belongs to.
-
-**Tasks folder** takes no variables, because a task folder has no repository behind it.
 
 Per-repository commands have a **Variables** menu of their own, with 2 more variables. See [Per-repository commands](/kepler/settings-repositories#per-repository-commands).
 
@@ -140,7 +116,7 @@ The following setting names new tasks for you:
 |---|---|---|
 | **Automatically name new tasks** | *Names a new task with AI from its prompt and attached resources. A task created from a single issue or PR keeps that item's name.* | On |
 
-You need a paid GitKraken subscription to turn this setting on. On the Community plan, when you are signed out, or with no organization, a lock replaces the checkbox only while the setting is off. Because the setting starts on, you see a ticked checkbox, and you can always turn it off. A change takes effect on the next task you create.
+You need a paid GitKraken subscription to turn this setting on. Without one, a lock replaces the checkbox while the setting is off, but you can always turn it off. A change takes effect on the next task you create.
 
 ## Task page
 
@@ -148,10 +124,10 @@ You need a paid GitKraken subscription to turn this setting on. On the Community
 
 | Setting | What it controls | Default |
 |---|---|---|
-| **Show tabs on the task page** | Keeps sessions, worktrees, and resources open as tabs you can pin, drag between groups, and arrange side by side. With it off, each column of a task shows one thing at a time, and you switch between them from the list on the left | Off |
+| **Show tabs on the task page** | Keeps sessions, worktrees, and resources open as tabs you can pin, drag between groups, and arrange side by side | Off |
 | **Preview tabs** | *A single click opens a preview that the next click replaces. Double-click, or edit, to keep it open.* | On |
 
-**Preview tabs** works only with **Show tabs on the task page** turned on. Sessions always open as permanent tabs. See [The task view](/kepler/task-view).
+With **Show tabs on the task page** off, each column of a task shows one thing at a time, and you switch between them from the list on the left. **Preview tabs** works only with it turned on. Sessions always open as permanent tabs. See [The task view](/kepler/task-view).
 
 ## Groups
 

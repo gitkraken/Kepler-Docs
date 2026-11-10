@@ -21,7 +21,7 @@ taxonomy:
 
 Use these Settings pages to change how Kepler itself looks and behaves:
 
-- [General](#general): language, windows and dialogs, the default editor, and keeping agents running
+- [General](#general): language, windows and dialogs, the default editor, keeping agents running, and usage insights
 - [Notifications](#notifications): which agent events notify you, on the desktop and in Kepler
 - [Appearance](#appearance): light or dark appearance and themes, the Dashboard's views, the chat, the terminal font, and the code font and diff layout
 - [Voice input](#voice-input): on-device speech-to-text, its transcription engine, and learned words
@@ -31,7 +31,7 @@ Use these Settings pages to change how Kepler itself looks and behaves:
 
 ## General
 
-Use **General** to choose Kepler's language, how its windows open, which editor opens your files, and whether agents keep running when your machine would sleep or Kepler restarts.
+Use **General** to choose Kepler's language, how its windows open, which editor opens your files, whether agents keep running when your machine would sleep or Kepler restarts, and whether Kepler keeps usage statistics on your computer.
 
 ### Language
 
@@ -70,13 +70,13 @@ These settings keep agent work running when the machine would otherwise stop it.
 
 | Setting | What it controls | Default |
 |---|---|---|
-| **Keep this machine awake while agents work** | Blocks sleep and standby while an agent session is starting, running, or waiting for your input. It also blocks sleep while Remote Access is on, because sleeping would drop the connection, but not while Remote Access is waiting to reconnect | On |
+| **Keep this machine awake while agents work** | Blocks sleep while an agent session is starting, running, or waiting for your input, and while Remote Access is connected | On |
 | **Keep agents and terminals running across restarts and updates** | *Agent sessions and terminals stay alive while Kepler restarts or updates, and reconnect afterwards. Experimental.* | On |
 | **Put idle agents to sleep** | How long a chat agent can sit idle before Kepler stops it, from **After 5 minutes** to **After 1 hour**, or **Never** | After 15 minutes |
 
 The screen can still turn off. If Kepler cannot keep the machine awake, the setting says why under the switch.
 
-The setting counts Claude Code sessions detected outside Kepler as well as Kepler's own sessions. Kepler lets the machine sleep again as soon as the last of those sessions settles.
+The setting also counts Claude Code sessions running outside Kepler.
 
 **Keep agents and terminals running across restarts and updates** applies from the next session you start. On a build that does not support it, the switch is off and disabled.
 
@@ -87,6 +87,21 @@ The setting counts Claude Code sessions detected outside Kepler as well as Keple
     <img src="/wp-content/uploads/agents-idle-sleep-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Put idle agents to sleep setting set to After 15 minutes, with help text on when an agent in a chat view sleeps, what wakes it, and which agents stay awake.">
   </a>
   <figcaption style="text-align:center; color:#888">Put idle agents to sleep, at its default.</figcaption>
+</figure>
+
+### Insights
+
+**Insights** has 1 setting:
+
+| Setting | What it controls | Default |
+|---|---|---|
+| **Collect usage insights** | *Keep local statistics about your sessions and tasks on this computer. Nothing leaves it.* | On |
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/settings-insights-nov-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/settings-insights-nov-2026.png" class="help-center-img img-bordered" alt="The Insights section of Settings › General, with the Collect usage insights checkbox ticked and its help text: Keep local statistics about your sessions and tasks on this computer. Nothing leaves it.">
+  </a>
+  <figcaption style="text-align:center; color:#888">Collect usage insights, at its default.</figcaption>
 </figure>
 
 ***
@@ -107,9 +122,9 @@ Use **Notifications** to choose which agent events Kepler tells you about, and w
 | **Approval requests** | *An agent asks to do something in Kepler only you can approve, like deleting a worktree or rewriting a branch.* See [Approvals](/kepler/settings-agents#approvals) | On | On |
 | **Errors** | *A session stops because something went wrong.* | On | On |
 
-In a browser connected to Kepler, every **Desktop** box starts off. **Replies** stays off on the desktop unless you turned on system notifications in an earlier version of Kepler. Until you set **Approval requests** yourself, it follows **Permission requests**. When you turn on the first **Desktop** box, Kepler sends a sample notification so your OS asks for permission.
+In a browser connected to Kepler, every **Desktop** box starts off. Until you set **Approval requests** yourself, it follows **Permission requests**. When you turn on the first **Desktop** box, Kepler sends a sample notification so your OS asks for permission.
 
-After your first session starts, the desktop app sends 1 notification to say *Notifications are on*: *Kepler will notify you here when an agent needs you. Change this in Settings › Notifications.* Click the notification to open **Settings → Notifications**. If every **Desktop** box is off, Kepler skips this notification.
+After your first session starts, the desktop app sends 1 notification to say notifications are on, unless every **Desktop** box is off. Click it to open **Settings → Notifications**.
 
 These settings appear under the grid:
 
@@ -155,7 +170,7 @@ How you pick a tile depends on **Appearance**:
 - On **System**, each tile has a moon and a sun. Click the moon to *Use {name} when your system is dark*, or the sun to *Use {name} when your system is light*. Click the tile itself to *Use {name} for both dark and light*.
 - On **Light** or **Dark**, click a tile to use it for that appearance.
 
-The tile in use reads **In use now**. If you used **Midnight** in an earlier version of Kepler, Kepler switches **Appearance** to **Dark** and keeps **Midnight** as your dark theme.
+The tile in use reads **In use now**.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/appearance-theme-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -179,12 +194,12 @@ A theme file follows these rules:
 
 Kepler reads up to 64 theme files, and reloads a file each time you save it.
 
-If Kepler cannot fully read a theme's file, its tile shows **Has problems** or **Has warnings**. To see what is wrong, click the badge. A file that is not valid JSON shows *Line {line}, column {column}: {message}*. A problem with a theme's values names the setting it is in, such as *themes.1.extends*.
+If Kepler cannot fully read a theme's file, its tile shows **Has problems** or **Has warnings**. To see what is wrong, click the badge. Each problem gives its line and column, or names the setting it is in, such as *themes.1.extends*.
 
 A file with warnings still works. Kepler leaves out a theme that has errors, and still loads the other themes in its file. To fix a file, use one of these options below the list of problems:
 
 - **Create a task to fix it** gives the file to an agent.
-- In the desktop app, **Open file** opens the file in your editor, at the error's line when there is one. *Changes apply when you save.*
+- In the desktop app, **Open file** opens the file in your editor, at the error's line when there is one. Changes apply when you save.
 
 A tile's **More actions for {name}** menu has **Show in folder** and **Move to Trash** (**Move to Recycle Bin** on Windows).
 
@@ -197,16 +212,16 @@ A tile's **More actions for {name}** menu has **Show in folder** and **Move to T
 
 #### Theme gallery
 
-**Browse gallery** opens the **Theme gallery**: *Themes from the community, each checked for contrast. Try one on Kepler before you install it.* The gallery needs an internet connection. It has the following controls:
+**Browse gallery** opens the **Theme gallery** of community themes, each checked for contrast, which you can try before you install. The gallery needs an internet connection. It has the following controls:
 
 - **Search themes**, which matches a theme's name, author, tags, or description.
 - **Show**, which filters to **All**, **Dark**, or **Light** themes.
 - **Sort:**, with **Featured**, **Newest**, or **Name**.
 
-Click a theme to see its details card, drawn in the theme's own colors. The card shows its author, its dark and light variants, **Version**, **License**, and **Updated**, and any contrast warnings in your version of Kepler. Then choose one of the following:
+Click a theme to see its details card, with its author, its dark and light variants, its version and license, and any contrast warnings. Then choose one of the following:
 
-- **Install** adds the theme to **Your themes** without changing the theme on screen. The button then reads **Use**, or **Use for dark and light** for a theme with both.
-- **Try it** closes the gallery and paints the whole window in the theme, so you can open a diff or a terminal to judge it. A bar at the bottom reads **Trying {name}**, with **Use {name}** and **Done**, which returns you to the gallery.
+- **Install** adds the theme to **Your themes** without changing the theme on screen. The button then reads **Use**.
+- **Try it** closes the gallery and paints the whole window in the theme, so you can open a diff or a terminal to judge it. In the bar at the bottom, click **Use {name}**, or **Done** to return to the gallery.
 
 If a theme you already have uses the same id, Kepler asks before it replaces that file, and moves the old file to the Trash. A gallery theme you installed and have not edited offers **Update to {version}** on its tile when a newer version is published. The gallery's themes come from `gitkraken/kepler-themes` on GitHub, where you can also publish your own.
 
@@ -226,30 +241,25 @@ If a theme you already have uses the same id, Kepler asks before it replaces tha
 
 #### Create a theme
 
-**Create a theme** opens the new task launcher with a prompt already written for an agent, ending in *The theme I want:* for you to describe it. The agent reads and saves themes through Kepler's `theme_get` and `theme_save` tools, so it does not need the themes folder attached. The agent checks the theme's format and contrast before saving. **Create a task to fix it**, on a broken theme file, starts the same kind of task with that file's problems listed.
+**Create a theme** opens the **New task** composer with a prompt already written for an agent, ending in *The theme I want:* for you to describe it. The agent reads and saves themes through Kepler's own tools, so you do not need to attach the themes folder. The agent checks the theme's format and contrast before saving. **Create a task to fix it**, on a broken theme file, starts the same kind of task with that file's problems listed.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/create-a-theme-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/create-a-theme-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The New task launcher opened from Create a theme, its prompt asking the agent to read theme_get, check a draft with theme_save using dryRun, then save it, and ending in The theme I want. Add issue, Add PR and Add context sit above the prompt, and the agent picker, Start and Add repo or folder below it.">
+    <img src="/wp-content/uploads/create-a-theme-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The New task composer opened from Create a theme, its prompt asking the agent to read theme_get, check a draft with theme_save using dryRun, then save it, and ending in The theme I want. Add issue, Add PR and Add context sit above the prompt, and the agent picker, Start and Add repo or folder below it.">
   </a>
-  <figcaption style="text-align:center; color:#888">The launcher that Create a theme opens.</figcaption>
+  <figcaption style="text-align:center; color:#888">The New task composer that Create a theme opens.</figcaption>
 </figure>
 
 #### Themes in a remote window
 
-Themes belong to this computer, as your choice of theme does. Every window, including one connected to a remote environment, lists and installs themes in this computer's themes folder and gallery. In a window connected to another machine, the picker adds an **On {host}** group with that machine's themes, compared with the copies on this computer:
+Themes belong to this computer, as your choice of theme does. Every window, including one connected to a remote environment, lists and installs themes in this computer's themes folder and gallery.
 
-| The theme on {host} | The picker offers |
-|---|---|
-| Not on this computer | **Install {name} on this computer** |
-| A copy you installed from {host} earlier, changed since | **Update {name} from {host}**, which updates it at once |
-| A later version of your own copy | **Update {name} to {version} from {host}**, marked **Update to {version}** |
-| An earlier version of your own copy | **Replace {name} on this computer with the copy on {host}**, marked **Older than yours** |
-| A copy that differs from yours in another way | **Replace {name} on this computer with the copy on {host}**, marked **Differs from yours** |
+In a window connected to another machine, the picker adds an **On {host}** group with that machine's themes:
 
-Updating or replacing your own copy asks first: **Update {name} to {version}?** or **Replace {name} on this computer?**. Your copy moves to the Trash (the Recycle Bin on Windows), and Kepler confirms *Your previous copy is in the {bin}.* Where Kepler cannot use a Trash, it does not replace your copy: *To use this version, remove the copy on this computer first*. A host update to your own copy also shows on its tile in **Your themes**.
+- A theme you do not have offers **Install {name} on this computer**.
+- A theme that differs from your copy offers to update or replace your copy, and is marked **Update to {version}**, **Older than yours**, or **Differs from yours**.
 
-Kepler never replaces your copy on its own; an update from {host} waits until you choose it.
+Kepler asks before it updates or replaces your copy, and moves your copy to the Trash (the Recycle Bin on Windows). It never replaces your copy on its own.
 
 ### Dashboard
 
@@ -306,7 +316,7 @@ The grayed text in **Family** is an example, not the value in effect. If Kepler 
 
 Each Kepler terminal belongs to a worktree. Opening a terminal starts a shell in that worktree's folder, so you do not need to `cd` into it, and the shell loads your profile the same way an interactive login shell would. Use **⌘ J** to show and hide the terminal panel, **New terminal** to open another terminal, and **Close terminal** to end one.
 
-Use terminals for work next to an agent session: running tests while the agent writes code, checking Git state, or reproducing something the session did not show. A terminal starts in one worktree and stays there, so work that spans several repositories is usually easier in a standalone terminal.
+Use terminals for work next to an agent session: running tests while the agent writes code, checking Git state, or reproducing something the session did not show. A terminal starts in one worktree and stays there, so for work that spans several repositories, use a standalone terminal.
 
 ### Code
 
@@ -328,7 +338,7 @@ Use **Voice input** to talk to your agents instead of typing. Kepler transcribes
 
 ### Voice input
 
-**Use voice input in the chat prompt** shows the microphone in the chat prompt. *Turn this off to pause voice input. The downloaded models stay on this computer.* Installing a model turns this switch on.
+**Use voice input in the chat prompt** shows the microphone in the chat prompt. Turn it off to pause voice input; the downloaded models stay on this computer. Installing a model turns this switch on.
 
 ### Transcription engine
 
@@ -342,22 +352,19 @@ Choose the engine that turns your speech into text. Every engine runs on this co
 
 Both Qwen3-ASR engines need a graphics card with WebGPU. On a new device, Kepler selects the Qwen3-ASR size that suits its graphics card and marks it **Recommended**. Kepler selects Whisper instead when the machine has no WebGPU, or when a Whisper model is already installed.
 
-Each engine's card shows its approximate download size. To install a Qwen3-ASR model, click **Download and set up ({size})**. The card then reads *Ready on this computer.* Until the engine you selected finishes downloading, dictation keeps using an engine that is already installed. **Remove Qwen3-ASR models** deletes every downloaded Qwen3-ASR model, after you confirm. If you use Whisper, a card suggests **Switch to Qwen3-ASR ({size})** once, with **Not now**.
+Each engine's card shows its approximate download size. To install a Qwen3-ASR model, click **Download and set up ({size})**. Until the engine you selected finishes downloading, dictation keeps using an engine that is already installed. **Remove Qwen3-ASR models** deletes every downloaded Qwen3-ASR model, after you confirm. If you use Whisper, a card suggests **Switch to Qwen3-ASR ({size})** once.
 
-When a newer version of an installed Qwen3-ASR model is released, the card says *A newer version of this model is available. Dictation keeps using the installed one until you update.*, with **Update ({size})**. Kepler also tells you once, in a notification with **Update**.
+When a newer version of an installed Qwen3-ASR model is released, its card offers **Update ({size})**, and Kepler tells you once in a notification. Dictation keeps using the installed model until you update.
 
-With a Qwen3-ASR engine, **Dictation language** sets *The language you speak.* **Auto-detect**, the default, picks among your system's preferred languages and the app language. If those name fewer than 2 languages, it picks among all languages. Over time, it favors the languages this device has dictated in successfully. To always dictate in one language, choose that language. Whisper ignores this setting.
+With a Qwen3-ASR engine, **Dictation language** sets the language you speak. **Auto-detect**, the default, picks among your system's preferred languages and the app language. To always dictate in one language, choose that language. Whisper ignores this setting.
 
 #### Whisper
 
-With **Whisper** selected, setup takes you through these steps, 1 at a time. Each step appears only when it can do something:
+With **Whisper** selected, setup takes you through these steps:
 
-| Step | What it is |
-|---|---|
-| **Set up voice input** | *Takes a minute: Kepler checks what this machine can run, then downloads a model.* **Get started** begins setup |
-| Hardware check | A one-time measurement of how fast this machine transcribes: *Checking what this machine can run…* It runs once. Later quality changes skip it |
-| **Choose transcription quality** | Picks a model, with the check's recommendation marked **Suggested**. **Download and set up** installs it |
-| Ready | The installed model and its size on disk, with **Change quality**, **Remove Whisper**, and **Technical details** |
+1. Under **Set up voice input**, click **Get started**. Kepler checks once how fast this machine transcribes.
+2. Under **Choose transcription quality**, pick a model. The check's recommendation is marked **Suggested**.
+3. Click **Download and set up**.
 
 Whisper offers 4 quality levels:
 
@@ -370,7 +377,7 @@ Whisper offers 4 quality levels:
 
 Each option shows its approximate download size. A download continues if you leave the page, and Kepler notifies you when the model is ready.
 
-Once you have installed a Whisper model, use these controls to manage it:
+Once you have installed a Whisper model, the section shows the model and its size on disk, with these controls:
 
 | Control | What it does |
 |---|---|
@@ -392,9 +399,9 @@ Once you have installed a model, choose what happens when you stop recording:
 
 Qwen3-ASR learns how to spell words that you fix in dictated text before you send it, 1 word at a time. When you fix the same word in 2 sends, Kepler suggests it, and dictation uses it once you approve it. Kepler stores only the words, on this device only, and keeps them after you sign out.
 
-When a fix becomes a suggestion, a notification says *A dictated word fix is ready to review*, with **Review**, which opens **Learned words**. The section has 2 lists:
+When a fix becomes a suggestion, a notification offers **Review**, which opens **Learned words**. The section has 2 lists:
 
-- **Suggested words**: *Fixes you made in two sends. Dictation uses a word only after you approve it.* Each word reads **Heard as {heard}**, with **Approve** and **Dismiss**. Kepler never suggests a dismissed fix again.
+- **Suggested words**: fixes you made in 2 sends, each with what dictation heard, **Approve**, and **Dismiss**. Kepler never suggests a dismissed fix again.
 - **Learned words**: the words dictation uses, each marked **In use** or **Added by you**, with **Remove {term}**. While Qwen3-ASR dictates, you can add a word yourself with **Add a word**.
 
 **Forget learned words** removes every word Qwen3-ASR learned or suggested, and every word you added, on this device, after you confirm.
@@ -405,7 +412,7 @@ Kepler downloads each model from the internet once. Transcription then runs enti
 
 ## Keyboard shortcuts
 
-Use **Keyboard shortcuts** to look up Kepler's shortcuts. The page lists them in 6 groups: **General**, **Navigation**, **Dashboard**, **Task page**, **Chat**, and **Changes and code views**. As the page says, *These shortcuts can't be changed yet.* Kepler also shows each shortcut in the menu items and button tooltips it belongs to. For a few tab shortcuts that Settings does not list, such as reopening a closed tab and jumping to a tab by position, see [Task View](/kepler/task-view#keyboard).
+Use **Keyboard shortcuts** to look up Kepler's shortcuts. The page lists them in 6 groups: **General**, **Navigation**, **Dashboard**, **Task page**, **Chat**, and **Changes and code views**. You cannot change these shortcuts yet. Kepler also shows each shortcut in the menu items and button tooltips it belongs to. For a few tab shortcuts that Settings does not list, such as reopening a closed tab and jumping to a tab by position, see [Task View](/kepler/task-view#keyboard).
 
 The tables show Mac symbols first. On Windows and Linux, **⌘** is **Ctrl** and **⌥** is **Alt**, and **⌃** is **Ctrl** on every platform.
 
@@ -435,10 +442,15 @@ The **General** group holds app-wide shortcuts:
 | Delete task | ⌘ ⇧ Backspace | Ctrl + Shift + Backspace |
 | Manage remote environments | ⌘ ⇧ R | Ctrl + Shift + R |
 | Open file | ⌘ O | Ctrl + O |
+| Open folder | ⌘ ⇧ O | Ctrl + Shift + O |
 | Go to file | ⌘ P | Ctrl + P |
+| Go to task | ⌘ ⇧ P | Ctrl + Shift + P |
+| Go to task | F1 | F1 |
 | Dismiss / Cancel | Escape | Escape |
 | Back | ⌘ [ | Alt + ← |
 | Forward | ⌘ ] | Alt + → |
+
+**Go to task** and **Open folder** are also in the app menu, as **View › Command Palette…** and **File › Open Folder…**.
 
 ### Navigation shortcuts
 
@@ -474,7 +486,7 @@ The **Dashboard** group works on the Dashboard's tasks and detail panels:
 | Open next item in the list | ⌥ ⇧ ↓ | Alt + Shift + ↓ |
 | Switch detail panels | ⌃ Tab | Ctrl + Tab |
 | Switch detail panels, oldest first | ⌃ ⇧ Tab | Ctrl + Shift + Tab |
-| Maximize detail panel | ⌘ ⇧ M | Ctrl + Shift + M |
+| Solo detail panel | ⌘ ⇧ M | Ctrl + Shift + M |
 | Maximize panel terminals | ⌘ ⇧ J | Ctrl + Shift + J |
 | Show or hide changes in detail panel | ⌘ ⇧ G | Ctrl + Shift + G |
 | Switch detail panels between columns and grid | ⌘ \ | Ctrl + \ |
