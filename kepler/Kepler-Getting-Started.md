@@ -86,15 +86,15 @@ After you sign in, a guided start walks you through setup. To skip it at any poi
 If you installed an agent that Kepler did not find, click **Rescan**. To go on without an agent, click **Continue without an agent**. You can set one up later in **Settings → Agents**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/onboarding-no-agent-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/onboarding-no-agent-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The guided start's first step, Choose your coding agents, with no agent found: the nine coding agents sit in a box headed Set up a coding agent to get started, with Rescan and the line Install one here, or Rescan if you installed one yourself., each agent with an install or locate button. Kep says Hmm, no agents here yet. Installed one yourself? Press Rescan., and the step ends with I'll explore on my own and Continue without an agent.">
+  <a href="/wp-content/uploads/onboarding-no-agent-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/onboarding-no-agent-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The guided start's first step, Choose your coding agents, with no agent found: the list is headed Set up a coding agent to get started, with Rescan and the line Install one here, or Rescan if you installed one yourself., and the nine coding agents are dashed tiles, each ending in an arrow that you click to install or locate it. Kep says Hmm, no agents here yet. Installed one yourself? Press Rescan., and the step ends with I'll explore on my own and Continue without an agent.">
   </a>
   <figcaption style="text-align:center; color:#888">The first step of the guided start, with no agent found.</figcaption>
 </figure>
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/onboarding-agents-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/onboarding-agents-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The guided start's first step, Choose your coding agents, under Welcome to Kepler and the 01 Agents / 02 Theme & notifications steps: Claude Code and Codex are switched on among the nine coding agents, the others offer an install button, and New sessions start in offers Chat (selected) or Terminal. Kep says Kepler found Claude Code and Codex, with I'll explore on my own and Next at the bottom.">
+  <a href="/wp-content/uploads/onboarding-agents-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/onboarding-agents-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The guided start's first step, Choose your coding agents, under Welcome to Kepler and the 01 Agents / 02 Theme & notifications steps: Claude Code and Codex are switched on among the nine coding agents, the others are dashed tiles ending in an arrow that you click to install or locate them, and New sessions start in offers Chat (selected) or Terminal. Kep says Kepler found Claude Code and Codex, with I'll explore on my own and Next at the bottom.">
   </a>
   <figcaption style="text-align:center; color:#888">The first step of the guided start, with two agents found and switched on.</figcaption>
 </figure>

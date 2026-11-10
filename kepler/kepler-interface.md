@@ -127,8 +127,8 @@ On Windows and Linux, click the icon to open the window that needs you. The icon
 The Dashboard shows your work in views. To move between them, click a view in the row of views, which sits below the top bar by default.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/todo-task-in-progress-agent-graph-sep-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/todo-task-in-progress-agent-graph-sep-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Dashboard's row of views below the title bar: Todo, Tasks, selected, and Agent Graph, each with its icon, then New view. Tasks and Agent Graph carry an orange mark on their icons for a task waiting on you.">
+  <a href="/wp-content/uploads/todo-task-in-progress-agent-graph-sep-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/todo-task-in-progress-agent-graph-sep-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Dashboard's row of views below the title bar: Todo and Tasks, selected, with Kepler's own Todo and Task icons, and Agent Graph with its graph icon, then New view. Tasks and Agent Graph carry an orange mark on their icons for a task waiting on you.">
   </a>
   <figcaption style="text-align:center; color:#888">The Dashboard's starting views: Todo, Tasks, and Agent Graph.</figcaption>
 </figure>
@@ -339,8 +339,8 @@ To manage a task, open its **⋮** menu or right-click its row. The menu holds:
 The menu shows only the items that apply, and grouping and **Progress** leave archived tasks out. The rows the menu acts on stay outlined until it closes. **Archive**, **Restore**, and **Delete** ask first, with the same confirmation as a section's **Select** bar. If you right-click a task outside the selection, or use a row's **⋮** menu, the action applies to that task alone.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/task-selection-menu-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-selection-menu-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Tasks view grouped by your groups, with Add product search and Write the 2.4 release notes selected and outlined in the Ungrouped section, and the selection's right-click menu open below them: New group with 2 tasks…, Add 2 tasks to group, Archive 2 tasks and Delete 2 tasks. Above are the Checkout and Payments sections.">
+  <a href="/wp-content/uploads/task-selection-menu-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-selection-menu-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Tasks list grouped by your groups: the Checkout and Payments sections, then Ungrouped, where Add product search and Write the 2.4 release notes are selected and outlined, with the selection's right-click menu open below them: Progress of 2 tasks, Mark 1 task as read and Star 2 tasks, then New group with 2 tasks… and Add 2 tasks to group, then Shut down agents in 1 task, Archive 2 tasks and Delete 2 tasks.">
   </a>
   <figcaption style="text-align:center; color:#888">The menu for two selected tasks.</figcaption>
 </figure>
@@ -729,8 +729,8 @@ To jump to a task or a file from anywhere, open the Go to palette. It has 2 tabs
 To switch tabs, click the other tab or press its key again.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/go-to-task-palette-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/go-to-task-palette-nov-2026.png" class="help-center-img img-bordered" alt="The Go to task palette: a search field reading Go to task, the Tasks and Files tabs with Tasks selected, and your tasks listed under Needs attention, Unread, Recent and Not started, with Fix the cart total checked as the current task, above key hints such as Open and Task files.">
+  <a href="/wp-content/uploads/go-to-task-palette-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/go-to-task-palette-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Go to task palette: a search field reading Go to task, the Tasks and Files tabs with Tasks selected, and your tasks listed under Needs attention, Unread, Recent and Not started, with Fix the cart total checked as the current task, above key hints such as Open and Task files.">
   </a>
   <figcaption style="text-align:center; color:#888">Go to task, listing your tasks to switch to.</figcaption>
 </figure>

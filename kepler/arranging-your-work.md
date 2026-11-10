@@ -29,8 +29,8 @@ Arrange the Dashboard so it shows the work you need to see. The Dashboard is a s
 What you choose in the **View** menu is saved to the view at once. To learn what each part of the screen is, see [The Kepler Interface](/kepler/kepler-interface).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/arrange-work-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/arrange-work-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The Dashboard's arranging controls: the row of views (Todo, Tasks selected, Agent Graph, New view), and under it the list toggle, the search box reading Search title, ref, or repo…, the View button showing the List glyph, Inbox and Updated, then Panel layout and Refresh at the right. Tasks and Agent Graph carry the orange mark of a task waiting on you.">
+  <a href="/wp-content/uploads/arrange-work-oct-2026-v6@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/arrange-work-oct-2026-v6@2x.png" class="help-center-img img-bordered" alt="The Dashboard's arranging controls: the row of views (Todo and Tasks with Kepler's own Todo and Task icons, Tasks selected, Agent Graph, New view), and under it the list toggle, the search box reading Search title, ref, or repo…, the View button showing the List glyph, Inbox and Updated, then Panel layout and Refresh at the right. Tasks and Agent Graph carry the orange mark of a task waiting on you.">
   </a>
   <figcaption style="text-align:center; color:#888">The views, and the search, View, panel and refresh controls under them.</figcaption>
 </figure>
@@ -53,8 +53,8 @@ Kepler starts you with a **Todo** view, a **Tasks** view, and an **Agent Graph**
 A view keeps its own layout, grouping, sort, and filters. Every window shares the same views.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/saved-views-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/saved-views-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Tasks view's menu open from its tab in the Dashboard's row of views (Todo, Tasks, Agent Graph, New view), where Tasks and Agent Graph carry the orange mark of a task waiting on you: Rename with F2, Change icon showing Rocket, Show counts on views ticked, View options, Duplicate view highlighted, Move left, Move right, Views position, and Delete view.">
+  <a href="/wp-content/uploads/saved-views-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/saved-views-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Tasks view's menu open from its tab in the Dashboard's row of views (Todo, Tasks, Agent Graph, New view), where Tasks and Agent Graph carry the orange mark of a task waiting on you: Rename with F2, Change icon showing Task, Show counts on views ticked, View options, Duplicate view highlighted, Move left, Move right, Views position, and Delete view.">
   </a>
   <figcaption style="text-align:center; color:#888">A view's menu.</figcaption>
 </figure>
@@ -85,8 +85,8 @@ If the views run out of room, they fold into 1 button. Click it to see every vie
 To pick another icon for a view, open the view's menu and point to **Change icon**. Search for an icon or choose one from the grid. The first icon is the view type's default.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/dashboard-view-icon-picker-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/dashboard-view-icon-picker-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Tasks view's menu open from its tab, with Change icon, Rocket, highlighted and its picker open beside it: a Search icons field over a grid of six rows of icons, the rocket first and outlined, and a footer reading Default, Rocket.">
+  <a href="/wp-content/uploads/dashboard-view-icon-picker-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/dashboard-view-icon-picker-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Tasks view's menu open from its tab, with Change icon, Task, highlighted and its picker open beside it: a Search icons field over a grid of icons, Kepler's Task icon first and outlined, and a footer reading Default, Task.">
   </a>
   <figcaption style="text-align:center; color:#888">The icon picker, from a view's Change icon row.</figcaption>
 </figure>
@@ -98,8 +98,8 @@ By default, the views sit in a row below the title bar. To move them, choose **V
 Along the left side, the views start as icons. To show their names, click **Expand views** at the foot of the column, or drag the column's edge. **Collapse views** returns to icons.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/dashboard-views-side-rail-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/dashboard-views-side-rail-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Dashboard with its views along the left side, expanded to show names: Todo, Tasks (selected), Agent Graph and New view at the top, Settings and the Collapse views button at the foot. Tasks and Agent Graph carry the orange mark of a task waiting on you. The top bar keeps New task, Ask, Feedback and the account but no Settings button, and the Tasks list fills the rest of the window under its toolbar.">
+  <a href="/wp-content/uploads/dashboard-views-side-rail-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/dashboard-views-side-rail-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Dashboard with its views along the left side, expanded to show names: Todo and Tasks with Kepler's own Todo and Task icons, Tasks selected, then Agent Graph and New view at the top, Settings and the Collapse views button at the foot. Tasks and Agent Graph carry the orange mark of a task waiting on you. The top bar keeps New task, Ask, Feedback and the account but no Settings button, and the Tasks list fills the rest of the window under its toolbar.">
   </a>
   <figcaption style="text-align:center; color:#888">The views along the left side of the window, with their names shown.</figcaption>
 </figure>
@@ -512,8 +512,8 @@ The **Filters** section at the end of the **View** menu has a submenu for each f
   <figcaption style="text-align:center; color:#888">The Filters section, with a facet's flyout open.</figcaption>
 </figure>
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/filter-todo-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/filter-todo-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The View menu on Todo, under the View button reading Type, Updated and Mine: the List and Board switch, the Mine and All scope switch with Mine chosen and Your work, in every org under it, Group by Type and Sort by Updated, then Filters: Needs my attention, Your role, Type, Linked work, Status, Priority, Age and Provider, then a GitHub section with Repository, Assignee and Label, each set to Any. The Provider flyout lists GitHub with its count of 5, and Manage integrations.">
+  <a href="/wp-content/uploads/filter-todo-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/filter-todo-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The View menu on Todo, under the View button reading Type, Updated and Mine: the List and Board switch, the Mine and All scope switch with Mine chosen and Your work, in every org under it, Group by Type and Sort by Updated, then Filters: Needs my attention, Review requests, Your role, Type, Linked work, Status, Priority, Age and Provider, then a GitHub section with Repository, Assignee, Author, Reviewer and Label, each set to Any. The Provider flyout lists GitHub with its count of 5, and Manage integrations.">
   </a>
   <figcaption style="text-align:center; color:#888">The View menu on Todo. Each connected provider gets its own section, here GitHub.</figcaption>
 </figure>

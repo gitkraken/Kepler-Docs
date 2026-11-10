@@ -97,8 +97,8 @@ Commits that the upstream does not have yet show a green dot and line, and read 
 With a Jira or Jira Server account connected, Jira issue keys in a commit's message become links, and the commit's right-click menu adds **Open issue {issue}** and **Copy issue URL for {issue}**. See [Issue Tracker Integrations](/kepler/issue-tracker-integrations).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/changes-commit-row-tip-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/changes-commit-row-tip-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A worktree's column on Commits, where the two newest commits have green dots because they are not pushed, and Apply the discount before tax, which is pushed, has a gray one. Clamp the discount at the subtotal is hovered, and its hover card shows Alex Lee, committed 4h ago, the subject, a body with a two-item list and a Refs: #38 trailer, then the short hash, its line changes, 1 file and a Not pushed chip.">
+  <a href="/wp-content/uploads/changes-commit-row-tip-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/changes-commit-row-tip-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="A worktree's column on its Changes view, whose list reads All changes, then three commits and origin/main branched here. The two newest commits have green dots because they are not pushed, and Apply the discount before tax, which is pushed, has a grey one. Hovering Clamp the discount at the subtotal opens its hover card, which shows Alex Lee, committed 4h ago, the subject, a body with a two-item list and a Refs: #38 trailer, then the short hash, its line changes, 1 file and a Not pushed chip.">
   </a>
   <figcaption style="text-align:center; color:#888">Unpushed commits, and the card for one of them.</figcaption>
 </figure>
@@ -112,8 +112,8 @@ A wholly untracked folder with hundreds of files, such as a build output nobody 
 To open the Changes overlay, click a file, or choose **Open changes** from the worktree's menu. The overlay opens over the page at a width for one column of code, or two if you last used **Split**. Drag its edges to resize it. At that default width, **Maximize** in its header fills the window, and **Restore** returns it to the default width.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/changes-overlay-maximize-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/changes-overlay-maximize-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total open over the task page at its default width, with the task page showing around it, and the Maximize button in the overlay's header hovered, its tooltip reading Maximize. The header also reads from main and Up to date, and the context panel behind ends with Manage resources.">
+  <a href="/wp-content/uploads/changes-overlay-maximize-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/changes-overlay-maximize-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total open over the task page at its default width, with the task page showing dimmed around it, and the Maximize button in the overlay's header hovered, its tooltip reading Maximize. The header also reads from main and Up to date; the overlay's side list has the Changes (2), Files and Comments view buttons over Working changes, 2 files and main branched here, then Commit… and the two changed files, beside cart.js's diff. The context panel behind ends with Manage resources.">
   </a>
   <figcaption style="text-align:center; color:#888">The Changes overlay at its default width, with Maximize in its header.</figcaption>
 </figure>
@@ -221,8 +221,8 @@ An unsaved edit shows **Unsaved** with **Save** and **Discard** beside it. Keple
 The file opens in **File** view, marked **Working**, ready to edit. Switch the file to **Changes** to see the diff counted from where the commit view started. **Stop editing** returns to the file as committed.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/changes-edit-working-copy-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/changes-edit-working-copy-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Changes overlay on the Commits view of kepler/fix-cart-total, with All commits picked above the commit Apply the discount before tax, main (branched here) and the file cart.js. The viewer has switched cart.js to the working copy: its header reads 1 of 1, M, cart.js and Working, with Stop editing beside the File and Changes switch, and the file is open for editing in File view.">
+  <a href="/wp-content/uploads/changes-edit-working-copy-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/changes-edit-working-copy-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total, from origin/main, on its Changes view, with the oldest commit, Apply the discount before tax, picked in the list under All changes and the two newer commits, above origin/main (branched here) and the file cart.js. The viewer has switched cart.js to the working copy: its header reads 1 of 1, M, cart.js and Working, with Stop editing beside the File and Changes switch, File selected, and the file open for editing.">
   </a>
   <figcaption style="text-align:center; color:#888">A file from a commit switched to its working copy, ready to edit.</figcaption>
 </figure>
@@ -270,8 +270,8 @@ When you use Kepler in a phone's browser through Remote Access, the overlay repl
 The overlay opens **Stacked** on a phone, with lines wrapped.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/phone-changes-bar-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/phone-changes-bar-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Changes overlay on a phone, showing cart.js with wrapped lines under one bar: Close, the file name cart.js with a chevron, Previous and Next file, and More actions, whose menu is open. It lists Change scope (Working changes, 2 ticked, Commits, All changes, All files), File view (File, Changes ticked), Diff layout (Stacked ticked, Split unavailable as Too narrow for a split diff), Wrap lines ticked, Comment on selection and Open in editor (both unavailable), Copy path and Copy relative path.">
+  <a href="/wp-content/uploads/phone-changes-bar-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/phone-changes-bar-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Changes overlay on a phone, showing cart.js with wrapped lines under one bar: Close, the file name cart.js with a chevron, Previous and Next file, and More actions, whose menu is open. It lists Change scope (Changes, 2 ticked, Files and Comments) with a Working changes submenu, File view (File, Changes ticked), Diff layout (Stacked ticked, Split unavailable as Too narrow for a split diff), Wrap lines ticked, Comment on selection and Open in editor (both unavailable), Copy path and Copy relative path.">
   </a>
   <figcaption style="text-align:center; color:#888">The Changes overlay on a phone, with its menu open.</figcaption>
 </figure>
@@ -363,8 +363,8 @@ To collapse a card to a one-line row, click the chevron beside its lines. Click 
 The **Comments** view lists every review comment on the task. Open it from the view picker in the changes panel or the overlay, after **Files**. Its button shows the number of open comments, with a dot when there are unread replies.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/review-comments-list-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/review-comments-list-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total on its Comments view, its header reading 3 comments and Send comment. The side list reads 3 comments with View options, then the comments grouped by status: Not sent (cart.js:2), Queued (cart.js:4) and Sent (cart.js:3), each row with its place, just now, its note and its status. Beside it, cart.js shows the three cards: line 2 Not sent yet with Add to queue and Send now, line 3 Sent to OpenCode with the Reply to OpenCode box, Resolve and Reply, and line 4 Queued for OpenCode with Remove from queue and Send now. The header also reads from main and Up to date.">
+  <a href="/wp-content/uploads/review-comments-list-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/review-comments-list-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total on its Comments view (the speech-bubble segment, 3, picked beside the Changes and Files icons), its header reading 3 comments and Send comment. The side list reads 3 comments with View options, then the comments grouped by status: Not sent (cart.js:2), Queued (cart.js:4) and Sent (cart.js:3), each row with its place, just now, its note and its status. Beside it, cart.js shows the three cards: line 2 Not sent yet with Add to queue and Send now, line 3 Sent to OpenCode with the Reply to OpenCode box, Resolve and Reply, and line 4 Queued for OpenCode with Remove from queue and Send now. The header also reads from main and Up to date.">
   </a>
   <figcaption style="text-align:center; color:#888">The Comments view, grouped by status.</figcaption>
 </figure>
@@ -394,8 +394,8 @@ In commit mode, **Commit to {branch}** takes the place of the list of changes, e
 The changes panel and the overlay share one commit box per worktree, so a message you start in one appears in the other, and Kepler keeps it when the overlay closes.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/staging-commit-box-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/staging-commit-box-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The worktree column for kepler/fix-cart-total on Working changes, beside Commits, All changes, All files and Comments. cart.js is ticked and cart.test.js is not, so the header box is partly checked and its badge reads 1 of 2 staged. The file list's toolbar starts with the Discard button. Below the files sits the commit box, with Commit message, Amend last commit and Commit.">
+  <a href="/wp-content/uploads/staging-commit-box-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/staging-commit-box-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The worktree column for kepler/fix-cart-total in commit mode, on Changes 2 beside Files and Comments. The header reads Commit to kepler/fix-cart-total, Pick the files to commit, then write a message, with Cancel. cart.js is ticked and cart.test.js is not, so the header box is partly checked and its badge reads 1 of 2 staged; the file list's toolbar also holds the Discard button. Below the files sits the commit box, with Commit message, Amend last commit and Commit.">
   </a>
   <figcaption style="text-align:center; color:#888">Staging files in commit mode, above the commit box.</figcaption>
 </figure>
@@ -657,8 +657,8 @@ A branch's **merge target** is the branch it will merge into: what its commits, 
 | See what landed on the merge target | **See what's new on {target}** from the merge target chip's menu on the Dashboard, while the merge target is ahead. See [What's new on the merge target](#whats-new-on-the-merge-target) |
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/save-merge-target-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/save-merge-target-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The worktree column for kepler/fix-cart-total on Commits, with All commits over three commits and origin/release/2.4 marked branched here. The counts row compares from origin/release/2.4, picked for this view only, with a Save as merge target button beside the picker, above cart.js and cart.test.js.">
+  <a href="/wp-content/uploads/save-merge-target-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/save-merge-target-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The worktree column for kepler/fix-cart-total on its Changes view, with All changes selected over the branch's three commits (Cover discounted orders in tests, Clamp the discount at the subtotal, Apply the discount before tax) and origin/release/2.4 marked branched here. The files toolbar compares from origin/release/2.4, picked for this view only, with a Save as merge target button beside the picker, above cart.js and cart.test.js.">
   </a>
   <figcaption style="text-align:center; color:#888">A branch picked for this view only, with Save as merge target beside it.</figcaption>
 </figure>

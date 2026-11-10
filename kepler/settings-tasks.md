@@ -36,8 +36,8 @@ If no agent is installed, Kepler hides the control. If you later uninstall the a
 An [Action](/kepler/actions) inherits this configuration unless it names an agent of its own.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-sessions-start-with-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-sessions-start-with-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The New tasks section of Kepler's Settings › Tasks, with New tasks use set to Use last used agent and its description.">
+  <a href="/wp-content/uploads/new-sessions-start-with-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-sessions-start-with-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The New tasks section of Settings › Tasks: New tasks use, with its agent-settings pill reading Use last used agent, and the description Every new session starts with this agent and its settings. Choose Use last used agent to start with your last pick instead.">
   </a>
   <figcaption style="text-align:center; color:#888">The default agent for new tasks, in Settings → Tasks.</figcaption>
 </figure>

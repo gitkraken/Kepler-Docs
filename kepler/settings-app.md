@@ -98,8 +98,8 @@ The setting also counts Claude Code sessions running outside Kepler.
 | **Collect usage insights** | *Keep local statistics about your sessions and tasks on this computer. Nothing leaves it.* | On |
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/settings-insights-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/settings-insights-nov-2026.png" class="help-center-img img-bordered" alt="The Insights section of Settings › General, with the Collect usage insights checkbox ticked and its help text: Keep local statistics about your sessions and tasks on this computer. Nothing leaves it.">
+  <a href="/wp-content/uploads/settings-insights-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/settings-insights-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Insights section of Settings › General, with the Collect usage insights checkbox ticked and its help text: Keep local statistics about your sessions and tasks on this computer. Nothing leaves it.">
   </a>
   <figcaption style="text-align:center; color:#888">Collect usage insights, at its default.</figcaption>
 </figure>
@@ -233,8 +233,8 @@ If a theme you already have uses the same id, Kepler asks before it replaces tha
 </figure>
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/theme-gallery-try-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/theme-gallery-try-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Settings › Appearance painted in the Amethyst theme while trying it from the gallery, with the preview bar at the bottom: Trying Amethyst Dark, a Dark / Light switch, Use Amethyst and Done.">
+  <a href="/wp-content/uploads/theme-gallery-try-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/theme-gallery-try-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Settings › Appearance painted in the Amethyst theme while trying it from the gallery, with the preview bar at the bottom: Trying Amethyst Dark, a Dark / Light switch, Use Amethyst and Done.">
   </a>
   <figcaption style="text-align:center; color:#888">Trying a gallery theme on the whole window before you use it.</figcaption>
 </figure>

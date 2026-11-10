@@ -336,8 +336,8 @@ To edit an open note, click **Edit**, or press **Enter** on the focused note. Be
 **A note keeps its saved versions.** To see them, click **History** on the open note. The history shows who created and last edited the note, and lists its **Saved versions**, newest first. Pick a version to see what it changed, then click **Restore this version** to bring it back as the newest version. A deleted note can be restored too: click **Deleted** on the **Notes** tab of the **Resources** screen, open the note, and restore a version from its history.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/note-history-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/note-history-nov-2026.png" class="help-center-img img-bordered" alt="The Coding conventions note open on the task page with its History sidebar beside it: who created and last edited the note, the Saved versions list with Version 3 marked Current above Versions 2 and 1, and Version 2 selected, showing the line it added, Every cart change gets a test in cart.test.js, above the Restore this version button.">
+  <a href="/wp-content/uploads/note-history-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/note-history-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Coding conventions note open on the task page with its History sidebar beside it: who created and last edited the note, the Saved versions list with Version 3 marked Current above Versions 2 and 1, and Version 2 selected, showing the line it added, Every cart change gets a test in cart.test.js, above the Restore this version button.">
   </a>
   <figcaption style="text-align:center; color:#888">A note's History, with a saved version ready to restore.</figcaption>
 </figure>

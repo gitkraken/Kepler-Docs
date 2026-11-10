@@ -105,8 +105,8 @@ Below the bar, a details row holds the Progress control and **Refresh**. Unfold 
 Pull down on the bar, or long-press a segment, to open **Everything in this task**. This sheet takes the place of the context panel: it lists every session, checkout, terminal, and resource, each with its own actions menu. Under **Resources**, each kind of resource has its own heading and count, in the same order as the context panel. The sheet also offers **New session**, **Add resource**, **New terminal**, and the archived sessions. A long press opens it on that segment's group only.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/phone-context-sheet-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/phone-context-sheet-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Everything in this task sheet pulled up over the task page in a phone-width browser. Sessions (1) lists the agent's session, ticked as the one on screen, then New session and Import an external session; Changes (2) lists kepler/fix-cart-total and kepler/cart-rounding in acme-web; Terminals (0) offers New terminal; Resources (4) lists the pull request Apply discounts before tax in the cart total, the issue Cart total ignores discounts when tax is a…, note.md and Coding conventions. Each row has an actions menu.">
+  <a href="/wp-content/uploads/phone-context-sheet-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/phone-context-sheet-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Everything in this task sheet pulled up over the task page in a phone-width browser. Sessions (1) lists the agent's session, ticked as the one on screen, then New session; Changes (2) lists kepler/fix-cart-total and kepler/cart-rounding in acme-web; Terminals (0) offers New terminal; Resources (4) heads each kind with its count: Pull requests (1) with Apply discounts before tax in the cart total, Issues (1) with Cart total ignores discounts when tax is a…, and Notes (2) with note.md and Coding conventions. Each row has an actions menu.">
   </a>
   <figcaption style="text-align:center; color:#888">Everything in this task, which takes the place of the context panel on a phone.</figcaption>
 </figure>
@@ -298,8 +298,8 @@ In both layouts, terminals open in the [drawer](#the-terminal-drawer) below the 
 ### The columns
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/task-columns-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-columns-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The task page for Fix the cart total with tabs off: the context panel on the left with Sessions, Changes and Notes, then three columns side by side: the session's conversation (thinking, plan, a Read cart.js tool call and the agent's replies), the kepler/fix-cart-total worktree's Working changes with cart.js modified and cart.test.js added above the commit box, and the task's Prompt note in Resources.">
+  <a href="/wp-content/uploads/task-columns-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-columns-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The task page for Fix the cart total with tabs off: the context panel on the left with Sessions, Changes and Notes, then three columns side by side: the session's conversation (the prompt, Thinking, a completed Plan, a Read cart.js tool call and the agent's replies, with the composer at the foot), the kepler/fix-cart-total worktree on Changes, with its Working changes row, the Commit… button and cart.js modified and cart.test.js added, and the task's Prompt note.">
   </a>
   <figcaption style="text-align:center; color:#888">The three content columns: Sessions, Changes, and Resources.</figcaption>
 </figure>
@@ -342,8 +342,8 @@ The close control on a session's strip depends on the session:
 With tabs on, anything you open from the context panel, including sessions, worktrees, files, and every other resource, opens as a tab. Tabs sit in **groups** that you arrange freely, like editor tabs in VS Code.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/tabs-preview-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/tabs-preview-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Two tab groups side by side on the task page for Fix the cart total, with the left group's tab strip ringed: it starts with the pinned session tab, shrunk to its icon, beside the Prompt note in an italic preview tab, the note's text below with its Copy note and Edit buttons; the right group holds the kepler/fix-cart-total worktree tab showing Working changes 2, cart.js and cart.test.js. Each tab is a card rising to the top of its strip.">
+  <a href="/wp-content/uploads/tabs-preview-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/tabs-preview-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="Two tab groups side by side on the task page for Fix the cart total, with the left group's tabs ringed: they start with the pinned session tab, shrunk to its icon, beside the Prompt note in an italic preview tab, the note's text below with its Copy, Save as…, History and Edit buttons; the right group holds the kepler/fix-cart-total worktree tab on Changes 2, beside Files and Comments, with the Working changes row above cart.js and cart.test.js. Each tab is a card rising to the top of its strip.">
   </a>
   <figcaption style="text-align:center; color:#888">An italic preview tab beside a session tab.</figcaption>
 </figure>
@@ -359,8 +359,8 @@ To open a tab's menu, right-click the tab, or press **Shift+F10** or the Menu ke
 A draft session's tab shows **(draft)** after its name when the tab strip has room. With tabs off, right-click a draft tab for **Discard draft**. With tabs on, close a draft with **Close tab** in its menu. Closing a draft that has text in it asks you to confirm first, because your draft prompt and attachments are removed.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ade-draft-session-tab-menu-01-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ade-draft-session-tab-menu-01-v3@2x.png" class="help-center-img img-bordered" alt="The top of a task's side panel with a New session draft tab beside the task's first session, and the draft tab's Tab actions menu open under it: Move left, with its Ctrl+Alt+[ shortcut, and Discard draft.">
+  <a href="/wp-content/uploads/ade-draft-session-tab-menu-01-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ade-draft-session-tab-menu-01-v4@2x.png" class="help-center-img img-bordered" alt="The top of a task's side panel with a New session draft tab beside the task's first session, and the menu a right-click on the draft tab opens under it: Move left, with its Ctrl+Alt+[ shortcut, and Discard draft. The tabs carry no ⋮ button.">
   </a>
   <figcaption style="text-align:center; color:#888">A draft session's tab and its menu, opened with a right-click.</figcaption>
 </figure>
@@ -381,8 +381,8 @@ When every tab is closed, the content area offers **New session**, so you can st
 To bring in an agent conversation you started outside Kepler, start a new session, then click **Open an external session** under its composer. The card shows only while Kepler lists [sessions started outside Kepler](/kepler/agent-sessions#sessions-started-outside-kepler). Each conversation you open gets its own tab. **Back to the new session** returns to the composer.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-session-external-card-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-session-external-card-nov-2026.png" class="help-center-img img-bordered" alt="A new session's draft on the task page: What should the agent work on?, the composer with its repository, branch and worktree chips, then &quot;or&quot;, then the Open an external session card, Pick up a Claude Code, Codex or other agent session you already started and bring it into this task.">
+  <a href="/wp-content/uploads/new-session-external-card-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-session-external-card-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="A new session's draft on the task page: What should the agent work on?, the composer with its repository, branch and worktree chips, then &quot;or&quot;, then the Open an external session card, Pick up a Claude Code, Codex or other agent session you already started and bring it into this task.">
   </a>
   <figcaption style="text-align:center; color:#888">Open an external session, under a new session's composer.</figcaption>
 </figure>

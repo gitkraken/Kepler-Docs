@@ -103,8 +103,8 @@ To give a session your own name, choose **Rename session** on its row menu. Agen
 ## Agent, model, mode, and effort
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-settings-from-composer-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-settings-from-composer-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="Agent settings open above a new session's composer: Agent OpenCode, Preset Custom, Start in with Chat selected beside Terminal, Model Docs Model, Permission mode Build or Plan, MCP servers (No servers) with Manage, and Use defaults. Below it, the composer footer holds Attach a file, the microphone and a ticked Task context chip, then the Docs Model Build pill and Start.">
+  <a href="/wp-content/uploads/agent-settings-from-composer-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-settings-from-composer-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="Agent settings open above a new session's composer: Agent OpenCode, Preset No preset, Start in with Chat selected beside Terminal, Model Docs Model, Permission mode Build or Plan, MCP servers (No servers) with Manage, and the agent settings gear with Save preset. Below it, the composer footer holds Attach a file, the microphone and a ticked Task context chip, then the Docs Model Build pill and Start.">
   </a>
   <figcaption style="text-align:center; color:#888">The Agent settings pill, opened from the composer, with the Task context chip in the footer.</figcaption>
 </figure>
@@ -499,8 +499,8 @@ When you take over a conversation from disk, the agent starts on your first mess
 To send a prompt, type it in the composer at the bottom of the session.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/sending-a-prompt-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/sending-a-prompt-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The session composer with a pasted image.png attached as a thumbnail chip and the draft @cart.js @README.md Does the check also cover these codes? Below the draft sit Attach a file and the microphone, then the Agent settings pill (Docs Model, Build, with its chevron), the context usage ring, and Send with its chevron.">
+  <a href="/wp-content/uploads/sending-a-prompt-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/sending-a-prompt-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The session composer with a pasted image.png attached as a thumbnail chip with its remove button, and a draft holding the file chips cart.js and README.md, each with its file icon, then Does the check also cover these codes? Below the draft sit Attach a file and the crossed-out microphone, then the Agent settings pill (Docs Model, Build, with its chevron), the context usage ring, and Send with its chevron.">
   </a>
   <figcaption style="text-align:center; color:#888">The composer, at the bottom of the session.</figcaption>
 </figure>
@@ -660,8 +660,8 @@ A session's conversation shows your prompts, the agent's replies, and the agent'
 **Quote a passage to ask about it.** Select text in a message, right-click it, and choose **Quote**. The passage goes into the composer as a quote block, and Kepler tints its source in the conversation. Click the quote block to scroll to its source, or click the tinted passage to go back to the quote. In a sent message, a long quote folds, with **Show more** and **Show less**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/composer-quote-block-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/composer-quote-block-nov-2026.png" class="help-center-img img-bordered" alt="A session on Fix the cart total: the agent's sentence, The total applied the discount after tax, so discounted orders were overcharged by the tax on the discount, is tinted in the conversation, and the composer below holds the same sentence as a quote block, with the question Does the same apply to gift cards? typed under it.">
+  <a href="/wp-content/uploads/composer-quote-block-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/composer-quote-block-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="A session on Fix the cart total: the agent's sentence, The total applied the discount after tax, so discounted orders were overcharged by the tax on the discount, is tinted in the conversation, and the composer below holds the same sentence as a quote block, with the question Does the same apply to gift cards? typed under it.">
   </a>
   <figcaption style="text-align:center; color:#888">A quote in the composer, with its source tinted in the conversation.</figcaption>
 </figure>
@@ -774,8 +774,8 @@ Reports from other agents arrive in a session's inbox and do not ask you anythin
 You can answer a request from any window that shows it, or from its notification. If another window answered it first, Kepler says **Already answered**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-permission-request-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-permission-request-oct-2026.png" class="help-center-img img-bordered" alt="A permission request for a shell command, marked Needs approval, with the agent's reason, Contains brace with quote character, just above the Allow, Allow for this session, and Reject buttons.">
+  <a href="/wp-content/uploads/agent-permission-request-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-permission-request-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A permission request for a shell command, marked Needs approval and headed Run the search tests, the agent's description of the command, with the command itself, npm test -- --run search, in a box beneath it, above the Allow, Allow for this session, Allow always and Reject buttons.">
   </a>
   <figcaption style="text-align:center; color:#888">A permission request for a shell command, headed by what the command does.</figcaption>
 </figure>
@@ -979,8 +979,8 @@ Kepler judges a usage bar by pace: the share of the window you have used, compar
 **You can spend a Codex usage reset from Kepler.** When the account has a reset available, click **Redeem reset** under **Usage limit resets** in the Codex popover. If you still have more than 3% of your 7-day allowance left, Kepler warns you first that redeeming now may waste it. The confirmation lists your current usage and the reset's expiry. Redeeming uses up the reset and cannot be undone.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/usage-reset-redeem-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/usage-reset-redeem-nov-2026.png" class="help-center-img img-bordered" alt="The Plan usage popover open under the Codex usage chip in the New task composer, which reads Limit reached until Mar 5, 02:30 PM. The popover shows the account (alex.lee@example.com, Plus), the 5h window at 41% used and the 7d window at 100% used, each with its reset time, then Usage limit resets: 1 available, Expires Mar 16, 02:30 PM, the hint Earned resets that clear an active limit early, and a Redeem reset button, above Updated just now and a refresh button.">
+  <a href="/wp-content/uploads/usage-reset-redeem-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/usage-reset-redeem-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Plan usage popover open under the Codex usage chip in the New task composer, which reads Limit reached until Mar 5, 02:30 PM. The popover shows the account (alex.lee@example.com, Plus), the 5h window at 41% used and the 7d window at 100% used, each with its reset time, then Usage limit resets: 1 available, Expires Mar 16, 02:30 PM, the hint Earned resets that clear an active limit early, and a Redeem reset button, above Updated just now and a refresh button.">
   </a>
   <figcaption style="text-align:center; color:#888">Redeem reset, in the Codex plan usage popover.</figcaption>
 </figure>

@@ -104,8 +104,8 @@ Once connected, a self-hosted provider lists each server on its own row, with **
 - To make a server the provider's default connection, click **Set as primary**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/self-hosted-installations-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/self-hosted-installations-nov-2026.png" class="help-center-img img-bordered" alt="GitHub Enterprise in Settings › Integrations with Add connection beside its name and one row per server below it: github.acme.example and ghe.contoso.example, each signed in as alex-lee and marked Connected, with Replace token and Disconnect, the primary server marked Primary and the other offering Set as primary. Below them, Everything visible with Choose what's visible…, and a notice that agents' GitKraken MCP server acts as alex-lee (https://github.acme.example), the primary connection on your GitKraken account.">
+  <a href="/wp-content/uploads/self-hosted-installations-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/self-hosted-installations-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="GitHub Enterprise in Settings › Integrations with Add connection beside its name and one row per server below it: github.acme.example and ghe.contoso.example, each signed in as alex-lee and marked Connected, with Replace token and Disconnect, the primary server marked Primary and the other offering Set as primary. Below them, Everything visible with Choose what's visible…, and a notice that agents' GitKraken MCP server acts as alex-lee (https://github.acme.example), the primary connection on your GitKraken account.">
   </a>
   <figcaption style="text-align:center; color:#888">A self-hosted provider with 2 servers connected.</figcaption>
 </figure>
@@ -267,8 +267,8 @@ On Todo, each warning also has **Filter out {provider}**, which hides that provi
 Rows kept from the last good load show a cloud mark on their provider chip.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/todo-provider-failure-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/todo-provider-failure-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Todo when GitHub refuses its sign-in: Unable to load your work, over a warning that reads Sign in to GitHub again to load its work, with a Reconnect button.">
+  <a href="/wp-content/uploads/todo-provider-failure-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/todo-provider-failure-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="Todo when GitHub refuses its sign-in: Unable to load your work, over a warning that reads Sign in to GitHub again to load its work, with a Reconnect button and, beside it, a crossed-out eye button, Filter out GitHub.">
   </a>
   <figcaption style="text-align:center; color:#888">Todo names a provider whose sign-in failed and offers Reconnect, or Filter out.</figcaption>
 </figure>

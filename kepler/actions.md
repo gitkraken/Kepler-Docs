@@ -48,8 +48,8 @@ Kepler comes with 4 Actions, and you can edit each of them.
 You can edit and reset built-in Actions, but you cannot delete them.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/reset-action-to-default-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/reset-action-to-default-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="The built-in Review Action's row in Settings › Actions after it was edited, with a restore icon beside its chevron and no edit or delete icon.">
+  <a href="/wp-content/uploads/reset-action-to-default-aug-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/reset-action-to-default-aug-2026-v3@2x.png" class="help-center-img img-bordered" alt="The built-in Review Action's row in Settings › Actions after its prompt was edited: the edited prompt, Please review the code changes in this worktree. Check for bugs and missing tests…, over Available on tasks and pull requests, with a restore icon beside its chevron and no delete icon.">
   </a>
   <figcaption style="text-align:center; color:#888">An edited built-in Action's row: Restore default, no delete.</figcaption>
 </figure>
@@ -159,8 +159,8 @@ Firing into a live session **queues** the prompt behind whatever the agent is cu
 To choose the Action each kind of item suggests, open **Settings → Actions → Suggested Actions**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/preferred-actions-settings-sep-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/preferred-actions-settings-sep-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Suggested Actions section of Kepler's Settings › Actions, with an Action picked for each kind of item and Suggest automatically turned on.">
+  <a href="/wp-content/uploads/preferred-actions-settings-sep-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/preferred-actions-settings-sep-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Suggested Actions section of Settings › Actions with its description: Tasks (Tasks you create in Kepler), Issues (Issues from your connected trackers), Pull requests I authored (Pull requests you opened) and Pull requests from others (Pull requests someone else opened, like ones you're asked to review), each with its Action picked, then the Suggest automatically switch and its help.">
   </a>
   <figcaption style="text-align:center; color:#888">The Suggested Actions settings.</figcaption>
 </figure>
@@ -205,8 +205,8 @@ To show only the chevron on the button for a kind of item, set its slot to **Non
 To edit an Action, go to **Settings → Actions** and click the Action's row under **All Actions**. The editor opens as its own page.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/actions-settings-built-in-sep-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/actions-settings-built-in-sep-2026-v2@2x.png" class="help-center-img img-bordered" alt="The All Actions list in Settings › Actions, with Built in and Custom groups: Plan, Implement, the edited Review and Address Feedback, then the custom Write Tests.">
+  <a href="/wp-content/uploads/actions-settings-built-in-sep-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/actions-settings-built-in-sep-2026-v3@2x.png" class="help-center-img img-bordered" alt="The All Actions list in Settings › Actions with New Action and Restore all defaults, in Built in and Custom groups: Plan, Implement, the edited Review and Address Feedback, then the custom Write Tests, each row with what the Action does and where it is available, such as Available on tasks, issues and pull requests.">
   </a>
   <figcaption style="text-align:center; color:#888">The All Actions list. Click a row to edit that Action.</figcaption>
 </figure>
@@ -227,8 +227,8 @@ The editor has these fields:
 To create an Action, click **New Action** in **Settings → Actions**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-custom-action-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-custom-action-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="The New Action sub-page in Kepler's Settings › Actions, with empty Title and Prompt fields, Available on with Tasks ticked, and the Agent field set to Use default agent.">
+  <a href="/wp-content/uploads/new-custom-action-aug-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-custom-action-aug-2026-v3@2x.png" class="help-center-img img-bordered" alt="The New Action sub-page in Settings › Actions, under the breadcrumb Actions › New Action: an empty Title field, focused, an empty Prompt field, Available on with Tasks ticked and Issues and Pull requests not, the Agent field's Preset reading Use default agent (Uses your default agent configuration), and Cancel and Save.">
   </a>
   <figcaption style="text-align:center; color:#888">The New Action editor.</figcaption>
 </figure>
@@ -236,8 +236,8 @@ To create an Action, click **New Action** in **Settings → Actions**.
 Custom Actions work exactly like the built-in ones. Make one for any prompt you would otherwise retype, such as backporting a fix, writing a migration, or auditing a dependency bump.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-custom-action-config-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-custom-action-config-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="A custom Action being created: Title Backport a fix, the prompt Run the skill /backport, Available on with Tasks and Pull requests ticked, and the Agent field set to Use default agent.">
+  <a href="/wp-content/uploads/new-custom-action-config-aug-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-custom-action-config-aug-2026-v3@2x.png" class="help-center-img img-bordered" alt="A custom Action being created: Title Backport a fix, the prompt Run the skill /backport, Available on with Tasks and Pull requests ticked, and the Agent field's Preset reading Use default agent (Uses your default agent configuration).">
   </a>
   <figcaption style="text-align:center; color:#888">A custom Action's configuration.</figcaption>
 </figure>
@@ -308,8 +308,8 @@ By default an Action runs on your **default agent**, configured in **Settings �
 | **Custom agent settings** | The agent, model, and mode you set for this Action alone |
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/inherit-default-agent-setting-aug-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/inherit-default-agent-setting-aug-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Agent field's Preset list open in Kepler's Action editor: Use default agent, 4 presets named with their agents, and Custom agent settings.">
+  <a href="/wp-content/uploads/inherit-default-agent-setting-aug-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/inherit-default-agent-setting-aug-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Agent field in the Action editor with its Preset list open: Use default agent (selected), Quick fix · Claude Code, Careful review · Claude Code, Quick fix · Codex, Docs pass · OpenCode, and Custom agent settings.">
   </a>
   <figcaption style="text-align:center; color:#888">The Agent field's Preset list: the default agent, your presets, or custom settings.</figcaption>
 </figure>

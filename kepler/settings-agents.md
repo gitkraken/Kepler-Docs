@@ -28,8 +28,8 @@ To choose the agent Ask Kepler uses, set **Ask Kepler uses**. It is separate fro
 **Ask Kepler uses** lists only the agents that run in **Chat**, because only they can answer in the Ask Kepler panel. See [Ask Kepler](/kepler/ask-kepler#which-agents-can-answer).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-settings-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-settings-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="Kepler's Settings › Agents, with New tasks use Claude Code and Change in Tasks, Ask Kepler uses set to a preset, and the Claude Code card under Your agents.">
+  <a href="/wp-content/uploads/agent-settings-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-settings-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="Settings › Agents: the page description, New tasks use Claude Code with Change in Tasks, then Ask Kepler uses with its agent-settings pill showing the Claude Code mark and the Quick fix preset, and its help text. Your agents has Update all and Rescan above the Claude Code card (Update, Enabled), which shows Accounts with Add account and the Claude Code CLI account marked Default with Check usage, New sessions start in set to Chat, Let artifact comments start turns (on), Artifacts in new sessions (off), and a collapsed Program and data folder.">
   </a>
   <figcaption style="text-align:center; color:#888">Settings → Agents.</figcaption>
 </figure>
@@ -172,8 +172,8 @@ An agent preset saves one agent's model, mode, and other options, such as effort
 - To duplicate, reorder, or delete a preset, use its menu.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-presets-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-presets-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Agent presets section of Kepler's Settings › Agents, with New preset and 4 presets, each badged with its agent: 2 for Claude Code, 1 for Codex and 1 for OpenCode.">
+  <a href="/wp-content/uploads/agent-presets-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-presets-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Agent presets section of Settings › Agents with New preset and its description: Quick fix and Careful review, each badged Claude Code, Quick fix badged Codex, and Docs pass badged OpenCode, each row with its options menu.">
   </a>
   <figcaption style="text-align:center; color:#888">Presets, each badged with the agent it belongs to.</figcaption>
 </figure>
