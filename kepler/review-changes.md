@@ -119,11 +119,7 @@ To open the Changes overlay, click a file, or choose **Open changes** from the w
   <figcaption style="text-align:center; color:#888">The Changes overlay at its default width, with Maximize in its header.</figcaption>
 </figure>
 
-<div class="note" markdown="1">
-
-**You can act on a diff in the overlay as well as read it.** In **Working changes** and **All changes** you can edit a file in place. In **Working changes** you can also stage it, commit it, resolve its conflicts, discard it or delete it. You can leave review comments for your agent too. See [Staging and committing](#staging-and-committing) and [Review comments](#review-comments).
-
-</div>
+> **Tip:** **You can act on a diff in the overlay as well as read it.** In **Working changes** and **All changes** you can edit a file in place. In **Working changes** you can also stage it, commit it, resolve its conflicts, discard it or delete it. You can leave review comments for your agent too. See [Staging and committing](#staging-and-committing) and [Review comments](#review-comments).
 
 ### The layout
 

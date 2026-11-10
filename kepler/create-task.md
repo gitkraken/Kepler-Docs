@@ -64,11 +64,7 @@ The button shows as an outline until you hover or select its row, and then fills
 
 Kepler names tasks automatically from what you started them with. To rename a task, use **Rename task** in the **⋮** menu, whose field also has an **Auto-name** button that suggests a name from the task's prompt and resources. See [Tasks and Resources](/kepler/tasks-and-resources).
 
-<div class="note" markdown="1">
-
-**Nothing in Todo?** Set up your [issue tracker](/kepler/issue-tracker-integrations) and [pull request](/kepler/pull-request-integrations) integrations in **Settings** first. **Todo** shows work only from connected accounts.
-
-</div>
+> **Tip:** **Nothing in Todo?** Set up your [issue tracker](/kepler/issue-tracker-integrations) and [pull request](/kepler/pull-request-integrations) integrations in **Settings** first. **Todo** shows work only from connected accounts.
 
 ***
 

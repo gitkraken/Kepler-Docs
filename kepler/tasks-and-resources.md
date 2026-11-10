@@ -510,11 +510,7 @@ To archive or restore a single session, use the session's own menu in the contex
 
 Agents work with tasks through Kepler's own MCP server, `kepler-workspace`. With its tools, an agent can keep the task's resources up to date for you, and can find and coordinate with the rest of your work.
 
-<div class="note" markdown="1">
-
-**The workspace tools were renamed in Kepler 0.15.** Each tool is now named for what it acts on, then what it does, such as `task_get` or `worktree_create`. If an agent's settings allow-list `mcp__kepler-workspace__` tools by name, update them to the names below.
-
-</div>
+> **Warning:** **The workspace tools were renamed in Kepler 0.15.** Each tool is now named for what it acts on, then what it does, such as `task_get` or `worktree_create`. If an agent's settings allow-list `mcp__kepler-workspace__` tools by name, update them to the names below.
 
 If you paste a Kepler link to a task or a session into the chat, the agent can use it to find that task or session. Wherever a tool takes a repository, the agent can also name the repository by one of its **Aliases**, which you set on the repository's page in **Settings → Repositories**. See [Settings](/kepler/settings-repositories#edit-a-repository).
 
