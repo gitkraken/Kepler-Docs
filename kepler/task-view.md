@@ -106,7 +106,7 @@ Pull down on the bar, or long-press a segment, to open **Everything in this task
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/phone-context-sheet-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/phone-context-sheet-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Everything in this task sheet pulled up over the task page in a phone-width browser. Sessions (1) lists the agent's session, ticked as the one on screen, then New session; Changes (2) lists kepler/fix-cart-total and kepler/cart-rounding in acme-web; Terminals (0) offers New terminal; Resources (4) heads each kind with its count: Pull requests (1) with Apply discounts before tax in the cart total, Issues (1) with Cart total ignores discounts when tax is a…, and Notes (2) with note.md and Coding conventions. Each row has an actions menu.">
+    <img src="/wp-content/uploads/phone-context-sheet-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Everything in this task sheet pulled up over the task page in a phone-width browser. Sessions (1) lists the agent's session, ticked as the one on screen, then New session; Changes (2) lists kepler/fix-cart-total and kepler/cart-rounding in acme-web; Terminals (0) offers New terminal; Resources (4) heads each kind with its count: Pull requests (1) with Apply discounts before tax in the cart total, Issues (1) with Cart total ignores discounts when tax is a…, and Notes (2) with note.md and Coding conventions. Each row has an actions menu, and the sheet ends with Add resource.">
   </a>
   <figcaption style="text-align:center; color:#888">Everything in this task, which takes the place of the context panel on a phone.</figcaption>
 </figure>
