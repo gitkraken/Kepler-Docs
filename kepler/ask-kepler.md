@@ -22,6 +22,9 @@ custom_fields:
     nav_order: 40
     nav_parent: "working-in-kepler"
     page_type: "content"
+    card_icon: "message-question"
+    card_color: "blue"
+    card_description: "A chat and a terminal beside whatever you're looking at"
 ---
 <kbd>Last updated: November 2026</kbd>
 

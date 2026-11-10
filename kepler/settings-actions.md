@@ -22,6 +22,9 @@ custom_fields:
     nav_order: 50
     nav_parent: "behavior-and-integration-settings"
     page_type: "content"
+    card_icon: "bolt"
+    card_color: "amber"
+    card_description: "Pick the Action for each kind of item, and manage your Actions"
 ---
 <kbd>Last updated: November 2026</kbd>
 

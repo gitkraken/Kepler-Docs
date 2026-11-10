@@ -17,11 +17,14 @@ tags: [agent-integrations, claude-code, codex, copilot, cursor, auggie, opencode
 taxonomy:
   category: kepler
 custom_fields:
-    nav_category: "integrations"
+    nav_category: "kepler-integrations"
     nav_label: "Agent Integrations"
     nav_order: 10
-    nav_parent: "integrations"
+    nav_parent: "kepler-integrations"
     page_type: "content"
+    card_icon: "robot"
+    card_color: "green"
+    card_description: "Connect Claude Code, Codex, GitHub Copilot, Cursor, Auggie and more, or add a custom agent"
 ---
 <kbd>Last updated: November 2026</kbd>
 

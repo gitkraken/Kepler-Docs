@@ -22,6 +22,9 @@ custom_fields:
     nav_order: 20
     nav_parent: "behavior-and-integration-settings"
     page_type: "content"
+    card_icon: "checklist"
+    card_color: "amber"
+    card_description: "How new tasks start: default agent, branch prefix, folders and task names"
 ---
 <kbd>Last updated: November 2026</kbd>
 

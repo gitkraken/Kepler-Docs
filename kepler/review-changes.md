@@ -22,6 +22,9 @@ custom_fields:
     nav_order: 30
     nav_parent: "working-in-kepler"
     page_type: "content"
+    card_icon: "git-compare"
+    card_color: "blue"
+    card_description: "Read the diff, comment, commit, update the branch and resolve conflicts with AI"
 ---
 <kbd>Last updated: November 2026</kbd>
 

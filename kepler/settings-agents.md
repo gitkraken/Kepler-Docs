@@ -22,6 +22,9 @@ custom_fields:
     nav_order: 10
     nav_parent: "behavior-and-integration-settings"
     page_type: "content"
+    card_icon: "robot"
+    card_color: "amber"
+    card_description: "Install and sign in to agents, custom agents, MCP servers, approvals and usage limits"
 ---
 <kbd>Last updated: November 2026</kbd>
 

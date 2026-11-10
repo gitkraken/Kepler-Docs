@@ -22,6 +22,9 @@ custom_fields:
     nav_order: 50
     nav_parent: "working-in-kepler"
     page_type: "content"
+    card_icon: "microphone"
+    card_color: "blue"
+    card_description: "Dictate to an agent on your device, push-to-talk or hands-free"
 ---
 <kbd>Last updated: November 2026</kbd>
 

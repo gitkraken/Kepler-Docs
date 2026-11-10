@@ -22,6 +22,9 @@ custom_fields:
     nav_order: 30
     nav_parent: "behavior-and-integration-settings"
     page_type: "content"
+    card_icon: "git-branch"
+    card_color: "amber"
+    card_description: "Clone locations, per-repository commands, worktree cleanup and projects"
 ---
 <kbd>Last updated: November 2026</kbd>
 

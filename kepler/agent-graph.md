@@ -22,6 +22,9 @@ custom_fields:
     nav_order: 60
     nav_parent: "core-concepts"
     page_type: "content"
+    card_icon: "affiliate"
+    card_color: "purple"
+    card_description: "Every task, session, turn, tool call and file your agents touch, in one live graph"
 ---
 <kbd>Last updated: November 2026</kbd>
 

@@ -22,6 +22,9 @@ custom_fields:
     nav_order: 30
     nav_parent: "core-concepts"
     page_type: "content"
+    card_icon: "bolt"
+    card_color: "purple"
+    card_description: "Editable named prompts you fire at a task, issue or pull request"
 ---
 <kbd>Last updated: November 2026</kbd>
 

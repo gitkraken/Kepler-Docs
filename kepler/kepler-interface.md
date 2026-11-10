@@ -22,6 +22,9 @@ custom_fields:
     nav_order: 10
     nav_parent: "core-concepts"
     page_type: "content"
+    card_icon: "layout-dashboard"
+    card_color: "purple"
+    card_description: "Read the Dashboard of issues, pull requests and tasks, and start work from any row"
 ---
 <kbd>Last updated: November 2026</kbd>
 

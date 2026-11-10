@@ -22,6 +22,9 @@ custom_fields:
     nav_order: 20
     nav_parent: "core-concepts"
     page_type: "content"
+    card_icon: "layout-kanban"
+    card_color: "purple"
+    card_description: "Views, layouts, grouping, sorting, filters, task progress and bulk archive"
 ---
 <kbd>Last updated: November 2026</kbd>
 

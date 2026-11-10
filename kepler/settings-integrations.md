@@ -22,6 +22,9 @@ custom_fields:
     nav_order: 40
     nav_parent: "behavior-and-integration-settings"
     page_type: "content"
+    card_icon: "plug-connected"
+    card_color: "amber"
+    card_description: "Connect issue trackers and Git hosts, and choose what each brings in"
 ---
 <kbd>Last updated: November 2026</kbd>
 

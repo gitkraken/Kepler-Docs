@@ -22,6 +22,9 @@ custom_fields:
     nav_order: 10
     nav_parent: "working-in-kepler"
     page_type: "content"
+    card_icon: "circle-plus"
+    card_color: "blue"
+    card_description: "Start a task from an issue, a pull request, or nothing at all"
 ---
 <kbd>Last updated: November 2026</kbd>
 

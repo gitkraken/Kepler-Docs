@@ -22,6 +22,9 @@ custom_fields:
     nav_order: 20
     nav_parent: "configuration"
     page_type: "content"
+    card_icon: "cloud-computing"
+    card_color: "amber"
+    card_description: "Run your agents on another machine over SSH or in WSL, or reach Kepler from another device"
 ---
 <kbd>Last updated: November 2026</kbd>
 

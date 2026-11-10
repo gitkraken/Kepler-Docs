@@ -22,6 +22,9 @@ custom_fields:
     nav_order: 20
     nav_parent: "working-in-kepler"
     page_type: "content"
+    card_icon: "message-chatbot"
+    card_color: "blue"
+    card_description: "Start, direct and manage a running conversation with a coding agent"
 ---
 <kbd>Last updated: November 2026</kbd>
 

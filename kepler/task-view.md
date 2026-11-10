@@ -22,6 +22,9 @@ custom_fields:
     nav_order: 50
     nav_parent: "core-concepts"
     page_type: "content"
+    card_icon: "layout-columns"
+    card_color: "purple"
+    card_description: "A task's resources, sessions, changes and files side by side"
 ---
 <kbd>Last updated: November 2026</kbd>
 

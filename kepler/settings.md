@@ -22,6 +22,9 @@ custom_fields:
     nav_order: 10
     nav_parent: "configuration"
     page_type: "content"
+    card_icon: "settings"
+    card_color: "amber"
+    card_description: "Open Settings, find a setting by name, and keep or discard changes"
 ---
 <kbd>Last updated: November 2026</kbd>
 
