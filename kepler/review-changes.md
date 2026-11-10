@@ -113,7 +113,7 @@ To open the Changes overlay, click a file, or choose **Open changes** from the w
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/changes-overlay-maximize-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/changes-overlay-maximize-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total open over the task page at its default width, with the task page showing dimmed around it, and the Maximize button in the overlay's header hovered, its tooltip reading Maximize. The header also reads from main and Up to date; the overlay's side list has the Changes (2), Files and Comments view buttons over Working changes, 2 files and main branched here, then Commit… and the two changed files, beside cart.js's diff. The context panel behind ends with Manage resources.">
+    <img src="/wp-content/uploads/changes-overlay-maximize-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total open over the task page at its default width, with the task page showing dimmed around it, and the Maximize button in the overlay's header ringed and hovered, its tooltip reading Maximize. The header also reads from main and Up to date; the overlay's side list has the view switch's icon buttons for Changes (2), Files and Comments over Working changes, 2 files and main branched here, then Commit… and the two changed files, beside cart.js's diff. The context panel behind ends with Manage resources.">
   </a>
   <figcaption style="text-align:center; color:#888">The Changes overlay at its default width, with Maximize in its header.</figcaption>
 </figure>
