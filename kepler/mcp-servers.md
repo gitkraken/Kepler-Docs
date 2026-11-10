@@ -85,8 +85,8 @@ To manage the servers for one repository:
 When you open a server's page, **All servers** takes you back to the list.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/mcp-agent-settings-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/mcp-agent-settings-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Agent settings menu from the New task composer with OpenCode chosen: Preset Default, Start in (Chat selected, or Terminal), and the MCP servers row reading 2 of 2 enabled beside a Manage button, above the agent settings gear and Use defaults.">
+  <a href="/wp-content/uploads/mcp-agent-settings-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/mcp-agent-settings-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Agent settings menu from the New task composer with OpenCode chosen as the Agent: Start in (Chat selected, or Terminal), Model (Docs Model), Permission mode (Build or Plan), and the MCP servers row reading 2 of 2 enabled beside a Manage button, above the agent settings gear and Save preset.">
   </a>
   <figcaption style="text-align:center; color:#888">The MCP servers row in the Agent settings menu.</figcaption>
 </figure>

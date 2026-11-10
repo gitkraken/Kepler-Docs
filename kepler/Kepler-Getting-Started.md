@@ -46,12 +46,7 @@ Kepler has installers for these platforms:
 2. Run the installer.
 3. Launch Kepler.
 
-**If you open an older copy of Kepler** than the one that last used your data, Kepler stops at **Kepler is out of date** before it opens. The older copy cannot read everything the newer one saved, and sessions in particular may seem to have disappeared. The dialog names the version your data needs and offers these choices:
-
-- **Open Newer Version**, when a newer copy is installed
-- **Update and Restart**, when this copy can update itself (a Snap install does not offer it)
-- **Quit**
-- **Open Anyway**
+**If you open an older copy of Kepler** than the one that last used your data, Kepler stops at **Kepler is out of date** before it opens. The older copy cannot read everything the newer one saved, so sessions may seem to have disappeared. Click **Open Newer Version** when a newer copy is installed, or **Update and Restart** to update this copy (a Snap install does not offer it). The dialog also offers **Quit** and **Open Anyway**.
 
 ***
 
@@ -66,11 +61,13 @@ Kepler opens on a welcome screen, **Launch any agent. Land every PR.** Click **S
   <figcaption style="text-align:center; color:#888">The welcome screen on first launch.</figcaption>
 </figure>
 
-Kepler opens the sign-in page in your browser and replaces the button with a sign-in panel that reads *Continue in your browser*. Once you sign in, Kepler continues on its own. If no browser opened, click **Reopen browser**, or click **Copy link** and open the link in any browser. You can also paste the code from your browser under **Or paste the code from your browser**, then click **Sign in**. If Kepler cannot reach GitKraken, it says *Unable to reach GitKraken to start sign-in. Check your connection and try again.*
+Kepler opens the sign-in page in your browser. Once you sign in there, Kepler continues on its own. If no browser opened, click **Reopen browser**, or click **Copy link** and open the link in any browser. You can also paste the code from your browser under **Or paste the code from your browser**, then click **Sign in**.
 
-The screen's top corner shows Kepler's version. Click the version to check for updates. The corner shows **Checking…**, then **Up to date**, the download's progress, or *Unable to check for updates* with **Try again**. When an update has downloaded, the corner reads **Update ready to install** with **Update and restart**, so you can update before you sign in.
+**Behind a proxy.** Kepler uses your system's proxy settings, or the `HTTPS_PROXY` environment variable when you set it, and passes the same proxy to the agents and terminals it starts. If a request fails through the proxy, the error names the proxy's address.
 
-In a window connected to another machine, the screen says *Continue in your other Kepler window*. You sign in from the Kepler window on this computer, and the remote window continues once you finish there. If Kepler cannot sign the remote window in, it says *Unable to sign this window in with your Kepler account. Reconnect it and try again.*
+To check for updates before you sign in, click the version in the screen's top corner. When an update has downloaded, click **Update and restart**.
+
+In a window connected to another machine, you sign in from the Kepler window on this computer, and the remote window continues once you finish there.
 
 To watch a short tour before you start, click the **Watch Quick Start Tour** tile on the welcome screen, or watch the <a href="https://www.youtube.com/playlist?list=PLXIji1KJqw9A" target="_blank" rel="noopener noreferrer">Kepler Quick Start Tour playlist</a> on YouTube.
 
@@ -82,22 +79,22 @@ After you sign in, a guided start walks you through setup. To skip it at any poi
 
 **Choose your coding agents.** Kepler finds the coding agents installed on this computer. In this step:
 
-- Switch on the agents you want Kepler to use, and make one the default. To add a missing agent, click the download button on its row. See [Agent Integrations](/kepler/agent-integrations#install-an-agent).
+- Switch on the agents you want Kepler to use, and make one the default. To add a missing agent, click its tile to install or locate it. After an install, Kepler offers to sign you in to the agent. See [Agent Integrations](/kepler/agent-integrations#install-an-agent).
 - Under **New sessions start in**, pick **Chat**, Kepler's own view of the agent, or **Terminal**, the agent's command-line app.
 - If your code is on another machine, use **Work on another machine?** to move this window there. Remote environments need a paid plan.
 
 If you installed an agent that Kepler did not find, click **Rescan**. To go on without an agent, click **Continue without an agent**. You can set one up later in **Settings → Agents**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/onboarding-no-agent-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/onboarding-no-agent-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The guided start's first step, Choose your coding agents, with no agent found: the nine coding agents sit in a box headed Set up a coding agent to get started, with Rescan and the line Install one here, or Rescan if you installed one yourself., each agent with an install or locate button. Kep says Hmm, no agents here yet. Installed one yourself? Press Rescan., and the step ends with I'll explore on my own and Continue without an agent.">
+  <a href="/wp-content/uploads/onboarding-no-agent-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/onboarding-no-agent-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The guided start's first step, Choose your coding agents, with no agent found: the list is headed Set up a coding agent to get started, with Rescan and the line Install one here, or Rescan if you installed one yourself., and the nine coding agents are dashed tiles, each ending in an arrow that you click to install or locate it. Kep says Hmm, no agents here yet. Installed one yourself? Press Rescan., and the step ends with I'll explore on my own and Continue without an agent.">
   </a>
   <figcaption style="text-align:center; color:#888">The first step of the guided start, with no agent found.</figcaption>
 </figure>
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/onboarding-agents-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/onboarding-agents-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The guided start's first step, Choose your coding agents, under Welcome to Kepler and the 01 Agents / 02 Theme & notifications steps: Claude Code and Codex are switched on among the nine coding agents, the others offer an install button, and New sessions start in offers Chat (selected) or Terminal. Kep says Kepler found Claude Code and Codex, with I'll explore on my own and Next at the bottom.">
+  <a href="/wp-content/uploads/onboarding-agents-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/onboarding-agents-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The guided start's first step, Choose your coding agents, under Welcome to Kepler and the 01 Agents / 02 Theme & notifications steps: Claude Code and Codex are switched on among the nine coding agents, the others are dashed tiles ending in an arrow that you click to install or locate them, and New sessions start in offers Chat (selected) or Terminal. Kep says Kepler found Claude Code and Codex, with I'll explore on my own and Next at the bottom.">
   </a>
   <figcaption style="text-align:center; color:#888">The first step of the guided start, with two agents found and switched on.</figcaption>
 </figure>

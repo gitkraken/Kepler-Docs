@@ -29,13 +29,13 @@ Arrange the Dashboard so it shows the work you need to see. The Dashboard is a s
 What you choose in the **View** menu is saved to the view at once. To learn what each part of the screen is, see [The Kepler Interface](/kepler/kepler-interface).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/arrange-work-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/arrange-work-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The Dashboard's arranging controls: the row of views (Todo, Tasks selected, Agent Graph, New view), and under it the list toggle, the search box reading Search title, ref, or repo…, the View button showing the List glyph, Inbox and Updated, then Panel layout and Refresh at the right. Tasks and Agent Graph carry the orange mark of a task waiting on you.">
+  <a href="/wp-content/uploads/arrange-work-oct-2026-v6@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/arrange-work-oct-2026-v6@2x.png" class="help-center-img img-bordered" alt="The Dashboard's arranging controls: the row of views (Todo and Tasks with Kepler's own Todo and Task icons, Tasks selected, Agent Graph, New view), and under it the list toggle, the search box reading Search title, ref, or repo…, the View button showing the List glyph, Inbox and Updated, then Panel layout and Refresh at the right. Tasks and Agent Graph carry the orange mark of a task waiting on you.">
   </a>
   <figcaption style="text-align:center; color:#888">The views, and the search, View, panel and refresh controls under them.</figcaption>
 </figure>
 
-To open several tasks at once, use the open button on a section header, or **Open group** on one of [your groups](#your-groups). The toolbar has no button that opens every row in the list.
+To open several tasks at once, use the open button on a section header, or **Open group** on one of [your groups](#your-groups).
 
 In a narrow window, the search box becomes a search icon. Click it, or press **Cmd/Ctrl+F**, to open the search box.
 
@@ -53,8 +53,8 @@ Kepler starts you with a **Todo** view, a **Tasks** view, and an **Agent Graph**
 A view keeps its own layout, grouping, sort, and filters. Every window shares the same views.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/saved-views-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/saved-views-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Tasks view's menu open from its tab in the Dashboard's row of views (Todo, Tasks, Agent Graph, New view), where Tasks and Agent Graph carry the orange mark of a task waiting on you: Rename with F2, Change icon showing Rocket, Show counts on views ticked, View options, Duplicate view highlighted, Move left, Move right, Views position, and Delete view.">
+  <a href="/wp-content/uploads/saved-views-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/saved-views-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Tasks view's menu open from its tab in the Dashboard's row of views (Todo, Tasks, Agent Graph, New view), where Tasks and Agent Graph carry the orange mark of a task waiting on you: Rename with F2, Change icon showing Task, Show counts on views ticked, View options, Duplicate view highlighted, Move left, Move right, Views position, and Delete view.">
   </a>
   <figcaption style="text-align:center; color:#888">A view's menu.</figcaption>
 </figure>
@@ -74,7 +74,7 @@ A view keeps its own layout, grouping, sort, and filters. Every window shares th
 
 You cannot delete your last Todo view or your last Tasks view.
 
-**Add a view.** Click **New view** after the views, then choose **Todo**, **Tasks**, or **Duplicate current view**. Name the new view, set it up in the menu that opens, and choose **Done**.
+**Add a view.** Click **New view** after the views, then choose **Todo**, **Tasks**, **Agent Graph**, or **Duplicate current view**. Name the new view, set it up in the menu that opens, and choose **Done**.
 
 **Reorder the views.** Drag a view to a new place, or use **Move left** and **Move right** in its menu. On the Dashboard, **Cmd/Ctrl+Shift+[** and **Cmd/Ctrl+Shift+]** show the previous or next view, and **Cmd+Option+[** and **Cmd+Option+]** (**Ctrl+Alt+[** and **Ctrl+Alt+]** on Windows and Linux) move the view you are on. See [Keyboard shortcuts](/kepler/settings-app#keyboard-shortcuts).
 
@@ -85,8 +85,8 @@ If the views run out of room, they fold into 1 button. Click it to see every vie
 To pick another icon for a view, open the view's menu and point to **Change icon**. Search for an icon or choose one from the grid. The first icon is the view type's default.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/dashboard-view-icon-picker-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/dashboard-view-icon-picker-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Tasks view's menu open from its tab, with Change icon, Rocket, highlighted and its picker open beside it: a Search icons field over a grid of six rows of icons, the rocket first and outlined, and a footer reading Default, Rocket.">
+  <a href="/wp-content/uploads/dashboard-view-icon-picker-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/dashboard-view-icon-picker-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Tasks view's menu open from its tab, with Change icon, Task, highlighted and its picker open beside it: a Search icons field over a grid of icons, Kepler's Task icon first and outlined, and a footer reading Default, Task.">
   </a>
   <figcaption style="text-align:center; color:#888">The icon picker, from a view's Change icon row.</figcaption>
 </figure>
@@ -98,8 +98,8 @@ By default, the views sit in a row below the title bar. To move them, choose **V
 Along the left side, the views start as icons. To show their names, click **Expand views** at the foot of the column, or drag the column's edge. **Collapse views** returns to icons.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/dashboard-views-side-rail-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/dashboard-views-side-rail-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Dashboard with its views along the left side, expanded to show names: Todo, Tasks (selected), Agent Graph and New view at the top, Settings and the Collapse views button at the foot. Tasks and Agent Graph carry the orange mark of a task waiting on you. The top bar keeps New task, Ask, Feedback and the account but no Settings button, and the Tasks list fills the rest of the window under its toolbar.">
+  <a href="/wp-content/uploads/dashboard-views-side-rail-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/dashboard-views-side-rail-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Dashboard with its views along the left side, expanded to show names: Todo and Tasks with Kepler's own Todo and Task icons, Tasks selected, then Agent Graph and New view at the top, Settings and the Collapse views button at the foot. Tasks and Agent Graph carry the orange mark of a task waiting on you. The top bar keeps New task, Ask, Feedback and the account but no Settings button, and the Tasks list fills the rest of the window under its toolbar.">
   </a>
   <figcaption style="text-align:center; color:#888">The views along the left side of the window, with their names shown.</figcaption>
 </figure>
@@ -151,7 +151,7 @@ The layout switch at the top of the **View** menu sets how Kepler shows the view
 
 **List** is the default. Each view remembers its own layout, so a Todo view can show a list while a Tasks view shows a board. **List** and **Board** both use the view's grouping and filters.
 
-**Board** shows the sections of the *current* grouping as columns side by side, so **Group by** sets what the columns are. When you group by **Progress**, the columns are the stages: **Exploration**, **In Development**, **In Review**, and **Done**. These columns stay in place as tasks move between them, and an empty column reads **Nothing here**. **On hold**, **Later**, and **Archived** appear only when they hold a task, or while you drag a card. On every other grouping, Kepler hides empty sections, except your own groups, which stay so you can drop tasks into them.
+**Board** shows the sections of the *current* grouping as columns side by side, so **Group by** sets what the columns are. When you group by **Progress**, the columns are the stages, from **Exploration** to **Done**, and they stay in place even when empty. **On hold**, **Later**, and **Archived** appear only when they hold a task, or while you drag a card. On every other grouping, Kepler hides empty sections, except your own groups.
 
 When **Your groups** is on and another grouping is chosen, the **Board** becomes a grid. Each group is a row (a lane), and the grouping's sections are columns across every lane. See [Your groups](#your-groups).
 
@@ -241,7 +241,7 @@ A finished turn stays unread until you look at it.
 
 A section that refuses the card fades, and says why when you hover over it. To see what a drag looks like, see [Set a task's progress](#set-a-tasks-progress).
 
-A task stays in **Running** briefly between turns, so it does not jump between sections. Running tasks keep the order they started in, instead of changing places as they work. Moves into **Unread** and **Needs attention** happen at once, because they mean something changed.
+Tasks in **Running** keep their places while they work, so the list does not jump. Moves into **Unread** and **Needs attention** happen at once.
 
 **On hold** and **Later** are for tasks you do not want to work on now, so a held task stays there even while an agent works on it. A held task still moves up when something needs you: an unread turn or a blocked prompt lists it under **Unread** or **Needs attention**.
 
@@ -256,22 +256,9 @@ A task stays in **Running** briefly between turns, so it does not jump between s
 
 Tasks views have no Status grouping. A task's status is its progress stage, so group by **Progress** instead.
 
-On Todo, **Needs my attention** groups each item by what it needs from you now, most urgent first:
+On Todo, **Needs my attention** groups each item by what it needs from you now, most urgent first, from **Ready to merge** and **Changes requested** down to **No action needed**. Each section header has a **?** button that explains what the section holds.
 
-- **Ready to merge**
-- **Changes requested**
-- **Cannot merge yet**
-- **Needs my review**
-- **Re-review**
-- **Approved, comments open**
-- **Comments**
-- **Assigned to me**
-- **Filed by me, unassigned**
-- **No action needed**, last, so it never pushes items that need you further down the list
-
-Each section header has a **?** button (**About {label}**) that explains what the section holds. For example, **Ready to merge** is *Yours, approved, no open feedback and no blockers the provider can see. It only needs merging.*
-
-On Todo, **Priority** reads an item's priority from its labels: names such as *P0* to *P4*, a *priority:* prefix, or a bare *blocker*, *critical*, *urgent*, *highest*, or *lowest*. When an item has several, the most urgent label counts. The sections are **Urgent**, **High**, **Medium**, **Low**, and **Unprioritised**, and every pull request goes under **Not applicable**. Kepler does not read a tracker's own priority field, so an issue with no priority label is **Unprioritised**.
+On Todo, **Priority** reads an item's priority from its labels, such as *P0* to *P4* or *urgent*. Kepler does not read a tracker's own priority field, so an issue with no priority label is **Unprioritised**, and every pull request goes under **Not applicable**.
 
 **Age** groups by when an item was created: **Today**, **This week**, **This month**, **Older**, and **No date**. **Assignee** groups by who an item is assigned to on each provider, with **Unassigned** for the rest.
 
@@ -283,11 +270,7 @@ Items with no repository or provider go under **No repository** and **No provide
 
 The other groupings arrange tasks by what Kepler can see. A group is one you make yourself: a name and a color you give to tasks that belong together, such as the tasks for one feature or one release. A task can be in 1 group at a time, and groups are available only on Tasks views.
 
-**Create a group.** The **New group** form asks for a **Group name** and a **Color**. It offers 12 colors and starts on the one your groups use least, so a new group looks different from your other groups. Choose **Create group** to save the group. These rules apply:
-
-- A group needs a name (*Give the group a name*).
-- Each active group needs its own name, regardless of capitalization (*A group with this name already exists*). You can reuse an archived group's name.
-- What you type stays in the form if you press **Escape** or click away, until you close the window. Only **Cancel** or saving clears it.
+**Create a group.** The **New group** form asks for a **Group name** and a **Color**. Choose **Create group** to save the group. Each active group needs its own name, regardless of capitalization. You can reuse an archived group's name.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/new-task-group-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
@@ -299,7 +282,7 @@ The other groupings arrange tasks by what Kepler can see. A group is one you mak
 **Put tasks in a group.** You can add tasks to a group in 4 ways:
 
 - **From a task's menu.** A task's **⋮** and right-click menus, on the Dashboard and on the task page, have **Add to group**. Its submenu lists your groups with their colors, with the task's current group checked. Below them, **New group…** opens the form with this task already in it, and **Remove from group** appears for a task that has a group. A task with sub-tasks also offers **Group with its {count} sub-tasks**, which opens the form with the task's name and with the task and its sub-tasks in it.
-- **By dragging one task onto another.** Hold a dragged task over another task for half a second, and a pill appears on the task underneath: **Create group** when that task has no group, or **Add to {group}** in its group's color. Drop the task on the pill. **Create group** opens the form with both tasks in it and the other task's title as the name. The pill needs a pointer. From the keyboard, use the menu.
+- **By dragging one task onto another.** Hold a dragged task over another task until a pill appears: **Create group**, or **Add to {group}** when that task has a group. Drop the task on the pill. **Create group** opens the form with both tasks in it. From the keyboard, use the menu.
 - **From a selection.** Right-click inside a selection of 2 or more tasks and choose **New group with {count} tasks…**, **Add {count} tasks to group**, or **Remove {count} tasks from group**. See [Act on several tasks at once](#act-on-several-tasks-at-once).
 - **By dropping into a group's section.** With the list grouped by your groups, drag a task into another group's section to move it there, or onto **Ungrouped** to remove it from its group.
 
@@ -312,7 +295,7 @@ To add an archived task to a group, restore the task first.
   <figcaption style="text-align:center; color:#888">Add to group, in a task's menu.</figcaption>
 </figure>
 
-**See a task's group.** Under any grouping, a task in a group shows its group's color: a bar on the left edge of a **List** row, or a chip with the group's name after a **Board** card's title. Hover over the bar or chip to see the group's name and a summary (*3 tasks: 1 needs you, 2 unread*). Click it to open the group's menu without opening the task:
+**See a task's group.** Under any grouping, a task in a group shows its group's color: a bar on the left edge of a **List** row, or a chip with the group's name after a **Board** card's title. Hover over the bar or chip to see the group's name and a summary of its tasks. Click it to open the group's menu without opening the task:
 
 | Item | What it does |
 |---|---|
@@ -322,12 +305,10 @@ To add an archived task to a group, restore the task first.
 | **Remove from group** | Takes this task out of the group |
 | **Edit group…**, **Archive group**, **Delete group…** | Act on the group itself, as from its header (below) |
 
-**Group the list by your groups.** Turn on the **Your groups** switch in the **View** menu. The line under the switch describes the result:
+**Group the list by your groups.** Turn on the **Your groups** switch in the **View** menu:
 
-- **With None chosen** (*Shows a section per group*), each group is a section, in your own order whatever the sort, followed by **Ungrouped** for tasks without a group. Each group's archived tasks are in an **Archived** section just after the group, folded at first. A group with no tasks still has its section, so you can drop tasks into it.
-- **With another grouping chosen** (*Shows {axis} within each group*), the **View** button reads, for example, **Your groups › Inbox**, and each group has its own **Inbox** sections, which you can fold separately. On the **Board**, each group becomes a lane, and the grouping's sections become columns across every lane.
-
-Until you have a group, the switch says *Drag a task onto another to group them*.
+- **With None chosen**, each group is a section, in your own order whatever the sort, followed by **Ungrouped** for tasks without a group. Each group's archived tasks are in a folded **Archived** section just after the group. A group with no tasks still has its section, so you can drop tasks into it.
+- **With another grouping chosen**, such as **Inbox**, each group has its own sections of that grouping. On the **Board**, each group becomes a lane, and the grouping's sections become columns across every lane.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/task-groups-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -336,7 +317,7 @@ Until you have a group, the switch says *Drag a task onto another to group them*
   <figcaption style="text-align:center; color:#888">A Tasks view, grouped by your groups.</figcaption>
 </figure>
 
-**A group's header.** Each group's header shows the group's color and name, then its count of active tasks and a dot for each state its tasks' sessions are in. A folded group therefore still shows whether something in it needs you. **Select** on a group header selects every task in the group. As the header gets narrower, it hides the session dots first, then shortens **Select** to an icon, so the name stays readable.
+**A group's header.** Each group's header shows the group's color and name, then its count of active tasks and a dot for each state its tasks' sessions are in. A folded group therefore still shows whether something in it needs you. **Select** on a group header selects every task in the group.
 
 To open the group's menu, right-click the header or click its **⋮**. The menu acts on the group, never on its tasks:
 
@@ -346,7 +327,7 @@ To open the group's menu, right-click the header or click its **⋮**. The menu 
 | **Move group to top**, **Move group up**, **Move group down**, **Move group to bottom** | Moves the group in your order |
 | **Manage groups…** | Opens **Settings → Tasks → Groups** (below) |
 | **Archive group** | Archives the group. Offered only when every task in it is archived |
-| **Delete group…** | Removes the group after a confirmation, *Its {count} tasks stay, ungrouped.* |
+| **Delete group…** | Removes the group after a confirmation. Its tasks stay, ungrouped |
 
 You can also drag a group's header to move the group before or after another group. **Ungrouped**, and the sections inside a group, cannot be moved.
 
@@ -427,7 +408,7 @@ Dates sort newest first. **Name** and **ID** sort in ascending order. **ID** com
 
 You do not have to switch to **Manual** first. If you drop a task in a new place in its own section while the list is sorted another way, Kepler saves the order you see, including your move, as the view's **Manual** order, and switches the sort to **Manual**. If you switch to **Manual** yourself, Kepler also keeps the current order, so no task changes place.
 
-If the view already has a saved **Manual** order, a drop under another sort would replace it. Kepler asks first, in a popover beside the dropped task: *Replace your Manual order?* To keep the move, choose **Switch and replace Manual**. To put the task back, choose **Cancel**, press **Escape**, or click away.
+If the view already has a saved **Manual** order, a drop under another sort would replace it, so Kepler asks first. To keep the move, choose **Switch and replace Manual**. To put the task back, choose **Cancel**, press **Escape**, or click away.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/manual-sort-replace-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
@@ -435,8 +416,6 @@ If the view already has a saved **Manual** order, a drop under another sort woul
   </a>
   <figcaption style="text-align:center; color:#888">Kepler asks before a drop replaces your saved Manual order.</figcaption>
 </figure>
-
-If a move fails, Kepler shows *Unable to move the task*, and restores the previous sort if the move had changed it.
 
 ***
 
@@ -453,9 +432,9 @@ By default, Kepler sets a task's progress stage from its Git branches and pull r
 
 You can set the stage in these ways:
 
-- **The progress control.** Click the stage name on a task row, in the preview header, or in the task page header to open the **Progress** menu: **Automatic** (*Updates as you work*), then **Exploration**, **In Development**, **In Review**, **On hold**, **Later**, and **Done**. When there is no room for the stage name, the control shows only the stage's icon.
-- **The task menus.** A task's **⋮** and right-click menus have the same choices under a **Progress** submenu, plus **Reopen** while the task is Done. Each item's hint says where the task will go (*Moves it to In Review*).
-- **Drag a card.** In any grouping, on **List** or **Board**, drag a task's card or row. When grouped by **Progress**, drop it on another stage. On a touch screen, press and hold the card to pick it up. Press **Escape** to cancel the drag. If you drop the card in its own section, Kepler reorders it (see [Put tasks in your own order](#put-tasks-in-your-own-order)). You cannot drag a task that Kepler is still preparing. If you hold the card over another task, Kepler offers to group the 2 tasks (see [Your groups](#your-groups)). If you drag a task that is part of a selection, you drag the whole selection.
+- **The progress control.** Click the stage name on a task row, in the panel header, or in the task page header to open the **Progress** menu: **Automatic**, then each stage, **On hold**, and **Later**.
+- **The task menus.** A task's **⋮** and right-click menus have the same choices under a **Progress** submenu, plus **Reopen** while the task is Done.
+- **Drag a card.** In any grouping, on **List** or **Board**, drag a task's card or row. When grouped by **Progress**, drop it on another stage. On a touch screen, press and hold the card to pick it up. Press **Escape** to cancel the drag. If you drop the card in its own section, Kepler reorders it (see [Put tasks in your own order](#put-tasks-in-your-own-order)).
 - **The Mark as bar.** While you drag, a **Mark as** bar appears over the toolbar with chips for what the card can become: **Read** or **Unread**, the stages, **On hold** and **Later**, **Reopen** for a Done task, and **Archive task**. For an archived task, it shows only **Restore**. Drop the card on a chip.
 - **From the keyboard.** When a card has focus on the **Board** grouped by **Progress**, press **Cmd/Ctrl+Shift+←** or **Cmd/Ctrl+Shift+→** to move it 1 column. The card stops at **Exploration** and **Done**.
 
@@ -466,7 +445,7 @@ You can set the stage in these ways:
   <figcaption style="text-align:center; color:#888">Dragging a card to another stage, with the Mark as bar over the toolbar.</figcaption>
 </figure>
 
-While you drag, the card stays faded in its original place, and a line shows where it would land. Each section that accepts the card has a dashed outline, which becomes solid when the card is over it. Sections that do not accept the card fade, and say why when you hover over them. On the **Board**, a folded column opens after you hold the card over it for half a second.
+While you drag, each section that accepts the card has a dashed outline. Sections that do not accept it fade, and say why when you hover over them. On the **Board**, a folded column opens when you hold the card over it.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/drag-drop-bar-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
@@ -509,7 +488,7 @@ Agents can also set the stage, put a task on hold until a condition, or set it a
 | **Until tomorrow**, **Until next week** | At 9:00 the next morning, or at 9:00 next Monday |
 | **Until a custom date...** | At the date and time you choose, up to a year away |
 
-The pull request rows need an open or draft pull request linked to the task.
+The pull request rows need an open or draft pull request linked to the task. When the task has several, each pull request row opens a submenu: wait on **All running pull requests** for CI, or **Any pull request** for a review or a merge, or pick one pull request.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/hold-until-menu-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -533,8 +512,8 @@ The **Filters** section at the end of the **View** menu has a submenu for each f
   <figcaption style="text-align:center; color:#888">The Filters section, with a facet's flyout open.</figcaption>
 </figure>
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/filter-todo-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/filter-todo-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The View menu on Todo, under the View button reading Type, Updated and Mine: the List and Board switch, the Mine and All scope switch with Mine chosen and Your work, in every org under it, Group by Type and Sort by Updated, then Filters: Needs my attention, Your role, Type, Linked work, Status, Priority, Age and Provider, then a GitHub section with Repository, Assignee and Label, each set to Any. The Provider flyout lists GitHub with its count of 5, and Manage integrations.">
+  <a href="/wp-content/uploads/filter-todo-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/filter-todo-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The View menu on Todo, under the View button reading Type, Updated and Mine: the List and Board switch, the Mine and All scope switch with Mine chosen and Your work, in every org under it, Group by Type and Sort by Updated, then Filters: Needs my attention, Review requests, Your role, Type, Linked work, Status, Priority, Age and Provider, then a GitHub section with Repository, Assignee, Author, Reviewer and Label, each set to Any. The Provider flyout lists GitHub with its count of 5, and Manage integrations.">
   </a>
   <figcaption style="text-align:center; color:#888">The View menu on Todo. Each connected provider gets its own section, here GitHub.</figcaption>
 </figure>
@@ -543,7 +522,7 @@ Each type of view has these facets:
 
 | View | Facets |
 |---|---|
-| **Todo** | Needs my attention · Your role · Type · Linked work · Status · Priority · Age · Provider, then one section per connected provider with its own Repository · Assignee · Issue type · Label · Project · Iteration or Sprint |
+| **Todo** | Needs my attention · Review requests · Your role · Type · Linked work · Status · Priority · Age · Provider, then one section per connected provider with its own Repository · Assignee · Author · Reviewer · Issue type · Label · Project · Iteration or Sprint |
 | **Tasks** | Progress · Activity · Repository · Agent · Session · Group · Linked work |
 
 Facets with a fixed set of values, such as **Progress** or **Priority**, always list every value, even one that nothing matches. Other facets list only the values in your work, and Kepler hides a facet that has no values to choose from. For example, if you work in a single repository, the menu has no Repository facet.
@@ -559,7 +538,7 @@ Facets with a fixed set of values, such as **Progress** or **Priority**, always 
 
 **Session** offers *Has a session* and *Has a live session*. To find tasks *without* a pull request, issue, or session, exclude the value.
 
-**Group** lists each of [your groups](#your-groups), including empty ones, and **Ungrouped** for tasks without a group. If a filter still names a group that was deleted or archived, the facet shows it as **Removed group**. When the list is grouped by your groups, the facet also limits which group sections appear.
+**Group** lists each of [your groups](#your-groups), including empty ones, and **Ungrouped** for tasks without a group. When the list is grouped by your groups, the facet also limits which group sections appear.
 
 **Include or exclude any value.** Click a value to include it. To exclude a value instead, hover over it and click its minus button, or press **Shift+Enter** from the keyboard. An excluded value reads *not {value}*. On Todo, excluding a provider's value removes only that provider's items, so excluding a GitHub label never hides a Jira issue.
 
@@ -593,7 +572,7 @@ When a search or a filter narrows the list, pills at the right end of the search
 
 While a search is on, the filter pill counts only hidden rows that match the search. If a search seems to miss something, the filter pill shows whether your filters are hiding it. Todo loads in pages, so its counts read *40+* or *7+ hidden* until everything has loaded.
 
-When nothing matches, the empty list reads **Nothing matches your search**, or **Nothing matches these filters** when only filters narrow it. It offers a button named for what it resets: **Clear search**, **Clear filters**, or **Clear search and filters**.
+When nothing matches, the empty list offers a button that clears the search, the filters, or both.
 
 Search covers only the work the view has already loaded. On a Todo view, that is the work its scope lists. See [Choose what a Todo view lists](#choose-what-a-todo-view-lists).
 
@@ -634,15 +613,15 @@ When a task meets all of these conditions, the preview header and the task page 
   <figcaption style="text-align:center; color:#888">The Ready to archive? suggestion on a Done task.</figcaption>
 </figure>
 
-The confirmation offers the same options as deleting a task: **Also delete worktrees**, **Also delete branches** (after you tick **Also delete worktrees**), and **Also delete the branch on the remote** (after you tick **Also delete branches**). You can therefore remove a finished task's worktrees and branches from disk without deleting the task. With **Also delete worktrees** ticked, the dialog lists each worktree, riskiest first, with what will happen to it (*Merged into main*, *2 uncommitted files*, *In open PR #42*). It also names the worktrees it keeps: the repository's main worktree, and worktrees that another task still uses. Kepler keeps a worktree that would lose work unless you tick the extra box that names exactly what would be lost. To check before you decide, open the changes from the row of a worktree at risk.
+The confirmation offers the same options as deleting a task: **Also delete worktrees**, **Also delete branches** (after you tick **Also delete worktrees**), and **Also delete the branch on the remote** (after you tick **Also delete branches**). You can therefore remove a finished task's worktrees and branches from disk without deleting the task. With **Also delete worktrees** ticked, the dialog lists each worktree with what will happen to it, such as *2 uncommitted files*, and names the worktrees it keeps, such as the repository's main worktree. Kepler keeps a worktree that would lose work unless you tick the extra box that names what would be lost. To check before you decide, open the changes from the row of a worktree at risk.
 
-With **Also delete the branch on the remote** ticked, Kepler deletes each branch's remote copy after it deletes the local branch, unless a check says to keep it. Kepler keeps a branch with no upstream, or a default branch, without a message. For any other branch it keeps, a *Kept a branch on the remote* message says why, for example *it has an open pull request*, *it has commits that are not on the remote*, *the remote has commits this branch does not*, or *the remote branch changed after it was checked*.
+With **Also delete the branch on the remote** ticked, Kepler also deletes each branch's remote copy, unless that would lose work, such as a branch with an open pull request or commits that are not on the remote. A message says which branches it kept, and why.
 
 **Archived** takes priority over every other section, so an archived task stays in **Archived** even if a shell is still open on it.
 
 **Restore task** replaces **Archive task** in an archived task's **⋮** menu, and also appears in the task page's header. It restores the task at once, without asking, even when another active task holds the same pull request (several tasks can share one). A restored task stays in its group, and if that group was archived, Kepler restores the group too.
 
-To archive, restore or delete several tasks at once, click **Select** on a section header in a Tasks view. That part of the header becomes a bar with a select-all box, **{count} selected**, and icon buttons for the actions, each named in its tooltip. The section's rows show checkboxes. You can select in 1 section at a time, and while you select, clicking a row ticks it instead of opening its panel. A task that Kepler is still preparing has no checkbox, and select-all skips it.
+To archive, restore or delete several tasks at once, click **Select** on a section header in a Tasks view. The header becomes a bar with a select-all box and the actions, and the section's rows show checkboxes. You can select in 1 section at a time, and while you select, clicking a row ticks it instead of opening its panel.
 
 The bar has these buttons:
 
@@ -662,9 +641,9 @@ The bar has these buttons:
 
 The tasks you open with **Shift**-click or **Cmd/Ctrl**-click (see [Open a panel](/kepler/kepler-interface#open-a-panel)) are also a selection you can act on. While 2 or more tasks are selected, right-clicking or dragging any one of them acts on all of them. Right-clicking or dragging a task outside the selection acts on that task only. A row's **⋮** always acts on its own row.
 
-Right-clicking inside the selection opens a selection menu instead of the task menu. Each item shows how many tasks it acts on: **New group with {count} tasks…**, **Add {count} tasks to group**, **Remove {count} tasks from group**, **Archive {count} tasks**, **Restore {count} tasks**, and **Delete {count} tasks**. Kepler leaves out items with nothing to act on, and the group items skip archived tasks. While the menu is open, the rows it acts on are outlined. **Archive**, **Restore**, and **Delete** open the same batch confirmation as a section's **Select** bar.
+Right-clicking inside the selection opens a selection menu instead of the task menu, and each item counts the tasks it acts on. With it you can set the progress of every selected task, mark them read or unread, star or unstar them, group or ungroup them, shut down their agents, and archive, restore or delete them. **Shut down agents** asks first while an agent is still working. The group and **Progress** items skip archived tasks. **Archive**, **Restore**, and **Delete** open the same batch confirmation as a section's **Select** bar. For the full menu, see [Task rows](/kepler/kepler-interface#task-rows).
 
-Dragging a selected task drags the whole selection. Each drop target says how many of the tasks it accepts (*2 of 3 tasks*). After the drop, Kepler reports how many tasks moved and how many stayed where they were. Under the **Manual** sort, the tasks land together as one block.
+Dragging a selected task drags the whole selection. Each drop target says how many of the tasks it accepts. After the drop, Kepler reports how many tasks moved and how many stayed where they were. Under the **Manual** sort, the tasks land together as one block.
 
 To clean up worktrees and local branches instead of tasks, open **Settings → Repositories** and choose **Manage worktrees and branches**. The **Worktrees and branches** page lists every worktree, and every local branch that no worktree has checked out. You can filter the list by **Safe to delete**, **Needs update**, **Conflicts**, **Stale**, or **All**. On this page, you can:
 

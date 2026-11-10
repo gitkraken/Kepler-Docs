@@ -28,7 +28,7 @@ An **Action** is a named prompt you fire at a task, issue, or pull request to st
   <figcaption style="text-align:center; color:#888">The Action split button, chevron open. One click runs the default; the chevron lists every applicable Action, including your own.</figcaption>
 </figure>
 
-You can change every Action's wording and agent, and choose which Action is the one-click default for each kind of work.
+You can change every Action's wording and agent, and choose which Action each kind of work suggests as its one-click default.
 
 ***
 
@@ -36,7 +36,7 @@ You can change every Action's wording and agent, and choose which Action is the 
 
 Kepler comes with 4 Actions, and you can edit each of them.
 
-| Action | What it asks the agent to do | Offered on |
+| Action | What it asks the agent to do | Available on |
 |---|---|---|
 | **Plan** | Research the code first, write out the proposed approach, change nothing, and wait for your confirmation | Tasks, Issues, Pull requests |
 | **Implement** | Read enough surrounding code to be confident, then make the changes directly rather than describing them | Tasks, Issues, Pull requests |
@@ -48,8 +48,8 @@ Kepler comes with 4 Actions, and you can edit each of them.
 You can edit and reset built-in Actions, but you cannot delete them.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/reset-action-to-default-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/reset-action-to-default-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="The built-in Review Action's row in Settings › Actions after it was edited, with a restore icon beside its chevron and no edit or delete icon.">
+  <a href="/wp-content/uploads/reset-action-to-default-aug-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/reset-action-to-default-aug-2026-v3@2x.png" class="help-center-img img-bordered" alt="The built-in Review Action's row in Settings › Actions after its prompt was edited: the edited prompt, Please review the code changes in this worktree. Check for bugs and missing tests…, over Available on tasks and pull requests, with a restore icon beside its chevron and no delete icon.">
   </a>
   <figcaption style="text-align:center; color:#888">An edited built-in Action's row: Restore default, no delete.</figcaption>
 </figure>
@@ -58,11 +58,11 @@ You can edit and reset built-in Actions, but you cannot delete them.
 
 ## Where the Action button appears
 
-You fire Actions from a **split button**. The left half runs your preferred Action for that surface; the chevron opens the full list.
+You fire Actions from a **split button**. The left half runs the Action suggested for that surface; the chevron opens the full list.
 
 <div class="table-center" markdown="1">
 
-| Surface | Preferred Action comes from |
+| Surface | Suggested Action comes from |
 |---|---|
 | A row in **Todo** (an issue or pull request) | the row's own kind of item |
 | The side panel, on the selected item | the selected item's kind |
@@ -71,7 +71,7 @@ You fire Actions from a **split button**. The left half runs your preferred Acti
 
 Firing an Action from a Todo row is also how an issue or pull request that is not tracked yet **becomes** a task in Kepler.
 
-On a narrow card, the button shrinks to a play icon. On a phone, a row has a single **⋮** menu instead (**Actions for {title}**) that lists every Action.
+On a narrow card, the button shrinks to a play icon. On a phone, a row has a single **⋮** menu instead that lists every Action.
 
 In the list of Actions, hover a row, or move focus to it, to read that Action's prompt, line breaks included.
 
@@ -82,7 +82,7 @@ In the list of Actions, hover a row, or move focus to it, to read that Action's 
   <figcaption style="text-align:center; color:#888">The split button on a Todo row: the row's kind of item decides which Action fills the left half.</figcaption>
 </figure>
 
-Inside a task, Actions live under the **chevron on the composer's send button** rather than on a split button of their own: type a refinement, then pick the Action to fire it with. In a composer that starts something new, such as the **New task** composer or a panel's draft, picking an Action does not fire it. It sets the main button to that Action and shows the Action's own agent, if it names one, in the agent pill. See [Create a task](/kepler/create-task#from-the-new-task-composer).
+Inside a task, Actions are under the **chevron on the composer's send button**: type a refinement, then pick the Action to fire it with. In a composer that starts something new, such as the **New task** composer or a panel's draft, picking an Action does not fire it. It sets the main button to that Action, and the agent pill shows the Action's own agent, if it names one. See [Create a task](/kepler/create-task#from-the-new-task-composer).
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/inside-task-actions-button-aug-2026.png" target="_blank" rel="noopener noreferrer">
@@ -103,7 +103,7 @@ An Action runs at once, unless Kepler needs you to choose where it runs.
 
 ### The left half: one click
 
-The left half of the button runs your preferred Action straight away, in the current session if one exists. It stops to ask only when the task has **2 or more worktrees**.
+The left half of the button runs the suggested Action straight away, in the current session if one exists. It stops to ask only when the task has **2 or more worktrees**.
 
 The number of issues or pull requests attached to the task does not change what the Action does. Kepler sends the Action's prompt word for word, and every attached item reaches the agent as shared context. To have the agent look at one item first, say so in the prompt box or in the chat.
 
@@ -139,7 +139,7 @@ When an Action runs on worktrees:
 
 An Action never runs in a worktree you have removed.
 
-A task with no worktree runs the Action in a folder attached to it, or else in the task's own folder. With neither, Kepler says *This task has no folder or worktree to start a session in.*
+A task with no worktree runs the Action in a folder attached to it, or else in the task's own folder. With neither, Kepler tells you it has nowhere to start a session.
 
 ### Firing into a running session
 
@@ -154,18 +154,18 @@ Firing into a live session **queues** the prompt behind whatever the agent is cu
 
 ***
 
-## Set your preferred Actions
+## Set your suggested Actions
 
-To set your preferred Actions, open **Settings → Actions → Preferred Actions**.
+To choose the Action each kind of item suggests, open **Settings → Actions → Suggested Actions**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/preferred-actions-settings-sep-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/preferred-actions-settings-sep-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Preferred Actions section of Settings › Actions, with one Action picked for Tasks, Issues, Pull requests I authored and Pull requests from others.">
+  <a href="/wp-content/uploads/preferred-actions-settings-sep-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/preferred-actions-settings-sep-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Suggested Actions section of Settings › Actions with its description: Tasks (Tasks you create in Kepler), Issues (Issues from your connected trackers), Pull requests I authored (Pull requests you opened) and Pull requests from others (Pull requests someone else opened, like ones you're asked to review), each with its Action picked, then the Suggest automatically switch and its help.">
   </a>
-  <figcaption style="text-align:center; color:#888">The Preferred Actions settings.</figcaption>
+  <figcaption style="text-align:center; color:#888">The Suggested Actions settings.</figcaption>
 </figure>
 
-Each row sets the Action that the left half of the button runs for that kind of item.
+Each row sets the Action that the left half of the button runs for that kind of item. A hint under each row names the items it covers, such as *Pull requests you opened*.
 
 <div class="table-center" markdown="1">
 
@@ -182,18 +182,20 @@ Pull requests split by **who wrote them**, not by what you want to do with them.
 
 To show only the chevron on the button for a kind of item, set its slot to **None**.
 
+**Suggest automatically**, below the pickers, is on by default. When you link an issue or pull request to a new task, the composer's button switches to that item's suggested Action, and anything you type is added to the Action's prompt. Turn it off to keep **Start**.
+
 <figure style="text-align:center">
   <a href="/wp-content/uploads/set-to-none-action-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/set-to-none-action-aug-2026.png" class="help-center-img img-bordered" alt="A preferred-action slot set to None, showing only the chevron on that surface">
+    <img src="/wp-content/uploads/set-to-none-action-aug-2026.png" class="help-center-img img-bordered" alt="A suggested-Action slot set to None, showing only the chevron on that surface">
   </a>
   <figcaption style="text-align:center; color:#888">A slot set to None, leaving only the chevron.</figcaption>
 </figure>
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/chevron-set-to-none-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/chevron-set-to-none-aug-2026.png" class="help-center-img img-bordered" alt="A row's Action button showing only the chevron, with no preferred Action set">
+    <img src="/wp-content/uploads/chevron-set-to-none-aug-2026.png" class="help-center-img img-bordered" alt="A row's Action button showing only the chevron, with no suggested Action set">
   </a>
-  <figcaption style="text-align:center; color:#888">The chevron-only button on a row with no preferred Action.</figcaption>
+  <figcaption style="text-align:center; color:#888">The chevron-only button on a row with no suggested Action.</figcaption>
 </figure>
 
 ***
@@ -203,21 +205,21 @@ To show only the chevron on the button for a kind of item, set its slot to **Non
 To edit an Action, go to **Settings → Actions** and click the Action's row under **All Actions**. The editor opens as its own page.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/actions-settings-built-in-sep-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/actions-settings-built-in-sep-2026-v2@2x.png" class="help-center-img img-bordered" alt="The All Actions list in Settings › Actions, with Built in and Custom groups: Plan, Implement, the edited Review and Address Feedback, then the custom Write Tests.">
+  <a href="/wp-content/uploads/actions-settings-built-in-sep-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/actions-settings-built-in-sep-2026-v3@2x.png" class="help-center-img img-bordered" alt="The All Actions list in Settings › Actions with New Action and Restore all defaults, in Built in and Custom groups: Plan, Implement, the edited Review and Address Feedback, then the custom Write Tests, each row with what the Action does and where it is available, such as Available on tasks, issues and pull requests.">
   </a>
   <figcaption style="text-align:center; color:#888">The All Actions list. Click a row to edit that Action.</figcaption>
 </figure>
 
-Once you have a custom Action, the list splits into **Built in** and **Custom**. Until then, it shows the built-in Actions without labels.
+Each row shows what the Action does and where it is available. Once you have a custom Action, the list splits into **Built in** and **Custom**. Until then, it shows the built-in Actions without labels.
 
 The editor has these fields:
 
 | Field | What it does |
 |---|---|
-| **Title** | The name shown on the button and in the chevron list. Required: *Title can't be empty.* |
-| **Prompt** | Sent to the agent word for word. It *Can be, or start with, one of your skills*: type **/** (or **$** for Codex) to pick one. Required: *Prompt can't be empty.* |
-| **Applies to** | **Tasks**, **Issues**, **Pull requests**: controls where the Action is offered. Pick at least one |
+| **Title** | Required. The name shown on the button and in the chevron list |
+| **Prompt** | Required. Sent to the agent word for word, and can be or start with one of your skills: type **/** (or **$** for Codex) to pick one |
+| **Available on** | Where the Action is offered: **Tasks**, **Issues**, **Pull requests**, or several. Pick at least one |
 | **Agent** | Which agent runs it. See below |
 
 ### Create your own
@@ -225,8 +227,8 @@ The editor has these fields:
 To create an Action, click **New Action** in **Settings → Actions**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-custom-action-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-custom-action-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="The New Action sub-page in Settings › Actions, with empty Title and Prompt fields, Applies to with Tasks ticked, the Agent field reading Inherit, and Cancel and Save.">
+  <a href="/wp-content/uploads/new-custom-action-aug-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-custom-action-aug-2026-v3@2x.png" class="help-center-img img-bordered" alt="The New Action sub-page in Settings › Actions, under the breadcrumb Actions › New Action: an empty Title field, focused, an empty Prompt field, Available on with Tasks ticked and Issues and Pull requests not, the Agent field's Preset reading Use default agent (Uses your default agent configuration), and Cancel and Save.">
   </a>
   <figcaption style="text-align:center; color:#888">The New Action editor.</figcaption>
 </figure>
@@ -234,8 +236,8 @@ To create an Action, click **New Action** in **Settings → Actions**.
 Custom Actions work exactly like the built-in ones. Make one for any prompt you would otherwise retype, such as backporting a fix, writing a migration, or auditing a dependency bump.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-custom-action-config-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-custom-action-config-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="A custom Action being created: Title Backport a fix, the prompt Run the skill /backport, Applies to with Tasks and Pull requests ticked, and the Agent field reading Inherit.">
+  <a href="/wp-content/uploads/new-custom-action-config-aug-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-custom-action-config-aug-2026-v3@2x.png" class="help-center-img img-bordered" alt="A custom Action being created: Title Backport a fix, the prompt Run the skill /backport, Available on with Tasks and Pull requests ticked, and the Agent field's Preset reading Use default agent (Uses your default agent configuration).">
   </a>
   <figcaption style="text-align:center; color:#888">A custom Action's configuration.</figcaption>
 </figure>
@@ -247,8 +249,8 @@ This Action asks the agent to gather the evidence a reviewer needs before you re
 | Field | Value |
 |---|---|
 | **Title** | Prepare for review |
-| **Applies to** | **Tasks** |
-| **Agent** | **Use default agent**, or a different agent from the one that wrote the code |
+| **Available on** | **Tasks** |
+| **Agent** | **Use default agent**, or a preset for a different agent from the one that wrote the code |
 
 Use the following text for **Prompt**:
 
@@ -270,7 +272,7 @@ Kepler has no "create pull request" button, so the agent or you open one. This A
 | Field | Value |
 |---|---|
 | **Title** | Open a pull request |
-| **Applies to** | **Tasks** |
+| **Available on** | **Tasks** |
 | **Agent** | **Use default agent** |
 
 Use the following text for **Prompt**:
@@ -291,27 +293,28 @@ To undo your edits to one Action, click **Restore default** on its row. The row 
 
 An Action you have never edited picks up new default wording when Kepler updates. **Restore default** discards your edit.
 
-Deleting a custom Action that a preferred-Action slot points to sets that slot to **None**, so its rows show only the chevron. To pick a new preferred Action, go back to **Settings → Actions → Preferred Actions**.
+Deleting a custom Action that a suggested-Action slot points to sets that slot to **None**, so its rows show only the chevron. To pick a new suggested Action, go back to **Settings → Actions → Suggested Actions**.
 
 ***
 
 ## Setting an Action's agent
 
-By default an Action runs on your **default agent**, configured in **Settings → Tasks → New tasks → Default agent**. The Action editor has 2 fields for it:
+By default an Action runs on your **default agent**, configured in **Settings → Tasks → New tasks → Default agent**. To change it, open the **Preset** list in the editor's **Agent** field and pick one of the following:
 
-| Field | Choices |
+| Choice | What the Action runs on |
 |---|---|
-| **Agent** | **Use default agent**, or the agent to run the Action on |
-| **Preset** | **Default**, one of your agent presets, or **Custom agent settings**, which sets the model and mode for this Action alone |
+| **Use default agent** | Your default agent configuration |
+| A preset, shown as **{preset} · {agent}** | That preset's agent, with its model, mode, and options. If that agent has more than 1 account, pick the account below the list |
+| **Custom agent settings** | The agent, model, and mode you set for this Action alone |
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/inherit-default-agent-setting-aug-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/inherit-default-agent-setting-aug-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Agent field in the Action editor, reading Use default agent, with the Preset field below it set to Default.">
+  <a href="/wp-content/uploads/inherit-default-agent-setting-aug-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/inherit-default-agent-setting-aug-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Agent field in the Action editor with its Preset list open: Use default agent (selected), Quick fix · Claude Code, Careful review · Claude Code, Quick fix · Codex, Docs pass · OpenCode, and Custom agent settings.">
   </a>
-  <figcaption style="text-align:center; color:#888">The Agent field, reading Use default agent, with its preset.</figcaption>
+  <figcaption style="text-align:center; color:#888">The Agent field's Preset list: the default agent, your presets, or custom settings.</figcaption>
 </figure>
 
-You save agent presets in **Settings → Agents → Agent presets**; see [Settings](/kepler/settings-agents#agent-presets). For example, pick a cheap, fast preset for triage and review, and a heavier one for implementation. If an Action's preset has no settings for the agent it would run on, the Action shows **Preset unavailable for this agent**.
+You save agent presets in **Settings → Agents → Agent presets**; see [Settings](/kepler/settings-agents#agent-presets). For example, pick a cheap, fast preset for triage and review, and a heavier one for implementation. If an Action's preset no longer exists, the Action shows **Preset unavailable for this agent**.
 
 **Custom agent settings** is an **all-or-nothing override**: it pins the provider, account, model, mode, and options together, rather than changing one of them and inheriting the rest.
 
@@ -328,10 +331,10 @@ You can have one agent write the code and a different agent review it. A reviewe
 To give **Review** its own agent, take the following steps:
 
 1. Go to **Settings → Actions**, and click **Review** under **All Actions**.
-2. Name a different agent in the **Agent** field from the one that writes your code, and pick its **Preset**. **Implement** uses your default agent unless you've changed it.
+2. In the **Agent** field, pick a preset for a different agent from the one that writes your code, or choose **Custom agent settings** and pick that agent. **Implement** uses your default agent unless you've changed it.
 3. Click **Save**.
 
-**Review** now runs on that agent, whether you fire it at a task's uncommitted work or at an attached pull request, with the model and mode its preset sets.
+**Review** now runs on that agent, whether you fire it at a task's uncommitted work or at an attached pull request, with the model and mode you chose for it.
 
 To use a different reviewer just once, pick the agent when you fire **Review**. An agent you pick at that point beats the Action's override.
 

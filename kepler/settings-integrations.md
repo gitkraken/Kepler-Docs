@@ -8,7 +8,7 @@ audience: developer
 plan_required: all
 os_support: [Windows, macOS, Linux]
 git_hosts: [github, github-enterprise, gitlab, gitlab-self-hosted, bitbucket, bitbucket-data-center, azure-devops, azure-devops-server]
-integrations: [github, gitlab, bitbucket, azure-devops, jira, jira-data-center, linear, trello]
+integrations: [github, gitlab, bitbucket, azure-devops, jira, jira-data-center, linear, trello, asana]
 hosted_variant: both
 status: GA
 last_verified: 2026-11
@@ -23,62 +23,57 @@ Use **Settings → Integrations** to connect the issue trackers and Git hosts yo
 
 ## Issues and pull requests
 
-Connect your issue and pull request providers to see their issues and pull requests in the **New task** composer and in [the Kepler interface](/kepler/kepler-interface). Kepler lists every supported provider, connected or not, in this order:
-
-| Provider |
-|---|
-| Azure DevOps |
-| Azure DevOps Server |
-| Bitbucket |
-| Bitbucket Data Center |
-| GitHub |
-| GitHub Enterprise |
-| GitLab |
-| GitLab Self-Hosted |
-| Jira |
-| Jira Server / Data Center |
-| Linear |
-| Trello |
+Connect your issue and pull request providers to see their issues and pull requests in the **New task** composer and in [the Kepler interface](/kepler/kepler-interface). Kepler lists every supported provider, with the connected ones first: Azure DevOps, Azure DevOps Server, Bitbucket, Bitbucket Data Center, GitHub, GitHub Enterprise, GitLab, GitLab Self-Hosted, Jira, Jira Server / Data Center, Linear, Trello, and Asana.
 
 Each provider row shows these controls and states:
 
 | Control | What it does |
 |---|---|
-| **Connect** | Starts the connection flow for a provider you have not connected |
-| **Connected** | Shown on a working connection |
-| **Reconnect** | Refreshes an expired token. A **Sign-in expired** badge and the hint *Sign-in has expired. Click Reconnect to refresh this provider's token.* mark the rows that need it |
-| **Cannot connect to server** | The provider's server did not answer. The integration stays connected and this state clears by itself once the server responds, so you do not need to reconnect |
-| **Unexpected response** | The provider answered with data Kepler could not read, so some of its items may be missing. The integration stays connected, and reconnecting does not fix this state |
-| **Disconnect** | Disconnects the provider from GitKraken everywhere: every GitKraken product and service that uses this connection loses access too. Other accounts for that provider stay connected, and you can reconnect at any time |
-| **Refresh** | Checks every provider's connection status again. It is in the section header |
+| **Connect** | Connects a provider you have not connected |
+| **Connected** | Marks a working connection |
+| **Reconnect** | Refreshes a token on a row marked **Sign-in expired** |
+| **Cannot connect to server** | The server did not answer; the integration stays connected and the state clears on its own |
+| **Unexpected response** | Kepler could not read the provider's answer, so some items may be missing; reconnecting does not fix it |
+| **Disconnect** | Disconnects the account from every GitKraken product that uses it; other accounts stay connected |
+| **Refresh** | Checks every provider's connection again, from the section header |
 
 If a row shows **Cannot connect to server**, check that the server is reachable from your network or VPN. If **Unexpected response** stays, check for a proxy or gateway between Kepler and the provider.
 
-Providers connect through your GitKraken account, so the section asks you to sign in before it shows anything to manage.
+Providers connect through your GitKraken account, so you sign in to GitKraken before you can manage them.
 
-A self-hosted provider, such as GitHub Enterprise, Azure DevOps Server, Bitbucket Data Center, or Jira Server / Data Center, connects with a personal access token. **Connect** or **Reconnect** opens **Connect {name}**, with **Server URL** and **Personal access token**. **Save connection** checks the token against your server from this machine, saves the connection here, and syncs it to your GitKraken account. Until the sync finishes, the row shows **Cloud sync pending**. See [Pull Request Integrations](/kepler/pull-request-integrations) and [Issue Tracker Integrations](/kepler/issue-tracker-integrations).
+### Self-hosted providers
 
-To hide organizations, repositories, or tracker projects you do not want in Kepler, use **Choose what's visible…**. Every connected provider except Trello has it, on a line that reads **Everything visible** or **{count} hidden**. In **Choose what {name} brings in**, untick the items to hide. *Hidden items are left out of the dashboard, the launcher and pickers. Tasks and branches already linked to them keep resolving.* Kepler saves the choice on your GitKraken account. See [Issue Tracker Integrations](/kepler/issue-tracker-integrations).
+A self-hosted provider, such as GitHub Enterprise, Azure DevOps Server, Bitbucket Data Center, or Jira Server / Data Center, connects with a personal access token. Click **Connect**, enter the **Server URL** and **Personal access token**, then click **Save connection**. Kepler checks the token against your server and adds the connection to your GitKraken account. Until it finishes, the row shows **Cloud sync pending**.
 
-When a provider has more than 1 account, an **Accounts** block lists them. **Set as primary** chooses which account Kepler acts as, and **Read from this account** chooses which account Kepler reads issues and pull requests from. These can be different accounts, but agents' GitKraken MCP server always acts as the primary account.
+A connected self-hosted provider lists each server on its own row. Each server keeps its own repositories and issues:
+
+- To connect another server, click **Add connection** on the provider's row. Connecting more than 1 server needs an active GitKraken plan or trial.
+- To renew an expired or rejected token, click **Replace token** on that server's row.
+- To make a server the provider's default connection, click **Set as primary**.
+
+### Choose what's visible
+
+To hide organizations, repositories, or tracker projects you do not want in Kepler, click **Choose what's visible…** under the provider's row, then untick the items to hide. Every connected provider except Trello and Asana has it. Hidden items leave the dashboard, the launcher, and pickers, and tasks and branches already linked to them keep working. The choice is saved on your GitKraken account.
+
+### Accounts and organizations
+
+When a provider has more than 1 account, an **Accounts** block lists them. **Set as primary** chooses which account Kepler acts as, and **Read from this account** chooses which account Kepler reads issues and pull requests from. These can be different accounts, but agents' GitKraken MCP server always acts as the primary account. See [MCP servers](/kepler/settings-agents#mcp-servers).
 
 When an organization refuses a working connection, because it blocks third-party OAuth apps or has not approved GitKraken, the row names the organization and says that its items are not shown. The row links to a fix, such as **Request access on GitHub**.
-
-Under the list, the line *Agents can use these through the GitKraken MCP server.* links to [MCP servers](/kepler/settings-agents#mcp-servers).
 
 For per-provider setup, see [Issue Tracker Integrations](/kepler/issue-tracker-integrations) and [Pull Request Integrations](/kepler/pull-request-integrations).
 
 ## Your terminal
 
-The following setting lets you follow agent sessions you start outside Kepler:
+To follow agent sessions you start in your own terminal, use this setting:
 
 | Setting | What it controls | Default |
 |---|---|---|
-| **Show sessions started outside Kepler** | *Lists sessions you start in your own terminal, so you can follow and continue them here.* | On |
+| **Show sessions started outside Kepler** | Lists sessions you start in your own terminal, so you can follow and continue them in Kepler | On |
 
-To do this, Kepler installs GitKraken hooks. The switch covers every agent that reports through hooks, and its help text names those agents. See [Agent Sessions](/kepler/agent-sessions#sessions-started-outside-kepler).
+The setting covers every agent Kepler can follow this way. See [Agent Sessions](/kepler/agent-sessions#sessions-started-outside-kepler).
 
-If a running agent session stops reporting to Kepler, every window shows *Agent sessions aren't reporting to Kepler*, with a **Repair** button. **Repair** installs the reporting configuration again. Restart any session that still does not report. For another computer's sessions, repair from that computer.
+If a running agent session stops reporting to Kepler, every window shows *Agent sessions aren't reporting to Kepler*, with a **Repair** button. **Repair** reinstalls the reporting configuration. Restart any session that still does not report. For another computer's sessions, repair from that computer.
 
 ***
 
