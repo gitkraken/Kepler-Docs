@@ -169,11 +169,7 @@ All columns on the board have the same width. To resize them, use one of these m
 
 Each view remembers its own column width. When a column has more tasks to load, **Load more** appears at the bottom of the column. From the keyboard, **←** and **→** move to the nearest column that has a card.
 
-<div class="note" markdown="1">
-
-**Columns** in **Panel layout** arranges open panels. It is not the **Board** layout.
-
-</div>
+> **Note:** **Columns** in **Panel layout** arranges open panels. It is not the **Board** layout.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/columns-progress-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
