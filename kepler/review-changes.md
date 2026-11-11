@@ -17,6 +17,10 @@ tags: [review, diff, changes-overlay, working-changes, commits, staging, amend, 
 taxonomy:
   category: kepler
 custom_fields:
+    entry_title: "Review and ship what an agent wrote"
+    entry_role: "Ship"
+    entry_desc: "Read the diff, comment, commit, and update the branch from its base"
+    entry_order: 30
     nav_category: "kepler-working-in-kepler"
     nav_label: "Review Changes"
     nav_order: 30

@@ -17,6 +17,10 @@ tags: [agent-sessions, sessions, prompts, steering, queueing, accounts, models, 
 taxonomy:
   category: kepler
 custom_fields:
+    entry_title: "Direct an agent mid-session"
+    entry_role: "Direct"
+    entry_desc: "Start a session, pick the agent and model, and send and steer prompts"
+    entry_order: 20
     nav_category: "kepler-working-in-kepler"
     nav_label: "Agent Sessions"
     nav_order: 20

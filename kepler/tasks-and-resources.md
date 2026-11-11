@@ -17,6 +17,10 @@ tags: [tasks, resources, worktrees, shared-context, draft-sessions, notes, files
 taxonomy:
   category: kepler
 custom_fields:
+    entry_title: "Understand what a task holds"
+    entry_role: "Understand"
+    entry_desc: "What you can attach to a task, how worktrees work, and how resources reach your agents"
+    entry_order: 10
     nav_category: "kepler-core-concepts"
     nav_label: "Tasks and Resources"
     nav_order: 40
