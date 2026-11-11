@@ -24,7 +24,7 @@ custom_fields:
     page_type: "content"
     card_icon: "cloud-computing"
     card_color: "amber"
-    card_description: "Run your agents on another machine over SSH or in WSL, or reach Kepler from another device"
+    card_description: "Run your agents on another machine over SSH or in WSL"
 ---
 <kbd>Last updated: November 2026</kbd>
 
