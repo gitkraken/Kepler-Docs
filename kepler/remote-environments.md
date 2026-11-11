@@ -29,7 +29,7 @@ custom_fields:
         - "the-dashboard|kepler-remote-access#the-dashboard"
         - "a-task|kepler-remote-access#a-task"
         - "terminals|kepler-remote-access#terminals"
-        - "managing-sessions-from-gitkrakendev|kepler-remote-access#managing-sessions-from-gitkrakendev"
+        - "managing-sessions-from-gitkraken-dev|kepler-remote-access#managing-sessions-from-gitkraken-dev"
     nav_order: 20
     nav_parent: "kepler-configuration"
     page_type: "content"
