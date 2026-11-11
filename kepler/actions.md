@@ -17,6 +17,10 @@ tags: [actions, prompts, agents, tasks, issues, pull-requests, settings, customi
 taxonomy:
   category: kepler
 custom_fields:
+    entry_title: "Change the prompts, or write your own"
+    entry_role: "Customize"
+    entry_desc: "Edit the built-in Actions, or write your own named prompts"
+    entry_order: 40
     nav_category: "core-concepts"
     nav_label: "Actions"
     nav_order: 30
