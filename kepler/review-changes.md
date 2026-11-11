@@ -23,7 +23,7 @@ custom_fields:
     entry_order: 30
     nav_category: "kepler-working-in-kepler"
     nav_label: "Review Changes"
-    nav_order: 30
+    nav_order: 60
     nav_parent: "kepler-working-in-kepler"
     page_type: "content"
     card_icon: "git-compare"

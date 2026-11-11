@@ -205,7 +205,7 @@ The **Usage windows** section shows your agent subscription windows, with 1 bar 
 
 See [Settings](/kepler/settings-agents#usage-limits).
 
-These bars show only how much of each window you have used. To see whether you are on pace for a window, and when it runs out at your current rate, check a session's usage meter. See [Usage indicators](/kepler/agent-sessions#usage-indicators).
+These bars show only how much of each window you have used. To see whether you are on pace for a window, and when it runs out at your current rate, check a session's usage meter. See [Usage indicators](/kepler/kepler-agent-accounts#usage-indicators).
 
 ### What was folded away
 

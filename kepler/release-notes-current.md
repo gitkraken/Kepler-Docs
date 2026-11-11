@@ -36,7 +36,7 @@ This release notes page tracks what's new and changing in the current version of
 
 - This page covers the current version line of Kepler, 0.x. Archived version pages will be listed here as later lines ship.
 - Each entry applies only to the specific release listed under its version heading.
-- Kepler is in public preview. A free GitKraken account is all you need to run it, though a few capabilities, such as [Remote Access](/kepler/remote-environments), require a paid GitKraken plan.
+- Kepler is in public preview. A free GitKraken account is all you need to run it, though a few capabilities, such as [Remote Access](/kepler/kepler-remote-access), require a paid GitKraken plan.
 - Kepler updates itself. You're prompted to restart when a new version is published, and **Check for Updates** in the app menu asks straight away.
 
 <a href="https://www.gitkraken.com/kepler/download?source=help_center" target="_blank" class="button button--basic ">Download Current Version Now</a>

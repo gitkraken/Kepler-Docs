@@ -27,6 +27,9 @@
         "kepler-working-in-kepler.md",
         "create-task.md",
         "agent-sessions.md",
+        "kepler-agent-requests.md",
+        "kepler-agent-accounts.md",
+        "kepler-external-sessions.md",
         "ask-kepler.md",
         "review-changes.md",
         "voice-input.md"
@@ -57,7 +60,8 @@
         "settings-app.md",
         "settings-environment.md",
         "settings-updates-help.md",
-        "remote-environments.md"
+        "remote-environments.md",
+        "kepler-remote-access.md"
       ]
     },
     {

@@ -108,7 +108,7 @@ Each account row has the following controls:
 - **Sign in**.
 - An account menu with **Rename**, **Share history with the CLI**, **Sign in another way**, **Sign out**, and **Remove account**. On a signed-in Claude Code account, the menu also has **Switch account…**, which signs that account in with a different Claude login. See [Switch the account a Claude Code login uses](#switch-the-account-a-claude-code-login-uses).
 
-Removing an account stops its running sessions and deletes the sessions stored only in that account. To keep those sessions, click **Move to CLI account** first. See [Agent Sessions](/kepler/agent-sessions#several-accounts-for-one-agent).
+Removing an account stops its running sessions and deletes the sessions stored only in that account. To keep those sessions, click **Move to CLI account** first. See [Agent Sessions](/kepler/kepler-agent-accounts#several-accounts-for-one-agent).
 
 ### When an added account stops sharing your settings
 
@@ -261,7 +261,7 @@ When you turn either setting on, Kepler confirms that *New agent sessions will p
 
 Some actions your agents take wait for your approval. Use **Approvals** to manage the rules that approve those actions for you. An action that no rule covers still asks.
 
-When an agent uses Kepler's workspace tools to do something that needs your approval, Kepler pins an approval card above that session's message box. Examples include deleting a worktree, sending a prompt to another session, or rewriting a branch. The card's **Approve** menu offers **Always approve** for that kind of action. Kepler does not offer it for actions that can lose work, or for a setting change that Ask Kepler asks to make. See [Agent Sessions](/kepler/agent-sessions).
+When an agent uses Kepler's workspace tools to do something that needs your approval, Kepler pins an approval card above that session's message box. Examples include deleting a worktree, sending a prompt to another session, or rewriting a branch. The card's **Approve** menu offers **Always approve** for that kind of action. Kepler does not offer it for actions that can lose work, or for a setting change that Ask Kepler asks to make. See [Answering Your Agent](/kepler/kepler-agent-requests#approval-requests).
 
 **Always approved** lists each rule you create this way. A rule's row says when and where you added it, *Added {date} from {session} on {task}.*, and how often it has run, *Used {count} times, last {when}.* or *Not used yet.* **Remove** deletes the rule, so that kind of action asks again. With no rules, the section reads *No rules yet. When an agent asks, choose Always approve on its request to stop being asked about actions like it.*
 

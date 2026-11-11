@@ -94,7 +94,7 @@ The name turns into an editable field. **Auto-name** (*Suggest a name from the t
 
 ### On a phone
 
-At phone width, for example in a phone browser connected through [Remote Access](/kepler/remote-environments#remote-access-reach-kepler-from-another-device), the task page replaces its header with a single bar:
+At phone width, for example in a phone browser connected through [Remote Access](/kepler/kepler-remote-access), the task page replaces its header with a single bar:
 
 - **Back**, on the left, which shows a dot when another task needs you.
 - The task's name as a chip, which opens the task switcher. Swipe sideways on the name to go back to the previous task.
@@ -284,7 +284,7 @@ The worktree's **Branch** submenu holds the actions that change the branch itsel
 
 **Copy session link** copies a Kepler link that opens the session. When the window is connected to a remote machine, the link names that machine, so it opens there. With the row focused, **Cmd/Ctrl+C** copies the same link. See [Agent Sessions](/kepler/agent-sessions#pointing-an-agent-at-another-session).
 
-**Continue as** moves the conversation to another signed-in account of the same agent. The agent restarts under that account and keeps the conversation. **Continue in Terminal** and **Continue in Chat** move the conversation between the 2 ways a session runs. When the session is still running a turn or background work, Kepler asks first, for example **Stop this session and continue in Terminal?** (or **Stop this session and continue as {login}?**), and warns when queued messages would be discarded. **Stop and switch** stops the session and moves it. See [Moving a session to another account](/kepler/agent-sessions#moving-a-session-to-another-account) and [How a session runs](/kepler/agent-sessions#how-a-session-runs).
+**Continue as** moves the conversation to another signed-in account of the same agent. The agent restarts under that account and keeps the conversation. **Continue in Terminal** and **Continue in Chat** move the conversation between the 2 ways a session runs. When the session is still running a turn or background work, Kepler asks first, for example **Stop this session and continue in Terminal?** (or **Stop this session and continue as {login}?**), and warns when queued messages would be discarded. **Stop and switch** stops the session and moves it. See [Moving a session to another account](/kepler/kepler-agent-accounts#moving-a-session-to-another-account) and [How a session runs](/kepler/agent-sessions#how-a-session-runs).
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/switch-mode-confirm-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -602,7 +602,7 @@ Every terminal also has a row in the context panel's **Terminals** group. Click 
 
 **Maximize terminal pane**, or **Cmd/Ctrl+Shift+J**, takes the whole height; **Restore terminal pane** brings it back.
 
-On a phone, a terminal takes the whole column, with a row of the keys a phone keyboard lacks beneath it, and you select text with a long press. See [Remote Access](/kepler/remote-environments#remote-access-reach-kepler-from-another-device).
+On a phone, a terminal takes the whole column, with a row of the keys a phone keyboard lacks beneath it, and you select text with a long press. See [Remote Access](/kepler/kepler-remote-access).
 
 ### When a terminal reconnects
 
@@ -639,7 +639,7 @@ Right-click a path for more: **Open file**, your default editor (opening at the 
 
 Kepler task and session links in a terminal are links too, and so are the task and session IDs Kepler recognizes. The hover hint says *Click to open in Kepler*; Cmd/Ctrl-click opens it, and right-click offers **Open in Kepler** and **Copy link**.
 
-On a phone, long-press a path or link instead, then pick **Open** from the small menu over the selection, which also offers **Copy**, **Paste**, and **Select all**. See [Remote Access](/kepler/remote-environments#remote-access-reach-kepler-from-another-device).
+On a phone, long-press a path or link instead, then pick **Open** from the small menu over the selection, which also offers **Copy**, **Paste**, and **Select all**. See [Remote Access](/kepler/kepler-remote-access).
 
 ### Closing a busy terminal
 
