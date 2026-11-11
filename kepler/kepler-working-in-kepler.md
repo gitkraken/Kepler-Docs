@@ -17,7 +17,7 @@ tags: [working-in-kepler, tasks, agent-sessions, review-changes, ask-kepler, voi
 taxonomy:
   category: kepler
 custom_fields:
-    nav_category: "working-in-kepler"
+    nav_category: "kepler-working-in-kepler"
     nav_label: "Working in Kepler"
     nav_order: 40
     nav_parent: ""

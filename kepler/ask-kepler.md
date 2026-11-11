@@ -17,10 +17,10 @@ tags: [ask-kepler, chat, assistant, terminal, side-panel, keyboard, agent-sessio
 taxonomy:
   category: kepler
 custom_fields:
-    nav_category: "working-in-kepler"
+    nav_category: "kepler-working-in-kepler"
     nav_label: "Ask Kepler"
     nav_order: 40
-    nav_parent: "working-in-kepler"
+    nav_parent: "kepler-working-in-kepler"
     page_type: "content"
     card_icon: "message-question"
     card_color: "blue"

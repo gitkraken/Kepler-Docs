@@ -17,10 +17,10 @@ tags: [tasks, task-page, sessions, draft-sessions, terminals, worktrees, resourc
 taxonomy:
   category: kepler
 custom_fields:
-    nav_category: "core-concepts"
+    nav_category: "kepler-core-concepts"
     nav_label: "The Task View"
     nav_order: 50
-    nav_parent: "core-concepts"
+    nav_parent: "kepler-core-concepts"
     page_type: "content"
     card_icon: "layout-columns"
     card_color: "purple"

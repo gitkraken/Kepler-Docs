@@ -17,10 +17,10 @@ tags: [settings, configuration, keyboard-shortcuts, appearance, agents, tasks, n
 taxonomy:
   category: kepler
 custom_fields:
-    nav_category: "configuration"
+    nav_category: "kepler-configuration"
     nav_label: "Settings"
     nav_order: 10
-    nav_parent: "configuration"
+    nav_parent: "kepler-configuration"
     page_type: "content"
     card_icon: "settings"
     card_color: "amber"

@@ -17,10 +17,10 @@ tags: [settings, repositories, worktrees, branches, per-repository-commands, pro
 taxonomy:
   category: kepler
 custom_fields:
-    nav_category: "configuration"
+    nav_category: "kepler-configuration"
     nav_label: "Repository Settings"
     nav_order: 30
-    nav_parent: "behavior-and-integration-settings"
+    nav_parent: "kepler-behavior-and-integration-settings"
     page_type: "content"
     card_icon: "git-branch"
     card_color: "amber"

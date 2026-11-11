@@ -17,10 +17,10 @@ tags: [settings, integrations, issue-trackers, git-hosts, terminal]
 taxonomy:
   category: kepler
 custom_fields:
-    nav_category: "configuration"
+    nav_category: "kepler-configuration"
     nav_label: "Integration Settings"
     nav_order: 40
-    nav_parent: "behavior-and-integration-settings"
+    nav_parent: "kepler-behavior-and-integration-settings"
     page_type: "content"
     card_icon: "plug-connected"
     card_color: "amber"

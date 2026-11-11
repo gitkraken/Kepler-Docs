@@ -17,10 +17,10 @@ tags: [agent-graph, dashboard, sessions, subagents, tool-calls, monitoring]
 taxonomy:
   category: kepler
 custom_fields:
-    nav_category: "core-concepts"
+    nav_category: "kepler-core-concepts"
     nav_label: "The Agent Graph"
     nav_order: 60
-    nav_parent: "core-concepts"
+    nav_parent: "kepler-core-concepts"
     page_type: "content"
     card_icon: "affiliate"
     card_color: "purple"

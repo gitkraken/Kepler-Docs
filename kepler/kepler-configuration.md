@@ -17,7 +17,7 @@ tags: [configuration, settings, remote-environments]
 taxonomy:
   category: kepler
 custom_fields:
-    nav_category: "configuration"
+    nav_category: "kepler-configuration"
     nav_label: "Configuration"
     nav_order: 60
     nav_parent: ""

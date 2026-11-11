@@ -17,7 +17,7 @@ tags: [settings, setup, account, organization, plan, ai-credits, trials, gitkrak
 taxonomy:
   category: kepler
 custom_fields:
-    nav_category: "configuration"
+    nav_category: "kepler-configuration"
     nav_label: "Setup and Account Settings"
     nav_order: 10
     nav_parent: "settings"

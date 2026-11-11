@@ -17,7 +17,7 @@ tags: [settings, agents, tasks, repositories, integrations, actions]
 taxonomy:
   category: kepler
 custom_fields:
-    nav_category: "configuration"
+    nav_category: "kepler-configuration"
     nav_label: "Behavior and Integration settings"
     nav_order: 20
     nav_parent: "settings"

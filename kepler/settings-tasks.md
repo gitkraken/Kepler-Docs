@@ -17,10 +17,10 @@ tags: [settings, tasks, default-agent, worktrees, branch-prefix, folder-location
 taxonomy:
   category: kepler
 custom_fields:
-    nav_category: "configuration"
+    nav_category: "kepler-configuration"
     nav_label: "Task Settings"
     nav_order: 20
-    nav_parent: "behavior-and-integration-settings"
+    nav_parent: "kepler-behavior-and-integration-settings"
     page_type: "content"
     card_icon: "checklist"
     card_color: "amber"

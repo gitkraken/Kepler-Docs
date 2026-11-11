@@ -17,10 +17,10 @@ tags: [voice-input, dictation, qwen3-asr, whisper, webgpu, microphone, settings,
 taxonomy:
   category: kepler
 custom_fields:
-    nav_category: "working-in-kepler"
+    nav_category: "kepler-working-in-kepler"
     nav_label: "Voice Input"
     nav_order: 50
-    nav_parent: "working-in-kepler"
+    nav_parent: "kepler-working-in-kepler"
     page_type: "content"
     card_icon: "microphone"
     card_color: "blue"

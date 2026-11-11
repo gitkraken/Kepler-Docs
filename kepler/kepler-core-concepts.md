@@ -17,7 +17,7 @@ tags: [core-concepts, dashboard, tasks, actions, task-view, agent-graph]
 taxonomy:
   category: kepler
 custom_fields:
-    nav_category: "core-concepts"
+    nav_category: "kepler-core-concepts"
     nav_label: "Core Concepts"
     nav_order: 30
     nav_parent: ""
