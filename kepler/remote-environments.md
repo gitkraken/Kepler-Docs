@@ -17,11 +17,14 @@ tags: [remote-environments, ssh, wsl, windows, port-forwarding, settings, remote
 taxonomy:
   category: kepler
 custom_fields:
-    nav_category: "configuration"
+    nav_category: "kepler-configuration"
     nav_label: "Remote Environments"
     nav_order: 20
-    nav_parent: "configuration"
+    nav_parent: "kepler-configuration"
     page_type: "content"
+    card_icon: "cloud-computing"
+    card_color: "amber"
+    card_description: "Run your agents on another machine over SSH or in WSL"
 ---
 <kbd>Last updated: November 2026</kbd>
 

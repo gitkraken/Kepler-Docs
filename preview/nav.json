@@ -12,6 +12,7 @@
     {
       "title": "Core Concepts",
       "pages": [
+        "kepler-core-concepts.md",
         "kepler-interface.md",
         "arranging-your-work.md",
         "actions.md",
@@ -23,6 +24,7 @@
     {
       "title": "Working in Kepler",
       "pages": [
+        "kepler-working-in-kepler.md",
         "create-task.md",
         "agent-sessions.md",
         "ask-kepler.md",
@@ -33,6 +35,7 @@
     {
       "title": "Integrations",
       "pages": [
+        "kepler-integrations.md",
         "agent-integrations.md",
         "mcp-servers.md",
         "issue-tracker-integrations.md",
@@ -42,8 +45,10 @@
     {
       "title": "Configuration",
       "pages": [
+        "kepler-configuration.md",
         "settings.md",
         "settings-setup-account.md",
+        "kepler-behavior-and-integration-settings.md",
         "settings-agents.md",
         "settings-tasks.md",
         "settings-repositories.md",

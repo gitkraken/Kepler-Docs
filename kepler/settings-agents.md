@@ -17,11 +17,14 @@ tags: [settings, agents, custom-agents, mcp-servers, agent-tools, approvals, usa
 taxonomy:
   category: kepler
 custom_fields:
-    nav_category: "configuration"
+    nav_category: "kepler-configuration"
     nav_label: "Agent Settings"
     nav_order: 10
-    nav_parent: "behavior-and-integration-settings"
+    nav_parent: "kepler-behavior-and-integration-settings"
     page_type: "content"
+    card_icon: "robot"
+    card_color: "amber"
+    card_description: "Install and sign in to agents, custom agents, MCP servers, approvals and usage limits"
 ---
 <kbd>Last updated: November 2026</kbd>
 

@@ -17,11 +17,14 @@ tags: [integrations, pull-requests, github, gitlab, bitbucket, bitbucket-data-ce
 taxonomy:
   category: kepler
 custom_fields:
-    nav_category: "integrations"
+    nav_category: "kepler-integrations"
     nav_label: "Pull Request Integrations"
     nav_order: 40
-    nav_parent: "integrations"
+    nav_parent: "kepler-integrations"
     page_type: "content"
+    card_icon: "git-pull-request"
+    card_color: "green"
+    card_description: "Bring pull requests from your Git hosts, cloud or self-hosted, into one list"
 ---
 <kbd>Last updated: November 2026</kbd>
 

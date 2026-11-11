@@ -17,11 +17,14 @@ tags: [tasks, create-task, composer, worktrees, branches, folders, issues, pull-
 taxonomy:
   category: kepler
 custom_fields:
-    nav_category: "working-in-kepler"
+    nav_category: "kepler-working-in-kepler"
     nav_label: "Create a task"
     nav_order: 10
-    nav_parent: "working-in-kepler"
+    nav_parent: "kepler-working-in-kepler"
     page_type: "content"
+    card_icon: "circle-plus"
+    card_color: "blue"
+    card_description: "Start a task from an issue, a pull request, or nothing at all"
 ---
 <kbd>Last updated: November 2026</kbd>
 
