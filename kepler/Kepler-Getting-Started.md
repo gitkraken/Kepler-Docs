@@ -141,7 +141,7 @@ Expand **More setup options** for optional items:
 - **Set a default repositories folder**: where Kepler clones repositories it does not find locally
 - **Set a default worktree folder**: where Kepler creates one worktree per repository, per task
 - **Connect a remote environment**, covered in [Remote Environments](/kepler/remote-environments), where your plan can use it
-- **Control Kepler remotely**, covered in [Remote Access](/kepler/remote-access)
+- **Control Kepler remotely**, covered in [Remote Access](/kepler/kepler-remote-access)
 - **Add repo commands**, once you have a repository
 
 If your project needs a setup step, use **Add repo commands** early. Save a repository's install or build command once, and Kepler can run it every time it creates a worktree, so an agent never starts in a checkout it cannot build. See [Tasks and Resources](/kepler/tasks-and-resources).

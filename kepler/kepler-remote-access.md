@@ -17,10 +17,10 @@ tags: [remote-access, phone, pairing, qr-code, gitkraken-dev, relay]
 taxonomy:
   category: kepler
 custom_fields:
-    nav_category: "configuration"
+    nav_category: "kepler-configuration"
     nav_label: "Remote Access"
     nav_order: 30
-    nav_parent: "configuration"
+    nav_parent: "kepler-configuration"
     page_type: "content"
     card_icon: "device-mobile"
     card_color: "amber"

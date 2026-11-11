@@ -17,10 +17,10 @@ tags: [permissions, approvals, questions, plan-review, agent-reports, notificati
 taxonomy:
   category: kepler
 custom_fields:
-    nav_category: "working-in-kepler"
+    nav_category: "kepler-working-in-kepler"
     nav_label: "Answering Your Agent"
     nav_order: 30
-    nav_parent: "working-in-kepler"
+    nav_parent: "kepler-working-in-kepler"
     page_type: "content"
     card_icon: "bell"
     card_color: "blue"

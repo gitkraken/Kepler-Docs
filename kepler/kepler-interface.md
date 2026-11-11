@@ -41,7 +41,7 @@ The top bar holds the following controls, from the leading edge:
 - The Dashboard's views, when you place them in the title bar. By default they sit in a row below it. See [The Dashboard's views](#the-dashboards-views).
 - Your setup progress, until you finish the primary setup steps
 - The remote indicator: the environment chip that shows which machine this window works on
-- **Remote Access**, a monitor-and-phone button whose color shows whether Remote Access is on. Hover it to turn Remote Access on or off and, while it's on, to scan its QR code or copy its link. See [Remote access](/kepler/remote-access).
+- **Remote Access**, a monitor-and-phone button whose color shows whether Remote Access is on. Hover it to turn Remote Access on or off and, while it's on, to scan its QR code or copy its link. See [Remote access](/kepler/kepler-remote-access).
 - **Ask Kepler** (**Cmd/Ctrl+L** or **Cmd/Ctrl+K**), shown as Kep, Kepler's mascot, with the word **Ask**. It opens a chat and quick terminals in a panel beside the page. See [Ask Kepler](/kepler/ask-kepler).
 - Feedback
 - Settings
@@ -196,7 +196,7 @@ To fill **Todo**, connect at least one provider. See [Issue Tracker Integrations
 
 Todo lists only issues and pull requests. Agent conversations running outside Kepler do not have a section of their own in the list, and they do not open as panels. To pick one up, open **New task** and use **Open an external session** in the **New task** composer. See [Create a task](/kepler/create-task#from-a-session-you-already-started).
 
-To learn what external sessions are and what you can do with them, see [Agent Sessions](/kepler/external-sessions).
+To learn what external sessions are and what you can do with them, see [Agent Sessions](/kepler/kepler-external-sessions).
 
 ***
 

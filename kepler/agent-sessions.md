@@ -20,25 +20,25 @@ custom_fields:
     nav_category: "working-in-kepler"
     nav_label: "Agent Sessions"
     anchor_map:
-        - "several-accounts-for-one-agent|agent-accounts#several-accounts-for-one-agent"
-        - "choosing-an-account-for-a-session|agent-accounts#choosing-an-account-for-a-session"
-        - "moving-a-session-to-another-account|agent-accounts#moving-a-session-to-another-account"
-        - "signing-in-through-your-browser|agent-accounts#signing-in-through-your-browser"
-        - "sessions-started-outside-kepler|external-sessions"
-        - "turning-detection-on|external-sessions#turning-detection-on"
-        - "reading-one|external-sessions#reading-one"
-        - "taking-one-over|external-sessions#taking-one-over"
-        - "when-the-agent-asks-you-something|agent-requests"
-        - "permission-requests|agent-requests#permission-requests"
-        - "requests-that-arrive-through-hooks|agent-requests#requests-that-arrive-through-hooks"
-        - "multiple-choice-and-multi-select-questions|agent-requests#multiple-choice-and-multi-select-questions"
-        - "reviewing-a-plan|agent-requests#reviewing-a-plan"
-        - "approval-requests|agent-requests#approval-requests"
-        - "reports-from-other-agents|agent-requests#reports-from-other-agents"
-        - "usage-indicators|agent-accounts#usage-indicators"
-        - "when-you-hit-a-usage-limit|agent-accounts#when-you-hit-a-usage-limit"
-        - "notifications|agent-requests#notifications"
-        - "notifications-from-terminal-programs|agent-requests#notifications-from-terminal-programs"
+        - "several-accounts-for-one-agent|kepler-agent-accounts#several-accounts-for-one-agent"
+        - "choosing-an-account-for-a-session|kepler-agent-accounts#choosing-an-account-for-a-session"
+        - "moving-a-session-to-another-account|kepler-agent-accounts#moving-a-session-to-another-account"
+        - "signing-in-through-your-browser|kepler-agent-accounts#signing-in-through-your-browser"
+        - "sessions-started-outside-kepler|kepler-external-sessions"
+        - "turning-detection-on|kepler-external-sessions#turning-detection-on"
+        - "reading-one|kepler-external-sessions#reading-one"
+        - "taking-one-over|kepler-external-sessions#taking-one-over"
+        - "when-the-agent-asks-you-something|kepler-agent-requests"
+        - "permission-requests|kepler-agent-requests#permission-requests"
+        - "requests-that-arrive-through-hooks|kepler-agent-requests#requests-that-arrive-through-hooks"
+        - "multiple-choice-and-multi-select-questions|kepler-agent-requests#multiple-choice-and-multi-select-questions"
+        - "reviewing-a-plan|kepler-agent-requests#reviewing-a-plan"
+        - "approval-requests|kepler-agent-requests#approval-requests"
+        - "reports-from-other-agents|kepler-agent-requests#reports-from-other-agents"
+        - "usage-indicators|kepler-agent-accounts#usage-indicators"
+        - "when-you-hit-a-usage-limit|kepler-agent-accounts#when-you-hit-a-usage-limit"
+        - "notifications|kepler-agent-requests#notifications"
+        - "notifications-from-terminal-programs|kepler-agent-requests#notifications-from-terminal-programs"
     nav_order: 20
     nav_parent: "working-in-kepler"
     page_type: "content"
@@ -54,11 +54,11 @@ Sessions vary in 2 ways:
 | Property | Values | Details |
 |---|---|---|
 | **How it runs** | **Chat** or **Terminal** | [How a session runs](#how-a-session-runs) |
-| **Where it started** | In Kepler, or outside Kepler and found by it | [Sessions started outside Kepler](/kepler/external-sessions) |
+| **Where it started** | In Kepler, or outside Kepler and found by it | [Sessions started outside Kepler](/kepler/kepler-external-sessions) |
 
 Prompts, steering, permissions, status, and the session lifecycle work the same way for every session.
 
-Answering the agent's requests and notifications, accounts and usage, and sessions started outside Kepler each have their own page: [Answering Your Agent](/kepler/agent-requests), [Agent Accounts and Usage](/kepler/agent-accounts), and [Sessions Started Outside Kepler](/kepler/external-sessions).
+Answering the agent's requests and notifications, accounts and usage, and sessions started outside Kepler each have their own page: [Answering Your Agent](/kepler/kepler-agent-requests), [Agent Accounts and Usage](/kepler/kepler-agent-accounts), and [Sessions Started Outside Kepler](/kepler/kepler-external-sessions).
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/agent-session-aug-2026.png" target="_blank" rel="noopener noreferrer">
@@ -290,7 +290,7 @@ From left to right, the status bar shows the following:
 | Model, effort, and mode | What the *running* CLI reports, not what you picked at launch, so a change made inside the CLI shows here |
 | Context ring | The share of the context window in use. Hover for tokens used, available, and total, the estimated cost at API rates, and the prompt cache |
 | Branch | The session's branch, with a folder mark when the CLI reports working in a subfolder or outside the worktree. Outside the worktree, the tip's folder line reads **Outside this worktree** |
-| Plan usage | 2 bars for the **5h** and **7d** windows, colored by pace. Hover for the full readout; see [Usage indicators](/kepler/agent-accounts#usage-indicators) |
+| Plan usage | 2 bars for the **5h** and **7d** windows, colored by pace. Hover for the full readout; see [Usage indicators](/kepler/kepler-agent-accounts#usage-indicators) |
 | **Rich input** | Shows or hides Kepler's message composer. Hide it to type straight into the CLI |
 | **No Kepler tools** | Shown when the agent cannot use Kepler's workspace tools or inbox in a terminal. Its tip points to **Continue in Chat** on the session menu |
 | **Idle detection** | Shown for an agent that does not report its status to Kepler. Kepler judges activity from the terminal going quiet, so a long pause mid-turn can read as idle |
@@ -367,7 +367,7 @@ The composer has these controls:
 | Microphone | Voice input. See [Voice Input](/kepler/voice-input) |
 | **Agent settings** | Agent, model, permission mode, effort, and options |
 | Context usage | The share of the session's context window in use, drawn as a ring. Hover to see tokens used, available, and total, the estimated cost at API rates, and the prompt cache |
-| Plan usage | Your provider plan's usage windows and when each resets. See [Usage indicators](/kepler/agent-accounts#usage-indicators) |
+| Plan usage | Your provider plan's usage windows and when each resets. See [Usage indicators](/kepler/kepler-agent-accounts#usage-indicators) |
 | **Send** | Sends the prompt, and shows a sending state from the moment you click. The chevron holds **Send** and every applicable Action |
 
 **Attaching a file sends a path, not a copy, wherever it can.** If the session's machine can already read the file, including a Windows file in a window connected to a WSL distro on the same computer, Kepler sends its path. Kepler copies any other file into the task when you send, up to 200 MB.
@@ -463,7 +463,7 @@ Kepler merges everything you send during one turn and delivers it together. 2 qu
 |---|---|
 | **{count} queued** | How many prompts are waiting. It adds **Sending queue…** while the queue goes out and **Stopping…** while a stop is pending |
 | A queued row | The prompt's text and its attachments, or a paperclip and filename when it is attachments only |
-| *Sending at {time}, when the quota resets.* | The account hit a usage limit, so the queue waits for the reset instead of sending into the limit. See [Usage indicators](/kepler/agent-accounts#usage-indicators) |
+| *Sending at {time}, when the quota resets.* | The account hit a usage limit, so the queue waits for the reset instead of sending into the limit. See [Usage indicators](/kepler/kepler-agent-accounts#usage-indicators) |
 | **Send now** | Sends a queue held for a usage limit right away |
 | **×** on a row | Removes that one prompt |
 | **Clear queue** | Removes all of them |
@@ -754,7 +754,7 @@ If a session cannot continue, its context card says so with a badge, one sentenc
 
 If a card has more detail, it shows **Details**, which opens the **Diagnostics** behind it, with **Copy** for a bug report.
 
-An **Agent error** banner names the cause, such as *{name} binary is missing or not executable.*, *Agent authentication failed.*, or *Agent process exited on its own.* Depending on the cause, the banner offers **Reconnect**, **Authenticate**, **Compact**, or **Dismiss**. A usage limit reads **{login} reached its usage limit**, or **{agent} reached its session limit**, with *Available again at {time}.* See [When you hit a usage limit](/kepler/agent-accounts#when-you-hit-a-usage-limit). A Codex turn that the provider could not serve reads **Codex was unable to complete this turn**: *OpenAI reported a capacity problem, not a usage limit. Reconnect to this conversation, then retry in a moment or switch models.*
+An **Agent error** banner names the cause, such as *{name} binary is missing or not executable.*, *Agent authentication failed.*, or *Agent process exited on its own.* Depending on the cause, the banner offers **Reconnect**, **Authenticate**, **Compact**, or **Dismiss**. A usage limit reads **{login} reached its usage limit**, or **{agent} reached its session limit**, with *Available again at {time}.* See [When you hit a usage limit](/kepler/kepler-agent-accounts#when-you-hit-a-usage-limit). A Codex turn that the provider could not serve reads **Codex was unable to complete this turn**: *OpenAI reported a capacity problem, not a usage limit. Reconnect to this conversation, then retry in a moment or switch models.*
 
 A Chat turn that fails on the provider's side says which kind of failure it hit and what to do:
 

@@ -54,7 +54,7 @@ Each agent gets its own section in **Settings → Agents**, in this order:
 | **Cursor** | Cursor | Your installed `cursor-agent` CLI | Chat or Terminal | No |
 | **Grok Build** | Grok Build | Your installed `grok` CLI | Chat or Terminal | Yes |
 
-**Auggie** is Augment's coding agent. Like Claude Code and Codex, it reports plan usage back to Kepler, but only as a credit balance rather than usage windows. To learn about the plan usage meter, see [Agent Sessions](/kepler/agent-accounts#usage-indicators).
+**Auggie** is Augment's coding agent. Like Claude Code and Codex, it reports plan usage back to Kepler, but only as a credit balance rather than usage windows. To learn about the plan usage meter, see [Agent Sessions](/kepler/kepler-agent-accounts#usage-indicators).
 
 Kepler asks each agent's provider for plan usage while **Check plan usage with each agent's provider** is on. This setting is in **Settings → Agents → Usage limits**, and it is on by default.
 
@@ -289,7 +289,7 @@ Chat sessions show up as Kepler in places such as your Anthropic dashboard.
 
 ### Detecting sessions started outside Kepler
 
-**Settings → Integrations → Your terminal → Show sessions started outside Kepler** is a separate setting that applies to all agents, and it is **on by default**. It installs GitKraken hooks so sessions you start in your own terminal show up in Kepler. It covers every agent Kepler can track that way: **Claude Code**, **Codex**, **Cursor**, **GitHub Copilot**, **OpenCode**, **Auggie**, **Grok Build**, and **Pi**. Kepler does not track Google Antigravity this way. See [Agent Sessions](/kepler/external-sessions).
+**Settings → Integrations → Your terminal → Show sessions started outside Kepler** is a separate setting that applies to all agents, and it is **on by default**. It installs GitKraken hooks so sessions you start in your own terminal show up in Kepler. It covers every agent Kepler can track that way: **Claude Code**, **Codex**, **Cursor**, **GitHub Copilot**, **OpenCode**, **Auggie**, **Grok Build**, and **Pi**. Kepler does not track Google Antigravity this way. See [Agent Sessions](/kepler/kepler-external-sessions).
 
 Kepler also follows its own **Terminal** sessions this way. If a running Terminal session stops reporting to Kepler, Kepler warns that **Agent sessions aren't reporting to Kepler**. Click **Repair**, then restart any session that still does not report. To repair sessions running on another computer, use Kepler on that computer.
 
@@ -341,6 +341,6 @@ After you connect an agent, you run it in a **session** inside a task. To learn 
 
 A task holds resources and does not require a worktree, or even a repository. See [Tasks and Resources](/kepler/tasks-and-resources).
 
-To follow conversations you started outside Kepler, see [Sessions started outside Kepler](/kepler/external-sessions).
+To follow conversations you started outside Kepler, see [Sessions started outside Kepler](/kepler/kepler-external-sessions).
 
 ---

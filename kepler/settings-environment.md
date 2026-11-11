@@ -133,7 +133,7 @@ These 2 reasons tell you how to fix them:
 
 The section notes: *Only you can connect, signed in to your GitKraken account. Turning Remote Access off disconnects every device, and you can revoke any single device under Connected devices.*
 
-A pairing link works once and expires after 5 minutes. A used link shows *This pairing link no longer works*. To pair again, open a new link from the computer running Kepler. If you open a saved address, such as a bookmark, after its browser session has ended, Kepler takes you to gitkraken.dev to sign in again. To learn about prerequisites, pairing, and managing sessions from gitkraken.dev, see [Remote Access](/kepler/remote-access).
+A pairing link works once and expires after 5 minutes. A used link shows *This pairing link no longer works*. To pair again, open a new link from the computer running Kepler. If you open a saved address, such as a bookmark, after its browser session has ended, Kepler takes you to gitkraken.dev to sign in again. To learn about prerequisites, pairing, and managing sessions from gitkraken.dev, see [Remote Access](/kepler/kepler-remote-access).
 
 ***
 

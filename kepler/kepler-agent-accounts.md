@@ -17,10 +17,10 @@ tags: [accounts, multiple-accounts, sign-in, usage-limits, context-window, accou
 taxonomy:
   category: kepler
 custom_fields:
-    nav_category: "working-in-kepler"
+    nav_category: "kepler-working-in-kepler"
     nav_label: "Agent Accounts and Usage"
     nav_order: 40
-    nav_parent: "working-in-kepler"
+    nav_parent: "kepler-working-in-kepler"
     page_type: "content"
     card_icon: "users"
     card_color: "blue"

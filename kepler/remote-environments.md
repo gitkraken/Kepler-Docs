@@ -20,16 +20,16 @@ custom_fields:
     nav_category: "configuration"
     nav_label: "Remote Environments"
     anchor_map:
-        - "remote-access-reach-kepler-from-another-device|remote-access"
-        - "before-you-start|remote-access#before-you-start"
-        - "turning-on-remote-access|remote-access#turning-on-remote-access"
-        - "pairing-another-device|remote-access#pairing-another-device"
-        - "using-kepler-on-a-phone|remote-access#using-kepler-on-a-phone"
-        - "the-menu|remote-access#the-menu"
-        - "the-dashboard|remote-access#the-dashboard"
-        - "a-task|remote-access#a-task"
-        - "terminals|remote-access#terminals"
-        - "managing-sessions-from-gitkrakendev|remote-access#managing-sessions-from-gitkrakendev"
+        - "remote-access-reach-kepler-from-another-device|kepler-remote-access"
+        - "before-you-start|kepler-remote-access#before-you-start"
+        - "turning-on-remote-access|kepler-remote-access#turning-on-remote-access"
+        - "pairing-another-device|kepler-remote-access#pairing-another-device"
+        - "using-kepler-on-a-phone|kepler-remote-access#using-kepler-on-a-phone"
+        - "the-menu|kepler-remote-access#the-menu"
+        - "the-dashboard|kepler-remote-access#the-dashboard"
+        - "a-task|kepler-remote-access#a-task"
+        - "terminals|kepler-remote-access#terminals"
+        - "managing-sessions-from-gitkrakendev|kepler-remote-access#managing-sessions-from-gitkrakendev"
     nav_order: 20
     nav_parent: "configuration"
     page_type: "content"
@@ -58,7 +58,7 @@ You open both from the right end of the title bar: first the environment chip, t
   <figcaption style="text-align:center; color:#888">The environment chip and the Remote Access button, in a local window.</figcaption>
 </figure>
 
-To let another device reach this Kepler, rather than connecting *to* another machine, see [Remote Access](/kepler/remote-access).
+To let another device reach this Kepler, rather than connecting *to* another machine, see [Remote Access](/kepler/kepler-remote-access).
 
 <div class="note" markdown="1">
 
@@ -90,7 +90,7 @@ Each window works on one environment at a time, and the title-bar chip shows whi
 | Radio-tower glyph | This window is [forwarding ports](#port-forwarding) from the host |
 | An error headline | The last attempt failed. The chip and the popover clear it after a few seconds unless the popover is open, and the host's Settings page keeps the full error |
 
-Remote Access has its own button beside the chip, so the chip shows only this window's environment. See [Remote Access](/kepler/remote-access).
+Remote Access has its own button beside the chip, so the chip shows only this window's environment. See [Remote Access](/kepler/kepler-remote-access).
 
 **Hover over the chip to preview the popover.** After a short pause, the popover's header appears, and its buttons work. Move the pointer into the header to show the rest of the popover. To open the whole popover and keep it open, click the chip, or focus it and press **Enter** or **Down Arrow**.
 
