@@ -60,14 +60,6 @@
       "pages": [
         "release-notes-current.md"
       ]
-    },
-    {
-      "title": "Retired \u2014 preview only, not in the site nav",
-      "preview_only": true,
-      "pages": [
-        "workflow-views.md",
-        "environment-and-setup.md"
-      ]
     }
   ]
 }
