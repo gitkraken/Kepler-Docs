@@ -22,6 +22,7 @@ custom_fields:
     nav_order: 70
     nav_parent: ""
     page_type: "content"
+    layout: "release-notes"
 ---
 <kbd>Last updated: October 2026</kbd>
 
