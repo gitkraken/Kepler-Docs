@@ -1,6 +1,6 @@
 ---
 title: Configuration
-description: Configure Kepler: its Settings, and remote environments that run your agents on another machine.
+description: "Configure Kepler: its Settings, and remote environments that run your agents on another machine."
 product: Kepler
 feature: Configuration
 content_type: overview

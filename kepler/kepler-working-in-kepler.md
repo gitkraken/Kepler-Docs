@@ -1,6 +1,6 @@
 ---
 title: Working in Kepler
-description: Day-to-day work in Kepler: create a task, direct agent sessions, review what the agents changed, ask Kepler, and dictate with voice input.
+description: "Day-to-day work in Kepler: create a task, direct agent sessions, review what the agents changed, ask Kepler, and dictate with voice input."
 product: Kepler
 feature: Working in Kepler
 content_type: overview

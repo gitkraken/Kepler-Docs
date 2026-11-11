@@ -1,6 +1,6 @@
 ---
 title: Core Concepts
-description: The building blocks of Kepler: the Dashboard and how you arrange it, tasks and what they hold, Actions, the task view, and the Agent Graph.
+description: "The building blocks of Kepler: the Dashboard and how you arrange it, tasks and what they hold, Actions, the task view, and the Agent Graph."
 product: Kepler
 feature: Core Concepts
 content_type: overview

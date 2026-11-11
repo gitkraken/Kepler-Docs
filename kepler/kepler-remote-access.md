@@ -1,6 +1,6 @@
 ---
 title: Remote Access
-description: Open this Kepler from another computer or your phone: turn on Remote Access, pair devices, use it on a phone, and manage sessions from gitkraken.dev.
+description: "Open this Kepler from another computer or your phone: turn on Remote Access, pair devices, use it on a phone, and manage sessions from gitkraken.dev."
 product: Kepler
 feature: Remote Access
 content_type: how-to
