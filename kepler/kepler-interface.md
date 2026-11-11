@@ -17,11 +17,14 @@ tags: [interface, dashboard, todo, tasks, draft-sessions, issues, pull-requests,
 taxonomy:
   category: kepler
 custom_fields:
-    nav_category: "core-concepts"
+    nav_category: "kepler-core-concepts"
     nav_label: "The Kepler Interface"
     nav_order: 10
-    nav_parent: "core-concepts"
+    nav_parent: "kepler-core-concepts"
     page_type: "content"
+    card_icon: "layout-dashboard"
+    card_color: "purple"
+    card_description: "Read the Dashboard of issues, pull requests and tasks, and start work from any row"
 ---
 <kbd>Last updated: November 2026</kbd>
 

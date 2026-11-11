@@ -17,7 +17,7 @@ tags: [settings, remote-environments, ssh, wsl, remote-access, gitkraken-dev]
 taxonomy:
   category: kepler
 custom_fields:
-    nav_category: "configuration"
+    nav_category: "kepler-configuration"
     nav_label: "Environment Settings"
     nav_order: 40
     nav_parent: "settings"

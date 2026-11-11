@@ -21,11 +21,14 @@ custom_fields:
     entry_role: "Direct"
     entry_desc: "Start a session, pick the agent and model, and send and steer prompts"
     entry_order: 20
-    nav_category: "working-in-kepler"
+    nav_category: "kepler-working-in-kepler"
     nav_label: "Agent Sessions"
     nav_order: 20
-    nav_parent: "working-in-kepler"
+    nav_parent: "kepler-working-in-kepler"
     page_type: "content"
+    card_icon: "message-chatbot"
+    card_color: "blue"
+    card_description: "Start, direct and manage a running conversation with a coding agent"
 ---
 <kbd>Last updated: November 2026</kbd>
 

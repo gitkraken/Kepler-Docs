@@ -21,11 +21,14 @@ custom_fields:
     entry_role: "Customize"
     entry_desc: "Edit the built-in Actions, or write your own named prompts"
     entry_order: 40
-    nav_category: "core-concepts"
+    nav_category: "kepler-core-concepts"
     nav_label: "Actions"
     nav_order: 30
-    nav_parent: "core-concepts"
+    nav_parent: "kepler-core-concepts"
     page_type: "content"
+    card_icon: "bolt"
+    card_color: "purple"
+    card_description: "Editable named prompts you fire at a task, issue or pull request"
 ---
 <kbd>Last updated: November 2026</kbd>
 

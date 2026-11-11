@@ -21,11 +21,14 @@ custom_fields:
     entry_role: "Ship"
     entry_desc: "Read the diff, comment, commit, and update the branch from its base"
     entry_order: 30
-    nav_category: "working-in-kepler"
+    nav_category: "kepler-working-in-kepler"
     nav_label: "Review Changes"
     nav_order: 30
-    nav_parent: "working-in-kepler"
+    nav_parent: "kepler-working-in-kepler"
     page_type: "content"
+    card_icon: "git-compare"
+    card_color: "blue"
+    card_description: "Read the diff, comment, commit, update the branch and resolve conflicts with AI"
 ---
 <kbd>Last updated: November 2026</kbd>
 

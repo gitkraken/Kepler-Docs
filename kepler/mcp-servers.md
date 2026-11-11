@@ -17,11 +17,14 @@ tags: [mcp, mcp-servers, model-context-protocol, tools, agents, claude-code, cod
 taxonomy:
   category: kepler
 custom_fields:
-    nav_category: "integrations"
+    nav_category: "kepler-integrations"
     nav_label: "MCP Servers"
     nav_order: 20
-    nav_parent: "integrations"
+    nav_parent: "kepler-integrations"
     page_type: "content"
+    card_icon: "server"
+    card_color: "green"
+    card_description: "See and control the MCP servers and tools each agent loads"
 ---
 <kbd>Last updated: November 2026</kbd>
 
