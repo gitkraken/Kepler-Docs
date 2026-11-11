@@ -17,11 +17,14 @@ tags: [tasks, resources, worktrees, shared-context, draft-sessions, notes, files
 taxonomy:
   category: kepler
 custom_fields:
-    nav_category: "core-concepts"
+    nav_category: "kepler-core-concepts"
     nav_label: "Tasks and Resources"
     nav_order: 40
-    nav_parent: "core-concepts"
+    nav_parent: "kepler-core-concepts"
     page_type: "content"
+    card_icon: "checklist"
+    card_color: "purple"
+    card_description: "What a task holds, how worktrees work, and how resources reach your agents"
 ---
 <kbd>Last updated: November 2026</kbd>
 

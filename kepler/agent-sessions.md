@@ -17,7 +17,7 @@ tags: [agent-sessions, sessions, prompts, steering, queueing, models, modes, ses
 taxonomy:
   category: kepler
 custom_fields:
-    nav_category: "working-in-kepler"
+    nav_category: "kepler-working-in-kepler"
     nav_label: "Agent Sessions"
     anchor_map:
         - "several-accounts-for-one-agent|kepler-agent-accounts#several-accounts-for-one-agent"
@@ -40,8 +40,11 @@ custom_fields:
         - "notifications|kepler-agent-requests#notifications"
         - "notifications-from-terminal-programs|kepler-agent-requests#notifications-from-terminal-programs"
     nav_order: 20
-    nav_parent: "working-in-kepler"
+    nav_parent: "kepler-working-in-kepler"
     page_type: "content"
+    card_icon: "message-chatbot"
+    card_color: "blue"
+    card_description: "Start, direct and manage a running conversation with a coding agent"
 ---
 <kbd>Last updated: November 2026</kbd>
 

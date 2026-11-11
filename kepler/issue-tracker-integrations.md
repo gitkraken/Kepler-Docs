@@ -17,11 +17,14 @@ tags: [integrations, issue-trackers, jira, jira-data-center, linear, trello, git
 taxonomy:
     category: kepler
 custom_fields:
-    nav_category: "integrations"
+    nav_category: "kepler-integrations"
     nav_label: "Issue Tracker Integrations"
     nav_order: 30
-    nav_parent: "integrations"
+    nav_parent: "kepler-integrations"
     page_type: "content"
+    card_icon: "ticket"
+    card_color: "green"
+    card_description: "Bring issues from your trackers, cloud or self-hosted, into one list"
 ---
 <kbd>Last updated: November 2026</kbd>
 

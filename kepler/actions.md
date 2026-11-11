@@ -17,11 +17,14 @@ tags: [actions, prompts, agents, tasks, issues, pull-requests, settings, customi
 taxonomy:
   category: kepler
 custom_fields:
-    nav_category: "core-concepts"
+    nav_category: "kepler-core-concepts"
     nav_label: "Actions"
     nav_order: 30
-    nav_parent: "core-concepts"
+    nav_parent: "kepler-core-concepts"
     page_type: "content"
+    card_icon: "bolt"
+    card_color: "purple"
+    card_description: "Editable named prompts you fire at a task, issue or pull request"
 ---
 <kbd>Last updated: November 2026</kbd>
 

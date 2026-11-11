@@ -17,11 +17,14 @@ tags: [settings, actions, preferred-actions]
 taxonomy:
   category: kepler
 custom_fields:
-    nav_category: "configuration"
+    nav_category: "kepler-configuration"
     nav_label: "Action Settings"
     nav_order: 50
-    nav_parent: "behavior-and-integration-settings"
+    nav_parent: "kepler-behavior-and-integration-settings"
     page_type: "content"
+    card_icon: "bolt"
+    card_color: "amber"
+    card_description: "Pick the Action for each kind of item, and manage your Actions"
 ---
 <kbd>Last updated: November 2026</kbd>
 

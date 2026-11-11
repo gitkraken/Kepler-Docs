@@ -17,7 +17,7 @@ tags: [remote-environments, ssh, wsl, windows, port-forwarding, settings, diagno
 taxonomy:
   category: kepler
 custom_fields:
-    nav_category: "configuration"
+    nav_category: "kepler-configuration"
     nav_label: "Remote Environments"
     anchor_map:
         - "remote-access-reach-kepler-from-another-device|kepler-remote-access"
@@ -31,8 +31,11 @@ custom_fields:
         - "terminals|kepler-remote-access#terminals"
         - "managing-sessions-from-gitkrakendev|kepler-remote-access#managing-sessions-from-gitkrakendev"
     nav_order: 20
-    nav_parent: "configuration"
+    nav_parent: "kepler-configuration"
     page_type: "content"
+    card_icon: "cloud-computing"
+    card_color: "amber"
+    card_description: "Run your agents on another machine over SSH or in WSL"
 ---
 <kbd>Last updated: November 2026</kbd>
 

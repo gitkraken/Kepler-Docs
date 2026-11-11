@@ -17,11 +17,14 @@ tags: [arrangements, views, inbox, list, columns, grouping, task-groups, multi-s
 taxonomy:
   category: kepler
 custom_fields:
-    nav_category: "core-concepts"
+    nav_category: "kepler-core-concepts"
     nav_label: "Arranging Your Work"
     nav_order: 20
-    nav_parent: "core-concepts"
+    nav_parent: "kepler-core-concepts"
     page_type: "content"
+    card_icon: "layout-kanban"
+    card_color: "purple"
+    card_description: "Views, layouts, grouping, sorting, filters, task progress and bulk archive"
 ---
 <kbd>Last updated: November 2026</kbd>
 

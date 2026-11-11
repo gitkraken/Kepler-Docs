@@ -17,7 +17,7 @@ tags: [settings, language, windows, default-editor, keep-awake, notifications, a
 taxonomy:
   category: kepler
 custom_fields:
-    nav_category: "configuration"
+    nav_category: "kepler-configuration"
     nav_label: "App Settings"
     nav_order: 30
     nav_parent: "settings"
