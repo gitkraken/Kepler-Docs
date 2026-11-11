@@ -595,7 +595,7 @@ These requests wait for your approval:
 - Sending a prompt to any session other than one the agent started itself, or a message to a session outside its own work
 - Stopping or renaming a session outside its own work, or archiving any session other than one it started
 - Changing a task outside its own work, such as its stage, hold, name, group, links or notes, detaching its files, or archiving its resources
-- Changing a Kepler setting that affects your accounts, privacy, other tools, what runs, or where files go. Only [Ask Kepler](/kepler/ask-kepler) can change settings, and you approve each change on its own. See [Approval requests](/kepler/agent-sessions#approval-requests)
+- Changing a Kepler setting that affects your accounts, privacy, other tools, what runs, or where files go. Only [Ask Kepler](/kepler/ask-kepler) can change settings, and you approve each change on its own. See [Approval requests](/kepler/agent-requests#approval-requests)
 - Deleting any note
 - Detaching an uploaded file, because Kepler deletes its saved copy
 - Archiving a task outside its own work or with other live sessions, and any archive that also deletes worktrees
@@ -607,7 +607,7 @@ These requests wait for your approval:
 
 A session that an agent starts cannot run in a higher mode than the session that started it unless you approve. The request says *More permissive than the asking session, which is in {mode} mode.*
 
-The request appears as an approval card above the asking session's composer, with **Approve** and **Deny**. The **Approve** menu can approve every request of that kind from the session, or always. A rule you make with **Always approve** is listed under **Settings → Agents → Approvals**, where **Remove** deletes it. **Always approve** is not offered for actions that can lose work. See [Agent Sessions](/kepler/agent-sessions#when-the-agent-asks-you-something).
+The request appears as an approval card above the asking session's composer, with **Approve** and **Deny**. The **Approve** menu can approve every request of that kind from the session, or always. A rule you make with **Always approve** is listed under **Settings → Agents → Approvals**, where **Remove** deletes it. **Always approve** is not offered for actions that can lose work. See [Agent Sessions](/kepler/agent-requests).
 
 The agent does not wait for you to answer the card. Kepler tells the agent the request is awaiting your approval, the agent continues, and the outcome arrives in its inbox. Before an approved request runs, Kepler checks again. If the target changed in the meantime, such as a worktree that has new commits, nothing runs.
 

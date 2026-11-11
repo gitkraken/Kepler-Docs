@@ -19,7 +19,7 @@ taxonomy:
 custom_fields:
     nav_category: "working-in-kepler"
     nav_label: "Ask Kepler"
-    nav_order: 40
+    nav_order: 70
     nav_parent: "working-in-kepler"
     page_type: "content"
 ---
@@ -115,7 +115,7 @@ The chat can look up Kepler's settings for you. Ask where something is set, or w
 
 The agent changes a setting only when you ask it to. It can find and link to some settings but not change them, such as secrets, actions, and settings that take a list. The agent cannot turn on a paid feature without a paid plan, and it tells you why when it refuses.
 
-Some changes wait for your approval: a change to a setting that affects your accounts, your privacy, other tools, what runs, or where files go. The approval card reads **Change the setting {setting}** with **From {from} to {to}**. Kepler asks about each such change separately, and the card offers no way to approve more than that one change. See [Approval requests](/kepler/agent-sessions#approval-requests).
+Some changes wait for your approval: a change to a setting that affects your accounts, your privacy, other tools, what runs, or where files go. The approval card reads **Change the setting {setting}** with **From {from} to {to}**. Kepler asks about each such change separately, and the card offers no way to approve more than that one change. See [Approval requests](/kepler/agent-requests#approval-requests).
 
 Kepler keeps some settings, such as the theme, the language, or the terminal font, on your own computer. When you use Kepler in a browser or a remote window, the window you asked from applies such a change and shows **Ask Kepler changed {label} from {from} to {to}.** with **Undo**. See [Settings](/kepler/settings).
 

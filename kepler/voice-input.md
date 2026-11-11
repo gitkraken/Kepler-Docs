@@ -19,7 +19,7 @@ taxonomy:
 custom_fields:
     nav_category: "working-in-kepler"
     nav_label: "Voice Input"
-    nav_order: 50
+    nav_order: 80
     nav_parent: "working-in-kepler"
     page_type: "content"
 ---

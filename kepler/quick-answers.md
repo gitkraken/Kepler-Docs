@@ -41,7 +41,7 @@ Common questions about where and how your agents run:
 | Run Kepler on Windows | Kepler installs natively on Windows 10 and later, on 64-bit and ARM64. It also runs on macOS 12 and later, and on Linux. | [Getting Started → Install Kepler](/kepler/kepler-getting-started#install-kepler) |
 | Run agents in Windows Subsystem for Linux (WSL) | Kepler treats a WSL 2 distro as a remote environment. It finds your version 2 distros and lists them under **Found on this machine** in Settings. | [Remote Environments → WSL environments](/kepler/remote-environments#wsl-environments) |
 | Run agents on another machine | Add the machine as an SSH host. Kepler installs itself on the host over SSH, so you do not need to install anything there first. | [Remote Environments → Add an SSH host](/kepler/remote-environments#add-an-ssh-host) |
-| Use several accounts of the same agent | Claude Code, Codex, GitHub Copilot, Auggie, and Grok Build can each hold more than one signed-in account. To add one, open **Settings → Agents**, expand the agent, and click **Add account**. | [Agent Sessions → Several accounts for one agent](/kepler/agent-sessions#several-accounts-for-one-agent) |
+| Use several accounts of the same agent | Claude Code, Codex, GitHub Copilot, Auggie, and Grok Build can each hold more than one signed-in account. To add one, open **Settings → Agents**, expand the agent, and click **Add account**. | [Agent Sessions → Several accounts for one agent](/kepler/agent-accounts#several-accounts-for-one-agent) |
 
 ***
 
@@ -72,8 +72,8 @@ Common questions about watching and answering your agents:
 |---|---|---|
 | See what every agent is doing | The **Agent Graph** draws every task, session, turn, tool call, subagent, and file the agents touch. It updates live as they work. | [The Agent Graph](/kepler/agent-graph) |
 | Find out what needs you | Open **Ask Kepler** and ask. Its chat can see what's on your screen and check on your tasks and sessions. | [Ask Kepler](/kepler/ask-kepler) |
-| Answer an agent's permission request | The request pins to the top of the session. Choose **Allow**, **Allow for this session**, **Allow always**, **Reject**, or **Reject always**. | [Agent Sessions → Permission requests](/kepler/agent-sessions#permission-requests) |
-| Check on your agents from your phone | Turn on **Remote Access** and scan its QR code with your phone's camera. Kepler opens in your phone's browser, and your work keeps running on your computer. | [Remote Environments → Using Kepler on a phone](/kepler/remote-environments#using-kepler-on-a-phone) |
+| Answer an agent's permission request | The request pins to the top of the session. Choose **Allow**, **Allow for this session**, **Allow always**, **Reject**, or **Reject always**. | [Agent Sessions → Permission requests](/kepler/agent-requests#permission-requests) |
+| Check on your agents from your phone | Turn on **Remote Access** and scan its QR code with your phone's camera. Kepler opens in your phone's browser, and your work keeps running on your computer. | [Remote Environments → Using Kepler on a phone](/kepler/remote-access#using-kepler-on-a-phone) |
 
 ***
 

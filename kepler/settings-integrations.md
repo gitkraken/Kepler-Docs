@@ -82,7 +82,7 @@ The following setting lets you follow agent sessions you start outside Kepler:
 |---|---|---|
 | **Show sessions started outside Kepler** | *Lists sessions you start in your own terminal, so you can follow and continue them here.* | On |
 
-To do this, Kepler installs GitKraken hooks. The switch covers every agent that reports through hooks, and its help text names those agents. See [Agent Sessions](/kepler/agent-sessions#sessions-started-outside-kepler).
+To do this, Kepler installs GitKraken hooks. The switch covers every agent that reports through hooks, and its help text names those agents. See [Agent Sessions](/kepler/external-sessions).
 
 If a running agent session stops reporting to Kepler, every window shows *Agent sessions aren't reporting to Kepler*, with a **Repair** button. **Repair** installs the reporting configuration again. Restart any session that still does not report. For another computer's sessions, repair from that computer.
 

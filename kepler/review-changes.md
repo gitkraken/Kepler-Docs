@@ -19,7 +19,7 @@ taxonomy:
 custom_fields:
     nav_category: "working-in-kepler"
     nav_label: "Review Changes"
-    nav_order: 30
+    nav_order: 60
     nav_parent: "working-in-kepler"
     page_type: "content"
 ---

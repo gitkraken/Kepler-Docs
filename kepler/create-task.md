@@ -228,7 +228,7 @@ Starting a task from an external session anywhere else, such as from a Kepler li
 
 Because you can create a task in any plain folder, you can add a conversation from a scratch directory the same way as one from a checkout.
 
-For what happens to the conversation once it's on a task, including forking, continuing, and what Kepler will and will not answer on its behalf, see [Agent Sessions](/kepler/agent-sessions#sessions-started-outside-kepler).
+For what happens to the conversation once it's on a task, including forking, continuing, and what Kepler will and will not answer on its behalf, see [Agent Sessions](/kepler/external-sessions).
 
 ***
 
