@@ -146,7 +146,7 @@ The overlay's header shows the branch the changes are measured against, **from {
 | Click a file | Opens it on its own |
 | **Cmd/Ctrl**-click | Adds a file to the set on screen |
 | **Shift**-click | Extends the selection to a range |
-| Click a folder | Opens every file in it, stacked |
+| Click a folder | Opens the changed files in it, stacked |
 | Type a name in the tree | Jumps to the first file that starts with it |
 | **Alt+↑** / **Alt+↓** | Previous and next file |
 | **F7** / **Shift+F7** | Next and previous change, carrying on into the next file that has one |
@@ -251,6 +251,8 @@ Kepler normalizes line endings in diffs, so a file that changed from CRLF to LF 
 
 If Kepler cannot read the changes, the view says so instead of showing an empty list: **Unable to load these changes**, with **Try again**.
 
+In a repository you have not trusted, Kepler runs no git, so the view reads **Trust this repository to see its changes**. To show the changes, click **Trust**. See [Trust a repository](/kepler/settings-repositories#trust-a-repository).
+
 An empty view shows one of these messages:
 
 - **No changes on this branch yet**, in **Changes**, when the branch has no commits and nothing uncommitted.
@@ -302,11 +304,11 @@ To start a comment, do one of the following:
 | The line highlight | Move it with **↑** / **↓** in read-only code, then press **C** |
 | What you selected in the editor | **Cmd/Ctrl+Shift+C**, which also works on the line the caret is on |
 
-You can comment in **Changes**, whatever you picked in its list, and in **Files**, including on a file shown whole, such as a new file. A file attached to the task, open in its tab, accepts comments too, and so does a file in the file viewer. The file's header and its tree row show how many comments the file has.
+You can comment in **Changes**, whatever you picked in its list, and in **Files**, including on a file shown whole, such as a new file. A file attached to the task, open in its tab, accepts comments too, and so does a file in the file viewer. Notes take comments too. See [Comment on a note](#comment-on-a-note). The file's header and its tree row show how many comments the file has.
 
 ### Write and send a comment
 
-A draft opens under the last line. Below the note, **To {agent} {name}** names the session that receives the comment. To send it to another of the task's sessions, pick one from its chevron. Comments for a session that is not running wait until it runs.
+A draft opens under the last line. Below the note, **To** and the session's title show which session receives the comment. To send it to another of the task's sessions, pick one from its chevron. Comments for a session that is not running wait until it runs.
 
 To finish the draft, follow these steps:
 
@@ -332,10 +334,10 @@ Each comment appears as a card under its lines. What the card offers depends on 
 | Status | The card offers |
 |---|---|
 | **Not sent yet** | **Edit comment**, **Delete comment**, **Add to queue** and **Send now** |
-| **Queued for {agent} {name}** | **Edit comment**, **Delete comment**, **Remove from queue** and **Send now** |
-| **Sending to {agent} {name}** | Nothing, until the prompt has gone out |
-| **Sent to {agent} {name} {time}** | **Reply to {agent}**, **Resolve** and **Delete comment** |
-| **Resolved**, or **Resolved by {agent} {name}** | **Reopen** |
+| **Queued for {session}** | **Edit comment**, **Delete comment**, **Remove from queue** and **Send now** |
+| **Sending to {session}** | Nothing, until the prompt has gone out |
+| **Sent to {session} {time}** | **Reply to {agent}**, **Resolve** and **Delete comment** |
+| **Resolved**, or **Resolved in {session}** when the agent resolved it | **Reopen** |
 
 After a comment goes out in a prompt, you cannot edit its text, because the agent has already read it. The overlay's header shows **{count} comments**, which opens the [Comments view](#the-comments-view), and a **Comment options** menu with **Discard unsent comments**. Discarding keeps the comments you have already sent.
 
@@ -355,6 +357,8 @@ The agent answers a comment you sent in a thread under it, and it can resolve th
 - **Reply**: type in **Reply to {agent}** and press **Reply**, or **Cmd/Ctrl+Enter**. The reply goes to the session the comment was last sent to. If that session is gone, Kepler asks you to choose another.
 - **Resolve** closes the comment, and **Reopen** opens it again. A resolved card starts collapsed.
 - **Unread replies**: a card with replies you have not read shows **{count} new replies** and marks each one **New**. To change this yourself, use **Mark as read** or **Mark as unread**.
+
+New replies also show in the session: its tab counts them, its composer shows a **{count} new replies** chip, and each reply appears in the conversation with **Open in Changes**. See [Reading the conversation](/kepler/agent-sessions#reading-the-conversation).
 
 To collapse a card to a one-line row, click the chevron beside its lines. Click the row to expand it again.
 
@@ -382,6 +386,23 @@ Each row shows the comment's place, when it was written, the note and its status
 A comment stays with its code. If the agent moves the lines it is on, the card moves with them. If the agent changes those lines, the card stays near where it was, marked **Outdated**, and shows the lines as they were when you commented.
 
 A view of the files on disk shows every comment on a file, whichever commit it was written on, so a card stays visible after the agent edits or commits. A commit you pick in the list of changes shows only the comments written on that commit. The header counts comments on files that are not in the view. Opening a comment whose file has no changes in the view opens the file whole.
+
+### Comment on a note
+
+A task's notes take review comments too, so you can ask an agent to fix a note the way you ask it to fix code. In an open note, start a comment in one of these ways:
+
+- Select lines, then click **Comment on the selected lines**.
+- Hover a heading, then click **Comment on section**.
+- Right-click the note and choose **Comment**.
+
+While you edit a note, comment on its lines as you would in a file. The draft works like a comment on code: pick the session, then click **Add comment** or **Send now**. The agent's reply in the conversation offers **Open note**.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/note-comment-nov-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/note-comment-nov-2026.png" class="help-center-img img-bordered" alt="The Coding conventions note open on the task page, with its Money heading pointed at and its Copy link to section and Comment on section buttons beside it. Under the Money section's two lines a comment draft is open: Comment on lines 1 to 4, the note Say whether tax is worked out before or after the rounding, the target To with the OpenCode logo and the session Fix the cart total: discounts should apply before tax., then Cancel, Add comment and Send now. The Tests heading starts below the draft.">
+  </a>
+  <figcaption style="text-align:center; color:#888">A comment draft on a note's section.</figcaption>
+</figure>
 
 ***
 
@@ -526,17 +547,18 @@ The Sync view rebases or merges the branch onto its merge target. It works on a 
   <a href="/wp-content/uploads/update-view-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/update-view-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The sync view titled Sync kepler/fix-cart-total, from origin/main with Rebase selected in the Rebase and Merge control, at Ready to apply: The rebase onto origin/main is ready. Apply updates your branch. Sync sits beside Apply & push and its chevron.">
   </a>
-  <figcaption style="text-align:center; color:#888">The sync view with a clean result, ready to apply and push.</figcaption>
+  <figcaption style="text-align:center; color:#888">The Sync view with Push after update ticked, ready to apply and push.</figcaption>
 </figure>
 
 To sync the branch with its merge target, follow these steps:
 
 1. Open the Sync view from the sync control. Kepler picks the detected base. To use another base, choose it from the picker.
-2. Choose **Rebase** or **Merge** in the **Sync method** control beside the base.
-3. Press **Sync**. To abandon a run in progress, press **Stop**. Your branch is not touched, and any earlier result stays available.
-4. When the copy reaches **Ready to apply**, apply it:
-   - For a clean result (no conflicts, nothing resolved by AI) on a branch already on the remote, the main button is **Apply & push**, with **Apply** in its menu.
-   - Otherwise the main button is **Apply**, with **Apply & push** in its menu when the branch can push. A branch you never pushed gets **Apply** too.
+2. Choose **Rebase** or **Merge** in the **Sync method** control beside the base. It starts on the repository's default. See [Repository Settings](/kepler/settings-repositories#edit-a-repository).
+3. To push the result when you apply it, tick **Push after update** beside the method. It also starts on the repository's setting.
+4. Press **Sync**. To abandon a run in progress, press **Stop**. Your branch is not touched, and any earlier result stays available.
+5. When the copy reaches **Ready to apply**, apply it:
+   - With **Push after update** ticked, the button is **Apply & push**. A branch you never pushed gets **Apply**.
+   - Otherwise the main button is **Apply**, with **Apply & push** in its menu when the branch can push.
 
 **Apply** moves your branch to the result, and the view reads **Branch synced**. You can check the branch before you push it. On a branch already on the remote, **Push** is then the main button. On a branch you never pushed, the main button is **Roll back**, with **Push** in its menu. After a rebase, the push replaces the remote's old commits. A push from the Sync view never overwrites work someone else pushed in the meantime.
 
@@ -586,7 +608,7 @@ To resolve conflicts with AI, follow these steps:
 3. Choose **Rebase** or **Merge** in the **Sync method** control, then press **Sync**.
 4. Wait while the progress line counts the files resolved. To abandon the run, press **Stop**.
 5. When the run reaches **Ready to apply**, read the review. See [Read the AI review](#read-the-ai-review).
-6. Press **Apply**. If the branch can push, **Apply & push** is in its menu. To leave the result unapplied, close the view; your branch stays as it was.
+6. Press **Apply**, or **Apply & push** to push too, as in [Updating from the base](#updating-from-the-base). To leave the result unapplied, close the view; your branch stays as it was.
 
 If the AI cannot finish some files, such as a binary file, the run stops without changing your branch and lists each file with the reason. You resolve those files by hand.
 
@@ -704,7 +726,7 @@ A file or folder in a worktree opens in the Changes overlay too, wherever you op
 
 To bring several worktrees and local branches up to date with their bases in one pass, use **Update** in **Settings → Repositories → Worktrees and branches**. The **Update worktrees** panel checks each one and lists what it will update and what it skips, such as a worktree with uncommitted changes, one where an agent is working, or a branch already checked out in a worktree. A local branch with no worktree is updated in place, without being checked out.
 
-Choose **Rebase** or **Merge**, and tick **Push after update** to push each updated branch too. Branches with no upstream are updated but not pushed. Nothing changes until you press **Update**, and **Roll back** undoes a worktree's update. See [Settings](/kepler/settings-repositories#update-worktrees).
+Keep each repository's default way to update and push, or choose another for this update. **Push + Publish** also publishes branches that have no remote branch yet. Nothing changes until you press **Update**, and **Roll back** undoes a worktree's update. See [Settings](/kepler/settings-repositories#update-worktrees).
 
 ***
 
@@ -730,7 +752,7 @@ AI Sync and AI Compose give agents Git tools they do not otherwise have. Both ar
 
 | Tool | How an agent uses it |
 |---|---|
-| **AI Sync** | Rebases or merges the branch onto its base and resolves conflicts, with a result you can read before it applies, and every run backed up |
+| **AI Sync** | Rebases or merges the branch onto its base and resolves conflicts, with a result you can read before it applies, and every run backed up. It can push the result, and follows the repository's update and push settings unless you ask otherwise |
 | **AI Compose** | Plans the new commits for you to read before it applies them, can split a branch into a stack, and can undo what it applied |
 
 When you ask for a sync, tell the agent what matters, such as which side is authoritative, and it uses that when it resolves conflicts.

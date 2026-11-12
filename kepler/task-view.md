@@ -172,6 +172,8 @@ To give the content area the full width, hide the context panel:
 
 While the context panel is hidden, the control shows the task's session status, so you can still see when a session needs you. Hover the control to peek at the context panel over the content, and press **Escape** to close it. To keep the context panel open, click the control while peeking. To resize the context panel, drag its edge.
 
+When the window is too narrow for the context panel beside the open columns, Kepler hides the context panel, and you peek at it the same way. Widen the window to bring it back.
+
 ### What a row shows
 
 Each row has 2 lines, cut off at the width of the context panel. Hover a row for a tip with its full name and the details the row has no room for, such as its path, repository, agent, or account.
@@ -188,9 +190,10 @@ Some kinds of row show more:
 - A **pull request** or **issue** row shows the same live card as the Dashboard. A pull request row leads its subtitle with what needs attention, such as **CI failed**.
 - A **file** row's card adds the file's size, type, and dates. An image file shows its own thumbnail as the row's icon.
 - A **Changes** row's subtitle is a series of chips that show the checkout's state: uncommitted files, commits on the branch, commits behind or ahead of the upstream and the merge target, conflicts, and an unpublished branch. A checkout with nothing to report shows **Up to date**. When the task spans more than 1 repository, each row also names its repository.
-- A checkout in an unusual state shows that state instead of the chips, such as a paused rebase or merge, or **Detached** for a detached HEAD. A detached row is titled with the commit's short hash.
+- A checkout in an unusual state shows that state instead of the chips, such as a paused rebase or merge, **Detached** for a detached HEAD, or **Not trusted. Kepler runs no git here.** for a repository you have not trusted. A detached row is titled with the commit's short hash. See [Trust a repository](/kepler/settings-repositories#trust-a-repository).
 - A **Changes** row's hover tip lists the branch, the repository and path, any unusual state, the pull request the branch owns, and how the branch compares with its upstream and merge target. With tabs on, a worktree's tab shows the same tip.
 - A **session** row starts with its state. When an agent has more than 1 account configured, the row also shows which **Account** the session runs under.
+- A **session** row, and its tab, count the agent's replies to your review comments that you have not read. A **Changes** row counts the unread replies on comments in its changes. See [Replies and resolving](/kepler/review-changes#replies-and-resolving).
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/task-rail-detached-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -229,7 +232,7 @@ Each kind of row adds its own items to the menu:
 | A worktree that's on disk | **Open changes**, **Open in**, the **Branch** submenu, **New session here**, **New terminal here**, **Run command here**, the copy actions, and **Refresh** |
 | A folder | **New session here**, **New terminal here**, **Open in**, and **Copy path** |
 | A file | **Open in default app**, a way to show it in your file manager, **Save as…**, and **Copy path** |
-| A note | **Rename note**, **Copy note**, and **Save as…**, which saves the note as a Markdown file |
+| A note | **Rename note**, **Copy note**, **Copy link to note**, and **Save as…**, which saves the note as a Markdown file |
 | A session | **New session from this one**, **Rename session**, **Copy session link**, **Show Agent Graph**, the ways to continue it, **Restart agent**, and **Shut down agent** |
 | A session started outside Kepler | **Open preview**, **Continue in this task**, **Create task**, and the copy actions |
 | A pull request or issue | **Open**, which opens it in Kepler, **Open on {provider}**, the copy actions, **Refresh**, and **Go to worktree** when its branch is checked out |
@@ -316,6 +319,8 @@ With tabs off, the kind of row you open decides its column:
 To resize columns, drag the divider between them. Kepler keeps the sizes you set.
 
 **Clicking a row toggles it.** Click a row to open it in its column. Click the row that's already on screen to close it again. A column with nothing open disappears, and the other columns take its space.
+
+When the window is too narrow for the open columns side by side, the page shows one column at a time: the one with focus. Clicking a row in the context panel shows its column. Widen the window to see every column again.
 
 When you open the task page, it shows a conversation and the checkout that conversation works in.
 
@@ -455,7 +460,7 @@ If the place is a worktree that's gone from disk, **Start** recreates it, after 
 
 **Task context** is a checkbox chip in the composer's footer, beside the place chip. It's on by default and gives the agent the task's prompt and notes, and later changes to them reach the agent with your next message. Turn it off when you want the session to form its own view without them. See [Starting a session without the task's context](/kepler/tasks-and-resources#starting-a-session-without-the-tasks-context).
 
-**Which agent a draft starts with is a setting.** **New tasks use**, in **Settings → Tasks → New tasks**, sets the agent every new session starts with. Pick **Use last used agent** there to start with your last pick instead. See [Settings](/kepler/settings-tasks#default-agent).
+**Which agent a draft starts with is a setting.** By default, each session starts on the agent you used last. **New sessions start with**, in **Settings → Tasks → New tasks**, sets the agent for your first session, and for every session once you untick **Start each session on the agent you used last** under it. See [Settings](/kepler/settings-tasks#default-agent).
 
 If no agent is set up, the agent control reads **Set up an agent**, and **Start** opens a panel where you can install an agent or tell Kepler where yours is. See [Agent Integrations](/kepler/agent-integrations). If the agent is signed out, sign in to it before you start.
 
@@ -498,7 +503,7 @@ A path that's already one of the task's files opens that file's own tab rather t
 
 ### Go to a task or file
 
-**Go to File…** and **Command Palette…** open the same palette, on its **Files** tab or its **Tasks** tab. While it's open, press the other shortcut to switch tabs. For the **Tasks** tab, see [Go to a task or file](/kepler/kepler-interface#go-to-a-task-or-file).
+**Go to File…** and **Command Palette…** open the same palette, on its **Files** tab or its **Tasks** tab. While it's open, press the other shortcut to switch tabs. The palette also has a **Todo** tab for your pull requests and issues, and a **Commands** tab: in an empty search field, type **#** or **>** to switch to them. For the other tabs, see [Go to a task or file](/kepler/kepler-interface#go-to-a-task-or-file).
 
 On the task page, **Files** starts on this task's files, shown as a pill in the search field. Before you type, it lists **Changed in this task** and **Recent in this task**. To search every task's files, click the pill's **×** or press **Backspace** in the empty field. You can also type a full path. A path that names a folder offers **Open** and opens the folder.
 
@@ -648,7 +653,7 @@ Each kind of resource opens in its own pane:
 | **File** | The file itself, in the [file viewer](#opening-a-file), with its description, where it came from, and its size on the viewer's toolbar. An uploaded copy says it's a copy in the task folder, and has **Rename** in **File actions** |
 | **Pull request** / **Issue** | Status, who it involves, the item's description and its labels. An issue adds its comments |
 | **Link** | Every plain link (one that is not a pull request or issue) shares one **Links** pane, scrolled to the link you picked |
-| **Note** | The note itself, with **Copy**, **Save as…**, **History**, and **Edit**. The **Prompt** note edits the task's prompt |
+| **Note** | The note itself, with **Copy**, **Save as…**, **What changed**, and **Edit**. The **Prompt** note edits the task's prompt |
 
 **The worktree strip.** The **⋮** beside the branch, and a right-click on the branch, both open the worktree's full [row menu](#the-row-menu). With more than 1 worktree, the branch name also switches between the task's worktrees. **Detach worktree…** leaves the worktree on disk, and **Delete worktree…** removes it from disk.
 
@@ -658,7 +663,7 @@ Each kind of resource opens in its own pane:
 
 A pull request's **People** section shows its author, its **Assignees**, and each reviewer with their review state. An issue shows its **Assignee**.
 
-An issue from GitHub, GitHub Enterprise, GitLab, GitLab Self-Managed, Jira, or Jira Server also shows its latest comments under **Comments · {count}**. **Show earlier comments** pages back, and **Refresh comments** reads them again. Kepler shows the comments for you to read. It does not pass them to the agent.
+An issue from GitHub, GitHub Enterprise, GitLab, GitLab Self-Hosted, Jira, or Jira Server also shows its latest comments under **Comments · {count}**. **Show earlier comments** pages back, and **Refresh comments** reads them again. Kepler shows the comments for you to read. It does not pass them to the agent.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/issue-comments-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -669,7 +674,14 @@ An issue from GitHub, GitHub Enterprise, GitLab, GitLab Self-Managed, Jira, or J
 
 **Links.** The **Links** pane lists every plain link on the task with its title and URL, an **Open in browser** button, and **Link actions**, scrolled to the link you clicked.
 
-**Notes.** To rename a note in place, double-click its name, press **F2** with the note focused, or pick **Rename note** from its row menu. **Enter** saves the name and **Escape** puts it back. You cannot rename the **Prompt** note. **Enter** on a focused note opens it for editing. A note with unsaved edits says **Unsaved draft**, and **Edit** reads **Resume draft**. **Save as…** saves the note as a Markdown file. **History** opens the note's saved versions in a sidebar beside it. See [Notes are how you give standing instructions](/kepler/tasks-and-resources#notes-are-how-you-give-standing-instructions).
+**Notes.** In a note's pane:
+
+- To rename the note, click its name while you are in the note, press **F2** with the note focused, or pick **Rename note** from its row menu. **Enter** saves the name and **Escape** puts it back. You cannot rename the **Prompt** note.
+- To edit the note, click **Edit** or press **Enter** on the focused note. The note opens in Kepler's code editor, and **Cmd/Ctrl+S** saves it. A note with unsaved edits says **Unsaved draft**, and **Edit** reads **Resume draft**.
+- To see the note's earlier versions in its place, click **What changed**, or **See what changed** on the line that says who last edited the note.
+- **Save as…** saves the note as a Markdown file.
+
+See [Notes are how you give standing instructions](/kepler/tasks-and-resources#notes-are-how-you-give-standing-instructions).
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/note-rename-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">

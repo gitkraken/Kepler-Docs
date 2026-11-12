@@ -81,7 +81,7 @@ If your browser did not open, copy the **Connection link** from the dialog Keple
 **GitHub Enterprise**, **GitLab Self-Hosted**, **Azure DevOps Server**, and **Bitbucket Data Center** connect inside Kepler with a personal access token rather than through the browser:
 
 1. Open **Settings → Integrations**.
-2. Find the provider in **Issues and pull requests** and click **Connect**. The **Connect {name}** dialog opens.
+2. Find the provider in **Issues and pull requests** and click **Connect**. The **Connect *provider*** dialog opens.
 3. In **Server URL**, enter the server's address, including the port and installation path when your server uses them.
 4. In **Personal access token**, paste a token with access to the repositories you need.
 5. Click **Save connection**.
@@ -217,13 +217,14 @@ Kepler reads these fields from a pull request:
 | **Head and base branch** | When the provider reports them |
 | **Fork** | Whether the head branch lives on a fork, and where |
 | **Created at** | |
+| **Checks and review** | Shown on an open or draft pull request's chip in a task panel: failing, pending, or passing checks, and an approved review |
 | **URL** | Used by the open control, which names the provider: **Open on GitHub**, **Open on Bitbucket**, and so on |
 
-<!-- TODO(verify): at v0.16.0 Kepler's pull request data also carries reviewers, assignees, mergeability, checks, the review decision, and when it was last updated, which the table above does not list. Confirm which of these Kepler shows or hands to the agent before adding them. Also confirm with engineering what supplies review comments and the diff to a Review or Address Feedback run before documenting them. -->
+<!-- TODO(verify): at v0.16.0 Kepler's pull request data also carries reviewers, assignees, mergeability, and when it was last updated, which the table above does not list (checks and the review decision are answered by v0.19.0). Confirm which of these Kepler shows or hands to the agent before adding them. Also confirm with engineering what supplies review comments and the diff to a Review or Address Feedback run before documenting them. -->
 
 A merged pull request keeps its description and author for as long as a task, archived or not, still links it.
 
-On a self-hosted server (GitHub Enterprise, GitLab Self-Hosted, Azure DevOps Server, or Bitbucket Data Center), images embedded in a pull request's description are blocked and do not display in Kepler's previews. The server's member avatars still load.
+Images embedded in a pull request's description display in Kepler's previews, including on GitHub Enterprise, GitLab Self-Hosted, and Azure DevOps Server. On Bitbucket Data Center, an embedded image may show as a link instead.
 
 ***
 
@@ -262,7 +263,7 @@ The pull request list on a task's **Resources** screen has its own scope menu: *
 | The provider refused part of the request, so some organizations or repositories are missing | **Open settings** |
 | Rate limiting, an unreachable server, an unreadable answer, or a temporary problem | **Retry** |
 
-On Todo, each warning also has **Filter out {provider}**, which hides that provider from the Todo view so it stops reporting the failure. To show the provider again, clear it in the view's **Provider** filter.
+On Todo, each warning also has **Filter out *provider***, which hides that provider from the Todo view so it stops reporting the failure. To show the provider again, clear it in the view's **Provider** filter.
 
 Rows kept from the last good load show a cloud mark on their provider chip.
 

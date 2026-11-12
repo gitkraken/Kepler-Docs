@@ -21,9 +21,9 @@ taxonomy:
 
 Arrange the Dashboard so it shows the work you need to see. The Dashboard is a set of views, such as **Todo** and **Tasks**, and each view keeps its own arrangement. Above a view's list, the toolbar has these controls:
 
-- The search box finds items in the list. See [Search](#search).
 - **View** opens a menu that sets the layout (**List**, **Board**, or **Graph**), the grouping, the sort, and the filters.
-- **Panel layout** arranges open panels side by side (**Columns**) or in a **Grid**. See [Open a panel](/kepler/kepler-interface#open-a-panel).
+- The search box finds items in the list, and also takes filters. See [Search](#search).
+- **Panel layout** arranges open panels side by side in 1 row, or in a grid of several rows. See [Lay panels out in a grid](/kepler/kepler-interface#lay-panels-out-in-a-grid).
 - **Refresh** fetches the view's items from your providers again.
 
 What you choose in the **View** menu is saved to the view at once. To learn what each part of the screen is, see [The Kepler Interface](/kepler/kepler-interface).
@@ -50,7 +50,7 @@ Each view lists one kind of work:
 
 Kepler starts you with a **Todo** view, a **Tasks** view, and an **Agent Graph** view, which is a Tasks view in the **Graph** layout (see [Layouts](#layouts)). The views appear on every page. Click a view to open the Dashboard on it.
 
-A view keeps its own layout, grouping, sort, and filters. Every window shares the same views.
+A view keeps its own layout, grouping, sort, filters, and search text. Every window shares the same views.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/saved-views-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
@@ -165,7 +165,7 @@ Each view remembers its own column width. When a column has more tasks to load, 
 
 <div class="note" markdown="1">
 
-**Columns** in **Panel layout** arranges open panels. It is not the **Board** layout.
+**Panel layout** arranges the panels you open, not the list. Its **Auto columns** are not the **Board** layout's columns.
 
 </div>
 
@@ -197,7 +197,7 @@ Each type of view has its own groupings:
 
 | View | Group by | Default |
 |---|---|---|
-| **Todo** | Type, Needs my attention, Priority, Age, Your role, Assignee, Provider, Repository, Status, None | Type |
+| **Todo** | Type, Needs my attention, Priority, Age, Your role, Assignee, Provider, Repository, Milestone, Status, None | Type |
 | **Tasks** | Inbox, Progress, Activity, Repository, None, and the **Your groups** switch above them | Inbox |
 
 On a Tasks view, the **Your groups** switch above **Group by** divides the list by groups you make yourself, either alone or with another grouping inside each group. See [Your groups](#your-groups).
@@ -221,6 +221,8 @@ On a Tasks view, the **Your groups** switch above **Group by** divides the list 
 | **Archived** | Tasks you archived. Starts folded |
 
 A finished turn stays unread until you look at it.
+
+To step through the tasks that need you in Inbox order, use **Go to next task needing attention**, **Go to next unread task**, or **Go to next task needing attention or unread**. Run them from the palette's **Commands** tab, or give them a key in [Keyboard shortcuts](/kepler/settings-app#keyboard-shortcuts). They have no key by default.
 
 **Inbox** lists every task exactly once:
 
@@ -261,6 +263,8 @@ On Todo, **Needs my attention** groups each item by what it needs from you now, 
 On Todo, **Priority** reads an item's priority from its labels, such as *P0* to *P4* or *urgent*. Kepler does not read a tracker's own priority field, so an issue with no priority label is **Unprioritised**, and every pull request goes under **Not applicable**.
 
 **Age** groups by when an item was created: **Today**, **This week**, **This month**, **Older**, and **No date**. **Assignee** groups by who an item is assigned to on each provider, with **Unassigned** for the rest.
+
+On Todo, **Milestone** groups items by their milestone, with open milestones before closed ones. Items with no milestone go under **No milestone**, and items from trackers without milestones, such as Jira, go under **No milestones**.
 
 On Todo, **Status** groups issues by their tracker's own workflow state, such as a Linear *In Progress* or a Jira *To Verify*, instead of putting every open issue in one section.
 
@@ -515,17 +519,19 @@ The **Filters** section at the end of the **View** menu has a submenu for each f
   <a href="/wp-content/uploads/filter-todo-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/filter-todo-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The View menu on Todo, under the View button reading Type, Updated and Mine: the List and Board switch, the Mine and All scope switch with Mine chosen and Your work, in every org under it, Group by Type and Sort by Updated, then Filters: Needs my attention, Review requests, Your role, Type, Linked work, Status, Priority, Age and Provider, then a GitHub section with Repository, Assignee, Author, Reviewer and Label, each set to Any. The Provider flyout lists GitHub with its count of 5, and Manage integrations.">
   </a>
-  <figcaption style="text-align:center; color:#888">The View menu on Todo. Each connected provider gets its own section, here GitHub.</figcaption>
+  <figcaption style="text-align:center; color:#888">The View menu on Todo. Each connection gets its own section, here GitHub.</figcaption>
 </figure>
 
 Each type of view has these facets:
 
 | View | Facets |
 |---|---|
-| **Todo** | Needs my attention · Review requests · Your role · Type · Linked work · Status · Priority · Age · Provider, then one section per connected provider with its own Repository · Assignee · Author · Reviewer · Issue type · Label · Project · Iteration or Sprint |
+| **Todo** | Needs my attention · Review requests · Your role · Type · Linked work · Status · Priority · Age · Provider, then one section per connection with its own Repository · Assignee · Author · Reviewer · Issue type · Label · Project · Milestone · Iteration or Sprint |
 | **Tasks** | Progress · Activity · Repository · Agent · Session · Group · Linked work |
 
 Facets with a fixed set of values, such as **Progress** or **Priority**, always list every value, even one that nothing matches. Other facets list only the values in your work, and Kepler hides a facet that has no values to choose from. For example, if you work in a single repository, the menu has no Repository facet.
+
+GitHub Enterprise and GitLab Self-Hosted get sections of their own, apart from GitHub and GitLab. If you connect 2 servers of one provider, each section's heading names its host, such as *GitHub Enterprise · ghe.example.com*. **Milestone** appears for providers that have milestones, such as GitHub, GitLab, and Linear.
 
 **Issue type**, **Label**, **Project**, and **Iteration** use your provider's own values (a Jira issue type, your team's labels, a board name), not Kepler's own names for them. Azure DevOps calls the last one **Iteration** and Jira calls it **Sprint**, so the facet uses each tracker's word.
 
@@ -544,7 +550,7 @@ Facets with a fixed set of values, such as **Progress** or **Priority**, always 
 
 **Values you include in one facet are combined.** If you tick GitHub *and* GitLab under **Provider**, the list shows items from either provider. Excluded values remove items: Kepler hides an item that matches any of them. A facet with nothing chosen reads **Any** and does not narrow the list.
 
-To find a value in a long facet, type in its **Search filters…** box. The **View** button counts the filters that are on. Hover over the button to see them.
+To find a value in a long facet, type in its **Search filters…** box. The filters you choose also show in the search box, and you can type them there instead. See [Filter from the search box](#filter-from-the-search-box). When a narrow window folds the search box into an icon, the **View** button counts the filters instead. Hover over the button to see them.
 
 To fetch the current view from your providers again, click **Refresh**.
 
@@ -552,16 +558,11 @@ To fetch the current view from your providers again, click **Refresh**.
 
 ## Search
 
-The search box finds items by **title, reference, or repository**. To find one task, paste its link (**Copy task link**) into the search box. A session's link (**Copy session link**) finds the task that holds the session.
+The search box finds items by **title, reference, or repository**, and finds tasks by their branch names too. Each word you type matches on its own, in any order, so *login kepler* finds a *Fix login* task in the kepler repository. Put a word or phrase in quotes to match whole words only: *"log"* leaves out *login*.
 
-<figure style="text-align:center">
-  <a href="/wp-content/uploads/search-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/search-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The search box holding the query the, with a 1 of 5 search pill and a 2 hidden filter pill, each with its own clear button, beside the View button reading Inbox and Updated with 1 filter, and the list toggle at the left.">
-  </a>
-  <figcaption style="text-align:center; color:#888">The search box, with its search and filter pills.</figcaption>
-</figure>
+To find one task, paste its link (**Copy task link**) into the search box. A session's link (**Copy session link**) finds the task that holds the session.
 
-To have the search box fill the free space in the toolbar, set **Search box** to **Full width** in [Settings → Appearance → Dashboard](/kepler/settings-app#dashboard).
+The search box fills the free space in the toolbar. To have it grow only as you type, set **Search box** to **Grows as you type** in [Settings → Appearance → Dashboard](/kepler/settings-app#dashboard).
 
 When a search or a filter narrows the list, pills at the right end of the search box show how many rows are left or hidden. Each pill clears only its own search or filters:
 
@@ -576,11 +577,28 @@ When nothing matches, the empty list offers a button that clears the search, the
 
 Search covers only the work the view has already loaded. On a Todo view, that is the work its scope lists. See [Choose what a Todo view lists](#choose-what-a-todo-view-lists).
 
+### Filter from the search box
+
+The search box also takes the view's filters, written as qualifiers such as `activity:waiting` or `type:pr`, beside your search words. As you type, it suggests filters, then their values with their counts. A filter you set in the **View** menu appears in the box as a qualifier, and a qualifier you type sets the filter. When you type a qualifier:
+
+- Put **-** before a qualifier to exclude its value, such as `-progress:done`.
+- Put a name with spaces in quotes, such as `group:"Release work"`.
+- On a Tasks view, `branch:` filters by branch name.
+
+A qualifier that can match nothing is underlined. Hover over it to see why, such as a group name that does not exist.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/search-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/search-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The search box holding the query the, with a 1 of 5 search pill and a 2 hidden filter pill, each with its own clear button, beside the View button reading Inbox and Updated with 1 filter, and the list toggle at the left.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The search box suggesting the values of a filter.</figcaption>
+</figure>
+
 ***
 
 ## What Kepler remembers
 
-Each view keeps its layout, grouping, sort, filters, and, on Todo, its scope, in every window and across restarts. In each window, each view also remembers its search text, its open panels and their layout, its folded sections, and where you scrolled to. If you switch to another view and back, the panels you were reading are still open.
+Each view keeps its layout, grouping, sort, filters, search text, and, on Todo, its scope, in every window and across restarts. In each window, each view also remembers its open panels and their layout, its folded sections, and where you scrolled to. If you switch to another view and back, the panels you were reading are still open.
 
 After a restart, each window reopens on the view it was showing, with that view's panels. The window's other views start with no panels open.
 
@@ -588,7 +606,7 @@ After a restart, each window reopens on the view it was showing, with that view'
 
 ## Archive, restore, and clean up in bulk
 
-**Archive task** puts a task away. The task moves from its current section to **Archived**, and Kepler stops its running agents. Its sessions and resources are kept, so you can resume them later. With **Also delete worktrees** ticked, archiving ends the task's agents instead.
+**Archive task** puts a task away. The task moves from its current section to **Archived**, and Kepler stops its running agents. Its sessions and resources are kept, so you can resume them later. With **Also delete worktrees** ticked, archiving ends the task's agents instead, and closes the Kepler terminals open in those worktrees.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/archive-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">

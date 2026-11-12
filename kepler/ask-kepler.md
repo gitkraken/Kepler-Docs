@@ -1,6 +1,6 @@
 ---
 title: Ask Kepler
-description: "Ask Kepler is a chat and a terminal in a panel beside whatever you're looking at. Ask what needs you, have it check on your tasks and sessions, hand a chat on to a new task, or open a quick shell that belongs to no task."
+description: "Ask Kepler is a chat and a terminal in a panel beside whatever you're looking at. Ask what needs you, have it check on your tasks and sessions, set up an automation, hand a chat on to a new task, or open a quick shell that belongs to no task."
 product: Kepler
 feature: Ask Kepler
 content_type: how-to
@@ -13,7 +13,7 @@ hosted_variant: both
 status: GA
 last_verified: 2026-11
 llms_include: true
-tags: [ask-kepler, chat, assistant, terminal, side-panel, keyboard, agent-sessions]
+tags: [ask-kepler, chat, assistant, terminal, side-panel, keyboard, agent-sessions, automations, dashboard-views]
 taxonomy:
   category: kepler
 ---
@@ -47,10 +47,7 @@ To close the panel, press the same shortcut again while focus is inside it. On W
 
 **The top bar button shows the state of your chats.** When a chat needs something from you, the button becomes a pill that reads **Needs you**, **New reply**, or **Failed**. Click the pill to open the panel on that chat.
 
-**Floating or docked.** By default, the panel floats as a card over the left or right edge of the page, and you can still use the page behind it. When you dock the panel, it becomes a column of the window, and the page narrows beside it. The panel's header holds 2 controls of its own:
-
-- **Dock panel** switches between floating and docked. It shows as pressed while the panel is docked.
-- **Close Ask Kepler** puts it away.
+**Floating or docked.** By default, the panel floats as a card over the left or right edge of the page, and you can still use the page behind it. To make the panel a column of the window, with the page narrowed beside it, click **Dock panel** in the panel's header. Click it again to float the panel. **Close Ask Kepler** beside it puts the panel away.
 
 Right-click the panel's header, or press the keyboard's context-menu key on it, for the panel's menu: **Dock panel**, and **Move to the left** or **Move to the right** to move the panel to the other edge of the window.
 
@@ -96,7 +93,7 @@ The chat keeps up with what you have on screen. With each message, the agent kno
 
 So you can ask *what's this one stuck on?* about the task in front of you. Kepler also tells the agent which sessions are waiting on you, such as approvals, permission requests, questions, and failed or unread sessions. To get that list, ask **What needs me right now?**
 
-The agent can read your tasks and sessions and act on them through Kepler's own tools. Before the agent starts a session on a task that it did not create, Kepler asks you first. When it mentions a task, a session, or a setting, it names it as a link you can click; a setting link shows the setting's name and opens it in **Settings**.
+The agent can read your tasks and sessions and act on them through Kepler's own tools. Before the agent starts a session on a task that it did not create, Kepler asks you first. When it mentions a task, a session, a task note, or a setting, it names it as a link you can click; a setting link shows the setting's name and opens it in **Settings**.
 
 ### Finding and changing settings
 
@@ -108,11 +105,28 @@ Some changes wait for your approval: a change to a setting that affects your acc
 
 Kepler keeps some settings, such as the theme, the language, or the terminal font, on your own computer. When you use Kepler in a browser or a remote window, the window you asked from applies such a change and offers **Undo**. See [Settings](/kepler/settings).
 
+### Changing your Dashboard views
+
+Ask the chat to add a view to the Dashboard, or to rename a view or change its filters. The agent changes views only when you ask, and tells you when a filter matches nothing. See [Views](/kepler/arranging-your-work#views).
+
+### Set up an automation
+
+Describe an automation in your own words, such as *Every Monday at 9, check my repos for outdated dependencies*, and the chat sets it up. You can also type the request in the **New automation** dialog in Automations and click **Ask Kepler**, which sends it to a new chat.
+
+The chat creates the automation paused and shows an **Automation created** card with what the automation watches, what it runs, and where. To start it, click **Turn on**. To see it in Automations, click **Open**. See [Automations](/kepler/automations).
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/automations-created-card-nov-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/automations-created-card-nov-2026.png" class="help-center-img img-bordered" alt="The Automation created card in an Ask Kepler chat for Check dependencies every Monday: Schedule, Weekly on Monday, 9:00 AM, UTC, the start of its prompt with Show full prompt, On your default agent, In /home/alex/kepler/repositories, and Paused until you turn it on, with the Turn on and Open buttons.">
+  </a>
+  <figcaption style="text-align:center; color:#888">An automation that Ask Kepler set up, paused until you turn it on.</figcaption>
+</figure>
+
 ### Which agents can answer
 
 The agent pill lists only agents that run in **Chat**. An agent that runs only in a terminal, such as Pi, cannot answer in the panel. See [Agent Integrations](/kepler/agent-integrations) for which agents run in **Chat**.
 
-**Ask Kepler keeps its own agent, separate from tasks.** A new chat opens on the agent you picked last in the panel, and picking an agent here never changes a task's agent, or the reverse. Until you pick one, it uses the agent and settings set in **Settings → Agents** under **Ask Kepler uses**. See [Settings: Agents](/kepler/settings-agents).
+**Ask Kepler keeps its own agent, separate from tasks.** A new chat opens on the agent you picked last in the panel, and picking an agent here never changes a task's agent, or the reverse. Your first chat uses the agent and settings set in **Settings → Agents** under **New Ask Kepler chats start with**. To start every chat there instead of on your last pick, clear **Start each chat on the agent you used last**. See [Settings: Agents](/kepler/settings-agents).
 
 ### Past chats and new chats
 

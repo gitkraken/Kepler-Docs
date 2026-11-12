@@ -19,13 +19,14 @@ taxonomy:
 ---
 <kbd>Last updated: November 2026</kbd>
 
-You can start a task in 4 ways. The shortest starts from work that is already assigned to you:
+You can start a task in 5 ways. The shortest starts from work that is already assigned to you:
 
 | Start from | How |
 |---|---|
 | **Work assigned to you** | Run an Action on an issue or pull request in the **Todo** view of [the Kepler interface](/kepler/kepler-interface). One click starts the task with its context attached |
 | **Something you're describing yourself** | **New task** opens the **New task** composer, where you write the prompt and attach what it needs |
 | **A conversation you already started** | **Open an external session**, under the **New task** composer, wraps a task around an agent session you began in your own terminal |
+| **Workspaces in another agent app** | **Import from another app** brings workspaces from Conductor, Orca, herdr, or Vibe Kanban in as tasks, with their branches and chats |
 | **Another GitKraken app** | A link from GitLens or GitKraken Desktop opens Kepler on the work you were looking at |
 
 ***
@@ -101,7 +102,7 @@ A repository you pick yourself takes precedence over the link's. If Kepler canno
 
 In a window connected to another machine, picking a file through **Add context** also offers **Upload from this machine**. Uploads are saved into the task's own folder when it starts.
 
-**Repositories and folders share 1 list**, with the places you use most at the top. Picking a folder that is one of a repository's existing worktrees attaches that worktree itself, and the chip reads **Worktree {branch}**.
+**Repositories and folders share 1 list**, with the places you use most at the top. Picking a folder that is one of a repository's existing worktrees attaches that worktree itself, and the chip reads **Worktree *branch***.
 
 You can attach as much or as little context as you want. To create a task from the composer, follow these steps:
 
@@ -142,9 +143,9 @@ The task appears in the list as soon as you press **Start**, with a **Preparing*
   <figcaption style="text-align:center; color:#888">Kep narrating a task's launch in its panel.</figcaption>
 </figure>
 
-If setup fails, the row's pill reads **Failed** and the panel shows the error. To change the task and try again, click **Edit and retry**, or **Dismiss** to clear it. A task that starts without some of its repositories warns you which ones it left out.
+If setup fails, the row's pill reads **Failed** and the panel shows the error. To change the task and try again, click **Edit and retry**, or **Dismiss** to clear it. If it failed because a repository or folder is not trusted, the panel says so: click **Trust and retry**. A task that starts without some of its repositories warns you which ones it left out. When they were left out because they are not trusted, the warning offers **Trust**. See [Trust a repository](/kepler/settings-repositories#trust-a-repository).
 
-If the task starts but its agent session does not, the task page and the Dashboard panel show **{agent} was unable to start**, with **Retry**. See [Agent Sessions](/kepler/agent-sessions#when-a-session-drops).
+If the task starts but its agent session does not, the task page and the Dashboard panel say that the agent was unable to start, with **Retry**. See [Agent Sessions](/kepler/agent-sessions#when-a-session-drops).
 
 ### Configuring a repository
 
@@ -175,7 +176,7 @@ Kepler names a task's branch from what the task is about, rather than from the t
 - **A name you type is yours verbatim.** The prefix applies to automatic names only.
 - **Kepler applies your repository's own branch-naming policy** where the host publishes one.
 
-You can set the prefix in 2 places: **Settings → Tasks → New tasks → Branch prefix** for the app, and per repository in **Settings → Repositories**, on the repository's own page. The repository's page offers **Default ({value})**, **None**, or **Custom**, and shows an example branch name. Leave the app setting empty for no prefix at all. If a repository already has a branch named `kepler`, Kepler tells you the prefix cannot be used there.
+You can set the prefix in 2 places: **Settings → Tasks → New tasks → Branch prefix** for the app, and per repository in **Settings → Repositories**, on the repository's own page. The repository's page offers **Default (*prefix*)**, **None**, or **Custom**, and shows an example branch name. Leave the app setting empty for no prefix at all. If a repository already has a branch named `kepler`, Kepler tells you the prefix cannot be used there.
 
 A repository linked to a pull request always opens in its own isolated working copy, and the toggle is locked. If the pull request's branch already exists on this machine with commits that are not on the pull request, Kepler keeps your local branch and starts the task on a new branch that tracks the pull request. A pull request from a fork never takes over your own branch of the same name, unless that branch already tracks the fork.
 
@@ -216,6 +217,28 @@ When the conversation's folder already belongs to a task, Kepler asks under the 
 Starting a task from an external session anywhere else, such as from a Kepler link, asks the same question in the **Add to existing task?** dialog. **Add to task** adds the conversation to the task you pick, and **Create a new task** creates a new one anyway. When several tasks include the folder, the dialog marks the **closest**.
 
 For what happens to the conversation once it's on a task, including forking, continuing, and what Kepler will and will not answer on its behalf, see [Agent Sessions](/kepler/agent-sessions#sessions-started-outside-kepler).
+
+***
+
+## From another agent app
+
+If you work in Conductor, Orca, herdr, or Vibe Kanban, you can bring its workspaces into Kepler as tasks. Each workspace becomes a task in the same folder, on the same branch, and its chats continue as the task's sessions.
+
+To import workspaces, take the following steps:
+
+1. Choose **File → Import from Another App…**. On an empty tasks list, you can also click the card that names the apps Kepler found, such as **Import from Orca**.
+2. If Kepler finds more than 1 of these apps, pick the one to import from.
+3. Tick the workspaces you want. A workspace you already imported is marked **Already a task**.
+4. Click **Import *N* workspaces**.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/import-apps-nov-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/import-apps-nov-2026.png" class="help-center-img img-bordered" alt="The Import from Orca dialog, Choose the workspaces to bring in as tasks, listing acme-web's workspaces: Gift card checkout on orca/gift-cards with 2 chats and Paginate search results on orca/search-paging with 1 chat, both ticked, and Cart total with discounts on orca/cart-total, its tick dimmed and marked Already a task: Fix the cart total. Select all (dimmed) and Deselect all sit above the list, and the note to continue each chat in one app only sits above Import 2 workspaces.">
+  </a>
+  <figcaption style="text-align:center; color:#888">Choosing the workspaces to import from Orca.</figcaption>
+</figure>
+
+Continue each chat in one app only: both apps write to the same chat history.
 
 ***
 
@@ -289,6 +312,6 @@ Starting from **Todo** and starting from the **New task** composer send the same
 | **A row in Todo** | The full issue or pull request body, attached as shared context |
 | **The New task composer** | A reference (identifier, title, and URL) which the agent fetches the detail from itself |
 
-Either way, Kepler saves each linked issue's description as a note titled *Issue {identifier}: {title}*; long descriptions are shortened with a link to the issue. Kepler does not save pull request descriptions this way.
+Either way, Kepler saves each linked issue's description as a note titled with the issue's identifier and title; long descriptions are shortened with a link to the issue. Kepler does not save pull request descriptions this way.
 
 ---

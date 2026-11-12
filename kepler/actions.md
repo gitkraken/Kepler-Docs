@@ -28,7 +28,7 @@ An **Action** is a named prompt you fire at a task, issue, or pull request to st
   <figcaption style="text-align:center; color:#888">The Action split button, chevron open. One click runs the default; the chevron lists every applicable Action, including your own.</figcaption>
 </figure>
 
-You can change every Action's wording and agent, and choose which Action each kind of work suggests as its one-click default.
+You can change every Action's wording and agent, and choose which Action each kind of work suggests as its one-click default. An [automation](/kepler/automations) can also run an Action for you, on a schedule or when new GitHub or Jira activity matches its query.
 
 ***
 
@@ -73,7 +73,7 @@ Firing an Action from a Todo row is also how an issue or pull request that is no
 
 On a narrow card, the button shrinks to a play icon. On a phone, a row has a single **⋮** menu instead that lists every Action.
 
-In the list of Actions, hover a row, or move focus to it, to read that Action's prompt, line breaks included.
+In the list of Actions, hover a row, or move focus to it, to read that Action's prompt.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/action-button-todo-row-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -91,9 +91,7 @@ Inside a task, Actions are under the **chevron on the composer's send button**: 
   <figcaption style="text-align:center; color:#888">The Actions chevron on the composer's send button.</figcaption>
 </figure>
 
-Task rows do not carry an Action button. A task's own operations live behind the **⋮** menu on the row instead.
-
-A task row has no **Resume** button. Clicking the row selects it and shows its sessions, the way to look at running work without sending anything. Firing an Action on live work takes you to the session that Action landed in instead.
+Task rows do not carry an Action button. A task's own operations are in the **⋮** menu on its row.
 
 ***
 
@@ -109,7 +107,7 @@ The number of issues or pull requests attached to the task does not change what 
 
 ### The chevron: the deliberate path
 
-An Action you pick from the chevron list asks where to run it whenever there is a choice to make. That includes a new session or the current one on a task with a single worktree, which the left half answers without asking.
+An Action you pick from the chevron list asks where to run it whenever there is a choice, even between a new session and the current one.
 
 At the bottom of the list, **Manage Actions…** opens **Settings → Actions**.
 
@@ -132,12 +130,7 @@ The **Run in** view asks 2 separate questions.
 
 Clicking any row **runs the Action** immediately, with no separate confirm step.
 
-When an Action runs on worktrees:
-
-- **A worktree with no session open still runs** under *Current session*. It starts one there, so *all worktrees* always means all of them.
-- **Kepler navigates to the first destination you picked**, not to whichever session happened to start first.
-
-An Action never runs in a worktree you have removed.
+When an Action runs on several worktrees, Kepler takes you to the first one you picked. Under *Current session*, a worktree with no open session gets a new one, so **All N worktrees** always means all of them.
 
 A task with no worktree runs the Action in a folder attached to it, or else in the task's own folder. With neither, Kepler tells you it has nowhere to start a session.
 
@@ -165,7 +158,7 @@ To choose the Action each kind of item suggests, open **Settings → Actions →
   <figcaption style="text-align:center; color:#888">The Suggested Actions settings.</figcaption>
 </figure>
 
-Each row sets the Action that the left half of the button runs for that kind of item. A hint under each row names the items it covers, such as *Pull requests you opened*.
+Each row sets the Action that the left half of the button runs for that kind of item.
 
 <div class="table-center" markdown="1">
 
@@ -211,7 +204,7 @@ To edit an Action, go to **Settings → Actions** and click the Action's row und
   <figcaption style="text-align:center; color:#888">The All Actions list. Click a row to edit that Action.</figcaption>
 </figure>
 
-Each row shows what the Action does and where it is available. Once you have a custom Action, the list splits into **Built in** and **Custom**. Until then, it shows the built-in Actions without labels.
+Each row shows what the Action does and where it is available. Once you have a custom Action, the list splits into **Built in** and **Custom**.
 
 The editor has these fields:
 
@@ -295,6 +288,8 @@ An Action you have never edited picks up new default wording when Kepler updates
 
 Deleting a custom Action that a suggested-Action slot points to sets that slot to **None**, so its rows show only the chevron. To pick a new suggested Action, go back to **Settings → Actions → Suggested Actions**.
 
+You cannot delete an Action that an automation runs. Delete the automation first; see [Automations](/kepler/automations#manage-an-automation).
+
 ***
 
 ## Setting an Action's agent
@@ -315,6 +310,8 @@ By default an Action runs on your **default agent**, configured in **Settings �
 </figure>
 
 You save agent presets in **Settings → Agents → Agent presets**; see [Settings](/kepler/settings-agents#agent-presets). For example, pick a cheap, fast preset for triage and review, and a heavier one for implementation. If an Action's preset no longer exists, the Action shows **Preset unavailable for this agent**.
+
+An [automation](/kepler/automations) runs its Action unattended, on issue and pull request text that other people write. If an automation uses the Action, choose a mode that acts without asking only if you trust everyone who can open or comment on those items.
 
 **Custom agent settings** is an **all-or-nothing override**: it pins the provider, account, model, mode, and options together, rather than changing one of them and inheriting the rest.
 

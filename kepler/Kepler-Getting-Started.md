@@ -46,7 +46,7 @@ Kepler has installers for these platforms:
 2. Run the installer.
 3. Launch Kepler.
 
-**If you open an older copy of Kepler** than the one that last used your data, Kepler stops at **Kepler is out of date** before it opens. The older copy cannot read everything the newer one saved, so sessions may seem to have disappeared. Click **Open Newer Version** when a newer copy is installed, or **Update and Restart** to update this copy (a Snap install does not offer it). The dialog also offers **Quit** and **Open Anyway**.
+**If you open an older copy of Kepler** than the one that last used your data, Kepler stops at **Kepler is out of date** before it opens. The older copy cannot read everything the newer one saved, so sessions may seem to have disappeared. Click **Open Newer Version** when a newer copy is installed, or **Update and Restart** to update this copy (a Snap install does not offer it).
 
 ***
 
@@ -73,7 +73,7 @@ To watch a short tour before you start, click the **Watch Quick Start Tour** til
 
 ***
 
-## Choose your agents and your look
+## Choose your agents, repos, and look
 
 After you sign in, a guided start walks you through setup. To skip it at any point, click **I'll explore on my own**.
 
@@ -99,6 +99,20 @@ If you installed an agent that Kepler did not find, click **Rescan**. To go on w
   <figcaption style="text-align:center; color:#888">The first step of the guided start, with two agents found and switched on.</figcaption>
 </figure>
 
+**Bring in your repos.** Every task runs in a repo or folder you add here. Kepler lists the repos and folders it found where you have worked, with the ones you use most already checked. In this step:
+
+- Check the repos you work in. To add one Kepler did not find, click **Add a folder**.
+- Confirm the **Repos folder**. Kepler finds your repos there and clones new ones into it.
+
+Then click the button that adds them, such as **Add 2 and continue**. Kepler adds only what you check. If you leave the guided start before you finish this step, Kepler adds the repos it checked for you.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/onboarding-repos-nov-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/onboarding-repos-nov-2026.png" class="help-center-img img-bordered" alt="The guided start's second step, Bring in your repos, with 02 Repos current in the step header: the Repos folder field reads /home/alex/code, and Repos and folders lists acme-web and acme-api checked and design-tokens unchecked, each with its path and when it was last used, under Filter, Select all, Unselect all and Add a folder. Back, I'll explore on my own and Add 2 and continue sit at the bottom.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The second step, with the 2 repos Kepler picked checked.</figcaption>
+</figure>
+
 **Make it yours.** Pick a theme, or open the **Theme gallery**, and choose how Kepler gets your attention under **Notify me**:
 
 - **Everything**: every reply and request on the desktop as well
@@ -111,10 +125,8 @@ To try an alert, click **Send a test notification**. You can change these choice
   <a href="/wp-content/uploads/onboarding-theme-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/onboarding-theme-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The guided start's second step, Make it yours: Theme tiles Kepler Dark (selected), Midnight, Kepler Light and Theme gallery beside the System / Light / Dark switch on Dark, and Notify me presets Everything, When I'm needed (selected) and Only in Kepler, with Play a sound with desktop notifications ticked, Send a test notification, Back and Finish.">
   </a>
-  <figcaption style="text-align:center; color:#888">The second step, with the theme and notification choices.</figcaption>
+  <figcaption style="text-align:center; color:#888">The third step, with the theme and notification choices.</figcaption>
 </figure>
-
-Kepler also adds the repositories you already work in, including those GitKraken Desktop and GitLens know, to your repository picker.
 
 ***
 
@@ -137,7 +149,7 @@ Expand **More setup options** for optional items:
 
 If your project needs a setup step, use **Add repo commands** early. Save a repository's install or build command once, and Kepler can run it every time it creates a worktree, so an agent never starts in a checkout it cannot build. See [Tasks and Resources](/kepler/tasks-and-resources).
 
-You can set folder paths and everything else on the checklist in [Settings](/kepler/settings-setup-account#setup). To remove the checklist from the top bar, click **Hide from toolbar (still available in Settings)**. You can still open it from Settings.
+You can set folder paths and everything else on the checklist in [Settings](/kepler/settings-setup-account#setup). To remove the checklist from the top bar, click **Hide from toolbar (still available in Settings)**.
 
 ***
 
@@ -204,6 +216,7 @@ Pick the next step that fits what you want to do:
 | Understand what a task holds | [Tasks and Resources](/kepler/tasks-and-resources) |
 | Work inside a task | [The Task View](/kepler/task-view) |
 | Direct an agent mid-session | [Agent Sessions](/kepler/agent-sessions) |
+| Run an agent on a schedule, or on new GitHub or Jira activity | [Automations](/kepler/automations) |
 | See what every agent is doing at once | [The Agent Graph](/kepler/agent-graph) |
 | Reshape the list to fit how you work | [Arranging Your Work](/kepler/arranging-your-work) |
 | Review and ship what an agent wrote | [Review Changes](/kepler/review-changes) |

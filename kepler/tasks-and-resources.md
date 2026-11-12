@@ -329,17 +329,23 @@ To add a note, click **New note** on the **Notes** tab of the **Resources** scre
   <figcaption style="text-align:center; color:#888">Writing a note with a title and Markdown content.</figcaption>
 </figure>
 
-To rename a note, double-click its name, press **F2** on the open note, or choose **Rename note** from its right-click menu. The name becomes a field. Press **Enter** to keep the new name, or **Escape** to restore the old one. A note with no name reads **Untitled note**. The task's **Prompt** cannot be renamed.
+To rename a note, click its name while you are in the note, press **F2** on the open note, or choose **Rename note** from its right-click menu. The name becomes a field. Press **Enter** to keep the new name, or **Escape** to restore the old one. A note with no name reads **Untitled note**. The task's **Prompt** cannot be renamed.
 
-To edit an open note, click **Edit**, or press **Enter** on the focused note. Beside **Edit**, **Copy** copies the note and **Save as…** saves it as a Markdown file. If you leave an edit unsaved, Kepler keeps it as a draft: the note reads **Unsaved draft**, and **Edit** becomes **Resume draft**.
+To edit an open note, click **Edit**, or press **Enter** on the focused note. The note opens in Kepler's code editor, with highlighted Markdown, line numbers, and find. To save, press **Cmd/Ctrl+S**. If the note changed while you were editing it, such as when an agent wrote to it, Kepler stops the save and asks first: **Save anyway** keeps your version, and the note's history keeps the version it replaces.
 
-**A note keeps its saved versions.** To see them, click **History** on the open note. The history shows who created and last edited the note, and lists its **Saved versions**, newest first. Pick a version to see what it changed, then click **Restore this version** to bring it back as the newest version. A deleted note can be restored too: click **Deleted** on the **Notes** tab of the **Resources** screen, open the note, and restore a version from its history.
+Beside **Edit**, **Copy** copies the note and **Save as…** saves it as a Markdown file. If you leave an edit unsaved, Kepler keeps it as a draft: the note reads **Unsaved draft**, and **Edit** becomes **Resume draft**.
+
+A checklist item in a note, such as `- [ ] Add a test`, shows as a checkbox. Tick it in the open note, without opening the editor. Each tick saves a new version of the note.
+
+To point someone, or an agent, at a note, choose **Copy link to note** from its menu. Hover a heading and click **Copy link to section** to copy a link that opens the note at that section. To ask an agent to change part of a note, comment on it. See [Comment on a note](/kepler/review-changes#comment-on-a-note).
+
+**A note keeps its saved versions.** To see them, click **What changed** on the open note, or **See what changed** on the line that says who last edited it. The note shows what changed since your last edit. To compare other versions, pick them in **Changes after** … **up to** …. To bring a version back as the newest one, click **Restore version {version}**. **Back to note** returns to the note. A deleted note can be restored too: click **Deleted** on the **Notes** tab of the **Resources** screen, open the note, and restore a version from its history.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/note-history-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/note-history-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Coding conventions note open on the task page with its History sidebar beside it: who created and last edited the note, the Saved versions list with Version 3 marked Current above Versions 2 and 1, and Version 2 selected, showing the line it added, Every cart change gets a test in cart.test.js, above the Restore this version button.">
+    <img src="/wp-content/uploads/note-history-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Coding conventions note open on the task page, showing what changed: Version 2 by You, 2 of 3, with Back to note; Changes after Version 1 up to Version 2, with Restore version 2; and the line Version 2 added, Every cart change gets a test in cart.test.js.">
   </a>
-  <figcaption style="text-align:center; color:#888">A note's History, with a saved version ready to restore.</figcaption>
+  <figcaption style="text-align:center; color:#888">A note's What changed view, with a saved version ready to restore.</figcaption>
 </figure>
 
 ***
@@ -454,7 +460,7 @@ If you dismiss the suggestion, Kepler stops suggesting it for that task.
 - **Also delete branches**
 - **Also delete the branch on the remote**
 
-Until you tick a box, worktrees and branches stay on disk. With **Also delete worktrees** ticked, every agent of the task ends.
+Until you tick a box, worktrees and branches stay on disk. With **Also delete worktrees** ticked, every agent of the task ends, and Kepler closes the terminals open in those worktrees before it deletes them.
 
 When you tick **Also delete worktrees**, Kepler lists every worktree with the same tags a single worktree delete shows, and says what will happen to each. It deletes a worktree that is safe to delete, and **keeps** one that would lose work unless you tick the box that names it and confirms the loss. A worktree it cannot delete, such as one another task uses, is listed with the reason.
 
@@ -499,7 +505,7 @@ If you paste a Kepler link to a task or a session into the chat, the agent can u
 | `task_list` | Find tasks by name, prompt, notes or files, filtered by stage, hold, repository or [group](/kepler/arranging-your-work#your-groups) |
 | `task_note_read` | Read one note's full text |
 | `task_note_history` | List a note's saved versions, or the task's notes that have history |
-| `task_comment_read` | Read the [review comments](/kepler/review-changes#review-comments) you sent on a task's code, with their replies |
+| `task_comment_read` | Read the [review comments](/kepler/review-changes#review-comments) you sent on a task's code or notes, with their replies |
 
 **Finding sessions, agents and places**
 
@@ -596,10 +602,10 @@ Each session has an **inbox** for what other agents send it:
 - Changes in the state of a session it started
 - The outcomes of its approval requests
 
-When an item arrives for an idle session, Kepler wakes the session to read it. A busy session reads it when its turn ends. Kepler wakes sessions running in Terminal the same way.
+When an item arrives for an idle session, Kepler wakes the session to read it. A busy session reads it when its turn ends. In Terminal, Kepler can wake only some agents; see [Reports from other agents](/kepler/agent-sessions#reports-from-other-agents).
 
-A session with unread reports has a badge with their count on its tab and on its row in the context panel. To have the agent read them now, click **Have it read them** above its composer.
+When a session has unread reports, the band above its composer says how many. To have the agent read them now, click **Have it read them**.
 
-Agents that keep waking each other can loop. To stop a loop, after 20 turns started by agents rather than by you, reports stop waking the session. The session reads *Reports from other agents are paused*. To turn wakes back on, click **Resume reports**, or send the session a message of your own.
+Agents that keep waking each other can loop. To stop a loop, after 20 turns started by agents rather than by you, reports stop waking the session. The band reads **Reports from other agents are paused**, and the session's tab and row show a reports badge with the count. To turn wakes back on, click **Resume reports**, or send the session a message of your own.
 
 ---
