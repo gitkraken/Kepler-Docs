@@ -230,7 +230,7 @@ To import workspaces from Conductor, take the following steps:
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/import-card-nov-2026@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/import-card-nov-2026@2x.png" class="help-center-img img-bordered" alt="Two cards under the New task composer on an empty Tasks list: Import from Conductor, Orca and 2 more, reading Bring in your workspaces as tasks, with their branches and chats, and Open an external session.">
+    <img src="/wp-content/uploads/import-card-nov-2026@2x.png" class="help-center-img img-bordered" alt="Two cards below an or divider: Import from Conductor, Orca and 2 more, reading Bring in your workspaces as tasks, with their branches and chats, and Open an external session.">
   </a>
   <figcaption style="text-align:center; color:#888">Step 1: the import card names the apps Kepler found.</figcaption>
 </figure>

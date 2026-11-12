@@ -136,7 +136,7 @@ Under **All**, **Repos** and **Updated** choose which repositories and how recen
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/view-options-sep-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/view-options-sep-2026-v4@2x.png" class="help-center-img img-bordered" alt="The top of the View menu: its layout switch with List selected, then Board and Graph, above the Your groups toggle, Group by (Inbox) and Sort by (Updated).">
+    <img src="/wp-content/uploads/view-options-sep-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Dashboard toolbar with the View button, reading Inbox, beside the search box, and the top of its menu open below it: the layout switch with List selected, then Board and Graph, above the Your groups toggle, Group by (Inbox) and Sort by (Updated).">
   </a>
   <figcaption style="text-align:center; color:#888">The layout switch at the top of the View menu.</figcaption>
 </figure>

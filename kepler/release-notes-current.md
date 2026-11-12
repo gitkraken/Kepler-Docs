@@ -143,7 +143,6 @@ New to Kepler? [Getting Started with Kepler](/kepler/kepler-getting-started) tak
 
 - Kepler runs background git work only for repositories you're using, so a long repo list costs much less.
 - The Changes overlay, All files and Go to File open faster.
-- Open conversations no longer redraw on unrelated task page updates.
 
 ### Fixes
 
@@ -154,8 +153,6 @@ New to Kepler? [Getting Started with Kepler](/kepler/kepler-getting-started) tak
 - A session whose background work ends during its final answer no longer looks finished too early.
 - After switching accounts, the usage gauge shows the picked account's usage.
 - A finished OpenCode terminal turn is marked unread.
-- Auggie 0.37.0 keeps the MCP servers from its own settings.
-- Kepler refuses prompts sent by an agent that imitate Kepler's own hidden instructions.
 
 #### Tasks
 
@@ -171,7 +168,6 @@ New to Kepler? [Getting Started with Kepler](/kepler/kepler-getting-started) tak
 
 - With two accounts on one self-hosted installation, issues, comments, images and git all use the same account.
 - Jira Server attachment images and comments load on installations with special characters in their path.
-- Each provider connection gets its own section in the Todo's filters.
 
 ### Breaking changes
 
