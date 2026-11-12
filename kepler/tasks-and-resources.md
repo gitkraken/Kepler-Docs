@@ -342,8 +342,8 @@ To point someone, or an agent, at a note, choose **Copy link to note** from its 
 **A note keeps its saved versions.** To see them, click **What changed** on the open note, or **See what changed** on the line that says who last edited it. The note shows what changed since your last edit. To compare other versions, pick them in **Changes after** … **up to** …. To bring a version back as the newest one, click **Restore version {version}**. **Back to note** returns to the note. A deleted note can be restored too: click **Deleted** on the **Notes** tab of the **Resources** screen, open the note, and restore a version from its history.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/note-history-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/note-history-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Coding conventions note open on the task page, showing what changed: Version 2 by You, 2 of 3, with Back to note; Changes after Version 1 up to Version 2, with Restore version 2; and the line Version 2 added, Every cart change gets a test in cart.test.js.">
+  <a href="/wp-content/uploads/note-history-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/note-history-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Coding conventions note open on the task page, its text replaced by What changed: Earlier version and Later version arrows, Version 2 by You, 2 of 3, and Back to note; the line Changes after Version 1 up to Version 2, with Restore version 2 beside it; and below, the note's lines with the one Version 2 added, Every cart change gets a test in cart.test.js., marked as added.">
   </a>
   <figcaption style="text-align:center; color:#888">A note's What changed view, with a saved version ready to restore.</figcaption>
 </figure>

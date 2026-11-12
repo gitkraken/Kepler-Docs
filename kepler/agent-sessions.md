@@ -210,8 +210,8 @@ Expand the warning to see which file the account copied, with the paths of **Thi
 If 2 or more accounts are signed in, the **Agent** list shows one row per account, labeled with the account name. You pick the agent and the account in one click, in the **New task** composer or in a draft session tab.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/account-multiple-selector-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/account-multiple-selector-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Agent list open in the New task composer, grouped by agent. Under a Claude Code heading sit two account rows, CLI (alex.lee@example.com, Acme) with a check mark and Personal, followed by Codex CLI, GitHub Copilot CLI, Cursor, Antigravity, OpenCode and the other agents, then Add another account and Install another agent.">
+  <a href="/wp-content/uploads/account-multiple-selector-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/account-multiple-selector-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Agent list open in the New task composer, with Search options at the top. Under a Claude Code heading sit two account rows: CLI, with the login alex.lee@example.com and an Acme badge, checked, and Personal. Below come Codex CLI (Not signed in), GitHub Copilot CLI (Not signed in), OpenCode, Pi and Auggie CLI (Not signed in), with more agents further down the list, then Add another account and Install another agent.">
   </a>
   <figcaption style="text-align:center; color:#888">The Agent list, with one row per account.</figcaption>
 </figure>
@@ -533,8 +533,8 @@ If an upload fails, or the message is too large for the agent, Kepler does not s
 **Replies to your review comments show on the session.** When the agent replies to a comment you left in Changes, its composer shows a chip such as **1 new reply**, and the session's tab shows the count. Click the chip to list the replies under **Replies**. Click a reply to open its comment in Changes, or click **Mark all read**. In a Terminal session with the composer hidden, the chip sits in the bar under the terminal. The reply itself also appears in the conversation; see [Reading the conversation](#reading-the-conversation).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/unread-replies-chip-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/unread-replies-chip-nov-2026.png" class="help-center-img img-bordered" alt="A session composer with its 1 new reply chip open: the Replies popover, with Mark all read, lists cart.js:3 over the start of the agent's reply, Agreed. I'll clamp it with Math.max(0, subtotal -. The popover covers the message box; Docs Model, Build and Send sit to its right.">
+  <a href="/wp-content/uploads/unread-replies-chip-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/unread-replies-chip-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="A session composer with its 1 new reply chip open: the Replies popover, with Mark all read, lists cart.js:3 over the start of the agent's reply, Agreed. I'll clamp it with Math.max(0, subtotal -. The popover covers the message box; Docs Model, Build and Send sit to its right.">
   </a>
   <figcaption style="text-align:center; color:#888">An unread reply to a review comment, listed from the composer.</figcaption>
 </figure>
@@ -652,8 +652,8 @@ A session's conversation shows your prompts, the agent's replies, and the agent'
 </figure>
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/review-reply-card-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/review-reply-card-nov-2026.png" class="help-center-img img-bordered" alt="A reply card in the agent's conversation: Replied on cart.js:3 with a New badge and Open in Changes, then You: Clamp the discounted subtotal at zero so a large discount cannot make the total negative, and the agent's reply, Agreed. I'll clamp it with Math.max(0, subtotal - discount) and add a test for a discount larger than the order.">
+  <a href="/wp-content/uploads/review-reply-card-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/review-reply-card-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="A reply card in the agent's conversation: Replied on cart.js:3 with a New badge and Open in Changes, then You: Clamp the discounted subtotal at zero so a large discount cannot make the total negative, and the agent's reply, Agreed. I'll clamp it with Math.max(0, subtotal - discount) and add a test for a discount larger than the order.">
   </a>
   <figcaption style="text-align:center; color:#888">The agent's reply to a review comment, in its conversation.</figcaption>
 </figure>
@@ -924,8 +924,8 @@ When an item arrives for an idle session, Kepler wakes the session to read its i
 When a session has unread reports, the band above its composer says how many, such as *OpenCode hasn't read 3 reports from other agents*. To have the agent read them, click **Have it read them**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-reports-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-reports-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The task page for Fix the cart total, where the Discount codes break the cart total session carries a reports badge with 3 beside the reviewer it started. Its conversation shows a 2 new items to read row, and above the composer OpenCode hasn't read 3 reports from other agents, with Have it read them.">
+  <a href="/wp-content/uploads/agent-reports-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-reports-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The task page for Fix the cart total, where the Discount codes break the cart total session has started a reviewer session, listed under it in Sessions. Its conversation shows a 2 new items to read row, and above the composer OpenCode hasn't read 3 reports from other agents, with Have it read them.">
   </a>
   <figcaption style="text-align:center; color:#888">A session with unread reports from other agents.</figcaption>
 </figure>
@@ -1011,8 +1011,8 @@ Kepler handles usage limits this way for the agents it can read usage for: Claud
 Every session's composer has a microphone, **Dictate**. Click it, then speak, and the transcript appears in the prompt. Transcription runs on your device. Dictation works once you download a model in **Settings → Voice**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/start-voice-input-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/start-voice-input-aug-2026.png" class="help-center-img img-bordered" alt="The composer's microphone icon, with its Dictate tooltip">
+  <a href="/wp-content/uploads/start-voice-input-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/start-voice-input-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="The New task composer: Add issue, Add PR and Add context above the empty prompt, then the attach button and the microphone button with its Dictate tooltip, the agent pill with a warning sign and Start on the right, and Add repo or folder below.">
   </a>
   <figcaption style="text-align:center; color:#888">The composer's microphone, with its Dictate tooltip.</figcaption>
 </figure>

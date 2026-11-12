@@ -259,8 +259,8 @@ Under **Mine**, each provider reports a different set of issues related to you:
 An issue listed only because you were mentioned is marked **Mentioned**, so you can tell it apart from work that is yours. Under **All**, the **Your role** filter also offers **Not mine**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/todo-scope-tooltip-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/todo-scope-tooltip-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Todo's View menu, opened from the toolbar's View button (Type, Updated, All). It switches List or Board, and the scope Mine or All, here All: Kepler repos, last 90 days, with Repos (All) and Updated (90 days). Below are Group by (Type), Sort by (Updated) and the Filters Needs my attention, Type, Linked work, Priority, Age and Provider, each Any.">
+  <a href="/wp-content/uploads/todo-scope-tooltip-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/todo-scope-tooltip-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="Todo's View menu, opened from the toolbar's View button (Type and All). It switches List or Board, and the scope Mine or All, here All: Kepler repos, last 90 days, with Repos (All) and Updated (90 days). Below are Group by (Type), Sort by (Updated) and the Filters Needs my attention, Review requests, Type, Linked work, Priority, Age and Provider, each Any.">
   </a>
   <figcaption style="text-align:center; color:#888">A Todo view's scope, set in its View menu.</figcaption>
 </figure>

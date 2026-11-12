@@ -29,8 +29,8 @@ Arrange the Dashboard so it shows the work you need to see. The Dashboard is a s
 What you choose in the **View** menu is saved to the view at once. To learn what each part of the screen is, see [The Kepler Interface](/kepler/kepler-interface).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/arrange-work-oct-2026-v6@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/arrange-work-oct-2026-v6@2x.png" class="help-center-img img-bordered" alt="The Dashboard's arranging controls: the row of views (Todo and Tasks with Kepler's own Todo and Task icons, Tasks selected, Agent Graph, New view), and under it the list toggle, the search box reading Search title, ref, or repo…, the View button showing the List glyph, Inbox and Updated, then Panel layout and Refresh at the right. Tasks and Agent Graph carry the orange mark of a task waiting on you.">
+  <a href="/wp-content/uploads/arrange-work-oct-2026-v7@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/arrange-work-oct-2026-v7@2x.png" class="help-center-img img-bordered" alt="The Dashboard's arranging controls: the row of views (Todo and Tasks with Kepler's own Todo and Task icons, Tasks selected, Agent Graph, New view, and Automations at the right), and under it the list toggle, the View button showing the List glyph and Inbox, the search box reading Search, or filter like activity:waiting across the toolbar, then Panel layout (Auto × 1) and Refresh at the right. Tasks and Agent Graph carry the orange mark of a task waiting on you.">
   </a>
   <figcaption style="text-align:center; color:#888">The views, and the search, View, panel and refresh controls under them.</figcaption>
 </figure>
@@ -135,8 +135,8 @@ Under **All**, **Repos** and **Updated** choose which repositories and how recen
 ## Layouts
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/view-options-sep-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/view-options-sep-2026-v3@2x.png" class="help-center-img img-bordered" alt="The top of the View menu, open under the View button (List glyph, Inbox, Updated): its layout switch with List selected, then Board and Graph.">
+  <a href="/wp-content/uploads/view-options-sep-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/view-options-sep-2026-v4@2x.png" class="help-center-img img-bordered" alt="The top of the View menu, open under the View button (List glyph and Inbox): its layout switch with List selected, then Board and Graph.">
   </a>
   <figcaption style="text-align:center; color:#888">The layout switch at the top of the View menu.</figcaption>
 </figure>
@@ -170,8 +170,8 @@ Each view remembers its own column width. When a column has more tasks to load, 
 </div>
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/columns-progress-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/columns-progress-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Tasks view on the Board layout, grouped by Progress: the Exploration, In Development, In Review, On hold and Done columns side by side, each with its count, and Open in panels and Select on every column that has tasks. Each task is a card with its title, age, session and progress glyphs, its waiting state (New reply, or Approval needed for Run npm test), and, for a task with a worktree, its repository and branch; Done reads Nothing here. Above, the toolbar holds the search box and the View button showing the Board glyph, Progress and Updated.">
+  <a href="/wp-content/uploads/columns-progress-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/columns-progress-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Tasks view on the Board layout, grouped by Progress: the Exploration, In Development, In Review, On hold and Done columns side by side, each with its count, and Open in panels and Select on every column that has tasks. Each task is a card with its title, age, session and progress glyphs, its waiting state (New reply, or Approval needed for Run npm test), and, for a task with a worktree, its repository and branch; Done reads Nothing here. Above, the toolbar holds the View button showing the Board glyph and Progress, then the search box reading Search, or filter like activity:waiting.">
   </a>
   <figcaption style="text-align:center; color:#888">The Board layout, grouped by Progress.</figcaption>
 </figure>
@@ -187,8 +187,8 @@ On the board grouped by **Progress**, you can also move a task to another stage 
 **Group by** in the **View** menu divides the list into sections.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/group-options-tasks-sep-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/group-options-tasks-sep-2026-v4@2x.png" class="help-center-img img-bordered" alt="The View menu open under the View button, which reads Your groups › Inbox and Updated: the List, Board and Graph switch, the Your groups switch on with Shows Inbox within each group under it, and Group by open on its submenu of Inbox (checked), Progress, Activity, Repository (highlighted) and None. Below come Sort by, Updated, and the Filters section: Progress, Activity, Repository, Agent, Session, Group and Linked work, each Any.">
+  <a href="/wp-content/uploads/group-options-tasks-sep-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/group-options-tasks-sep-2026-v5@2x.png" class="help-center-img img-bordered" alt="The View menu open under the View button, which reads Your groups › Inbox: the List, Board and Graph switch, the Your groups switch on with Shows Inbox within each group under it, and Group by open on its submenu of Inbox (checked), Progress, Activity, Repository (highlighted) and None. Below come Sort by, Updated, and the Filters section: Progress, Activity, Repository, Agent, Session, Group and Linked work, each Any.">
   </a>
   <figcaption style="text-align:center; color:#888">Group by in the View menu of a Tasks view.</figcaption>
 </figure>
@@ -415,8 +415,8 @@ You do not have to switch to **Manual** first. If you drop a task in a new place
 If the view already has a saved **Manual** order, a drop under another sort would replace it, so Kepler asks first. To keep the move, choose **Switch and replace Manual**. To put the task back, choose **Cancel**, press **Escape**, or click away.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/manual-sort-replace-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/manual-sort-replace-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Tasks view after Upgrade the payment SDK was dropped at the top of Unread while sorted by Updated: the View button already reads Inbox and Manual, the dropped row shows its drag grip and Star button, and a popover beside it asks Replace your Manual order? Keeping this move switches the sort to Manual and saves the list in the order you see now, with Cancel and Switch and replace Manual.">
+  <a href="/wp-content/uploads/manual-sort-replace-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/manual-sort-replace-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Tasks view after Upgrade the payment SDK was dropped at the top of Unread while sorted by Updated: the dropped row shows its drag grip and Star button, and a popover under it asks Replace your Manual order? Keeping this move switches the sort to Manual and saves the list in the order you see now, with Cancel and Switch and replace Manual.">
   </a>
   <figcaption style="text-align:center; color:#888">Kepler asks before a drop replaces your saved Manual order.</figcaption>
 </figure>
@@ -510,14 +510,14 @@ While a task waits, its row says what for, such as *On hold until CI finishes on
 The **Filters** section at the end of the **View** menu has a submenu for each facet, such as **Progress** or **Provider**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/filter-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/filter-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The View menu's Filters section with Progress open on In Development (ticked, 2), and Exploration (1), In Review (1), On hold (1), Later, Done and Archived (each 0), every value listed with its count. Archived's exclude button is hovered, and its tooltip reads Exclude Archived with Shift+Enter. The View button counts 1 filter, the search box shows a 3 hidden pill, and the list behind holds Add product search and Fix the cart total.">
+  <a href="/wp-content/uploads/filter-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/filter-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The View menu, open under the View button (List glyph and Inbox): the List, Board and Graph switch, Your groups, Group by Inbox and Sort by Updated, then Filters with Progress set to In Development and Activity, Repository, Agent, Session, Group and Linked work at Any, and Clear filters. Progress's flyout lists Exploration (1), In Development (ticked, 2), In Review (1), On hold (1), Later, Done and Archived (each 0); Archived's exclude button is hovered, and its tooltip reads Exclude Archived with Shift+Enter. Above, the search box reads progress:development with a 3 hidden pill at its end, and behind the menu the two In Development tasks show their repository and status.">
   </a>
   <figcaption style="text-align:center; color:#888">The Filters section, with a facet's flyout open.</figcaption>
 </figure>
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/filter-todo-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/filter-todo-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The View menu on Todo, under the View button reading Type, Updated and Mine: the List and Board switch, the Mine and All scope switch with Mine chosen and Your work, in every org under it, Group by Type and Sort by Updated, then Filters: Needs my attention, Review requests, Your role, Type, Linked work, Status, Priority, Age and Provider, then a GitHub section with Repository, Assignee, Author, Reviewer and Label, each set to Any. The Provider flyout lists GitHub with its count of 5, and Manage integrations.">
+  <a href="/wp-content/uploads/filter-todo-oct-2026-v6@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/filter-todo-oct-2026-v6@2x.png" class="help-center-img img-bordered" alt="The View menu on Todo, under the View button reading Type and Mine: the List and Board switch, the Mine and All scope switch with Mine chosen and Your work, in every org under it, Group by Type and Sort by Updated, then Filters: Needs my attention, Review requests, Your role, Type, Linked work, Status, Priority, Age and Provider, then a GitHub section with Repository, Assignee, Author, Reviewer, Label and Milestone, each set to Any. The Milestone flyout lists Release 2.4 and Release 2.5 with their counts, and No milestone.">
   </a>
   <figcaption style="text-align:center; color:#888">The View menu on Todo. Each connection gets its own section, here GitHub.</figcaption>
 </figure>
@@ -588,8 +588,8 @@ The search box also takes the view's filters, written as qualifiers such as `act
 A qualifier that can match nothing is underlined. Hover over it to see why, such as a group name that does not exist.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/search-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/search-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The search box holding the query the, with a 1 of 5 search pill and a 2 hidden filter pill, each with its own clear button, beside the View button reading Inbox and Updated with 1 filter, and the list toggle at the left.">
+  <a href="/wp-content/uploads/search-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/search-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The search box holding progress:, with a suggestions list under it: Exclude progress, then the Progress stages Exploration, In Development, In Review, On hold, Later, Done and Archived, each with its count of tasks. The View button, showing the List glyph and Inbox, sits to the left of the box, and the task list shows behind the suggestions.">
   </a>
   <figcaption style="text-align:center; color:#888">The search box suggesting the values of a filter.</figcaption>
 </figure>

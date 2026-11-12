@@ -36,8 +36,8 @@ If no agent is installed, Kepler hides the control. If you later uninstall the a
 An [Action](/kepler/actions) inherits this configuration unless it names an agent of its own.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-sessions-start-with-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-sessions-start-with-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The New tasks section of Settings › Tasks: New tasks use, with its agent-settings pill reading Use last used agent, and the description Every new session starts with this agent and its settings. Choose Use last used agent to start with your last pick instead.">
+  <a href="/wp-content/uploads/new-sessions-start-with-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-sessions-start-with-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The top of the New tasks section of Settings › Tasks: New sessions start with, its agent-settings pill showing the Claude Code mark, the caption Your first session uses this agent. After that, each session starts on your last pick, and Start each session on the agent you used last ticked.">
   </a>
   <figcaption style="text-align:center; color:#888">The default agent for new sessions, in Settings → Tasks.</figcaption>
 </figure>
@@ -68,8 +68,8 @@ You can edit **Branch prefix**, **Worktrees folder**, and **Tasks folder** which
 | **At the end** | Always opens the panel after every open panel |
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/settings-new-task-panel-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/settings-new-task-panel-nov-2026.png" class="help-center-img img-bordered" alt="Where a new task opens on the Dashboard, in Settings › Tasks: two choice cards, Beside the focused panel (selected), which opens at the end once the panels fill more than one row, and At the end, always after every open panel.">
+  <a href="/wp-content/uploads/settings-new-task-panel-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/settings-new-task-panel-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="Where a new task opens on the Dashboard, in Settings › Tasks: two choice cards, Beside the focused panel (selected), which opens at the end once the panels fill more than one row, and At the end, always after every open panel.">
   </a>
   <figcaption style="text-align:center; color:#888">Where a new task opens on the Dashboard, in Settings → Tasks.</figcaption>
 </figure>

@@ -347,8 +347,8 @@ The close control on a session's strip depends on the session:
 With tabs on, anything you open from the context panel, including sessions, worktrees, files, and every other resource, opens as a tab. Tabs sit in **groups** that you arrange freely, like editor tabs in VS Code.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/tabs-preview-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/tabs-preview-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="Two tab groups side by side on the task page for Fix the cart total, with the left group's tabs ringed: they start with the pinned session tab, shrunk to its icon, beside the Prompt note in an italic preview tab, the note's text below with its Copy, Save as…, History and Edit buttons; the right group holds the kepler/fix-cart-total worktree tab on Changes 2, beside Files and Comments, with the Working changes row above cart.js and cart.test.js. Each tab is a card rising to the top of its strip.">
+  <a href="/wp-content/uploads/tabs-preview-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/tabs-preview-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="Two tab groups side by side on the task page for Fix the cart total, with the left group's tabs ringed: they start with the pinned session tab, shrunk to its icon, beside the Prompt note in an italic preview tab, the note open below it, with a line saying when it was created and the Copy, Save as…, What changed and Edit buttons above its text; the right group holds the kepler/fix-cart-total worktree tab on Changes 2, beside Files and Comments, with the Working changes row above cart.js and cart.test.js. Each tab is a card rising to the top of its strip.">
   </a>
   <figcaption style="text-align:center; color:#888">An italic preview tab beside a session tab.</figcaption>
 </figure>

@@ -30,8 +30,8 @@ Dictation has 2 transcription engines:
 - **Whisper** works on any machine. Use it where WebGPU is unavailable.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/start-voice-input-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/start-voice-input-aug-2026.png" class="help-center-img img-bordered" alt="The composer's microphone icon, with its Start voice input tooltip">
+  <a href="/wp-content/uploads/start-voice-input-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/start-voice-input-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="The New task composer: Add issue, Add PR and Add context above the empty prompt, then the attach button and the microphone button with its Dictate tooltip, the agent pill with a warning sign and Start on the right, and Add repo or folder below.">
   </a>
   <figcaption style="text-align:center; color:#888">The composer's microphone, with its Dictate tooltip.</figcaption>
 </figure>
@@ -39,8 +39,8 @@ Dictation has 2 transcription engines:
 Dictation turns on once you download a model in **Settings → Voice**. The microphone in the prompt becomes available when the model is ready.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/voice-input-settings-aug-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/voice-input-settings-aug-2026-v3@2x.png" class="help-center-img img-bordered" alt="Settings › Voice input with Whisper set up: Use voice input in the chat prompt ticked; Transcription engine with the Whisper card selected and the note that Qwen3-ASR needs a graphics card with WebGPU, which is not available here, then the Fast model, About 42 MB on this machine, with Change quality, Remove Whisper and a collapsed Technical details; and When you stop talking set to Insert the text so you can edit it, with Send the prompt and Keep listening, transcribing each phrase as you pause.">
+  <a href="/wp-content/uploads/voice-input-settings-aug-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/voice-input-settings-aug-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Dictation section of Settings › Voice. Under Model, the Whisper row (80 MB) is picked, with Remove… and Licenses, and its Quality select reads Fast (80 MB), suggested, installed; a row for Qwen3-ASR 1.7B and 0.6B says they need a graphics card with WebGPU, which this machine does not have. Under Listening, When you stop talking offers Insert the text so you can edit it (selected), Send the prompt, and Keep listening, transcribing each phrase as you pause. The status line below reads Whisper, Fast quality (80 MB).">
   </a>
   <figcaption style="text-align:center; color:#888">The Dictation settings on a computer without WebGPU, where Whisper transcribes.</figcaption>
 </figure>
@@ -77,8 +77,8 @@ Qwen3-ASR learns how you spell words it gets wrong. When you fix a single dictat
 Kepler stores only the words, on this device only, and keeps them after you sign out.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/voice-learned-words-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/voice-learned-words-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The word sections of Settings › Voice input: Suggested words, Fixes you made in two sends, with Kepler heard as keplar and Approve and Dismiss; then Learned words with its description, Jira (In use · heard as gira) and pnpm (Added by you), each with a remove button, and Forget learned words.">
+  <a href="/wp-content/uploads/voice-learned-words-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/voice-learned-words-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Learned words in Settings › Voice, marked Qwen models only, with its description. Suggested words lists Kepler, heard as keplar, with Approve and Dismiss; Words shows Jira and pnpm, each with a remove button, above the Add a word field with Add and Forget learned words….">
   </a>
   <figcaption style="text-align:center; color:#888">A suggested word waiting for approval, above the learned words.</figcaption>
 </figure>
@@ -187,8 +187,8 @@ To have a reply read aloud, use one of these controls:
 While anything is being read, **Stop reading** appears in the top bar, on every page.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/read-aloud-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/read-aloud-nov-2026.png" class="help-center-img img-bordered" alt="An agent reply in the chat being read aloud: its second sentence, The total now takes the discount off before tax, so a discounted order no longer pays tax on money it never spent, is highlighted, and under the reply the Read aloud button has turned into Stop reading, a square icon between Copy and the reply's time.">
+  <a href="/wp-content/uploads/read-aloud-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/read-aloud-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="An agent reply in the chat being read aloud: its second sentence, The total now takes the discount off before tax, so a discounted order no longer pays tax on money it never spent, is highlighted, and under the reply the Read aloud button has turned into Stop reading, a square icon between Copy and the reply's time.">
   </a>
   <figcaption style="text-align:center; color:#888">A reply being read aloud, with its current sentence highlighted.</figcaption>
 </figure>

@@ -289,8 +289,8 @@ Read the diff, mark what needs fixing, and send your notes to the agent, one at 
 Kepler saves comments with the task, so they stay after a reload and appear in every window. Kepler does not post them to your Git host.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/review-comment-draft-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/review-comment-draft-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total with cart.js open in the Changes view. Lines 3 and 4 are selected and a review comment draft is open beneath them: Comment on lines 3 to 4 above the note Pull the discount and rounding into one helper, then the target To OpenCode Fix the cart total: discounts should apply before tax. with its chevron, Cancel, Add comment and Send now. The overlay header reads from main and Up to date; the file header holds File and Changes, then Find, Diff layout, Wrap lines and More actions.">
+  <a href="/wp-content/uploads/review-comment-draft-oct-2026-v6@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/review-comment-draft-oct-2026-v6@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total with cart.js open in the Changes view. Lines 3 and 4 are selected and a review comment draft is open beneath them: Comment on lines 3 to 4 above the note Pull the discount and rounding into one helper, then the target: a TO stamp, the OpenCode logo and the session title Fix the cart total: discounts should apply before tax., with its chevron, then Cancel, Add comment and Send now. The overlay header reads from main and Up to date; the file header holds File and Changes, then Find, Diff layout, Wrap lines and More actions.">
   </a>
   <figcaption style="text-align:center; color:#888">A review comment draft, under the lines it's about.</figcaption>
 </figure>
@@ -323,8 +323,8 @@ Queued comments show as a **{count} comments** chip in that session's composer a
 On a task with no session yet, **Send now** reads **Start a session**, which opens a new session's draft with the comments as its first prompt. To send comments, open the file from a conversation: an overlay opened some other way, such as from a file path, cannot send them.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ade-review-comments-01-v5@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ade-review-comments-01-v5@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total with cart.js open in the Changes view and three review comments under the lines they are about. The comment on line 2 reads Not sent yet, with Add to queue and Send now; the comments on lines 3 and 4 read Queued for OpenCode Fix the cart total: discounts should apply before tax., with Remove from queue and Send now. Each card opens with You, just now and its note, and has Edit comment and Delete comment icons. Line 2 is picked in the gutter. The overlay header reads 3 comments and Send comments (2), with the Comment options menu open on Discard unsent comments, beside from main and Up to date.">
+  <a href="/wp-content/uploads/ade-review-comments-01-v6@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ade-review-comments-01-v6@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total with cart.js open in the Changes view and three review comments under the lines they are about. The comment on line 2 reads Not sent yet, with Add to queue and Send now; the comments on lines 3 and 4 show the OpenCode logo and Queued for Fix the cart total: discounts should apply before tax., with Remove from queue and Send now. Each card opens with You, just now and its note, and has Edit comment and Delete comment icons. Line 2 is picked in the gutter. The overlay header reads 3 comments and Send comments (2), with the Comment options menu open on Discard unsent comments, beside from main and Up to date.">
   </a>
   <figcaption style="text-align:center; color:#888">Comments not sent and queued, with Send comments in the overlay header.</figcaption>
 </figure>
@@ -348,8 +348,8 @@ Kepler keeps what you type. **Escape** only moves focus out of a draft's field, 
 The agent answers a comment you sent in a thread under it, and it can resolve the comment when the fix is done. The card shows your note, then each reply, oldest first.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/review-comment-thread-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/review-comment-thread-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total with cart.js open and a sent review comment under line 3, its status Sent to OpenCode Fix the cart total: discounts should apply before tax. just now. The card reads as a conversation: You with the note Clamp the discounted subtotal at zero so a large discount cannot make the total negative, then OpenCode's reply under the session's name, Agreed. I'll clamp it with Math.max(0, subtotal - discount) and add a test for a discount larger than the order. Below them sit the Reply to OpenCode box, Resolve and Reply. The overlay header reads from main, Up to date and 1 comment.">
+  <a href="/wp-content/uploads/review-comment-thread-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/review-comment-thread-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total with cart.js open and a sent review comment under line 3, its status the OpenCode logo and Sent to Fix the cart total: discounts should apply before tax. just now. The card reads as a conversation: You with the note Clamp the discounted subtotal at zero so a large discount cannot make the total negative, then the reply under the OpenCode logo and the session title, Agreed. I'll clamp it with Math.max(0, subtotal - discount) and add a test for a discount larger than the order. Below them sit the Reply to OpenCode box, Resolve and Reply. The overlay header reads from main, Up to date and 1 comment.">
   </a>
   <figcaption style="text-align:center; color:#888">A sent comment with the agent's reply.</figcaption>
 </figure>
@@ -367,8 +367,8 @@ To collapse a card to a one-line row, click the chevron beside its lines. Click 
 The **Comments** view lists every review comment on the task. Open it from the view picker in the changes panel or the overlay, after **Files**. Its button shows the number of open comments, with a dot when there are unread replies.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/review-comments-list-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/review-comments-list-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total on its Comments view (the speech-bubble segment, 3, picked beside the Changes and Files icons), its header reading 3 comments and Send comment. The side list reads 3 comments with View options, then the comments grouped by status: Not sent (cart.js:2), Queued (cart.js:4) and Sent (cart.js:3), each row with its place, just now, its note and its status. Beside it, cart.js shows the three cards: line 2 Not sent yet with Add to queue and Send now, line 3 Sent to OpenCode with the Reply to OpenCode box, Resolve and Reply, and line 4 Queued for OpenCode with Remove from queue and Send now. The header also reads from main and Up to date.">
+  <a href="/wp-content/uploads/review-comments-list-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/review-comments-list-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total on its Comments view (the speech-bubble segment, 3, picked beside the Changes and Files icons), its header reading 3 comments and Send comment. The side list reads 3 comments with View options, then the comments grouped by status: Not sent (cart.js:2), Queued (cart.js:4) and Sent (cart.js:3), each row with its place, just now, its note and its status. Beside it, cart.js shows the three cards: line 2 Not sent yet with Add to queue and Send now, line 3 Sent to Fix the cart total: discounts should apply before tax. beside the OpenCode logo, with the Reply to OpenCode box, Resolve and Reply, and line 4 Queued for the same session with Remove from queue and Send now. The header also reads from main and Up to date.">
   </a>
   <figcaption style="text-align:center; color:#888">The Comments view, grouped by status.</figcaption>
 </figure>
@@ -398,8 +398,8 @@ A task's notes take review comments too, so you can ask an agent to fix a note t
 While you edit a note, comment on its lines as you would in a file. The draft works like a comment on code: pick the session, then click **Add comment** or **Send now**. The agent's reply in the conversation offers **Open note**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/note-comment-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/note-comment-nov-2026.png" class="help-center-img img-bordered" alt="The Coding conventions note open on the task page, with its Money heading pointed at and its Copy link to section and Comment on section buttons beside it. Under the Money section's two lines a comment draft is open: Comment on lines 1 to 4, the note Say whether tax is worked out before or after the rounding, the target To with the OpenCode logo and the session Fix the cart total: discounts should apply before tax., then Cancel, Add comment and Send now. The Tests heading starts below the draft.">
+  <a href="/wp-content/uploads/note-comment-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/note-comment-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Coding conventions note open on the task page, with its Money heading pointed at and its Copy link to section and Comment on section buttons beside it. Under the Money section's two lines a comment draft is open: Comment on lines 1 to 4, the note Say whether tax is worked out before or after the rounding, the target To with the OpenCode logo and the session Fix the cart total: discounts should apply before tax., then Cancel, Add comment and Send now. The Tests heading starts below the draft.">
   </a>
   <figcaption style="text-align:center; color:#888">A comment draft on a note's section.</figcaption>
 </figure>
@@ -544,8 +544,8 @@ When you pick a branch, Kepler saves it at once. The picker lists only branches 
 The Sync view rebases or merges the branch onto its merge target. It works on a copy first, and your branch changes only when you apply the result.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/update-view-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/update-view-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The sync view titled Sync kepler/fix-cart-total, from origin/main with Rebase selected in the Rebase and Merge control, at Ready to apply: The rebase onto origin/main is ready. Apply updates your branch. Sync sits beside Apply & push and its chevron.">
+  <a href="/wp-content/uploads/update-view-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/update-view-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The sync view titled Sync kepler/fix-cart-total, from origin/main with Rebase selected in the Rebase and Merge control and Push after update ticked beside it, at Ready to apply: The rebase onto origin/main is ready. Apply updates your branch. Sync sits beside Apply & push, which has no menu.">
   </a>
   <figcaption style="text-align:center; color:#888">The Sync view with Push after update ticked, ready to apply and push.</figcaption>
 </figure>

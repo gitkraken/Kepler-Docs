@@ -24,8 +24,8 @@ Use **Settings → Agents** to install the coding agents you already use, sign i
 Kepler supports 9 agents. You can also add any other agent that speaks the Agent Client Protocol (ACP), or whose command-line interface you want to run inside a task.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-settings-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-settings-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="Settings › Agents: the page description, New tasks use Claude Code with Change in Tasks, then Ask Kepler uses with its agent-settings pill showing the Claude Code mark and the Quick fix preset, and its help text. Your agents has Update all and Rescan above the Claude Code card (Update, Enabled), which shows Accounts with Add account and the Claude Code CLI account marked Default with Check usage, New sessions start in set to Chat, Let artifact comments start turns (on), Artifacts in new sessions (off), and a collapsed Program and data folder.">
+  <a href="/wp-content/uploads/agent-settings-oct-2026-v6@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-settings-oct-2026-v6@2x.png" class="help-center-img img-bordered" alt="Settings › Agents: the page description; New sessions start on your last pick, or Claude Code the first time, with Change in Tasks; then New Ask Kepler chats start with, its agent-settings pill showing the Claude Code mark and the Quick fix preset, the caption Your first chat uses this agent, and Start each chat on the agent you used last ticked. Your agents has Update all and Rescan above the Claude Code card (Update, Enabled), which shows Accounts with Add account and the Claude Code CLI account marked Default with Check usage, New sessions start in set to Chat, Let artifact comments start turns (on), Artifacts in new sessions (off), and a collapsed Program and data folder.">
   </a>
   <figcaption style="text-align:center; color:#888">Settings → Agents.</figcaption>
 </figure>

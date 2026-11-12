@@ -619,8 +619,8 @@ On a touch phone, every live terminal has a key row under it with the keys a pho
 Tap **Ctrl** once to hold it for the next key only, or double-tap it to lock it until you tap it again. Shift works the same way: swipe up on or hold **Ctrl** once to hold Shift for the next key, or twice quickly to lock it. With Shift on, the letters you type are capitals. Holding an arrow repeats it. **Hide keys** replaces the row with a **Show keys** button, and this device remembers the choice. The phone keyboard opens only when you tap the terminal or **Keyboard**, not on every scroll.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/terminal-key-row-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/terminal-key-row-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A task terminal in a phone-width browser after git status, with the terminal key row under it: Esc (Ctrl+C above it), Ctrl, Tab, the Left and Right arrows (Home and End above), Up and Down (PgUp and PgDn above), Enter, Keyboard, and the Hide keys chevron.">
+  <a href="/wp-content/uploads/terminal-key-row-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/terminal-key-row-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="A task terminal in a phone-width browser after git status, with the terminal key row under it: Esc (^C above it), Ctrl (the Shift arrow above it), Tab (a back-tab arrow above it), the Left and Right arrows (Home and End above), Up and Down (PgUp and PgDn above), Enter (a Shift arrow above it), Keyboard, and the Hide keys chevron.">
   </a>
   <figcaption style="text-align:center; color:#888">The key row under a terminal on a phone.</figcaption>
 </figure>

@@ -232,8 +232,8 @@ To import workspaces, take the following steps:
 4. Click **Import *N* workspaces**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/import-apps-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/import-apps-nov-2026.png" class="help-center-img img-bordered" alt="The Import from Orca dialog, Choose the workspaces to bring in as tasks, listing acme-web's workspaces: Gift card checkout on orca/gift-cards with 2 chats and Paginate search results on orca/search-paging with 1 chat, both ticked, and Cart total with discounts on orca/cart-total, its tick dimmed and marked Already a task: Fix the cart total. Select all (dimmed) and Deselect all sit above the list, and the note to continue each chat in one app only sits above Import 2 workspaces.">
+  <a href="/wp-content/uploads/import-apps-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/import-apps-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Import from Orca dialog, Choose the workspaces to bring in as tasks, listing acme-web's workspaces: Gift card checkout on orca/gift-cards with 2 chats and Paginate search results on orca/search-paging with 1 chat, both ticked, and Cart total with discounts on orca/cart-total, its tick dimmed and marked Already a task: Fix the cart total. Select all (dimmed) and Deselect all sit above the list, and the note to continue each chat in one app only sits above Import 2 workspaces.">
   </a>
   <figcaption style="text-align:center; color:#888">Choosing the workspaces to import from Orca.</figcaption>
 </figure>

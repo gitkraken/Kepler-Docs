@@ -93,8 +93,8 @@ If you installed an agent that Kepler did not find, click **Rescan**. To go on w
 </figure>
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/onboarding-agents-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/onboarding-agents-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The guided start's first step, Choose your coding agents, under Welcome to Kepler and the 01 Agents / 02 Theme & notifications steps: Claude Code and Codex are switched on among the nine coding agents, the others are dashed tiles ending in an arrow that you click to install or locate them, and New sessions start in offers Chat (selected) or Terminal. Kep says Kepler found Claude Code and Codex, with I'll explore on my own and Next at the bottom.">
+  <a href="/wp-content/uploads/onboarding-agents-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/onboarding-agents-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The guided start's first step, Choose your coding agents, under Welcome to Kepler and the 01 Agents / 02 Repos / 03 Theme & notifications steps: Claude Code and Codex are switched on among the nine coding agents, the others are dashed tiles ending in an arrow that you click to install or locate them, and New sessions start in offers Chat (selected) or Terminal. Kep says Kepler found Claude Code and Codex, with I'll explore on my own and Next at the bottom.">
   </a>
   <figcaption style="text-align:center; color:#888">The first step of the guided start, with two agents found and switched on.</figcaption>
 </figure>
@@ -107,8 +107,8 @@ If you installed an agent that Kepler did not find, click **Rescan**. To go on w
 Then click the button that adds them, such as **Add 2 and continue**. Kepler adds only what you check. If you leave the guided start before you finish this step, Kepler adds the repos it checked for you.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/onboarding-repos-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/onboarding-repos-nov-2026.png" class="help-center-img img-bordered" alt="The guided start's second step, Bring in your repos, with 02 Repos current in the step header: the Repos folder field reads /home/alex/code, and Repos and folders lists acme-web and acme-api checked and design-tokens unchecked, each with its path and when it was last used, under Filter, Select all, Unselect all and Add a folder. Back, I'll explore on my own and Add 2 and continue sit at the bottom.">
+  <a href="/wp-content/uploads/onboarding-repos-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/onboarding-repos-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The guided start's second step, Bring in your repos, with 02 Repos current in the step header: the Repos folder field reads /home/alex/code, and Repos and folders lists acme-web and acme-api checked and design-tokens unchecked, each with its path and when it was last used, under Filter, Select all, Unselect all and Add a folder. Back, I'll explore on my own and Add 2 and continue sit at the bottom.">
   </a>
   <figcaption style="text-align:center; color:#888">The second step, with the 2 repos Kepler picked checked.</figcaption>
 </figure>
@@ -122,8 +122,8 @@ Then click the button that adds them, such as **Add 2 and continue**. Kepler add
 To try an alert, click **Send a test notification**. You can change these choices later in [Settings](/kepler/settings-app#notifications). Click **Finish** to open the **New task** composer on the Dashboard and start your first task.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/onboarding-theme-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/onboarding-theme-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The guided start's second step, Make it yours: Theme tiles Kepler Dark (selected), Midnight, Kepler Light and Theme gallery beside the System / Light / Dark switch on Dark, and Notify me presets Everything, When I'm needed (selected) and Only in Kepler, with Play a sound with desktop notifications ticked, Send a test notification, Back and Finish.">
+  <a href="/wp-content/uploads/onboarding-theme-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/onboarding-theme-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The guided start's third step, Make it yours, with 01 Agents and 02 Repos checked off and 03 Theme & notifications current: Theme tiles Kepler Dark (selected), Midnight, Kepler Light and Theme gallery beside the System / Light / Dark switch on Dark, and Notify me presets Everything, When I'm needed (selected) and Only in Kepler, with Play a sound with desktop notifications ticked, Send a test notification, Back and Finish.">
   </a>
   <figcaption style="text-align:center; color:#888">The third step, with the theme and notification choices.</figcaption>
 </figure>

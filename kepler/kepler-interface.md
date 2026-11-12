@@ -420,8 +420,8 @@ You can change all of these defaults. See [Actions](/kepler/actions).
 ### Open a panel
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/open-a-task-panel-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/open-a-task-panel-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Todo view, with two pull requests above three issues, GitHub issue #42 selected and its side panel open on the right: the issue header with Plan, the GITHUB, ISSUE #42 and Mentioned chips, its Summary with the bug and checkout labels and description, and a composer at the bottom, with #42 attached, for starting a task from it. Above are the row of views, with Todo selected, and the toolbar with the View button reading Type, Updated and Mine.">
+  <a href="/wp-content/uploads/open-a-task-panel-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/open-a-task-panel-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Todo view, with two pull requests above three issues, GitHub issue #42 selected and its side panel open on the right: the issue header with Plan, the GITHUB, ISSUE #42 and Mentioned chips, its Summary with the bug and checkout labels and description, and a composer at the bottom, with #42 attached, for starting a task from it. Above are the row of views, with Todo selected, and the toolbar with the View button reading Type and Mine before the search box.">
   </a>
   <figcaption style="text-align:center; color:#888">The side panel, opened from a row.</figcaption>
 </figure>
@@ -504,8 +504,8 @@ When the window is too narrow for the list beside the open panels, Kepler hides 
 ### Lay panels out in a grid
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/dashboard-grid-formation-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/dashboard-grid-formation-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Dashboard with four task panels in a 2 by 2 grid beside a narrow task list grouped by Repository (acme-web, 4, and No repository, 1). The Panel layout popover is open under the 3 × 2 toolbar button: Columns and Grid, with Grid chosen, a 3 by 2 block highlighted, and 3 × 2, 6 panels, Up to 16 panels, fewer in smaller windows.">
+  <a href="/wp-content/uploads/dashboard-grid-formation-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/dashboard-grid-formation-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Dashboard with four task panels in a 2 by 2 grid beside a narrow task list grouped by Repository (acme-web, 4, and No repository, 1). The Panel layout popover is open under the 2 × 2 toolbar button: Auto columns unticked, a size matrix with a 2 by 2 block marked, and 2 × 2, 4 panels, Up to 16 panels, fewer in smaller windows.">
   </a>
   <figcaption style="text-align:center; color:#888">Panels in a grid, with the Panel layout popover open.</figcaption>
 </figure>
@@ -736,8 +736,8 @@ To jump to a task, a pull request or issue, or a file, or to run a command, open
 To switch tabs, click a tab or press **Shift+Tab**. In an empty field, you can also type **#** for **Todo**, **@** for **Files**, or **>** for **Commands**, and press **Backspace** to return to **Tasks**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/go-to-task-palette-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/go-to-task-palette-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Go to task palette: a search field reading Go to task, the Tasks and Files tabs with Tasks selected, and your tasks listed under Needs attention, Unread, Recent and Not started, with Fix the cart total checked as the current task, above key hints such as Open and Task files.">
+  <a href="/wp-content/uploads/go-to-task-palette-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/go-to-task-palette-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Go to task palette: a search field reading Go to task, or type # for todos, @ for files or > for commands, the Tasks, Todo, Files and Commands tabs with Tasks selected, and your tasks listed under Needs attention, Unread, Recent and Not started, with Fix the cart total checked as the current task, above key hints such as Open and Task files.">
   </a>
   <figcaption style="text-align:center; color:#888">Go to task, listing your tasks to switch to.</figcaption>
 </figure>
@@ -755,8 +755,8 @@ To switch tabs, click a tab or press **Shift+Tab**. In an empty field, you can a
 **Commands** lists the commands you can run from where you are, each with its keyboard shortcut, and a row for each Settings page and for actions such as switching windows. Press **Enter** to run the highlighted command.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/palette-commands-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/palette-commands-nov-2026.png" class="help-center-img img-bordered" alt="The palette on its Commands tab: a search field reading Search commands, or type @ for files or # for todos, the Tasks, Todo, Files and Commands tabs with Commands selected, and the General commands, such as Open settings, Toggle Ask Kepler chat, New Ask Kepler chat and New task (highlighted), some with their keyboard shortcut on the right, then Send feedback, Open documentation and the Appearance commands, above key hints such as Run and Next tab.">
+  <a href="/wp-content/uploads/palette-commands-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/palette-commands-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The palette on its Commands tab: a search field reading Search commands, or type @ for files or # for todos, the Tasks, Todo, Files and Commands tabs with Commands selected, and the General commands, such as Open settings, Toggle Ask Kepler chat, New Ask Kepler chat and New task (highlighted), some with their keyboard shortcut on the right, then Send feedback, Open documentation and the Appearance commands, above key hints such as Run and Next tab.">
   </a>
   <figcaption style="text-align:center; color:#888">The Commands tab, listing commands with their shortcuts.</figcaption>
 </figure>

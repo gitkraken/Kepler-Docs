@@ -84,8 +84,8 @@ Click a repository's row to open its **Edit repo** page. The page shows the repo
 - Agents working in this repo read the description, so write a full sentence.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/edit-repo-dialog-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/edit-repo-dialog-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Edit repo page for acme-web in Settings › Repositories: its path and main · 2 branches, then Name (How this repo is listed in Kepler.), Aliases (empty, placeholder api, backend; Short names for this repo when talking to agents, separated by commas.), Description (What this repo is for. Agents working in it read this.) and Branch prefix on Default (kepler/) with the example kepler/fix-login-form; the Commands section with Add command, Install deps (Runs on creation) and Dev server; and MCP servers with Add server, Agent set to Claude Code CLI and acme-issues, docs-search and acme-analytics switched on.">
+  <a href="/wp-content/uploads/edit-repo-dialog-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/edit-repo-dialog-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The Edit repo page for acme-web in Settings › Repositories: its path and main · 2 branches, then Name, Aliases (empty, placeholder api, backend) and Description, each with its help line; Trusted switched on (Kepler runs git here, and agent sessions skip the agent's own trust question); Branch prefix on Default (kepler/) with the example kepler/fix-login-form; Branch synchronization with How to update set to Rebase and Push after update unticked; the Commands section with Add command, Install deps (Runs on creation) and Dev server; and MCP servers with Add server, Agent set to Claude Code CLI and acme-issues, docs-search and acme-analytics switched on.">
   </a>
   <figcaption style="text-align:center; color:#888">The Edit repo page.</figcaption>
 </figure>
@@ -237,8 +237,8 @@ A branch with no worktree is updated in place; it is skipped if a worktree holds
 When the update finishes, you can undo one row with **Roll back**, or every row with **Roll back all**. If you did not push during the update, **Push** and **Push all** push the updated branches that have an upstream. Kepler does not push a branch that moved since the update. The finished report stays in every window until you click **Dismiss**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ade-worktree-batch-update-01-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ade-worktree-batch-update-01-v3@2x.png" class="help-center-img img-bordered" alt="The Update worktrees dialog with How to update set to Rebase and Push after update ticked: kepler/gift-card-ui is Up to date, kepler/old-banner Will update · 3 commits behind with No upstream, update only, kepler/wishlist is Skipped · uncommitted changes, and kepler/summer-teaser Will update · 3 commits behind with Will push. The footer reads 2 worktrees to update beside Cancel and Update.">
+  <a href="/wp-content/uploads/ade-worktree-batch-update-01-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ade-worktree-batch-update-01-v4@2x.png" class="help-center-img img-bordered" alt="The Update worktrees dialog with How to update on Default and Push after update on Push + Publish. kepler/old-banner reads 3 commits behind with Rebase · Will publish to origin/kepler/old-banner, kepler/summer-teaser 3 commits behind with Rebase · Will push to origin/kepler/summer-teaser, kepler/gift-card-ui Will publish to origin/kepler/gift-card-ui, and kepler/wishlist Skipped · uncommitted changes. The footer reads 2 updates · 1 push · 2 publications beside Cancel and Update.">
   </a>
   <figcaption style="text-align:center; color:#888">The Update worktrees plan, with Push after update on Push + Publish.</figcaption>
 </figure>

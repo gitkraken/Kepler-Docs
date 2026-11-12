@@ -48,8 +48,8 @@ The language also applies to native dialogs, not only to the in-app interface.
 **Send messages with** chooses the key that sends a message from the chat box: **Enter**, the default, or **⌘ Enter** (**Ctrl + Enter** on Windows and Linux). With **Enter**, **Shift + Enter** starts a new line. With **⌘ Enter**, **Enter** starts a new line. In the browser on a phone or tablet, **Enter** always starts a new line.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/settings-send-key-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/settings-send-key-nov-2026.png" class="help-center-img img-bordered" alt="The Chat section of Settings › General: Send messages with, set to Enter rather than Ctrl+Enter, the hint Shift+Enter starts a new line, and the note that in the browser on a phone or tablet, Enter always starts a new line.">
+  <a href="/wp-content/uploads/settings-send-key-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/settings-send-key-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Chat section of Settings › General: Send messages with, set to Enter rather than Ctrl+Enter, the hint Shift+Enter starts a new line, and the note that in the browser on a phone or tablet, Enter always starts a new line.">
   </a>
   <figcaption style="text-align:center; color:#888">Send messages with, at its default.</figcaption>
 </figure>
@@ -283,8 +283,8 @@ These settings set where the Dashboard's views sit and how they look:
 With **Along the left side**, the **Settings** button moves to the bottom of the views.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/settings-appearance-dashboard-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/settings-appearance-dashboard-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Dashboard section of Settings › Appearance at its defaults: Views, with picture tiles for In the title bar, Below the title bar (chosen) and Along the left side; View style, with Tabs chosen over Pills; Size, Default or Compact, marked Left side only; Counts on views, switched on; and Search box, Grows as you type chosen over Full width. Each row has its help line.">
+  <a href="/wp-content/uploads/settings-appearance-dashboard-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/settings-appearance-dashboard-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Dashboard section of Settings › Appearance at its defaults: Views, with picture tiles for In the title bar, Below the title bar (chosen) and Along the left side; View style, with Tabs chosen over Pills; Size, Default or Compact, marked Left side only; Counts on views, switched on; and Search box, with Full width chosen over Grows as you type. Each row has its help line.">
   </a>
   <figcaption style="text-align:center; color:#888">The Dashboard settings, at their defaults.</figcaption>
 </figure>
@@ -396,8 +396,8 @@ Kepler downloads each model from the internet once. Transcription then runs enti
 Until Kokoro is downloaded, and for text that is not English, the system voice reads. Once Kokoro is downloaded, **Remove…** deletes it after you confirm.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/settings-read-aloud-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/settings-read-aloud-nov-2026.png" class="help-center-img img-bordered" alt="The Read aloud section of Settings › Voice at its defaults: under Engine, System voices (Built in) is selected beside Kokoro with its download size and a Download button, and under Voice options, Voice is set to System default beside a button that plays a sample, with Speed at 1x.">
+  <a href="/wp-content/uploads/settings-read-aloud-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/settings-read-aloud-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Read aloud section of Settings › Voice, which reads agent replies to you from the chat, the terminal or the title bar. Under Engine, System voices (Built in) is selected, and Kokoro, natural English voices on your graphics card, shows its download size and a Download button. Under Voice options, Voice is set to System default beside a button that plays a sample, and Speed is a slider at 1x.">
   </a>
   <figcaption style="text-align:center; color:#888">The Read aloud settings, at their defaults.</figcaption>
 </figure>
@@ -419,8 +419,8 @@ If the keys already belong to another command, Kepler names it, and **Replace** 
 A changed row offers **Reset to default**. **Changed only** lists only the shortcuts you changed, and **Reset all shortcuts** puts every shortcut back to its default after you confirm. A row with a lock, such as **Copy the selection or the focused item** or **Dismiss / Cancel**, cannot be changed.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/settings-shortcuts-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/settings-shortcuts-nov-2026.png" class="help-center-img img-bordered" alt="Settings › Keyboard shortcuts, under its description, with new task typed in Search shortcuts, beside Changed only, the count 1 of 112 shortcuts, and Reset all shortcuts, dimmed. The General section lists New task with its Ctrl+N key and a pencil button showing the tooltip Change shortcut.">
+  <a href="/wp-content/uploads/settings-shortcuts-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/settings-shortcuts-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="Settings › Keyboard shortcuts, under its description, with new task typed in Search shortcuts, beside Changed only, the count 1 of 112 shortcuts, and Reset all shortcuts, dimmed. The General section lists New task with its Ctrl+N key and a pencil button showing the tooltip Change shortcut.">
   </a>
   <figcaption style="text-align:center; color:#888">Searching the shortcuts, with a row's Change shortcut button.</figcaption>
 </figure>

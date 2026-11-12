@@ -116,8 +116,8 @@ Describe an automation in your own words, such as *Every Monday at 9, check my r
 The chat creates the automation paused and shows an **Automation created** card with what the automation watches, what it runs, and where. To start it, click **Turn on**. To see it in Automations, click **Open**. See [Automations](/kepler/automations).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/automations-created-card-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/automations-created-card-nov-2026.png" class="help-center-img img-bordered" alt="The Automation created card in an Ask Kepler chat for Check dependencies every Monday: Schedule, Weekly on Monday, 9:00 AM, UTC, the start of its prompt with Show full prompt, On your default agent, In /home/alex/kepler/repositories, and Paused until you turn it on, with the Turn on and Open buttons.">
+  <a href="/wp-content/uploads/automations-created-card-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/automations-created-card-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Automation created card in an Ask Kepler chat for Check dependencies every Monday: Schedule, Weekly on Monday, 9:00 AM, UTC, the start of its prompt with Show full prompt, On your default agent, In /home/alex/kepler/repositories, and Paused until you turn it on, with the Turn on and Open buttons.">
   </a>
   <figcaption style="text-align:center; color:#888">An automation that Ask Kepler set up, paused until you turn it on.</figcaption>
 </figure>

@@ -24,8 +24,8 @@ Use Settings to change how Kepler, your agents, and your tasks work. Settings ha
 To open Settings, click the gear icon in the top bar, or press **⌘ ,** (**Ctrl ,** on Windows and Linux). To close it, click the gear icon or press the same shortcut again.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/settings-general-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/settings-general-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Settings open on Repositories. The Settings sidebar on the left starts with Search settings and Setup, then lists Account; Agents, Tasks, Repositories, Integrations and Actions; General, Notifications, Appearance, Voice input and Keyboard shortcuts; Remote environments and Remote Access; and Updates and Help, with Repositories' section links (Your repos and folders, Worktrees and branches, Projects) expanded under it.">
+  <a href="/wp-content/uploads/settings-general-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/settings-general-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="Settings open on Repositories. The Settings sidebar on the left starts with Search settings and Setup, then lists Account; Agents, Tasks, Repositories, Integrations and Actions; General, Notifications, Appearance, Voice and Keyboard shortcuts; Remote environments and Remote Access; and Updates and Help, with Repositories' section links (Your repos and folders, Worktrees and branches, Projects) expanded under it.">
   </a>
   <figcaption style="text-align:center; color:#888">Settings, open on Repositories.</figcaption>
 </figure>
