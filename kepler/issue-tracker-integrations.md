@@ -78,7 +78,7 @@ If your browser did not open, copy the **Connection link** from the dialog Keple
 **GitHub Enterprise**, **GitLab Self-Hosted**, **Azure DevOps Server**, and **Jira Server / Data Center** connect inside Kepler with a personal access token rather than through the browser:
 
 1. Open **Settings → Integrations**.
-2. Find the provider in **Issues and pull requests** and click **Connect**. The **Connect {name}** dialog opens.
+2. Find the provider in **Issues and pull requests** and click **Connect**. The **Connect *provider*** dialog opens.
 3. In **Server URL**, enter the server's address, including the port and installation path when your server uses them.
 4. In **Personal access token**, paste a token with access to the issues you need.
 5. Click **Save connection**.
@@ -138,7 +138,7 @@ Each connected integration except Trello and Asana has a visibility line under i
 
 To hide part of an integration:
 
-1. Click **Choose what's visible…** on the provider's row. The **Choose what {name} brings in** dialog opens.
+1. Click **Choose what's visible…** on the provider's row. The **Choose what *provider* brings in** dialog opens.
 2. Clear the checkbox of each item to hide. Type in **Filter…** to narrow a long list.
 3. Click **Save**.
 
@@ -221,13 +221,15 @@ When an issue becomes a task, Kepler attaches what it read, so the agent starts 
 | **Repository** | Name, owner, and host, for the git hosts |
 | **URL** | Used by the open control, which names the provider: **Open on GitHub**, **Open on Jira**, and so on |
 
-Kepler does not read an issue's priority field, due date, milestone, Trello checklist, or Linear cycle. An agent can still find these by opening the issue's URL itself, but Kepler does not deliver them as attached context.
+Kepler does not read an issue's priority field, due date, Trello checklist, or Linear cycle. An agent can still find these by opening the issue's URL itself, but Kepler does not deliver them as attached context.
+
+Kepler reads an issue's milestone on GitHub, GitHub Enterprise, GitLab, GitLab Self-Hosted, and Linear, so Todo can group and filter by **Milestone**. See [Arranging Your Work](/kepler/arranging-your-work).
 
 Todo's **Priority** grouping and filter come from labels instead: a label such as `P1`, `priority: high`, `blocker`, or `critical` sets the level, and the most urgent label wins. Jira and Linear keep priority in a field Kepler does not read, so their issues show as **Unprioritised** unless a label sets a priority. See [Arranging Your Work](/kepler/arranging-your-work).
 
 Jira and Azure DevOps descriptions keep their headings, code blocks, and tables in Kepler's previews and in the agent's context.
 
-Images embedded in an issue's description, including Jira and Azure DevOps attachments, display in Kepler's issue previews. On a self-hosted server (GitHub Enterprise, GitLab Self-Hosted, Azure DevOps Server, or Jira Server / Data Center), these images are blocked and do not display, though the server's member avatars do. The agent receives the description as text: Kepler does not pass the attachments or images themselves.
+Images embedded in an issue's description, including Jira and Azure DevOps attachments, display in Kepler's issue previews, from self-hosted servers too. The agent receives the description as text: Kepler does not pass the attachments or images themselves.
 
 ### Comments
 
@@ -257,8 +259,8 @@ Under **Mine**, each provider reports a different set of issues related to you:
 An issue listed only because you were mentioned is marked **Mentioned**, so you can tell it apart from work that is yours. Under **All**, the **Your role** filter also offers **Not mine**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/todo-scope-tooltip-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/todo-scope-tooltip-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Todo's View menu, opened from the toolbar's View button (Type, Updated, All). It switches List or Board, and the scope Mine or All, here All: Kepler repos, last 90 days, with Repos (All) and Updated (90 days). Below are Group by (Type), Sort by (Updated) and the Filters Needs my attention, Type, Linked work, Priority, Age and Provider, each Any.">
+  <a href="/wp-content/uploads/todo-scope-tooltip-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/todo-scope-tooltip-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The top of Todo's View menu, with List selected in its layout switch and All picked in the Mine or All scope. The line under it reads Kepler repos, last 90 days, followed by the Repos (All) and Updated (90 days) rows.">
   </a>
   <figcaption style="text-align:center; color:#888">A Todo view's scope, set in its View menu.</figcaption>
 </figure>
@@ -268,7 +270,7 @@ To find issues to add to a task, the issue list on a task's **Resources** screen
 For GitHub and Azure DevOps, **All visible** reads every issue across your organizations, including repositories you can read outside them, such as ones where you are an outside collaborator. It loads more slowly. Jira and Linear show only your issues there until you pick a project or a team:
 
 - **Jira**: when the issue list shows Jira alone, a project picker appears, starting with **All projects**. Pick a project to see every open issue in it. Kepler remembers the pick for each Jira connection.
-- **Linear**: when the issue list shows Linear alone, a team picker and a **Project** picker appear. Pick a team, a Linear project, or both, to see every open issue in them, whoever it is assigned to. The **Project** picker lists your Linear workspace's projects with their state, closed ones included. Changing the team clears the project pick.
+- **Linear**: when the issue list shows Linear alone, a team picker and a **Project** picker appear. Pick a team, a Linear project, or both, to see every open issue in them, whoever it is assigned to. The **Project** picker lists your Linear workspace's projects with their state, closed ones included.
 
 <!-- TODO(screenshot): New — ade-linear-project-picker-01: the Add to this task dialog on its Issues tab with Linear selected and the Project picker open on All projects and the workspace's projects, each with its state. -->
 
@@ -297,7 +299,7 @@ Kepler recognizes an issue from its URL when you paste or attach one, including 
 
 **Search by key or link.** In the issue list of a task's **Resources** screen, type a Jira or Linear issue key, such as `OPS-42`, or paste a Jira Cloud, Jira Server / Data Center, Linear, or Azure DevOps work item link. Kepler finds that issue in its tracker, whatever its state, even when it is not in the list. A Jira Server / Data Center link resolves when it points at an installation you have connected.
 
-**Jira keys in commits and branches.** With Jira or Jira Server / Data Center connected, Kepler links Jira issue keys in commit messages and branch names, so `OPS-42` in a commit message links to that issue. Right-click a commit in a worktree's commit list for **Open issue {issue}** and **Copy issue URL for {issue}** (see [Review Changes](/kepler/review-changes#the-changes-panel)), and the **Worktrees and branches** page shows the keys as chips on branch and worktree rows (see [Repository Settings](/kepler/settings-repositories#worktrees-and-branches)). Only Jira keys are linked this way.
+**Jira keys in commits and branches.** With Jira or Jira Server / Data Center connected, Kepler links Jira issue keys in commit messages and branch names, so `OPS-42` in a commit message links to that issue. Right-click a commit in a worktree's commit list for **Open issue *key*** and **Copy issue URL for *key*** (see [Review Changes](/kepler/review-changes#the-changes-panel)), and the **Worktrees and branches** page shows the keys as chips on branch and worktree rows (see [Repository Settings](/kepler/settings-repositories#worktrees-and-branches)). Only Jira keys are linked this way.
 
 **Add from the list with the keyboard.** In the issue list on the **Resources** screen, the arrows move between rows, and **Enter** or a double-click adds the row. **Show preview** in the screen's header shows the picked row beside the list. See [Picking issues and pull requests](/kepler/tasks-and-resources#picking-issues-and-pull-requests).
 

@@ -24,8 +24,8 @@ Use **Settings → Agents** to install the coding agents you already use, sign i
 Kepler supports 9 agents. You can also add any other agent that speaks the Agent Client Protocol (ACP), or whose command-line interface you want to run inside a task.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-settings-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-settings-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="Settings › Agents: the page description, New tasks use Claude Code with Change in Tasks, then Ask Kepler uses with its agent-settings pill showing the Claude Code mark and the Quick fix preset, and its help text. Your agents has Update all and Rescan above the Claude Code card (Update, Enabled), which shows Accounts with Add account and the Claude Code CLI account marked Default with Check usage, New sessions start in set to Chat, Let artifact comments start turns (on), Artifacts in new sessions (off), and a collapsed Program and data folder.">
+  <a href="/wp-content/uploads/agent-settings-oct-2026-v6@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-settings-oct-2026-v6@2x.png" class="help-center-img img-bordered" alt="Settings › Agents: the page description; New sessions start on your last pick, or Claude Code the first time, with Change in Tasks; then New Ask Kepler chats start with, its agent-settings pill showing the Claude Code mark and the Quick fix preset, the caption Your first chat uses this agent, and Start each chat on the agent you used last ticked. Your agents has Update all and Rescan above the Claude Code card (Update, Enabled), which shows Accounts with Add account and the Claude Code CLI account marked Default with Check usage, New sessions start in set to Chat, Let artifact comments start turns (on), Artifacts in new sessions (off), and a collapsed Program and data folder.">
   </a>
   <figcaption style="text-align:center; color:#888">Settings → Agents.</figcaption>
 </figure>
@@ -58,13 +58,18 @@ Kepler asks each agent's provider for plan usage while **Check plan usage with e
 
 **Pi is terminal-only.** Kepler runs Pi's own interface in a terminal inside the task. Kepler does not check Pi's sign-in. Pi uses its own sign-in (`/login`, or the provider API-key environment variables it reads directly).
 
-With Pi 1.x, a session gets the task's context and Kepler's workspace tools, and your own Pi configuration stays as it was. With other Pi versions, Kepler pastes the task's context into the session instead. A Pi session resumes where it left off, and Pi does not ask again whether to trust a worktree of a repository you already trust.
+With Pi 1.x, a session gets the task's context and Kepler's workspace tools, and your own Pi configuration stays as it was. With other Pi versions, Kepler pastes the task's context into the session instead. A Pi session resumes where it left off.
 
 **OpenCode needs version 2.** Kepler does not start a session on an OpenCode 1 binary. A conversation you started under OpenCode 1 resumes in OpenCode 2.
 
-**Inbox wake in Terminal mode.** Kepler can wake an idle **Terminal** session to read its inbox for Claude Code, Pi, and OpenCode 2.1.1 or newer, without changing your own config. Other agents in Terminal mode cannot use Kepler's workspace tools or inbox. To give one access, choose **Continue in Chat** from the session menu.
+**Kepler's tools in Terminal mode.** If a **Terminal** session shows **No Kepler tools** on its status bar, choose **Continue in Chat** from the session menu to give the agent Kepler's workspace tools. These agents get them in Terminal mode too, without any change to your own config:
 
-**Claude Code folder trust.** A worktree inherits the trust you already gave its repository, so a session does not stop at the trust prompt.
+| Agent | In Terminal mode |
+|---|---|
+| Claude Code, Pi, OpenCode 2.1.1 or newer | Kepler's workspace tools, and Kepler wakes an idle session to read its inbox |
+| Google Antigravity 1.5.3 or newer | Kepler's workspace tools only |
+
+**Folder trust.** A Claude Code or Pi session does not stop at the CLI's own trust question in a repository, worktree, or folder you marked **Trusted** in Kepler. A worktree also inherits the trust you already gave its repository. See [Trust a repository](/kepler/settings-repositories#trust-a-repository).
 
 To choose between **Chat** and **Terminal** for an agent, see [Run modes](#run-modes).
 
@@ -81,7 +86,7 @@ Kepler checks the build before it starts a session, and tells you to update if i
 
 ## Install an agent
 
-When an agent is not installed, its section reads **Not installed** and offers **Install**, which opens **Set up {name}**. Pick an install method, and Kepler runs the install command for you and shows its output. **Cancel** stops an install in progress. Once the install finishes, Kepler opens **Sign in to {name}** if the agent needs a sign-in. Installs and updates run one at a time.
+When an agent is not installed, its section reads **Not installed** and offers **Install**, which opens **Set up *agent***. Pick an install method, and Kepler runs the install command for you and shows its output. **Cancel** stops an install in progress. Once the install finishes, Kepler opens **Sign in to *agent*** if the agent needs a sign-in. Installs and updates run one at a time.
 
 The install methods depend on the operating system of the machine you are on:
 
@@ -97,7 +102,7 @@ The install methods depend on the operating system of the machine you are on:
 | **Pi** | Native installer, npm (global) | Native installer, npm (global) | Native installer, npm (global) |
 | **Google Antigravity** | Native installer | Native installer | Native installer |
 
-Every OpenCode method installs OpenCode 2. Windows offers only npm, because Scoop's and Chocolatey's `opencode` packages still install OpenCode 1.
+Every OpenCode method installs OpenCode 2.
 
 The dialog marks Claude Code's **npm (global)** method *Deprecated by Anthropic*.
 
@@ -105,14 +110,14 @@ Kepler offers a method only when the tool it runs, such as Homebrew or npm, is i
 
 If you already installed the agent somewhere Kepler did not find it, tell Kepler where it is from the same dialog:
 
-1. Under **Already installed?**, type the program's full path in the **Full path to {name}** field, or click **Browse…** to pick it.
+1. Under **Already installed?**, type the program's full path in the **Full path to *agent*** field, or click **Browse…** to pick it.
 2. Click **Use this**, or press **Enter**.
 
 Kepler saves the path as the agent's **Binary** if the agent runs from it. If it does not, Kepler keeps the path you had before.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/agent-setup-dialog-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-setup-dialog-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Set up Claude Code dialog: Install it with one of these, or tell Kepler where your copy is. Under Install, three method buttons: Native installer, Homebrew, and npm (global) marked Deprecated by Anthropic. Then Already installed? with a Full path to Claude Code field, Browse… and Use this.">
+    <img src="/wp-content/uploads/agent-setup-dialog-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Set up Claude Code dialog: under Install, the Native installer, Homebrew, and npm (global) methods, npm marked Deprecated by Anthropic, then Already installed? with a Full path to Claude Code field, Browse… and Use this.">
   </a>
   <figcaption style="text-align:center; color:#888">The Set up dialog, with its install methods and the Already installed? path field.</figcaption>
 </figure>
@@ -141,13 +146,13 @@ Each agent's card in **Settings → Agents** shows what Kepler resolved. The ver
 
 If Kepler cannot read an installed agent's version, its section shows a **Version unknown** badge, and features that depend on the version stay off, such as sending a new session's first message automatically. To fix it, reinstall or update the agent.
 
-When an installed version has a known problem, the agent's card shows a warning note under its title line that names the version and what to do:
+When an installed version has a known problem, the agent's card shows a warning under its title line that names the version and what to do. For example:
 
-| Agent | Warning |
+| Agent | What the warning tells you |
 |---|---|
-| **OpenCode** | *OpenCode {version} is not supported*. Sessions with it do not start, so install OpenCode 2 or pick an OpenCode 2 binary |
-| **Auggie** | *Auggie {version} may not load your MCP servers in chat* |
-| **Codex** | *Codex {version} can show approval prompts that need no answer*. Update Codex to 0.163.0 or newer |
+| **OpenCode** | OpenCode 1 is not supported, and its sessions do not start. Install OpenCode 2, or pick an OpenCode 2 binary |
+| **Auggie** | Chat sessions with this version may not load your MCP servers |
+| **Codex** | This version can show approval prompts that need no answer. Update Codex to 0.163.0 or newer |
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/agent-version-advisory-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -156,7 +161,7 @@ When an installed version has a known problem, the agent's card shows a warning 
   <figcaption style="text-align:center; color:#888">A version warning on the Codex card.</figcaption>
 </figure>
 
-If a pinned path later disappears (for example, when an auto-updater cleans up an old version), Kepler falls back to automatic resolution instead of reporting the agent as missing.
+If a custom path later disappears, such as after an auto-update removes an old version, Kepler finds the agent itself again instead of reporting it missing.
 
 Above the agent cards in **Settings → Agents**, **Rescan** re-detects every agent at once, and **Update all** runs each installed agent's own updater.
 
@@ -177,7 +182,7 @@ An installed agent shows **Sign in** until it has a credential, and **Sign out**
 |---|---|
 | **Claude Code** | Browser sign-in. Kepler runs the sign-in for you and your browser opens; you paste a code back only if the browser callback cannot reach Kepler. **More sign-in options** adds **Amazon Bedrock**, **Google Vertex AI**, **Microsoft Foundry**, and **LLM gateway** |
 | **Codex** | Sign in with a ChatGPT account through your browser, or enter an API key. On a remote, **ChatGPT (device code)** |
-| **GitHub Copilot** | **Sign in with GitHub**: Kepler's own device flow. Open `github.com/login/device` and enter the one-time code |
+| **GitHub Copilot** | **Sign in with GitHub**: open `github.com/login/device` and enter the one-time code Kepler shows |
 | **Cursor CLI** | Cursor's own browser sign-in, driven from the modal, or **Paste an API key** from the Cursor dashboard. On a remote, only the API key works |
 | **Auggie** | **Sign in with browser**, or **Paste session token** |
 | **OpenCode** | **OpenCode account (Go or Console)**: sign in through your browser with a one-time code. OpenCode also resolves providers from its own config file and provider environment variables |
@@ -239,7 +244,7 @@ When a sign-in runs in a terminal on a remote and the browser page does not load
 
 **Import local Codex login** is the other remote route, in the desktop app: it copies this machine's `~/.codex/auth.json` to the remote target, and asks you to confirm on this machine before it reads the file. The import copies a credential: anyone with access to that remote machine can send Codex requests on your account until you sign out.
 
-A Codex API key works locally and on a remote: Kepler collects the key in the modal and passes it to Codex for that account. **Sign out** on Codex signs the CLI itself out, and Kepler follows a sign-in you do in the Codex CLI outside Kepler.
+A Codex API key, entered in the modal, works locally and on a remote. **Sign out** on Codex signs the CLI itself out, and Kepler follows a sign-in you do in the Codex CLI outside Kepler.
 
 ### Auggie's sign-in methods
 
@@ -289,7 +294,7 @@ Some terminal programs report their own status to Kepler. When an agent's termin
 
 ## Your default agent
 
-**Settings → Tasks → New tasks → Default agent** sets the agent, account, model, mode, and options a new session starts with. You pick them in the same **Agent settings** pill as the composer, and you can start from an [agent preset](/kepler/settings-agents#agent-presets). To start each session with your last pick instead, choose **Use last used agent**.
+**New sessions start with**, in **Settings → Tasks → New tasks**, sets the agent, account, model, mode, and options a new session starts with. You pick them in the same **Agent settings** pill as the composer, and you can start from an [agent preset](/kepler/settings-agents#agent-presets). **Start each session on the agent you used last** is on by default: your first session uses the pill's agent, and each later one starts on your last pick. To always start on the pill's agent, clear it. See [Default agent](/kepler/settings-tasks#default-agent).
 
 Kepler saves agent options **per account**. Picking a different account of the same agent brings up that account's own saved model and options, so a larger model you chose on your work account does not carry over to your personal one.
 

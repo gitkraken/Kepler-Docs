@@ -13,19 +13,19 @@ hosted_variant: both
 status: GA
 last_verified: 2026-11
 llms_include: true
-tags: [settings, configuration, keyboard-shortcuts, appearance, agents, tasks, notifications, updates, mcp-servers, actions, repositories, worktrees, terminal, voice-input, remote, remote-environments, remote-access, logs, gitkraken-dev, integrations, preferences]
+tags: [settings, configuration, keyboard-shortcuts, appearance, agents, tasks, notifications, updates, mcp-servers, actions, repositories, worktrees, terminal, voice, dictation, read-aloud, remote, remote-environments, remote-access, logs, gitkraken-dev, integrations, preferences]
 taxonomy:
   category: kepler
 ---
 <kbd>Last updated: November 2026</kbd>
 
-Use Settings to change how Kepler, your agents, and your tasks work. Settings has 15 pages, and each one links to its own reference in [The Settings pages](#the-settings-pages).
+Use Settings to change how Kepler, your agents, and your tasks work. Settings has 15 pages, listed in [The Settings pages](#the-settings-pages).
 
 To open Settings, click the gear icon in the top bar, or press **⌘ ,** (**Ctrl ,** on Windows and Linux). To close it, click the gear icon or press the same shortcut again.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/settings-general-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/settings-general-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Settings open on Repositories. The Settings sidebar on the left starts with Search settings and Setup, then lists Account; Agents, Tasks, Repositories, Integrations and Actions; General, Notifications, Appearance, Voice input and Keyboard shortcuts; Remote environments and Remote Access; and Updates and Help, with Repositories' section links (Your repos and folders, Worktrees and branches, Projects) expanded under it.">
+  <a href="/wp-content/uploads/settings-general-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/settings-general-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="Settings open on Repositories. The Settings sidebar on the left starts with Search settings and Setup, then lists Account; Agents, Tasks, Repositories, Integrations and Actions; General, Notifications, Appearance, Voice and Keyboard shortcuts; Remote environments and Remote Access; and Updates and Help, with Repositories' section links (Your repos and folders, Worktrees and branches, Projects) expanded under it.">
   </a>
   <figcaption style="text-align:center; color:#888">Settings, open on Repositories.</figcaption>
 </figure>
@@ -44,11 +44,11 @@ The Settings sidebar starts with a **Search settings** field and [**Setup**](/ke
 | [**Repositories**](/kepler/settings-repositories) | The repositories folder, your repos and folders, worktrees and branches, and Projects |
 | [**Integrations**](/kepler/settings-integrations) | Issue tracker and Git host connections, and sessions started in your own terminal |
 | [**Actions**](/kepler/settings-actions) | Suggested Actions per item kind, and the Action list |
-| [**General**](/kepler/settings-app#general) | Language, windows, the default editor, keeping agents running, and usage insights |
+| [**General**](/kepler/settings-app#general) | Language, the chat's send key, the default editor, windows, keeping agents running, and usage insights |
 | [**Notifications**](/kepler/settings-app#notifications) | Which agent events notify you, on the desktop and in Kepler |
 | [**Appearance**](/kepler/settings-app#appearance) | Light or dark appearance and themes, the Dashboard's views, the chat, the terminal font, the code font, and diff layout |
-| [**Voice input**](/kepler/settings-app#voice-input) | On-device speech-to-text, its transcription engine, and learned words |
-| [**Keyboard shortcuts**](/kepler/settings-app#keyboard-shortcuts) | Kepler's keyboard shortcuts |
+| [**Voice**](/kepler/settings-app#voice) | Dictation, with its models and learned words, and read aloud, all on this device |
+| [**Keyboard shortcuts**](/kepler/settings-app#keyboard-shortcuts) | Kepler's keyboard shortcuts, and the keys you choose for them |
 | [**Remote environments**](/kepler/settings-environment#remote-environments) | The machines your agents can run on, over SSH or WSL |
 | [**Remote Access**](/kepler/settings-environment#remote-access) | Opening this Kepler from another device |
 | [**Updates**](/kepler/settings-updates-help#updates) | The installed version and app updates |
@@ -58,7 +58,7 @@ The account menu also opens **Account**.
 
 ### Find a setting
 
-To find a setting by name, start typing when Settings opens: **Search settings** already has focus. Search matches section titles, control labels, help text, and common synonyms, so a word like *theme* or *notifications* finds the right section.
+To find a setting by name, start typing when Settings opens: **Search settings** already has focus. Search also matches help text and common synonyms, so a word like *theme* or *notifications* finds the right section.
 
 When a search result or an Ask Kepler link takes you to a setting, Kepler highlights its control. If the setting is not shown, for example because it depends on something you have not set up yet, Kepler says why.
 
@@ -72,11 +72,11 @@ When you open an item to edit it, such as a repository, a project, a custom agen
 
 A sub-page form saves when you click **Save** in its footer. If a save fails, the footer shows why and keeps your edits on the form.
 
-If you leave a sub-page with unsaved changes, however you leave, Kepler asks **Save your changes?** before it discards anything. A form with nothing to save yet, such as a step-by-step add flow, asks **Discard your changes?** instead.
+If you leave a sub-page with unsaved changes, however you leave, Kepler asks whether to save them before it discards anything.
 
 Most fields outside those forms save themselves and show their status beside them. If a save fails, Kepler shows the reason, and names the setting if you have already left the page.
 
-**Back**, or your mouse's back button, steps back through each page, sub-page, and search result you opened in Settings. To leave Settings in one click from any page or sub-page, use the back arrow in the Settings header, the gear icon, or **⌘ ,** (**Ctrl ,**). When the Dashboard's [views](/kepler/settings-app#dashboard) sit **Along the left side**, the back arrow sits at the top of the views column instead. Each one returns you to what you were doing before you opened Settings.
+**Go back**, or your mouse's back button, steps back through each page, sub-page, and search result you opened in Settings. To leave Settings in one click from any page or sub-page, use the back arrow in the Settings header, the gear icon, or **⌘ ,** (**Ctrl ,**). When the Dashboard's [views](/kepler/settings-app#dashboard) sit **Along the left side**, the back arrow sits at the top of the views column instead. Each one returns you to what you were doing before you opened Settings.
 
 ### Settings in a remote window
 

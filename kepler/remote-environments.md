@@ -440,7 +440,7 @@ Some things have to happen on the machine in front of you. Kepler runs those thr
 |---|---|
 | **Open in…** and **Show in Finder** (**Show in Explorer** on Windows, **Show in file manager** on Linux) | Run on your desktop machine, not on the host. Kepler shows only the ones that work for this machine |
 | **Desktop notifications** | Shown by your local desktop once per machine, or inside Kepler while you are in a window on that machine. A muted host shows none |
-| **Voice input** | Captured by the local app. See [Voice Input](/kepler/voice-input) |
+| **Dictation** | Captured by the local app. See [Dictation and Read Aloud](/kepler/voice-input) |
 | **Copying from Codex** | A copy Codex makes in a remote window goes to your local clipboard, not the host's |
 | **Pasting in a Windows host's terminal** | **Ctrl+V** pastes your local clipboard, even when this window runs on macOS or Linux |
 | **Folder pickers** | Browse the host's filesystem, since that is where the work lives |
@@ -512,6 +512,8 @@ You need a GitKraken account signed in to Kepler, on a paid GitKraken plan. Remo
 
 When you sign out of Kepler, each remote machine your windows are connected to learns that you signed out, and turns its Remote Access off. A sign-in that expires on its own does not turn Remote Access off.
 
+If Kepler on the computer is not signed in, a paired device shows **Sign in**. Only the GitKraken account that turned on Remote Access can sign the computer in from there. To use another account, sign in to Kepler on the computer itself.
+
 ### Turning on Remote Access
 
 1. Open **Settings → Remote Access**.
@@ -547,7 +549,7 @@ You can bookmark the address a paired browser opens on. If that browser's connec
 
 ### Using Kepler on a phone
 
-When you open Kepler in a phone's browser, it uses a phone layout: one bar at the top of each screen in place of the desktop top bar and headers. The phone layout applies to any browser window as narrow as a phone; the desktop app never uses it. On a touch screen, Kepler also keeps the phone awake while you watch a working agent or a terminal printing output, so the connection does not drop. When the on-screen keyboard is open, Kepler fits the screen above it.
+When you open Kepler in a phone's browser, it uses a phone layout: one bar at the top of each screen in place of the desktop top bar and headers. The phone layout applies to any browser window as narrow as a phone. The desktop app never uses it, at any window width. On a touch screen, Kepler also keeps the phone awake while you watch a working agent or a terminal printing output, so the connection does not drop. When the on-screen keyboard is open, Kepler fits the screen above it. In the composer, **Enter** starts a new line. To send, tap **Send**.
 
 To open Kepler like an app, add it to your phone's home screen from the browser's menu, such as **Add to Home Screen**. The Kepler icon then opens Kepler full screen, without the browser's address bar and toolbars.
 
@@ -603,21 +605,22 @@ Under the bar, a details row shows the task's stage and a summary. Expand it to 
 
 #### Terminals
 
-On a touch phone, every live terminal has a key row under it with the keys a phone keyboard lacks: **Esc**, **Ctrl**, **Tab**, the arrows, **Enter**, **Keyboard**, which shows or hides the phone keyboard, and **Hide keys**. Swipe up on a key, or hold **Esc**, **Tab**, or **Enter**, for the second action printed above it:
+On a touch phone, every live terminal has a key row under it with the keys a phone keyboard lacks: **Esc**, **Ctrl**, **Tab**, the arrows, **Enter**, **Keyboard**, which shows or hides the phone keyboard, and **Hide keys**. Swipe up on a key, or hold **Esc**, **Ctrl**, **Tab**, or **Enter**, for the second action printed above it:
 
 | Key | Second action |
 |---|---|
 | **Esc** | **Ctrl+C** |
+| **Ctrl** | **Shift** |
 | **Tab** | **Shift+Tab** |
 | **Enter** | **New line** |
 | Left and Right arrows | **Home** and **End** |
 | Up and Down arrows | **Page up** and **Page down** |
 
-Tap **Ctrl** once to hold it for the next key only, or double-tap it to lock it until you tap it again. Holding an arrow repeats it. **Hide keys** replaces the row with a **Show keys** button, and this device remembers the choice. The phone keyboard opens only when you tap the terminal or **Keyboard**, not on every scroll.
+Tap **Ctrl** once to hold it for the next key only, or double-tap it to lock it until you tap it again. Shift works the same way: swipe up on or hold **Ctrl** once to hold Shift for the next key, or twice quickly to lock it. With Shift on, the letters you type are capitals. Holding an arrow repeats it. **Hide keys** replaces the row with a **Show keys** button, and this device remembers the choice. The phone keyboard opens only when you tap the terminal or **Keyboard**, not on every scroll.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/terminal-key-row-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/terminal-key-row-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A task terminal in a phone-width browser after git status, with the terminal key row under it: Esc (Ctrl+C above it), Ctrl, Tab, the Left and Right arrows (Home and End above), Up and Down (PgUp and PgDn above), Enter, Keyboard, and the Hide keys chevron.">
+  <a href="/wp-content/uploads/terminal-key-row-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/terminal-key-row-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="A task terminal in a phone-width browser after git status, with the terminal key row under it: Esc (^C above it), Ctrl (the Shift arrow above it), Tab (a back-tab arrow above it), the Left and Right arrows (Home and End above), Up and Down (PgUp and PgDn above), Enter (a Shift arrow above it), Keyboard, and the Hide keys chevron.">
   </a>
   <figcaption style="text-align:center; color:#888">The key row under a terminal on a phone.</figcaption>
 </figure>

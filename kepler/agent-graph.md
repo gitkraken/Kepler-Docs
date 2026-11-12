@@ -212,8 +212,8 @@ At the bottom of the stats column, a note counts what Kepler left out of the gra
 ## Finding things in a busy graph
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-graph-header-sep-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-graph-header-sep-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Agent Graph view's View menu, open from the View button (Graph glyph, Depth 4, 1 filter) beside the search box and its Active sessions pill: the List, Board and Graph switch with Graph selected, Detail depth at 4/5, Direction, Left to right, open on Left to right (checked) and Top to bottom, Zoom, Group repeated tool calls ticked, Compact stats, then Filters with Sessions set to Active and Progress, Activity, Repository, Agent, Session and Linked work at Any, and Clear filters. The graph's nodes show behind it.">
+  <a href="/wp-content/uploads/agent-graph-header-sep-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-graph-header-sep-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Agent Graph view's View menu, open from the View button (Graph glyph and Depth 4) at the left of the toolbar: the List, Board and Graph switch with Graph selected, Detail depth at 4/5, Direction, Left to right, open on Left to right (checked) and Top to bottom, Zoom, Group repeated tool calls ticked, Compact stats, then Filters with Sessions set to Active and Progress, Activity, Repository, Agent, Session and Linked work at Any, and Clear filters. The graph's nodes show behind it.">
   </a>
   <figcaption style="text-align:center; color:#888">An Agent Graph view's View menu, with the graph's settings and filters.</figcaption>
 </figure>

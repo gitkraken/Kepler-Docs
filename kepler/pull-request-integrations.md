@@ -81,7 +81,7 @@ If your browser did not open, copy the **Connection link** from the dialog Keple
 **GitHub Enterprise**, **GitLab Self-Hosted**, **Azure DevOps Server**, and **Bitbucket Data Center** connect inside Kepler with a personal access token rather than through the browser:
 
 1. Open **Settings → Integrations**.
-2. Find the provider in **Issues and pull requests** and click **Connect**. The **Connect {name}** dialog opens.
+2. Find the provider in **Issues and pull requests** and click **Connect**. The **Connect *provider*** dialog opens.
 3. In **Server URL**, enter the server's address, including the port and installation path when your server uses them.
 4. In **Personal access token**, paste a token with access to the repositories you need.
 5. Click **Save connection**.
@@ -100,7 +100,7 @@ Until Kepler finishes syncing the connection to your account, the provider's row
 Once connected, a self-hosted provider lists each server on its own row, with **Set as primary**, **Replace token**, and **Disconnect**. Each server keeps its own repositories and pull requests:
 
 - To connect another server, click **Add connection** on the provider's row. Connecting more than 1 server needs an active GitKraken plan or trial.
-- To renew an expired or rejected token, click **Replace token** on that server's row. If you change the server's address there, Kepler disconnects the previous server before it adds the new one.
+- To renew an expired or rejected token, click **Replace token** on that server's row.
 - To make a server the provider's default connection, click **Set as primary**.
 
 <figure style="text-align:center">
@@ -130,7 +130,7 @@ See [Issue Tracker Integrations](/kepler/issue-tracker-integrations) for the war
 
 ## Cloning a repository for a pull request
 
-When you start work on a pull request from a repository you have never cloned, Kepler first clones the repository into your **Repositories folder** (**Settings → Repositories**). On GitHub and GitLab, the clone signs in through your connected account, so a private repository clones without a Git credential helper. How the clone authenticates depends on the host:
+When you start work on a pull request from a repository you have never cloned, Kepler first clones the repository into your **Repositories folder** (**Settings → Repositories**). How the clone signs in depends on the host:
 
 | Host | How the clone authenticates |
 |---|---|
@@ -193,11 +193,7 @@ Kepler matches a pull request to a worktree by its branch, so a branch shows its
 
 When you open a pull request outside Kepler (with `gh` in a terminal, from GitKraken Desktop, or on the web), Kepler attaches it to the task for you. The pull request then behaves like one you attached yourself: it appears in the task's resources, and the agent receives it as context. See [Tasks and Resources](/kepler/tasks-and-resources).
 
-Kepler auto-attaches a pull request only when all of these are true:
-
-- It is open.
-- Its head branch exactly matches a worktree's branch on an active task, in the same repository (not from a fork).
-- It is yours: you opened it, or your branch pushes to it. A teammate's pull request on a branch with the same name is not attached; attach it yourself if you need it.
+Kepler attaches only an open pull request that is yours, from a branch that matches a worktree's branch on an active task in the same repository. To link a teammate's pull request, attach it yourself.
 
 Kepler never removes or replaces a link. Several active tasks can share one pull request.
 
@@ -217,13 +213,14 @@ Kepler reads these fields from a pull request:
 | **Head and base branch** | When the provider reports them |
 | **Fork** | Whether the head branch lives on a fork, and where |
 | **Created at** | |
+| **Checks and review** | Shown on an open or draft pull request's chip in a task panel: failing, pending, or passing checks, and an approved review |
 | **URL** | Used by the open control, which names the provider: **Open on GitHub**, **Open on Bitbucket**, and so on |
 
-<!-- TODO(verify): at v0.16.0 Kepler's pull request data also carries reviewers, assignees, mergeability, checks, the review decision, and when it was last updated, which the table above does not list. Confirm which of these Kepler shows or hands to the agent before adding them. Also confirm with engineering what supplies review comments and the diff to a Review or Address Feedback run before documenting them. -->
+<!-- TODO(verify): at v0.16.0 Kepler's pull request data also carries reviewers, assignees, mergeability, and when it was last updated, which the table above does not list (checks and the review decision are answered by v0.19.0). Confirm which of these Kepler shows or hands to the agent before adding them. Also confirm with engineering what supplies review comments and the diff to a Review or Address Feedback run before documenting them. -->
 
 A merged pull request keeps its description and author for as long as a task, archived or not, still links it.
 
-On a self-hosted server (GitHub Enterprise, GitLab Self-Hosted, Azure DevOps Server, or Bitbucket Data Center), images embedded in a pull request's description are blocked and do not display in Kepler's previews. The server's member avatars still load.
+Images embedded in a pull request's description display in Kepler's previews, including on GitHub Enterprise, GitLab Self-Hosted, and Azure DevOps Server.
 
 ***
 
@@ -262,7 +259,7 @@ The pull request list on a task's **Resources** screen has its own scope menu: *
 | The provider refused part of the request, so some organizations or repositories are missing | **Open settings** |
 | Rate limiting, an unreachable server, an unreadable answer, or a temporary problem | **Retry** |
 
-On Todo, each warning also has **Filter out {provider}**, which hides that provider from the Todo view so it stops reporting the failure. To show the provider again, clear it in the view's **Provider** filter.
+On Todo, each warning also has **Filter out *provider***, which hides that provider from the Todo view so it stops reporting the failure. To show the provider again, clear it in the view's **Provider** filter.
 
 Rows kept from the last good load show a cloud mark on their provider chip.
 
@@ -278,15 +275,7 @@ Rows kept from the last good load show a cloud mark on their provider chip.
 - If the **Linked work** filter hides pull requests, the picker says how many it hides and which filter hides them, and offers **Show all**.
 - If no connected provider can list pull requests, the picker reads **Connect your code host** and lists the providers that can fill the tab, each with **Connect**.
 
-The **Linked work** filter defaults to **No active task**. A task counts as active until you archive it, so Done and on-hold tasks count. The filter has 5 options:
-
-| Option | Shows pull requests |
-|---|---|
-| **Any** | Whatever their task history |
-| **No active task** | With no task, or with archived tasks only |
-| **No tasks ever** | Never linked to a task |
-| **Has an active task** | Linked to at least one task that is not archived |
-| **Archived tasks only** | Linked only to archived tasks |
+The **Linked work** filter defaults to **No active task**, which shows pull requests with no task or with archived tasks only. A task counts as active until you archive it, so Done and on-hold tasks count. To see every pull request, choose **Any**.
 
 A row with task history carries a badge that says how many tasks it belongs to, and whether they are archived.
 

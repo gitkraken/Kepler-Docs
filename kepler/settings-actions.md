@@ -31,7 +31,7 @@ Under **Suggested Actions**:
 - Set a picker to **None** to leave only the menu on that kind of item.
 - **Suggest automatically** switches a new task's button to the suggested Action when you link an issue or pull request to it. Turn it off to keep **Start**.
 
-Under **All Actions**, click a row to edit it, use **Restore default** on a row you have edited, or use **Delete** on a custom row.
+Under **All Actions**, click a row to edit it, use **Restore default** on a row you have edited, or use **Delete** on a custom row. To delete an Action that an [automation](/kepler/automations) runs, delete the automation first.
 
 An Action can run with one of your [agent presets](/kepler/settings-agents#agent-presets), and the preset picks the agent. If the Action's preset no longer exists, its row shows **Preset unavailable for this agent** and the Action runs without it. To fix it, choose another preset in the Action's editor.
 

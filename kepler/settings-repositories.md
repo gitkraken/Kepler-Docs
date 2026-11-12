@@ -29,7 +29,7 @@ To choose where Kepler clones repositories, use this setting:
 |---|---|---|
 | **Repositories folder** | Where Kepler clones repositories, and where it looks for repositories to add | `~/kepler/repositories` |
 
-To add every repository already in that folder, click **Scan for repositories** beside the field. Kepler scans only when you change the setting or click the button, so a repository you removed stays removed.
+To add every repository already in that folder, click **Scan for repositories** beside the field. Kepler scans only when you change the setting or click the button. A scan skips any repository you removed; to bring one back, add it yourself with **Add repo**. Repositories a scan adds start untrusted. See [Trust a repository](#trust-a-repository).
 
 After a scan that added repositories, **Undo** removes them again, except any you have used or changed since the scan. To scan, the setting needs a full folder path before any variable in it.
 
@@ -37,7 +37,7 @@ If the folder does not exist yet, Kepler creates it when you clone. The field ta
 
 ## Your repos and folders
 
-**Your repos and folders** lists every repository Kepler tracks and every folder you have attached to a task. Each row shows its name, its path on disk, and how many commands it has. The section has these controls:
+**Your repos and folders** lists every repository Kepler tracks and every folder you have attached to a task. Each row shows its name, its path on disk, and how many commands it has. A repository or folder you have not trusted shows an **Untrusted** badge. The section has these controls:
 
 | Control | What it does |
 |---|---|
@@ -71,7 +71,9 @@ Click a repository's row to open its **Edit repo** page. The page shows the repo
 | **Name** | How this repo is listed in Kepler. Leave it empty to use the folder name |
 | **Aliases** | Short names for this repo when talking to agents, separated by commas, such as `api, backend` |
 | **Description** | What this repo is for. Agents working in it read this |
+| **Trusted** | Lets Kepler run git in this repo. See [Trust a repository](#trust-a-repository) |
 | **Branch prefix** | Overrides the prefix from **Settings → Tasks** for this repository only. See below |
+| **Branch synchronization** | How this repo's branches update by default (**Rebase** or **Merge**), and whether to push after an update. See [Update worktrees](#update-worktrees) |
 | **Commands** | Shell commands for this repository. See [Per-repository commands](#per-repository-commands) |
 | **MCP servers** | Extra tools your agents get in this repo, on top of their own lists. See [MCP Servers](/kepler/mcp-servers) |
 
@@ -82,8 +84,8 @@ Click a repository's row to open its **Edit repo** page. The page shows the repo
 - Agents working in this repo read the description, so write a full sentence.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/edit-repo-dialog-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/edit-repo-dialog-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Edit repo page for acme-web in Settings › Repositories: its path and main · 2 branches, then Name (How this repo is listed in Kepler.), Aliases (empty, placeholder api, backend; Short names for this repo when talking to agents, separated by commas.), Description (What this repo is for. Agents working in it read this.) and Branch prefix on Default (kepler/) with the example kepler/fix-login-form; the Commands section with Add command, Install deps (Runs on creation) and Dev server; and MCP servers with Add server, Agent set to Claude Code CLI and acme-issues, docs-search and acme-analytics switched on.">
+  <a href="/wp-content/uploads/edit-repo-dialog-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/edit-repo-dialog-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The Edit repo page for acme-web in Settings › Repositories: its path and main · 2 branches, then Name, Aliases (empty, placeholder api, backend) and Description, each with its help line; Trusted switched on (Kepler runs git here, and agent sessions skip the agent's own trust question); Branch prefix on Default (kepler/) with the example kepler/fix-login-form; Branch synchronization with How to update set to Rebase and Push after update unticked; the Commands section with Add command, Install deps (Runs on creation) and Dev server; and MCP servers with Add server, Agent set to Claude Code CLI and acme-issues, docs-search and acme-analytics switched on.">
   </a>
   <figcaption style="text-align:center; color:#888">The Edit repo page.</figcaption>
 </figure>
@@ -101,6 +103,12 @@ The **Branch prefix** control has 3 options:
 **New task branches will look like** shows an example branch name for your choice.
 
 Kepler does not save a prefix that the repository already uses as a local branch name. Rename that branch, or choose another prefix.
+
+#### Trust a repository
+
+Kepler runs no git in a repository or folder you have not trusted, because a repository's own settings can run programs. Until you trust it, its status, branches, and changes stay empty.
+
+To trust a repository or folder, turn on **Trusted** on its page. You can also click **Trust** where Kepler asks, such as in a task's Changes view. While **Trusted** is on, agent sessions in it also skip the agent's own trust question.
 
 ### Per-repository commands
 
@@ -209,7 +217,7 @@ Select rows, then click **Delete**. The confirmation says what is lost:
   <figcaption style="text-align:center; color:#888">Deleting two local branches, one of them not merged.</figcaption>
 </figure>
 
-Kepler keeps any branch it cannot delete safely and says why, for example *Checked out in {path}. Remove that worktree first.* A local branch with commits that are not merged is kept too, and the result offers **Force delete** for it, which deletes the branch with those commits.
+Kepler keeps any branch it cannot delete safely and says why, for example when a worktree still has it checked out. A local branch with commits that are not merged is kept too, and the result offers **Force delete** for it, which deletes the branch with those commits.
 
 Kepler never deletes a repository's main checkout. It keeps any worktree that still has uncommitted or unpushed work, other tasks, running agent sessions, or a lock from another tool, and says why for each one. Where forcing can help, the result offers **Force delete**, which discards the listed work and ends the agent sessions running there.
 
@@ -219,9 +227,9 @@ To bring several worktrees and local branches up to date with their base branch 
 
 1. On the Worktrees and branches sub-page, select the worktrees and branches.
 2. Click **Update**. The **Update worktrees** dialog opens. Nothing changes until you confirm.
-3. Review the plan. Each row reads **Will update**, **Up to date**, or **Skipped** with the reason, such as *uncommitted changes* or *would conflict*.
-4. Under **How to update**, choose **Rebase** or **Merge**.
-5. To push each updated branch too, tick **Push after update**. A branch with no upstream is updated only.
+3. Under **How to update**, keep **Default** to use each repository's own setting (see [Edit a repository](#edit-a-repository)), or choose **Rebase** or **Merge** for this update.
+4. Under **Push after update**, keep **Default**, or choose **Don't push**, **Push**, or **Push + Publish**. **Push** pushes only branches that already have a remote branch; **Push + Publish** also publishes the ones that do not.
+5. Review the plan. Each row says how the branch will update and where it will be pushed, or **Skipped** with the reason, such as uncommitted changes or a conflict.
 6. Click **Update**.
 
 A branch with no worktree is updated in place; it is skipped if a worktree holds it or the main checkout has uncommitted changes. If Kepler prepared an update but could not apply it automatically, Kepler keeps it for you to review instead of discarding it.
@@ -229,10 +237,10 @@ A branch with no worktree is updated in place; it is skipped if a worktree holds
 When the update finishes, you can undo one row with **Roll back**, or every row with **Roll back all**. If you did not push during the update, **Push** and **Push all** push the updated branches that have an upstream. Kepler does not push a branch that moved since the update. The finished report stays in every window until you click **Dismiss**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ade-worktree-batch-update-01-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ade-worktree-batch-update-01-v3@2x.png" class="help-center-img img-bordered" alt="The Update worktrees dialog with How to update set to Rebase and Push after update ticked: kepler/gift-card-ui is Up to date, kepler/old-banner Will update · 3 commits behind with No upstream, update only, kepler/wishlist is Skipped · uncommitted changes, and kepler/summer-teaser Will update · 3 commits behind with Will push. The footer reads 2 worktrees to update beside Cancel and Update.">
+  <a href="/wp-content/uploads/ade-worktree-batch-update-01-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ade-worktree-batch-update-01-v4@2x.png" class="help-center-img img-bordered" alt="The Update worktrees dialog with How to update on Default and Push after update on Push + Publish. kepler/old-banner reads 3 commits behind with Rebase · Will publish to origin/kepler/old-banner, kepler/summer-teaser 3 commits behind with Rebase · Will push to origin/kepler/summer-teaser, kepler/gift-card-ui Will publish to origin/kepler/gift-card-ui, and kepler/wishlist Skipped · uncommitted changes. The footer reads 2 updates · 1 push · 2 publications beside Cancel and Update.">
   </a>
-  <figcaption style="text-align:center; color:#888">The Update worktrees plan, with Push after update ticked.</figcaption>
+  <figcaption style="text-align:center; color:#888">The Update worktrees plan, with Push after update on Push + Publish.</figcaption>
 </figure>
 
 <figure style="text-align:center">
