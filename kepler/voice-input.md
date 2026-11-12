@@ -31,7 +31,7 @@ Dictation has 2 transcription engines:
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/start-voice-input-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/start-voice-input-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="The New task composer: Add issue, Add PR and Add context above the empty prompt, then the attach button and the microphone button with its Dictate tooltip, the agent pill with a warning sign and Start on the right, and Add repo or folder below.">
+    <img src="/wp-content/uploads/start-voice-input-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="The New task composer: Add issue, Add PR and Add context above the empty prompt, then the attach button and the microphone button with its Dictate tooltip below it, and the agent pill with a warning sign and Start on the right.">
   </a>
   <figcaption style="text-align:center; color:#888">The composer's microphone, with its Dictate tooltip.</figcaption>
 </figure>
@@ -63,7 +63,7 @@ With Qwen3-ASR, **Keep listening** can correct earlier words in a paragraph as y
 
 Kepler treats short, whole utterances as commands rather than dictation: saying "send", "cancel", or "clear" acts on the prompt instead of adding text to it. Kepler dictates anything longer verbatim.
 
-While a transcription is in progress, the microphone shows **Transcribing…**. If transcription falls behind while you keep talking, Kepler pauses the microphone rather than dropping audio. Wait for it to catch up, or pick a smaller model.
+While a transcription is in progress, the microphone shows **Transcribing…**. If transcription falls behind, Kepler pauses the microphone until it catches up. If this happens often, pick a smaller model.
 
 ### Teach dictation your words
 
@@ -103,7 +103,7 @@ To set up dictation, follow these steps:
 2. For Whisper, pick a **Quality** on its row: **Fast**, **Balanced**, **Accurate**, or **Most accurate**. Kepler marks the best fit for this machine as *suggested*.
 3. Click **Download** on the model's row.
 
-Your first download turns dictation on. Downloads keep going if you leave the page, and Kepler notifies you when the model is ready. With more than 1 model downloaded, pick the one dictation uses. Until a newly chosen Whisper quality is downloaded, dictation keeps using the one already installed.
+Your first download turns dictation on. Downloads keep going if you leave the page, and Kepler notifies you when the model is ready. With more than 1 model downloaded, pick the one dictation uses.
 
 Once a model is downloaded, these settings apply:
 
@@ -115,7 +115,7 @@ Once a model is downloaded, these settings apply:
 
 ### Dictation language
 
-With Qwen3-ASR, **Dictation language** is **Auto-detect** by default, or 1 of 30 languages, each listed by its own name. Choose a language to always dictate in it. **Auto-detect** picks among your system's preferred languages, the app language, and the languages you have dictated in before. Whisper ignores this setting.
+With Qwen3-ASR, **Dictation language** is **Auto-detect** by default, or 1 of 30 languages, each listed by its own name. Choose a language to always dictate in it. Whisper ignores this setting.
 
 ### Model updates
 

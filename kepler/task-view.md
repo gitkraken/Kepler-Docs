@@ -102,7 +102,7 @@ Tap a segment to go to what needs you in that group, or else to the last session
 
 Below the bar, a details row holds the Progress control and **Refresh**. Unfold it to see the checkout and its pull request and issue chips.
 
-Pull down on the bar, or long-press a segment, to open **Everything in this task**. This sheet takes the place of the context panel: it lists every session, checkout, terminal, and resource, each with its own actions menu. Under **Resources**, each kind of resource has its own heading and count, in the same order as the context panel. The sheet also offers **New session**, **Add resource**, **New terminal**, and the archived sessions. A long press opens it on that segment's group only.
+Pull down on the bar, or long-press a segment, to open **Everything in this task**. This sheet takes the place of the context panel: it lists every session, checkout, terminal, and resource, each with its own actions menu. The sheet also offers **New session**, **Add resource**, **New terminal**, and the archived sessions. A long press opens it on that segment's group only.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/phone-context-sheet-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
@@ -374,12 +374,12 @@ A session tab swaps its close control for the session's status dot while the ses
 
 Closing a tab only hides it. You can close a tab in any of these ways:
 
-- Click its **×** (**Close tab**). The active tab always shows its **×**; another tab shows it when you point at the tab.
+- Click its **×** (**Close tab**).
 - Middle-click the tab.
 - Press **Cmd/Ctrl+W**, or **Ctrl+F4** on Windows and Linux.
 - Press **Delete** on a focused tab.
 
-**Backspace** does not close a tab, except on a Mac keyboard, whose delete key sends Backspace. A closed session keeps running and stays in the context panel. To archive a session, use **Archive** on its row. **Cmd/Ctrl+Shift+T** reopens the last tab you closed.
+A closed session keeps running and stays in the context panel. To archive a session, use **Archive** on its row. **Cmd/Ctrl+Shift+T** reopens the last tab you closed.
 
 When every tab is closed, the content area offers **New session**, so you can start something right away.
 
@@ -392,7 +392,7 @@ To bring in an agent conversation you started outside Kepler, start a new sessio
   <figcaption style="text-align:center; color:#888">Open an external session, under a new session's composer.</figcaption>
 </figure>
 
-The list shows the agent conversations Kepler found outside it, under **Live now** and **Past sessions**, with the folder each ran in and when it was last active. **Show past sessions** and **Show sessions from every folder** widen the list. For each agent, the list says how many days back it goes.
+The list shows the agent conversations Kepler found outside it, under **Live now** and **Past sessions**, with the folder each ran in and when it was last active. **Show past sessions** and **Show sessions from every folder** widen the list.
 
 ### Keyboard
 
@@ -449,7 +449,7 @@ The place chip has 3 segments. The first segment opens a menu of places in these
 
 The second segment picks the branch the session works on. The third is a checkbox: tick it to start on a new branch in a new worktree of the session's own, or leave it clear to work in the place as it is.
 
-If the place is a worktree that's gone from disk, **Start** recreates it, after Kepler asks you to confirm. On a task with no place to run, click **Add worktree or folder** first. On a task with a [planned worktree](#the-context-panel), a new draft starts on the planned branch. On a task with more than 1 worktree or folder, a new draft starts on **All worktrees and folders**, unless only 1 of them is a folder or an unmerged worktree, which it then starts on. To narrow the session to one place, pick it from the place chip.
+If the place is a worktree that's gone from disk, **Start** recreates it, after Kepler asks you to confirm. On a task with no place to run, click **Add worktree or folder** first. On a task with a [planned worktree](#the-context-panel), a new draft starts on the planned branch. On a task with more than 1 worktree or folder, a new draft can start on **All worktrees and folders**. To narrow the session to one place, pick it from the place chip.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/new-session-flyout-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
@@ -494,7 +494,7 @@ You can open a file in these ways:
 | **File › Go to File…** (**Cmd/Ctrl+P**) | The Go to palette on its **Files** tab. See [Go to a task or file](#go-to-a-task-or-file) |
 | **View › Command Palette…** (**Cmd/Ctrl+Shift+P** or **F1**) | The Go to palette on its **Tasks** tab |
 | A row in the context panel's **Files** group | That file |
-| A file path an agent writes in the conversation | The file, at the line the agent named. A click or Cmd/Ctrl+click opens it in Kepler, and Cmd/Ctrl+Shift+click opens it in your default editor. |
+| A file path an agent writes in the conversation | The file, at the line the agent named |
 | A file path in a terminal | The file, at its line. See [File paths are links](#file-paths-are-links) |
 
 **All file links work the same way.** A click, a Cmd/Ctrl+click, or a middle-click opens the file in Kepler. Cmd/Ctrl+Shift+click opens it in your default editor at its line.
@@ -503,9 +503,9 @@ A path that's already one of the task's files opens that file's own tab rather t
 
 ### Go to a task or file
 
-**Go to File…** and **Command Palette…** open the same palette, on its **Files** tab or its **Tasks** tab. While it's open, press the other shortcut to switch tabs. The palette also has a **Todo** tab for your pull requests and issues, and a **Commands** tab: in an empty search field, type **#** or **>** to switch to them. For the other tabs, see [Go to a task or file](/kepler/kepler-interface#go-to-a-task-or-file).
+**Go to File…** and **Command Palette…** open the same Go to palette, on its **Files** tab or its **Tasks** tab. For its **Todo** and **Commands** tabs and how to switch tabs, see [Go to a task or file](/kepler/kepler-interface#go-to-a-task-or-file).
 
-On the task page, **Files** starts on this task's files, shown as a pill in the search field. Before you type, it lists **Changed in this task** and **Recent in this task**. To search every task's files, click the pill's **×** or press **Backspace** in the empty field. You can also type a full path. A path that names a folder offers **Open** and opens the folder.
+On the task page, **Files** starts on this task's files, shown as a pill in the search field. To search every task's files, click the pill's **×**. You can also type a full path. A path that names a folder offers **Open** and opens the folder.
 
 ### What the file viewer shows
 
@@ -543,8 +543,6 @@ Every code view, the file viewer and the diffs in the Changes overlay alike, has
 | **Use regular expression** | **Alt+R**, or **Cmd+Option+R** on macOS |
 
 **Escape** closes the bar. In a diff, the search runs across every file in the stack but skips the unchanged lines that are folded away.
-
-Selecting text works across the whole file, not only the lines on screen, so select all and copy gets the whole file.
 
 ### Files that open in an overlay
 
@@ -603,7 +601,6 @@ A terminal reattaches to its running shell rather than starting a new one:
 - While it reconnects, the last screen stays readable. If it cannot reconnect, the shell is still running: click **Retry** to load its output again.
 - What you type while it reconnects is sent once the terminal is back. If the program printed something in the meantime, Kepler drops your typing and tells you to type it again.
 - Only 1 view can type in a terminal at a time. When another window or a Remote Access device is driving it, click **Take control** to type here.
-- When a terminal prints faster than the connection can show, Kepler shows the latest output and skips older lines.
 
 ### Reading a tab
 
@@ -674,14 +671,7 @@ An issue from GitHub, GitHub Enterprise, GitLab, GitLab Self-Hosted, Jira, or Ji
 
 **Links.** The **Links** pane lists every plain link on the task with its title and URL, an **Open in browser** button, and **Link actions**, scrolled to the link you clicked.
 
-**Notes.** In a note's pane:
-
-- To rename the note, click its name while you are in the note, press **F2** with the note focused, or pick **Rename note** from its row menu. **Enter** saves the name and **Escape** puts it back. You cannot rename the **Prompt** note.
-- To edit the note, click **Edit** or press **Enter** on the focused note. The note opens in Kepler's code editor, and **Cmd/Ctrl+S** saves it. A note with unsaved edits says **Unsaved draft**, and **Edit** reads **Resume draft**.
-- To see the note's earlier versions in its place, click **What changed**, or **See what changed** on the line that says who last edited the note.
-- **Save as…** saves the note as a Markdown file.
-
-See [Notes are how you give standing instructions](/kepler/tasks-and-resources#notes-are-how-you-give-standing-instructions).
+**Notes.** A note's pane has **Edit**, **Copy**, **Save as…** and **What changed**, and you can rename the note in place. To rename, edit, or restore a note, see [Notes are how you give standing instructions](/kepler/tasks-and-resources#notes-are-how-you-give-standing-instructions).
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/note-rename-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">

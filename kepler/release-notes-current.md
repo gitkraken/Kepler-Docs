@@ -38,10 +38,10 @@ New to Kepler? [Getting Started with Kepler](/kepler/kepler-getting-started) tak
 
 ***
 
-<a id="v0-16-0"></a>
+<a id="v0-19-0"></a>
 ## Version 0.19.0
 
-<kbd>Wednesday, November 11th, 2026</kbd>
+<kbd>Thursday, November 12th, 2026</kbd>
 
 ### Highlights
 
@@ -179,6 +179,7 @@ New to Kepler? [Getting Started with Kepler](/kepler/kepler-getting-started) tak
 
 ***
 
+<a id="v0-18-0"></a>
 ## Version 0.18.0
 
 <kbd>Friday, November 6th, 2026</kbd>
@@ -318,6 +319,7 @@ New to Kepler? [Getting Started with Kepler](/kepler/kepler-getting-started) tak
 
 ***
 
+<a id="v0-17-0"></a>
 ## Version 0.17.0
 
 <kbd>Tuesday, November 3rd, 2026</kbd>
@@ -443,6 +445,7 @@ New to Kepler? [Getting Started with Kepler](/kepler/kepler-getting-started) tak
 
 ***
 
+<a id="v0-16-0"></a>
 ## Version 0.16.0
 
 <kbd>Thursday, October 29th, 2026</kbd>

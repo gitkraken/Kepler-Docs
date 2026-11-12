@@ -55,8 +55,6 @@ The default Action depends on the item:
 
 You can edit all of these Actions. To read an Action's prompt, open the list under the button's chevron and hover the Action. See [Actions](/kepler/actions).
 
-The button stays an outline until you hover or select its row. On a narrow card, it shrinks to a play icon. On a phone, it becomes a single **⋮** menu that lists every Action.
-
 Kepler names tasks automatically from what you started them with. To rename a task, use **Rename task** in the **⋮** menu, whose field also has an **Auto-name** button that suggests a name from the task's prompt and resources. See [Tasks and Resources](/kepler/tasks-and-resources).
 
 <div class="note" markdown="1">
@@ -90,7 +88,7 @@ The **New task** composer is a prompt box above a row of 4 buttons:
 | Control | What it attaches |
 |---|---|
 | **Add repo or folder** | A repository to work in, or a plain folder |
-| **Add issue** → **Issues** | Issues from your connected trackers. With only Linear in the list, a team picker and a **Project** picker show every open issue in the team or Linear project you pick, not just yours |
+| **Add issue** → **Issues** | Issues from your connected trackers. For Linear, pick a team or **Project** to list everyone's open issues, not just yours |
 | **Add PR** → **PRs** | Pull requests from your connected hosts |
 | **Add context** | Files and links the agent can read. A folder to work in goes through **Add repo or folder** |
 
@@ -98,11 +96,11 @@ Each picker lists what you have already attached of its kind, where you can also
 
 **Paste a link to attach it.** Paste a pull request or issue URL into the prompt, from a connected host or from Jira or Linear, and it becomes a chip naming the item. The chip attaches the item the same way **Add issue** or **Add PR** would, along with its repository, so a pull request from another repository launches in that repository, on its branch. If the repository is not in Kepler yet, Kepler clones it when the task starts.
 
-A repository you pick yourself takes precedence over the link's. If Kepler cannot read a link, the composer says so and tries again when you press **Start**. A link that still cannot be read does not stop the task: the task starts with whatever was staged, and the agent gets the link to continue from. If the link staged nothing, the task does not start.
+A repository you pick yourself takes precedence over the link's. If Kepler cannot read a link, the composer says so, and the agent gets the link to continue from.
 
 In a window connected to another machine, picking a file through **Add context** also offers **Upload from this machine**. Uploads are saved into the task's own folder when it starts.
 
-**Repositories and folders share 1 list**, with the places you use most at the top. Picking a folder that is one of a repository's existing worktrees attaches that worktree itself, and the chip reads **Worktree *branch***.
+**Repositories and folders share 1 list**, with the places you use most at the top.
 
 You can attach as much or as little context as you want. To create a task from the composer, follow these steps:
 
@@ -176,9 +174,9 @@ Kepler names a task's branch from what the task is about, rather than from the t
 - **A name you type is yours verbatim.** The prefix applies to automatic names only.
 - **Kepler applies your repository's own branch-naming policy** where the host publishes one.
 
-You can set the prefix in 2 places: **Settings → Tasks → New tasks → Branch prefix** for the app, and per repository in **Settings → Repositories**, on the repository's own page. The repository's page offers **Default (*prefix*)**, **None**, or **Custom**, and shows an example branch name. Leave the app setting empty for no prefix at all. If a repository already has a branch named `kepler`, Kepler tells you the prefix cannot be used there.
+You can set the prefix in 2 places: **Settings → Tasks → New tasks → Branch prefix** for the app, and per repository in **Settings → Repositories**, on the repository's own page. The repository's page offers **Default (*prefix*)**, **None**, or **Custom**, and shows an example branch name. Leave the app setting empty for no prefix at all.
 
-A repository linked to a pull request always opens in its own isolated working copy, and the toggle is locked. If the pull request's branch already exists on this machine with commits that are not on the pull request, Kepler keeps your local branch and starts the task on a new branch that tracks the pull request. A pull request from a fork never takes over your own branch of the same name, unless that branch already tracks the fork.
+A repository linked to a pull request always opens in its own isolated working copy, and the toggle is locked. Kepler never overwrites a local branch that has commits the pull request does not: it starts the task on a new branch that tracks the pull request.
 
 When the task starts, Kepler clones a repository you have not cloned yet into your **Repositories folder**. Until then, you cannot pick its branch.
 
@@ -203,8 +201,6 @@ If you started work with an agent in your own terminal, you can track that conve
 | **Past sessions** | Conversations found on disk, from any time |
 | **Find an external session…** | Searches across both groups |
 
-When the list is capped, or Kepler could not read one agent's sessions, the list says so.
-
 Pick a conversation to continue it in a new task:
 
 - A past conversation resumes.
@@ -222,20 +218,49 @@ For what happens to the conversation once it's on a task, including forking, con
 
 ## From another agent app
 
-If you work in Conductor, Orca, herdr, or Vibe Kanban, you can bring its workspaces into Kepler as tasks. Each workspace becomes a task in the same folder, on the same branch, and its chats continue as the task's sessions.
+If you work in Conductor, Orca, herdr, or Vibe Kanban, you can bring its workspaces into Kepler as tasks. Each workspace becomes a task in the same folder, on the same branch, and its chats continue as the task's sessions. From Conductor, Kepler imports the workspaces the Conductor app keeps on your Mac, not Conductor Cloud workspaces.
 
-To import workspaces, take the following steps:
+To import workspaces from Conductor, take the following steps:
 
-1. Choose **File → Import from Another App…**. On an empty tasks list, you can also click the card that names the apps Kepler found, such as **Import from Orca**.
-2. If Kepler finds more than 1 of these apps, pick the one to import from.
-3. Tick the workspaces you want. A workspace you already imported is marked **Already a task**.
-4. Click **Import *N* workspaces**.
+1. On an empty **Tasks** list, click the import card. It names the apps Kepler found, such as **Import from Conductor, Orca and 2 more**. You can also choose **File → Import from Another App…**.
+2. If Kepler finds more than 1 app, click **Conductor**.
+3. Tick the workspaces you want, and click **Import *N* workspaces**. A workspace you already imported is marked **Already a task**.
+4. When **Import finished** shows what came over, click **Done**.
+5. Find the new tasks in **Tasks**. Open one to pick its chat up where it left off.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/import-apps-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/import-apps-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Import from Orca dialog, Choose the workspaces to bring in as tasks, listing acme-web's workspaces: Gift card checkout on orca/gift-cards with 2 chats and Paginate search results on orca/search-paging with 1 chat, both ticked, and Cart total with discounts on orca/cart-total, its tick dimmed and marked Already a task: Fix the cart total. Select all (dimmed) and Deselect all sit above the list, and the note to continue each chat in one app only sits above Import 2 workspaces.">
+  <a href="/wp-content/uploads/import-card-nov-2026@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/import-card-nov-2026@2x.png" class="help-center-img img-bordered" alt="Two cards under the New task composer on an empty Tasks list: Import from Conductor, Orca and 2 more, reading Bring in your workspaces as tasks, with their branches and chats, and Open an external session.">
   </a>
-  <figcaption style="text-align:center; color:#888">Choosing the workspaces to import from Orca.</figcaption>
+  <figcaption style="text-align:center; color:#888">Step 1: the import card names the apps Kepler found.</figcaption>
+</figure>
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/import-choose-app-nov-2026@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/import-choose-app-nov-2026@2x.png" class="help-center-img img-bordered" alt="The Import from another app dialog, Choose the app to bring workspaces in from, listing Conductor, Orca, herdr and Vibe Kanban.">
+  </a>
+  <figcaption style="text-align:center; color:#888">Step 2: picking the app to import from.</figcaption>
+</figure>
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/import-workspaces-nov-2026@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/import-workspaces-nov-2026@2x.png" class="help-center-img img-bordered" alt="The Import from Conductor dialog, Choose the workspaces to bring in as tasks, listing 4 ticked workspaces grouped by repository: Checkout redesign and Gift card support under acme-web, Order search endpoint under acme-api, and Apple Pay on mobile under acme-mobile, each with its branch and number of chats. The note to continue each chat in one app only sits above Back to apps and Import 4 workspaces.">
+  </a>
+  <figcaption style="text-align:center; color:#888">Step 3: choosing the Conductor workspaces to import.</figcaption>
+</figure>
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/import-finished-nov-2026@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/import-finished-nov-2026@2x.png" class="help-center-img img-bordered" alt="The Import finished dialog for Import from Conductor, reading 4 workspaces became tasks and 6 chats resumed, with Back to apps and Done buttons.">
+  </a>
+  <figcaption style="text-align:center; color:#888">Step 4: the import is finished.</figcaption>
+</figure>
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/import-tasks-nov-2026@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/import-tasks-nov-2026@2x.png" class="help-center-img img-bordered" alt="The Tasks view listing the 4 imported tasks under Recent: Apple Pay on mobile, Order search endpoint, Gift card support and Checkout redesign, each with its repository and In development status.">
+  </a>
+  <figcaption style="text-align:center; color:#888">Step 5: the imported workspaces in Tasks.</figcaption>
 </figure>
 
 Continue each chat in one app only: both apps write to the same chat history.

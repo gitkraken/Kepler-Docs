@@ -100,7 +100,7 @@ Until Kepler finishes syncing the connection to your account, the provider's row
 Once connected, a self-hosted provider lists each server on its own row, with **Set as primary**, **Replace token**, and **Disconnect**. Each server keeps its own repositories and pull requests:
 
 - To connect another server, click **Add connection** on the provider's row. Connecting more than 1 server needs an active GitKraken plan or trial.
-- To renew an expired or rejected token, click **Replace token** on that server's row. If you change the server's address there, Kepler disconnects the previous server before it adds the new one.
+- To renew an expired or rejected token, click **Replace token** on that server's row.
 - To make a server the provider's default connection, click **Set as primary**.
 
 <figure style="text-align:center">
@@ -130,7 +130,7 @@ See [Issue Tracker Integrations](/kepler/issue-tracker-integrations) for the war
 
 ## Cloning a repository for a pull request
 
-When you start work on a pull request from a repository you have never cloned, Kepler first clones the repository into your **Repositories folder** (**Settings → Repositories**). On GitHub and GitLab, the clone signs in through your connected account, so a private repository clones without a Git credential helper. How the clone authenticates depends on the host:
+When you start work on a pull request from a repository you have never cloned, Kepler first clones the repository into your **Repositories folder** (**Settings → Repositories**). How the clone signs in depends on the host:
 
 | Host | How the clone authenticates |
 |---|---|
@@ -193,11 +193,7 @@ Kepler matches a pull request to a worktree by its branch, so a branch shows its
 
 When you open a pull request outside Kepler (with `gh` in a terminal, from GitKraken Desktop, or on the web), Kepler attaches it to the task for you. The pull request then behaves like one you attached yourself: it appears in the task's resources, and the agent receives it as context. See [Tasks and Resources](/kepler/tasks-and-resources).
 
-Kepler auto-attaches a pull request only when all of these are true:
-
-- It is open.
-- Its head branch exactly matches a worktree's branch on an active task, in the same repository (not from a fork).
-- It is yours: you opened it, or your branch pushes to it. A teammate's pull request on a branch with the same name is not attached; attach it yourself if you need it.
+Kepler attaches only an open pull request that is yours, from a branch that matches a worktree's branch on an active task in the same repository. To link a teammate's pull request, attach it yourself.
 
 Kepler never removes or replaces a link. Several active tasks can share one pull request.
 
@@ -224,7 +220,7 @@ Kepler reads these fields from a pull request:
 
 A merged pull request keeps its description and author for as long as a task, archived or not, still links it.
 
-Images embedded in a pull request's description display in Kepler's previews, including on GitHub Enterprise, GitLab Self-Hosted, and Azure DevOps Server. On Bitbucket Data Center, an embedded image may show as a link instead.
+Images embedded in a pull request's description display in Kepler's previews, including on GitHub Enterprise, GitLab Self-Hosted, and Azure DevOps Server.
 
 ***
 
@@ -279,15 +275,7 @@ Rows kept from the last good load show a cloud mark on their provider chip.
 - If the **Linked work** filter hides pull requests, the picker says how many it hides and which filter hides them, and offers **Show all**.
 - If no connected provider can list pull requests, the picker reads **Connect your code host** and lists the providers that can fill the tab, each with **Connect**.
 
-The **Linked work** filter defaults to **No active task**. A task counts as active until you archive it, so Done and on-hold tasks count. The filter has 5 options:
-
-| Option | Shows pull requests |
-|---|---|
-| **Any** | Whatever their task history |
-| **No active task** | With no task, or with archived tasks only |
-| **No tasks ever** | Never linked to a task |
-| **Has an active task** | Linked to at least one task that is not archived |
-| **Archived tasks only** | Linked only to archived tasks |
+The **Linked work** filter defaults to **No active task**, which shows pull requests with no task or with archived tasks only. A task counts as active until you archive it, so Done and on-hold tasks count. To see every pull request, choose **Any**.
 
 A row with task history carries a badge that says how many tasks it belongs to, and whether they are archived.
 

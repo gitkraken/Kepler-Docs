@@ -46,7 +46,7 @@ Kepler has installers for these platforms:
 2. Run the installer.
 3. Launch Kepler.
 
-**If you open an older copy of Kepler** than the one that last used your data, Kepler stops at **Kepler is out of date** before it opens. The older copy cannot read everything the newer one saved, so sessions may seem to have disappeared. Click **Open Newer Version** when a newer copy is installed, or **Update and Restart** to update this copy (a Snap install does not offer it).
+If Kepler stops at **Kepler is out of date**, you opened an older copy than the one that last used your data. Click **Open Newer Version** when a newer copy is installed, or **Update and Restart** to update this copy (not offered for a Snap install).
 
 ***
 
@@ -63,7 +63,7 @@ Kepler opens on a welcome screen, **Launch any agent. Land every PR.** Click **S
 
 Kepler opens the sign-in page in your browser. Once you sign in there, Kepler continues on its own. If no browser opened, click **Reopen browser**, or click **Copy link** and open the link in any browser. You can also paste the code from your browser under **Or paste the code from your browser**, then click **Sign in**.
 
-**Behind a proxy.** Kepler uses your system's proxy settings, or the `HTTPS_PROXY` environment variable when you set it, and passes the same proxy to the agents and terminals it starts. If a request fails through the proxy, the error names the proxy's address.
+**Behind a proxy.** Kepler uses your system's proxy settings, or the `HTTPS_PROXY` environment variable when you set it, and passes the same proxy to the agents and terminals it starts.
 
 To check for updates before you sign in, click the version in the screen's top corner. When an update has downloaded, click **Update and restart**.
 
@@ -104,7 +104,7 @@ If you installed an agent that Kepler did not find, click **Rescan**. To go on w
 - Check the repos you work in. To add one Kepler did not find, click **Add a folder**.
 - Confirm the **Repos folder**. Kepler finds your repos there and clones new ones into it.
 
-Then click the button that adds them, such as **Add 2 and continue**. Kepler adds only what you check. If you leave the guided start before you finish this step, Kepler adds the repos it checked for you.
+Then click the button that adds them, such as **Add 2 and continue**. Kepler adds only what you check.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/onboarding-repos-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -132,7 +132,7 @@ To try an alert, click **Send a test notification**. You can change these choice
 
 ## Finish the setup checklist
 
-After the guided start, the **Setup** entry in the top bar tracks 2 setup items and shows **Setup · N/2** until you finish them. Open it to see **Finish setting up Kepler** and your progress. Once both items are done, the **Setup** entry disappears from the top bar.
+After the guided start, the **Setup** entry in the top bar tracks 2 setup items and shows **Setup · N/2** until you finish them. Once both are done, the **Setup** entry disappears from the top bar.
 
 | # | Item | What it does |
 |---|---|---|
@@ -196,6 +196,8 @@ To start a task that has no issue or pull request behind it:
 4. Start the task.
 
 You can also attach nothing at all and turn the task into real work later. See [Create a task](/kepler/create-task).
+
+If you work in Conductor or another agent app, you can import its workspaces as tasks, chats included. See [Create a task → From another agent app](/kepler/create-task#from-another-agent-app).
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/new-task-button-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">

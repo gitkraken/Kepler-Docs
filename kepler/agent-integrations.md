@@ -62,7 +62,12 @@ With Pi 1.x, a session gets the task's context and Kepler's workspace tools, and
 
 **OpenCode needs version 2.** Kepler does not start a session on an OpenCode 1 binary. A conversation you started under OpenCode 1 resumes in OpenCode 2.
 
-**Kepler's tools in Terminal mode.** Kepler can wake an idle **Terminal** session to read its inbox for Claude Code, Pi, and OpenCode 2.1.1 or newer, without changing your own config. Google Antigravity 1.5.3 or newer gets Kepler's workspace tools in Terminal, but not the inbox wake. An agent that cannot use Kepler's workspace tools in a terminal shows **No Kepler tools** on its status bar. To give one access, choose **Continue in Chat** from the session menu.
+**Kepler's tools in Terminal mode.** If a **Terminal** session shows **No Kepler tools** on its status bar, choose **Continue in Chat** from the session menu to give the agent Kepler's workspace tools. These agents get them in Terminal mode too, without any change to your own config:
+
+| Agent | In Terminal mode |
+|---|---|
+| Claude Code, Pi, OpenCode 2.1.1 or newer | Kepler's workspace tools, and Kepler wakes an idle session to read its inbox |
+| Google Antigravity 1.5.3 or newer | Kepler's workspace tools only |
 
 **Folder trust.** A Claude Code or Pi session does not stop at the CLI's own trust question in a repository, worktree, or folder you marked **Trusted** in Kepler. A worktree also inherits the trust you already gave its repository. See [Trust a repository](/kepler/settings-repositories#trust-a-repository).
 
@@ -81,7 +86,7 @@ Kepler checks the build before it starts a session, and tells you to update if i
 
 ## Install an agent
 
-When an agent is not installed, its section reads **Not installed** and offers **Install**, which opens **Set up {name}**. Pick an install method, and Kepler runs the install command for you and shows its output. **Cancel** stops an install in progress. Once the install finishes, Kepler opens **Sign in to {name}** if the agent needs a sign-in. Installs and updates run one at a time.
+When an agent is not installed, its section reads **Not installed** and offers **Install**, which opens **Set up *agent***. Pick an install method, and Kepler runs the install command for you and shows its output. **Cancel** stops an install in progress. Once the install finishes, Kepler opens **Sign in to *agent*** if the agent needs a sign-in. Installs and updates run one at a time.
 
 The install methods depend on the operating system of the machine you are on:
 
@@ -97,7 +102,7 @@ The install methods depend on the operating system of the machine you are on:
 | **Pi** | Native installer, npm (global) | Native installer, npm (global) | Native installer, npm (global) |
 | **Google Antigravity** | Native installer | Native installer | Native installer |
 
-Every OpenCode method installs OpenCode 2. Windows offers only npm, because Scoop's and Chocolatey's `opencode` packages still install OpenCode 1.
+Every OpenCode method installs OpenCode 2.
 
 The dialog marks Claude Code's **npm (global)** method *Deprecated by Anthropic*.
 
@@ -105,7 +110,7 @@ Kepler offers a method only when the tool it runs, such as Homebrew or npm, is i
 
 If you already installed the agent somewhere Kepler did not find it, tell Kepler where it is from the same dialog:
 
-1. Under **Already installed?**, type the program's full path in the **Full path to {name}** field, or click **Browse…** to pick it.
+1. Under **Already installed?**, type the program's full path in the **Full path to *agent*** field, or click **Browse…** to pick it.
 2. Click **Use this**, or press **Enter**.
 
 Kepler saves the path as the agent's **Binary** if the agent runs from it. If it does not, Kepler keeps the path you had before.
@@ -141,13 +146,13 @@ Each agent's card in **Settings → Agents** shows what Kepler resolved. The ver
 
 If Kepler cannot read an installed agent's version, its section shows a **Version unknown** badge, and features that depend on the version stay off, such as sending a new session's first message automatically. To fix it, reinstall or update the agent.
 
-When an installed version has a known problem, the agent's card shows a warning note under its title line that names the version and what to do:
+When an installed version has a known problem, the agent's card shows a warning under its title line that names the version and what to do. For example:
 
-| Agent | Warning |
+| Agent | What the warning tells you |
 |---|---|
-| **OpenCode** | *OpenCode {version} is not supported*. Sessions with it do not start, so install OpenCode 2 or pick an OpenCode 2 binary |
-| **Auggie** | *Auggie {version} may not load your MCP servers in chat* |
-| **Codex** | *Codex {version} can show approval prompts that need no answer*. Update Codex to 0.163.0 or newer |
+| **OpenCode** | OpenCode 1 is not supported, and its sessions do not start. Install OpenCode 2, or pick an OpenCode 2 binary |
+| **Auggie** | Chat sessions with this version may not load your MCP servers |
+| **Codex** | This version can show approval prompts that need no answer. Update Codex to 0.163.0 or newer |
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/agent-version-advisory-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -156,7 +161,7 @@ When an installed version has a known problem, the agent's card shows a warning 
   <figcaption style="text-align:center; color:#888">A version warning on the Codex card.</figcaption>
 </figure>
 
-If a pinned path later disappears (for example, when an auto-updater cleans up an old version), Kepler falls back to automatic resolution instead of reporting the agent as missing.
+If a custom path later disappears, such as after an auto-update removes an old version, Kepler finds the agent itself again instead of reporting it missing.
 
 Above the agent cards in **Settings → Agents**, **Rescan** re-detects every agent at once, and **Update all** runs each installed agent's own updater.
 

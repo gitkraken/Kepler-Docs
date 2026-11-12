@@ -29,9 +29,9 @@ Use **Settings → Tasks** to choose how new tasks start and how a task's page l
 
 **New sessions start with** sets the agent that the **New task** composer, the Dashboard's composer, and a new draft session start with. It is the same agent-settings pill as in the composer: pick the agent and account, and optionally an [agent preset](/kepler/settings-agents#agent-presets), a model, and other options. Kepler saves each pick as you make it.
 
-**Start each session on the agent you used last**, below the pill, is on by default. With it, your first session uses the pill's agent, and each later session starts with the agent, model, and mode you last picked. To start every session on the pill's agent and settings, clear it. A task that an agent created and that has no session yet starts with the agent that created it. Kepler does not remember an Action's own agent as your last pick.
+**Start each session on the agent you used last**, below the pill, is on by default. With it, your first session uses the pill's agent, and each later session starts with the agent, model, and mode you last picked. To start every session on the pill's agent and settings, clear it.
 
-If no agent is installed, Kepler hides the control. If you later uninstall the agent you saved, the row warns you to pick another. This setting does not apply to Ask Kepler, which has its own default in [Settings → Agents](/kepler/settings-agents).
+If you uninstall the agent you saved, the row warns you to pick another. This setting does not apply to Ask Kepler, which has its own default in [Settings → Agents](/kepler/settings-agents).
 
 An [Action](/kepler/actions) inherits this configuration unless it names an agent of its own.
 
@@ -100,7 +100,7 @@ Type a path, or click **Choose a folder** beside the field to browse. An edit sa
 
 The fields also warn you about paths that do not work the way you might expect:
 
-- If a **Worktrees folder** has text before `<REPOSITORY_PATH>`, Kepler adds each repository's full path after that text, and the field suggests 2 patterns that work: worktrees next to each repository, or a subfolder per repository. On Windows, Kepler does not save such a path.
+- If a **Worktrees folder** has text before `<REPOSITORY_PATH>`, Kepler adds each repository's full path after that text. The field suggests 2 patterns that work: worktrees next to each repository, or a subfolder per repository. On Windows, Kepler does not save a path like this, so use one of the 2 patterns.
 - If the **Repositories folder** does not exist yet, the field tells you that Kepler creates it when you clone.
 
 ### The Variables menu
@@ -132,7 +132,7 @@ The following setting names new tasks for you:
 |---|---|---|
 | **Automatically name new tasks** | *Names a new task with AI from its prompt and attached resources. A task created from a single issue or PR keeps that item's name.* | On |
 
-You need a paid GitKraken subscription to turn this setting on. Without one, a lock replaces the checkbox while the setting is off, but you can always turn it off. A change takes effect on the next task you create.
+You need a paid GitKraken subscription to turn this setting on. Without one, a lock replaces the checkbox while the setting is off. If the setting is on, you can still turn it off. A change takes effect on the next task you create.
 
 ## Task page
 

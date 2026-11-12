@@ -41,11 +41,11 @@ Use **General** to choose Kepler's language, which key sends a chat message, whi
 |---|---|---|---|
 | **Language** | The display language for Kepler's interface | English | English, Español |
 
-The language also applies to native dialogs, not only to the in-app interface.
+The language also applies to Kepler's native dialogs.
 
 ### Chat
 
-**Send messages with** chooses the key that sends a message from the chat box: **Enter**, the default, or **⌘ Enter** (**Ctrl + Enter** on Windows and Linux). With **Enter**, **Shift + Enter** starts a new line. With **⌘ Enter**, **Enter** starts a new line. In the browser on a phone or tablet, **Enter** always starts a new line.
+**Send messages with** chooses the key that sends a message from the chat box: **Enter**, the default, or **⌘ Enter** (**Ctrl + Enter** on Windows and Linux). With **Enter**, **Shift + Enter** starts a new line. With **⌘ Enter**, **Enter** starts a new line.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/settings-send-key-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -140,7 +140,7 @@ These settings appear under the grid:
 | **Play a sound with desktop notifications** | Whether a desktop notification makes the OS notification sound | On |
 | **Notify even for the task you're looking at** | *Otherwise Kepler stays quiet about the task open in the window you're using.* | Off |
 
-To silence desktop notifications from one remote machine only, use **Mute notifications from {host}** on that machine in [Remote environments](/kepler/settings-environment#remote-environments).
+To silence desktop notifications from one remote machine only, use **Mute notifications from *host*** on that machine in [Remote environments](/kepler/settings-environment#remote-environments).
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/ade-settings-notifications-01-01-v3@2x.png" target="_blank" rel="noopener noreferrer">
@@ -174,7 +174,7 @@ Under **Theme**, each theme is a tile. The **Kepler** group holds the built-in t
 
 How you pick a tile depends on **Appearance**:
 
-- On **System**, each tile has a moon and a sun. Click the moon to *Use {name} when your system is dark*, or the sun to *Use {name} when your system is light*. Click the tile itself to *Use {name} for both dark and light*.
+- On **System**, each tile has a moon and a sun. Click the moon to use the theme when your system is dark, or the sun to use it when your system is light. Click the tile itself to use it for both.
 - On **Light** or **Dark**, click a tile to use it for that appearance.
 
 The tile in use reads **In use now**.
@@ -186,7 +186,7 @@ The tile in use reads **In use now**.
   <figcaption style="text-align:center; color:#888">Appearance and Theme, at their defaults.</figcaption>
 </figure>
 
-Terminals follow the theme too. Agent CLIs and other terminal programs that support it match your theme.
+Agent CLIs and other terminal programs that support it match your theme too.
 
 #### Your themes
 
@@ -208,7 +208,7 @@ A file with warnings still works. Kepler leaves out a theme that has errors, and
 - **Create a task to fix it** gives the file to an agent.
 - In the desktop app, **Open file** opens the file in your editor, at the error's line when there is one. Changes apply when you save.
 
-A tile's **More actions for {name}** menu has **Show in folder** and **Move to Trash** (**Move to Recycle Bin** on Windows).
+A tile's **More actions for *theme*** menu has **Show in folder** and **Move to Trash** (**Move to Recycle Bin** on Windows).
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/theme-problems-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -228,9 +228,9 @@ A tile's **More actions for {name}** menu has **Show in folder** and **Move to T
 Click a theme to see its details card, with its author, its dark and light variants, its version and license, and any contrast warnings. Then choose one of the following:
 
 - **Install** adds the theme to **Your themes** without changing the theme on screen. The button then reads **Use**.
-- **Try it** closes the gallery and paints the whole window in the theme, so you can open a diff or a terminal to judge it. In the bar at the bottom, click **Use {name}**, or **Done** to return to the gallery.
+- **Try it** closes the gallery and paints the whole window in the theme, so you can open a diff or a terminal to judge it. In the bar at the bottom, click **Use *theme***, or **Done** to return to the gallery.
 
-If a theme you already have uses the same id, Kepler asks before it replaces that file, and moves the old file to the Trash. A gallery theme you installed and have not edited offers **Update to {version}** on its tile when a newer version is published. The gallery's themes come from `gitkraken/kepler-themes` on GitHub, where you can also publish your own.
+If a theme you already have uses the same id, Kepler asks before it replaces that file, and moves the old file to the Trash. A gallery theme you installed and have not edited offers **Update to *version*** on its tile when a newer version is published. The gallery's themes come from `gitkraken/kepler-themes` on GitHub, where you can also publish your own.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/theme-gallery-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -259,12 +259,12 @@ If a theme you already have uses the same id, Kepler asks before it replaces tha
 
 #### Themes in a remote window
 
-Themes belong to this computer, as your choice of theme does. Every window, including one connected to a remote environment, lists and installs themes in this computer's themes folder and gallery.
+Themes and your choice of theme belong to this computer. Every window, including one connected to a remote environment, lists and installs themes in this computer's themes folder and gallery.
 
-In a window connected to another machine, the picker adds an **On {host}** group with that machine's themes:
+In a window connected to another machine, the picker adds an **On *host*** group with that machine's themes:
 
-- A theme you do not have offers **Install {name} on this computer**.
-- A theme that differs from your copy offers to update or replace your copy, and is marked **Update to {version}**, **Older than yours**, or **Differs from yours**.
+- A theme you do not have offers **Install *theme* on this computer**.
+- A theme that differs from your copy offers to update or replace your copy, and is marked **Update to *version***, **Older than yours**, or **Differs from yours**.
 
 Kepler asks before it updates or replaces your copy, and moves your copy to the Trash (the Recycle Bin on Windows). It never replaces your copy on its own.
 
@@ -345,59 +345,28 @@ Use **Voice** to talk to your agents instead of typing, and to have their replie
 
 ### Dictation
 
-Dictation is the microphone in the chat prompt. It has no on/off switch: it is on once a model is downloaded.
-
-#### Model
-
-**Model** lists 3 models, each with its download size and its own **Download** button:
-
-| Model | What it's best at |
-|---|---|
-| **Qwen3-ASR 1.7B** | *The most accurate, especially with developer terms and mixed languages. Needs a recent graphics card.* |
-| **Qwen3-ASR 0.6B** | *Better than Whisper with technical terms, and lighter on memory. For graphics cards with less memory.* |
-| **Whisper** | *Works on any machine, including without a compatible graphics card. Less accurate with technical terms.* |
-
-Both Qwen3-ASR models need a graphics card with WebGPU. Without one, a single row says so. Kepler marks the Qwen3-ASR size that suits this graphics card **Recommended**. Whisper's row has a **Quality** select, **Fast**, **Balanced**, **Accurate**, or **Most accurate**, with the best fit for this machine marked *suggested*.
-
-Your first download turns dictation on. With more than 1 model downloaded, pick the one dictation uses. A download keeps going while you work elsewhere in Kepler, and Kepler notifies you when the model is ready. Until a newly chosen model is downloaded, dictation keeps using the installed one.
-
-A downloaded model's row offers **Remove…**, which deletes the model after you confirm. Removing the model that dictates turns the chat microphone off until another is downloaded and picked. When a newer version of a downloaded Qwen3-ASR model is released, its row offers **Update**, and Kepler tells you once in a notification. Dictation keeps using the installed model until you update.
-
-#### Listening
+Dictation is the microphone in the chat prompt. It turns on once a model is downloaded. To choose and download a model, see [Set up dictation in Settings](/kepler/voice-input#set-up-dictation-in-settings).
 
 | Setting | What it controls | Default |
 |---|---|---|
-| **Dictation language** | With a Qwen3-ASR model, the language you speak. **Auto-detect** picks among your system's preferred languages and the app language. Whisper ignores this setting | Auto-detect |
-| **When you stop talking** | **Insert the text so you can edit it**, **Send the prompt**, or **Keep listening, transcribing each phrase as you pause** | Insert the text so you can edit it |
-
-#### Learned words
-
-**Learned words** works with Qwen models only. Qwen3-ASR learns how to spell words that you fix in dictated text before you send it, 1 word at a time. When you fix the same word in 2 sends, Kepler suggests it, and dictation uses it once you approve it. Kepler stores only the words, on this device only, and keeps them after you sign out.
-
-When a fix becomes a suggestion, a notification offers **Review**, which opens **Learned words**. It has 2 lists:
-
-- **Suggested words**: fixes you made in 2 sends, each with what dictation heard, **Approve**, and **Dismiss**. Kepler never suggests a dismissed fix again.
-- **Words**: the words dictation uses, each with a remove button. To add a word yourself, type it in **Add a word** and click **Add**.
-
-**Forget learned words…** removes every word Qwen3-ASR learned or suggested, and every word you added, on this device, after you confirm.
-
-Kepler downloads each model from the internet once. Transcription then runs entirely on your device, and your audio is never uploaded. See [Dictation and Read Aloud](/kepler/voice-input).
+| **Model** | The on-device model that dictates: **Qwen3-ASR 1.7B**, **Qwen3-ASR 0.6B**, or **Whisper**. Each row has **Download**, and **Remove…** once downloaded | None until you download one |
+| **Dictation language** | With Qwen3-ASR, the language you speak. Whisper ignores it | Auto-detect |
+| **When you stop talking** | Insert the text, send the prompt, or keep listening | Insert the text so you can edit it |
+| **Learned words** | Words Qwen3-ASR learned from your fixes, and suggestions to approve. See [Teach dictation your words](/kepler/voice-input#teach-dictation-your-words) | Empty |
 
 ### Read aloud
 
-**Read aloud** reads agent replies to you from the chat, the terminal, or the title bar. See [Read aloud](/kepler/voice-input#read-aloud).
+**Read aloud** reads agent replies to you from the chat, the terminal, or the title bar. To use it, see [Read aloud](/kepler/voice-input#read-aloud).
 
 | Setting | What it controls | Default |
 |---|---|---|
-| **Voice engine** | **System voices**, built into this machine, or **Kokoro**, natural English voices that need a graphics card with WebGPU and their own **Download** | System voices |
-| **Voice** | The voice that reads. Choosing a voice plays a short sample | System default |
-| **Speed** | How fast Kepler reads. **Reset to 1x** returns to normal speed | 1x |
-
-Until Kokoro is downloaded, and for text that is not English, the system voice reads. Once Kokoro is downloaded, **Remove…** deletes it after you confirm.
+| **Voice engine** | **System voices**, or **Kokoro**, natural English voices that need a download | System voices |
+| **Voice** | The voice that reads | System default |
+| **Speed** | How fast Kepler reads | 1x |
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/settings-read-aloud-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/settings-read-aloud-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Read aloud section of Settings › Voice, which reads agent replies to you from the chat, the terminal or the title bar. Under Engine, System voices (Built in) is selected, and Kokoro, natural English voices on your graphics card, shows its download size and a Download button. Under Voice options, Voice is set to System default beside a button that plays a sample, and Speed is a slider at 1x.">
+    <img src="/wp-content/uploads/settings-read-aloud-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Read aloud section of Settings › Voice, at its defaults. Under Engine, System voices (Built in) is selected and Kokoro shows its download size and a Download button, and under Voice options, Voice is System default beside a sample button and Speed is a slider at 1x.">
   </a>
   <figcaption style="text-align:center; color:#888">The Read aloud settings, at their defaults.</figcaption>
 </figure>

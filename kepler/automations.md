@@ -94,7 +94,7 @@ Automations run unattended, on text other people write in issues and pull reques
 - For an issue or a schedule, set the **Folder** where the agent starts: one repository, or a folder of them it picks from. You can also set a **Base branch**. A pull request automation runs in the pull request's own repository.
 - To file the tasks its runs start in one of your groups, pick it under **Task group**, or choose **New group**.
 
-Changes are made in a worktree, never in your own checkout.
+The agent makes its changes in a worktree, never in your own checkout.
 
 ***
 
@@ -104,9 +104,9 @@ The Automations page lists your automations, each with its runs. **Needs you**, 
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/automations-view-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/automations-view-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Automations page, opened from the highlighted Automations button at the right of the Dashboard's views row. On the left, the Automations list with All and Unread, Needs you holding the failed run on acme/acme-web#58, then Review pull requests awaiting my review (3) and Triage new bugs (2), each with its finished runs, and the paused Check dependencies every Monday, dimmed with a play button, above New automation. On the right, the selected run's details: Failed, the failure reason, the Automation, the Item, its Queued, Claimed, Started and Finished times, and the Open item and Edit automation buttons.">
+    <img src="/wp-content/uploads/automations-view-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Automations page, opened from the highlighted Automations button at the right of the Dashboard's views row. On the left, the Automations list with All and Unread, Needs you holding the failed run on acme/acme-web#58, then Review pull requests awaiting my review (3) and Triage new bugs (2), each with its finished runs, and the paused Check dependencies every Monday with a play button, above New automation. On the right, the selected finished run acme/acme-web#61: Done, its Automation, the Item PR acme/acme-web#61, its Queued, Claimed, Started and Finished times, and the Open item and Edit automation buttons.">
   </a>
-  <figcaption style="text-align:center; color:#888">The Automations page, with a failed run selected.</figcaption>
+  <figcaption style="text-align:center; color:#888">The Automations page, with a finished run selected and a failed run in Needs you.</figcaption>
 </figure>
 
 Click a run to open it beside the list. A run that started a task shows the agent's session, where you answer its questions and approvals as you would in the task. Otherwise you see the run's details, with **Open item** and **Edit automation**. With no run selected, the page shows a summary of today's runs.
@@ -126,7 +126,7 @@ Each automation's row has these controls:
 
 **Duplicate** opens a copy in the form. If you save a copy that does exactly what the original does, Kepler asks you to confirm, since each run would then happen twice.
 
-A paused automation is dimmed in the list and starts no runs. To start it again, choose **Resume** from its **More actions** menu.
+A paused automation is dimmed and marked **Paused** in the list, and starts no runs. To start it again, choose **Resume** from its **More actions** menu.
 
 You cannot delete an Action while an automation runs it. Delete the automation first.
 

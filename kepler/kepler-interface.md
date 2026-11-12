@@ -21,7 +21,7 @@ taxonomy:
 
 Kepler's Dashboard shows your work: the issues and pull requests that involve you across your connected trackers and Git hosts, beside the tasks you already have running. To start work, pick an item from the list instead of describing it from scratch.
 
-You can arrange the Dashboard to fit how you work. See [Arranging Your Work](/kepler/arranging-your-work). Besides the Dashboard, Kepler has a page for each task, Settings, and remote connections.
+You can arrange the Dashboard to fit how you work. See [Arranging Your Work](/kepler/arranging-your-work).
 
 ***
 
@@ -42,13 +42,13 @@ The top bar holds the following controls, from the leading edge:
 - Settings
 - Your account
 
-The **Ask Kepler** button also shows the state of the panel's chats. When a chat needs you, has a new reply, or failed, the button becomes a **Needs you**, **New reply**, or **Failed** pill. Click the pill to open that chat. A focused shell keeps **Ctrl+L** for itself, so use **Ctrl+K** there. See [Ask Kepler](/kepler/ask-kepler).
+The **Ask Kepler** button also shows the state of the panel's chats. When a chat needs you, has a new reply, or failed, the button becomes a **Needs you**, **New reply**, or **Failed** pill. Click the pill to open that chat. A focused shell keeps **Ctrl+L** for itself, so use **Ctrl+K** there.
 
 While an update downloads, a chip near the trailing end of the top bar shows its progress. Hover the chip to see the version and about how long is left. You can keep working meanwhile.
 
-When the update is ready, an **Update available** chip replaces the progress chip. It opens a popover that says what a restart does to running work, such as how many agents it stops and whether terminals close, and offers **Restart to update**. The chip shows on every screen.
+When the update is ready, an **Update available** chip replaces the progress chip. It opens a popover that says what a restart does to running work, such as how many agents it stops, and offers **Restart to update**.
 
-On Windows and Linux, Kepler replaces the native title bar with its own. The menu button at the leading edge holds the full application menu (**File**, **Edit**, **View**, **Window**, **Help**), including **Settings**, **Check for Updates…**, and **About**. macOS keeps its native menu bar. Both menus open the same **About Kepler** dialog.
+On Windows and Linux, the menu button at the leading edge of the top bar holds the full application menu (**File**, **Edit**, **View**, **Window**, **Help**), including **Settings**, **Check for Updates…**, and **About**. macOS keeps its native menu bar.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/new-task-button-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
@@ -71,8 +71,6 @@ On Windows and Linux, Kepler replaces the native title bar with its own. The men
   <figcaption style="text-align:center; color:#888">The trailing cluster when an update is ready.</figcaption>
 </figure>
 
-As the window narrows, the top bar hides the controls that no longer fit.
-
 Menu items and button tooltips show a command's keyboard shortcut when the item does exactly what the key does, including a key you assigned yourself. To see every shortcut or change one, see [Keyboard shortcuts](/kepler/settings-app#keyboard-shortcuts).
 
 ### The window switcher
@@ -92,7 +90,7 @@ The [tray icon](#the-tray-icon) has the same list.
   <figcaption style="text-align:center; color:#888">The window switcher, open.</figcaption>
 </figure>
 
-Each window's title starts with the remote it's connected to and how many of its sessions are waiting on you. Each window keeps its own layout. If you close the last window while Kepler keeps running, the next window opens where that one was.
+Each window's title starts with the remote it's connected to and how many of its sessions are waiting on you. Each window keeps its own layout.
 
 ### The tray icon
 
@@ -104,8 +102,6 @@ Kepler's icon in the system tray (the menu bar on macOS) shows the most urgent t
 | Failed | A turn that ended in an error and that you have not opened |
 | Finished | A finished turn you have not read |
 | Working | Running a turn |
-
-The icon does not count idle sessions, sessions started outside Kepler, plain terminals, archived sessions, or sessions whose only work is a background task.
 
 Hover the icon to see a count of each level. On macOS, a count of the agents that need a look (waiting, failed, or finished) appears beside the icon, in red while any of them is waiting or failed.
 
@@ -119,7 +115,7 @@ On Windows and Linux, click the icon to open the window that needs you. The icon
 
 ### New task
 
-**New task** (**Cmd/Ctrl+N**) opens the **New task** composer. To start a task from a conversation you began outside Kepler, use **Open an external session** in the composer. A session that's still live in its terminal opens read-only in its task, and **Continue here** and **Fork** become available once it's idle. See [Create a task](/kepler/create-task#from-a-session-you-already-started).
+**New task** (**Cmd/Ctrl+N**) opens the **New task** composer. To start a task from a conversation you began outside Kepler, use **Open an external session** in the composer. See [Create a task](/kepler/create-task#from-a-session-you-already-started).
 
 ***
 
@@ -191,7 +187,7 @@ To fill **Todo**, connect at least one provider. See [Issue Tracker Integrations
 
 ### External sessions
 
-Todo lists only issues and pull requests. Agent conversations running outside Kepler do not have a section of their own in the list, and they do not open as panels. To pick one up, open **New task** and use **Open an external session** in the **New task** composer. See [Create a task](/kepler/create-task#from-a-session-you-already-started).
+Todo lists only issues and pull requests. To pick up an agent conversation you started outside Kepler, open **New task** and use **Open an external session**. See [Create a task](/kepler/create-task#from-a-session-you-already-started).
 
 To learn what external sessions are and what you can do with them, see [Agent Sessions](/kepler/agent-sessions#sessions-started-outside-kepler).
 
@@ -232,11 +228,11 @@ Each Todo row shows, from left to right:
 
 Hover the avatars to see a card that names everyone on the item and shows where each review stands. An issue that's on your list only because it mentions you carries a muted **Mentioned** badge, so you can tell it apart from work assigned to you.
 
-When a Linear issue is synced with a GitHub issue and both copies are listed, Todo shows one row for them: the Linear row. The 2 copies share one task history. A task started from either copy counts as the issue's task, and a task started from the Linear row works in the GitHub copy's repository. If you filter the list to GitHub, the GitHub copy shows on its own.
+When a Linear issue is synced with a GitHub issue and both copies are listed, Todo shows one row for them: the Linear row. A task started from either copy counts as the issue's task, and a task started from the Linear row works in the GitHub copy's repository.
 
 When a provider fails to load, Kepler keeps showing its rows from the last successful load, with a crossed-out cloud on their provider chip. A notice above the list names the provider and the fix, such as signing in again or **Retry**. If you do not need that provider, click **Filter out {provider}** beside its fix to hide it from Todo, so the notice stops reporting it. To show it again, clear it in **Filter**.
 
-Right-click a Todo row to open its menu. The menu does not change which panel is open. It holds:
+Right-click a Todo row to open its menu. It holds:
 
 - **Open task page**, when the item already has a task
 - **Open on {provider}**
@@ -245,7 +241,7 @@ Right-click a Todo row to open its menu. The menu does not change which panel is
 - **Copy number**
 - **Copy branch name**, on a pull request
 
-When the list is narrow, each row wraps onto 2 lines instead of dropping cells. On the **Board** layout, a pull request's card also shows its branch.
+On the **Board** layout, a pull request's card also shows its branch.
 
 The **Your role** grouping and filter sort items by your part in them:
 
@@ -349,7 +345,7 @@ The menu shows only the items that apply, and grouping and **Progress** leave ar
   <figcaption style="text-align:center; color:#888">The menu for two selected tasks.</figcaption>
 </figure>
 
-Drag any selected task to move the whole selection to another section or column or, under **Manual** sort, to a new place in the list. Press **Escape** to cancel the drag. Each task moves only where it can, and Kepler tells you how many moved and how many stayed where they were.
+Drag any selected task to move the whole selection. See [Act on several tasks at once](/kepler/arranging-your-work#act-on-several-tasks-at-once).
 
 ### Status
 
@@ -371,12 +367,7 @@ A task sits at the furthest stage any of its checkouts reached, except **Done**,
 
 **Done** waits for the work to land, however it got there, including a rebase or squash merge, or a merge with no pull request. A task that's done but still has uncommitted changes or unpushed commits in a checkout reads **Done · local changes**, so you can decide whether to keep them before you archive.
 
-To set the stage yourself, or to set the task aside, click the progress control on its row. A stage you set stays until the evidence moves past it. There are 2 ways to set a task aside:
-
-- **On hold** pauses the task while its agents keep running. Hold it **Indefinitely**, for a set time, or until something happens, such as CI finishing or a review arriving. A hold with a condition lifts by itself, and the row says why.
-- **Later** sets the task aside until you bring it back. It stops the task's agents and keeps their sessions, so you can resume them later.
-
-A Done task offers neither. See [Arranging Your Work](/kepler/arranging-your-work#set-a-tasks-progress).
+To set the stage yourself, click the progress control on its row. The same menu puts a task **On hold**, which pauses it until something happens, or sets it aside for **Later**. A Done task offers neither. See [Set a task's progress](/kepler/arranging-your-work#set-a-tasks-progress).
 
 Each task row also shows one dot for each distinct session state, with a count of each.
 
@@ -390,9 +381,9 @@ Each task row also shows one dot for each distinct session state, with a count o
 
 The dots show what the *agents* are doing, which is separate from where the work stands, such as **Running**, **Waiting**, **Unread** or **Error**.
 
-A waiting session also says what it's waiting on, such as **Permission** or **Question**. A session with an unanswered Kepler approval request counts as waiting, even while its agent keeps working, and reads **Approval needed** (or **Approval needed, destructive**). A live session that stopped after a failed turn, such as a rate limit, an exhausted quota, or an overloaded agent, reads **Error**.
+A waiting session also says what it's waiting on, such as **Permission** or **Question**. A session with an unanswered Kepler approval request reads **Approval needed**, even while its agent keeps working. A session that stopped after a failed turn, such as a rate limit, reads **Error**.
 
-When a session's turn ends but something it started keeps going in the background, such as a shell or a monitor, the session reads **Background task running**. Its dot is solid green and does not pulse. It has its own count in the hover card rather than joining **Running**, and it does not keep the machine awake. See [Agent Sessions](/kepler/agent-sessions).
+When a session's turn ends but something it started keeps going in the background, such as a shell, the session reads **Background task running**, with a solid green dot. See [Agent Sessions](/kepler/agent-sessions).
 
 A dormant session shows as an outlined dot rather than a filled one. Hover the dots to see a count of each state, most urgent first.
 
@@ -426,7 +417,7 @@ You can change all of these defaults. See [Actions](/kepler/actions).
   <figcaption style="text-align:center; color:#888">The side panel, opened from a row.</figcaption>
 </figure>
 
-- **Click a row** to select it and open the side panel. A plain click replaces whatever was open, except for panels you've pinned. If the row's panel is already open, the click moves focus to that panel instead, and a second click closes the others.
+- **Click a row** to select it and open the side panel. A plain click replaces whatever was open, except for panels you've pinned.
 - **Shift-click** a second row to open both side by side. The panel holds one column per open item, each with its own chat, so you can work several tasks at once without leaving the list.
 - **Cmd-click** (**Ctrl-click** on Windows and Linux) to add one row to the open set, or to close it again.
 - **Double-click a row** to open the item's full task page. From a Todo row that's the page of the task behind it. A row with no task yet has no page, so a double-click opens its panel with the cursor in the prompt box instead.
@@ -458,8 +449,6 @@ A new task appears in the list as soon as you press **Start** in the **New task*
 </figure>
 
 Shift-click selects a range from your last plain click, as it does in Finder or VS Code. You can open up to 16 panels at once. Once they're all open, opening another closes the unpinned panel you opened longest ago. To arrange the panels in rows, see [Lay panels out in a grid](#lay-panels-out-in-a-grid).
-
-Each panel gets its own column as soon as you open it. Until its item loads, the column shows a placeholder, with **Try again** if the item could not be loaded, or **Sign in** if you're signed out. You can close any placeholder.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/multi-task-panels-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
@@ -537,11 +526,10 @@ A grid holds up to 16 panels, fewer in smaller windows. In a grid:
 An unpinned panel is for browsing: a plain click on another row replaces it. To keep a panel in place, choose **Pin panel** from the panel's **⋮** menu (on a task, under **Panel**). After you pin a panel:
 
 - A plain click on a row opens beside your pinned panels instead of replacing them.
-- Following a link in **Related** replaces an unpinned panel in place, but opens the linked item beside a pinned one.
 - The pin stays with the view you pinned it in.
 - Kepler never closes a pinned panel to make room when the maximum number of panels is open.
 
-Kepler always keeps one panel unpinned for browsing, so browsing never has to close a pinned panel. Once every other panel is pinned, the menu item reads **Keep one panel unpinned for browsing** and you cannot pin another. To release a pinned panel, click **Unpin panel** in its header.
+Kepler always keeps one panel unpinned for browsing, so once every other panel is pinned, you cannot pin another. To release a pinned panel, click **Unpin panel** in its header.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/unpin-panel-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -580,11 +568,11 @@ To reorder the tabs in **What's running** or **Terminals**, drag a tab to a new 
 
 To archive a session from the keyboard, focus its tab in **What's running** and press **Delete**. Kepler asks first. The tab's own archive control and its menu item archive in one click, without asking.
 
-A plain shell tab takes the name of what's running in it, such as `pnpm dev`, and returns to its own label at the prompt. Hover a tab with a program status to see how long the program has been in that state, its progress, and, for a blocked or failed program, what to do next.
+A plain shell tab takes the name of what's running in it, such as `pnpm dev`. Hover a tab with a program status to see how long the program has been in that state, its progress, and, for a blocked or failed program, what to do next.
 
 If an agent fails after you start a session, **What's running** shows **{agent} was unable to start** with the agent's message. Press **Retry** to launch it again, or **Open agent settings** to fix the problem.
 
-For an issue or pull request with no task yet, the side panel's primary button runs the item's suggested Action, such as **Plan**, **Implement**, **Review**, or **Address Feedback**. If the suggested Action is **None**, no longer exists, or cannot apply to this kind of item, the button reads **Start** instead.
+For an issue or pull request with no task yet, the side panel's primary button runs the item's suggested Action, such as **Plan**, **Implement**, **Review**, or **Address Feedback**. When there is no suggested Action to run, the button reads **Start** instead.
 
 In the side panel for a task, the primary button reads **Start**. Once a session exists, the composer becomes that session's chat, and the button reads **Send**.
 
@@ -607,7 +595,7 @@ The side panel's header holds:
 - **Unsolo panel** and **Maximize**, while the panel is soloed
 - **Unpin panel**, when the panel is pinned
 - **Close panel** (**Cmd/Ctrl+W** on the focused panel)
-- **Panel actions** (**⋮**): **Close panel**, **Open task page**, **Open on {provider}** for an issue or pull request, **Pin panel**, **Solo panel**, **Move panel left**, **Move panel right**, **Close other panels**, and **Close all panels**. On a task, these items are part of its **Task actions** menu. **Solo panel**, the move items, **Close other panels**, and **Close all panels** appear only when more than one panel is open
+- **Panel actions** (**⋮**): **Close panel**, **Open task page**, **Open on {provider}** for an issue or pull request, **Pin panel**, **Solo panel**, **Move panel left**, **Move panel right**, **Close other panels**, and **Close all panels**. On a task, these items are part of its **Task actions** menu
 
 An issue or pull request also has a status line with its provider state, session dots, repository, and last activity.
 
@@ -622,7 +610,7 @@ Each pull request, issue, or artifact linked to a task has a chip under the head
 
 Hover a task's title to read its prompt. To copy the whole prompt, use **Copy task prompt** in the **⋮** menu. The prompt also appears first among the task's notes, labeled **Prompt**, and you cannot delete it.
 
-To rename a task, choose **Rename task** from its **⋮** menu, or press **F2** on its focused panel, then edit the name in place. While only one panel is open, you can also double-click the title. With several open, click the focused panel's title to rename it, or double-click it to solo the panel. Press **Enter** to save the change, or **Escape** to discard it.
+To rename a task, choose **Rename task** from its **⋮** menu, or press **F2** on its focused panel, then edit the name in place. Press **Enter** to save the change, or **Escape** to discard it.
 
 To fold the header down to its title row, use the chevron beside the title. A folded task header has a run control, and a row of icons that each open a view in the side pane.
 
@@ -632,8 +620,6 @@ The run control runs the worktree's command, or opens the worktree in your edito
 - **Show pull request**: the pull request that asks the most of you
 - **Show issue**: the unfinished issue updated last
 - **Show resources**: the **Resources** list
-
-In the narrowest panels, the icons fold into one paperclip icon that opens the **Resources** list.
 
 A Done task with no unpushed work, and no agent working, waiting on you, or keeping background work alive (such as a dev server), shows *Ready to archive?* in its header. See [Arranging Your Work](/kepler/arranging-your-work).
 
@@ -776,7 +762,7 @@ Use these shortcuts to go back and forward:
 | **Back** | ⌘ [ | Alt + ← |
 | **Forward** | ⌘ ] | Alt + → |
 
-The **Back** and **Forward** buttons in the top bar do the same, and so do a mouse's side buttons. On macOS, a sideways swipe on a trackpad or Magic Mouse also goes back and forward. On Windows and Linux, a sideways scroll never goes back.
+The **Back** and **Forward** buttons in the top bar do the same, and so do a mouse's side buttons. On macOS, a sideways swipe on a trackpad or Magic Mouse also goes back and forward.
 
 Each set of open panels gets its own history entry, so **Back** closes the set you just opened rather than the whole visit. Each Settings page you open gets its own entry too, so **Back** steps through the Settings pages you visited. To leave Settings in one step, use the back arrow in the Settings header, which returns you to what you were doing before you opened it.
 
@@ -788,7 +774,7 @@ When a view has nothing to show, or Kepler cannot load it, you see one of these 
 
 | What you see | What it means |
 |---|---|
-| **Your agents' work lives here** | You have no tasks. **Tasks** shows the **New task** composer, plus an **Import from {app}** card if Kepler finds another agent app's work. See [Create a task](/kepler/create-task#from-another-agent-app) |
+| **Your agents' work lives here** | You have no tasks. **Tasks** shows the **New task** composer, plus an import card, such as **Import from Conductor**, if Kepler finds another agent app's work. See [Create a task](/kepler/create-task#from-another-agent-app) |
 | **No tasks yet** | The tasks list is empty |
 | **No assigned PRs or issues** | Providers are connected, but nothing related to you is open. Open **View** to see what the view's scope covers |
 | **Nothing matches your search** | Your search excludes everything. Use **Clear search** beneath it |
@@ -817,7 +803,5 @@ Kep, Kepler's planet mascot, appears on empty, loading and error screens. On a c
   </a>
   <figcaption style="text-align:center; color:#888">Kep over a new session's empty chat.</figcaption>
 </figure>
-
-Kep's eyes follow your pointer unless your system is set to reduce motion.
 
 ---

@@ -223,7 +223,7 @@ When an issue becomes a task, Kepler attaches what it read, so the agent starts 
 
 Kepler does not read an issue's priority field, due date, Trello checklist, or Linear cycle. An agent can still find these by opening the issue's URL itself, but Kepler does not deliver them as attached context.
 
-Kepler reads an issue's milestone on GitHub, GitHub Enterprise, GitLab, GitLab Self-Hosted, and Linear, so Todo can group and filter by **Milestone**. The agent does not receive the milestone. See [Arranging Your Work](/kepler/arranging-your-work).
+Kepler reads an issue's milestone on GitHub, GitHub Enterprise, GitLab, GitLab Self-Hosted, and Linear, so Todo can group and filter by **Milestone**. See [Arranging Your Work](/kepler/arranging-your-work).
 
 Todo's **Priority** grouping and filter come from labels instead: a label such as `P1`, `priority: high`, `blocker`, or `critical` sets the level, and the most urgent label wins. Jira and Linear keep priority in a field Kepler does not read, so their issues show as **Unprioritised** unless a label sets a priority. See [Arranging Your Work](/kepler/arranging-your-work).
 
@@ -260,7 +260,7 @@ An issue listed only because you were mentioned is marked **Mentioned**, so you 
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/todo-scope-tooltip-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/todo-scope-tooltip-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="Todo's View menu, opened from the toolbar's View button (Type and All). It switches List or Board, and the scope Mine or All, here All: Kepler repos, last 90 days, with Repos (All) and Updated (90 days). Below are Group by (Type), Sort by (Updated) and the Filters Needs my attention, Review requests, Type, Linked work, Priority, Age and Provider, each Any.">
+    <img src="/wp-content/uploads/todo-scope-tooltip-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The top of Todo's View menu, with List selected in its layout switch and All picked in the Mine or All scope. The line under it reads Kepler repos, last 90 days, followed by the Repos (All) and Updated (90 days) rows.">
   </a>
   <figcaption style="text-align:center; color:#888">A Todo view's scope, set in its View menu.</figcaption>
 </figure>
@@ -270,7 +270,7 @@ To find issues to add to a task, the issue list on a task's **Resources** screen
 For GitHub and Azure DevOps, **All visible** reads every issue across your organizations, including repositories you can read outside them, such as ones where you are an outside collaborator. It loads more slowly. Jira and Linear show only your issues there until you pick a project or a team:
 
 - **Jira**: when the issue list shows Jira alone, a project picker appears, starting with **All projects**. Pick a project to see every open issue in it. Kepler remembers the pick for each Jira connection.
-- **Linear**: when the issue list shows Linear alone, a team picker and a **Project** picker appear. Pick a team, a Linear project, or both, to see every open issue in them, whoever it is assigned to. The **Project** picker lists your Linear workspace's projects with their state, closed ones included. Changing the team clears the project pick.
+- **Linear**: when the issue list shows Linear alone, a team picker and a **Project** picker appear. Pick a team, a Linear project, or both, to see every open issue in them, whoever it is assigned to. The **Project** picker lists your Linear workspace's projects with their state, closed ones included.
 
 <!-- TODO(screenshot): New — ade-linear-project-picker-01: the Add to this task dialog on its Issues tab with Linear selected and the Project picker open on All projects and the workspace's projects, each with its state. -->
 
