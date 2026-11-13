@@ -218,7 +218,7 @@ Pick the next step that fits what you want to do:
 | Understand what a task holds | [Tasks and Resources](/kepler/tasks-and-resources) |
 | Work inside a task | [The Task View](/kepler/task-view) |
 | Direct an agent mid-session | [Agent Sessions](/kepler/agent-sessions) |
-| Run an agent on a schedule, or on new GitHub or Jira activity | [Automations](/kepler/automations) |
+| Run an agent on a schedule, or on new GitHub or Jira activity | [Automations](/kepler/kepler-automations) |
 | See what every agent is doing at once | [The Agent Graph](/kepler/agent-graph) |
 | Reshape the list to fit how you work | [Arranging Your Work](/kepler/arranging-your-work) |
 | Review and ship what an agent wrote | [Review Changes](/kepler/review-changes) |
