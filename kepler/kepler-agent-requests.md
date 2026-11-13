@@ -8,7 +8,7 @@ audience: developer
 plan_required: all
 os_support: [Windows, macOS, Linux]
 git_hosts: [generic]
-integrations: [claude-code, codex, copilot, cursor, auggie, opencode, pi]
+integrations: [claude-code, codex, copilot, cursor, auggie, opencode]
 hosted_variant: both
 status: preview
 last_verified: 2026-11
@@ -40,15 +40,15 @@ Reports from other agents arrive in a session's inbox and do not ask you anythin
 You can answer a request from any window that shows it, or from its notification. If another window answered it first, Kepler says **Already answered**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-permission-request-oct-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-permission-request-oct-2026.png" class="help-center-img img-bordered" alt="A permission request for a shell command, marked Needs approval, with the agent's reason, Contains brace with quote character, just above the Allow, Allow for this session, and Reject buttons.">
+  <a href="/wp-content/uploads/agent-permission-request-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-permission-request-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A permission request for a shell command, marked Needs approval and headed Run the search tests, the agent's description of the command, with the command itself, npm test -- --run search, in a box beneath it, above the Allow, Allow for this session, Allow always and Reject buttons.">
   </a>
-  <figcaption style="text-align:center; color:#888">A permission request, with the agent's reason above the buttons.</figcaption>
+  <figcaption style="text-align:center; color:#888">A permission request for a shell command, headed by what the command does.</figcaption>
 </figure>
 
 ## Permission requests
 
-A permission request pins to the top of the session. It shows an amber shield, the tool being asked about as the heading, and the call's input beneath it. If the agent says why it is asking, the reason appears just above the buttons. For example, a Claude Code session in auto mode can still hit a safety check. A request to reach outside the agent's network sandbox says so in Kepler's own words, *Reaches outside the network sandbox.*, with the agent's reason when it gives one.
+A permission request pins to the top of the session. It shows an amber shield, the tool being asked about as the heading, and the call's input beneath it. For a shell command, the heading is the agent's description of what the command does, with the command in a box beneath it. If the agent says why it is asking, the reason appears just above the buttons. For example, a Claude Code session in auto mode can still hit a safety check. A request to reach outside the agent's network sandbox says so in Kepler's own words, *Reaches outside the network sandbox.*, with the agent's reason when it gives one.
 
 The buttons read the same whichever agent raised the request:
 
@@ -60,11 +60,9 @@ The buttons read the same whichever agent raised the request:
 | **Reject** | Refuses this call |
 | **Reject always** | Refuses it permanently |
 
-You see only the tiers the agent offers. **Allow for this session** is Kepler's own middle tier and appears only next to an **Allow**. A request that offers only a permanent approval, such as Claude Code's plan-exit prompt, has no one-time approval to extend, so it has no middle tier. If an agent offers several permanent choices, Kepler keeps the agent's labels instead of a single **Allow always**. A **RULE** line beneath the buttons spells out any `Tool(...)` pattern a rule would cover.
+You see only the tiers the agent offers. **Allow for this session** is Kepler's own middle tier and appears only next to an **Allow**. If an agent offers several permanent choices, Kepler keeps the agent's labels instead of a single **Allow always**. A **RULE** line beneath the buttons spells out any `Tool(...)` pattern a rule would cover.
 
 Kepler combines repeated requests. A command that fires many identical requests, such as an install that reaches the network again and again, asks once, and your answer settles the whole group.
-
-A request raised by a subagent that another subagent started shows on the outermost subagent card, under the path of subagent names that leads to it (**Parent › Child**). See [Reading the conversation](/kepler/agent-sessions#reading-the-conversation).
 
 Answered requests stay in the transcript, showing the tier you picked: **Allowed for this session** for the middle one, otherwise the button's own label, falling back to **Approved** or **Denied**.
 
@@ -149,9 +147,7 @@ Some actions that an agent asks Kepler itself to do, through Kepler's workspace 
 
 Kepler tells the agent that the request is waiting, and the agent can keep working; your answer reaches the agent's inbox later. Meanwhile, the session reads **Approval needed** or **Approval needed, destructive**.
 
-The request is pinned above that session's composer as a card. The card names the action, such as **Delete worktree {worktree} and its branch**, and shows what is at stake (*At risk: {loss}*), with **Approve** and **Deny**. A card for an action that can lose work is amber; other cards are blue. If several requests are waiting, page through them with **{index} of {count}**. A setting change reads **Change the setting {setting}**, with **From {from} to {to}** beneath, or **To {to}, on your computer** for a setting kept on your own computer.
-
-Other cards say what they would do in the same way, such as **Archive resources on {task}** or **Hold until {pr} merges or closes**. A card for an action that would stop agents names them.
+The request is pinned above that session's composer as a card. The card names the action, such as deleting a worktree and its branch, and shows what is at risk, with **Approve** and **Deny**. A card for an action that can lose work is amber; other cards are blue. If several requests are waiting, page through them. A setting change names the setting and its old and new values. A card for an action that would stop agents names them.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/approval-card-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -163,13 +159,13 @@ Other cards say what they would do in the same way, such as **Archive resources 
 The **Approve** chevron offers 2 broader answers:
 
 - **Approve all {label} from this session**: approves this kind of request for the rest of the session.
-- **Always approve {label}**: adds a standing rule. It is not offered for an action that can lose work (*Not offered for actions that can lose work.*) or for starting a session.
+- **Always approve {label}**: adds a standing rule. It is not offered for an action that can lose work or for starting a session.
 
 A setting change offers neither answer; each setting change asks on its own.
 
-Before Kepler carries out an approved request, it checks that the request still applies. The request then shows **Running** while Kepler carries it out. A request that fails shows **Not done: {summary}**, with **Dismiss**. A waiting request expires when its session is archived.
+An approved request shows **Running** while Kepler carries it out. A request that fails says what was not done, with **Dismiss**. A waiting request expires when its session is archived.
 
-To review your standing rules, open **Settings → Agents → Approvals**: *Some actions your agents take wait for your approval. These rules approve them for you; anything not covered still asks.* Each rule under **Always approved** says when and where it was added and how often it has been used, with **Remove**.
+To review your standing rules, open **Settings → Agents → Approvals**. Anything a rule does not cover still asks. Each rule under **Always approved** says when and where it was added and how often it has been used, with **Remove**.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/settings-approvals-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -188,18 +184,18 @@ Agents that work together report to each other through Kepler. Each session has 
 
 When an item arrives for an idle session, Kepler wakes the session to read its inbox, and the conversation shows a row such as **2 new items to read**. Kepler wakes a busy session once its turn ends.
 
-A session with unread reports shows a reports badge with a count on its tab and on its row in the context panel (*{agent} hasn't read {count} reports from other agents*). The band above its composer offers **Have it read them**.
+When a session has unread reports, the band above its composer says how many, such as *OpenCode hasn't read 3 reports from other agents*. To have the agent read them, click **Have it read them**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-reports-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-reports-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The task page for Fix the cart total, where the Discount codes break the cart total session carries a reports badge with 3 beside the reviewer it started. Its conversation shows a 2 new items to read row, and above the composer OpenCode hasn't read 3 reports from other agents, with Have it read them.">
+  <a href="/wp-content/uploads/agent-reports-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-reports-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The task page for Fix the cart total. Under Sessions, the Discount codes break the cart total session is selected, and the Review the discount fix session it started is listed below it as Unread. Its conversation shows the session_start Review the discount fix call, a 2 new items to read row, and above the composer OpenCode hasn't read 3 reports from other agents, with Have it read them.">
   </a>
   <figcaption style="text-align:center; color:#888">A session with unread reports from other agents.</figcaption>
 </figure>
 
-To stop agents from waking each other without end, Kepler pauses wakes after 20 turns in a row that agents started without a prompt from you. The band then reads **Reports from other agents are paused**: *They no longer wake this session on their own. Resume to let them wake it again.* To let reports wake the session again, click **Resume reports** or send your next prompt.
+To stop agents from waking each other without end, Kepler pauses wakes after 20 turns in a row that agents started without a prompt from you. The band then reads **Reports from other agents are paused**, and the session's tab and its row in the context panel show a reports badge with the count. To let reports wake the session again, click **Resume reports** or send your next prompt.
 
-In Terminal mode, Kepler can wake only Claude Code, Pi, and OpenCode 2 sessions to read their inbox. Any other Terminal agent shows **No Kepler tools** on its status bar: *{name} can't use Kepler's workspace tools or inbox in a terminal.*
+In Terminal mode, only some agents can be woken to read their inbox. See [Kepler's tools in Terminal mode](/kepler/agent-integrations#supported-agents).
 
 ***
 
@@ -218,7 +214,7 @@ Kepler notifies you when a session replies, needs you, or fails. Each notificati
 
 A Terminal or external session blocked on a prompt in its own CLI also notifies you, for every agent. Sessions started outside Kepler notify you only once they are on a task.
 
-A notification's title reads **{status}: {task}**, with the agent and the repository or branch beneath (*{agent} on {repo}/{branch}*). Click the notification to go to the session. Kepler opens it in the window that already shows that session or its task, or else in the window you used last. An approval notification's title is its status alone. Beneath it are the action, what a destructive action would put at risk, and *Asked by {session}*.
+A notification's title reads **{status}: {task}**, with the agent and the repository or branch beneath (*{agent} on {repo}/{branch}*). A permission request for a shell command the agent described is titled with that description instead, and shows the command beneath it. Click the notification to go to the session. An approval notification's title is its status alone. Beneath it are the action, what a destructive action would put at risk, and *Asked by {session}*.
 
 You can answer an approval request from its alert. The in-app alert has **Approve** and **Deny** for every request, destructive ones included, followed by **View**, which opens the request in its session. On macOS, the desktop notification also has **Approve** and **Deny** buttons, which answer the request without opening a window. Windows and Linux notifications have no buttons.
 
@@ -231,7 +227,7 @@ You can answer an approval request from its alert. The in-app alert has **Approv
 
 By default, Kepler sends no notification for the task open in the window you are using. To be notified about that task too, turn on **Notify even for the task you're looking at**.
 
-While you are working in any Kepler window on a computer, that computer posts no desktop notifications. The window you are in shows them in Kepler instead, and several windows on one computer post a single alert. A canceled turn and a session that is reconnecting do not count as completions, so neither sends a notification.
+While you are working in any Kepler window on a computer, that computer posts no desktop notifications. The window you are in shows them in Kepler instead, and several windows on one computer post a single alert.
 
 To choose which events notify you, and whether each one appears as a **Desktop** notification, **In Kepler**, or both, open **Settings → Notifications**. The same page has **Play a sound with desktop notifications**. In the desktop app, every event except **Replies** notifies on the desktop until you change it. In a browser, desktop notifications start off. After your first session starts, the desktop app sends a one-time **Notifications are on** notification. Click it to open **Settings → Notifications**. See [Settings](/kepler/settings-app#notifications).
 

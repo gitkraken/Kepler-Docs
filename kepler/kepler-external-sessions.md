@@ -38,7 +38,7 @@ Detection is on by default. To turn it on or off, use **Settings → Integration
 
 The switch installs GitKraken hooks, so each agent's own CLI reports what it is doing to Kepler. The one switch covers every agent that Kepler can track this way: **Claude Code**, **Codex**, **Cursor**, **GitHub Copilot**, **OpenCode**, **Auggie**, **Grok Build**, and **Pi**. Kepler does not track Google Antigravity through hooks. Turning the switch off stops reporting from all of them.
 
-Kepler follows **Terminal** sessions through the same hooks. If a live session's hook events stop arriving, Kepler warns you so that status and notifications do not go out of date: **Agent sessions aren't reporting to Kepler**, *Session status and notifications may be out of date. Repair reinstalls the reporting configuration.* After you click **Repair**, restart any session that still does not report. A window that only views sessions running on another computer shows the warning without **Repair**: *To repair reporting, use Kepler on the computer running these sessions.*
+Kepler follows **Terminal** sessions through the same hooks. If a live session stops reporting, Kepler warns that **Agent sessions aren't reporting to Kepler**, because its status and notifications may be out of date. Click **Repair**, then restart any session that still does not report. To repair sessions running on another computer, use Kepler on that computer.
 
 Detection shows *live* outside sessions. Kepler also finds **past** sessions from the transcripts the agent writes to disk, including ones from before you turned detection on.
 
@@ -56,15 +56,9 @@ An outside session opens read-only, marked **(external)** and **External**, with
 | **Ended** | The process finished |
 | **Not running** | Found on disk, with nothing running it anywhere |
 
-The sentence matches the badge. A running session reads *Follow along here.* A waiting one reads *Answer it in your terminal.* Kepler does not answer a prompt it does not own, but it notifies you that the session is waiting, whatever the agent.
+For a waiting session, answer in your terminal. Kepler does not answer a prompt it does not own, but it notifies you that the session is waiting, whatever the agent.
 
-When you pick a live outside session from **Open an external session**, it always opens this way, read-only in its task. Picking it never takes the conversation over.
-
-Kepler reads the transcripts of **Claude Code**, **Codex**, **GitHub Copilot**, **OpenCode**, **Auggie**, **Grok Build**, **Pi**, and the **Google Antigravity** CLI from each agent's own store on disk, without starting the agent. A few agents behave differently:
-
-- A GitHub Copilot autopilot run ends with its completion summary, shown as the agent's answer.
-- A GitHub Copilot session run in **Chat** has a transcript on disk once it has run a turn.
-- A **Cursor** session still appears as a row and you can still adopt it, but it shows *Preview isn't available for {agent} sessions yet.* in place of the conversation.
+Kepler reads the transcripts of **Claude Code**, **Codex**, **GitHub Copilot**, **Cursor**, **OpenCode**, **Auggie**, **Grok Build**, **Pi**, and the **Google Antigravity** CLI from each agent's own store on disk, without starting the agent. For Cursor, that includes chats from its terminal CLI.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/external-past-session-preview-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -73,7 +67,7 @@ Kepler reads the transcripts of **Claude Code**, **Codex**, **GitHub Copilot**, 
   <figcaption style="text-align:center; color:#888">A past Pi session, previewed read-only from its transcript on disk.</figcaption>
 </figure>
 
-Kepler leaves some conversations out of the list: OpenCode's archived and subagent sessions, and Grok Build and Antigravity conversations with no messages yet. Kepler replays an Antigravity conversation but does not follow it live.
+Kepler replays an Antigravity conversation but does not follow it live.
 
 If Kepler cannot read a transcript, it says which problem it hit instead of showing an empty conversation:
 
@@ -83,7 +77,7 @@ If Kepler cannot read a transcript, it says which problem it hit instead of show
 | **Kepler can't read this session's transcript** | The file exists, but Kepler could not open it. Check its permissions; Kepler keeps retrying |
 | **Waiting for activity…** | The agent has not written anything yet |
 
-If a live session goes quiet, Kepler flags it instead of showing it as busy: *No activity for {minutes} minutes. The session may have ended without reporting it.*
+If a live session goes quiet, Kepler flags that it may have ended without reporting it, instead of showing it as busy.
 
 ## Taking one over
 
@@ -91,12 +85,12 @@ You can take over an outside session in 2 ways. They differ in what happens to t
 
 | Button | What it does |
 |---|---|
-| **Fork** | *Copies this conversation into a new Kepler session. Your terminal keeps the original.* Both continue independently |
-| **Continue here** | *Carries on this conversation in Kepler.* One conversation, now owned by Kepler |
+| **Fork** | Copies the conversation into a new Kepler session, and your terminal keeps the original. Both continue independently |
+| **Continue here** | Carries on the same conversation in Kepler |
 
-Both buttons stay on screen while the session works, but they work only once it is idle. Hover a button to see why it is unavailable: *Available once it is idle.*, or *Answer it in your terminal first.* while the session waits on you.
+Both buttons work only once the session is idle. If it waits on you, answer it in your terminal first.
 
-If a terminal still owns the session, **Continue here** first asks **Continue this conversation here?** If 2 clients write the same conversation, they corrupt it: *If your terminal is still open, both will write to this conversation. Close it there first.* Once Kepler has the conversation, the view shows *Ready to continue here.*
+If a terminal still owns the session, **Continue here** asks you to confirm. Close the conversation in your terminal first, because 2 programs writing the same conversation corrupt it.
 
 When you take over a conversation from disk, the agent starts on your first message, not when you take it over. Adopting one costs nothing.
 

@@ -1,8 +1,8 @@
 ---
-title: Voice Input
-description: Dictate to an agent instead of typing. Voice input transcribes on your device with Qwen3-ASR, or with Whisper where WebGPU is unavailable, learns the words you fix, works push-to-talk or hands-free, and is available in remote windows.
+title: Dictation and Read Aloud
+description: Dictate to an agent instead of typing, and have its replies read aloud. Dictation transcribes on your device with Qwen3-ASR, or with Whisper where WebGPU is unavailable, learns the words you fix, and works push-to-talk or hands-free; read aloud uses your system's voices or Kokoro. Both work in remote windows.
 product: Kepler
-feature: Voice Input
+feature: Voice
 content_type: how-to
 audience: developer
 plan_required: all
@@ -13,7 +13,7 @@ hosted_variant: both
 status: preview
 last_verified: 2026-11
 llms_include: true
-tags: [voice-input, dictation, qwen3-asr, whisper, webgpu, microphone, settings, agent-sessions]
+tags: [dictation, voice-input, read-aloud, text-to-speech, kokoro, qwen3-asr, whisper, webgpu, microphone, settings, agent-sessions]
 taxonomy:
   category: kepler
 custom_fields:
@@ -28,37 +28,39 @@ custom_fields:
 ---
 <kbd>Last updated: November 2026</kbd>
 
-Voice input adds a microphone to the agent prompt, so you can dictate instead of typing. **Transcription runs on your device**, using a model Kepler downloads once. Kepler never uploads your audio.
+Kepler has 2 voice features, both set up in **Settings → Voice**:
 
-Kepler has 2 transcription engines:
+- **Dictation** adds a microphone to the agent prompt, so you can talk instead of typing. **Transcription runs on your device**, using a model Kepler downloads once. Kepler never uploads your audio.
+- **Read aloud** reads an agent's replies to you. See [Read aloud](#read-aloud).
+
+Dictation has 2 transcription engines:
 
 - **Qwen3-ASR** is the default. It reads what you're writing, so it gets developer terms such as Jira, rebase, or pull request right more often than Whisper. It needs a graphics card with WebGPU.
-- **Whisper** works on any machine. Kepler uses it where WebGPU is unavailable, and keeps it for anyone who set up Whisper before Qwen3-ASR was available.
+- **Whisper** works on any machine. Use it where WebGPU is unavailable.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/start-voice-input-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/start-voice-input-aug-2026.png" class="help-center-img img-bordered" alt="The composer's microphone icon, with its Start voice input tooltip">
+  <a href="/wp-content/uploads/start-voice-input-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/start-voice-input-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="The New task composer: Add issue, Add PR and Add context above the empty prompt, then the attach button and the microphone button with its Dictate tooltip below it, and the agent pill with a warning sign and Start on the right.">
   </a>
-  <figcaption style="text-align:center; color:#888">The composer's microphone icon.</figcaption>
+  <figcaption style="text-align:center; color:#888">The composer's microphone, with its Dictate tooltip.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — ade-start-voice-input-01: on a machine with a WebGPU graphics card, set up Qwen3-ASR 1.7B in Settings → Voice input, then hover the composer's microphone so the tooltip reads Start voice input · Qwen3-ASR 1.7B. -->
 
-Voice input is off until you set it up in **Settings → Voice input**: Kepler downloads a model, and the microphone in the prompt becomes available when the model is ready.
+Dictation turns on once you download a model in **Settings → Voice**. The microphone in the prompt becomes available when the model is ready.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/voice-input-settings-aug-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/voice-input-settings-aug-2026-v3@2x.png" class="help-center-img img-bordered" alt="Settings › Voice input with Whisper set up: Use voice input in the chat prompt ticked; Transcription engine with the Whisper card selected and the note that Qwen3-ASR needs a graphics card with WebGPU, which is not available here, then the Fast model, About 42 MB on this machine, with Change quality, Remove Whisper and a collapsed Technical details; and When you stop talking set to Insert the text so you can edit it, with Send the prompt and Keep listening, transcribing each phrase as you pause.">
+  <a href="/wp-content/uploads/voice-input-settings-aug-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/voice-input-settings-aug-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Dictation section of Settings › Voice. Under Model, the Whisper row (80 MB) is picked, with Remove… and Licenses, and its Quality select reads Fast (80 MB), suggested, installed; a row for Qwen3-ASR 1.7B and 0.6B says they need a graphics card with WebGPU, which this machine does not have. Under Listening, When you stop talking offers Insert the text so you can edit it (selected), Send the prompt, and Keep listening, transcribing each phrase as you pause. The status line below reads Whisper, Fast quality (80 MB).">
   </a>
-  <figcaption style="text-align:center; color:#888">Settings → Voice input on a computer without WebGPU, where Whisper transcribes.</figcaption>
+  <figcaption style="text-align:center; color:#888">The Dictation settings on a computer without WebGPU, where Whisper transcribes.</figcaption>
 </figure>
 
 ***
 
 ## Choose what happens when you stop talking
 
-To record, click **Start voice input** in the prompt, speak, then click **Stop and transcribe**.
+To record, click **Dictate** in the prompt, speak, then click **Stop and transcribe**.
 
-To choose what Kepler does with what you say, go to **Settings → Voice input → When you stop talking** and pick one of these options:
+To choose what Kepler does with what you say, go to **Settings → Voice → When you stop talking** and pick one of these options:
 
 | Option | What it does |
 |---|---|
@@ -66,82 +68,67 @@ To choose what Kepler does with what you say, go to **Settings → Voice input �
 | **Send the prompt** | Sends the prompt as soon as you stop recording |
 | **Keep listening, transcribing each phrase as you pause** | Keeps the microphone open and transcribes each phrase as you pause |
 
-With Qwen3-ASR, **Keep listening** groups phrases you speak without a long pause into a single paragraph. As the paragraph grows, Kepler transcribes it again as a whole and replaces the text it already inserted for it, so earlier words can change as you keep talking. Once you edit that text, your edit takes priority. Kepler adds only the new words and never overwrites what you typed.
+With Qwen3-ASR, **Keep listening** can correct earlier words in a paragraph as you keep talking. Once you edit that text, Kepler adds only new words and never overwrites what you typed.
 
 Kepler treats short, whole utterances as commands rather than dictation: saying "send", "cancel", or "clear" acts on the prompt instead of adding text to it. Kepler dictates anything longer verbatim.
 
-While a transcription is in progress, the microphone shows **Transcribing…**. If transcription falls behind while you keep talking, Kepler pauses the microphone rather than dropping audio: *Transcribing too slowly — pausing the mic. Wait, or pick a smaller model.*
+While a transcription is in progress, the microphone shows **Transcribing…**. If transcription falls behind, Kepler pauses the microphone until it catches up. If this happens often, pick a smaller model.
 
 ### Teach dictation your words
 
-Qwen3-ASR learns how you spell words it gets wrong. When you fix a single dictated word in the prompt before you send it, Kepler notes the fix. After you make the same fix in 2 sends, Kepler suggests the word, with a notice: *A dictated word fix is ready to review*. **Review** opens Settings. Dictation uses a suggested word only after you approve it.
+Qwen3-ASR learns how you spell words it gets wrong. When you fix a single dictated word in the prompt before you send it, Kepler notes the fix. After you make the same fix in 2 sends, a notice suggests the word, and **Review** opens Settings. Dictation uses a suggested word only after you approve it.
 
-**Settings → Voice input** lists the words in 2 groups:
+**Learned words**, in **Settings → Voice**, lists the words in 2 groups:
 
-- **Suggested words**: *Fixes you made in two sends. Dictation uses a word only after you approve it.* Each shows what Qwen3-ASR heard, with **Approve** and **Dismiss**. A dismissed fix is never suggested again.
-- **Learned words**: approved words, marked **In use**, and words you added, marked **Added by you**. Each has a remove button. Type in **Add a word** and click **Add** to add one yourself. **Forget learned words** removes every learned, suggested, and added word on this device.
+- **Suggested words**: each shows what Qwen3-ASR heard, with **Approve** and **Dismiss**. A dismissed fix is never suggested again.
+- **Words**: the words you approved and the words you added. Each has a remove button. Type in **Add a word** and click **Add** to add one yourself. **Forget learned words…** removes every learned, suggested, and added word on this device.
 
-Kepler stores only the words, on this device only, and keeps them after you sign out. Learning runs only while Qwen3-ASR dictates.
+Kepler stores only the words, on this device only, and keeps them after you sign out.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/voice-learned-words-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/voice-learned-words-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The word sections of Settings › Voice input: Suggested words, Fixes you made in two sends, with Kepler heard as keplar and Approve and Dismiss; then Learned words with its description, Jira (In use · heard as gira) and pnpm (Added by you), each with a remove button, and Forget learned words.">
+  <a href="/wp-content/uploads/voice-learned-words-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/voice-learned-words-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Learned words in Settings › Voice, marked Qwen models only, with its description. Suggested words lists Kepler, heard as keplar, with Approve and Dismiss; Words shows Jira and pnpm, each with a remove button, above the Add a word field with Add and Forget learned words….">
   </a>
   <figcaption style="text-align:center; color:#888">A suggested word waiting for approval, above the learned words.</figcaption>
 </figure>
 
 ***
 
-## Set up voice input in Settings
+## Set up dictation in Settings
 
-**Settings → Voice input** has 4 sections: **Voice input**, **Transcription engine**, **When you stop talking**, and **Learned words**.
+In **Settings → Voice**, the **Dictation** section's **Model** list offers 3 models. Every model runs on this computer, and nothing you say leaves it.
 
-**Transcription engine** offers 3 cards. Every engine runs on this computer, and nothing you say leaves it.
-
-| Engine | What it is |
+| Model | What it is |
 |---|---|
 | **Qwen3-ASR 1.7B** | The most accurate, especially with developer terms and mixed languages. Needs a recent graphics card |
 | **Qwen3-ASR 0.6B** | Better than Whisper with technical terms, and lighter on memory, for graphics cards with less memory |
 | **Whisper** | Works on any machine, including without a compatible graphics card. Less accurate with technical terms |
 
-Kepler checks the graphics card and marks the Qwen3-ASR size it suits as **Recommended**. A device that never chose an engine starts on that size. Without WebGPU, the page says *Qwen3-ASR needs a graphics card with WebGPU, which is not available here. Whisper works on this computer.*, and Whisper is the engine.
+Kepler checks the graphics card and marks the Qwen3-ASR size it suits as **Recommended**. Without WebGPU, only Whisper can run.
 
-To set up Qwen3-ASR, follow these steps:
+To set up dictation, follow these steps:
 
-1. Open **Settings → Voice input**.
-2. Under **Transcription engine**, pick a Qwen3-ASR card.
-3. Click **Download and set up**, which shows the download size.
+1. Open **Settings → Voice**.
+2. For Whisper, pick a **Quality** on its row: **Fast**, **Balanced**, **Accurate**, or **Most accurate**. Kepler marks the best fit for this machine as *suggested*.
+3. Click **Download** on the model's row.
 
-To set up Whisper, follow these steps:
+Your first download turns dictation on. Downloads keep going if you leave the page, and Kepler notifies you when the model is ready. With more than 1 model downloaded, pick the one dictation uses.
 
-1. Under **Transcription engine**, pick **Whisper**.
-2. Under **Set up voice input**, click **Get started**. Kepler checks what this machine can run. This check runs once.
-3. Under **Choose transcription quality**, pick **Fast**, **Balanced**, **Accurate**, or **Most accurate**. Kepler marks the best fit for this machine as **Suggested**.
-4. Click **Download and set up**.
-
-Setting up turns voice input on. Downloads keep going if you leave the page, and Kepler notifies you when the model is ready. Until a newly chosen model is downloaded, dictation keeps using a model that is already ready, and the page says so.
-
-Once a model is installed, the page offers these settings:
+Once a model is downloaded, these settings apply:
 
 | Setting | What it does |
 |---|---|
-| **Use voice input in the chat prompt** | Turns the microphone on or off. Turning it off pauses voice input, and the downloaded models stay on this computer |
-| **Dictation language** | With a Qwen3-ASR model ready: the language you speak. See [Dictation language](#dictation-language) |
-| **Remove Qwen3-ASR models** | Deletes every downloaded Qwen3-ASR model and frees their storage. If Qwen3-ASR is what dictates, the microphone stops using it |
-| **Change quality** | With Whisper: reopens the quality picker, so you can switch to another Whisper model |
-| **Remove Whisper** | Deletes the Whisper model and frees its storage. If Whisper is what dictates, the chat microphone turns off |
-| **Technical details** | With Whisper: shows the model ID, its revision, and the backend and data type it runs on |
+| **Remove…** | On a downloaded model's row: deletes the model and frees its storage. Removing the model that dictates turns the microphone off until you pick another |
+| **Dictation language** | With a Qwen3-ASR model: the language you speak. See [Dictation language](#dictation-language) |
 | **When you stop talking** | Chooses what happens to what you say. See [Choose what happens when you stop talking](#choose-what-happens-when-you-stop-talking) |
-
-If you use Whisper and never chose an engine, on a computer that can run Qwen3-ASR, the page offers **Try Qwen3-ASR for better results** once, with **Switch to Qwen3-ASR (*size*)** and **Not now**.
 
 ### Dictation language
 
-With Qwen3-ASR, **Dictation language** is **Auto-detect** by default, or 1 of 30 languages, each listed by its own name. Choose a language to always dictate in it. **Auto-detect** picks among your system's preferred languages and the app language. It also favors the languages this device has reliably dictated in before. Whisper ignores this setting.
+With Qwen3-ASR, **Dictation language** is **Auto-detect** by default, or 1 of 30 languages, each listed by its own name. Choose a language to always dictate in it. Whisper ignores this setting.
 
 ### Model updates
 
-When a newer version of a Qwen3-ASR model ships, a notice on this device says once that a newer version of the voice model is available, with **Update**. **Settings → Voice input** keeps offering **Update (*size*)**, and says *A newer version of this model is available. Dictation keeps using the installed one until you update.*
+When a newer version of a Qwen3-ASR model ships, a notice offers **Update**, and the model's row in **Settings → Voice** keeps offering **Update**. Dictation keeps using the installed model until you update.
 
 ### Linux graphics cards
 
@@ -153,7 +140,7 @@ On Linux, Kepler turns WebGPU on so Qwen3-ASR can use the graphics card:
 
 If Kepler's first window hangs or never draws with WebGPU on, Kepler turns WebGPU off for later launches and restarts. Without WebGPU, use Whisper.
 
-For every voice input setting, see [Voice input settings](/kepler/settings-app#voice-input).
+For every dictation and read aloud setting, see [Voice settings](/kepler/settings-app#voice).
 
 ***
 
@@ -163,12 +150,11 @@ Hover the microphone, and its tooltip explains why:
 
 | Tooltip | What it means |
 |---|---|
-| *Voice input is off. Turn it on in Settings.* | Not set up yet, or turned off. Clicking opens Settings |
-| *Voice input needs a one-time setup. Open Settings to finish it.* | Enabled, but no model is downloaded. Clicking opens Settings |
-| *Voice input requires a secure (https) connection* | You're using Kepler over plain HTTP, where the browser will not grant microphone access |
-| *Voice input is not supported in this environment* | This build or browser cannot run it |
-| *The selected voice model needs WebGPU, which is not available here. Open Settings to choose Whisper.* | A Qwen3-ASR model is selected, but this computer or browser has no WebGPU. Clicking opens Settings at **Transcription engine** |
-| *The graphics card is not responding, so voice input cannot start. Open Settings to check it again.* | The graphics card did not answer. Clicking opens Settings at **Transcription engine** |
+| *Dictation needs a model. Open Settings to download one.* | No model is downloaded yet. Clicking opens Settings |
+| *Dictation requires a secure (https) connection* | You're using Kepler over plain HTTP, where the browser will not grant microphone access |
+| *Dictation is not supported in this environment* | This build or browser cannot run it |
+| *The selected voice model needs WebGPU, which is not available here. Open Settings to choose Whisper.* | A Qwen3-ASR model is selected, but this computer or browser has no WebGPU. Clicking opens Settings |
+| *The graphics card is not responding, so dictation cannot start. Open Settings to check it again.* | The graphics card did not answer. Clicking opens Settings |
 | *Loading voice model…* / *Transcribing…* | Busy. The button is disabled for the moment |
 
 <figure style="text-align:center">
@@ -178,34 +164,58 @@ Hover the microphone, and its tooltip explains why:
   <figcaption style="text-align:center; color:#888">The microphone with a Qwen3-ASR model selected on a computer without WebGPU.</figcaption>
 </figure>
 
-A microphone that is available but idle reads **Start voice input**; while recording, it reads **Stop and transcribe**. With Qwen3-ASR, the tooltip also names the engine, for example **Start voice input · Qwen3-ASR 1.7B**. You can always stop. If the surrounding prompt goes read-only mid-recording, the transcript still lands in the draft.
+With Qwen3-ASR, the microphone's **Dictate** tooltip also names the model, for example **Dictate · Qwen3-ASR 1.7B**.
 
-When voice input fails, Kepler names the cause, with **Open Settings** where Settings can fix it. For example:
+When dictation fails, Kepler names the cause, with **Open Settings** where Settings can fix it. For example:
 
 - *A voice model is being installed. Try again when it finishes.*
 - *The voice model is no longer downloaded on this computer. Download it again in Settings.*
 - *The voice engine stopped responding. Try again; the model reloads on its own.*
-- *Voice input stopped unexpectedly.*
+- *Dictation stopped unexpectedly.*
 
 ***
 
 ## Microphone permission on macOS
 
-macOS asks for microphone access the first time you record, and Kepler prompts for it rather than failing silently.
+macOS asks for microphone access the first time you record.
 
-If access is denied or restricted, Kepler explains what to do:
+If access is denied or restricted, turn it on in **System Settings → Privacy & Security → Microphone**, if your device policy allows it. **Open System Settings**, in Kepler's message, takes you straight to that pane. You may need to restart Kepler for the change to take effect.
 
-> Kepler can't use the microphone because access is denied or restricted. Turn it on in System Settings → Privacy & Security → Microphone if your device policy allows it. You may need to restart Kepler for the change to take effect.
+***
 
-**Open System Settings** takes you straight to the Microphone pane. The guidance stays on screen if the deep link cannot open, so you keep the instructions.
+## Read aloud
+
+Read aloud speaks an agent's replies to you. Kepler reads only the prose: code blocks, diffs, and tables become a short summary. In the chat, the sentence being read is highlighted.
+
+To have a reply read aloud, use one of these controls:
+
+- **Read aloud**, the speaker button under each chat reply. While that reply plays, the button reads **Stop reading**.
+- **Read aloud from here**, in the right-click menu of a message or a terminal session. Kepler reads from the sentence under the pointer through the replies after it.
+- **Read last reply**, on a terminal session's status bar.
+
+While anything is being read, **Stop reading** appears in the top bar, on every page.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/read-aloud-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/read-aloud-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="An agent reply in the chat being read aloud: its second sentence, The total now takes the discount off before tax, so a discounted order no longer pays tax on money it never spent, is highlighted, and under the reply the Read aloud button has turned into Stop reading, a square icon between Copy and the reply's time.">
+  </a>
+  <figcaption style="text-align:center; color:#888">A reply being read aloud, with its current sentence highlighted.</figcaption>
+</figure>
+
+The read aloud controls appear only on a computer with a voice to read with. Read aloud starts with your system's voices. To change the voice, follow these steps:
+
+1. Open **Settings → Voice**, and go to **Read aloud**.
+2. Under **Voice engine**, choose **System voices** or **Kokoro**. Kokoro has natural English voices and needs a graphics card with WebGPU. Click **Download** to get it. Until Kokoro is downloaded, and for text that is not English, the system voice reads.
+3. Pick a **Voice**. Choosing one plays a short sample.
+4. Set the **Speed**.
 
 ***
 
 ## Remote windows
 
-Voice input works in a window attached to a remote environment. The agent runs on the remote machine; the microphone and the transcription stay local, on the computer in front of you.
+Dictation works in a window attached to a remote environment. The agent runs on the remote machine; the microphone and the transcription stay local, on the computer in front of you.
 
-Over a plain HTTP connection the microphone is unavailable, and its tooltip reads *Voice input requires a secure (https) connection*.
+Over a plain HTTP connection the microphone is unavailable. See [Why the microphone is unavailable](#why-the-microphone-is-unavailable).
 
 Voice settings belong to each computer:
 

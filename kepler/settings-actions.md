@@ -13,7 +13,7 @@ hosted_variant: both
 status: preview
 last_verified: 2026-11
 llms_include: true
-tags: [settings, actions, preferred-actions]
+tags: [settings, actions, suggested-actions]
 taxonomy:
   category: kepler
 custom_fields:
@@ -32,21 +32,28 @@ Use **Settings → Actions** to save the prompts you use often and run them on a
 
 | Section | What it holds |
 |---|---|
-| **Preferred Actions** | Which Action runs when you press the Action button on a task, issue, or pull request: one picker each for **Tasks**, **Issues**, **Pull requests I authored**, and **Pull requests from others**. Any picker can be **None** |
-| **All Actions** | The built-in Actions under **Built in**, and yours under **Custom**. Click a row to edit it, use **Restore default** on a row you have edited, or use **Delete** on a custom row |
+| **Suggested Actions** | The Action that the button on each kind of item suggests: **Tasks**, **Issues**, **Pull requests I authored**, and **Pull requests from others** |
+| **All Actions** | The built-in Actions under **Built in** and yours under **Custom**, each with what it does and where it is available |
 
-An Action can run with one of your [agent presets](/kepler/settings-agents#agent-presets). If the preset has no settings for the Action's agent, the Action shows **Preset unavailable for this agent** and runs without them. To fix it, add settings for that agent to the preset, or choose another preset in the Action's editor.
+Under **Suggested Actions**:
+
+- Set a picker to **None** to leave only the menu on that kind of item.
+- **Suggest automatically** switches a new task's button to the suggested Action when you link an issue or pull request to it. Turn it off to keep **Start**.
+
+Under **All Actions**, click a row to edit it, use **Restore default** on a row you have edited, or use **Delete** on a custom row. To delete an Action that an [automation](/kepler/automations) runs, delete the automation first.
+
+An Action can run with one of your [agent presets](/kepler/settings-agents#agent-presets), and the preset picks the agent. If the Action's preset no longer exists, its row shows **Preset unavailable for this agent** and the Action runs without it. To fix it, choose another preset in the Action's editor.
 
 To create an Action, click **New Action** in the **All Actions** section header. **Restore all defaults**, beside it, discards every edit. An Action you create or edit opens as a sub-page.
 
-Kepler has 4 built-in Actions, and each one is the default preferred Action for one kind of item:
+Kepler has 4 built-in Actions, and each one is the default suggested Action for one kind of item:
 
 - **Tasks** default to **Implement**.
 - **Issues** default to **Plan**.
 - Pull requests you authored default to **Address Feedback**.
 - Pull requests from others default to **Review**.
 
-For what the built-in Actions ask an agent to do, how the editor's **Title**, **Prompt**, **Applies to**, and **Agent** fields behave, and how an Action picks the agent it runs on, see [Actions](/kepler/actions).
+For what the built-in Actions ask an agent to do, how the editor's **Title**, **Prompt**, **Available on**, and **Agent** fields behave, and how an Action picks the agent it runs on, see [Actions](/kepler/actions).
 
 ***
 
