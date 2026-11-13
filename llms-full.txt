@@ -164,7 +164,7 @@ Pick the next step that fits what you want to do:
 | Understand what a task holds | [Tasks and Resources](/kepler/tasks-and-resources) |
 | Work inside a task | [The Task View](/kepler/task-view) |
 | Direct an agent mid-session | [Agent Sessions](/kepler/agent-sessions) |
-| Run an agent on a schedule, or on new GitHub or Jira activity | [Automations](/kepler/automations) |
+| Run an agent on a schedule, or on new GitHub or Jira activity | [Automations](/kepler/kepler-automations) |
 | See what every agent is doing at once | [The Agent Graph](/kepler/agent-graph) |
 | Reshape the list to fit how you work | [Arranging Your Work](/kepler/arranging-your-work) |
 | Review and ship what an agent wrote | [Review Changes](/kepler/review-changes) |
@@ -219,7 +219,7 @@ Common questions about starting work, giving agents your rules, preparing each n
 | Copy `.env` files into every new worktree | List them in a `.worktreeinclude` file at the repository's root, in `.gitignore` syntax. Kepler copies the matching Git-ignored files into each new worktree. | [Tasks and Resources → Make a new worktree ready to build](/kepler/tasks-and-resources#make-a-new-worktree-ready-to-build) |
 | Install dependencies in every new worktree | Add a per-repository command, such as `pnpm install`, and turn on **Run on worktree creation**. | [Settings → Per-repository commands](/kepler/settings-repositories#per-repository-commands) |
 | Keep agents in different worktrees from colliding on ports or databases | A worktree separates files, not ports, databases, or caches. Use a command that runs on worktree creation to give each worktree its own settings, such as its own port or database name. | [Tasks and Resources → What a worktree does not separate](/kepler/tasks-and-resources#what-a-worktree-does-not-separate) |
-| Run an agent on a schedule, or when an issue or pull request changes | Click **Automations** on the Dashboard and create an automation. It runs an Action or your own prompt on a schedule, or when new GitHub or Jira activity matches its query. | [Automations](/kepler/automations) |
+| Run an agent on a schedule, or when an issue or pull request changes | Click **Automations** on the Dashboard and create an automation. It runs an Action or your own prompt on a schedule, or when new GitHub or Jira activity matches its query. | [Automations](/kepler/kepler-automations) |
 
 ***
 
@@ -350,7 +350,7 @@ Kepler starts you with 3 views:
 
 Each view keeps its own layout, grouping, sort, filters, search and, on a Todo view, scope. Changes you make in the view's **View** menu save automatically, and switching to another view and back restores its open panels. See [Arranging Your Work](/kepler/arranging-your-work).
 
-The **Automations** button, after the views, opens your automations: agents that run on a schedule or when new GitHub or Jira activity matches a query. A count on the button shows the runs that need you. See [Automations](/kepler/automations).
+The **Automations** button, after the views, opens your automations: agents that run on a schedule or when new GitHub or Jira activity matches a query. A count on the button shows the runs that need you. See [Automations](/kepler/kepler-automations).
 
 To work with views:
 
@@ -462,7 +462,7 @@ Each task row shows:
 - Session activity, and a pill for its running terminals
 - Time
 - A **Star** button, shown when you hover or focus the row, and kept in view once the task is starred
-- An **Automation** badge, on a task an automation started. Hover it to see the automation's query. See [Automations](/kepler/automations).
+- An **Automation** badge, on a task an automation started. Hover it to see the automation's query. See [Automations](/kepler/kepler-automations).
 
 Star a task to mark it important. In the **Inbox** grouping, a starred task lists under **Important**, and in every sort except **Manual**, starred tasks list first in their section. To take the star off, click **Unstar**. On a touch screen, use **Star** in the task's menu.
 
@@ -1338,7 +1338,7 @@ last_verified: 2026-11
 
 An **Action** is a named prompt you fire at a task, issue, or pull request to start agent work.
 
-You can change every Action's wording and agent, and choose which Action each kind of work suggests as its one-click default. An [automation](/kepler/automations) can also run an Action for you, on a schedule or when new GitHub or Jira activity matches its query.
+You can change every Action's wording and agent, and choose which Action each kind of work suggests as its one-click default. An [automation](/kepler/kepler-automations) can also run an Action for you, on a schedule or when new GitHub or Jira activity matches its query.
 
 ***
 
@@ -1521,7 +1521,7 @@ An Action you have never edited picks up new default wording when Kepler updates
 
 Deleting a custom Action that a suggested-Action slot points to sets that slot to **None**, so its rows show only the chevron. To pick a new suggested Action, go back to **Settings → Actions → Suggested Actions**.
 
-You cannot delete an Action that an automation runs. Delete the automation first; see [Automations](/kepler/automations#manage-an-automation).
+You cannot delete an Action that an automation runs. Delete the automation first; see [Automations](/kepler/kepler-automations#manage-an-automation).
 
 ***
 
@@ -1537,7 +1537,7 @@ By default an Action runs on your **default agent**, configured in **Settings �
 
 You save agent presets in **Settings → Agents → Agent presets**; see [Settings](/kepler/settings-agents#agent-presets). For example, pick a cheap, fast preset for triage and review, and a heavier one for implementation. If an Action's preset no longer exists, the Action shows **Preset unavailable for this agent**.
 
-An [automation](/kepler/automations) runs its Action unattended, on issue and pull request text that other people write. If an automation uses the Action, choose a mode that acts without asking only if you trust everyone who can open or comment on those items.
+An [automation](/kepler/kepler-automations) runs its Action unattended, on issue and pull request text that other people write. If an automation uses the Action, choose a mode that acts without asking only if you trust everyone who can open or comment on those items.
 
 **Custom agent settings** is an **all-or-nothing override**: it pins the provider, account, model, mode, and options together, rather than changing one of them and inheriting the rest.
 
@@ -4017,7 +4017,7 @@ Ask the chat to add a view to the Dashboard, or to rename a view or change its f
 
 Describe an automation in your own words, such as *Every Monday at 9, check my repos for outdated dependencies*, and the chat sets it up. You can also type the request in the **New automation** dialog in Automations and click **Ask Kepler**, which sends it to a new chat.
 
-The chat creates the automation paused and shows an **Automation created** card with what the automation watches, what it runs, and where. To start it, click **Turn on**. To see it in Automations, click **Open**. See [Automations](/kepler/automations).
+The chat creates the automation paused and shows an **Automation created** card with what the automation watches, what it runs, and where. To start it, click **Turn on**. To see it in Automations, click **Open**. See [Automations](/kepler/kepler-automations).
 
 ### Which agents can answer
 
@@ -4059,7 +4059,7 @@ The panel's shells belong to the panel. They never move to a task's terminal dra
 
 ---
 # Automations
-URL: https://help.gitkraken.com/kepler/automations/
+URL: https://help.gitkraken.com/kepler/kepler-automations/
 product: Kepler
 feature: Automations
 content_type: how-to
@@ -6227,7 +6227,7 @@ You can use a preset in these places:
 - **A session's agent settings.** In the composer, pick it in the **Preset** row, which appears when the chosen agent has presets. See [Agent Sessions](/kepler/agent-sessions#agent-model-mode-and-effort).
 - **The default agents.** The **New sessions start with** pill on [Default agent](/kepler/settings-tasks#default-agent), and the **New Ask Kepler chats start with** pill at the top of this page.
 - **Actions.** Each Action's **Preset** list, in the Action's editor. See [Actions](/kepler/actions).
-- **Automations.** An automation's agent settings can use a preset. See [Automations](/kepler/automations).
+- **Automations.** An automation's agent settings can use a preset. See [Automations](/kepler/kepler-automations).
 
 If Actions or automations use a preset you delete, Kepler lists them and asks you to choose a replacement. If you change a preset that automations use, Kepler names them and asks you to confirm, and they use the updated options from their next run.
 
@@ -6732,7 +6732,7 @@ Under **Suggested Actions**:
 - Set a picker to **None** to leave only the menu on that kind of item.
 - **Suggest automatically** switches a new task's button to the suggested Action when you link an issue or pull request to it. Turn it off to keep **Start**.
 
-Under **All Actions**, click a row to edit it, use **Restore default** on a row you have edited, or use **Delete** on a custom row. To delete an Action that an [automation](/kepler/automations) runs, delete the automation first.
+Under **All Actions**, click a row to edit it, use **Restore default** on a row you have edited, or use **Delete** on a custom row. To delete an Action that an [automation](/kepler/kepler-automations) runs, delete the automation first.
 
 An Action can run with one of your [agent presets](/kepler/settings-agents#agent-presets), and the preset picks the agent. If the Action's preset no longer exists, its row shows **Preset unavailable for this agent** and the Action runs without it. To fix it, choose another preset in the Action's editor.
 

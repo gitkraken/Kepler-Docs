@@ -149,7 +149,7 @@ Kepler starts you with 3 views:
 
 Each view keeps its own layout, grouping, sort, filters, search and, on a Todo view, scope. Changes you make in the view's **View** menu save automatically, and switching to another view and back restores its open panels. See [Arranging Your Work](/kepler/arranging-your-work).
 
-The **Automations** button, after the views, opens your automations: agents that run on a schedule or when new GitHub or Jira activity matches a query. A count on the button shows the runs that need you. See [Automations](/kepler/automations).
+The **Automations** button, after the views, opens your automations: agents that run on a schedule or when new GitHub or Jira activity matches a query. A count on the button shows the runs that need you. See [Automations](/kepler/kepler-automations).
 
 To work with views:
 
@@ -281,7 +281,7 @@ Each task row shows:
 - Session activity, and a pill for its running terminals
 - Time
 - A **Star** button, shown when you hover or focus the row, and kept in view once the task is starred
-- An **Automation** badge, on a task an automation started. Hover it to see the automation's query. See [Automations](/kepler/automations).
+- An **Automation** badge, on a task an automation started. Hover it to see the automation's query. See [Automations](/kepler/kepler-automations).
 
 Star a task to mark it important. In the **Inbox** grouping, a starred task lists under **Important**, and in every sort except **Manual**, starred tasks list first in their section. To take the star off, click **Unstar**. On a touch screen, use **Star** in the task's menu.
 
