@@ -13,7 +13,7 @@ hosted_variant: both
 status: preview
 last_verified: 2026-11
 llms_include: true
-tags: [agent-sessions, sessions, prompts, steering, queueing, models, modes, session-recovery]
+tags: [agent-sessions, sessions, prompts, steering, queueing, models, modes, dictation, read-aloud, session-recovery]
 taxonomy:
   category: kepler
 custom_fields:
