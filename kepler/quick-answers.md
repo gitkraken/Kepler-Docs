@@ -60,7 +60,7 @@ Common questions about starting work, giving agents your rules, preparing each n
 | Copy `.env` files into every new worktree | List them in a `.worktreeinclude` file at the repository's root, in `.gitignore` syntax. Kepler copies the matching Git-ignored files into each new worktree. | [Tasks and Resources → Make a new worktree ready to build](/kepler/tasks-and-resources#make-a-new-worktree-ready-to-build) |
 | Install dependencies in every new worktree | Add a per-repository command, such as `pnpm install`, and turn on **Run on worktree creation**. | [Settings → Per-repository commands](/kepler/settings-repositories#per-repository-commands) |
 | Keep agents in different worktrees from colliding on ports or databases | A worktree separates files, not ports, databases, or caches. Use a command that runs on worktree creation to give each worktree its own settings, such as its own port or database name. | [Tasks and Resources → What a worktree does not separate](/kepler/tasks-and-resources#what-a-worktree-does-not-separate) |
-| Run an agent on a schedule, or when an issue or pull request changes | Click **Automations** on the Dashboard and create an automation. It runs an Action or your own prompt on a schedule, or when new GitHub or Jira activity matches its query. | [Automations](/kepler/automations) |
+| Run an agent on a schedule, or when an issue or pull request changes | Click **Automations** on the Dashboard and create an automation. It runs an Action or your own prompt on a schedule, or when new GitHub or Jira activity matches its query. | [Automations](/kepler/kepler-automations) |
 
 ***
 
