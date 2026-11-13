@@ -1,6 +1,6 @@
 ---
 title: App Settings
-description: Change how Kepler looks and behaves, including its language, windows, default editor, notifications, themes, the Dashboard's views, chat, terminal and code settings, voice input, and keyboard shortcuts.
+description: Change how Kepler looks and behaves, including its language, the chat's send key, windows, default editor, notifications, themes, the Dashboard's views, chat, terminal and code settings, dictation and read aloud, and keyboard shortcuts.
 product: Kepler
 feature: Settings
 content_type: reference
@@ -13,7 +13,7 @@ hosted_variant: both
 status: preview
 last_verified: 2026-11
 llms_include: true
-tags: [settings, language, windows, default-editor, keep-awake, notifications, appearance, themes, voice-input, keyboard-shortcuts]
+tags: [settings, language, send-key, windows, default-editor, keep-awake, notifications, appearance, themes, voice, dictation, read-aloud, keyboard-shortcuts]
 taxonomy:
   category: kepler
 custom_fields:
@@ -27,17 +27,17 @@ custom_fields:
 
 Use these Settings pages to change how Kepler itself looks and behaves:
 
-- [General](#general): language, windows and dialogs, the default editor, and keeping agents running
+- [General](#general): language, the chat's send key, the default editor, windows and dialogs, keeping agents running, and usage insights
 - [Notifications](#notifications): which agent events notify you, on the desktop and in Kepler
 - [Appearance](#appearance): light or dark appearance and themes, the Dashboard's views, the chat, the terminal font, and the code font and diff layout
-- [Voice input](#voice-input): on-device speech-to-text, its transcription engine, and learned words
-- [Keyboard shortcuts](#keyboard-shortcuts): Kepler's keyboard shortcuts
+- [Voice](#voice): dictation, with its models and learned words, and read aloud
+- [Keyboard shortcuts](#keyboard-shortcuts): look up and change Kepler's keyboard shortcuts
 
 ***
 
 ## General
 
-Use **General** to choose Kepler's language, how its windows open, which editor opens your files, and whether agents keep running when your machine would sleep or Kepler restarts.
+Use **General** to choose Kepler's language, which key sends a chat message, which editor opens your files, how its windows open, whether agents keep running when your machine would sleep or Kepler restarts, and whether Kepler keeps usage statistics on your computer.
 
 ### Language
 
@@ -47,7 +47,28 @@ Use **General** to choose Kepler's language, how its windows open, which editor 
 |---|---|---|---|
 | **Language** | The display language for Kepler's interface | English | English, Español |
 
-The language also applies to native dialogs, not only to the in-app interface.
+The language also applies to Kepler's native dialogs.
+
+### Chat
+
+**Send messages with** chooses the key that sends a message from the chat box: **Enter**, the default, or **⌘ Enter** (**Ctrl + Enter** on Windows and Linux). With **Enter**, **Shift + Enter** starts a new line. With **⌘ Enter**, **Enter** starts a new line.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/settings-send-key-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/settings-send-key-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Chat section of Settings › General: Send messages with, set to Enter rather than Ctrl+Enter, the hint Shift+Enter starts a new line, and the note that in the browser on a phone or tablet, Enter always starts a new line.">
+  </a>
+  <figcaption style="text-align:center; color:#888">Send messages with, at its default.</figcaption>
+</figure>
+
+### Default editor
+
+**Default editor** has 1 setting:
+
+| Setting | What it controls | Default |
+|---|---|---|
+| **Open files and folders in** | The app that **Open in** and **⌘ ⇧**-click (**Ctrl + Shift**-click on Windows and Linux) on a file link use. The options are **Last used app**, each editor Kepler finds on this machine, and your system's default app | Last used app |
+
+With your system's default app, files open without line numbers, and folders open in Finder, Explorer, or your file manager. If Kepler cannot open any editor from the window you are in, the setting says so.
 
 ### Windows and dialogs
 
@@ -60,31 +81,19 @@ These settings set how windows and folder dialogs work on this machine:
 
 A change to **Restore windows on launch** takes effect the next time you start Kepler.
 
-### Default editor
-
-**Default editor** has 1 setting:
-
-| Setting | What it controls | Default |
-|---|---|---|
-| **Open files and folders in** | The app that **Open in** and **⌘ ⇧**-click (**Ctrl + Shift**-click on Windows and Linux) on a file link use. The options are **Last used app**, each editor Kepler finds on this machine, and your system's default app | Last used app |
-
-With your system's default app, files open without line numbers, folders open in Finder, Explorer, or your file manager, and programs open in your last used editor. If Kepler cannot open any editor from the window you are in, the setting reads *No editors can be opened from this window*.
-
 ### Keep agents running
 
 These settings keep agent work running when the machine would otherwise stop it. They apply to the machine the agents run on, so in a window connected to a remote machine, they apply to that machine:
 
 | Setting | What it controls | Default |
 |---|---|---|
-| **Keep this machine awake while agents work** | Blocks sleep and standby while an agent session is starting, running, or waiting for your input. It also blocks sleep while Remote Access is on, because sleeping would drop the connection, but not while Remote Access is waiting to reconnect | On |
+| **Keep this machine awake while agents work** | Blocks sleep while an agent session is starting, running, or waiting for your input, and while Remote Access is connected | On |
 | **Keep agents and terminals running across restarts and updates** | *Agent sessions and terminals stay alive while Kepler restarts or updates, and reconnect afterwards. Experimental.* | On |
 | **Put idle agents to sleep** | How long a chat agent can sit idle before Kepler stops it, from **After 5 minutes** to **After 1 hour**, or **Never** | After 15 minutes |
 
-The screen can still turn off. If Kepler cannot keep the machine awake, the setting says why under the switch.
+**Keep this machine awake while agents work** also counts Claude Code sessions running outside Kepler. The screen can still turn off. If Kepler cannot keep the machine awake, the setting says why under the switch.
 
-The setting counts Claude Code sessions detected outside Kepler as well as Kepler's own sessions. Kepler lets the machine sleep again as soon as the last of those sessions settles.
-
-**Keep agents and terminals running across restarts and updates** applies from the next session you start. On a build that does not support it, the switch is off and disabled.
+**Keep agents and terminals running across restarts and updates** applies from the next session you start.
 
 **Put idle agents to sleep** stops chat sessions you have left alone, and their status reads **Asleep**. Your next message wakes a session, and the conversation carries on. Agents that are working or waiting on you stay awake. See [Session status](/kepler/agent-sessions#session-status).
 
@@ -95,6 +104,21 @@ The setting counts Claude Code sessions detected outside Kepler as well as Keple
   <figcaption style="text-align:center; color:#888">Put idle agents to sleep, at its default.</figcaption>
 </figure>
 
+### Insights
+
+**Insights** has 1 setting:
+
+| Setting | What it controls | Default |
+|---|---|---|
+| **Collect usage insights** | *Keep local statistics about your sessions and tasks on this computer. Nothing leaves it.* | On |
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/settings-insights-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/settings-insights-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Insights section of Settings › General, with the Collect usage insights checkbox ticked and its help text: Keep local statistics about your sessions and tasks on this computer. Nothing leaves it.">
+  </a>
+  <figcaption style="text-align:center; color:#888">Collect usage insights, at its default.</figcaption>
+</figure>
+
 ***
 
 ## Notifications
@@ -103,7 +127,7 @@ Use **Notifications** to choose which agent events Kepler tells you about, and w
 
 ### What to notify you about
 
-**What to notify you about** is a grid. Each row is an event, and each column is a place Kepler can notify you: **Desktop** or **In Kepler**. The following table lists the events and their defaults in the desktop app:
+**What to notify you about** has a **Desktop** and an **In Kepler** box for each event. The following table lists the events and their defaults in the desktop app:
 
 | Event | When it fires | Desktop | In Kepler |
 |---|---|---|---|
@@ -113,9 +137,7 @@ Use **Notifications** to choose which agent events Kepler tells you about, and w
 | **Approval requests** | *An agent asks to do something in Kepler only you can approve, like deleting a worktree or rewriting a branch.* See [Approvals](/kepler/settings-agents#approvals) | On | On |
 | **Errors** | *A session stops because something went wrong.* | On | On |
 
-In a browser connected to Kepler, every **Desktop** box starts off. **Replies** stays off on the desktop unless you turned on system notifications in an earlier version of Kepler. Until you set **Approval requests** yourself, it follows **Permission requests**. When you turn on the first **Desktop** box, Kepler sends a sample notification so your OS asks for permission.
-
-After your first session starts, the desktop app sends 1 notification to say *Notifications are on*: *Kepler will notify you here when an agent needs you. Change this in Settings › Notifications.* Click the notification to open **Settings → Notifications**. If every **Desktop** box is off, Kepler skips this notification.
+In a browser connected to Kepler, every **Desktop** box starts off. Until you set **Approval requests** yourself, it follows **Permission requests**. When you turn on the first **Desktop** box, Kepler sends a sample notification so your OS asks for permission.
 
 These settings appear under the grid:
 
@@ -124,7 +146,7 @@ These settings appear under the grid:
 | **Play a sound with desktop notifications** | Whether a desktop notification makes the OS notification sound | On |
 | **Notify even for the task you're looking at** | *Otherwise Kepler stays quiet about the task open in the window you're using.* | Off |
 
-To silence desktop notifications from one remote machine only, use **Mute notifications from {host}** on that machine in [Remote environments](/kepler/settings-environment#remote-environments).
+To silence desktop notifications from one remote machine only, use **Mute notifications from *host*** on that machine in [Remote environments](/kepler/settings-environment#remote-environments).
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/ade-settings-notifications-01-01-v3@2x.png" target="_blank" rel="noopener noreferrer">
@@ -158,10 +180,10 @@ Under **Theme**, each theme is a tile. The **Kepler** group holds the built-in t
 
 How you pick a tile depends on **Appearance**:
 
-- On **System**, each tile has a moon and a sun. Click the moon to *Use {name} when your system is dark*, or the sun to *Use {name} when your system is light*. Click the tile itself to *Use {name} for both dark and light*.
+- On **System**, each tile has a moon and a sun. Click the moon to use the theme when your system is dark, or the sun to use it when your system is light. Click the tile itself to use it for both.
 - On **Light** or **Dark**, click a tile to use it for that appearance.
 
-The tile in use reads **In use now**. If you used **Midnight** in an earlier version of Kepler, Kepler switches **Appearance** to **Dark** and keeps **Midnight** as your dark theme.
+The tile in use reads **In use now**.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/appearance-theme-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -170,7 +192,7 @@ The tile in use reads **In use now**. If you used **Midnight** in an earlier ver
   <figcaption style="text-align:center; color:#888">Appearance and Theme, at their defaults.</figcaption>
 </figure>
 
-Terminals follow the theme too. Agent CLIs and other terminal programs that support it match your theme.
+Agent CLIs and other terminal programs that support it match your theme too.
 
 #### Your themes
 
@@ -185,14 +207,14 @@ A theme file follows these rules:
 
 Kepler reads up to 64 theme files, and reloads a file each time you save it.
 
-If Kepler cannot fully read a theme's file, its tile shows **Has problems** or **Has warnings**. To see what is wrong, click the badge. A file that is not valid JSON shows *Line {line}, column {column}: {message}*. A problem with a theme's values names the setting it is in, such as *themes.1.extends*.
+If Kepler cannot fully read a theme's file, its tile shows **Has problems** or **Has warnings**. To see what is wrong, click the badge. Each problem gives its line and column, or names the setting it is in, such as *themes.1.extends*.
 
 A file with warnings still works. Kepler leaves out a theme that has errors, and still loads the other themes in its file. To fix a file, use one of these options below the list of problems:
 
 - **Create a task to fix it** gives the file to an agent.
-- In the desktop app, **Open file** opens the file in your editor, at the error's line when there is one. *Changes apply when you save.*
+- In the desktop app, **Open file** opens the file in your editor, at the error's line when there is one. Changes apply when you save.
 
-A tile's **More actions for {name}** menu has **Show in folder** and **Move to Trash** (**Move to Recycle Bin** on Windows).
+A tile's **More actions for *theme*** menu has **Show in folder** and **Move to Trash** (**Move to Recycle Bin** on Windows).
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/theme-problems-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -203,18 +225,18 @@ A tile's **More actions for {name}** menu has **Show in folder** and **Move to T
 
 #### Theme gallery
 
-**Browse gallery** opens the **Theme gallery**: *Themes from the community, each checked for contrast. Try one on Kepler before you install it.* The gallery needs an internet connection. It has the following controls:
+**Browse gallery** opens the **Theme gallery** of community themes, each checked for contrast, which you can try before you install. The gallery needs an internet connection. It has the following controls:
 
 - **Search themes**, which matches a theme's name, author, tags, or description.
 - **Show**, which filters to **All**, **Dark**, or **Light** themes.
 - **Sort:**, with **Featured**, **Newest**, or **Name**.
 
-Click a theme to see its details card, drawn in the theme's own colors. The card shows its author, its dark and light variants, **Version**, **License**, and **Updated**, and any contrast warnings in your version of Kepler. Then choose one of the following:
+Click a theme to see its details card, with its author, its dark and light variants, its version and license, and any contrast warnings. Then choose one of the following:
 
-- **Install** adds the theme to **Your themes** without changing the theme on screen. The button then reads **Use**, or **Use for dark and light** for a theme with both.
-- **Try it** closes the gallery and paints the whole window in the theme, so you can open a diff or a terminal to judge it. A bar at the bottom reads **Trying {name}**, with **Use {name}** and **Done**, which returns you to the gallery.
+- **Install** adds the theme to **Your themes** without changing the theme on screen. The button then reads **Use**.
+- **Try it** closes the gallery and paints the whole window in the theme, so you can open a diff or a terminal to judge it. In the bar at the bottom, click **Use *theme***, or **Done** to return to the gallery.
 
-If a theme you already have uses the same id, Kepler asks before it replaces that file, and moves the old file to the Trash. A gallery theme you installed and have not edited offers **Update to {version}** on its tile when a newer version is published. The gallery's themes come from `gitkraken/kepler-themes` on GitHub, where you can also publish your own.
+If a theme you already have uses the same id, Kepler asks before it replaces that file, and moves the old file to the Trash. A gallery theme you installed and have not edited offers **Update to *version*** on its tile when a newer version is published. The gallery's themes come from `gitkraken/kepler-themes` on GitHub, where you can also publish your own.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/theme-gallery-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -224,38 +246,33 @@ If a theme you already have uses the same id, Kepler asks before it replaces tha
 </figure>
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/theme-gallery-try-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/theme-gallery-try-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Settings › Appearance painted in the Amethyst theme while trying it from the gallery, with the preview bar at the bottom: Trying Amethyst Dark, a Dark / Light switch, Use Amethyst and Done.">
+  <a href="/wp-content/uploads/theme-gallery-try-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/theme-gallery-try-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Settings › Appearance painted in the Amethyst theme while trying it from the gallery, with the preview bar at the bottom: Trying Amethyst Dark, a Dark / Light switch, Use Amethyst and Done.">
   </a>
   <figcaption style="text-align:center; color:#888">Trying a gallery theme on the whole window before you use it.</figcaption>
 </figure>
 
 #### Create a theme
 
-**Create a theme** opens the new task launcher with a prompt already written for an agent, ending in *The theme I want:* for you to describe it. The agent reads and saves themes through Kepler's `theme_get` and `theme_save` tools, so it does not need the themes folder attached. The agent checks the theme's format and contrast before saving. **Create a task to fix it**, on a broken theme file, starts the same kind of task with that file's problems listed.
+**Create a theme** opens the **New task** composer with a prompt already written for an agent, ending in *The theme I want:* for you to describe it. You do not need to attach the themes folder: the agent checks the theme's format and contrast, then saves it to **Your themes**. **Create a task to fix it**, on a broken theme file, starts the same kind of task with that file's problems listed.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/create-a-theme-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/create-a-theme-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The New task launcher opened from Create a theme, its prompt asking the agent to read theme_get, check a draft with theme_save using dryRun, then save it, and ending in The theme I want. Add issue, Add PR and Add context sit above the prompt, and the agent picker, Start and Add repo or folder below it.">
+    <img src="/wp-content/uploads/create-a-theme-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The New task composer opened from Create a theme, its prompt asking the agent to read theme_get, check a draft with theme_save using dryRun, then save it, and ending in The theme I want. Add issue, Add PR and Add context sit above the prompt, and the agent picker, Start and Add repo or folder below it.">
   </a>
-  <figcaption style="text-align:center; color:#888">The launcher that Create a theme opens.</figcaption>
+  <figcaption style="text-align:center; color:#888">The New task composer that Create a theme opens.</figcaption>
 </figure>
 
 #### Themes in a remote window
 
-Themes belong to this computer, as your choice of theme does. Every window, including one connected to a remote environment, lists and installs themes in this computer's themes folder and gallery. In a window connected to another machine, the picker adds an **On {host}** group with that machine's themes, compared with the copies on this computer:
+Themes and your choice of theme belong to this computer. Every window, including one connected to a remote environment, lists and installs themes in this computer's themes folder and gallery.
 
-| The theme on {host} | The picker offers |
-|---|---|
-| Not on this computer | **Install {name} on this computer** |
-| A copy you installed from {host} earlier, changed since | **Update {name} from {host}**, which updates it at once |
-| A later version of your own copy | **Update {name} to {version} from {host}**, marked **Update to {version}** |
-| An earlier version of your own copy | **Replace {name} on this computer with the copy on {host}**, marked **Older than yours** |
-| A copy that differs from yours in another way | **Replace {name} on this computer with the copy on {host}**, marked **Differs from yours** |
+In a window connected to another machine, the picker adds an **On *host*** group with that machine's themes:
 
-Updating or replacing your own copy asks first: **Update {name} to {version}?** or **Replace {name} on this computer?**. Your copy moves to the Trash (the Recycle Bin on Windows), and Kepler confirms *Your previous copy is in the {bin}.* Where Kepler cannot use a Trash, it does not replace your copy: *To use this version, remove the copy on this computer first*. A host update to your own copy also shows on its tile in **Your themes**.
+- A theme you do not have offers **Install *theme* on this computer**.
+- A theme that differs from your copy offers to update or replace your copy, and is marked **Update to *version***, **Older than yours**, or **Differs from yours**.
 
-Kepler never replaces your copy on its own; an update from {host} waits until you choose it.
+Kepler asks before it updates or replaces your copy, and moves your copy to the Trash (the Recycle Bin on Windows). It never replaces your copy on its own.
 
 ### Dashboard
 
@@ -267,13 +284,13 @@ These settings set where the Dashboard's views sit and how they look:
 | **View style** | How views in or below the title bar look | Tabs | Tabs, Pills |
 | **Size** | How big views along the left side are | Default | Default, Compact |
 | **Counts on views** | Shows how many tasks match each view's filters | On | On, Off |
-| **Search box** | How wide the Dashboard's search box is | Grows as you type | Grows as you type, Full width |
+| **Search box** | How wide the Dashboard's search box is | Full width | Grows as you type, Full width |
 
 With **Along the left side**, the **Settings** button moves to the bottom of the views.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/settings-appearance-dashboard-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/settings-appearance-dashboard-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Dashboard section of Settings › Appearance at its defaults: Views, with picture tiles for In the title bar, Below the title bar (chosen) and Along the left side; View style, with Tabs chosen over Pills; Size, Default or Compact, marked Left side only; Counts on views, switched on; and Search box, Grows as you type chosen over Full width. Each row has its help line.">
+  <a href="/wp-content/uploads/settings-appearance-dashboard-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/settings-appearance-dashboard-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Dashboard section of Settings › Appearance at its defaults: Views, with picture tiles for In the title bar, Below the title bar (chosen) and Along the left side; View style, with Tabs chosen over Pills; Size, Default or Compact, marked Left side only; Counts on views, switched on; and Search box, with Full width chosen over Grows as you type. Each row has its help line.">
   </a>
   <figcaption style="text-align:center; color:#888">The Dashboard settings, at their defaults.</figcaption>
 </figure>
@@ -312,7 +329,7 @@ The grayed text in **Family** is an example, not the value in effect. If Kepler 
 
 Each Kepler terminal belongs to a worktree. Opening a terminal starts a shell in that worktree's folder, so you do not need to `cd` into it, and the shell loads your profile the same way an interactive login shell would. Use **⌘ J** to show and hide the terminal panel, **New terminal** to open another terminal, and **Close terminal** to end one.
 
-Use terminals for work next to an agent session: running tests while the agent writes code, checking Git state, or reproducing something the session did not show. A terminal starts in one worktree and stays there, so work that spans several repositories is usually easier in a standalone terminal.
+Use terminals for work next to an agent session: running tests while the agent writes code, checking Git state, or reproducing something the session did not show. A terminal starts in one worktree and stays there, so for work that spans several repositories, use a standalone terminal.
 
 ### Code
 
@@ -328,141 +345,125 @@ To switch a single diff without changing the default, use the layout button on t
 
 ***
 
-## Voice input
+## Voice
 
-Use **Voice input** to talk to your agents instead of typing. Kepler transcribes your speech on this machine, and your speech never leaves it. Kepler saves these settings on this machine.
+Use **Voice** to talk to your agents instead of typing, and to have their replies read aloud. Both run on this machine, so nothing you say or hear leaves it. Kepler saves these settings on this machine.
 
-### Voice input
+### Dictation
 
-**Use voice input in the chat prompt** shows the microphone in the chat prompt. *Turn this off to pause voice input. The downloaded models stay on this computer.* Installing a model turns this switch on.
+Dictation is the microphone in the chat prompt. It turns on once a model is downloaded. To choose and download a model, see [Set up dictation in Settings](/kepler/voice-input#set-up-dictation-in-settings).
 
-### Transcription engine
+| Setting | What it controls | Default |
+|---|---|---|
+| **Model** | The on-device model that dictates: **Qwen3-ASR 1.7B**, **Qwen3-ASR 0.6B**, or **Whisper**. Each row has **Download**, and **Remove…** once downloaded | None until you download one |
+| **Dictation language** | With Qwen3-ASR, the language you speak. Whisper ignores it | Auto-detect |
+| **When you stop talking** | Insert the text, send the prompt, or keep listening | Insert the text so you can edit it |
+| **Learned words** | Words Qwen3-ASR learned from your fixes, and suggestions to approve. See [Teach dictation your words](/kepler/voice-input#teach-dictation-your-words) | Empty |
 
-Choose the engine that turns your speech into text. Every engine runs on this computer, and nothing you say leaves it. Qwen3-ASR reads what you are writing, so it gets developer terms like Jira, rebase, or pull request right more often than Whisper. The section offers 3 engines:
+### Read aloud
 
-| Engine | What it's best at |
-|---|---|
-| **Qwen3-ASR 1.7B** | *The most accurate, especially with developer terms and mixed languages. Needs a recent graphics card.* |
-| **Qwen3-ASR 0.6B** | *Better than Whisper with technical terms, and lighter on memory. For graphics cards with less memory.* |
-| **Whisper** | *Works on any machine, including without a compatible graphics card. Less accurate with technical terms.* |
+**Read aloud** reads agent replies to you from the chat, the terminal, or the title bar. To use it, see [Read aloud](/kepler/voice-input#read-aloud).
 
-Both Qwen3-ASR engines need a graphics card with WebGPU. On a new device, Kepler selects the Qwen3-ASR size that suits its graphics card and marks it **Recommended**. Kepler selects Whisper instead when the machine has no WebGPU, or when a Whisper model is already installed.
+| Setting | What it controls | Default |
+|---|---|---|
+| **Voice engine** | **System voices**, or **Kokoro**, natural English voices that need a download | System voices |
+| **Voice** | The voice that reads | System default |
+| **Speed** | How fast Kepler reads | 1x |
 
-Each engine's card shows its approximate download size. To install a Qwen3-ASR model, click **Download and set up ({size})**. The card then reads *Ready on this computer.* Until the engine you selected finishes downloading, dictation keeps using an engine that is already installed. **Remove Qwen3-ASR models** deletes every downloaded Qwen3-ASR model, after you confirm. If you use Whisper, a card suggests **Switch to Qwen3-ASR ({size})** once, with **Not now**.
-
-When a newer version of an installed Qwen3-ASR model is released, the card says *A newer version of this model is available. Dictation keeps using the installed one until you update.*, with **Update ({size})**. Kepler also tells you once, in a notification with **Update**.
-
-With a Qwen3-ASR engine, **Dictation language** sets *The language you speak.* **Auto-detect**, the default, picks among your system's preferred languages and the app language. If those name fewer than 2 languages, it picks among all languages. Over time, it favors the languages this device has dictated in successfully. To always dictate in one language, choose that language. Whisper ignores this setting.
-
-#### Whisper
-
-With **Whisper** selected, setup takes you through these steps, 1 at a time. Each step appears only when it can do something:
-
-| Step | What it is |
-|---|---|
-| **Set up voice input** | *Takes a minute: Kepler checks what this machine can run, then downloads a model.* **Get started** begins setup |
-| Hardware check | A one-time measurement of how fast this machine transcribes: *Checking what this machine can run…* It runs once. Later quality changes skip it |
-| **Choose transcription quality** | Picks a model, with the check's recommendation marked **Suggested**. **Download and set up** installs it |
-| Ready | The installed model and its size on disk, with **Change quality**, **Remove Whisper**, and **Technical details** |
-
-Whisper offers 4 quality levels:
-
-| Option | What it's best at |
-|---|---|
-| **Fast** | Short prompts in a quiet room, transcribed almost instantly on any machine. The best place to start |
-| **Balanced** | Longer sentences and technical words, still quick on most machines |
-| **Accurate** | Accents, names, and background noise. Expect a short pause after speaking on machines without a modern graphics card |
-| **Most accurate** | The best quality available, including for languages other than English. Worth it on Apple Silicon or a recent graphics card, and slow on anything older |
-
-Each option shows its approximate download size. A download continues if you leave the page, and Kepler notifies you when the model is ready.
-
-Once you have installed a Whisper model, use these controls to manage it:
-
-| Control | What it does |
-|---|---|
-| **Change quality** | Reopens the quality picker |
-| **Remove Whisper** | Removes the Whisper model and frees its disk space. If Whisper is the engine that dictates, the chat microphone turns off |
-| **Technical details** | Shows the model's revision, and the backend and data type it runs on |
-
-### When you stop talking
-
-Once you have installed a model, choose what happens when you stop recording:
-
-| Option | What it does |
-|---|---|
-| **Insert the text so you can edit it** | Puts the transcript in the prompt for you to review. The default |
-| **Send the prompt** | Sends the prompt automatically |
-| **Keep listening, transcribing each phrase as you pause** | Keeps the microphone open and transcribes each phrase as you pause |
-
-### Learned words
-
-Qwen3-ASR learns how to spell words that you fix in dictated text before you send it, 1 word at a time. When you fix the same word in 2 sends, Kepler suggests it, and dictation uses it once you approve it. Kepler stores only the words, on this device only, and keeps them after you sign out.
-
-When a fix becomes a suggestion, a notification says *A dictated word fix is ready to review*, with **Review**, which opens **Learned words**. The section has 2 lists:
-
-- **Suggested words**: *Fixes you made in two sends. Dictation uses a word only after you approve it.* Each word reads **Heard as {heard}**, with **Approve** and **Dismiss**. Kepler never suggests a dismissed fix again.
-- **Learned words**: the words dictation uses, each marked **In use** or **Added by you**, with **Remove {term}**. While Qwen3-ASR dictates, you can add a word yourself with **Add a word**.
-
-**Forget learned words** removes every word Qwen3-ASR learned or suggested, and every word you added, on this device, after you confirm.
-
-Kepler downloads each model from the internet once. Transcription then runs entirely on your device, and your audio is never uploaded. See [Voice Input](/kepler/voice-input).
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/settings-read-aloud-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/settings-read-aloud-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Read aloud section of Settings › Voice, at its defaults. Under Engine, System voices (Built in) is selected and Kokoro shows its download size and a Download button, and under Voice options, Voice is System default beside a sample button and Speed is a slider at 1x.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The Read aloud settings, at their defaults.</figcaption>
+</figure>
 
 ***
 
 ## Keyboard shortcuts
 
-Use **Keyboard shortcuts** to look up Kepler's shortcuts. The page lists them in 6 groups: **General**, **Navigation**, **Dashboard**, **Task page**, **Chat**, and **Changes and code views**. As the page says, *These shortcuts can't be changed yet.* Kepler also shows each shortcut in the menu items and button tooltips it belongs to. For a few tab shortcuts that Settings does not list, such as reopening a closed tab and jumping to a tab by position, see [Task View](/kepler/task-view#keyboard).
+Use **Keyboard shortcuts** to look up Kepler's shortcuts and choose your own keys. The page lists every command in 6 groups: **General**, **Navigation**, **Dashboard**, **Task page**, **Chat**, and **Changes and code views**. A command without a key shows **None**. Menu items and button tooltips show each command's keys, including the ones you set. For a few tab shortcuts that Settings does not list, such as reopening a closed tab and jumping to a tab by position, see [Task View](/kepler/task-view#keyboard).
 
-The tables show Mac symbols first. On Windows and Linux, **⌘** is **Ctrl** and **⌥** is **Alt**, and **⌃** is **Ctrl** on every platform.
+### Change a shortcut
 
-### General shortcuts
+1. Find the command, or type its name in **Search shortcuts**.
+2. Click the pencil (**Change shortcut**) on its row. If the command already has a key, a menu opens: choose **Change shortcut**, **Add another shortcut**, or **Remove** followed by the key.
+3. Press the new keys. **Escape** cancels, and **Backspace** removes the shortcut.
+
+If the keys already belong to another command, Kepler names it, and **Replace** moves the keys to this command. Kepler refuses keys it needs elsewhere, such as the key that sends chat messages, and says why.
+
+A changed row offers **Reset to default**. **Changed only** lists only the shortcuts you changed, and **Reset all shortcuts** puts every shortcut back to its default after you confirm. A row with a lock, such as **Copy the selection or the focused item** or **Dismiss / Cancel**, cannot be changed.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/settings-shortcuts-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/settings-shortcuts-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="Settings › Keyboard shortcuts, under its description, with new task typed in Search shortcuts, beside Changed only, the count 1 of 112 shortcuts, and Reset all shortcuts, dimmed. The General section lists New task with its Ctrl+N key and a pencil button showing the tooltip Change shortcut.">
+  </a>
+  <figcaption style="text-align:center; color:#888">Searching the shortcuts, with a row's Change shortcut button.</figcaption>
+</figure>
+
+### Default shortcuts
+
+The tables list the default keys, Mac symbols first. On Windows and Linux, **⌘** is **Ctrl** and **⌥** is **Alt**, and **⌃** is **Ctrl** on every platform.
+
+#### General shortcuts
 
 The **General** group holds app-wide shortcuts:
 
 | Action | Mac | Windows / Linux |
 |---|---|---|
 | Open settings | ⌘ , | Ctrl + , |
-| Toggle Ask Kepler chat | ⌘ L | Ctrl + L |
-| Toggle Ask Kepler chat | ⌘ K | Ctrl + K |
+| Toggle Ask Kepler chat | ⌘ L or ⌘ K | Ctrl + L or Ctrl + K |
 | Toggle Ask Kepler terminal | ⌃ ` | Ctrl + ` |
-| New Ask Kepler chat | ⌘ ⇧ K | Ctrl + Shift + K |
-| New Ask Kepler chat | ⌘ ⇧ L | Ctrl + Shift + L |
+| New Ask Kepler chat | ⌘ ⇧ K or ⌘ ⇧ L | Ctrl + Shift + K or Ctrl + Shift + L |
 | New task | ⌘ N | Ctrl + N |
 | Open quick launcher (global) | ⇧ ⌥ N | Shift + Alt + N |
 | New window | ⌘ ⇧ N | Ctrl + Shift + N |
-| Quit | None | Ctrl + Q |
+| Quit | ⌘ Q | Ctrl + Q |
 | Zoom in | ⌘ = | Ctrl + = |
-| Zoom out | ⌘ – | Ctrl + – |
+| Zoom out | ⌘ - | Ctrl + - |
 | Reset zoom | ⌘ 0 | Ctrl + 0 |
+| Toggle full screen | ⌘ ⌃ F | F11 |
+| Minimize | ⌘ M | Ctrl + M |
+| Reload | ⌘ R | Ctrl + R |
+| Hide Kepler | ⌘ H | macOS only |
+| Hide others | ⌘ ⌥ H | macOS only |
 | Copy the selection or the focused item | ⌘ C | Ctrl + C |
 | Close window | ⌘ ⇧ W | Ctrl + Shift + W |
+| Toggle terminal | ⌘ J | Ctrl + J |
 | New session | ⌘ T | Ctrl + T |
 | Rename task | F2 | F2 |
 | Delete task | ⌘ ⇧ Backspace | Ctrl + Shift + Backspace |
 | Manage remote environments | ⌘ ⇧ R | Ctrl + Shift + R |
+| Toggle side panel | ⌘ B | Ctrl + B |
 | Open file | ⌘ O | Ctrl + O |
+| Open folder | ⌘ ⇧ O | Ctrl + Shift + O |
 | Go to file | ⌘ P | Ctrl + P |
+| Go to task | ⌘ ⇧ P or F1 | Ctrl + Shift + P or F1 |
 | Dismiss / Cancel | Escape | Escape |
-| Back | ⌘ [ | Alt + ← |
-| Forward | ⌘ ] | Alt + → |
 
-### Navigation shortcuts
+**Go to task** and **Open folder** are also in the app menu, as **View › Command Palette…** and **File › Open Folder…**.
 
-The **Navigation** group moves you between tabs and regions:
+#### Navigation shortcuts
+
+The **Navigation** group moves you between tasks, tabs, and regions:
 
 | Action | Mac | Windows / Linux |
 |---|---|---|
+| Go to next task needing attention | None | None |
+| Go to next unread task | None | None |
+| Go to next task needing attention or unread | None | None |
 | Previous tab | ⌘ ⇧ [ | Ctrl + Shift + [ or Ctrl + PageUp |
 | Next tab | ⌘ ⇧ ] | Ctrl + Shift + ] or Ctrl + PageDown |
 | Move tab left | ⌘ ⌥ [ | Ctrl + Alt + [ or Ctrl + Shift + PageUp |
 | Move tab right | ⌘ ⌥ ] | Ctrl + Alt + ] or Ctrl + Shift + PageDown |
+| Focus next region | F6 | F6 |
+| Focus previous region | ⇧ F6 | Shift + F6 |
 | Close tab or panel | ⌘ W | Ctrl + W or Ctrl + F4 |
-| Toggle terminal | ⌘ J | Ctrl + J |
-| Dock or hide the task list or context panel | ⌘ B | Ctrl + B |
-| Next region | F6 | F6 |
-| Previous region | ⇧ F6 | Shift + F6 |
+| Go back | ⌘ [ | Alt + ← |
+| Go forward | ⌘ ] | Alt + → |
 
-### Dashboard shortcuts
+The 3 **Go to next task** commands open the next task that needs you, the next task with an unread reply, or the next of either.
+
+#### Dashboard shortcuts
 
 The **Dashboard** group works on the Dashboard's tasks and detail panels:
 
@@ -474,21 +475,20 @@ The **Dashboard** group works on the Dashboard's tasks and detail panels:
 | Move panel down | ⌘ ⌥ ⇧ ↓ | Ctrl + Alt + Shift + ↓ |
 | Move task to the previous Progress stage | ⌘ ⇧ ← | Ctrl + Shift + ← |
 | Move task to the next Progress stage | ⌘ ⇧ → | Ctrl + Shift + → |
-| Focus detail panel 1–8 | ⌘ 1–8 | Ctrl + 1–8 |
+| Focus detail panel 1 to 8 | ⌘ 1 to ⌘ 8 | Ctrl + 1 to Ctrl + 8 |
 | Focus last detail panel | ⌘ 9 | Ctrl + 9 |
-| Open previous item in the list | ⌥ ⇧ ↑ | Alt + Shift + ↑ |
-| Open next item in the list | ⌥ ⇧ ↓ | Alt + Shift + ↓ |
-| Switch detail panels | ⌃ Tab | Ctrl + Tab |
-| Switch detail panels, oldest first | ⌃ ⇧ Tab | Ctrl + Shift + Tab |
-| Maximize detail panel | ⌘ ⇧ M | Ctrl + Shift + M |
+| Previous item in list | ⌥ ⇧ ↑ | Alt + Shift + ↑ |
+| Next item in list | ⌥ ⇧ ↓ | Alt + Shift + ↓ |
+| Switch to older panel | ⌃ ⇧ Tab | Ctrl + Shift + Tab |
+| Switch to newer panel | ⌃ Tab | Ctrl + Tab |
+| Solo detail panel | ⌘ ⇧ M | Ctrl + Shift + M |
 | Maximize panel terminals | ⌘ ⇧ J | Ctrl + Shift + J |
-| Show or hide changes in detail panel | ⌘ ⇧ G | Ctrl + Shift + G |
-| Switch detail panels between columns and grid | ⌘ \ | Ctrl + \ |
-| Show the task list floating over the panels, or hide it | ⌘ ⇧ B | Ctrl + Shift + B |
-| Show or hide resources in detail panel | ⌘ ⇧ E | Ctrl + Shift + E |
+| Toggle changes pane | ⌘ ⇧ G | Ctrl + Shift + G |
+| Toggle task list peek | ⌘ ⇧ B | Ctrl + Shift + B |
+| Toggle resources pane | ⌘ ⇧ E | Ctrl + Shift + E |
 | Find in dashboard | ⌘ F | Ctrl + F |
 
-### Task page shortcuts
+#### Task page shortcuts
 
 The **Task page** group works on a task's page:
 
@@ -500,8 +500,9 @@ The **Task page** group works on a task's page:
 | Switch sessions | ⌃ Tab | Ctrl + Tab |
 | Switch sessions, oldest first | ⌃ ⇧ Tab | Ctrl + Shift + Tab |
 | Maximize terminal drawer | ⌘ ⇧ J | Ctrl + Shift + J |
+| Show or hide the preview in Add resources | ⌘ ⌥ P | Ctrl + Alt + P |
 
-### Chat shortcuts
+#### Chat shortcuts
 
 The **Chat** group works in a session's conversation:
 
@@ -510,9 +511,9 @@ The **Chat** group works in a session's conversation:
 | Find in conversation | ⌘ F | Ctrl + F |
 | Previous message | ⌘ ⌥ ↑ | Ctrl + Alt + ↑ |
 | Next message | ⌘ ⌥ ↓ | Ctrl + Alt + ↓ |
-| Interrupt & send | ⌘ ⇧ ⏎ | Ctrl + Shift + ⏎ |
+| Interrupt & send | ⌘ ⇧ Enter | Ctrl + Shift + Enter |
 
-### Changes and code view shortcuts
+#### Changes and code view shortcuts
 
 This group has 2 lists. The **Changes** list works in the Changes view:
 
@@ -523,7 +524,7 @@ This group has 2 lists. The **Changes** list works in the Changes view:
 | Next file | ⌥ ↓ | Alt + ↓ |
 | Next change | F7 | F7 |
 | Previous change | ⇧ F7 | Shift + F7 |
-| Show or hide changes panel | ⌘ B | Ctrl + B |
+| Toggle changes sidebar | ⌘ B | Ctrl + B |
 | Open all changes | ⌘ ⇧ A | Ctrl + Shift + A |
 | Comment on selection | ⌘ ⇧ C | Ctrl + Shift + C |
 | Edit working copy | ⌘ E | Ctrl + E |
@@ -551,17 +552,17 @@ Some keys do different things depending on where you are:
 - **⌘ P** filters changed files in the Changes view and opens **Go to file** elsewhere.
 - **⌘ F** finds in the Dashboard from its list or header, finds in a file or diff in a code view, and finds in the conversation elsewhere.
 - **⌘ ⇧ G** shows or hides changes in a Dashboard detail panel, and, on macOS, moves to the previous match in a code view.
-- **⌘ C** copies what a focused row, chip, or link names, such as a task's Kepler link, a pull request or issue link, a file path, or a commit hash, without opening a menu. In a text field, the message box, a terminal, or a text selection, it copies as usual.
+- **⌘ C** on a focused row, chip, or link copies what it names, such as a task's Kepler link, a pull request or issue link, a file path, or a commit hash. In a text field, a terminal, or a text selection, it copies as usual.
 
-**Open previous item in the list** and **Open next item in the list** work even while you type in the open panel's chat.
+**Previous item in list** and **Next item in list** work even while you type in the open panel's chat.
 
-**Open quick launcher** works while Kepler is in the background. Its row has a **Global** badge. **Quit**, **Ctrl + F4**, and the **PageUp** / **PageDown** tab keys are Windows and Linux shortcuts only. Kepler hides those rows on macOS, where you quit with the native **⌘ Q** menu item. **Close tab or panel** works only in the desktop app.
+**Open quick launcher** works while Kepler is in the background. Its row has a **Global** badge. **Close tab or panel**, **Toggle full screen**, **Minimize**, and **Reload** work only in the desktop app.
 
-On Windows and Linux, a focused terminal passes **Ctrl + W**, **Ctrl + L**, **Ctrl + B**, and **Ctrl + \\** to the shell. To toggle the Ask Kepler chat from a terminal, press **Ctrl + K**: the shell does not keep that key. **Ctrl + `** always toggles the Ask Kepler terminal, even from a terminal.
+On Windows and Linux, a focused terminal passes **Ctrl + W**, **Ctrl + L**, and **Ctrl + B** to the shell. To toggle the Ask Kepler chat from a terminal, press **Ctrl + K**: the shell does not keep that key. **Ctrl + `** always toggles the Ask Kepler terminal, even from a terminal.
 
-**Back** and **Forward** use different keys on each platform. Hold either key to keep moving through your history.
+Hold the **Go back** or **Go forward** key to keep moving through your history.
 
-**Send feedback**, **Show release notes**, **Show About**, **Check for updates**, and **Clean up worktrees** have no default key, so the page does not list them. You can open the first 4 from the app menu.
+**Send feedback**, **Show release notes**, **Show About Kepler**, **Check for updates**, and **Clean up worktrees** have no default key, nor do commands such as **Open documentation**, **Appearance: Dark**, and **Dashboard layout: Board**. To use one from the keyboard, give it a key on this page.
 
 ***
 

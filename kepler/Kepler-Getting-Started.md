@@ -52,12 +52,7 @@ Kepler has installers for these platforms:
 2. Run the installer.
 3. Launch Kepler.
 
-**If you open an older copy of Kepler** than the one that last used your data, Kepler stops at **Kepler is out of date** before it opens. The older copy cannot read everything the newer one saved, and sessions in particular may seem to have disappeared. The dialog names the version your data needs and offers these choices:
-
-- **Open Newer Version**, when a newer copy is installed
-- **Update and Restart**, when this copy can update itself (a Snap install does not offer it)
-- **Quit**
-- **Open Anyway**
+If Kepler stops at **Kepler is out of date**, you opened an older copy than the one that last used your data. Click **Open Newer Version** when a newer copy is installed, or **Update and Restart** to update this copy (not offered for a Snap install).
 
 ***
 
@@ -72,40 +67,56 @@ Kepler opens on a welcome screen, **Launch any agent. Land every PR.** Click **S
   <figcaption style="text-align:center; color:#888">The welcome screen on first launch.</figcaption>
 </figure>
 
-Kepler opens the sign-in page in your browser and replaces the button with a sign-in panel that reads *Continue in your browser*. Once you sign in, Kepler continues on its own. If no browser opened, click **Reopen browser**, or click **Copy link** and open the link in any browser. You can also paste the code from your browser under **Or paste the code from your browser**, then click **Sign in**. If Kepler cannot reach GitKraken, it says *Unable to reach GitKraken to start sign-in. Check your connection and try again.*
+Kepler opens the sign-in page in your browser. Once you sign in there, Kepler continues on its own. If no browser opened, click **Reopen browser**, or click **Copy link** and open the link in any browser. You can also paste the code from your browser under **Or paste the code from your browser**, then click **Sign in**.
 
-The screen's top corner shows Kepler's version. Click the version to check for updates. The corner shows **Checking…**, then **Up to date**, the download's progress, or *Unable to check for updates* with **Try again**. When an update has downloaded, the corner reads **Update ready to install** with **Update and restart**, so you can update before you sign in.
+**Behind a proxy.** Kepler uses your system's proxy settings, or the `HTTPS_PROXY` environment variable when you set it, and passes the same proxy to the agents and terminals it starts.
 
-In a window connected to another machine, the screen says *Continue in your other Kepler window*. You sign in from the Kepler window on this computer, and the remote window continues once you finish there. If Kepler cannot sign the remote window in, it says *Unable to sign this window in with your Kepler account. Reconnect it and try again.*
+To check for updates before you sign in, click the version in the screen's top corner. When an update has downloaded, click **Update and restart**.
+
+In a window connected to another machine, you sign in from the Kepler window on this computer, and the remote window continues once you finish there.
 
 To watch a short tour before you start, click the **Watch Quick Start Tour** tile on the welcome screen, or watch the <a href="https://www.youtube.com/playlist?list=PLXIji1KJqw9A" target="_blank" rel="noopener noreferrer">Kepler Quick Start Tour playlist</a> on YouTube.
 
 ***
 
-## Choose your agents and your look
+## Choose your agents, repos, and look
 
 After you sign in, a guided start walks you through setup. To skip it at any point, click **I'll explore on my own**.
 
 **Choose your coding agents.** Kepler finds the coding agents installed on this computer. In this step:
 
-- Switch on the agents you want Kepler to use, and make one the default. To add a missing agent, click the download button on its row. See [Agent Integrations](/kepler/agent-integrations#install-an-agent).
+- Switch on the agents you want Kepler to use, and make one the default. To add a missing agent, click its tile to install or locate it. After an install, Kepler offers to sign you in to the agent. See [Agent Integrations](/kepler/agent-integrations#install-an-agent).
 - Under **New sessions start in**, pick **Chat**, Kepler's own view of the agent, or **Terminal**, the agent's command-line app.
 - If your code is on another machine, use **Work on another machine?** to move this window there. Remote environments need a paid plan.
 
 If you installed an agent that Kepler did not find, click **Rescan**. To go on without an agent, click **Continue without an agent**. You can set one up later in **Settings → Agents**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/onboarding-no-agent-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/onboarding-no-agent-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The guided start's first step, Choose your coding agents, with no agent found: the nine coding agents sit in a box headed Set up a coding agent to get started, with Rescan and the line Install one here, or Rescan if you installed one yourself., each agent with an install or locate button. Kep says Hmm, no agents here yet. Installed one yourself? Press Rescan., and the step ends with I'll explore on my own and Continue without an agent.">
+  <a href="/wp-content/uploads/onboarding-no-agent-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/onboarding-no-agent-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The guided start's first step, Choose your coding agents, with no agent found: the list is headed Set up a coding agent to get started, with Rescan and the line Install one here, or Rescan if you installed one yourself., and the nine coding agents are dashed tiles, each ending in an arrow that you click to install or locate it. Kep says Hmm, no agents here yet. Installed one yourself? Press Rescan., and the step ends with I'll explore on my own and Continue without an agent.">
   </a>
   <figcaption style="text-align:center; color:#888">The first step of the guided start, with no agent found.</figcaption>
 </figure>
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/onboarding-agents-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/onboarding-agents-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The guided start's first step, Choose your coding agents, under Welcome to Kepler and the 01 Agents / 02 Theme & notifications steps: Claude Code and Codex are switched on among the nine coding agents, the others offer an install button, and New sessions start in offers Chat (selected) or Terminal. Kep says Kepler found Claude Code and Codex, with I'll explore on my own and Next at the bottom.">
+  <a href="/wp-content/uploads/onboarding-agents-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/onboarding-agents-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The guided start's first step, Choose your coding agents, under Welcome to Kepler and the 01 Agents / 02 Repos / 03 Theme & notifications steps: Claude Code and Codex are switched on among the nine coding agents, the others are dashed tiles ending in an arrow that you click to install or locate them, and New sessions start in offers Chat (selected) or Terminal. Kep says Kepler found Claude Code and Codex, with I'll explore on my own and Next at the bottom.">
   </a>
   <figcaption style="text-align:center; color:#888">The first step of the guided start, with two agents found and switched on.</figcaption>
+</figure>
+
+**Bring in your repos.** Every task runs in a repo or folder you add here. Kepler lists the repos and folders it found where you have worked, with the ones you use most already checked. In this step:
+
+- Check the repos you work in. To add one Kepler did not find, click **Add a folder**.
+- Confirm the **Repos folder**. Kepler finds your repos there and clones new ones into it.
+
+Then click the button that adds them, such as **Add 2 and continue**. Kepler adds only what you check.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/onboarding-repos-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/onboarding-repos-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The guided start's second step, Bring in your repos, with 02 Repos current in the step header: the Repos folder field reads /home/alex/code, and Repos and folders lists acme-web and acme-api checked and design-tokens unchecked, each with its path and when it was last used, under Filter, Select all, Unselect all and Add a folder. Back, I'll explore on my own and Add 2 and continue sit at the bottom.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The second step, with the 2 repos Kepler picked checked.</figcaption>
 </figure>
 
 **Make it yours.** Pick a theme, or open the **Theme gallery**, and choose how Kepler gets your attention under **Notify me**:
@@ -117,19 +128,17 @@ If you installed an agent that Kepler did not find, click **Rescan**. To go on w
 To try an alert, click **Send a test notification**. You can change these choices later in [Settings](/kepler/settings-app#notifications). Click **Finish** to open the **New task** composer on the Dashboard and start your first task.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/onboarding-theme-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/onboarding-theme-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The guided start's second step, Make it yours: Theme tiles Kepler Dark (selected), Midnight, Kepler Light and Theme gallery beside the System / Light / Dark switch on Dark, and Notify me presets Everything, When I'm needed (selected) and Only in Kepler, with Play a sound with desktop notifications ticked, Send a test notification, Back and Finish.">
+  <a href="/wp-content/uploads/onboarding-theme-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/onboarding-theme-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The guided start's third step, Make it yours, with 01 Agents and 02 Repos checked off and 03 Theme & notifications current: Theme tiles Kepler Dark (selected), Midnight, Kepler Light and Theme gallery beside the System / Light / Dark switch on Dark, and Notify me presets Everything, When I'm needed (selected) and Only in Kepler, with Play a sound with desktop notifications ticked, Send a test notification, Back and Finish.">
   </a>
-  <figcaption style="text-align:center; color:#888">The second step, with the theme and notification choices.</figcaption>
+  <figcaption style="text-align:center; color:#888">The third step, with the theme and notification choices.</figcaption>
 </figure>
-
-Kepler also adds the repositories you already work in, including those GitKraken Desktop and GitLens know, to your repository picker.
 
 ***
 
 ## Finish the setup checklist
 
-After the guided start, the **Setup** entry in the top bar tracks 2 setup items and shows **Setup · N/2** until you finish them. Open it to see **Finish setting up Kepler** and your progress. Once both items are done, the **Setup** entry disappears from the top bar.
+After the guided start, the **Setup** entry in the top bar tracks 2 setup items and shows **Setup · N/2** until you finish them. Once both are done, the **Setup** entry disappears from the top bar.
 
 | # | Item | What it does |
 |---|---|---|
@@ -146,7 +155,7 @@ Expand **More setup options** for optional items:
 
 If your project needs a setup step, use **Add repo commands** early. Save a repository's install or build command once, and Kepler can run it every time it creates a worktree, so an agent never starts in a checkout it cannot build. See [Tasks and Resources](/kepler/tasks-and-resources).
 
-You can set folder paths and everything else on the checklist in [Settings](/kepler/settings-setup-account#setup). To remove the checklist from the top bar, click **Hide from toolbar (still available in Settings)**. You can still open it from Settings.
+You can set folder paths and everything else on the checklist in [Settings](/kepler/settings-setup-account#setup). To remove the checklist from the top bar, click **Hide from toolbar (still available in Settings)**.
 
 ***
 
@@ -194,6 +203,8 @@ To start a task that has no issue or pull request behind it:
 
 You can also attach nothing at all and turn the task into real work later. See [Create a task](/kepler/create-task).
 
+If you work in Conductor or another agent app, you can import its workspaces as tasks, chats included. See [Create a task → From another agent app](/kepler/create-task#from-another-agent-app).
+
 <figure style="text-align:center">
   <a href="/wp-content/uploads/new-task-button-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/new-task-button-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The New task button at the left end of the Kepler top bar, a single button with a plus sign, after the application menu, the window switcher and the Back and Forward buttons.">
@@ -213,6 +224,7 @@ Pick the next step that fits what you want to do:
 | Understand what a task holds | [Tasks and Resources](/kepler/tasks-and-resources) |
 | Work inside a task | [The Task View](/kepler/task-view) |
 | Direct an agent mid-session | [Agent Sessions](/kepler/agent-sessions) |
+| Run an agent on a schedule, or on new GitHub or Jira activity | [Automations](/kepler/automations) |
 | See what every agent is doing at once | [The Agent Graph](/kepler/agent-graph) |
 | Reshape the list to fit how you work | [Arranging Your Work](/kepler/arranging-your-work) |
 | Review and ship what an agent wrote | [Review Changes](/kepler/review-changes) |

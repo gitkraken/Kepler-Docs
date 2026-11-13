@@ -114,7 +114,7 @@ To choose where the session runs, open the draft's target picker. It offers the 
 
 Every session sees the task's attached resources wherever it runs. **All worktrees and folders** changes only the session's working directory.
 
-A session receives the task's shared context by default. To start a session that forms its own view of the work, untick the **Task context** chip in the draft composer's footer, beside **Attach a file** and the microphone. The chip's tooltip reads **Leave out the task context** while it is ticked and **Include the task context** while it is not: *Gives the agent the task's prompt and notes. Later changes reach it with your next message.*
+A session receives the task's shared context by default. To start a session that forms its own view of the work, untick the **Task context** chip in the draft composer's footer, beside **Attach a file** and the microphone. The task context is the task's prompt and notes, and later changes to it reach the agent with your next message.
 
 Right-click a draft tab or its row in the context panel for these actions:
 
@@ -127,7 +127,7 @@ If **Show tabs on the task page** is on, the draft has a regular tab menu instea
 
 **New session from this one** starts a sibling session in the same task, worktree, agent, and account. The new agent can read the source conversation.
 
-**New session from here** does the same, but the new agent reads the source only up to and including the message you picked. The command is available once that message has finished streaming. It is not available on a terminal or external session (*This conversation can't be branched at a message.*).
+**New session from here** does the same, but the new agent reads the source only up to and including the message you picked. The command is available once that message has finished streaming, and not on a terminal or external session.
 
 To go back to the original, choose **Open source session** on the new session's menu.
 
@@ -138,31 +138,32 @@ To give a session your own name, choose **Rename session** on its row menu. Agen
 ## Agent, model, mode, and effort
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-settings-from-composer-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-settings-from-composer-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="Agent settings open above a new session's composer: Agent OpenCode, Preset Custom, Start in with Chat selected beside Terminal, Model Docs Model, Permission mode Build or Plan, MCP servers (No servers) with Manage, and Use defaults. Below it, the composer footer holds Attach a file, the microphone and a ticked Task context chip, then the Docs Model Build pill and Start.">
+  <a href="/wp-content/uploads/agent-settings-from-composer-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-settings-from-composer-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="Agent settings open above a new session's composer: Agent OpenCode, Preset No preset, Start in with Chat selected beside Terminal, Model Docs Model, Permission mode Build or Plan, MCP servers (No servers) with Manage, and the agent settings gear with Save preset. Below it, the composer footer holds Attach a file, the microphone and a ticked Task context chip, then the Docs Model Build pill and Start.">
   </a>
   <figcaption style="text-align:center; color:#888">The Agent settings pill, opened from the composer, with the Task context chip in the footer.</figcaption>
 </figure>
 
 To choose the agent, model, mode, and effort, use the **Agent settings** pill on the composer, when you start a session or while it runs.
 
-An **agent preset** is a saved set of model, mode, effort, and options. To create or edit presets, click **Manage presets** in the **Preset** list. See [Settings](/kepler/settings-agents#agent-presets).
+An **agent preset** is a saved set of one agent's model, mode, effort, and options. To save the current settings as a preset, click **Save preset** at the bottom of the menu. To create or edit presets, click **Manage presets** in the **Preset** list. See [Settings](/kepler/settings-agents#agent-presets).
 
 | Choice | Changeable mid-session | Notes |
 |---|---|---|
 | **Agent** | No | Fixed once the session exists. To use another agent, start a new session |
-| **Preset** | Yes | **Default**, one of your presets, or **Custom**. **Model**, **Mode**, and **Effort** appear only on **Custom** |
+| **Preset** | Yes | **No preset**, or one of this agent's presets, once it has any. A preset you change reads **{name} (unsaved)** |
 | **Start in** | No | **Chat** or **Terminal**, for an agent that offers both. To use the other mode, start a new session; see [How a session runs](#how-a-session-runs) |
 | **Model** | Yes | Models are per provider, so each agent has its own catalog and a model never moves to another agent. At the default, the row reads **Default · {model}**, naming the model the default resolves to |
 | **Mode** | Yes | The agent's own permission modes |
 | **Effort** | Yes | Reasoning or thinking depth, for agents that offer it |
-| Other **Options** | Some | You can set an option the agent reads only at startup when you launch the session, and nowhere else. A Terminal launch offers the CLI's own launch options; see [How a session runs](#how-a-session-runs) |
+| **Options** | Some | The agent's on/off options, such as **Artifacts**, ticked in one menu |
+| Startup options | No | Set when you launch the session. A Terminal launch offers the CLI's own options; see [How a session runs](#how-a-session-runs) |
 
 A change applies from your next message. It never interrupts the turn in progress.
 
 The menu also shows its state:
 
-- An option row reads **Agent decides** until you pick a value.
+- An option row reads **Agent default** until you pick a value.
 - **{name} settings changed** appears when a session's preset was edited after the session started. Click **Apply** to use the new settings.
 
 If a session's model changes, for example because the default now resolves to a different model, the conversation shows *Model changed from {from} to {to}.*
@@ -171,15 +172,6 @@ The model and mode lists update on their own, so a newly released model appears 
 
 The same menu lists the MCP servers the agent loads for this repository. To change them, click **Manage**. See [MCP Servers](/kepler/mcp-servers).
 
-Some agents need a separate download for **Chat**, such as Google Antigravity's ACP server. To install it, pick **Chat** under **Start in**, then click **Install and switch**.
-
-<figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-install-component-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-install-component-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Install ACP server dialog: Chat needs the ACP server for Antigravity, a separate download., with Cancel and Install and switch.">
-  </a>
-  <figcaption style="text-align:center; color:#888">Picking Chat for an agent whose Chat component is not installed yet.</figcaption>
-</figure>
-
 When the menu cannot offer the usual choices, it shows one of these messages:
 
 | The menu reads | When |
@@ -187,19 +179,13 @@ When the menu cannot offer the usual choices, it shows one of these messages:
 | **Loading your last agent choice…** | Kepler is restoring the agent you used last |
 | **Set up a coding agent** | No agent is set up. See below |
 | **Sign in to {agent} to start a session** | The chosen agent is installed but signed out |
-| **{agent} didn't share its options** | Kepler could not read the agent's models and modes: *You can still start a session. It uses {agent}'s own model and mode.* with **Retry** |
+| **{agent} didn't share its options** | Kepler could not read the agent's models and modes. You can still start a session on the agent's own model and mode, or click **Retry** |
 
 To set one up from **Set up a coding agent**, click **Install or locate {name}** for an agent. If you installed an agent yourself, click **Rescan**. If your agents are on another machine, click **Choose** to open **Settings → Remote environments**.
 
 If you have more than one account, the **Agent** list groups accounts under their agent. The list ends with **Add another account** and **Install another agent**.
 
-By default, a new task, the Dashboard composer, and a new draft tab start with the agent, model, and mode you last picked. To always start with one agent instead:
-
-1. Open **Settings → Tasks → New tasks**.
-2. Set **New tasks use** to the agent, and **New tasks use preset** to its preset.
-3. Set **New sessions start with** to **Default agent**.
-
-To use the default agent and preset for one session only, click **Use defaults** in the launcher. See [Settings](/kepler/settings-tasks#new-tasks).
+By default, a new task, the Dashboard composer, and a new draft tab start with the agent, model, and mode you last picked. To always start with one agent instead, open **Settings → Tasks → New tasks**, pick the agent and its settings in **New sessions start with**, and clear **Start each session on the agent you used last**. To start one session with other settings, change them in the draft's **Agent settings**. See [Settings](/kepler/settings-tasks#default-agent).
 
 ### Which agents are available
 
@@ -242,7 +228,7 @@ If the session is busy, with a turn running or work still going in the backgroun
 | Agent | Modes |
 |---|---|
 | Claude Code, Codex, GitHub Copilot, Cursor, OpenCode, Auggie, Grok Build | Chat or Terminal |
-| Google Antigravity | Terminal by default. Chat needs a separate download, which Kepler offers to install |
+| Google Antigravity | Terminal by default. Chat needs Antigravity CLI 1.5.0 or newer |
 | Pi | Terminal only |
 | Your own agent server | Whichever its command supports |
 
@@ -260,8 +246,9 @@ A Terminal launch offers these options for each CLI:
 | Grok Build | Permission mode: **Default**, **Accept edits**, **Auto**, **Don't ask**, or **Plan** |
 | Pi | **Thinking**, from **Off** to **Max** |
 | OpenCode | Model and agent, for a new session only; a resumed session keeps its own |
+| Google Antigravity | Model, mode, and effort, with Antigravity CLI 1.5.3 or newer |
 
-If the installed version supports it, GitHub Copilot, Cursor, OpenCode, and Pi receive your first message as they start.
+If the installed version supports it, GitHub Copilot, Cursor, OpenCode, Pi, Grok Build, and Google Antigravity receive your first message as they start.
 
 ### What's different in Terminal
 
@@ -278,7 +265,7 @@ A Terminal session's pane has 3 parts:
 |---|---|
 | The terminal | The agent's real interface, keys and all |
 | The status bar | The session at a glance, then your plan usage. See below |
-| The composer | Kepler's own message box, with attachments, voice input, and the agent-settings pill |
+| The composer | Kepler's own message box, with attachments, dictation, and the agent-settings pill |
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/terminal-session-status-bar-oct-2026.png" target="_blank" rel="noopener noreferrer">
@@ -296,56 +283,35 @@ From left to right, the status bar shows the following:
 | Agent and account | Tinted with the account's color when it has one, and drawn in a warning tone when the account's limit is spent. Click it for **Restart conversation as** to move the session to another account |
 | Model, effort, and mode | What the *running* CLI reports, not what you picked at launch, so a change made inside the CLI shows here |
 | Context ring | The share of the context window in use. Hover for tokens used, available, and total, the estimated cost at API rates, and the prompt cache |
-| Branch | The session's branch, with a folder mark when the CLI reports working in a subfolder or outside the worktree. Outside the worktree, the tip's folder line reads **Outside this worktree** |
+| Branch | The session's branch, with a folder mark when the CLI works in a subfolder or outside the worktree |
 | Plan usage | 2 bars for the **5h** and **7d** windows, colored by pace. Hover for the full readout; see [Usage indicators](/kepler/kepler-agent-accounts#usage-indicators) |
 | **Rich input** | Shows or hides Kepler's message composer. Hide it to type straight into the CLI |
+| **Read last reply** | Reads the agent's last reply aloud. See [Read aloud](/kepler/voice-input#read-aloud) |
 | **No Kepler tools** | Shown when the agent cannot use Kepler's workspace tools or inbox in a terminal. Its tip points to **Continue in Chat** on the session menu |
 | **Idle detection** | Shown for an agent that does not report its status to Kepler. Kepler judges activity from the terminal going quiet, so a long pause mid-turn can read as idle |
 | Program status | Shown in place of **Idle detection** when the program in the terminal reports its own status. See below |
 
-For an agent that cannot tell Kepler it is waiting on you, the status dot's tip adds *{name} doesn't report when it's waiting on you, so check the terminal when it goes quiet.*
+For an agent that cannot tell Kepler it is waiting on you, check the terminal when it goes quiet; the status dot's tip says so.
 
-Hover any part to see its card, and click to pin the card open. When the bar is narrow, it hides the least important parts first and shows them again as soon as they fit.
+Hover any part to see its card, and click to pin the card open.
 
 Hover an idle session's status to see its **Last reply** and **Last prompt**. When the prompt cache is about to expire or has expired, the card also shows **Prompt cache**. Once the cache expires, an idle session's next prompt can re-read its whole context without telling you.
 
-Some terminal programs report their own status to Kepler. When a program does, the status bar names that status, with any message and progress the program sends. The hover card shows the following:
+Some terminal programs report their own status to Kepler. When a program does, the status bar names that status, such as **Running**, **Needs your approval**, **Done**, or **Failed**, and the session reads as working, waiting on you, or done to match. Hover the status to see any message, progress, and sub-tasks the program sends.
 
-- The status, and how long the program has been in it.
-- Progress as a bar (*{percent}% done*).
-- Any sub-tasks, each with its own age and message.
-- *Reported by {app}*, when the app is not already the tab's name.
-- The next step, when a blocked or failed program gives no reason, such as *Approve it in the terminal.* or *No reason given. Check the terminal.*
+A Terminal session tracked through hooks reports a failed turn too. When a Claude Code, GitHub Copilot, or OpenCode turn fails, for example on a usage limit, a rate limit, or a server error, the session shows **Error** with the CLI's own message once the turn stops.
 
-The program's status sets whether the session reads as working, blocked, or done:
-
-| Status | Meaning |
-|---|---|
-| **Running** | The program is working |
-| **Needs you** | The program is waiting for you |
-| **Needs your approval** | The program is asking for a permission |
-| **Needs your answer** | The program asked a question |
-| **Needs you to sign in** | The program needs you to sign in |
-| **Done** | The program finished its work |
-| **Failed** | The program reported an error |
-| **Idle** | The program is doing nothing |
-
-A Terminal session tracked through hooks reports a failed turn too. When a Claude Code, GitHub Copilot, or OpenCode turn fails, for example on a usage limit, a rate limit, or a server error, the session shows **Error** with the CLI's own message once the turn stops. For a usage limit, that message usually says when the limit resets.
-
-In a Terminal session, the composer's **Agent settings** pill shows the model, effort, and mode the session uses, but you cannot change them there. The pill's tooltip ends *Change these in the terminal*. Change them in the CLI itself. An effort or mode you change in the CLI survives a relaunch of the session.
+In a Terminal session, the composer's **Agent settings** pill shows the model, effort, and mode the session uses, but you cannot change them there. Change them in the CLI itself. An effort or mode you change in the CLI survives a relaunch of the session.
 
 Terminal sessions also differ in these ways:
 
-- **Queued review comments wait in a bar** when the composer is hidden. The bar reads **{count} comments to send**, with the comments chip, **Add a message** to open the composer with the comments attached, and **Send comments** to send them on their own. **Send comments** waits while the terminal is starting (*Send once the terminal has started*), while another message is going out, and after the session exits (*Resume the session to send these comments*).
-- **A pasted image reaches the agent as an image.** When you paste an image into a Claude Code or Codex terminal, Kepler hands it to the CLI the way a paste into the CLI's own terminal would. The agent reads it as an image, not as a path it has to open.
-- **A terminal session's conversation is recorded**, so quitting Kepler, an idle shutdown, a restart, or a reboot does not lose it. Reopening reattaches to the same conversation with its scrollback intact, and the session keeps running through a context compaction.
-- **A first message that Kepler cannot safely type at launch** waits in the composer as a ready-to-send draft instead: *Your message is ready to send. {name} starts without it, so send it once the terminal is ready.*
-- **A first message that Kepler cannot confirm** is not silently resent. Kepler holds it, says why, and asks you to *Check the terminal before resending.* The reason reads, for example, *Kepler was unable to read {name}'s version, so it can't confirm {name} is ready.* or *The message was too long to pass to {name} at startup.*
-- **Lost keystrokes are never resent.** If Kepler cannot tell whether your last keystrokes reached the terminal, it warns *Your last keystrokes may not have arrived* and asks you to *Check what the terminal shows before you go on.* Kepler never resends that input, now or later. Typing resumes on its own once the input in flight settles.
-- **A terminal reattaches instead of restarting.** While it loads, it reads **Loading terminal…**. During a reconnect, a **Reconnecting to the terminal…** strip appears, and the last screen stays readable and scrollable. If the terminal cannot reconnect, **Unable to restore this terminal** says *The terminal is still running. Retry to load its output again.*, with **Retry**.
-- **What you type during a reconnect is held**, and sent once the terminal is back. If the program printed in the meantime, Kepler drops your typing instead of typing into a changed screen: **The terminal changed while reconnecting**, *Nothing you typed was sent. Type it again.* If your typing could never be sent, Kepler shows **Unable to send what you typed**.
-- **One view types at a time.** A terminal that another view is driving, in another window or on a Remote Access device, reads **Another view is controlling this terminal**. Click **Take control** to type here and size the terminal to this view.
-- **Fast output is trimmed, not queued.** A terminal printing faster than the connection can show reads **Showing the latest output**: *This terminal is printing faster than this connection can show, so older lines are skipped.*
+- **Queued review comments wait in a bar** when the composer is hidden. Click **Add a message** to open the composer with the comments attached, or **Send comments** to send them on their own once the terminal is running.
+- **A pasted image reaches the agent as an image.** When you paste an image into a Claude Code or Codex terminal, the agent reads it as an image, not as a path it has to open.
+- **A terminal session's conversation is recorded**, so quitting Kepler, an idle shutdown, a restart, or a reboot does not lose it. Reopening reattaches to the same conversation with its scrollback intact.
+- **A first message that Kepler cannot safely type at launch** waits in the composer as a ready-to-send draft. Send it once the terminal is ready.
+- **Lost keystrokes are never resent.** If Kepler cannot tell whether your last keystrokes reached the terminal, it warns *Your last keystrokes may not have arrived*. Check what the terminal shows before you go on.
+- **A terminal reattaches instead of restarting.** During a reconnect, the last screen stays readable. If the terminal cannot reconnect, click **Retry** under **Unable to restore this terminal**.
+- **One view types at a time.** A terminal that another window or a Remote Access device is driving reads **Another view is controlling this terminal**. Click **Take control** to type here.
 
 > **Note:** **A terminal session is not the same as a terminal.** A terminal session runs an *agent*, lives in the **Sessions** column, and carries the task's context. A plain terminal runs your shell, lives in the drawer beneath the columns, and carries none. See [The Task View](/kepler/task-view#the-terminal-drawer).
 
@@ -356,8 +322,8 @@ Terminal sessions also differ in these ways:
 To send a prompt, type it in the composer at the bottom of the session.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/sending-a-prompt-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/sending-a-prompt-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The session composer with a pasted image.png attached as a thumbnail chip and the draft @cart.js @README.md Does the check also cover these codes? Below the draft sit Attach a file and the microphone, then the Agent settings pill (Docs Model, Build, with its chevron), the context usage ring, and Send with its chevron.">
+  <a href="/wp-content/uploads/sending-a-prompt-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/sending-a-prompt-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The session composer with a pasted image.png attached as a thumbnail chip with its remove button, and a draft holding the file chips cart.js and README.md, each with its file icon, then Does the check also cover these codes? Below the draft sit Attach a file and the crossed-out microphone, then the Agent settings pill (Docs Model, Build, with its chevron), the context usage ring, and Send with its chevron.">
   </a>
   <figcaption style="text-align:center; color:#888">The composer, at the bottom of the session.</figcaption>
 </figure>
@@ -367,13 +333,13 @@ The composer has these controls:
 | Control | What it does |
 |---|---|
 | **Attach a file** | Attaches a file for the agent to read; you can also drag files onto the composer (*Drop files to attach*). On a remote connection, **Add a file from the remote** picks a file from the remote machine |
-| Microphone | Voice input. See [Voice Input](/kepler/voice-input) |
+| **Dictate** | The microphone: speak, and Kepler types what you say. See [Dictation](#dictation) |
 | **Agent settings** | Agent, model, permission mode, effort, and options |
 | Context usage | The share of the session's context window in use, drawn as a ring. Hover to see tokens used, available, and total, the estimated cost at API rates, and the prompt cache |
 | Plan usage | Your provider plan's usage windows and when each resets. See [Usage indicators](/kepler/kepler-agent-accounts#usage-indicators) |
 | **Send** | Sends the prompt, and shows a sending state from the moment you click. The chevron holds **Send** and every applicable Action |
 
-**Attaching a file sends a path, not a copy, wherever it can.** If the session's machine can already read the file, including a Windows file in a window connected to a WSL distro on the same computer, Kepler sends its path. Kepler copies any other file into the task when you send, up to 200 MB.
+**Attaching a file sends a path, not a copy, wherever it can.** If the session's machine can already read the file, including a Windows file in a window connected to a WSL distro on the same computer, Kepler sends its path. Kepler copies any other file into the task when you send, up to 200 MB. A message can carry at most 20 attachments, and Kepler tells you if it left a file out.
 
 If an upload fails, or the message is too large for the agent, Kepler does not send the message. Where the window can reach the file's machine, an attached file's card on the task page offers **Open in default app** and one of **Show in Finder** (macOS), **Show in Explorer** (Windows), or **Show in file manager** (Linux).
 
@@ -386,7 +352,7 @@ If an upload fails, or the message is too large for the agent, Kepler does not s
   <figcaption style="text-align:center; color:#888">A long paste, attached as a text file.</figcaption>
 </figure>
 
-**A pasted pull request or issue link becomes a chip.** Paste the URL of a pull request or issue from a connected GitHub, GitLab, Bitbucket, or Azure DevOps host, self-hosted included, or of a Jira or Linear issue. In a task's session composer or the **New task** composer, Kepler turns the URL into a chip labeled with its number, such as **#49**, and puts the label in your text in its place. Hover the chip to see the title and the URL. When you send, Kepler attaches the link to the task. A prompt that is a slash command keeps the URL as typed.
+**A pasted pull request or issue link becomes a chip.** Paste the URL of a pull request or issue from a connected GitHub, GitLab, Bitbucket, or Azure DevOps host, self-hosted included, or of a Jira or Linear issue. In a task's session composer or the **New task** composer, Kepler turns the URL into a chip labeled with its number, such as **#49**, and puts the label in your text in its place. Hover the chip to see the title and the URL. When you send, Kepler attaches the link to the task.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/pasted-link-chip-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -395,7 +361,7 @@ If an upload fails, or the message is too large for the agent, Kepler does not s
   <figcaption style="text-align:center; color:#888">A pasted pull request link, turned into a chip.</figcaption>
 </figure>
 
-**Review comments wait in a chip until you send.** Comments you queue for a session while you review its changes collect in one chip on its composer, such as **2 comments**. Click the chip to list them by file and line. Click a comment to open its place in the file, or click its **X** to remove it from the queue. The chip's own **X** removes all of them. Your next message sends the queued comments first, ahead of what you typed. You can also send them with an empty prompt. A slash command is sent alone, and the comments wait for the next message. See [Review Changes](/kepler/review-changes).
+**Review comments wait in a chip until you send.** Comments you queue for a session while you review its changes collect in one chip on its composer, such as **2 comments**. Click the chip to list them by file and line. Click a comment to open its place in the file, or click its **X** to remove it from the queue. The chip's own **X** removes all of them. Your next message sends the queued comments first, ahead of what you typed. You can also send them with an empty prompt. See [Review Changes](/kepler/review-changes).
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/queued-comments-chip-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -404,11 +370,20 @@ If an upload fails, or the message is too large for the agent, Kepler does not s
   <figcaption style="text-align:center; color:#888">Two review comments queued for the next message.</figcaption>
 </figure>
 
+**Replies to your review comments show on the session.** When the agent replies to a comment you left in Changes, its composer shows a chip such as **1 new reply**, and the session's tab shows the count. Click the chip to list the replies under **Replies**. Click a reply to open its comment in Changes, or click **Mark all read**. In a Terminal session with the composer hidden, the chip sits in the bar under the terminal. The reply itself also appears in the conversation; see [Reading the conversation](#reading-the-conversation).
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/unread-replies-chip-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/unread-replies-chip-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="A session composer with its 1 new reply chip open: the Replies popover, with Mark all read, lists cart.js:3 over the start of the agent's reply, Agreed. I'll clamp it with Math.max(0, subtotal -. The popover covers the message box; Docs Model, Build and Send sit to its right.">
+  </a>
+  <figcaption style="text-align:center; color:#888">An unread reply to a review comment, listed from the composer.</figcaption>
+</figure>
+
 A draft you have not sent survives a reload.
 
 The composer works with these keys:
 
-- **Enter** sends; **Shift+Enter** inserts a newline.
+- **Enter** sends; **Shift+Enter** inserts a newline. To send with **Cmd/Ctrl+Enter** instead, and have **Enter** start a new line, change **Send messages with** in **Settings → General → Chat**.
 - **Tab** moves focus from the prompt to **Send**, then to its chevron.
 - **Down Arrow** or **Alt+Down** on **Send** opens the chevron's menu. Closing the menu returns focus to **Send**.
 - **Cmd/Ctrl+F** opens **Find in conversation**.
@@ -435,7 +410,7 @@ A skill you add mid-session shows up without a restart.
 
 ### Mentioning files
 
-Type `@` to search the working directory and insert a path. A session that runs in the task folder also lists the task's other worktrees and folders, under **Worktrees and folders** above **Files**. To search inside one, pick it, or type its name and `/`. A path with spaces goes in quotes (`@"…"`), and Kepler adds the quotes when you pick such a path. `@` also works in composers that do not belong to a session yet, where it searches the task's folders or the folder you chose. Kepler automatically approves files you paste into a chat for the agent to read.
+Type `@` to search the working directory and insert a path. A path you pick from the menu shows as a chip with the file's icon and name; hover it to see the full path. A session that runs in the task folder also lists the task's other worktrees and folders, under **Worktrees and folders** above **Files**. To search inside one, pick it, or type its name and `/`. `@` also works in composers that do not belong to a session yet, where it searches the task's folders or the folder you chose. Kepler automatically approves files you paste into a chat for the agent to read.
 
 ***
 
@@ -443,17 +418,7 @@ Type `@` to search the working directory and insert a path. A session that runs 
 
 You do not have to wait for a turn to end. **If you send a message while the agent is working, the message steers the agent** instead of waiting until the turn is over.
 
-When you send during a turn, the message goes into a visible queue. The placeholder changes to *Type a message to queue...*, and a banner above the composer counts what is waiting. Kepler then sends the queue as **one merged follow-up prompt** at the earliest safe moment:
-
-| When it goes | Why |
-|---|---|
-| Immediately | The agent supports steering, and none of its own tool calls is running |
-| At the next tool-call boundary | A tool call is running and cannot be interrupted partway through |
-| At the end of the turn | The agent does not support steering |
-
-A background subagent's tool call never delays your message; only the main turn's own calls do.
-
-Kepler merges everything you send during one turn and delivers it together. 2 quick corrections arrive as a single instruction instead of 2 competing ones.
+When you send during a turn, the message goes into a queue, and a banner above the composer counts what is waiting. Kepler sends the queue as **one merged follow-up prompt** as soon as the agent can take it: right away, after the tool call that is running, or at the end of the turn for an agent that does not support steering. 2 quick corrections arrive as a single instruction instead of 2 competing ones.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/firing-into-a-running-session-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -478,11 +443,11 @@ Kepler merges everything you send during one turn and delivers it together. 2 qu
 
 With subagents running, **Interrupt & send** names them: **Interrupt & send ({count} running)**. If the stop gets no answer, the button becomes **Force quit (drops {count} queued)**, which ends the agent and drops the queued prompts instead of sending them.
 
-Queued prompts survive an interruption and a restart of Kepler. A **disconnect**, an expired token that forces **re-authentication**, and the **reconnect** afterwards also keep the queue. The rows stay on screen, nothing is dropped, and Kepler hands the prompts to the reconnected session in the same order. Canceling a turn promotes the next queued prompt instead of discarding it.
+Queued prompts survive an interruption, a restart of Kepler, a disconnect, and a sign-in that expires. Kepler sends them to the reconnected session in the same order. Canceling a turn sends the next queued prompt instead of discarding it.
 
 Each queued prompt picks up the task's shared context as it stands when the prompt runs, not as it stood when you typed it.
 
-If a send fails, Kepler puts the text back: *Something went wrong. Your message is back in the composer — try again.* If you have since typed a newer draft, Kepler keeps the newer draft and offers **Restore message**.
+If a send fails, Kepler puts the text back in the composer so you can try again.
 
 ### Stopping a turn
 
@@ -504,15 +469,17 @@ A session's conversation shows your prompts, the agent's replies, and the agent'
 - Your messages appear as chat bubbles. Right-click one to **Copy message**, **Quote**, **Ask**, or **New session from here**.
 - Agent replies render as Markdown and stream as one continuous message, even when a tool runs mid-reply. Right-click a reply to act on its whole turn. While the menu is open, a band outlines the turn, and **Copy message** copies all of the main agent's text in that turn. Every message menu starts with the message's exact time.
 - Each prompt, and the reply that closes each turn, has a copy button beneath it.
+- A reply has a **Read aloud** button beneath it. To read on through the replies that follow, right-click a message, in the chat or in a terminal, and choose **Read aloud from here**. To stop, click **Stop reading** in the top bar. See [Read aloud](/kepler/voice-input#read-aloud).
+- When the agent replies to one of your review comments, the reply shows as a card with your comment beneath **Replied on** and the file and line. Click **Open in Changes** to go to the comment.
 - Your latest prompt and the latest reply show how long ago they were sent. Every earlier finished reply shows the time it was sent. A divider marks a long gap between messages.
 - An agent's thinking shows as a collapsed **Thinking** block, for agents that send it.
-- A file path an agent writes (a link, an inline-code path, or the file in a read or edit tool call) becomes a link once Kepler confirms the file exists. Click it, or **Cmd/Ctrl+click** it, to open the file in Kepler at the named line. A file inside a worktree opens in the Changes overlay's file view. **Cmd/Ctrl+Shift+click** opens the file in your default editor at that line, or in Kepler if no editor opens it; the link's tooltip says so (**+ Click to open in editor**). A middle-click works like a plain click.
+- A file path an agent writes (a link, an inline-code path, or the file in a read or edit tool call) becomes a link once Kepler confirms the file exists. Click it, or **Cmd/Ctrl+click** it, to open the file in Kepler at the named line. A file inside a worktree opens in the Changes overlay's file view. **Cmd/Ctrl+Shift+click** opens the file in your default editor at that line.
 - A Kepler task or session link in the conversation opens inside Kepler when you click or middle-click it. Hover it to see where it goes. Right-click it for **Open in Kepler** and **Copy link**.
 - Images in replies and tool output open in a lightbox. You can save the image from the thumbnail or the lightbox with **Save as…**.
 - Tool calls collapse into groups: **{count} tool uses**, with **{count} done**, **{count} running**, and **{count} failed** tallies. Expand a group to read any call's output.
 - A plan renders as **Plan {completed}/{total}**. A plan cut short by a stop is marked **Interrupted**.
 - A context compaction shows as its own row: **Compacting the conversation…**, then **Conversation compacted**, **Unable to compact the conversation** with the error, or **Compaction stopped**. When the agent kept a summary of the conversation so far, the row expands to show it, and **Find in conversation** searches it.
-- Each subagent has its own card, collapsed by default, with **Prompt**, **Operations**, and **Result** sections that fold independently. The card's header row shows the subagent type, the description it was given, how many operations it has run, the step a running subagent is on, and a status of **Running**, **Stopped**, **Completed**, or **Failed**. You can follow progress without expanding the card. Claude Code, GitHub Copilot, Cursor, and OpenCode Chat sessions all produce these cards. A subagent that was canceled or cut off reads **Stopped**, not **Failed**.
+- Each subagent has its own card, collapsed by default, with **Prompt**, **Operations**, and **Result** sections that fold independently. The card's header row shows the subagent type, the description it was given, how many operations it has run, the step a running subagent is on, and a status of **Running**, **Stopped**, **Completed**, or **Failed**. You can follow progress without expanding the card. Claude Code, GitHub Copilot, Cursor, and OpenCode Chat sessions all produce these cards.
 - A session that another session started shows **Started by** and the starting session in its header. Click it to open that session.
 - A prompt that another session sent has a **From:** header naming the sending session. Click it to open that session.
 - A turn that ended for a notable reason has a pill: **Reached token limit**, **Reached request limit**, **Refused to continue**, or **Cancelled**. A turn that ended normally shows no pill.
@@ -522,6 +489,22 @@ A session's conversation shows your prompts, the agent's replies, and the agent'
     <img src="/wp-content/uploads/compaction-row-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A Chat transcript in which, after the Read checkout.js call and the agent's note, a Conversation compacted row is open on the summary the agent kept of the conversation so far, followed by Edit checkout.js and the agent's next message.">
   </a>
   <figcaption style="text-align:center; color:#888">A compaction row, expanded to the summary the agent kept.</figcaption>
+</figure>
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/review-reply-card-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/review-reply-card-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="A reply card in the agent's conversation: Replied on cart.js:3 with a New badge and Open in Changes, then You: Clamp the discounted subtotal at zero so a large discount cannot make the total negative, and the agent's reply, Agreed. I'll clamp it with Math.max(0, subtotal - discount) and add a test for a discount larger than the order.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The agent's reply to a review comment, in its conversation.</figcaption>
+</figure>
+
+**Quote a passage to ask about it.** Select text in a message, right-click it, and choose **Quote**. The passage goes into the composer as a quote block, and Kepler tints its source in the conversation. Click the quote block to scroll to its source, or click the tinted passage to go back to the quote. In a sent message, a long quote folds, with **Show more** and **Show less**.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/composer-quote-block-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/composer-quote-block-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="A session on Fix the cart total: the agent's sentence, The total applied the discount after tax, so discounted orders were overcharged by the tax on the discount, is tinted in the conversation, and the composer below holds the same sentence as a quote block, with the question Does the same apply to gift cards? typed under it.">
+  </a>
+  <figcaption style="text-align:center; color:#888">A quote in the composer, with its source tinted in the conversation.</figcaption>
 </figure>
 
 **A long conversation opens on its latest turns.** To read further back, click **Show earlier messages** at the top of the transcript. Each click loads the part before it.
@@ -534,8 +517,6 @@ A session's conversation shows your prompts, the agent's replies, and the agent'
 </figure>
 
 Until earlier messages are loaded, **Find in conversation** searches only the loaded ones. To search the whole conversation, click **Search earlier messages**.
-
-A very long session started outside Kepler may show only its most recent part.
 
 Kepler keeps subagent work separate from the main thread:
 
@@ -551,7 +532,7 @@ The pane's subtitle shows the current step on one line. When the step is longer,
 In a Claude Code or Codex Chat session, you can also direct one subagent from its pane instead of the whole turn:
 
 - **Message {name}**: sends the subagent a message through the main agent. The pane notes *Sent through the main agent*, or *Waiting for the main agent* while the main agent is busy. You cannot pass on a slash command. If the subagent has already finished, the pane reports *Unable to deliver the message to {name}, which may have finished*.
-- **Stop** (Claude Code): ends that subagent alone. Codex offers **Ask to stop** instead, which asks the main agent to stop the subagent.
+- **Stop**: ends that subagent alone. A Codex subagent that cannot be stopped directly offers **Ask to stop** instead, which asks the main agent to stop it.
 
 For other agents, the pane is marked **read-only**.
 
@@ -572,9 +553,9 @@ Code blocks have a **line-wrap toggle**, so you can read a long line without scr
 
 You turn artifacts on or off for each Claude Code Chat session, because the artifact tools add about 12k tokens to the session's context. A new session starts with artifacts off unless **Settings → Agents → Claude Code → Artifacts in new sessions** is on.
 
-To turn artifacts on for one session, tick **Artifacts** in its composer's **Agent settings**: *Lets the agent publish pages and designs. Adds about 12k tokens to the session's context. Turning it on in a running conversation restarts the session.* In a running conversation, Kepler asks first, **Turn on Artifacts?**: *The session restarts and resumes this conversation. The running turn, background shells and subagents, and queued messages end. Artifacts stay on for this conversation.* From then on, the row reads **On for this conversation**. While a session is still starting, the row reads **Available once the session has started**.
+To turn artifacts on for one session, open its composer's **Agent settings** and tick **Artifacts** in the **Options** menu. In a running conversation, Kepler asks first, because the session restarts and resumes the conversation: the running turn, background shells and subagents, and queued messages end. Artifacts then stay on for the conversation. You can tick **Artifacts** once the session has started.
 
-<!-- TODO(screenshot): Replace — ade-artifacts-toggle-01: a live Claude Code Chat session's Agent settings showing the Artifacts checkbox with its description (needs a signed-in Claude Code). -->
+<!-- TODO(screenshot): Replace — ade-artifacts-toggle-01: a live Claude Code Chat session's Agent settings with the Options menu open on the Artifacts checkbox and its description (needs a signed-in Claude Code). -->
 
 When a Claude Code Chat session with artifacts on publishes an artifact, including `/design` and `/slides` output, the artifact shows as a card instead of a tool call: title, version, **Private**, **Open**, **Copy link**, and **Preview**. A republish reads **Updated to v{seq}**. Kepler also attaches the artifact to the task as a link, so you can still reach it after the conversation moves on.
 
@@ -618,19 +599,18 @@ To change how the transcript scrolls and how wide it grows, open **Settings → 
 
 ***
 
-## Voice input
+## Dictation
 
-Every session's composer has a microphone. Click it to record, then speak, and the transcript appears in the prompt. Transcription runs on your device. Voice input is off until you turn it on and download a model.
+Every session's composer has a microphone, **Dictate**. Click it, then speak, and the transcript appears in the prompt. Transcription runs on your device. Dictation works once you download a model in **Settings → Voice**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/start-voice-input-aug-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/start-voice-input-aug-2026.png" class="help-center-img img-bordered" alt="The composer's microphone icon, with its Start voice input tooltip">
+  <a href="/wp-content/uploads/start-voice-input-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/start-voice-input-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="The New task composer: Add issue, Add PR and Add context above the empty prompt, then the attach button and the microphone button with its Dictate tooltip below it, and the agent pill with a warning sign and Start on the right.">
   </a>
-  <figcaption style="text-align:center; color:#888">The composer's microphone icon.</figcaption>
+  <figcaption style="text-align:center; color:#888">The composer's microphone, with its Dictate tooltip.</figcaption>
 </figure>
-<!-- TODO(screenshot): Replace — ade-start-voice-input-01: the composer microphone hovered with a Qwen3-ASR engine ready, tooltip Start voice input · Qwen3-ASR 1.7B (needs the voice model downloaded). -->
 
-When a Qwen engine is dictating, the microphone's tooltip names it, for example **Start voice input · Qwen3-ASR 1.7B**. When voice input cannot start, the tooltip says why and links to the engine's settings. For example, a graphics card might not be responding, or a model might need WebGPU. See [Voice Input](/kepler/voice-input).
+When dictation cannot start, such as before you download a model, the microphone's tooltip says why and links to Settings. See [Dictation and Read Aloud](/kepler/voice-input).
 
 ***
 
@@ -646,7 +626,7 @@ Each session has a status, shown as a colored dot on its tab and rows.
 | **Waiting** | Blocked on you, and it says on what: **Permission**, **Question**, **Plan review**, or **Prompt not sent**. A pending Kepler approval also counts, as **Approval needed** or **Approval needed, destructive**, even while the agent keeps working |
 | **Unread** | Finished a turn you have not looked at |
 | **Idle** | Connected, nothing running |
-| **Background task running** | The turn ended, but work the agent left running on its own, such as a backgrounded shell or a monitor, is still going. Shown as idle, a gray dot with a green ring that does not pulse, and it does not keep the machine awake |
+| **Background task running** | The turn ended, but work the agent left running on its own, such as a backgrounded shell or a monitor, is still going. Shown as idle, and it does not keep the machine awake |
 | **Asleep** or **Asleep, unread reply** | An idle Chat session that Kepler put to sleep until your next message. See [Dormant and archived sessions](#dormant-and-archived-sessions) |
 | **Reconnecting** | Kepler is reattaching to a session that kept running while Kepler restarted |
 | **Error** | The turn or the process failed. A live session whose last turn failed on a rate limit, an exhausted quota, or an overloaded provider reads **Error** too |
@@ -702,11 +682,11 @@ A **dormant** session (one restored from disk, or stopped before it ever ran) sh
 
 **An idle Chat session goes to sleep.** When no window shows a Chat session and it has been quiet for the time set in **Settings → General → Keep agents running → Put idle agents to sleep** (**After 15 minutes** by default), Kepler stops its agent to free the process. The session reads **Asleep**, and your next message wakes it with the conversation intact. A session that is working or waiting on you stays awake, and a Terminal session never sleeps. See [Settings](/kepler/settings-app#keep-agents-running).
 
-You can read an **archived** session without restoring it. It opens read-only, labeled *Read-only. Restore it to keep working.*, with **Restore this session and open it live** and **Permanently delete this saved session** beside it.
+You can read an **archived** session without restoring it. It opens read-only, with **Restore this session and open it live** and **Permanently delete this saved session** beside it.
 
-Archived sessions are listed under a **{count} archived** fold below the live ones in the context panel. On the Dashboard, the session strip's **Archived sessions** button searches them (*Find an archived session…*). Restoring puts the session back in the list, and the session reconnects when you open it.
+Archived sessions are listed under a **{count} archived** fold below the live ones in the context panel. On the Dashboard, the session strip's **Archived sessions** button searches them. Restoring puts the session back in the list, and the session reconnects when you open it.
 
-Some agents can store one conversation more than once. If a session has more than one saved copy, it resumes the newest copy it can run, without asking. To pick another copy, choose **Use another copy…** on the session's menu: *Kepler found more than one saved copy of this conversation. Pick the one to continue when you resume it.* Each copy lists when it was updated and how many messages it holds.
+Some agents can store one conversation more than once. If a session has more than one saved copy, it resumes the newest copy it can run, without asking. To pick another copy, choose **Use another copy…** on the session's menu. Each copy lists when it was updated and how many messages it holds.
 
 Deleting a task or removing its repository ends that task's live sessions.
 
@@ -718,7 +698,7 @@ An agent that cannot use Kepler's workspace tools gets a copy instead. Kepler at
 
 ### Keeping agents running through a restart
 
-**Settings → General → Keep agents running → Keep agents and terminals running across restarts and updates** is on by default, though the setting is still marked experimental: *Agent sessions and terminals stay alive while Kepler restarts or updates, and reconnect afterwards. Experimental.* A change to the setting applies to new sessions. If your build cannot keep agents running, the switch is off and grayed out.
+**Settings → General → Keep agents running → Keep agents and terminals running across restarts and updates** is on by default, though the setting is still marked experimental. Sessions and terminals stay alive while Kepler restarts or updates, and reconnect afterwards. A change to the setting applies to new sessions. If your build cannot keep agents running, the switch is off and grayed out.
 
 <!-- TODO(screenshot): New: A session showing the *Reconnecting to the agent…* overlay after Kepler restarts. -->
 
@@ -728,13 +708,13 @@ An agent that cannot use Kepler's workspace tools gets a copy instead. Kepler at
 | **Updating Kepler** | Warns only about agents the update would interrupt. Shell tabs keep running and come back after the restart | Warns how many agent sessions the restart will stop |
 | **Quit & End Sessions** | In the app and tray menus, including when only shell tabs are open. Ends the sessions as Kepler quits, asking first only if one is mid-turn or still has live work (**End Sessions and Quit**); you can continue each session again from its task | Not applicable |
 
-While Kepler reattaches, an overlay covers the session, and the session offers no actions until it is back. The overlay reads *Reconnecting to the agent…*, then *Restoring conversation history…*. If the reattach fails, the session falls back to its saved conversation: *Unable to reconnect to the agent. Resume to pick up from the saved conversation.* If a session's background process stops, the session also keeps its conversation instead of starting a new one.
+While Kepler reattaches, an overlay covers the session, and the session offers no actions until it is back. If the reattach fails, click **Resume** to pick up from the saved conversation. If a session's background process stops, the session also keeps its conversation instead of starting a new one.
 
 If Kepler never comes back to a session left running after a quit, the session ends on its own after an hour without any output from the agent. An agent still mid-task keeps producing output, so it finishes its work first.
 
 A Terminal session kept running this way also keeps its keyboard and paste modes across the restart. If a reboot ends the session, you can still resume it.
 
-A session kept running this way can stop accepting output if it reaches a storage or log limit. It then shows **Agent output paused**: *Kepler stopped accepting agent output after reaching a storage or log limit. Your draft is preserved while output is paused.*
+A session kept running this way can stop accepting output if it reaches a storage or log limit. It then shows **Agent output paused**, and your draft is kept.
 
 By default, Kepler keeps your computer awake while any session is starting, running, or waiting on you. To turn this off, clear **Settings → General → Keep agents running → Keep this machine awake while agents work**. See [Settings](/kepler/settings-app#keep-agents-running).
 
@@ -746,13 +726,13 @@ If a session cannot continue, its context card says so with a badge, one sentenc
 
 | Badge | What happened | What to do |
 |---|---|---|
-| **Ended** | The process is gone; the conversation is not | **Resume** |
+| **Ended** | The process is gone; the conversation is not | **Resume**. In a Chat session, a message you send also continues it |
 | **Exited** | *{name} exited on its own. Restart it to continue from the saved conversation.* | Restart the agent |
 | **Can't resume** | *{name} no longer has this conversation, so it can't continue. You can still read it below.* | **Archive session**, or **Start new conversation** |
 | **Sign-in failed** | *{name} was unable to sign in. Sign in again to continue this conversation.* | Sign in again |
 | **Can't start** | *{name} isn't installed or can't run*, or *The installed {name} can't run this session.* | Fix the install or path in agent settings, then restart |
 | **Folder missing** | *The folder this conversation ran in was removed or moved.* | **Recreate worktree and resume** or **Recreate folder and resume** |
-| **Disconnected** | *Kepler lost its connection to this session and ended it. Restart to pick up where it left off.* | Restart the agent |
+| **Disconnected** | *Kepler lost its connection to this session's background process. Restart to pick up where it left off.* | Restart the agent |
 | **Unable to resume** | *Another {name} is still running this conversation. Close it, then try again.* | Close the other copy, then resume |
 
 If a card has more detail, it shows **Details**, which opens the **Diagnostics** behind it, with **Copy** for a bug report.

@@ -30,10 +30,10 @@ custom_fields:
 
 **Remote Access** works in the other direction from [remote environments](/kepler/remote-environments). It opens this Kepler window from another device, such as a second computer or a phone, through your GitKraken account. Your work still runs here; the other device only sees the interface.
 
-Configure it in **Settings → Remote Access**, or from the **Remote Access** button in the title bar. The button's monitor-and-phone icon shows the status: green while active, amber while connecting, reconnecting, or waiting to reconnect, red on an error, and plain while off. Hover over it to open its popover, which works on the machine the window is on:
+Configure it in **Settings → Remote Access**, or from the **Remote Access** button in the title bar. The button's icon is green while Remote Access is active, amber while it connects, and red on an error. Hover over it to open its popover, which acts on the machine the window is on:
 
-- **Use this machine anywhere**, or **Use *machine* anywhere** in a remote window, with how many devices are paired and online, or *No paired devices yet*.
-- While active, a QR code captioned *Scan with your phone's camera to open this machine*, the link with **Copy link**, and *Works in any browser signed in to your GitKraken account.*
+- How many devices are paired and online.
+- While active, a QR code and the link, with **Copy link**.
 - **Turn on Remote Access** or **Turn off Remote Access**.
 - **Manage Remote Access…**, which opens **Settings → Remote Access**.
 
@@ -57,29 +57,31 @@ You need a GitKraken account signed in to Kepler, on a paid GitKraken plan. Remo
 
 When you sign out of Kepler, each remote machine your windows are connected to learns that you signed out, and turns its Remote Access off. A sign-in that expires on its own does not turn Remote Access off.
 
+If Kepler on the computer is not signed in, a paired device shows **Sign in**. Only the GitKraken account that turned on Remote Access can sign the computer in from there. To use another account, sign in to Kepler on the computer itself.
+
 ## Turning on Remote Access
 
 1. Open **Settings → Remote Access**.
 2. Click **Turn on Remote Access**.
 3. In **Name this machine**, keep the name Kepler fills in, or enter a name you recognize. gitkraken.dev shows this name in your list of machines.
 
-**Remote Access stays on until you turn it off.** Only you, a deliberate sign-out, or a different account signing in turns it off. When Kepler restarts, it turns Remote Access back on only for the account that turned it on. When the connection fails, Kepler retries quickly a few times. After that, the status reads **Waiting to reconnect**, with *Unable to connect* and the reason. *Kepler retries every 5 minutes.*, and **Retry now** tries at once. Paired devices stay paired through the wait. Remote Access also waits in these 2 cases:
+**Remote Access stays on until you turn it off.** Only you, a deliberate sign-out, or a different account signing in turns it off. When Kepler restarts, it turns Remote Access back on only for the account that turned it on. When the connection fails, Kepler keeps retrying, and the status reads **Waiting to reconnect** with the reason. **Retry now** tries at once. Paired devices stay paired through the wait. Remote Access also waits in these 2 cases:
 
-- With no GitKraken sign-in, the status reads *Waiting for a GitKraken sign-in. Remote Access connects as soon as one is available.*
-- When your account already has its limit of machines with Remote Access on, the status reads *Your account has reached its limit of machines with Remote Access on. Remove one you no longer use, then retry.*, with **Manage machines on gitkraken.dev**.
+- With no GitKraken sign-in, it connects as soon as you sign in.
+- When your account has reached its limit of machines with Remote Access on, remove one you no longer use with **Manage machines on gitkraken.dev**, then retry.
 
 This machine stays awake while Remote Access is on, except while it waits to reconnect.
 
-To turn it off, click **Turn off Remote Access** in Settings or in the popover. Kepler asks **Turn off Remote Access?**, because *Every paired device is disconnected.*
+To turn it off, click **Turn off Remote Access** in Settings or in the popover, and confirm. Every paired device is disconnected.
 
 ## Pairing another device
 
 When Remote Access is active, a QR code and a link appear in Settings and in the popover.
 
-- To pair a phone, scan the QR code (**Scan with your phone camera to open**). Otherwise, copy the link.
+- To pair a phone, scan the QR code. Otherwise, copy the link.
 - The link opens **gitkraken.dev/integrations**, where you approve the connection with your GitKraken account.
 
-A pairing link works once and expires after 5 minutes. A used or expired link shows *This pairing link no longer works*. To pair, open a new link from the computer running Kepler.
+A pairing link works once and expires after 5 minutes. To pair after that, open a new link from the computer running Kepler.
 
 You can bookmark the address a paired browser opens on. If that browser's connection has ended, opening the address again takes you to gitkraken.dev to sign in and pair it again.
 
@@ -92,7 +94,9 @@ You can bookmark the address a paired browser opens on. If that browser's connec
 
 ## Using Kepler on a phone
 
-When you open Kepler in a phone's browser, it uses a phone layout: one bar at the top of each screen in place of the desktop top bar and headers. The phone layout applies to any browser window as narrow as a phone; the desktop app never uses it. On a touch screen, Kepler also keeps the phone awake while you watch an agent that is working without needing you, or a terminal that is printing output, because a phone that locks drops the connection. When the on-screen keyboard is open, Kepler fits the screen above it.
+When you open Kepler in a phone's browser, it uses a phone layout: one bar at the top of each screen in place of the desktop top bar and headers. The phone layout applies to any browser window as narrow as a phone. The desktop app never uses it, at any window width. On a touch screen, Kepler also keeps the phone awake while you watch a working agent or a terminal printing output, so the connection does not drop. When the on-screen keyboard is open, Kepler fits the screen above it. In the composer, **Enter** starts a new line. To send, tap **Send**.
+
+To open Kepler like an app, add it to your phone's home screen from the browser's menu, such as **Add to Home Screen**. The Kepler icon then opens Kepler full screen, without the browser's address bar and toolbars.
 
 ### The menu
 
@@ -138,29 +142,30 @@ A task's bar has **Back**, the task's name, and one icon each for **Sessions**, 
 - **Tap the task's name** to open **Switch task**, a sheet of every task in the Dashboard's order. Swipe sideways on the name to go back to the previous task.
 - **Pull down on the bar** for a sheet of everything in the task: sessions, checkouts, terminals, and resources, with each row's actions.
 
-Under the bar, a details row shows the task's stage and a summary. Expand it to see the checkout and the task's pull request and issue. The row collapses while a terminal or the changes fill the screen.
+Under the bar, a details row shows the task's stage and a summary. Expand it to see the checkout and the task's pull request and issue.
 
-**Add resource** opens as a sheet that lists the kinds of resource, and steps into one at a time, with **Back to resource types** to step out. Each kind lists what the task already holds, with that kind's add control, such as **Add issues**, and **Select** to archive or remove several at once. Each item is added as soon as you pick it.
+**Add resource** opens a sheet of resource kinds. Pick a kind to see what the task already holds, add more with its add control, such as **Add issues**, or use **Select** to archive or remove several at once.
 
 **Changes** opens with one bar: **Close**, the file's name, and **Previous** and **Next**. Tap the name for the list of changed files. Everything else, from which changes to show to saving an edit, is in the bar's overflow menu.
 
 ### Terminals
 
-On a touch phone, every live terminal has a key row under it with the keys a phone keyboard lacks: **Esc**, **Ctrl**, **Tab**, the arrows, **Enter**, **Keyboard**, which shows or hides the phone keyboard, and **Hide keys**. Swipe up on a key, or hold **Esc**, **Tab**, or **Enter**, for the second action printed above it:
+On a touch phone, every live terminal has a key row under it with the keys a phone keyboard lacks: **Esc**, **Ctrl**, **Tab**, the arrows, **Enter**, **Keyboard**, which shows or hides the phone keyboard, and **Hide keys**. Swipe up on a key, or hold **Esc**, **Ctrl**, **Tab**, or **Enter**, for the second action printed above it:
 
 | Key | Second action |
 |---|---|
 | **Esc** | **Ctrl+C** |
+| **Ctrl** | **Shift** |
 | **Tab** | **Shift+Tab** |
 | **Enter** | **New line** |
 | Left and Right arrows | **Home** and **End** |
 | Up and Down arrows | **Page up** and **Page down** |
 
-Tap **Ctrl** once to hold it for the next key only, or double-tap it to lock it until you tap it again. Holding an arrow repeats it. **Hide keys** replaces the row with a **Show keys** button, and this device remembers the choice. The phone keyboard opens only when you tap the terminal or **Keyboard**, not on every scroll.
+Tap **Ctrl** once to hold it for the next key only, or double-tap it to lock it until you tap it again. Shift works the same way: swipe up on or hold **Ctrl** once to hold Shift for the next key, or twice quickly to lock it. With Shift on, the letters you type are capitals. Holding an arrow repeats it. **Hide keys** replaces the row with a **Show keys** button, and this device remembers the choice. The phone keyboard opens only when you tap the terminal or **Keyboard**, not on every scroll.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/terminal-key-row-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/terminal-key-row-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A task terminal in a phone-width browser after git status, with the terminal key row under it: Esc (Ctrl+C above it), Ctrl, Tab, the Left and Right arrows (Home and End above), Up and Down (PgUp and PgDn above), Enter, Keyboard, and the Hide keys chevron.">
+  <a href="/wp-content/uploads/terminal-key-row-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/terminal-key-row-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="A task terminal in a phone-width browser after git status, with the terminal key row under it: Esc (^C above it), Ctrl (the Shift arrow above it), Tab (a back-tab arrow above it), the Left and Right arrows (Home and End above), Up and Down (PgUp and PgDn above), Enter (a Shift arrow above it), Keyboard, and the Hide keys chevron.">
   </a>
   <figcaption style="text-align:center; color:#888">The key row under a terminal on a phone.</figcaption>
 </figure>

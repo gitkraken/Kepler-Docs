@@ -13,7 +13,7 @@ hosted_variant: both
 status: preview
 last_verified: 2026-11
 llms_include: true
-tags: [quick-answers, windows, wsl, ssh, accounts, remote-access, phone, worktrees, setup-commands, permissions, review, actions, pull-requests]
+tags: [quick-answers, windows, wsl, ssh, accounts, remote-access, phone, worktrees, setup-commands, automations, permissions, review, actions, pull-requests]
 taxonomy:
   category: kepler
 custom_fields:
@@ -49,16 +49,18 @@ Common questions about where and how your agents run:
 
 You can start a task from an issue in your tracker or from nothing at all.
 
-Common questions about starting work, giving agents your rules, and preparing each new worktree:
+Common questions about starting work, giving agents your rules, preparing each new worktree, and running agents on their own:
 
 | What you want to do | Short answer | Full details |
 |---|---|---|
 | Start an agent from a Jira, Linear, or GitHub issue | Connect your tracker, then run an Action from the issue's row. The issue becomes a task, and Kepler attaches what it read, so the agent starts with that context. | [Issue Tracker Integrations](/kepler/issue-tracker-integrations), [Actions](/kepler/actions) |
 | Start without an issue | Click **New task** or press **Cmd/Ctrl+N**, then write a prompt. You can attach nothing at all and turn the task into real work later. | [Getting Started → Start something that is not tracked yet](/kepler/kepler-getting-started#start-something-that-is-not-tracked-yet) |
+| Move my work over from Conductor | On an empty **Tasks** list, click the import card, or choose **File → Import from Another App…**. Each Conductor workspace becomes a task, and its chats continue in Kepler. | [Create a task → From another agent app](/kepler/create-task#from-another-agent-app) |
 | Give every agent on a task your team's rules | Attach a **Note** to the task with the rule, constraint, or decision. Every session on the task gets it, including sessions you start later. | [Tasks and Resources → Notes](/kepler/tasks-and-resources#notes-are-how-you-give-standing-instructions) |
 | Copy `.env` files into every new worktree | List them in a `.worktreeinclude` file at the repository's root, in `.gitignore` syntax. Kepler copies the matching Git-ignored files into each new worktree. | [Tasks and Resources → Make a new worktree ready to build](/kepler/tasks-and-resources#make-a-new-worktree-ready-to-build) |
 | Install dependencies in every new worktree | Add a per-repository command, such as `pnpm install`, and turn on **Run on worktree creation**. | [Settings → Per-repository commands](/kepler/settings-repositories#per-repository-commands) |
 | Keep agents in different worktrees from colliding on ports or databases | A worktree separates files, not ports, databases, or caches. Use a command that runs on worktree creation to give each worktree its own settings, such as its own port or database name. | [Tasks and Resources → What a worktree does not separate](/kepler/tasks-and-resources#what-a-worktree-does-not-separate) |
+| Run an agent on a schedule, or when an issue or pull request changes | Click **Automations** on the Dashboard and create an automation. It runs an Action or your own prompt on a schedule, or when new GitHub or Jira activity matches its query. | [Automations](/kepler/automations) |
 
 ***
 
@@ -89,7 +91,7 @@ Common questions about reviewing an agent's work and getting it merged:
 | Read what an agent changed | Open the task's worktree and read the diff in the **Changes** overlay. From there you can comment, stage, and commit. | [Review Changes](/kepler/review-changes) |
 | Undo an agent's change to a file | Use **Discard changes**, which asks first. Your current version goes to the Trash (the Recycle Bin on Windows), so you can get it back. | [Review Changes → Staging and committing](/kepler/review-changes#staging-and-committing) |
 | Have a different agent review the work | Set the **Review** Action to a different agent from the one that wrote the code. | [Actions → Review with a different agent](/kepler/actions#review-with-a-different-agent) |
-| Apply the review comments on a pull request | Fire **Address Feedback** on the pull request. It triages the comments, applies what's worth applying, and pushes back on the rest. | [Actions → The four built-in Actions](/kepler/actions#the-four-built-in-actions) |
-| Open a pull request | Kepler has no "create pull request" button, so you or the agent opens the pull request, and Kepler attaches it to the task once it exists. The example **Open a pull request** Action has the agent open it, with a note that an agent helped write the change. | [Review Changes → Opening a pull request](/kepler/review-changes#opening-a-pull-request), [Actions → Example: Open a pull request](/kepler/actions#example-open-a-pull-request) |
+| Apply the review comments on a pull request | Run **Address Feedback** on the pull request. It triages the comments, applies what's worth applying, and pushes back on the rest. | [Actions → The four built-in Actions](/kepler/actions#the-four-built-in-actions) |
+| Open a pull request | You or the agent opens the pull request, and Kepler attaches it to the task once it exists. The example **Open a pull request** Action has the agent open it for you. | [Review Changes → Opening a pull request](/kepler/review-changes#opening-a-pull-request), [Actions → Example: Open a pull request](/kepler/actions#example-open-a-pull-request) |
 
 ---
