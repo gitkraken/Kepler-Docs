@@ -188,7 +188,7 @@ You can use a preset in these places:
 - **A session's agent settings.** In the composer, pick it in the **Preset** row, which appears when the chosen agent has presets. See [Agent Sessions](/kepler/agent-sessions#agent-model-mode-and-effort).
 - **The default agents.** The **New sessions start with** pill on [Default agent](/kepler/settings-tasks#default-agent), and the **New Ask Kepler chats start with** pill at the top of this page.
 - **Actions.** Each Action's **Preset** list, in the Action's editor. See [Actions](/kepler/actions).
-- **Automations.** An automation's agent settings can use a preset. See [Automations](/kepler/automations).
+- **Automations.** An automation's agent settings can use a preset. See [Automations](/kepler/kepler-automations).
 
 If Actions or automations use a preset you delete, Kepler lists them and asks you to choose a replacement. If you change a preset that automations use, Kepler names them and asks you to confirm, and they use the updated options from their next run.
 

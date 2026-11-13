@@ -113,7 +113,7 @@ Ask the chat to add a view to the Dashboard, or to rename a view or change its f
 
 Describe an automation in your own words, such as *Every Monday at 9, check my repos for outdated dependencies*, and the chat sets it up. You can also type the request in the **New automation** dialog in Automations and click **Ask Kepler**, which sends it to a new chat.
 
-The chat creates the automation paused and shows an **Automation created** card with what the automation watches, what it runs, and where. To start it, click **Turn on**. To see it in Automations, click **Open**. See [Automations](/kepler/automations).
+The chat creates the automation paused and shows an **Automation created** card with what the automation watches, what it runs, and where. To start it, click **Turn on**. To see it in Automations, click **Open**. See [Automations](/kepler/kepler-automations).
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/automations-created-card-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
