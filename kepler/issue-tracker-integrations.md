@@ -100,7 +100,7 @@ For every message the dialog shows, see [Pull Request Integrations](/kepler/pull
 
 Once connected, a self-hosted provider lists each server on its own row, with **Set as primary**, **Replace token**, and **Disconnect**. Each server keeps its own repositories and issues:
 
-- To connect another server, click **Add connection** on the provider's row. Connecting more than 1 server needs an active GitKraken plan or trial.
+- To connect another server, click **Add connection** on the provider's row.
 - To renew an expired or rejected token, click **Replace token** on that server's row.
 - To make a server the provider's default connection, click **Set as primary**. Agents' GitKraken MCP server acts through the primary connection.
 

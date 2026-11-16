@@ -38,7 +38,7 @@ The Settings sidebar starts with a **Search settings** field and [**Setup**](/ke
 
 | Page | What it covers |
 |---|---|
-| [**Account**](/kepler/settings-setup-account#account) | Who you're signed in as, your organization, what your plan unlocks, and GitKraken AI credits |
+| [**Account**](/kepler/settings-setup-account#account) | Who you're signed in as, your organization, and GitKraken AI credits |
 | [**Agents**](/kepler/settings-agents) | Your agents, custom agents, MCP servers, agent tools, approvals, and usage limits |
 | [**Tasks**](/kepler/settings-tasks) | How new tasks start, including the default agent, and how a task's page looks |
 | [**Repositories**](/kepler/settings-repositories) | The repositories folder, your repos and folders, worktrees and branches, and Projects |

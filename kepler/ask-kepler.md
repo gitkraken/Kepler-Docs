@@ -99,7 +99,7 @@ The agent can read your tasks and sessions and act on them through Kepler's own 
 
 The chat can look up Kepler's settings for you. Ask where something is set, or what a setting is set to, and the agent finds the setting, tells you its current value and what it can be set to, and links to it. Click the link to open **Settings** at that setting. Only **Ask Kepler** can find and change settings; agents in tasks cannot.
 
-The agent changes a setting only when you ask it to. It can find and link to some settings but not change them, such as secrets, actions, and settings that take a list. The agent cannot turn on a paid feature without a paid plan, and it tells you why when it refuses.
+The agent changes a setting only when you ask it to. It can find and link to some settings but not change them, such as secrets, actions, and settings that take a list.
 
 Some changes wait for your approval: a change to a setting that affects your accounts, your privacy, other tools, what runs, or where files go. Kepler asks about each such change separately, and you approve it on its own. See [Approval requests](/kepler/agent-sessions#approval-requests).
 

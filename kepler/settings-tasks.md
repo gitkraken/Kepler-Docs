@@ -132,7 +132,7 @@ The following setting names new tasks for you:
 |---|---|---|
 | **Automatically name new tasks** | *Names a new task with AI from its prompt and attached resources. A task created from a single issue or PR keeps that item's name.* | On |
 
-You need a paid GitKraken subscription to turn this setting on. Without one, a lock replaces the checkbox while the setting is off. If the setting is on, you can still turn it off. A change takes effect on the next task you create.
+A change takes effect on the next task you create.
 
 ## Task page
 

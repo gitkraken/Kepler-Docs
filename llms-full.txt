@@ -1,5 +1,5 @@
 # Kepler Documentation: llms-full.txt
-Generated: 2026-11-12
+Generated: 2026-11-16
 Pages: 30
 Source: https://help.gitkraken.com/kepler/
 
@@ -18,7 +18,7 @@ Kepler is GitKraken's **agentic development environment** (**ADE**). Use it to d
 
 You use your own coding agent. Kepler pulls in the issues and pull requests already assigned to you, hands any of them to an agent with the context attached, and takes the result through review to a change you can merge.
 
-Kepler is in **public preview**. To use it, you need only a free GitKraken account.
+Kepler is in **public preview**. To use it, you need a GitKraken account.
 
 <div class="embed-container embed-container--16-9">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/U0w18ZXrZ5M?rel=0&vq=hd1080" frameborder="0" allowfullscreen></iframe>
@@ -69,7 +69,7 @@ After you sign in, a guided start walks you through setup. To skip it at any poi
 
 - Switch on the agents you want Kepler to use, and make one the default. To add a missing agent, click its tile to install or locate it. After an install, Kepler offers to sign you in to the agent. See [Agent Integrations](/kepler/agent-integrations#install-an-agent).
 - Under **New sessions start in**, pick **Chat**, Kepler's own view of the agent, or **Terminal**, the agent's command-line app.
-- If your code is on another machine, use **Work on another machine?** to move this window there. Remote environments need a paid plan.
+- If your code is on another machine, use **Work on another machine?** to move this window there.
 
 If you installed an agent that Kepler did not find, click **Rescan**. To go on without an agent, click **Continue without an agent**. You can set one up later in **Settings → Agents**.
 
@@ -103,7 +103,7 @@ Expand **More setup options** for optional items:
 
 - **Set a default repositories folder**: where Kepler clones repositories it does not find locally
 - **Set a default worktree folder**: where Kepler creates one worktree per repository, per task
-- **Connect a remote environment**, covered in [Remote Environments](/kepler/remote-environments), where your plan can use it
+- **Connect a remote environment**, covered in [Remote Environments](/kepler/remote-environments)
 - **Control Kepler remotely**, also in [Remote Environments](/kepler/remote-environments)
 - **Add repo commands**, once you have a repository
 
@@ -190,7 +190,7 @@ Find a short answer to a common Kepler question, then follow its link for the fu
 
 ## Run agents where you work
 
-Kepler runs agents on your computer, in WSL, or on another machine. Remote environments, which include WSL distros and SSH hosts, need a paid plan. The number of accounts you can add for one agent depends on your GitKraken plan.
+Kepler runs agents on your computer, in WSL, or on another machine.
 
 Common questions about where and how your agents run:
 
@@ -225,7 +225,7 @@ Common questions about starting work, giving agents your rules, preparing each n
 
 ## Keep track of your agents
 
-Kepler shows you what your agents are doing and when they need you, on your computer or your phone. Remote Access, which opens Kepler on a phone, needs a paid plan.
+Kepler shows you what your agents are doing and when they need you, on your computer or your phone.
 
 Common questions about watching and answering your agents:
 
@@ -3142,8 +3142,6 @@ Expand the warning to see which file the account copied, with the paths of **Thi
 
 **Removing an account tells you what it will remove.** The **Remove {name}?** dialog counts the running sessions it will stop and the sessions it will permanently delete, because their conversations are stored only in this account. To keep those sessions, first click **Move to CLI account** under **Keep these conversations**. The sessions stay in their tasks, and removing the account then deletes nothing. If you do not move them, **Continue to remove** asks you to confirm the deletion once more.
 
-**How many accounts you can add depends on your GitKraken plan.** Pro and higher plans have no limit. If your plan stops covering an account that a running session uses, the session tells you, so you can switch it to another account or upgrade.
-
 ### Choosing an account for a session
 
 If 2 or more accounts are signed in, the **Agent** list shows one row per account, labeled with the account name. You pick the agent and the account in one click, in the **New task** composer or in a draft session tab.
@@ -4003,7 +4001,7 @@ The agent can read your tasks and sessions and act on them through Kepler's own 
 
 The chat can look up Kepler's settings for you. Ask where something is set, or what a setting is set to, and the agent finds the setting, tells you its current value and what it can be set to, and links to it. Click the link to open **Settings** at that setting. Only **Ask Kepler** can find and change settings; agents in tasks cannot.
 
-The agent changes a setting only when you ask it to. It can find and link to some settings but not change them, such as secrets, actions, and settings that take a list. The agent cannot turn on a paid feature without a paid plan, and it tells you why when it refuses.
+The agent changes a setting only when you ask it to. It can find and link to some settings but not change them, such as secrets, actions, and settings that take a list.
 
 Some changes wait for your approval: a change to a setting that affects your accounts, your privacy, other tools, what runs, or where files go. Kepler asks about each such change separately, and you approve it on its own. See [Approval requests](/kepler/agent-sessions#approval-requests).
 
@@ -4637,9 +4635,8 @@ You can resolve the conflicts in 2 ways:
 
 AI conflict resolution runs the rebase or merge on a copy and resolves each conflicted file for you. Your branch changes only when you apply the result.
 
-AI conflict resolution needs all of the following:
+AI conflict resolution needs both of the following:
 
-- A paid GitKraken plan. On the Community plan, the button shows a padlock.
 - **AI Sync** turned on in **Settings → Agents → Agent tools**.
 - A GitKraken sign-in.
 
@@ -4755,7 +4752,7 @@ Attaching a pull request also unlocks the **Address Feedback** Action on that ta
 
 ## Agent tools: AI Sync and AI Compose
 
-AI Sync and AI Compose give agents Git tools they do not otherwise have. Both are off until you turn them on, and both need a **paid GitKraken subscription**. Turn them on in **Settings → Agents → Agent tools**. With a tool turned on, the agents in your sessions gain the matching tools, and you ask for the work in the chat. AI Sync also powers the Sync view's **Sync** button when the branch has conflicts. See [Resolve update conflicts with AI](#resolve-update-conflicts-with-ai).
+AI Sync and AI Compose give agents Git tools they do not otherwise have. Both are off until you turn them on. Turn them on in **Settings → Agents → Agent tools**. With a tool turned on, the agents in your sessions gain the matching tools, and you ask for the work in the chat. AI Sync also powers the Sync view's **Sync** button when the branch has conflicts. See [Resolve update conflicts with AI](#resolve-update-conflicts-with-ai).
 
 | Tool | How an agent uses it |
 |---|---|
@@ -4767,8 +4764,6 @@ When you ask for a sync, tell the agent what matters, such as which side is auth
 A running session keeps the tools it started with. To use a tool you just turned on, start a new session.
 
 Both sets of tools work on the session's own worktree by default. Each can also name another worktree attached to the same task, so one session can clean up a branch it is not working in.
-
-On the Community plan, both rows still appear, with a padlock. Everything else on this page works on the Community plan, except AI conflict resolution.
 
 ***
 
@@ -5504,7 +5499,7 @@ For every message the dialog shows, see [Pull Request Integrations](/kepler/pull
 
 Once connected, a self-hosted provider lists each server on its own row, with **Set as primary**, **Replace token**, and **Disconnect**. Each server keeps its own repositories and issues:
 
-- To connect another server, click **Add connection** on the provider's row. Connecting more than 1 server needs an active GitKraken plan or trial.
+- To connect another server, click **Add connection** on the provider's row.
 - To renew an expired or rejected token, click **Replace token** on that server's row.
 - To make a server the provider's default connection, click **Set as primary**. Agents' GitKraken MCP server acts through the primary connection.
 
@@ -5772,7 +5767,7 @@ Until Kepler finishes syncing the connection to your account, the provider's row
 
 Once connected, a self-hosted provider lists each server on its own row, with **Set as primary**, **Replace token**, and **Disconnect**. Each server keeps its own repositories and pull requests:
 
-- To connect another server, click **Add connection** on the provider's row. Connecting more than 1 server needs an active GitKraken plan or trial.
+- To connect another server, click **Add connection** on the provider's row.
 - To renew an expired or rejected token, click **Replace token** on that server's row.
 - To make a server the provider's default connection, click **Set as primary**.
 
@@ -5958,7 +5953,7 @@ The Settings sidebar starts with a **Search settings** field and [**Setup**](/ke
 
 | Page | What it covers |
 |---|---|
-| [**Account**](/kepler/settings-setup-account#account) | Who you're signed in as, your organization, what your plan unlocks, and GitKraken AI credits |
+| [**Account**](/kepler/settings-setup-account#account) | Who you're signed in as, your organization, and GitKraken AI credits |
 | [**Agents**](/kepler/settings-agents) | Your agents, custom agents, MCP servers, agent tools, approvals, and usage limits |
 | [**Tasks**](/kepler/settings-tasks) | How new tasks start, including the default agent, and how a task's page looks |
 | [**Repositories**](/kepler/settings-repositories) | The repositories folder, your repos and folders, worktrees and branches, and Projects |
@@ -6022,7 +6017,7 @@ plan_required: all
 status: GA
 last_verified: 2026-10
 
-Use **Setup** to get back to Kepler's first-run checklist. Use **Account** to see who you are signed in as, which organization you are acting as, what your plan includes, and how you are using your GitKraken AI credits.
+Use **Setup** to get back to Kepler's first-run checklist. Use **Account** to see who you are signed in as, which organization you are acting as, and how you are using your GitKraken AI credits.
 
 ## Setup
 
@@ -6040,24 +6035,11 @@ The **Account** page has these controls:
 | Organization | Your active organization and its plan. If your GitKraken account belongs to more than 1 organization, this line is a switcher |
 | **Refresh account status** | Reads your plan again. Kepler also picks up a purchase or plan change you make outside the app by itself, without a restart |
 | **Manage account** / **Manage subscription** | Opens your GitKraken account or subscription on gitkraken.dev |
-| **Unlock more with Kepler** | What this plan includes and what it does not. Shown only while something is left to unlock |
 | **GitKraken AI credits** | Your credit balance, with **Buy credits**, and **Your usage by feature**. Shown only when there is a balance to show |
 
-The organization you are acting as decides what a feature costs and whether it is unlocked at all.
+The organization you are acting as decides what a feature costs.
 
 **Your usage by feature** shows where your AI credits went. It appears once you have used an AI feature. A stacked bar splits your use between your 3 most-used AI features and everything else, shown as **Other**. Below the bar, each feature has a row with its share of your use as a percentage, such as **Commit Message**, **Conflict Resolution**, **Compose Changes**, or **Task & branch names**. To see what a feature does, hover its help icon.
-
-### When a feature is locked
-
-If a feature is locked on the organization you are acting as but included on another organization you belong to, Kepler offers to switch instead of showing a paywall: *{organization} ({plan}) already includes this.*, with **Switch to organization**.
-
-If you just changed your plan, use **Check again** under **Already upgraded?** on the paywall. If nothing has changed, the paywall reads *Still on {plan}*. A paywall that covers the whole window also shows an account card with **Signed in as**, your **Current organization**, and a **Switch** button for each other organization whose plan includes the feature.
-
-### Trials
-
-When a trial starts, a dialog reads **You just opened up all of Kepler**, with a pill that shows how many days are free (*{count} days free*). It lists what the trial unlocks: *Every feature below is yours until {date}.*
-
-When the trial ends, a dialog reads **Your trial has ended** and lists **What your trial included**. It offers an upgrade or, if your account can start the trial again, a way to continue where you stopped.
 
 ---
 
@@ -6263,8 +6245,6 @@ Use **Agent tools** to let your agents call Kepler's own tools for rebasing, mer
 | **AI Sync** | *Lets agents rebase or merge your branch and resolve conflicts for you. Every change can be undone.* | Off |
 | **AI Compose** | *Lets agents turn messy changes into clean, focused commits. Every change can be undone.* | Off |
 
-You need a paid GitKraken subscription to turn either one on. Without one, a setting that is off shows a lock in place of its checkbox. A setting that is already on keeps its checkbox, so you can still turn it off.
-
 A change applies to new agent sessions. Sessions already running keep the tools they started with.
 
 ## Approvals
@@ -6393,7 +6373,7 @@ The following setting names new tasks for you:
 |---|---|---|
 | **Automatically name new tasks** | *Names a new task with AI from its prompt and attached resources. A task created from a single issue or PR keeps that item's name.* | On |
 
-You need a paid GitKraken subscription to turn this setting on. Without one, a lock replaces the checkbox while the setting is off. If the setting is on, you can still turn it off. A change takes effect on the next task you create.
+A change takes effect on the next task you create.
 
 ## Task page
 
@@ -6677,7 +6657,7 @@ A self-hosted provider, such as GitHub Enterprise, Azure DevOps Server, Bitbucke
 
 A connected self-hosted provider lists each server on its own row. Each server keeps its own repositories and issues:
 
-- To connect another server, click **Add connection** on the provider's row. Connecting more than 1 server needs an active GitKraken plan or trial.
+- To connect another server, click **Add connection** on the provider's row.
 - To renew an expired or rejected token, click **Replace token** on that server's row.
 - To make a server the provider's default connection, click **Set as primary**.
 
@@ -7253,8 +7233,6 @@ In **Found on this machine**, you can do the following:
 - To save a machine, click **Add**.
 - To move a machine out of the list, click **Hide**. Hidden machines appear under **Show hidden ({count})**.
 
-If your plan does not include remote environments, **Add** reads **Try free and add** when a trial is available. Otherwise it reads **Upgrade to add**, which opens the plan page and saves nothing.
-
 To open a saved machine's page, click the machine:
 
 | Control | What it does |
@@ -7292,7 +7270,7 @@ To learn how to connect, forward ports, and how sessions behave on a machine, se
 
 ## Remote Access
 
-*Use this machine from any browser or your phone, through a secure GitKraken relay.* You do not need to open a port or set up a tunnel. Remote Access requires a paid GitKraken plan and is not available on the Community plan.
+*Use this machine from any browser or your phone, through a secure GitKraken relay.* You do not need to open a port or set up a tunnel.
 
 Under **How it works**, the page lists 3 steps:
 
@@ -7441,12 +7419,6 @@ Both sit at the right end of the title bar. The **Remote Access** button shows a
 
 To let another device reach this Kepler, rather than connecting *to* another machine, see [Remote Access](#remote-access-reach-kepler-from-another-device).
 
-<div class="note" markdown="1">
-
-**Remote environments need a paid plan.** Every paid plan except Student includes them, with no limit on how many environments you can add. On other plans, a banner offers a free trial when one is available. If another organization you belong to includes remote environments, the banner names that organization and offers **Switch to organization**. If you have just upgraded, click **Check again** under **Already upgraded?** to reload your plan.
-
-</div>
-
 ***
 
 ## Switching environments from the title bar
@@ -7512,7 +7484,7 @@ Use **Settings → Remote environments** to add, connect, edit, and remove machi
 - To bring forward a host that is open in another window, click **Show window**, which replaces **Connect** for that host.
 - To open the host's page, click the row.
 
-**Found on this machine** lists machines from your `~/.ssh/config` and WSL distributions you have not saved yet. To save one, click **Add**. If your plan does not include remote environments, **Add** reads **Try free and add** when a trial is available. Otherwise it reads **Upgrade to add**, which opens the plan page and saves nothing. To stop Kepler from offering a machine, click its eye icon to hide it. To bring hidden machines back, click **Show hidden (*N*)**.
+**Found on this machine** lists machines from your `~/.ssh/config` and WSL distributions you have not saved yet. To save one, click **Add**. To stop Kepler from offering a machine, click its eye icon to hide it. To bring hidden machines back, click **Show hidden (*N*)**.
 
 ### Host details
 
@@ -7746,8 +7718,6 @@ The action depends on what happened:
 
 A failed update or restart leaves the server stopped. **Try again** installs the update and starts the server. If the machine needs a password, the screen asks for it.
 
-**If your plan does not include remote environments**, the screen says so, and offers **Upgrade to *plan*** or a free trial when one is available. You can also switch to another organization marked *Includes remote environments*, sign out, or click **Check again** to re-read your plan. Once your plan allows it, the window connects by itself.
-
 ***
 
 ## Local conveniences that still work
@@ -7812,7 +7782,7 @@ Configure it in **Settings → Remote Access**, or from the **Remote Access** bu
 
 ### Before you start
 
-You need a GitKraken account signed in to Kepler, on a paid GitKraken plan. Remote Access is not available on the free Community plan.
+You need a GitKraken account signed in to Kepler.
 
 When you sign out of Kepler, each remote machine your windows are connected to learns that you signed out, and turns its Remote Access off. A sign-in that expires on its own does not turn Remote Access off.
 
@@ -7949,7 +7919,7 @@ This release notes page tracks what's new and changing in the current version of
 
 - This page covers the current version line of Kepler, 0.x. Archived version pages will be listed here as later lines ship.
 - Each entry applies only to the specific release listed under its version heading.
-- Kepler is in public preview. A free GitKraken account is all you need to run it, though a few capabilities, such as [Remote Access](/kepler/remote-environments), require a paid GitKraken plan.
+- Kepler is in public preview. A GitKraken account is all you need to run it.
 - Kepler updates itself. You're prompted to restart when a new version is published, and **Check for Updates** in the app menu asks straight away.
 
 <a href="https://www.gitkraken.com/kepler/download?source=help_center" target="_blank" class="button button--basic ">Download Current Version Now</a>

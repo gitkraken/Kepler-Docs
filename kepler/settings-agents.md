@@ -224,8 +224,6 @@ Use **Agent tools** to let your agents call Kepler's own tools for rebasing, mer
 | **AI Sync** | *Lets agents rebase or merge your branch and resolve conflicts for you. Every change can be undone.* | Off |
 | **AI Compose** | *Lets agents turn messy changes into clean, focused commits. Every change can be undone.* | Off |
 
-You need a paid GitKraken subscription to turn either one on. Without one, a setting that is off shows a lock in place of its checkbox. A setting that is already on keeps its checkbox, so you can still turn it off.
-
 A change applies to new agent sessions. Sessions already running keep the tools they started with.
 
 ## Approvals
