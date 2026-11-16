@@ -203,8 +203,6 @@ Expand the warning to see which file the account copied, with the paths of **Thi
 
 **Removing an account tells you what it will remove.** The **Remove {name}?** dialog counts the running sessions it will stop and the sessions it will permanently delete, because their conversations are stored only in this account. To keep those sessions, first click **Move to CLI account** under **Keep these conversations**. The sessions stay in their tasks, and removing the account then deletes nothing. If you do not move them, **Continue to remove** asks you to confirm the deletion once more.
 
-**How many accounts you can add depends on your GitKraken plan.** Pro and higher plans have no limit. If your plan stops covering an account that a running session uses, the session tells you, so you can switch it to another account or upgrade.
-
 ### Choosing an account for a session
 
 If 2 or more accounts are signed in, the **Agent** list shows one row per account, labeled with the account name. You pick the agent and the account in one click, in the **New task** composer or in a draft session tab.

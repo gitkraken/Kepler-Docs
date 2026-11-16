@@ -23,7 +23,7 @@ Kepler is GitKraken's **agentic development environment** (**ADE**). Use it to d
 
 You use your own coding agent. Kepler pulls in the issues and pull requests already assigned to you, hands any of them to an agent with the context attached, and takes the result through review to a change you can merge.
 
-Kepler is in **public preview**. To use it, you need only a free GitKraken account.
+Kepler is in **public preview**. To use it, you need a GitKraken account.
 
 <div class="embed-container embed-container--16-9">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/U0w18ZXrZ5M?rel=0&vq=hd1080" frameborder="0" allowfullscreen></iframe>
@@ -81,7 +81,7 @@ After you sign in, a guided start walks you through setup. To skip it at any poi
 
 - Switch on the agents you want Kepler to use, and make one the default. To add a missing agent, click its tile to install or locate it. After an install, Kepler offers to sign you in to the agent. See [Agent Integrations](/kepler/agent-integrations#install-an-agent).
 - Under **New sessions start in**, pick **Chat**, Kepler's own view of the agent, or **Terminal**, the agent's command-line app.
-- If your code is on another machine, use **Work on another machine?** to move this window there. Remote environments need a paid plan.
+- If your code is on another machine, use **Work on another machine?** to move this window there.
 
 If you installed an agent that Kepler did not find, click **Rescan**. To go on without an agent, click **Continue without an agent**. You can set one up later in **Settings → Agents**.
 
@@ -143,7 +143,7 @@ Expand **More setup options** for optional items:
 
 - **Set a default repositories folder**: where Kepler clones repositories it does not find locally
 - **Set a default worktree folder**: where Kepler creates one worktree per repository, per task
-- **Connect a remote environment**, covered in [Remote Environments](/kepler/remote-environments), where your plan can use it
+- **Connect a remote environment**, covered in [Remote Environments](/kepler/remote-environments)
 - **Control Kepler remotely**, also in [Remote Environments](/kepler/remote-environments)
 - **Add repo commands**, once you have a repository
 

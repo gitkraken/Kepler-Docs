@@ -43,12 +43,6 @@ Both sit at the right end of the title bar. The **Remote Access** button shows a
 
 To let another device reach this Kepler, rather than connecting *to* another machine, see [Remote Access](#remote-access-reach-kepler-from-another-device).
 
-<div class="note" markdown="1">
-
-**Remote environments need a paid plan.** Every paid plan except Student includes them, with no limit on how many environments you can add. On other plans, a banner offers a free trial when one is available. If another organization you belong to includes remote environments, the banner names that organization and offers **Switch to organization**. If you have just upgraded, click **Check again** under **Already upgraded?** to reload your plan.
-
-</div>
-
 ***
 
 ## Switching environments from the title bar
@@ -142,7 +136,7 @@ Use **Settings → Remote environments** to add, connect, edit, and remove machi
   <figcaption style="text-align:center; color:#888">Settings → Remote Environments, with a saved host.</figcaption>
 </figure>
 
-**Found on this machine** lists machines from your `~/.ssh/config` and WSL distributions you have not saved yet. To save one, click **Add**. If your plan does not include remote environments, **Add** reads **Try free and add** when a trial is available. Otherwise it reads **Upgrade to add**, which opens the plan page and saves nothing. To stop Kepler from offering a machine, click its eye icon to hide it. To bring hidden machines back, click **Show hidden (*N*)**.
+**Found on this machine** lists machines from your `~/.ssh/config` and WSL distributions you have not saved yet. To save one, click **Add**. To stop Kepler from offering a machine, click its eye icon to hide it. To bring hidden machines back, click **Show hidden (*N*)**.
 
 ### Host details
 
@@ -425,9 +419,6 @@ The action depends on what happened:
 
 A failed update or restart leaves the server stopped. **Try again** installs the update and starts the server. If the machine needs a password, the screen asks for it.
 
-**If your plan does not include remote environments**, the screen says so, and offers **Upgrade to *plan*** or a free trial when one is available. You can also switch to another organization marked *Includes remote environments*, sign out, or click **Check again** to re-read your plan. Once your plan allows it, the window connects by itself.
-
-<!-- TODO(screenshot): Replace — ade-remote-recovery-plan-gate-01: the full-window recovery screen for dev-server on an account without remote environments, reading Your plan doesn't include remote environments, with Upgrade to plan, the signed-in account card, and Switch to local. -->
 <!-- TODO(screenshot): New — The full-screen remote recovery screen at 0.15.0, for example "Disconnected from dev-server" with the reason line, Reconnect, and Switch to local. -->
 
 ***
@@ -508,7 +499,7 @@ Configure it in **Settings → Remote Access**, or from the **Remote Access** bu
 
 ### Before you start
 
-You need a GitKraken account signed in to Kepler, on a paid GitKraken plan. Remote Access is not available on the free Community plan.
+You need a GitKraken account signed in to Kepler.
 
 When you sign out of Kepler, each remote machine your windows are connected to learns that you signed out, and turns its Remote Access off. A sign-in that expires on its own does not turn Remote Access off.
 

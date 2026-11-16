@@ -47,8 +47,6 @@ In **Found on this machine**, you can do the following:
 - To save a machine, click **Add**.
 - To move a machine out of the list, click **Hide**. Hidden machines appear under **Show hidden ({count})**.
 
-If your plan does not include remote environments, **Add** reads **Try free and add** when a trial is available. Otherwise it reads **Upgrade to add**, which opens the plan page and saves nothing.
-
 To open a saved machine's page, click the machine:
 
 | Control | What it does |
@@ -86,7 +84,7 @@ To learn how to connect, forward ports, and how sessions behave on a machine, se
 
 ## Remote Access
 
-*Use this machine from any browser or your phone, through a secure GitKraken relay.* You do not need to open a port or set up a tunnel. Remote Access requires a paid GitKraken plan and is not available on the Community plan.
+*Use this machine from any browser or your phone, through a secure GitKraken relay.* You do not need to open a port or set up a tunnel.
 
 Under **How it works**, the page lists 3 steps:
 

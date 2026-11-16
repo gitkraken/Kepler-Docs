@@ -595,9 +595,8 @@ AI conflict resolution runs the rebase or merge on a copy and resolves each conf
   <figcaption style="text-align:center; color:#888">The sync view on a conflicting branch. Sync resolves the conflicts with AI.</figcaption>
 </figure>
 
-AI conflict resolution needs all of the following:
+AI conflict resolution needs both of the following:
 
-- A paid GitKraken plan. On the Community plan, the button shows a padlock.
 - **AI Sync** turned on in **Settings → Agents → Agent tools**.
 - A GitKraken sign-in.
 
@@ -748,7 +747,7 @@ Attaching a pull request also unlocks the **Address Feedback** Action on that ta
 
 ## Agent tools: AI Sync and AI Compose
 
-AI Sync and AI Compose give agents Git tools they do not otherwise have. Both are off until you turn them on, and both need a **paid GitKraken subscription**. Turn them on in **Settings → Agents → Agent tools**. With a tool turned on, the agents in your sessions gain the matching tools, and you ask for the work in the chat. AI Sync also powers the Sync view's **Sync** button when the branch has conflicts. See [Resolve update conflicts with AI](#resolve-update-conflicts-with-ai).
+AI Sync and AI Compose give agents Git tools they do not otherwise have. Both are off until you turn them on. Turn them on in **Settings → Agents → Agent tools**. With a tool turned on, the agents in your sessions gain the matching tools, and you ask for the work in the chat. AI Sync also powers the Sync view's **Sync** button when the branch has conflicts. See [Resolve update conflicts with AI](#resolve-update-conflicts-with-ai).
 
 | Tool | How an agent uses it |
 |---|---|
@@ -760,8 +759,6 @@ When you ask for a sync, tell the agent what matters, such as which side is auth
 A running session keeps the tools it started with. To use a tool you just turned on, start a new session.
 
 Both sets of tools work on the session's own worktree by default. Each can also name another worktree attached to the same task, so one session can clean up a branch it is not working in.
-
-On the Community plan, both rows still appear, with a padlock. Everything else on this page works on the Community plan, except AI conflict resolution.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/agent-features-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">

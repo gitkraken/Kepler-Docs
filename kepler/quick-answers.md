@@ -25,7 +25,7 @@ Find a short answer to a common Kepler question, then follow its link for the fu
 
 ## Run agents where you work
 
-Kepler runs agents on your computer, in WSL, or on another machine. Remote environments, which include WSL distros and SSH hosts, need a paid plan. The number of accounts you can add for one agent depends on your GitKraken plan.
+Kepler runs agents on your computer, in WSL, or on another machine.
 
 Common questions about where and how your agents run:
 
@@ -60,7 +60,7 @@ Common questions about starting work, giving agents your rules, preparing each n
 
 ## Keep track of your agents
 
-Kepler shows you what your agents are doing and when they need you, on your computer or your phone. Remote Access, which opens Kepler on a phone, needs a paid plan.
+Kepler shows you what your agents are doing and when they need you, on your computer or your phone.
 
 Common questions about watching and answering your agents:
 
