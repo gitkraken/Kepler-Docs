@@ -32,7 +32,7 @@
       ]
     },
     {
-      "title": "Agent Workflows",
+      "title": "Agent Workflows in Kepler",
       "pages": [
         "kepler-move-from-conductor.md",
         "kepler-run-coding-agents-in-parallel-on-windows.md",

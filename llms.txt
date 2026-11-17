@@ -27,7 +27,7 @@ Scope: 38 pages included. Excluded (3): environment-and-setup.md, kepler-New-Pag
 - [Review What a Coding Agent Changed in Kepler](https://help.gitkraken.com/kepler/review-changes/): In Kepler, review what a coding agent changed. Read its diff in the task's worktree in the Changes overlay, then comment on it, stage it and commit it.
 - [Dictation and Read Aloud](https://help.gitkraken.com/kepler/voice-input/): Dictate to an agent instead of typing, and have its replies read aloud. Dictation transcribes on your device with Qwen3-ASR, or with Whisper where WebGPU is unavailable, learns the words you fix, and works push-to-talk or hands-free; read aloud uses your system's voices or Kokoro. Both work in remote windows.
 
-## Agent Workflows
+## Agent Workflows in Kepler
 
 - [Move from Conductor to Kepler](https://help.gitkraken.com/kepler/kepler-move-from-conductor/): In Kepler, import your Conductor workspaces on macOS as tasks, in the same folders and branches, with their Claude Code and Codex chats ready to continue.
 - [Run Multiple Coding Agents in Parallel on Windows with Kepler](https://help.gitkraken.com/kepler/kepler-run-coding-agents-in-parallel-on-windows/): Kepler has a native Windows installer. Run Claude Code, Codex and 7 more coding agents side by side on Windows, each task in its own Git worktree.
