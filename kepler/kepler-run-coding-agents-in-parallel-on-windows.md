@@ -56,7 +56,12 @@ Kepler has installers for 2 Windows architectures:
 
 Kepler runs directly on Windows. You do not need WSL, a virtual machine or a Mac to use it. See [Getting Started with Kepler](/kepler/kepler-getting-started#install-kepler) for the other platforms.
 
-<!-- CAPTURE NEEDED: Kepler running natively on Windows 11, Dashboard with 2 tasks in progress (one Claude Code, one Codex), Windows title bar visible -->
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/windows-dashboard-agents-nov-2026@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/windows-dashboard-agents-nov-2026@2x.png" class="help-center-img img-bordered" alt="Kepler on Windows with 2 tasks running on the acme-web repo. The Tasks list shows Add product search and category filters and Apply discount codes to cart total under Running. Side by side, a Claude Code session with Opus 5.5 writes a reply and a Codex session with 6.1 Sol runs npm test. The Windows minimize, maximize and close buttons are at the top right.">
+  </a>
+  <figcaption style="text-align:center; color:#888">Claude Code and Codex running side by side in Kepler on Windows, each in its own task.</figcaption>
+</figure>
 
 ***
 
@@ -80,7 +85,12 @@ Kepler offers a method only when the tool it runs, such as winget or npm, is ins
 
 If you installed an agent yourself and Kepler did not find it, open the agent's **Set up** dialog, enter the program's full path under **Already installed?**, and click **Use this**. See [Agent Integrations](/kepler/agent-integrations#install-an-agent).
 
-<!-- CAPTURE NEEDED: the Set up Claude Code dialog on Windows, listing Native installer, winget and npm (global) -->
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/windows-setup-claude-code-nov-2026@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/windows-setup-claude-code-nov-2026@2x.png" class="help-center-img img-bordered" alt="The Set up Claude Code dialog in Kepler on Windows. Under Install it lists Native installer, winget, and npm (global), marked Deprecated by Anthropic. Under Already installed? is a field for the full path to Claude Code with Browse and Use this buttons.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The Windows install routes for Claude Code.</figcaption>
+</figure>
 
 ***
 
