@@ -58,9 +58,9 @@ Kepler runs directly on Windows. You do not need WSL, a virtual machine or a Mac
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/windows-dashboard-agents-nov-2026@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/windows-dashboard-agents-nov-2026@2x.png" class="help-center-img img-bordered" alt="Kepler on Windows with 2 tasks running on the acme-web repo. The Tasks list shows Add product search and category filters and Apply discount codes to cart total under Running. Side by side, a Claude Code session with Opus 5.5 writes a reply and a Codex session with 6.1 Sol runs npm test. The Windows minimize, maximize and close buttons are at the top right.">
+    <img src="/wp-content/uploads/windows-dashboard-agents-nov-2026@2x.png" class="help-center-img img-bordered" alt="Kepler on Windows with 2 tasks running on the acme-web repo. The Tasks list shows Add product search and category filters and Apply discount codes to cart total under Running. Side by side, a Claude Code session with Opus 5.5 writes a reply and a Codex session with 6.1 Sol runs npm test. A teal ring marks the agent and model label in each panel: Default · Opus 5.5 under the Claude Code session and 6.1 Sol Medium under the Codex session. The Windows minimize, maximize and close buttons are at the top right.">
   </a>
-  <figcaption style="text-align:center; color:#888">Claude Code and Codex running side by side in Kepler on Windows, each in its own task.</figcaption>
+  <figcaption style="text-align:center; color:#888">Claude Code (Opus 5.5) and Codex (6.1 Sol) running side by side in Kepler on Windows, each in its own task.</figcaption>
 </figure>
 
 ***
