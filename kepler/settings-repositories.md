@@ -137,7 +137,7 @@ To reorder commands, drag a row by its handle, or move it from the keyboard with
 
 A row needs both a name and a command before you can save it. A closed row that is not saved yet shows **Not saved**. **Remove command** deletes a saved command, and the notification that follows offers **Undo**.
 
-Commands set to run on worktree creation run one at a time, in list order. If one fails, Kepler skips the rest. Each command runs in the new worktree's folder through your login shell, so tools set up in your shell profile, such as `nvm`, are available. Each command has a 10-minute timeout.
+Commands set to run on worktree creation run one at a time, in list order. If one fails, Kepler skips the rest. Each command runs in the new worktree's folder. On macOS and Linux, it runs through your login shell, so tools set up in your shell profile, such as `nvm`, are available. On Windows, it runs in Command Prompt (`cmd.exe`). Each command has a 10-minute timeout.
 
 A failed command does not undo the worktree. The worktree exists but may not be usable. To fix it:
 

@@ -147,7 +147,7 @@ Expand **More setup options** for optional items:
 - **Control Kepler remotely**, also in [Remote Environments](/kepler/remote-environments)
 - **Add repo commands**, once you have a repository
 
-If your project needs a setup step, use **Add repo commands** early. Save a repository's install or build command once, and Kepler can run it every time it creates a worktree, so an agent never starts in a checkout it cannot build. See [Tasks and Resources](/kepler/tasks-and-resources).
+If your project needs a setup step, use **Add repo commands** early. Save a repository's install or build command once, and Kepler can run it every time it creates a worktree, so each new worktree is set up without you running the command. See [Tasks and Resources](/kepler/tasks-and-resources).
 
 You can set folder paths and everything else on the checklist in [Settings](/kepler/settings-setup-account#setup). To remove the checklist from the top bar, click **Hide from toolbar (still available in Settings)**.
 

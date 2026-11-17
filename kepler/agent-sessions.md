@@ -403,7 +403,7 @@ Kepler takes over a conversation only when you ask. It binds the conversation to
 
 ### Turning detection on
 
-Detection is on by default. To turn it on or off, use **Settings → Integrations → Your terminal → Show sessions started outside Kepler**.
+Detection is off by default. To turn it on, or off again, use **Settings → Integrations → Your terminal → Show sessions started outside Kepler**.
 
 The switch installs GitKraken hooks, so each agent's own CLI reports what it is doing to Kepler. The one switch covers every agent that Kepler can track this way: **Claude Code**, **Codex**, **Cursor**, **GitHub Copilot**, **OpenCode**, **Auggie**, **Grok Build**, and **Pi**. Kepler does not track Google Antigravity through hooks. Turning the switch off stops reporting from all of them.
 
