@@ -19,7 +19,7 @@ taxonomy:
 ---
 <kbd>Last updated: November 2026</kbd>
 
-In Kepler ADE by GitKraken, you move from Conductor by importing your Conductor workspaces as tasks. Each workspace becomes a Kepler task in the same folder and on the same branch, and its Claude Code or Codex chats continue as the task's sessions. You pick the workspaces to bring over in **Import from another app**, and Kepler leaves your files and branches where they are.
+Kepler by GitKraken imports your Conductor workspaces on a Mac as tasks, in the same folders and branches, with their Claude Code or Codex chats ready to continue. You pick the workspaces to bring over in **Import from another app**, and Kepler leaves your files and branches where they are.
 
 **Requirements and limits**
 - Scope: Bringing the workspaces the Conductor app keeps on your Mac into Kepler as tasks

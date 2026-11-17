@@ -19,7 +19,7 @@ taxonomy:
 ---
 <kbd>Last updated: November 2026</kbd>
 
-Yes, Kepler ADE by GitKraken keeps track of several Claude Code and Codex sessions for you, including sessions you started in your own terminal. Give each piece of work its own task, so each one gets its own worktree and branch. The Dashboard then shows which session needs you, and each task's **Changes** group shows what its agent changed.
+Kepler by GitKraken keeps track of several Claude Code and Codex sessions in 1 Dashboard, including sessions you start in your own terminal once you turn on detection. Give each piece of work its own task, so each one gets its own worktree and branch. The Dashboard then shows which session needs you, and each task's **Changes** group shows what its agent changed.
 
 **Requirements and limits**
 - Scope: Following several agent sessions at once, seeing which one needs you, and seeing which one changed what.

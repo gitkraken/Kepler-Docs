@@ -19,7 +19,7 @@ taxonomy:
 ---
 <kbd>Last updated: November 2026</kbd>
 
-In Kepler ADE by GitKraken, you review an AI-written change yourself before a teammate sees it. You read every changed line in the Changes overlay, send review comments back to the agent, have a second agent review the work, and only then open the pull request. The work stays in the task's worktree, so you can review what Claude Code, Codex, or any other agent wrote before you open the pull request.
+Kepler by GitKraken gives you a review step between an agent's work and your teammates. You read every changed line in the Changes overlay, send review comments back to the agent, have a second agent review the work, and only then open the pull request. The work stays in the task's worktree, so you can review what Claude Code, Codex, or any other agent wrote before you open the pull request.
 
 **Requirements and limits**
 - Scope: Reviewing an agent's uncommitted or committed work in a Kepler task before you open a pull request

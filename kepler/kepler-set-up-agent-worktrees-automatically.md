@@ -19,7 +19,7 @@ taxonomy:
 ---
 <kbd>Last updated: November 2026</kbd>
 
-In Kepler ADE by GitKraken, you set up each new agent worktree once per repository, and Kepler repeats it every time it creates a worktree. A `.worktreeinclude` file copies Git-ignored files such as `.env` into the new worktree, and repository commands set to **Run on worktree creation** install dependencies, so Claude Code, Codex or any other agent starts in a worktree that can build.
+Kepler by GitKraken repeats your worktree setup every time it creates a worktree for an agent. You set it up once per repository: a `.worktreeinclude` file copies Git-ignored files such as `.env` into each new worktree, and repository commands set to **Run on worktree creation** install dependencies in the background, for Claude Code, Codex or any other agent.
 
 **Requirements and limits**
 - Scope: Preparing every new worktree that Kepler creates for a task: ignored files, dependency installs, and per-worktree settings such as a port or a database name

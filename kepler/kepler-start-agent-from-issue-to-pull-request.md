@@ -19,7 +19,7 @@ taxonomy:
 ---
 <kbd>Last updated: November 2026</kbd>
 
-Yes, Kepler ADE by GitKraken can start a coding agent straight from a Jira or GitHub issue, with the ticket already attached, and take the work to a pull request. You connect your tracker once, then click the **Action** button on the issue's row in **Todo**. For a GitHub or GitLab issue, Kepler creates a task, sets up a worktree by default, and starts Claude Code, Codex, or your default agent with the issue's details in place, so you never paste the ticket into a chat. For a Jira issue, you add the repository in the issue's panel first, then start.
+Kepler by GitKraken starts a coding agent from a Jira or GitHub issue, with the ticket already attached, and takes the work to a pull request. You connect your tracker once, then click the **Action** button on the issue's row in **Todo**. For a GitHub or GitLab issue, Kepler creates a task, sets up a worktree by default, and starts Claude Code, Codex, or your default agent with the issue's details in place, so you never paste the ticket into a chat. For a Jira issue, you add the repository in the issue's panel first, then start.
 
 **Requirements and limits**
 - Scope: Going from an issue in a connected tracker to an agent's pull request, inside 1 Kepler task

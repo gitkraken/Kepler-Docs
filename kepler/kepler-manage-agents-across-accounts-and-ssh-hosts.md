@@ -19,7 +19,7 @@ taxonomy:
 ---
 <kbd>Last updated: November 2026</kbd>
 
-Yes, Kepler ADE by GitKraken gives you 1 app to manage Claude Code and Codex sessions across several accounts and several SSH hosts. You add each account once in **Settings → Agents**, pick the account when you start a session, and add each remote server in **Settings → Remote environments**. Sessions on a server run there and keep running when you disconnect.
+Kepler by GitKraken manages your Claude Code and Codex sessions across several accounts and SSH hosts in 1 app. You add each account once in **Settings → Agents**, pick the account when you start a session, and add each remote server in **Settings → Remote environments**. Sessions on a server run there and keep running when you disconnect.
 
 **Requirements and limits**
 - Scope: Several signed-in accounts for 1 agent, choosing the account for each session, moving a conversation to another account, and running agent sessions on SSH hosts.

@@ -19,7 +19,7 @@ taxonomy:
 ---
 <kbd>Last updated: November 2026</kbd>
 
-Yes, Kepler ADE by GitKraken runs on Windows with a native Windows installer, so you can run Claude Code, Codex and other coding agents in parallel without a Mac. In Kepler, each task gets a worktree per task, a private Git working copy, so agents that run at the same time never change each other's files.
+Kepler by GitKraken installs natively on Windows, so you can run Claude Code, Codex and other coding agents in parallel without a Mac or WSL. Each task gets its own worktree, a private Git working copy, so agents that run at the same time never change each other's files.
 
 **Requirements and limits**
 - Scope: Installing Kepler on Windows, installing coding agents there, and running several agents at once
