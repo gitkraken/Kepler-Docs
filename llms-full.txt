@@ -4947,7 +4947,7 @@ plan_required: all
 status: GA
 last_verified: 2026-11
 
-In Kepler ADE by GitKraken, you move from Conductor by importing your Conductor workspaces as tasks. Each workspace becomes a Kepler task in the same folder and on the same branch, and its Claude Code or Codex chats continue as the task's sessions. You pick the workspaces to bring over in **Import from another app**, and Kepler leaves your files and branches where they are.
+Kepler by GitKraken imports your Conductor workspaces on a Mac as tasks, in the same folders and branches, with their Claude Code or Codex chats ready to continue. You pick the workspaces to bring over in **Import from another app**, and Kepler leaves your files and branches where they are.
 
 **Requirements and limits**
 - Scope: Bringing the workspaces the Conductor app keeps on your Mac into Kepler as tasks
@@ -5056,7 +5056,7 @@ plan_required: all
 status: GA
 last_verified: 2026-11
 
-Yes, Kepler ADE by GitKraken runs on Windows with a native Windows installer, so you can run Claude Code, Codex and other coding agents in parallel without a Mac. In Kepler, each task gets a worktree per task, a private Git working copy, so agents that run at the same time never change each other's files.
+Kepler by GitKraken installs natively on Windows, so you can run Claude Code, Codex and other coding agents in parallel without a Mac or WSL. Each task gets its own worktree, a private Git working copy, so agents that run at the same time never change each other's files.
 
 **Requirements and limits**
 - Scope: Installing Kepler on Windows, installing coding agents there, and running several agents at once
@@ -5212,7 +5212,7 @@ plan_required: all
 status: GA
 last_verified: 2026-11
 
-In Kepler ADE by GitKraken, you set up each new agent worktree once per repository, and Kepler repeats it every time it creates a worktree. A `.worktreeinclude` file copies Git-ignored files such as `.env` into the new worktree, and repository commands set to **Run on worktree creation** install dependencies, so Claude Code, Codex or any other agent starts in a worktree that can build.
+Kepler by GitKraken repeats your worktree setup every time it creates a worktree for an agent. You set it up once per repository: a `.worktreeinclude` file copies Git-ignored files such as `.env` into each new worktree, and repository commands set to **Run on worktree creation** install dependencies in the background, for Claude Code, Codex or any other agent.
 
 **Requirements and limits**
 - Scope: Preparing every new worktree that Kepler creates for a task: ignored files, dependency installs, and per-worktree settings such as a port or a database name
@@ -5379,7 +5379,7 @@ plan_required: all
 status: GA
 last_verified: 2026-11
 
-Yes, Kepler ADE by GitKraken gives you 1 app to manage Claude Code and Codex sessions across several accounts and several SSH hosts. You add each account once in **Settings → Agents**, pick the account when you start a session, and add each remote server in **Settings → Remote environments**. Sessions on a server run there and keep running when you disconnect.
+Kepler by GitKraken manages your Claude Code and Codex sessions across several accounts and SSH hosts in 1 app. You add each account once in **Settings → Agents**, pick the account when you start a session, and add each remote server in **Settings → Remote environments**. Sessions on a server run there and keep running when you disconnect.
 
 **Requirements and limits**
 - Scope: Several signed-in accounts for 1 agent, choosing the account for each session, moving a conversation to another account, and running agent sessions on SSH hosts.
@@ -5526,7 +5526,7 @@ plan_required: all
 status: GA
 last_verified: 2026-11
 
-Yes, Kepler ADE by GitKraken keeps track of several Claude Code and Codex sessions for you, including sessions you started in your own terminal. Give each piece of work its own task, so each one gets its own worktree and branch. The Dashboard then shows which session needs you, and each task's **Changes** group shows what its agent changed.
+Kepler by GitKraken keeps track of several Claude Code and Codex sessions in 1 Dashboard, including sessions you start in your own terminal once you turn on detection. Give each piece of work its own task, so each one gets its own worktree and branch. The Dashboard then shows which session needs you, and each task's **Changes** group shows what its agent changed.
 
 **Requirements and limits**
 - Scope: Following several agent sessions at once, seeing which one needs you, and seeing which one changed what.
@@ -5676,7 +5676,7 @@ plan_required: all
 status: GA
 last_verified: 2026-11
 
-Yes, Kepler ADE by GitKraken lets you see what your coding agents are doing and approve their requests from your phone. Turn on Remote Access in Kepler on your computer, scan its QR code with your phone, and answer each permission request from Claude Code, Codex or any other agent in your phone's browser, with the same choices as on your desktop.
+Kepler by GitKraken lets you see what your coding agents are doing and approve their requests from your phone. Turn on Remote Access in Kepler on your computer, scan its QR code with your phone, and answer each permission request from Claude Code, Codex or any other agent in your phone's browser, with the same choices as on your desktop.
 
 **Requirements and limits**
 - Scope: Watching agent sessions and answering permission requests, questions, plan reviews and approval requests from a phone
@@ -5810,7 +5810,7 @@ plan_required: all
 status: GA
 last_verified: 2026-11
 
-Yes, Kepler ADE by GitKraken can start a coding agent straight from a Jira or GitHub issue, with the ticket already attached, and take the work to a pull request. You connect your tracker once, then click the **Action** button on the issue's row in **Todo**. For a GitHub or GitLab issue, Kepler creates a task, sets up a worktree by default, and starts Claude Code, Codex, or your default agent with the issue's details in place, so you never paste the ticket into a chat. For a Jira issue, you add the repository in the issue's panel first, then start.
+Kepler by GitKraken starts a coding agent from a Jira or GitHub issue, with the ticket already attached, and takes the work to a pull request. You connect your tracker once, then click the **Action** button on the issue's row in **Todo**. For a GitHub or GitLab issue, Kepler creates a task, sets up a worktree by default, and starts Claude Code, Codex, or your default agent with the issue's details in place, so you never paste the ticket into a chat. For a Jira issue, you add the repository in the issue's panel first, then start.
 
 **Requirements and limits**
 - Scope: Going from an issue in a connected tracker to an agent's pull request, inside 1 Kepler task
@@ -5945,7 +5945,7 @@ plan_required: all
 status: GA
 last_verified: 2026-11
 
-In Kepler ADE by GitKraken, you review an AI-written change yourself before a teammate sees it. You read every changed line in the Changes overlay, send review comments back to the agent, have a second agent review the work, and only then open the pull request. The work stays in the task's worktree, so you can review what Claude Code, Codex, or any other agent wrote before you open the pull request.
+Kepler by GitKraken gives you a review step between an agent's work and your teammates. You read every changed line in the Changes overlay, send review comments back to the agent, have a second agent review the work, and only then open the pull request. The work stays in the task's worktree, so you can review what Claude Code, Codex, or any other agent wrote before you open the pull request.
 
 **Requirements and limits**
 - Scope: Reviewing an agent's uncommitted or committed work in a Kepler task before you open a pull request
