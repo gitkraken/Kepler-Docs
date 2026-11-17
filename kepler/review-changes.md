@@ -1,6 +1,6 @@
 ---
-title: Review Changes
-description: Review what an agent changed. Read the diff in the Changes overlay, comment on it, stage and commit, update the branch from its base, resolve update conflicts with AI, and hand the rest to AI Sync or AI Compose.
+title: Review What a Coding Agent Changed in Kepler
+description: In Kepler, review what a coding agent changed. Read its diff in the task's worktree in the Changes overlay, then comment on it, stage it and commit it.
 product: Kepler
 feature: Review Changes
 content_type: how-to
@@ -19,7 +19,7 @@ taxonomy:
 ---
 <kbd>Last updated: November 2026</kbd>
 
-When an agent stops and says it is done, read what it actually changed.
+In Kepler, you review what a coding agent such as Claude Code or Codex changed by reading its diff in the task's worktree in the Changes overlay. From there you comment on the diff, stage the files and commit them.
 
 The agent makes its changes in the task's **worktree**: the Git working copy for that task. To review them, open the worktree from the **Changes** group in the task page's context panel. See [The Task View](/kepler/task-view).
 
@@ -118,11 +118,7 @@ To open the Changes overlay, click a file, or choose **Open changes** from the w
   <figcaption style="text-align:center; color:#888">The Changes overlay at its default width, with Maximize in its header.</figcaption>
 </figure>
 
-<div class="note" markdown="1">
-
-**You can act on a diff in the overlay as well as read it.** In **Working changes** and **All changes** you can edit a file in place. In **Working changes** you can also resolve its conflicts, discard it or delete it, and **Commit…** lets you stage and commit it. You can leave review comments for your agent too. See [Staging and committing](#staging-and-committing) and [Review comments](#review-comments).
-
-</div>
+> **Note:** **You can act on a diff in the overlay as well as read it.** In **Working changes** and **All changes** you can edit a file in place. In **Working changes** you can also resolve its conflicts, discard it or delete it, and **Commit…** lets you stage and commit it. You can leave review comments for your agent too. See [Staging and committing](#staging-and-committing) and [Review comments](#review-comments).
 
 ### The layout
 
