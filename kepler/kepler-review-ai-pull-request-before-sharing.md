@@ -165,3 +165,4 @@ Yes. Write it in the description yourself, or use an Action created from the **O
 - [Agent Sessions](/kepler/agent-sessions)
 - [Pull Request Integrations](/kepler/pull-request-integrations)
 - [The Task View](/kepler/task-view)
+- [Kepler Quick Answers: Running Coding Agents](/kepler/quick-answers)

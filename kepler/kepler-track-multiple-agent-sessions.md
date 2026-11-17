@@ -179,3 +179,4 @@ Yes. Each task gets its own worktree, so Claude Code and Codex can each work in 
 - [Ask Kepler](/kepler/ask-kepler)
 - [Review Changes](/kepler/review-changes)
 - [Manage Claude Code and Codex Sessions Across Accounts and SSH Hosts in Kepler](/kepler/kepler-manage-agents-across-accounts-and-ssh-hosts)
+- [Kepler Quick Answers: Running Coding Agents](/kepler/quick-answers)

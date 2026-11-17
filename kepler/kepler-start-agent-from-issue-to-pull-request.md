@@ -155,3 +155,4 @@ Your default agent, such as Claude Code or Codex, unless the Action names anothe
 - [Review What a Coding Agent Changed in Kepler](/kepler/review-changes)
 - [Pull Request Integrations](/kepler/pull-request-integrations)
 - [Automations](/kepler/kepler-automations)
+- [Kepler Quick Answers: Running Coding Agents](/kepler/quick-answers)

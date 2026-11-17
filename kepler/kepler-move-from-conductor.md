@@ -150,3 +150,4 @@ Kepler can also import workspaces from Orca, herdr, and Vibe Kanban, in the same
 - [Actions](/kepler/actions)
 - [Review What a Coding Agent Changed in Kepler](/kepler/review-changes)
 - [Getting Started with Kepler](/kepler/kepler-getting-started)
+- [Kepler Quick Answers: Running Coding Agents](/kepler/quick-answers)
