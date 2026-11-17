@@ -19,7 +19,7 @@ taxonomy:
 ---
 <kbd>Last updated: November 2026</kbd>
 
-Yes, Kepler ADE by GitKraken can start a coding agent straight from a Jira or GitHub issue, with the ticket already attached, and take the work to a pull request. You connect your tracker once, then click the **Action** button on the issue's row in **Todo**. For a GitHub or GitLab issue, Kepler creates a task, sets up a worktree, and starts Claude Code, Codex, or your default agent with the issue's details in place, so you never paste the ticket into a chat. For a Jira issue, you add the repository in the issue's panel first, then start.
+Yes, Kepler ADE by GitKraken can start a coding agent straight from a Jira or GitHub issue, with the ticket already attached, and take the work to a pull request. You connect your tracker once, then click the **Action** button on the issue's row in **Todo**. For a GitHub or GitLab issue, Kepler creates a task, sets up a worktree by default, and starts Claude Code, Codex, or your default agent with the issue's details in place, so you never paste the ticket into a chat. For a Jira issue, you add the repository in the issue's panel first, then start.
 
 **Requirements and limits**
 - Scope: Going from an issue in a connected tracker to an agent's pull request, inside 1 Kepler task
@@ -34,7 +34,7 @@ Yes, Kepler ADE by GitKraken can start a coding agent straight from a Jira or Gi
 1. Go to **Settings → Integrations**, find your tracker, such as **Jira** or **GitHub**, under **Issues and pull requests**, and click **Connect**.
 2. Open **Todo** and find the issue.
 3. Click the issue's **Action** button. The default for an issue is **Plan**. To start coding straight away, pick **Implement** from the chevron.
-4. For a GitHub or GitLab issue, Kepler creates the task, attaches the repository and the issue, sets up a worktree by default, and starts the agent. For a Jira issue or another tracker's issue, the issue's panel opens: add the repository, then send.
+4. For a GitHub or GitLab issue, Kepler creates the task, attaches the repository and the issue, sets up a worktree by default, and starts the agent. For a Jira, Trello, Asana, or Azure DevOps issue, the issue's panel opens: add the repository, then send.
 5. Review the agent's changes and commit them.
 6. Have the agent open the pull request with an Action you create from the **Open a pull request** example, or open it yourself. Kepler attaches the pull request to the task.
 
