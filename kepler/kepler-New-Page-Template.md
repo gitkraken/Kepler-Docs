@@ -1,6 +1,6 @@
 ---
 title: Do the Task in Kepler
-description: In Kepler, ... One or 2 sentences, 160 characters or fewer, that name Kepler and the action the page covers.
+description: In Kepler, ... 1 or 2 sentences, 160 characters or fewer, that name Kepler and the action the page covers.
 product: Kepler
 feature: Feature Name
 content_type: how-to
@@ -12,7 +12,7 @@ integrations: []
 hosted_variant: both
 status: GA
 last_verified: YYYY-MM
-llms_include: true
+llms_include: false  # Templates stay false. Set this to true on a real page.
 tags: [keyword-one, keyword-two, keyword-three]
 taxonomy:
   category: kepler

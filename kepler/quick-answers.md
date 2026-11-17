@@ -7,7 +7,7 @@ content_type: how-to
 audience: developer
 plan_required: all
 os_support: [Windows, macOS, Linux]
-git_hosts: [github, github-enterprise, gitlab, gitlab-self-hosted, bitbucket, azure-devops]
+git_hosts: [github, github-enterprise, gitlab, gitlab-self-managed, bitbucket, azure-devops]
 integrations: [claude-code, codex-cli, copilot-cli, cursor, auggie, opencode, grok, pi, antigravity]
 hosted_variant: both
 status: GA
@@ -33,7 +33,7 @@ Common questions about where and how your agents run:
 |---|---|---|
 | Run several agents at once without their changes colliding | In Kepler, each task gets a **worktree**, a private Git working copy. Agents change files there, so several can run at once without touching each other's work or your own checkout. | [Tasks and Resources → Worktrees](/kepler/tasks-and-resources#worktrees-and-working-in-place) |
 | Run Kepler on Windows | Kepler installs natively on Windows 10 and later, on 64-bit and ARM64. It also runs on macOS 12 and later, and on Linux. | [Getting Started → Install Kepler](/kepler/kepler-getting-started#install-kepler) |
-| Run agents in Windows Subsystem for Linux (WSL) | In Kepler, a WSL 2 distro is a remote environment. It finds your version 2 distros and lists them under **Found on this machine** in Settings. | [Remote Environments → WSL environments](/kepler/remote-environments#wsl-environments) |
+| Run agents in Windows Subsystem for Linux (WSL) | In Kepler, a WSL 2 distro is a remote environment. Kepler finds your version 2 distros and lists them under **Found on this machine** in Settings. | [Remote Environments → WSL environments](/kepler/remote-environments#wsl-environments) |
 | Run agents on another machine | In Kepler, add the machine as an SSH host. Kepler installs itself on the host over SSH, so you do not need to install anything there first. | [Remote Environments → Add an SSH host](/kepler/remote-environments#add-an-ssh-host) |
 | Use several accounts of the same agent | In Kepler, Claude Code, Codex, GitHub Copilot, Auggie, and Grok Build can each hold more than one signed-in account. To add one, open **Settings → Agents**, expand the agent, and click **Add account**. | [Agent Sessions → Several accounts for one agent](/kepler/agent-sessions#several-accounts-for-one-agent) |
 
@@ -47,7 +47,7 @@ Common questions about starting work, giving agents your rules, preparing each n
 
 | What you want to do | Short answer | Full details |
 |---|---|---|
-| Start an agent from a Jira, Linear, or GitHub issue | In Kepler, connect your tracker, then run an Action from the issue's row. The issue becomes a task, and Kepler attaches what it read, so the agent starts with that context. | [Issue Tracker Integrations](/kepler/issue-tracker-integrations), [Actions](/kepler/actions) |
+| Start an agent from a Jira, Linear, or GitHub issue | In Kepler, connect your tracker, then run an Action from the issue's row. The issue becomes a task, and Kepler attaches what it read, so the agent starts with that context. For a Jira issue, or a Linear issue not synced with GitHub, add a repository in its panel first. | [Issue Tracker Integrations](/kepler/issue-tracker-integrations), [Actions](/kepler/actions) |
 | Start without an issue | In Kepler, click **New task** or press **Cmd/Ctrl+N**, then write a prompt. You can attach nothing at all and turn the task into real work later. | [Getting Started → Start something that is not tracked yet](/kepler/kepler-getting-started#start-something-that-is-not-tracked-yet) |
 | Move my work over from Conductor | In Kepler on macOS, click the import card on an empty **Tasks** list, or choose **File → Import from Another App…**. Each Conductor workspace becomes a task, and its chats continue in Kepler. | [Create a task → From another agent app](/kepler/create-task#from-another-agent-app) |
 | Give every agent on a task your team's rules | In Kepler, attach a **Note** to the task with the rule, constraint, or decision. Every session on the task gets it, including sessions you start later. | [Tasks and Resources → Notes](/kepler/tasks-and-resources#notes-are-how-you-give-standing-instructions) |
