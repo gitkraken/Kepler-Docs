@@ -26,6 +26,7 @@ Yes, Kepler ADE by GitKraken gives you 1 app to manage Claude Code and Codex ses
 - Agents with several accounts: Claude Code, Codex, GitHub Copilot, Auggie, and Grok Build.
 - Moving a conversation to another account: Claude Code and Codex only, and only between accounts that share history with the CLI.
 - SSH hosts: Kepler installs itself on the host over SSH. The agent you want to run must also be installed and signed in on the host.
+- Limits: SSH hosts and WSL distros need the Kepler desktop app. Kepler in a browser cannot connect to them.
 - Limits: Each Kepler window works on 1 machine at a time. Open 1 window per machine to watch several machines side by side.
 
 ***
@@ -47,12 +48,12 @@ Claude Code, Codex, GitHub Copilot, Auggie, and Grok Build can each have more th
 
 1. Open **Settings → Agents** and expand the agent.
 2. Under **Accounts**, click **Add account**.
-3. For Claude Code and Codex, choose how the account handles conversation history:
+3. For Claude Code, Codex, and GitHub Copilot, choose how the account handles conversation history:
    - **Share with the CLI**: the account reads the same conversations as the agent's own login. Pick this to move conversations between accounts later.
    - **Keep separate**: the account keeps its own conversations.
 4. Sign in.
 
-The first row, badged **Default**, is the agent's own login. Each account keeps its own sign-in and shares your skills, commands, and settings. Give each account a color to tell sessions apart: the color tints the agent icon on session tabs.
+The first row is the agent's own login. The account badged **Default** is the one new sessions use. Each account keeps its own sign-in and shares your skills, commands, and settings. Give each added account a color to tell sessions apart: the color tints the agent icon on session tabs.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/agent-accounts-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
@@ -67,11 +68,11 @@ See [Several accounts for one agent](/kepler/agent-sessions#several-accounts-for
 
 ## How to choose the account for a session
 
-When 2 or more accounts of an agent are signed in, the **Agent** list shows 1 row per account, labeled with the account name. Pick the row in the **New task** composer or in a new session tab, and the session runs under that account.
+When an agent has 2 or more accounts, the **Agent** list shows 1 row per account, labeled with the account name. Pick the row in the **New task** window or in a new session tab, and the session runs under that account.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/account-multiple-selector-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/account-multiple-selector-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Agent list open in the New task composer, with Search options at the top. Under a Claude Code heading sit two account rows: CLI, with the login alex.lee@example.com and an Acme badge, checked, and Personal. Below come Codex CLI (Not signed in), GitHub Copilot CLI (Not signed in), OpenCode, Pi and Auggie CLI (Not signed in), with more agents further down the list, then Add another account and Install another agent.">
+    <img src="/wp-content/uploads/account-multiple-selector-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Agent list open in the New task composer, with Search options… at the top. Under a Claude Code heading sit two account rows: CLI, with the login alex.lee@example.com and an Acme badge, checked, and Personal. Below come Codex CLI (Not signed in), GitHub Copilot CLI (Not signed in), OpenCode, Pi and Auggie CLI (Not signed in), with more agents further down the list, then Add another account and Install another agent.">
   </a>
   <figcaption style="text-align:center; color:#888">The Agent list, with 1 row per account.</figcaption>
 </figure>
@@ -171,7 +172,7 @@ No. Sessions run on the server and keep running after you close the window or lo
 
 ### Does this work with WSL too?
 
-Yes. On Windows, a WSL distribution is a remote environment like an SSH host. See [WSL environments](/kepler/remote-environments#wsl-environments).
+Yes. On Windows, a WSL 2 distribution is a remote environment like an SSH host. See [WSL environments](/kepler/remote-environments#wsl-environments).
 
 ***
 

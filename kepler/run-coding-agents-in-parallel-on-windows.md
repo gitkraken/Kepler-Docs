@@ -23,7 +23,7 @@ Yes, Kepler ADE by GitKraken runs on Windows with a native Windows installer, so
 
 **Requirements and limits**
 - Scope: Installing Kepler on Windows, installing coding agents there, and running several agents at once
-- Prerequisite: Windows 10 or later, on x64 (64-bit) or ARM64, and a GitKraken account to sign in to Kepler
+- Prerequisite: Windows 10+, on 64-bit or ARM64, and a GitKraken account to sign in to Kepler
 - Prerequisite: Your own account for each coding agent you use, such as a Claude or ChatGPT plan
 - Limits: Auggie, Pi and OpenCode need Node.js on Windows. OpenCode installs only through npm on Windows
 - Limits: A worktree separates files only. Agents still share ports, databases and other local services. See [What a worktree does not separate](#what-a-worktree-does-not-separate)
@@ -37,7 +37,7 @@ Yes, Kepler ADE by GitKraken runs on Windows with a native Windows installer, so
 3. In **Choose your coding agents**, switch on Claude Code and Codex. To install an agent you do not have yet, click its tile.
 4. In **Bring in your repos**, check the repositories you work in, then click the button that adds them.
 5. Click **New task** or press **Ctrl+N**, write a prompt, attach a repository with **Add repo or folder**, and click **Start**. Kepler creates a worktree for the task and starts the agent in it.
-6. Start a second task the same way, and pick another agent under **Agent** in the composer. Both agents now work at the same time, each in its own worktree.
+6. Start a second task the same way, and pick another agent in the **New task** window. Both agents now work at the same time, each in its own worktree.
 
 ***
 
@@ -47,8 +47,8 @@ Kepler has installers for 2 Windows architectures:
 
 | Installer | For |
 |---|---|
-| 64-bit | Windows 10 or later on an Intel or AMD processor |
-| ARM64 | Windows 10 or later on an ARM processor |
+| 64-bit | Windows 10+ on an Intel or AMD processor |
+| ARM64 | Windows 10+ on an ARM processor |
 
 1. Go to [gitkraken.com/kepler/download](https://www.gitkraken.com/kepler/download) and pick the Windows installer for your processor.
 2. Run the installer.
@@ -66,7 +66,7 @@ Kepler supports 9 coding agents on Windows. When an agent is missing, open **Set
 
 | Agent | Install methods on Windows | Note for Windows |
 |---|---|---|
-| **Claude Code** | Native installer, winget, npm (global) | None |
+| **Claude Code** | Native installer, winget, npm (global) | Kepler marks npm **Deprecated by Anthropic** |
 | **Codex** | Standalone installer, npm (global) | None |
 | **GitHub Copilot** | winget, npm (global) | None |
 | **Cursor** | Native installer | None |
@@ -74,18 +74,11 @@ Kepler supports 9 coding agents on Windows. When an agent is missing, open **Set
 | **OpenCode** | npm (global) | Needs Node.js. npm is the only Windows method |
 | **Grok Build** | Native installer | None |
 | **Pi** | Native installer, npm (global) | Needs Node.js for both methods. Runs in Terminal only |
-| **Google Antigravity** | Native installer | None |
+| **Antigravity** | Native installer | Google's agent |
 
 Kepler offers a method only when the tool it runs, such as winget or npm, is installed. When an agent needs Node.js and it is missing, Kepler says so and offers **Get Node.js**. Install Node.js, then click **Rescan**.
 
 If you installed an agent yourself and Kepler did not find it, open the agent's **Set up** dialog, enter the program's full path under **Already installed?**, and click **Use this**. See [Agent Integrations](/kepler/agent-integrations#install-an-agent).
-
-<figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-setup-dialog-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-setup-dialog-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Set up Claude Code dialog: under Install, the Native installer, Homebrew, and npm (global) methods, npm marked Deprecated by Anthropic, then Already installed? with a Full path to Claude Code field, Browse… and Use this.">
-  </a>
-  <figcaption style="text-align:center; color:#888">The Set up dialog. On Windows, Claude Code lists Native installer, winget and npm (global).</figcaption>
-</figure>
 
 <!-- CAPTURE NEEDED: the Set up Claude Code dialog on Windows, listing Native installer, winget and npm (global) -->
 
@@ -159,7 +152,7 @@ Kepler lists WSL **version 2** distros only. Install each agent inside the distr
 
 ### Does Kepler work on Windows, or is it Mac only?
 
-Kepler works on Windows. It has a native Windows installer for Windows 10 and later, on 64-bit and ARM64. It also runs on macOS and Linux.
+Kepler works on Windows. It has a native Windows installer for Windows 10+, on 64-bit and ARM64. It also runs on macOS and Linux.
 
 ### Can I run Claude Code and Codex at the same time on Windows?
 
@@ -175,7 +168,7 @@ Leave **Isolated worktree** on, which is the default. Each task then works in it
 
 ### Why does my second agent's dev server fail to start?
 
-When 2 worktrees start a dev server on the same port, the second server fails to start. A worktree separates files only. Give each worktree its own port with a repository command. See [Set Up Every New Agent Worktree Automatically](/kepler/set-up-agent-worktrees-automatically#give-each-worktree-its-own-port-or-database).
+When 2 worktrees start a dev server on the same port, the second server can fail to start. A worktree separates files only. Give each worktree its own port with a repository command. See [Set Up Every New Agent Worktree Automatically](/kepler/set-up-agent-worktrees-automatically#give-each-worktree-its-own-port-or-database).
 
 ***
 

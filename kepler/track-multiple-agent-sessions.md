@@ -91,7 +91,7 @@ To change where new tasks make their changes, open **Settings → Tasks** and fi
 
 ### The Dashboard and its Inbox
 
-The Dashboard's **Tasks** view groups tasks by what each one needs from you. This grouping, **Inbox**, is the default:
+The Dashboard's **Tasks** view groups tasks by what each one needs from you. This grouping, **Inbox**, is the default. The first 3 sections are:
 
 | Section | What it holds |
 |---|---|
@@ -112,7 +112,7 @@ Each task row adds a line that says what its session needs, such as **Approval n
 
 ### Session status
 
-Every session shows a colored status on its tab and rows. **Waiting** means it is blocked on you, and says on what: **Permission**, **Question**, or **Plan review**. See [Session status](/kepler/agent-sessions#session-status).
+Every session shows a colored status on its tab and rows. **Waiting** means it is blocked on you, and says on what, such as **Permission**, **Question**, or **Plan review**. See [Session status](/kepler/agent-sessions#session-status).
 
 ### Notifications
 
@@ -124,7 +124,7 @@ The Dashboard's **Agent Graph** view shows every task, session, turn, tool call,
 
 ### Ask Kepler
 
-Open **Ask Kepler** and ask **What needs me right now?** Kepler answers with the sessions waiting on you, such as approvals, permission requests, questions, and failed or unread sessions. See [Ask Kepler](/kepler/ask-kepler).
+Open **Ask Kepler** and ask **What needs me right now?** Kepler lists what is waiting on you. See [Ask Kepler](/kepler/ask-kepler).
 
 ***
 

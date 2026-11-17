@@ -7,7 +7,7 @@ content_type: how-to
 audience: developer
 plan_required: all
 os_support: [Windows, macOS, Linux]
-git_hosts: [github, github-enterprise, gitlab, gitlab-self-hosted, bitbucket, azure-devops]
+git_hosts: [github, github-enterprise, gitlab, gitlab-self-managed, bitbucket, azure-devops]
 integrations: [claude-code, codex-cli, copilot-cli, cursor, auggie, opencode, grok, pi, antigravity]
 hosted_variant: both
 status: GA
@@ -19,7 +19,7 @@ taxonomy:
 ---
 <kbd>Last updated: November 2026</kbd>
 
-In Kepler ADE by GitKraken, you review an AI-written change yourself before a teammate sees it. You read every changed line in the Changes overlay, send review comments back to the agent, have a second agent review the work, and only then open the pull request. The work stays in the task's worktree until you are ready, so you can review what Claude Code, Codex, or any other agent wrote before anything reaches your Git host.
+In Kepler ADE by GitKraken, you review an AI-written change yourself before a teammate sees it. You read every changed line in the Changes overlay, send review comments back to the agent, have a second agent review the work, and only then open the pull request. The work stays in the task's worktree, so you can review what Claude Code, Codex, or any other agent wrote before you open the pull request.
 
 **Requirements and limits**
 - Scope: Reviewing an agent's uncommitted or committed work in a Kepler task before you open a pull request
@@ -36,7 +36,7 @@ In Kepler ADE by GitKraken, you review an AI-written change yourself before a te
 |---|---|
 | 1. Restate the problem | Ask the agent for a summary of what it changed and what it did not test, with an Action you create from the **Prepare for review** example |
 | 2. Read every changed line | Open the task's worktree and read the diff in the **Changes** overlay |
-| 3. Send fixes back | Comment on the lines that need work, then click **Send comments ({count})** |
+| 3. Send fixes back | Comment on the lines that need work, then click **Send comments (*n*)** |
 | 4. Prove it works | Ask the agent to run the tests in the session, and read the commands and results it reports |
 | 5. Get a second opinion | Run the built-in **Review** Action with a different agent, such as Codex for work Claude Code wrote |
 | 6. Open the pull request | Commit, then open the pull request yourself or with an Action you create from the **Open a pull request** example |
@@ -85,7 +85,7 @@ When a line needs work, comment on it instead of fixing it yourself or retyping 
 1. In the **Changes** overlay, hover a line and click the **+** beside its line number. To comment on a range, **Shift**-click the last line.
 2. Type your note.
 3. Click **Add comment** to queue it, or **Send now** to send it to the agent at once.
-4. When you finish the file, click **Send comments ({count})** in the overlay's header to send every queued comment.
+4. When you finish the file, click **Send comments (*n*)** in the overlay's header to send every queued comment.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/review-comment-draft-oct-2026-v6@2x.png" target="_blank" rel="noopener noreferrer">

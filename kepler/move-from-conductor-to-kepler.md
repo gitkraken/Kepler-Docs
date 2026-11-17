@@ -23,9 +23,9 @@ In Kepler ADE by GitKraken, you move from Conductor by importing your Conductor 
 
 **Requirements and limits**
 - Scope: Bringing the workspaces the Conductor app keeps on your Mac into Kepler as tasks
-- Prerequisite: Kepler and Conductor installed on the same Mac
+- Prerequisite: Conductor's workspaces on the Mac that runs Kepler
 - Limits: Importing from Conductor works on macOS only, because Conductor runs only on macOS.
-- Limits: Conductor Cloud workspaces are not imported. They have no folder on your Mac.
+- Limits: Conductor's cloud workspaces are not imported. They have no folder on your Mac.
 - Limits: Archived workspaces, and workspaces whose folder no longer exists, are not imported.
 - Limits: Continue each chat in 1 app only. Conductor and Kepler write to the same chat history.
 
@@ -61,7 +61,7 @@ In Kepler ADE by GitKraken, you move from Conductor by importing your Conductor 
   <figcaption style="text-align:center; color:#888">Picking Conductor as the app to import from.</figcaption>
 </figure>
 
-3. In **Import from Conductor**, tick the workspaces you want, and click **Import *N* workspaces**. The workspaces are grouped by repository, and each row shows its branch and how many chats it has. A workspace you already imported is marked **Already a task**.
+3. In **Import from Conductor**, tick the workspaces you want, and click **Import *N* workspaces**. The workspaces are grouped by repository, and each row shows its branch and how many chats it has. A workspace you already imported is marked **Already a task:** and the task's name.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/import-workspaces-nov-2026@2x.png" target="_blank" rel="noopener noreferrer">
@@ -83,7 +83,7 @@ In Kepler ADE by GitKraken, you move from Conductor by importing your Conductor 
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/import-tasks-nov-2026@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/import-tasks-nov-2026@2x.png" class="help-center-img img-bordered" alt="The Tasks view listing the 4 imported tasks under Recent, each with its repository and In development status.">
+    <img src="/wp-content/uploads/import-tasks-nov-2026@2x.png" class="help-center-img img-bordered" alt="The Tasks view listing the 4 imported tasks under Recent, each with its repository and In Development status.">
   </a>
   <figcaption style="text-align:center; color:#888">The imported workspaces, now tasks.</figcaption>
 </figure>
@@ -97,7 +97,7 @@ If Conductor is not in the list, Kepler did not find Conductor's workspaces on t
 | From Conductor | In Kepler |
 |---|---|
 | A workspace | A task, named after the workspace |
-| The workspace's folder | The task's worktree. Kepler uses the same folder and does not copy or move your files |
+| The workspace's folder | The task's worktree, or the repository folder for a workspace on the main checkout. Kepler uses the same folder and does not copy or move your files |
 | The workspace's branch | The same branch, in that worktree |
 | The workspace's chats | The task's sessions. Open one to continue the chat where it left off |
 | The workspace's notes | A note on the task, titled **Notes from Conductor** |

@@ -58,7 +58,7 @@ config/local.json
 certs/
 ```
 
-When Kepler creates a worktree, it copies the matching files from your checkout into it, before any setup command runs and before the agent gets the worktree.
+When Kepler creates a worktree, it copies the matching files from your checkout into it, before any setup command runs and before the agent receives your prompt.
 
 Kepler copies a file only when Git also ignores it in the new worktree, so an agent cannot commit a copied secret by mistake. Kepler never overwrites a file that is already in the worktree. You can commit `.worktreeinclude`, so teammates who use Kepler get the same list. See [Copy ignored files into new worktrees](/kepler/settings-repositories#copy-ignored-files-into-new-worktrees).
 
@@ -70,13 +70,13 @@ A new worktree has no `node_modules`, virtual environment or build output. Save 
 
 1. Open **Settings → Repositories** and open the repository's page.
 2. Under **Commands**, click **Add command**.
-3. Enter a **Name**, such as *Install deps*, and the command, such as `pnpm install`.
+3. Enter a name, such as *Install deps*, and the command, such as `pnpm install`.
 4. Tick **Run on worktree creation**.
 5. Click **Add command**, or press **Ctrl + Enter** (**⌘ Enter** on macOS). The command shows a **Runs on creation** chip.
 
 Add one command for each step, and drag the rows into the order they need to run. Each time Kepler creates a worktree for the repository, it runs these commands one at a time, in list order, in the new worktree's folder.
 
-The commands run in the background, so the agent can start while an install is still running. If a command fails, Kepler shows **Worktree setup failed** with the command's name and its error, and skips the commands after it. The worktree stays. To fix it, correct the command, then right-click the worktree in the task's context panel and choose **Run command here**.
+The commands run in the background, so the agent can start while an install is still running. If a command fails, Kepler shows **Worktree setup failed** with the command's name and its error, and skips the commands after it. The worktree stays. To fix it, correct the command, then right-click the worktree in the task's context panel and choose **Run command here**. On Windows, **Run command here** runs the command in a PowerShell terminal, while setup commands run in Command Prompt.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/repo-commands-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
@@ -150,7 +150,7 @@ See [What a worktree does not separate](/kepler/tasks-and-resources#what-a-workt
 
 ### How do I copy my .env file into every new worktree?
 
-List `.env` in a `.worktreeinclude` file at the repository's root. Kepler copies it from your checkout into each new worktree before the agent starts. Kepler copies it only while Git ignores it.
+List `.env` in a `.worktreeinclude` file at the repository's root. Kepler copies it from your checkout into each new worktree before the agent receives your prompt. Kepler copies it only while Git ignores it.
 
 ### Can Kepler run npm install or pnpm install when it creates a worktree?
 
@@ -158,11 +158,11 @@ Yes. Add the install as a repository command in **Settings → Repositories**, a
 
 ### Does the agent wait for the install to finish?
 
-No. Setup commands run in the background, and the agent can start before they finish. The files from `.worktreeinclude` are always in place before the agent starts.
+No. Setup commands run in the background, and the agent can start before they finish. The files from `.worktreeinclude` are in place before the agent receives your prompt.
 
 ### What happens when a setup command fails?
 
-Kepler shows **Worktree setup failed** with the command and its error, and skips the commands after it. The worktree stays. Fix the command, then run it again with **Run command here**.
+Kepler shows **Worktree setup failed** with the command and its error, and skips the commands after it. The worktree stays. Fix the command, then run it again with **Run command here**. On Windows, that runs it in PowerShell.
 
 ### Does this work for Claude Code, Codex and other agents?
 

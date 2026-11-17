@@ -7,7 +7,7 @@ content_type: how-to
 audience: developer
 plan_required: all
 os_support: [Windows, macOS, Linux]
-git_hosts: [github, github-enterprise, gitlab, gitlab-self-hosted, bitbucket, azure-devops]
+git_hosts: [github, github-enterprise, gitlab, gitlab-self-managed, bitbucket, azure-devops]
 integrations: [jira, linear, trello, asana, github, github-enterprise, gitlab, gitlab-self-hosted, azure-devops, claude-code, codex-cli]
 hosted_variant: both
 status: GA
@@ -19,7 +19,7 @@ taxonomy:
 ---
 <kbd>Last updated: November 2026</kbd>
 
-Yes, Kepler ADE by GitKraken can start a coding agent straight from a Jira or GitHub issue, with the ticket already attached, and take the work to a pull request. You connect your tracker once, then click the **Action** button on the issue's row in **Todo**. Kepler creates a task, sets up a worktree, and starts Claude Code, Codex, or your default agent with the issue's details in place, so you never paste the ticket into a chat.
+Yes, Kepler ADE by GitKraken can start a coding agent straight from a Jira or GitHub issue, with the ticket already attached, and take the work to a pull request. You connect your tracker once, then click the **Action** button on the issue's row in **Todo**. For a GitHub or GitLab issue, Kepler creates a task, sets up a worktree, and starts Claude Code, Codex, or your default agent with the issue's details in place, so you never paste the ticket into a chat. For a Jira issue, you add the repository in the issue's panel first, then start.
 
 **Requirements and limits**
 - Scope: Going from an issue in a connected tracker to an agent's pull request, inside 1 Kepler task
@@ -34,7 +34,7 @@ Yes, Kepler ADE by GitKraken can start a coding agent straight from a Jira or Gi
 1. Go to **Settings → Integrations**, find your tracker, such as **Jira** or **GitHub**, under **Issues and pull requests**, and click **Connect**.
 2. Open **Todo** and find the issue.
 3. Click the issue's **Action** button. The default for an issue is **Plan**. To start coding straight away, pick **Implement** from the chevron.
-4. Kepler creates the task, attaches the repository and the issue, sets up a worktree, and starts the agent.
+4. For a GitHub or GitLab issue, Kepler creates the task, attaches the repository and the issue, sets up a worktree by default, and starts the agent. For a Jira issue or another tracker's issue, the issue's panel opens: add the repository, then send.
 5. Review the agent's changes and commit them.
 6. Have the agent open the pull request with an Action you create from the **Open a pull request** example, or open it yourself. Kepler attaches the pull request to the task.
 
@@ -72,18 +72,20 @@ For a self-hosted tracker, such as Jira Server / Data Center or GitHub Enterpris
   <figcaption style="text-align:center; color:#888">The Action button on an issue's row in Todo.</figcaption>
 </figure>
 
-The left half of the button runs the issue's suggested Action. For an issue that is **Plan**, which has the agent research the code and propose an approach, then wait for your confirmation before it changes anything. The chevron lists every Action, including **Implement**, which has the agent make the changes directly.
+The left half of the button runs the issue's suggested Action. For an issue, that is **Plan**, which has the agent research the code and propose an approach, then wait for your confirmation before it changes anything. The chevron lists the Actions available on issues, such as **Plan** and **Implement**, which has the agent make the changes directly.
 
-Kepler then does the following:
+For a GitHub or GitLab issue, Kepler uses your local copy of the repository, or clones it, and then does the following:
 
 1. Creates the task.
 2. Attaches the repository and the issue.
-3. Sets up a worktree, so the agent works on its own branch.
-4. Starts an agent with the issue's full description attached as context.
+3. Sets up a worktree by default, so the agent works on its own branch.
+4. Starts an agent with the issue's description attached as context.
+
+A Jira issue names no repository, so Kepler cannot pick the code to work on. The same applies to Trello, Asana, and Azure DevOps issues. When you click **Action**, the issue's panel opens, ready to start a new task, and Kepler shows **Add a repository to start**. Add the repository in the panel, then send. If you started work from the same tracker project before, the panel can fill in that repository for you. A Linear issue gets its repository from the GitHub issue it is synced with.
 
 Kepler also saves the issue's description as a note on the task, titled with the issue's key and title. Long descriptions are shortened, with a link to the issue.
 
-The agent is your default agent, or the agent the Action names. See [Setting an Action's agent](/kepler/actions#setting-an-actions-agent).
+From the issue's row, the agent is your default agent, or the agent the Action names. To use another agent, choose the Action in the **New task** window and change the agent before you send. See [Setting an Action's agent](/kepler/actions#setting-an-actions-agent).
 
 ***
 
@@ -125,7 +127,7 @@ To have Kepler start the agent for you, set up an [automation](/kepler/kepler-au
 
 ### Can I start a coding agent straight from a Jira issue?
 
-Yes. Connect Jira in **Settings → Integrations**, then click the **Action** button on the issue's row in **Todo**. Kepler starts the agent with the issue's description attached as context.
+Yes. Connect Jira in **Settings → Integrations**, then click **Action** on the issue's row in **Todo**, add the repository in the issue's panel, then send. Kepler starts the agent with the issue's description attached as context.
 
 ### Which issue trackers does Kepler support?
 
@@ -133,7 +135,7 @@ Jira, Jira Server / Data Center, Linear, Trello, Asana, GitHub, GitHub Enterpris
 
 ### Do I have to copy the ticket into the chat?
 
-No. Starting from the issue's row in **Todo** attaches the full issue description as context, and Kepler saves it as a note on the task.
+No. Starting from the issue's row in **Todo** attaches the issue's description as context, and Kepler saves it as a note on the task.
 
 ### Can the agent open the pull request by itself?
 
@@ -141,7 +143,7 @@ Yes. Create an Action from the **Open a pull request** example on the [Actions](
 
 ### Which agent does the work?
 
-Your default agent, such as Claude Code or Codex, unless the Action names another agent. You can also pick the agent when you run the Action.
+Your default agent, such as Claude Code or Codex, unless the Action names another agent. To use another agent, choose the Action in the **New task** window and change the agent before you send.
 
 ***
 
