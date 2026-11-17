@@ -163,11 +163,7 @@ All columns on the board have the same width. To resize them, use one of these m
 
 Each view remembers its own column width. When a column has more tasks to load, **Load more** appears at the bottom of the column. From the keyboard, **←** and **→** move to the nearest column that has a card.
 
-<div class="note" markdown="1">
-
-**Panel layout** arranges the panels you open, not the list. Its **Auto columns** are not the **Board** layout's columns.
-
-</div>
+> **Note:** Panel layout arranges the panels you open, not the list. Its **Auto columns** are not the **Board** layout's columns.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/columns-progress-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
