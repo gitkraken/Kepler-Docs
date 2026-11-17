@@ -120,7 +120,7 @@ A worktree is a private Git working copy for one task. Agents make their changes
   <figcaption style="text-align:center; color:#888">Adding a repository to a task creates a new worktree for it.</figcaption>
 </figure>
 
-A new worktree has none of your Git-ignored files, such as `.env` or `node_modules`. To set up each new worktree automatically, see [Set Up Every New Agent Worktree Automatically](/kepler/set-up-agent-worktrees-automatically).
+A new worktree has none of your Git-ignored files, such as `.env` or `node_modules`. To set up each new worktree automatically, see [Set Up Every New Agent Worktree Automatically](/kepler/kepler-set-up-agent-worktrees-automatically).
 
 ### What a worktree does not separate
 
@@ -130,7 +130,7 @@ A worktree gives each task its own copy of the files, and nothing else. Agents i
 - **Databases and other local services.** Agents that point at the same database read and write the same data.
 - **Caches and files outside the repository**, such as a global package cache.
 
-To give each worktree its own port or database, use a repository command that runs when Kepler creates the worktree. See [Set Up Every New Agent Worktree Automatically](/kepler/set-up-agent-worktrees-automatically#give-each-worktree-its-own-port-or-database).
+To give each worktree its own port or database, use a repository command that runs when Kepler creates the worktree. See [Set Up Every New Agent Worktree Automatically](/kepler/kepler-set-up-agent-worktrees-automatically#give-each-worktree-its-own-port-or-database).
 
 ***
 
@@ -168,7 +168,7 @@ Leave **Isolated worktree** on, which is the default. Each task then works in it
 
 ### Why does my second agent's dev server fail to start?
 
-When 2 worktrees start a dev server on the same port, the second server can fail to start. A worktree separates files only. Give each worktree its own port with a repository command. See [Set Up Every New Agent Worktree Automatically](/kepler/set-up-agent-worktrees-automatically#give-each-worktree-its-own-port-or-database).
+When 2 worktrees start a dev server on the same port, the second server can fail to start. A worktree separates files only. Give each worktree its own port with a repository command. See [Set Up Every New Agent Worktree Automatically](/kepler/kepler-set-up-agent-worktrees-automatically#give-each-worktree-its-own-port-or-database).
 
 ***
 
@@ -179,5 +179,5 @@ When 2 worktrees start a dev server on the same port, the second server can fail
 - [Tasks and Resources](/kepler/tasks-and-resources)
 - [Create a task](/kepler/create-task)
 - [Remote Environments](/kepler/remote-environments)
-- [Set Up Every New Agent Worktree Automatically](/kepler/set-up-agent-worktrees-automatically)
+- [Set Up Every New Agent Worktree Automatically](/kepler/kepler-set-up-agent-worktrees-automatically)
 - [Kepler Quick Answers: Running Coding Agents](/kepler/quick-answers)

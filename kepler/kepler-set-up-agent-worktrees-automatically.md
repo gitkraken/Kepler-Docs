@@ -179,5 +179,5 @@ Yes. On Windows, setup commands run in Command Prompt, so write them for `cmd.ex
 - [Tasks and Resources: Make a new worktree ready to build](/kepler/tasks-and-resources#make-a-new-worktree-ready-to-build)
 - [Settings: Per-repository commands](/kepler/settings-repositories#per-repository-commands)
 - [Settings: Copy ignored files into new worktrees](/kepler/settings-repositories#copy-ignored-files-into-new-worktrees)
-- [Run Multiple Coding Agents in Parallel on Windows](/kepler/run-coding-agents-in-parallel-on-windows)
+- [Run Multiple Coding Agents in Parallel on Windows](/kepler/kepler-run-coding-agents-in-parallel-on-windows)
 - [Kepler Quick Answers: Running Coding Agents](/kepler/quick-answers)

@@ -93,7 +93,7 @@ From the issue's row, the agent is your default agent, or the agent the Action n
 
 ### Review and commit
 
-When the agent finishes, open the task's worktree and read its changes in the **Changes** overlay. Send fixes back as review comments, then click **Commit…** to stage and commit. See [Review an AI-Written Pull Request Before Your Teammates Do](/kepler/review-ai-pull-request-before-sharing) and [Review Changes](/kepler/review-changes).
+When the agent finishes, open the task's worktree and read its changes in the **Changes** overlay. Send fixes back as review comments, then click **Commit…** to stage and commit. See [Review an AI-Written Pull Request Before Your Teammates Do](/kepler/kepler-review-ai-pull-request-before-sharing) and [Review Changes](/kepler/review-changes).
 
 ### Open the pull request
 
