@@ -4937,6 +4937,115 @@ See [Remote Environments](/kepler/remote-environments).
 ---
 
 ---
+# Move from Conductor to Kepler
+URL: https://help.gitkraken.com/kepler/kepler-move-from-conductor/
+product: Kepler
+feature: Tasks
+content_type: how-to
+audience: developer
+plan_required: all
+status: GA
+last_verified: 2026-11
+
+In Kepler ADE by GitKraken, you move from Conductor by importing your Conductor workspaces as tasks. Each workspace becomes a Kepler task in the same folder and on the same branch, and its Claude Code or Codex chats continue as the task's sessions. You pick the workspaces to bring over in **Import from another app**, and Kepler leaves your files and branches where they are.
+
+**Requirements and limits**
+- Scope: Bringing the workspaces the Conductor app keeps on your Mac into Kepler as tasks
+- Prerequisite: Conductor's workspaces on the Mac that runs Kepler
+- Limits: Importing from Conductor works on macOS only, because Conductor runs only on macOS.
+- Limits: Conductor's cloud workspaces are not imported. They have no folder on your Mac.
+- Limits: Archived workspaces, and workspaces whose folder no longer exists, are not imported.
+- Limits: Continue each chat in 1 app only. Conductor and Kepler write to the same chat history.
+
+***
+
+## Quick Start
+
+1. On an empty **Tasks** list, click the import card, such as **Import from Conductor**. You can also choose **File → Import from Another App…**.
+2. If Kepler found more than 1 app, click **Conductor**.
+3. Tick the workspaces you want, and click **Import *N* workspaces**.
+4. When **Import finished** shows what came over, click **Done**.
+5. Open a new task in **Tasks** to pick its chat up where it left off.
+
+***
+
+## How to import your Conductor workspaces
+
+1. On an empty **Tasks** list, click the import card. It names the apps Kepler found, such as **Import from Conductor, Orca and 2 more**. You can also choose **File → Import from Another App…** at any time.
+
+2. If Kepler found more than 1 app, click **Conductor** in **Import from another app**.
+
+3. In **Import from Conductor**, tick the workspaces you want, and click **Import *N* workspaces**. The workspaces are grouped by repository, and each row shows its branch and how many chats it has. A workspace you already imported is marked **Already a task:** and the task's name.
+
+4. When **Import finished** shows how many workspaces became tasks and how many chats resumed, click **Done**.
+
+5. Find the new tasks in **Tasks**.
+
+If Conductor is not in the list, Kepler did not find Conductor's workspaces on this Mac.
+
+***
+
+## What carries over from Conductor
+
+| From Conductor | In Kepler |
+|---|---|
+| A workspace | A task, named after the workspace |
+| The workspace's folder | The task's worktree, or the repository folder for a workspace on the main checkout. Kepler uses the same folder and does not copy or move your files |
+| The workspace's branch | The same branch, in that worktree |
+| The workspace's chats | The task's sessions. Open one to continue the chat where it left off |
+| The workspace's notes | A note on the task, titled **Notes from Conductor** |
+| The workspace's target branch | The worktree's merge target |
+
+A chat continues only if its agent's history is on your Mac and Kepler supports that agent. The workspace list counts the chats that cannot continue, and **Import finished** counts the chats Kepler was unable to resume.
+
+After the import, continue each chat in Kepler or in Conductor, not both. Both apps write to the same chat history.
+
+***
+
+## What to do next in Kepler
+
+- **Start new work from your issues.** Connect your tracker and start tasks from the **Todo** view, with the issue attached. See [Start a Coding Agent from a Jira or GitHub Issue](/kepler/kepler-start-agent-from-issue-to-pull-request).
+- **Run Actions.** Fire **Plan**, **Implement**, **Review**, or your own Actions at a task instead of retyping prompts. See [Actions](/kepler/actions).
+- **Review each task's changes.** Read the diff in the **Changes** overlay, send comments back to the agent, and commit. See [Review Changes](/kepler/review-changes).
+- **Set up new worktrees.** Run a setup command each time Kepler creates a worktree with **Run on worktree creation**, and copy git-ignored files such as `.env` with a `.worktreeinclude` file. See [Repository Settings](/kepler/settings-repositories) and [Tasks and Resources](/kepler/tasks-and-resources).
+
+***
+
+## Common questions
+
+### Can I move my Conductor workspaces to Kepler?
+
+Yes. On macOS, choose **File → Import from Another App…**, pick **Conductor**, tick the workspaces, and click **Import *N* workspaces**. Each workspace becomes a task in the same folder and on the same branch.
+
+### Do my Conductor chats come with me?
+
+Yes, for chats whose agent history is on your Mac and whose agent Kepler supports, such as Claude Code and Codex. Each chat becomes a session on the task, and you continue it where it left off.
+
+### Can I import from Conductor on Windows or Linux?
+
+No. Conductor runs only on macOS, so Kepler imports Conductor workspaces only on a Mac.
+
+### Does importing change anything in Conductor?
+
+Kepler reads Conductor's workspaces and does not move your files. Both apps then point at the same folders, branches, and chat history, so continue each chat in 1 app only.
+
+### Which other apps can Kepler import from?
+
+Kepler can also import workspaces from Orca, herdr, and Vibe Kanban, in the same **Import from another app** dialog. See [From another agent app](/kepler/create-task#from-another-agent-app).
+
+***
+
+## Related pages
+
+- [Create a task](/kepler/create-task#from-another-agent-app)
+- [Tasks and Resources](/kepler/tasks-and-resources)
+- [Agent Sessions](/kepler/agent-sessions)
+- [Actions](/kepler/actions)
+- [Review What a Coding Agent Changed in Kepler](/kepler/review-changes)
+- [Getting Started with Kepler](/kepler/kepler-getting-started)
+- [Kepler Quick Answers: Running Coding Agents](/kepler/quick-answers)
+
+---
 # Run Multiple Coding Agents in Parallel on Windows with Kepler
 URL: https://help.gitkraken.com/kepler/kepler-run-coding-agents-in-parallel-on-windows/
 product: Kepler
@@ -5090,140 +5199,6 @@ When 2 worktrees start a dev server on the same port, the second server can fail
 - [Create a task](/kepler/create-task)
 - [Remote Environments](/kepler/remote-environments)
 - [Set Up Every New Agent Worktree Automatically](/kepler/kepler-set-up-agent-worktrees-automatically)
-- [Kepler Quick Answers: Running Coding Agents](/kepler/quick-answers)
-
----
-# Approve Coding Agent Requests from Your Phone with Kepler
-URL: https://help.gitkraken.com/kepler/kepler-approve-agent-requests-from-your-phone/
-product: Kepler
-feature: Remote Access
-content_type: how-to
-audience: developer
-plan_required: all
-status: GA
-last_verified: 2026-11
-
-Yes, Kepler ADE by GitKraken lets you see what your coding agents are doing and approve their requests from your phone. Turn on Remote Access in Kepler on your computer, scan its QR code with your phone, and answer each permission request from Claude Code, Codex or any other agent in your phone's browser, with the same choices as on your desktop.
-
-**Requirements and limits**
-- Scope: Watching agent sessions and answering permission requests, questions, plan reviews and approval requests from a phone
-- Prerequisite: Kepler running on your computer, signed in to your GitKraken account. Your agents keep running on the computer, and the phone shows its interface
-- Prerequisite: A phone browser signed in to the same GitKraken account
-- Limits: Kepler sends no push notifications to your phone. Requests appear on the phone only while Kepler is open there, as an alert and in the waiting task
-
-***
-
-## Quick Start
-
-1. In Kepler on your computer, open **Settings → Remote Access** and click **Turn on Remote Access**.
-2. In **Name this machine**, keep the name or enter your own, then click **Turn on Remote Access** in the dialog.
-3. Scan the QR code with your phone's camera, and sign in with your GitKraken account.
-4. In your phone's browser menu, choose the option that adds the page to your home screen, such as Add to Home Screen, to open Kepler like an app.
-5. When an agent stops to ask, open Kepler on your phone, tap the task that waits on you, and answer the request with **Allow**, **Allow for this session**, **Allow always**, **Reject** or **Reject always**.
-
-***
-
-## How to turn on Remote Access
-
-Remote Access opens this Kepler from another device, such as your phone, through your GitKraken account. Your agents, worktrees and terminals stay on your computer.
-
-1. On your computer, open **Settings → Remote Access**, or hover over the **Remote Access** button in the title bar.
-2. Click **Turn on Remote Access**.
-3. In **Name this machine**, keep the name Kepler fills in, or enter a name you recognize, then click **Turn on Remote Access** in the dialog.
-
-Remote Access stays on until you turn it off, including after Kepler restarts. By default, Kepler keeps your computer awake while Remote Access is on, so your agents keep working while you are away. To change this, use **Keep this machine awake while agents work** in **Settings → General**. See [Remote Environments](/kepler/remote-environments#turning-on-remote-access).
-
-***
-
-## How to pair your phone
-
-When Remote Access is active, Kepler shows a QR code and a link in **Settings → Remote Access** and in the **Remote Access** popover.
-
-1. Scan the QR code with your phone's camera. To pair another browser instead, click **Copy link** and open the link there.
-2. The link opens gitkraken.dev. Sign in with the GitKraken account you use in Kepler.
-3. Kepler opens in your phone's browser, in a layout made for phones.
-
-Only your GitKraken account can connect. To disconnect one device, use **Connected devices** in **Settings → Remote Access**. To disconnect every device, click **Turn off Remote Access**.
-
-***
-
-## How to add Kepler to your home screen
-
-To open Kepler like an app, add it to your phone's home screen from the browser's menu, such as Add to Home Screen. The Kepler icon then opens Kepler full screen, without the browser's address bar and toolbars.
-
-***
-
-## How to find what waits on you
-
-Kepler marks every task and session that waits on you, so you can find a request as soon as you open Kepler on your phone:
-
-- **An alert.** While Kepler is open on the phone, a new permission request, question, plan review or approval request shows as an alert. A permission alert has **Allow** and **Deny** for a one-time answer, and **View**, which opens the request in its session.
-- **The menu.** Tap **Menu**. Under **Recent tasks**, a dot marks each task that waits on you.
-- **The task list.** On the Dashboard, a Tasks view grouped by **Inbox** lists the tasks that wait on you under **Needs attention**.
-- **Inside a task.** Tap **Sessions** to go to the session that waits on you. A dot on the back arrow means another task needs you.
-
-> **Note:** Kepler sends no push notifications to your phone. When Kepler is closed on the phone, nothing tells you that an agent is waiting. Open Kepler on the phone to check. On your computer, Kepler's desktop notifications still work as usual.
-
-***
-
-## How to answer a permission request
-
-A permission request pins to the top of its session. It names the tool the agent wants to use and shows the call, such as the shell command. Tap one of the buttons:
-
-| Button | What it does |
-|---|---|
-| **Allow** | Approves this one call |
-| **Allow for this session** | Approves this call and matching calls for the rest of the session |
-| **Allow always** | Gives the agent a permanent approval, stored in the agent's own settings |
-| **Reject** | Refuses this call |
-| **Reject always** | Refuses it permanently |
-
-You see only the choices the agent offers. A session in Terminal mode offers **Allow once**, **Always allow** and **Deny** instead. The agent continues as soon as you answer. If you already answered on another device, Kepler says **Already answered**. See [Agent Sessions](/kepler/agent-sessions#permission-requests).
-
-***
-
-## How to answer plans, questions and approval requests
-
-Other requests wait in the session the same way, and you answer them on the phone as you do on your computer:
-
-- **A plan review.** Read the agent's plan, then **Approve** it or comment and tap **Request changes (*n*)**. See [Reviewing a plan](/kepler/agent-sessions#reviewing-a-plan).
-- **A question.** Pick an option, or type your own answer, and submit. See [Multiple-choice and multi-select questions](/kepler/agent-sessions#multiple-choice-and-multi-select-questions).
-- **An approval request**, when an agent asks Kepler itself to do something, such as delete a worktree. Tap **Approve** or **Deny**. See [Approval requests](/kepler/agent-sessions#approval-requests).
-
-To see what an agent did while you were away, open its session and read the conversation, or tap **Changes** to read the changed files.
-
-***
-
-## Common questions
-
-### Will my phone notify me when an agent needs permission?
-
-No. Kepler sends no push notifications to your phone. A request shows on the phone as an alert, and in its task, only while Kepler is open there. Add Kepler to your home screen so you can check it in one tap.
-
-### Do I need to install an app on my phone?
-
-No. Kepler opens in your phone's browser. To open it like an app, add it to your home screen from the browser's menu.
-
-### Does my computer need to stay on?
-
-Yes. Your agents run on your computer, and the phone shows that computer's Kepler. By default, Kepler keeps the computer awake while Remote Access is on, with the setting **Keep this machine awake while agents work**.
-
-### Does this work with Claude Code and Codex?
-
-Yes. In a Chat session, a permission request shows the same buttons whichever agent raised it, including Claude Code, Codex and GitHub Copilot. A session in Terminal mode offers **Allow once**, **Always allow** and **Deny**, and you answer those from the phone too.
-
-### Can someone else open my Kepler from their phone?
-
-No. Only your GitKraken account can connect. You can disconnect any single device in **Connected devices**, or every device with **Turn off Remote Access**.
-
-***
-
-## Related pages
-
-- [Remote Environments: Remote access](/kepler/remote-environments#remote-access-reach-kepler-from-another-device)
-- [Remote Environments: Using Kepler on a phone](/kepler/remote-environments#using-kepler-on-a-phone)
-- [Agent Sessions: When the agent asks you something](/kepler/agent-sessions#when-the-agent-asks-you-something)
-- [Agent Sessions: Notifications](/kepler/agent-sessions#notifications)
 - [Kepler Quick Answers: Running Coding Agents](/kepler/quick-answers)
 
 ---
@@ -5691,6 +5666,275 @@ Yes. Each task gets its own worktree, so Claude Code and Codex can each work in 
 - [Kepler Quick Answers: Running Coding Agents](/kepler/quick-answers)
 
 ---
+# Approve Coding Agent Requests from Your Phone with Kepler
+URL: https://help.gitkraken.com/kepler/kepler-approve-agent-requests-from-your-phone/
+product: Kepler
+feature: Remote Access
+content_type: how-to
+audience: developer
+plan_required: all
+status: GA
+last_verified: 2026-11
+
+Yes, Kepler ADE by GitKraken lets you see what your coding agents are doing and approve their requests from your phone. Turn on Remote Access in Kepler on your computer, scan its QR code with your phone, and answer each permission request from Claude Code, Codex or any other agent in your phone's browser, with the same choices as on your desktop.
+
+**Requirements and limits**
+- Scope: Watching agent sessions and answering permission requests, questions, plan reviews and approval requests from a phone
+- Prerequisite: Kepler running on your computer, signed in to your GitKraken account. Your agents keep running on the computer, and the phone shows its interface
+- Prerequisite: A phone browser signed in to the same GitKraken account
+- Limits: Kepler sends no push notifications to your phone. Requests appear on the phone only while Kepler is open there, as an alert and in the waiting task
+
+***
+
+## Quick Start
+
+1. In Kepler on your computer, open **Settings → Remote Access** and click **Turn on Remote Access**.
+2. In **Name this machine**, keep the name or enter your own, then click **Turn on Remote Access** in the dialog.
+3. Scan the QR code with your phone's camera, and sign in with your GitKraken account.
+4. In your phone's browser menu, choose the option that adds the page to your home screen, such as Add to Home Screen, to open Kepler like an app.
+5. When an agent stops to ask, open Kepler on your phone, tap the task that waits on you, and answer the request with **Allow**, **Allow for this session**, **Allow always**, **Reject** or **Reject always**.
+
+***
+
+## How to turn on Remote Access
+
+Remote Access opens this Kepler from another device, such as your phone, through your GitKraken account. Your agents, worktrees and terminals stay on your computer.
+
+1. On your computer, open **Settings → Remote Access**, or hover over the **Remote Access** button in the title bar.
+2. Click **Turn on Remote Access**.
+3. In **Name this machine**, keep the name Kepler fills in, or enter a name you recognize, then click **Turn on Remote Access** in the dialog.
+
+Remote Access stays on until you turn it off, including after Kepler restarts. By default, Kepler keeps your computer awake while Remote Access is on, so your agents keep working while you are away. To change this, use **Keep this machine awake while agents work** in **Settings → General**. See [Remote Environments](/kepler/remote-environments#turning-on-remote-access).
+
+***
+
+## How to pair your phone
+
+When Remote Access is active, Kepler shows a QR code and a link in **Settings → Remote Access** and in the **Remote Access** popover.
+
+1. Scan the QR code with your phone's camera. To pair another browser instead, click **Copy link** and open the link there.
+2. The link opens gitkraken.dev. Sign in with the GitKraken account you use in Kepler.
+3. Kepler opens in your phone's browser, in a layout made for phones.
+
+Only your GitKraken account can connect. To disconnect one device, use **Connected devices** in **Settings → Remote Access**. To disconnect every device, click **Turn off Remote Access**.
+
+***
+
+## How to add Kepler to your home screen
+
+To open Kepler like an app, add it to your phone's home screen from the browser's menu, such as Add to Home Screen. The Kepler icon then opens Kepler full screen, without the browser's address bar and toolbars.
+
+***
+
+## How to find what waits on you
+
+Kepler marks every task and session that waits on you, so you can find a request as soon as you open Kepler on your phone:
+
+- **An alert.** While Kepler is open on the phone, a new permission request, question, plan review or approval request shows as an alert. A permission alert has **Allow** and **Deny** for a one-time answer, and **View**, which opens the request in its session.
+- **The menu.** Tap **Menu**. Under **Recent tasks**, a dot marks each task that waits on you.
+- **The task list.** On the Dashboard, a Tasks view grouped by **Inbox** lists the tasks that wait on you under **Needs attention**.
+- **Inside a task.** Tap **Sessions** to go to the session that waits on you. A dot on the back arrow means another task needs you.
+
+> **Note:** Kepler sends no push notifications to your phone. When Kepler is closed on the phone, nothing tells you that an agent is waiting. Open Kepler on the phone to check. On your computer, Kepler's desktop notifications still work as usual.
+
+***
+
+## How to answer a permission request
+
+A permission request pins to the top of its session. It names the tool the agent wants to use and shows the call, such as the shell command. Tap one of the buttons:
+
+| Button | What it does |
+|---|---|
+| **Allow** | Approves this one call |
+| **Allow for this session** | Approves this call and matching calls for the rest of the session |
+| **Allow always** | Gives the agent a permanent approval, stored in the agent's own settings |
+| **Reject** | Refuses this call |
+| **Reject always** | Refuses it permanently |
+
+You see only the choices the agent offers. A session in Terminal mode offers **Allow once**, **Always allow** and **Deny** instead. The agent continues as soon as you answer. If you already answered on another device, Kepler says **Already answered**. See [Agent Sessions](/kepler/agent-sessions#permission-requests).
+
+***
+
+## How to answer plans, questions and approval requests
+
+Other requests wait in the session the same way, and you answer them on the phone as you do on your computer:
+
+- **A plan review.** Read the agent's plan, then **Approve** it or comment and tap **Request changes (*n*)**. See [Reviewing a plan](/kepler/agent-sessions#reviewing-a-plan).
+- **A question.** Pick an option, or type your own answer, and submit. See [Multiple-choice and multi-select questions](/kepler/agent-sessions#multiple-choice-and-multi-select-questions).
+- **An approval request**, when an agent asks Kepler itself to do something, such as delete a worktree. Tap **Approve** or **Deny**. See [Approval requests](/kepler/agent-sessions#approval-requests).
+
+To see what an agent did while you were away, open its session and read the conversation, or tap **Changes** to read the changed files.
+
+***
+
+## Common questions
+
+### Will my phone notify me when an agent needs permission?
+
+No. Kepler sends no push notifications to your phone. A request shows on the phone as an alert, and in its task, only while Kepler is open there. Add Kepler to your home screen so you can check it in one tap.
+
+### Do I need to install an app on my phone?
+
+No. Kepler opens in your phone's browser. To open it like an app, add it to your home screen from the browser's menu.
+
+### Does my computer need to stay on?
+
+Yes. Your agents run on your computer, and the phone shows that computer's Kepler. By default, Kepler keeps the computer awake while Remote Access is on, with the setting **Keep this machine awake while agents work**.
+
+### Does this work with Claude Code and Codex?
+
+Yes. In a Chat session, a permission request shows the same buttons whichever agent raised it, including Claude Code, Codex and GitHub Copilot. A session in Terminal mode offers **Allow once**, **Always allow** and **Deny**, and you answer those from the phone too.
+
+### Can someone else open my Kepler from their phone?
+
+No. Only your GitKraken account can connect. You can disconnect any single device in **Connected devices**, or every device with **Turn off Remote Access**.
+
+***
+
+## Related pages
+
+- [Remote Environments: Remote access](/kepler/remote-environments#remote-access-reach-kepler-from-another-device)
+- [Remote Environments: Using Kepler on a phone](/kepler/remote-environments#using-kepler-on-a-phone)
+- [Agent Sessions: When the agent asks you something](/kepler/agent-sessions#when-the-agent-asks-you-something)
+- [Agent Sessions: Notifications](/kepler/agent-sessions#notifications)
+- [Kepler Quick Answers: Running Coding Agents](/kepler/quick-answers)
+
+---
+# Start a Coding Agent from a Jira or GitHub Issue and Take It to a Pull Request in Kepler
+URL: https://help.gitkraken.com/kepler/kepler-start-agent-from-issue-to-pull-request/
+product: Kepler
+feature: Tasks
+content_type: how-to
+audience: developer
+plan_required: all
+status: GA
+last_verified: 2026-11
+
+Yes, Kepler ADE by GitKraken can start a coding agent straight from a Jira or GitHub issue, with the ticket already attached, and take the work to a pull request. You connect your tracker once, then click the **Action** button on the issue's row in **Todo**. For a GitHub or GitLab issue, Kepler creates a task, sets up a worktree by default, and starts Claude Code, Codex, or your default agent with the issue's details in place, so you never paste the ticket into a chat. For a Jira issue, you add the repository in the issue's panel first, then start.
+
+**Requirements and limits**
+- Scope: Going from an issue in a connected tracker to an agent's pull request, inside 1 Kepler task
+- Prerequisite: A GitKraken account signed in to Kepler, and a connected issue tracker. See [Issue Tracker Integrations](/kepler/issue-tracker-integrations).
+- Limits: Kepler reads issues from Jira, Jira Server / Data Center, Linear, Trello, Asana, GitHub, GitHub Enterprise, GitLab, GitLab Self-Hosted, Azure DevOps, and Azure DevOps Server.
+- Limits: Kepler has no button that creates a pull request. The agent opens it, or you open it yourself. Kepler then attaches it to the task.
+
+***
+
+## Quick Start
+
+1. Go to **Settings → Integrations**, find your tracker, such as **Jira** or **GitHub**, under **Issues and pull requests**, and click **Connect**.
+2. Open **Todo** and find the issue.
+3. Click the issue's **Action** button. The default for an issue is **Plan**. To start coding straight away, pick **Implement** from the chevron.
+4. For a GitHub or GitLab issue, Kepler creates the task, attaches the repository and the issue, sets up a worktree by default, and starts the agent. For a Jira, Trello, Asana, or Azure DevOps issue, the issue's panel opens: add the repository, then send.
+5. Review the agent's changes and commit them.
+6. Have the agent open the pull request with an Action you create from the **Open a pull request** example, or open it yourself. Kepler attaches the pull request to the task.
+
+***
+
+## How to connect your issue tracker
+
+You connect a tracker once, and its issues appear in **Todo** from then on.
+
+1. Open **Settings → Integrations**.
+2. Under **Issues and pull requests**, find the provider and click **Connect**.
+3. Authorize Kepler on GitKraken's website, which opens in your browser.
+4. Return to Kepler, where the provider shows a **Connected** badge.
+
+For a self-hosted tracker, such as Jira Server / Data Center or GitHub Enterprise, you connect with its address and a personal access token. See [Connect a self-hosted tracker](/kepler/issue-tracker-integrations#connect-a-self-hosted-tracker).
+
+***
+
+## How to start the agent from the issue
+
+1. Open **Todo**. It lists your issues from every connected tracker.
+2. Find the issue's row, and click its **Action** button.
+
+The left half of the button runs the issue's suggested Action. For an issue, that is **Plan**, which has the agent research the code and propose an approach, then wait for your confirmation before it changes anything. The chevron lists the Actions available on issues, such as **Plan** and **Implement**, which has the agent make the changes directly.
+
+For a GitHub or GitLab issue, Kepler uses your local copy of the repository, or clones it, and then does the following:
+
+1. Creates the task.
+2. Attaches the repository and the issue.
+3. Sets up a worktree by default, so the agent works on its own branch.
+4. Starts an agent with the issue's description attached as context.
+
+A Jira issue names no repository, so Kepler cannot pick the code to work on. The same applies to Trello, Asana, and Azure DevOps issues. When you click **Action**, the issue's panel opens, ready to start a new task, and Kepler shows **Add a repository to start**. Add the repository in the panel, then send. If you started work from the same tracker project before, the panel can fill in that repository for you. A Linear issue gets its repository from the GitHub issue it is synced with.
+
+Kepler also saves the issue's description as a note on the task, titled with the issue's key and title. Long descriptions are shortened, with a link to the issue.
+
+From the issue's row, the agent is your default agent, or the agent the Action names. To use another agent, choose the Action in the **New task** window and change the agent before you send. See [Setting an Action's agent](/kepler/actions#setting-an-actions-agent).
+
+***
+
+## How to take the work to a pull request
+
+### Review and commit
+
+When the agent finishes, open the task's worktree and read its changes in the **Changes** overlay. Send fixes back as review comments, then click **Commit…** to stage and commit. See [Review an AI-Written Pull Request Before Your Teammates Do](/kepler/kepler-review-ai-pull-request-before-sharing) and [Review Changes](/kepler/review-changes).
+
+### Open the pull request
+
+Kepler does not ship a "create pull request" Action. To have the agent open the pull request, create an Action once from the example on the Actions page:
+
+1. Go to **Settings → Actions** and click **New Action**.
+2. For **Title**, type `Open a pull request`.
+3. For **Prompt**, paste the prompt from [Example: Open a pull request](/kepler/actions#example-open-a-pull-request). It tells the agent to push the branch, open a pull request against its base branch, write the title and description, and stop if the worktree has uncommitted changes.
+4. Under **Available on**, tick **Tasks**.
+5. Click **Save**.
+
+Then open the task and pick **Open a pull request** from the chevron on the composer's send button. The agent opens the pull request with the tools it has, such as your Git host's command-line tool.
+
+You can also push the branch and open the pull request yourself, on your Git host's website or from the worktree's terminal.
+
+### Kepler attaches the pull request
+
+When the agent publishes the pull request on one of the worktree's remotes, Kepler attaches it to the task. The task then holds the issue and its pull request together. A pull request you opened yourself can be attached from **Manage resources** at the bottom of the task's context panel. See [Opening a pull request](/kepler/review-changes#opening-a-pull-request).
+
+With the pull request attached, the **Address Feedback** Action is available on the task. When your teammates leave review comments, run it to have the agent work through each one.
+
+***
+
+## How to start agents on new issues automatically
+
+To have Kepler start the agent for you, set up an [automation](/kepler/kepler-automations). An automation runs an Action on a schedule, or when new GitHub or Jira activity matches its query.
+
+***
+
+## Common questions
+
+### Can I start a coding agent straight from a Jira issue?
+
+Yes. Connect Jira in **Settings → Integrations**, then click **Action** on the issue's row in **Todo**, add the repository in the issue's panel, then send. Kepler starts the agent with the issue's description attached as context.
+
+### Which issue trackers does Kepler support?
+
+Jira, Jira Server / Data Center, Linear, Trello, Asana, GitHub, GitHub Enterprise, GitLab, GitLab Self-Hosted, Azure DevOps, and Azure DevOps Server. See [Issue Tracker Integrations](/kepler/issue-tracker-integrations).
+
+### Do I have to copy the ticket into the chat?
+
+No. Starting from the issue's row in **Todo** attaches the issue's description as context, and Kepler saves it as a note on the task.
+
+### Can the agent open the pull request by itself?
+
+Yes. Create an Action from the **Open a pull request** example on the [Actions](/kepler/actions#example-open-a-pull-request) page and run it on the task. Kepler attaches the pull request when the agent publishes it.
+
+### Which agent does the work?
+
+Your default agent, such as Claude Code or Codex, unless the Action names another agent. To use another agent, choose the Action in the **New task** window and change the agent before you send.
+
+***
+
+## Related pages
+
+- [Create a task](/kepler/create-task)
+- [Issue Tracker Integrations](/kepler/issue-tracker-integrations)
+- [Actions](/kepler/actions)
+- [Review What a Coding Agent Changed in Kepler](/kepler/review-changes)
+- [Pull Request Integrations](/kepler/pull-request-integrations)
+- [Automations](/kepler/kepler-automations)
+- [Kepler Quick Answers: Running Coding Agents](/kepler/quick-answers)
+
+---
 # Review an AI-Written Pull Request Before Your Teammates Do, in Kepler
 URL: https://help.gitkraken.com/kepler/kepler-review-ai-pull-request-before-sharing/
 product: Kepler
@@ -5833,250 +6077,6 @@ Yes. Write it in the description yourself, or use an Action created from the **O
 - [Agent Sessions](/kepler/agent-sessions)
 - [Pull Request Integrations](/kepler/pull-request-integrations)
 - [The Task View](/kepler/task-view)
-- [Kepler Quick Answers: Running Coding Agents](/kepler/quick-answers)
-
----
-# Start a Coding Agent from a Jira or GitHub Issue and Take It to a Pull Request in Kepler
-URL: https://help.gitkraken.com/kepler/kepler-start-agent-from-issue-to-pull-request/
-product: Kepler
-feature: Tasks
-content_type: how-to
-audience: developer
-plan_required: all
-status: GA
-last_verified: 2026-11
-
-Yes, Kepler ADE by GitKraken can start a coding agent straight from a Jira or GitHub issue, with the ticket already attached, and take the work to a pull request. You connect your tracker once, then click the **Action** button on the issue's row in **Todo**. For a GitHub or GitLab issue, Kepler creates a task, sets up a worktree by default, and starts Claude Code, Codex, or your default agent with the issue's details in place, so you never paste the ticket into a chat. For a Jira issue, you add the repository in the issue's panel first, then start.
-
-**Requirements and limits**
-- Scope: Going from an issue in a connected tracker to an agent's pull request, inside 1 Kepler task
-- Prerequisite: A GitKraken account signed in to Kepler, and a connected issue tracker. See [Issue Tracker Integrations](/kepler/issue-tracker-integrations).
-- Limits: Kepler reads issues from Jira, Jira Server / Data Center, Linear, Trello, Asana, GitHub, GitHub Enterprise, GitLab, GitLab Self-Hosted, Azure DevOps, and Azure DevOps Server.
-- Limits: Kepler has no button that creates a pull request. The agent opens it, or you open it yourself. Kepler then attaches it to the task.
-
-***
-
-## Quick Start
-
-1. Go to **Settings → Integrations**, find your tracker, such as **Jira** or **GitHub**, under **Issues and pull requests**, and click **Connect**.
-2. Open **Todo** and find the issue.
-3. Click the issue's **Action** button. The default for an issue is **Plan**. To start coding straight away, pick **Implement** from the chevron.
-4. For a GitHub or GitLab issue, Kepler creates the task, attaches the repository and the issue, sets up a worktree by default, and starts the agent. For a Jira, Trello, Asana, or Azure DevOps issue, the issue's panel opens: add the repository, then send.
-5. Review the agent's changes and commit them.
-6. Have the agent open the pull request with an Action you create from the **Open a pull request** example, or open it yourself. Kepler attaches the pull request to the task.
-
-***
-
-## How to connect your issue tracker
-
-You connect a tracker once, and its issues appear in **Todo** from then on.
-
-1. Open **Settings → Integrations**.
-2. Under **Issues and pull requests**, find the provider and click **Connect**.
-3. Authorize Kepler on GitKraken's website, which opens in your browser.
-4. Return to Kepler, where the provider shows a **Connected** badge.
-
-For a self-hosted tracker, such as Jira Server / Data Center or GitHub Enterprise, you connect with its address and a personal access token. See [Connect a self-hosted tracker](/kepler/issue-tracker-integrations#connect-a-self-hosted-tracker).
-
-***
-
-## How to start the agent from the issue
-
-1. Open **Todo**. It lists your issues from every connected tracker.
-2. Find the issue's row, and click its **Action** button.
-
-The left half of the button runs the issue's suggested Action. For an issue, that is **Plan**, which has the agent research the code and propose an approach, then wait for your confirmation before it changes anything. The chevron lists the Actions available on issues, such as **Plan** and **Implement**, which has the agent make the changes directly.
-
-For a GitHub or GitLab issue, Kepler uses your local copy of the repository, or clones it, and then does the following:
-
-1. Creates the task.
-2. Attaches the repository and the issue.
-3. Sets up a worktree by default, so the agent works on its own branch.
-4. Starts an agent with the issue's description attached as context.
-
-A Jira issue names no repository, so Kepler cannot pick the code to work on. The same applies to Trello, Asana, and Azure DevOps issues. When you click **Action**, the issue's panel opens, ready to start a new task, and Kepler shows **Add a repository to start**. Add the repository in the panel, then send. If you started work from the same tracker project before, the panel can fill in that repository for you. A Linear issue gets its repository from the GitHub issue it is synced with.
-
-Kepler also saves the issue's description as a note on the task, titled with the issue's key and title. Long descriptions are shortened, with a link to the issue.
-
-From the issue's row, the agent is your default agent, or the agent the Action names. To use another agent, choose the Action in the **New task** window and change the agent before you send. See [Setting an Action's agent](/kepler/actions#setting-an-actions-agent).
-
-***
-
-## How to take the work to a pull request
-
-### Review and commit
-
-When the agent finishes, open the task's worktree and read its changes in the **Changes** overlay. Send fixes back as review comments, then click **Commit…** to stage and commit. See [Review an AI-Written Pull Request Before Your Teammates Do](/kepler/kepler-review-ai-pull-request-before-sharing) and [Review Changes](/kepler/review-changes).
-
-### Open the pull request
-
-Kepler does not ship a "create pull request" Action. To have the agent open the pull request, create an Action once from the example on the Actions page:
-
-1. Go to **Settings → Actions** and click **New Action**.
-2. For **Title**, type `Open a pull request`.
-3. For **Prompt**, paste the prompt from [Example: Open a pull request](/kepler/actions#example-open-a-pull-request). It tells the agent to push the branch, open a pull request against its base branch, write the title and description, and stop if the worktree has uncommitted changes.
-4. Under **Available on**, tick **Tasks**.
-5. Click **Save**.
-
-Then open the task and pick **Open a pull request** from the chevron on the composer's send button. The agent opens the pull request with the tools it has, such as your Git host's command-line tool.
-
-You can also push the branch and open the pull request yourself, on your Git host's website or from the worktree's terminal.
-
-### Kepler attaches the pull request
-
-When the agent publishes the pull request on one of the worktree's remotes, Kepler attaches it to the task. The task then holds the issue and its pull request together. A pull request you opened yourself can be attached from **Manage resources** at the bottom of the task's context panel. See [Opening a pull request](/kepler/review-changes#opening-a-pull-request).
-
-With the pull request attached, the **Address Feedback** Action is available on the task. When your teammates leave review comments, run it to have the agent work through each one.
-
-***
-
-## How to start agents on new issues automatically
-
-To have Kepler start the agent for you, set up an [automation](/kepler/kepler-automations). An automation runs an Action on a schedule, or when new GitHub or Jira activity matches its query.
-
-***
-
-## Common questions
-
-### Can I start a coding agent straight from a Jira issue?
-
-Yes. Connect Jira in **Settings → Integrations**, then click **Action** on the issue's row in **Todo**, add the repository in the issue's panel, then send. Kepler starts the agent with the issue's description attached as context.
-
-### Which issue trackers does Kepler support?
-
-Jira, Jira Server / Data Center, Linear, Trello, Asana, GitHub, GitHub Enterprise, GitLab, GitLab Self-Hosted, Azure DevOps, and Azure DevOps Server. See [Issue Tracker Integrations](/kepler/issue-tracker-integrations).
-
-### Do I have to copy the ticket into the chat?
-
-No. Starting from the issue's row in **Todo** attaches the issue's description as context, and Kepler saves it as a note on the task.
-
-### Can the agent open the pull request by itself?
-
-Yes. Create an Action from the **Open a pull request** example on the [Actions](/kepler/actions#example-open-a-pull-request) page and run it on the task. Kepler attaches the pull request when the agent publishes it.
-
-### Which agent does the work?
-
-Your default agent, such as Claude Code or Codex, unless the Action names another agent. To use another agent, choose the Action in the **New task** window and change the agent before you send.
-
-***
-
-## Related pages
-
-- [Create a task](/kepler/create-task)
-- [Issue Tracker Integrations](/kepler/issue-tracker-integrations)
-- [Actions](/kepler/actions)
-- [Review What a Coding Agent Changed in Kepler](/kepler/review-changes)
-- [Pull Request Integrations](/kepler/pull-request-integrations)
-- [Automations](/kepler/kepler-automations)
-- [Kepler Quick Answers: Running Coding Agents](/kepler/quick-answers)
-
----
-# Move from Conductor to Kepler
-URL: https://help.gitkraken.com/kepler/kepler-move-from-conductor/
-product: Kepler
-feature: Tasks
-content_type: how-to
-audience: developer
-plan_required: all
-status: GA
-last_verified: 2026-11
-
-In Kepler ADE by GitKraken, you move from Conductor by importing your Conductor workspaces as tasks. Each workspace becomes a Kepler task in the same folder and on the same branch, and its Claude Code or Codex chats continue as the task's sessions. You pick the workspaces to bring over in **Import from another app**, and Kepler leaves your files and branches where they are.
-
-**Requirements and limits**
-- Scope: Bringing the workspaces the Conductor app keeps on your Mac into Kepler as tasks
-- Prerequisite: Conductor's workspaces on the Mac that runs Kepler
-- Limits: Importing from Conductor works on macOS only, because Conductor runs only on macOS.
-- Limits: Conductor's cloud workspaces are not imported. They have no folder on your Mac.
-- Limits: Archived workspaces, and workspaces whose folder no longer exists, are not imported.
-- Limits: Continue each chat in 1 app only. Conductor and Kepler write to the same chat history.
-
-***
-
-## Quick Start
-
-1. On an empty **Tasks** list, click the import card, such as **Import from Conductor**. You can also choose **File → Import from Another App…**.
-2. If Kepler found more than 1 app, click **Conductor**.
-3. Tick the workspaces you want, and click **Import *N* workspaces**.
-4. When **Import finished** shows what came over, click **Done**.
-5. Open a new task in **Tasks** to pick its chat up where it left off.
-
-***
-
-## How to import your Conductor workspaces
-
-1. On an empty **Tasks** list, click the import card. It names the apps Kepler found, such as **Import from Conductor, Orca and 2 more**. You can also choose **File → Import from Another App…** at any time.
-
-2. If Kepler found more than 1 app, click **Conductor** in **Import from another app**.
-
-3. In **Import from Conductor**, tick the workspaces you want, and click **Import *N* workspaces**. The workspaces are grouped by repository, and each row shows its branch and how many chats it has. A workspace you already imported is marked **Already a task:** and the task's name.
-
-4. When **Import finished** shows how many workspaces became tasks and how many chats resumed, click **Done**.
-
-5. Find the new tasks in **Tasks**.
-
-If Conductor is not in the list, Kepler did not find Conductor's workspaces on this Mac.
-
-***
-
-## What carries over from Conductor
-
-| From Conductor | In Kepler |
-|---|---|
-| A workspace | A task, named after the workspace |
-| The workspace's folder | The task's worktree, or the repository folder for a workspace on the main checkout. Kepler uses the same folder and does not copy or move your files |
-| The workspace's branch | The same branch, in that worktree |
-| The workspace's chats | The task's sessions. Open one to continue the chat where it left off |
-| The workspace's notes | A note on the task, titled **Notes from Conductor** |
-| The workspace's target branch | The worktree's merge target |
-
-A chat continues only if its agent's history is on your Mac and Kepler supports that agent. The workspace list counts the chats that cannot continue, and **Import finished** counts the chats Kepler was unable to resume.
-
-After the import, continue each chat in Kepler or in Conductor, not both. Both apps write to the same chat history.
-
-***
-
-## What to do next in Kepler
-
-- **Start new work from your issues.** Connect your tracker and start tasks from the **Todo** view, with the issue attached. See [Start a Coding Agent from a Jira or GitHub Issue](/kepler/kepler-start-agent-from-issue-to-pull-request).
-- **Run Actions.** Fire **Plan**, **Implement**, **Review**, or your own Actions at a task instead of retyping prompts. See [Actions](/kepler/actions).
-- **Review each task's changes.** Read the diff in the **Changes** overlay, send comments back to the agent, and commit. See [Review Changes](/kepler/review-changes).
-- **Set up new worktrees.** Run a setup command each time Kepler creates a worktree with **Run on worktree creation**, and copy git-ignored files such as `.env` with a `.worktreeinclude` file. See [Repository Settings](/kepler/settings-repositories) and [Tasks and Resources](/kepler/tasks-and-resources).
-
-***
-
-## Common questions
-
-### Can I move my Conductor workspaces to Kepler?
-
-Yes. On macOS, choose **File → Import from Another App…**, pick **Conductor**, tick the workspaces, and click **Import *N* workspaces**. Each workspace becomes a task in the same folder and on the same branch.
-
-### Do my Conductor chats come with me?
-
-Yes, for chats whose agent history is on your Mac and whose agent Kepler supports, such as Claude Code and Codex. Each chat becomes a session on the task, and you continue it where it left off.
-
-### Can I import from Conductor on Windows or Linux?
-
-No. Conductor runs only on macOS, so Kepler imports Conductor workspaces only on a Mac.
-
-### Does importing change anything in Conductor?
-
-Kepler reads Conductor's workspaces and does not move your files. Both apps then point at the same folders, branches, and chat history, so continue each chat in 1 app only.
-
-### Which other apps can Kepler import from?
-
-Kepler can also import workspaces from Orca, herdr, and Vibe Kanban, in the same **Import from another app** dialog. See [From another agent app](/kepler/create-task#from-another-agent-app).
-
-***
-
-## Related pages
-
-- [Create a task](/kepler/create-task#from-another-agent-app)
-- [Tasks and Resources](/kepler/tasks-and-resources)
-- [Agent Sessions](/kepler/agent-sessions)
-- [Actions](/kepler/actions)
-- [Review What a Coding Agent Changed in Kepler](/kepler/review-changes)
-- [Getting Started with Kepler](/kepler/kepler-getting-started)
 - [Kepler Quick Answers: Running Coding Agents](/kepler/quick-answers)
 
 ---

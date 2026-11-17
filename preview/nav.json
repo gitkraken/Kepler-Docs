@@ -32,16 +32,16 @@
       ]
     },
     {
-      "title": "How-to Guides",
+      "title": "Agent Workflows",
       "pages": [
+        "kepler-move-from-conductor.md",
         "kepler-run-coding-agents-in-parallel-on-windows.md",
-        "kepler-approve-agent-requests-from-your-phone.md",
         "kepler-set-up-agent-worktrees-automatically.md",
         "kepler-manage-agents-across-accounts-and-ssh-hosts.md",
         "kepler-track-multiple-agent-sessions.md",
-        "kepler-review-ai-pull-request-before-sharing.md",
+        "kepler-approve-agent-requests-from-your-phone.md",
         "kepler-start-agent-from-issue-to-pull-request.md",
-        "kepler-move-from-conductor.md"
+        "kepler-review-ai-pull-request-before-sharing.md"
       ]
     },
     {

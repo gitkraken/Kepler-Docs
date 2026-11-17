@@ -85,13 +85,13 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://help.gitkraken.com/kepler/kepler-run-coding-agents-in-parallel-on-windows/</loc>
+    <loc>https://help.gitkraken.com/kepler/kepler-move-from-conductor/</loc>
     <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://help.gitkraken.com/kepler/kepler-approve-agent-requests-from-your-phone/</loc>
+    <loc>https://help.gitkraken.com/kepler/kepler-run-coding-agents-in-parallel-on-windows/</loc>
     <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -115,7 +115,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://help.gitkraken.com/kepler/kepler-review-ai-pull-request-before-sharing/</loc>
+    <loc>https://help.gitkraken.com/kepler/kepler-approve-agent-requests-from-your-phone/</loc>
     <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -127,7 +127,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://help.gitkraken.com/kepler/kepler-move-from-conductor/</loc>
+    <loc>https://help.gitkraken.com/kepler/kepler-review-ai-pull-request-before-sharing/</loc>
     <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
