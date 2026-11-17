@@ -94,8 +94,6 @@ The move works only between accounts that share history with the CLI. An account
 
 See [Moving a session to another account](/kepler/agent-sessions#moving-a-session-to-another-account).
 
-<!-- CAPTURE NEEDED: A Claude Code session's tab menu with Continue as open, listing a second signed-in account that shares history, with the current account checked (needs 2 signed-in Claude Code accounts that share history). -->
-
 ***
 
 ## How to add an SSH host

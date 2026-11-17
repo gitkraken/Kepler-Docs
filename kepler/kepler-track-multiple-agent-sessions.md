@@ -108,7 +108,12 @@ Each task row adds a line that says what its session needs, such as **Approval n
   <figcaption style="text-align:center; color:#888">The Dashboard's Tasks view, grouped by Inbox.</figcaption>
 </figure>
 
-<!-- CAPTURE NEEDED: The Dashboard's Tasks view grouped by Inbox with 4 or 5 tasks: 1 Claude Code task under Needs attention showing "Approval needed for" a tool, 1 Codex task under Unread with "New reply", and 2 tasks under Running. -->
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/dashboard-inbox-nov-2026@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/dashboard-inbox-nov-2026@2x.png" class="help-center-img img-bordered" alt="The Dashboard's Tasks view grouped by Inbox. Under Needs attention (1), Add product search in acme-web, In Development, reads Approval needed for Run npm test in orange. Under Unread (1), Fix the cart total, In Development, reads New reply in blue. Under Running (2), Fix gift card code matching and Upgrade the payment SDK, both Exploration, each show a green status dot.">
+  </a>
+  <figcaption style="text-align:center; color:#888">Tasks grouped by what needs you: an approval, a new reply, and 2 running tasks.</figcaption>
+</figure>
 
 ### Session status
 

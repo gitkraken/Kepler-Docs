@@ -81,8 +81,6 @@ Only your GitKraken account can connect. To disconnect one device, use **Connect
 
 To open Kepler like an app, add it to your phone's home screen from the browser's menu, such as Add to Home Screen. The Kepler icon then opens Kepler full screen, without the browser's address bar and toolbars.
 
-<!-- CAPTURE NEEDED: phone browser share menu with Add to Home Screen selected while Kepler is open, then the Kepler icon on the phone's home screen -->
-
 ***
 
 ## How to find what waits on you
@@ -133,7 +131,12 @@ You see only the choices the agent offers. A session in Terminal mode offers **A
   <figcaption style="text-align:center; color:#888">A permission request, shown here on the desktop. The phone shows the same buttons.</figcaption>
 </figure>
 
-<!-- CAPTURE NEEDED: a permission request in a session on a phone-width browser (Claude Code shell command), with Allow, Allow for this session, Allow always and Reject visible -->
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/phone-permission-request-nov-2026@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/phone-permission-request-nov-2026@2x.png" class="help-center-img img-bordered" alt="A task page in a phone-width browser for Add product search, In Development, with its plan (1 of 3 steps done). Below the request Add product search to the product list and the agent's reply, a permission request for Run npm test, marked Needs approval, sits above the Allow, Allow for this session, Allow always and Reject buttons.">
+  </a>
+  <figcaption style="text-align:center; color:#888">A permission request on a phone, with every answer available.</figcaption>
+</figure>
 
 ***
 
