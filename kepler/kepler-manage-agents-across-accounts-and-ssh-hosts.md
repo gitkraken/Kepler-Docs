@@ -59,8 +59,8 @@ The first row is the agent's own login. The account badged **Default** is the on
 With 2 or more accounts, the list is in priority order. To reorder it, drag a row by its handle, or use **Move to top**, **Move up**, or **Move down** in the row's menu. When you pick no account, a new session starts on the first account from the top with usage left. At a usage limit, Kepler moves to, or suggests, the first account from the top with usage left. To skip an account at a usage limit, clear **Use at a usage limit** in its menu. The row then reads **Skipped at a usage limit**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-accounts-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-accounts-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Claude Code card in Settings › Agents with two accounts, the default Claude Code CLI (Acme, Default) with the No color mark and Personal with a blue color swatch, each with Check usage and a row menu. Below them sit New sessions start in, Let artifact comments start turns, Artifacts in new sessions, and Program and data folder.">
+  <a href="/wp-content/uploads/agent-accounts-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-accounts-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Accounts section of the Claude Code card in Settings › Agents, with Add account and the caption Drag accounts into priority order. New sessions start on the first one with usage left. When a session hits its usage limit, Kepler suggests the first one with usage left. Two accounts are listed in order, each signed in as alex.lee@example.com with a drag handle, Check usage and a row menu: Claude Code CLI (Acme) with the No color mark, then Personal (Personal) with a blue color swatch, marked New sessions only.">
   </a>
   <figcaption style="text-align:center; color:#888">2 Claude Code accounts in Settings → Agents.</figcaption>
 </figure>

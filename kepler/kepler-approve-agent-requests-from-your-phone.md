@@ -95,8 +95,8 @@ Kepler marks every task and session that waits on you, so you can find a request
 - **Inside a task.** Tap **Sessions** to go to the session that waits on you.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-access-phone-sep-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-access-phone-sep-2026-v3@2x.png" class="help-center-img img-bordered" alt="Kepler's Dashboard in a phone's browser, on the Tasks view: one bar with Menu, the view picker showing Tasks with a chevron and an orange dot, Search, Options and New task, over the task list grouped into Needs attention (Add product search, In Development, Approval needed), Unread (Fix the cart total, In Review with its pull request and issue chips and Changes requested; Update checkout copy, On Hold, and Upgrade the payment SDK, In Review, each with New reply) and a folded Not started (1).">
+  <a href="/wp-content/uploads/remote-access-phone-sep-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-access-phone-sep-2026-v4@2x.png" class="help-center-img img-bordered" alt="Kepler's Dashboard in a phone's browser, on the Tasks view: one bar with Menu, the view picker showing Tasks with a chevron and an orange dot, Search, Options, the Tasks that need you button with an orange mark, Ask Kepler and New task, over the task list grouped into Needs attention (Add product search, In Development, Approval needed), Unread (Fix the cart total, In Review with its pull request and issue chips and Changes requested; Update checkout copy, On Hold, and Upgrade the payment SDK, In Review, each with New reply) and a folded Not started (1).">
   </a>
   <figcaption style="text-align:center; color:#888">The Tasks view on a phone, with a task that needs approval at the top.</figcaption>
 </figure>

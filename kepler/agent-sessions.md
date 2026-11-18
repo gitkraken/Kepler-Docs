@@ -163,8 +163,8 @@ Kepler supports Claude Code, Codex, GitHub Copilot, Cursor, Auggie, OpenCode, Gr
 Claude Code, Codex, GitHub Copilot, Auggie, and Grok Build can each have more than one signed-in account. To manage an agent's accounts, open **Settings → Agents**, expand the agent, and find **Accounts**:
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-accounts-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-accounts-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Claude Code card in Settings › Agents with two accounts, the default Claude Code CLI (Acme, Default) with the No color mark and Personal with a blue color swatch, each with Check usage and a row menu. Below them sit New sessions start in, Let artifact comments start turns, Artifacts in new sessions, and Program and data folder.">
+  <a href="/wp-content/uploads/agent-accounts-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-accounts-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Accounts section of the Claude Code card in Settings › Agents, with Add account and the caption Drag accounts into priority order. New sessions start on the first one with usage left. When a session hits its usage limit, Kepler suggests the first one with usage left. Two accounts are listed in order, each signed in as alex.lee@example.com with a drag handle, Check usage and a row menu: Claude Code CLI (Acme) with the No color mark, then Personal (Personal) with a blue color swatch, marked New sessions only.">
   </a>
   <figcaption style="text-align:center; color:#888">The Accounts section, in Settings → Agents.</figcaption>
 </figure>
@@ -579,8 +579,8 @@ On an agent that takes messages mid-turn, a prompt that joins the turn is marked
 Kepler sends waiting prompts as **one merged follow-up prompt**, so 2 quick corrections arrive as a single instruction instead of 2 competing ones.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/firing-into-a-running-session-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/firing-into-a-running-session-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="A running session in a task's side panel: the agent's plan at 1 of 3, its turn still running on Run npm test, and below it 1 queued with Interrupt & send and Clear queue, holding the prompt Also cover gift card codes with surrounding spaces. The composer reads Type a message to queue….">
+  <a href="/wp-content/uploads/firing-into-a-running-session-aug-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/firing-into-a-running-session-aug-2026-v3@2x.png" class="help-center-img img-bordered" alt="A running session: the agent's plan at 1 of 3, its turn still running on Run npm test, and below it 1 queued with Interrupt & send and Clear queue, holding the prompt Also cover gift card codes with surrounding spaces., marked After this turn with a remove button. The composer, its border tinted while the turn runs, reads Type a message to queue... above Docs Model, Build and Send.">
   </a>
   <figcaption style="text-align:center; color:#888">A prompt queued to send after the agent's current turn.</figcaption>
 </figure>
@@ -966,8 +966,8 @@ While a session is idle, the context ring warns about the prompt cache on its ow
 **Check plan usage with each agent's provider** fetches the full readout, including per-model limits and extra usage, from each agent's provider. It is on by default, in **Settings → Agents → Usage and recovery**:
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/show-token-usage-aug-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/show-token-usage-aug-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Usage limits section of Settings › Agents: Check plan usage with each agent's provider, ticked, with its help text on what Kepler asks the provider for and what it shows when off, and Resume after the usage limit resets, unticked.">
+  <a href="/wp-content/uploads/show-token-usage-aug-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/show-token-usage-aug-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Usage and recovery section of Settings › Agents: Check plan usage with each agent's provider, ticked, with its help text; When a usage limit is reached, a dropdown set to Wait for the reset (Continues on its own when the limit resets), which applies to every agent in chat and in the terminal; and Retry automatically when the model is overloaded, ticked, with its help text.">
   </a>
   <figcaption style="text-align:center; color:#888">The Usage and recovery section of Settings → Agents.</figcaption>
 </figure>
@@ -1015,8 +1015,8 @@ When a usage limit cuts off a turn, a limit bar docks on the composer. In a Term
 - **Manage accounts…**, in the bar's account menu, and **Dismiss**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/usage-limit-bar-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/usage-limit-bar-nov-2026.png" class="help-center-img img-bordered" alt="A session whose turn was cut off: the agent read checkout.js and said it would lowercase both sides, and the limit bar docked on the composer reads OpenCode reached its usage limit, with the agent's message (You have reached your usage limit for this plan. Upgrade or wait for the limit to reset.) and Claude Code can pick up in a new session that reads this conversation first. Its buttons are Continue in Claude Code and Dismiss, above the composer's Type a message... box.">
+  <a href="/wp-content/uploads/usage-limit-bar-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/usage-limit-bar-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="A session whose turn was cut off: the agent read checkout.js and said it would lowercase both sides, and the limit bar docked on the composer reads OpenCode reached its usage limit, with the agent's message (You have reached your usage limit for this plan. Upgrade or wait for the limit to reset.) and Claude Code can pick up in a new session that reads this conversation first. Its buttons are Continue in Claude Code and Dismiss, above the composer's Type a message... box.">
   </a>
   <figcaption style="text-align:center; color:#888">The limit bar, offering to continue in another agent.</figcaption>
 </figure>
@@ -1244,8 +1244,8 @@ While you are working in any Kepler window on a computer, that computer posts no
 To choose which events notify you, and whether each one appears as a **Desktop** notification, **In Kepler**, or both, open **Settings → Notifications**. The same page has **Play a sound with desktop notifications**. In the desktop app, every event except **Replies** notifies on the desktop until you change it. In a browser, desktop notifications start off. After your first session starts, the desktop app sends a one-time **Notifications are on** notification. Click it to open **Settings → Notifications**. See [Settings](/kepler/settings-app#notifications).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ade-settings-notifications-01-01-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ade-settings-notifications-01-01-v3@2x.png" class="help-center-img img-bordered" alt="Settings › Notifications, What to notify you about, at the desktop app's defaults: a grid of Replies, Questions, Permission requests, Approval requests and Errors against Desktop and In Kepler, with every box ticked except both Replies boxes; below it Play a sound with desktop notifications is ticked and Notify even for the task you're looking at is not.">
+  <a href="/wp-content/uploads/ade-settings-notifications-01-01-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ade-settings-notifications-01-01-v4@2x.png" class="help-center-img img-bordered" alt="Settings › Notifications, What to notify you about, at the desktop app's defaults: a grid of Replies, Questions, Permission requests, Approval requests, Errors and Offers against Desktop and In Kepler, with every box ticked except both Replies boxes and Offers' Desktop box; below it Play a sound with desktop notifications is ticked, Notify even for the task you're looking at is not, and Show a count on the app icon is ticked.">
   </a>
   <figcaption style="text-align:center; color:#888">What to notify you about, in Settings → Notifications, at the desktop app's defaults.</figcaption>
 </figure>

@@ -66,8 +66,8 @@ Kepler names tasks automatically from what you started them with. To rename a ta
 Click **New task** or press **Cmd/Ctrl+N**. To start one without switching to Kepler first, press **Shift+Alt+N** to open the quick launcher from anywhere, including when Kepler is not the focused window.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-task-button-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-task-button-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The New task button at the left end of the Kepler top bar, a single button with a plus sign, after the application menu, the window switcher and the Back and Forward buttons.">
+  <a href="/wp-content/uploads/new-task-button-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-task-button-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The left end of the Kepler top bar: the application menu, the Back and Forward arrows, the New task button with a plus sign, then the Local environment chip and the Remote Access button's monitor-and-phone icon in green because Remote Access is on.">
   </a>
   <figcaption style="text-align:center; color:#888">The New task button, available from anywhere in Kepler.</figcaption>
 </figure>
@@ -241,15 +241,15 @@ To import workspaces from Conductor, take the following steps:
 </figure>
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/import-workspaces-nov-2026@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/import-workspaces-nov-2026@2x.png" class="help-center-img img-bordered" alt="The Import from Conductor dialog, Choose the workspaces to bring in as tasks, listing 4 ticked workspaces grouped by repository: Checkout redesign and Gift card support under acme-web, Order search endpoint under acme-api, and Apple Pay on mobile under acme-mobile, each with its branch and number of chats. The note to continue each chat in one app only sits above Back to apps and Import 4 workspaces.">
+  <a href="/wp-content/uploads/import-workspaces-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/import-workspaces-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Import from Conductor dialog, Choose the workspaces to bring in as tasks: 9 of 14 selected with an info button, Select all (dimmed) and Select none, and a Filter workspaces box above the list. The workspaces are grouped by repository, each group with its own tick and count: acme-web (4 of 4), acme-api (3 of 3) and acme-mobile (2 of 2), every row ticked and showing its branch, a Claude Code 1 chat badge and how long ago it was active, from 22h to 25d. The 5 older workspaces are folded under Older, and Back to apps and Import 9 workspaces sit at the bottom.">
   </a>
   <figcaption style="text-align:center; color:#888">Step 3: choosing the Conductor workspaces to import.</figcaption>
 </figure>
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/import-run-chip-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/import-run-chip-nov-2026.png" class="help-center-img img-bordered" alt="The title bar after an import ran in the background: the Imported 3 chip, with a check, sits left of the inbox, Ask, feedback, Settings and account buttons, and hovering it opens its card, Import finished, 3 tasks created, with Dismiss and View tasks.">
+  <a href="/wp-content/uploads/import-run-chip-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/import-run-chip-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The title bar after an import ran in the background: the Imported 3 chip, with a check, sits left of the inbox, Ask, feedback, Settings and account buttons, and hovering it opens its card, Import finished, 3 tasks created, with Dismiss and View tasks.">
   </a>
   <figcaption style="text-align:center; color:#888">Step 4: the finished import in the title bar.</figcaption>
 </figure>

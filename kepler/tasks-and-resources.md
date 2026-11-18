@@ -428,8 +428,8 @@ If the worktree is locked, the dialog says what locked it: a task, with **View t
 ## Renaming, archiving, and deleting a task
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/rename-task-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/rename-task-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The Task actions menu of the Fix the cart total row, unread with a New reply, with Rename task highlighted. It runs Open task page; Progress (In Development), Mark as read and Star; Rename task and Add to group; Manage resources and Refresh; Copy task link and Copy task prompt; then Shut down all agents, Archive task and Delete task.">
+  <a href="/wp-content/uploads/rename-task-oct-2026-v6@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/rename-task-oct-2026-v6@2x.png" class="help-center-img img-bordered" alt="The Task actions menu of the Fix the cart total row, unread with a New reply, with Rename task highlighted. It runs Open task page; Mark as read, Star, Rename task and Progress (In Development); Add to group; Manage resources and Refresh; Copy task link and Copy task prompt; then Shut down all agents, Archive task and Delete task.">
   </a>
   <figcaption style="text-align:center; color:#888">The Task actions menu, open from a task's row.</figcaption>
 </figure>

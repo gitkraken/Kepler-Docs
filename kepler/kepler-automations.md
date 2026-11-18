@@ -30,8 +30,8 @@ Automations are marked **Experimental**. To use them, you need to be signed in t
 To open your automations, click the **Automations** tab at the end of the Dashboard's tab row. The tab shows how many runs need you.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/automations-dashboard-button-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/automations-dashboard-button-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Dashboard's row of views, Todo, Tasks, Agent Graph and New view, with the Automations button ringed at the row's right end, its lightning icon and an orange 1 for the run that needs you.">
+  <a href="/wp-content/uploads/automations-dashboard-button-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/automations-dashboard-button-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Dashboard's tab row, Todo, Tasks, Agent Graph and New view, with the Automations tab ringed at the row's right end, its workflow icon and an orange 1 for the run that needs you.">
   </a>
   <figcaption style="text-align:center; color:#888">The Automations tab, with 1 run that needs you.</figcaption>
 </figure>
@@ -66,8 +66,8 @@ GitHub and Jira automations need that account connected. A source you have not c
 The form has 3 cards: **When** sets what the automation watches, **Do** sets what it runs, and **Where** sets where it runs. Click **Save** when you are done.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/automations-editor-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/automations-editor-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The New automation form filled from the Review pull requests awaiting my review template: its Name, Source with GitHub selected, Watch reading Choose repositories or organizations, the pull request filters (Type, Involving me set to Awaiting my review, State with Open ticked, Review status, With and Without labels, Exclude drafts and Exclude Dependabot and Renovate on) and a folded Show query, Runs per item set to On new activity with Ignore my own activity switched on, Then run with Action selected and the Review Action chosen, and Where it runs set to Any of my installs with Task group (optional) at No group, above Cancel and Save.">
+  <a href="/wp-content/uploads/automations-editor-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/automations-editor-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The New automation form filled from the Review pull requests awaiting my review template, in three cards. When: GitHub selected among Schedule, GitHub and Jira, Watch reading Choose repositories or organizations, Type Pull requests, Involving me set to Awaiting my review, and folded Filters (Open, Excludes drafts and bots), Options (On each new activity, Skips my own activity) and Show query rows. Do: Action selected over Custom prompt, the Review Action, and Agent reading Your default agent, OpenCode. Where: Runs in Each pull request's own repository with its explanation, and folded Options (Any of my installs, No group). Cancel and Save below.">
   </a>
   <figcaption style="text-align:center; color:#888">A new automation from the Review pull requests awaiting my review template, in its When, Do and Where cards.</figcaption>
 </figure>
@@ -107,8 +107,8 @@ Each run works on its own new branch in a new worktree, never in your own checko
 The Automations page lists your automations, each with its runs. **Needs you**, at the top, holds the runs that failed, could not start, or are waiting on you. Use **Unread** to show only runs you have not looked at.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/automations-view-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/automations-view-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Automations page, opened from the highlighted Automations button at the right of the Dashboard's views row. On the left, the Automations list with All and Unread, Needs you holding the failed run on acme/acme-web#58, then Review pull requests awaiting my review (3) and Triage new bugs (2), each with its finished runs, and the paused Check dependencies every Monday with a play button, above New automation. On the right, the selected finished run acme/acme-web#61: Done, its Automation, the Item PR acme/acme-web#61, its Queued, Claimed, Started and Finished times, and the Open item and Edit automation buttons.">
+  <a href="/wp-content/uploads/automations-view-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/automations-view-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Automations page, opened from the Automations tab at the right end of the Dashboard's tab row. Its header reads Automations with an Experimental badge and a Give feedback button. On the left, the Automations list with All and Unread, Needs you holding the failed run on acme/acme-web#58, then Review pull requests awaiting my review (3) and Triage new bugs (2), each with its finished runs, and the paused Check dependencies every Monday with a play button, above New automation. On the right, the selected finished run acme/acme-web#61: Done, its Automation, the Item PR acme/acme-web#61, its Queued, Claimed, Started and Finished times, and the Open item and Edit automation buttons.">
   </a>
   <figcaption style="text-align:center; color:#888">The Automations page, with a finished run selected and a failed run in Needs you.</figcaption>
 </figure>

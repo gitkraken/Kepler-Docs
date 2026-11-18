@@ -57,8 +57,8 @@ The organization you are acting as decides what a feature costs.
 **Profiles**, right under **Account** in the desktop app, lists the profiles on this computer. Each profile has its own tasks, repositories, settings, and sign-ins, and runs side by side with the others. Click **Add profile** to add one, or use a profile's row menu to edit, open, or delete it. See [Use Profiles in Kepler](/kepler/kepler-profiles).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/profiles-settings-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/profiles-settings-nov-2026.png" class="help-center-img img-bordered" alt="Settings › Profiles: Keep work, personal and client work apart. Each profile has its own tasks and settings, can use the same GitKraken account or another one, and most agents keep a separate sign-in in each. Under Add profile, the list holds Default (gray D badge), marked This profile, and Client work (purple C badge) with a drag handle, each with a row menu.">
+  <a href="/wp-content/uploads/profiles-settings-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/profiles-settings-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="Settings › Profiles: Keep work, personal and client work apart. Each profile has its own tasks and settings, can use the same GitKraken account or another one, and most agents keep a separate sign-in in each. Under Add profile, the list holds Default (gray D badge), marked This profile, and Client work (purple C badge) with a drag handle, each with a row menu.">
   </a>
   <figcaption style="text-align:center; color:#888">Settings → Profiles.</figcaption>
 </figure>

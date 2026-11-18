@@ -34,8 +34,8 @@ A profile in Kepler by GitKraken is a separate Kepler setup on the same computer
 To see and manage your profiles, open **Settings → Profiles**, right under **Account**. You can also choose **Manage profiles…** from the account menu. The list shows each profile with its color, and marks the one this window belongs to as **This profile**. Each row has a menu with **Edit**, **Open**, and **Delete…**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/profiles-settings-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/profiles-settings-nov-2026.png" class="help-center-img img-bordered" alt="Settings › Profiles: Keep work, personal and client work apart. Each profile has its own tasks and settings, can use the same GitKraken account or another one, and most agents keep a separate sign-in in each. Under Add profile, the list holds Default (gray D badge), marked This profile, and Client work (purple C badge) with a drag handle, each with a row menu.">
+  <a href="/wp-content/uploads/profiles-settings-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/profiles-settings-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="Settings › Profiles: Keep work, personal and client work apart. Each profile has its own tasks and settings, can use the same GitKraken account or another one, and most agents keep a separate sign-in in each. Under Add profile, the list holds Default (gray D badge), marked This profile, and Client work (purple C badge) with a drag handle, each with a row menu.">
   </a>
   <figcaption style="text-align:center; color:#888">Settings → Profiles, with a second profile added.</figcaption>
 </figure>
@@ -50,8 +50,8 @@ To see and manage your profiles, open **Settings → Profiles**, right under **A
 4. Click **Add** to add the profile, or **Add and open** to also open it in a new window.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/profiles-add-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/profiles-add-nov-2026.png" class="help-center-img img-bordered" alt="The Add profile dialog: Name reads Client work, Profile color has the purple swatch picked among twelve colors, and the Start from list is open with Blank profile and Copy of Default (selected). Cancel, Add and Add and open sit at the bottom.">
+  <a href="/wp-content/uploads/profiles-add-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/profiles-add-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Add profile dialog: Name reads Client work, Profile color has the purple swatch picked among twelve colors, and the Start from list is open with Blank profile and Copy of Default (selected). Cancel, Add and Add and open sit at the bottom.">
   </a>
   <figcaption style="text-align:center; color:#888">Adding a profile as a copy of the Default profile.</figcaption>
 </figure>
@@ -70,8 +70,8 @@ Each profile opens in its own windows. To open another profile, or bring its win
 Once you have more than 1 profile, each window's title names its profile.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/profiles-account-menu-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/profiles-account-menu-nov-2026.png" class="help-center-img img-bordered" alt="The account menu open under the title bar's AL avatar: Default (gray D badge), marked This window, over Alex Lee, alex.lee@example.com and the GitKraken Enterprise organization; Account settings; Other profiles with Client work (purple C badge); Manage profiles…; and Sign out.">
+  <a href="/wp-content/uploads/profiles-account-menu-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/profiles-account-menu-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The account menu open under the title bar's AL avatar: Default (gray D badge), marked This window, over Alex Lee, alex.lee@example.com and the GitKraken Enterprise organization; Account settings; Other profiles with Client work (purple C badge); Manage profiles…; and Sign out.">
   </a>
   <figcaption style="text-align:center; color:#888">Other profiles and Manage profiles…, in the account menu.</figcaption>
 </figure>

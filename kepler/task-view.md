@@ -35,8 +35,8 @@ To open the task page, double-click a task's row in [the Kepler interface](/kepl
 ## The header
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/task-header-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-header-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The left side of the task header: the context panel toggle, the back chevron, the Fix the cart total task chip with its switcher chevron, the ⋮ Task actions menu, and the In Development progress control.">
+  <a href="/wp-content/uploads/task-header-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-header-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The task header from left to right: the context panel toggle, the back chevron, the Fix the cart total task chip with its switcher chevron, the In Development progress control, then at the far right the Terminal button and the ⋮ Task actions menu.">
   </a>
   <figcaption style="text-align:center; color:#888">The task header, with Terminal and the ⋮ menu at its right end.</figcaption>
 </figure>
@@ -95,8 +95,8 @@ At phone width, for example in a phone browser connected through [Remote Access]
 - A segment for each of **Sessions**, **Changes**, **Terminal**, and **Resources**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/phone-task-view-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/phone-task-view-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The task page in a phone-width browser. One bar holds Back (with a dot, because another task needs you), the Fix the cart total chip, and the Sessions (1), Changes (2), Terminal and Resources (4) segments. Below it the details row reads In Review with Refresh and a fold chevron, then the checkout box for kepler/fix-cart-total (1/1, its #51 pull request with a red changes-requested dot, 2 uncommitted, origin/main) and the #51 Open and #38 Open chips, above the agent's session and its composer.">
+  <a href="/wp-content/uploads/phone-task-view-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/phone-task-view-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The task page in a phone-width browser. One bar holds Back, the Fix the cart total chip, the Tasks that need you button with an orange mark, and the segments as icons: Sessions (1, picked), Changes (2) and Terminal. Below it the folded details row reads In Review, then the branch icon with an amber dot, the pull request icon with a red dot, the issue icon, a paperclip with 2, Refresh and the fold chevron, above the agent's session (its plan completed, its replies and tool uses) and the composer.">
   </a>
   <figcaption style="text-align:center; color:#888">The task page on a phone, with its single bar and details row.</figcaption>
 </figure>
@@ -293,8 +293,8 @@ The content area shows what you open in either columns or tabs. To choose, turn 
 | **On** | Free-form **tabs** you can pin, drag between groups, and arrange side by side |
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/show-tabs-on-task-page-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/show-tabs-on-task-page-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Task page section of Settings › Tasks, with Show tabs on the task page and Preview tabs.">
+  <a href="/wp-content/uploads/show-tabs-on-task-page-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/show-tabs-on-task-page-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Task page and panels section of Settings › Tasks: Where links, Go To and notifications open a task, a dropdown set to Automatic (a Dashboard panel when you are on the Dashboard, the task page everywhere else), noting the phone app always opens the task page; Show tabs on the task page, unticked, whose help says Preview tabs need it on; Preview tabs, ticked but dimmed; and Open changes beside the session in Dashboard panels, ticked.">
   </a>
   <figcaption style="text-align:center; color:#888">The Show tabs on the task page setting.</figcaption>
 </figure>
@@ -306,8 +306,8 @@ In both layouts, terminals open in the [drawer](#the-terminal-drawer) below the 
 ### The columns
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/task-columns-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-columns-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The task page for Fix the cart total with tabs off: the context panel on the left with Sessions, Changes and Notes, then three columns side by side: the session's conversation (the prompt, Thinking, a completed Plan, a Read cart.js tool call and the agent's replies, with the composer at the foot), the kepler/fix-cart-total worktree on Changes, with its Working changes row, the Commit… button and cart.js modified and cart.test.js added, and the task's Prompt note.">
+  <a href="/wp-content/uploads/task-columns-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-columns-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The task page for Fix the cart total with tabs off: the context panel on the left with Sessions, Changes and Notes, then three columns side by side: the session's conversation (the prompt, Thinking, a completed Plan, a Read cart.js tool call and the agent's replies, with the composer at the foot), the kepler/fix-cart-total worktree on Changes, its branch line in a card with the Working changes row and its Commit… button over main, branched here, then cart.js modified and cart.test.js added, and the task's Prompt note.">
   </a>
   <figcaption style="text-align:center; color:#888">The three content columns: Sessions, Changes, and Resources.</figcaption>
 </figure>

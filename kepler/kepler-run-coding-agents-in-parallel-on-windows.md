@@ -110,8 +110,8 @@ You can attach the same repository to several tasks. Each task gets its own work
 To follow every agent at once, use the Dashboard. Kepler notifies you when an agent needs you, for example to answer a permission request. See [Agent Sessions](/kepler/agent-sessions#notifications).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-task-button-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-task-button-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The New task button at the left end of the Kepler top bar, a single button with a plus sign, after the application menu, the window switcher and the Back and Forward buttons.">
+  <a href="/wp-content/uploads/new-task-button-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-task-button-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The left end of the Kepler top bar: the application menu, the Back and Forward arrows, the New task button with a plus sign, then the Local environment chip and the Remote Access button's monitor-and-phone icon in green because Remote Access is on.">
   </a>
   <figcaption style="text-align:center; color:#888">The New task button starts each parallel task.</figcaption>
 </figure>

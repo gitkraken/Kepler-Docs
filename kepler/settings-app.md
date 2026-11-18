@@ -147,8 +147,8 @@ These settings appear under the grid:
 To silence desktop notifications from one remote machine only, use **Mute notifications from *host*** on that machine in [Remote environments](/kepler/settings-environment#remote-environments).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ade-settings-notifications-01-01-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ade-settings-notifications-01-01-v3@2x.png" class="help-center-img img-bordered" alt="Settings › Notifications, What to notify you about, at the desktop app's defaults: a grid of Replies, Questions, Permission requests, Approval requests and Errors against Desktop and In Kepler, with every box ticked except both Replies boxes; below it Play a sound with desktop notifications is ticked and Notify even for the task you're looking at is not.">
+  <a href="/wp-content/uploads/ade-settings-notifications-01-01-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ade-settings-notifications-01-01-v4@2x.png" class="help-center-img img-bordered" alt="Settings › Notifications, What to notify you about, at the desktop app's defaults: a grid of Replies, Questions, Permission requests, Approval requests, Errors and Offers against Desktop and In Kepler, with every box ticked except both Replies boxes and Offers' Desktop box; below it Play a sound with desktop notifications is ticked, Notify even for the task you're looking at is not, and Show a count on the app icon is ticked.">
   </a>
   <figcaption style="text-align:center; color:#888">What to notify you about, at the desktop app's defaults.</figcaption>
 </figure>

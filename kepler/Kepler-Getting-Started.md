@@ -88,15 +88,15 @@ After you sign in, a guided start walks you through setup. To skip it at any poi
 If you installed an agent that Kepler did not find, click **Rescan**. To go on without an agent, click **Continue without an agent**. You can set one up later in **Settings → Agents**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/onboarding-no-agent-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/onboarding-no-agent-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The guided start's first step, Choose your coding agents, with no agent found: the list is headed Set up a coding agent to get started, with Rescan and the line Install one here, or Rescan if you installed one yourself., and the nine coding agents are dashed tiles, each ending in an arrow that you click to install or locate it. Kep says Hmm, no agents here yet. Installed one yourself? Press Rescan., and the step ends with I'll explore on my own and Continue without an agent.">
+  <a href="/wp-content/uploads/onboarding-no-agent-nov-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/onboarding-no-agent-nov-2026-v4@2x.png" class="help-center-img img-bordered" alt="The guided start's first step, Choose your coding agents, with no agent found, under the 01 Agents / 02 Repos / 03 Preferences steps: the list is headed Set up a coding agent to get started, with Rescan and the line Install one here, or Rescan if you installed one yourself., and the nine coding agents are dashed tiles, each ending in an arrow that you click to install or locate it. Kep says Hmm, no agents here yet. Installed one yourself? Press Rescan., and the step ends with Explore on my own and Continue without an agent.">
   </a>
   <figcaption style="text-align:center; color:#888">The first step of the guided start, with no agent found.</figcaption>
 </figure>
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/onboarding-agents-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/onboarding-agents-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The guided start's first step, Choose your coding agents, under Welcome to Kepler and the 01 Agents / 02 Repos / 03 Theme & notifications steps: Claude Code and Codex are switched on among the nine coding agents, the others are dashed tiles ending in an arrow that you click to install or locate them, and New sessions start in offers Chat (selected) or Terminal. Kep says Kepler found Claude Code and Codex, with I'll explore on my own and Next at the bottom.">
+  <a href="/wp-content/uploads/onboarding-agents-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/onboarding-agents-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The guided start's first step, Choose your coding agents, under Welcome to Kepler and the 01 Agents / 02 Repos / 03 Preferences steps: Claude Code and Codex are switched on among the nine coding agents, the others are dashed tiles ending in an arrow that you click to install or locate them, with Rescan above the list, and New sessions start in offers Chat (selected) or Terminal. Kep says Kepler found Claude Code and Codex, with Explore on my own and Next at the bottom.">
   </a>
   <figcaption style="text-align:center; color:#888">The first step of the guided start, with two agents found and switched on.</figcaption>
 </figure>
@@ -110,8 +110,8 @@ If you installed an agent that Kepler did not find, click **Rescan**. To go on w
 Then click the button that adds them, such as **Add 2 and continue**. Kepler adds only what you check.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/onboarding-repos-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/onboarding-repos-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The guided start's second step, Bring in your repos, with 02 Repos current in the step header: the Repos folder field reads /home/alex/code, and Repos and folders lists acme-web and acme-api checked and design-tokens unchecked, each with its path and when it was last used, under Filter, Select all, Unselect all and Add a folder. Back, I'll explore on my own and Add 2 and continue sit at the bottom.">
+  <a href="/wp-content/uploads/onboarding-repos-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/onboarding-repos-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The guided start's second step, Bring in your repos, with 02 Repos current in the 01 Agents / 02 Repos / 03 Preferences step header: the Repos folder field reads /home/alex/code, and Repos and folders lists acme-web and acme-api checked and design-tokens unchecked, each with its path and when it was last used, under Filter, 2 selected, Select all, Unselect all and Add a folder. Below the list, Trust the repos you're adding is ticked and Also trust /home/alex/code, including repos added there later is not. Kep says it found 3 places and picked the 2 you use most; Back, Explore on my own and Add 2 and continue sit at the bottom.">
   </a>
   <figcaption style="text-align:center; color:#888">The second step, with the 2 repos Kepler picked checked.</figcaption>
 </figure>
@@ -127,8 +127,8 @@ Then click the button that adds them, such as **Add 2 and continue**. Kepler add
 To try an alert, click **Send a test notification**. You can change these choices later in [Settings](/kepler/settings-app#notifications). Click **Finish** to open the **New task** composer on the Dashboard and start your first task. If an **Import** step follows, the button reads **Next**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/onboarding-theme-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/onboarding-theme-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The guided start's third step, Make it yours, with 01 Agents and 02 Repos checked off and 03 Theme & notifications current: Theme tiles Kepler Dark (selected), Midnight, Kepler Light and Theme gallery beside the System / Light / Dark switch on Dark, and Notify me presets Everything, When I'm needed (selected) and Only in Kepler, with Play a sound with desktop notifications ticked, Send a test notification, Back and Finish.">
+  <a href="/wp-content/uploads/onboarding-theme-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/onboarding-theme-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The guided start's third step, Make it yours, with 01 Agents and 02 Repos checked off and 03 Preferences current: New tasks work in offers Isolated worktree (selected), New branch and Current branch; Notify me offers Everything, When I'm needed (selected) and Only in Kepler, with Play a sound with desktop notifications ticked and Send a test notification; Theme shows the System / Light / Dark switch on Dark and tiles Kepler Dark (selected), Midnight, Kepler Light and Theme gallery. Kep asks where agents should work; Back and Finish sit at the bottom.">
   </a>
   <figcaption style="text-align:center; color:#888">The third step, with where new tasks work, the notification choices, and the theme.</figcaption>
 </figure>
@@ -136,8 +136,8 @@ To try an alert, click **Send a test notification**. You can change these choice
 **Bring your work over.** If Kepler finds workspaces from Conductor, Orca, herdr, or Vibe Kanban on this computer, the guided start ends with an **Import** step. Each app has a row with a switch, and the workspaces you used in the last 30 days are already picked. To change the picks, click **Review**. Click the button that imports them, such as **Import 11 and finish**, to bring them over as tasks once setup ends, or click **Finish without importing**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/onboarding-import-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/onboarding-import-nov-2026.png" class="help-center-img img-bordered" alt="The guided start's last step, Bring your work over, with 01 Agents, 02 Repos and 03 Preferences checked off and 04 Import current: Workspaces come over as tasks once you finish setup. A row per app found, each with Review and its switch on: Conductor, 9 of 14 workspaces selected, active in the last 30 days (Checkout redesign, Gift card support, Cart total with discounts and 6 more), and Orca, 2 of 2 workspaces selected (First-run tour, Offline cart). Kep says it found Conductor and Orca on this machine; Back, Finish without importing and Import 11 and finish sit at the bottom.">
+  <a href="/wp-content/uploads/onboarding-import-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/onboarding-import-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The guided start's last step, Bring your work over, with 01 Agents, 02 Repos and 03 Preferences checked off and 04 Import current: Workspaces come over as tasks once you finish setup. A row per app found, each with Review and its switch on: Conductor, 9 of 14 workspaces selected, active in the last 30 days (Checkout redesign, Gift card support, Cart total with discounts and 6 more), and Orca, 2 of 2 workspaces selected (First-run tour, Offline cart). Kep says it found Conductor and Orca on this machine; Back, Finish without importing and Import 11 and finish sit at the bottom.">
   </a>
   <figcaption style="text-align:center; color:#888">The Import step, with the workspaces Kepler found in 2 apps.</figcaption>
 </figure>
@@ -214,8 +214,8 @@ You can also attach nothing at all and turn the task into real work later. See [
 If you work in Conductor or another agent app, you can import its workspaces as tasks, chats included. See [Create a task → From another agent app](/kepler/create-task#from-another-agent-app).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-task-button-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-task-button-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The New task button at the left end of the Kepler top bar, a single button with a plus sign, after the application menu, the window switcher and the Back and Forward buttons.">
+  <a href="/wp-content/uploads/new-task-button-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-task-button-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The left end of the Kepler top bar: the application menu, the Back and Forward arrows, the New task button with a plus sign, then the Local environment chip and the Remote Access button's monitor-and-phone icon in green because Remote Access is on.">
   </a>
   <figcaption style="text-align:center; color:#888">The New task button, available from anywhere in Kepler.</figcaption>
 </figure>

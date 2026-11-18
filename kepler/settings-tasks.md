@@ -68,8 +68,8 @@ You can edit **Branch prefix**, **Worktrees folder**, and **Tasks folder** which
 | **At the end** | Always opens the panel after every open panel |
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/settings-new-task-panel-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/settings-new-task-panel-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="Where a new task opens on the Dashboard, in Settings › Tasks: two choice cards, Beside the focused panel (selected), which opens at the end once the panels fill more than one row, and At the end, always after every open panel.">
+  <a href="/wp-content/uploads/settings-new-task-panel-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/settings-new-task-panel-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="Where a new task opens on the Dashboard, in Settings › Tasks, with its dropdown open: Beside the focused panel (selected), which opens at the end once the panels fill more than one row, and At the end, always after every open panel.">
   </a>
   <figcaption style="text-align:center; color:#888">Where a new task opens on the Dashboard, in Settings → Tasks.</figcaption>
 </figure>

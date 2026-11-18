@@ -55,22 +55,22 @@ When the update is ready, an **Update available** chip replaces the progress chi
 On Windows and Linux, the menu button at the leading edge of the top bar holds the full application menu (**File**, **Edit**, **View**, **Window**, **Help**), including **Settings**, **Check for Updates…**, and **About**. macOS keeps its native menu bar. To switch windows, see [Kepler windows](#kepler-windows).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-task-button-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-task-button-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The New task button at the left end of the Kepler top bar, a single button with a plus sign, after the application menu, the window switcher and the Back and Forward buttons.">
+  <a href="/wp-content/uploads/new-task-button-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-task-button-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The left end of the Kepler top bar: the application menu, the Back and Forward arrows, the New task button with a plus sign, then the Local environment chip and the Remote Access button's monitor-and-phone icon in green because Remote Access is on.">
   </a>
   <figcaption style="text-align:center; color:#888">The top bar's leading edge.</figcaption>
 </figure>
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/top-tool-bar-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/top-tool-bar-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The right end of the Kepler top bar: the Local environment chip, the Remote Access button's monitor-and-phone icon in green because Remote Access is on, the Ask button with Kep, Feedback, Settings, and the account avatar.">
+  <a href="/wp-content/uploads/top-tool-bar-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/top-tool-bar-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The right end of the Kepler top bar: the Tasks that need you inbox icon (nothing waiting), the Ask button with Kepler's ringed-planet glyph, Feedback, Settings, and the account avatar with Alex Lee's initials.">
   </a>
   <figcaption style="text-align:center; color:#888">The top bar's trailing cluster.</figcaption>
 </figure>
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/update-available-chip-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/update-available-chip-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The right end of the Kepler top bar with a green Update available chip before the Local environment chip, Remote Access, the Ask button with Kep, Feedback, Settings, and the account avatar.">
+  <a href="/wp-content/uploads/update-available-chip-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/update-available-chip-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The right end of the Kepler top bar with a green Update available chip before the Tasks that need you inbox icon, the Ask button, Feedback, Settings, and the account avatar with Alex Lee's initials.">
   </a>
   <figcaption style="text-align:center; color:#888">The trailing cluster when an update is ready.</figcaption>
 </figure>
@@ -86,8 +86,8 @@ Menu items and button tooltips show a command's keyboard shortcut when the item 
 - **Other machines** lists your other machines with work waiting. Click one to switch to its window.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/needs-you-menu-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/needs-you-menu-nov-2026.png" class="help-center-img img-bordered" alt="The Tasks that need you menu, open under its title-bar chip, which shows an inbox icon and 2: Go to next task that needs you with its F8 key, then Needs attention (1) with Add product search, Approval needed for Run npm test, and Unread (1) with Fix the cart total.">
+  <a href="/wp-content/uploads/needs-you-menu-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/needs-you-menu-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Tasks that need you menu, open under its title-bar chip, which shows an inbox icon and 2: Go to next task that needs you with its F8 key, then Needs attention (1) with Add product search, Approval needed for Run npm test, and Unread (1) with Fix the cart total.">
   </a>
   <figcaption style="text-align:center; color:#888">The Tasks that need you menu.</figcaption>
 </figure>
@@ -538,8 +538,8 @@ A grid holds up to 16 panels, fewer in smaller windows. In a grid:
 ### Pin a panel
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/pin-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/pin-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="A task panel's Task actions menu open from the ⋮ beside its title, Fix the cart total: Open task page; Progress, In Development, Mark as unread and Star; Rename task (F2) and Add to group; Manage resources and Refresh; Copy task link and Copy task prompt; Panel, open on its submenu with Pin panel highlighted; then Shut down all agents, Archive task and Delete task.">
+  <a href="/wp-content/uploads/pin-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/pin-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="A task panel's Task actions menu, open from the ⋮ at the right end of its header between Terminal and Close: Open task page; Mark as unread, Star, Rename task (F2) and Progress (In Development); Add to group; Manage resources and Refresh; Copy task link and Copy task prompt; Panel, open on its submenu to the left with Pin panel highlighted; then Shut down all agents, Archive task and Delete task.">
   </a>
   <figcaption style="text-align:center; color:#888">Pin panel, in the Panel submenu of a task panel's ⋮ menu.</figcaption>
 </figure>
@@ -602,8 +602,8 @@ If you created a task with a prompt but have not started it, press **Start** wit
 The side panel's header holds:
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/task-preview-header-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-preview-header-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A task's side panel header: the fold chevron, the task title Upgrade the payment SDK, Open task page, the ⋮ Task actions menu, the In Review progress control, the Terminal button and Close, above its worktree button with the kepler/payment-sdk-v5 branch in acme-web, 1 uncommitted file and the main merge target.">
+  <a href="/wp-content/uploads/task-preview-header-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-preview-header-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="A task's side panel header: the fold chevron, the task title Upgrade the payment SDK, Open task page, the In Review progress control, then at the right end the Terminal button, the ⋮ Task actions menu and Close.">
   </a>
   <figcaption style="text-align:center; color:#888">The side panel's header, on a task.</figcaption>
 </figure>
@@ -692,8 +692,8 @@ Comments work for GitHub, GitHub Enterprise, GitLab, GitLab Self-Hosted, Jira, a
 Below the header, each of the task's checkouts appears as a **worktree button** with 2 rows: what identifies the checkout on top, and what's in it below.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/task-preview-header-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-preview-header-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A task's side panel header: the fold chevron, the task title Upgrade the payment SDK, Open task page, the ⋮ Task actions menu, the In Review progress control, the Terminal button and Close, above its worktree button with the kepler/payment-sdk-v5 branch in acme-web, 1 uncommitted file and the main merge target.">
+  <a href="/wp-content/uploads/task-preview-header-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-preview-header-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="A task's side panel header: the fold chevron, the task title Upgrade the payment SDK, Open task page, the In Review progress control, then at the right end the Terminal button, the ⋮ Task actions menu and Close.">
   </a>
   <figcaption style="text-align:center; color:#888">A task's worktree button, below the header.</figcaption>
 </figure>
@@ -747,8 +747,8 @@ To jump to a task, a pull request or issue, a file, or something said in a chat,
 To switch tabs, click a tab or press **Shift+Tab**. In an empty field, you can also type **@** for **Files**, **?** for **Chats**, or **>** to show only commands. Press **Backspace** to return to **All**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/palette-all-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/palette-all-nov-2026.png" class="help-center-img img-bordered" alt="The palette's All view as it opens: a search field reading Search tasks, todos and commands, or type @ for files, ? for chats or > for commands, the All, Tasks, Todo, Files and Chats tabs with All selected, then Needs you with Add product search (Approval needed for Run npm test), Unread with Fix the cart total, and the Suggested commands such as New task, Go to what needs you next and Open settings with their keys, above the General commands.">
+  <a href="/wp-content/uploads/palette-all-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/palette-all-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The palette's All view as it opens: a search field reading Search tasks, todos and commands, or type @ for files, ? for chats or > for commands, the All, Tasks, Todo, Files and Chats tabs with All selected, then Needs you with Add product search (Approval needed for Run npm test), Unread with Fix the cart total, and the Suggested commands such as New task, Go to what needs you next and Open settings with their keys, above the General commands.">
   </a>
   <figcaption style="text-align:center; color:#888">The palette as it opens, on All.</figcaption>
 </figure>
@@ -756,8 +756,8 @@ To switch tabs, click a tab or press **Shift+Tab**. In an empty field, you can a
 **All** opens on the tasks that need you, followed by the commands. Type to search your tasks, todos and commands at once. Under **More ways to search**, rows turn what you typed into a search of your chats or files, a new task, or an [Ask Kepler](/kepler/ask-kepler) chat. Paste a pull request or issue link to open it or start a task from it.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/go-to-task-palette-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/go-to-task-palette-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Go to task palette: a search field reading Go to task, or type # for todos, @ for files or > for commands, the Tasks, Todo, Files and Commands tabs with Tasks selected, and your tasks listed under Needs attention, Unread, Recent and Not started, with Fix the cart total checked as the current task, above key hints such as Open and Task files.">
+  <a href="/wp-content/uploads/go-to-task-palette-nov-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/go-to-task-palette-nov-2026-v4@2x.png" class="help-center-img img-bordered" alt="The palette on its Tasks tab: a search field reading Go to task, or type @ for files, > for commands or ? for chats, the All, Tasks, Todo, Files and Chats tabs with Tasks selected, and your tasks under Needs attention, Unread, Recent and Not started, with Fix the cart total checked as the current task, above key hints such as All, Open, Task files and Next tab.">
   </a>
   <figcaption style="text-align:center; color:#888">The Tasks tab, listing your tasks to switch to.</figcaption>
 </figure>
@@ -777,8 +777,8 @@ To switch tabs, click a tab or press **Shift+Tab**. In an empty field, you can a
 On **Files** and **Chats**, the scope chip at the end of the tabs names the task being searched, or reads **All tasks**. To search another task, click the chip or press **Alt+S** (**Cmd+Option+S** on macOS), then pick a task or type to find one. To search every task, pick **All tasks** or click the chip's **×**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/palette-chats-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/palette-chats-nov-2026.png" class="help-center-img img-bordered" alt="The palette on its Chats tab, searching all tasks (All tasks scope chip) for discount: one chat, Fix the cart total, marked Running with 3 matches, then its three messages with discount highlighted, two from the agent and your own prompt, Fix the cart total: discounts should apply before tax, above key hints such as Open, Scope and Next tab.">
+  <a href="/wp-content/uploads/palette-chats-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/palette-chats-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The palette on its Chats tab, searching all tasks (All tasks scope chip) for discount: one chat, Fix the cart total, marked Running with 3 matches, then its three messages with discount highlighted, two from the agent and your own prompt, Fix the cart total: discounts should apply before tax, above key hints such as Open, Scope and Next tab.">
   </a>
   <figcaption style="text-align:center; color:#888">The Chats tab, with matches grouped by chat.</figcaption>
 </figure>
@@ -786,8 +786,8 @@ On **Files** and **Chats**, the scope chip at the end of the tabs names the task
 **Commands.** To show only commands, type **>** in an empty field, or press **Cmd/Ctrl+Shift+P** again while **All** is showing. Before you type, the list starts with **Suggested**, led by the commands you use most. Each command shows its keyboard shortcut. The list also has a row for each Settings page and for actions such as **Switch to window: {name}**. Press **Enter** to run the highlighted command. To give it a different key, click **Change shortcut** on its row.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/palette-commands-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/palette-commands-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The palette on its Commands tab: a search field reading Search commands, or type @ for files or # for todos, the Tasks, Todo, Files and Commands tabs with Commands selected, and the General commands, such as Open settings, Toggle Ask Kepler chat, New Ask Kepler chat and New task (highlighted), some with their keyboard shortcut on the right, then Send feedback, Open documentation and the Appearance commands, above key hints such as Run and Next tab.">
+  <a href="/wp-content/uploads/palette-commands-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/palette-commands-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The palette's All view filtered to commands: a Commands chip with an x in a search field reading Search commands, or type @ for files or ? for chats, the All, Tasks, Todo, Files and Chats tabs with All selected, and the Suggested commands, New task (highlighted, with its Change shortcut keyboard button), Go to what needs you next (F8), Toggle Ask Kepler chat, New Ask Kepler chat, Open settings and others, then the General commands, above key hints such as Run and Next tab.">
   </a>
   <figcaption style="text-align:center; color:#888">The palette showing only commands, with Suggested first.</figcaption>
 </figure>

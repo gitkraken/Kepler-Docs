@@ -139,8 +139,8 @@ A task with no worktree runs the Action in a folder attached to it, or else in t
 Firing into a live session **queues** the prompt behind whatever the agent is currently doing. Nothing is dropped and nothing is canceled, and Kepler takes you to the session the prompt went into.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/firing-into-a-running-session-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/firing-into-a-running-session-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="A running session in a task's side panel: the agent's plan at 1 of 3, its turn still running on Run npm test, and below it 1 queued with Interrupt & send and Clear queue, holding the prompt Also cover gift card codes with surrounding spaces. The composer reads Type a message to queue….">
+  <a href="/wp-content/uploads/firing-into-a-running-session-aug-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/firing-into-a-running-session-aug-2026-v3@2x.png" class="help-center-img img-bordered" alt="A running session: the agent's plan at 1 of 3, its turn still running on Run npm test, and below it 1 queued with Interrupt & send and Clear queue, holding the prompt Also cover gift card codes with surrounding spaces., marked After this turn with a remove button. The composer, its border tinted while the turn runs, reads Type a message to queue... above Docs Model, Build and Send.">
   </a>
   <figcaption style="text-align:center; color:#888">A prompt queued into a running session.</figcaption>
 </figure>

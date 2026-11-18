@@ -122,8 +122,8 @@ To trust a repository or folder, use one of these:
 While a repository is trusted, agent sessions in it also skip the agent's own trust question.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/repositories-trust-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/repositories-trust-nov-2026.png" class="help-center-img img-bordered" alt="Your repos and folders in Settings › Repositories, with Add repo and Add folder…: Trusted folders (Everything inside, now and later) lists /home/alex/code/oss with a remove button, beside Trust a folder…. The view switch reads All 5, Trusted 3 and Untrusted 2, with Untrusted selected: the group /home/alex/code/acme, ticked, with 2 and Trust acme, holds acme-api and acme-mobile, both ticked, each with No commands and a warning shield. A bar at the bottom reads 2 selected with Trust 2 and Clear.">
+  <a href="/wp-content/uploads/repositories-trust-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/repositories-trust-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="Your repos and folders in Settings › Repositories, with Add repo and Add folder…: Trusted folders (Everything inside, now and later) lists /home/alex/code/oss with a remove button, beside Trust a folder…. The view switch reads All 5, Trusted 3 and Untrusted 2, with Untrusted selected: the group /home/alex/code/acme, ticked, with 2 and Trust acme, holds acme-api and acme-mobile, both ticked, each with No commands and a warning shield. A bar at the bottom reads 2 selected with Trust 2 and Clear.">
   </a>
   <figcaption style="text-align:center; color:#888">Untrusted repos grouped by folder, ready to trust together.</figcaption>
 </figure>

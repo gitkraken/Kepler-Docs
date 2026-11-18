@@ -97,8 +97,8 @@ Commits that the upstream does not have yet show a green dot and line, and read 
 With a Jira or Jira Server account connected, Jira issue keys in a commit's message become links, and the commit's right-click menu adds **Open issue {issue}** and **Copy issue URL for {issue}**. See [Issue Tracker Integrations](/kepler/issue-tracker-integrations).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/changes-commit-row-tip-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/changes-commit-row-tip-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="A worktree's column on its Changes view, whose list reads All changes, then three commits and origin/main branched here. The two newest commits have green dots because they are not pushed, and Apply the discount before tax, which is pushed, has a grey one. Hovering Clamp the discount at the subtotal opens its hover card, which shows Alex Lee, committed 4h ago, the subject, a body with a two-item list and a Refs: #38 trailer, then the short hash, its line changes, 1 file and a Not pushed chip.">
+  <a href="/wp-content/uploads/changes-commit-row-tip-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/changes-commit-row-tip-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="A worktree's column on its Changes view: the branch list, in its own card, reads All changes, then three commits and origin/main branched here. The two newest commits have green dots because they are not pushed, and Apply the discount before tax, which is pushed, has a grey one. Hovering Clamp the discount at the subtotal opens its hover card, which shows Alex Lee, committed 4h ago, the subject, a body with a two-item list and a Refs: #38 trailer, then the short hash, its line changes, 1 file and a Not pushed chip. Below the card sit the file list's toolbar and cart.js and cart.test.js.">
   </a>
   <figcaption style="text-align:center; color:#888">Unpushed commits, and the card for one of them.</figcaption>
 </figure>
@@ -114,8 +114,8 @@ To open the Changes overlay, click a file, or choose **Open changes** from the w
 In the desktop app, you can review on a second screen: click **Open in new window** in the overlay's header. The review moves to a window of its own, on the same files and view, and your comments still go to the same session. **Close window** closes it.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/changes-overlay-maximize-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/changes-overlay-maximize-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total open over the task page at its default width, with the task page showing dimmed around it, and the Maximize button in the overlay's header ringed and hovered, its tooltip reading Maximize. The header also reads from main and Up to date; the overlay's side list has the view switch's icon buttons for Changes (2), Files and Comments over Working changes, 2 files and main branched here, then Commit… and the two changed files, beside cart.js's diff. The context panel behind ends with Manage resources.">
+  <a href="/wp-content/uploads/changes-overlay-maximize-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/changes-overlay-maximize-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total open over the task page at its default width, with the task page showing dimmed around it, and the Maximize button in the overlay's header ringed and hovered, its tooltip reading Maximize. The header also reads from main and Up to date. The overlay's side list has the view switch's icon buttons (Changes 2, Files, Comments) over a card holding Working chang� with its Commit� button and main branched here, then the file toolbar and the two changed files, beside cart.js's diff.">
   </a>
   <figcaption style="text-align:center; color:#888">The Changes overlay at its default width, with Maximize in its header.</figcaption>
 </figure>
@@ -134,8 +134,8 @@ In the desktop app, you can review on a second screen: click **Open in new windo
 With the tree hidden, the overlay's header also adds a Comments menu, with the count of open comments, that lists the task's comments by file. Click a comment to go to its lines, or click **Open in panel** to show the [Comments view](#the-comments-view).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/changes-comments-menu-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/changes-comments-menu-nov-2026.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total with its changes panel hidden. The viewer bar holds the view picker reading Working changes, beside the file switcher for cart.js. The header's Comments menu, its speech-bubble button showing 3, is open over the diff: under cart.js it lists the three comments with their line numbers (2, 3 and 4), then Open in panel. Behind it, line 2's Not sent yet card shows with Add to queue and Send now.">
+  <a href="/wp-content/uploads/changes-comments-menu-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/changes-comments-menu-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total with its changes panel hidden. The viewer bar holds the view picker reading Working changes, beside the file switcher for cart.js. The header's Comments menu, its speech-bubble button showing 3, is open over the diff: under cart.js it lists the three comments with their line numbers (2, 3 and 4), then Open in panel. Behind it, line 2's Not sent yet card shows with Add to queue and Send now.">
   </a>
   <figcaption style="text-align:center; color:#888">The Comments menu, with the changes panel hidden.</figcaption>
 </figure>
@@ -212,8 +212,8 @@ Use these keys in the find bar:
 **Escape** closes the bar. Kepler remembers the toggles. If you select text on one line before you open the bar, the selection fills the search field.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/code-find-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/code-find-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total showing cart.js and cart.test.js stacked, 2 files shown. The find bar at the top right holds discount, with Match case on beside Match whole word and Use regular expression, and reads 5 of 6 with Previous match, Next match and Close find. Every match is highlighted in both files, the current one on line 4 of cart.js. The overlay header reads from main and Up to date, and the stack bar ends with the Diff layout and Wrap lines buttons.">
+  <a href="/wp-content/uploads/code-find-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/code-find-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total showing cart.js and cart.test.js stacked, 2 files shown. The find bar at the top right holds discount, with Match case on beside Match whole word and Use regular expression, and reads 5 of 6 with Previous match and Next match, then the Only in changes toggle, ringed and on, and Close find. Every match is highlighted in both files, the current one on line 4 of cart.js. The overlay header reads from main and Up to date, and the stack bar ends with the Diff layout and Wrap lines buttons.">
   </a>
   <figcaption style="text-align:center; color:#888">Finding across a stack of two files.</figcaption>
 </figure>
@@ -377,8 +377,8 @@ To collapse a card to a one-line row, click the chevron beside its lines. Click 
 The **Comments** view lists every review comment on the task. Open it from the view picker in the changes panel or the overlay, after **Files**. With the changes panel hidden, use the Comments menu in the overlay's header instead. Its button shows the number of open comments, with a dot when there are unread replies.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/review-comments-list-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/review-comments-list-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total on its Comments view (the speech-bubble segment, 3, picked beside the Changes and Files icons), its header reading 3 comments and Send comment. The side list reads 3 comments with View options, then the comments grouped by status: Not sent (cart.js:2), Queued (cart.js:4) and Sent (cart.js:3), each row with its place, just now, its note and its status. Beside it, cart.js shows the three cards: line 2 Not sent yet with Add to queue and Send now, line 3 Sent to Fix the cart total: discounts should apply before tax. beside the OpenCode logo, with the Reply to OpenCode box, Resolve and Reply, and line 4 Queued for the same session with Remove from queue and Send now. The header also reads from main and Up to date.">
+  <a href="/wp-content/uploads/review-comments-list-oct-2026-v6@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/review-comments-list-oct-2026-v6@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total on its Comments view (the speech-bubble segment, 3, picked beside the Changes and Files icons), its header reading from main, Up to date, 2 files, 3 comments and Send comment. The side list reads 3 comments with View options, then the comments grouped by status in a sunken list: Not sent (cart.js:2), Queued (cart.js:4) and Sent (cart.js:3), each row with its place, just now, its note and its status. Beside it, cart.js shows the three cards: line 2 Not sent yet with Add to queue and Send now, line 3 Sent to Fix the cart total: discounts should apply before tax. with the Reply to OpenCode box, Resolve and Reply, and line 4 Queued for the same session with Remove from queue and Send now.">
   </a>
   <figcaption style="text-align:center; color:#888">The Comments view, grouped by status.</figcaption>
 </figure>
@@ -425,8 +425,8 @@ In commit mode, **Commit to {branch}** takes the place of the list of changes, e
 The changes panel and the overlay share one commit box per worktree, so a message you start in one appears in the other, and Kepler keeps it when the overlay closes.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/staging-commit-box-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/staging-commit-box-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The worktree column for kepler/fix-cart-total in commit mode, on Changes 2 beside Files and Comments. The header reads Commit to kepler/fix-cart-total, Pick the files to commit, then write a message, with Cancel. cart.js is ticked and cart.test.js is not, so the header box is partly checked and its badge reads 1 of 2 staged; the file list's toolbar also holds the Discard button. Below the files sits the commit box, with Commit message, Amend last commit and Commit.">
+  <a href="/wp-content/uploads/staging-commit-box-oct-2026-v6@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/staging-commit-box-oct-2026-v6@2x.png" class="help-center-img img-bordered" alt="The worktree column for kepler/fix-cart-total in commit mode, on Changes 2 beside Files and Comments. The commit mode band reads Commit to kepler/fix-cart-total, with Cancel. cart.js is ticked and cart.test.js is not, so the header box is partly checked and its badge reads 1 of 2 staged; the file list's toolbar also holds the Discard button. Below the files sits the commit box, with Commit message, Amend last commit and Commit.">
   </a>
   <figcaption style="text-align:center; color:#888">Staging files in commit mode, above the commit box.</figcaption>
 </figure>

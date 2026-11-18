@@ -35,8 +35,8 @@ Kepler has 2 remote features, and they work in opposite directions:
 Both sit at the left of the title bar, right after **New task**. The **Remote Access** button shows a monitor-and-phone icon.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-task-button-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-task-button-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The left end of the Kepler top bar: the application menu, the Back and Forward arrows, the New task button with a plus sign, then the Local environment chip and the Remote Access button's monitor-and-phone icon in green because Remote Access is on.">
+  <a href="/wp-content/uploads/new-task-button-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-task-button-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The left end of the Kepler top bar: the application menu, the Back and Forward arrows, the New task button with a plus sign, then the Local environment chip and the Remote Access button's monitor-and-phone icon in green because Remote Access is on.">
   </a>
   <figcaption style="text-align:center; color:#888">The environment chip and the Remote Access button after New task, in a local window.</figcaption>
 </figure>
@@ -50,8 +50,8 @@ To let another device reach this Kepler, rather than connecting *to* another mac
 Each window works on one environment at a time, and the title-bar chip shows which one. The chip leads with the environment's type icon, and a green dot on that icon means connected.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-chip-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-chip-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The right end of the title bar in a window connected to dev-server: the environment chip reads dev-server on the host's purple tint, with a green dot on its type icon, followed by the Remote Access button, the Ask button with Kep, Feedback, Settings and the account avatar.">
+  <a href="/wp-content/uploads/remote-chip-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-chip-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The left end of the title bar in a window connected to dev-server: the app menu, Back and Forward, and New task, then the environment chip reading dev-server on the host's purple tint, with a green dot on its type icon, followed by the Remote Access button.">
   </a>
   <figcaption style="text-align:center; color:#888">The chip on a host colored Purple, connected.</figcaption>
 </figure>
@@ -289,8 +289,8 @@ If the address you enter is a machine you already saved, the first step says so 
 **Generate key** needs `ssh-keygen` on your machine; the chip reads **ssh-keygen missing** when ssh-keygen is absent.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-auth-mode-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-auth-mode-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Add machine wizard's Choose authentication step asking how Kepler should authenticate to dev.acme.example: Existing key (1 key found) is selected over Password and Generate key, the Identity file reads /home/alex/.ssh/id_ed25519, and Back, Cancel and Continue sit below the card.">
+  <a href="/wp-content/uploads/remote-auth-mode-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-auth-mode-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Add machine wizard's Choose authentication step asking how Kepler should authenticate to dev.acme.example. Under Authentication mode, Existing key (1 key found) is selected beside Use my SSH agent or SSH config (Keys from ssh-agent, 1Password, Secretive, a security key, or ~/.ssh/config), with Password (Re-prompt every connect) and Generate key (Keyless after first connect) below. The Identity file reads /home/alex/.ssh/id_ed25519, and Back, Cancel and Continue sit below the card.">
   </a>
   <figcaption style="text-align:center; color:#888">Choosing how Kepler signs in to the host.</figcaption>
 </figure>
@@ -395,8 +395,8 @@ If Kepler launches directly into a remote window and connecting takes more than 
 When you start a connection with **Connect**, **Switch to**, a new window, or **Reconnect**, and SSH needs an answer from you, Kepler asks for it in the window. It can ask for the machine's password, your key's passphrase, a one-time code, or a security key PIN. This works on Windows computers too, with the limits in [Known limitations](#known-limitations).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-ssh-signin-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-ssh-signin-nov-2026.png" class="help-center-img img-bordered" alt="The Unlock your SSH key dialog: Enter the passphrase for /home/alex/.ssh/id_ed25519., an empty Passphrase field with Show beside it, a Remember for this session checkbox, and Skip this key, Cancel and Continue along the bottom.">
+  <a href="/wp-content/uploads/remote-ssh-signin-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-ssh-signin-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Unlock your SSH key dialog: Enter the passphrase for /home/alex/.ssh/id_ed25519., an empty Passphrase field with Show beside it, a Remember for this session checkbox, and Skip this key, Cancel and Continue along the bottom.">
   </a>
   <figcaption style="text-align:center; color:#888">Kepler asking for a key's passphrase.</figcaption>
 </figure>
@@ -554,8 +554,8 @@ A pairing link works once and expires after 5 minutes. To pair after that, open 
 You can bookmark the address a paired browser opens on. If that browser's connection has ended, opening the address again takes you to gitkraken.dev to sign in and pair it again.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-access-phone-sep-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-access-phone-sep-2026-v3@2x.png" class="help-center-img img-bordered" alt="Kepler's Dashboard in a phone's browser, on the Tasks view: one bar with Menu, the view picker showing Tasks with a chevron and an orange dot, Search, Options and New task, over the task list grouped into Needs attention (Add product search, In Development, Approval needed), Unread (Fix the cart total, In Review with its pull request and issue chips and Changes requested; Update checkout copy, On Hold, and Upgrade the payment SDK, In Review, each with New reply) and a folded Not started (1).">
+  <a href="/wp-content/uploads/remote-access-phone-sep-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-access-phone-sep-2026-v4@2x.png" class="help-center-img img-bordered" alt="Kepler's Dashboard in a phone's browser, on the Tasks view: one bar with Menu, the view picker showing Tasks with a chevron and an orange dot, Search, Options, the Tasks that need you button with an orange mark, Ask Kepler and New task, over the task list grouped into Needs attention (Add product search, In Development, Approval needed), Unread (Fix the cart total, In Review with its pull request and issue chips and Changes requested; Update checkout copy, On Hold, and Upgrade the payment SDK, In Review, each with New reply) and a folded Not started (1).">
   </a>
   <figcaption style="text-align:center; color:#888">Once paired, a phone opens this Kepler in its browser, in the phone layout.</figcaption>
 </figure>
@@ -587,8 +587,8 @@ To open Kepler like an app, add it to your phone's home screen from the browser'
 The Dashboard's bar holds **Menu**, a view picker, **Search**, **Options**, **Tasks that need you** (while a task waits on you), **Ask Kepler**, and **New task**. The view picker switches between your Dashboard views and has **New view**. **Search** expands in the bar. **Options** opens a sheet with **Refresh** and the view's settings, such as its grouping, sort and filters.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/phone-dashboard-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/phone-dashboard-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Kepler's Dashboard in a phone-width browser: one bar with Menu, the view picker showing the Todo view with a chevron and an orange dot, Search, Options and New task, above the Todo list grouped into PR (two pull requests marked Changes requested, #51 with a Task badge) and Issue (three issues, one marked Mentioned and #38 with a Task badge) for acme-web.">
+  <a href="/wp-content/uploads/phone-dashboard-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/phone-dashboard-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="Kepler's Dashboard in a phone-width browser: one bar with Menu, the view picker showing the Todo view with a chevron and an orange dot, Search, Options, the Tasks that need you button with an orange mark, Ask Kepler and New task, above the Todo list grouped into PR (two pull requests marked Changes requested, #51 with a Task badge) and Issue (three issues, one marked Mentioned and #38 with a Task badge) for acme-web.">
   </a>
   <figcaption style="text-align:center; color:#888">The Dashboard's one bar on a phone, over the Todo list.</figcaption>
 </figure>

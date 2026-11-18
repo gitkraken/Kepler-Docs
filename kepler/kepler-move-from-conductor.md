@@ -67,8 +67,8 @@ After you install Kepler, the guided start also offers to import Conductor's wor
 3. In **Import from Conductor**, tick the workspaces you want, and click **Import *N* workspaces**. The workspaces are grouped by repository, and each row shows its branch and how long ago it was active. Workspaces active in the last 30 days arrive ticked, and older ones are folded under **Older**. To tick a whole repository, use its tick box. The count at the top, such as **9 of 14 selected**, shows how many you picked. To narrow a long list, type in **Filter workspaces**. To clear every tick, click **Select none**. A workspace you already imported is marked **Already a task:** and the task's name.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/import-workspaces-nov-2026@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/import-workspaces-nov-2026@2x.png" class="help-center-img img-bordered" alt="The Import from Conductor dialog, Choose the workspaces to bring in as tasks, listing 4 ticked workspaces grouped by repository, each with its branch and number of chats, above Back to apps and Import 4 workspaces.">
+  <a href="/wp-content/uploads/import-workspaces-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/import-workspaces-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Import from Conductor dialog, Choose the workspaces to bring in as tasks: 9 of 14 selected with an info button, Select all (dimmed) and Select none, and a Filter workspaces box above the list. The workspaces are grouped by repository, each group with its own tick and count: acme-web (4 of 4), acme-api (3 of 3) and acme-mobile (2 of 2), every row ticked and showing its branch, a Claude Code 1 chat badge and how long ago it was active, from 22h to 25d. The 5 older workspaces are folded under Older, and Back to apps and Import 9 workspaces sit at the bottom.">
   </a>
   <figcaption style="text-align:center; color:#888">Choosing the Conductor workspaces to import.</figcaption>
 </figure>
@@ -76,8 +76,8 @@ After you install Kepler, the guided start also offers to import Conductor's wor
 4. The dialog closes and the import runs in the background. A chip in the title bar shows its progress, such as **Importing 2 of 4**. Hover over or click the chip for its card, where **Stop** ends the import and **Retry** tries a failed workspace again. When the chip reads **Imported *N***, click **View tasks** on its card, or **Dismiss** to clear the chip.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/import-run-chip-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/import-run-chip-nov-2026.png" class="help-center-img img-bordered" alt="The title bar after an import ran in the background: the Imported 3 chip, with a check, sits left of the inbox, Ask, feedback, Settings and account buttons, and hovering it opens its card, Import finished, 3 tasks created, with Dismiss and View tasks.">
+  <a href="/wp-content/uploads/import-run-chip-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/import-run-chip-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The title bar after an import ran in the background: the Imported 3 chip, with a check, sits left of the inbox, Ask, feedback, Settings and account buttons, and hovering it opens its card, Import finished, 3 tasks created, with Dismiss and View tasks.">
   </a>
   <figcaption style="text-align:center; color:#888">The finished import in the title bar, with its card open.</figcaption>
 </figure>
