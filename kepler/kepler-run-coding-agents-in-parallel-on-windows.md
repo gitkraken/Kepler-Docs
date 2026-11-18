@@ -22,6 +22,7 @@ taxonomy:
 Kepler by GitKraken installs natively on Windows, so you can run Claude Code, Codex and other coding agents in parallel without a Mac or WSL. Each task gets its own worktree, a private Git working copy, so agents that run at the same time never change each other's files.
 
 **Requirements and limits**
+
 - Scope: Installing Kepler on Windows, installing coding agents there, and running several agents at once
 - Prerequisite: Windows 10+, on 64-bit or ARM64, and a GitKraken account to sign in to Kepler
 - Prerequisite: Your own account for each coding agent you use, such as a Claude or ChatGPT plan

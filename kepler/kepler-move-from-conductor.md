@@ -22,6 +22,7 @@ taxonomy:
 Kepler by GitKraken imports your Conductor workspaces on a Mac as tasks, in the same folders and branches, with their Claude Code or Codex chats ready to continue. You pick the workspaces to bring over in **Import from another app**, and Kepler leaves your files and branches where they are.
 
 **Requirements and limits**
+
 - Scope: Bringing the workspaces the Conductor app keeps on your Mac into Kepler as tasks
 - Prerequisite: Conductor's workspaces on the Mac that runs Kepler
 - Limits: Importing from Conductor works on macOS only, because Conductor runs only on macOS.

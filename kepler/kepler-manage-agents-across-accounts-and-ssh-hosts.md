@@ -22,6 +22,7 @@ taxonomy:
 Kepler by GitKraken manages your Claude Code and Codex sessions across several accounts and SSH hosts in 1 app. You add each account once in **Settings → Agents**, pick the account when you start a session, and add each remote server in **Settings → Remote environments**. Sessions on a server run there and keep running when you disconnect.
 
 **Requirements and limits**
+
 - Scope: Several signed-in accounts for 1 agent, choosing the account for each session, moving a conversation to another account, and running agent sessions on SSH hosts.
 - Agents with several accounts: Claude Code, Codex, GitHub Copilot, Auggie, and Grok Build.
 - Moving a conversation to another account: Claude Code and Codex only, and only between accounts that share history with the CLI.
