@@ -123,7 +123,7 @@ The review is a report. Read it in the session, and send the agent that wrote th
 
 ## How to open the pull request
 
-When you are satisfied, commit the work. In the **Changes** overlay, click **Commit…** to stage and commit it. See [Staging and committing](/kepler/review-changes#staging-and-committing).
+When you are satisfied, commit the work. In the **Changes** overlay, click **Commit…** on the **Working changes** row to stage and commit it. See [Staging and committing](/kepler/review-changes#staging-and-committing).
 
 Then open the pull request in one of these ways:
 
@@ -142,7 +142,7 @@ In Kepler, read every changed line in the task's **Changes** overlay, send revie
 
 ### Can a different AI agent review the code that Claude Code wrote?
 
-Yes. Set the **Agent** field of the built-in **Review** Action to Codex or another agent in **Settings → Actions**, or pick the agent when you run **Review**.
+Set the **Agent** field of the built-in **Review** Action to Codex or another agent in **Settings → Actions**, or pick the agent when you run **Review**.
 
 ### Does Kepler post my review comments to GitHub?
 
@@ -154,7 +154,7 @@ No. Both are examples on the [Actions](/kepler/actions) page. You create each on
 
 ### Can I mark the pull request as AI-assisted?
 
-Yes. Write it in the description yourself, or use an Action created from the **Open a pull request** example, which ends the description with a line that says an AI coding agent helped write the change and a person reviewed it.
+Write a note in the description yourself, or use an Action created from the **Open a pull request** example, which ends the description with a line that says an AI coding agent helped write the change and a person reviewed it.
 
 ***
 

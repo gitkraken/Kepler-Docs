@@ -91,7 +91,8 @@ Kepler marks every task and session that waits on you, so you can find a request
 - **An alert.** While Kepler is open on the phone, a new permission request, question, plan review or approval request shows as an alert. A permission alert has **Allow** and **Deny** for a one-time answer, and **View**, which opens the request in its session.
 - **The menu.** Tap **Menu**. Under **Recent tasks**, a dot marks each task that waits on you.
 - **The task list.** On the Dashboard, a Tasks view grouped by **Inbox** lists the tasks that wait on you under **Needs attention**.
-- **Inside a task.** Tap **Sessions** to go to the session that waits on you. A dot on the back arrow means another task needs you.
+- **The bar.** While a task waits on you, the Dashboard's bar and a task's bar show **Tasks that need you**. Tap it to see those tasks, or to go to the next one.
+- **Inside a task.** Tap **Sessions** to go to the session that waits on you.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/remote-access-phone-sep-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
@@ -123,7 +124,7 @@ A permission request pins to the top of its session. It names the tool the agent
 | **Reject** | Refuses this call |
 | **Reject always** | Refuses it permanently |
 
-You see only the choices the agent offers. A session in Terminal mode offers **Allow once**, **Always allow** and **Deny** instead. The agent continues as soon as you answer. If you already answered on another device, Kepler says **Already answered**. See [Agent Sessions](/kepler/agent-sessions#permission-requests).
+You see only the choices the agent offers. A session in Terminal mode shows the same card, with **Reject**, **Allow** and an **Allow always** button for each scope. The agent continues as soon as you answer. If you already answered on another device, Kepler says **Already answered**. See [Agent Sessions](/kepler/agent-sessions#permission-requests).
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/agent-permission-request-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -165,11 +166,11 @@ No. Kepler opens in your phone's browser. To open it like an app, add it to your
 
 ### Does my computer need to stay on?
 
-Yes. Your agents run on your computer, and the phone shows that computer's Kepler. By default, Kepler keeps the computer awake while Remote Access is on, with the setting **Keep this machine awake while agents work**.
+Your computer needs to stay on. Your agents run on it, and the phone shows that computer's Kepler. By default, Kepler keeps the computer awake while Remote Access is on, with the setting **Keep this machine awake while agents work**.
 
 ### Does this work with Claude Code and Codex?
 
-Yes. In a Chat session, a permission request shows the same buttons whichever agent raised it, including Claude Code, Codex and GitHub Copilot. A session in Terminal mode offers **Allow once**, **Always allow** and **Deny**, and you answer those from the phone too.
+In a Chat session, a permission request shows the same buttons whichever agent raised it, including Claude Code, Codex and GitHub Copilot. A session in Terminal mode shows the same card, with **Reject**, **Allow** and **Allow always**, and you answer those from the phone too.
 
 ### Can someone else open my Kepler from their phone?
 

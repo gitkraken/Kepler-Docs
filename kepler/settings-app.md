@@ -31,7 +31,7 @@ Use these Settings pages to change how Kepler itself looks and behaves:
 
 ## General
 
-Use **General** to choose Kepler's language, which key sends a chat message, which editor opens your files, how its windows open, whether agents keep running when your machine would sleep or Kepler restarts, and whether Kepler keeps usage statistics on your computer.
+Use **General** to choose Kepler's language, which key sends a chat message, which editor opens your files, how its windows open, whether agents keep running when your machine would sleep or Kepler quits, and whether Kepler keeps usage statistics on your computer.
 
 ### Language
 
@@ -82,12 +82,12 @@ These settings keep agent work running when the machine would otherwise stop it.
 | Setting | What it controls | Default |
 |---|---|---|
 | **Keep this machine awake while agents work** | Blocks sleep while an agent session is starting, running, or waiting for your input, and while Remote Access is connected | On |
-| **Keep agents and terminals running across restarts and updates** | *Agent sessions and terminals stay alive while Kepler restarts or updates, and reconnect afterwards. Experimental.* | On |
+| **Keep agents and terminals running after Kepler quits or restarts** | *Agents and terminals stay alive while Kepler is closed or updating, and reconnect afterwards. When off, quitting or restarting Kepler ends them.* | On |
 | **Put idle agents to sleep** | How long a chat agent can sit idle before Kepler stops it, from **After 5 minutes** to **After 1 hour**, or **Never** | After 15 minutes |
 
 **Keep this machine awake while agents work** also counts Claude Code sessions running outside Kepler. The screen can still turn off. If Kepler cannot keep the machine awake, the setting says why under the switch.
 
-**Keep agents and terminals running across restarts and updates** applies from the next session you start.
+**Keep agents and terminals running after Kepler quits or restarts** applies from the next session you start. If agents and terminals cannot start on this machine, the setting says why.
 
 **Put idle agents to sleep** stops chat sessions you have left alone, and their status reads **Asleep**. Your next message wakes a session, and the conversation carries on. Agents that are working or waiting on you stay awake. See [Session status](/kepler/agent-sessions#session-status).
 
@@ -105,6 +105,8 @@ These settings keep agent work running when the machine would otherwise stop it.
 | Setting | What it controls | Default |
 |---|---|---|
 | **Collect usage insights** | *Keep local statistics about your sessions and tasks on this computer. Nothing leaves it.* | On |
+
+[Ask Kepler](/kepler/ask-kepler) uses these statistics to answer questions about your agent work, such as tokens and cost, how long agents waited on you, and how often you hit a usage limit.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/settings-insights-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -130,6 +132,7 @@ Use **Notifications** to choose which agent events Kepler tells you about, and w
 | **Permission requests** | *An agent wants permission to do something.* | On | On |
 | **Approval requests** | *An agent asks to do something in Kepler only you can approve, like deleting a worktree or rewriting a branch.* See [Approvals](/kepler/settings-agents#approvals) | On | On |
 | **Errors** | *A session stops because something went wrong.* | On | On |
+| **Offers** | *An agent offers to show you a task, session or note.* | Off | On |
 
 In a browser connected to Kepler, every **Desktop** box starts off. Until you set **Approval requests** yourself, it follows **Permission requests**. When you turn on the first **Desktop** box, Kepler sends a sample notification so your OS asks for permission.
 
@@ -139,6 +142,7 @@ These settings appear under the grid:
 |---|---|---|
 | **Play a sound with desktop notifications** | Whether a desktop notification makes the OS notification sound | On |
 | **Notify even for the task you're looking at** | *Otherwise Kepler stays quiet about the task open in the window you're using.* | Off |
+| **Show a count on the app icon** | *Shows how many tasks need you on the Dock icon or taskbar button.* Desktop app only | On |
 
 To silence desktop notifications from one remote machine only, use **Mute notifications from *host*** on that machine in [Remote environments](/kepler/settings-environment#remote-environments).
 
@@ -190,7 +194,7 @@ Agent CLIs and other terminal programs that support it match your theme too.
 
 #### Your themes
 
-**Your themes** lists the themes you have added, with 2 more tiles, **Browse gallery** and **Create a theme**. **Open themes folder**, beside the heading, opens the folder that holds your themes, `~/.kepler/themes`.
+**Your themes** lists the themes you have added, with 2 more tiles, **Browse gallery** and **Create a theme**. **Open themes folder**, beside the heading, opens the folder that holds your themes, `~/.kepler/themes`. Each [profile](/kepler/kepler-profiles) other than the default keeps its own themes folder.
 
 A theme file follows these rules:
 
@@ -383,6 +387,8 @@ Use **Keyboard shortcuts** to look up Kepler's shortcuts and choose your own key
 2. Click the pencil (**Change shortcut**) on its row. If the command already has a key, a menu opens: choose **Change shortcut**, **Add another shortcut**, or **Remove** followed by the key.
 3. Press the new keys. **Escape** cancels, and **Backspace** removes the shortcut.
 
+You can also start from the command palette: a command's **Change shortcut** action opens this page at that command, ready for the new keys.
+
 If the keys already belong to another command, Kepler names it, and **Replace** moves the keys to this command. Kepler refuses keys it needs elsewhere, such as the key that sends chat messages, and says why.
 
 A changed row offers **Reset to default**. **Changed only** lists only the shortcuts you changed, and **Reset all shortcuts** puts every shortcut back to its default after you confirm. A row with a lock, such as **Copy the selection or the focused item** or **Dismiss / Cancel**, cannot be changed.
@@ -405,7 +411,7 @@ The **General** group holds app-wide shortcuts:
 | Action | Mac | Windows / Linux |
 |---|---|---|
 | Open settings | ⌘ , | Ctrl + , |
-| Toggle Ask Kepler chat | ⌘ L or ⌘ K | Ctrl + L or Ctrl + K |
+| Toggle Ask Kepler chat | ⌘ K or ⌘ L | Ctrl + K or Ctrl + L |
 | Toggle Ask Kepler terminal | ⌃ ` | Ctrl + ` |
 | New Ask Kepler chat | ⌘ ⇧ K or ⌘ ⇧ L | Ctrl + Shift + K or Ctrl + Shift + L |
 | New task | ⌘ N | Ctrl + N |
@@ -431,10 +437,11 @@ The **General** group holds app-wide shortcuts:
 | Open file | ⌘ O | Ctrl + O |
 | Open folder | ⌘ ⇧ O | Ctrl + Shift + O |
 | Go to file | ⌘ P | Ctrl + P |
-| Go to task | ⌘ ⇧ P or F1 | Ctrl + Shift + P or F1 |
+| Go to task or command | ⌘ ⇧ P or F1 | Ctrl + Shift + P or F1 |
+| Change search scope | ⌘ ⌥ S | Alt + S |
 | Dismiss / Cancel | Escape | Escape |
 
-**Go to task** and **Open folder** are also in the app menu, as **View › Command Palette…** and **File › Open Folder…**.
+**Go to task or command** and **Open folder** are also in the app menu, as **View › Command Palette…** and **File › Open Folder…**.
 
 #### Navigation shortcuts
 
@@ -442,9 +449,9 @@ The **Navigation** group moves you between tasks, tabs, and regions:
 
 | Action | Mac | Windows / Linux |
 |---|---|---|
-| Go to next task needing attention | None | None |
-| Go to next unread task | None | None |
-| Go to next task needing attention or unread | None | None |
+| Go to next in Needs attention | None | None |
+| Go to next in Unread | None | None |
+| Go to what needs you next | F8 | F8 |
 | Previous tab | ⌘ ⇧ [ | Ctrl + Shift + [ or Ctrl + PageUp |
 | Next tab | ⌘ ⇧ ] | Ctrl + Shift + ] or Ctrl + PageDown |
 | Move tab left | ⌘ ⌥ [ | Ctrl + Alt + [ or Ctrl + Shift + PageUp |
@@ -455,7 +462,7 @@ The **Navigation** group moves you between tasks, tabs, and regions:
 | Go back | ⌘ [ | Alt + ← |
 | Go forward | ⌘ ] | Alt + → |
 
-The 3 **Go to next task** commands open the next task that needs you, the next task with an unread reply, or the next of either.
+**Go to next in Needs attention** opens the next session waiting on you, and **Go to next in Unread** opens the next unread reply. **Go to what needs you next** (**F8**) does both, waiting sessions first, and skips what is already on screen. **F8** works even from a focused terminal.
 
 #### Dashboard shortcuts
 
@@ -506,6 +513,8 @@ The **Chat** group works in a session's conversation:
 | Previous message | ⌘ ⌥ ↑ | Ctrl + Alt + ↑ |
 | Next message | ⌘ ⌥ ↓ | Ctrl + Alt + ↓ |
 | Interrupt & send | ⌘ ⇧ Enter | Ctrl + Shift + Enter |
+| Send after this turn | ⌥ Enter | Alt + Enter |
+| Switch between terminal and transcript | ⌘ ⇧ X | Ctrl + Shift + X |
 
 #### Changes and code view shortcuts
 
@@ -533,6 +542,7 @@ The **Code views** list works in any code view, such as a diff or a file you hav
 | Match case | ⌘ ⌥ C | Alt + C |
 | Match whole word | ⌘ ⌥ W | Alt + W |
 | Use regular expression | ⌘ ⌥ R | Alt + R |
+| Find only in changes | ⌘ ⌥ L | Alt + L |
 
 ### Shortcuts that depend on where you are
 

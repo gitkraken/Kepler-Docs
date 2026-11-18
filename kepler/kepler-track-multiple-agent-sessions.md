@@ -96,7 +96,7 @@ The Dashboard's **Tasks** view groups tasks by what each one needs from you. Thi
 
 | Section | What it holds |
 |---|---|
-| **Needs attention** | A session waits on you, such as a question, a permission request, or a failed turn |
+| **Needs attention** | A session waits on you, such as a question or a permission request. A failed turn stays here until you open the task |
 | **Unread** | A session finished a turn you have not looked at |
 | **Running** | An agent is working on it |
 
@@ -115,6 +115,12 @@ Each task row adds a line that says what its session needs, such as **Approval n
   </a>
   <figcaption style="text-align:center; color:#888">Tasks grouped by what needs you: an approval, a new reply, and 2 running tasks.</figcaption>
 </figure>
+
+### Tasks that need you, in the top bar
+
+The **Tasks that need you** button in the top bar shows how many tasks need you. Click it for a menu that lists them under **Needs attention** and **Unread**, each with what it needs. Click a task to open it at that session. Under **Other machines**, the menu also lists your other machines with work waiting. Click one to switch to its window.
+
+To go straight to the next thing, press **F8** (**Go to what needs you next**), or choose **Go to next task that needs you** at the top of the menu. Each press opens the next session across your tasks: sessions waiting on you first, then unread replies.
 
 ### Session status
 
@@ -159,11 +165,11 @@ Give each piece of work its own task and worktree, name each task by its work, a
 
 ### Can Kepler see the Claude Code session I started in my terminal?
 
-Yes, after you turn on **Settings → Integrations → Your terminal → Show sessions started outside Kepler**. It is off by default.
+Kepler sees it after you turn on **Settings → Integrations → Your terminal → Show sessions started outside Kepler**. It is off by default.
 
 ### Can I answer a terminal session's question from Kepler?
 
-No. Kepler follows a session that runs in your terminal but does not control it. Answer in your terminal, or once the session is idle, click **Continue here** to carry the conversation on in Kepler.
+Kepler follows a session that runs in your terminal but does not control it. Answer in your terminal, or once the session is idle, click **Continue here** to carry the conversation on in Kepler.
 
 ### How do I know which session changed a file?
 
@@ -171,7 +177,7 @@ Open the task and click its worktree under **Changes**. Each task has its own wo
 
 ### Can 2 agents work in the same repository at once?
 
-Yes. Each task gets its own worktree, so Claude Code and Codex can each work in their own copy of the repository without editing each other's files.
+Each task gets its own worktree, so Claude Code and Codex can work in the same repository at once, each in its own copy, without editing each other's files.
 
 ***
 

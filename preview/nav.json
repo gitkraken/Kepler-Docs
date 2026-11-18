@@ -58,6 +58,7 @@
       "pages": [
         "settings.md",
         "settings-setup-account.md",
+        "kepler-profiles.md",
         "settings-agents.md",
         "settings-tasks.md",
         "settings-repositories.md",

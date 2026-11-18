@@ -19,7 +19,7 @@ taxonomy:
 ---
 <kbd>Last updated: November 2026</kbd>
 
-Use Settings to change how Kepler, your agents, and your tasks work. Settings has 15 pages, listed in [The Settings pages](#the-settings-pages).
+Use Settings to change how Kepler, your agents, and your tasks work. Settings has 16 pages in the desktop app, listed in [The Settings pages](#the-settings-pages).
 
 To open Settings, click the gear icon in the top bar, or press **⌘ ,** (**Ctrl ,** on Windows and Linux). To close it, click the gear icon or press the same shortcut again.
 
@@ -39,8 +39,9 @@ The Settings sidebar starts with a **Search settings** field and [**Setup**](/ke
 | Page | What it covers |
 |---|---|
 | [**Account**](/kepler/settings-setup-account#account) | Who you're signed in as, your organization, and GitKraken AI credits |
-| [**Agents**](/kepler/settings-agents) | Your agents, custom agents, MCP servers, agent tools, approvals, and usage limits |
-| [**Tasks**](/kepler/settings-tasks) | How new tasks start, including the default agent, and how a task's page looks |
+| [**Profiles**](/kepler/kepler-profiles) | The profiles on this computer, each with its own tasks, settings, and sign-ins. Desktop app only |
+| [**Agents**](/kepler/settings-agents) | Your agents, custom agents, MCP servers, agent tools, approvals, and what happens at a usage limit or when a model is overloaded |
+| [**Tasks**](/kepler/settings-tasks) | How new tasks start, including the default agent, where links and notifications open a task, and how a task's page and Dashboard panels look |
 | [**Repositories**](/kepler/settings-repositories) | The repositories folder, your repos and folders, worktrees and branches, and Projects |
 | [**Integrations**](/kepler/settings-integrations) | Issue tracker and Git host connections, and sessions started in your own terminal |
 | [**Actions**](/kepler/settings-actions) | Suggested Actions per item kind, and the Action list |

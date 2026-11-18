@@ -38,7 +38,7 @@ Kepler by GitKraken installs natively on Windows, so you can run Claude Code, Co
 3. In **Choose your coding agents**, switch on Claude Code and Codex. To install an agent you do not have yet, click its tile.
 4. In **Bring in your repos**, check the repositories you work in, then click the button that adds them.
 5. Click **New task** or press **Ctrl+N**, write a prompt, attach a repository with **Add repo or folder**, and click **Start**. Kepler creates a worktree for the task and starts the agent in it.
-6. Start a second task the same way, and pick another agent in the **New task** window. Both agents now work at the same time, each in its own worktree.
+6. Start a second task the same way, and pick another agent in the **New task** composer. Both agents now work at the same time, each in its own worktree.
 
 ***
 
@@ -167,11 +167,11 @@ Kepler works on Windows. It has a native Windows installer for Windows 10+, on 6
 
 ### Can I run Claude Code and Codex at the same time on Windows?
 
-Yes. Start one task for each, and pick Claude Code for one and Codex for the other. Each task gets its own worktree, so the 2 agents never change each other's files.
+Claude Code and Codex can run at the same time on Windows. Start one task for each, and pick Claude Code for one and Codex for the other. Each task gets its own worktree, so the 2 agents never change each other's files.
 
 ### Do I need WSL to run coding agents on Windows?
 
-No. All 9 agents that Kepler supports install and run on native Windows. Use WSL 2 only when your project needs a Linux toolchain.
+You do not need WSL. All 9 agents that Kepler supports install and run on native Windows. Use WSL 2 only when your project needs a Linux toolchain.
 
 ### How do I stop parallel agents from overwriting each other's work?
 

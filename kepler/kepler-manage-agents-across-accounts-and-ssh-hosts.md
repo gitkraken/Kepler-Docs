@@ -56,6 +56,8 @@ Claude Code, Codex, GitHub Copilot, Auggie, and Grok Build can each have more th
 
 The first row is the agent's own login. The account badged **Default** is the one new sessions use. Each account keeps its own sign-in and shares your skills, commands, and settings. Give each added account a color to tell sessions apart: the color tints the agent icon on session tabs.
 
+With 2 or more accounts, the list is in priority order. To reorder it, drag a row by its handle, or use **Move to top**, **Move up**, or **Move down** in the row's menu. When you pick no account, a new session starts on the first account from the top with usage left. At a usage limit, Kepler moves to, or suggests, the first account from the top with usage left. To skip an account at a usage limit, clear **Use at a usage limit** in its menu. The row then reads **Skipped at a usage limit**.
+
 <figure style="text-align:center">
   <a href="/wp-content/uploads/agent-accounts-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/agent-accounts-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Claude Code card in Settings › Agents with two accounts, the default Claude Code CLI (Acme, Default) with the No color mark and Personal with a blue color swatch, each with Check usage and a row menu. Below them sit New sessions start in, Let artifact comments start turns, Artifacts in new sessions, and Program and data folder.">
@@ -89,7 +91,13 @@ Move a Claude Code or Codex conversation to another account when an account reac
 1. Open the session's tab menu and select **Continue as**.
 2. Pick the account. Kepler restarts the agent with the same conversation as that account and confirms **Continued as** *account*.
 
-You can also use **Continue as** *account* on the usage-limit banner, or the **Account** row in the composer's agent settings.
+When an account reaches its usage limit, a bar on the session's composer says which limit and when it resets. The bar offers these choices:
+
+- **Continue on** *account* picks up where the conversation stopped.
+- A new session on another account reads this conversation first.
+- **Wait** continues the conversation when the account resets.
+
+You can also use the **Account** row in the composer's agent settings.
 
 The move works only between accounts that share history with the CLI. An account that keeps its own history shows as **Separate history** in the list, because it cannot read the conversation. Sessions started outside Kepler cannot move to another account.
 
@@ -101,7 +109,7 @@ See [Moving a session to another account](/kepler/agent-sessions#moving-a-sessio
 
 1. Open **Settings → Remote environments** and click **Add machine**. To add a host that is already in your `~/.ssh/config`, click **Add** next to it under **Found on this machine** instead.
 2. Enter the **Host**, and optionally the **Name**, **User**, and **Port**.
-3. Choose how Kepler signs in: an existing key, a password, or a key Kepler generates for this host.
+3. Choose how Kepler signs in: an existing key, your SSH agent or SSH config, a password, or a key Kepler generates for this host.
 4. Check the host's fingerprint and click **Trust and continue**.
 5. After Kepler tests the connection, click **Add**, then click **Connect** on the host.
 
@@ -132,7 +140,7 @@ See [What runs where](/kepler/remote-environments#what-runs-where).
 
 Each Kepler window shows 1 machine's tasks and sessions on its Dashboard, including which sessions need you. Use these to cover your computer and every server:
 
-- **Switch machines from the title bar.** The chip at the right of the title bar shows which machine the window works on, such as **Local** or a host name. Click it and pick a machine under **Switch to**.
+- **Switch machines from the title bar.** The chip after **New task**, at the left of the title bar, shows which machine the window works on, such as **Local** or a host name. Click it and pick a machine under **Switch to**.
 - **Open a window per machine.** In the chip's menu, click the window icon next to a host to open it in a new window. Keep 1 window on your computer and 1 on each server.
 - **Manage every machine in Settings.** **Settings → Remote environments** lists **Your machines**, whether each one is connected, and how many windows use it.
 
@@ -151,15 +159,15 @@ To keep track of which session needs you on each machine, see [Keep Track of Sev
 
 ### Can I use 2 Claude Code accounts at the same time?
 
-Yes. Add both accounts in **Settings → Agents**, then pick a different account for each session. Sessions on different accounts run side by side.
+Sessions on different accounts run side by side. Add both accounts in **Settings → Agents**, then pick a different account for each session.
 
 ### Can I run Claude Code on 1 account and Codex on another at the same time?
 
-Yes. Each agent has its own accounts, and each session picks its own agent and account.
+Each agent has its own accounts, and each session picks its own agent and account.
 
 ### Can I switch accounts when I hit a usage limit?
 
-Yes, for Claude Code and Codex. Use **Continue as** on the session's tab menu or on the usage-limit banner. The conversation moves to the other account, as long as both accounts share history with the CLI.
+When an account reaches its limit, the bar on the session's composer offers **Continue on** another account. You can also use **Continue as** on the session's tab menu. For Claude Code and Codex, the conversation moves to the other account when both accounts share history with the CLI. Otherwise, the bar offers a new session on another account that reads this conversation first.
 
 ### Do I need to install anything on the SSH server?
 
@@ -171,7 +179,7 @@ No. Sessions run on the server and keep running after you close the window or lo
 
 ### Does this work with WSL too?
 
-Yes. On Windows, a WSL 2 distribution is a remote environment like an SSH host. See [WSL environments](/kepler/remote-environments#wsl-environments).
+On Windows, a WSL 2 distribution is a remote environment like an SSH host. See [WSL environments](/kepler/remote-environments#wsl-environments).
 
 ***
 

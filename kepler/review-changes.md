@@ -42,7 +42,7 @@ When you open a worktree from the context panel's **Changes** group, it opens in
 
 | Control | What it does |
 |---|---|
-| The **branch** | Shows the branch this checkout is on. **⋮** beside it, or a right-click, opens the worktree's menu, the same menu the worktree has in the context panel and on the Dashboard. On a task with several worktrees, the branch name also switches between them |
+| The **branch** | Shows the branch this checkout is on. **⋮** at the end of the header row, or a right-click on the branch, opens the worktree's menu, the same menu the worktree has in the context panel and on the Dashboard. On a task with several worktrees, the branch name also switches between them |
 | The **sync control** | One button whose label follows the branch's state (**Publish**, **Push**, **Pull**, **Fetch**, **Update** or **Sync**), with the counts beside it. See [Publishing and syncing the branch](#publishing-and-syncing-the-branch) |
 | **Open in** | Opens the checkout in another app. The split button runs your default; the chevron lists the others, ending with **Open on {provider}** when the branch is on a supported host |
 | **Run a command** | Lists the repository's configured commands, and **Manage commands…**. See [Settings](/kepler/settings-repositories#per-repository-commands) |
@@ -81,7 +81,7 @@ In **Changes**, the list shows the branch from the newest work down to where it 
 - **Commits**: every commit the branch adds on top of its merge target, followed by each commit on its own.
 - **branched here**: the merge base, where the branch started.
 
-Click a row to show it. **Shift**-click another row to show everything between them, such as **Working changes** and the newest commits, which the counts read as **Working + {count} commits**. **Cmd/Ctrl**-click adds a row to what you show, or takes it away. A branch with commits opens on **All changes**, and a branch with only uncommitted work opens on **Working changes**. A branch with neither reads **No changes on this branch yet**.
+Click a row to show it. **Shift**-click another row to show everything between them, such as **Working changes** and the newest commits, which the counts read as **Working + {count} commits**. **Cmd/Ctrl**-click adds a row to what you show, or takes it away. A branch with commits opens on **All changes**, and a branch with only uncommitted work opens on **Working changes**. A branch with neither opens on **Files**.
 
 What you picked stays picked when an agent edits a file, so the list does not move while you read it.
 
@@ -111,6 +111,8 @@ A wholly untracked folder with hundreds of files, such as a build output nobody 
 
 To open the Changes overlay, click a file, or choose **Open changes** from the worktree's menu. The overlay opens over the page at a width for one column of code, or two if you last used **Split**. Drag its edges to resize it. At that default width, **Maximize** in its header fills the window, and **Restore** returns it to the default width.
 
+In the desktop app, you can review on a second screen: click **Open in new window** in the overlay's header. The review moves to a window of its own, on the same files and view, and your comments still go to the same session. **Close window** closes it.
+
 <figure style="text-align:center">
   <a href="/wp-content/uploads/changes-overlay-maximize-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/changes-overlay-maximize-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total open over the task page at its default width, with the task page showing dimmed around it, and the Maximize button in the overlay's header ringed and hovered, its tooltip reading Maximize. The header also reads from main and Up to date; the overlay's side list has the view switch's icon buttons for Changes (2), Files and Comments over Working changes, 2 files and main branched here, then Commit… and the two changed files, beside cart.js's diff. The context panel behind ends with Manage resources.">
@@ -118,7 +120,7 @@ To open the Changes overlay, click a file, or choose **Open changes** from the w
   <figcaption style="text-align:center; color:#888">The Changes overlay at its default width, with Maximize in its header.</figcaption>
 </figure>
 
-> **Note:** You can act on a diff in the overlay as well as read it. In **Working changes** and **All changes** you can edit a file in place. In **Working changes** you can also resolve its conflicts, discard it or delete it, and **Commit…** lets you stage and commit it. You can leave review comments for your agent too. See [Staging and committing](#staging-and-committing) and [Review comments](#review-comments).
+> **Note:** You can act on a diff in the overlay as well as read it. In **Working changes** and **All changes** you can edit a file in place. In **Working changes** you can also resolve its conflicts, discard it or delete it, and **Commit…**, on the **Working changes** row, lets you stage and commit it. You can leave review comments for your agent too. See [Staging and committing](#staging-and-committing) and [Review comments](#review-comments).
 
 ### The layout
 
@@ -127,7 +129,16 @@ To open the Changes overlay, click a file, or choose **Open changes** from the w
 | The tree | The same view picker, list of changes and file tree as the changes panel, with its own controls. In commit mode, the rows have staging checkboxes and the commit box is below them; in **Comments**, the task's [comment list](#the-comments-view) replaces the tree |
 | The viewer | The diff, or several diffs stacked when you opened a folder or a selection. A single file can show as **File**, the whole file with its changes marked in the gutter, or **Changes**, the diff |
 
-**Hide changes panel**, or **Cmd/Ctrl+B**, hides the tree and gives its width to the viewer. While the tree is hidden, the view picker and a **Jump to file…** switcher move to the viewer's header, and the picker also lists the rows of **Changes**, so you can still change what you show and which file.
+**Hide changes panel**, or **Cmd/Ctrl+B**, hides the tree and gives its width to the viewer. While the tree is hidden, the viewer's header keeps a view picker and a **Jump to file…** switcher, so you can still change what you show and which file. The picker lists the rows of **Changes**, then **All files**, where **Jump to file…** finds any file in the worktree.
+
+With the tree hidden, the overlay's header also adds a Comments menu, with the count of open comments, that lists the task's comments by file. Click a comment to go to its lines, or click **Open in panel** to show the [Comments view](#the-comments-view).
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/changes-comments-menu-nov-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/changes-comments-menu-nov-2026.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total with its changes panel hidden. The viewer bar holds the view picker reading Working changes, beside the file switcher for cart.js. The header's Comments menu, its speech-bubble button showing 3, is open over the diff: under cart.js it lists the three comments with their line numbers (2, 3 and 4), then Open in panel. Behind it, line 2's Not sent yet card shows with Add to queue and Send now.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The Comments menu, with the changes panel hidden.</figcaption>
+</figure>
 
 A file's header has **File** and **Changes**, **Find**, the diff layout button (**Stacked** or **Split**), **Wrap lines**, **Open in**, and a menu that includes **Add to task**. A file shown from a commit shows **As of {sha}**: the file as that commit left it, with **Edit** to switch to its working copy. See [Editing in place](#editing-in-place).
 
@@ -183,7 +194,9 @@ If you select several rows, the menu items act on all of them.
 
 ### Finding in the code
 
-**Cmd/Ctrl+F** in the viewer opens a find bar at the viewer's top right. The find bar searches every file in the stack, including your edits, and counts the matches as **{current} of {total}**, or **No results**. It does not search collapsed unchanged lines.
+**Cmd/Ctrl+F** in the viewer opens a find bar at the viewer's top right. The find bar searches every file in the stack, including your edits, and counts the matches as **{current} of {total}**, or **No results**.
+
+**Only in changes** limits the search to the changed lines. Turn it off to search the whole files, including the unchanged lines folded away. It starts on for a stack of files and off for a single file.
 
 Use these keys in the find bar:
 
@@ -194,8 +207,9 @@ Use these keys in the find bar:
 | **Match case** | **Alt+C** | **Cmd+Option+C** |
 | **Match whole word** | **Alt+W** | **Cmd+Option+W** |
 | **Use regular expression** | **Alt+R** | **Cmd+Option+R** |
+| **Only in changes** | **Alt+L** | **Cmd+Option+L** |
 
-**Escape** closes the bar. Kepler remembers the 3 toggles. If you select text on one line before you open the bar, the selection fills the search field.
+**Escape** closes the bar. Kepler remembers the toggles. If you select text on one line before you open the bar, the selection fills the search field.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/code-find-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
@@ -210,7 +224,7 @@ You can select and copy across a whole file, including lines that are not on scr
 
 In **Working changes** and **All changes**, the viewer shows the file on disk. To edit it, click into the diff, or into the whole file in **File** view, and type. **Cmd/Ctrl+S** saves.
 
-An unsaved edit shows **Unsaved** with **Save** and **Discard** beside it. Kepler never discards an edit without asking: **Escape**, closing the overlay, or moving to another file, view or worktree asks **Save your edit?** first. Switching between **File** and **Changes** carries the edit across instead. You cannot stage or commit a file with an unsaved edit until you save or discard it, because Git records what is on disk.
+An unsaved edit shows **Unsaved** with **Save** and **Discard** beside it. Kepler never discards an edit without asking: **Escape**, closing the overlay or the window, or moving to another file, view or worktree asks **Save your edit?** first. Quitting Kepler warns you when windows have unsaved file edits, because quitting discards them. Switching between **File** and **Changes** carries the edit across instead. You cannot stage or commit a file with an unsaved edit until you save or discard it, because Git records what is on disk.
 
 **Editing a file from a commit.** A file shown from a commit you picked in the list is read-only, but you can switch it to the file on disk: click **Edit** in its header, choose **Edit working copy** from its row menu, or press **Cmd/Ctrl+E**.
 
@@ -360,7 +374,7 @@ To collapse a card to a one-line row, click the chevron beside its lines. Click 
 
 ### The Comments view
 
-The **Comments** view lists every review comment on the task. Open it from the view picker in the changes panel or the overlay, after **Files**. Its button shows the number of open comments, with a dot when there are unread replies.
+The **Comments** view lists every review comment on the task. Open it from the view picker in the changes panel or the overlay, after **Files**. With the changes panel hidden, use the Comments menu in the overlay's header instead. Its button shows the number of open comments, with a dot when there are unread replies.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/review-comments-list-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
@@ -404,7 +418,7 @@ While you edit a note, comment on its lines as you would in a file. The draft wo
 
 ## Staging and committing
 
-You stage and commit in commit mode. To enter it, pick **Working changes** in the list of changes and click **Commit…**, first on the files toolbar. **Commit…** appears only while the worktree has uncommitted files.
+You stage and commit in commit mode. To enter it, click **Commit…** on the **Working changes** row of the list of changes, whatever you are showing. **Commit…** appears only while the worktree has uncommitted files.
 
 In commit mode, **Commit to {branch}** takes the place of the list of changes, each file gets a staging checkbox, and the commit box appears below the files. **Cancel**, or **Escape**, leaves commit mode. Committing leaves it too, and marks the new commit in the list. Outside commit mode, the rows have no checkboxes, and you can still open or discard a file.
 
@@ -711,7 +725,7 @@ The Dashboard's task preview shows each worktree as a two-row **worktree button*
 
 - The top row: the branch and repository, its menu, the pull request, and the sync control.
 - The bottom row: chips for the uncommitted files, the commits and the merge target, with **Open in** and **Run** beside them. Each chip has a hover card that says what a click does, and a right-click menu of its own.
-- A task with several worktrees shows one worktree button at a time, with **Show all {count} worktrees** on its leading edge. The branch name switches between them, and **Auto-switch to active worktree** lets it follow whichever worktree is busiest.
+- A task with several worktrees shows one worktree button at a time, with **Show all {count} worktrees** on its leading edge. The branch name switches between them, and its list sets apart worktrees that are **Merged** or **Gone from disk**. **Auto-switch to active worktree** lets it follow whichever worktree is busiest.
 
 Click the uncommitted or commits chip to open that worktree's changes panel, showing those changes, in a side pane of the task panel, without going to the task page first. Its files open the same Changes overlay. Click the chip again to close the pane, or press **Cmd/Ctrl+Shift+G** to show or hide it. See [The Kepler Interface](/kepler/kepler-interface).
 

@@ -224,7 +224,7 @@ Each option says where the work will happen. Kepler names a new branch for you u
 
 With no remote default branch available, the new branch starts from your current commit.
 
-**Starting a session brings an older worktree up to date.** When you start a session in an existing worktree whose branch has no changes or commits of its own and is not published, Kepler first moves the branch up to its merge target. Kepler never moves a branch that holds work.
+**Starting or resuming a session brings an older worktree up to date.** When you start a session in an existing worktree, or resume a stopped session there, and the worktree's branch has no changes or commits of its own and is not published, Kepler first moves the branch up to its merge target. Kepler never moves a branch that holds work.
 
 Kepler suggests branch names from the task's own context. A suggested name starts with the issue identifier when the task has one, and sits under the `kepler/` prefix unless you configure another prefix. See [Create a task](/kepler/create-task#naming-the-branch).
 
@@ -421,6 +421,8 @@ The dialog's tags show what you could lose, such as uncommitted files, commits n
 
 Kepler **keeps** a worktree that would lose work, unless you tick the extra box that names the worktree and what it would lose. Kepler never deletes uncommitted or unpushed work without your confirmation.
 
+If the worktree is locked, the dialog says what locked it: a task, with **View task** to check it, or another tool. To delete it anyway, tick **Unlock and delete anyway** and click **Unlock and delete**. Cleaning up several tasks at once leaves a locked worktree in place. To remove it, delete that worktree on its own.
+
 ***
 
 ## Renaming, archiving, and deleting a task
@@ -511,6 +513,8 @@ If you paste a Kepler link to a task or a session into the chat, the agent can u
 | `session_read` | Read another session's conversation, including one you link with **Copy session link** |
 | `agent_list` | List the agents, accounts, models, modes and saved presets a new session can start with |
 | `repo_list` | List the repositories and folders where work can happen |
+| `repo_get` | Read a repository's details and its Run commands |
+| `action_list` / `action_get` | List your [Actions](/kepler/actions), or read one Action's full prompt |
 
 **Notes, links and files**
 
@@ -542,7 +546,7 @@ Where AI Sync and AI Compose are turned on, the `sync_*` and `compose_*` tools a
 | Tool | What it does |
 |---|---|
 | `task_create` | Create a *separate* task, linked back to this one as a sub-task, follow-up or related task. Nothing starts on it |
-| `task_update` | Set the task's stage or hold, set it aside for **Later**, rename it, move it to a group, or restore it from the archive. A hold can lift by itself, such as when CI finishes on the task's pull request |
+| `task_update` | Set the task's stage or hold, set it aside for **Later**, rename it, move it to a group, restore it from the archive, or adopt another task into the agent's own work. A hold can lift by itself, such as when CI finishes on the task's pull request |
 | `task_archive` | Archive a task and keep its sessions. It can also delete the task's worktrees and merged branches |
 
 **Starting and coordinating work**
@@ -551,17 +555,26 @@ Where AI Sync and AI Compose are turned on, the `sync_*` and `compose_*` tools a
 |---|---|
 | `session_start` | Start an agent session on a task, such as a delegate or a reviewer, with a first message. It can start without the task's context |
 | `session_send` | Send another session a prompt or a message, or stop its running turn |
-| `session_update` | Rename a session |
+| `session_update` | Rename a session, or restore an archived session without starting it |
 | `session_archive` | Archive a session. A session cannot archive itself |
 | `inbox_read` | Read this session's inbox, or wait for reports from the sessions it started |
 | `approval_list` | List the requests waiting on your approval. It cannot approve or deny anything |
+| `approval_cancel` | Withdraw a request the agent made that is still waiting. Its card closes |
 | `theme_get` / `theme_save` | Read Kepler's theme format, then check a theme file and install it into the themes folder |
+
+**Repositories and Actions**
+
+| Tool | What it does |
+|---|---|
+| `repo_update` | Rename a repository, or change its description or aliases. A change to its sync settings asks you first |
+| `repo_command_create` / `repo_command_update` / `repo_command_delete` | Add, replace or delete a repository's Run commands. Each one asks you first |
+| `action_update` | Change the prompt of an Action you created, when you ask it to. Each change asks you first |
 
 ### What runs at once, and what asks you
 
 Every workspace tool is pre-approved, in Chat and in Terminal, so none of them shows the agent's own permission prompt. Instead, Kepler decides which requests can run at once.
 
-An agent works freely within its own work. Its own work is its own task, plus the tasks and sessions it created or started sessions on. These requests run at once:
+An agent works freely within its own work. Its own work is its own task, plus the tasks and sessions it created or started sessions on, and any task you approved it adopting. These requests run at once:
 
 - Reads, anywhere.
 - Creating a task, a note or a worktree.
@@ -573,6 +586,9 @@ These requests wait for your approval:
 - Stopping or renaming a session outside its own work, or archiving any session other than one it started
 - Changing a task outside its own work, such as its stage, hold, name, group, links or notes, detaching its files, or archiving its resources
 - Changing a Kepler setting that affects your accounts, privacy, other tools, what runs, or where files go. Only [Ask Kepler](/kepler/ask-kepler) can change settings, and you approve each change on its own. See [Approval requests](/kepler/agent-sessions#approval-requests)
+- Adopting a task into its own work. Once you approve, the agent can change that task, its notes, worktrees and sessions as freely as its own
+- Adding, replacing or deleting a repository's Run command, or changing a repository's sync settings
+- Changing an Action's prompt
 - Deleting any note
 - Detaching an uploaded file, because Kepler deletes its saved copy
 - Archiving a task outside its own work or with other live sessions, and any archive that also deletes worktrees
@@ -584,7 +600,7 @@ These requests wait for your approval:
 
 A session that an agent starts cannot run in a higher mode than the session that started it unless you approve.
 
-The request appears as an approval card above the asking session's composer, with **Approve** and **Deny**. The **Approve** menu can approve every request of that kind from the session, or always. A rule you make with **Always approve** is listed under **Settings → Agents → Approvals**, where **Remove** deletes it. **Always approve** is not offered for actions that can lose work. See [Agent Sessions](/kepler/agent-sessions#when-the-agent-asks-you-something).
+The request appears as an approval card above the asking session's composer, with **Approve** and **Deny**. The **Approve** menu can approve every request of that kind from the session, or always. A rule you make with **Always approve** is listed under **Settings → Agents → Approvals**, where **Remove** deletes it. **Always approve** is not offered for actions that can lose work, for adopting a task, for changing an Action's prompt, or for adding or replacing a Run command. See [Agent Sessions](/kepler/agent-sessions#when-the-agent-asks-you-something).
 
 The agent does not wait for you to answer the card. Kepler tells the agent the request is awaiting your approval, the agent continues, and the outcome arrives in its inbox. Before an approved request runs, Kepler checks again. If the target changed in the meantime, such as a worktree that has new commits, nothing runs.
 

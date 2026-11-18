@@ -191,10 +191,10 @@ The **Tool spectrum** section shows the calls by kind, with a bar and a count fo
 
 The **Usage windows** section shows your agent subscription windows, with 1 bar for each window of each agent, and the share of the window you have used. The section appears when it has something to show:
 
-- With **Check plan usage with each agent's provider** on (the default, in **Settings → Agents → Usage limits**), Kepler asks each agent's provider for your usage.
+- With **Check plan usage with each agent's provider** on (the default, in **Settings → Agents → Usage and recovery**), Kepler asks each agent's provider for your usage.
 - With it off, the section shows only readings that your agents report themselves, dimmed when they are out of date. The section stays hidden until an agent reports a reading.
 
-See [Settings](/kepler/settings-agents#usage-limits).
+See [Settings](/kepler/settings-agents#usage-and-recovery).
 
 These bars show only how much of each window you have used. To see whether you are on pace for a window, and when it runs out at your current rate, check a session's usage meter. See [Usage indicators](/kepler/agent-sessions#usage-indicators).
 

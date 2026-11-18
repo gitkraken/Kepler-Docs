@@ -121,6 +121,8 @@ The chevron beside the primary button lists the other choices: **Prepare**, whic
 
 A task that has its prompt but no session yet, such as one an agent created for you, opens a draft session tab. To send the task's prompt as written, press **Start** on the empty box.
 
+**Untrusted repositories.** A repository or folder chip you have not trusted shows a warning shield. Click the shield to trust it, or everything in its folder. If you press **Start** while something is untrusted, Kepler asks you to trust it first: click **Trust and start**. See [Trust a repository](/kepler/settings-repositories#trust-a-repository).
+
 The task appears in the list as soon as you press **Start**, with a **Preparing** pill until setup finishes. The task's panel and the task page show each launch step. **Cancel** stops a launch while Kepler is reading a link or cloning a repository.
 
 <figure style="text-align:center">
@@ -137,7 +139,7 @@ The task appears in the list as soon as you press **Start**, with a **Preparing*
   <figcaption style="text-align:center; color:#888">Kep narrating a task's launch in its panel.</figcaption>
 </figure>
 
-If setup fails, the row's pill reads **Failed** and the panel shows the error. To change the task and try again, click **Edit and retry**, or **Dismiss** to clear it. If it failed because a repository or folder is not trusted, the panel says so: click **Trust and retry**. A task that starts without some of its repositories warns you which ones it left out. When they were left out because they are not trusted, the warning offers **Trust**. See [Trust a repository](/kepler/settings-repositories#trust-a-repository).
+If setup fails, the row's pill reads **Failed** and the panel shows the error. To change the task and try again, click **Edit and retry**, or **Dismiss** to clear it. If it failed because a repository or folder is not trusted, the panel says so: click **Trust and start**. A task that starts without some of its repositories warns you which ones it left out. When they were left out because they are not trusted, the warning offers **Trust**. See [Trust a repository](/kepler/settings-repositories#trust-a-repository).
 
 If the task starts but its agent session does not, the task page and the Dashboard panel say that the agent was unable to start, with **Retry**. See [Agent Sessions](/kepler/agent-sessions#when-a-session-drops).
 
@@ -156,7 +158,7 @@ Each attached repository gets a chip with 3 segments:
 - **Branch name**: the new branch's name, suggested from your prompt as you type. Click it to edit it. See [Naming the branch](#naming-the-branch).
 - **Isolated worktree**: an on/off toggle, on by default, that gives the task its own working copy. Turn it off to have the task share your repository folder, so a branch switch there moves your checkout. See [Tasks and Resources](/kepler/tasks-and-resources#worktrees-and-working-in-place).
 
-**What a newly attached repository starts on is a setting.** The 3 segments start from **Settings → Tasks → New tasks → Where new tasks make changes**: **Isolated worktree** (the default), **New branch**, or **Current branch**. The setting changes only the starting point. You can still change every segment for each repository in each task. See [Settings](/kepler/settings-tasks#where-new-tasks-make-changes).
+**What a newly attached repository starts on is a setting.** The 3 segments start from **Settings → Tasks → New tasks → Where new tasks make changes**: **Isolated worktree** (the default), **New branch**, or **Current branch**. The setting changes only the starting point. You can still change every segment for each repository in each task. To check the default from a chip, open its branch menu: the **Isolated worktree** row shows it, such as **New tasks: Isolated worktree**, and **Change** opens the setting. See [Settings](/kepler/settings-tasks#where-new-tasks-make-changes).
 
 Picking **New branch** or **Current branch** means the task runs in the repository's own checkout rather than an isolated one, so only 1 task can use that checkout at a time. If another task already has it, the chip says **Another task is working here** and names it. Click **Create a worktree for this task** to put this repository in an isolated worktree instead.
 
@@ -220,8 +222,8 @@ To import workspaces from Conductor, take the following steps:
 
 1. On an empty **Tasks** list, click the import card. It names the apps Kepler found, such as **Import from Conductor, Orca and 2 more**. You can also choose **File → Import from Another App…**.
 2. If Kepler finds more than 1 app, click **Conductor**.
-3. Tick the workspaces you want, and click **Import *N* workspaces**. A workspace you already imported is marked **Already a task**.
-4. When **Import finished** shows what came over, click **Done**.
+3. Tick the workspaces you want, and click **Import *N* workspaces**. The list is grouped by repository, and workspaces active in the last 30 days start ticked. Older ones are folded under **Older**. To narrow a long list, type in **Filter workspaces**. To clear every tick, click **Select none**. A workspace you already imported is marked **Already a task**.
+4. The import runs in the background, and a chip in the title bar shows its progress. When it reads **Imported *N***, hover over or click the chip, and click **View tasks**. The chip's card also has **Stop**, to stop the import, and **Retry**, to try a failed workspace again.
 5. Find the new tasks in **Tasks**. Open one to pick its chat up where it left off.
 
 <figure style="text-align:center">
@@ -246,10 +248,10 @@ To import workspaces from Conductor, take the following steps:
 </figure>
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/import-finished-nov-2026@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/import-finished-nov-2026@2x.png" class="help-center-img img-bordered" alt="The Import finished dialog for Import from Conductor, reading 4 workspaces became tasks and 6 chats resumed, with Back to apps and Done buttons.">
+  <a href="/wp-content/uploads/import-run-chip-nov-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/import-run-chip-nov-2026.png" class="help-center-img img-bordered" alt="The title bar after an import ran in the background: the Imported 3 chip, with a check, sits left of the inbox, Ask, feedback, Settings and account buttons, and hovering it opens its card, Import finished, 3 tasks created, with Dismiss and View tasks.">
   </a>
-  <figcaption style="text-align:center; color:#888">Step 4: the import is finished.</figcaption>
+  <figcaption style="text-align:center; color:#888">Step 4: the finished import in the title bar.</figcaption>
 </figure>
 
 <figure style="text-align:center">

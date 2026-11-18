@@ -1,6 +1,6 @@
 ---
 title: Task Settings
-description: Choose how new Kepler tasks start, including the default agent, where tasks make changes, where a new task opens on the Dashboard, the branch prefix, folder locations, and automatic task names, how a task's page looks, and your task groups.
+description: Choose how new Kepler tasks start, including the default agent, where tasks make changes, where a new task opens on the Dashboard, the branch prefix, folder locations, and automatic task names, where tasks open, how a task's page looks, and your task groups.
 product: Kepler
 feature: Settings
 content_type: reference
@@ -19,7 +19,7 @@ taxonomy:
 ---
 <kbd>Last updated: November 2026</kbd>
 
-Use **Settings → Tasks** to choose how new tasks start and how a task's page looks, and to manage your task groups. A task is one piece of work: its prompt, the agent sessions working on it, and the worktree or folder they work in.
+Use **Settings → Tasks** to choose how new tasks start, where tasks open, and how a task's page looks, and to manage your task groups. A task is one piece of work: its prompt, the agent sessions working on it, and the worktree or folder they work in.
 
 ## New tasks
 
@@ -44,7 +44,7 @@ An [Action](/kepler/actions) inherits this configuration unless it names an agen
 
 ### Where new tasks make changes
 
-**Where new tasks make changes** sets what a repository starts on when you attach it to a new task in the **New task** composer. It has these options:
+**Where new tasks make changes** sets what a repository starts on when you attach it to a new task in the **New task** composer. Pick one of these options from its dropdown:
 
 | Option | What it does |
 |---|---|
@@ -52,7 +52,7 @@ An [Action](/kepler/actions) inherits this configuration unless it names an agen
 | **New branch** | Creates a new branch in the repository's own checkout, with no worktree |
 | **Current branch** | Works on whichever branch the repository's own checkout has |
 
-This setting is only the default. For a single task, the repository chip's own **Base branch** and **Isolated worktree** controls override it. See [Create a task](/kepler/create-task#configuring-a-repository).
+This setting is only the default. For a single task, the repository chip's own **Base branch** and **Isolated worktree** controls override it. Under **Isolated worktree**, the composer names the default as **New tasks:** and the option, and **Change** opens this setting. See [Create a task](/kepler/create-task#configuring-a-repository).
 
 **With New branch and Current branch, commits land on whichever branch is checked out at the time**, because both work in the repository's own checkout. If another task is already working in that checkout, Kepler says so and offers to switch that repository to an isolated worktree instead.
 
@@ -60,7 +60,7 @@ You can edit **Branch prefix**, **Worktrees folder**, and **Tasks folder** which
 
 ### Where a new task opens on the Dashboard
 
-**Where a new task opens on the Dashboard** sets where the panel of a task you start, or open from a notification, appears among the Dashboard's open panels:
+**Where a new task opens on the Dashboard** sets where the panel of a task you start, or open from a notification, appears among the Dashboard's open panels. Pick one of these options from its dropdown:
 
 | Option | What it does |
 |---|---|
@@ -134,14 +134,26 @@ The following setting names new tasks for you:
 
 A change takes effect on the next task you create.
 
-## Task page
+<a id="task-page"></a>
 
-**Task page** sets how a task's page looks in this window. Kepler saves these settings on this machine:
+## Task page and panels
+
+**Task page and panels** sets where a task opens and how its page and Dashboard panel look. Kepler saves these settings on this machine:
 
 | Setting | What it controls | Default |
 |---|---|---|
+| **Where links, Go To and notifications open a task** | Whether a task opens as its own page or as a Dashboard panel. See the options below | Automatic |
 | **Show tabs on the task page** | Keeps sessions, worktrees, and resources open as tabs you can pin, drag between groups, and arrange side by side | Off |
 | **Preview tabs** | *A single click opens a preview that the next click replaces. Double-click, or edit, to keep it open.* | On |
+| **Open changes beside the session in Dashboard panels** | When a Dashboard panel has room, shows its worktree's changes beside the session, or its resources when it has no worktree. Closing that pane keeps it closed for that task in that view | On |
+
+**Where links, Go To and notifications open a task** has these options:
+
+- **Automatic** opens a Dashboard panel when you are on the Dashboard, and the task page everywhere else.
+- **Task page** always opens the task's own page.
+- **Dashboard panel** always opens a Dashboard panel.
+
+The phone app always opens the task page.
 
 With **Show tabs on the task page** off, each column of a task shows one thing at a time, and you switch between them from the list on the left. **Preview tabs** works only with it turned on. Sessions always open as permanent tabs. See [The task view](/kepler/task-view).
 

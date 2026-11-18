@@ -204,7 +204,7 @@ On a Tasks view, the **Your groups** switch above **Group by** divides the list 
 
 | Section | What it holds |
 |---|---|
-| **Needs attention** | Something waits on you, such as a question, an approval request, a failed turn, failing CI, or a review that requests changes |
+| **Needs attention** | Something waits on you, such as a question or an approval request. A failed turn, failing CI, or a review that requests changes stays here until you open the task |
 | **Unread** | A session finished a turn you have not looked at, or a hold lifted |
 | **Running** | An agent is working on it |
 | **Important** | A task you starred with **Star** in its menu |
@@ -218,7 +218,7 @@ On a Tasks view, the **Your groups** switch above **Group by** divides the list 
 
 A finished turn stays unread until you look at it.
 
-To step through the tasks that need you in Inbox order, use **Go to next task needing attention**, **Go to next unread task**, or **Go to next task needing attention or unread**. Run them from the palette's **Commands** tab, or give them a key in [Keyboard shortcuts](/kepler/settings-app#keyboard-shortcuts). They have no key by default.
+To step through what needs you, press **F8** (**Go to what needs you next**). Each press opens the next session across your tasks: sessions waiting on you first, then unread replies. To step through only one section, run **Go to next in Needs attention** or **Go to next in Unread** from [the palette](/kepler/kepler-interface#go-to-a-task-or-file), or give them a key in [Keyboard shortcuts](/kepler/settings-app#keyboard-shortcuts).
 
 **Inbox** lists every task exactly once:
 
@@ -521,7 +521,7 @@ Each type of view has these facets:
 | View | Facets |
 |---|---|
 | **Todo** | Needs my attention · Review requests · Your role · Type · Linked work · Status · Priority · Age · Provider, then one section per connection with its own Repository · Assignee · Author · Reviewer · Issue type · Label · Project · Milestone · Iteration or Sprint |
-| **Tasks** | Progress · Activity · Repository · Agent · Session · Group · Linked work |
+| **Tasks** | Activity · Progress · Starred · Group · Repository · Agent · Session · Linked work |
 
 Facets with a fixed set of values, such as **Progress** or **Priority**, always list every value, even one that nothing matches. Other facets list only the values in your work, and Kepler hides a facet that has no values to choose from.
 
@@ -535,6 +535,8 @@ GitHub Enterprise and GitLab Self-Hosted get sections of their own. **Milestone*
 - In Tasks, it offers *Has a PR or issue*.
 
 **Activity** matches a task when *any* of its sessions is in that state, so a task with one running session and one unread session matches both **Running** and **Unread**.
+
+**Starred** shows the tasks you starred with **Star**.
 
 **Session** offers *Has a session* and *Has a live session*. To find tasks *without* a pull request, issue, or session, exclude the value.
 
@@ -565,7 +567,9 @@ When a search or a filter narrows the list, pills at the right end of the search
 
 While a search is on, the filter pill counts only hidden rows that match the search. If a search seems to miss something, the filter pill shows whether your filters are hiding it. On Todo, a count such as *40+* means more items are still loading.
 
-When nothing matches, the empty list offers a button that clears the search, the filters, or both.
+When nothing matches, the empty list offers a button that clears the search, the filters, or both. On a Tasks view, it also offers **Search notes, files, links and chats too**.
+
+**Choose where to search.** On a Tasks view, add `in:` to say where your words are looked for: `in:name`, `in:prompt`, `in:notes`, `in:files`, `in:links`, or `in:chats`. For example, `in:notes,chats deploy` finds tasks whose notes or chats mention *deploy*. Each matching row shows where it matched. When a chat matched, click **Show the messages that matched** to list them, then pick one to open the session at that message.
 
 Search covers only the work the view has already loaded. On a Todo view, that is the work its scope lists. See [Choose what a Todo view lists](#choose-what-a-todo-view-lists).
 
@@ -576,6 +580,10 @@ The search box also takes the view's filters, written as qualifiers such as `act
 - Put **-** before a qualifier to exclude its value, such as `-progress:done`.
 - Put a name with spaces in quotes, such as `group:"Release work"`.
 - On a Tasks view, `branch:` filters by branch name.
+- Separate values with commas to match any of them, such as `activity:waiting,unread`.
+- Join filters with **OR** in parentheses to match either one, such as `(activity:waiting OR progress:review)`. The group combines with your other filters.
+- Use `has:` or `no:` to find tasks with or without something: `group`, `linked`, `session`, `repo`, or `branch`, such as `no:group`. On Todo, `no:` and `has:` take `label`, `assignee`, `milestone`, or `reviewer` with a provider, such as `no:label@github`.
+- `is:starred` shows the tasks you starred.
 
 A qualifier that can match nothing is underlined. Hover over it to see why, such as a group name that does not exist.
 
@@ -590,9 +598,9 @@ A qualifier that can match nothing is underlined. Hover over it to see why, such
 
 ## What Kepler remembers
 
-Each view keeps its layout, grouping, sort, filters, search text, and, on Todo, its scope, in every window and across restarts. In each window, each view also remembers its open panels and their layout, its folded sections, and where you scrolled to. If you switch to another view and back, the panels you were reading are still open.
+Each view keeps its layout, grouping, sort, filters, search text, and, on Todo, its scope, in every window and across restarts. In each window, each view also remembers its open panels and their layout, its folded sections, and where you scrolled to. If you switch to another view and back, each panel is as you left it, such as its side pane, your place in the chat, an open find bar or a maximized terminal.
 
-After a restart, each window reopens on the view it was showing, with that view's panels.
+After a restart, each window reopens on the view it was showing, and every view gets its panels back.
 
 ***
 

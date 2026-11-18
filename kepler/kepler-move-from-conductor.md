@@ -36,9 +36,11 @@ Kepler by GitKraken imports your Conductor workspaces on a Mac as tasks, in the 
 
 1. On an empty **Tasks** list, click the import card, such as **Import from Conductor**. You can also choose **File → Import from Another App…**.
 2. If Kepler found more than 1 app, click **Conductor**.
-3. Tick the workspaces you want, and click **Import *N* workspaces**.
-4. When **Import finished** shows what came over, click **Done**.
+3. Tick the workspaces you want, and click **Import *N* workspaces**. Workspaces active in the last 30 days arrive ticked.
+4. The import runs in the background. When the title bar chip reads **Imported *N***, click it, then click **View tasks**.
 5. Open a new task in **Tasks** to pick its chat up where it left off.
+
+After you install Kepler, the guided start also offers to import Conductor's workspaces when it finds them. See [Getting Started](/kepler/kepler-getting-started).
 
 ***
 
@@ -62,7 +64,7 @@ Kepler by GitKraken imports your Conductor workspaces on a Mac as tasks, in the 
   <figcaption style="text-align:center; color:#888">Picking Conductor as the app to import from.</figcaption>
 </figure>
 
-3. In **Import from Conductor**, tick the workspaces you want, and click **Import *N* workspaces**. The workspaces are grouped by repository, and each row shows its branch and how many chats it has. A workspace you already imported is marked **Already a task:** and the task's name.
+3. In **Import from Conductor**, tick the workspaces you want, and click **Import *N* workspaces**. The workspaces are grouped by repository, and each row shows its branch and how long ago it was active. Workspaces active in the last 30 days arrive ticked, and older ones are folded under **Older**. To tick a whole repository, use its tick box. The count at the top, such as **9 of 14 selected**, shows how many you picked. To narrow a long list, type in **Filter workspaces**. To clear every tick, click **Select none**. A workspace you already imported is marked **Already a task:** and the task's name.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/import-workspaces-nov-2026@2x.png" target="_blank" rel="noopener noreferrer">
@@ -71,13 +73,13 @@ Kepler by GitKraken imports your Conductor workspaces on a Mac as tasks, in the 
   <figcaption style="text-align:center; color:#888">Choosing the Conductor workspaces to import.</figcaption>
 </figure>
 
-4. When **Import finished** shows how many workspaces became tasks and how many chats resumed, click **Done**.
+4. The dialog closes and the import runs in the background. A chip in the title bar shows its progress, such as **Importing 2 of 4**. Hover over or click the chip for its card, where **Stop** ends the import and **Retry** tries a failed workspace again. When the chip reads **Imported *N***, click **View tasks** on its card, or **Dismiss** to clear the chip.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/import-finished-nov-2026@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/import-finished-nov-2026@2x.png" class="help-center-img img-bordered" alt="The Import finished dialog for Import from Conductor, reading 4 workspaces became tasks and 6 chats resumed, with Back to apps and Done buttons.">
+  <a href="/wp-content/uploads/import-run-chip-nov-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/import-run-chip-nov-2026.png" class="help-center-img img-bordered" alt="The title bar after an import ran in the background: the Imported 3 chip, with a check, sits left of the inbox, Ask, feedback, Settings and account buttons, and hovering it opens its card, Import finished, 3 tasks created, with Dismiss and View tasks.">
   </a>
-  <figcaption style="text-align:center; color:#888">The import is finished.</figcaption>
+  <figcaption style="text-align:center; color:#888">The finished import in the title bar, with its card open.</figcaption>
 </figure>
 
 5. Find the new tasks in **Tasks**.
@@ -104,7 +106,7 @@ If Conductor is not in the list, Kepler did not find Conductor's workspaces on t
 | The workspace's notes | A note on the task, titled **Notes from Conductor** |
 | The workspace's target branch | The worktree's merge target |
 
-A chat continues only if its agent's history is on your Mac and Kepler supports that agent. The workspace list counts the chats that cannot continue, and **Import finished** counts the chats Kepler was unable to resume.
+A chat continues only if its agent's history is on your Mac and Kepler supports that agent. The workspace list marks a chat that Kepler cannot continue. If a workspace fails to import, the title bar chip counts it, and its card offers **Retry**.
 
 After the import, continue each chat in Kepler or in Conductor, not both. Both apps write to the same chat history.
 
@@ -123,15 +125,15 @@ After the import, continue each chat in Kepler or in Conductor, not both. Both a
 
 ### Can I move my Conductor workspaces to Kepler?
 
-Yes. On macOS, choose **File → Import from Another App…**, pick **Conductor**, tick the workspaces, and click **Import *N* workspaces**. Each workspace becomes a task in the same folder and on the same branch.
+On macOS, choose **File → Import from Another App…**, pick **Conductor**, tick the workspaces, and click **Import *N* workspaces**. Each workspace becomes a task in the same folder and on the same branch.
 
 ### Do my Conductor chats come with me?
 
-Yes, for chats whose agent history is on your Mac and whose agent Kepler supports, such as Claude Code and Codex. Each chat becomes a session on the task, and you continue it where it left off.
+A chat comes with you when its agent history is on your Mac and Kepler supports its agent, such as Claude Code and Codex. Each chat becomes a session on the task, and you continue it where it left off.
 
 ### Can I import from Conductor on Windows or Linux?
 
-No. Conductor runs only on macOS, so Kepler imports Conductor workspaces only on a Mac.
+Kepler imports Conductor workspaces only on a Mac, because Conductor runs only on macOS.
 
 ### Does importing change anything in Conductor?
 

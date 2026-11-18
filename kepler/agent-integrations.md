@@ -48,9 +48,9 @@ Each agent gets its own section in **Settings → Agents**, in this order:
 | **Cursor** | Cursor | Your installed `cursor-agent` CLI | Chat or Terminal | No |
 | **Grok Build** | Grok Build | Your installed `grok` CLI | Chat or Terminal | Yes |
 
-**Auggie** is Augment's coding agent. Like Claude Code and Codex, it reports plan usage back to Kepler, but only as a credit balance rather than usage windows. Google Antigravity reports a percentage used for each model's quota. To learn about the plan usage meter, see [Agent Sessions](/kepler/agent-sessions#usage-indicators).
+**Auggie** is Augment's coding agent. Like Claude Code and Codex, it reports plan usage back to Kepler, but only as a credit balance rather than usage windows. Google Antigravity reports a percentage used for each limit on the selected model, including its 5-hour and weekly windows. To learn about the plan usage meter, see [Agent Sessions](/kepler/agent-sessions#usage-indicators).
 
-Kepler asks each agent's provider for plan usage while **Check plan usage with each agent's provider** is on. This setting is in **Settings → Agents → Usage limits**, and it is on by default.
+Kepler asks each agent's provider for plan usage while **Check plan usage with each agent's provider** is on. This setting is in **Settings → Agents → Usage and recovery**, and it is on by default.
 
 **Grok Build** is xAI's coding agent. It signs in through your browser, or you can supply an xAI API key.
 

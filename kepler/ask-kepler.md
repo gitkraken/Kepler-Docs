@@ -39,11 +39,13 @@ You can open **Ask Kepler** from anywhere in Kepler in one of these ways:
 | How | Opens |
 |---|---|
 | The **Ask Kepler** button (Kep, the planet mascot, with the word **Ask**) in the top bar | The panel, on the section you used last |
-| **Cmd/Ctrl+L** or **Cmd/Ctrl+K** (**Toggle Ask Kepler chat**) | The **Chat** section |
+| **Cmd/Ctrl+K** or **Cmd/Ctrl+L** (**Toggle Ask Kepler chat**) | The **Chat** section |
 | **Ctrl+&#96;** on every platform, macOS included (**Toggle Ask Kepler terminal**) | The **Terminal** section, starting a shell if none is open |
 | **Cmd/Ctrl+Shift+K** or **Cmd/Ctrl+Shift+L** (**New Ask Kepler chat**) | A new chat, from anywhere in the desktop app |
 
 To close the panel, press the same shortcut again while focus is inside it. On Windows and Linux, a focused shell uses **Ctrl+L** to clear its screen, so press **Ctrl+K** to open or close the chat from inside a terminal.
+
+On a phone, tap Kep in the Dashboard bar. The panel opens full screen, so it has no **Dock panel** and no controls to move it to the other side.
 
 **The top bar button shows the state of your chats.** When a chat needs something from you, the button becomes a pill that reads **Needs you**, **New reply**, or **Failed**. Click the pill to open the panel on that chat.
 
@@ -95,11 +97,19 @@ So you can ask *what's this one stuck on?* about the task in front of you. Keple
 
 The agent can read your tasks and sessions and act on them through Kepler's own tools. Before the agent starts a session on a task that it did not create, Kepler asks you first. When it mentions a task, a session, a task note, or a setting, it names it as a link you can click; a setting link shows the setting's name and opens it in **Settings**.
 
+**It can take you there.** Ask the chat to show you a task, a session, a note, a Dashboard view, or a setting, and it opens it in the window you asked from. It can also press some of Kepler's own shortcuts for you, such as maximizing a panel or switching the Dashboard's layout. Your cursor stays in the chat. If you are typing somewhere else or a dialog is open, it keeps your view as it is and tells you.
+
+### Ask how your agent work is going
+
+The chat can answer questions about your own usage, from the usage insights Kepler keeps on your computer. For example, you can ask how many tokens or how much cost your agents used this week, how long agents worked or waited on you, how often you hit a usage limit, or how quickly your pull requests merged. These answers need **Collect usage insights** on. See [Insights](/kepler/settings-app#insights).
+
 ### Finding and changing settings
 
 The chat can look up Kepler's settings for you. Ask where something is set, or what a setting is set to, and the agent finds the setting, tells you its current value and what it can be set to, and links to it. Click the link to open **Settings** at that setting. Only **Ask Kepler** can find and change settings; agents in tasks cannot.
 
-The agent changes a setting only when you ask it to. It can find and link to some settings but not change them, such as secrets, actions, and settings that take a list.
+The agent changes a setting only when you ask it to. It can find and link to some settings but not change them, such as secrets and settings that take a list.
+
+The agent can also list your [Actions](/kepler/actions) and read an Action's prompt. When you ask, it can change the prompt of an Action you created, and Kepler asks for your approval every time. To change a built-in Action, edit it in **Settings → Actions**.
 
 Some changes wait for your approval: a change to a setting that affects your accounts, your privacy, other tools, what runs, or where files go. Kepler asks about each such change separately, and you approve it on its own. See [Approval requests](/kepler/agent-sessions#approval-requests).
 
@@ -130,7 +140,7 @@ The agent pill lists only agents that run in **Chat**. An agent that runs only i
 
 ### Past chats and new chats
 
-To switch chats, open the chat's title in the panel header. It lists:
+To switch chats, open the chat's title in the panel header. To find a chat, type in **Search chats** at the top. The search also finds archived chats, and picking one restores it. The picker lists:
 
 - **New chat**, which returns the section to a fresh chat
 - **Continue in a new task**, for the chat that's open

@@ -19,7 +19,7 @@ taxonomy:
 ---
 <kbd>Last updated: November 2026</kbd>
 
-Kepler is GitKraken's **agentic development environment** (**ADE**). Use it to direct coding agents on your real work, in as many repositories as you need, at the same time.
+Kepler by GitKraken is an agentic development environment. Use it to direct coding agents on your real work, in as many repositories as you need, at the same time.
 
 You use your own coding agent. Kepler pulls in the issues and pull requests already assigned to you, hands any of them to an agent with the context attached, and takes the result through review to a change you can merge.
 
@@ -73,9 +73,11 @@ To watch a short tour before you start, click the **Watch Quick Start Tour** til
 
 ***
 
-## Choose your agents, repos, and look
+<a id="choose-your-agents-repos-and-look"></a>
 
-After you sign in, a guided start walks you through setup. To skip it at any point, click **I'll explore on my own**.
+## Set up your agents, repos, and preferences
+
+After you sign in, a guided start walks you through setup. To skip it at any point, click **Explore on my own**.
 
 **Choose your coding agents.** Kepler finds the coding agents installed on this computer. In this step:
 
@@ -103,6 +105,7 @@ If you installed an agent that Kepler did not find, click **Rescan**. To go on w
 
 - Check the repos you work in. To add one Kepler did not find, click **Add a folder**.
 - Confirm the **Repos folder**. Kepler finds your repos there and clones new ones into it.
+- Keep **Trust the repos you're adding** checked, so that Kepler can run git in them and agents can work in them without asking. To also trust everything in their folder, including repos added there later, check **Also trust** and the folder.
 
 Then click the button that adds them, such as **Add 2 and continue**. Kepler adds only what you check.
 
@@ -113,19 +116,30 @@ Then click the button that adds them, such as **Add 2 and continue**. Kepler add
   <figcaption style="text-align:center; color:#888">The second step, with the 2 repos Kepler picked checked.</figcaption>
 </figure>
 
-**Make it yours.** Pick a theme, or open the **Theme gallery**, and choose how Kepler gets your attention under **Notify me**:
+**Make it yours.** In the **Preferences** step, choose where new tasks work under **New tasks work in**: **Isolated worktree**, **New branch**, or **Current branch**. This is the same choice as [Where new tasks make changes](/kepler/settings-tasks#where-new-tasks-make-changes) in Settings. Then choose how Kepler gets your attention under **Notify me**, and pick a theme, or open the **Theme gallery**.
+
+**Notify me** has these options:
 
 - **Everything**: every reply and request on the desktop as well
 - **When I'm needed**: questions, approvals, and errors on the desktop, while replies stay in Kepler
 - **Only in Kepler**: no desktop notifications
 
-To try an alert, click **Send a test notification**. You can change these choices later in [Settings](/kepler/settings-app#notifications). Click **Finish** to open the **New task** composer on the Dashboard and start your first task.
+To try an alert, click **Send a test notification**. You can change these choices later in [Settings](/kepler/settings-app#notifications). Click **Finish** to open the **New task** composer on the Dashboard and start your first task. If an **Import** step follows, the button reads **Next**.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/onboarding-theme-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/onboarding-theme-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The guided start's third step, Make it yours, with 01 Agents and 02 Repos checked off and 03 Theme & notifications current: Theme tiles Kepler Dark (selected), Midnight, Kepler Light and Theme gallery beside the System / Light / Dark switch on Dark, and Notify me presets Everything, When I'm needed (selected) and Only in Kepler, with Play a sound with desktop notifications ticked, Send a test notification, Back and Finish.">
   </a>
-  <figcaption style="text-align:center; color:#888">The third step, with the theme and notification choices.</figcaption>
+  <figcaption style="text-align:center; color:#888">The third step, with where new tasks work, the notification choices, and the theme.</figcaption>
+</figure>
+
+**Bring your work over.** If Kepler finds workspaces from Conductor, Orca, herdr, or Vibe Kanban on this computer, the guided start ends with an **Import** step. Each app has a row with a switch, and the workspaces you used in the last 30 days are already picked. To change the picks, click **Review**. Click the button that imports them, such as **Import 11 and finish**, to bring them over as tasks once setup ends, or click **Finish without importing**.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/onboarding-import-nov-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/onboarding-import-nov-2026.png" class="help-center-img img-bordered" alt="The guided start's last step, Bring your work over, with 01 Agents, 02 Repos and 03 Preferences checked off and 04 Import current: Workspaces come over as tasks once you finish setup. A row per app found, each with Review and its switch on: Conductor, 9 of 14 workspaces selected, active in the last 30 days (Checkout redesign, Gift card support, Cart total with discounts and 6 more), and Orca, 2 of 2 workspaces selected (First-run tour, Offline cart). Kep says it found Conductor and Orca on this machine; Back, Finish without importing and Import 11 and finish sit at the bottom.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The Import step, with the workspaces Kepler found in 2 apps.</figcaption>
 </figure>
 
 ***
