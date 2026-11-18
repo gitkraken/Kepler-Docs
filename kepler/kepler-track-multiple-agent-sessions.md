@@ -21,12 +21,12 @@ taxonomy:
 
 Kepler by GitKraken keeps track of several Claude Code and Codex sessions in 1 Dashboard, including sessions you start in your own terminal once you turn on detection. Give each piece of work its own task, so each one gets its own worktree and branch. The Dashboard then shows which session needs you, and each task's **Changes** group shows what its agent changed.
 
-**Requirements and limits**
+## Requirements and limits
 
 - Scope: Following several agent sessions at once, seeing which one needs you, and seeing which one changed what.
 - Sessions you start in your own terminal: Kepler lists them only after you turn on **Show sessions started outside Kepler**, which is off by default.
 - Limits: Kepler follows a session running in your terminal but does not control it. To answer a question it asks, answer in your terminal, or move the session into Kepler.
-- Limits: 2 sessions that share 1 worktree also share its changes. To tell their changes apart, give each session its own task.
+- Limits: Sessions that share a worktree also share its changes. To tell their changes apart, give each session its own task.
 
 ***
 
@@ -76,7 +76,7 @@ See [Sessions started outside Kepler](/kepler/agent-sessions#sessions-started-ou
 
 ***
 
-## How to keep 1 task per worktree
+## How to give each task its own worktree
 
 Give each piece of work its own task. By default, each new task makes its changes in its own worktree: a separate copy of the repository on its own branch. Sessions in different tasks do not edit the same files, so you always know which session changed what.
 
@@ -89,6 +89,8 @@ To change where new tasks make their changes, open **Settings → Tasks** and fi
 ***
 
 ## How to see which session needs you
+
+Kepler shows what each session needs in 5 places: the Dashboard, session status, notifications, the Agent Graph, and Ask Kepler.
 
 ### The Dashboard and its Inbox
 
@@ -103,15 +105,8 @@ The Dashboard's **Tasks** view groups tasks by what each one needs from you. Thi
 Each task row adds a line that says what its session needs, such as **Approval needed for** *tool*, **Asking:** *question*, or **New reply**. See [Inbox](/kepler/arranging-your-work#inbox).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/arrange-work-oct-2026-v7@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/arrange-work-oct-2026-v7@2x.png" class="help-center-img img-bordered" alt="The Dashboard's arranging controls: the row of views (Todo and Tasks with Kepler's own Todo and Task icons, Tasks selected, Agent Graph, New view, and Automations at the right), and under it the list toggle, the View button showing the List glyph and Inbox, the search box reading Search, or filter like activity:waiting across the toolbar, then Panel layout (Auto × 1) and Refresh at the right. Tasks and Agent Graph carry the orange mark of a task waiting on you.">
-  </a>
-  <figcaption style="text-align:center; color:#888">The Dashboard's Tasks view, grouped by Inbox.</figcaption>
-</figure>
-
-<figure style="text-align:center">
   <a href="/wp-content/uploads/dashboard-inbox-nov-2026@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/dashboard-inbox-nov-2026@2x.png" class="help-center-img img-bordered" alt="The Dashboard's Tasks view grouped by Inbox. Under Needs attention (1), Add product search in acme-web, In Development, reads Approval needed for Run npm test in orange. Under Unread (1), Fix the cart total, In Development, reads New reply in blue. Under Running (2), Fix gift card code matching and Upgrade the payment SDK, both Exploration, each show a green status dot.">
+    <img src="/wp-content/uploads/dashboard-inbox-nov-2026@2x.png" class="help-center-img img-bordered" alt="The Dashboard's Tasks view grouped by Inbox: Add product search under Needs attention with Approval needed for Run npm test, Fix the cart total under Unread with New reply, and 2 tasks under Running.">
   </a>
   <figcaption style="text-align:center; color:#888">Tasks grouped by what needs you: an approval, a new reply, and 2 running tasks.</figcaption>
 </figure>
@@ -152,6 +147,8 @@ See [Review What a Coding Agent Changed](/kepler/review-changes) to read the dif
 ***
 
 ## Common questions
+
+Short answers about keeping track of several agent sessions in Kepler.
 
 ### How do people manage 5 or more Claude Code and Codex sessions at once?
 

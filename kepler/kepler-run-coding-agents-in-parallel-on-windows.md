@@ -19,15 +19,15 @@ taxonomy:
 ---
 <kbd>Last updated: November 2026</kbd>
 
-Kepler by GitKraken installs natively on Windows, so you can run Claude Code, Codex and other coding agents in parallel without a Mac or WSL. Each task gets its own worktree, a private Git working copy, so agents that run at the same time never change each other's files.
+Kepler by GitKraken installs natively on Windows, so you can run Claude Code, Codex, and other coding agents in parallel without a Mac or WSL. Each task gets its own worktree, a private Git working copy, so agents that run at the same time never change each other's files.
 
-**Requirements and limits**
+## Requirements and limits
 
 - Scope: Installing Kepler on Windows, installing coding agents there, and running several agents at once
-- Prerequisite: Windows 10+, on 64-bit or ARM64, and a GitKraken account to sign in to Kepler
+- Prerequisite: Windows 10 and later, on 64-bit or ARM64, and a GitKraken account to sign in to Kepler
 - Prerequisite: Your own account for each coding agent you use, such as a Claude or ChatGPT plan
-- Limits: Auggie, Pi and OpenCode need Node.js on Windows. OpenCode installs only through npm on Windows
-- Limits: A worktree separates files only. Agents still share ports, databases and other local services. See [What a worktree does not separate](#what-a-worktree-does-not-separate)
+- Limits: Auggie, Pi, and OpenCode need Node.js on Windows. OpenCode installs only through npm on Windows
+- Limits: A worktree separates files only. Agents still share ports, databases, and other local services. See [What a worktree does not separate](#what-a-worktree-does-not-separate)
 
 ***
 
@@ -48,8 +48,8 @@ Kepler has installers for 2 Windows architectures:
 
 | Installer | For |
 |---|---|
-| 64-bit | Windows 10+ on an Intel or AMD processor |
-| ARM64 | Windows 10+ on an ARM processor |
+| 64-bit | Windows 10 and later on an Intel or AMD processor |
+| ARM64 | Windows 10 and later on an ARM processor |
 
 1. Go to [gitkraken.com/kepler/download](https://www.gitkraken.com/kepler/download) and pick the Windows installer for your processor.
 2. Run the installer.
@@ -59,7 +59,7 @@ Kepler runs directly on Windows. You do not need WSL, a virtual machine or a Mac
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/windows-dashboard-agents-nov-2026@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/windows-dashboard-agents-nov-2026@2x.png" class="help-center-img img-bordered" alt="Kepler on Windows with 2 tasks running on the acme-web repo. The Tasks list shows Add product search and category filters and Apply discount codes to cart total under Running. Side by side, a Claude Code session with Opus 5.5 writes a reply and a Codex session with 6.1 Sol runs npm test. A teal ring marks the agent and model label in each panel: Default · Opus 5.5 under the Claude Code session and 6.1 Sol Medium under the Codex session. The Windows minimize, maximize and close buttons are at the top right.">
+    <img src="/wp-content/uploads/windows-dashboard-agents-nov-2026@2x.png" class="help-center-img img-bordered" alt="Kepler on Windows with 2 acme-web tasks running side by side: a Claude Code session on Opus 5.5 and a Codex session on 6.1 Sol. Teal rings mark each panel's agent and model label.">
   </a>
   <figcaption style="text-align:center; color:#888">Claude Code (Opus 5.5) and Codex (6.1 Sol) running side by side in Kepler on Windows, each in its own task.</figcaption>
 </figure>
@@ -88,7 +88,7 @@ If you installed an agent yourself and Kepler did not find it, open the agent's 
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/windows-setup-claude-code-nov-2026@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/windows-setup-claude-code-nov-2026@2x.png" class="help-center-img img-bordered" alt="The Set up Claude Code dialog in Kepler on Windows. Under Install it lists Native installer, winget, and npm (global), marked Deprecated by Anthropic. Under Already installed? is a field for the full path to Claude Code with Browse and Use this buttons.">
+    <img src="/wp-content/uploads/windows-setup-claude-code-nov-2026@2x.png" class="help-center-img img-bordered" alt="The Set up Claude Code dialog on Windows, listing the Native installer, winget, and npm (global) install routes, with npm marked Deprecated by Anthropic. A path field under Already installed? points Kepler at your own copy.">
   </a>
   <figcaption style="text-align:center; color:#888">The Windows install routes for Claude Code.</figcaption>
 </figure>
@@ -137,11 +137,11 @@ A new worktree has none of your Git-ignored files, such as `.env` or `node_modul
 
 A worktree gives each task its own copy of the files, and nothing else. Agents in different tasks still share:
 
-- **Ports.** 2 worktrees that start the same dev server on the same port collide.
+- **Ports.** Two worktrees that start the same dev server on the same port collide.
 - **Databases and other local services.** Agents that point at the same database read and write the same data.
 - **Caches and files outside the repository**, such as a global package cache.
 
-To give each worktree its own port or database, use a repository command that runs when Kepler creates the worktree. See [Set Up Every New Agent Worktree Automatically](/kepler/kepler-set-up-agent-worktrees-automatically#give-each-worktree-its-own-port-or-database).
+To give each worktree its own port or database, use a repository command that runs when Kepler creates the worktree. See [Set Up Every New Agent Worktree Automatically](/kepler/kepler-set-up-agent-worktrees-automatically#how-to-give-each-worktree-its-own-port-or-database).
 
 ***
 
@@ -149,7 +149,7 @@ To give each worktree its own port or database, use a repository command that ru
 
 Run agents natively on Windows when your project builds and runs on Windows. Use a WSL 2 distro when your project needs a Linux toolchain, such as build scripts written for bash.
 
-In Kepler, a WSL 2 distro is a remote environment. Your agents, worktrees and terminals run inside the distro, while you work from the Kepler window on Windows. It needs no credentials and no extra setup:
+In Kepler, a WSL 2 distro is a remote environment. Your agents, worktrees, and terminals run inside the distro, while you work from the Kepler window on Windows. It needs no credentials and no extra setup:
 
 1. Open **Settings → Remote environments**.
 2. Find your distro under **Found on this machine**, and click **Add**.
@@ -161,9 +161,11 @@ Kepler lists WSL **version 2** distros only. Install each agent inside the distr
 
 ## Common questions
 
+Short answers about running coding agents on Windows with Kepler.
+
 ### Does Kepler work on Windows, or is it Mac only?
 
-Kepler works on Windows. It has a native Windows installer for Windows 10+, on 64-bit and ARM64. It also runs on macOS and Linux.
+Kepler works on Windows. It has a native Windows installer for Windows 10 and later, on 64-bit and ARM64. It also runs on macOS and Linux.
 
 ### Can I run Claude Code and Codex at the same time on Windows?
 
@@ -179,7 +181,7 @@ Leave **Isolated worktree** on, which is the default. Each task then works in it
 
 ### Why does my second agent's dev server fail to start?
 
-When 2 worktrees start a dev server on the same port, the second server can fail to start. A worktree separates files only. Give each worktree its own port with a repository command. See [Set Up Every New Agent Worktree Automatically](/kepler/kepler-set-up-agent-worktrees-automatically#give-each-worktree-its-own-port-or-database).
+When 2 worktrees start a dev server on the same port, the second server can fail to start. A worktree separates files only. Give each worktree its own port with a repository command. See [Set Up Every New Agent Worktree Automatically](/kepler/kepler-set-up-agent-worktrees-automatically#how-to-give-each-worktree-its-own-port-or-database).
 
 ***
 

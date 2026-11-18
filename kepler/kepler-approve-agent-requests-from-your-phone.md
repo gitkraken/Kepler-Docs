@@ -19,11 +19,11 @@ taxonomy:
 ---
 <kbd>Last updated: November 2026</kbd>
 
-Kepler by GitKraken lets you see what your coding agents are doing and approve their requests from your phone. Turn on Remote Access in Kepler on your computer, scan its QR code with your phone, and answer each permission request from Claude Code, Codex or any other agent in your phone's browser, with the same choices as on your desktop.
+Kepler by GitKraken lets you see what your coding agents are doing and approve their requests from your phone. Turn on Remote Access in Kepler on your computer, scan its QR code with your phone, and answer each permission request from Claude Code, Codex, or any other agent in your phone's browser, with the same choices as on your desktop.
 
-**Requirements and limits**
+## Requirements and limits
 
-- Scope: Watching agent sessions and answering permission requests, questions, plan reviews and approval requests from a phone
+- Scope: Watching agent sessions and answering permission requests, questions, plan reviews, and approval requests from a phone
 - Prerequisite: Kepler running on your computer, signed in to your GitKraken account. Your agents keep running on the computer, and the phone shows its interface
 - Prerequisite: A phone browser signed in to the same GitKraken account
 - Limits: Kepler sends no push notifications to your phone. Requests appear on the phone only while Kepler is open there, as an alert and in the waiting task
@@ -42,7 +42,7 @@ Kepler by GitKraken lets you see what your coding agents are doing and approve t
 
 ## How to turn on Remote Access
 
-Remote Access opens this Kepler from another device, such as your phone, through your GitKraken account. Your agents, worktrees and terminals stay on your computer.
+Remote Access opens this Kepler from another device, such as your phone, through your GitKraken account. Your agents, worktrees, and terminals stay on your computer.
 
 1. On your computer, open **Settings → Remote Access**, or hover over the **Remote Access** button in the title bar.
 2. Click **Turn on Remote Access**.
@@ -107,7 +107,7 @@ Kepler marks every task and session that waits on you, so you can find a request
   <figcaption style="text-align:center; color:#888">The phone menu, with a dot on each recent task that waits on you.</figcaption>
 </figure>
 
-> **Note:** Kepler sends no push notifications to your phone. When Kepler is closed on the phone, nothing tells you that an agent is waiting. Open Kepler on the phone to check. On your computer, Kepler's desktop notifications still work as usual.
+> **Note:** When Kepler is closed on the phone, nothing tells you that an agent is waiting. Open Kepler on the phone to check. On your computer, Kepler's desktop notifications still work as usual.
 
 ***
 
@@ -123,7 +123,7 @@ A permission request pins to the top of its session. It names the tool the agent
 | **Reject** | Refuses this call |
 | **Reject always** | Refuses it permanently |
 
-You see only the choices the agent offers. A session in Terminal mode offers **Allow once**, **Always allow** and **Deny** instead. The agent continues as soon as you answer. If you already answered on another device, Kepler says **Already answered**. See [Agent Sessions](/kepler/agent-sessions#permission-requests).
+You see only the choices the agent offers. A session in Terminal mode offers **Allow once**, **Always allow**, and **Deny** instead. The agent continues as soon as you answer. If you already answered on another device, Kepler says **Already answered**. See [Agent Sessions](/kepler/agent-sessions#permission-requests).
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/agent-permission-request-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -141,7 +141,7 @@ You see only the choices the agent offers. A session in Terminal mode offers **A
 
 ***
 
-## How to answer plans, questions and approval requests
+## How to answer plans, questions, and approval requests
 
 Other requests wait in the session the same way, and you answer them on the phone as you do on your computer:
 
@@ -154,6 +154,8 @@ To see what an agent did while you were away, open its session and read the conv
 ***
 
 ## Common questions
+
+Short answers about approving agent requests from a phone with Kepler.
 
 ### Will my phone notify me when an agent needs permission?
 
@@ -169,7 +171,7 @@ Yes. Your agents run on your computer, and the phone shows that computer's Keple
 
 ### Does this work with Claude Code and Codex?
 
-Yes. In a Chat session, a permission request shows the same buttons whichever agent raised it, including Claude Code, Codex and GitHub Copilot. A session in Terminal mode offers **Allow once**, **Always allow** and **Deny**, and you answer those from the phone too.
+Yes. In a Chat session, a permission request shows the same buttons whichever agent raised it, including Claude Code, Codex, and GitHub Copilot. A session in Terminal mode offers **Allow once**, **Always allow**, and **Deny**, and you answer those from the phone too.
 
 ### Can someone else open my Kepler from their phone?
 
