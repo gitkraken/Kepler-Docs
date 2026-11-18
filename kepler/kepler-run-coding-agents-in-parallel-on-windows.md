@@ -175,7 +175,7 @@ No. All 9 agents that Kepler supports install and run on native Windows. Use WSL
 
 ### How do I stop parallel agents from overwriting each other's work?
 
-Leave **Isolated worktree** on, which is the default. Each task then works in its own worktree on its own branch. When the work is done, review and merge each branch on its own. See [Review Changes](/kepler/review-changes).
+Leave **Isolated worktree** on, which is the default. Each task then works in its own worktree on its own branch. When the work is done, review and merge each branch on its own. See [Review What a Coding Agent Changed](/kepler/review-changes).
 
 ### Why does my second agent's dev server fail to start?
 

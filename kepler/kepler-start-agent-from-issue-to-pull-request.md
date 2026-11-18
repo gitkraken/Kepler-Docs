@@ -94,7 +94,7 @@ From the issue's row, the agent is your default agent, or the agent the Action n
 
 ### Review and commit
 
-When the agent finishes, open the task's worktree and read its changes in the **Changes** overlay. Send fixes back as review comments, then click **Commit…** to stage and commit. See [Review an AI-Written Pull Request Before Your Teammates Do](/kepler/kepler-review-ai-pull-request-before-sharing) and [Review Changes](/kepler/review-changes).
+When the agent finishes, open the task's worktree and read its changes in the **Changes** overlay. Send fixes back as review comments, then click **Commit…** to stage and commit. See [Review an AI-Written Pull Request Before Your Teammates Do](/kepler/kepler-review-ai-pull-request-before-sharing) and [Review What a Coding Agent Changed](/kepler/review-changes).
 
 ### Open the pull request
 
@@ -153,7 +153,7 @@ Your default agent, such as Claude Code or Codex, unless the Action names anothe
 - [Create a task](/kepler/create-task)
 - [Issue Tracker Integrations](/kepler/issue-tracker-integrations)
 - [Actions](/kepler/actions)
-- [Review What a Coding Agent Changed in Kepler](/kepler/review-changes)
+- [Review What a Coding Agent Changed](/kepler/review-changes)
 - [Pull Request Integrations](/kepler/pull-request-integrations)
 - [Automations](/kepler/kepler-automations)
 - [Kepler Quick Answers: Running Coding Agents](/kepler/quick-answers)

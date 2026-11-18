@@ -335,7 +335,7 @@ These settings set how diffs and code look:
 | **Font** › **Family** | The font for diffs, file views, and code in chat. Leave it empty to use the terminal's font | Empty |
 | **Font** › **Size** | Text size in diffs and file views, from 10 to 24 | 13 |
 
-To switch a single diff without changing the default, use the layout button on the file's header in the Changes overlay. See [Review changes](/kepler/review-changes).
+To switch a single diff without changing the default, use the layout button on the file's header in the Changes overlay. See [Review What a Coding Agent Changed](/kepler/review-changes).
 
 ***
 

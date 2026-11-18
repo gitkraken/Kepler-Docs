@@ -322,7 +322,7 @@ The task appears in the **Tasks** view right away, with the **Preparing** pill u
   <figcaption style="text-align:center; color:#888">The task page, with the context panel beside an open session.</figcaption>
 </figure>
 
-From there you can add more sessions, attach more resources, and review what the agent changed. See [Agent Sessions](/kepler/agent-sessions) and [Review Changes](/kepler/review-changes).
+From there you can add more sessions, attach more resources, and review what the agent changed. See [Agent Sessions](/kepler/agent-sessions) and [Review What a Coding Agent Changed](/kepler/review-changes).
 
 ### Context: what gets handed to the agent
 

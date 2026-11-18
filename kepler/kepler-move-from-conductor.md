@@ -112,9 +112,9 @@ After the import, continue each chat in Kepler or in Conductor, not both. Both a
 
 ## What to do next in Kepler
 
-- **Start new work from your issues.** Connect your tracker and start tasks from the **Todo** view, with the issue attached. See [Start a Coding Agent from a Jira or GitHub Issue](/kepler/kepler-start-agent-from-issue-to-pull-request).
+- **Start new work from your issues.** Connect your tracker and start tasks from the **Todo** view, with the issue attached. See [Start a Coding Agent from a Jira or GitHub Issue and Take It to a Pull Request](/kepler/kepler-start-agent-from-issue-to-pull-request).
 - **Run Actions.** Fire **Plan**, **Implement**, **Review**, or your own Actions at a task instead of retyping prompts. See [Actions](/kepler/actions).
-- **Review each task's changes.** Read the diff in the **Changes** overlay, send comments back to the agent, and commit. See [Review Changes](/kepler/review-changes).
+- **Review each task's changes.** Read the diff in the **Changes** overlay, send comments back to the agent, and commit. See [Review What a Coding Agent Changed](/kepler/review-changes).
 - **Set up new worktrees.** Run a setup command each time Kepler creates a worktree with **Run on worktree creation**, and copy git-ignored files such as `.env` with a `.worktreeinclude` file. See [Repository Settings](/kepler/settings-repositories) and [Tasks and Resources](/kepler/tasks-and-resources).
 
 ***
@@ -149,6 +149,6 @@ Kepler can also import workspaces from Orca, herdr, and Vibe Kanban, in the same
 - [Tasks and Resources](/kepler/tasks-and-resources)
 - [Agent Sessions](/kepler/agent-sessions)
 - [Actions](/kepler/actions)
-- [Review What a Coding Agent Changed in Kepler](/kepler/review-changes)
+- [Review What a Coding Agent Changed](/kepler/review-changes)
 - [Getting Started with Kepler](/kepler/kepler-getting-started)
 - [Kepler Quick Answers: Running Coding Agents](/kepler/quick-answers)

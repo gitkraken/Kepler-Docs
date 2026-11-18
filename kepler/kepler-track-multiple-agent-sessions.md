@@ -147,7 +147,7 @@ On the Dashboard, a task's preview shows each worktree with chips for its uncomm
   <figcaption style="text-align:center; color:#888">A task's sessions and its worktree under Changes.</figcaption>
 </figure>
 
-See [Review Changes](/kepler/review-changes) to read the diff, comment on it, and commit.
+See [Review What a Coding Agent Changed](/kepler/review-changes) to read the diff, comment on it, and commit.
 
 ***
 
@@ -178,11 +178,11 @@ Yes. Each task gets its own worktree, so Claude Code and Codex can each work in 
 ## Related pages
 
 - [Agent Sessions](/kepler/agent-sessions)
-- [Create a Task](/kepler/create-task)
+- [Create a task](/kepler/create-task)
 - [Tasks and Resources](/kepler/tasks-and-resources)
 - [Arranging Your Work](/kepler/arranging-your-work)
 - [The Agent Graph](/kepler/agent-graph)
 - [Ask Kepler](/kepler/ask-kepler)
-- [Review Changes](/kepler/review-changes)
-- [Manage Claude Code and Codex Sessions Across Accounts and SSH Hosts in Kepler](/kepler/kepler-manage-agents-across-accounts-and-ssh-hosts)
+- [Review What a Coding Agent Changed](/kepler/review-changes)
+- [Manage Claude Code and Codex Sessions Across Accounts and SSH Hosts](/kepler/kepler-manage-agents-across-accounts-and-ssh-hosts)
 - [Kepler Quick Answers: Running Coding Agents](/kepler/quick-answers)

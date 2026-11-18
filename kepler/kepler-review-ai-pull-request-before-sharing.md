@@ -75,7 +75,7 @@ The agent makes its changes in the task's worktree. To read them:
   <figcaption style="text-align:center; color:#888">The Changes overlay lists every changed file beside its diff.</figcaption>
 </figure>
 
-See [Review Changes](/kepler/review-changes#the-changes-overlay) for the overlay's views, layouts, and keyboard controls.
+See [Review What a Coding Agent Changed](/kepler/review-changes#the-changes-overlay) for the overlay's views, layouts, and keyboard controls.
 
 ***
 
@@ -160,7 +160,7 @@ Yes. Write it in the description yourself, or use an Action created from the **O
 
 ## Related pages
 
-- [Review What a Coding Agent Changed in Kepler](/kepler/review-changes)
+- [Review What a Coding Agent Changed](/kepler/review-changes)
 - [Actions](/kepler/actions)
 - [Create a task](/kepler/create-task)
 - [Agent Sessions](/kepler/agent-sessions)
