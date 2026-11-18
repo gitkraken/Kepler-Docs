@@ -70,7 +70,7 @@ The agent makes its changes in the task's worktree. To read them:
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/changes-overlay-maximize-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/changes-overlay-maximize-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total open over the task page at its default width, with the task page showing dimmed around it, and the Maximize button in the overlay's header ringed and hovered, its tooltip reading Maximize. The header also reads from main and Up to date. The overlay's side list has the view switch's icon buttons (Changes 2, Files, Comments) over a card holding Working chang� with its Commit� button and main branched here, then the file toolbar and the two changed files, beside cart.js's diff.">
+    <img src="/wp-content/uploads/changes-overlay-maximize-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total open over the task page at its default width, with the task page showing dimmed around it, and the Maximize button in the overlay's header ringed and hovered, its tooltip reading Maximize. The header also reads from main and Up to date. The overlay's side list has the view switch's icon buttons (Changes 2, Files, Comments) over a card holding Working chang… with its Commit… button and main branched here, then the file toolbar and the two changed files, beside cart.js's diff.">
   </a>
   <figcaption style="text-align:center; color:#888">The Changes overlay lists every changed file beside its diff.</figcaption>
 </figure>
