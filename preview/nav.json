@@ -1,5 +1,5 @@
 {
-  "site": "Kepler Docs \u2014 local preview",
+  "site": "Kepler Docs — local preview",
   "note": "This file is the proposed left-nav structure for the WordPress help center. It lives here because the real nav is built in WordPress and not in this repo. Edit it, re-run build.py, and reload index.html.",
   "sections": [
     {
@@ -29,6 +29,19 @@
         "kepler-automations.md",
         "review-changes.md",
         "voice-input.md"
+      ]
+    },
+    {
+      "title": "Agent Workflows in Kepler",
+      "pages": [
+        "kepler-move-from-conductor.md",
+        "kepler-run-coding-agents-in-parallel-on-windows.md",
+        "kepler-set-up-agent-worktrees-automatically.md",
+        "kepler-manage-agents-across-accounts-and-ssh-hosts.md",
+        "kepler-track-multiple-agent-sessions.md",
+        "kepler-approve-agent-requests-from-your-phone.md",
+        "kepler-start-agent-from-issue-to-pull-request.md",
+        "kepler-review-ai-pull-request-before-sharing.md"
       ]
     },
     {
@@ -63,7 +76,7 @@
       ]
     },
     {
-      "title": "Retired \u2014 preview only, not in the site nav",
+      "title": "Retired — preview only, not in the site nav",
       "preview_only": true,
       "pages": [
         "workflow-views.md",

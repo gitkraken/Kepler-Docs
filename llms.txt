@@ -2,12 +2,12 @@
 
 > Kepler is GitKraken's Agentic Development Environment (ADE). It pulls every issue and pull request assigned to you into one place, then hands any of it to the coding agent you already use (Claude Code, Codex, Copilot, Cursor, Auggie, OpenCode, Grok Build, Pi, or Google Antigravity) with the context already attached.
 
-Scope: 30 pages included. Excluded (3): environment-and-setup.md, kepler-New-Page-Template.md, workflow-views.md.
+Scope: 38 pages included. Excluded (3): environment-and-setup.md, kepler-New-Page-Template.md, workflow-views.md.
 
 ## Getting Started
 
 - [Getting Started with Kepler](https://help.gitkraken.com/kepler/kepler-getting-started/): Install Kepler on Windows, macOS, or Linux, connect an agent and your trackers, and put an agent on real work in a few minutes.
-- [Quick Answers](https://help.gitkraken.com/kepler/quick-answers/): Short answers to common Kepler questions, each linked to the full page. Run agents on Windows, in WSL, or on another machine, use several accounts of one agent, check on agents from your phone, set up and copy files into every new worktree automatically, and have a second agent review the work.
+- [Kepler Quick Answers: Running Coding Agents](https://help.gitkraken.com/kepler/quick-answers/): In Kepler, run coding agents on Windows, in WSL or over SSH, use several accounts, answer agents from your phone, prepare each worktree and review the work.
 
 ## Core Concepts
 
@@ -24,8 +24,19 @@ Scope: 30 pages included. Excluded (3): environment-and-setup.md, kepler-New-Pag
 - [Agent Sessions](https://help.gitkraken.com/kepler/agent-sessions/): An agent session is one running conversation with a coding agent inside a task. Learn how to start one, pick the agent and account (including several accounts of the same agent), queue prompts, answer the agent's questions and permission requests, track usage limits, and keep sessions running through restarts.
 - [Ask Kepler](https://help.gitkraken.com/kepler/ask-kepler/): Ask Kepler is a chat and a terminal in a panel beside whatever you're looking at. Ask what needs you, have it check on your tasks and sessions, set up an automation, hand a chat on to a new task, or open a quick shell that belongs to no task.
 - [Automations](https://help.gitkraken.com/kepler/kepler-automations/): Have Kepler run an Action or your own prompt on a schedule, or when new GitHub or Jira activity matches a query. Create an automation from a template or by describing it, follow its runs, and fix a run that did not start.
-- [Review Changes](https://help.gitkraken.com/kepler/review-changes/): Review what an agent changed. Read the diff in the Changes overlay, comment on it, stage and commit, update the branch from its base, resolve update conflicts with AI, and hand the rest to AI Sync or AI Compose.
+- [Review What a Coding Agent Changed in Kepler](https://help.gitkraken.com/kepler/review-changes/): In Kepler, review what a coding agent changed. Read its diff in the task's worktree in the Changes overlay, then comment on it, stage it and commit it.
 - [Dictation and Read Aloud](https://help.gitkraken.com/kepler/voice-input/): Dictate to an agent instead of typing, and have its replies read aloud. Dictation transcribes on your device with Qwen3-ASR, or with Whisper where WebGPU is unavailable, learns the words you fix, and works push-to-talk or hands-free; read aloud uses your system's voices or Kokoro. Both work in remote windows.
+
+## Agent Workflows in Kepler
+
+- [Move from Conductor to Kepler](https://help.gitkraken.com/kepler/kepler-move-from-conductor/): In Kepler, import your Conductor workspaces on macOS as tasks, in the same folders and branches, with their Claude Code and Codex chats ready to continue.
+- [Run Multiple Coding Agents in Parallel on Windows with Kepler](https://help.gitkraken.com/kepler/kepler-run-coding-agents-in-parallel-on-windows/): Kepler has a native Windows installer. Run Claude Code, Codex and 7 more coding agents side by side on Windows, each task in its own Git worktree.
+- [Set Up Every New Agent Worktree Automatically in Kepler](https://help.gitkraken.com/kepler/kepler-set-up-agent-worktrees-automatically/): In Kepler, copy .env files into each new agent worktree with .worktreeinclude and run installs on worktree creation, for Claude Code, Codex and more.
+- [Manage Claude Code and Codex Sessions Across Accounts and SSH Hosts in Kepler](https://help.gitkraken.com/kepler/kepler-manage-agents-across-accounts-and-ssh-hosts/): In Kepler, run Claude Code and Codex sessions on several accounts and on SSH hosts, pick the account per session, and move a conversation to another account.
+- [Keep Track of Several Claude Code and Codex Sessions in Kepler](https://help.gitkraken.com/kepler/kepler-track-multiple-agent-sessions/): In Kepler, track several Claude Code and Codex sessions at once, with 1 task per worktree, a Dashboard of who needs you, and each worktree's changes.
+- [Approve Coding Agent Requests from Your Phone with Kepler](https://help.gitkraken.com/kepler/kepler-approve-agent-requests-from-your-phone/): In Kepler, turn on Remote Access and pair your phone to see what Claude Code, Codex and other agents are doing and answer their permission requests.
+- [Start a Coding Agent from a Jira or GitHub Issue and Take It to a Pull Request in Kepler](https://help.gitkraken.com/kepler/kepler-start-agent-from-issue-to-pull-request/): In Kepler, start a coding agent from a Jira, GitHub, or Linear issue with the ticket attached, then take the work to a pull request without copying the ticket.
+- [Review an AI-Written Pull Request Before Your Teammates Do, in Kepler](https://help.gitkraken.com/kepler/kepler-review-ai-pull-request-before-sharing/): In Kepler, review an AI agent's work yourself before you open a pull request. Read every line, comment, get a second agent's review, then open it.
 
 ## Integrations
 

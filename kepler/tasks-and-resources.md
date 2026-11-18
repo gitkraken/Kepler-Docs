@@ -242,7 +242,7 @@ An attached folder that was removed stays on the task the same way. If you start
 
 A new worktree is a clean checkout. It has no `node_modules`, no build output, and none of the files your setup script would normally create. An agent that starts there has to install dependencies first, or its first build fails.
 
-To prepare new worktrees automatically, use **Commands**. Save a repository's setup steps once, such as `pnpm install` or a code generation step, and tick **Run on worktree creation**. Each time Kepler creates a worktree for that repository, it runs those commands in order in the new worktree's folder, before the agent starts. To run a command that is not set to run on creation, right-click a worktree in the context panel and choose **Run command here**.
+To prepare new worktrees automatically, use **Commands**. Save a repository's setup steps once, such as `pnpm install` or a code generation step, and tick **Run on worktree creation**. Each time Kepler creates a worktree for that repository, it runs those commands in order in the new worktree's folder, in the background. The agent can start before they finish. To run a command that is not set to run on creation, right-click a worktree in the context panel and choose **Run command here**.
 
 **Copy ignored files such as `.env` into new worktrees.** A new worktree has none of the Git-ignored files in your checkout. List the ones a worktree needs in a `.worktreeinclude` file at the repository's root, in `.gitignore` syntax. Kepler copies the matching files from your checkout into each new worktree, before any **Run on worktree creation** command runs, and never overwrites a file that is already there. Lines that start with `!` are skipped.
 
@@ -489,11 +489,7 @@ To archive or restore a single session, use the session's own menu in the contex
 
 Agents work with tasks through Kepler's own MCP server, `kepler-workspace`. With its tools, an agent can keep the task's resources up to date for you, and can find and coordinate with the rest of your work.
 
-<div class="note" markdown="1">
-
-**Allow-listing the tools by name?** Each tool is named for what it acts on, then what it does, such as `task_get` or `worktree_create`. If an agent's settings allow-list `mcp__kepler-workspace__` tools by name, use the names below.
-
-</div>
+> **Note:** Allow-listing the tools by name? Each tool is named for what it acts on, then what it does, such as `task_get` or `worktree_create`. If an agent's settings allow-list `mcp__kepler-workspace__` tools by name, use the names below.
 
 If you paste a Kepler link to a task or a session into the chat, the agent can use it to find that task or session. Wherever a tool takes a repository, the agent can also name the repository by one of its **Aliases**, which you set on the repository's page in **Settings → Repositories**. See [Settings](/kepler/settings-repositories#edit-a-repository).
 
