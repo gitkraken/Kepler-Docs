@@ -58,7 +58,7 @@ The worktree's menu has these items:
 
 In a narrow column, **Open in** and **Run a command** leave the header. You can still reach both from a right-click or from the tab's own menu.
 
-To open a shell in this checkout, choose **New terminal here** on the worktree's row in the context panel, or press **Cmd/Ctrl+J**. Terminals open in the terminal drawer below the columns, not in the worktree tab. See [The Task View](/kepler/task-view#the-terminal-drawer).
+To open a shell in this checkout, choose **New terminal here** on the worktree's row in the context panel, or press **Ctrl/⌘ + J**. Terminals open in the terminal drawer below the columns, not in the worktree tab. See [The Task View](/kepler/task-view#the-terminal-drawer).
 
 ### The changes panel
 
@@ -81,7 +81,7 @@ In **Changes**, the list shows the branch from the newest work down to where it 
 - **Commits**: every commit the branch adds on top of its merge target, followed by each commit on its own.
 - **branched here**: the merge base, where the branch started.
 
-Click a row to show it. **Shift**-click another row to show everything between them, such as **Working changes** and the newest commits, which the counts read as **Working + {count} commits**. **Cmd/Ctrl**-click adds a row to what you show, or takes it away. A branch with commits opens on **All changes**, and a branch with only uncommitted work opens on **Working changes**. A branch with neither opens on **Files**.
+Click a row to show it. **Shift**-click another row to show everything between them, such as **Working changes** and the newest commits, which the counts read as **Working + {count} commits**. **Ctrl/⌘**-click adds a row to what you show, or takes it away. A branch with commits opens on **All changes**, and a branch with only uncommitted work opens on **Working changes**. A branch with neither opens on **Files**.
 
 What you picked stays picked when an agent edits a file, so the list does not move while you read it.
 
@@ -92,7 +92,7 @@ When you show commits together with uncommitted work, a file that also has uncom
 Commits that the upstream does not have yet show a green dot and line, and read **Not pushed**. To see more about a commit:
 
 - Hover over it to see its card: the author, when it was committed, the full message, the short hash, and its line and file counts.
-- Right-click it, or press **Shift+F10**, to copy its SHA or message. A pushed commit also has **Open commit on {provider}** and **Copy commit URL**.
+- Right-click it, or press **Shift + F10**, to copy its SHA or message. A pushed commit also has **Open commit on {provider}** and **Copy commit URL**.
 
 With a Jira or Jira Server account connected, Jira issue keys in a commit's message become links, and the commit's right-click menu adds **Open issue {issue}** and **Copy issue URL for {issue}**. See [Issue Tracker Integrations](/kepler/issue-tracker-integrations).
 
@@ -129,7 +129,7 @@ In the desktop app, you can review on a second screen: click **Open in new windo
 | The tree | The same view picker, list of changes and file tree as the changes panel, with its own controls. In commit mode, the rows have staging checkboxes and the commit box is below them; in **Comments**, the task's [comment list](#the-comments-view) replaces the tree |
 | The viewer | The diff, or several diffs stacked when you opened a folder or a selection. A single file can show as **File**, the whole file with its changes marked in the gutter, or **Changes**, the diff |
 
-**Hide changes panel**, or **Cmd/Ctrl+B**, hides the tree and gives its width to the viewer. While the tree is hidden, the viewer's header keeps a view picker and a **Jump to file…** switcher, so you can still change what you show and which file. The picker lists the rows of **Changes**, then **All files**, where **Jump to file…** finds any file in the worktree.
+**Hide changes panel**, or **Ctrl/⌘ + B**, hides the tree and gives its width to the viewer. While the tree is hidden, the viewer's header keeps a view picker and a **Jump to file…** switcher, so you can still change what you show and which file. The picker lists the rows of **Changes**, then **All files**, where **Jump to file…** finds any file in the worktree.
 
 With the tree hidden, the overlay's header also adds a Comments menu, with the count of open comments, that lists the task's comments by file. Click a comment to go to its lines, or click **Open in panel** to show the [Comments view](#the-comments-view).
 
@@ -151,18 +151,18 @@ The overlay's header shows the branch the changes are measured against, **from {
 | Gesture | What it does |
 |---|---|
 | Click a file | Opens it on its own |
-| **Cmd/Ctrl**-click | Adds a file to the set on screen |
+| **Ctrl/⌘**-click | Adds a file to the set on screen |
 | **Shift**-click | Extends the selection to a range |
 | Click a folder | Opens the changed files in it, stacked |
 | Type a name in the tree | Jumps to the first file that starts with it |
-| **Alt+↑** / **Alt+↓** | Previous and next file |
-| **F7** / **Shift+F7** | Next and previous change, carrying on into the next file that has one |
-| **Cmd/Ctrl+Shift+A** | **Open all changes** |
-| **Cmd/Ctrl+B** | Shows or hides the changes panel |
-| **F6** / **Shift+F6** | Moves between the header, the tree, the commit message and the viewer |
-| **Cmd/Ctrl+P** | **Filter files**, or **Jump to file…** when the tree is hidden |
-| **Cmd/Ctrl+F** | Filters the tree when the tree has focus, and finds in the code anywhere else |
-| **↑** / **↓** in read-only code | Moves the line highlight. **Shift+↑** / **Shift+↓** extends it, and **C** comments on it |
+| **Alt/⌥ + ↑** / **Alt/⌥ + ↓** | Previous and next file |
+| **F7** / **Shift + F7** | Next and previous change, carrying on into the next file that has one |
+| **Ctrl/⌘ + Shift + A** | **Open all changes** |
+| **Ctrl/⌘ + B** | Shows or hides the changes panel |
+| **F6** / **Shift + F6** | Moves between the header, the tree, the commit message and the viewer |
+| **Ctrl/⌘ + P** | **Filter files**, or **Jump to file…** when the tree is hidden |
+| **Ctrl/⌘ + F** | Filters the tree when the tree has focus, and finds in the code anywhere else |
+| **↑** / **↓** in read-only code | Moves the line highlight. **Shift + ↑** / **Shift + ↓** extends it, and **C** comments on it |
 | **←** / **→** in a split diff | Switches the line highlight between the old and new side |
 | **Escape** | Clears a line selection, leaves commit mode, then closes the overlay. With an unsaved edit, it asks first |
 
@@ -194,20 +194,20 @@ If you select several rows, the menu items act on all of them.
 
 ### Finding in the code
 
-**Cmd/Ctrl+F** in the viewer opens a find bar at the viewer's top right. The find bar searches every file in the stack, including your edits, and counts the matches as **{current} of {total}**, or **No results**.
+**Ctrl/⌘ + F** in the viewer opens a find bar at the viewer's top right. The find bar searches every file in the stack, including your edits, and counts the matches as **{current} of {total}**, or **No results**.
 
 **Only in changes** searches only the changes: the changed lines and the context lines shown around them. Turn it off to search whole files, including the unchanged lines folded away. It starts on for a stack of files and off for a single file.
 
 Use these keys in the find bar:
 
-| Control | Windows and Linux | macOS |
-|---|---|---|
-| Next match | **F3** | **Cmd+G** |
-| Previous match | **Shift+F3** | **Cmd+Shift+G** |
-| **Match case** | **Alt+C** | **Cmd+Option+C** |
-| **Match whole word** | **Alt+W** | **Cmd+Option+W** |
-| **Use regular expression** | **Alt+R** | **Cmd+Option+R** |
-| **Only in changes** | **Alt+L** | **Cmd+Option+L** |
+| Control | Shortcut |
+|---|---|
+| Next match | **F3**, or **⌘ + G** on macOS |
+| Previous match | **Shift + F3**, or **⌘ + Shift + G** on macOS |
+| **Match case** | **Alt + C**, or **⌘ + ⌥ + C** on macOS |
+| **Match whole word** | **Alt + W**, or **⌘ + ⌥ + W** on macOS |
+| **Use regular expression** | **Alt + R**, or **⌘ + ⌥ + R** on macOS |
+| **Only in changes** | **Alt + L**, or **⌘ + ⌥ + L** on macOS |
 
 **Escape** closes the bar. Kepler remembers the toggles. If you select text on one line before you open the bar, the selection fills the search field.
 
@@ -222,11 +222,11 @@ You can select and copy across a whole file, including lines that are not on scr
 
 ### Editing in place
 
-In **Working changes** and **All changes**, the viewer shows the file on disk. To edit it, click into the diff, or into the whole file in **File** view, and type. **Cmd/Ctrl+S** saves.
+In **Working changes** and **All changes**, the viewer shows the file on disk. To edit it, click into the diff, or into the whole file in **File** view, and type. **Ctrl/⌘ + S** saves.
 
 An unsaved edit shows **Unsaved** with **Save** and **Discard** beside it. Kepler never discards an edit without asking: **Escape**, closing the overlay or the window, or moving to another file, view, or worktree asks **Save your edit?** first. Quitting Kepler warns you when windows have unsaved file edits, because quitting discards them. Switching between **File** and **Changes** carries the edit across instead. You cannot stage or commit a file with an unsaved edit until you save or discard it, because Git records what is on disk.
 
-**Editing a file from a commit.** A file shown from a commit you picked in the list is read-only, but you can switch it to the file on disk: click **Edit** in its header, choose **Edit working copy** from its row menu, or press **Cmd/Ctrl+E**.
+**Editing a file from a commit.** A file shown from a commit you picked in the list is read-only, but you can switch it to the file on disk: click **Edit** in its header, choose **Edit working copy** from its row menu, or press **Ctrl/⌘ + E**.
 
 The file opens in **File** view, marked **Working**, ready to edit. Switch the file to **Changes** to see the diff counted from where the commit view started. **Stop editing** returns to the file as committed.
 
@@ -310,9 +310,9 @@ To start a comment, do one of the following:
 | To comment on | Do this |
 |---|---|
 | One line | Hover it and click the **+** beside its line number |
-| A range | Click the **+** on the first line, then **Shift**-click the last, or extend with **Shift+↑** / **Shift+↓** |
+| A range | Click the **+** on the first line, then **Shift**-click the last, or extend with **Shift + ↑** / **Shift + ↓** |
 | The line highlight | Move it with **↑** / **↓** in read-only code, then press **C** |
-| What you selected in the editor | **Cmd/Ctrl+Shift+C**, which also works on the line the caret is on |
+| What you selected in the editor | **Ctrl/⌘ + Shift + C**, which also works on the line the caret is on |
 
 You can comment in **Changes**, whatever you picked in its list, and in **Files**, including on a file shown whole, such as a new file. A file attached to the task, open in its tab, accepts comments too, and so does a file in the file viewer. Notes take comments too. See [Comment on a note](#comment-on-a-note). The file's header and its tree row show how many comments the file has.
 
@@ -324,8 +324,8 @@ To finish the draft, follow these steps:
 
 1. Type your note. A comment with no note sends the selected lines as context.
 2. Choose how it goes:
-   - **Add comment**, or **Cmd/Ctrl+Enter**, adds it to that session's queue.
-   - **Send now**, or **Cmd/Ctrl+Shift+Enter**, sends it to the session at once.
+   - **Add comment**, or **Ctrl/⌘ + Enter**, adds it to that session's queue.
+   - **Send now**, or **Ctrl/⌘ + Shift + Enter**, sends it to the session at once.
 3. To send the queued comments, press **Send comments ({count})** in the overlay's header, or send your next prompt in that session.
 
 Queued comments show as a **{count} comments** chip in that session's composer and go out with its next prompt. The header's **Send comments ({count})** sends every queued comment on the task, in one prompt for each session. When the session is not on screen, a notification offers **Open** to go to it. Each comment reaches the agent with its file, lines, the code, and your note.
@@ -364,7 +364,7 @@ The agent answers a comment you sent in a thread under it, and it can resolve th
   <figcaption style="text-align:center; color:#888">A sent comment with the agent's reply.</figcaption>
 </figure>
 
-- **Reply**: type in **Reply to {agent}** and press **Reply**, or **Cmd/Ctrl+Enter**. The reply goes to the session the comment was last sent to. If that session is gone, Kepler asks you to choose another.
+- **Reply**: type in **Reply to {agent}** and press **Reply**, or **Ctrl/⌘ + Enter**. The reply goes to the session the comment was last sent to. If that session is gone, Kepler asks you to choose another.
 - **Resolve** closes the comment, and **Reopen** opens it again. A resolved card starts collapsed.
 - **Unread replies**: a card with replies you have not read shows **{count} new replies** and marks each one **New**. To change this yourself, use **Mark as read** or **Mark as unread**.
 
@@ -443,7 +443,7 @@ To discard changes:
 - **Discard changes** on a row, or **Delete** on a focused row (**Backspace** on a Mac), asks first. Your current version goes to the Trash (the Recycle Bin on Windows), so you can get it back. If Kepler cannot use the Trash, the confirmation says the change is permanent.
 - On a file with staged and unstaged changes, discarding removes only the unstaged changes. Discard again to remove the staged ones too.
 - **Discard folder**, in a folder's menu, discards the files under it.
-- **Discard** in the tree's toolbar discards the selected files, or every listed file when nothing is selected. Its label says which, and it asks first. To discard every listed file instead of the selection, **Alt**-click it (**Option**-click on a Mac).
+- **Discard** in the tree's toolbar discards the selected files, or every listed file when nothing is selected. Its label says which, and it asks first. To discard every listed file instead of the selection, **Alt/⌥**-click it.
 - **Discard** is unavailable on a conflicted file until you resolve the conflicts.
 - **Delete** in the row menu moves the file to the Trash, and Git reports the deletion like any other.
 
@@ -453,7 +453,7 @@ The commit box looks like the prompt composer: one message field whose first lin
 
 | Control | What it does |
 |---|---|
-| The message field | **Cmd/Ctrl+Enter** commits |
+| The message field | **Ctrl/⌘ + Enter** commits |
 | **Amend last commit** | Rewrites the last commit instead of adding one. Ticking it fills an empty box with the last commit's message and changes the button to **Amend commit** |
 | **Commit** | Commits what is staged |
 
@@ -727,7 +727,7 @@ The Dashboard's task preview shows each worktree as a two-row **worktree button*
 - The bottom row: chips for the uncommitted files, the commits, and the merge target, with **Open in** and **Run** beside them. Each chip has a hover card that says what a click does, and a right-click menu of its own.
 - A task with several worktrees shows one worktree button at a time, with **Show all {count} worktrees** on its leading edge. The branch name switches between them, and its list sets apart worktrees that are **Merged** or **Gone from disk**. **Auto-switch to active worktree** lets it follow whichever worktree is busiest.
 
-Click the uncommitted or commits chip to open that worktree's changes panel, showing those changes, in a side pane of the task panel, without going to the task page first. Its files open the same Changes overlay. Click the chip again to close the pane, or press **Cmd/Ctrl+Shift+G** to show or hide it. See [The Kepler Interface](/kepler/kepler-interface).
+Click the uncommitted or commits chip to open that worktree's changes panel, showing those changes, in a side pane of the task panel, without going to the task page first. Its files open the same Changes overlay. Click the chip again to close the pane, or press **Ctrl/⌘ + Shift + G** to show or hide it. See [The Kepler Interface](/kepler/kepler-interface).
 
 A file or folder in a worktree opens in the Changes overlay too, wherever you open it by its path, such as a file path in a terminal or **Open in Changes** on an attached file's tab. On the task page, only the task's attached files and folders open as tabs; any other file in a worktree opens here. A file opens in **File** view, at its line: on **Working changes** when it has uncommitted changes, and on **Files** otherwise. A folder opens on **Files**, with its changed files stacked.
 

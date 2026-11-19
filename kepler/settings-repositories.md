@@ -140,7 +140,7 @@ To add a command, click **Add command** in the **Commands** section of the Edit 
 | Command | The shell command, for example `pnpm install`. Its **Variables** menu inserts any of the variables below |
 | **Run on worktree creation** | Runs the command each time Kepler creates a worktree for this repository. Off by default |
 
-To save a row, click **Add command** (or **Save** on a stored command), or press **⌘ Enter** (**Ctrl + Enter** on Windows and Linux). Each command saves on its own.
+To save a row, click **Add command** (or **Save** on a stored command), or press **Ctrl/⌘ + Enter**. Each command saves on its own.
 
 Commands accept 4 variables, which Kepler fills in when the command runs:
 
@@ -151,7 +151,7 @@ Commands accept 4 variables, which Kepler fills in when the command runs:
 | `<SOURCE_PATH>` | Where files come from (the main repo, or the source worktree when forking) |
 | `<WORKTREE_PATH>` | The new worktree folder |
 
-To reorder commands, drag a row by its handle, or move it from the keyboard with **Alt + ↑** and **Alt + ↓**. A new order saves at once. The order sets the order of the **Run** menu, and the order in which commands set to run on worktree creation run.
+To reorder commands, drag a row by its handle, or move it from the keyboard with **Alt/⌥ + ↑** and **Alt/⌥ + ↓**. A new order saves at once. The order sets the order of the **Run** menu, and the order in which commands set to run on worktree creation run.
 
 A row needs both a name and a command before you can save it. A closed row that is not saved yet shows **Not saved**. **Remove command** deletes a saved command, and the notification that follows offers **Undo**.
 

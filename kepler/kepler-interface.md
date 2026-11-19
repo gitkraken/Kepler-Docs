@@ -41,12 +41,12 @@ At the trailing end:
 - Your setup progress, until you finish the primary setup steps
 - **Stop reading**, on every page while Kepler reads an agent's reply aloud. Click it to stop. Hover it to see the sentence being read. See [Read aloud](/kepler/voice-input#read-aloud).
 - **Tasks that need you**, which shows how many tasks need you. See [Tasks that need you](#tasks-that-need-you).
-- **Ask Kepler** (**Cmd/Ctrl+K** or **Cmd/Ctrl+L**), shown as Kep, Kepler's mascot, with the word **Ask**. It opens a chat and quick terminals in a panel beside the page. See [Ask Kepler](/kepler/ask-kepler).
+- **Ask Kepler** (**Ctrl/⌘ + K** or **Ctrl/⌘ + L**), shown as Kep, Kepler's mascot, with the word **Ask**. It opens a chat and quick terminals in a panel beside the page. See [Ask Kepler](/kepler/ask-kepler).
 - Feedback
 - Settings
 - Your account
 
-The **Ask Kepler** button also shows the state of the panel's chats. When a chat needs you, has a new reply, or failed, the button becomes a **Needs you**, **New reply**, or **Failed** pill. Click the pill to open that chat. A focused shell keeps **Ctrl+L** for itself, so use **Ctrl+K** there.
+The **Ask Kepler** button also shows the state of the panel's chats. When a chat needs you, has a new reply, or failed, the button becomes a **Needs you**, **New reply**, or **Failed** pill. Click the pill to open that chat. On Windows and Linux, a focused shell keeps **Ctrl + L** for itself, so use **Ctrl + K** there.
 
 While an update downloads, a chip near the trailing end of the top bar shows its progress. Hover the chip to see the version and about how long is left. You can keep working meanwhile.
 
@@ -100,7 +100,7 @@ To switch to another Kepler window, use one of these:
 - The tray icon's **Windows** submenu. See [The tray icon](#the-tray-icon).
 - **Switch to window: {name}** in the command palette. See [Go to a task or file](#go-to-a-task-or-file).
 
-**New Window** (**Cmd/Ctrl+Shift+N**), in the **File** menu, opens another window on the same connection as this one. In a remote window, **New Local Window** opens a window on this computer instead.
+**New Window** (**Ctrl/⌘ + Shift + N**), in the **File** menu, opens another window on the same connection as this one. In a remote window, **New Local Window** opens a window on this computer instead.
 
 Each window's title starts with how many of its sessions are waiting on you and the remote it's connected to. With more than one [profile](/kepler/kepler-profiles), the title also names the window's profile. Each window keeps its own layout.
 
@@ -134,7 +134,7 @@ The app icon shows how many tasks need you: as a badge on the macOS Dock icon, o
 
 ### New task
 
-**New task** (**Cmd/Ctrl+N**) opens the **New task** composer. To start a task from a conversation you began outside Kepler, use **Open an external session** in the composer. See [Create a task](/kepler/create-task#from-a-session-you-already-started).
+**New task** (**Ctrl/⌘ + N**) opens the **New task** composer. To start a task from a conversation you began outside Kepler, use **Open an external session** in the composer. See [Create a task](/kepler/create-task#from-a-session-you-already-started).
 
 ***
 
@@ -255,7 +255,7 @@ Right-click a Todo row to open its menu. It holds:
 
 - **Open task page**, when the item already has a task
 - **Open on {provider}**
-- **Copy link** (**Cmd/Ctrl+C** on a focused row)
+- **Copy link** (**Ctrl/⌘ + C** on a focused row)
 - **Copy title**
 - **Copy number**
 - **Copy branch name**, on a pull request
@@ -337,14 +337,14 @@ To manage a task, open its **⋮** menu or right-click its row. The menu holds:
 - **Move up**, **Move down**, and **Move to top of {section}**, while the list is sorted by **Manual**. See [Arranging Your Work](/kepler/arranging-your-work#sort).
 - **Manage resources**, which opens the task's **Resources** screen
 - **Refresh**, which re-reads the task's worktrees and its linked pull requests and issues
-- **Copy task link** (**Cmd/Ctrl+C** on a focused row), a `kepler://` link to the task
+- **Copy task link** (**Ctrl/⌘ + C** on a focused row), a `kepler://` link to the task
 - **Copy task prompt**
 - **Panel**, a submenu with the panel's own items, on a task open in a panel. See [The side panel](#the-side-panel).
 - **Shut down all agents**, which asks first while an agent is still working
 - **Archive task**, or **Restore task** when the task is already archived
 - **Delete task**
 
-**Act on several tasks at once.** Open 2 or more tasks with **Shift-click** or **Cmd/Ctrl-click** (see [Open a panel](#open-a-panel)), then right-click any of them. The menu acts on the whole selection, and each label counts the tasks:
+**Act on several tasks at once.** Open 2 or more tasks with **Shift-click** or **Ctrl/⌘-click** (see [Open a panel](#open-a-panel)), then right-click any of them. The menu acts on the whole selection, and each label counts the tasks:
 
 - **Progress of {count} tasks**, which sets the stage of every selected task
 - **Mark {count} tasks as read** or **Mark {count} tasks as unread**
@@ -440,7 +440,7 @@ You can change all of these defaults. See [Actions](/kepler/actions).
 
 - **Click a row** to select it and open the side panel. A plain click replaces whatever was open, except for panels you've pinned.
 - **Shift-click** a second row to open both side by side. The panel holds one column per open item, each with its own chat, so you can work several tasks at once without leaving the list.
-- **Cmd-click** (**Ctrl-click** on Windows and Linux) to add one row to the open set, or to close it again.
+- **Ctrl/⌘-click** to add one row to the open set, or to close it again.
 - **Double-click a row** to open the item's full task page. From a Todo row that's the page of the task behind it. A row with no task yet has no page, so a double-click opens its panel with the cursor in the prompt box instead.
 
 **From the keyboard**, the list is a single tab stop. Move through it like a tree with these keys:
@@ -454,11 +454,11 @@ You can change all of these defaults. See [Actions](/kepler/actions).
 | **Page Up** / **Page Down** | Move by a screenful |
 | **Space** | Open the focused row's panel, or close it if it's open |
 | **Enter** | On a row whose panel is open, move focus into that panel |
-| **Alt+Enter** | Open the item's task page, like a double-click |
+| **Alt/⌥ + Enter** | Open the item's task page, like a double-click |
 
 On the **Board** layout, **←** and **→** move between columns. **Tab** leaves the list.
 
-**Alt+Shift+↑** and **Alt+Shift+↓** (**⌥⇧↑** and **⌥⇧↓** on macOS) open the previous or next item in the list.
+**Alt/⌥ + Shift + ↑** and **Alt/⌥ + Shift + ↓** open the previous or next item in the list.
 
 A new task appears in the list as soon as you press **Start** in the **New task** composer. While Kepler sets it up, its row shows a **Preparing** pill, and its panel shows each step, with **Cancel** while a repository clones. If setup fails, the row shows **Failed**. Choose **Edit and retry** to change the task and start it again, or **Dismiss**.
 
@@ -482,25 +482,25 @@ Shift-click selects a range from your last plain click, as it does in Finder or 
 
 **Scroll.** Once the panel strip grows wider than the window, it scrolls instead of squeezing the columns below a readable width. Scroll it sideways with **Shift** and the mouse wheel, or a sideways trackpad swipe, even over a terminal.
 
-**Reorder.** Drag a panel by its header to a new place in the strip. A panel's **Panel actions** menu (**⋮**) offers **Move panel left** and **Move panel right**, and so do **Cmd/Ctrl+Alt+Shift+←** and **Cmd/Ctrl+Alt+Shift+→**.
+**Reorder.** Drag a panel by its header to a new place in the strip. A panel's **Panel actions** menu (**⋮**) offers **Move panel left** and **Move panel right**, and so do **Ctrl/⌘ + Alt/⌥ + Shift + ←** and **Ctrl/⌘ + Alt/⌥ + Shift + →**.
 
-**Solo.** Once 2 or more panels are open, **Solo panel** in the **⋮** menu (or **Cmd/Ctrl+Shift+M**) widens one panel across the strip. Drag the soloed panel's edges to resize it, or click **Maximize** in its header to fill the space. Click outside it, or click **Unsolo panel** in its header, to put the layout back.
+**Solo.** Once 2 or more panels are open, **Solo panel** in the **⋮** menu (or **Ctrl/⌘ + Shift + M**) widens one panel across the strip. Drag the soloed panel's edges to resize it, or click **Maximize** in its header to fill the space. Click outside it, or click **Unsolo panel** in its header, to put the layout back.
 
-**Move between panels.** **Ctrl+Tab** opens **Recent panels**, a switcher of your open panels and the ones you replaced recently, so you can switch back to an item you moved away from. **Delete** or **Backspace** closes the highlighted panel, or removes it from the list. **Cmd/Ctrl+1** through **Cmd/Ctrl+8** jump to a panel by its position from the left, and **Cmd/Ctrl+9** to the last.
+**Move between panels.** **Ctrl + Tab** opens **Recent panels**, a switcher of your open panels and the ones you replaced recently, so you can switch back to an item you moved away from. **Delete** or **Backspace** closes the highlighted panel, or removes it from the list. **Ctrl/⌘ + 1** through **Ctrl/⌘ + 8** jump to a panel by its position from the left, and **Ctrl/⌘ + 9** to the last.
 
 If you start a task from **New task** while you're on the list, the new task opens as a panel and the list stays where it was, instead of switching to the task's page. The panel opens beside the one you're reading, or at the end in a grid. To always open it at the end, change **Where a new task opens on the Dashboard** in [Settings → Tasks](/kepler/settings-tasks#new-tasks).
 
 **Open several at once.** Each section's header, except **Archived**, has a button that opens that section's rows in panels, up to the panel limit. A group's chip offers **Open group** for its tasks.
 
-**Hide the list.** With at least one panel open, the toggle at the start of the Dashboard header, **Hide list** (**Cmd/Ctrl+B**), hides the list so the panels get the full width. While the list is hidden:
+**Hide the list.** With at least one panel open, the toggle at the start of the Dashboard header, **Hide list** (**Ctrl/⌘ + B**), hides the list so the panels get the full width. While the list is hidden:
 
-- Hover the toggle, now **Dock list**, to see the list float over the panels as the **Task list** (or **Todo list**). **Cmd/Ctrl+Shift+B** shows the floating list or hides it again.
+- Hover the toggle, now **Dock list**, to see the list float over the panels as the **Task list** (or **Todo list**). **Ctrl/⌘ + Shift + B** shows the floating list or hides it again.
 - Click a row in the floating list to open it. The list closes and focus moves into that panel; **Escape** closes the list while focus is in it.
 - Drag the floating list's edge (**Resize list**) to resize it, and double-click the edge to reset it.
 - When a task in the hidden list needs you and has no panel open, the toggle shows its status dot.
-- **Dock list**, or **Cmd/Ctrl+B** again, brings the list back beside the panels.
+- **Dock list**, or **Ctrl/⌘ + B** again, brings the list back beside the panels.
 
-A hidden list always uses the **List** layout. **Cmd/Ctrl+B** works from a terminal on macOS only; on Windows and Linux a focused shell keeps **Ctrl+B**.
+A hidden list always uses the **List** layout. From a terminal, **⌘ + B** works on macOS; on Windows and Linux a focused shell keeps **Ctrl + B**.
 
 When the window is too narrow for the list beside the open panels, Kepler hides the list, and the toggle reads **Show list**. Click it to float the list over the panels. The list returns when you widen the window.
 
@@ -530,7 +530,7 @@ A grid holds up to 16 panels, fewer in smaller windows. In a grid:
 
 - Drag the dividers between grid columns (**Resize grid column**) and rows (**Resize grid row**). Hold **Shift** to resize every track at once, and double-click a divider or press **Home** on it to even them out.
 - Panels that do not fit the grid go on further pages that scroll sideways.
-- Drag a panel by its header to reorder it, row by row. **Move panel up** and **Move panel down** (**Cmd/Ctrl+Alt+Shift+↑** and **Cmd/Ctrl+Alt+Shift+↓**) join the left and right moves.
+- Drag a panel by its header to reorder it, row by row. **Move panel up** and **Move panel down** (**Ctrl/⌘ + Alt/⌥ + Shift + ↑** and **Ctrl/⌘ + Alt/⌥ + Shift + ↓**) join the left and right moves.
 - **Solo panel** spreads one panel over its page.
 - Panels in short cells start with their headers folded, until you unfold them.
 - Clicking rows opens and closes panels the same way as in 1 row. See [Open a panel](#open-a-panel).
@@ -581,7 +581,7 @@ A section appears only when it has something to show:
 | **What's running** | The chat: session tabs and draft session tabs | Always, on an item you can start work on. You can resize it but not fold it |
 | **Plan** | The plan the conversation on screen has proposed | The agent produced one |
 | **Changes** | The checkout's commits, working changes, and file diffs, in the [side pane](#the-side-pane) | You opened a worktree's changes from its worktree button |
-| **Terminals** | Terminal tabs across the task's checkouts, each with its program's status when it reports one | While a terminal is open. **Cmd/Ctrl+J** shows or hides it without stopping the shells |
+| **Terminals** | Terminal tabs across the task's checkouts, each with its program's status when it reports one | While a terminal is open. **Ctrl/⌘ + J** shows or hides it without stopping the shells |
 
 In **Related**, click a live task to open it in the panel, or an archived one to open its task page without restoring it. A task shows its own pull requests and issues as chips instead.
 
@@ -616,7 +616,7 @@ The side panel's header holds:
 - **Unsolo panel** and **Maximize**, while the panel is soloed
 - **Unpin panel**, when the panel is pinned
 - **Panel actions** (**⋮**): **Close panel**, **Open task page**, **Open on {provider}** for an issue or pull request, **Pin panel**, **Solo panel**, **Move panel left**, **Move panel right**, **Close other panels**, and **Close all panels**. On a task, these items are part of its **Task actions** menu
-- **Close panel** (**Cmd/Ctrl+W** on the focused panel), at the end of the row
+- **Close panel** (**Ctrl/⌘ + W** on the focused panel), at the end of the row
 
 An issue or pull request also has a status line with its provider state, session dots, repository, and last activity.
 
@@ -671,8 +671,8 @@ A wide task panel opens the side pane on its own, on the worktree's changes, or 
 
 Click the same chip again to close the pane. To move between the task's linked items and resources without closing the pane, use the switcher in the pane's title row. On the focused panel, 2 shortcuts show or hide the pane:
 
-- **Cmd/Ctrl+Shift+G** shows or hides the worktree's changes.
-- **Cmd/Ctrl+Shift+E** shows or hides the **Resources** list.
+- **Ctrl/⌘ + Shift + G** shows or hides the worktree's changes.
+- **Ctrl/⌘ + Shift + E** shows or hides the **Resources** list.
 
 ### Issue comments
 
@@ -741,10 +741,10 @@ When a task has more than one checkout, the terminal strip's **+** opens a choos
 
 To jump to a task, a pull request or issue, a file, or something said in a chat, or to run a command, open the palette from anywhere. It has 5 tabs: **All**, **Tasks**, **Todo**, **Files**, and **Chats**. To open it:
 
-- **Cmd/Ctrl+Shift+P** or **F1** (**View › Command Palette…**) opens **Go to task or command**, on **All**.
-- **Cmd/Ctrl+P** (**File › Go to File…**) opens **Go to file**, on **Files**.
+- **Ctrl/⌘ + Shift + P** or **F1** (**View › Command Palette…**) opens **Go to task or command**, on **All**.
+- **Ctrl/⌘ + P** (**File › Go to File…**) opens **Go to file**, on **Files**.
 
-To switch tabs, click a tab or press **Shift+Tab**. In an empty field, you can also type **@** for **Files**, **?** for **Chats**, or **>** to show only commands. Press **Backspace** to return to **All**.
+To switch tabs, click a tab or press **Shift + Tab**. In an empty field, you can also type **@** for **Files**, **?** for **Chats**, or **>** to show only commands. Press **Backspace** to return to **All**.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/palette-all-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -774,7 +774,7 @@ To switch tabs, click a tab or press **Shift+Tab**. In an empty field, you can a
 
 **Chats** searches what was said in your agent chats across every task, archived sessions included. Results are grouped by chat, and your own messages show a person icon. Pick a result to open its session at that message.
 
-On **Files** and **Chats**, the scope chip at the end of the tabs names the task being searched, or reads **All tasks**. To search another task, click the chip or press **Alt+S** (**Cmd+Option+S** on macOS), then pick a task or type to find one. To search every task, pick **All tasks** or click the chip's **×**.
+On **Files** and **Chats**, the scope chip at the end of the tabs names the task being searched, or reads **All tasks**. To search another task, click the chip or press **Alt + S**, or **⌘ + ⌥ + S** on macOS, then pick a task or type to find one. To search every task, pick **All tasks** or click the chip's **×**.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/palette-chats-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -783,7 +783,7 @@ On **Files** and **Chats**, the scope chip at the end of the tabs names the task
   <figcaption style="text-align:center; color:#888">The Chats tab, with matches grouped by chat.</figcaption>
 </figure>
 
-**Commands.** To show only commands, type **>** in an empty field, or press **Cmd/Ctrl+Shift+P** again while **All** is showing. Before you type, the list starts with **Suggested**, led by the commands you use most. Each command shows its keyboard shortcut. The list also has a row for each Settings page and for actions such as **Switch to window: {name}**. Press **Enter** to run the highlighted command. To give it a different key, click **Change shortcut** on its row.
+**Commands.** To show only commands, type **>** in an empty field, or press **Ctrl/⌘ + Shift + P** again while **All** is showing. Before you type, the list starts with **Suggested**, led by the commands you use most. Each command shows its keyboard shortcut. The list also has a row for each Settings page and for actions such as **Switch to window: {name}**. Press **Enter** to run the highlighted command. To give it a different key, click **Change shortcut** on its row.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/palette-commands-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
@@ -792,7 +792,7 @@ On **Files** and **Chats**, the scope chip at the end of the tabs names the task
   <figcaption style="text-align:center; color:#888">The palette showing only commands, with Suggested first.</figcaption>
 </figure>
 
-Each row has a menu of its actions, also on **Alt+Enter**. For how a file opens on the task page, see [The Task View](/kepler/task-view#opening-a-file).
+Each row has a menu of its actions, also on **Alt/⌥ + Enter**. For how a file opens on the task page, see [The Task View](/kepler/task-view#opening-a-file).
 
 ***
 
@@ -802,10 +802,10 @@ Each row has a menu of its actions, also on **Alt+Enter**. For how a file opens 
 
 Use these shortcuts to go back and forward:
 
-| Command | Mac | Windows / Linux |
-|---|---|---|
-| **Back** | ⌘ [ | Alt + ← |
-| **Forward** | ⌘ ] | Alt + → |
+| Command | Shortcut |
+|---|---|
+| **Back** | **Alt + ←**, or **⌘ + [** on macOS |
+| **Forward** | **Alt + →**, or **⌘ + ]** on macOS |
 
 The **Back** and **Forward** buttons in the top bar do the same, and so do a mouse's side buttons. On macOS, a sideways swipe on a trackpad or Magic Mouse also goes back and forward.
 

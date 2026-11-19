@@ -45,7 +45,7 @@ The language also applies to Kepler's native dialogs.
 
 ### Chat
 
-**Send messages with** chooses the key that sends a message from the chat box: **Enter**, the default, or **⌘ Enter** (**Ctrl + Enter** on Windows and Linux). With **Enter**, **Shift + Enter** starts a new line. With **⌘ Enter**, **Enter** starts a new line.
+**Send messages with** chooses the key that sends a message from the chat box: **Enter**, the default, or **Ctrl/⌘ + Enter**. With **Enter**, **Shift + Enter** starts a new line. With **Ctrl/⌘ + Enter**, **Enter** starts a new line.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/settings-send-key-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -60,7 +60,7 @@ The language also applies to Kepler's native dialogs.
 
 | Setting | What it controls | Default |
 |---|---|---|
-| **Open files and folders in** | The app that **Open in** and **⌘ ⇧**-click (**Ctrl + Shift**-click on Windows and Linux) on a file link use. The options are **Last used app**, each editor Kepler finds on this machine, and your system's default app | Last used app |
+| **Open files and folders in** | The app that **Open in** and **Ctrl/⌘ + Shift**-click on a file link use. The options are **Last used app**, each editor Kepler finds on this machine, and your system's default app | Last used app |
 
 With your system's default app, files open without line numbers, and folders open in Finder, Explorer, or your file manager. If Kepler cannot open any editor from the window you are in, the setting says so.
 
@@ -325,7 +325,7 @@ The grayed text in **Family** is an example, not the value in effect. If Kepler 
 
 #### Embedded terminals
 
-Each Kepler terminal belongs to a worktree. Opening a terminal starts a shell in that worktree's folder, so you do not need to `cd` into it, and the shell loads your profile the same way an interactive login shell would. Use **⌘ J** to show and hide the terminal panel, **New terminal** to open another terminal, and **Close terminal** to end one.
+Each Kepler terminal belongs to a worktree. Opening a terminal starts a shell in that worktree's folder, so you do not need to `cd` into it, and the shell loads your profile the same way an interactive login shell would. Use **Ctrl/⌘ + J** to show and hide the terminal panel, **New terminal** to open another terminal, and **Close terminal** to end one.
 
 Use terminals for work next to an agent session: running tests while the agent writes code, checking Git state, or reproducing something the session did not show. A terminal starts in one worktree and stays there, so for work that spans several repositories, use a standalone terminal.
 
@@ -402,44 +402,44 @@ A changed row offers **Reset to default**. **Changed only** lists only the short
 
 ### Default shortcuts
 
-The tables list the default keys, Mac symbols first. On Windows and Linux, **⌘** is **Ctrl** and **⌥** is **Alt**, and **⌃** is **Ctrl** on every platform.
+The tables list the default keys.
 
 #### General shortcuts
 
 The **General** group holds app-wide shortcuts:
 
-| Action | Mac | Windows / Linux |
-|---|---|---|
-| Open settings | ⌘ , | Ctrl + , |
-| Toggle Ask Kepler chat | ⌘ K or ⌘ L | Ctrl + K or Ctrl + L |
-| Toggle Ask Kepler terminal | ⌃ ` | Ctrl + ` |
-| New Ask Kepler chat | ⌘ ⇧ K or ⌘ ⇧ L | Ctrl + Shift + K or Ctrl + Shift + L |
-| New task | ⌘ N | Ctrl + N |
-| Open quick launcher (global) | ⇧ ⌥ N | Shift + Alt + N |
-| New window | ⌘ ⇧ N | Ctrl + Shift + N |
-| Quit | ⌘ Q | Ctrl + Q |
-| Zoom in | ⌘ = | Ctrl + = |
-| Zoom out | ⌘ - | Ctrl + - |
-| Reset zoom | ⌘ 0 | Ctrl + 0 |
-| Toggle full screen | ⌘ ⌃ F | F11 |
-| Minimize | ⌘ M | Ctrl + M |
-| Reload | ⌘ R | Ctrl + R |
-| Hide Kepler | ⌘ H | macOS only |
-| Hide others | ⌘ ⌥ H | macOS only |
-| Copy the selection or the focused item | ⌘ C | Ctrl + C |
-| Close window | ⌘ ⇧ W | Ctrl + Shift + W |
-| Toggle terminal | ⌘ J | Ctrl + J |
-| New session | ⌘ T | Ctrl + T |
-| Rename task | F2 | F2 |
-| Delete task | ⌘ ⇧ Backspace | Ctrl + Shift + Backspace |
-| Manage remote environments | ⌘ ⇧ R | Ctrl + Shift + R |
-| Toggle side panel | ⌘ B | Ctrl + B |
-| Open file | ⌘ O | Ctrl + O |
-| Open folder | ⌘ ⇧ O | Ctrl + Shift + O |
-| Go to file | ⌘ P | Ctrl + P |
-| Go to task or command | ⌘ ⇧ P or F1 | Ctrl + Shift + P or F1 |
-| Change search scope | ⌘ ⌥ S | Alt + S |
-| Dismiss / Cancel | Escape | Escape |
+| Action | Shortcut |
+|---|---|
+| Open settings | Ctrl/⌘ + , |
+| Toggle Ask Kepler chat | Ctrl/⌘ + K or Ctrl/⌘ + L |
+| Toggle Ask Kepler terminal | Ctrl + ` |
+| New Ask Kepler chat | Ctrl/⌘ + Shift + K or Ctrl/⌘ + Shift + L |
+| New task | Ctrl/⌘ + N |
+| Open quick launcher (global) | Shift + Alt/⌥ + N |
+| New window | Ctrl/⌘ + Shift + N |
+| Quit | Ctrl/⌘ + Q |
+| Zoom in | Ctrl/⌘ + = |
+| Zoom out | Ctrl/⌘ + - |
+| Reset zoom | Ctrl/⌘ + 0 |
+| Toggle full screen | F11, or ⌘ + ⌃ + F on macOS |
+| Minimize | Ctrl/⌘ + M |
+| Reload | Ctrl/⌘ + R |
+| Hide Kepler | ⌘ + H (macOS only) |
+| Hide others | ⌘ + ⌥ + H (macOS only) |
+| Copy the selection or the focused item | Ctrl/⌘ + C |
+| Close window | Ctrl/⌘ + Shift + W |
+| Toggle terminal | Ctrl/⌘ + J |
+| New session | Ctrl/⌘ + T |
+| Rename task | F2 |
+| Delete task | Ctrl/⌘ + Shift + Backspace |
+| Manage remote environments | Ctrl/⌘ + Shift + R |
+| Toggle side panel | Ctrl/⌘ + B |
+| Open file | Ctrl/⌘ + O |
+| Open folder | Ctrl/⌘ + Shift + O |
+| Go to file | Ctrl/⌘ + P |
+| Go to task or command | Ctrl/⌘ + Shift + P or F1 |
+| Change search scope | Alt + S, or ⌘ + ⌥ + S on macOS |
+| Dismiss / Cancel | Escape |
 
 **Go to task or command** and **Open folder** are also in the app menu, as **View › Command Palette…** and **File › Open Folder…**.
 
@@ -447,20 +447,20 @@ The **General** group holds app-wide shortcuts:
 
 The **Navigation** group moves you between tasks, tabs, and regions:
 
-| Action | Mac | Windows / Linux |
-|---|---|---|
-| Go to next in Needs attention | None | None |
-| Go to next in Unread | None | None |
-| Go to what needs you next | F8 | F8 |
-| Previous tab | ⌘ ⇧ [ | Ctrl + Shift + [ or Ctrl + PageUp |
-| Next tab | ⌘ ⇧ ] | Ctrl + Shift + ] or Ctrl + PageDown |
-| Move tab left | ⌘ ⌥ [ | Ctrl + Alt + [ or Ctrl + Shift + PageUp |
-| Move tab right | ⌘ ⌥ ] | Ctrl + Alt + ] or Ctrl + Shift + PageDown |
-| Focus next region | F6 | F6 |
-| Focus previous region | ⇧ F6 | Shift + F6 |
-| Close tab or panel | ⌘ W | Ctrl + W or Ctrl + F4 |
-| Go back | ⌘ [ | Alt + ← |
-| Go forward | ⌘ ] | Alt + → |
+| Action | Shortcut |
+|---|---|
+| Go to next in Needs attention | None |
+| Go to next in Unread | None |
+| Go to what needs you next | F8 |
+| Previous tab | Ctrl/⌘ + Shift + [, or Ctrl + PageUp on Windows and Linux |
+| Next tab | Ctrl/⌘ + Shift + ], or Ctrl + PageDown on Windows and Linux |
+| Move tab left | Ctrl/⌘ + Alt/⌥ + [, or Ctrl + Shift + PageUp on Windows and Linux |
+| Move tab right | Ctrl/⌘ + Alt/⌥ + ], or Ctrl + Shift + PageDown on Windows and Linux |
+| Focus next region | F6 |
+| Focus previous region | Shift + F6 |
+| Close tab or panel | Ctrl/⌘ + W, or Ctrl + F4 on Windows and Linux |
+| Go back | Alt + ←, or ⌘ + [ on macOS |
+| Go forward | Alt + →, or ⌘ + ] on macOS |
 
 **Go to next in Needs attention** opens the next session waiting on you, and **Go to next in Unread** opens the next unread reply. **Go to what needs you next** (**F8**) does both, waiting sessions first, and skips what is already on screen. **F8** works even from a focused terminal.
 
@@ -468,95 +468,95 @@ The **Navigation** group moves you between tasks, tabs, and regions:
 
 The **Dashboard** group works on the Dashboard's tasks and detail panels:
 
-| Action | Mac | Windows / Linux |
-|---|---|---|
-| Move panel left | ⌘ ⌥ ⇧ ← | Ctrl + Alt + Shift + ← |
-| Move panel right | ⌘ ⌥ ⇧ → | Ctrl + Alt + Shift + → |
-| Move panel up | ⌘ ⌥ ⇧ ↑ | Ctrl + Alt + Shift + ↑ |
-| Move panel down | ⌘ ⌥ ⇧ ↓ | Ctrl + Alt + Shift + ↓ |
-| Move task to the previous Progress stage | ⌘ ⇧ ← | Ctrl + Shift + ← |
-| Move task to the next Progress stage | ⌘ ⇧ → | Ctrl + Shift + → |
-| Focus detail panel 1 to 8 | ⌘ 1 to ⌘ 8 | Ctrl + 1 to Ctrl + 8 |
-| Focus last detail panel | ⌘ 9 | Ctrl + 9 |
-| Previous item in list | ⌥ ⇧ ↑ | Alt + Shift + ↑ |
-| Next item in list | ⌥ ⇧ ↓ | Alt + Shift + ↓ |
-| Switch to older panel | ⌃ ⇧ Tab | Ctrl + Shift + Tab |
-| Switch to newer panel | ⌃ Tab | Ctrl + Tab |
-| Solo detail panel | ⌘ ⇧ M | Ctrl + Shift + M |
-| Maximize panel terminals | ⌘ ⇧ J | Ctrl + Shift + J |
-| Toggle changes pane | ⌘ ⇧ G | Ctrl + Shift + G |
-| Toggle task list peek | ⌘ ⇧ B | Ctrl + Shift + B |
-| Toggle resources pane | ⌘ ⇧ E | Ctrl + Shift + E |
-| Find in dashboard | ⌘ F | Ctrl + F |
+| Action | Shortcut |
+|---|---|
+| Move panel left | Ctrl/⌘ + Alt/⌥ + Shift + ← |
+| Move panel right | Ctrl/⌘ + Alt/⌥ + Shift + → |
+| Move panel up | Ctrl/⌘ + Alt/⌥ + Shift + ↑ |
+| Move panel down | Ctrl/⌘ + Alt/⌥ + Shift + ↓ |
+| Move task to the previous Progress stage | Ctrl/⌘ + Shift + ← |
+| Move task to the next Progress stage | Ctrl/⌘ + Shift + → |
+| Focus detail panel 1 to 8 | Ctrl/⌘ + 1 to Ctrl/⌘ + 8 |
+| Focus last detail panel | Ctrl/⌘ + 9 |
+| Previous item in list | Alt/⌥ + Shift + ↑ |
+| Next item in list | Alt/⌥ + Shift + ↓ |
+| Switch to older panel | Ctrl + Shift + Tab |
+| Switch to newer panel | Ctrl + Tab |
+| Solo detail panel | Ctrl/⌘ + Shift + M |
+| Maximize panel terminals | Ctrl/⌘ + Shift + J |
+| Toggle changes pane | Ctrl/⌘ + Shift + G |
+| Toggle task list peek | Ctrl/⌘ + Shift + B |
+| Toggle resources pane | Ctrl/⌘ + Shift + E |
+| Find in dashboard | Ctrl/⌘ + F |
 
 #### Task page shortcuts
 
 The **Task page** group works on a task's page:
 
-| Action | Mac | Windows / Linux |
-|---|---|---|
-| Focus chat | ⌘ 1 | Ctrl + 1 |
-| Focus changes | ⌘ 2 | Ctrl + 2 |
-| Focus resources | ⌘ 3 | Ctrl + 3 |
-| Switch sessions | ⌃ Tab | Ctrl + Tab |
-| Switch sessions, oldest first | ⌃ ⇧ Tab | Ctrl + Shift + Tab |
-| Maximize terminal drawer | ⌘ ⇧ J | Ctrl + Shift + J |
-| Show or hide the preview in Add resources | ⌘ ⌥ P | Ctrl + Alt + P |
+| Action | Shortcut |
+|---|---|
+| Focus chat | Ctrl/⌘ + 1 |
+| Focus changes | Ctrl/⌘ + 2 |
+| Focus resources | Ctrl/⌘ + 3 |
+| Switch sessions | Ctrl + Tab |
+| Switch sessions, oldest first | Ctrl + Shift + Tab |
+| Maximize terminal drawer | Ctrl/⌘ + Shift + J |
+| Show or hide the preview in Add resources | Ctrl/⌘ + Alt/⌥ + P |
 
 #### Chat shortcuts
 
 The **Chat** group works in a session's conversation:
 
-| Action | Mac | Windows / Linux |
-|---|---|---|
-| Find in conversation | ⌘ F | Ctrl + F |
-| Previous message | ⌘ ⌥ ↑ | Ctrl + Alt + ↑ |
-| Next message | ⌘ ⌥ ↓ | Ctrl + Alt + ↓ |
-| Interrupt & send | ⌘ ⇧ Enter | Ctrl + Shift + Enter |
-| Send after this turn | ⌥ Enter | Alt + Enter |
-| Switch between terminal and transcript | ⌘ ⇧ X | Ctrl + Shift + X |
+| Action | Shortcut |
+|---|---|
+| Find in conversation | Ctrl/⌘ + F |
+| Previous message | Ctrl/⌘ + Alt/⌥ + ↑ |
+| Next message | Ctrl/⌘ + Alt/⌥ + ↓ |
+| Interrupt & send | Ctrl/⌘ + Shift + Enter |
+| Send after this turn | Alt/⌥ + Enter |
+| Switch between terminal and transcript | Ctrl/⌘ + Shift + X |
 
 #### Changes and code view shortcuts
 
 This group has 2 lists. The **Changes** list works in the Changes view:
 
-| Action | Mac | Windows / Linux |
-|---|---|---|
-| Filter changed files | ⌘ P | Ctrl + P |
-| Previous file | ⌥ ↑ | Alt + ↑ |
-| Next file | ⌥ ↓ | Alt + ↓ |
-| Next change | F7 | F7 |
-| Previous change | ⇧ F7 | Shift + F7 |
-| Toggle changes sidebar | ⌘ B | Ctrl + B |
-| Open all changes | ⌘ ⇧ A | Ctrl + Shift + A |
-| Comment on selection | ⌘ ⇧ C | Ctrl + Shift + C |
-| Edit working copy | ⌘ E | Ctrl + E |
+| Action | Shortcut |
+|---|---|
+| Filter changed files | Ctrl/⌘ + P |
+| Previous file | Alt/⌥ + ↑ |
+| Next file | Alt/⌥ + ↓ |
+| Next change | F7 |
+| Previous change | Shift + F7 |
+| Toggle changes sidebar | Ctrl/⌘ + B |
+| Open all changes | Ctrl/⌘ + Shift + A |
+| Comment on selection | Ctrl/⌘ + Shift + C |
+| Edit working copy | Ctrl/⌘ + E |
 
 The **Code views** list works in any code view, such as a diff or a file you have opened:
 
-| Action | Mac | Windows / Linux |
-|---|---|---|
-| Find in file or diff | ⌘ F | Ctrl + F |
-| Next match | F3 or ⌘ G | F3 |
-| Previous match | ⇧ F3 or ⌘ ⇧ G | Shift + F3 |
-| Match case | ⌘ ⌥ C | Alt + C |
-| Match whole word | ⌘ ⌥ W | Alt + W |
-| Use regular expression | ⌘ ⌥ R | Alt + R |
-| Find only in changes | ⌘ ⌥ L | Alt + L |
+| Action | Shortcut |
+|---|---|
+| Find in file or diff | Ctrl/⌘ + F |
+| Next match | F3, or ⌘ + G on macOS |
+| Previous match | Shift + F3, or ⌘ + Shift + G on macOS |
+| Match case | Alt + C, or ⌘ + ⌥ + C on macOS |
+| Match whole word | Alt + W, or ⌘ + ⌥ + W on macOS |
+| Use regular expression | Alt + R, or ⌘ + ⌥ + R on macOS |
+| Find only in changes | Alt + L, or ⌘ + ⌥ + L on macOS |
 
 ### Shortcuts that depend on where you are
 
 Some keys do different things depending on where you are:
 
-- **⌘ 1**, **⌘ 2**, and **⌘ 3** focus a detail panel on the Dashboard but a column on the task page.
-- **⌃ Tab** switches detail panels on the Dashboard and sessions on the task page.
-- **⌘ ⇧ [** and **⌘ ⇧ ]** step through the Dashboard's views on the Dashboard, and through a panel's tabs when the panel or the task page has focus. **⌘ ⌥ [** and **⌘ ⌥ ]** move the current view or tab.
-- **⌘ ⇧ J** maximizes the panel's terminals on the Dashboard and the terminal drawer on the task page.
-- **⌘ B** shows or hides the changes panel in the Changes view, docks or hides the task list on the Dashboard, and docks or hides the context panel on the task page.
-- **⌘ P** filters changed files in the Changes view and opens **Go to file** elsewhere.
-- **⌘ F** finds in the Dashboard from its list or header, finds in a file or diff in a code view, and finds in the conversation elsewhere.
-- **⌘ ⇧ G** shows or hides changes in a Dashboard detail panel, and, on macOS, moves to the previous match in a code view.
-- **⌘ C** on a focused row, chip, or link copies what it names, such as a task's Kepler link, a pull request or issue link, a file path, or a commit hash. In a text field, a terminal, or a text selection, it copies as usual.
+- **Ctrl/⌘ + 1**, **Ctrl/⌘ + 2**, and **Ctrl/⌘ + 3** focus a detail panel on the Dashboard but a column on the task page.
+- **Ctrl + Tab** switches detail panels on the Dashboard and sessions on the task page.
+- **Ctrl/⌘ + Shift + [** and **Ctrl/⌘ + Shift + ]** step through the Dashboard's views on the Dashboard, and through a panel's tabs when the panel or the task page has focus. **Ctrl/⌘ + Alt/⌥ + [** and **Ctrl/⌘ + Alt/⌥ + ]** move the current view or tab.
+- **Ctrl/⌘ + Shift + J** maximizes the panel's terminals on the Dashboard and the terminal drawer on the task page.
+- **Ctrl/⌘ + B** shows or hides the changes panel in the Changes view, docks or hides the task list on the Dashboard, and docks or hides the context panel on the task page.
+- **Ctrl/⌘ + P** filters changed files in the Changes view and opens **Go to file** elsewhere.
+- **Ctrl/⌘ + F** finds in the Dashboard from its list or header, finds in a file or diff in a code view, and finds in the conversation elsewhere.
+- **Ctrl/⌘ + Shift + G** shows or hides changes in a Dashboard detail panel, and, on macOS, moves to the previous match in a code view.
+- **Ctrl/⌘ + C** on a focused row, chip, or link copies what it names, such as a task's Kepler link, a pull request or issue link, a file path, or a commit hash. In a text field, a terminal, or a text selection, it copies as usual.
 
 **Previous item in list** and **Next item in list** work even while you type in the open panel's chat.
 

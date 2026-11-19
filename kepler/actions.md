@@ -111,7 +111,7 @@ An Action you pick from the chevron list asks where to run it whenever there is 
 
 At the bottom of the list, **Manage Actions…** opens **Settings → Actions**.
 
-From the keyboard, the two halves are separate **Tab** stops, the Action first. **Down Arrow** or **Alt+Down** on the Action opens the list too, and closing the list puts focus back on the Action. Every split button in Kepler (**Send**, **Open in**, **Run**) works the same way.
+From the keyboard, the two halves are separate **Tab** stops, the Action first. **Down Arrow** or **Alt/⌥ + Down Arrow** on the Action opens the list too, and closing the list puts focus back on the Action. Every split button in Kepler (**Send**, **Open in**, **Run**) works the same way.
 
 ### Choosing where it runs
 

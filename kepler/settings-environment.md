@@ -27,7 +27,7 @@ Use **Settings → Remote environments** to save the machines your agents can ru
 
 *Run your agents on another machine, like a dev server or cloud VM, while you work from here. Kepler installs itself over SSH, so there's nothing to set up on that machine first.* On Windows, you can also use a WSL distro, with nothing extra to install.
 
-To open this page from anywhere, press **⌘ ⇧ R**, or click **Manage remote environments…** in the remote chip's popover. Kepler saves the machine list on this computer, whichever machine a window is connected to.
+To open this page from anywhere, press **Ctrl/⌘ + Shift + R**, or click **Manage remote environments…** in the remote chip's popover. Kepler saves the machine list on this computer, whichever machine a window is connected to.
 
 The Remote environments page has 3 sections:
 

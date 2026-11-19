@@ -204,7 +204,7 @@ You can change the prompt behind every Action and add Actions of your own. See [
 
 To start a task that has no issue or pull request behind it:
 
-1. Click **New task** or press **Cmd/Ctrl+N**. From outside Kepler, press **Shift+Alt+N** to open the quick launcher.
+1. Click **New task** or press **Ctrl/⌘ + N**. From outside Kepler, press **Shift + Alt/⌥ + N** to open the quick launcher.
 2. Write a prompt.
 3. If the task needs a repository, attach one.
 4. Start the task.

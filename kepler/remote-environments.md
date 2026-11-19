@@ -86,7 +86,7 @@ Use the popover to see which machine this window is on, switch to another machin
 | Forwarded ports | Lists the ports this window forwards, and opens the host's **Ports** list |
 | **Switch to** | Every other saved host, plus **Local** (*Work on this machine*) when this window is on a remote |
 | **Found on this machine** | WSL distributions found on this PC, offered for one-click connect while you have no saved hosts |
-| **Manage remote environments…** | Opens **Settings → Remote environments**. **⌘ ⇧ R** on macOS, **Ctrl + Shift + R** elsewhere |
+| **Manage remote environments…** | Opens **Settings → Remote environments**. **Ctrl/⌘ + Shift + R** |
 
 The line under **Restart server to update** says what the update will stop. When nothing would stop, the update starts at once. Otherwise, the **Update server?** confirmation names the agents and terminals that stop, or says that the server could not report them.
 
@@ -99,7 +99,7 @@ The line under **Restart server to update** says what the update will stop. When
 
 If this app is older than the server, the header offers an update for this app instead, and says that sessions on the host keep running.
 
-To move this window to another host, click the host's row under **Switch to**. To open the host in a new window and leave this window where it is, hold **Cmd** (macOS) or **Ctrl** while you click, or click the window icon at the end of the row. A host already open in another window is marked **Connected**. Clicking its row brings that window to the front instead of opening a second connection.
+To move this window to another host, click the host's row under **Switch to**. To open the host in a new window and leave this window where it is, hold **Ctrl/⌘** while you click, or click the window icon at the end of the row. A host already open in another window is marked **Connected**. Clicking its row brings that window to the front instead of opening a second connection.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/remote-popover-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -112,7 +112,7 @@ To move this window to another host, click the host's row under **Switch to**. T
 
 ## Windows on a remote host
 
-- **New Window opens on the same host.** **File → New Window** (**⌘ ⇧ N** on macOS, **Ctrl + Shift + N** elsewhere) from a remote window opens a second window on that host. A remote window also offers **File → New Local Window** when you want a local one. A new window that cannot reach the host opens on the [recovery screen](#the-recovery-screen) with the reason.
+- **New Window opens on the same host.** **File → New Window** (**Ctrl/⌘ + Shift + N**) from a remote window opens a second window on that host. A remote window also offers **File → New Local Window** when you want a local one. A new window that cannot reach the host opens on the [recovery screen](#the-recovery-screen) with the reason.
 - **Windows on one host share a connection,** so another window on it opens quickly.
 - **A host open in another window shows as connected.** The popover and Settings offer **Show window**, and show its latency, versions, and sessions.
 - **The last closed remote window reopens on its host.** With no window open, the dock, the tray, or launching Kepler again reconnects to the host the last window was on. If you close a window that was still waiting on an unreachable host, the next window opens locally. If **Restore windows on launch** is off, Kepler launches locally.
@@ -142,7 +142,7 @@ Use **Settings → Remote environments** to add, connect, edit, and remove machi
 
 A host's page has a card of actions at the top:
 
-- **Connect**. To connect in a new window, **Cmd/Ctrl**-click it. While a connection is in progress, the same button cancels it.
+- **Connect**. To connect in a new window, **Ctrl/⌘**-click it. While a connection is in progress, the same button cancels it.
 - **Show window** and **Connect to *machine* in a new window**, in place of **Connect**, when another window already has the host open.
 - **Stop server**.
 - **Remove *machine*…**, the red trash icon.
@@ -330,7 +330,7 @@ On Windows, a WSL 2 distro is a remote environment like any other, and the simpl
 
 When an agent or a terminal starts a dev server on an SSH host, its `http://localhost:3000` link points at the host, not at this computer. Kepler forwards that port over your SSH connection so the link opens here.
 
-- **Click the link.** In an SSH window, **Cmd/Ctrl**-click a `localhost`, `127.0.0.1`, or `0.0.0.0` link in a terminal, or click one in the agent transcript. Kepler forwards the port to the host's `localhost`, then opens the local URL. If that port is already taken on this computer, Kepler picks a free one.
+- **Click the link.** In an SSH window, **Ctrl/⌘**-click a `localhost`, `127.0.0.1`, or `0.0.0.0` link in a terminal, or click one in the agent transcript. Kepler forwards the port to the host's `localhost`, then opens the local URL. If that port is already taken on this computer, Kepler picks a free one.
 - **Open it from the task.** A `localhost` link attached to a task opens through forwarding too, from the task's context panel, the link's detail, or the Dashboard's resources list. Agents attach the URL of a dev server they start for you to open.
 - **Add one by hand.** **Settings → Remote environments → Ports**, in the SSH window, lists this window's forwards as remote port → local URL. To add a forward, enter a **Port** and click **Add**. **Stop** ends one forward, and **Stop all** appears when more than one is forwarded.
 
@@ -455,7 +455,7 @@ Some things have to happen on the machine in front of you. Kepler runs those thr
 | **Desktop notifications** | Shown by your local desktop once per machine, or inside Kepler while you are in a window on that machine. A muted host shows none |
 | **Dictation** | Captured by the local app. See [Dictation and Read Aloud](/kepler/voice-input) |
 | **Copying from Codex** | A copy Codex makes in a remote window goes to your local clipboard, not the host's |
-| **Pasting in a Windows host's terminal** | **Ctrl+V** pastes your local clipboard, even when this window runs on macOS or Linux |
+| **Pasting in a Windows host's terminal** | **Ctrl + V** pastes your local clipboard, even when this window runs on macOS or Linux |
 | **Folder pickers** | Browse the host's filesystem, since that is where the work lives |
 
 These 7 editors open a remote folder through their own remote extension:
@@ -622,9 +622,9 @@ On a touch phone, every live terminal has a key row under it with the keys a pho
 
 | Key | Second action |
 |---|---|
-| **Esc** | **Ctrl+C** |
+| **Esc** | **Ctrl + C** |
 | **Ctrl** | **Shift** |
-| **Tab** | **Shift+Tab** |
+| **Tab** | **Shift + Tab** |
 | **Enter** | **New line** |
 | Left and Right arrows | **Home** and **End** |
 | Up and Down arrows | **Page up** and **Page down** |

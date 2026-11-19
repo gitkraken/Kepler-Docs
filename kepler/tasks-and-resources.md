@@ -92,7 +92,7 @@ The scope filter sets which items the list shows:
 
 To add an item, select its row and click **Add**, press **Enter**, or double-click the row. **Remove** takes it off again.
 
-To see more about an item before you add it, click **Show preview** in the screen's header, or press **Cmd/Ctrl+Alt+P**.
+To see more about an item before you add it, click **Show preview** in the screen's header, or press **Ctrl/⌘ + Alt/⌥ + P**.
 
 You can use the list from the keyboard:
 
@@ -303,7 +303,7 @@ The text you wrote when you started the task is a context item of its own: the *
 
 Sometimes you want an agent that forms its own view, such as a reviewer that should not be influenced by the implementer's brief. To start a session without the task's prompt and notes, follow these steps:
 
-1. Click **+** on the **Sessions** group in the context panel, or press **Cmd/Ctrl+T**. A draft session tab opens.
+1. Click **+** on the **Sessions** group in the context panel, or press **Ctrl/⌘ + T**. A draft session tab opens.
 2. In the draft's composer footer, untick the **Task context** chip. The chip is on by default.
 3. Type your prompt and click **Start**.
 
@@ -331,7 +331,7 @@ To add a note, click **New note** on the **Notes** tab of the **Resources** scre
 
 To rename a note, click its name while you are in the note, press **F2** on the open note, or choose **Rename note** from its right-click menu. The name becomes a field. Press **Enter** to keep the new name, or **Escape** to restore the old one. A note with no name reads **Untitled note**. The task's **Prompt** cannot be renamed.
 
-To edit an open note, click **Edit**, or press **Enter** on the focused note. The note opens in Kepler's code editor, with highlighted Markdown, line numbers, and find. To save, press **Cmd/Ctrl+S**. If the note changed while you were editing it, such as when an agent wrote to it, Kepler stops the save and asks first: **Save anyway** keeps your version, and the note's history keeps the version it replaces.
+To edit an open note, click **Edit**, or press **Enter** on the focused note. The note opens in Kepler's code editor, with highlighted Markdown, line numbers, and find. To save, press **Ctrl/⌘ + S**. If the note changed while you were editing it, such as when an agent wrote to it, Kepler stops the save and asks first: **Save anyway** keeps your version, and the note's history keeps the version it replaces.
 
 Beside **Edit**, **Copy** copies the note and **Save as…** saves it as a Markdown file. If you leave an edit unsaved, Kepler keeps it as a draft: the note reads **Unsaved draft**, and **Edit** becomes **Resume draft**.
 
@@ -442,11 +442,11 @@ To rename, archive, or delete a task, open the **Task actions** (**⋮**) menu o
 | **Rename task** | Turns the name into a field. **Auto-name** suggests a name from the task's prompt and resources |
 | **Add to group** | Puts the task in one of [your groups](/kepler/arranging-your-work#your-groups) or a **New group…**, or takes it out with **Remove from group** |
 | **Manage resources** | Opens the task's **Resources** screen. See [What a task holds](#what-a-task-holds) |
-| **Copy task link** | Copies a Kepler link to the task. **Cmd/Ctrl+C** on a focused task row does the same |
+| **Copy task link** | Copies a Kepler link to the task. **Ctrl/⌘ + C** on a focused task row does the same |
 | **Refresh** | Reads the task's worktrees and its pull requests and issues again |
 | **Archive task** | Moves the task out of the active list and stops its running agents. Its sessions and resources are kept, and prompting it puts it back |
 | **Restore task** | Replaces **Archive task** on an archived task, and returns it to the active list and its group |
-| **Delete task** | Removes the task along with its sessions and resources. On the task page, **Cmd/Ctrl+Shift+Backspace** does the same |
+| **Delete task** | Removes the task along with its sessions and resources. On the task page, **Ctrl/⌘ + Shift + Backspace** does the same |
 
 **Kepler suggests archiving a finished task.** When a task meets all of these conditions, its header asks *Ready to archive?* with an **Archive** button:
 

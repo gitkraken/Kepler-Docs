@@ -39,11 +39,11 @@ You can open **Ask Kepler** from anywhere in Kepler in one of these ways:
 | How | Opens |
 |---|---|
 | The **Ask Kepler** button (Kep, the planet mascot, with the word **Ask**) in the top bar | The panel, on the section you used last |
-| **Cmd/Ctrl+K** or **Cmd/Ctrl+L** (**Toggle Ask Kepler chat**) | The **Chat** section |
-| **Ctrl+&#96;** on every platform, macOS included (**Toggle Ask Kepler terminal**) | The **Terminal** section, starting a shell if none is open |
-| **Cmd/Ctrl+Shift+K** or **Cmd/Ctrl+Shift+L** (**New Ask Kepler chat**) | A new chat, from anywhere in the desktop app |
+| **Ctrl/⌘ + K** or **Ctrl/⌘ + L** (**Toggle Ask Kepler chat**) | The **Chat** section |
+| **Ctrl + &#96;** on every platform, macOS included (**Toggle Ask Kepler terminal**) | The **Terminal** section, starting a shell if none is open |
+| **Ctrl/⌘ + Shift + K** or **Ctrl/⌘ + Shift + L** (**New Ask Kepler chat**) | A new chat, from anywhere in the desktop app |
 
-To close the panel, press the same shortcut again while focus is inside it. On Windows and Linux, a focused shell uses **Ctrl+L** to clear its screen, so press **Ctrl+K** to open or close the chat from inside a terminal.
+To close the panel, press the same shortcut again while focus is inside it. On Windows and Linux, a focused shell uses **Ctrl + L** to clear its screen, so press **Ctrl + K** to open or close the chat from inside a terminal.
 
 On a phone, tap Kep in the Dashboard bar. The panel opens full screen, so it has no **Dock panel** and no controls to move it to the other side.
 
@@ -173,7 +173,7 @@ A panel chat belongs to no task, so when a task's session links back to the chat
   <figcaption style="text-align:center; color:#888">The Terminal section, with one shell in the home folder.</figcaption>
 </figure>
 
-The **Terminal** section holds shells that belong to no task, in the same tab strip a task page's terminal drawer uses. The first time you open the section, Kepler starts a shell. After you close the last shell, the strip stays empty until you click **New terminal** or press **Ctrl+&#96;**.
+The **Terminal** section holds shells that belong to no task, in the same tab strip a task page's terminal drawer uses. The first time you open the section, Kepler starts a shell. After you close the last shell, the strip stays empty until you click **New terminal** or press **Ctrl + &#96;**.
 
 Where a new shell opens depends on where you are:
 

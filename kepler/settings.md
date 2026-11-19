@@ -21,7 +21,7 @@ taxonomy:
 
 Use Settings to change how Kepler, your agents, and your tasks work. Settings has 16 pages in the desktop app, listed in [The Settings pages](#the-settings-pages).
 
-To open Settings, click the gear icon in the top bar, or press **⌘ ,** (**Ctrl ,** on Windows and Linux). To close it, click the gear icon or press the same shortcut again.
+To open Settings, click the gear icon in the top bar, or press **Ctrl/⌘ + ,**. To close it, click the gear icon or press the same shortcut again.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/settings-general-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
@@ -77,7 +77,7 @@ If you leave a sub-page with unsaved changes, however you leave, Kepler asks whe
 
 Most fields outside those forms save themselves and show their status beside them. If a save fails, Kepler shows the reason, and names the setting if you have already left the page.
 
-**Go back**, or your mouse's back button, steps back through each page, sub-page, and search result you opened in Settings. To leave Settings in one click from any page or sub-page, use the back arrow in the Settings header, the gear icon, or **⌘ ,** (**Ctrl ,**). When the Dashboard's [views](/kepler/settings-app#dashboard) sit **Along the left side**, the back arrow sits at the top of the views column instead. Each one returns you to what you were doing before you opened Settings.
+**Go back**, or your mouse's back button, steps back through each page, sub-page, and search result you opened in Settings. To leave Settings in one click from any page or sub-page, use the back arrow in the Settings header, the gear icon, or **Ctrl/⌘ + ,**. When the Dashboard's [views](/kepler/settings-app#dashboard) sit **Along the left side**, the back arrow sits at the top of the views column instead. Each one returns you to what you were doing before you opened Settings.
 
 ### Settings in a remote window
 

@@ -63,7 +63,7 @@ Kepler names tasks automatically from what you started them with. To rename a ta
 
 ## From the New task composer
 
-Click **New task** or press **Cmd/Ctrl+N**. To start one without switching to Kepler first, press **Shift+Alt+N** to open the quick launcher from anywhere, including when Kepler is not the focused window.
+Click **New task** or press **Ctrl/⌘ + N**. To start one without switching to Kepler first, press **Shift + Alt/⌥ + N** to open the quick launcher from anywhere, including when Kepler is not the focused window.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/new-task-button-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
@@ -115,9 +115,9 @@ The primary button runs the Action that matches what you've attached, exactly as
 
 To keep **Start** when you link an issue or pull request, turn the switching off: click **Turn off** in the note the composer shows the first time it switches, or turn off **Suggest automatically** in [Settings → Actions](/kepler/settings-actions).
 
-The chevron beside the primary button lists the other choices: **Prepare**, which creates the session without starting work yet, and every Action that applies to what you've attached. Picking one there does not run it. Instead, it relabels the primary button, and an Action that names its own agent puts that agent in the agent pill. You can then check or change what will run before you press the button. To pick an Action and run it at once, hold Cmd/Ctrl as you click it. The Action sends its prompt, with anything you typed added as a refinement.
+The chevron beside the primary button lists the other choices: **Prepare**, which creates the session without starting work yet, and every Action that applies to what you've attached. Picking one there does not run it. Instead, it relabels the primary button, and an Action that names its own agent puts that agent in the agent pill. You can then check or change what will run before you press the button. To pick an Action and run it at once, hold Ctrl/⌘ as you click it. The Action sends its prompt, with anything you typed added as a refinement.
 
-**Shift+Tab** in the prompt cycles the primary button through the same list.
+**Shift + Tab** in the prompt cycles the primary button through the same list.
 
 A task that has its prompt but no session yet, such as one an agent created for you, opens a draft session tab. To send the task's prompt as written, press **Start** on the empty box.
 

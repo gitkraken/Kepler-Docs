@@ -80,7 +80,7 @@ Once you have more than 1 profile, each window's title names its profile.
 
 To rename a profile or change its color, choose **Edit** from its row menu. To color the top of every window in that profile, turn on **Tint this profile's windows**. A window connected to a remote machine shows that machine's color instead.
 
-To reorder your profiles, drag a row by its handle, use **Move profile up** and **Move profile down** in its menu, or press **Alt + ↑** or **Alt + ↓**.
+To reorder your profiles, drag a row by its handle, use **Move profile up** and **Move profile down** in its menu, or press **Alt/⌥ + ↑** or **Alt/⌥ + ↓**.
 
 ## Quit with several profiles open
 

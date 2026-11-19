@@ -73,7 +73,7 @@ A new worktree has no `node_modules`, virtual environment, or build output. Save
 2. Under **Commands**, click **Add command**.
 3. Enter a name, such as *Install deps*, and the command, such as `pnpm install`.
 4. Tick **Run on worktree creation**.
-5. Click **Add command**, or press **Cmd/Ctrl+Enter**. The command shows a **Runs on creation** chip.
+5. Click **Add command**, or press **Ctrl/⌘ + Enter**. The command shows a **Runs on creation** chip.
 
 Add one command for each step, and drag the rows into the order they need to run. Each time Kepler creates a worktree for the repository, it runs these commands one at a time, in list order, in the new worktree's folder.
 

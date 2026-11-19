@@ -37,7 +37,7 @@ What you choose in the **View** menu is saved to the view at once. To learn what
 
 To open several tasks at once, use the open button on a section header, or **Open group** on one of [your groups](#your-groups).
 
-In a narrow window, the search box becomes a search icon. Click it, or press **Cmd/Ctrl+F**, to open the search box.
+In a narrow window, the search box becomes a search icon. Click it, or press **Ctrl/⌘ + F**, to open the search box.
 
 ***
 
@@ -76,7 +76,7 @@ You cannot delete your last Todo view or your last Tasks view.
 
 **Add a view.** Click **New view** after the views, then choose **Todo**, **Tasks**, **Agent Graph**, or **Duplicate current view**. Name the new view, set it up in the menu that opens, and choose **Done**.
 
-**Reorder the views.** Drag a view to a new place, or use **Move left** and **Move right** in its menu. On the Dashboard, **Cmd/Ctrl+Shift+[** and **Cmd/Ctrl+Shift+]** show the previous or next view, and **Cmd+Option+[** and **Cmd+Option+]** (**Ctrl+Alt+[** and **Ctrl+Alt+]** on Windows and Linux) move the view you are on. See [Keyboard shortcuts](/kepler/settings-app#keyboard-shortcuts).
+**Reorder the views.** Drag a view to a new place, or use **Move left** and **Move right** in its menu. On the Dashboard, **Ctrl/⌘ + Shift + [** and **Ctrl/⌘ + Shift + ]** show the previous or next view, and **Ctrl/⌘ + Alt/⌥ + [** and **Ctrl/⌘ + Alt/⌥ + ]** move the view you are on. See [Keyboard shortcuts](/kepler/settings-app#keyboard-shortcuts).
 
 If the views run out of room, they fold into 1 button. Click it to see every view.
 
@@ -434,7 +434,7 @@ You can set the stage in these ways:
 - **The task menus.** A task's **⋮** and right-click menus have the same choices under a **Progress** submenu, plus **Reopen** while the task is Done.
 - **Drag a card.** In any grouping, on **List** or **Board**, drag a task's card or row. When grouped by **Progress**, drop it on another stage. On a touch screen, press and hold the card to pick it up. Press **Escape** to cancel the drag. If you drop the card in its own section, Kepler reorders it (see [Put tasks in your own order](#put-tasks-in-your-own-order)).
 - **The Mark as bar.** While you drag, a **Mark as** bar appears over the toolbar with chips for what the card can become: **Read** or **Unread**, the stages, **On hold**, **Later**, **Reopen** for a Done task, and **Archive task**. For an archived task, it shows only **Restore**. Drop the card on a chip.
-- **From the keyboard.** When a card has focus on the **Board** grouped by **Progress**, press **Cmd/Ctrl+Shift+←** or **Cmd/Ctrl+Shift+→** to move it 1 column.
+- **From the keyboard.** When a card has focus on the **Board** grouped by **Progress**, press **Ctrl/⌘ + Shift + ←** or **Ctrl/⌘ + Shift + →** to move it 1 column.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/progress-drag-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
@@ -542,7 +542,7 @@ GitHub Enterprise and GitLab Self-Hosted get sections of their own. **Milestone*
 
 **Group** lists each of [your groups](#your-groups), including empty ones, and **Ungrouped** for tasks without a group. When the list is grouped by your groups, the facet also limits which group sections appear.
 
-**Include or exclude any value.** Click a value to include it. To exclude a value instead, hover over it and click its minus button, or press **Shift+Enter** from the keyboard. An excluded value reads *not {value}*. On Todo, excluding a provider's value removes only that provider's items, so excluding a GitHub label never hides a Jira issue.
+**Include or exclude any value.** Click a value to include it. To exclude a value instead, hover over it and click its minus button, or press **Shift + Enter** from the keyboard. An excluded value reads *not {value}*. On Todo, excluding a provider's value removes only that provider's items, so excluding a GitHub label never hides a Jira issue.
 
 **Values you include in one facet are combined.** If you tick GitHub *and* GitLab under **Provider**, the list shows items from either provider. Excluded values remove items: Kepler hides an item that matches any of them. A facet with nothing chosen reads **Any** and does not narrow the list.
 
@@ -655,7 +655,7 @@ The bar has these buttons:
 
 ### Act on several tasks at once
 
-The tasks you open with **Shift**-click or **Cmd/Ctrl**-click (see [Open a panel](/kepler/kepler-interface#open-a-panel)) are also a selection you can act on. While 2 or more tasks are selected, right-clicking or dragging any one of them acts on all of them. Right-clicking or dragging a task outside the selection acts on that task only. A row's **⋮** always acts on its own row.
+The tasks you open with **Shift**-click or **Ctrl/⌘**-click (see [Open a panel](/kepler/kepler-interface#open-a-panel)) are also a selection you can act on. While 2 or more tasks are selected, right-clicking or dragging any one of them acts on all of them. Right-clicking or dragging a task outside the selection acts on that task only. A row's **⋮** always acts on its own row.
 
 Right-clicking inside the selection opens a selection menu instead of the task menu, and each item counts the tasks it acts on. With it you can set the progress of every selected task, mark them read or unread, star or unstar them, group or ungroup them, shut down their agents, and archive, restore, or delete them. **Shut down agents** asks first while an agent is still working. The group and **Progress** items skip archived tasks. **Archive**, **Restore**, and **Delete** open the same batch confirmation as a section's **Select** bar. For the full menu, see [Task rows](/kepler/kepler-interface#task-rows).
 

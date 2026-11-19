@@ -37,7 +37,7 @@ Kepler by GitKraken installs natively on Windows, so you can run Claude Code, Co
 2. Launch Kepler and click **Sign in with GitKraken**.
 3. In **Choose your coding agents**, switch on Claude Code and Codex. To install an agent you do not have yet, click its tile.
 4. In **Bring in your repos**, check the repositories you work in, then click the button that adds them.
-5. Click **New task** or press **Ctrl+N**, write a prompt, attach a repository with **Add repo or folder**, and click **Start**. Kepler creates a worktree for the task and starts the agent in it.
+5. Click **New task** or press **Ctrl/⌘ + N**, write a prompt, attach a repository with **Add repo or folder**, and click **Start**. Kepler creates a worktree for the task and starts the agent in it.
 6. Start a second task the same way, and pick another agent in the **New task** composer. Both agents now work at the same time, each in its own worktree.
 
 ***
@@ -99,7 +99,7 @@ If you installed an agent yourself and Kepler did not find it, open the agent's 
 
 In Kepler, the unit of work is a task. Each task holds its own sessions, and each repository you attach to it gets its own worktree. To run several agents at once, start one task per piece of work:
 
-1. Click **New task** or press **Ctrl+N**.
+1. Click **New task** or press **Ctrl/⌘ + N**.
 2. Write the prompt, and attach the repository with **Add repo or folder**.
 3. Under **Agent**, pick the agent for this task, such as Claude Code.
 4. Click **Start**.

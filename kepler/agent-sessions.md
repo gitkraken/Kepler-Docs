@@ -51,7 +51,7 @@ You can start a session from any of the following places:
 |---|---|
 | A row in **Todo** | Fire an Action. See [Actions](/kepler/actions) |
 | The task page's context panel | **New session** on the **Sessions** group, or **New session here** on a worktree or folder row |
-| An open session strip | **+** (**New session**), or **Cmd/Ctrl+T** |
+| An open session strip | **+** (**New session**), or **Ctrl/⌘ + T** |
 | An existing session | **New session from this one** on its row menu |
 | A message in a conversation | **New session from here** on the message's right-click menu |
 
@@ -364,7 +364,7 @@ From left to right, the status bar shows the following:
 | Context ring | The share of the context window in use. Hover for tokens used, available, and total, the estimated cost at API rates, and the prompt cache |
 | Branch | The session's branch, with a folder mark when the CLI works in a subfolder or outside the worktree |
 | Account and plan usage | The account, in a warning tone once its limit is spent, and 2 bars for the **5h** and **7d** windows, colored by pace. Hover or click for the full readout, which ends with **Continue as** to move the session to another account; see [Usage indicators](#usage-indicators) |
-| **Transcript** | Swaps the terminal for a read-only, searchable view of the conversation. Click it again, or press **Cmd/Ctrl+Shift+X**, to return to the terminal |
+| **Transcript** | Swaps the terminal for a read-only, searchable view of the conversation. Click it again, or press **Ctrl/⌘ + Shift + X**, to return to the terminal |
 | **Rich input** | Shows or hides Kepler's message composer. Hide it to type straight into the CLI |
 | **Read last reply** | Reads the agent's last reply aloud. See [Read aloud](/kepler/voice-input#read-aloud) |
 | **No Kepler tools** | Shown when the agent cannot use Kepler's workspace tools or inbox in a terminal. Its tip points to **Continue in Chat** on the session menu |
@@ -533,11 +533,11 @@ A draft you have not sent survives a reload.
 
 The composer works with these keys:
 
-- **Enter** sends; **Shift+Enter** inserts a newline. To send with **Cmd/Ctrl+Enter** instead, and have **Enter** start a new line, change **Send messages with** in **Settings → General → Chat**.
-- **Alt+Enter** sends after the running turn ends (**Send after this turn**). See [Steering a running turn](#steering-a-running-turn).
+- **Enter** sends; **Shift + Enter** inserts a newline. To send with **Ctrl/⌘ + Enter** instead, and have **Enter** start a new line, change **Send messages with** in **Settings → General → Chat**.
+- **Alt/⌥ + Enter** sends after the running turn ends (**Send after this turn**). See [Steering a running turn](#steering-a-running-turn).
 - **Tab** moves focus from the prompt to **Send**, then to its chevron.
-- **Down Arrow** or **Alt+Down** on **Send** opens the chevron's menu. Closing the menu returns focus to **Send**.
-- **Cmd/Ctrl+F** opens **Find in conversation**.
+- **Down Arrow** or **Alt/⌥ + Down Arrow** on **Send** opens the chevron's menu. Closing the menu returns focus to **Send**.
+- **Ctrl/⌘ + F** opens **Find in conversation**.
 - To type a prompt, start typing anywhere in the session. The composer takes the keystroke, so you do not have to click into it first.
 
 For agents with long option lists, the **Agent settings** menus have a **Search options…** box.
@@ -574,7 +574,7 @@ When you send during a turn, the message goes into a queue, and a banner above t
 - **After this step**: the prompt joins the running turn once the agent finishes its current step.
 - **After this turn**: the prompt waits until the turn ends, for example on an agent that cannot take messages mid-turn.
 
-On an agent that takes messages mid-turn, a prompt that joins the turn is marked **Added mid-turn** in the conversation. To hold a message for the end of the turn instead, choose **Send after this turn** on the send button's chevron, or press **Alt+Enter**.
+On an agent that takes messages mid-turn, a prompt that joins the turn is marked **Added mid-turn** in the conversation. To hold a message for the end of the turn instead, choose **Send after this turn** on the send button's chevron, or press **Alt/⌥ + Enter**.
 
 Kepler sends waiting prompts as **one merged follow-up prompt**, so 2 quick corrections arrive as a single instruction instead of 2 competing ones.
 
@@ -597,7 +597,7 @@ Kepler sends waiting prompts as **one merged follow-up prompt**, so 2 quick corr
 | **Not sent — too large ({size} of {limit})** | The queued messages are too large for the agent |
 | **Not sent — the agent was unavailable** | The agent could not take the queued messages |
 | **Back to composer** | Puts messages that were not sent back in the composer, so you can edit and resend them |
-| **Interrupt & send** | Stops the current turn and delivers the queue immediately, in one step. **Cmd/Ctrl+Shift+Enter** does the same from the keyboard |
+| **Interrupt & send** | Stops the current turn and delivers the queue immediately, in one step. **Ctrl/⌘ + Shift + Enter** does the same from the keyboard |
 
 With subagents running, **Interrupt & send** names them: **Interrupt & send ({count} running)**. If the stop gets no answer, the button becomes **Force quit (drops {count} queued)**, which ends the agent and drops the queued prompts instead of sending them.
 
@@ -613,10 +613,10 @@ If a send fails, Kepler puts the text back in the composer so you can try again.
 |---|---|
 | **Escape** | Stops the running turn |
 | The stop segment on the send button | Stops the running turn. Its tooltip says what happens to the queue |
-| **Cmd/Ctrl+Shift+Enter** | **Interrupt & send**: stops the turn *and* delivers what you typed |
+| **Ctrl/⌘ + Shift + Enter** | **Interrupt & send**: stops the turn *and* delivers what you typed |
 | **Force quit the agent** | Offered once a cancel has been pending too long. It does not wait for the agent to settle |
 
-In **Terminal** mode, Kepler recognizes an interrupt whether it arrives as **Escape** or as **Ctrl+C**, and the session shows as stopped once the CLI has stopped.
+In **Terminal** mode, Kepler recognizes an interrupt whether it arrives as **Escape** or as **Ctrl + C**, and the session shows as stopped once the CLI has stopped.
 
 ***
 
@@ -631,7 +631,7 @@ A session's conversation shows your prompts, the agent's replies, and the agent'
 - When the agent replies to one of your review comments, the reply shows as a card with your comment beneath **Replied on** and the file and line. Click **Open in Changes** to go to the comment.
 - Your latest prompt and the latest reply show how long ago they were sent. Every earlier finished reply shows the time it was sent. A divider marks a long gap between messages.
 - An agent's thinking shows as a collapsed **Thinking** block, for agents that send it.
-- A file path an agent writes (a link, an inline-code path, or the file in a read or edit tool call) becomes a link once Kepler confirms the file exists. Click it, or **Cmd/Ctrl+click** it, to open the file in Kepler at the named line. A file inside a worktree opens in the Changes overlay's file view. **Cmd/Ctrl+Shift+click** opens the file in your default editor at that line.
+- A file path an agent writes (a link, an inline-code path, or the file in a read or edit tool call) becomes a link once Kepler confirms the file exists. Click it, or **Ctrl/⌘ + click** it, to open the file in Kepler at the named line. A file inside a worktree opens in the Changes overlay's file view. **Ctrl/⌘ + Shift + click** opens the file in your default editor at that line.
 - A Kepler task or session link in the conversation opens inside Kepler when you click or middle-click it. Hover it to see where it goes. Right-click it for **Open in Kepler** and **Copy link**.
 - Images in replies and tool output open in a lightbox. You can save the image from the thumbnail or the lightbox with **Save as…**.
 - Tool calls collapse into groups: **{count} tool uses**, with **{count} done**, **{count} running**, and **{count} failed** tallies. Expand a group to read any call's output.
@@ -1091,9 +1091,9 @@ You can do the following with tabs:
 
 | Action | Result |
 |---|---|
-| **Cmd/Ctrl+T** or **+** | Opens a draft tab for a new session. See [Draft session tabs](#draft-session-tabs) |
-| **Alt+1** to **Alt+9** | Jumps to a tab by position |
-| **Cmd/Ctrl+Shift+[** / **]** | Previous or next tab |
+| **Ctrl/⌘ + T** or **+** | Opens a draft tab for a new session. See [Draft session tabs](#draft-session-tabs) |
+| **Alt/⌥ + 1** to **Alt/⌥ + 9** | Jumps to a tab by position |
+| **Ctrl/⌘ + Shift + [** / **]** | Previous or next tab |
 | **×** on a tab in the Sessions column (**Archive session**) | Archives the session |
 | **Archive** on a session's row in the context panel | Archives the session |
 | **Restore** | Brings an archived session back into the strip |
@@ -1128,7 +1128,7 @@ Deleting a task or removing its repository ends that task's live sessions.
 
 ### Pointing an agent at another session
 
-To copy a Kepler link to a session, such as `kepler://session/<id>`, choose **Copy session link** on the session's row or tab menu, or press **Cmd/Ctrl+C** on a focused row. **Copy task link** on a task's menu does the same for a task. When you paste the link into a prompt, the agent can read that conversation through the workspace tools. For example, you can ask an agent to read what another agent concluded and continue from there. See [Tasks and Resources](/kepler/tasks-and-resources).
+To copy a Kepler link to a session, such as `kepler://session/<id>`, choose **Copy session link** on the session's row or tab menu, or press **Ctrl/⌘ + C** on a focused row. **Copy task link** on a task's menu does the same for a task. When you paste the link into a prompt, the agent can read that conversation through the workspace tools. For example, you can ask an agent to read what another agent concluded and continue from there. See [Tasks and Resources](/kepler/tasks-and-resources).
 
 An agent that cannot use Kepler's workspace tools gets a copy instead. Kepler attaches a Markdown snapshot of each task or session linked in the prompt, up to 5 per prompt. The same happens when you paste a link into such an agent's terminal. A snapshot is a copy taken when you send, not a live view.
 

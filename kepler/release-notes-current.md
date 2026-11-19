@@ -97,7 +97,7 @@ Keep work and personal, or one client and another, fully apart without signing o
 - Ask Kepler to take you there: it can show a task, session, note, Dashboard view or setting in your window and press Kepler's shortcuts for you, while you keep typing.
 - Ask how your work with agents is going: tokens and cost, how long agents worked and waited on you, how often you hit a usage limit, and how quickly your pull requests merged.
 - It can read your custom Actions and edit their prompts, asking before a change.
-- Ctrl+K now opens Ask Kepler, with Ctrl+L kept as an alias.
+- Ctrl/⌘ + K now opens Ask Kepler, with Ctrl/⌘ + L kept as an alias.
 - On the phone it opens full screen from a button in the Dashboard bar, and its past-chats picker has search.
 
 #### Chat

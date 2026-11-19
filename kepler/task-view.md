@@ -171,7 +171,7 @@ The context panel also has these controls and rows:
 To give the content area the full width, hide the context panel:
 
 - Click **Hide context panel** in the header. **Show context panel** brings the panel back.
-- Press **Cmd/Ctrl+B**. On Windows and Linux, a focused shell keeps **Ctrl+B** for itself.
+- Press **Ctrl/⌘ + B**. On Windows and Linux, a focused shell keeps **Ctrl + B** for itself.
 
 While the context panel is hidden, the control shows the task's session status, so you can still see when a session needs you. Hover the control to peek at the context panel over the content, and press **Escape** to close it. To keep the context panel open, click the control while peeking. To resize the context panel, drag its edge.
 
@@ -210,7 +210,7 @@ Some rows have controls at the end of the subtitle line, always visible:
 | Row | Controls |
 |---|---|
 | **Folder** | **Open in…** |
-| **Worktree** (on disk) | **Open in…** and the run-a-command control. To open a shell, use the row's menu or **Cmd/Ctrl+J** |
+| **Worktree** (on disk) | **Open in…** and the run-a-command control. To open a shell, use the row's menu or **Ctrl/⌘ + J** |
 | **Session** | Show or hide the [Agent Graph](/kepler/agent-graph) for that session alone, and **Archive** |
 
 The run-a-command control shows the newest command running in that worktree, with **Stop**. When nothing is running, it shows your default command.
@@ -257,7 +257,7 @@ The worktree's **Branch** submenu holds the actions that change the branch itsel
 
 **Rename session** lets you name a Chat session yourself. Automatic titles never overwrite a name you chose.
 
-**Copy session link** copies a Kepler link that opens the session. When the window is connected to a remote machine, the link names that machine, so it opens there. With the row focused, **Cmd/Ctrl+C** copies the same link. See [Agent Sessions](/kepler/agent-sessions#pointing-an-agent-at-another-session).
+**Copy session link** copies a Kepler link that opens the session. When the window is connected to a remote machine, the link names that machine, so it opens there. With the row focused, **Ctrl/⌘ + C** copies the same link. See [Agent Sessions](/kepler/agent-sessions#pointing-an-agent-at-another-session).
 
 **Continue as** moves the conversation to another signed-in account of the same agent. The agent restarts under that account and keeps the conversation. **Continue in Terminal** and **Continue in Chat** move the conversation between the 2 ways a session runs. When the session is still running, Kepler asks first, and warns when queued messages would be discarded. **Stop and switch** stops the session and moves it. See [Moving a session to another account](/kepler/agent-sessions#moving-a-session-to-another-account) and [How a session runs](/kepler/agent-sessions#how-a-session-runs).
 
@@ -270,7 +270,7 @@ The worktree's **Branch** submenu holds the actions that change the branch itsel
 
 **Use another copy…** appears when Kepler has more than 1 saved copy of the conversation. It lists each copy, with **In use** on the current one. Pick the one to continue when you resume. See [Agent Sessions](/kepler/agent-sessions).
 
-**Option/Alt-click** a resource row to open it in your browser instead of in Kepler.
+**Alt/⌥ + click** a resource row to open it in your browser instead of in Kepler.
 
 The last item in a row menu removes the row from the task. It depends on the kind of row:
 
@@ -338,7 +338,7 @@ To close a column, click **Close panel** (**X**) on its strip.
   <figcaption style="text-align:center; color:#888">The Close panel control, on a column's strip.</figcaption>
 </figure>
 
-**Split a column to see 2 items of the same kind.** Cmd-click a row in the context panel (Ctrl-click on Windows and Linux), or pick **Open to the side** in its menu. The item opens beside what that column already shows. While a column is split, a plain click replaces only the focused pane and leaves the others alone.
+**Split a column to see 2 items of the same kind.** Ctrl/⌘ + click a row in the context panel, or pick **Open to the side** in its menu. The item opens beside what that column already shows. While a column is split, a plain click replaces only the focused pane and leaves the others alone.
 
 **Shift-click to open a range of rows.** Use a range to watch several agents at once. Click one session, then shift-click another, and every session from the first to the second opens side by side in the Sessions column.
 
@@ -360,11 +360,11 @@ With tabs on, anything you open from the context panel, including sessions, work
 
 - **Drag a tab** to reorder it, onto another group to move it there, or to a group's edge to split off a new group there. Drag the divider between groups to resize them.
 - **A single click opens a preview.** A resource opened with one click shows in an italic preview tab that the next single click replaces. Double-click a row, or start editing in the tab, to keep it open. A session always opens as a tab you keep. Turn **Preview tabs** off in **Settings → Tasks → Task page and panels** to have every click keep its tab.
-- **Cmd-click a row** in the context panel (Ctrl-click on Windows and Linux), or pick **Open beside** in its menu, to open it in a new group beside the one you're reading.
+- **Ctrl/⌘ + click a row** in the context panel, or pick **Open beside** in its menu, to open it in a new group beside the one you're reading.
 - **Shift-click opens a range** of rows, each as its own tab.
 - Clicking the row of something already open just brings its tab forward. Close a tab from the tab itself.
 
-To open a tab's menu, right-click the tab, or press **Shift+F10** or the Menu key on a focused tab. The menu starts with the tab's own actions, such as **Keep open** on a preview, **Pin tab**, **Close others**, and **Close all**, followed by everything the item's row menu offers. A pinned tab shrinks to its icon at the front of its group and has no close control; unpin it to close it.
+To open a tab's menu, right-click the tab, or press **Shift + F10** or the Menu key on a focused tab. The menu starts with the tab's own actions, such as **Keep open** on a preview, **Pin tab**, **Close others**, and **Close all**, followed by everything the item's row menu offers. A pinned tab shrinks to its icon at the front of its group and has no close control; unpin it to close it.
 
 A draft session's tab shows **(draft)** after its name when the tab strip has room. With tabs off, right-click a draft tab for **Discard draft**. With tabs on, close a draft with **Close tab** in its menu. Closing a draft that has text in it asks you to confirm first, because your draft prompt and attachments are removed.
 
@@ -381,10 +381,10 @@ Closing a tab only hides it. You can close a tab in any of these ways:
 
 - Click its **×** (**Close tab**).
 - Middle-click the tab.
-- Press **Cmd/Ctrl+W**, or **Ctrl+F4** on Windows and Linux.
+- Press **Ctrl/⌘ + W**, or **Ctrl + F4** on Windows and Linux.
 - Press **Delete** on a focused tab.
 
-A closed session keeps running and stays in the context panel. To archive a session, use **Archive** on its row. **Cmd/Ctrl+Shift+T** reopens the last tab you closed.
+A closed session keeps running and stays in the context panel. To archive a session, use **Archive** on its row. **Ctrl/⌘ + Shift + T** reopens the last tab you closed.
 
 When every tab is closed, the content area offers **New session**, so you can start something right away.
 
@@ -405,27 +405,27 @@ The task page has these keyboard shortcuts:
 
 | Keys | What they do |
 |---|---|
-| **Ctrl+Tab** / **Ctrl+Shift+Tab** | Switch between the task's sessions, most recently used first |
-| **F6** / **Shift+F6** | Move focus to the next or previous region of the page |
-| **Cmd/Ctrl+1**, **2**, **3** | Focus the Sessions, Changes, or Resources column (tabs off) |
-| **Cmd/Ctrl+Shift+[** and **Cmd/Ctrl+Shift+]** | Previous and next tab. Also **Ctrl+PageUp** and **Ctrl+PageDown** on Windows and Linux |
-| **Alt+1** to **Alt+9** | Jump to a tab in the focused group (tabs on) |
-| **Cmd/Ctrl+Alt+[** and **Cmd/Ctrl+Alt+]** | Move the focused tab left or right. Also **Ctrl+Shift+PageUp** and **Ctrl+Shift+PageDown** on Windows and Linux |
-| **Cmd/Ctrl+W** | Close the focused tab or panel. Also **Ctrl+F4** on Windows and Linux |
+| **Ctrl + Tab** / **Ctrl + Shift + Tab** | Switch between the task's sessions, most recently used first |
+| **F6** / **Shift + F6** | Move focus to the next or previous region of the page |
+| **Ctrl/⌘ + 1**, **2**, **3** | Focus the Sessions, Changes, or Resources column (tabs off) |
+| **Ctrl/⌘ + Shift + [** and **Ctrl/⌘ + Shift + ]** | Previous and next tab. Also **Ctrl + PageUp** and **Ctrl + PageDown** on Windows and Linux |
+| **Alt/⌥ + 1** to **Alt/⌥ + 9** | Jump to a tab in the focused group (tabs on) |
+| **Ctrl/⌘ + Alt/⌥ + [** and **Ctrl/⌘ + Alt/⌥ + ]** | Move the focused tab left or right. Also **Ctrl + Shift + PageUp** and **Ctrl + Shift + PageDown** on Windows and Linux |
+| **Ctrl/⌘ + W** | Close the focused tab or panel. Also **Ctrl + F4** on Windows and Linux |
 | **Delete** | Close the focused tab, the way its **×** does |
-| **Cmd/Ctrl+Shift+T** | Reopen the last closed tab (tabs on) |
-| **Cmd/Ctrl+T** | New session, which opens a draft tab |
-| **Cmd/Ctrl+B** | Show or hide the context panel |
-| **Cmd/Ctrl+J** | Show or hide the terminal drawer |
-| **Cmd/Ctrl+Shift+J** | Maximize the terminal drawer, opening it first if it's hidden |
-| **Cmd/Ctrl+O** / **Cmd/Ctrl+P** | **Open File…** / **Go to File…**. See [Opening a file](#opening-a-file) |
-| **Cmd/Ctrl+Shift+O** | **Open Folder…** |
-| **Cmd/Ctrl+Shift+P** or **F1** | **Go to task or command**. See [Go to a task or file](#go-to-a-task-or-file) |
-| **Cmd/Ctrl+F** | Find in the focused file or diff. See [Finding text in a file](#finding-text-in-a-file) |
+| **Ctrl/⌘ + Shift + T** | Reopen the last closed tab (tabs on) |
+| **Ctrl/⌘ + T** | New session, which opens a draft tab |
+| **Ctrl/⌘ + B** | Show or hide the context panel |
+| **Ctrl/⌘ + J** | Show or hide the terminal drawer |
+| **Ctrl/⌘ + Shift + J** | Maximize the terminal drawer, opening it first if it's hidden |
+| **Ctrl/⌘ + O** / **Ctrl/⌘ + P** | **Open File…** / **Go to File…**. See [Opening a file](#opening-a-file) |
+| **Ctrl/⌘ + Shift + O** | **Open Folder…** |
+| **Ctrl/⌘ + Shift + P** or **F1** | **Go to task or command**. See [Go to a task or file](#go-to-a-task-or-file) |
+| **Ctrl/⌘ + F** | Find in the focused file or diff. See [Finding text in a file](#finding-text-in-a-file) |
 | **F2** | Rename the task, or the note whose pane or tab has focus |
-| **Cmd/Ctrl+Shift+Backspace** | Delete the task, after you confirm |
-| **Cmd/Ctrl+C** | Copy what the focused row names, such as a session's link or a file's path |
-| **Cmd/Ctrl+Shift+W** | Close the window |
+| **Ctrl/⌘ + Shift + Backspace** | Delete the task, after you confirm |
+| **Ctrl/⌘ + C** | Copy what the focused row names, such as a session's link or a file's path |
+| **Ctrl/⌘ + Shift + W** | Close the window |
 | **Tab** to a divider, then the arrow keys | Move the divider between panes, columns, or tab groups. Hold **Shift** for bigger steps |
 
 With tabs off, a tab's menu in a column strip also holds **Move left** and **Move right**.
@@ -438,7 +438,7 @@ Every new session starts as a draft in its own tab, marked **(draft)** when the 
 
 To start a session, follow these steps:
 
-1. Click **+** on the **Sessions** group in the context panel, or press **Cmd/Ctrl+T**. A draft tab opens, and a **Draft** row appears in **Sessions**.
+1. Click **+** on the **Sessions** group in the context panel, or press **Ctrl/⌘ + T**. A draft tab opens, and a **Draft** row appears in **Sessions**.
 2. Choose where the agent works from the place chip at the bottom of the composer. The chip names the place, then its branch, then whether the session gets a new worktree.
 3. Open **Agent settings** to choose the **Agent**, **Start in**, and the agent's own options, such as **Permission mode**.
 4. Type your prompt.
@@ -494,15 +494,15 @@ You can open a file in these ways:
 
 | How to open one | What you get |
 |---|---|
-| **File › Open File…** (**Cmd/Ctrl+O**) | A file picker for the machine the window is connected to |
-| **File › Open Folder…** (**Cmd/Ctrl+Shift+O**) | A folder picker. The folder opens with its file tree |
-| **File › Go to File…** (**Cmd/Ctrl+P**) | The Go to palette on its **Files** tab. See [Go to a task or file](#go-to-a-task-or-file) |
-| **View › Command Palette…** (**Cmd/Ctrl+Shift+P** or **F1**) | The Go to palette on its **All** tab |
+| **File › Open File…** (**Ctrl/⌘ + O**) | A file picker for the machine the window is connected to |
+| **File › Open Folder…** (**Ctrl/⌘ + Shift + O**) | A folder picker. The folder opens with its file tree |
+| **File › Go to File…** (**Ctrl/⌘ + P**) | The Go to palette on its **Files** tab. See [Go to a task or file](#go-to-a-task-or-file) |
+| **View › Command Palette…** (**Ctrl/⌘ + Shift + P** or **F1**) | The Go to palette on its **All** tab |
 | A row in the context panel's **Files** group | That file |
 | A file path an agent writes in the conversation | The file, at the line the agent named |
 | A file path in a terminal | The file, at its line. See [File paths are links](#file-paths-are-links) |
 
-**All file links work the same way.** A click, a Cmd/Ctrl+click, or a middle-click opens the file in Kepler. Cmd/Ctrl+Shift+click opens it in your default editor at its line.
+**All file links work the same way.** A click, a Ctrl/⌘ + click, or a middle-click opens the file in Kepler. Ctrl/⌘ + Shift + click opens it in your default editor at its line.
 
 A path that's already one of the task's files opens that file's own tab rather than a second copy, however the path was spelled.
 
@@ -538,15 +538,15 @@ A very large file shows its start first, with **Load the rest**.
 
 ### Finding text in a file
 
-Every code view, the file viewer and the diffs in the Changes overlay alike, has its own find bar. Press **Cmd/Ctrl+F** in the view to open it at the top right. It counts matches as *{current} of {total}*, or **No results**, and offers the following:
+Every code view, the file viewer and the diffs in the Changes overlay alike, has its own find bar. Press **Ctrl/⌘ + F** in the view to open it at the top right. It counts matches as *{current} of {total}*, or **No results**, and offers the following:
 
 | Control | Keys |
 |---|---|
-| Next and previous match | **F3** and **Shift+F3**. Also **Cmd+G** and **Cmd+Shift+G** on macOS |
-| **Match case** | **Alt+C**, or **Cmd+Option+C** on macOS |
-| **Match whole word** | **Alt+W**, or **Cmd+Option+W** on macOS |
-| **Use regular expression** | **Alt+R**, or **Cmd+Option+R** on macOS |
-| **Only in changes**, in a diff | **Alt+L**, or **Cmd+Option+L** on macOS |
+| Next and previous match | **F3** and **Shift + F3**. Also **⌘ + G** and **⌘ + Shift + G** on macOS |
+| **Match case** | **Alt + C**, or **⌘ + ⌥ + C** on macOS |
+| **Match whole word** | **Alt + W**, or **⌘ + ⌥ + W** on macOS |
+| **Use regular expression** | **Alt + R**, or **⌘ + ⌥ + R** on macOS |
+| **Only in changes**, in a diff | **Alt + L**, or **⌘ + ⌥ + L** on macOS |
 
 **Escape** closes the bar. In a diff, the search runs across every file in the stack. With **Only in changes** on, it searches only the changed lines. Turn it off to search the whole files.
 
@@ -589,14 +589,14 @@ To show the drawer or open a terminal, use one of these:
 
 | How to open one | What you get |
 |---|---|
-| **Cmd/Ctrl+J**, or the header's **Terminal** | Shows and hides the drawer |
+| **Ctrl/⌘ + J**, or the header's **Terminal** | Shows and hides the drawer |
 | **New terminal here**, on a worktree or folder row | A shell in that checkout |
 | **Run command here**, on a worktree row | The command you pick, running in that checkout, revealed without taking your focus |
 | The strip's **+** | A shell. With several checkouts it becomes **New terminal in…**, listing them by branch |
 
 Every terminal also has a row in the context panel's **Terminals** group. Click the row to open the drawer on that terminal. Click the row of the terminal already showing to hide the drawer. Drag the drawer's tabs to reorder them.
 
-**Maximize terminal pane**, or **Cmd/Ctrl+Shift+J**, takes the whole height; **Restore terminal pane** brings it back.
+**Maximize terminal pane**, or **Ctrl/⌘ + Shift + J**, takes the whole height; **Restore terminal pane** brings it back.
 
 If a terminal or a command cannot start, Kepler shows **Unable to open the terminal** or **Unable to run the command**, with the reason when it knows it, such as a full disk or security software that blocks Kepler. Fix the cause, then click **Retry**. If it keeps failing and the notice offers **Copy diagnostics**, include them in a support request.
 
@@ -630,11 +630,11 @@ A finished command run shows a **result bar** rather than leaving you to read th
 
 ### File paths are links
 
-File paths printed in a terminal are links, including relative paths, paths with a line suffix such as `src/app.ts:42`, and paths wrapped across lines. Cmd-click one (Ctrl-click on Windows and Linux) to open the file [on the task page](#opening-a-file) at its line, and Cmd/Ctrl+Shift+click to open it in your default editor.
+File paths printed in a terminal are links, including relative paths, paths with a line suffix such as `src/app.ts:42`, and paths wrapped across lines. Ctrl/⌘ + click one to open the file [on the task page](#opening-a-file) at its line, and Ctrl/⌘ + Shift + click to open it in your default editor.
 
 Right-click a path for more: **Open file**, your default editor (opening at the line), **Open in** for the rest of your editors and your computer's **Default app**, **Save as…**, and **Copy path**. Any of those targets can be your default, with **Set as default**.
 
-Kepler task and session links in a terminal are links too. Cmd/Ctrl-click one to open it in Kepler, or right-click it for **Open in Kepler** and **Copy link**.
+Kepler task and session links in a terminal are links too. Ctrl/⌘ + click one to open it in Kepler, or right-click it for **Open in Kepler** and **Copy link**.
 
 On a phone, long-press a path or link instead, then pick **Open** from the small menu over the selection, which also offers **Copy**, **Paste**, and **Select all**. See [Remote Access](/kepler/remote-environments#remote-access-reach-kepler-from-another-device).
 
