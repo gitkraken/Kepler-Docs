@@ -150,7 +150,7 @@ You can change the prompt behind every Action and add Actions of your own. See [
 
 To start a task that has no issue or pull request behind it:
 
-1. Click **New task** or press **Cmd/Ctrl+N**. From outside Kepler, press **Shift+Alt+N** to open the quick launcher.
+1. Click **New task** or press **Ctrl/⌘ + N**. From outside Kepler, press **Shift + Alt/⌥ + N** to open the quick launcher.
 2. Write a prompt.
 3. If the task needs a repository, attach one.
 4. Start the task.
@@ -220,7 +220,7 @@ Common questions about starting work, giving agents your rules, preparing each n
 | What you want to do | Short answer | Full details |
 |---|---|---|
 | Start an agent from a Jira, Linear, or GitHub issue | In Kepler, connect your tracker, then run an Action from the issue's row, and the agent starts with the issue attached. For a Jira issue, or a Linear issue not synced with GitHub, add a repository in its panel first. | [Issue Tracker Integrations](/kepler/issue-tracker-integrations), [Actions](/kepler/actions), [Start a Coding Agent from a Jira or GitHub Issue and Take It to a Pull Request](/kepler/kepler-start-agent-from-issue-to-pull-request) |
-| Start without an issue | In Kepler, click **New task** or press **Cmd/Ctrl+N**, then write a prompt. You can attach nothing at all and turn the task into real work later. | [Getting Started → Start something that is not tracked yet](/kepler/kepler-getting-started#start-something-that-is-not-tracked-yet) |
+| Start without an issue | In Kepler, click **New task** or press **Ctrl/⌘ + N**, then write a prompt. You can attach nothing at all and turn the task into real work later. | [Getting Started → Start something that is not tracked yet](/kepler/kepler-getting-started#start-something-that-is-not-tracked-yet) |
 | Move my work over from Conductor | In Kepler on macOS, click the import card on an empty **Tasks** list, or choose **File → Import from Another App…**. Each Conductor workspace becomes a task, and its chats continue in Kepler. | [Create a task → From another agent app](/kepler/create-task#from-another-agent-app), [Move from Conductor to Kepler](/kepler/kepler-move-from-conductor) |
 | Give every agent on a task your team's rules | In Kepler, attach a **Note** to the task with the rule, constraint, or decision. Every session on the task gets it, including sessions you start later. | [Tasks and Resources → Notes](/kepler/tasks-and-resources#notes-are-how-you-give-standing-instructions) |
 | Copy `.env` files into every new worktree | In Kepler, list them in a `.worktreeinclude` file at the repository's root, in `.gitignore` syntax. Kepler copies the matching Git-ignored files into each new worktree. | [Tasks and Resources → Make a new worktree ready to build](/kepler/tasks-and-resources#make-a-new-worktree-ready-to-build), [Set Up Every New Agent Worktree Automatically](/kepler/kepler-set-up-agent-worktrees-automatically) |
@@ -295,12 +295,12 @@ At the trailing end:
 - Your setup progress, until you finish the primary setup steps
 - **Stop reading**, on every page while Kepler reads an agent's reply aloud. Click it to stop. Hover it to see the sentence being read. See [Read aloud](/kepler/voice-input#read-aloud).
 - **Tasks that need you**, which shows how many tasks need you. See [Tasks that need you](#tasks-that-need-you).
-- **Ask Kepler** (**Cmd/Ctrl+K** or **Cmd/Ctrl+L**), shown as Kep, Kepler's mascot, with the word **Ask**. It opens a chat and quick terminals in a panel beside the page. See [Ask Kepler](/kepler/ask-kepler).
+- **Ask Kepler** (**Ctrl/⌘ + K** or **Ctrl/⌘ + L**), shown as Kep, Kepler's mascot, with the word **Ask**. It opens a chat and quick terminals in a panel beside the page. See [Ask Kepler](/kepler/ask-kepler).
 - Feedback
 - Settings
 - Your account
 
-The **Ask Kepler** button also shows the state of the panel's chats. When a chat needs you, has a new reply, or failed, the button becomes a **Needs you**, **New reply**, or **Failed** pill. Click the pill to open that chat. A focused shell keeps **Ctrl+L** for itself, so use **Ctrl+K** there.
+The **Ask Kepler** button also shows the state of the panel's chats. When a chat needs you, has a new reply, or failed, the button becomes a **Needs you**, **New reply**, or **Failed** pill. Click the pill to open that chat. On Windows and Linux, a focused shell keeps **Ctrl + L** for itself, so use **Ctrl + K** there.
 
 While an update downloads, a chip near the trailing end of the top bar shows its progress. Hover the chip to see the version and about how long is left. You can keep working meanwhile.
 
@@ -326,7 +326,7 @@ To switch to another Kepler window, use one of these:
 - The tray icon's **Windows** submenu. See [The tray icon](#the-tray-icon).
 - **Switch to window: {name}** in the command palette. See [Go to a task or file](#go-to-a-task-or-file).
 
-**New Window** (**Cmd/Ctrl+Shift+N**), in the **File** menu, opens another window on the same connection as this one. In a remote window, **New Local Window** opens a window on this computer instead.
+**New Window** (**Ctrl/⌘ + Shift + N**), in the **File** menu, opens another window on the same connection as this one. In a remote window, **New Local Window** opens a window on this computer instead.
 
 Each window's title starts with how many of its sessions are waiting on you and the remote it's connected to. With more than one [profile](/kepler/kepler-profiles), the title also names the window's profile. Each window keeps its own layout.
 
@@ -358,7 +358,7 @@ The app icon shows how many tasks need you: as a badge on the macOS Dock icon, o
 
 ### New task
 
-**New task** (**Cmd/Ctrl+N**) opens the **New task** composer. To start a task from a conversation you began outside Kepler, use **Open an external session** in the composer. See [Create a task](/kepler/create-task#from-a-session-you-already-started).
+**New task** (**Ctrl/⌘ + N**) opens the **New task** composer. To start a task from a conversation you began outside Kepler, use **Open an external session** in the composer. See [Create a task](/kepler/create-task#from-a-session-you-already-started).
 
 ***
 
@@ -459,7 +459,7 @@ Right-click a Todo row to open its menu. It holds:
 
 - **Open task page**, when the item already has a task
 - **Open on {provider}**
-- **Copy link** (**Cmd/Ctrl+C** on a focused row)
+- **Copy link** (**Ctrl/⌘ + C** on a focused row)
 - **Copy title**
 - **Copy number**
 - **Copy branch name**, on a pull request
@@ -520,14 +520,14 @@ To manage a task, open its **⋮** menu or right-click its row. The menu holds:
 - **Move up**, **Move down**, and **Move to top of {section}**, while the list is sorted by **Manual**. See [Arranging Your Work](/kepler/arranging-your-work#sort).
 - **Manage resources**, which opens the task's **Resources** screen
 - **Refresh**, which re-reads the task's worktrees and its linked pull requests and issues
-- **Copy task link** (**Cmd/Ctrl+C** on a focused row), a `kepler://` link to the task
+- **Copy task link** (**Ctrl/⌘ + C** on a focused row), a `kepler://` link to the task
 - **Copy task prompt**
 - **Panel**, a submenu with the panel's own items, on a task open in a panel. See [The side panel](#the-side-panel).
 - **Shut down all agents**, which asks first while an agent is still working
 - **Archive task**, or **Restore task** when the task is already archived
 - **Delete task**
 
-**Act on several tasks at once.** Open 2 or more tasks with **Shift-click** or **Cmd/Ctrl-click** (see [Open a panel](#open-a-panel)), then right-click any of them. The menu acts on the whole selection, and each label counts the tasks:
+**Act on several tasks at once.** Open 2 or more tasks with **Shift-click** or **Ctrl/⌘-click** (see [Open a panel](#open-a-panel)), then right-click any of them. The menu acts on the whole selection, and each label counts the tasks:
 
 - **Progress of {count} tasks**, which sets the stage of every selected task
 - **Mark {count} tasks as read** or **Mark {count} tasks as unread**
@@ -594,7 +594,7 @@ You can change all of these defaults. See [Actions](/kepler/actions).
 
 - **Click a row** to select it and open the side panel. A plain click replaces whatever was open, except for panels you've pinned.
 - **Shift-click** a second row to open both side by side. The panel holds one column per open item, each with its own chat, so you can work several tasks at once without leaving the list.
-- **Cmd-click** (**Ctrl-click** on Windows and Linux) to add one row to the open set, or to close it again.
+- **Ctrl/⌘-click** to add one row to the open set, or to close it again.
 - **Double-click a row** to open the item's full task page. From a Todo row that's the page of the task behind it. A row with no task yet has no page, so a double-click opens its panel with the cursor in the prompt box instead.
 
 **From the keyboard**, the list is a single tab stop. Move through it like a tree with these keys:
@@ -608,11 +608,11 @@ You can change all of these defaults. See [Actions](/kepler/actions).
 | **Page Up** / **Page Down** | Move by a screenful |
 | **Space** | Open the focused row's panel, or close it if it's open |
 | **Enter** | On a row whose panel is open, move focus into that panel |
-| **Alt+Enter** | Open the item's task page, like a double-click |
+| **Alt/⌥ + Enter** | Open the item's task page, like a double-click |
 
 On the **Board** layout, **←** and **→** move between columns. **Tab** leaves the list.
 
-**Alt+Shift+↑** and **Alt+Shift+↓** (**⌥⇧↑** and **⌥⇧↓** on macOS) open the previous or next item in the list.
+**Alt/⌥ + Shift + ↑** and **Alt/⌥ + Shift + ↓** open the previous or next item in the list.
 
 A new task appears in the list as soon as you press **Start** in the **New task** composer. While Kepler sets it up, its row shows a **Preparing** pill, and its panel shows each step, with **Cancel** while a repository clones. If setup fails, the row shows **Failed**. Choose **Edit and retry** to change the task and start it again, or **Dismiss**.
 
@@ -622,25 +622,25 @@ Shift-click selects a range from your last plain click, as it does in Finder or 
 
 **Scroll.** Once the panel strip grows wider than the window, it scrolls instead of squeezing the columns below a readable width. Scroll it sideways with **Shift** and the mouse wheel, or a sideways trackpad swipe, even over a terminal.
 
-**Reorder.** Drag a panel by its header to a new place in the strip. A panel's **Panel actions** menu (**⋮**) offers **Move panel left** and **Move panel right**, and so do **Cmd/Ctrl+Alt+Shift+←** and **Cmd/Ctrl+Alt+Shift+→**.
+**Reorder.** Drag a panel by its header to a new place in the strip. A panel's **Panel actions** menu (**⋮**) offers **Move panel left** and **Move panel right**, and so do **Ctrl/⌘ + Alt/⌥ + Shift + ←** and **Ctrl/⌘ + Alt/⌥ + Shift + →**.
 
-**Solo.** Once 2 or more panels are open, **Solo panel** in the **⋮** menu (or **Cmd/Ctrl+Shift+M**) widens one panel across the strip. Drag the soloed panel's edges to resize it, or click **Maximize** in its header to fill the space. Click outside it, or click **Unsolo panel** in its header, to put the layout back.
+**Solo.** Once 2 or more panels are open, **Solo panel** in the **⋮** menu (or **Ctrl/⌘ + Shift + M**) widens one panel across the strip. Drag the soloed panel's edges to resize it, or click **Maximize** in its header to fill the space. Click outside it, or click **Unsolo panel** in its header, to put the layout back.
 
-**Move between panels.** **Ctrl+Tab** opens **Recent panels**, a switcher of your open panels and the ones you replaced recently, so you can switch back to an item you moved away from. **Delete** or **Backspace** closes the highlighted panel, or removes it from the list. **Cmd/Ctrl+1** through **Cmd/Ctrl+8** jump to a panel by its position from the left, and **Cmd/Ctrl+9** to the last.
+**Move between panels.** **Ctrl + Tab** opens **Recent panels**, a switcher of your open panels and the ones you replaced recently, so you can switch back to an item you moved away from. **Delete** or **Backspace** closes the highlighted panel, or removes it from the list. **Ctrl/⌘ + 1** through **Ctrl/⌘ + 8** jump to a panel by its position from the left, and **Ctrl/⌘ + 9** to the last.
 
 If you start a task from **New task** while you're on the list, the new task opens as a panel and the list stays where it was, instead of switching to the task's page. The panel opens beside the one you're reading, or at the end in a grid. To always open it at the end, change **Where a new task opens on the Dashboard** in [Settings → Tasks](/kepler/settings-tasks#new-tasks).
 
 **Open several at once.** Each section's header, except **Archived**, has a button that opens that section's rows in panels, up to the panel limit. A group's chip offers **Open group** for its tasks.
 
-**Hide the list.** With at least one panel open, the toggle at the start of the Dashboard header, **Hide list** (**Cmd/Ctrl+B**), hides the list so the panels get the full width. While the list is hidden:
+**Hide the list.** With at least one panel open, the toggle at the start of the Dashboard header, **Hide list** (**Ctrl/⌘ + B**), hides the list so the panels get the full width. While the list is hidden:
 
-- Hover the toggle, now **Dock list**, to see the list float over the panels as the **Task list** (or **Todo list**). **Cmd/Ctrl+Shift+B** shows the floating list or hides it again.
+- Hover the toggle, now **Dock list**, to see the list float over the panels as the **Task list** (or **Todo list**). **Ctrl/⌘ + Shift + B** shows the floating list or hides it again.
 - Click a row in the floating list to open it. The list closes and focus moves into that panel; **Escape** closes the list while focus is in it.
 - Drag the floating list's edge (**Resize list**) to resize it, and double-click the edge to reset it.
 - When a task in the hidden list needs you and has no panel open, the toggle shows its status dot.
-- **Dock list**, or **Cmd/Ctrl+B** again, brings the list back beside the panels.
+- **Dock list**, or **Ctrl/⌘ + B** again, brings the list back beside the panels.
 
-A hidden list always uses the **List** layout. **Cmd/Ctrl+B** works from a terminal on macOS only; on Windows and Linux a focused shell keeps **Ctrl+B**.
+A hidden list always uses the **List** layout. From a terminal, **⌘ + B** works on macOS; on Windows and Linux a focused shell keeps **Ctrl + B**.
 
 When the window is too narrow for the list beside the open panels, Kepler hides the list, and the toggle reads **Show list**. Click it to float the list over the panels. The list returns when you widen the window.
 
@@ -656,7 +656,7 @@ A grid holds up to 16 panels, fewer in smaller windows. In a grid:
 
 - Drag the dividers between grid columns (**Resize grid column**) and rows (**Resize grid row**). Hold **Shift** to resize every track at once, and double-click a divider or press **Home** on it to even them out.
 - Panels that do not fit the grid go on further pages that scroll sideways.
-- Drag a panel by its header to reorder it, row by row. **Move panel up** and **Move panel down** (**Cmd/Ctrl+Alt+Shift+↑** and **Cmd/Ctrl+Alt+Shift+↓**) join the left and right moves.
+- Drag a panel by its header to reorder it, row by row. **Move panel up** and **Move panel down** (**Ctrl/⌘ + Alt/⌥ + Shift + ↑** and **Ctrl/⌘ + Alt/⌥ + Shift + ↓**) join the left and right moves.
 - **Solo panel** spreads one panel over its page.
 - Panels in short cells start with their headers folded, until you unfold them.
 - Clicking rows opens and closes panels the same way as in 1 row. See [Open a panel](#open-a-panel).
@@ -686,7 +686,7 @@ A section appears only when it has something to show:
 | **What's running** | The chat: session tabs and draft session tabs | Always, on an item you can start work on. You can resize it but not fold it |
 | **Plan** | The plan the conversation on screen has proposed | The agent produced one |
 | **Changes** | The checkout's commits, working changes, and file diffs, in the [side pane](#the-side-pane) | You opened a worktree's changes from its worktree button |
-| **Terminals** | Terminal tabs across the task's checkouts, each with its program's status when it reports one | While a terminal is open. **Cmd/Ctrl+J** shows or hides it without stopping the shells |
+| **Terminals** | Terminal tabs across the task's checkouts, each with its program's status when it reports one | While a terminal is open. **Ctrl/⌘ + J** shows or hides it without stopping the shells |
 
 In **Related**, click a live task to open it in the panel, or an archived one to open its task page without restoring it. A task shows its own pull requests and issues as chips instead.
 
@@ -714,7 +714,7 @@ The side panel's header holds:
 - **Unsolo panel** and **Maximize**, while the panel is soloed
 - **Unpin panel**, when the panel is pinned
 - **Panel actions** (**⋮**): **Close panel**, **Open task page**, **Open on {provider}** for an issue or pull request, **Pin panel**, **Solo panel**, **Move panel left**, **Move panel right**, **Close other panels**, and **Close all panels**. On a task, these items are part of its **Task actions** menu
-- **Close panel** (**Cmd/Ctrl+W** on the focused panel), at the end of the row
+- **Close panel** (**Ctrl/⌘ + W** on the focused panel), at the end of the row
 
 An issue or pull request also has a status line with its provider state, session dots, repository, and last activity.
 
@@ -755,8 +755,8 @@ A wide task panel opens the side pane on its own, on the worktree's changes, or 
 
 Click the same chip again to close the pane. To move between the task's linked items and resources without closing the pane, use the switcher in the pane's title row. On the focused panel, 2 shortcuts show or hide the pane:
 
-- **Cmd/Ctrl+Shift+G** shows or hides the worktree's changes.
-- **Cmd/Ctrl+Shift+E** shows or hides the **Resources** list.
+- **Ctrl/⌘ + Shift + G** shows or hides the worktree's changes.
+- **Ctrl/⌘ + Shift + E** shows or hides the **Resources** list.
 
 ### Issue comments
 
@@ -811,10 +811,10 @@ When a task has more than one checkout, the terminal strip's **+** opens a choos
 
 To jump to a task, a pull request or issue, a file, or something said in a chat, or to run a command, open the palette from anywhere. It has 5 tabs: **All**, **Tasks**, **Todo**, **Files**, and **Chats**. To open it:
 
-- **Cmd/Ctrl+Shift+P** or **F1** (**View › Command Palette…**) opens **Go to task or command**, on **All**.
-- **Cmd/Ctrl+P** (**File › Go to File…**) opens **Go to file**, on **Files**.
+- **Ctrl/⌘ + Shift + P** or **F1** (**View › Command Palette…**) opens **Go to task or command**, on **All**.
+- **Ctrl/⌘ + P** (**File › Go to File…**) opens **Go to file**, on **Files**.
 
-To switch tabs, click a tab or press **Shift+Tab**. In an empty field, you can also type **@** for **Files**, **?** for **Chats**, or **>** to show only commands. Press **Backspace** to return to **All**.
+To switch tabs, click a tab or press **Shift + Tab**. In an empty field, you can also type **@** for **Files**, **?** for **Chats**, or **>** to show only commands. Press **Backspace** to return to **All**.
 
 **All** opens on the tasks that need you, followed by the commands. Type to search your tasks, todos, and commands at once. Under **More ways to search**, rows turn what you typed into a search of your chats or files, a new task, or an [Ask Kepler](/kepler/ask-kepler) chat. Paste a pull request or issue link to open it or start a task from it.
 
@@ -830,11 +830,11 @@ To switch tabs, click a tab or press **Shift+Tab**. In an empty field, you can a
 
 **Chats** searches what was said in your agent chats across every task, archived sessions included. Results are grouped by chat, and your own messages show a person icon. Pick a result to open its session at that message.
 
-On **Files** and **Chats**, the scope chip at the end of the tabs names the task being searched, or reads **All tasks**. To search another task, click the chip or press **Alt+S** (**Cmd+Option+S** on macOS), then pick a task or type to find one. To search every task, pick **All tasks** or click the chip's **×**.
+On **Files** and **Chats**, the scope chip at the end of the tabs names the task being searched, or reads **All tasks**. To search another task, click the chip or press **Alt + S**, or **⌘ + ⌥ + S** on macOS, then pick a task or type to find one. To search every task, pick **All tasks** or click the chip's **×**.
 
-**Commands.** To show only commands, type **>** in an empty field, or press **Cmd/Ctrl+Shift+P** again while **All** is showing. Before you type, the list starts with **Suggested**, led by the commands you use most. Each command shows its keyboard shortcut. The list also has a row for each Settings page and for actions such as **Switch to window: {name}**. Press **Enter** to run the highlighted command. To give it a different key, click **Change shortcut** on its row.
+**Commands.** To show only commands, type **>** in an empty field, or press **Ctrl/⌘ + Shift + P** again while **All** is showing. Before you type, the list starts with **Suggested**, led by the commands you use most. Each command shows its keyboard shortcut. The list also has a row for each Settings page and for actions such as **Switch to window: {name}**. Press **Enter** to run the highlighted command. To give it a different key, click **Change shortcut** on its row.
 
-Each row has a menu of its actions, also on **Alt+Enter**. For how a file opens on the task page, see [The Task View](/kepler/task-view#opening-a-file).
+Each row has a menu of its actions, also on **Alt/⌥ + Enter**. For how a file opens on the task page, see [The Task View](/kepler/task-view#opening-a-file).
 
 ***
 
@@ -844,10 +844,10 @@ Each row has a menu of its actions, also on **Alt+Enter**. For how a file opens 
 
 Use these shortcuts to go back and forward:
 
-| Command | Mac | Windows / Linux |
-|---|---|---|
-| **Back** | ⌘ [ | Alt + ← |
-| **Forward** | ⌘ ] | Alt + → |
+| Command | Shortcut |
+|---|---|
+| **Back** | **Alt + ←**, or **⌘ + [** on macOS |
+| **Forward** | **Alt + →**, or **⌘ + ]** on macOS |
 
 The **Back** and **Forward** buttons in the top bar do the same, and so do a mouse's side buttons. On macOS, a sideways swipe on a trackpad or Magic Mouse also goes back and forward.
 
@@ -901,7 +901,7 @@ What you choose in the **View** menu is saved to the view at once. To learn what
 
 To open several tasks at once, use the open button on a section header, or **Open group** on one of [your groups](#your-groups).
 
-In a narrow window, the search box becomes a search icon. Click it, or press **Cmd/Ctrl+F**, to open the search box.
+In a narrow window, the search box becomes a search icon. Click it, or press **Ctrl/⌘ + F**, to open the search box.
 
 ***
 
@@ -933,7 +933,7 @@ You cannot delete your last Todo view or your last Tasks view.
 
 **Add a view.** Click **New view** after the views, then choose **Todo**, **Tasks**, **Agent Graph**, or **Duplicate current view**. Name the new view, set it up in the menu that opens, and choose **Done**.
 
-**Reorder the views.** Drag a view to a new place, or use **Move left** and **Move right** in its menu. On the Dashboard, **Cmd/Ctrl+Shift+[** and **Cmd/Ctrl+Shift+]** show the previous or next view, and **Cmd+Option+[** and **Cmd+Option+]** (**Ctrl+Alt+[** and **Ctrl+Alt+]** on Windows and Linux) move the view you are on. See [Keyboard shortcuts](/kepler/settings-app#keyboard-shortcuts).
+**Reorder the views.** Drag a view to a new place, or use **Move left** and **Move right** in its menu. On the Dashboard, **Ctrl/⌘ + Shift + [** and **Ctrl/⌘ + Shift + ]** show the previous or next view, and **Ctrl/⌘ + Alt/⌥ + [** and **Ctrl/⌘ + Alt/⌥ + ]** move the view you are on. See [Keyboard shortcuts](/kepler/settings-app#keyboard-shortcuts).
 
 If the views run out of room, they fold into 1 button. Click it to see every view.
 
@@ -1186,7 +1186,7 @@ You can set the stage in these ways:
 - **The task menus.** A task's **⋮** and right-click menus have the same choices under a **Progress** submenu, plus **Reopen** while the task is Done.
 - **Drag a card.** In any grouping, on **List** or **Board**, drag a task's card or row. When grouped by **Progress**, drop it on another stage. On a touch screen, press and hold the card to pick it up. Press **Escape** to cancel the drag. If you drop the card in its own section, Kepler reorders it (see [Put tasks in your own order](#put-tasks-in-your-own-order)).
 - **The Mark as bar.** While you drag, a **Mark as** bar appears over the toolbar with chips for what the card can become: **Read** or **Unread**, the stages, **On hold**, **Later**, **Reopen** for a Done task, and **Archive task**. For an archived task, it shows only **Restore**. Drop the card on a chip.
-- **From the keyboard.** When a card has focus on the **Board** grouped by **Progress**, press **Cmd/Ctrl+Shift+←** or **Cmd/Ctrl+Shift+→** to move it 1 column.
+- **From the keyboard.** When a card has focus on the **Board** grouped by **Progress**, press **Ctrl/⌘ + Shift + ←** or **Ctrl/⌘ + Shift + →** to move it 1 column.
 
 While you drag, each section that accepts the card has a dashed outline. Sections that do not accept it fade, and say why when you hover over them. On the **Board**, a folded column opens when you hold the card over it.
 
@@ -1260,7 +1260,7 @@ GitHub Enterprise and GitLab Self-Hosted get sections of their own. **Milestone*
 
 **Group** lists each of [your groups](#your-groups), including empty ones, and **Ungrouped** for tasks without a group. When the list is grouped by your groups, the facet also limits which group sections appear.
 
-**Include or exclude any value.** Click a value to include it. To exclude a value instead, hover over it and click its minus button, or press **Shift+Enter** from the keyboard. An excluded value reads *not {value}*. On Todo, excluding a provider's value removes only that provider's items, so excluding a GitHub label never hides a Jira issue.
+**Include or exclude any value.** Click a value to include it. To exclude a value instead, hover over it and click its minus button, or press **Shift + Enter** from the keyboard. An excluded value reads *not {value}*. On Todo, excluding a provider's value removes only that provider's items, so excluding a GitHub label never hides a Jira issue.
 
 **Values you include in one facet are combined.** If you tick GitHub *and* GitLab under **Provider**, the list shows items from either provider. Excluded values remove items: Kepler hides an item that matches any of them. A facet with nothing chosen reads **Any** and does not narrow the list.
 
@@ -1352,7 +1352,7 @@ The bar has these buttons:
 
 ### Act on several tasks at once
 
-The tasks you open with **Shift**-click or **Cmd/Ctrl**-click (see [Open a panel](/kepler/kepler-interface#open-a-panel)) are also a selection you can act on. While 2 or more tasks are selected, right-clicking or dragging any one of them acts on all of them. Right-clicking or dragging a task outside the selection acts on that task only. A row's **⋮** always acts on its own row.
+The tasks you open with **Shift**-click or **Ctrl/⌘**-click (see [Open a panel](/kepler/kepler-interface#open-a-panel)) are also a selection you can act on. While 2 or more tasks are selected, right-clicking or dragging any one of them acts on all of them. Right-clicking or dragging a task outside the selection acts on that task only. A row's **⋮** always acts on its own row.
 
 Right-clicking inside the selection opens a selection menu instead of the task menu, and each item counts the tasks it acts on. With it you can set the progress of every selected task, mark them read or unread, star or unstar them, group or ungroup them, shut down their agents, and archive, restore, or delete them. **Shut down agents** asks first while an agent is still working. The group and **Progress** items skip archived tasks. **Archive**, **Restore**, and **Delete** open the same batch confirmation as a section's **Select** bar. For the full menu, see [Task rows](/kepler/kepler-interface#task-rows).
 
@@ -1442,7 +1442,7 @@ An Action you pick from the chevron list asks where to run it whenever there is 
 
 At the bottom of the list, **Manage Actions…** opens **Settings → Actions**.
 
-From the keyboard, the two halves are separate **Tab** stops, the Action first. **Down Arrow** or **Alt+Down** on the Action opens the list too, and closing the list puts focus back on the Action. Every split button in Kepler (**Send**, **Open in**, **Run**) works the same way.
+From the keyboard, the two halves are separate **Tab** stops, the Action first. **Down Arrow** or **Alt/⌥ + Down Arrow** on the Action opens the list too, and closing the list puts focus back on the Action. Every split button in Kepler (**Send**, **Open in**, **Run**) works the same way.
 
 ### Choosing where it runs
 
@@ -1670,7 +1670,7 @@ The scope filter sets which items the list shows:
 
 To add an item, select its row and click **Add**, press **Enter**, or double-click the row. **Remove** takes it off again.
 
-To see more about an item before you add it, click **Show preview** in the screen's header, or press **Cmd/Ctrl+Alt+P**.
+To see more about an item before you add it, click **Show preview** in the screen's header, or press **Ctrl/⌘ + Alt/⌥ + P**.
 
 You can use the list from the keyboard:
 
@@ -1832,7 +1832,7 @@ The text you wrote when you started the task is a context item of its own: the *
 
 Sometimes you want an agent that forms its own view, such as a reviewer that should not be influenced by the implementer's brief. To start a session without the task's prompt and notes, follow these steps:
 
-1. Click **+** on the **Sessions** group in the context panel, or press **Cmd/Ctrl+T**. A draft session tab opens.
+1. Click **+** on the **Sessions** group in the context panel, or press **Ctrl/⌘ + T**. A draft session tab opens.
 2. In the draft's composer footer, untick the **Task context** chip. The chip is on by default.
 3. Type your prompt and click **Start**.
 
@@ -1846,7 +1846,7 @@ To add a note, click **New note** on the **Notes** tab of the **Resources** scre
 
 To rename a note, click its name while you are in the note, press **F2** on the open note, or choose **Rename note** from its right-click menu. The name becomes a field. Press **Enter** to keep the new name, or **Escape** to restore the old one. A note with no name reads **Untitled note**. The task's **Prompt** cannot be renamed.
 
-To edit an open note, click **Edit**, or press **Enter** on the focused note. The note opens in Kepler's code editor, with highlighted Markdown, line numbers, and find. To save, press **Cmd/Ctrl+S**. If the note changed while you were editing it, such as when an agent wrote to it, Kepler stops the save and asks first: **Save anyway** keeps your version, and the note's history keeps the version it replaces.
+To edit an open note, click **Edit**, or press **Enter** on the focused note. The note opens in Kepler's code editor, with highlighted Markdown, line numbers, and find. To save, press **Ctrl/⌘ + S**. If the note changed while you were editing it, such as when an agent wrote to it, Kepler stops the save and asks first: **Save anyway** keeps your version, and the note's history keeps the version it replaces.
 
 Beside **Edit**, **Copy** copies the note and **Save as…** saves it as a Markdown file. If you leave an edit unsaved, Kepler keeps it as a draft: the note reads **Unsaved draft**, and **Edit** becomes **Resume draft**.
 
@@ -1922,11 +1922,11 @@ To rename, archive, or delete a task, open the **Task actions** (**⋮**) menu o
 | **Rename task** | Turns the name into a field. **Auto-name** suggests a name from the task's prompt and resources |
 | **Add to group** | Puts the task in one of [your groups](/kepler/arranging-your-work#your-groups) or a **New group…**, or takes it out with **Remove from group** |
 | **Manage resources** | Opens the task's **Resources** screen. See [What a task holds](#what-a-task-holds) |
-| **Copy task link** | Copies a Kepler link to the task. **Cmd/Ctrl+C** on a focused task row does the same |
+| **Copy task link** | Copies a Kepler link to the task. **Ctrl/⌘ + C** on a focused task row does the same |
 | **Refresh** | Reads the task's worktrees and its pull requests and issues again |
 | **Archive task** | Moves the task out of the active list and stops its running agents. Its sessions and resources are kept, and prompting it puts it back |
 | **Restore task** | Replaces **Archive task** on an archived task, and returns it to the active list and its group |
-| **Delete task** | Removes the task along with its sessions and resources. On the task page, **Cmd/Ctrl+Shift+Backspace** does the same |
+| **Delete task** | Removes the task along with its sessions and resources. On the task page, **Ctrl/⌘ + Shift + Backspace** does the same |
 
 **Kepler suggests archiving a finished task.** When a task meets all of these conditions, its header asks *Ready to archive?* with an **Archive** button:
 
@@ -2196,7 +2196,7 @@ The context panel also has these controls and rows:
 To give the content area the full width, hide the context panel:
 
 - Click **Hide context panel** in the header. **Show context panel** brings the panel back.
-- Press **Cmd/Ctrl+B**. On Windows and Linux, a focused shell keeps **Ctrl+B** for itself.
+- Press **Ctrl/⌘ + B**. On Windows and Linux, a focused shell keeps **Ctrl + B** for itself.
 
 While the context panel is hidden, the control shows the task's session status, so you can still see when a session needs you. Hover the control to peek at the context panel over the content, and press **Escape** to close it. To keep the context panel open, click the control while peeking. To resize the context panel, drag its edge.
 
@@ -2221,7 +2221,7 @@ Some rows have controls at the end of the subtitle line, always visible:
 | Row | Controls |
 |---|---|
 | **Folder** | **Open in…** |
-| **Worktree** (on disk) | **Open in…** and the run-a-command control. To open a shell, use the row's menu or **Cmd/Ctrl+J** |
+| **Worktree** (on disk) | **Open in…** and the run-a-command control. To open a shell, use the row's menu or **Ctrl/⌘ + J** |
 | **Session** | Show or hide the [Agent Graph](/kepler/agent-graph) for that session alone, and **Archive** |
 
 The run-a-command control shows the newest command running in that worktree, with **Stop**. When nothing is running, it shows your default command.
@@ -2261,13 +2261,13 @@ The worktree's **Branch** submenu holds the actions that change the branch itsel
 
 **Rename session** lets you name a Chat session yourself. Automatic titles never overwrite a name you chose.
 
-**Copy session link** copies a Kepler link that opens the session. When the window is connected to a remote machine, the link names that machine, so it opens there. With the row focused, **Cmd/Ctrl+C** copies the same link. See [Agent Sessions](/kepler/agent-sessions#pointing-an-agent-at-another-session).
+**Copy session link** copies a Kepler link that opens the session. When the window is connected to a remote machine, the link names that machine, so it opens there. With the row focused, **Ctrl/⌘ + C** copies the same link. See [Agent Sessions](/kepler/agent-sessions#pointing-an-agent-at-another-session).
 
 **Continue as** moves the conversation to another signed-in account of the same agent. The agent restarts under that account and keeps the conversation. **Continue in Terminal** and **Continue in Chat** move the conversation between the 2 ways a session runs. When the session is still running, Kepler asks first, and warns when queued messages would be discarded. **Stop and switch** stops the session and moves it. See [Moving a session to another account](/kepler/agent-sessions#moving-a-session-to-another-account) and [How a session runs](/kepler/agent-sessions#how-a-session-runs).
 
 **Use another copy…** appears when Kepler has more than 1 saved copy of the conversation. It lists each copy, with **In use** on the current one. Pick the one to continue when you resume. See [Agent Sessions](/kepler/agent-sessions).
 
-**Option/Alt-click** a resource row to open it in your browser instead of in Kepler.
+**Alt/⌥ + click** a resource row to open it in your browser instead of in Kepler.
 
 The last item in a row menu removes the row from the task. It depends on the kind of row:
 
@@ -2313,7 +2313,7 @@ When you open the task page, it shows a conversation and the checkout that conve
 
 To close a column, click **Close panel** (**X**) on its strip.
 
-**Split a column to see 2 items of the same kind.** Cmd-click a row in the context panel (Ctrl-click on Windows and Linux), or pick **Open to the side** in its menu. The item opens beside what that column already shows. While a column is split, a plain click replaces only the focused pane and leaves the others alone.
+**Split a column to see 2 items of the same kind.** Ctrl/⌘ + click a row in the context panel, or pick **Open to the side** in its menu. The item opens beside what that column already shows. While a column is split, a plain click replaces only the focused pane and leaves the others alone.
 
 **Shift-click to open a range of rows.** Use a range to watch several agents at once. Click one session, then shift-click another, and every session from the first to the second opens side by side in the Sessions column.
 
@@ -2328,11 +2328,11 @@ With tabs on, anything you open from the context panel, including sessions, work
 
 - **Drag a tab** to reorder it, onto another group to move it there, or to a group's edge to split off a new group there. Drag the divider between groups to resize them.
 - **A single click opens a preview.** A resource opened with one click shows in an italic preview tab that the next single click replaces. Double-click a row, or start editing in the tab, to keep it open. A session always opens as a tab you keep. Turn **Preview tabs** off in **Settings → Tasks → Task page and panels** to have every click keep its tab.
-- **Cmd-click a row** in the context panel (Ctrl-click on Windows and Linux), or pick **Open beside** in its menu, to open it in a new group beside the one you're reading.
+- **Ctrl/⌘ + click a row** in the context panel, or pick **Open beside** in its menu, to open it in a new group beside the one you're reading.
 - **Shift-click opens a range** of rows, each as its own tab.
 - Clicking the row of something already open just brings its tab forward. Close a tab from the tab itself.
 
-To open a tab's menu, right-click the tab, or press **Shift+F10** or the Menu key on a focused tab. The menu starts with the tab's own actions, such as **Keep open** on a preview, **Pin tab**, **Close others**, and **Close all**, followed by everything the item's row menu offers. A pinned tab shrinks to its icon at the front of its group and has no close control; unpin it to close it.
+To open a tab's menu, right-click the tab, or press **Shift + F10** or the Menu key on a focused tab. The menu starts with the tab's own actions, such as **Keep open** on a preview, **Pin tab**, **Close others**, and **Close all**, followed by everything the item's row menu offers. A pinned tab shrinks to its icon at the front of its group and has no close control; unpin it to close it.
 
 A draft session's tab shows **(draft)** after its name when the tab strip has room. With tabs off, right-click a draft tab for **Discard draft**. With tabs on, close a draft with **Close tab** in its menu. Closing a draft that has text in it asks you to confirm first, because your draft prompt and attachments are removed.
 
@@ -2342,10 +2342,10 @@ Closing a tab only hides it. You can close a tab in any of these ways:
 
 - Click its **×** (**Close tab**).
 - Middle-click the tab.
-- Press **Cmd/Ctrl+W**, or **Ctrl+F4** on Windows and Linux.
+- Press **Ctrl/⌘ + W**, or **Ctrl + F4** on Windows and Linux.
 - Press **Delete** on a focused tab.
 
-A closed session keeps running and stays in the context panel. To archive a session, use **Archive** on its row. **Cmd/Ctrl+Shift+T** reopens the last tab you closed.
+A closed session keeps running and stays in the context panel. To archive a session, use **Archive** on its row. **Ctrl/⌘ + Shift + T** reopens the last tab you closed.
 
 When every tab is closed, the content area offers **New session**, so you can start something right away.
 
@@ -2359,27 +2359,27 @@ The task page has these keyboard shortcuts:
 
 | Keys | What they do |
 |---|---|
-| **Ctrl+Tab** / **Ctrl+Shift+Tab** | Switch between the task's sessions, most recently used first |
-| **F6** / **Shift+F6** | Move focus to the next or previous region of the page |
-| **Cmd/Ctrl+1**, **2**, **3** | Focus the Sessions, Changes, or Resources column (tabs off) |
-| **Cmd/Ctrl+Shift+[** and **Cmd/Ctrl+Shift+]** | Previous and next tab. Also **Ctrl+PageUp** and **Ctrl+PageDown** on Windows and Linux |
-| **Alt+1** to **Alt+9** | Jump to a tab in the focused group (tabs on) |
-| **Cmd/Ctrl+Alt+[** and **Cmd/Ctrl+Alt+]** | Move the focused tab left or right. Also **Ctrl+Shift+PageUp** and **Ctrl+Shift+PageDown** on Windows and Linux |
-| **Cmd/Ctrl+W** | Close the focused tab or panel. Also **Ctrl+F4** on Windows and Linux |
+| **Ctrl + Tab** / **Ctrl + Shift + Tab** | Switch between the task's sessions, most recently used first |
+| **F6** / **Shift + F6** | Move focus to the next or previous region of the page |
+| **Ctrl/⌘ + 1**, **2**, **3** | Focus the Sessions, Changes, or Resources column (tabs off) |
+| **Ctrl/⌘ + Shift + [** and **Ctrl/⌘ + Shift + ]** | Previous and next tab. Also **Ctrl + PageUp** and **Ctrl + PageDown** on Windows and Linux |
+| **Alt/⌥ + 1** to **Alt/⌥ + 9** | Jump to a tab in the focused group (tabs on) |
+| **Ctrl/⌘ + Alt/⌥ + [** and **Ctrl/⌘ + Alt/⌥ + ]** | Move the focused tab left or right. Also **Ctrl + Shift + PageUp** and **Ctrl + Shift + PageDown** on Windows and Linux |
+| **Ctrl/⌘ + W** | Close the focused tab or panel. Also **Ctrl + F4** on Windows and Linux |
 | **Delete** | Close the focused tab, the way its **×** does |
-| **Cmd/Ctrl+Shift+T** | Reopen the last closed tab (tabs on) |
-| **Cmd/Ctrl+T** | New session, which opens a draft tab |
-| **Cmd/Ctrl+B** | Show or hide the context panel |
-| **Cmd/Ctrl+J** | Show or hide the terminal drawer |
-| **Cmd/Ctrl+Shift+J** | Maximize the terminal drawer, opening it first if it's hidden |
-| **Cmd/Ctrl+O** / **Cmd/Ctrl+P** | **Open File…** / **Go to File…**. See [Opening a file](#opening-a-file) |
-| **Cmd/Ctrl+Shift+O** | **Open Folder…** |
-| **Cmd/Ctrl+Shift+P** or **F1** | **Go to task or command**. See [Go to a task or file](#go-to-a-task-or-file) |
-| **Cmd/Ctrl+F** | Find in the focused file or diff. See [Finding text in a file](#finding-text-in-a-file) |
+| **Ctrl/⌘ + Shift + T** | Reopen the last closed tab (tabs on) |
+| **Ctrl/⌘ + T** | New session, which opens a draft tab |
+| **Ctrl/⌘ + B** | Show or hide the context panel |
+| **Ctrl/⌘ + J** | Show or hide the terminal drawer |
+| **Ctrl/⌘ + Shift + J** | Maximize the terminal drawer, opening it first if it's hidden |
+| **Ctrl/⌘ + O** / **Ctrl/⌘ + P** | **Open File…** / **Go to File…**. See [Opening a file](#opening-a-file) |
+| **Ctrl/⌘ + Shift + O** | **Open Folder…** |
+| **Ctrl/⌘ + Shift + P** or **F1** | **Go to task or command**. See [Go to a task or file](#go-to-a-task-or-file) |
+| **Ctrl/⌘ + F** | Find in the focused file or diff. See [Finding text in a file](#finding-text-in-a-file) |
 | **F2** | Rename the task, or the note whose pane or tab has focus |
-| **Cmd/Ctrl+Shift+Backspace** | Delete the task, after you confirm |
-| **Cmd/Ctrl+C** | Copy what the focused row names, such as a session's link or a file's path |
-| **Cmd/Ctrl+Shift+W** | Close the window |
+| **Ctrl/⌘ + Shift + Backspace** | Delete the task, after you confirm |
+| **Ctrl/⌘ + C** | Copy what the focused row names, such as a session's link or a file's path |
+| **Ctrl/⌘ + Shift + W** | Close the window |
 | **Tab** to a divider, then the arrow keys | Move the divider between panes, columns, or tab groups. Hold **Shift** for bigger steps |
 
 With tabs off, a tab's menu in a column strip also holds **Move left** and **Move right**.
@@ -2392,7 +2392,7 @@ Every new session starts as a draft in its own tab, marked **(draft)** when the 
 
 To start a session, follow these steps:
 
-1. Click **+** on the **Sessions** group in the context panel, or press **Cmd/Ctrl+T**. A draft tab opens, and a **Draft** row appears in **Sessions**.
+1. Click **+** on the **Sessions** group in the context panel, or press **Ctrl/⌘ + T**. A draft tab opens, and a **Draft** row appears in **Sessions**.
 2. Choose where the agent works from the place chip at the bottom of the composer. The chip names the place, then its branch, then whether the session gets a new worktree.
 3. Open **Agent settings** to choose the **Agent**, **Start in**, and the agent's own options, such as **Permission mode**.
 4. Type your prompt.
@@ -2434,15 +2434,15 @@ You can open a file in these ways:
 
 | How to open one | What you get |
 |---|---|
-| **File › Open File…** (**Cmd/Ctrl+O**) | A file picker for the machine the window is connected to |
-| **File › Open Folder…** (**Cmd/Ctrl+Shift+O**) | A folder picker. The folder opens with its file tree |
-| **File › Go to File…** (**Cmd/Ctrl+P**) | The Go to palette on its **Files** tab. See [Go to a task or file](#go-to-a-task-or-file) |
-| **View › Command Palette…** (**Cmd/Ctrl+Shift+P** or **F1**) | The Go to palette on its **All** tab |
+| **File › Open File…** (**Ctrl/⌘ + O**) | A file picker for the machine the window is connected to |
+| **File › Open Folder…** (**Ctrl/⌘ + Shift + O**) | A folder picker. The folder opens with its file tree |
+| **File › Go to File…** (**Ctrl/⌘ + P**) | The Go to palette on its **Files** tab. See [Go to a task or file](#go-to-a-task-or-file) |
+| **View › Command Palette…** (**Ctrl/⌘ + Shift + P** or **F1**) | The Go to palette on its **All** tab |
 | A row in the context panel's **Files** group | That file |
 | A file path an agent writes in the conversation | The file, at the line the agent named |
 | A file path in a terminal | The file, at its line. See [File paths are links](#file-paths-are-links) |
 
-**All file links work the same way.** A click, a Cmd/Ctrl+click, or a middle-click opens the file in Kepler. Cmd/Ctrl+Shift+click opens it in your default editor at its line.
+**All file links work the same way.** A click, a Ctrl/⌘ + click, or a middle-click opens the file in Kepler. Ctrl/⌘ + Shift + click opens it in your default editor at its line.
 
 A path that's already one of the task's files opens that file's own tab rather than a second copy, however the path was spelled.
 
@@ -2471,15 +2471,15 @@ A very large file shows its start first, with **Load the rest**.
 
 ### Finding text in a file
 
-Every code view, the file viewer and the diffs in the Changes overlay alike, has its own find bar. Press **Cmd/Ctrl+F** in the view to open it at the top right. It counts matches as *{current} of {total}*, or **No results**, and offers the following:
+Every code view, the file viewer and the diffs in the Changes overlay alike, has its own find bar. Press **Ctrl/⌘ + F** in the view to open it at the top right. It counts matches as *{current} of {total}*, or **No results**, and offers the following:
 
 | Control | Keys |
 |---|---|
-| Next and previous match | **F3** and **Shift+F3**. Also **Cmd+G** and **Cmd+Shift+G** on macOS |
-| **Match case** | **Alt+C**, or **Cmd+Option+C** on macOS |
-| **Match whole word** | **Alt+W**, or **Cmd+Option+W** on macOS |
-| **Use regular expression** | **Alt+R**, or **Cmd+Option+R** on macOS |
-| **Only in changes**, in a diff | **Alt+L**, or **Cmd+Option+L** on macOS |
+| Next and previous match | **F3** and **Shift + F3**. Also **⌘ + G** and **⌘ + Shift + G** on macOS |
+| **Match case** | **Alt + C**, or **⌘ + ⌥ + C** on macOS |
+| **Match whole word** | **Alt + W**, or **⌘ + ⌥ + W** on macOS |
+| **Use regular expression** | **Alt + R**, or **⌘ + ⌥ + R** on macOS |
+| **Only in changes**, in a diff | **Alt + L**, or **⌘ + ⌥ + L** on macOS |
 
 **Escape** closes the bar. In a diff, the search runs across every file in the stack. With **Only in changes** on, it searches only the changed lines. Turn it off to search the whole files.
 
@@ -2508,14 +2508,14 @@ To show the drawer or open a terminal, use one of these:
 
 | How to open one | What you get |
 |---|---|
-| **Cmd/Ctrl+J**, or the header's **Terminal** | Shows and hides the drawer |
+| **Ctrl/⌘ + J**, or the header's **Terminal** | Shows and hides the drawer |
 | **New terminal here**, on a worktree or folder row | A shell in that checkout |
 | **Run command here**, on a worktree row | The command you pick, running in that checkout, revealed without taking your focus |
 | The strip's **+** | A shell. With several checkouts it becomes **New terminal in…**, listing them by branch |
 
 Every terminal also has a row in the context panel's **Terminals** group. Click the row to open the drawer on that terminal. Click the row of the terminal already showing to hide the drawer. Drag the drawer's tabs to reorder them.
 
-**Maximize terminal pane**, or **Cmd/Ctrl+Shift+J**, takes the whole height; **Restore terminal pane** brings it back.
+**Maximize terminal pane**, or **Ctrl/⌘ + Shift + J**, takes the whole height; **Restore terminal pane** brings it back.
 
 If a terminal or a command cannot start, Kepler shows **Unable to open the terminal** or **Unable to run the command**, with the reason when it knows it, such as a full disk or security software that blocks Kepler. Fix the cause, then click **Retry**. If it keeps failing and the notice offers **Copy diagnostics**, include them in a support request.
 
@@ -2549,11 +2549,11 @@ A finished command run shows a **result bar** rather than leaving you to read th
 
 ### File paths are links
 
-File paths printed in a terminal are links, including relative paths, paths with a line suffix such as `src/app.ts:42`, and paths wrapped across lines. Cmd-click one (Ctrl-click on Windows and Linux) to open the file [on the task page](#opening-a-file) at its line, and Cmd/Ctrl+Shift+click to open it in your default editor.
+File paths printed in a terminal are links, including relative paths, paths with a line suffix such as `src/app.ts:42`, and paths wrapped across lines. Ctrl/⌘ + click one to open the file [on the task page](#opening-a-file) at its line, and Ctrl/⌘ + Shift + click to open it in your default editor.
 
 Right-click a path for more: **Open file**, your default editor (opening at the line), **Open in** for the rest of your editors and your computer's **Default app**, **Save as…**, and **Copy path**. Any of those targets can be your default, with **Set as default**.
 
-Kepler task and session links in a terminal are links too. Cmd/Ctrl-click one to open it in Kepler, or right-click it for **Open in Kepler** and **Copy link**.
+Kepler task and session links in a terminal are links too. Ctrl/⌘ + click one to open it in Kepler, or right-click it for **Open in Kepler** and **Copy link**.
 
 On a phone, long-press a path or link instead, then pick **Open** from the small menu over the selection, which also offers **Copy**, **Paste**, and **Select all**. See [Remote Access](/kepler/remote-environments#remote-access-reach-kepler-from-another-device).
 
@@ -2862,7 +2862,7 @@ Kepler names tasks automatically from what you started them with. To rename a ta
 
 ## From the New task composer
 
-Click **New task** or press **Cmd/Ctrl+N**. To start one without switching to Kepler first, press **Shift+Alt+N** to open the quick launcher from anywhere, including when Kepler is not the focused window.
+Click **New task** or press **Ctrl/⌘ + N**. To start one without switching to Kepler first, press **Shift + Alt/⌥ + N** to open the quick launcher from anywhere, including when Kepler is not the focused window.
 
 The **New task** composer is a prompt box above a row of 4 buttons:
 
@@ -2900,9 +2900,9 @@ The primary button runs the Action that matches what you've attached, exactly as
 
 To keep **Start** when you link an issue or pull request, turn the switching off: click **Turn off** in the note the composer shows the first time it switches, or turn off **Suggest automatically** in [Settings → Actions](/kepler/settings-actions).
 
-The chevron beside the primary button lists the other choices: **Prepare**, which creates the session without starting work yet, and every Action that applies to what you've attached. Picking one there does not run it. Instead, it relabels the primary button, and an Action that names its own agent puts that agent in the agent pill. You can then check or change what will run before you press the button. To pick an Action and run it at once, hold Cmd/Ctrl as you click it. The Action sends its prompt, with anything you typed added as a refinement.
+The chevron beside the primary button lists the other choices: **Prepare**, which creates the session without starting work yet, and every Action that applies to what you've attached. Picking one there does not run it. Instead, it relabels the primary button, and an Action that names its own agent puts that agent in the agent pill. You can then check or change what will run before you press the button. To pick an Action and run it at once, hold Ctrl/⌘ as you click it. The Action sends its prompt, with anything you typed added as a refinement.
 
-**Shift+Tab** in the prompt cycles the primary button through the same list.
+**Shift + Tab** in the prompt cycles the primary button through the same list.
 
 A task that has its prompt but no session yet, such as one an agent created for you, opens a draft session tab. To send the task's prompt as written, press **Start** on the empty box.
 
@@ -3076,7 +3076,7 @@ You can start a session from any of the following places:
 |---|---|
 | A row in **Todo** | Fire an Action. See [Actions](/kepler/actions) |
 | The task page's context panel | **New session** on the **Sessions** group, or **New session here** on a worktree or folder row |
-| An open session strip | **+** (**New session**), or **Cmd/Ctrl+T** |
+| An open session strip | **+** (**New session**), or **Ctrl/⌘ + T** |
 | An existing session | **New session from this one** on its row menu |
 | A message in a conversation | **New session from here** on the message's right-click menu |
 
@@ -3329,7 +3329,7 @@ From left to right, the status bar shows the following:
 | Context ring | The share of the context window in use. Hover for tokens used, available, and total, the estimated cost at API rates, and the prompt cache |
 | Branch | The session's branch, with a folder mark when the CLI works in a subfolder or outside the worktree |
 | Account and plan usage | The account, in a warning tone once its limit is spent, and 2 bars for the **5h** and **7d** windows, colored by pace. Hover or click for the full readout, which ends with **Continue as** to move the session to another account; see [Usage indicators](#usage-indicators) |
-| **Transcript** | Swaps the terminal for a read-only, searchable view of the conversation. Click it again, or press **Cmd/Ctrl+Shift+X**, to return to the terminal |
+| **Transcript** | Swaps the terminal for a read-only, searchable view of the conversation. Click it again, or press **Ctrl/⌘ + Shift + X**, to return to the terminal |
 | **Rich input** | Shows or hides Kepler's message composer. Hide it to type straight into the CLI |
 | **Read last reply** | Reads the agent's last reply aloud. See [Read aloud](/kepler/voice-input#read-aloud) |
 | **No Kepler tools** | Shown when the agent cannot use Kepler's workspace tools or inbox in a terminal. Its tip points to **Continue in Chat** on the session menu |
@@ -3456,11 +3456,11 @@ A draft you have not sent survives a reload.
 
 The composer works with these keys:
 
-- **Enter** sends; **Shift+Enter** inserts a newline. To send with **Cmd/Ctrl+Enter** instead, and have **Enter** start a new line, change **Send messages with** in **Settings → General → Chat**.
-- **Alt+Enter** sends after the running turn ends (**Send after this turn**). See [Steering a running turn](#steering-a-running-turn).
+- **Enter** sends; **Shift + Enter** inserts a newline. To send with **Ctrl/⌘ + Enter** instead, and have **Enter** start a new line, change **Send messages with** in **Settings → General → Chat**.
+- **Alt/⌥ + Enter** sends after the running turn ends (**Send after this turn**). See [Steering a running turn](#steering-a-running-turn).
 - **Tab** moves focus from the prompt to **Send**, then to its chevron.
-- **Down Arrow** or **Alt+Down** on **Send** opens the chevron's menu. Closing the menu returns focus to **Send**.
-- **Cmd/Ctrl+F** opens **Find in conversation**.
+- **Down Arrow** or **Alt/⌥ + Down Arrow** on **Send** opens the chevron's menu. Closing the menu returns focus to **Send**.
+- **Ctrl/⌘ + F** opens **Find in conversation**.
 - To type a prompt, start typing anywhere in the session. The composer takes the keystroke, so you do not have to click into it first.
 
 For agents with long option lists, the **Agent settings** menus have a **Search options…** box.
@@ -3497,7 +3497,7 @@ When you send during a turn, the message goes into a queue, and a banner above t
 - **After this step**: the prompt joins the running turn once the agent finishes its current step.
 - **After this turn**: the prompt waits until the turn ends, for example on an agent that cannot take messages mid-turn.
 
-On an agent that takes messages mid-turn, a prompt that joins the turn is marked **Added mid-turn** in the conversation. To hold a message for the end of the turn instead, choose **Send after this turn** on the send button's chevron, or press **Alt+Enter**.
+On an agent that takes messages mid-turn, a prompt that joins the turn is marked **Added mid-turn** in the conversation. To hold a message for the end of the turn instead, choose **Send after this turn** on the send button's chevron, or press **Alt/⌥ + Enter**.
 
 Kepler sends waiting prompts as **one merged follow-up prompt**, so 2 quick corrections arrive as a single instruction instead of 2 competing ones.
 
@@ -3513,7 +3513,7 @@ Kepler sends waiting prompts as **one merged follow-up prompt**, so 2 quick corr
 | **Not sent — too large ({size} of {limit})** | The queued messages are too large for the agent |
 | **Not sent — the agent was unavailable** | The agent could not take the queued messages |
 | **Back to composer** | Puts messages that were not sent back in the composer, so you can edit and resend them |
-| **Interrupt & send** | Stops the current turn and delivers the queue immediately, in one step. **Cmd/Ctrl+Shift+Enter** does the same from the keyboard |
+| **Interrupt & send** | Stops the current turn and delivers the queue immediately, in one step. **Ctrl/⌘ + Shift + Enter** does the same from the keyboard |
 
 With subagents running, **Interrupt & send** names them: **Interrupt & send ({count} running)**. If the stop gets no answer, the button becomes **Force quit (drops {count} queued)**, which ends the agent and drops the queued prompts instead of sending them.
 
@@ -3529,10 +3529,10 @@ If a send fails, Kepler puts the text back in the composer so you can try again.
 |---|---|
 | **Escape** | Stops the running turn |
 | The stop segment on the send button | Stops the running turn. Its tooltip says what happens to the queue |
-| **Cmd/Ctrl+Shift+Enter** | **Interrupt & send**: stops the turn *and* delivers what you typed |
+| **Ctrl/⌘ + Shift + Enter** | **Interrupt & send**: stops the turn *and* delivers what you typed |
 | **Force quit the agent** | Offered once a cancel has been pending too long. It does not wait for the agent to settle |
 
-In **Terminal** mode, Kepler recognizes an interrupt whether it arrives as **Escape** or as **Ctrl+C**, and the session shows as stopped once the CLI has stopped.
+In **Terminal** mode, Kepler recognizes an interrupt whether it arrives as **Escape** or as **Ctrl + C**, and the session shows as stopped once the CLI has stopped.
 
 ***
 
@@ -3547,7 +3547,7 @@ A session's conversation shows your prompts, the agent's replies, and the agent'
 - When the agent replies to one of your review comments, the reply shows as a card with your comment beneath **Replied on** and the file and line. Click **Open in Changes** to go to the comment.
 - Your latest prompt and the latest reply show how long ago they were sent. Every earlier finished reply shows the time it was sent. A divider marks a long gap between messages.
 - An agent's thinking shows as a collapsed **Thinking** block, for agents that send it.
-- A file path an agent writes (a link, an inline-code path, or the file in a read or edit tool call) becomes a link once Kepler confirms the file exists. Click it, or **Cmd/Ctrl+click** it, to open the file in Kepler at the named line. A file inside a worktree opens in the Changes overlay's file view. **Cmd/Ctrl+Shift+click** opens the file in your default editor at that line.
+- A file path an agent writes (a link, an inline-code path, or the file in a read or edit tool call) becomes a link once Kepler confirms the file exists. Click it, or **Ctrl/⌘ + click** it, to open the file in Kepler at the named line. A file inside a worktree opens in the Changes overlay's file view. **Ctrl/⌘ + Shift + click** opens the file in your default editor at that line.
 - A Kepler task or session link in the conversation opens inside Kepler when you click or middle-click it. Hover it to see where it goes. Right-click it for **Open in Kepler** and **Copy link**.
 - Images in replies and tool output open in a lightbox. You can save the image from the thumbnail or the lightbox with **Save as…**.
 - Tool calls collapse into groups: **{count} tool uses**, with **{count} done**, **{count} running**, and **{count} failed** tallies. Expand a group to read any call's output.
@@ -3873,9 +3873,9 @@ You can do the following with tabs:
 
 | Action | Result |
 |---|---|
-| **Cmd/Ctrl+T** or **+** | Opens a draft tab for a new session. See [Draft session tabs](#draft-session-tabs) |
-| **Alt+1** to **Alt+9** | Jumps to a tab by position |
-| **Cmd/Ctrl+Shift+[** / **]** | Previous or next tab |
+| **Ctrl/⌘ + T** or **+** | Opens a draft tab for a new session. See [Draft session tabs](#draft-session-tabs) |
+| **Alt/⌥ + 1** to **Alt/⌥ + 9** | Jumps to a tab by position |
+| **Ctrl/⌘ + Shift + [** / **]** | Previous or next tab |
 | **×** on a tab in the Sessions column (**Archive session**) | Archives the session |
 | **Archive** on a session's row in the context panel | Archives the session |
 | **Restore** | Brings an archived session back into the strip |
@@ -3910,7 +3910,7 @@ Deleting a task or removing its repository ends that task's live sessions.
 
 ### Pointing an agent at another session
 
-To copy a Kepler link to a session, such as `kepler://session/<id>`, choose **Copy session link** on the session's row or tab menu, or press **Cmd/Ctrl+C** on a focused row. **Copy task link** on a task's menu does the same for a task. When you paste the link into a prompt, the agent can read that conversation through the workspace tools. For example, you can ask an agent to read what another agent concluded and continue from there. See [Tasks and Resources](/kepler/tasks-and-resources).
+To copy a Kepler link to a session, such as `kepler://session/<id>`, choose **Copy session link** on the session's row or tab menu, or press **Ctrl/⌘ + C** on a focused row. **Copy task link** on a task's menu does the same for a task. When you paste the link into a prompt, the agent can read that conversation through the workspace tools. For example, you can ask an agent to read what another agent concluded and continue from there. See [Tasks and Resources](/kepler/tasks-and-resources).
 
 An agent that cannot use Kepler's workspace tools gets a copy instead. Kepler attaches a Markdown snapshot of each task or session linked in the prompt, up to 5 per prompt. The same happens when you paste a link into such an agent's terminal. A snapshot is a copy taken when you send, not a live view.
 
@@ -4055,11 +4055,11 @@ You can open **Ask Kepler** from anywhere in Kepler in one of these ways:
 | How | Opens |
 |---|---|
 | The **Ask Kepler** button (Kep, the planet mascot, with the word **Ask**) in the top bar | The panel, on the section you used last |
-| **Cmd/Ctrl+K** or **Cmd/Ctrl+L** (**Toggle Ask Kepler chat**) | The **Chat** section |
-| **Ctrl+&#96;** on every platform, macOS included (**Toggle Ask Kepler terminal**) | The **Terminal** section, starting a shell if none is open |
-| **Cmd/Ctrl+Shift+K** or **Cmd/Ctrl+Shift+L** (**New Ask Kepler chat**) | A new chat, from anywhere in the desktop app |
+| **Ctrl/⌘ + K** or **Ctrl/⌘ + L** (**Toggle Ask Kepler chat**) | The **Chat** section |
+| **Ctrl + &#96;** on every platform, macOS included (**Toggle Ask Kepler terminal**) | The **Terminal** section, starting a shell if none is open |
+| **Ctrl/⌘ + Shift + K** or **Ctrl/⌘ + Shift + L** (**New Ask Kepler chat**) | A new chat, from anywhere in the desktop app |
 
-To close the panel, press the same shortcut again while focus is inside it. On Windows and Linux, a focused shell uses **Ctrl+L** to clear its screen, so press **Ctrl+K** to open or close the chat from inside a terminal.
+To close the panel, press the same shortcut again while focus is inside it. On Windows and Linux, a focused shell uses **Ctrl + L** to clear its screen, so press **Ctrl + K** to open or close the chat from inside a terminal.
 
 On a phone, tap Kep in the Dashboard bar. The panel opens full screen, so it has no **Dock panel** and no controls to move it to the other side.
 
@@ -4161,7 +4161,7 @@ A panel chat belongs to no task, so when a task's session links back to the chat
 
 ## Quick terminals
 
-The **Terminal** section holds shells that belong to no task, in the same tab strip a task page's terminal drawer uses. The first time you open the section, Kepler starts a shell. After you close the last shell, the strip stays empty until you click **New terminal** or press **Ctrl+&#96;**.
+The **Terminal** section holds shells that belong to no task, in the same tab strip a task page's terminal drawer uses. The first time you open the section, Kepler starts a shell. After you close the last shell, the strip stays empty until you click **New terminal** or press **Ctrl + &#96;**.
 
 Where a new shell opens depends on where you are:
 
@@ -4340,7 +4340,7 @@ The worktree's menu has these items:
 
 In a narrow column, **Open in** and **Run a command** leave the header. You can still reach both from a right-click or from the tab's own menu.
 
-To open a shell in this checkout, choose **New terminal here** on the worktree's row in the context panel, or press **Cmd/Ctrl+J**. Terminals open in the terminal drawer below the columns, not in the worktree tab. See [The Task View](/kepler/task-view#the-terminal-drawer).
+To open a shell in this checkout, choose **New terminal here** on the worktree's row in the context panel, or press **Ctrl/⌘ + J**. Terminals open in the terminal drawer below the columns, not in the worktree tab. See [The Task View](/kepler/task-view#the-terminal-drawer).
 
 ### The changes panel
 
@@ -4363,7 +4363,7 @@ In **Changes**, the list shows the branch from the newest work down to where it 
 - **Commits**: every commit the branch adds on top of its merge target, followed by each commit on its own.
 - **branched here**: the merge base, where the branch started.
 
-Click a row to show it. **Shift**-click another row to show everything between them, such as **Working changes** and the newest commits, which the counts read as **Working + {count} commits**. **Cmd/Ctrl**-click adds a row to what you show, or takes it away. A branch with commits opens on **All changes**, and a branch with only uncommitted work opens on **Working changes**. A branch with neither opens on **Files**.
+Click a row to show it. **Shift**-click another row to show everything between them, such as **Working changes** and the newest commits, which the counts read as **Working + {count} commits**. **Ctrl/⌘**-click adds a row to what you show, or takes it away. A branch with commits opens on **All changes**, and a branch with only uncommitted work opens on **Working changes**. A branch with neither opens on **Files**.
 
 What you picked stays picked when an agent edits a file, so the list does not move while you read it.
 
@@ -4374,7 +4374,7 @@ When you show commits together with uncommitted work, a file that also has uncom
 Commits that the upstream does not have yet show a green dot and line, and read **Not pushed**. To see more about a commit:
 
 - Hover over it to see its card: the author, when it was committed, the full message, the short hash, and its line and file counts.
-- Right-click it, or press **Shift+F10**, to copy its SHA or message. A pushed commit also has **Open commit on {provider}** and **Copy commit URL**.
+- Right-click it, or press **Shift + F10**, to copy its SHA or message. A pushed commit also has **Open commit on {provider}** and **Copy commit URL**.
 
 With a Jira or Jira Server account connected, Jira issue keys in a commit's message become links, and the commit's right-click menu adds **Open issue {issue}** and **Copy issue URL for {issue}**. See [Issue Tracker Integrations](/kepler/issue-tracker-integrations).
 
@@ -4397,7 +4397,7 @@ In the desktop app, you can review on a second screen: click **Open in new windo
 | The tree | The same view picker, list of changes and file tree as the changes panel, with its own controls. In commit mode, the rows have staging checkboxes and the commit box is below them; in **Comments**, the task's [comment list](#the-comments-view) replaces the tree |
 | The viewer | The diff, or several diffs stacked when you opened a folder or a selection. A single file can show as **File**, the whole file with its changes marked in the gutter, or **Changes**, the diff |
 
-**Hide changes panel**, or **Cmd/Ctrl+B**, hides the tree and gives its width to the viewer. While the tree is hidden, the viewer's header keeps a view picker and a **Jump to file…** switcher, so you can still change what you show and which file. The picker lists the rows of **Changes**, then **All files**, where **Jump to file…** finds any file in the worktree.
+**Hide changes panel**, or **Ctrl/⌘ + B**, hides the tree and gives its width to the viewer. While the tree is hidden, the viewer's header keeps a view picker and a **Jump to file…** switcher, so you can still change what you show and which file. The picker lists the rows of **Changes**, then **All files**, where **Jump to file…** finds any file in the worktree.
 
 With the tree hidden, the overlay's header also adds a Comments menu, with the count of open comments, that lists the task's comments by file. Click a comment to go to its lines, or click **Open in panel** to show the [Comments view](#the-comments-view).
 
@@ -4412,18 +4412,18 @@ The overlay's header shows the branch the changes are measured against, **from {
 | Gesture | What it does |
 |---|---|
 | Click a file | Opens it on its own |
-| **Cmd/Ctrl**-click | Adds a file to the set on screen |
+| **Ctrl/⌘**-click | Adds a file to the set on screen |
 | **Shift**-click | Extends the selection to a range |
 | Click a folder | Opens the changed files in it, stacked |
 | Type a name in the tree | Jumps to the first file that starts with it |
-| **Alt+↑** / **Alt+↓** | Previous and next file |
-| **F7** / **Shift+F7** | Next and previous change, carrying on into the next file that has one |
-| **Cmd/Ctrl+Shift+A** | **Open all changes** |
-| **Cmd/Ctrl+B** | Shows or hides the changes panel |
-| **F6** / **Shift+F6** | Moves between the header, the tree, the commit message and the viewer |
-| **Cmd/Ctrl+P** | **Filter files**, or **Jump to file…** when the tree is hidden |
-| **Cmd/Ctrl+F** | Filters the tree when the tree has focus, and finds in the code anywhere else |
-| **↑** / **↓** in read-only code | Moves the line highlight. **Shift+↑** / **Shift+↓** extends it, and **C** comments on it |
+| **Alt/⌥ + ↑** / **Alt/⌥ + ↓** | Previous and next file |
+| **F7** / **Shift + F7** | Next and previous change, carrying on into the next file that has one |
+| **Ctrl/⌘ + Shift + A** | **Open all changes** |
+| **Ctrl/⌘ + B** | Shows or hides the changes panel |
+| **F6** / **Shift + F6** | Moves between the header, the tree, the commit message and the viewer |
+| **Ctrl/⌘ + P** | **Filter files**, or **Jump to file…** when the tree is hidden |
+| **Ctrl/⌘ + F** | Filters the tree when the tree has focus, and finds in the code anywhere else |
+| **↑** / **↓** in read-only code | Moves the line highlight. **Shift + ↑** / **Shift + ↓** extends it, and **C** comments on it |
 | **←** / **→** in a split diff | Switches the line highlight between the old and new side |
 | **Escape** | Clears a line selection, leaves commit mode, then closes the overlay. With an unsaved edit, it asks first |
 
@@ -4455,20 +4455,20 @@ If you select several rows, the menu items act on all of them.
 
 ### Finding in the code
 
-**Cmd/Ctrl+F** in the viewer opens a find bar at the viewer's top right. The find bar searches every file in the stack, including your edits, and counts the matches as **{current} of {total}**, or **No results**.
+**Ctrl/⌘ + F** in the viewer opens a find bar at the viewer's top right. The find bar searches every file in the stack, including your edits, and counts the matches as **{current} of {total}**, or **No results**.
 
 **Only in changes** searches only the changes: the changed lines and the context lines shown around them. Turn it off to search whole files, including the unchanged lines folded away. It starts on for a stack of files and off for a single file.
 
 Use these keys in the find bar:
 
-| Control | Windows and Linux | macOS |
-|---|---|---|
-| Next match | **F3** | **Cmd+G** |
-| Previous match | **Shift+F3** | **Cmd+Shift+G** |
-| **Match case** | **Alt+C** | **Cmd+Option+C** |
-| **Match whole word** | **Alt+W** | **Cmd+Option+W** |
-| **Use regular expression** | **Alt+R** | **Cmd+Option+R** |
-| **Only in changes** | **Alt+L** | **Cmd+Option+L** |
+| Control | Shortcut |
+|---|---|
+| Next match | **F3**, or **⌘ + G** on macOS |
+| Previous match | **Shift + F3**, or **⌘ + Shift + G** on macOS |
+| **Match case** | **Alt + C**, or **⌘ + ⌥ + C** on macOS |
+| **Match whole word** | **Alt + W**, or **⌘ + ⌥ + W** on macOS |
+| **Use regular expression** | **Alt + R**, or **⌘ + ⌥ + R** on macOS |
+| **Only in changes** | **Alt + L**, or **⌘ + ⌥ + L** on macOS |
 
 **Escape** closes the bar. Kepler remembers the toggles. If you select text on one line before you open the bar, the selection fills the search field.
 
@@ -4476,11 +4476,11 @@ You can select and copy across a whole file, including lines that are not on scr
 
 ### Editing in place
 
-In **Working changes** and **All changes**, the viewer shows the file on disk. To edit it, click into the diff, or into the whole file in **File** view, and type. **Cmd/Ctrl+S** saves.
+In **Working changes** and **All changes**, the viewer shows the file on disk. To edit it, click into the diff, or into the whole file in **File** view, and type. **Ctrl/⌘ + S** saves.
 
 An unsaved edit shows **Unsaved** with **Save** and **Discard** beside it. Kepler never discards an edit without asking: **Escape**, closing the overlay or the window, or moving to another file, view, or worktree asks **Save your edit?** first. Quitting Kepler warns you when windows have unsaved file edits, because quitting discards them. Switching between **File** and **Changes** carries the edit across instead. You cannot stage or commit a file with an unsaved edit until you save or discard it, because Git records what is on disk.
 
-**Editing a file from a commit.** A file shown from a commit you picked in the list is read-only, but you can switch it to the file on disk: click **Edit** in its header, choose **Edit working copy** from its row menu, or press **Cmd/Ctrl+E**.
+**Editing a file from a commit.** A file shown from a commit you picked in the list is read-only, but you can switch it to the file on disk: click **Edit** in its header, choose **Edit working copy** from its row menu, or press **Ctrl/⌘ + E**.
 
 The file opens in **File** view, marked **Working**, ready to edit. Switch the file to **Changes** to see the diff counted from where the commit view started. **Stop editing** returns to the file as committed.
 
@@ -4543,9 +4543,9 @@ To start a comment, do one of the following:
 | To comment on | Do this |
 |---|---|
 | One line | Hover it and click the **+** beside its line number |
-| A range | Click the **+** on the first line, then **Shift**-click the last, or extend with **Shift+↑** / **Shift+↓** |
+| A range | Click the **+** on the first line, then **Shift**-click the last, or extend with **Shift + ↑** / **Shift + ↓** |
 | The line highlight | Move it with **↑** / **↓** in read-only code, then press **C** |
-| What you selected in the editor | **Cmd/Ctrl+Shift+C**, which also works on the line the caret is on |
+| What you selected in the editor | **Ctrl/⌘ + Shift + C**, which also works on the line the caret is on |
 
 You can comment in **Changes**, whatever you picked in its list, and in **Files**, including on a file shown whole, such as a new file. A file attached to the task, open in its tab, accepts comments too, and so does a file in the file viewer. Notes take comments too. See [Comment on a note](#comment-on-a-note). The file's header and its tree row show how many comments the file has.
 
@@ -4557,8 +4557,8 @@ To finish the draft, follow these steps:
 
 1. Type your note. A comment with no note sends the selected lines as context.
 2. Choose how it goes:
-   - **Add comment**, or **Cmd/Ctrl+Enter**, adds it to that session's queue.
-   - **Send now**, or **Cmd/Ctrl+Shift+Enter**, sends it to the session at once.
+   - **Add comment**, or **Ctrl/⌘ + Enter**, adds it to that session's queue.
+   - **Send now**, or **Ctrl/⌘ + Shift + Enter**, sends it to the session at once.
 3. To send the queued comments, press **Send comments ({count})** in the overlay's header, or send your next prompt in that session.
 
 Queued comments show as a **{count} comments** chip in that session's composer and go out with its next prompt. The header's **Send comments ({count})** sends every queued comment on the task, in one prompt for each session. When the session is not on screen, a notification offers **Open** to go to it. Each comment reaches the agent with its file, lines, the code, and your note.
@@ -4583,7 +4583,7 @@ Kepler keeps what you type. **Escape** only moves focus out of a draft's field, 
 
 The agent answers a comment you sent in a thread under it, and it can resolve the comment when the fix is done. The card shows your note, then each reply, oldest first.
 
-- **Reply**: type in **Reply to {agent}** and press **Reply**, or **Cmd/Ctrl+Enter**. The reply goes to the session the comment was last sent to. If that session is gone, Kepler asks you to choose another.
+- **Reply**: type in **Reply to {agent}** and press **Reply**, or **Ctrl/⌘ + Enter**. The reply goes to the session the comment was last sent to. If that session is gone, Kepler asks you to choose another.
 - **Resolve** closes the comment, and **Reopen** opens it again. A resolved card starts collapsed.
 - **Unread replies**: a card with replies you have not read shows **{count} new replies** and marks each one **New**. To change this yourself, use **Mark as read** or **Mark as unread**.
 
@@ -4641,7 +4641,7 @@ To discard changes:
 - **Discard changes** on a row, or **Delete** on a focused row (**Backspace** on a Mac), asks first. Your current version goes to the Trash (the Recycle Bin on Windows), so you can get it back. If Kepler cannot use the Trash, the confirmation says the change is permanent.
 - On a file with staged and unstaged changes, discarding removes only the unstaged changes. Discard again to remove the staged ones too.
 - **Discard folder**, in a folder's menu, discards the files under it.
-- **Discard** in the tree's toolbar discards the selected files, or every listed file when nothing is selected. Its label says which, and it asks first. To discard every listed file instead of the selection, **Alt**-click it (**Option**-click on a Mac).
+- **Discard** in the tree's toolbar discards the selected files, or every listed file when nothing is selected. Its label says which, and it asks first. To discard every listed file instead of the selection, **Alt/⌥**-click it.
 - **Discard** is unavailable on a conflicted file until you resolve the conflicts.
 - **Delete** in the row menu moves the file to the Trash, and Git reports the deletion like any other.
 
@@ -4651,7 +4651,7 @@ The commit box looks like the prompt composer: one message field whose first lin
 
 | Control | What it does |
 |---|---|
-| The message field | **Cmd/Ctrl+Enter** commits |
+| The message field | **Ctrl/⌘ + Enter** commits |
 | **Amend last commit** | Rewrites the last commit instead of adding one. Ticking it fills an empty box with the last commit's message and changes the button to **Amend commit** |
 | **Commit** | Commits what is staged |
 
@@ -4848,7 +4848,7 @@ The Dashboard's task preview shows each worktree as a two-row **worktree button*
 - The bottom row: chips for the uncommitted files, the commits, and the merge target, with **Open in** and **Run** beside them. Each chip has a hover card that says what a click does, and a right-click menu of its own.
 - A task with several worktrees shows one worktree button at a time, with **Show all {count} worktrees** on its leading edge. The branch name switches between them, and its list sets apart worktrees that are **Merged** or **Gone from disk**. **Auto-switch to active worktree** lets it follow whichever worktree is busiest.
 
-Click the uncommitted or commits chip to open that worktree's changes panel, showing those changes, in a side pane of the task panel, without going to the task page first. Its files open the same Changes overlay. Click the chip again to close the pane, or press **Cmd/Ctrl+Shift+G** to show or hide it. See [The Kepler Interface](/kepler/kepler-interface).
+Click the uncommitted or commits chip to open that worktree's changes panel, showing those changes, in a side pane of the task panel, without going to the task page first. Its files open the same Changes overlay. Click the chip again to close the pane, or press **Ctrl/⌘ + Shift + G** to show or hide it. See [The Kepler Interface](/kepler/kepler-interface).
 
 A file or folder in a worktree opens in the Changes overlay too, wherever you open it by its path, such as a file path in a terminal or **Open in Changes** on an attached file's tab. On the task page, only the task's attached files and folders open as tabs; any other file in a worktree opens here. A file opens in **File** view, at its line: on **Working changes** when it has uncommitted changes, and on **Files** otherwise. A folder opens on **Files**, with its changed files stacked.
 
@@ -5228,7 +5228,7 @@ Kepler by GitKraken installs natively on Windows, so you can run Claude Code, Co
 2. Launch Kepler and click **Sign in with GitKraken**.
 3. In **Choose your coding agents**, switch on Claude Code and Codex. To install an agent you do not have yet, click its tile.
 4. In **Bring in your repos**, check the repositories you work in, then click the button that adds them.
-5. Click **New task** or press **Ctrl+N**, write a prompt, attach a repository with **Add repo or folder**, and click **Start**. Kepler creates a worktree for the task and starts the agent in it.
+5. Click **New task** or press **Ctrl/⌘ + N**, write a prompt, attach a repository with **Add repo or folder**, and click **Start**. Kepler creates a worktree for the task and starts the agent in it.
 6. Start a second task the same way, and pick another agent in the **New task** composer. Both agents now work at the same time, each in its own worktree.
 
 ***
@@ -5276,7 +5276,7 @@ If you installed an agent yourself and Kepler did not find it, open the agent's 
 
 In Kepler, the unit of work is a task. Each task holds its own sessions, and each repository you attach to it gets its own worktree. To run several agents at once, start one task per piece of work:
 
-1. Click **New task** or press **Ctrl+N**.
+1. Click **New task** or press **Ctrl/⌘ + N**.
 2. Write the prompt, and attach the repository with **Add repo or folder**.
 3. Under **Agent**, pick the agent for this task, such as Claude Code.
 4. Click **Start**.
@@ -5423,7 +5423,7 @@ A new worktree has no `node_modules`, virtual environment, or build output. Save
 2. Under **Commands**, click **Add command**.
 3. Enter a name, such as *Install deps*, and the command, such as `pnpm install`.
 4. Tick **Run on worktree creation**.
-5. Click **Add command**, or press **Cmd/Ctrl+Enter**. The command shows a **Runs on creation** chip.
+5. Click **Add command**, or press **Ctrl/⌘ + Enter**. The command shows a **Runs on creation** chip.
 
 Add one command for each step, and drag the rows into the order they need to run. Each time Kepler creates a worktree for the repository, it runs these commands one at a time, in list order, in the new worktree's folder.
 
@@ -7258,7 +7258,7 @@ last_verified: 2026-11
 
 Use Settings to change how Kepler, your agents, and your tasks work. Settings has 16 pages in the desktop app, listed in [The Settings pages](#the-settings-pages).
 
-To open Settings, click the gear icon in the top bar, or press **⌘ ,** (**Ctrl ,** on Windows and Linux). To close it, click the gear icon or press the same shortcut again.
+To open Settings, click the gear icon in the top bar, or press **Ctrl/⌘ + ,**. To close it, click the gear icon or press the same shortcut again.
 
 ***
 
@@ -7307,7 +7307,7 @@ If you leave a sub-page with unsaved changes, however you leave, Kepler asks whe
 
 Most fields outside those forms save themselves and show their status beside them. If a save fails, Kepler shows the reason, and names the setting if you have already left the page.
 
-**Go back**, or your mouse's back button, steps back through each page, sub-page, and search result you opened in Settings. To leave Settings in one click from any page or sub-page, use the back arrow in the Settings header, the gear icon, or **⌘ ,** (**Ctrl ,**). When the Dashboard's [views](/kepler/settings-app#dashboard) sit **Along the left side**, the back arrow sits at the top of the views column instead. Each one returns you to what you were doing before you opened Settings.
+**Go back**, or your mouse's back button, steps back through each page, sub-page, and search result you opened in Settings. To leave Settings in one click from any page or sub-page, use the back arrow in the Settings header, the gear icon, or **Ctrl/⌘ + ,**. When the Dashboard's [views](/kepler/settings-app#dashboard) sit **Along the left side**, the back arrow sits at the top of the views column instead. Each one returns you to what you were doing before you opened Settings.
 
 ### Settings in a remote window
 
@@ -7416,7 +7416,7 @@ Once you have more than 1 profile, each window's title names its profile.
 
 To rename a profile or change its color, choose **Edit** from its row menu. To color the top of every window in that profile, turn on **Tint this profile's windows**. A window connected to a remote machine shows that machine's color instead.
 
-To reorder your profiles, drag a row by its handle, use **Move profile up** and **Move profile down** in its menu, or press **Alt + ↑** or **Alt + ↓**.
+To reorder your profiles, drag a row by its handle, use **Move profile up** and **Move profile down** in its menu, or press **Alt/⌥ + ↑** or **Alt/⌥ + ↓**.
 
 ## Quit with several profiles open
 
@@ -7939,7 +7939,7 @@ To add a command, click **Add command** in the **Commands** section of the Edit 
 | Command | The shell command, for example `pnpm install`. Its **Variables** menu inserts any of the variables below |
 | **Run on worktree creation** | Runs the command each time Kepler creates a worktree for this repository. Off by default |
 
-To save a row, click **Add command** (or **Save** on a stored command), or press **⌘ Enter** (**Ctrl + Enter** on Windows and Linux). Each command saves on its own.
+To save a row, click **Add command** (or **Save** on a stored command), or press **Ctrl/⌘ + Enter**. Each command saves on its own.
 
 Commands accept 4 variables, which Kepler fills in when the command runs:
 
@@ -7950,7 +7950,7 @@ Commands accept 4 variables, which Kepler fills in when the command runs:
 | `<SOURCE_PATH>` | Where files come from (the main repo, or the source worktree when forking) |
 | `<WORKTREE_PATH>` | The new worktree folder |
 
-To reorder commands, drag a row by its handle, or move it from the keyboard with **Alt + ↑** and **Alt + ↓**. A new order saves at once. The order sets the order of the **Run** menu, and the order in which commands set to run on worktree creation run.
+To reorder commands, drag a row by its handle, or move it from the keyboard with **Alt/⌥ + ↑** and **Alt/⌥ + ↓**. A new order saves at once. The order sets the order of the **Run** menu, and the order in which commands set to run on worktree creation run.
 
 A row needs both a name and a command before you can save it. A closed row that is not saved yet shows **Not saved**. **Remove command** deletes a saved command, and the notification that follows offers **Undo**.
 
@@ -8199,7 +8199,7 @@ The language also applies to Kepler's native dialogs.
 
 ### Chat
 
-**Send messages with** chooses the key that sends a message from the chat box: **Enter**, the default, or **⌘ Enter** (**Ctrl + Enter** on Windows and Linux). With **Enter**, **Shift + Enter** starts a new line. With **⌘ Enter**, **Enter** starts a new line.
+**Send messages with** chooses the key that sends a message from the chat box: **Enter**, the default, or **Ctrl/⌘ + Enter**. With **Enter**, **Shift + Enter** starts a new line. With **Ctrl/⌘ + Enter**, **Enter** starts a new line.
 
 ### Default editor
 
@@ -8207,7 +8207,7 @@ The language also applies to Kepler's native dialogs.
 
 | Setting | What it controls | Default |
 |---|---|---|
-| **Open files and folders in** | The app that **Open in** and **⌘ ⇧**-click (**Ctrl + Shift**-click on Windows and Linux) on a file link use. The options are **Last used app**, each editor Kepler finds on this machine, and your system's default app | Last used app |
+| **Open files and folders in** | The app that **Open in** and **Ctrl/⌘ + Shift**-click on a file link use. The options are **Last used app**, each editor Kepler finds on this machine, and your system's default app | Last used app |
 
 With your system's default app, files open without line numbers, and folders open in Finder, Explorer, or your file manager. If Kepler cannot open any editor from the window you are in, the setting says so.
 
@@ -8402,7 +8402,7 @@ The grayed text in **Family** is an example, not the value in effect. If Kepler 
 
 #### Embedded terminals
 
-Each Kepler terminal belongs to a worktree. Opening a terminal starts a shell in that worktree's folder, so you do not need to `cd` into it, and the shell loads your profile the same way an interactive login shell would. Use **⌘ J** to show and hide the terminal panel, **New terminal** to open another terminal, and **Close terminal** to end one.
+Each Kepler terminal belongs to a worktree. Opening a terminal starts a shell in that worktree's folder, so you do not need to `cd` into it, and the shell loads your profile the same way an interactive login shell would. Use **Ctrl/⌘ + J** to show and hide the terminal panel, **New terminal** to open another terminal, and **Close terminal** to end one.
 
 Use terminals for work next to an agent session: running tests while the agent writes code, checking Git state, or reproducing something the session did not show. A terminal starts in one worktree and stays there, so for work that spans several repositories, use a standalone terminal.
 
@@ -8465,44 +8465,44 @@ A changed row offers **Reset to default**. **Changed only** lists only the short
 
 ### Default shortcuts
 
-The tables list the default keys, Mac symbols first. On Windows and Linux, **⌘** is **Ctrl** and **⌥** is **Alt**, and **⌃** is **Ctrl** on every platform.
+The tables list the default keys.
 
 #### General shortcuts
 
 The **General** group holds app-wide shortcuts:
 
-| Action | Mac | Windows / Linux |
-|---|---|---|
-| Open settings | ⌘ , | Ctrl + , |
-| Toggle Ask Kepler chat | ⌘ K or ⌘ L | Ctrl + K or Ctrl + L |
-| Toggle Ask Kepler terminal | ⌃ ` | Ctrl + ` |
-| New Ask Kepler chat | ⌘ ⇧ K or ⌘ ⇧ L | Ctrl + Shift + K or Ctrl + Shift + L |
-| New task | ⌘ N | Ctrl + N |
-| Open quick launcher (global) | ⇧ ⌥ N | Shift + Alt + N |
-| New window | ⌘ ⇧ N | Ctrl + Shift + N |
-| Quit | ⌘ Q | Ctrl + Q |
-| Zoom in | ⌘ = | Ctrl + = |
-| Zoom out | ⌘ - | Ctrl + - |
-| Reset zoom | ⌘ 0 | Ctrl + 0 |
-| Toggle full screen | ⌘ ⌃ F | F11 |
-| Minimize | ⌘ M | Ctrl + M |
-| Reload | ⌘ R | Ctrl + R |
-| Hide Kepler | ⌘ H | macOS only |
-| Hide others | ⌘ ⌥ H | macOS only |
-| Copy the selection or the focused item | ⌘ C | Ctrl + C |
-| Close window | ⌘ ⇧ W | Ctrl + Shift + W |
-| Toggle terminal | ⌘ J | Ctrl + J |
-| New session | ⌘ T | Ctrl + T |
-| Rename task | F2 | F2 |
-| Delete task | ⌘ ⇧ Backspace | Ctrl + Shift + Backspace |
-| Manage remote environments | ⌘ ⇧ R | Ctrl + Shift + R |
-| Toggle side panel | ⌘ B | Ctrl + B |
-| Open file | ⌘ O | Ctrl + O |
-| Open folder | ⌘ ⇧ O | Ctrl + Shift + O |
-| Go to file | ⌘ P | Ctrl + P |
-| Go to task or command | ⌘ ⇧ P or F1 | Ctrl + Shift + P or F1 |
-| Change search scope | ⌘ ⌥ S | Alt + S |
-| Dismiss / Cancel | Escape | Escape |
+| Action | Shortcut |
+|---|---|
+| Open settings | Ctrl/⌘ + , |
+| Toggle Ask Kepler chat | Ctrl/⌘ + K or Ctrl/⌘ + L |
+| Toggle Ask Kepler terminal | Ctrl + ` |
+| New Ask Kepler chat | Ctrl/⌘ + Shift + K or Ctrl/⌘ + Shift + L |
+| New task | Ctrl/⌘ + N |
+| Open quick launcher (global) | Shift + Alt/⌥ + N |
+| New window | Ctrl/⌘ + Shift + N |
+| Quit | Ctrl/⌘ + Q |
+| Zoom in | Ctrl/⌘ + = |
+| Zoom out | Ctrl/⌘ + - |
+| Reset zoom | Ctrl/⌘ + 0 |
+| Toggle full screen | F11, or ⌘ + ⌃ + F on macOS |
+| Minimize | Ctrl/⌘ + M |
+| Reload | Ctrl/⌘ + R |
+| Hide Kepler | ⌘ + H (macOS only) |
+| Hide others | ⌘ + ⌥ + H (macOS only) |
+| Copy the selection or the focused item | Ctrl/⌘ + C |
+| Close window | Ctrl/⌘ + Shift + W |
+| Toggle terminal | Ctrl/⌘ + J |
+| New session | Ctrl/⌘ + T |
+| Rename task | F2 |
+| Delete task | Ctrl/⌘ + Shift + Backspace |
+| Manage remote environments | Ctrl/⌘ + Shift + R |
+| Toggle side panel | Ctrl/⌘ + B |
+| Open file | Ctrl/⌘ + O |
+| Open folder | Ctrl/⌘ + Shift + O |
+| Go to file | Ctrl/⌘ + P |
+| Go to task or command | Ctrl/⌘ + Shift + P or F1 |
+| Change search scope | Alt + S, or ⌘ + ⌥ + S on macOS |
+| Dismiss / Cancel | Escape |
 
 **Go to task or command** and **Open folder** are also in the app menu, as **View › Command Palette…** and **File › Open Folder…**.
 
@@ -8510,20 +8510,20 @@ The **General** group holds app-wide shortcuts:
 
 The **Navigation** group moves you between tasks, tabs, and regions:
 
-| Action | Mac | Windows / Linux |
-|---|---|---|
-| Go to next in Needs attention | None | None |
-| Go to next in Unread | None | None |
-| Go to what needs you next | F8 | F8 |
-| Previous tab | ⌘ ⇧ [ | Ctrl + Shift + [ or Ctrl + PageUp |
-| Next tab | ⌘ ⇧ ] | Ctrl + Shift + ] or Ctrl + PageDown |
-| Move tab left | ⌘ ⌥ [ | Ctrl + Alt + [ or Ctrl + Shift + PageUp |
-| Move tab right | ⌘ ⌥ ] | Ctrl + Alt + ] or Ctrl + Shift + PageDown |
-| Focus next region | F6 | F6 |
-| Focus previous region | ⇧ F6 | Shift + F6 |
-| Close tab or panel | ⌘ W | Ctrl + W or Ctrl + F4 |
-| Go back | ⌘ [ | Alt + ← |
-| Go forward | ⌘ ] | Alt + → |
+| Action | Shortcut |
+|---|---|
+| Go to next in Needs attention | None |
+| Go to next in Unread | None |
+| Go to what needs you next | F8 |
+| Previous tab | Ctrl/⌘ + Shift + [, or Ctrl + PageUp on Windows and Linux |
+| Next tab | Ctrl/⌘ + Shift + ], or Ctrl + PageDown on Windows and Linux |
+| Move tab left | Ctrl/⌘ + Alt/⌥ + [, or Ctrl + Shift + PageUp on Windows and Linux |
+| Move tab right | Ctrl/⌘ + Alt/⌥ + ], or Ctrl + Shift + PageDown on Windows and Linux |
+| Focus next region | F6 |
+| Focus previous region | Shift + F6 |
+| Close tab or panel | Ctrl/⌘ + W, or Ctrl + F4 on Windows and Linux |
+| Go back | Alt + ←, or ⌘ + [ on macOS |
+| Go forward | Alt + →, or ⌘ + ] on macOS |
 
 **Go to next in Needs attention** opens the next session waiting on you, and **Go to next in Unread** opens the next unread reply. **Go to what needs you next** (**F8**) does both, waiting sessions first, and skips what is already on screen. **F8** works even from a focused terminal.
 
@@ -8531,95 +8531,95 @@ The **Navigation** group moves you between tasks, tabs, and regions:
 
 The **Dashboard** group works on the Dashboard's tasks and detail panels:
 
-| Action | Mac | Windows / Linux |
-|---|---|---|
-| Move panel left | ⌘ ⌥ ⇧ ← | Ctrl + Alt + Shift + ← |
-| Move panel right | ⌘ ⌥ ⇧ → | Ctrl + Alt + Shift + → |
-| Move panel up | ⌘ ⌥ ⇧ ↑ | Ctrl + Alt + Shift + ↑ |
-| Move panel down | ⌘ ⌥ ⇧ ↓ | Ctrl + Alt + Shift + ↓ |
-| Move task to the previous Progress stage | ⌘ ⇧ ← | Ctrl + Shift + ← |
-| Move task to the next Progress stage | ⌘ ⇧ → | Ctrl + Shift + → |
-| Focus detail panel 1 to 8 | ⌘ 1 to ⌘ 8 | Ctrl + 1 to Ctrl + 8 |
-| Focus last detail panel | ⌘ 9 | Ctrl + 9 |
-| Previous item in list | ⌥ ⇧ ↑ | Alt + Shift + ↑ |
-| Next item in list | ⌥ ⇧ ↓ | Alt + Shift + ↓ |
-| Switch to older panel | ⌃ ⇧ Tab | Ctrl + Shift + Tab |
-| Switch to newer panel | ⌃ Tab | Ctrl + Tab |
-| Solo detail panel | ⌘ ⇧ M | Ctrl + Shift + M |
-| Maximize panel terminals | ⌘ ⇧ J | Ctrl + Shift + J |
-| Toggle changes pane | ⌘ ⇧ G | Ctrl + Shift + G |
-| Toggle task list peek | ⌘ ⇧ B | Ctrl + Shift + B |
-| Toggle resources pane | ⌘ ⇧ E | Ctrl + Shift + E |
-| Find in dashboard | ⌘ F | Ctrl + F |
+| Action | Shortcut |
+|---|---|
+| Move panel left | Ctrl/⌘ + Alt/⌥ + Shift + ← |
+| Move panel right | Ctrl/⌘ + Alt/⌥ + Shift + → |
+| Move panel up | Ctrl/⌘ + Alt/⌥ + Shift + ↑ |
+| Move panel down | Ctrl/⌘ + Alt/⌥ + Shift + ↓ |
+| Move task to the previous Progress stage | Ctrl/⌘ + Shift + ← |
+| Move task to the next Progress stage | Ctrl/⌘ + Shift + → |
+| Focus detail panel 1 to 8 | Ctrl/⌘ + 1 to Ctrl/⌘ + 8 |
+| Focus last detail panel | Ctrl/⌘ + 9 |
+| Previous item in list | Alt/⌥ + Shift + ↑ |
+| Next item in list | Alt/⌥ + Shift + ↓ |
+| Switch to older panel | Ctrl + Shift + Tab |
+| Switch to newer panel | Ctrl + Tab |
+| Solo detail panel | Ctrl/⌘ + Shift + M |
+| Maximize panel terminals | Ctrl/⌘ + Shift + J |
+| Toggle changes pane | Ctrl/⌘ + Shift + G |
+| Toggle task list peek | Ctrl/⌘ + Shift + B |
+| Toggle resources pane | Ctrl/⌘ + Shift + E |
+| Find in dashboard | Ctrl/⌘ + F |
 
 #### Task page shortcuts
 
 The **Task page** group works on a task's page:
 
-| Action | Mac | Windows / Linux |
-|---|---|---|
-| Focus chat | ⌘ 1 | Ctrl + 1 |
-| Focus changes | ⌘ 2 | Ctrl + 2 |
-| Focus resources | ⌘ 3 | Ctrl + 3 |
-| Switch sessions | ⌃ Tab | Ctrl + Tab |
-| Switch sessions, oldest first | ⌃ ⇧ Tab | Ctrl + Shift + Tab |
-| Maximize terminal drawer | ⌘ ⇧ J | Ctrl + Shift + J |
-| Show or hide the preview in Add resources | ⌘ ⌥ P | Ctrl + Alt + P |
+| Action | Shortcut |
+|---|---|
+| Focus chat | Ctrl/⌘ + 1 |
+| Focus changes | Ctrl/⌘ + 2 |
+| Focus resources | Ctrl/⌘ + 3 |
+| Switch sessions | Ctrl + Tab |
+| Switch sessions, oldest first | Ctrl + Shift + Tab |
+| Maximize terminal drawer | Ctrl/⌘ + Shift + J |
+| Show or hide the preview in Add resources | Ctrl/⌘ + Alt/⌥ + P |
 
 #### Chat shortcuts
 
 The **Chat** group works in a session's conversation:
 
-| Action | Mac | Windows / Linux |
-|---|---|---|
-| Find in conversation | ⌘ F | Ctrl + F |
-| Previous message | ⌘ ⌥ ↑ | Ctrl + Alt + ↑ |
-| Next message | ⌘ ⌥ ↓ | Ctrl + Alt + ↓ |
-| Interrupt & send | ⌘ ⇧ Enter | Ctrl + Shift + Enter |
-| Send after this turn | ⌥ Enter | Alt + Enter |
-| Switch between terminal and transcript | ⌘ ⇧ X | Ctrl + Shift + X |
+| Action | Shortcut |
+|---|---|
+| Find in conversation | Ctrl/⌘ + F |
+| Previous message | Ctrl/⌘ + Alt/⌥ + ↑ |
+| Next message | Ctrl/⌘ + Alt/⌥ + ↓ |
+| Interrupt & send | Ctrl/⌘ + Shift + Enter |
+| Send after this turn | Alt/⌥ + Enter |
+| Switch between terminal and transcript | Ctrl/⌘ + Shift + X |
 
 #### Changes and code view shortcuts
 
 This group has 2 lists. The **Changes** list works in the Changes view:
 
-| Action | Mac | Windows / Linux |
-|---|---|---|
-| Filter changed files | ⌘ P | Ctrl + P |
-| Previous file | ⌥ ↑ | Alt + ↑ |
-| Next file | ⌥ ↓ | Alt + ↓ |
-| Next change | F7 | F7 |
-| Previous change | ⇧ F7 | Shift + F7 |
-| Toggle changes sidebar | ⌘ B | Ctrl + B |
-| Open all changes | ⌘ ⇧ A | Ctrl + Shift + A |
-| Comment on selection | ⌘ ⇧ C | Ctrl + Shift + C |
-| Edit working copy | ⌘ E | Ctrl + E |
+| Action | Shortcut |
+|---|---|
+| Filter changed files | Ctrl/⌘ + P |
+| Previous file | Alt/⌥ + ↑ |
+| Next file | Alt/⌥ + ↓ |
+| Next change | F7 |
+| Previous change | Shift + F7 |
+| Toggle changes sidebar | Ctrl/⌘ + B |
+| Open all changes | Ctrl/⌘ + Shift + A |
+| Comment on selection | Ctrl/⌘ + Shift + C |
+| Edit working copy | Ctrl/⌘ + E |
 
 The **Code views** list works in any code view, such as a diff or a file you have opened:
 
-| Action | Mac | Windows / Linux |
-|---|---|---|
-| Find in file or diff | ⌘ F | Ctrl + F |
-| Next match | F3 or ⌘ G | F3 |
-| Previous match | ⇧ F3 or ⌘ ⇧ G | Shift + F3 |
-| Match case | ⌘ ⌥ C | Alt + C |
-| Match whole word | ⌘ ⌥ W | Alt + W |
-| Use regular expression | ⌘ ⌥ R | Alt + R |
-| Find only in changes | ⌘ ⌥ L | Alt + L |
+| Action | Shortcut |
+|---|---|
+| Find in file or diff | Ctrl/⌘ + F |
+| Next match | F3, or ⌘ + G on macOS |
+| Previous match | Shift + F3, or ⌘ + Shift + G on macOS |
+| Match case | Alt + C, or ⌘ + ⌥ + C on macOS |
+| Match whole word | Alt + W, or ⌘ + ⌥ + W on macOS |
+| Use regular expression | Alt + R, or ⌘ + ⌥ + R on macOS |
+| Find only in changes | Alt + L, or ⌘ + ⌥ + L on macOS |
 
 ### Shortcuts that depend on where you are
 
 Some keys do different things depending on where you are:
 
-- **⌘ 1**, **⌘ 2**, and **⌘ 3** focus a detail panel on the Dashboard but a column on the task page.
-- **⌃ Tab** switches detail panels on the Dashboard and sessions on the task page.
-- **⌘ ⇧ [** and **⌘ ⇧ ]** step through the Dashboard's views on the Dashboard, and through a panel's tabs when the panel or the task page has focus. **⌘ ⌥ [** and **⌘ ⌥ ]** move the current view or tab.
-- **⌘ ⇧ J** maximizes the panel's terminals on the Dashboard and the terminal drawer on the task page.
-- **⌘ B** shows or hides the changes panel in the Changes view, docks or hides the task list on the Dashboard, and docks or hides the context panel on the task page.
-- **⌘ P** filters changed files in the Changes view and opens **Go to file** elsewhere.
-- **⌘ F** finds in the Dashboard from its list or header, finds in a file or diff in a code view, and finds in the conversation elsewhere.
-- **⌘ ⇧ G** shows or hides changes in a Dashboard detail panel, and, on macOS, moves to the previous match in a code view.
-- **⌘ C** on a focused row, chip, or link copies what it names, such as a task's Kepler link, a pull request or issue link, a file path, or a commit hash. In a text field, a terminal, or a text selection, it copies as usual.
+- **Ctrl/⌘ + 1**, **Ctrl/⌘ + 2**, and **Ctrl/⌘ + 3** focus a detail panel on the Dashboard but a column on the task page.
+- **Ctrl + Tab** switches detail panels on the Dashboard and sessions on the task page.
+- **Ctrl/⌘ + Shift + [** and **Ctrl/⌘ + Shift + ]** step through the Dashboard's views on the Dashboard, and through a panel's tabs when the panel or the task page has focus. **Ctrl/⌘ + Alt/⌥ + [** and **Ctrl/⌘ + Alt/⌥ + ]** move the current view or tab.
+- **Ctrl/⌘ + Shift + J** maximizes the panel's terminals on the Dashboard and the terminal drawer on the task page.
+- **Ctrl/⌘ + B** shows or hides the changes panel in the Changes view, docks or hides the task list on the Dashboard, and docks or hides the context panel on the task page.
+- **Ctrl/⌘ + P** filters changed files in the Changes view and opens **Go to file** elsewhere.
+- **Ctrl/⌘ + F** finds in the Dashboard from its list or header, finds in a file or diff in a code view, and finds in the conversation elsewhere.
+- **Ctrl/⌘ + Shift + G** shows or hides changes in a Dashboard detail panel, and, on macOS, moves to the previous match in a code view.
+- **Ctrl/⌘ + C** on a focused row, chip, or link copies what it names, such as a task's Kepler link, a pull request or issue link, a file path, or a commit hash. In a text field, a terminal, or a text selection, it copies as usual.
 
 **Previous item in list** and **Next item in list** work even while you type in the open panel's chat.
 
@@ -8654,7 +8654,7 @@ Use **Settings → Remote environments** to save the machines your agents can ru
 
 *Run your agents on another machine, like a dev server or cloud VM, while you work from here. Kepler installs itself over SSH, so there's nothing to set up on that machine first.* On Windows, you can also use a WSL distro, with nothing extra to install.
 
-To open this page from anywhere, press **⌘ ⇧ R**, or click **Manage remote environments…** in the remote chip's popover. Kepler saves the machine list on this computer, whichever machine a window is connected to.
+To open this page from anywhere, press **Ctrl/⌘ + Shift + R**, or click **Manage remote environments…** in the remote chip's popover. Kepler saves the machine list on this computer, whichever machine a window is connected to.
 
 The Remote environments page has 3 sections:
 
@@ -8896,19 +8896,19 @@ Use the popover to see which machine this window is on, switch to another machin
 | Forwarded ports | Lists the ports this window forwards, and opens the host's **Ports** list |
 | **Switch to** | Every other saved host, plus **Local** (*Work on this machine*) when this window is on a remote |
 | **Found on this machine** | WSL distributions found on this PC, offered for one-click connect while you have no saved hosts |
-| **Manage remote environments…** | Opens **Settings → Remote environments**. **⌘ ⇧ R** on macOS, **Ctrl + Shift + R** elsewhere |
+| **Manage remote environments…** | Opens **Settings → Remote environments**. **Ctrl/⌘ + Shift + R** |
 
 The line under **Restart server to update** says what the update will stop. When nothing would stop, the update starts at once. Otherwise, the **Update server?** confirmation names the agents and terminals that stop, or says that the server could not report them.
 
 If this app is older than the server, the header offers an update for this app instead, and says that sessions on the host keep running.
 
-To move this window to another host, click the host's row under **Switch to**. To open the host in a new window and leave this window where it is, hold **Cmd** (macOS) or **Ctrl** while you click, or click the window icon at the end of the row. A host already open in another window is marked **Connected**. Clicking its row brings that window to the front instead of opening a second connection.
+To move this window to another host, click the host's row under **Switch to**. To open the host in a new window and leave this window where it is, hold **Ctrl/⌘** while you click, or click the window icon at the end of the row. A host already open in another window is marked **Connected**. Clicking its row brings that window to the front instead of opening a second connection.
 
 ***
 
 ## Windows on a remote host
 
-- **New Window opens on the same host.** **File → New Window** (**⌘ ⇧ N** on macOS, **Ctrl + Shift + N** elsewhere) from a remote window opens a second window on that host. A remote window also offers **File → New Local Window** when you want a local one. A new window that cannot reach the host opens on the [recovery screen](#the-recovery-screen) with the reason.
+- **New Window opens on the same host.** **File → New Window** (**Ctrl/⌘ + Shift + N**) from a remote window opens a second window on that host. A remote window also offers **File → New Local Window** when you want a local one. A new window that cannot reach the host opens on the [recovery screen](#the-recovery-screen) with the reason.
 - **Windows on one host share a connection,** so another window on it opens quickly.
 - **A host open in another window shows as connected.** The popover and Settings offer **Show window**, and show its latency, versions, and sessions.
 - **The last closed remote window reopens on its host.** With no window open, the dock, the tray, or launching Kepler again reconnects to the host the last window was on. If you close a window that was still waiting on an unreachable host, the next window opens locally. If **Restore windows on launch** is off, Kepler launches locally.
@@ -8931,7 +8931,7 @@ Use **Settings → Remote environments** to add, connect, edit, and remove machi
 
 A host's page has a card of actions at the top:
 
-- **Connect**. To connect in a new window, **Cmd/Ctrl**-click it. While a connection is in progress, the same button cancels it.
+- **Connect**. To connect in a new window, **Ctrl/⌘**-click it. While a connection is in progress, the same button cancels it.
 - **Show window** and **Connect to *machine* in a new window**, in place of **Connect**, when another window already has the host open.
 - **Stop server**.
 - **Remove *machine*…**, the red trash icon.
@@ -9083,7 +9083,7 @@ On Windows, a WSL 2 distro is a remote environment like any other, and the simpl
 
 When an agent or a terminal starts a dev server on an SSH host, its `http://localhost:3000` link points at the host, not at this computer. Kepler forwards that port over your SSH connection so the link opens here.
 
-- **Click the link.** In an SSH window, **Cmd/Ctrl**-click a `localhost`, `127.0.0.1`, or `0.0.0.0` link in a terminal, or click one in the agent transcript. Kepler forwards the port to the host's `localhost`, then opens the local URL. If that port is already taken on this computer, Kepler picks a free one.
+- **Click the link.** In an SSH window, **Ctrl/⌘**-click a `localhost`, `127.0.0.1`, or `0.0.0.0` link in a terminal, or click one in the agent transcript. Kepler forwards the port to the host's `localhost`, then opens the local URL. If that port is already taken on this computer, Kepler picks a free one.
 - **Open it from the task.** A `localhost` link attached to a task opens through forwarding too, from the task's context panel, the link's detail, or the Dashboard's resources list. Agents attach the URL of a dev server they start for you to open.
 - **Add one by hand.** **Settings → Remote environments → Ports**, in the SSH window, lists this window's forwards as remote port → local URL. To add a forward, enter a **Port** and click **Add**. **Stop** ends one forward, and **Stop all** appears when more than one is forwarded.
 
@@ -9186,7 +9186,7 @@ Some things have to happen on the machine in front of you. Kepler runs those thr
 | **Desktop notifications** | Shown by your local desktop once per machine, or inside Kepler while you are in a window on that machine. A muted host shows none |
 | **Dictation** | Captured by the local app. See [Dictation and Read Aloud](/kepler/voice-input) |
 | **Copying from Codex** | A copy Codex makes in a remote window goes to your local clipboard, not the host's |
-| **Pasting in a Windows host's terminal** | **Ctrl+V** pastes your local clipboard, even when this window runs on macOS or Linux |
+| **Pasting in a Windows host's terminal** | **Ctrl + V** pastes your local clipboard, even when this window runs on macOS or Linux |
 | **Folder pickers** | Browse the host's filesystem, since that is where the work lives |
 
 These 7 editors open a remote folder through their own remote extension:
@@ -9311,9 +9311,9 @@ On a touch phone, every live terminal has a key row under it with the keys a pho
 
 | Key | Second action |
 |---|---|
-| **Esc** | **Ctrl+C** |
+| **Esc** | **Ctrl + C** |
 | **Ctrl** | **Shift** |
-| **Tab** | **Shift+Tab** |
+| **Tab** | **Shift + Tab** |
 | **Enter** | **New line** |
 | Left and Right arrows | **Home** and **End** |
 | Up and Down arrows | **Page up** and **Page down** |
@@ -9444,7 +9444,7 @@ Keep work and personal, or one client and another, fully apart without signing o
 - Ask Kepler to take you there: it can show a task, session, note, Dashboard view or setting in your window and press Kepler's shortcuts for you, while you keep typing.
 - Ask how your work with agents is going: tokens and cost, how long agents worked and waited on you, how often you hit a usage limit, and how quickly your pull requests merged.
 - It can read your custom Actions and edit their prompts, asking before a change.
-- Ctrl+K now opens Ask Kepler, with Ctrl+L kept as an alias.
+- Ctrl/⌘ + K now opens Ask Kepler, with Ctrl/⌘ + L kept as an alias.
 - On the phone it opens full screen from a button in the Dashboard bar, and its past-chats picker has search.
 
 #### Chat
