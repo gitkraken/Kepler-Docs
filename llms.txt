@@ -2,7 +2,7 @@
 
 > Kepler is GitKraken's Agentic Development Environment (ADE). It pulls every issue and pull request assigned to you into one place, then hands any of it to the coding agent you already use (Claude Code, Codex, Copilot, Cursor, Auggie, OpenCode, Grok Build, Pi, or Google Antigravity) with the context already attached.
 
-Scope: 38 pages included. Excluded (3): environment-and-setup.md, kepler-New-Page-Template.md, workflow-views.md.
+Scope: 39 pages included. Excluded (3): environment-and-setup.md, kepler-New-Page-Template.md, workflow-views.md.
 
 ## Getting Started
 
@@ -12,7 +12,7 @@ Scope: 38 pages included. Excluded (3): environment-and-setup.md, kepler-New-Pag
 ## Core Concepts
 
 - [The Kepler Interface](https://help.gitkraken.com/kepler/kepler-interface/): Kepler's Dashboard shows the issues and pull requests that involve you, alongside the tasks you already have running. Learn how to read it, work several items side by side, and start work from it.
-- [Arranging Your Work](https://help.gitkraken.com/kepler/arranging-your-work/): Add and arrange the Dashboard's views, choose a layout for each list, group, sort and filter it, put tasks in your own groups, set a task's progress or hold it until something happens, and archive tasks in bulk.
+- [Arranging Your Work](https://help.gitkraken.com/kepler/arranging-your-work/): Add and arrange the Dashboard's views, choose a layout for each list, group, sort, and filter it, put tasks in your own groups, set a task's progress or hold it until something happens, and archive tasks in bulk.
 - [Actions](https://help.gitkraken.com/kepler/actions/): Actions are editable named prompts you fire at a task, issue, or pull request. Learn the 4 built-in Actions, how to change them, how to write your own, and how to have a different agent review the code than the one that wrote it.
 - [Tasks and Resources](https://help.gitkraken.com/kepler/tasks-and-resources/): A task is the unit of work in Kepler. Learn what you can attach to a task, how worktrees work, and how a task's resources reach your agents.
 - [The Task View](https://help.gitkraken.com/kepler/task-view/): Open a task to see its resources, agent sessions, changes, and files side by side. Use the header, the context panel, columns or tabs, the file viewer, and the terminal drawer, and start sessions from a draft tab.
@@ -30,11 +30,11 @@ Scope: 38 pages included. Excluded (3): environment-and-setup.md, kepler-New-Pag
 ## Agent Workflows in Kepler
 
 - [Move from Conductor to Kepler](https://help.gitkraken.com/kepler/kepler-move-from-conductor/): In Kepler, import your Conductor workspaces on macOS as tasks, in the same folders and branches, with their Claude Code and Codex chats ready to continue.
-- [Run Multiple Coding Agents in Parallel on Windows with Kepler](https://help.gitkraken.com/kepler/kepler-run-coding-agents-in-parallel-on-windows/): Kepler has a native Windows installer. Run Claude Code, Codex and 7 more coding agents side by side on Windows, each task in its own Git worktree.
+- [Run Multiple Coding Agents in Parallel on Windows with Kepler](https://help.gitkraken.com/kepler/kepler-run-coding-agents-in-parallel-on-windows/): Kepler has a native Windows installer. Run Claude Code, Codex, and 7 more coding agents side by side on Windows, each task in its own Git worktree.
 - [Set Up Every New Agent Worktree Automatically in Kepler](https://help.gitkraken.com/kepler/kepler-set-up-agent-worktrees-automatically/): In Kepler, copy .env files into each new agent worktree with .worktreeinclude and run installs on worktree creation, for Claude Code, Codex and more.
 - [Manage Claude Code and Codex Sessions Across Accounts and SSH Hosts in Kepler](https://help.gitkraken.com/kepler/kepler-manage-agents-across-accounts-and-ssh-hosts/): In Kepler, run Claude Code and Codex sessions on several accounts and on SSH hosts, pick the account per session, and move a conversation to another account.
 - [Keep Track of Several Claude Code and Codex Sessions in Kepler](https://help.gitkraken.com/kepler/kepler-track-multiple-agent-sessions/): In Kepler, track several Claude Code and Codex sessions at once, with 1 task per worktree, a Dashboard of who needs you, and each worktree's changes.
-- [Approve Coding Agent Requests from Your Phone with Kepler](https://help.gitkraken.com/kepler/kepler-approve-agent-requests-from-your-phone/): In Kepler, turn on Remote Access and pair your phone to see what Claude Code, Codex and other agents are doing and answer their permission requests.
+- [Approve Coding Agent Requests from Your Phone with Kepler](https://help.gitkraken.com/kepler/kepler-approve-agent-requests-from-your-phone/): In Kepler, turn on Remote Access and pair your phone to see what Claude Code, Codex, and other agents are doing and answer their permission requests.
 - [Start a Coding Agent from a Jira or GitHub Issue and Take It to a Pull Request in Kepler](https://help.gitkraken.com/kepler/kepler-start-agent-from-issue-to-pull-request/): In Kepler, start a coding agent from a Jira, GitHub, or Linear issue with the ticket attached, then take the work to a pull request without copying the ticket.
 - [Review an AI-Written Pull Request Before Your Teammates Do, in Kepler](https://help.gitkraken.com/kepler/kepler-review-ai-pull-request-before-sharing/): In Kepler, review an AI agent's work yourself before you open a pull request. Read every line, comment, get a second agent's review, then open it.
 
@@ -48,13 +48,14 @@ Scope: 38 pages included. Excluded (3): environment-and-setup.md, kepler-New-Pag
 ## Configuration
 
 - [Settings](https://help.gitkraken.com/kepler/settings/): Open Kepler's Settings, find a setting by name, keep or discard unsaved changes, and change settings in a remote window.
-- [Setup and Account Settings](https://help.gitkraken.com/kepler/settings-setup-account/): Reopen Kepler's first-run setup checklist, see who you are signed in as, switch organizations, and track your GitKraken AI credits and usage by feature.
-- [Agent Settings](https://help.gitkraken.com/kepler/settings-agents/): Install, update, and sign in to your coding agents in Kepler, choose how their sessions start, and set up custom agents, MCP servers, agent tools, approval rules, and usage limits.
-- [Task Settings](https://help.gitkraken.com/kepler/settings-tasks/): Choose how new Kepler tasks start, including the default agent, where tasks make changes, where a new task opens on the Dashboard, the branch prefix, folder locations, and automatic task names, how a task's page looks, and your task groups.
-- [Repository Settings](https://help.gitkraken.com/kepler/settings-repositories/): Choose where Kepler clones repositories, add and edit repositories with their own branch prefixes and commands, update and clean up worktrees and branches, and group repositories into projects.
+- [Setup and Account Settings](https://help.gitkraken.com/kepler/settings-setup-account/): Reopen Kepler's setup checklist, see who you are signed in as, switch organizations, track your GitKraken AI credits, and manage your profiles.
+- [Use Profiles in Kepler](https://help.gitkraken.com/kepler/kepler-profiles/): Keep work, personal, and client work apart in Kepler with profiles, each with its own tasks, repositories, settings, and sign-ins, and switch between them.
+- [Agent Settings](https://help.gitkraken.com/kepler/settings-agents/): Install, update, and sign in to your coding agents in Kepler, choose how their sessions start, and set up custom agents, MCP servers, agent tools, approval rules, and what happens at a usage limit.
+- [Task Settings](https://help.gitkraken.com/kepler/settings-tasks/): Choose how new Kepler tasks start (the default agent, where tasks make changes, where a new task opens on the Dashboard, the branch prefix, folder locations, and automatic task names), where tasks open, how a task's page looks, and your task groups.
+- [Repository Settings](https://help.gitkraken.com/kepler/settings-repositories/): Choose where Kepler clones repositories, add, trust, and edit repositories with their own branch prefixes and commands, update and clean up worktrees and branches, and group repositories into projects.
 - [Integration Settings](https://help.gitkraken.com/kepler/settings-integrations/): Connect issue trackers and Git hosts to Kepler, choose what each one brings in, and follow agent sessions you start in your own terminal.
 - [Action Settings](https://help.gitkraken.com/kepler/settings-actions/): Choose which Action runs on each kind of item in Kepler, and create, edit, restore, or delete the Actions in your list.
-- [App Settings](https://help.gitkraken.com/kepler/settings-app/): Change how Kepler looks and behaves, including its language, the chat's send key, windows, default editor, notifications, themes, the Dashboard's views, chat, terminal and code settings, dictation and read aloud, and keyboard shortcuts.
+- [App Settings](https://help.gitkraken.com/kepler/settings-app/): Change how Kepler looks and behaves, including its language, the chat's send key, windows, default editor, notifications, themes, the Dashboard's views, chat, terminal, and code settings, dictation and read aloud, and keyboard shortcuts.
 - [Environment Settings](https://help.gitkraken.com/kepler/settings-environment/): Save the machines your Kepler agents run on over SSH or WSL, choose how remote windows load, and open Kepler from a browser or your phone with Remote Access.
 - [Update and Help Settings](https://help.gitkraken.com/kepler/settings-updates-help/): Check your Kepler version and install updates, open the docs and release notes, show onboarding tips again, and save Kepler's logs to report a problem.
 - [Remote Environments](https://help.gitkraken.com/kepler/remote-environments/): Run your agents on another machine over SSH or in WSL, switch environments from the title bar, manage machines in Settings, forward an SSH host's ports to this computer, and open this Kepler from another device, including your phone, with Remote Access.
