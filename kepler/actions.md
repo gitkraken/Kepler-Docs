@@ -19,11 +19,11 @@ taxonomy:
 ---
 <kbd>Last updated: November 2026</kbd>
 
-An **Action** is a named prompt you fire at a task, issue, or pull request to start agent work.
+An **Action** is a named prompt that you run on a task, issue, or pull request to start agent work.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/actions-drop-down.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/actions-drop-down.png" class="help-center-img img-bordered" alt="The Action split button on a Todo row, chevron open, showing Plan, Implement, a custom action, and Manage actions">
+  <a href="/wp-content/uploads/actions-drop-down-nov-2026@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/actions-drop-down-nov-2026@2x.png" class="help-center-img img-bordered" alt="The row for PR #49, marked Changes requested, with the chevron on its Address Feedback button open. The menu lists Plan, Implement, Review, Address Feedback, and Write Tests, then Manage Actions… below a divider.">
   </a>
   <figcaption style="text-align:center; color:#888">The Action split button, chevron open. One click runs the default; the chevron lists every applicable Action, including your own.</figcaption>
 </figure>
@@ -294,7 +294,7 @@ You cannot delete an Action that an automation runs. Delete the automation first
 
 ## Setting an Action's agent
 
-By default, an Action runs on your **default agent**, configured in **Settings → Tasks → New tasks → Default agent**. To change it, open the **Preset** list in the editor's **Agent** field and pick one of the following:
+By default, an Action runs on your **default agent**, which you set in **New sessions start with** in [Settings → Tasks](/kepler/settings-tasks#default-agent). To change it, open the **Preset** list in the editor's **Agent** field and pick one of the following:
 
 | Choice | What the Action runs on |
 |---|---|

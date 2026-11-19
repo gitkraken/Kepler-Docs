@@ -415,8 +415,8 @@ A dormant session shows as an outlined dot rather than a filled one. Hover the d
 Click the **Action** button on a Todo row to hand the item to an agent with its context already attached: the repository, the issue body, the branch, and the diff. You do not need to copy or paste anything.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/actions-drop-down.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/actions-drop-down.png" class="help-center-img img-bordered" alt="The Action dropdown open on a Todo row, listing Plan, Implement, Review, and Address Feedback">
+  <a href="/wp-content/uploads/actions-drop-down-nov-2026@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/actions-drop-down-nov-2026@2x.png" class="help-center-img img-bordered" alt="The row for PR #49, marked Changes requested, with the chevron on its Address Feedback button open. The menu lists Plan, Implement, Review, Address Feedback, and Write Tests, then Manage Actions… below a divider.">
   </a>
   <figcaption style="text-align:center; color:#888">The Action dropdown, opened from the chevron next to the button.</figcaption>
 </figure>
@@ -691,12 +691,19 @@ Comments work for GitHub, GitHub Enterprise, GitLab, GitLab Self-Hosted, Jira, a
 
 Below the header, each of the task's checkouts appears as a **worktree button** with 2 rows: what identifies the checkout on top, and what's in it below.
 
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/worktree-button-nov-2026@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/worktree-button-nov-2026@2x.png" class="help-center-img img-bordered" alt="The side panel header for Fix the cart total, with the worktree button below it. The top row reads kepler/fix-cart-total and acme-web, and the bottom row shows 2 uncommitted (+2 −1), the merge target main with a check mark, and Run's + button.">
+  </a>
+  <figcaption style="text-align:center; color:#888">A task's worktree button, below the header.</figcaption>
+</figure>
+
 The button's rows hold:
 
 | Row | What it shows |
 |---|---|
 | **Top** | The branch and repository, the worktree's own pull request with its CI status, and the upstream control |
-| **Bottom** | Chips for uncommitted files, commits, and the merge target, plus **Open in** and **Run** |
+| **Bottom** | Chips for uncommitted files, commits, and the merge target, plus **Open in** (in the desktop app) and **Run** |
 
 The button's controls do the following:
 
@@ -705,7 +712,7 @@ The button's controls do the following:
 - **Uncommitted** and **commits** chips: open the worktree's changes in the side pane, on that scope. Click the chip that's showing again to close the side pane, or the other chip to switch scope.
 - **Merge target** chip: shows how the branch compares with its merge target. While the target is ahead, its menu offers **See what's new on {target}**. See [What's new on the merge target](/kepler/review-changes#whats-new-on-the-merge-target). The menu also offers **Rebase onto {target}** and **Merge {target} into this branch**. See [Review Changes](/kepler/review-changes#updating-from-the-base).
 - **Open in**: opens the checkout in your default editor. Other editors are in its chevron menu.
-- **Run**: runs one of the repository's commands.
+- **Run**: runs one of the repository's commands. While the repository has none, it shows a **+** that adds one.
 
 The button also tells you what needs doing, such as unpushed commits, or a paused rebase or merge you can continue or abort from the button. Hover any chip to see what a click does, or right-click the chip for the worktree's menu.
 
@@ -741,7 +748,7 @@ To switch tabs, click a tab or press **Shift+Tab**. In an empty field, you can a
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/palette-all-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/palette-all-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The palette's All view as it opens: a search field reading Search tasks, todos and commands, or type @ for files, ? for chats or > for commands, the All, Tasks, Todo, Files and Chats tabs with All selected, then Needs you with Add product search (Approval needed for Run npm test), Unread with Fix the cart total, and the Suggested commands such as New task, Go to what needs you next and Open settings with their keys, above the General commands.">
+    <img src="/wp-content/uploads/palette-all-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The palette's All view as it opens: a search field reading Search tasks, todos and commands, or type @ for files, ? for chats or > for commands, the All, Tasks, Todo, Files, and Chats tabs with All selected, then Needs you with Add product search (Approval needed for Run npm test), Unread with Fix the cart total, and the Suggested commands such as New task, Go to what needs you next, and Open settings with their keys, above the General commands.">
   </a>
   <figcaption style="text-align:center; color:#888">The palette as it opens, on All.</figcaption>
 </figure>
@@ -750,7 +757,7 @@ To switch tabs, click a tab or press **Shift+Tab**. In an empty field, you can a
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/go-to-task-palette-nov-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/go-to-task-palette-nov-2026-v4@2x.png" class="help-center-img img-bordered" alt="The palette on its Tasks tab: a search field reading Go to task, or type @ for files, > for commands or ? for chats, the All, Tasks, Todo, Files and Chats tabs with Tasks selected, and your tasks under Needs attention, Unread, Recent and Not started, with Fix the cart total checked as the current task, above key hints such as All, Open, Task files and Next tab.">
+    <img src="/wp-content/uploads/go-to-task-palette-nov-2026-v4@2x.png" class="help-center-img img-bordered" alt="The palette on its Tasks tab: a search field reading Go to task, or type @ for files, > for commands or ? for chats, the All, Tasks, Todo, Files, and Chats tabs with Tasks selected, and your tasks under Needs attention, Unread, Recent, and Not started, with Fix the cart total checked as the current task, above key hints such as All, Open, Task files, and Next tab.">
   </a>
   <figcaption style="text-align:center; color:#888">The Tasks tab, listing your tasks to switch to.</figcaption>
 </figure>
@@ -780,7 +787,7 @@ On **Files** and **Chats**, the scope chip at the end of the tabs names the task
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/palette-commands-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/palette-commands-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The palette's All view filtered to commands: a Commands chip with an x in a search field reading Search commands, or type @ for files or ? for chats, the All, Tasks, Todo, Files and Chats tabs with All selected, and the Suggested commands, New task (highlighted, with its Change shortcut keyboard button), Go to what needs you next (F8), Toggle Ask Kepler chat, New Ask Kepler chat, Open settings and others, then the General commands, above key hints such as Run and Next tab.">
+    <img src="/wp-content/uploads/palette-commands-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The palette's All view filtered to commands: a Commands chip with an x in a search field reading Search commands, or type @ for files or ? for chats, the All, Tasks, Todo, Files, and Chats tabs with All selected, and the Suggested commands, New task (highlighted, with its Change shortcut keyboard button), Go to what needs you next (F8), Toggle Ask Kepler chat, New Ask Kepler chat, Open settings, and others, then the General commands, above key hints such as Run and Next tab.">
   </a>
   <figcaption style="text-align:center; color:#888">The palette showing only commands, with Suggested first.</figcaption>
 </figure>

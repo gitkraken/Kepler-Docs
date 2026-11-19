@@ -149,7 +149,7 @@ To save either kind of file somewhere else, choose **Save as…** from its menu.
 
 ### Issues and pull requests attach themselves
 
-You do not have to attach a task's pull request yourself. If a task holds no pull request yet, and one of its worktrees is on a branch that exactly matches an open pull request's head branch, Kepler attaches that pull request to the task. This works however the pull request was opened, including from a terminal, from GitKraken, or on the web.
+You do not have to attach a task's pull request yourself. When one of a task's worktrees is on a branch that exactly matches an open pull request's head branch, Kepler attaches that pull request to the task, even if the task already holds other pull requests. This works however the pull request was opened, including from a terminal, from GitKraken, or on the web.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/prs-attach-aug-2026.png" target="_blank" rel="noopener noreferrer">
@@ -429,9 +429,9 @@ If the worktree is locked, the dialog says what locked it: a task, with **View t
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/rename-task-oct-2026-v6@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/rename-task-oct-2026-v6@2x.png" class="help-center-img img-bordered" alt="The Task actions menu of the Fix the cart total row, unread with a New reply, with Rename task highlighted. It runs Open task page; Mark as read, Star, Rename task and Progress (In Development); Add to group; Manage resources and Refresh; Copy task link and Copy task prompt; then Shut down all agents, Archive task and Delete task.">
+    <img src="/wp-content/uploads/rename-task-oct-2026-v6@2x.png" class="help-center-img img-bordered" alt="The Task actions menu with Rename task highlighted. It lists Open task page at the top and Shut down all agents, Archive task, and Delete task at the bottom.">
   </a>
-  <figcaption style="text-align:center; color:#888">The Task actions menu, open from a task's row.</figcaption>
+  <figcaption style="text-align:center; color:#888">The Task actions menu, where you rename, archive, or delete a task.</figcaption>
 </figure>
 
 To rename, archive, or delete a task, open the **Task actions** (**⋮**) menu on the task's row or in the task page's header. The menu has these actions:

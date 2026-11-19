@@ -254,7 +254,7 @@ Claude Code and Codex both sign in through your browser, without a terminal. To 
 | Connection | Claude Code | Codex |
 |---|---|---|
 | Local | Kepler runs the sign-in, your browser opens, and Kepler shows a status line instead of a terminal | Browser sign-in with your ChatGPT account |
-| Remote or SSH | **Sign in with browser**: sign in in your local browser, then paste the code it returns | **ChatGPT (device code)**: sign in with a one-time code in your browser |
+| Remote or SSH | **Sign in with Claude.ai**: sign in in your local browser, then paste the code it returns | **ChatGPT (device code)**: sign in with a one-time code in your browser |
 
 A local sign-in offers these controls:
 

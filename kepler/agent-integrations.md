@@ -234,7 +234,7 @@ The agent's card then shows OpenCode as signed in.
 
 This also works on a [remote environment](/kepler/remote-environments):
 
-- **Claude Code** on a remote offers **Sign in with browser**, which opens the sign-in page in your *local* browser and takes the code you paste back. Kepler saves the credential on the remote machine.
+- **Claude Code** on a remote offers **Sign in with Claude.ai**, which opens Claude's sign-in in your *local* browser and takes the code you paste back. Kepler saves the credential on the remote machine. **Sign in with token (advanced)** is for an account that cannot finish a browser sign-in.
 - **Codex** on a remote offers **ChatGPT (device code)**. Kepler shows the sign-in link and a **One-time code**, and the credential is saved on the remote machine. Some ChatGPT workspaces turn device sign-in off, and Kepler then points you to the alternatives.
 - **Cursor CLI** on a remote offers only **Paste an API key**, because its browser sign-in cannot complete there.
 
