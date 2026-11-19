@@ -1,6 +1,6 @@
 ---
 title: Keep Track of Several Claude Code and Codex Sessions in Kepler
-description: In Kepler, track several Claude Code and Codex sessions at once, with 1 task per worktree, a Dashboard of who needs you, and each worktree's changes.
+description: In Kepler, track several Claude Code and Codex sessions at once, with a worktree per task, a Dashboard of who needs you, and each worktree's changes.
 product: Kepler
 feature: Agent Sessions
 content_type: how-to

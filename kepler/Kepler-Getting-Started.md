@@ -37,7 +37,7 @@ Kepler has installers for these platforms:
 
 | Platform | Installer | Minimum OS |
 |---|---|---|
-| Windows | 64-bit, ARM64 | Windows 10+ |
+| Windows | 64-bit, ARM64 | Windows 10 and later |
 | macOS | Apple Silicon, Intel | macOS 12+ |
 | Linux (x64) | .deb, .rpm, .AppImage, Flatpak, AUR | Ubuntu LTS 18.04+ / Debian 10+ / RHEL 8+ / Fedora 39+ |
 | Linux (ARM) | .deb, .rpm, .AppImage | Ubuntu LTS 20.04+ / RHEL 8+ / Fedora 39+ |

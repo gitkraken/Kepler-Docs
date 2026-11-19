@@ -60,7 +60,7 @@ The first row is the agent's own login. The account badged **Default** is the on
   <a href="/wp-content/uploads/agent-accounts-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/agent-accounts-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Claude Code card in Settings › Agents with two accounts, the default Claude Code CLI (Acme, Default) with the No color mark and Personal with a blue color swatch, each with Check usage and a row menu. Below them sit New sessions start in, Let artifact comments start turns, Artifacts in new sessions, and Program and data folder.">
   </a>
-  <figcaption style="text-align:center; color:#888">2 Claude Code accounts in Settings → Agents.</figcaption>
+  <figcaption style="text-align:center; color:#888">Two Claude Code accounts in Settings → Agents.</figcaption>
 </figure>
 
 See [Several accounts for one agent](/kepler/agent-sessions#several-accounts-for-one-agent) for every account control.
