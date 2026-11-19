@@ -109,7 +109,7 @@ For every message the dialog shows, see [Pull Request Integrations](/kepler/pull
 
 Once connected, a self-hosted provider lists each server on its own row, with **Set as primary**, **Replace token**, and **Disconnect**. Each server keeps its own repositories and issues:
 
-- To connect another server, click **Add connection** on the provider's row. Connecting more than 1 server needs an active GitKraken plan or trial.
+- To connect another server, click **Add connection** on the provider's row.
 - To renew an expired or rejected token, click **Replace token** on that server's row.
 - To make a server the provider's default connection, click **Set as primary**. Agents' GitKraken MCP server acts through the primary connection.
 
@@ -308,7 +308,7 @@ Kepler recognizes an issue from its URL when you paste or attach one, including 
 
 **Search by key or link.** In the issue list of a task's **Resources** screen, type a Jira or Linear issue key, such as `OPS-42`, or paste a Jira Cloud, Jira Server / Data Center, Linear, or Azure DevOps work item link. Kepler finds that issue in its tracker, whatever its state, even when it is not in the list. A Jira Server / Data Center link resolves when it points at an installation you have connected.
 
-**Jira keys in commits and branches.** With Jira or Jira Server / Data Center connected, Kepler links Jira issue keys in commit messages and branch names, so `OPS-42` in a commit message links to that issue. Right-click a commit in a worktree's commit list for **Open issue *key*** and **Copy issue URL for *key*** (see [Review Changes](/kepler/review-changes#the-changes-panel)), and the **Worktrees and branches** page shows the keys as chips on branch and worktree rows (see [Repository Settings](/kepler/settings-repositories#worktrees-and-branches)). Only Jira keys are linked this way.
+**Jira keys in commits and branches.** With Jira or Jira Server / Data Center connected, Kepler links Jira issue keys in commit messages and branch names, so `OPS-42` in a commit message links to that issue. Right-click a commit in a worktree's commit list for **Open issue *key*** and **Copy issue URL for *key*** (see [Review What a Coding Agent Changed](/kepler/review-changes#the-changes-panel)), and the **Worktrees and branches** page shows the keys as chips on branch and worktree rows (see [Repository Settings](/kepler/settings-repositories#worktrees-and-branches)). Only Jira keys are linked this way.
 
 **Add from the list with the keyboard.** In the issue list on the **Resources** screen, the arrows move between rows, and **Enter** or a double-click adds the row. **Show preview** in the screen's header shows the picked row beside the list. See [Picking issues and pull requests](/kepler/tasks-and-resources#picking-issues-and-pull-requests).
 

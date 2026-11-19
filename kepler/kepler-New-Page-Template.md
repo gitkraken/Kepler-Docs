@@ -1,9 +1,8 @@
 ---
-
-title: New Page Title
-description: New Page Description
+title: Do the Task in Kepler
+description: In Kepler, ... 1 or 2 sentences, 160 characters or fewer, that name Kepler and the action the page covers.
 product: Kepler
-feature: Template
+feature: Feature Name
 content_type: how-to
 audience: developer
 plan_required: all
@@ -11,16 +10,14 @@ os_support: [Windows, macOS, Linux]
 git_hosts: [generic]
 integrations: []
 hosted_variant: both
-status: draft
-last_verified: 2026-06
-llms_include: false
-tags: [template]
+status: GA
+last_verified: YYYY-MM
+llms_include: false  # Templates stay false. Set this to true on a real page.
+tags: [keyword-one, keyword-two, keyword-three]
 taxonomy:
-    category: kepler
-
+  category: kepler
 ---
+<kbd>Last updated: Month YYYY</kbd>
 
 Content
-
----
 

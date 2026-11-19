@@ -32,11 +32,11 @@ custom_fields:
 ---
 <kbd>Last updated: November 2026</kbd>
 
-An **Action** is a named prompt you fire at a task, issue, or pull request to start agent work.
+An **Action** is a named prompt that you run on a task, issue, or pull request to start agent work.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/actions-drop-down.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/actions-drop-down.png" class="help-center-img img-bordered" alt="The Action split button on a Todo row, chevron open, showing Plan, Implement, a custom action, and Manage actions">
+  <a href="/wp-content/uploads/actions-drop-down-nov-2026@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/actions-drop-down-nov-2026@2x.png" class="help-center-img img-bordered" alt="The row for PR #49, marked Changes requested, with the chevron on its Address Feedback button open. The menu lists Plan, Implement, Review, Address Feedback, and Write Tests, then Manage Actions… below a divider.">
   </a>
   <figcaption style="text-align:center; color:#888">The Action split button, chevron open. One click runs the default; the chevron lists every applicable Action, including your own.</figcaption>
 </figure>
@@ -124,7 +124,7 @@ An Action you pick from the chevron list asks where to run it whenever there is 
 
 At the bottom of the list, **Manage Actions…** opens **Settings → Actions**.
 
-From the keyboard, the two halves are separate **Tab** stops, the Action first. **Down Arrow** or **Alt+Down** on the Action opens the list too, and closing the list puts focus back on the Action. Every split button in Kepler (**Send**, **Open in**, **Run**) works the same way.
+From the keyboard, the two halves are separate **Tab** stops, the Action first. **Down Arrow** or **Alt/⌥ + Down Arrow** on the Action opens the list too, and closing the list puts focus back on the Action. Every split button in Kepler (**Send**, **Open in**, **Run**) works the same way.
 
 ### Choosing where it runs
 
@@ -152,8 +152,8 @@ A task with no worktree runs the Action in a folder attached to it, or else in t
 Firing into a live session **queues** the prompt behind whatever the agent is currently doing. Nothing is dropped and nothing is canceled, and Kepler takes you to the session the prompt went into.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/firing-into-a-running-session-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/firing-into-a-running-session-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="A running session in a task's side panel: the agent's plan at 1 of 3, its turn still running on Run npm test, and below it 1 queued with Interrupt & send and Clear queue, holding the prompt Also cover gift card codes with surrounding spaces. The composer reads Type a message to queue….">
+  <a href="/wp-content/uploads/firing-into-a-running-session-aug-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/firing-into-a-running-session-aug-2026-v3@2x.png" class="help-center-img img-bordered" alt="A running session: the agent's plan at 1 of 3, its turn still running on Run npm test, and below it 1 queued with Interrupt & send and Clear queue, holding the prompt Also cover gift card codes with surrounding spaces., marked After this turn with a remove button. The composer, its border tinted while the turn runs, reads Type a message to queue... above Docs Model, Build and Send.">
   </a>
   <figcaption style="text-align:center; color:#888">A prompt queued into a running session.</figcaption>
 </figure>
@@ -269,7 +269,7 @@ Before I review this work, write a review summary in this session. Include:
 Don't change any files.
 ```
 
-The summary is the agent's own account. Check it against the diff in [Review Changes](/kepler/review-changes) before you commit.
+The summary is the agent's own account. Check it against the diff in [Review What a Coding Agent Changed](/kepler/review-changes) before you commit.
 
 #### Example: Open a pull request
 
@@ -291,7 +291,7 @@ End the description with this line:
 If the worktree has uncommitted changes, stop and tell me.
 ```
 
-The agent opens the pull request with the tools it has, such as your Git host's command-line tool. When it publishes the pull request, Kepler attaches it to the task. See [Review Changes](/kepler/review-changes#opening-a-pull-request).
+The agent opens the pull request with the tools it has, such as your Git host's command-line tool. When it publishes the pull request, Kepler attaches it to the task. See [Review What a Coding Agent Changed](/kepler/review-changes#opening-a-pull-request).
 
 ### Restore defaults
 
@@ -307,7 +307,7 @@ You cannot delete an Action that an automation runs. Delete the automation first
 
 ## Setting an Action's agent
 
-By default an Action runs on your **default agent**, configured in **Settings → Tasks → New tasks → Default agent**. To change it, open the **Preset** list in the editor's **Agent** field and pick one of the following:
+By default, an Action runs on your **default agent**, which you set in **New sessions start with** in [Settings → Tasks](/kepler/settings-tasks#default-agent). To change it, open the **Preset** list in the editor's **Agent** field and pick one of the following:
 
 | Choice | What the Action runs on |
 |---|---|
@@ -328,7 +328,7 @@ An [automation](/kepler/kepler-automations) runs its Action unattended, on issue
 
 **Custom agent settings** is an **all-or-nothing override**: it pins the provider, account, model, mode, and options together, rather than changing one of them and inheriting the rest.
 
-Three rules govern which agent actually runs:
+Three rules decide which agent runs:
 
 - A model belongs to its provider, so a pinned model never runs on a different agent.
 - If an Action names an agent you do not have installed, the override falls back **whole** to your default agent.

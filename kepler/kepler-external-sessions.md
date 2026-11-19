@@ -34,9 +34,9 @@ Kepler takes over a conversation only when you ask. It binds the conversation to
 
 ## Turning detection on
 
-Detection is on by default. To turn it on or off, use **Settings → Integrations → Your terminal → Show sessions started outside Kepler**.
+Detection is off by default. To turn it on, or off again, use **Settings → Integrations → Your terminal → Show sessions started outside Kepler**.
 
-The switch installs GitKraken hooks, so each agent's own CLI reports what it is doing to Kepler. The one switch covers every agent that Kepler can track this way: **Claude Code**, **Codex**, **Cursor**, **GitHub Copilot**, **OpenCode**, **Auggie**, **Grok Build**, and **Pi**. Kepler does not track Google Antigravity through hooks. Turning the switch off stops reporting from all of them.
+The switch installs GitKraken hooks, so each agent's own CLI reports what it is doing to Kepler. The one switch covers every agent that Kepler can track this way: **Claude Code**, **Codex**, **Cursor**, **GitHub Copilot**, **OpenCode**, **Auggie**, **Grok Build**, **Pi**, and **Google Antigravity**. Turning the switch off stops reporting from all of them.
 
 Kepler follows **Terminal** sessions through the same hooks. If a live session stops reporting, Kepler warns that **Agent sessions aren't reporting to Kepler**, because its status and notifications may be out of date. Click **Repair**, then restart any session that still does not report. To repair sessions running on another computer, use Kepler on that computer.
 
@@ -67,7 +67,7 @@ Kepler reads the transcripts of **Claude Code**, **Codex**, **GitHub Copilot**, 
   <figcaption style="text-align:center; color:#888">A past Pi session, previewed read-only from its transcript on disk.</figcaption>
 </figure>
 
-Kepler replays an Antigravity conversation but does not follow it live.
+Kepler replays an Antigravity transcript but does not update it live.
 
 If Kepler cannot read a transcript, it says which problem it hit instead of showing an empty conversation:
 
@@ -88,9 +88,9 @@ You can take over an outside session in 2 ways. They differ in what happens to t
 | **Fork** | Copies the conversation into a new Kepler session, and your terminal keeps the original. Both continue independently |
 | **Continue here** | Carries on the same conversation in Kepler |
 
-Both buttons work only once the session is idle. If it waits on you, answer it in your terminal first.
+Both buttons work even while the session looks busy. **Fork** runs right away.
 
-If a terminal still owns the session, **Continue here** asks you to confirm. Close the conversation in your terminal first, because 2 programs writing the same conversation corrupt it.
+If a terminal still owns the session, **Continue here** asks you to confirm, and warns you when Kepler thinks the terminal is still in the middle of a turn. Close the conversation in your terminal first, because 2 programs writing the same conversation corrupt it.
 
 When you take over a conversation from disk, the agent starts on your first message, not when you take it over. Adopting one costs nothing.
 

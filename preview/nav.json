@@ -37,6 +37,20 @@
       ]
     },
     {
+      "title": "Agent Workflows in Kepler",
+      "pages": [
+        "kepler-agent-workflows.md",
+        "kepler-move-from-conductor.md",
+        "kepler-run-coding-agents-in-parallel-on-windows.md",
+        "kepler-set-up-agent-worktrees-automatically.md",
+        "kepler-manage-agents-across-accounts-and-ssh-hosts.md",
+        "kepler-track-multiple-agent-sessions.md",
+        "kepler-approve-agent-requests-from-your-phone.md",
+        "kepler-start-agent-from-issue-to-pull-request.md",
+        "kepler-review-ai-pull-request-before-sharing.md"
+      ]
+    },
+    {
       "title": "Integrations",
       "pages": [
         "kepler-integrations.md",
@@ -52,6 +66,7 @@
         "kepler-configuration.md",
         "settings.md",
         "settings-setup-account.md",
+        "kepler-profiles.md",
         "kepler-behavior-and-integration-settings.md",
         "settings-agents.md",
         "settings-tasks.md",
