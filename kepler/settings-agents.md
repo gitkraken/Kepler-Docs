@@ -1,6 +1,6 @@
 ---
 title: Agent Settings
-description: Install, update, and sign in to your coding agents in Kepler, choose how their sessions start, and set up custom agents, MCP servers, agent tools, approval rules, and usage limits.
+description: Install, update, and sign in to your coding agents in Kepler, choose how their sessions start, and set up custom agents, MCP servers, agent tools, approval rules, and what happens at a usage limit.
 product: Kepler
 feature: Settings
 content_type: reference
@@ -94,6 +94,13 @@ Each account row has the following controls:
 - A color picker that tints the agent icon wherever that account runs. The default account starts with **No color**.
 - **Sign in**.
 - An account menu with **Rename**, **Share history with the CLI**, **Sign in another way**, **Sign out**, and **Remove account**. On a signed-in Claude Code account, the menu also has **Switch account…**, which signs that account in with a different Claude login. See [Switch the account a Claude Code login uses](#switch-the-account-a-claude-code-login-uses).
+
+Once an agent has 2 or more accounts, Kepler uses them in list order, top first:
+
+- A new session you start without picking an account starts on the first account with usage left.
+- When a session hits a usage limit, Kepler continues it on the first account with usage left, or suggests that account, depending on [When a usage limit is reached](#usage-and-recovery).
+
+To reorder the list, drag a row by its handle, or use **Move to top**, **Move up**, and **Move down** in the account menu. To keep an account out of the switch at a usage limit, clear **Use at a usage limit** in its menu. Its row then reads **Skipped at a usage limit**. An account that keeps its own history reads **New sessions only**, because a conversation can move to it only with **Share history with the CLI** on.
 
 Removing an account stops its running sessions and deletes the sessions stored only in that account. To keep those sessions, click **Move to CLI account** first. See [Agent Sessions](/kepler/agent-sessions#several-accounts-for-one-agent).
 
@@ -230,18 +237,27 @@ A change applies to new agent sessions. Sessions already running keep the tools 
 
 Some actions your agents take wait for your approval. Use **Approvals** to manage the rules that approve those actions for you. An action that no rule covers still asks.
 
-When an agent uses Kepler's workspace tools to do something that needs your approval, Kepler pins an approval card above that session's message box. Examples include deleting a worktree, sending a prompt to another session, or rewriting a branch. The card's **Approve** menu offers **Always approve** for that kind of action. Kepler does not offer it for actions that can lose work, or for a setting change that Ask Kepler asks to make. See [Agent Sessions](/kepler/agent-sessions).
+When an agent uses Kepler's workspace tools to do something that needs your approval, Kepler pins an approval card above that session's message box. Examples include deleting a worktree, sending a prompt to another session, or rewriting a branch. The card's **Approve** menu offers **Always approve** for that kind of action. Kepler does not offer it for actions that can lose work, for adopting a task into another agent's work, for adding or replacing a repository's Run command, or for a setting change that Ask Kepler asks to make. See [Agent Sessions](/kepler/agent-sessions).
 
 **Always approved** lists each rule you create this way, with when and where you added it and how often it has run. **Remove** deletes the rule, so that kind of action asks again.
 
-## Usage limits
+<a id="usage-limits"></a>
 
-These settings control how Kepler handles your agent plans' usage limits:
+## Usage and recovery
+
+These settings control what Kepler does when an agent hits a usage limit or its model is overloaded:
 
 | Setting | What it controls | Default |
 |---|---|---|
 | **Check plan usage with each agent's provider** | Asks each agent's provider for your plan usage, per-model limits, and extra usage, with the agent's own sign-in | On |
-| **Resume after the usage limit resets** | When a usage limit cuts off a turn and nothing is queued, sends a "continue" message shortly after the limit resets | Off |
+| **When a usage limit is reached** | What happens to a session that a usage limit cuts off, for every agent, in Chat and in Terminal. See the options below | Wait for the reset |
+| **Retry automatically when the model is overloaded** | When the model is overloaded or the provider has a temporary server error, Kepler waits and asks the agent to continue, for up to 12 hours. It never resends your prompt | On |
+
+**When a usage limit is reached** has these options:
+
+- **Manual**: the usage bar offers to wait for the reset or switch accounts.
+- **Wait for the reset**: the session continues on its own when the limit resets.
+- **Switch accounts**: the session continues on an account with usage left, in [your accounts' order](#use-several-accounts-for-one-agent), or after the reset if no account has any.
 
 Kepler uses the agent's sign-in only to ask its provider, and never changes it. With **Check plan usage with each agent's provider** off, Kepler shows only what agents report, and sends a message queued at a usage limit automatically only if the agent says when the limit resets.
 

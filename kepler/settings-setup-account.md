@@ -1,6 +1,6 @@
 ---
 title: Setup and Account Settings
-description: Reopen Kepler's first-run setup checklist, see who you are signed in as, switch organizations, and track your GitKraken AI credits and usage by feature.
+description: Reopen Kepler's setup checklist, see who you are signed in as, switch organizations, track your GitKraken AI credits, and manage your profiles.
 product: Kepler
 feature: Settings
 content_type: reference
@@ -11,15 +11,15 @@ git_hosts: [generic]
 integrations: []
 hosted_variant: both
 status: GA
-last_verified: 2026-10
+last_verified: 2026-11
 llms_include: true
-tags: [settings, setup, account, organization, ai-credits, gitkraken-dev]
+tags: [settings, setup, account, organization, ai-credits, gitkraken-dev, profiles]
 taxonomy:
   category: kepler
 ---
 <kbd>Last updated: November 2026</kbd>
 
-Use **Setup** to get back to Kepler's first-run checklist. Use **Account** to see who you are signed in as, which organization you are acting as, and how you are using your GitKraken AI credits.
+Use **Setup** to get back to Kepler's first-run checklist. Use **Account** to see who you are signed in as, which organization you are acting as, and how you are using your GitKraken AI credits. Use **Profiles** to keep separate sets of work on this computer.
 
 ## Setup
 
@@ -48,6 +48,19 @@ The organization you are acting as decides what a feature costs.
     <img src="/wp-content/uploads/ai-usage-breakdown-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The GitKraken AI credits section of Settings › Account: Your weekly usage 412,500 / 3.2M (13%, resets Sun, Mar 8), Shared weekly credits 18.4M / 80M, and Your usage by feature, a stacked bar over Commit Message 38.3%, Conflict Resolution 27.2%, Compose Changes 18.5%, Task & branch names 9.9% and Pull Request 6.1%, each with a help icon, above Buy credits.">
   </a>
   <figcaption style="text-align:center; color:#888">GitKraken AI credits, with your usage by feature.</figcaption>
+</figure>
+
+***
+
+## Profiles
+
+**Profiles**, right under **Account** in the desktop app, lists the profiles on this computer. Each profile has its own tasks, repositories, settings, and sign-ins, and runs side by side with the others. Click **Add profile** to add one, or use a profile's row menu to edit, open, or delete it. See [Use Profiles in Kepler](/kepler/kepler-profiles).
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/profiles-settings-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/profiles-settings-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Profiles settings page, with Add profile above two profiles: Default, marked This profile, and Client work, each with a row menu.">
+  </a>
+  <figcaption style="text-align:center; color:#888">Settings → Profiles.</figcaption>
 </figure>
 
 ---

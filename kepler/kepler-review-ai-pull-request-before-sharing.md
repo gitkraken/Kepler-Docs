@@ -67,8 +67,8 @@ The agent makes its changes in the task's worktree. To read them:
 3. Read each file's diff. The file tree beside it lists every file the agent touched.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/changes-overlay-maximize-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/changes-overlay-maximize-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total open over the task page, listing the 2 changed files beside the diff of cart.js.">
+  <a href="/wp-content/uploads/changes-overlay-maximize-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/changes-overlay-maximize-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total open over the dimmed task page, with the Maximize button in its header ringed and its tooltip showing. The side list shows the two changed files beside the diff of cart.js.">
   </a>
   <figcaption style="text-align:center; color:#888">The Changes overlay lists every changed file beside its diff.</figcaption>
 </figure>
@@ -88,7 +88,7 @@ When a line needs work, comment on it instead of fixing it yourself or retyping 
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/review-comment-draft-oct-2026-v6@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/review-comment-draft-oct-2026-v6@2x.png" class="help-center-img img-bordered" alt="A review comment draft under lines 3 and 4 of cart.js in the Changes overlay, with Cancel, Add comment and Send now.">
+    <img src="/wp-content/uploads/review-comment-draft-oct-2026-v6@2x.png" class="help-center-img img-bordered" alt="A review comment draft under lines 3 and 4 of cart.js in the Changes overlay, with the note Pull the discount and rounding into one helper. Below the note, To names the session Fix the cart total: discounts should apply before tax., beside Cancel, Add comment, and Send now.">
   </a>
   <figcaption style="text-align:center; color:#888">A review comment draft, under the lines it is about.</figcaption>
 </figure>
@@ -121,7 +121,7 @@ The review is a report. Read it in the session, and send the agent that wrote th
 
 ## How to open the pull request
 
-When you are satisfied, commit the work. In the **Changes** overlay, click **Commit…** to stage and commit it. See [Staging and committing](/kepler/review-changes#staging-and-committing).
+When you are satisfied, commit the work. In the **Changes** overlay, click **Commit…** on the **Working changes** row to stage and commit it. See [Staging and committing](/kepler/review-changes#staging-and-committing).
 
 Then open the pull request in one of these ways:
 
@@ -142,7 +142,7 @@ In Kepler, read every changed line in the task's **Changes** overlay, send revie
 
 ### Can a different AI agent review the code that Claude Code wrote?
 
-Yes. Set the **Agent** field of the built-in **Review** Action to Codex or another agent in **Settings → Actions**, or pick the agent when you run **Review**.
+Set the **Agent** field of the built-in **Review** Action to Codex or another agent in **Settings → Actions**, or pick the agent when you run **Review**.
 
 ### Does Kepler post my review comments to GitHub?
 
@@ -154,7 +154,7 @@ No. Both are examples on the [Actions](/kepler/actions) page. You create each on
 
 ### Can I mark the pull request as AI-assisted?
 
-Yes. Write it in the description yourself, or use an Action created from the **Open a pull request** example, which ends the description with a line that says an AI coding agent helped write the change and a person reviewed it.
+Write a note in the description yourself, or use an Action created from the **Open a pull request** example, which ends the description with a line that says an AI coding agent helped write the change and a person reviewed it.
 
 ***
 

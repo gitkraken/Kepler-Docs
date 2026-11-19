@@ -24,8 +24,8 @@ Each task has its own screen, the **task page**. The context panel lists everyth
 To open the task page, double-click a task's row in [the Kepler interface](/kepler/kepler-interface), or click **Open task page** in the task's side panel. For what a task is and what you can attach to one, see [Tasks and Resources](/kepler/tasks-and-resources).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/full-task-view-oct-2026-v2.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/full-task-view-oct-2026-v2.png" class="help-center-img img-bordered" alt="The task page, its header holding the task name, the ⋮ menu, the In Development progress control, and Terminal at the right edge. The context panel lists Sessions, Changes, Pull requests, and Notes led by Prompt, and a session on the right is waiting on a command approval.">
+  <a href="/wp-content/uploads/full-task-view-nov-2026@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/full-task-view-nov-2026@2x.png" class="help-center-img img-bordered" alt="The task page for Fix the cart total, with In Development, Terminal, and the ⋮ menu in its header. The context panel lists a session, the kepler/fix-cart-total worktree under Changes, and the Prompt note, beside the open session's conversation and composer.">
   </a>
   <figcaption style="text-align:center; color:#888">The task page, with the context panel beside an open session.</figcaption>
 </figure>
@@ -35,10 +35,10 @@ To open the task page, double-click a task's row in [the Kepler interface](/kepl
 ## The header
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/task-header-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-header-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The left side of the task header: the context panel toggle, the back chevron, the Fix the cart total task chip with its switcher chevron, the ⋮ Task actions menu, and the In Development progress control.">
+  <a href="/wp-content/uploads/task-header-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-header-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The task header from left to right: the context panel toggle, the back chevron, the Fix the cart total task chip with its switcher chevron, the In Development progress control, then at the far right the Terminal button and the ⋮ Task actions menu.">
   </a>
-  <figcaption style="text-align:center; color:#888">The left side of the task header. Terminal sits at the far right.</figcaption>
+  <figcaption style="text-align:center; color:#888">The task header, with Terminal and the ⋮ menu at its right end.</figcaption>
 </figure>
 
 The header holds these controls, from left to right:
@@ -46,9 +46,9 @@ The header holds these controls, from left to right:
 - **Hide context panel** or **Show context panel**, which hides and shows the context panel. See [The context panel](#the-context-panel).
 - **Back to dashboard**, a back chevron, which returns you to the Dashboard as you left it. With the views on the left side, it sits at the top of the views column instead.
 - **The task switcher**, the task's name as a chip, which jumps to another task without going back first. Type to search it. Right-click the name for the same actions as the **⋮** menu, or double-click it to rename the task.
-- **⋮ Task actions**, a menu of actions on the whole task. See [Task actions](#task-actions).
 - **The Progress control**, which shows the task's stage, such as **In Development** or **Done**. Click it to set the stage yourself, to put the task on hold, or to set it back to **Automatic**. See [Arranging your work](/kepler/arranging-your-work).
-- **Terminal**, at the right edge, which shows and hides the [terminal drawer](#the-terminal-drawer) and counts the terminals running in it.
+- **Terminal**, at the right, which shows and hides the [terminal drawer](#the-terminal-drawer) and counts the terminals running in it.
+- **⋮ Task actions**, at the right edge, a menu of actions on the whole task. See [Task actions](#task-actions).
 
 When a task looks finished, the header shows a **Ready to archive?** prompt with **Archive** beside it, until you archive the task or dismiss the prompt.
 
@@ -56,10 +56,12 @@ When a task looks finished, the header shows a **Ready to archive?** prompt with
 
 The **⋮ Task actions** menu holds these items:
 
-- The task's **Progress** submenu, with **Reopen** leading on a finished task.
+- **Reopen**, on a finished task.
 - **Mark as read** while any of the task's sessions is unread, which marks them all read. Otherwise the menu offers **Mark as unread**.
 - **Star** or **Unstar**.
-- **Rename task** and **Add to group**.
+- **Rename task**.
+- The task's **Progress** submenu.
+- **Add to group**.
 - **Manage resources**, which opens the task's **Resources** screen. See [What a task holds](/kepler/tasks-and-resources#what-a-task-holds).
 - **Refresh**, which reads the task's worktrees and its pull requests and issues again.
 - **Copy task link**, which copies a Kepler link that opens this task, and **Copy task prompt**.
@@ -71,10 +73,10 @@ The **⋮ Task actions** menu holds these items:
 To rename a task, do one of the following:
 
 - Pick **Rename task** in the **⋮ Task actions** menu.
-- Press **F2** anywhere on the page outside a text field.
+- Press **F2** anywhere on the page, even in a text field.
 - Double-click the task switcher.
 
-The name turns into an editable field. **Auto-name** fills the field with a name suggested from the task's prompt and resources, which you can accept or edit. It never renames the task on its own. To save, press **Enter** or click the check mark. To cancel, press **Escape** or click **×**.
+The name turns into an editable field. **Auto-name** fills the field with a name suggested from the task's prompt and resources, which you can accept or edit. It never renames the task on its own. To save, press **Enter** or click the check mark. To cancel, press **Escape**, click **×**, or click away from the field.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/rename-inline-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -87,13 +89,14 @@ The name turns into an editable field. **Auto-name** fills the field with a name
 
 At phone width, for example in a phone browser connected through [Remote Access](/kepler/remote-environments#remote-access-reach-kepler-from-another-device), the task page replaces its header with a single bar:
 
-- **Back**, on the left, which shows a dot when another task needs you.
+- **Back**, on the left.
 - The task's name as a chip, which opens the task switcher. Swipe sideways on the name to go back to the previous task.
-- A segment for each of **Sessions**, **Changes**, **Terminal**, and **Resources**.
+- **Tasks that need you**, while a task needs you. Tap it for the list of those tasks and **Go to next task that needs you**.
+- A segment for each of **Sessions**, **Changes**, and **Terminal**, plus **Resources** when the bar has room. When it has no room, the task's resources are in **Everything in this task**, the sheet you pull down from the bar.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/phone-task-view-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/phone-task-view-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The task page in a phone-width browser. One bar holds Back (with a dot, because another task needs you), the Fix the cart total chip, and the Sessions (1), Changes (2), Terminal and Resources (4) segments. Below it the details row reads In Review with Refresh and a fold chevron, then the checkout box for kepler/fix-cart-total (1/1, its #51 pull request with a red changes-requested dot, 2 uncommitted, origin/main) and the #51 Open and #38 Open chips, above the agent's session and its composer.">
+  <a href="/wp-content/uploads/phone-task-view-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/phone-task-view-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The task page in a phone-width browser: one bar holds Back, the Fix the cart total chip, an inbox button with an orange mark for tasks that need you, and the Sessions, Changes, and Terminal segments as icons. Below it, the folded details row reads In Review, above the agent's session and the composer.">
   </a>
   <figcaption style="text-align:center; color:#888">The task page on a phone, with its single bar and details row.</figcaption>
 </figure>
@@ -106,7 +109,7 @@ Pull down on the bar, or long-press a segment, to open **Everything in this task
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/phone-context-sheet-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/phone-context-sheet-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Everything in this task sheet pulled up over the task page in a phone-width browser. Sessions (1) lists the agent's session, ticked as the one on screen, then New session; Changes (2) lists kepler/fix-cart-total and kepler/cart-rounding in acme-web; Terminals (0) offers New terminal; Resources (4) heads each kind with its count: Pull requests (1) with Apply discounts before tax in the cart total, Issues (1) with Cart total ignores discounts when tax is a…, and Notes (2) with note.md and Coding conventions. Each row has an actions menu, and the sheet ends with Add resource.">
+    <img src="/wp-content/uploads/phone-context-sheet-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Everything in this task sheet pulled up over the task page in a phone-width browser, listing the task's sessions, changes, terminals, and resources, each row with an actions menu. Its rows include New session, New terminal, and, at the end, Add resource.">
   </a>
   <figcaption style="text-align:center; color:#888">Everything in this task, which takes the place of the context panel on a phone.</figcaption>
 </figure>
@@ -134,18 +137,18 @@ The task's worktrees are listed under **Changes**. Each row shows the checkout's
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/task-planned-worktree-row-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-planned-worktree-row-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The task page's context panel. Under Sessions is a New session draft; under Changes, a planned row for acme-web on kepler/receipt-discount reads Created when a session starts, with a remove button. Its tip reads acme-web, Branch: kepler/receipt-discount, A new worktree for this repository, created when the first session starts. Below are Notes with the Prompt, and Related tasks with Fix the cart total (Follows up on).">
+    <img src="/wp-content/uploads/task-planned-worktree-row-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The context panel with a planned row under Changes, acme-web on kepler/receipt-discount, reading Created when a session starts, beside a New session draft under Sessions. Its tip reads A new worktree for this repository, created when the first session starts.">
   </a>
   <figcaption style="text-align:center; color:#888">A planned worktree, made when the task's first session starts.</figcaption>
 </figure>
 
-**Merged** holds the worktrees whose branch has been merged, so they do not crowd the work still in progress. Each row says where it was merged. To delete all the merged worktrees at once, click **Delete all…** on the group header and confirm.
+**Merged** holds the worktrees whose branch has been merged, so they do not crowd the work still in progress. Each row says where it was merged. To delete all the merged worktrees at once, click **Delete all…** on the group header and confirm. **Delete all…** skips a locked worktree. Delete that one on its own: Kepler names what locked it and offers to unlock and delete it.
 
 **Related tasks** lists the tasks linked to this one, each with its stage and its relation, such as **Sub-task** or **Follow-up**. Hover a row to see the reason for the link. Click the row to go to that task.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/task-rail-merged-related-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-rail-merged-related-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The context panel with the Merged group unfolded: kepler/cart-rounding, merged into origin/main, under Merged (1) with Delete all…, above the Pull requests row Apply discounts before tax in… (#51) and the Issues row Cart total ignores discounts… (#38). At the bottom, Related tasks lists Add tests for discount codes as a Sub-task and Show the discount on the receipt as a Follow-up; pointing at the follow-up shows its tip, Follow-up · Exploration, with the reason: once the total is right, the receipt should show the discount. Beside the panel, the session's chat shows the agent's replies and the Type a message… box.">
+    <img src="/wp-content/uploads/task-rail-merged-related-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The context panel with the Merged group unfolded, listing kepler/cart-rounding as merged into origin/main, and Delete all… on the group header. At the bottom, Related tasks lists a Sub-task and a Follow-up, and pointing at the follow-up shows its tip, Follow-up · Exploration, with the reason for the link.">
   </a>
   <figcaption style="text-align:center; color:#888">The Merged and Related tasks groups, with a related task's tip.</figcaption>
 </figure>
@@ -168,7 +171,7 @@ The context panel also has these controls and rows:
 To give the content area the full width, hide the context panel:
 
 - Click **Hide context panel** in the header. **Show context panel** brings the panel back.
-- Press **Cmd/Ctrl+B**. On Windows and Linux, a focused shell keeps **Ctrl+B** for itself.
+- Press **Ctrl/⌘ + B**. On Windows and Linux, a focused shell keeps **Ctrl + B** for itself.
 
 While the context panel is hidden, the control shows the task's session status, so you can still see when a session needs you. Hover the control to peek at the context panel over the content, and press **Escape** to close it. To keep the context panel open, click the control while peeking. To resize the context panel, drag its edge.
 
@@ -207,7 +210,7 @@ Some rows have controls at the end of the subtitle line, always visible:
 | Row | Controls |
 |---|---|
 | **Folder** | **Open in…** |
-| **Worktree** (on disk) | **Open in…** and the run-a-command control. To open a shell, use the row's menu or **Cmd/Ctrl+J** |
+| **Worktree** (on disk) | **Open in…** and the run-a-command control. To open a shell, use the row's menu or **Ctrl/⌘ + J** |
 | **Session** | Show or hide the [Agent Graph](/kepler/agent-graph) for that session alone, and **Archive** |
 
 The run-a-command control shows the newest command running in that worktree, with **Stop**. When nothing is running, it shows your default command.
@@ -254,7 +257,7 @@ The worktree's **Branch** submenu holds the actions that change the branch itsel
 
 **Rename session** lets you name a Chat session yourself. Automatic titles never overwrite a name you chose.
 
-**Copy session link** copies a Kepler link that opens the session. When the window is connected to a remote machine, the link names that machine, so it opens there. With the row focused, **Cmd/Ctrl+C** copies the same link. See [Agent Sessions](/kepler/agent-sessions#pointing-an-agent-at-another-session).
+**Copy session link** copies a Kepler link that opens the session. When the window is connected to a remote machine, the link names that machine, so it opens there. With the row focused, **Ctrl/⌘ + C** copies the same link. See [Agent Sessions](/kepler/agent-sessions#pointing-an-agent-at-another-session).
 
 **Continue as** moves the conversation to another signed-in account of the same agent. The agent restarts under that account and keeps the conversation. **Continue in Terminal** and **Continue in Chat** move the conversation between the 2 ways a session runs. When the session is still running, Kepler asks first, and warns when queued messages would be discarded. **Stop and switch** stops the session and moves it. See [Moving a session to another account](/kepler/agent-sessions#moving-a-session-to-another-account) and [How a session runs](/kepler/agent-sessions#how-a-session-runs).
 
@@ -267,7 +270,7 @@ The worktree's **Branch** submenu holds the actions that change the branch itsel
 
 **Use another copy…** appears when Kepler has more than 1 saved copy of the conversation. It lists each copy, with **In use** on the current one. Pick the one to continue when you resume. See [Agent Sessions](/kepler/agent-sessions).
 
-**Option/Alt-click** a resource row to open it in your browser instead of in Kepler.
+**Alt/⌥ + click** a resource row to open it in your browser instead of in Kepler.
 
 The last item in a row menu removes the row from the task. It depends on the kind of row:
 
@@ -282,7 +285,7 @@ A worktree menu also ends with **Delete worktree…**, except on the repository'
 
 ## Columns or tabs
 
-The content area shows what you open in either columns or tabs. To choose, turn **Show tabs on the task page** on or off in **Settings → Tasks → Task page**:
+The content area shows what you open in either columns or tabs. To choose, turn **Show tabs on the task page** on or off in **Settings → Tasks → Task page and panels**:
 
 | Setting | What the content area does |
 |---|---|
@@ -290,19 +293,21 @@ The content area shows what you open in either columns or tabs. To choose, turn 
 | **On** | Free-form **tabs** you can pin, drag between groups, and arrange side by side |
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/show-tabs-on-task-page-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/show-tabs-on-task-page-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Task page section of Settings › Tasks, with Show tabs on the task page and Preview tabs.">
+  <a href="/wp-content/uploads/show-tabs-on-task-page-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/show-tabs-on-task-page-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Task page and panels section of Settings › Tasks: Where links, Go To and notifications open a task, a dropdown set to Automatic (a Dashboard panel when you are on the Dashboard, the task page everywhere else), noting the phone app always opens the task page; Show tabs on the task page, unticked, whose help says Preview tabs need it on; Preview tabs, ticked but dimmed; and Open changes beside the session in Dashboard panels, ticked.">
   </a>
   <figcaption style="text-align:center; color:#888">The Show tabs on the task page setting.</figcaption>
 </figure>
+
+In the same section, **Where links, Go To and notifications open a task** sets whether a task opens on its task page or in a Dashboard panel. **Automatic**, the default, opens a panel when you're on the Dashboard and the task page everywhere else.
 
 In both layouts, terminals open in the [drawer](#the-terminal-drawer) below the content area, never in a column or a tab. Closing a column or a tab only changes the view. It does not detach anything or stop a session, and the context panel still lists everything.
 
 ### The columns
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/task-columns-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-columns-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The task page for Fix the cart total with tabs off: the context panel on the left with Sessions, Changes and Notes, then three columns side by side: the session's conversation (the prompt, Thinking, a completed Plan, a Read cart.js tool call and the agent's replies, with the composer at the foot), the kepler/fix-cart-total worktree on Changes, with its Working changes row, the Commit… button and cart.js modified and cart.test.js added, and the task's Prompt note.">
+  <a href="/wp-content/uploads/task-columns-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-columns-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The task page for Fix the cart total with tabs off: the context panel on the left with Sessions, Changes and Notes, then three columns side by side: the session's conversation (the prompt, Thinking, a completed Plan, a Read cart.js tool call and the agent's replies, with the composer at the foot), the kepler/fix-cart-total worktree on Changes, its branch line in a card with the Working changes row and its Commit… button over main, branched here, then cart.js modified and cart.test.js added, and the task's Prompt note.">
   </a>
   <figcaption style="text-align:center; color:#888">The three content columns: Sessions, Changes, and Resources.</figcaption>
 </figure>
@@ -333,7 +338,7 @@ To close a column, click **Close panel** (**X**) on its strip.
   <figcaption style="text-align:center; color:#888">The Close panel control, on a column's strip.</figcaption>
 </figure>
 
-**Split a column to see 2 items of the same kind.** Cmd-click a row in the context panel (Ctrl-click on Windows and Linux), or pick **Open to the side** in its menu. The item opens beside what that column already shows. While a column is split, a plain click replaces only the focused pane and leaves the others alone.
+**Split a column to see 2 items of the same kind.** Ctrl/⌘ + click a row in the context panel, or pick **Open to the side** in its menu. The item opens beside what that column already shows. While a column is split, a plain click replaces only the focused pane and leaves the others alone.
 
 **Shift-click to open a range of rows.** Use a range to watch several agents at once. Click one session, then shift-click another, and every session from the first to the second opens side by side in the Sessions column.
 
@@ -354,12 +359,12 @@ With tabs on, anything you open from the context panel, including sessions, work
 </figure>
 
 - **Drag a tab** to reorder it, onto another group to move it there, or to a group's edge to split off a new group there. Drag the divider between groups to resize them.
-- **A single click opens a preview.** A resource opened with one click shows in an italic preview tab that the next single click replaces. Double-click a row, or start editing in the tab, to keep it open. A session always opens as a tab you keep. Turn **Preview tabs** off in **Settings → Tasks → Task page** to have every click keep its tab.
-- **Cmd-click a row** in the context panel (Ctrl-click on Windows and Linux), or pick **Open beside** in its menu, to open it in a new group beside the one you're reading.
+- **A single click opens a preview.** A resource opened with one click shows in an italic preview tab that the next single click replaces. Double-click a row, or start editing in the tab, to keep it open. A session always opens as a tab you keep. Turn **Preview tabs** off in **Settings → Tasks → Task page and panels** to have every click keep its tab.
+- **Ctrl/⌘ + click a row** in the context panel, or pick **Open beside** in its menu, to open it in a new group beside the one you're reading.
 - **Shift-click opens a range** of rows, each as its own tab.
 - Clicking the row of something already open just brings its tab forward. Close a tab from the tab itself.
 
-To open a tab's menu, right-click the tab, or press **Shift+F10** or the Menu key on a focused tab. The menu starts with the tab's own actions, such as **Keep open** on a preview, **Pin tab**, **Close others**, and **Close all**, followed by everything the item's row menu offers. A pinned tab shrinks to its icon at the front of its group and has no close control; unpin it to close it.
+To open a tab's menu, right-click the tab, or press **Shift + F10** or the Menu key on a focused tab. The menu starts with the tab's own actions, such as **Keep open** on a preview, **Pin tab**, **Close others**, and **Close all**, followed by everything the item's row menu offers. A pinned tab shrinks to its icon at the front of its group and has no close control; unpin it to close it.
 
 A draft session's tab shows **(draft)** after its name when the tab strip has room. With tabs off, right-click a draft tab for **Discard draft**. With tabs on, close a draft with **Close tab** in its menu. Closing a draft that has text in it asks you to confirm first, because your draft prompt and attachments are removed.
 
@@ -376,10 +381,10 @@ Closing a tab only hides it. You can close a tab in any of these ways:
 
 - Click its **×** (**Close tab**).
 - Middle-click the tab.
-- Press **Cmd/Ctrl+W**, or **Ctrl+F4** on Windows and Linux.
+- Press **Ctrl/⌘ + W**, or **Ctrl + F4** on Windows and Linux.
 - Press **Delete** on a focused tab.
 
-A closed session keeps running and stays in the context panel. To archive a session, use **Archive** on its row. **Cmd/Ctrl+Shift+T** reopens the last tab you closed.
+A closed session keeps running and stays in the context panel. To archive a session, use **Archive** on its row. **Ctrl/⌘ + Shift + T** reopens the last tab you closed.
 
 When every tab is closed, the content area offers **New session**, so you can start something right away.
 
@@ -400,27 +405,27 @@ The task page has these keyboard shortcuts:
 
 | Keys | What they do |
 |---|---|
-| **Ctrl+Tab** / **Ctrl+Shift+Tab** | Switch between the task's sessions, most recently used first |
-| **F6** / **Shift+F6** | Move focus to the next or previous region of the page |
-| **Cmd/Ctrl+1**, **2**, **3** | Focus the Sessions, Changes, or Resources column (tabs off) |
-| **Cmd/Ctrl+Shift+[** and **Cmd/Ctrl+Shift+]** | Previous and next tab. Also **Ctrl+PageUp** and **Ctrl+PageDown** on Windows and Linux |
-| **Alt+1** to **Alt+9** | Jump to a tab in the focused group (tabs on) |
-| **Cmd/Ctrl+Alt+[** and **Cmd/Ctrl+Alt+]** | Move the focused tab left or right. Also **Ctrl+Shift+PageUp** and **Ctrl+Shift+PageDown** on Windows and Linux |
-| **Cmd/Ctrl+W** | Close the focused tab or panel. Also **Ctrl+F4** on Windows and Linux |
+| **Ctrl + Tab** / **Ctrl + Shift + Tab** | Switch between the task's sessions, most recently used first |
+| **F6** / **Shift + F6** | Move focus to the next or previous region of the page |
+| **Ctrl/⌘ + 1**, **2**, **3** | Focus the Sessions, Changes, or Resources column (tabs off) |
+| **Ctrl/⌘ + Shift + [** and **Ctrl/⌘ + Shift + ]** | Previous and next tab. Also **Ctrl + PageUp** and **Ctrl + PageDown** on Windows and Linux |
+| **Alt/⌥ + 1** to **Alt/⌥ + 9** | Jump to a tab in the focused group (tabs on) |
+| **Ctrl/⌘ + Alt/⌥ + [** and **Ctrl/⌘ + Alt/⌥ + ]** | Move the focused tab left or right. Also **Ctrl + Shift + PageUp** and **Ctrl + Shift + PageDown** on Windows and Linux |
+| **Ctrl/⌘ + W** | Close the focused tab or panel. Also **Ctrl + F4** on Windows and Linux |
 | **Delete** | Close the focused tab, the way its **×** does |
-| **Cmd/Ctrl+Shift+T** | Reopen the last closed tab (tabs on) |
-| **Cmd/Ctrl+T** | New session, which opens a draft tab |
-| **Cmd/Ctrl+B** | Show or hide the context panel |
-| **Cmd/Ctrl+J** | Show or hide the terminal drawer |
-| **Cmd/Ctrl+Shift+J** | Maximize the terminal drawer, opening it first if it's hidden |
-| **Cmd/Ctrl+O** / **Cmd/Ctrl+P** | **Open File…** / **Go to File…**. See [Opening a file](#opening-a-file) |
-| **Cmd/Ctrl+Shift+O** | **Open Folder…** |
-| **Cmd/Ctrl+Shift+P** or **F1** | **Go to task**. See [Go to a task or file](#go-to-a-task-or-file) |
-| **Cmd/Ctrl+F** | Find in the focused file or diff. See [Finding text in a file](#finding-text-in-a-file) |
+| **Ctrl/⌘ + Shift + T** | Reopen the last closed tab (tabs on) |
+| **Ctrl/⌘ + T** | New session, which opens a draft tab |
+| **Ctrl/⌘ + B** | Show or hide the context panel |
+| **Ctrl/⌘ + J** | Show or hide the terminal drawer |
+| **Ctrl/⌘ + Shift + J** | Maximize the terminal drawer, opening it first if it's hidden |
+| **Ctrl/⌘ + O** / **Ctrl/⌘ + P** | **Open File…** / **Go to File…**. See [Opening a file](#opening-a-file) |
+| **Ctrl/⌘ + Shift + O** | **Open Folder…** |
+| **Ctrl/⌘ + Shift + P** or **F1** | **Go to task or command**. See [Go to a task or file](#go-to-a-task-or-file) |
+| **Ctrl/⌘ + F** | Find in the focused file or diff. See [Finding text in a file](#finding-text-in-a-file) |
 | **F2** | Rename the task, or the note whose pane or tab has focus |
-| **Cmd/Ctrl+Shift+Backspace** | Delete the task, after you confirm |
-| **Cmd/Ctrl+C** | Copy what the focused row names, such as a session's link or a file's path |
-| **Cmd/Ctrl+Shift+W** | Close the window |
+| **Ctrl/⌘ + Shift + Backspace** | Delete the task, after you confirm |
+| **Ctrl/⌘ + C** | Copy what the focused row names, such as a session's link or a file's path |
+| **Ctrl/⌘ + Shift + W** | Close the window |
 | **Tab** to a divider, then the arrow keys | Move the divider between panes, columns, or tab groups. Hold **Shift** for bigger steps |
 
 With tabs off, a tab's menu in a column strip also holds **Move left** and **Move right**.
@@ -433,7 +438,7 @@ Every new session starts as a draft in its own tab, marked **(draft)** when the 
 
 To start a session, follow these steps:
 
-1. Click **+** on the **Sessions** group in the context panel, or press **Cmd/Ctrl+T**. A draft tab opens, and a **Draft** row appears in **Sessions**.
+1. Click **+** on the **Sessions** group in the context panel, or press **Ctrl/⌘ + T**. A draft tab opens, and a **Draft** row appears in **Sessions**.
 2. Choose where the agent works from the place chip at the bottom of the composer. The chip names the place, then its branch, then whether the session gets a new worktree.
 3. Open **Agent settings** to choose the **Agent**, **Start in**, and the agent's own options, such as **Permission mode**.
 4. Type your prompt.
@@ -489,23 +494,23 @@ You can open a file in these ways:
 
 | How to open one | What you get |
 |---|---|
-| **File › Open File…** (**Cmd/Ctrl+O**) | A file picker for the machine the window is connected to |
-| **File › Open Folder…** (**Cmd/Ctrl+Shift+O**) | A folder picker. The folder opens with its file tree |
-| **File › Go to File…** (**Cmd/Ctrl+P**) | The Go to palette on its **Files** tab. See [Go to a task or file](#go-to-a-task-or-file) |
-| **View › Command Palette…** (**Cmd/Ctrl+Shift+P** or **F1**) | The Go to palette on its **Tasks** tab |
+| **File › Open File…** (**Ctrl/⌘ + O**) | A file picker for the machine the window is connected to |
+| **File › Open Folder…** (**Ctrl/⌘ + Shift + O**) | A folder picker. The folder opens with its file tree |
+| **File › Go to File…** (**Ctrl/⌘ + P**) | The Go to palette on its **Files** tab. See [Go to a task or file](#go-to-a-task-or-file) |
+| **View › Command Palette…** (**Ctrl/⌘ + Shift + P** or **F1**) | The Go to palette on its **All** tab |
 | A row in the context panel's **Files** group | That file |
 | A file path an agent writes in the conversation | The file, at the line the agent named |
 | A file path in a terminal | The file, at its line. See [File paths are links](#file-paths-are-links) |
 
-**All file links work the same way.** A click, a Cmd/Ctrl+click, or a middle-click opens the file in Kepler. Cmd/Ctrl+Shift+click opens it in your default editor at its line.
+**All file links work the same way.** A click, a Ctrl/⌘ + click, or a middle-click opens the file in Kepler. Ctrl/⌘ + Shift + click opens it in your default editor at its line.
 
 A path that's already one of the task's files opens that file's own tab rather than a second copy, however the path was spelled.
 
 ### Go to a task or file
 
-**Go to File…** and **Command Palette…** open the same Go to palette, on its **Files** tab or its **Tasks** tab. For its **Todo** and **Commands** tabs and how to switch tabs, see [Go to a task or file](/kepler/kepler-interface#go-to-a-task-or-file).
+**Go to File…** and **Command Palette…** open the same Go to palette, on its **Files** tab or its **All** tab. For its other tabs and how to switch tabs, see [Go to a task or file](/kepler/kepler-interface#go-to-a-task-or-file).
 
-On the task page, **Files** starts on this task's files, shown as a pill in the search field. To search every task's files, click the pill's **×**. You can also type a full path. A path that names a folder offers **Open** and opens the folder.
+On the task page, **Files** starts on this task's files, named on the scope chip at the end of the tabs. To search another task's files, pick it from the chip, or click the chip's **×** to search every task's files. You can also type a full path. A path that names a folder offers **Open** and opens the folder.
 
 ### What the file viewer shows
 
@@ -514,7 +519,7 @@ The file viewer shows each kind of file in its own way:
 - **Code and text**, with syntax highlighting, scrolled to the line you opened it at, with that line marked. **Wrap lines** turns soft wrapping on and off.
 - **Markdown**, rendered, with a **Preview** / **Source** toggle. A Markdown file opened at a line, such as from a path an agent wrote, opens in **Source** so you see the line.
 - **Images and SVG**, fitted to the pane, with **Fit** and **100%**.
-- Anything else gets a **No preview for this file** card with the options available in this window: **Open in default app**, **Show in Finder** (macOS), **Show in Explorer** (Windows) or **Show in file manager** (Linux), and **Copy path**.
+- Anything else gets a **No preview for this file** card with the options available in this window: **Open in default app**, **Show in Finder** (macOS), **Show in Explorer** (Windows), or **Show in file manager** (Linux), and **Copy path**.
 
 **An open file stays in sync with the file on disk.** When the file changes, the viewer updates in place and says **Updated just now**, naming the session that changed it when Kepler knows. **Show changes** shows what changed since the file was first shown; **Back to file** returns. A deleted file keeps showing the last version Kepler read, and says so.
 
@@ -533,16 +538,17 @@ A very large file shows its start first, with **Load the rest**.
 
 ### Finding text in a file
 
-Every code view, the file viewer and the diffs in the Changes overlay alike, has its own find bar. Press **Cmd/Ctrl+F** in the view to open it at the top right. It counts matches as *{current} of {total}*, or **No results**, and offers the following:
+Every code view, the file viewer and the diffs in the Changes overlay alike, has its own find bar. Press **Ctrl/⌘ + F** in the view to open it at the top right. It counts matches as *{current} of {total}*, or **No results**, and offers the following:
 
 | Control | Keys |
 |---|---|
-| Next and previous match | **F3** and **Shift+F3**. Also **Cmd+G** and **Cmd+Shift+G** on macOS |
-| **Match case** | **Alt+C**, or **Cmd+Option+C** on macOS |
-| **Match whole word** | **Alt+W**, or **Cmd+Option+W** on macOS |
-| **Use regular expression** | **Alt+R**, or **Cmd+Option+R** on macOS |
+| Next and previous match | **F3** and **Shift + F3**. Also **⌘ + G** and **⌘ + Shift + G** on macOS |
+| **Match case** | **Alt + C**, or **⌘ + ⌥ + C** on macOS |
+| **Match whole word** | **Alt + W**, or **⌘ + ⌥ + W** on macOS |
+| **Use regular expression** | **Alt + R**, or **⌘ + ⌥ + R** on macOS |
+| **Only in changes**, in a diff | **Alt + L**, or **⌘ + ⌥ + L** on macOS |
 
-**Escape** closes the bar. In a diff, the search runs across every file in the stack but skips the unchanged lines that are folded away.
+**Escape** closes the bar. In a diff, the search runs across every file in the stack. With **Only in changes** on, it searches only the changed lines. Turn it off to search the whole files.
 
 ### Files that open in an overlay
 
@@ -553,7 +559,7 @@ A file that is not one of the task's files or folders opens in an overlay rather
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/file-overlay-tree-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/file-overlay-tree-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="checkout-style-guide.md open in the file overlay, with the breadcrumb /, srv, acme, brand above it and the file tree of the brand folder beside it: the fonts and launch-2.4 folders, the logos folder opened on acme-mark-dark.svg and acme-mark.svg, then checkout-style-guide.md (selected), colors.json, README.txt and voice-and-tone.md. The viewer shows the guide rendered as Markdown, with the Preview and Source toggle and Wrap lines. The header holds Hide file tree, More file actions, Maximize and Close, and the tree pane a Filter files button.">
+    <img src="/wp-content/uploads/file-overlay-tree-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The file checkout-style-guide.md open in the file overlay, rendered as Markdown, under the breadcrumb /, srv, acme, brand. Beside it, the file tree of the brand folder has the logos folder open and checkout-style-guide.md selected.">
   </a>
   <figcaption style="text-align:center; color:#888">A file in the file overlay, with its folder's tree beside it.</figcaption>
 </figure>
@@ -570,7 +576,7 @@ In the file overlay:
 
 ## The terminal drawer
 
-Terminals open in a drawer below the content area. Drag its divider to resize it. The **Terminal** control at the right edge of the header shows and hides the drawer, and counts the terminals running in it.
+Terminals open in a drawer below the content area. Drag its divider to resize it. The **Terminal** control at the right of the header shows and hides the drawer, and counts the terminals running in it.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/new-terminal-here-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -583,14 +589,16 @@ To show the drawer or open a terminal, use one of these:
 
 | How to open one | What you get |
 |---|---|
-| **Cmd/Ctrl+J**, or the header's **Terminal** | Shows and hides the drawer |
+| **Ctrl/⌘ + J**, or the header's **Terminal** | Shows and hides the drawer |
 | **New terminal here**, on a worktree or folder row | A shell in that checkout |
 | **Run command here**, on a worktree row | The command you pick, running in that checkout, revealed without taking your focus |
 | The strip's **+** | A shell. With several checkouts it becomes **New terminal in…**, listing them by branch |
 
 Every terminal also has a row in the context panel's **Terminals** group. Click the row to open the drawer on that terminal. Click the row of the terminal already showing to hide the drawer. Drag the drawer's tabs to reorder them.
 
-**Maximize terminal pane**, or **Cmd/Ctrl+Shift+J**, takes the whole height; **Restore terminal pane** brings it back.
+**Maximize terminal pane**, or **Ctrl/⌘ + Shift + J**, takes the whole height; **Restore terminal pane** brings it back.
+
+If a terminal or a command cannot start, Kepler shows **Unable to open the terminal** or **Unable to run the command**, with the reason when it knows it, such as a full disk or security software that blocks Kepler. Fix the cause, then click **Retry**. If it keeps failing and the notice offers **Copy diagnostics**, include them in a support request.
 
 On a phone, a terminal takes the whole column, with a row of the keys a phone keyboard lacks beneath it, and you select text with a long press. See [Remote Access](/kepler/remote-environments#remote-access-reach-kepler-from-another-device).
 
@@ -622,11 +630,11 @@ A finished command run shows a **result bar** rather than leaving you to read th
 
 ### File paths are links
 
-File paths printed in a terminal are links, including relative paths, paths with a line suffix such as `src/app.ts:42`, and paths wrapped across lines. Cmd-click one (Ctrl-click on Windows and Linux) to open the file [on the task page](#opening-a-file) at its line, and Cmd/Ctrl+Shift+click to open it in your default editor.
+File paths printed in a terminal are links, including relative paths, paths with a line suffix such as `src/app.ts:42`, and paths wrapped across lines. Ctrl/⌘ + click one to open the file [on the task page](#opening-a-file) at its line, and Ctrl/⌘ + Shift + click to open it in your default editor.
 
 Right-click a path for more: **Open file**, your default editor (opening at the line), **Open in** for the rest of your editors and your computer's **Default app**, **Save as…**, and **Copy path**. Any of those targets can be your default, with **Set as default**.
 
-Kepler task and session links in a terminal are links too. Cmd/Ctrl-click one to open it in Kepler, or right-click it for **Open in Kepler** and **Copy link**.
+Kepler task and session links in a terminal are links too. Ctrl/⌘ + click one to open it in Kepler, or right-click it for **Open in Kepler** and **Copy link**.
 
 On a phone, long-press a path or link instead, then pick **Open** from the small menu over the selection, which also offers **Copy**, **Paste**, and **Select all**. See [Remote Access](/kepler/remote-environments#remote-access-reach-kepler-from-another-device).
 
@@ -648,11 +656,11 @@ Each kind of resource opens in its own pane:
 | **Worktree**, missing | Its branch, base branch, and recorded path, with a way to recreate it. See [When a worktree goes missing](/kepler/tasks-and-resources#when-a-worktree-goes-missing) |
 | **Folder** | The folder's name and its **Path** |
 | **File** | The file itself, in the [file viewer](#opening-a-file), with its description, where it came from, and its size on the viewer's toolbar. An uploaded copy says it's a copy in the task folder, and has **Rename** in **File actions** |
-| **Pull request** / **Issue** | Status, who it involves, the item's description and its labels. An issue adds its comments |
+| **Pull request** / **Issue** | Status, who it involves, the item's description, and its labels. An issue adds its comments |
 | **Link** | Every plain link (one that is not a pull request or issue) shares one **Links** pane, scrolled to the link you picked |
 | **Note** | The note itself, with **Copy**, **Save as…**, **What changed**, and **Edit**. The **Prompt** note edits the task's prompt |
 
-**The worktree strip.** The **⋮** beside the branch, and a right-click on the branch, both open the worktree's full [row menu](#the-row-menu). With more than 1 worktree, the branch name also switches between the task's worktrees. **Detach worktree…** leaves the worktree on disk, and **Delete worktree…** removes it from disk.
+**The worktree strip.** The **⋮** at the end of the strip, and a right-click on the branch, both open the worktree's full [row menu](#the-row-menu). With more than 1 worktree, the branch name also switches between the task's worktrees. Its list shows the live worktrees first, then the **Merged** and **Gone from disk** groups. **Detach worktree…** leaves the worktree on disk, and **Delete worktree…** removes it from disk.
 
 **Files.** A description you edit saves as you type, and **Done** closes the field. **Rename** on an uploaded copy renames its file on disk. A linked file has no **Rename**.
 
@@ -671,7 +679,7 @@ An issue from GitHub, GitHub Enterprise, GitLab, GitLab Self-Hosted, Jira, or Ji
 
 **Links.** The **Links** pane lists every plain link on the task with its title and URL, an **Open in browser** button, and **Link actions**, scrolled to the link you clicked.
 
-**Notes.** A note's pane has **Edit**, **Copy**, **Save as…** and **What changed**, and you can rename the note in place. To rename, edit, or restore a note, see [Notes are how you give standing instructions](/kepler/tasks-and-resources#notes-are-how-you-give-standing-instructions).
+**Notes.** A note's pane has **Edit**, **Copy**, **Save as…**, and **What changed**, and you can rename the note in place. To rename, edit, or restore a note, see [Notes are how you give standing instructions](/kepler/tasks-and-resources#notes-are-how-you-give-standing-instructions).
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/note-rename-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">

@@ -21,22 +21,22 @@ taxonomy:
 
 An **automation** runs an [Action](/kepler/actions) or a prompt of your own without you starting it. It runs on a schedule, such as every weekday morning, or when new activity on a GitHub or Jira issue or pull request matches a query. Each run starts a task with its own worktree, so you review the agent's work the way you review any task.
 
-Automations are marked **Experimental**. To use them, you need to be signed in to your GitKraken account, and Kepler has to be open on one of your installs when a run is due.
+Automations are marked **Experimental**. To use them, you need to be signed in to your GitKraken account, and Kepler has to be open on one of your installs when a run is due. To tell us what works for you, click **Give feedback** beside the page title.
 
 ***
 
 ## Open Automations
 
-To open your automations, click **Automations** at the right end of the Dashboard's row of views. The button shows how many runs need you.
+To open your automations, click the **Automations** tab at the end of the Dashboard's tab row. The tab shows how many runs need you.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/automations-dashboard-button-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/automations-dashboard-button-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Dashboard's row of views, Todo, Tasks, Agent Graph and New view, with the Automations button ringed at the row's right end, its lightning icon and an orange 1 for the run that needs you.">
+  <a href="/wp-content/uploads/automations-dashboard-button-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/automations-dashboard-button-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Dashboard's tab row, Todo, Tasks, Agent Graph and New view, with the Automations tab ringed at the row's right end, its workflow icon and an orange 1 for the run that needs you.">
   </a>
-  <figcaption style="text-align:center; color:#888">The Automations button, with 1 run that needs you.</figcaption>
+  <figcaption style="text-align:center; color:#888">The Automations tab, with 1 run that needs you.</figcaption>
 </figure>
 
-To go back, click **Automations** again, or the back arrow beside the page title.
+To go back, click a view's tab or the **Automations** tab again, or press <kbd>Esc</kbd>.
 
 ***
 
@@ -55,7 +55,7 @@ You can start an automation in 3 ways:
 
 - **Describe it.** Type what should run, such as *Every Monday at 9, check my repos for outdated dependencies*, and click **Ask Kepler**. [Ask Kepler](/kepler/ask-kepler) sets the automation up in a new chat and creates it paused. To start it, click **Turn on** on the card the chat shows.
 - **Pick a template.** **Routines** run on a schedule, such as **Write my standup notes**. **Review** and **Plan & build** watch your pull requests and issues, such as **Review pull requests awaiting my review**. The template fills in the form, and you adjust it before you save.
-- **Start blank.** Choose **GitHub**, **Jira** or **Schedule** from the **Start blank** menu.
+- **Start blank.** Choose **GitHub**, **Jira**, or **Schedule** from the **Start blank** menu.
 
 GitHub and Jira automations need that account connected. A source you have not connected is marked **Not connected**. See [Integrations settings](/kepler/settings-integrations).
 
@@ -63,38 +63,42 @@ GitHub and Jira automations need that account connected. A source you have not c
 
 ## Set up an automation
 
-The form asks what the automation watches, what it runs, and where it runs. Click **Save** when you are done.
+The form has 3 cards: **When** sets what the automation watches, **Do** sets what it runs, and **Where** sets where it runs. Click **Save** when you are done.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/automations-editor-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/automations-editor-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The New automation form filled from the Review pull requests awaiting my review template: its Name, Source with GitHub selected, Watch reading Choose repositories or organizations, the pull request filters (Type, Involving me set to Awaiting my review, State with Open ticked, Review status, With and Without labels, Exclude drafts and Exclude Dependabot and Renovate on) and a folded Show query, Runs per item set to On new activity with Ignore my own activity switched on, Then run with Action selected and the Review Action chosen, and Where it runs set to Any of my installs with Task group (optional) at No group, above Cancel and Save.">
+  <a href="/wp-content/uploads/automations-editor-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/automations-editor-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The New automation form for the Review pull requests awaiting my review template. When watches GitHub pull requests Awaiting my review, Do runs the Review Action on your default agent, and Where runs in each pull request's own repository.">
   </a>
-  <figcaption style="text-align:center; color:#888">A new automation from the Review pull requests awaiting my review template.</figcaption>
+  <figcaption style="text-align:center; color:#888">A new automation from the Review pull requests awaiting my review template, in its When, Do, and Where cards.</figcaption>
 </figure>
 
 ### What it watches
 
-- **GitHub**: under **Watch**, pick the repositories or organizations, then filter the pull requests or issues, for example to the ones **Awaiting my review**. To see the search the filters make, click **Show query**.
+In the **When** card, choose **Schedule**, **GitHub**, or **Jira**.
+
+- **GitHub**: under **Watch**, pick the repositories or organizations, choose **Pull requests** or **Issues**, and pick how they involve you, for example **Awaiting my review**. That choice also matches review requests sent to a team you are on. To run only on requests made to you, choose **Awaiting my review (requested from me, not a team)**. Open **Filters** to narrow the items further. To see the search the filters make, click **Show query**.
 - **Jira**: pick the projects from one Jira site, your role, and the statuses.
 - **Schedule**: pick how often it repeats and the time. The form lists the next runs.
 
-An issue or pull request automation runs when an item gets new activity, not on items that match when you save it. Under **Runs per item**, **On new activity** runs each time an item changes, and **Once** runs only the first time.
+An issue or pull request automation runs when an item gets new activity, not on items that match when you save it. Open **Options** to set **Runs per item**: **On new activity** runs each time an item changes, and **Once** runs only the first time.
 
-For GitHub, **Ignore my own activity** is on by default, so updates that are only yours do not start the automation again. That includes what the agent does as you, such as pushing a commit or posting a review.
+For GitHub, **Ignore my own activity**, also under **Options**, is on by default, so updates that are only yours do not start the automation again. That includes what the agent does as you, such as pushing a commit or posting a review.
 
 ### What it runs
 
-Under **Then run**, pick an **Action**, or write a **Custom prompt** and pick the agent that runs it. The line under the Action says which mode its agent runs in; to change it, click **Change in Actions**.
+In the **Do** card, choose **Action** and pick one, or choose **Custom prompt** and write your own. **Agent** shows the agent that runs it. For an Action, the Action sets the agent, such as **Your default agent**; to change it, edit the Action in Actions. For a custom prompt, keep **Your default agent** or pick another agent.
 
 Automations run unattended, on text other people write in issues and pull requests. Choose a mode that acts without asking only if you trust everyone who can open or comment on those items. See [Setting an Action's agent](/kepler/actions#setting-an-actions-agent).
 
 ### Where it runs
 
-- **Any of my installs** lets whichever of your Kepler installs picks the run up first run it. **This install** runs it only on this one.
-- For an issue or a schedule, set the **Folder** where the agent starts: one repository, or a folder of them it picks from. You can also set a **Base branch**. A pull request automation runs in the pull request's own repository.
-- To file the tasks its runs start in one of your groups, pick it under **Task group**, or choose **New group**.
+In the **Where** card:
 
-The agent makes its changes in a worktree, never in your own checkout.
+- For an issue or a schedule, pick where the agent works under **Runs in**: one of your repositories, a folder of them it picks from, or **Enter a path…**. A GitHub issue automation can also run in **Each item's own repository**. A pull request automation always runs in the pull request's own repository.
+- For a repository, pick the **Base branch** each run's new branch starts from.
+- Open **Options** to choose **Run on**: **Any of my installs** runs it on whichever of your Kepler installs picks it up first, and **This install** runs it only on this one. To file the tasks its runs start in one of your groups, pick it under **Task group (optional)**, or choose **New group**.
+
+Each run works on its own new branch in a new worktree, never in your own checkout. If the repository is not trusted on the install that runs it, its runs fail until you trust it. See [Trust a repository](/kepler/settings-repositories#trust-a-repository).
 
 ***
 
@@ -103,8 +107,8 @@ The agent makes its changes in a worktree, never in your own checkout.
 The Automations page lists your automations, each with its runs. **Needs you**, at the top, holds the runs that failed, could not start, or are waiting on you. Use **Unread** to show only runs you have not looked at.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/automations-view-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/automations-view-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Automations page, opened from the highlighted Automations button at the right of the Dashboard's views row. On the left, the Automations list with All and Unread, Needs you holding the failed run on acme/acme-web#58, then Review pull requests awaiting my review (3) and Triage new bugs (2), each with its finished runs, and the paused Check dependencies every Monday with a play button, above New automation. On the right, the selected finished run acme/acme-web#61: Done, its Automation, the Item PR acme/acme-web#61, its Queued, Claimed, Started and Finished times, and the Open item and Edit automation buttons.">
+  <a href="/wp-content/uploads/automations-view-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/automations-view-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Automations page, opened from the Automations tab at the right end of the Dashboard's tab row, listing each automation with its runs. On the right, the selected run acme/acme-web#61 reads Done, with its times and the Open item and Edit automation buttons.">
   </a>
   <figcaption style="text-align:center; color:#888">The Automations page, with a finished run selected and a failed run in Needs you.</figcaption>
 </figure>
@@ -112,6 +116,8 @@ The Automations page lists your automations, each with its runs. **Needs you**, 
 Click a run to open it beside the list. A run that started a task shows the agent's session, where you answer its questions and approvals as you would in the task. Otherwise you see the run's details, with **Open item** and **Edit automation**. With no run selected, the page shows a summary of today's runs.
 
 Each run's task also appears in your task list, with an **Automation** badge on its row. Right-click a run to **Pin** it, **Mark as unread**, **Open in Tasks**, or **Clear from Needs you**.
+
+After a while, Kepler removes a finished run's worktree from disk. The task and its branch stay, and Kepler keeps any worktree with uncommitted changes or a running session. When you continue the task, Kepler restores the worktree first.
 
 A run that another of your installs picked up reads, for example, **Done on another install**. Its task and conversation are on that install.
 

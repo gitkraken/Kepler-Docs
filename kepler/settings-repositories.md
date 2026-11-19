@@ -1,6 +1,6 @@
 ---
 title: Repository Settings
-description: Choose where Kepler clones repositories, add and edit repositories with their own branch prefixes and commands, update and clean up worktrees and branches, and group repositories into projects.
+description: Choose where Kepler clones repositories, add, trust, and edit repositories with their own branch prefixes and commands, update and clean up worktrees and branches, and group repositories into projects.
 product: Kepler
 feature: Settings
 content_type: reference
@@ -19,7 +19,7 @@ taxonomy:
 ---
 <kbd>Last updated: November 2026</kbd>
 
-Use **Settings → Repositories** to choose where Kepler clones repositories, add and edit the repositories and folders Kepler tracks, update and clean up worktrees and branches, and group repositories into projects.
+Use **Settings → Repositories** to choose where Kepler clones repositories, add, trust, and edit the repositories and folders Kepler tracks, update and clean up worktrees and branches, and group repositories into projects.
 
 ## Repositories folder
 
@@ -29,19 +29,23 @@ To choose where Kepler clones repositories, use this setting:
 |---|---|---|
 | **Repositories folder** | Where Kepler clones repositories, and where it looks for repositories to add | `~/kepler/repositories` |
 
-To add every repository already in that folder, click **Scan for repositories** beside the field. Kepler scans only when you change the setting or click the button. A scan skips any repository you removed; to bring one back, add it yourself with **Add repo**. Repositories a scan adds start untrusted. See [Trust a repository](#trust-a-repository).
+To add every repository already in that folder, click **Scan for repositories** beside the field. Kepler scans only when you change the setting or click the button. A scan skips any repository you removed; to bring one back, add it yourself with **Add repo**. Repositories a scan adds start untrusted, and the message after the scan offers to trust them, or to trust the folder they are in. See [Trust a repository](#trust-a-repository).
 
 After a scan that added repositories, **Undo** removes them again, except any you have used or changed since the scan. To scan, the setting needs a full folder path before any variable in it.
+
+To trust every repository in this folder, including ones added there later, turn on **Trust everything in this folder** under the field.
 
 If the folder does not exist yet, Kepler creates it when you clone. The field takes the `<REPOSITORY_NAME>` variable. See [The Variables menu](/kepler/settings-tasks#the-variables-menu).
 
 ## Your repos and folders
 
-**Your repos and folders** lists every repository Kepler tracks and every folder you have attached to a task. Each row shows its name, its path on disk, and how many commands it has. A repository or folder you have not trusted shows an **Untrusted** badge. The section has these controls:
+**Your repos and folders** lists every repository Kepler tracks and every folder you have attached to a task. Each row shows its name, its path on disk, how many commands it has, and a shield that shows whether you trust it. The section has these controls:
 
 | Control | What it does |
 |---|---|
 | **Filter repos and folders** | Narrows the list by name |
+| **Show** | Lists **All**, **Trusted**, or **Untrusted** repos and folders, each with a count |
+| Shield | Trusts the row, or stops trusting it, in one click |
 | A row | Click it to open the repository's **Edit repo** page, or the folder's page |
 | **Add repo** | Opens the **Add repo** page. See below |
 | **Add folder…** | Adds a plain folder |
@@ -108,11 +112,25 @@ Kepler does not save a prefix that the repository already uses as a local branch
 
 Kepler runs no git in a repository or folder you have not trusted, because a repository's own settings can run programs. Until you trust it, its status, branches, and changes stay empty.
 
-To trust a repository or folder, turn on **Trusted** on its page. You can also click **Trust** where Kepler asks, such as in a task's Changes view. While **Trusted** is on, agent sessions in it also skip the agent's own trust question.
+To trust a repository or folder, use one of these:
+
+- Click the shield on its row in **Your repos and folders**, or turn on **Trusted** on its page.
+- At the top of **Your repos and folders**, under **Trusted folders**, click **Trust a folder…** to trust everything inside a folder, now and later. You cannot trust a whole drive or filesystem root. A repository trusted this way shows **via** and the folder. To stop trusting it, remove the folder from **Trusted folders**.
+- Under **Show**, pick **Untrusted** to see untrusted repos and folders grouped by parent folder. Tick rows and trust them together from the bar at the bottom, or trust a group's whole folder with the **Trust** button beside it.
+- Click **Trust**, **Trust and retry**, or **Trust and start** where Kepler asks, such as in a task's Changes view or when you start a task in the **New task** composer.
+
+While a repository is trusted, agent sessions in it also skip the agent's own trust question.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/repositories-trust-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/repositories-trust-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="Your repos and folders, with one folder under Trusted folders and the Untrusted 2 view selected. Two repos grouped under /home/alex/code/acme, beside Trust acme, are ticked, and the bar at the bottom reads 2 selected with Trust 2.">
+  </a>
+  <figcaption style="text-align:center; color:#888">Untrusted repos grouped by folder, ready to trust together.</figcaption>
+</figure>
 
 ### Per-repository commands
 
-Use commands to run your dev server, tests, or build from a task's worktree in one click. A command can also run when Kepler creates a new worktree, for example to install dependencies. Commands are shell commands for one repository.
+Use commands to run your dev server, tests, or build from a task's worktree in one click. A command can also run when Kepler creates a new worktree, for example to install dependencies. Commands are shell commands for one repository. An agent can also add, change, or delete a repository's commands, and asks for your approval first.
 
 To add a command, click **Add command** in the **Commands** section of the Edit repo page. Each command row has 3 fields:
 
@@ -122,7 +140,7 @@ To add a command, click **Add command** in the **Commands** section of the Edit 
 | Command | The shell command, for example `pnpm install`. Its **Variables** menu inserts any of the variables below |
 | **Run on worktree creation** | Runs the command each time Kepler creates a worktree for this repository. Off by default |
 
-To save a row, click **Add command** (or **Save** on a stored command), or press **⌘ Enter** (**Ctrl + Enter** on Windows and Linux). Each command saves on its own.
+To save a row, click **Add command** (or **Save** on a stored command), or press **Ctrl/⌘ + Enter**. Each command saves on its own.
 
 Commands accept 4 variables, which Kepler fills in when the command runs:
 
@@ -133,7 +151,7 @@ Commands accept 4 variables, which Kepler fills in when the command runs:
 | `<SOURCE_PATH>` | Where files come from (the main repo, or the source worktree when forking) |
 | `<WORKTREE_PATH>` | The new worktree folder |
 
-To reorder commands, drag a row by its handle, or move it from the keyboard with **Alt + ↑** and **Alt + ↓**. A new order saves at once. The order sets the order of the **Run** menu, and the order in which commands set to run on worktree creation run.
+To reorder commands, drag a row by its handle, or move it from the keyboard with **Alt/⌥ + ↑** and **Alt/⌥ + ↓**. A new order saves at once. The order sets the order of the **Run** menu, and the order in which commands set to run on worktree creation run.
 
 A row needs both a name and a command before you can save it. A closed row that is not saved yet shows **Not saved**. **Remove command** deletes a saved command, and the notification that follows offers **Undo**.
 
@@ -198,7 +216,7 @@ A row counts as one or more of the following:
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/ade-worktree-cleanup-01-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ade-worktree-cleanup-01-v4@2x.png" class="help-center-img img-bordered" alt="The Worktrees and branches page from its description down (See which worktrees and local branches of your repositories are stale…): 4 worktrees and 2 branches in 1 repo, 3 look safe to delete, with Stale after 14 days and Re-check; Search branch, path or repo, the Safe to delete (3), Needs update, Conflicts, Stale and All filters, and All / Worktrees only / Branches only. The bar reads 2 selected with Clear, Create task, Update and Delete. Under acme-web, kepler/old-banner and kepler/promo-page (worktrees tagged Spring sale banner) and kepler/summer-teaser (Not checked out) are each 3 behind main and merged into main; old-banner and summer-teaser are ticked.">
+    <img src="/wp-content/uploads/ade-worktree-cleanup-01-v4@2x.png" class="help-center-img img-bordered" alt="The Worktrees and branches page filtered to Safe to delete (3), listing three acme-web branches that are merged into main and 3 behind main. Two rows are ticked, and the bar reads 2 selected with Create task, Update, and Delete.">
   </a>
   <figcaption style="text-align:center; color:#888">The Worktrees and branches sub-page, filtered to what is safe to delete.</figcaption>
 </figure>

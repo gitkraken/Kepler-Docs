@@ -48,9 +48,9 @@ Each agent gets its own section in **Settings → Agents**, in this order:
 | **Cursor** | Cursor | Your installed `cursor-agent` CLI | Chat or Terminal | No |
 | **Grok Build** | Grok Build | Your installed `grok` CLI | Chat or Terminal | Yes |
 
-**Auggie** is Augment's coding agent. Like Claude Code and Codex, it reports plan usage back to Kepler, but only as a credit balance rather than usage windows. Google Antigravity reports a percentage used for each model's quota. To learn about the plan usage meter, see [Agent Sessions](/kepler/agent-sessions#usage-indicators).
+**Auggie** is Augment's coding agent. Like Claude Code and Codex, it reports plan usage back to Kepler, but only as a credit balance rather than usage windows. Google Antigravity reports a percentage used for each limit on the selected model, including its 5-hour and weekly windows. To learn about the plan usage meter, see [Agent Sessions](/kepler/agent-sessions#usage-indicators).
 
-Kepler asks each agent's provider for plan usage while **Check plan usage with each agent's provider** is on. This setting is in **Settings → Agents → Usage limits**, and it is on by default.
+Kepler asks each agent's provider for plan usage while **Check plan usage with each agent's provider** is on. This setting is in **Settings → Agents → Usage and recovery**, and it is on by default.
 
 **Grok Build** is xAI's coding agent. It signs in through your browser, or you can supply an xAI API key.
 
@@ -234,7 +234,7 @@ The agent's card then shows OpenCode as signed in.
 
 This also works on a [remote environment](/kepler/remote-environments):
 
-- **Claude Code** on a remote offers **Sign in with browser**, which opens the sign-in page in your *local* browser and takes the code you paste back. Kepler saves the credential on the remote machine.
+- **Claude Code** on a remote offers **Sign in with Claude.ai**, which opens Claude's sign-in in your *local* browser and takes the code you paste back. Kepler saves the credential on the remote machine. **Sign in with token (advanced)** is for an account that cannot finish a browser sign-in.
 - **Codex** on a remote offers **ChatGPT (device code)**. Kepler shows the sign-in link and a **One-time code**, and the credential is saved on the remote machine. Some ChatGPT workspaces turn device sign-in off, and Kepler then points you to the alternatives.
 - **Cursor CLI** on a remote offers only **Paste an API key**, because its browser sign-in cannot complete there.
 
@@ -282,7 +282,7 @@ Chat sessions show up as Kepler in places such as your Anthropic dashboard.
 
 ### Detecting sessions started outside Kepler
 
-**Settings → Integrations → Your terminal → Show sessions started outside Kepler** is a separate setting that applies to all agents, and it is **on by default**. It installs GitKraken hooks so sessions you start in your own terminal show up in Kepler. It covers every agent Kepler can track that way: **Claude Code**, **Codex**, **Cursor**, **GitHub Copilot**, **OpenCode**, **Auggie**, **Grok Build**, and **Pi**. Kepler does not track Google Antigravity this way. See [Agent Sessions](/kepler/agent-sessions#sessions-started-outside-kepler).
+**Settings → Integrations → Your terminal → Show sessions started outside Kepler** is a separate setting that applies to all agents, and it is **off by default**. It installs GitKraken hooks so sessions you start in your own terminal show up in Kepler. It covers every agent Kepler can track that way: **Claude Code**, **Codex**, **Cursor**, **GitHub Copilot**, **OpenCode**, **Auggie**, **Grok Build**, **Pi**, and **Google Antigravity**. See [Agent Sessions](/kepler/agent-sessions#sessions-started-outside-kepler).
 
 Kepler also follows its own **Terminal** sessions this way. If a running Terminal session stops reporting to Kepler, Kepler warns that **Agent sessions aren't reporting to Kepler**. Click **Repair**, then restart any session that still does not report. To repair sessions running on another computer, use Kepler on that computer.
 
@@ -324,7 +324,7 @@ Custom agents appear alongside the built-in agents everywhere you can choose an 
 
 ## MCP servers
 
-Kepler lists the MCP servers each agent loads, and lets you add, remove, sign in to, and turn off servers or single tools, per repository from the composer's **Agent settings** pill or as defaults in **Settings → Agents → MCP servers**. See [MCP Servers](/kepler/mcp-servers).
+Kepler lists the MCP servers each agent loads. You can add, remove, sign in to, and turn off servers or single tools, per repository from the composer's **Agent settings** pill, or as defaults in **Settings → Agents → MCP servers**. See [MCP Servers](/kepler/mcp-servers).
 
 ***
 

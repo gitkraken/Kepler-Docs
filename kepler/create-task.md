@@ -63,11 +63,11 @@ Kepler names tasks automatically from what you started them with. To rename a ta
 
 ## From the New task composer
 
-Click **New task** or press **Cmd/Ctrl+N**. To start one without switching to Kepler first, press **Shift+Alt+N** to open the quick launcher from anywhere, including when Kepler is not the focused window.
+Click **New task** or press **Ctrl/⌘ + N**. To start one without switching to Kepler first, press **Shift + Alt/⌥ + N** to open the quick launcher from anywhere, including when Kepler is not the focused window.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-task-button-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-task-button-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The New task button at the left end of the Kepler top bar, a single button with a plus sign, after the application menu, the window switcher and the Back and Forward buttons.">
+  <a href="/wp-content/uploads/new-task-button-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-task-button-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The left end of the Kepler top bar: the application menu, the Back and Forward arrows, the New task button with a plus sign, then the Local environment chip and the Remote Access button's monitor-and-phone icon in green because Remote Access is on.">
   </a>
   <figcaption style="text-align:center; color:#888">The New task button, available from anywhere in Kepler.</figcaption>
 </figure>
@@ -115,11 +115,13 @@ The primary button runs the Action that matches what you've attached, exactly as
 
 To keep **Start** when you link an issue or pull request, turn the switching off: click **Turn off** in the note the composer shows the first time it switches, or turn off **Suggest automatically** in [Settings → Actions](/kepler/settings-actions).
 
-The chevron beside the primary button lists the other choices: **Prepare**, which creates the session without starting work yet, and every Action that applies to what you've attached. Picking one there does not run it. Instead, it relabels the primary button, and an Action that names its own agent puts that agent in the agent pill. You can then check or change what will run before you press the button. To pick an Action and run it at once, hold Cmd/Ctrl as you click it. The Action sends its prompt, with anything you typed added as a refinement.
+The chevron beside the primary button lists the other choices: **Prepare**, which creates the session without starting work yet, and every Action that applies to what you've attached. Picking one there does not run it. Instead, it relabels the primary button, and an Action that names its own agent puts that agent in the agent pill. You can then check or change what will run before you press the button. To pick an Action and run it at once, hold Ctrl/⌘ as you click it. The Action sends its prompt, with anything you typed added as a refinement.
 
-**Shift+Tab** in the prompt cycles the primary button through the same list.
+**Shift + Tab** in the prompt cycles the primary button through the same list.
 
 A task that has its prompt but no session yet, such as one an agent created for you, opens a draft session tab. To send the task's prompt as written, press **Start** on the empty box.
+
+**Untrusted repositories.** A repository or folder chip you have not trusted shows a warning shield. Click the shield to trust it, or everything in its folder. If you press **Start** while something is untrusted, Kepler asks you to trust it first: click **Trust and start**. See [Trust a repository](/kepler/settings-repositories#trust-a-repository).
 
 The task appears in the list as soon as you press **Start**, with a **Preparing** pill until setup finishes. The task's panel and the task page show each launch step. **Cancel** stops a launch while Kepler is reading a link or cloning a repository.
 
@@ -132,12 +134,12 @@ The task appears in the list as soon as you press **Start**, with a **Preparing*
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/task-launch-kep-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-launch-kep-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The side panel of a task that is starting, Add a gift-card field to checkout, marked Preparing. Kep, the Kepler mascot, sits above the line Making your worktree. So your other work stays put. Below it, the launch steps list Setting up worktrees… (current), Starting OpenCode with your prompt and Opening the chat.">
+    <img src="/wp-content/uploads/task-launch-kep-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The side panel of a task that is starting, Add a gift-card field to checkout, marked Preparing, with Kep, the Kepler mascot, above the message Making your worktree. The launch steps below list Setting up worktrees… as the current step, then Starting OpenCode with your prompt and Opening the chat.">
   </a>
   <figcaption style="text-align:center; color:#888">Kep narrating a task's launch in its panel.</figcaption>
 </figure>
 
-If setup fails, the row's pill reads **Failed** and the panel shows the error. To change the task and try again, click **Edit and retry**, or **Dismiss** to clear it. If it failed because a repository or folder is not trusted, the panel says so: click **Trust and retry**. A task that starts without some of its repositories warns you which ones it left out. When they were left out because they are not trusted, the warning offers **Trust**. See [Trust a repository](/kepler/settings-repositories#trust-a-repository).
+If setup fails, the row's pill reads **Failed** and the panel shows the error. To change the task and try again, click **Edit and retry**, or **Dismiss** to clear it. If it failed because a repository or folder is not trusted, the panel says so: click **Trust and start**. A task that starts without some of its repositories warns you which ones it left out. When they were left out because they are not trusted, the warning offers **Trust**. See [Trust a repository](/kepler/settings-repositories#trust-a-repository).
 
 If the task starts but its agent session does not, the task page and the Dashboard panel say that the agent was unable to start, with **Retry**. See [Agent Sessions](/kepler/agent-sessions#when-a-session-drops).
 
@@ -156,7 +158,7 @@ Each attached repository gets a chip with 3 segments:
 - **Branch name**: the new branch's name, suggested from your prompt as you type. Click it to edit it. See [Naming the branch](#naming-the-branch).
 - **Isolated worktree**: an on/off toggle, on by default, that gives the task its own working copy. Turn it off to have the task share your repository folder, so a branch switch there moves your checkout. See [Tasks and Resources](/kepler/tasks-and-resources#worktrees-and-working-in-place).
 
-**What a newly attached repository starts on is a setting.** The 3 segments start from **Settings → Tasks → New tasks → Where new tasks make changes**: **Isolated worktree** (the default), **New branch**, or **Current branch**. The setting changes only the starting point. You can still change every segment for each repository in each task. See [Settings](/kepler/settings-tasks#where-new-tasks-make-changes).
+**What a newly attached repository starts on is a setting.** The 3 segments start from **Settings → Tasks → New tasks → Where new tasks make changes**: **Isolated worktree** (the default), **New branch**, or **Current branch**. The setting changes only the starting point. You can still change every segment for each repository in each task. To check the default from a chip, open its branch menu: the **Isolated worktree** row shows it, such as **New tasks: Isolated worktree**, and **Change** opens the setting. See [Settings](/kepler/settings-tasks#where-new-tasks-make-changes).
 
 Picking **New branch** or **Current branch** means the task runs in the repository's own checkout rather than an isolated one, so only 1 task can use that checkout at a time. If another task already has it, the chip says **Another task is working here** and names it. Click **Create a worktree for this task** to put this repository in an isolated worktree instead.
 
@@ -220,8 +222,8 @@ To import workspaces from Conductor, take the following steps:
 
 1. On an empty **Tasks** list, click the import card. It names the apps Kepler found, such as **Import from Conductor, Orca and 2 more**. You can also choose **File → Import from Another App…**.
 2. If Kepler finds more than 1 app, click **Conductor**.
-3. Tick the workspaces you want, and click **Import *N* workspaces**. A workspace you already imported is marked **Already a task**.
-4. When **Import finished** shows what came over, click **Done**.
+3. Tick the workspaces you want, and click **Import *N* workspaces**. The list is grouped by repository, and workspaces active in the last 30 days start ticked. Older ones are folded under **Older**. To narrow a long list, type in **Filter workspaces**. To clear every tick, click **Select none**. A workspace you already imported is marked **Already a task**.
+4. The import runs in the background, and a chip in the title bar shows its progress. When it reads **Imported *N***, hover over or click the chip, and click **View tasks**. The chip's card also has **Stop**, to stop the import, and **Retry**, to try a failed workspace again.
 5. Find the new tasks in **Tasks**. Open one to pick its chat up where it left off.
 
 <figure style="text-align:center">
@@ -239,17 +241,17 @@ To import workspaces from Conductor, take the following steps:
 </figure>
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/import-workspaces-nov-2026@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/import-workspaces-nov-2026@2x.png" class="help-center-img img-bordered" alt="The Import from Conductor dialog, Choose the workspaces to bring in as tasks, listing 4 ticked workspaces grouped by repository: Checkout redesign and Gift card support under acme-web, Order search endpoint under acme-api, and Apple Pay on mobile under acme-mobile, each with its branch and number of chats. The note to continue each chat in one app only sits above Back to apps and Import 4 workspaces.">
+  <a href="/wp-content/uploads/import-workspaces-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/import-workspaces-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Import from Conductor dialog with 9 of 14 selected, Select none, and a Filter workspaces box above ticked workspaces grouped by repository, each row showing its branch and how long ago it was active. The 5 older workspaces are folded under Older, and Import 9 workspaces sits at the bottom.">
   </a>
   <figcaption style="text-align:center; color:#888">Step 3: choosing the Conductor workspaces to import.</figcaption>
 </figure>
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/import-finished-nov-2026@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/import-finished-nov-2026@2x.png" class="help-center-img img-bordered" alt="The Import finished dialog for Import from Conductor, reading 4 workspaces became tasks and 6 chats resumed, with Back to apps and Done buttons.">
+  <a href="/wp-content/uploads/import-run-chip-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/import-run-chip-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The title bar after an import ran in the background: the Imported 3 chip, with a check, sits left of the inbox, Ask, feedback, Settings and account buttons, and hovering it opens its card, Import finished, 3 tasks created, with Dismiss and View tasks.">
   </a>
-  <figcaption style="text-align:center; color:#888">Step 4: the import is finished.</figcaption>
+  <figcaption style="text-align:center; color:#888">Step 4: the finished import in the title bar.</figcaption>
 </figure>
 
 <figure style="text-align:center">
@@ -316,8 +318,8 @@ If a link cannot open on the machine it names, it opens on this computer instead
 The task appears in the **Tasks** view right away, with the **Preparing** pill until its setup finishes. Click it to open its side panel, or double-click it to open [the task page](/kepler/task-view).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/full-task-view-oct-2026-v2.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/full-task-view-oct-2026-v2.png" class="help-center-img img-bordered" alt="The task page, its header holding the task name, the ⋮ menu, the In Development progress control, and Terminal at the right edge. The context panel lists Sessions, Changes, Pull requests, and Notes led by Prompt, and a session on the right is waiting on a command approval.">
+  <a href="/wp-content/uploads/full-task-view-nov-2026@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/full-task-view-nov-2026@2x.png" class="help-center-img img-bordered" alt="The task page for Fix the cart total, with In Development, Terminal, and the ⋮ menu in its header. The context panel lists a session, the kepler/fix-cart-total worktree under Changes, and the Prompt note, beside the open session's conversation and composer.">
   </a>
   <figcaption style="text-align:center; color:#888">The task page, with the context panel beside an open session.</figcaption>
 </figure>

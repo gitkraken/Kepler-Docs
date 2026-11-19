@@ -1,6 +1,6 @@
 ---
 title: Run Multiple Coding Agents in Parallel on Windows with Kepler
-description: Kepler has a native Windows installer. Run Claude Code, Codex and 7 more coding agents side by side on Windows, each task in its own Git worktree.
+description: Kepler has a native Windows installer. Run Claude Code, Codex, and 7 more coding agents side by side on Windows, each task in its own Git worktree.
 product: Kepler
 feature: Parallel Agents on Windows
 content_type: how-to
@@ -37,8 +37,8 @@ Kepler by GitKraken installs natively on Windows, so you can run Claude Code, Co
 2. Launch Kepler and click **Sign in with GitKraken**.
 3. In **Choose your coding agents**, switch on Claude Code and Codex. To install an agent you do not have yet, click its tile.
 4. In **Bring in your repos**, check the repositories you work in, then click the button that adds them.
-5. Click **New task** or press **Ctrl+N**, write a prompt, attach a repository with **Add repo or folder**, and click **Start**. Kepler creates a worktree for the task and starts the agent in it.
-6. Start a second task the same way, and pick another agent in the **New task** window. Both agents now work at the same time, each in its own worktree.
+5. Click **New task** or press **Ctrl/⌘ + N**, write a prompt, attach a repository with **Add repo or folder**, and click **Start**. Kepler creates a worktree for the task and starts the agent in it.
+6. Start a second task the same way, and pick another agent in the **New task** composer. Both agents now work at the same time, each in its own worktree.
 
 ***
 
@@ -55,11 +55,11 @@ Kepler has installers for 2 Windows architectures:
 2. Run the installer.
 3. Launch Kepler and sign in. A guided start then helps you set up agents and repositories.
 
-Kepler runs directly on Windows. You do not need WSL, a virtual machine or a Mac to use it. See [Getting Started with Kepler](/kepler/kepler-getting-started#install-kepler) for the other platforms.
+Kepler runs directly on Windows. You do not need WSL, a virtual machine, or a Mac to use it. See [Getting Started with Kepler](/kepler/kepler-getting-started#install-kepler) for the other platforms.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/windows-dashboard-agents-nov-2026@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/windows-dashboard-agents-nov-2026@2x.png" class="help-center-img img-bordered" alt="Kepler on Windows with 2 acme-web tasks running side by side: a Claude Code session on Opus 5.5 and a Codex session on 6.1 Sol. Teal rings mark each panel's agent and model label.">
+    <img src="/wp-content/uploads/windows-dashboard-agents-nov-2026@2x.png" class="help-center-img img-bordered" alt="Kepler on Windows with 2 tasks on the acme-web repo open side by side under Running. A Claude Code session on Default · Opus 5.5 writes a design note, while a Codex session on 6.1 Sol Medium runs npm test.">
   </a>
   <figcaption style="text-align:center; color:#888">Claude Code (Opus 5.5) and Codex (6.1 Sol) running side by side in Kepler on Windows, each in its own task.</figcaption>
 </figure>
@@ -88,7 +88,7 @@ If you installed an agent yourself and Kepler did not find it, open the agent's 
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/windows-setup-claude-code-nov-2026@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/windows-setup-claude-code-nov-2026@2x.png" class="help-center-img img-bordered" alt="The Set up Claude Code dialog on Windows, listing the Native installer, winget, and npm (global) install routes, with npm marked Deprecated by Anthropic. A path field under Already installed? points Kepler at your own copy.">
+    <img src="/wp-content/uploads/windows-setup-claude-code-nov-2026@2x.png" class="help-center-img img-bordered" alt="The Set up Claude Code dialog in Kepler on Windows lists Native installer, winget, and npm (global), marked Deprecated by Anthropic. Below them, a field for the full path to an installed Claude Code has Browse and Use this buttons.">
   </a>
   <figcaption style="text-align:center; color:#888">The Windows install routes for Claude Code.</figcaption>
 </figure>
@@ -99,7 +99,7 @@ If you installed an agent yourself and Kepler did not find it, open the agent's 
 
 In Kepler, the unit of work is a task. Each task holds its own sessions, and each repository you attach to it gets its own worktree. To run several agents at once, start one task per piece of work:
 
-1. Click **New task** or press **Ctrl+N**.
+1. Click **New task** or press **Ctrl/⌘ + N**.
 2. Write the prompt, and attach the repository with **Add repo or folder**.
 3. Under **Agent**, pick the agent for this task, such as Claude Code.
 4. Click **Start**.
@@ -110,8 +110,8 @@ You can attach the same repository to several tasks. Each task gets its own work
 To follow every agent at once, use the Dashboard. Kepler notifies you when an agent needs you, for example to answer a permission request. See [Agent Sessions](/kepler/agent-sessions#notifications).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-task-button-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-task-button-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The New task button at the left end of the Kepler top bar, a single button with a plus sign, after the application menu, the window switcher and the Back and Forward buttons.">
+  <a href="/wp-content/uploads/new-task-button-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-task-button-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The left end of the Kepler top bar: the application menu, the Back and Forward arrows, the New task button with a plus sign, then the Local environment chip and the Remote Access button's monitor-and-phone icon in green because Remote Access is on.">
   </a>
   <figcaption style="text-align:center; color:#888">The New task button starts each parallel task.</figcaption>
 </figure>
@@ -169,11 +169,11 @@ Kepler works on Windows. It has a native Windows installer for Windows 10 and la
 
 ### Can I run Claude Code and Codex at the same time on Windows?
 
-Yes. Start one task for each, and pick Claude Code for one and Codex for the other. Each task gets its own worktree, so the 2 agents never change each other's files.
+Claude Code and Codex can run at the same time on Windows. Start one task for each, and pick Claude Code for one and Codex for the other. Each task gets its own worktree, so the 2 agents never change each other's files.
 
 ### Do I need WSL to run coding agents on Windows?
 
-No. All 9 agents that Kepler supports install and run on native Windows. Use WSL 2 only when your project needs a Linux toolchain.
+You do not need WSL. All 9 agents that Kepler supports install and run on native Windows. Use WSL 2 only when your project needs a Linux toolchain.
 
 ### How do I stop parallel agents from overwriting each other's work?
 
