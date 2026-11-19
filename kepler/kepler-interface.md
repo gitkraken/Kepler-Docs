@@ -755,7 +755,7 @@ To switch tabs, click a tab or press **Shift+Tab**. In an empty field, you can a
   <figcaption style="text-align:center; color:#888">The Tasks tab, listing your tasks to switch to.</figcaption>
 </figure>
 
-**Tasks** lists your tasks in the same groups as the Dashboard, with the one you're in marked **Current**. Type to narrow the list, or paste a Kepler task link. You can also find a task by its pull request or issue, from its link or a number such as #51. Archived tasks follow the live ones. Press **Enter** to switch to the highlighted task, or **→** to search that task's files. Below the matches, 3 rows turn what you typed into something else:
+**Tasks** lists your tasks in the same groups as the Dashboard, with a check mark on the one you're in. Type to narrow the list, or paste a Kepler task link. You can also find a task by its pull request or issue, from its link or a number such as #51. Archived tasks follow the live ones. Press **Enter** to switch to the highlighted task, or **→** to search that task's files. Below the matches, 3 rows turn what you typed into something else:
 
 - **Search files for “{query}”** searches every task's files for it.
 - **New task: “{query}”** puts it in the **New task** composer.
