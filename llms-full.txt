@@ -773,7 +773,7 @@ The button's rows hold:
 | Row | What it shows |
 |---|---|
 | **Top** | The branch and repository, the worktree's own pull request with its CI status, and the upstream control |
-| **Bottom** | Chips for uncommitted files, commits, and the merge target, plus **Open in** and **Run** |
+| **Bottom** | Chips for uncommitted files, commits, and the merge target, plus **Open in** (in the desktop app) and **Run** |
 
 The button's controls do the following:
 
@@ -782,7 +782,7 @@ The button's controls do the following:
 - **Uncommitted** and **commits** chips: open the worktree's changes in the side pane, on that scope. Click the chip that's showing again to close the side pane, or the other chip to switch scope.
 - **Merge target** chip: shows how the branch compares with its merge target. While the target is ahead, its menu offers **See what's new on {target}**. See [What's new on the merge target](/kepler/review-changes#whats-new-on-the-merge-target). The menu also offers **Rebase onto {target}** and **Merge {target} into this branch**. See [Review Changes](/kepler/review-changes#updating-from-the-base).
 - **Open in**: opens the checkout in your default editor. Other editors are in its chevron menu.
-- **Run**: runs one of the repository's commands.
+- **Run**: runs one of the repository's commands. While the repository has none, it shows a **+** that adds one.
 
 The button also tells you what needs doing, such as unpushed commits, or a paused rebase or merge you can continue or abort from the button. Hover any chip to see what a click does, or right-click the chip for the worktree's menu.
 
@@ -1378,7 +1378,7 @@ plan_required: all
 status: GA
 last_verified: 2026-11
 
-An **Action** is a named prompt you fire at a task, issue, or pull request to start agent work.
+An **Action** is a named prompt that you run on a task, issue, or pull request to start agent work.
 
 You can change every Action's wording and agent, and choose which Action each kind of work suggests as its one-click default. An [automation](/kepler/kepler-automations) can also run an Action for you, on a schedule or when new GitHub or Jira activity matches its query.
 
@@ -1569,7 +1569,7 @@ You cannot delete an Action that an automation runs. Delete the automation first
 
 ## Setting an Action's agent
 
-By default, an Action runs on your **default agent**, configured in **Settings → Tasks → New tasks → Default agent**. To change it, open the **Preset** list in the editor's **Agent** field and pick one of the following:
+By default, an Action runs on your **default agent**, which you set in **New sessions start with** in [Settings → Tasks](/kepler/settings-tasks#default-agent). To change it, open the **Preset** list in the editor's **Agent** field and pick one of the following:
 
 | Choice | What the Action runs on |
 |---|---|
@@ -1706,7 +1706,7 @@ To save either kind of file somewhere else, choose **Save as…** from its menu.
 
 ### Issues and pull requests attach themselves
 
-You do not have to attach a task's pull request yourself. If a task holds no pull request yet, and one of its worktrees is on a branch that exactly matches an open pull request's head branch, Kepler attaches that pull request to the task. This works however the pull request was opened, including from a terminal, from GitKraken, or on the web.
+You do not have to attach a task's pull request yourself. When one of a task's worktrees is on a branch that exactly matches an open pull request's head branch, Kepler attaches that pull request to the task, even if the task already holds other pull requests. This works however the pull request was opened, including from a terminal, from GitKraken, or on the web.
 
 Automatic attachment follows these rules:
 
@@ -3242,7 +3242,7 @@ Claude Code and Codex both sign in through your browser, without a terminal. To 
 | Connection | Claude Code | Codex |
 |---|---|---|
 | Local | Kepler runs the sign-in, your browser opens, and Kepler shows a status line instead of a terminal | Browser sign-in with your ChatGPT account |
-| Remote or SSH | **Sign in with browser**: sign in in your local browser, then paste the code it returns | **ChatGPT (device code)**: sign in with a one-time code in your browser |
+| Remote or SSH | **Sign in with Claude.ai**: sign in in your local browser, then paste the code it returns | **ChatGPT (device code)**: sign in with a one-time code in your browser |
 
 A local sign-in offers these controls:
 
@@ -6436,7 +6436,7 @@ The agent's card then shows OpenCode as signed in.
 
 This also works on a [remote environment](/kepler/remote-environments):
 
-- **Claude Code** on a remote offers **Sign in with browser**, which opens the sign-in page in your *local* browser and takes the code you paste back. Kepler saves the credential on the remote machine.
+- **Claude Code** on a remote offers **Sign in with Claude.ai**, which opens Claude's sign-in in your *local* browser and takes the code you paste back. Kepler saves the credential on the remote machine. **Sign in with token (advanced)** is for an account that cannot finish a browser sign-in.
 - **Codex** on a remote offers **ChatGPT (device code)**. Kepler shows the sign-in link and a **One-time code**, and the credential is saved on the remote machine. Some ChatGPT workspaces turn device sign-in off, and Kepler then points you to the alternatives.
 - **Cursor CLI** on a remote offers only **Paste an API key**, because its browser sign-in cannot complete there.
 
