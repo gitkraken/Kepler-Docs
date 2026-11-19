@@ -36,12 +36,208 @@ This release notes page tracks what's new and changing in the current version of
 
 - This page covers the current version line of Kepler, 0.x. Archived version pages will be listed here as later lines ship.
 - Each entry applies only to the specific release listed under its version heading.
-- Kepler is in public preview. A free GitKraken account is all you need to run it, though a few capabilities, such as [Remote Access](/kepler/kepler-remote-access), require a paid GitKraken plan.
+- Kepler is in public preview. A GitKraken account is all you need to run it.
 - Kepler updates itself. You're prompted to restart when a new version is published, and **Check for Updates** in the app menu asks straight away.
 
 <a href="https://www.gitkraken.com/kepler/download?source=help_center" target="_blank" class="button button--basic ">Download Current Version Now</a>
 
 New to Kepler? [Getting Started with Kepler](/kepler/kepler-getting-started) takes you from install to your first agent-run task.
+
+***
+
+<a id="v0-22-0"></a>
+## Version 0.22.0
+
+<kbd>Tuesday, November 17th, 2026</kbd>
+
+### Highlights
+
+- **Find any task, command or past conversation from one palette.** One place to find a task, a todo, a command, a file, or the conversation where something was decided.
+- **Keep agents working through usage limits and outages.** Work you leave running keeps going: a usage limit or a provider outage no longer ends a turn until you come back.
+- **Keep work and personal apart with profiles.** Keep work and personal, or one client and another, fully apart without signing out or running a second install.
+
+### Features
+
+#### Command palette and search
+
+One place to find a task, a todo, a command, a file, or the conversation where something was decided.
+
+- The palette opens on an All view of what needs you and searches tasks, todos and commands together, so you rarely pick a tab first.
+- The Chats tab, or typing `?`, searches what was said in every chat and terminal-agent session, archived ones included, and opens a hit at that exact message.
+- Commands and tasks you use most come first, archived tasks are found by name, link or id, and a command's shortcut can be changed from its row.
+- Find in a session counts matches earlier and later in the conversation, and live terminal sessions gain a Transcript view to read and search like a chat.
+- `in:name`, `in:prompt`, `in:notes`, `in:files`, `in:links` and `in:chats` say where a Dashboard search looks, so a common word doesn't match every task. Agents can search the same way.
+- Dashboard search takes OR groups, AND and comma lists, and `no:`, `has:` and `is:` filters, including per-provider filters in the Todo.
+
+#### Usage limits and accounts
+
+Work you leave running keeps going: a usage limit or a provider outage no longer ends a turn until you come back.
+
+- When a usage limit stops a turn, a bar on the composer, in chat and in terminals, offers to continue on another account, wait for the reset or start a new session, and the work picks up where it was cut off.
+- A run left overnight survives an outage: turns ended by an overloaded model or a temporary server error are retried for up to 12 hours, with Retry now and Stop retrying on the banner and a setting to turn it off.
+- Settings → Agents → Usage and recovery picks what a limit does on its own: ask you, wait for the reset, or switch accounts. Waiting for the reset is now the default.
+- Order each agent's accounts in one list: new sessions start on the top account with usage left, and a usage limit continues on the next one.
+- Switch a session's account from the Continue as list on its usage card, and redeem Claude's earned usage-limit resets there.
+- Give each account one of twelve colors, to tell at a glance which account a session runs on.
+
+#### Profiles
+
+Keep work and personal, or one client and another, fully apart without signing out or running a second install.
+
+- Each profile runs side by side with its own repositories, tasks, folders, themes, GitKraken sign-in and agent logins.
+- Start a profile blank or as a copy of another, and manage profiles from the account menu, Settings → Profiles or the tray.
+- Tint a profile's windows to always know which one you are in; the account avatar wears the same color.
+- Every agent works in every profile; one that can't keep separate logins uses your own and Settings says so, and a Data folder set in a profile keeps it apart.
+- Deleting a profile removes the servers it started on other machines, and leaves your accounts and other profiles alone.
+- Quitting the default profile offers to quit them all, and updates close and reopen every profile.
+
+#### What needs you
+
+- One title-bar menu lists the tasks waiting on you, on this machine and your others, and leads with Go to next.
+- F8 jumps to the next session waiting on you, across every task, so you can clear questions and approvals one after another.
+- With Kepler in the background, the tray menu lists the tasks that need you and what each needs, and a click opens the task.
+- The app icon shows their count on the macOS Dock, the Windows taskbar and the Linux launcher; Settings → Notifications turns it off.
+- Needs attention stays short: failed turns and red CI leave once you've seen them, while questions and approvals stay until answered.
+
+#### Ask Kepler
+
+- Ask Kepler to take you there: it can show a task, session, note, Dashboard view or setting in your window and press Kepler's shortcuts for you, while you keep typing.
+- Ask how your work with agents is going: tokens and cost, how long agents worked and waited on you, how often you hit a usage limit, and how quickly your pull requests merged.
+- It can read your custom Actions and edit their prompts, asking before a change.
+- Ctrl/⌘ + K now opens Ask Kepler, with Ctrl/⌘ + L kept as an alias.
+- On the phone it opens full screen from a button in the Dashboard bar, and its past-chats picker has search.
+
+#### Chat
+
+- Fix a prompt instead of arguing with its result: edit a sent prompt in place to rewind a Claude Code or Codex chat and resend it.
+- A follow-up shows whether it joins the running turn or waits for it, before you send it, and the composer glows while a turn runs.
+- Mermaid diagrams render as diagrams instead of code, with zoom and full screen.
+- A full context window says so and offers Compact, instead of a Reconnect that fails again.
+
+#### Reviewing changes
+
+- Review on a second screen: Open in new window gives a task's Changes its own window, keeping your place and sending comments to the same session.
+- Closing a window with unsaved edits asks whether to save or discard them, instead of losing them.
+- Commit… sits on the Working changes row, whichever changes you are viewing.
+- Find in diffs gains an Only in changes toggle: turn it off to search whole files.
+- With the panel hidden for more diff room, the header keeps a view picker and a Comments menu that lists comments by file and jumps to one.
+- The panel is redrawn, with the branch line in its own card so what you are diffing reads apart from the files.
+
+#### Agents & terminals
+
+- A terminal session's permission prompt shows the command and its diff as chat does, and a Claude prompt waits for your answer across restarts instead of expiring after a minute.
+- An idle task worktree is fast-forwarded when a stopped session resumes, so a session picked up days later doesn't start from an old base.
+- A task's agent can offer to show you a task, session, note or setting, as a banner with View and Dismiss that never moves your screen by itself.
+- Grok's questions and plans now reach you, in Kepler's question form and plan review.
+- Artifacts Claude publishes in a terminal session attach to the task, as they do in chat.
+- Agents can read a repository's details and Run commands, and changing a Run command asks you first.
+- An agent coordinating other tasks adopts one into its family once, with your approval, instead of asking on every call.
+
+#### Dashboard
+
+- Auto columns in the layout picker fits as many panels as the window holds while keeping terminals readable, and Shift-dragging a panel edge sets the width it aims for.
+- Each view restores its preview panels as you left them, so switching views doesn't cost you your place.
+- A wide task preview opens its side pane on its own, showing the worktree's changes without a click, and note links open there.
+- Automations appear as a tab at the end of the tab row.
+
+#### Automations
+
+- The editor is redesigned as When, Do and Where cards that read top to bottom, with the composer's own pickers for the agent and where runs happen.
+- A new trigger fires on review requests made to you directly, so an automation picks up only the reviews that are yours, not your team's.
+- Finished runs stop filling your disk: their worktrees are removed, never one with uncommitted changes or a live session, and restored when you continue the task.
+- Send feedback on Automations from its page header.
+
+#### Remote and SSH
+
+- Kepler asks for an SSH password, key passphrase or one-time code in the window, on Windows too, so connecting needs no terminal on the side.
+- The SSH wizard can use your SSH agent or SSH config, which covers keys kept in 1Password, Secretive or a security key.
+- A remote window reconnects by itself after your computer wakes, and connects over slow links that used to give up.
+- A restarted remote server comes back on the port it last used, so reconnecting takes fewer sign-ins.
+
+#### Import from other apps
+
+- Onboarding offers to import your workspaces from Conductor, Orca, herdr and Vibe Kanban when it finds any, and you can start working while they come over.
+- Every import runs in the background, with a title bar chip showing per-app progress, Stop and Retry.
+- The import picker groups workspaces by repo and pre-ticks those active in the last 30 days, so you bring over current work, not old clutter.
+
+### Improvements
+
+#### Performance
+
+- Opening a terminal is about as fast as a native shell.
+- After a Pull, Commit, Push or Fetch, the button and file lists update right away.
+- Changes lists and find in diffs open faster on large changes.
+- Switching Dashboard views shows the new view's panels sooner.
+- Typing in a remote window echoes sooner on slow or lossy links when Windows is on either end.
+- Remote desktop windows load more at once and reconnect sooner.
+
+#### Agents & terminals
+
+- Agents and terminals always run in the background process that keeps them alive, and "Keep agents running" now decides one thing: whether they outlive Kepler.
+- A failed terminal turn explains why, in the agent's own words.
+- When an agent's endpoint doesn't serve the model you picked, the chat says so and names the provider.
+- A launch that fails because the disk is full or blocked says so, with diagnostics you can copy.
+- A large Claude chat stays awake until its idle compaction can run, and that compaction no longer marks the session unread.
+- Antigravity terminal sessions report tool activity, cancelled turns and refusals with their reason.
+- Antigravity usage shows every limit for the selected model, 5-hour and weekly included.
+- A failed Copilot sub-agent says why on its card, without opening it.
+- An approval mode changed inside a Codex terminal shows in Kepler.
+
+#### Repositories
+
+- Trust a repo or folder where it arrives, in onboarding, scans and the composer, and Start asks instead of failing on an untrusted repo.
+- Settings → Repositories gains Trusted and Untrusted views and folder-wide and bulk trust, so a folder of your own repos is trusted in one step.
+
+#### Everything else
+
+- A setting chooses where tasks and links open.
+- Restore and resume an archived task whose folder is gone.
+- The worktree switcher groups worktrees into live, merged and gone.
+- The delete dialog names who holds a worktree's lock and lets you unlock and delete.
+- Onboarding asks where new tasks work: an isolated worktree, a new branch or the current branch.
+- Zoom in and out in finer steps.
+- Right-click a terminal session's status bar for its tab menu.
+
+### Fixes
+
+#### Security
+
+- On Windows, text a server sends as an SSH sign-in prompt can no longer run as a command through the saved-password helper.
+- A device connected through Remote Access can no longer read or replace the key that signs its sessions.
+- Electron is updated to 44.11.3 for its security fixes.
+
+#### Agents & terminals
+
+- The model picker lists the models of the account a session runs on, so a model that account has no longer goes missing.
+- Claude Code 2.1.326 no longer asks about the task's folders when a terminal launches.
+- A signed-out account reads "not signed in" and offers Sign in instead of a Retry that could not work.
+- Cursor and Codex chat turns that ended in an error are shown as failed, Antigravity quota refusals are shown instead of a clean finish, and an interrupted OpenCode terminal turn reads as cancelled.
+- Continue here and Fork no longer stay disabled when Kepler wrongly thinks an external session is mid-turn.
+- A session keeps its model when its MCP servers change mid-session.
+- A stopped background task shows as its own row instead of text stuck to the reply.
+- Emoji and wide characters in a terminal line up the way agent CLIs draw them.
+- Terminal text draws at its font size on all Electron builds.
+- Installing or updating agents on Windows no longer stops on prompts, finds the folders the vendors' installers use, and works under a user name with non-English characters.
+- Flatpak builds keep agents and terminals running in the background like the other Linux packages, and a stopped agent can no longer be started twice on one conversation.
+- Grok CLIs too old for chat say so, and an agent that refuses a session for having no model tells you how to give it one.
+
+#### Remote and SSH
+
+- Connections through a ProxyJump host no longer fail, for remote windows and for git fetch, pull and push.
+- A saved SSH password is tried once instead of up to three times.
+- Hosts imported from `~/.ssh/config` connect by their alias, so their ProxyJump, 1Password agent and other per-host settings apply.
+
+#### Everything else
+
+- Keyboard focus stays in the composer after you send.
+- Kepler links in notes stay clickable.
+- Dragging on a board keeps working when the pointer leaves it, and drops where the drop line shows.
+- Home and End work in palette and picker search fields, and F2 renames the task while a text field has focus.
+
+### Breaking changes
+
+- In the palette, `#` no longer switches to the Todo; use the Todo tab.
+- The palette's Commands tab is now All, and `>` still narrows it to commands.
 
 ***
 

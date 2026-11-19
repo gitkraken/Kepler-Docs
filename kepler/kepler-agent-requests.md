@@ -35,7 +35,7 @@ When an agent needs a decision it cannot make on its own, Kepler pauses and asks
 - A plan review when the agent proposes a plan before it starts.
 - An approval card when the agent asks Kepler itself to do something that needs your approval, such as deleting a worktree.
 
-Reports from other agents arrive in a session's inbox and do not ask you anything; see [Reports from other agents](#reports-from-other-agents).
+Reports from other agents arrive in a session's inbox and do not ask you anything; see [Reports from other agents](#reports-from-other-agents). An agent can also offer to show you something; see [Offers to show you something](#offers-to-show-you-something).
 
 You can answer a request from any window that shows it, or from its notification. If another window answered it first, Kepler says **Already answered**.
 
@@ -68,7 +68,7 @@ Answered requests stay in the transcript, showing the tier you picked: **Allowed
 
 ### Requests that arrive through hooks
 
-A session in **Terminal** mode and a session that Kepler **detected outside itself** both ask through the agent's own hooks. You still answer in Kepler, without switching to the CLI's own prompt. The card comes from the agent, though, so it offers scopes instead of Kepler's tiers: **Deny**, **Allow once**, and one **Always allow** for each scope the hook suggests, narrowest first:
+A session in **Terminal** mode and a session that Kepler **detected outside itself** both ask through the agent's own hooks. You still answer in Kepler, without switching to the CLI's own prompt, on the same card a Chat request uses: the agent's description with the command beneath it, or the diff of a file edit. The buttons are **Reject**, **Allow**, and one **Allow always** for each scope the hook suggests, narrowest first:
 
 | Scope | Meaning |
 |---|---|
@@ -77,15 +77,17 @@ A session in **Terminal** mode and a session that Kepler **detected outside itse
 | **this project (shared)** | This project, committed for your team |
 | **all projects** | Everywhere |
 
+When the hook suggests a change instead of a rule, the button names it, such as **Allow and switch to {mode} mode** or **Allow and add {folders}**.
+
 Above the buttons, Kepler shows the rule each button would write. A rule with no command pattern is marked **(this tool)**, which means it covers every call to that tool, not one command.
 
-Kepler never approves a hook request for you. If Kepler stops holding a request before you answer (the turn ends, the conversation moves elsewhere, or Kepler quits), it hands the request back to the CLI, which asks in its own dialog.
+Kepler never approves a hook request for you. If Kepler stops holding a request before you answer, because the turn ended or the conversation moved elsewhere, the CLI asks in its own dialog. Quitting or restarting Kepler does the same, except for Claude Code: a Claude Code request waits, and shows in Kepler again when Kepler is back. You can also answer a Claude Code request in its terminal, and the card in Kepler closes.
 
 A Codex question asked through its hooks shows in Kepler as a question you can answer, with its options and their descriptions. Cursor has no permission or notification hook, so a Cursor Terminal or outside session cannot tell Kepler that it is waiting on you. The session reads **Running** until it stops, and you answer in the terminal.
 
 ## Multiple-choice and multi-select questions
 
-Agents can ask you structured questions instead of guessing. The form renders in the conversation at the point where the agent asked. In Chat, Claude Code, Codex, and Cursor questions all arrive in this form. A Cursor question that takes several answers works as a multi-select.
+Agents can ask you structured questions instead of guessing. The form renders in the conversation at the point where the agent asked. In Chat, Claude Code, Codex, Cursor, and Grok Build questions all arrive in this form. A Cursor question that takes several answers works as a multi-select.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/agent-session-multiple-choice-aug-2026.png" target="_blank" rel="noopener noreferrer">
@@ -112,7 +114,7 @@ A restored session shows the question and the answers you gave as a read-only re
 
 ## Reviewing a plan
 
-When an agent in plan mode proposes a plan, Kepler opens it for review in a **Plan** panel beside the chat, with **Preview** and **Edit** tabs. The transcript shows the plan with **Open plan**. Claude Code, Codex, GitHub Copilot, Cursor, and OpenCode Chat sessions offer plan review. Cursor holds its plan request open while you review it, so the session waits with the reason **Plan review**.
+When an agent in plan mode proposes a plan, Kepler opens it for review in a **Plan** panel beside the chat, with **Preview** and **Edit** tabs. The transcript shows the plan with **Open plan**. Claude Code, Codex, GitHub Copilot, Cursor, OpenCode, and Grok Build Chat sessions offer plan review. Cursor holds its plan request open while you review it, so the session waits with the reason **Plan review**.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/plan-review-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -139,7 +141,10 @@ Some actions that an agent asks Kepler itself to do, through Kepler's workspace 
 
 - Sending a prompt or a message to another session, or stopping, renaming, or archiving one.
 - Editing or deleting a task note, changing another task or its links, detaching files, archiving or restoring another task's resources, or archiving a task.
+- Adopting another task into a session's work, or dropping it.
 - Deleting a worktree.
+- Changing a repository's sync settings, or adding, replacing, or deleting one of its Run commands.
+- Changing the prompt of one of your custom Actions.
 - Starting a session in a more permissive mode than the asking session's own.
 - Syncing a branch with its target, or rewriting its commits.
 - Overwriting a theme file.
@@ -161,9 +166,9 @@ The **Approve** chevron offers 2 broader answers:
 - **Approve all {label} from this session**: approves this kind of request for the rest of the session.
 - **Always approve {label}**: adds a standing rule. It is not offered for an action that can lose work or for starting a session.
 
-A setting change offers neither answer; each setting change asks on its own.
+A setting change, an Action's prompt, adopting a task, and adding or replacing a Run command offer neither answer. Each of these asks on its own.
 
-An approved request shows **Running** while Kepler carries it out. A request that fails says what was not done, with **Dismiss**. A waiting request expires when its session is archived.
+An approved request shows **Running** while Kepler carries it out. A request that fails says what was not done, with **Dismiss**. A waiting request expires when its session is archived. The agent that asked can also withdraw a request that is still waiting, and its card goes away.
 
 To review your standing rules, open **Settings → Agents → Approvals**. Anything a rule does not cover still asks. Each rule under **Always approved** says when and where it was added and how often it has been used, with **Remove**.
 
@@ -188,7 +193,7 @@ When a session has unread reports, the band above its composer says how many, su
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/agent-reports-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-reports-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The task page for Fix the cart total. Under Sessions, the Discount codes break the cart total session is selected, and the Review the discount fix session it started is listed below it as Unread. Its conversation shows the session_start Review the discount fix call, a 2 new items to read row, and above the composer OpenCode hasn't read 3 reports from other agents, with Have it read them.">
+    <img src="/wp-content/uploads/agent-reports-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The task page for Fix the cart total, with the Discount codes break the cart total session selected and the Review the discount fix session it started listed as Unread. Above the composer, a band reads OpenCode hasn't read 3 reports from other agents, with Have it read them.">
   </a>
   <figcaption style="text-align:center; color:#888">A session with unread reports from other agents.</figcaption>
 </figure>
@@ -196,6 +201,10 @@ When a session has unread reports, the band above its composer says how many, su
 To stop agents from waking each other without end, Kepler pauses wakes after 20 turns in a row that agents started without a prompt from you. The band then reads **Reports from other agents are paused**, and the session's tab and its row in the context panel show a reports badge with the count. To let reports wake the session again, click **Resume reports** or send your next prompt.
 
 In Terminal mode, only some agents can be woken to read their inbox. See [Kepler's tools in Terminal mode](/kepler/agent-integrations#supported-agents).
+
+### Offers to show you something
+
+A task's agent can offer to show you a task, session, note, or setting. The offer appears as a banner in its session, *{agent} wants to show you: {label}*, with **View** and **Dismiss**, and as a short alert that names the task. Kepler never moves your screen until you click **View**.
 
 ***
 
@@ -229,11 +238,11 @@ By default, Kepler sends no notification for the task open in the window you are
 
 While you are working in any Kepler window on a computer, that computer posts no desktop notifications. The window you are in shows them in Kepler instead, and several windows on one computer post a single alert.
 
-To choose which events notify you, and whether each one appears as a **Desktop** notification, **In Kepler**, or both, open **Settings → Notifications**. The same page has **Play a sound with desktop notifications**. In the desktop app, every event except **Replies** notifies on the desktop until you change it. In a browser, desktop notifications start off. After your first session starts, the desktop app sends a one-time **Notifications are on** notification. Click it to open **Settings → Notifications**. See [Settings](/kepler/settings-app#notifications).
+To choose which events notify you, and whether each one appears as a **Desktop** notification, **In Kepler**, or both, open **Settings → Notifications**. The same page has **Play a sound with desktop notifications**. In the desktop app, every event except **Replies** and **Offers** notifies on the desktop until you change it. In a browser, desktop notifications start off. After your first session starts, the desktop app sends a one-time **Notifications are on** notification. Click it to open **Settings → Notifications**. See [Settings](/kepler/settings-app#notifications).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ade-settings-notifications-01-01-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ade-settings-notifications-01-01-v3@2x.png" class="help-center-img img-bordered" alt="Settings › Notifications, What to notify you about, at the desktop app's defaults: a grid of Replies, Questions, Permission requests, Approval requests and Errors against Desktop and In Kepler, with every box ticked except both Replies boxes; below it Play a sound with desktop notifications is ticked and Notify even for the task you're looking at is not.">
+  <a href="/wp-content/uploads/ade-settings-notifications-01-01-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ade-settings-notifications-01-01-v4@2x.png" class="help-center-img img-bordered" alt="Settings › Notifications, What to notify you about, at the desktop app's defaults: a grid of Replies, Questions, Permission requests, Approval requests, Errors and Offers against Desktop and In Kepler, with every box ticked except both Replies boxes and Offers' Desktop box; below it Play a sound with desktop notifications is ticked, Notify even for the task you're looking at is not, and Show a count on the app icon is ticked.">
   </a>
   <figcaption style="text-align:center; color:#888">What to notify you about, in Settings → Notifications, at the desktop app's defaults.</figcaption>
 </figure>

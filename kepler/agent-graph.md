@@ -87,7 +87,7 @@ The graph shows only sessions that belong to a task, so an external session that
 
 ### Past turns start folded
 
-In a Dashboard graph view, each session shows its latest turn and folds the earlier ones. A folded card shows a chevron and the number of nodes beneath it. To fold or unfold any card with children, such as a session, a turn or a subagent, double-click it. A session's own graph starts with every turn unfolded.
+In a Dashboard graph view, each session shows its latest turn and folds the earlier ones. A folded card shows a chevron and the number of nodes beneath it. To fold or unfold any card with children, such as a session, a turn, or a subagent, double-click it. A session's own graph starts with every turn unfolded.
 
 Look out for 2 kinds of node, because the agent cannot continue until you respond: **Permission needed** and **Question for you**.
 
@@ -108,9 +108,7 @@ For 3 states that need your attention, the card shows a word instead of a color:
 
 ### Tool calls are colored by what they do
 
-Each tool call has a color for its kind:
-
-**Read · Edit · Delete · Move · Search · Execute · Think · Fetch · Switch mode · Other**
+Each tool call has a color for its kind: **Read**, **Edit**, **Delete**, **Move**, **Search**, **Execute**, **Think**, **Fetch**, **Switch mode**, or **Other**.
 
 The colors are the quickest way to see what an agent is doing. A task with only **Read** calls is still exploring the code. Many **Edit** calls mean the agent has chosen an approach and is making changes.
 
@@ -139,7 +137,7 @@ For a node with children, the details header also has a fold button, **Collapse 
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/graph-collapse-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/graph-collapse-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Agent Graph with the folded Turn 2 node selected, showing the failed call mark and a chevron with 3 hidden nodes, while the rest of the graph dims, down to the tool nodes Read cart.test.js, Edit cart.js, Run npm test and a permission request marked Needs you on the right. Its details panel shows Turn, Done, Turn 2, the path Fix the cart total › Discount codes break the cart…, 1 failed call, Tool calls 2 and the prompt Add a test for the discount, with the back, Expand what is under this node (ringed in purple) and close buttons in its header. Over the bottom of the graph float the replay bar (pause, previous and next frame, the scrubber and Live) and, beside it, the zoom buttons at 100%.">
+    <img src="/wp-content/uploads/graph-collapse-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Agent Graph with the folded Turn 2 node selected, showing a failed call mark and a chevron with 3 hidden nodes, while the rest of the graph dims. Its details panel shows Turn 2, 1 failed call, and the prompt Add a test for the discount, with Expand what is under this node ringed in its header.">
   </a>
   <figcaption style="text-align:center; color:#888">A folded turn selected, with Expand what is under this node in its details header.</figcaption>
 </figure>
@@ -194,16 +192,16 @@ The **Throughput** section shows a trace of your agents' activity over time, wit
 
 ### Tool spectrum
 
-The **Tool spectrum** section shows the calls by kind, with a bar and a count for each kind. It shows whether your agents are mostly reading, editing or running commands. Kinds with no calls do not appear, and until there are calls, the section reads **No tool activity yet**.
+The **Tool spectrum** section shows the calls by kind, with a bar and a count for each kind. It shows whether your agents are mostly reading, editing, or running commands. Kinds with no calls do not appear, and until there are calls, the section reads **No tool activity yet**.
 
 ### Usage windows
 
 The **Usage windows** section shows your agent subscription windows, with 1 bar for each window of each agent, and the share of the window you have used. The section appears when it has something to show:
 
-- With **Check plan usage with each agent's provider** on (the default, in **Settings → Agents → Usage limits**), Kepler asks each agent's provider for your usage.
+- With **Check plan usage with each agent's provider** on (the default, in **Settings → Agents → Usage and recovery**), Kepler asks each agent's provider for your usage.
 - With it off, the section shows only readings that your agents report themselves, dimmed when they are out of date. The section stays hidden until an agent reports a reading.
 
-See [Settings](/kepler/settings-agents#usage-limits).
+See [Settings](/kepler/settings-agents#usage-and-recovery).
 
 These bars show only how much of each window you have used. To see whether you are on pace for a window, and when it runs out at your current rate, check a session's usage meter. See [Usage indicators](/kepler/kepler-agent-accounts#usage-indicators).
 
@@ -227,7 +225,7 @@ At the bottom of the stats column, a note counts what Kepler left out of the gra
   <figcaption style="text-align:center; color:#888">An Agent Graph view's View menu, with the graph's settings and filters.</figcaption>
 </figure>
 
-In a Dashboard graph view, use the Dashboard's search box and the view's **View** menu. In a session's own graph, use the search box, **Options** menu and depth slider in the graph's header. The zoom buttons and the replay bar float over the bottom of the graph:
+In a Dashboard graph view, use the Dashboard's search box and the view's **View** menu. In a session's own graph, use the search box, **Options** menu, and depth slider in the graph's header. The zoom buttons and the replay bar float over the bottom of the graph:
 
 | Control | What it does |
 |---|---|

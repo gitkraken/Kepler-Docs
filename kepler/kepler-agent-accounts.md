@@ -35,8 +35,8 @@ Sign in to your agents, run more than one account of the same agent, and track h
 Claude Code, Codex, GitHub Copilot, Auggie, and Grok Build can each have more than one signed-in account. To manage an agent's accounts, open **Settings → Agents**, expand the agent, and find **Accounts**:
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-accounts-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-accounts-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Claude Code card in Settings › Agents with two accounts, the default Claude Code CLI (Acme, Default) with the No color mark and Personal with a blue color swatch, each with Check usage and a row menu. Below them sit New sessions start in, Let artifact comments start turns, Artifacts in new sessions, and Program and data folder.">
+  <a href="/wp-content/uploads/agent-accounts-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-accounts-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Accounts section of the Claude Code card in Settings › Agents, with Add account above its priority-order help text. Two accounts are listed in order, Claude Code CLI and Personal, each with a drag handle and Check usage, and Personal reads New sessions only.">
   </a>
   <figcaption style="text-align:center; color:#888">The Accounts section, in Settings → Agents.</figcaption>
 </figure>
@@ -49,10 +49,15 @@ Each account keeps its own credentials but shares your skills, agents, commands,
 | **Add account** | Adds an account with its own credentials. For Claude Code, Codex, and GitHub Copilot, you choose **Keep separate** or **Share with the CLI** for its history |
 | **Account name** | Rename a row in place. The name is what you pick from later |
 | **Sign in** / **Sign out** | Authenticates or clears that account alone |
-| **Check usage** | Reads that account's plan usage. Grayed out only when **Check plan usage with each agent's provider** is turned off in **Settings → Agents → Usage limits** |
+| **Check usage** | Reads that account's plan usage. Grayed out only when **Check plan usage with each agent's provider** is turned off in **Settings → Agents → Usage and recovery** |
 | **Switch account…** | On a signed-in Claude Code account's row menu. Signs that account in with a different Claude login, after a confirmation that counts the running sessions using it |
 | **Remove account** | Signs the account out and deletes its local data, but leaves your shared skills, agents, and settings alone. Sessions whose conversations are stored only in that account are deleted with it; see below |
 | Color swatch | At the left of each added account's row: pick a color, or **No color**. The default account's ⊘ **No color** mark means it stays uncolored, not that it is off |
+
+**The order of the accounts decides which one Kepler uses.** With 2 or more accounts, drag a row by its handle, or choose **Move to top**, **Move up**, or **Move down** on its row menu. A new session that you start without picking an account starts on the first account with usage left. When a session hits its usage limit, Kepler also turns to the first account with usage left; see [When you hit a usage limit](#when-you-hit-a-usage-limit).
+
+- To keep an account out of that choice, clear **Use at a usage limit** on its row menu. The row then reads **Skipped at a usage limit**.
+- An account that keeps its own history reads **New sessions only**, because a conversation cannot move to it.
 
 An account's color tints the agent icon on session tabs, in the context panel, and on the terminal status bar. You can tell sessions on different accounts apart by their color.
 
@@ -75,22 +80,20 @@ Expand the warning to see which file the account copied, with the paths of **Thi
 
 **Removing an account tells you what it will remove.** The **Remove {name}?** dialog counts the running sessions it will stop and the sessions it will permanently delete, because their conversations are stored only in this account. To keep those sessions, first click **Move to CLI account** under **Keep these conversations**. The sessions stay in their tasks, and removing the account then deletes nothing. If you do not move them, **Continue to remove** asks you to confirm the deletion once more.
 
-**How many accounts you can add depends on your GitKraken plan.** Pro and higher plans have no limit. If your plan stops covering an account that a running session uses, the session tells you, so you can switch it to another account or upgrade.
-
 ### Choosing an account for a session
 
 If 2 or more accounts are signed in, the **Agent** list shows one row per account, labeled with the account name. You pick the agent and the account in one click, in the **New task** composer or in a draft session tab.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/account-multiple-selector-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/account-multiple-selector-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Agent list open in the New task composer, with Search options at the top. Under a Claude Code heading sit two account rows: CLI, with the login alex.lee@example.com and an Acme badge, checked, and Personal. Below come Codex CLI (Not signed in), GitHub Copilot CLI (Not signed in), OpenCode, Pi and Auggie CLI (Not signed in), with more agents further down the list, then Add another account and Install another agent.">
+    <img src="/wp-content/uploads/account-multiple-selector-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Agent list open, with two rows under Claude Code: CLI, checked, with alex.lee@example.com and an Acme badge, and Personal. Other agents follow, then Add another account and Install another agent.">
   </a>
   <figcaption style="text-align:center; color:#888">The Agent list, with one row per account.</figcaption>
 </figure>
 
 With one account, the agent keeps a single row, with that account shown beside its name.
 
-A session starts on the account you picked. Later, you can move it to another signed-in account of the same agent and keep the conversation. When more than one account exists, session tabs name the account. If a tab's account has since been removed, the tab reads **(account missing)**.
+A session starts on the account you picked, or, if you did not pick one, on the first account in your order with usage left. Later, you can move it to another signed-in account of the same agent and keep the conversation. When more than one account exists, session tabs name the account. If a tab's account has since been removed, the tab reads **(account missing)**.
 
 #### Moving a session to another account
 
@@ -98,8 +101,8 @@ To move a session to another account, use any of these:
 
 - **Continue as** on the session's row or tab menu.
 - The **Account** row in the composer's **Agent settings**: **Restart conversation as** on a live session, or **Resume as** on a dormant one.
-- The agent and account part of a Terminal session's status bar.
-- **Continue as {login}** on the usage-limit banner. See [When you hit a usage limit](#when-you-hit-a-usage-limit).
+- **Continue as** at the foot of the plan usage card on a Terminal session's status bar.
+- **Continue on {account}** on the usage-limit bar. See [When you hit a usage limit](#when-you-hit-a-usage-limit).
 - The **Resume** or **Restart** split button on a dormant session, when another account could take the conversation.
 
 Each list shows the agent's other accounts with their login, color, and usage, and checks the current one. When you pick an account, Kepler restarts the agent with this conversation as that account and confirms **Continued as {login}**.
@@ -123,7 +126,7 @@ Claude Code and Codex both sign in through your browser, without a terminal. To 
 | Connection | Claude Code | Codex |
 |---|---|---|
 | Local | Kepler runs the sign-in, your browser opens, and Kepler shows a status line instead of a terminal | Browser sign-in with your ChatGPT account |
-| Remote or SSH | **Sign in with browser**: sign in in your local browser, then paste the code it returns | **ChatGPT (device code)**: sign in with a one-time code in your browser |
+| Remote or SSH | **Sign in with Claude.ai**: sign in in your local browser, then paste the code it returns | **ChatGPT (device code)**: sign in with a one-time code in your browser |
 
 A local sign-in offers these controls:
 
@@ -159,13 +162,13 @@ Kepler shows 2 usage readouts, and they measure different things.
 
 While a session is idle, the context ring warns about the prompt cache on its own. It shows an hourglass with the time the cache has left, or **Expiring** or **Expired**. The context card then warns that the next message re-reads most of the context. If there is no context reading, the ring is a dashed circle, and its card still shows the cost when the agent reports one.
 
-**Check plan usage with each agent's provider** fetches the full readout, including per-model limits and extra usage, from each agent's provider. It is on by default, in **Settings → Agents → Usage limits**:
+**Check plan usage with each agent's provider** fetches the full readout, including per-model limits and extra usage, from each agent's provider. It is on by default, in **Settings → Agents → Usage and recovery**:
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/show-token-usage-aug-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/show-token-usage-aug-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Usage limits section of Settings › Agents: Check plan usage with each agent's provider, ticked, with its help text on what Kepler asks the provider for and what it shows when off, and Resume after the usage limit resets, unticked.">
+  <a href="/wp-content/uploads/show-token-usage-aug-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/show-token-usage-aug-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Usage and recovery section of Settings › Agents: Check plan usage with each agent's provider, ticked, with its help text; When a usage limit is reached, a dropdown set to Wait for the reset (Continues on its own when the limit resets), which applies to every agent in chat and in the terminal; and Retry automatically when the model is overloaded, ticked, with its help text.">
   </a>
-  <figcaption style="text-align:center; color:#888">Check plan usage with each agent's provider, in Settings → Agents → Usage limits.</figcaption>
+  <figcaption style="text-align:center; color:#888">The Usage and recovery section of Settings → Agents.</figcaption>
 </figure>
 
 Kepler asks with the agent's own sign-in, which goes nowhere else and is never changed. With the setting off, Kepler makes no request to any provider. A Claude Code or Codex session still reports its own **5h** and **7d** readings as it runs, and Kepler shows those, marked as reported by the agent.
@@ -176,13 +179,13 @@ Kepler judges a usage bar by pace: the share of the window you have used, compar
 
 | Provider | What its popover shows |
 |---|---|
-| **Claude Code** | The **5h** and **7d** windows, and an **Extra usage** pool with credits used against any monthly limit |
+| **Claude Code** | The **5h** and **7d** windows, an **Extra usage** pool with credits used against any monthly limit, and **Usage limit resets** |
 | **Codex** | The same 2 windows, plus **Usage limit resets**: earned resets that clear an active limit early, each with its expiry |
 | **Auggie** | No windows, only the plan's name and the credits left on it |
 | **GitHub Copilot** | The plan's monthly **Premium**, **Chat**, and **Completions** quotas, each with when it resets, and the credits used on token-based billing. A spent premium quota reads **Premium quota exhausted** |
-| **Google Antigravity** | A quota for each model, as a percentage used. Antigravity reports no token counts |
+| **Google Antigravity** | Every limit on the selected model, including its 5-hour and weekly windows, as a percentage used. Antigravity reports no token counts |
 
-**You can spend a Codex usage reset from Kepler.** When the account has a reset available, click **Redeem reset** under **Usage limit resets** in the Codex popover. If you still have more than 3% of your 7-day allowance left, Kepler warns you first that redeeming now may waste it. The confirmation lists your current usage and the reset's expiry. Redeeming uses up the reset and cannot be undone.
+**You can spend an earned usage reset from Kepler.** Claude Code and Codex accounts list their earned resets under **Usage limit resets** in the plan usage popover. A Claude Code reset is named by what it refills, such as **Five-hour reset** or **Weekly reset**. To use one, click **Redeem reset**. Kepler warns you first when redeeming now may waste usage: for Codex, when more than 3% of your 7-day allowance is left, and for Claude Code, when the limit the reset refills is not reached yet (**Limit not reached yet**). The confirmation lists your current usage and the reset's expiry. Redeeming uses up the reset and cannot be undone.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/usage-reset-redeem-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -201,12 +204,32 @@ The prompts go out on their own shortly after the reset, even with no Kepler win
 
 <!-- TODO(screenshot): New: The queue banner holding a prompt until the quota resets (*Sending at {time}, when the quota resets.*) with **Send now**. -->
 
-If a turn hits the limit before the agent produced anything, the turn is not lost: Kepler sends the same prompt again after the reset. If the limit cuts off a turn after the agent started replying, and nothing is queued, the session waits for you. To have Kepler continue on its own, turn on **Settings → Agents → Usage limits → Resume after the usage limit resets**, which queues a "continue" message that is sent shortly after the limit resets. This setting is off by default. You can send the queued message early or remove it, like any other queued message.
+Kepler holds queued prompts this way for every agent whose plan usage it reads. If a turn hits the limit before the agent produced anything, the turn is not lost: Kepler sends the same prompt again after the reset.
 
-When a session's account reaches its limit, a banner shows **{login} reached its usage limit**, with when it is available again. To keep working now, click **Continue as {login}**, which moves the conversation to the account with the most usage left. The button's menu lists your other accounts. See [Moving a session to another account](#moving-a-session-to-another-account). If no other account can take the conversation, add another account.
+When a usage limit cuts off a turn, a limit bar docks on the composer. In a Terminal session with the composer hidden, the bar sits on the status bar. It names the limit the account reached, such as **{account} reached its weekly limit**, and when it resets. Then it offers what can keep the work going:
 
-A Claude Code account can read 100% while the agent still answers, for example on extra usage. Until a turn is refused, the banner only warns that **{login} is at or near its usage limit**.
+- **Continue on {account}**: moves this conversation to another of the agent's accounts, which picks up where it stopped. Kepler suggests the first account in your order with usage left; see [Several accounts for one agent](#several-accounts-for-one-agent).
+- **New session as {account}** or **Continue in {agent}**: starts a new session, on an account that keeps its own history or on another agent, that reads this conversation first.
+- **Wait**: sends a continue message when the account resets.
+- **Manage accounts…**, in the bar's account menu, and **Dismiss**.
 
-Kepler handles usage limits this way for the agents it can read usage for: Claude Code, Codex, and Auggie.
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/usage-limit-bar-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/usage-limit-bar-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="A session whose turn was cut off, with the limit bar docked on the composer reading OpenCode reached its usage limit. The bar offers Continue in Claude Code and Dismiss.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The limit bar, offering to continue in another agent.</figcaption>
+</figure>
+
+To choose what Kepler does on its own when a limit is reached, open **Settings → Agents → Usage and recovery → When a usage limit is reached**. The choice applies to every agent, in Chat and in the terminal.
+
+| Choice | What happens |
+|---|---|
+| **Manual** | The limit bar offers to wait for the reset or switch accounts |
+| **Wait for the reset** (the default) | The session continues on its own when the limit resets |
+| **Switch accounts** | The session continues on an account with usage left, or after the reset if none has any |
+
+While a session waits for the reset, the bar reads **Waiting for {account}**, with **Cancel**. When Kepler moves the conversation for you, the bar reads **Switched to {account} automatically**.
+
+A Claude Code account can read 100% while the agent still answers, for example on extra usage. Until a turn is refused, the bar only warns, such as **{account} is at its weekly limit**.
 
 ---
