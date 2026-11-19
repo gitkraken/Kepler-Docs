@@ -123,7 +123,7 @@ While a repository is trusted, agent sessions in it also skip the agent's own tr
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/repositories-trust-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/repositories-trust-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="Your repos and folders in Settings › Repositories, with Add repo and Add folder…: Trusted folders (Everything inside, now and later) lists /home/alex/code/oss with a remove button, beside Trust a folder…. The view switch reads All 5, Trusted 3 and Untrusted 2, with Untrusted selected: the group /home/alex/code/acme, ticked, with 2 and Trust acme, holds acme-api and acme-mobile, both ticked, each with No commands and a warning shield. A bar at the bottom reads 2 selected with Trust 2 and Clear.">
+    <img src="/wp-content/uploads/repositories-trust-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="Your repos and folders, with one folder under Trusted folders and the Untrusted 2 view selected. Two repos grouped under /home/alex/code/acme, beside Trust acme, are ticked, and the bar at the bottom reads 2 selected with Trust 2.">
   </a>
   <figcaption style="text-align:center; color:#888">Untrusted repos grouped by folder, ready to trust together.</figcaption>
 </figure>
@@ -216,7 +216,7 @@ A row counts as one or more of the following:
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/ade-worktree-cleanup-01-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ade-worktree-cleanup-01-v4@2x.png" class="help-center-img img-bordered" alt="The Worktrees and branches page from its description down (See which worktrees and local branches of your repositories are stale…): 4 worktrees and 2 branches in 1 repo, 3 look safe to delete, with Stale after 14 days and Re-check; Search branch, path or repo, the Safe to delete (3), Needs update, Conflicts, Stale and All filters, and All / Worktrees only / Branches only. The bar reads 2 selected with Clear, Create task, Update and Delete. Under acme-web, kepler/old-banner and kepler/promo-page (worktrees tagged Spring sale banner) and kepler/summer-teaser (Not checked out) are each 3 behind main and merged into main; old-banner and summer-teaser are ticked.">
+    <img src="/wp-content/uploads/ade-worktree-cleanup-01-v4@2x.png" class="help-center-img img-bordered" alt="The Worktrees and branches page filtered to Safe to delete (3), listing three acme-web branches that are merged into main and 3 behind main. Two rows are ticked, and the bar reads 2 selected with Create task, Update, and Delete.">
   </a>
   <figcaption style="text-align:center; color:#888">The Worktrees and branches sub-page, filtered to what is safe to delete.</figcaption>
 </figure>

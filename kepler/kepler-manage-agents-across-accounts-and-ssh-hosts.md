@@ -21,7 +21,7 @@ taxonomy:
 
 Kepler by GitKraken manages your Claude Code and Codex sessions across several accounts and SSH hosts in 1 app. You add each account once in **Settings → Agents**, pick the account when you start a session, and add each remote server in **Settings → Remote environments**. Sessions on a server run there and keep running when you disconnect.
 
-**Requirements and limits**
+## Requirements and limits
 
 - Scope: Several signed-in accounts for 1 agent, choosing the account for each session, moving a conversation to another account, and running agent sessions on SSH hosts.
 - Agents with several accounts: Claude Code, Codex, GitHub Copilot, Auggie, and Grok Build.
@@ -60,9 +60,9 @@ With 2 or more accounts, the list is in priority order. To reorder it, drag a ro
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/agent-accounts-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-accounts-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Accounts section of the Claude Code card in Settings › Agents, with Add account and the caption Drag accounts into priority order. New sessions start on the first one with usage left. When a session hits its usage limit, Kepler suggests the first one with usage left. Two accounts are listed in order, each signed in as alex.lee@example.com with a drag handle, Check usage and a row menu: Claude Code CLI (Acme) with the No color mark, then Personal (Personal) with a blue color swatch, marked New sessions only.">
+    <img src="/wp-content/uploads/agent-accounts-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Accounts section of the Claude Code card in Settings › Agents, with Add account above its priority-order help text. Two accounts are listed in order, Claude Code CLI and Personal, each with a drag handle and Check usage, and Personal reads New sessions only.">
   </a>
-  <figcaption style="text-align:center; color:#888">2 Claude Code accounts in Settings → Agents.</figcaption>
+  <figcaption style="text-align:center; color:#888">Two Claude Code accounts in Settings → Agents.</figcaption>
 </figure>
 
 See [Several accounts for one agent](/kepler/agent-sessions#several-accounts-for-one-agent) for every account control.
@@ -75,7 +75,7 @@ When an agent has 2 or more accounts, the **Agent** list shows 1 row per account
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/account-multiple-selector-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/account-multiple-selector-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Agent list open in the New task composer, with Search options… at the top. Under a Claude Code heading sit two account rows: CLI, with the login alex.lee@example.com and an Acme badge, checked, and Personal. Below come Codex CLI (Not signed in), GitHub Copilot CLI (Not signed in), OpenCode, Pi and Auggie CLI (Not signed in), with more agents further down the list, then Add another account and Install another agent.">
+    <img src="/wp-content/uploads/account-multiple-selector-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Agent list open, with two rows under Claude Code: CLI, checked, with alex.lee@example.com and an Acme badge, and Personal. Other agents follow, then Add another account and Install another agent.">
   </a>
   <figcaption style="text-align:center; color:#888">The Agent list, with 1 row per account.</figcaption>
 </figure>
@@ -146,7 +146,7 @@ Each Kepler window shows 1 machine's tasks and sessions on its Dashboard, includ
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/remote-popover-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-popover-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The popover open under the dev-server chip, whose icon carries a green dot. The header shows dev-server over SSH as alex@dev.acme.example, Connected at 5 ms, the server and app version 0.15.0, and a gear, with Disconnect and the restart and stop server buttons. Below are Switch to with Local (Work on this machine) and its window icon, and Manage remote environments… with its Ctrl+Shift+R shortcut.">
+    <img src="/wp-content/uploads/remote-popover-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The dev-server chip's popover, showing the host Connected over SSH as alex@dev.acme.example, with Disconnect. Below, Switch to lists Local with its window icon, above Manage remote environments… and its Ctrl+Shift+R shortcut.">
   </a>
   <figcaption style="text-align:center; color:#888">Switch machines, or open one in a new window, from the title-bar chip.</figcaption>
 </figure>

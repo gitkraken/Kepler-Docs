@@ -1,6 +1,6 @@
 ---
 title: Task Settings
-description: Choose how new Kepler tasks start, including the default agent, where tasks make changes, where a new task opens on the Dashboard, the branch prefix, folder locations, and automatic task names, where tasks open, how a task's page looks, and your task groups.
+description: Choose how new Kepler tasks start (the default agent, where tasks make changes, where a new task opens on the Dashboard, the branch prefix, folder locations, and automatic task names), where tasks open, how a task's page looks, and your task groups.
 product: Kepler
 feature: Settings
 content_type: reference
@@ -172,7 +172,7 @@ Archived groups are listed under **Archived**, where their menu has **Restore gr
   <a href="/wp-content/uploads/task-groups-settings-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/task-groups-settings-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Groups section of Settings › Tasks with New group: Checkout (blue, 2 tasks), Search (yellow, 1 task) and Payments (green, 1 task), each with a drag grip and a menu, then Archived with Holiday sale (pink, 1 task) and its menu.">
   </a>
-  <figcaption style="text-align:center; color:#888">3 groups and 1 archived group, in Settings → Tasks.</figcaption>
+  <figcaption style="text-align:center; color:#888">Settings → Tasks, with 3 groups and 1 archived group.</figcaption>
 </figure>
 
 ***

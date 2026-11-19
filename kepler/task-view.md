@@ -92,11 +92,11 @@ At phone width, for example in a phone browser connected through [Remote Access]
 - **Back**, on the left.
 - The task's name as a chip, which opens the task switcher. Swipe sideways on the name to go back to the previous task.
 - **Tasks that need you**, while a task needs you. Tap it for the list of those tasks and **Go to next task that needs you**.
-- A segment for each of **Sessions**, **Changes**, **Terminal**, and **Resources**.
+- A segment for each of **Sessions**, **Changes**, and **Terminal**, plus **Resources** when the bar has room. When it has no room, the task's resources are in **Everything in this task**, the sheet you pull down from the bar.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/phone-task-view-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/phone-task-view-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The task page in a phone-width browser. One bar holds Back, the Fix the cart total chip, the Tasks that need you button with an orange mark, and the segments as icons: Sessions (1, picked), Changes (2) and Terminal. Below it the folded details row reads In Review, then the branch icon with an amber dot, the pull request icon with a red dot, the issue icon, a paperclip with 2, Refresh and the fold chevron, above the agent's session (its plan completed, its replies and tool uses) and the composer.">
+    <img src="/wp-content/uploads/phone-task-view-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The task page in a phone-width browser: one bar holds Back, the Fix the cart total chip, an inbox button with an orange mark for tasks that need you, and the Sessions, Changes, and Terminal segments as icons. Below it, the folded details row reads In Review, above the agent's session and the composer.">
   </a>
   <figcaption style="text-align:center; color:#888">The task page on a phone, with its single bar and details row.</figcaption>
 </figure>
@@ -109,7 +109,7 @@ Pull down on the bar, or long-press a segment, to open **Everything in this task
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/phone-context-sheet-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/phone-context-sheet-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Everything in this task sheet pulled up over the task page in a phone-width browser. Sessions (1) lists the agent's session, ticked as the one on screen, then New session; Changes (2) lists kepler/fix-cart-total and kepler/cart-rounding in acme-web; Terminals (0) offers New terminal; Resources (4) heads each kind with its count: Pull requests (1) with Apply discounts before tax in the cart total, Issues (1) with Cart total ignores discounts when tax is a…, and Notes (2) with note.md and Coding conventions. Each row has an actions menu, and the sheet ends with Add resource.">
+    <img src="/wp-content/uploads/phone-context-sheet-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Everything in this task sheet pulled up over the task page in a phone-width browser, listing the task's sessions, changes, terminals, and resources, each row with an actions menu. Its rows include New session, New terminal, and, at the end, Add resource.">
   </a>
   <figcaption style="text-align:center; color:#888">Everything in this task, which takes the place of the context panel on a phone.</figcaption>
 </figure>
@@ -137,7 +137,7 @@ The task's worktrees are listed under **Changes**. Each row shows the checkout's
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/task-planned-worktree-row-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-planned-worktree-row-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The task page's context panel. Under Sessions is a New session draft; under Changes, a planned row for acme-web on kepler/receipt-discount reads Created when a session starts, with a remove button. Its tip reads acme-web, Branch: kepler/receipt-discount, A new worktree for this repository, created when the first session starts. Below are Notes with the Prompt, and Related tasks with Fix the cart total (Follows up on).">
+    <img src="/wp-content/uploads/task-planned-worktree-row-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The context panel with a planned row under Changes, acme-web on kepler/receipt-discount, reading Created when a session starts, beside a New session draft under Sessions. Its tip reads A new worktree for this repository, created when the first session starts.">
   </a>
   <figcaption style="text-align:center; color:#888">A planned worktree, made when the task's first session starts.</figcaption>
 </figure>
@@ -148,7 +148,7 @@ The task's worktrees are listed under **Changes**. Each row shows the checkout's
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/task-rail-merged-related-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-rail-merged-related-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The context panel with the Merged group unfolded: kepler/cart-rounding, merged into origin/main, under Merged (1) with Delete all…, above the Pull requests row Apply discounts before tax in… (#51) and the Issues row Cart total ignores discounts… (#38). At the bottom, Related tasks lists Add tests for discount codes as a Sub-task and Show the discount on the receipt as a Follow-up; pointing at the follow-up shows its tip, Follow-up · Exploration, with the reason: once the total is right, the receipt should show the discount. Beside the panel, the session's chat shows the agent's replies and the Type a message… box.">
+    <img src="/wp-content/uploads/task-rail-merged-related-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The context panel with the Merged group unfolded, listing kepler/cart-rounding as merged into origin/main, and Delete all… on the group header. At the bottom, Related tasks lists a Sub-task and a Follow-up, and pointing at the follow-up shows its tip, Follow-up · Exploration, with the reason for the link.">
   </a>
   <figcaption style="text-align:center; color:#888">The Merged and Related tasks groups, with a related task's tip.</figcaption>
 </figure>
@@ -519,7 +519,7 @@ The file viewer shows each kind of file in its own way:
 - **Code and text**, with syntax highlighting, scrolled to the line you opened it at, with that line marked. **Wrap lines** turns soft wrapping on and off.
 - **Markdown**, rendered, with a **Preview** / **Source** toggle. A Markdown file opened at a line, such as from a path an agent wrote, opens in **Source** so you see the line.
 - **Images and SVG**, fitted to the pane, with **Fit** and **100%**.
-- Anything else gets a **No preview for this file** card with the options available in this window: **Open in default app**, **Show in Finder** (macOS), **Show in Explorer** (Windows) or **Show in file manager** (Linux), and **Copy path**.
+- Anything else gets a **No preview for this file** card with the options available in this window: **Open in default app**, **Show in Finder** (macOS), **Show in Explorer** (Windows), or **Show in file manager** (Linux), and **Copy path**.
 
 **An open file stays in sync with the file on disk.** When the file changes, the viewer updates in place and says **Updated just now**, naming the session that changed it when Kepler knows. **Show changes** shows what changed since the file was first shown; **Back to file** returns. A deleted file keeps showing the last version Kepler read, and says so.
 
@@ -559,7 +559,7 @@ A file that is not one of the task's files or folders opens in an overlay rather
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/file-overlay-tree-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/file-overlay-tree-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="checkout-style-guide.md open in the file overlay, with the breadcrumb /, srv, acme, brand above it and the file tree of the brand folder beside it: the fonts and launch-2.4 folders, the logos folder opened on acme-mark-dark.svg and acme-mark.svg, then checkout-style-guide.md (selected), colors.json, README.txt and voice-and-tone.md. The viewer shows the guide rendered as Markdown, with the Preview and Source toggle and Wrap lines. The header holds Hide file tree, More file actions, Maximize and Close, and the tree pane a Filter files button.">
+    <img src="/wp-content/uploads/file-overlay-tree-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The file checkout-style-guide.md open in the file overlay, rendered as Markdown, under the breadcrumb /, srv, acme, brand. Beside it, the file tree of the brand folder has the logos folder open and checkout-style-guide.md selected.">
   </a>
   <figcaption style="text-align:center; color:#888">A file in the file overlay, with its folder's tree beside it.</figcaption>
 </figure>
@@ -656,7 +656,7 @@ Each kind of resource opens in its own pane:
 | **Worktree**, missing | Its branch, base branch, and recorded path, with a way to recreate it. See [When a worktree goes missing](/kepler/tasks-and-resources#when-a-worktree-goes-missing) |
 | **Folder** | The folder's name and its **Path** |
 | **File** | The file itself, in the [file viewer](#opening-a-file), with its description, where it came from, and its size on the viewer's toolbar. An uploaded copy says it's a copy in the task folder, and has **Rename** in **File actions** |
-| **Pull request** / **Issue** | Status, who it involves, the item's description and its labels. An issue adds its comments |
+| **Pull request** / **Issue** | Status, who it involves, the item's description, and its labels. An issue adds its comments |
 | **Link** | Every plain link (one that is not a pull request or issue) shares one **Links** pane, scrolled to the link you picked |
 | **Note** | The note itself, with **Copy**, **Save as…**, **What changed**, and **Edit**. The **Prompt** note edits the task's prompt |
 
@@ -679,7 +679,7 @@ An issue from GitHub, GitHub Enterprise, GitLab, GitLab Self-Hosted, Jira, or Ji
 
 **Links.** The **Links** pane lists every plain link on the task with its title and URL, an **Open in browser** button, and **Link actions**, scrolled to the link you clicked.
 
-**Notes.** A note's pane has **Edit**, **Copy**, **Save as…** and **What changed**, and you can rename the note in place. To rename, edit, or restore a note, see [Notes are how you give standing instructions](/kepler/tasks-and-resources#notes-are-how-you-give-standing-instructions).
+**Notes.** A note's pane has **Edit**, **Copy**, **Save as…**, and **What changed**, and you can rename the note in place. To rename, edit, or restore a note, see [Notes are how you give standing instructions](/kepler/tasks-and-resources#notes-are-how-you-give-standing-instructions).
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/note-rename-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">

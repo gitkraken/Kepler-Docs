@@ -43,7 +43,7 @@ When you open a worktree from the context panel's **Changes** group, it opens in
 | Control | What it does |
 |---|---|
 | The **branch** | Shows the branch this checkout is on. **⋮** at the end of the header row, or a right-click on the branch, opens the worktree's menu, the same menu the worktree has in the context panel and on the Dashboard. On a task with several worktrees, the branch name also switches between them |
-| The **sync control** | One button whose label follows the branch's state (**Publish**, **Push**, **Pull**, **Fetch**, **Update** or **Sync**), with the counts beside it. See [Publishing and syncing the branch](#publishing-and-syncing-the-branch) |
+| The **sync control** | One button whose label follows the branch's state (**Publish**, **Push**, **Pull**, **Fetch**, **Update**, or **Sync**), with the counts beside it. See [Publishing and syncing the branch](#publishing-and-syncing-the-branch) |
 | **Open in** | Opens the checkout in another app. The split button runs your default; the chevron lists the others, ending with **Open on {provider}** when the branch is on a supported host |
 | **Run a command** | Lists the repository's configured commands, and **Manage commands…**. See [Settings](/kepler/settings-repositories#per-repository-commands) |
 
@@ -51,10 +51,10 @@ The worktree's menu has these items:
 
 - **Open changes**, **Open in**, and **Open pull request** when one is linked.
 - **Continue {operation}** and **Abort {operation}…**, during a stopped rebase or merge.
-- A **Branch** submenu: **Rename branch**, the upstream (see [Set or change the upstream](#set-or-change-the-upstream)), **Change merge target…**, **Rebase onto {target}** or **Merge {target} into this branch**, and **Push**, **Pull** and **Fetch**.
-- **New session here**, **New terminal here** and **Run command here**.
-- **Copy branch name**, **Copy worktree path** and **Copy remote URL**.
-- **Refresh**, **Detach worktree…** and **Delete worktree…**.
+- A **Branch** submenu: **Rename branch**, the upstream (see [Set or change the upstream](#set-or-change-the-upstream)), **Change merge target…**, **Rebase onto {target}** or **Merge {target} into this branch**, and **Push**, **Pull**, and **Fetch**.
+- **New session here**, **New terminal here**, and **Run command here**.
+- **Copy branch name**, **Copy worktree path**, and **Copy remote URL**.
+- **Refresh**, **Detach worktree…**, and **Delete worktree…**.
 
 In a narrow column, **Open in** and **Run a command** leave the header. You can still reach both from a right-click or from the tab's own menu.
 
@@ -98,12 +98,12 @@ With a Jira or Jira Server account connected, Jira issue keys in a commit's mess
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/changes-commit-row-tip-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/changes-commit-row-tip-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="A worktree's column on its Changes view: the branch list, in its own card, reads All changes, then three commits and origin/main branched here. The two newest commits have green dots because they are not pushed, and Apply the discount before tax, which is pushed, has a grey one. Hovering Clamp the discount at the subtotal opens its hover card, which shows Alex Lee, committed 4h ago, the subject, a body with a two-item list and a Refs: #38 trailer, then the short hash, its line changes, 1 file and a Not pushed chip. Below the card sit the file list's toolbar and cart.js and cart.test.js.">
+    <img src="/wp-content/uploads/changes-commit-row-tip-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="A worktree's Changes view listing All changes, three commits, and origin/main branched here, with green dots on the two newest commits, which are not pushed. The hover card for Clamp the discount at the subtotal shows Alex Lee, the commit message, its short hash, and a Not pushed chip.">
   </a>
   <figcaption style="text-align:center; color:#888">Unpushed commits, and the card for one of them.</figcaption>
 </figure>
 
-A wholly untracked folder with hundreds of files, such as a build output nobody ignored or a test sandbox, shows as one dimmed row with its file count instead of one row per file. Click **Show** on the row to list the files. Staging, discarding and committing act on the folder as a whole.
+A wholly untracked folder with hundreds of files, such as a build output nobody ignored or a test sandbox, shows as one dimmed row with its file count instead of one row per file. Click **Show** on the row to list the files. Staging, discarding, and committing act on the folder as a whole.
 
 ***
 
@@ -115,7 +115,7 @@ In the desktop app, you can review on a second screen: click **Open in new windo
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/changes-overlay-maximize-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/changes-overlay-maximize-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total open over the task page at its default width, with the task page showing dimmed around it, and the Maximize button in the overlay's header ringed and hovered, its tooltip reading Maximize. The header also reads from main and Up to date. The overlay's side list has the view switch's icon buttons (Changes 2, Files, Comments) over a card holding Working chang… with its Commit… button and main branched here, then the file toolbar and the two changed files, beside cart.js's diff.">
+    <img src="/wp-content/uploads/changes-overlay-maximize-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total open over the dimmed task page, with the Maximize button in its header ringed and its tooltip showing. The side list shows the two changed files beside the diff of cart.js.">
   </a>
   <figcaption style="text-align:center; color:#888">The Changes overlay at its default width, with Maximize in its header.</figcaption>
 </figure>
@@ -135,7 +135,7 @@ With the tree hidden, the overlay's header also adds a Comments menu, with the c
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/changes-comments-menu-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/changes-comments-menu-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total with its changes panel hidden. The viewer bar holds the view picker reading Working changes, beside the file switcher for cart.js. The header's Comments menu, its speech-bubble button showing 3, is open over the diff: under cart.js it lists the three comments with their line numbers (2, 3 and 4), then Open in panel. Behind it, line 2's Not sent yet card shows with Add to queue and Send now.">
+    <img src="/wp-content/uploads/changes-comments-menu-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Comments button in the Changes overlay's header, showing 3, open on a menu that lists the three comments on cart.js by line number, then Open in panel. Behind the menu, the comment on line 2 reads Not sent yet, with Add to queue and Send now.">
   </a>
   <figcaption style="text-align:center; color:#888">The Comments menu, with the changes panel hidden.</figcaption>
 </figure>
@@ -196,7 +196,7 @@ If you select several rows, the menu items act on all of them.
 
 **Cmd/Ctrl+F** in the viewer opens a find bar at the viewer's top right. The find bar searches every file in the stack, including your edits, and counts the matches as **{current} of {total}**, or **No results**.
 
-**Only in changes** limits the search to the changed lines. Turn it off to search the whole files, including the unchanged lines folded away. It starts on for a stack of files and off for a single file.
+**Only in changes** searches only the changes: the changed lines and the context lines shown around them. Turn it off to search whole files, including the unchanged lines folded away. It starts on for a stack of files and off for a single file.
 
 Use these keys in the find bar:
 
@@ -213,7 +213,7 @@ Use these keys in the find bar:
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/code-find-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/code-find-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total showing cart.js and cart.test.js stacked, 2 files shown. The find bar at the top right holds discount, with Match case on beside Match whole word and Use regular expression, and reads 5 of 6 with Previous match and Next match, then the Only in changes toggle, ringed and on, and Close find. Every match is highlighted in both files, the current one on line 4 of cart.js. The overlay header reads from main and Up to date, and the stack bar ends with the Diff layout and Wrap lines buttons.">
+    <img src="/wp-content/uploads/code-find-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The find bar in the Changes overlay searching for discount across cart.js and cart.test.js, at 5 of 6 with the Only in changes toggle ringed and on. Every match is highlighted in both files, the current one on line 4 of cart.js.">
   </a>
   <figcaption style="text-align:center; color:#888">Finding across a stack of two files.</figcaption>
 </figure>
@@ -224,7 +224,7 @@ You can select and copy across a whole file, including lines that are not on scr
 
 In **Working changes** and **All changes**, the viewer shows the file on disk. To edit it, click into the diff, or into the whole file in **File** view, and type. **Cmd/Ctrl+S** saves.
 
-An unsaved edit shows **Unsaved** with **Save** and **Discard** beside it. Kepler never discards an edit without asking: **Escape**, closing the overlay or the window, or moving to another file, view or worktree asks **Save your edit?** first. Quitting Kepler warns you when windows have unsaved file edits, because quitting discards them. Switching between **File** and **Changes** carries the edit across instead. You cannot stage or commit a file with an unsaved edit until you save or discard it, because Git records what is on disk.
+An unsaved edit shows **Unsaved** with **Save** and **Discard** beside it. Kepler never discards an edit without asking: **Escape**, closing the overlay or the window, or moving to another file, view, or worktree asks **Save your edit?** first. Quitting Kepler warns you when windows have unsaved file edits, because quitting discards them. Switching between **File** and **Changes** carries the edit across instead. You cannot stage or commit a file with an unsaved edit until you save or discard it, because Git records what is on disk.
 
 **Editing a file from a commit.** A file shown from a commit you picked in the list is read-only, but you can switch it to the file on disk: click **Edit** in its header, choose **Edit working copy** from its row menu, or press **Cmd/Ctrl+E**.
 
@@ -300,7 +300,7 @@ Kepler saves comments with the task, so they stay after a reload and appear in e
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/review-comment-draft-oct-2026-v6@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/review-comment-draft-oct-2026-v6@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total with cart.js open in the Changes view. Lines 3 and 4 are selected and a review comment draft is open beneath them: Comment on lines 3 to 4 above the note Pull the discount and rounding into one helper, then the target: a TO stamp, the OpenCode logo and the session title Fix the cart total: discounts should apply before tax., with its chevron, then Cancel, Add comment and Send now. The overlay header reads from main and Up to date; the file header holds File and Changes, then Find, Diff layout, Wrap lines and More actions.">
+    <img src="/wp-content/uploads/review-comment-draft-oct-2026-v6@2x.png" class="help-center-img img-bordered" alt="A review comment draft under lines 3 and 4 of cart.js in the Changes overlay, with the note Pull the discount and rounding into one helper. Below the note, To names the session Fix the cart total: discounts should apply before tax., beside Cancel, Add comment, and Send now.">
   </a>
   <figcaption style="text-align:center; color:#888">A review comment draft, under the lines it's about.</figcaption>
 </figure>
@@ -334,7 +334,7 @@ On a task with no session yet, **Send now** reads **Start a session**, which ope
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/ade-review-comments-01-v6@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ade-review-comments-01-v6@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total with cart.js open in the Changes view and three review comments under the lines they are about. The comment on line 2 reads Not sent yet, with Add to queue and Send now; the comments on lines 3 and 4 show the OpenCode logo and Queued for Fix the cart total: discounts should apply before tax., with Remove from queue and Send now. Each card opens with You, just now and its note, and has Edit comment and Delete comment icons. Line 2 is picked in the gutter. The overlay header reads 3 comments and Send comments (2), with the Comment options menu open on Discard unsent comments, beside from main and Up to date.">
+    <img src="/wp-content/uploads/ade-review-comments-01-v6@2x.png" class="help-center-img img-bordered" alt="Three review comments under their lines of cart.js in the Changes overlay: line 2 reads Not sent yet, with Add to queue, and lines 3 and 4 read Queued for Fix the cart total: discounts should apply before tax., with Remove from queue. The overlay header reads 3 comments and Send comments (2), with the Comment options menu open on Discard unsent comments.">
   </a>
   <figcaption style="text-align:center; color:#888">Comments not sent and queued, with Send comments in the overlay header.</figcaption>
 </figure>
@@ -343,10 +343,10 @@ Each comment appears as a card under its lines. What the card offers depends on 
 
 | Status | The card offers |
 |---|---|
-| **Not sent yet** | **Edit comment**, **Delete comment**, **Add to queue** and **Send now** |
-| **Queued for {session}** | **Edit comment**, **Delete comment**, **Remove from queue** and **Send now** |
+| **Not sent yet** | **Edit comment**, **Delete comment**, **Add to queue**, and **Send now** |
+| **Queued for {session}** | **Edit comment**, **Delete comment**, **Remove from queue**, and **Send now** |
 | **Sending to {session}** | Nothing, until the prompt has gone out |
-| **Sent to {session} {time}** | **Reply to {agent}**, **Resolve** and **Delete comment** |
+| **Sent to {session} {time}** | **Reply to {agent}**, **Resolve**, and **Delete comment** |
 | **Resolved**, or **Resolved in {session}** when the agent resolved it | **Reopen** |
 
 After a comment goes out in a prompt, you cannot edit its text, because the agent has already read it. The overlay's header shows **{count} comments**, which opens the [Comments view](#the-comments-view), and a **Comment options** menu with **Discard unsent comments**. Discarding keeps the comments you have already sent.
@@ -359,7 +359,7 @@ The agent answers a comment you sent in a thread under it, and it can resolve th
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/review-comment-thread-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/review-comment-thread-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total with cart.js open and a sent review comment under line 3, its status the OpenCode logo and Sent to Fix the cart total: discounts should apply before tax. just now. The card reads as a conversation: You with the note Clamp the discounted subtotal at zero so a large discount cannot make the total negative, then the reply under the OpenCode logo and the session title, Agreed. I'll clamp it with Math.max(0, subtotal - discount) and add a test for a discount larger than the order. Below them sit the Reply to OpenCode box, Resolve and Reply. The overlay header reads from main, Up to date and 1 comment.">
+    <img src="/wp-content/uploads/review-comment-thread-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="A sent review comment under line 3 of cart.js, marked Sent to Fix the cart total: discounts should apply before tax. just now, with the note from You and the agent's reply below it. Under the thread sit the Reply to OpenCode box, Resolve, and Reply.">
   </a>
   <figcaption style="text-align:center; color:#888">A sent comment with the agent's reply.</figcaption>
 </figure>
@@ -378,16 +378,16 @@ The **Comments** view lists every review comment on the task. Open it from the v
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/review-comments-list-oct-2026-v6@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/review-comments-list-oct-2026-v6@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total on its Comments view (the speech-bubble segment, 3, picked beside the Changes and Files icons), its header reading from main, Up to date, 2 files, 3 comments and Send comment. The side list reads 3 comments with View options, then the comments grouped by status in a sunken list: Not sent (cart.js:2), Queued (cart.js:4) and Sent (cart.js:3), each row with its place, just now, its note and its status. Beside it, cart.js shows the three cards: line 2 Not sent yet with Add to queue and Send now, line 3 Sent to Fix the cart total: discounts should apply before tax. with the Reply to OpenCode box, Resolve and Reply, and line 4 Queued for the same session with Remove from queue and Send now.">
+    <img src="/wp-content/uploads/review-comments-list-oct-2026-v6@2x.png" class="help-center-img img-bordered" alt="The Changes overlay on its Comments view, with the side list holding the three comments on cart.js under Not sent, Queued, and Sent. Beside it, cart.js shows each comment as a card under its line.">
   </a>
   <figcaption style="text-align:center; color:#888">The Comments view, grouped by status.</figcaption>
 </figure>
 
-Each row shows the comment's place, when it was written, the note and its status. Click a row to show its code and go to its card. A row's own buttons and its right-click menu offer **Send now**, **Resolve**, **Reopen**, **Mark as read** and **Delete comment**, as its status allows.
+Each row shows the comment's place, when it was written, the note, and its status. Click a row to show its code and go to its card. A row's own buttons and its right-click menu offer **Send now**, **Resolve**, **Reopen**, **Mark as read**, and **Delete comment**, as its status allows.
 
 **View options** sets how the list reads:
 
-- **Group by**: **File**, **Status** or **None**.
+- **Group by**: **File**, **Status**, or **None**.
 - **Sort by**: **Line order** or **Latest activity**.
 - **Show resolved**: lists resolved comments too.
 
@@ -409,7 +409,7 @@ While you edit a note, comment on its lines as you would in a file. The draft wo
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/note-comment-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/note-comment-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Coding conventions note open on the task page, with its Money heading pointed at and its Copy link to section and Comment on section buttons beside it. Under the Money section's two lines a comment draft is open: Comment on lines 1 to 4, the note Say whether tax is worked out before or after the rounding, the target To with the OpenCode logo and the session Fix the cart total: discounts should apply before tax., then Cancel, Add comment and Send now. The Tests heading starts below the draft.">
+    <img src="/wp-content/uploads/note-comment-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Coding conventions note with the Comment on section button beside its Money heading, and a comment draft open under the section: Comment on lines 1 to 4, the note Say whether tax is worked out before or after the rounding, then Cancel, Add comment, and Send now.">
   </a>
   <figcaption style="text-align:center; color:#888">A comment draft on a note's section.</figcaption>
 </figure>
@@ -426,7 +426,7 @@ The changes panel and the overlay share one commit box per worktree, so a messag
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/staging-commit-box-oct-2026-v6@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/staging-commit-box-oct-2026-v6@2x.png" class="help-center-img img-bordered" alt="The worktree column for kepler/fix-cart-total in commit mode, on Changes 2 beside Files and Comments. The commit mode band reads Commit to kepler/fix-cart-total, with Cancel. cart.js is ticked and cart.test.js is not, so the header box is partly checked and its badge reads 1 of 2 staged; the file list's toolbar also holds the Discard button. Below the files sits the commit box, with Commit message, Amend last commit and Commit.">
+    <img src="/wp-content/uploads/staging-commit-box-oct-2026-v6@2x.png" class="help-center-img img-bordered" alt="The worktree column for kepler/fix-cart-total in commit mode, under Commit to kepler/fix-cart-total with Cancel, where cart.js is ticked, cart.test.js is not, and the badge reads 1 of 2 staged. Below the files sits the commit box, with Commit message, Amend last commit, and Commit.">
   </a>
   <figcaption style="text-align:center; color:#888">Staging files in commit mode, above the commit box.</figcaption>
 </figure>
@@ -469,7 +469,7 @@ If a commit fails after you left commit mode, Kepler takes you back to it to sho
 
 ### Resolving merge conflicts
 
-When a merge, rebase, cherry-pick or revert stops on conflicts, the conflicted files show a **!**.
+When a merge, rebase, cherry-pick, or revert stops on conflicts, the conflicted files show a **!**.
 
 | To resolve a file | Do this |
 |---|---|
@@ -478,7 +478,7 @@ When a merge, rebase, cherry-pick or revert stops on conflicts, the conflicted f
 
 When no file is conflicted, finish the operation:
 
-- A stopped merge, cherry-pick or revert finishes with a commit: click **Commit…** on **Working changes**, then **Commit**.
+- A stopped merge, cherry-pick, or revert finishes with a commit: click **Commit…** on **Working changes**, then **Commit**.
 - A rebase continues from the worktree's menu with **Continue rebase**, which is unavailable until every conflict is resolved.
 
 **Abort {operation}…** returns the branch to the state it was in before the operation started.
@@ -518,7 +518,7 @@ The counts change only when Kepler fetches, so the control shows when it last ch
 
 The chevron beside the button opens a menu. Its first item is the button's current action, followed by these items:
 
-- **Push** (or **Publish**), **Pull** and **Fetch**, each with where it goes.
+- **Push** (or **Publish**), **Pull**, and **Fetch**, each with where it goes.
 - **Set upstream** or **Change upstream**. See [Set or change the upstream](#set-or-change-the-upstream).
 - **Force push**, when the branch has diverged from its upstream, so a force push is always a separate click.
 - **Update**, which opens the Sync view. It reads **Review conflicts** when updating would conflict, and **Sync** after an applied sync.
@@ -536,7 +536,7 @@ After you apply a rebase in the Sync view, the main button reads **Sync** until 
 
 ### Set or change the upstream
 
-The upstream is the remote branch that **Push** and **Pull** use. To set it, change it or remove it, open **Set upstream** or **Change upstream** from the sync control's menu or from the worktree's **Branch** submenu. **Change upstream** shows the branch it tracks now.
+The upstream is the remote branch that **Push** and **Pull** use. To set it, change it, or remove it, open **Set upstream** or **Change upstream** from the sync control's menu or from the worktree's **Branch** submenu. **Change upstream** shows the branch it tracks now.
 
 The picker lists every remote branch, and any of them can be the upstream, whatever its name. The branch you track now is marked **Current**. Above the list, **Unset upstream** removes the upstream, and **Publish as {remote}/{branch}…** publishes the branch when no remote has one of the same name.
 
@@ -555,7 +555,7 @@ The Sync view rebases or merges the branch onto its merge target. It works on a 
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/update-view-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/update-view-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The sync view titled Sync kepler/fix-cart-total, from origin/main with Rebase selected in the Rebase and Merge control and Push after update ticked beside it, at Ready to apply: The rebase onto origin/main is ready. Apply updates your branch. Sync sits beside Apply & push, which has no menu.">
+    <img src="/wp-content/uploads/update-view-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Sync view for kepler/fix-cart-total, from origin/main with Rebase selected and Push after update ticked, at Ready to apply. Sync sits beside Apply & push.">
   </a>
   <figcaption style="text-align:center; color:#888">The Sync view with Push after update ticked, ready to apply and push.</figcaption>
 </figure>
@@ -580,7 +580,7 @@ A result waiting to be applied does not lock the branch. If the branch or its ba
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/update-view-stale-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/update-view-stale-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The sync view for kepler/fix-cart-total, from main with Merge now selected in the Rebase and Merge control, reading The last update result is out of date: The branch, base, or selected method no longer matches this result. Sync before applying a result. Sync is the only action beside the title, next to the close button.">
+    <img src="/wp-content/uploads/update-view-stale-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Sync view for kepler/fix-cart-total, from main with Merge selected, reading The last update result is out of date. Sync is the only button beside the title.">
   </a>
   <figcaption style="text-align:center; color:#888">A sync result that's out of date. Sync prepares a new one.</figcaption>
 </figure>
@@ -625,10 +625,10 @@ If the AI cannot finish some files, such as a binary file, the run stops without
 
 The review explains what the AI changed so you can decide whether to apply it. It contains the following parts:
 
-- **A verdict badge**: **No issues found**, **Needs review** or **Blocked**.
+- **A verdict badge**: **No issues found**, **Needs review**, or **Blocked**.
 - **A summary**: a short explanation of the run, with any files worth checking and why, and the overall confidence.
 - **A card for each commit**: the commit's short SHA and subject, or **Merge** for a merge run, and its file count.
-- **A row for each file**: the method used, a confidence badge and the AI's reasoning. A low confidence shows as a warning, and a file the AI did not finish is marked **Incomplete**.
+- **A row for each file**: the method used, a confidence badge, and the AI's reasoning. A low confidence shows as a warning, and a file the AI did not finish is marked **Incomplete**.
 
 Each file row shows one of the following methods. **Ours** and **Theirs** are Git's names for the two sides of the conflict. In a merge, **Ours** is your branch and **Theirs** is the base. In a rebase they swap: **Ours** is the branch you are rebasing onto, and **Theirs** is your branch.
 
@@ -659,7 +659,7 @@ To see more of the file around a conflict, use **Show {count} more lines above**
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/sync-ai-file-review-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/sync-ai-file-review-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The AI review of cart.js after a rebase onto main: commit 97c56d7 Apply the discount before tax, the AI method, a 75% badge and the AI's reasoning, with Conflict layout set to Conflict | Result beside Branches + ancestor. Below, Conflict 1 of 1 at Line 3 is marked Merged at 75% with the AI's reason, Main extracted roundCents; the branch reordered the discount. Combined both. The Conflict pane shows git's markers for main, the common ancestor and kepler/fix-cart-total, and the Result pane the merged code.">
+    <img src="/wp-content/uploads/sync-ai-file-review-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The AI review of cart.js for commit 97c56d7 Apply the discount before tax, at 75% with Conflict layout set to Conflict | Result. Conflict 1 of 1 at Line 3 is marked Merged, with the conflict and its Git markers beside the merged result.">
   </a>
   <figcaption style="text-align:center; color:#888">One file's AI review, conflict by conflict.</figcaption>
 </figure>
@@ -668,7 +668,7 @@ To see more of the file around a conflict, use **Show {count} more lines above**
 
 ## Merge targets
 
-A branch's **merge target** is the branch it will merge into: what its commits, counts and **Update** are measured against. Kepler detects one, and you can change it.
+A branch's **merge target** is the branch it will merge into: what its commits, counts, and **Update** are measured against. Kepler detects one, and you can change it.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/change-merge-target-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -708,12 +708,12 @@ Before you update a branch, check what landed on its merge target since you bran
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/changes-incoming-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/changes-incoming-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Changes overlay reviewing what is new on main for kepler/fix-cart-total. The header reads from where you branched, 2 new on main (pressed, with a close button) and Rebase onto main. On the left, the Overlaps 1 | All 2 switch; All new commits (2 commits) leads the list, then Use the 8.25% sales tax rate (8b89205, 1 file overlaps) and Mention gift cards in the README (2260509), over the changed files cart.js, marked as an overlap, and README.md. The viewer shows cart.js read-only, its tax rate changed from 0.08 to 0.0825.">
+    <img src="/wp-content/uploads/changes-incoming-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Changes overlay showing what is new on main for kepler/fix-cart-total, with 2 new on main pressed in the header beside Rebase onto main. The list holds the two new commits over cart.js, marked as an overlap, and README.md, and the viewer shows cart.js read-only.">
   </a>
   <figcaption style="text-align:center; color:#888">Reviewing what landed on the merge target, with the file you also changed marked.</figcaption>
 </figure>
 
-While you review, the list shows each pull request or commit that landed, with how many of its files overlap or conflict with yours. **Files to show** narrows the files to **Conflicts**, **Overlaps** or **All**, and **Rebase onto {target}** sits in the header.
+While you review, the list shows each pull request or commit that landed, with how many of its files overlap or conflict with yours. **Files to show** narrows the files to **Conflicts**, **Overlaps**, or **All**, and **Rebase onto {target}** sits in the header.
 
 The files show as they are on the merge target, so you cannot edit or comment on them here. To go back to your own changes, click the **X** on the chip or press **Escape**.
 
@@ -724,7 +724,7 @@ The files show as they are on the merge target, so you cannot edit or comment on
 The Dashboard's task preview shows each worktree as a two-row **worktree button**:
 
 - The top row: the branch and repository, its menu, the pull request, and the sync control.
-- The bottom row: chips for the uncommitted files, the commits and the merge target, with **Open in** and **Run** beside them. Each chip has a hover card that says what a click does, and a right-click menu of its own.
+- The bottom row: chips for the uncommitted files, the commits, and the merge target, with **Open in** and **Run** beside them. Each chip has a hover card that says what a click does, and a right-click menu of its own.
 - A task with several worktrees shows one worktree button at a time, with **Show all {count} worktrees** on its leading edge. The branch name switches between them, and its list sets apart worktrees that are **Merged** or **Gone from disk**. **Auto-switch to active worktree** lets it follow whichever worktree is busiest.
 
 Click the uncommitted or commits chip to open that worktree's changes panel, showing those changes, in a side pane of the task panel, without going to the task page first. Its files open the same Changes overlay. Click the chip again to close the pane, or press **Cmd/Ctrl+Shift+G** to show or hide it. See [The Kepler Interface](/kepler/kepler-interface).

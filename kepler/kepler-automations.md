@@ -55,7 +55,7 @@ You can start an automation in 3 ways:
 
 - **Describe it.** Type what should run, such as *Every Monday at 9, check my repos for outdated dependencies*, and click **Ask Kepler**. [Ask Kepler](/kepler/ask-kepler) sets the automation up in a new chat and creates it paused. To start it, click **Turn on** on the card the chat shows.
 - **Pick a template.** **Routines** run on a schedule, such as **Write my standup notes**. **Review** and **Plan & build** watch your pull requests and issues, such as **Review pull requests awaiting my review**. The template fills in the form, and you adjust it before you save.
-- **Start blank.** Choose **GitHub**, **Jira** or **Schedule** from the **Start blank** menu.
+- **Start blank.** Choose **GitHub**, **Jira**, or **Schedule** from the **Start blank** menu.
 
 GitHub and Jira automations need that account connected. A source you have not connected is marked **Not connected**. See [Integrations settings](/kepler/settings-integrations).
 
@@ -67,14 +67,14 @@ The form has 3 cards: **When** sets what the automation watches, **Do** sets wha
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/automations-editor-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/automations-editor-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The New automation form filled from the Review pull requests awaiting my review template, in three cards. When: GitHub selected among Schedule, GitHub and Jira, Watch reading Choose repositories or organizations, Type Pull requests, Involving me set to Awaiting my review, and folded Filters (Open, Excludes drafts and bots), Options (On each new activity, Skips my own activity) and Show query rows. Do: Action selected over Custom prompt, the Review Action, and Agent reading Your default agent, OpenCode. Where: Runs in Each pull request's own repository with its explanation, and folded Options (Any of my installs, No group). Cancel and Save below.">
+    <img src="/wp-content/uploads/automations-editor-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The New automation form for the Review pull requests awaiting my review template. When watches GitHub pull requests Awaiting my review, Do runs the Review Action on your default agent, and Where runs in each pull request's own repository.">
   </a>
-  <figcaption style="text-align:center; color:#888">A new automation from the Review pull requests awaiting my review template, in its When, Do and Where cards.</figcaption>
+  <figcaption style="text-align:center; color:#888">A new automation from the Review pull requests awaiting my review template, in its When, Do, and Where cards.</figcaption>
 </figure>
 
 ### What it watches
 
-In the **When** card, choose **Schedule**, **GitHub** or **Jira**.
+In the **When** card, choose **Schedule**, **GitHub**, or **Jira**.
 
 - **GitHub**: under **Watch**, pick the repositories or organizations, choose **Pull requests** or **Issues**, and pick how they involve you, for example **Awaiting my review**. That choice also matches review requests sent to a team you are on. To run only on requests made to you, choose **Awaiting my review (requested from me, not a team)**. Open **Filters** to narrow the items further. To see the search the filters make, click **Show query**.
 - **Jira**: pick the projects from one Jira site, your role, and the statuses.
@@ -108,7 +108,7 @@ The Automations page lists your automations, each with its runs. **Needs you**, 
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/automations-view-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/automations-view-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Automations page, opened from the Automations tab at the right end of the Dashboard's tab row. Its header reads Automations with an Experimental badge and a Give feedback button. On the left, the Automations list with All and Unread, Needs you holding the failed run on acme/acme-web#58, then Review pull requests awaiting my review (3) and Triage new bugs (2), each with its finished runs, and the paused Check dependencies every Monday with a play button, above New automation. On the right, the selected finished run acme/acme-web#61: Done, its Automation, the Item PR acme/acme-web#61, its Queued, Claimed, Started and Finished times, and the Open item and Edit automation buttons.">
+    <img src="/wp-content/uploads/automations-view-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Automations page, opened from the Automations tab at the right end of the Dashboard's tab row, listing each automation with its runs. On the right, the selected run acme/acme-web#61 reads Done, with its times and the Open item and Edit automation buttons.">
   </a>
   <figcaption style="text-align:center; color:#888">The Automations page, with a finished run selected and a failed run in Needs you.</figcaption>
 </figure>

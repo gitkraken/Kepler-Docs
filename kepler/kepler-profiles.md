@@ -1,6 +1,6 @@
 ---
 title: Use Profiles in Kepler
-description: Keep work, personal and client work apart in Kepler with profiles, each with its own tasks, repositories, settings, and sign-ins, and switch between them.
+description: Keep work, personal, and client work apart in Kepler with profiles, each with its own tasks, repositories, settings, and sign-ins, and switch between them.
 product: Kepler
 feature: Settings
 content_type: how-to
@@ -21,7 +21,7 @@ taxonomy:
 
 A profile in Kepler by GitKraken is a separate Kepler setup on the same computer. Each profile has its own tasks, repositories, folders, settings, and themes, and its own GitKraken sign-in and agent logins. Profiles run side by side, so you can keep work, personal, and client work apart and still have them all open at once.
 
-**Requirements and limits**
+## Requirements and limits
 
 - Profiles are in the Kepler desktop app only.
 - To add or open a profile, sign in to your GitKraken account.
@@ -35,7 +35,7 @@ To see and manage your profiles, open **Settings → Profiles**, right under **A
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/profiles-settings-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/profiles-settings-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="Settings › Profiles: Keep work, personal and client work apart. Each profile has its own tasks and settings, can use the same GitKraken account or another one, and most agents keep a separate sign-in in each. Under Add profile, the list holds Default (gray D badge), marked This profile, and Client work (purple C badge) with a drag handle, each with a row menu.">
+    <img src="/wp-content/uploads/profiles-settings-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Profiles settings page, with Add profile above two profiles: Default, marked This profile, and Client work, each with a row menu.">
   </a>
   <figcaption style="text-align:center; color:#888">Settings → Profiles, with a second profile added.</figcaption>
 </figure>

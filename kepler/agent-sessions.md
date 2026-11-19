@@ -164,7 +164,7 @@ Claude Code, Codex, GitHub Copilot, Auggie, and Grok Build can each have more th
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/agent-accounts-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-accounts-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Accounts section of the Claude Code card in Settings › Agents, with Add account and the caption Drag accounts into priority order. New sessions start on the first one with usage left. When a session hits its usage limit, Kepler suggests the first one with usage left. Two accounts are listed in order, each signed in as alex.lee@example.com with a drag handle, Check usage and a row menu: Claude Code CLI (Acme) with the No color mark, then Personal (Personal) with a blue color swatch, marked New sessions only.">
+    <img src="/wp-content/uploads/agent-accounts-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Accounts section of the Claude Code card in Settings › Agents, with Add account above its priority-order help text. Two accounts are listed in order, Claude Code CLI and Personal, each with a drag handle and Check usage, and Personal reads New sessions only.">
   </a>
   <figcaption style="text-align:center; color:#888">The Accounts section, in Settings → Agents.</figcaption>
 </figure>
@@ -214,7 +214,7 @@ If 2 or more accounts are signed in, the **Agent** list shows one row per accoun
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/account-multiple-selector-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/account-multiple-selector-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Agent list open in the New task composer, with Search options at the top. Under a Claude Code heading sit two account rows: CLI, with the login alex.lee@example.com and an Acme badge, checked, and Personal. Below come Codex CLI (Not signed in), GitHub Copilot CLI (Not signed in), OpenCode, Pi and Auggie CLI (Not signed in), with more agents further down the list, then Add another account and Install another agent.">
+    <img src="/wp-content/uploads/account-multiple-selector-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Agent list open, with two rows under Claude Code: CLI, checked, with alex.lee@example.com and an Acme badge, and Personal. Other agents follow, then Add another account and Install another agent.">
   </a>
   <figcaption style="text-align:center; color:#888">The Agent list, with one row per account.</figcaption>
 </figure>
@@ -295,7 +295,7 @@ To move an existing session to the other mode, choose **Continue in Terminal** o
 
 If the session is busy, with a turn running or work still going in the background, Kepler asks first: **Stop this session and continue in Terminal?** (or **in Chat?**). Moving to Terminal also warns you if the session has queued messages, because Kepler discards them. **Stop and switch** stops the session and resumes the conversation in the other mode.
 
-2 limits apply. You must take over a session started outside Kepler before you can move it, and only a session on a task can move to Terminal.
+Two limits apply. You must take over a session started outside Kepler before you can move it, and only a session on a task can move to Terminal.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/continue-in-terminal-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -524,7 +524,7 @@ If an upload fails, or the message is too large for the agent, Kepler does not s
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/unread-replies-chip-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/unread-replies-chip-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="A session composer with its 1 new reply chip open: the Replies popover, with Mark all read, lists cart.js:3 over the start of the agent's reply, Agreed. I'll clamp it with Math.max(0, subtotal -. The popover covers the message box; Docs Model, Build and Send sit to its right.">
+    <img src="/wp-content/uploads/unread-replies-chip-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="A session composer with its 1 new reply chip open on the Replies popover, which has Mark all read and lists an unread reply on cart.js:3.">
   </a>
   <figcaption style="text-align:center; color:#888">An unread reply to a review comment, listed from the composer.</figcaption>
 </figure>
@@ -930,7 +930,7 @@ When a session has unread reports, the band above its composer says how many, su
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/agent-reports-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-reports-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The task page for Fix the cart total. Under Sessions, the Discount codes break the cart total session is selected, and the Review the discount fix session it started is listed below it as Unread. Its conversation shows the session_start Review the discount fix call, a 2 new items to read row, and above the composer OpenCode hasn't read 3 reports from other agents, with Have it read them.">
+    <img src="/wp-content/uploads/agent-reports-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The task page for Fix the cart total, with the Discount codes break the cart total session selected and the Review the discount fix session it started listed as Unread. Above the composer, a band reads OpenCode hasn't read 3 reports from other agents, with Have it read them.">
   </a>
   <figcaption style="text-align:center; color:#888">A session with unread reports from other agents.</figcaption>
 </figure>
@@ -1016,7 +1016,7 @@ When a usage limit cuts off a turn, a limit bar docks on the composer. In a Term
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/usage-limit-bar-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/usage-limit-bar-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="A session whose turn was cut off: the agent read checkout.js and said it would lowercase both sides, and the limit bar docked on the composer reads OpenCode reached its usage limit, with the agent's message (You have reached your usage limit for this plan. Upgrade or wait for the limit to reset.) and Claude Code can pick up in a new session that reads this conversation first. Its buttons are Continue in Claude Code and Dismiss, above the composer's Type a message... box.">
+    <img src="/wp-content/uploads/usage-limit-bar-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="A session whose turn was cut off, with the limit bar docked on the composer reading OpenCode reached its usage limit. The bar offers Continue in Claude Code and Dismiss.">
   </a>
   <figcaption style="text-align:center; color:#888">The limit bar, offering to continue in another agent.</figcaption>
 </figure>
@@ -1241,7 +1241,7 @@ By default, Kepler sends no notification for the task open in the window you are
 
 While you are working in any Kepler window on a computer, that computer posts no desktop notifications. The window you are in shows them in Kepler instead, and several windows on one computer post a single alert.
 
-To choose which events notify you, and whether each one appears as a **Desktop** notification, **In Kepler**, or both, open **Settings → Notifications**. The same page has **Play a sound with desktop notifications**. In the desktop app, every event except **Replies** notifies on the desktop until you change it. In a browser, desktop notifications start off. After your first session starts, the desktop app sends a one-time **Notifications are on** notification. Click it to open **Settings → Notifications**. See [Settings](/kepler/settings-app#notifications).
+To choose which events notify you, and whether each one appears as a **Desktop** notification, **In Kepler**, or both, open **Settings → Notifications**. The same page has **Play a sound with desktop notifications**. In the desktop app, every event except **Replies** and **Offers** notifies on the desktop until you change it. In a browser, desktop notifications start off. After your first session starts, the desktop app sends a one-time **Notifications are on** notification. Click it to open **Settings → Notifications**. See [Settings](/kepler/settings-app#notifications).
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/ade-settings-notifications-01-01-v4@2x.png" target="_blank" rel="noopener noreferrer">

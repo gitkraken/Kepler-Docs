@@ -55,7 +55,7 @@ Right-click the panel's header, or press the keyboard's context-menu key on it, 
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/ask-kepler-docked-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ask-kepler-docked-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Ask Kepler panel docked on the right of the window, with the Dashboard's Tasks view narrowed beside it rather than covered: Needs attention (Add product search, Approval needed for Run npm test), Unread (Fix the cart total, Update checkout copy and Upgrade the payment SDK, each with New reply) and a folded Not started. The panel's Dock panel button is pressed and its header's right-click menu is open: Dock panel, checked, and Move to the left. The panel shows Kep over Ask Kepler anything, the three starters and the Ask anything composer with the Default pill.">
+    <img src="/wp-content/uploads/ask-kepler-docked-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Ask Kepler panel docked on the right of the window, with the Dashboard's Tasks view narrowed beside it rather than covered. The panel's header menu is open, with Dock panel checked above Move to the left.">
   </a>
   <figcaption style="text-align:center; color:#888">Ask Kepler docked beside the Dashboard, with the header's menu open.</figcaption>
 </figure>

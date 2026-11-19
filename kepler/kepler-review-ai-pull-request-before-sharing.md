@@ -21,7 +21,7 @@ taxonomy:
 
 Kepler by GitKraken gives you a review step between an agent's work and your teammates. You read every changed line in the Changes overlay, send review comments back to the agent, have a second agent review the work, and only then open the pull request. The work stays in the task's worktree, so you can review what Claude Code, Codex, or any other agent wrote before you open the pull request.
 
-**Requirements and limits**
+## Requirements and limits
 
 - Scope: Reviewing an agent's uncommitted or committed work in a Kepler task before you open a pull request
 - Prerequisite: A task whose agent has made changes in its worktree. See [Create a task](/kepler/create-task).
@@ -70,7 +70,7 @@ The agent makes its changes in the task's worktree. To read them:
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/changes-overlay-maximize-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/changes-overlay-maximize-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total open over the task page at its default width, with the task page showing dimmed around it, and the Maximize button in the overlay's header ringed and hovered, its tooltip reading Maximize. The header also reads from main and Up to date. The overlay's side list has the view switch's icon buttons (Changes 2, Files, Comments) over a card holding Working chang… with its Commit… button and main branched here, then the file toolbar and the two changed files, beside cart.js's diff.">
+    <img src="/wp-content/uploads/changes-overlay-maximize-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The Changes overlay for kepler/fix-cart-total open over the dimmed task page, with the Maximize button in its header ringed and its tooltip showing. The side list shows the two changed files beside the diff of cart.js.">
   </a>
   <figcaption style="text-align:center; color:#888">The Changes overlay lists every changed file beside its diff.</figcaption>
 </figure>
@@ -90,7 +90,7 @@ When a line needs work, comment on it instead of fixing it yourself or retyping 
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/review-comment-draft-oct-2026-v6@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/review-comment-draft-oct-2026-v6@2x.png" class="help-center-img img-bordered" alt="A review comment draft under lines 3 and 4 of cart.js in the Changes overlay, with Cancel, Add comment and Send now.">
+    <img src="/wp-content/uploads/review-comment-draft-oct-2026-v6@2x.png" class="help-center-img img-bordered" alt="A review comment draft under lines 3 and 4 of cart.js in the Changes overlay, with the note Pull the discount and rounding into one helper. Below the note, To names the session Fix the cart total: discounts should apply before tax., beside Cancel, Add comment, and Send now.">
   </a>
   <figcaption style="text-align:center; color:#888">A review comment draft, under the lines it is about.</figcaption>
 </figure>

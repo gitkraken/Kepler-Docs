@@ -157,13 +157,13 @@ Kepler starts you with 3 views:
 | **Tasks** | The tasks you already have running in Kepler |
 | **Agent Graph** | A live graph of every task, session, turn, tool call, and file. See [The Agent Graph](/kepler/agent-graph) |
 
-Each view keeps its own layout, grouping, sort, filters, search and, on a Todo view, scope. Changes you make in the view's **View** menu save automatically, and switching to another view and back restores its open panels. See [Arranging Your Work](/kepler/arranging-your-work).
+Each view keeps its own layout, grouping, sort, filters, search, and, on a Todo view, scope. Changes you make in the view's **View** menu save automatically, and switching to another view and back restores its open panels. See [Arranging Your Work](/kepler/arranging-your-work).
 
 The **Automations** tab, after the views, opens your automations: agents that run on a schedule or when new GitHub or Jira activity matches a query. A count on the tab shows the runs that need you. See [Automations](/kepler/kepler-automations).
 
 To work with views:
 
-- **New view** adds a **Todo**, **Tasks** or **Agent Graph** view, or a copy of the one you're on. Name it, pick its **Icon** and layout, then choose **Done**.
+- **New view** adds a **Todo**, **Tasks**, or **Agent Graph** view, or a copy of the one you're on. Name it, pick its **Icon** and layout, then choose **Done**.
 - Click the view you're on, or right-click any view, for its menu, with **Rename** (**F2**), **Change icon**, **Duplicate view**, **Views position**, **Delete view**, and more.
 - Double-click a view to rename it. Drag a view to reorder the row.
 - You always keep at least 1 **Todo** and 1 **Tasks** view.
@@ -181,7 +181,7 @@ Under **Mine**, each provider lists:
 
 | Integration | Issues | Pull requests |
 |---|---|---|
-| **GitHub**, **GitHub Enterprise** | Yours, assigned to you or mentioning you | Yours, assigned to you or ones you review |
+| **GitHub**, **GitHub Enterprise** | Yours, assigned to you, or mentioning you | Yours, assigned to you, or ones you review |
 | **GitLab**, **GitLab Self-Hosted**, **Azure DevOps**, **Azure DevOps Server** | Yours or assigned to you | Yours or awaiting your review |
 | **Bitbucket Cloud** | None | Yours, or awaiting your review in your workspaces and repositories added to Kepler |
 | **Bitbucket Data Center** | None | Yours or awaiting your review |
@@ -220,7 +220,7 @@ Todo rows and task rows show different information. A Todo row describes an issu
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/todo-row-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/todo-row-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The PR 2 group with pull requests #51 and #49, each marked Changes requested, and the ISSUE 3 group with #42 (Mentioned badge), #38 and #45. Each row shows its reference, title, repository and Open status; #51 and #38 also carry a Task badge for the task already started from them, with that task's session dot. A pull request shows its author's avatar beside a reviewer whose ring is red for changes requested, issue #38 its assignee. Then the age and the outlined Action button: Address Feedback on the pull requests, Plan on the issues.">
+    <img src="/wp-content/uploads/todo-row-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="Todo rows in the PR group, #51 and #49, each marked Changes requested, and the ISSUE group, #42 with a Mentioned badge, #38, and #45, each with its repository, Open status, people, and age. Each row ends with its Action button, Address Feedback on the pull requests and Plan on the issues, and #51 and #38 also carry a Task badge.">
   </a>
   <figcaption style="text-align:center; color:#888">Todo rows for pull requests and issues.</figcaption>
 </figure>
@@ -275,7 +275,7 @@ The **Your role** grouping and filter sort items by your part in them:
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/task-row-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-row-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Unread group of the Tasks view with three task rows: Fix the cart total, Update checkout copy and Upgrade the payment SDK. Each row shows its title, the acme-web repository, its progress stage (In Development, On hold, In Review), New reply, its blue session dot, its age and the ⋮ menu. Fix the cart total is starred, so its filled Star button stays in view.">
+    <img src="/wp-content/uploads/task-row-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Three task rows in the Unread group, Fix the cart total, Update checkout copy, and Upgrade the payment SDK, each with acme-web, its progress stage, New reply, its session dot, its age, and the ⋮ menu. Fix the cart total is starred, so its filled Star button stays in view.">
   </a>
   <figcaption style="text-align:center; color:#888">Task rows, one of them starred.</figcaption>
 </figure>
@@ -297,12 +297,12 @@ Star a task to mark it important. In the **Inbox** grouping, a starred task list
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/task-row-needs-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-row-needs-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Two task rows in the Tasks view, grouped by progress. Under In Development, Add product search shows acme-web, In Development, Approval needed for Run npm test in orange and an orange session dot. Under In Review, Fix the cart total shows acme-web, a pull request chip #51 and an issue chip #38, In Review, Changes requested in red, its session dot and a square for one running terminal. Each row ends with its age and the ⋮ menu.">
+    <img src="/wp-content/uploads/task-row-needs-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Two task rows grouped by progress: Add product search, In Development, shows Approval needed for Run npm test in orange. Fix the cart total, In Review, shows its #51 pull request and #38 issue chips, Changes requested in red, and a square for its running terminal.">
   </a>
   <figcaption style="text-align:center; color:#888">Task rows that say what they need from you, with pull request, issue and terminal chips.</figcaption>
 </figure>
 
-The needs cell gives the most pressing reason first, such as **Approval needed for {tool}**, **Waiting for you**, **Turn failed**, **Agent stopped** or **CI failing**. **Turn failed** means an agent's turn ended in an error. **Agent stopped** means the agent itself stopped with an error. On a task on hold, it says what the hold waits for, or why the hold lifted.
+The needs cell gives the most pressing reason first, such as **Approval needed for {tool}**, **Waiting for you**, **Turn failed**, **Agent stopped**, or **CI failing**. **Turn failed** means an agent's turn ended in an error. **Agent stopped** means the agent itself stopped with an error. On a task on hold, it says what the hold waits for, or why the hold lifted.
 
 A failed turn, a stopped agent, failing CI, a new **Changes requested** review, or a hold that lifted on bad news moves the task into **Needs attention**. Once you open the task, it moves back to its usual place and keeps its reason on the row. A question, an approval request, or a terminal that waits on you keeps the task in **Needs attention** until you answer.
 
@@ -319,7 +319,7 @@ When a session or a terminal in a task waits on you, the task's title shows in b
 
 Hover a pull request or issue chip to see its card, or click the chip to keep the card open. When the task has more than one link of that kind, the card lists them all. Right-click the chip for the link's menu.
 
-On a **Board** card, hover the group chip to see a summary of the group's tasks. Click the chip for **Open group**, **Show only this group**, **Remove from group** and the grouping options. See [Arranging Your Work](/kepler/arranging-your-work).
+On a **Board** card, hover the group chip to see a summary of the group's tasks. Click the chip for **Open group**, **Show only this group**, **Remove from group**, and the grouping options. See [Arranging Your Work](/kepler/arranging-your-work).
 
 A Done task that's ready to archive also gets an **Archive task** button on its row.
 
@@ -400,7 +400,7 @@ Each task row also shows one dot for each distinct session state, with a count o
 </figure>
 <!-- TODO(screenshot): Replace — ade-session-dots-01: a v0.15 task row with two or more session states and a count above 1, one of them dormant so its dot is an outline, with the hover card open (its {count} agent sessions title and per-state tallies, for example 2 Waiting (ended), 1 Ready). The current figure stays until it's replaced. -->
 
-The dots show what the *agents* are doing, which is separate from where the work stands, such as **Running**, **Waiting**, **Unread** or **Error**.
+The dots show what the *agents* are doing, which is separate from where the work stands, such as **Running**, **Waiting**, **Unread**, or **Error**.
 
 A waiting session also says what it's waiting on, such as **Permission** or **Question**. A session with an unanswered Kepler approval request reads **Approval needed**, even while its agent keeps working. A session that stopped after a failed turn, such as a rate limit, reads **Error**.
 
@@ -464,7 +464,7 @@ A new task appears in the list as soon as you press **Start** in the **New task*
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/ade-task-preparing-panel-01-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ade-task-preparing-panel-01-v3@2x.png" class="help-center-img img-bordered" alt="The Tasks view with a new task, Add a gift-card field to checkout, in Recent with the Preparing pill and its spinner. Its side panel, also marked Preparing, shows Kep narrating the launch: Making your worktree. So your other work stays put., over the task's steps, Setting up worktrees… (in progress), Starting OpenCode with your prompt and Opening the chat.">
+    <img src="/wp-content/uploads/ade-task-preparing-panel-01-v3@2x.png" class="help-center-img img-bordered" alt="The Tasks view with a new task, Add a gift-card field to checkout, under Recent with a Preparing pill and a spinner. Its side panel shows Kep over Making your worktree and the task's steps, with Setting up worktrees… in progress.">
   </a>
   <figcaption style="text-align:center; color:#888">A new task while Kepler prepares it, with Kep narrating in its panel.</figcaption>
 </figure>
@@ -522,7 +522,7 @@ When the window is too narrow for the list beside the open panels, Kepler hides 
 
 By default, open panels sit side by side in 1 row, with **Auto columns**: as many columns as the window has room for. To see more panels at once, lay them out in a grid. Click **Panel layout** in the toolbar, whose button shows the current size, such as **Auto × 1** or **3 × 2**:
 
-- Pick a size in the **Grid size** matrix. 1 row puts panels side by side, and 2 or more rows make a grid.
+- Pick a size in the **Grid size** matrix. One row puts panels side by side, and 2 or more rows make a grid.
 - Turn off **Auto columns** to choose a fixed number of columns.
 - **Reset sizes** evens out rows and columns you've resized.
 
@@ -609,7 +609,7 @@ The side panel's header holds:
 </figure>
 
 - The item's badges and reference
-- On an issue or pull request, the people on it: a pull request's author, assignees and reviewers, each reviewer marked with the state of their review, or an issue's assignee
+- On an issue or pull request, the people on it: a pull request's author, assignees, and reviewers, each reviewer marked with the state of their review, or an issue's assignee
 - The title, with a dot when a session needs you: blue for an unread turn, orange for one waiting on you
 - The progress control, on a task
 - The terminal control, on a task
@@ -691,13 +691,6 @@ Comments work for GitHub, GitHub Enterprise, GitLab, GitLab Self-Hosted, Jira, a
 
 Below the header, each of the task's checkouts appears as a **worktree button** with 2 rows: what identifies the checkout on top, and what's in it below.
 
-<figure style="text-align:center">
-  <a href="/wp-content/uploads/task-preview-header-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-preview-header-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="A task's side panel header: the fold chevron, the task title Upgrade the payment SDK, Open task page, the In Review progress control, then at the right end the Terminal button, the ⋮ Task actions menu and Close.">
-  </a>
-  <figcaption style="text-align:center; color:#888">A task's worktree button, below the header.</figcaption>
-</figure>
-
 The button's rows hold:
 
 | Row | What it shows |
@@ -722,7 +715,7 @@ The worktree menu is the same wherever a worktree appears, on the worktree butto
 
 - **Open changes**, **Open in**, and the worktree's pull request
 - **Continue {operation}** and **Abort {operation}** during a stopped rebase or merge
-- A **Branch** submenu: **Rename branch**, **Rebase onto {target}** and **Merge {target} into this branch**, **Push**, **Pull** and **Fetch**, **Set upstream** or **Change upstream**, and **Change merge target…**
+- A **Branch** submenu: **Rename branch**, **Rebase onto {target}** and **Merge {target} into this branch**, **Push**, **Pull**, and **Fetch**, **Set upstream** or **Change upstream**, and **Change merge target…**
 - **New session here**, **New terminal here**, and **Run command here**
 - **Copy branch name**, **Copy worktree path**, and **Copy remote URL**
 - **Detach worktree…** and **Delete worktree…**, or **Recreate worktree** for a checkout that's gone
@@ -739,7 +732,7 @@ When a task has more than one checkout, the terminal strip's **+** opens a choos
 
 ## Go to a task or file
 
-To jump to a task, a pull request or issue, a file, or something said in a chat, or to run a command, open the palette from anywhere. It has 5 tabs: **All**, **Tasks**, **Todo**, **Files** and **Chats**. To open it:
+To jump to a task, a pull request or issue, a file, or something said in a chat, or to run a command, open the palette from anywhere. It has 5 tabs: **All**, **Tasks**, **Todo**, **Files**, and **Chats**. To open it:
 
 - **Cmd/Ctrl+Shift+P** or **F1** (**View › Command Palette…**) opens **Go to task or command**, on **All**.
 - **Cmd/Ctrl+P** (**File › Go to File…**) opens **Go to file**, on **Files**.
@@ -753,7 +746,7 @@ To switch tabs, click a tab or press **Shift+Tab**. In an empty field, you can a
   <figcaption style="text-align:center; color:#888">The palette as it opens, on All.</figcaption>
 </figure>
 
-**All** opens on the tasks that need you, followed by the commands. Type to search your tasks, todos and commands at once. Under **More ways to search**, rows turn what you typed into a search of your chats or files, a new task, or an [Ask Kepler](/kepler/ask-kepler) chat. Paste a pull request or issue link to open it or start a task from it.
+**All** opens on the tasks that need you, followed by the commands. Type to search your tasks, todos, and commands at once. Under **More ways to search**, rows turn what you typed into a search of your chats or files, a new task, or an [Ask Kepler](/kepler/ask-kepler) chat. Paste a pull request or issue link to open it or start a task from it.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/go-to-task-palette-nov-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
@@ -772,7 +765,7 @@ To switch tabs, click a tab or press **Shift+Tab**. In an empty field, you can a
 
 **Files** searches the files of the task you're in. Before you type, it lists the files **Changed in this task**, then **Recent in this task**. Type a name, or a full path to open it.
 
-**Chats** searches what was said in your agent chats across every task, archived sessions included. Results are grouped by chat, and your own messages are marked **You**. Pick a result to open its session at that message.
+**Chats** searches what was said in your agent chats across every task, archived sessions included. Results are grouped by chat, and your own messages show a person icon. Pick a result to open its session at that message.
 
 On **Files** and **Chats**, the scope chip at the end of the tabs names the task being searched, or reads **All tasks**. To search another task, click the chip or press **Alt+S** (**Cmd+Option+S** on macOS), then pick a task or type to find one. To search every task, pick **All tasks** or click the chip's **×**.
 
@@ -840,7 +833,7 @@ When a view has nothing to show, or Kepler cannot load it, you see one of these 
 
 ### Kep
 
-Kep, Kepler's planet mascot, appears on empty, loading and error screens. On a crash screen, **Show details** reveals **Error details**, with **Copy details** for a bug report.
+Kep, Kepler's planet mascot, appears on empty, loading, and error screens. On a crash screen, **Show details** reveals **Error details**, with **Copy details** for a bug report.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/kep-empty-chat-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">

@@ -1,6 +1,6 @@
 ---
 title: Arranging Your Work
-description: Add and arrange the Dashboard's views, choose a layout for each list, group, sort and filter it, put tasks in your own groups, set a task's progress or hold it until something happens, and archive tasks in bulk.
+description: Add and arrange the Dashboard's views, choose a layout for each list, group, sort, and filter it, put tasks in your own groups, set a task's progress or hold it until something happens, and archive tasks in bulk.
 product: Kepler
 feature: Kepler Interface
 content_type: how-to
@@ -32,7 +32,7 @@ What you choose in the **View** menu is saved to the view at once. To learn what
   <a href="/wp-content/uploads/arrange-work-oct-2026-v7@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/arrange-work-oct-2026-v7@2x.png" class="help-center-img img-bordered" alt="The Dashboard's arranging controls: the row of views (Todo and Tasks with Kepler's own Todo and Task icons, Tasks selected, Agent Graph, New view, and Automations at the right), and under it the list toggle, the View button showing the List glyph and Inbox, the search box reading Search, or filter like activity:waiting across the toolbar, then Panel layout (Auto × 1) and Refresh at the right. Tasks and Agent Graph carry the orange mark of a task waiting on you.">
   </a>
-  <figcaption style="text-align:center; color:#888">The views, and the search, View, panel and refresh controls under them.</figcaption>
+  <figcaption style="text-align:center; color:#888">The views, and the search, View, panel, and refresh controls under them.</figcaption>
 </figure>
 
 To open several tasks at once, use the open button on a section header, or **Open group** on one of [your groups](#your-groups).
@@ -99,7 +99,7 @@ Along the left side, the views start as icons. To show their names, click **Expa
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/dashboard-views-side-rail-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/dashboard-views-side-rail-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Dashboard with its views along the left side, expanded to show names: Todo and Tasks with Kepler's own Todo and Task icons, Tasks selected, then Agent Graph and New view at the top, Settings and the Collapse views button at the foot. Tasks and Agent Graph carry the orange mark of a task waiting on you. The top bar keeps New task, Ask, Feedback and the account but no Settings button, and the Tasks list fills the rest of the window under its toolbar.">
+    <img src="/wp-content/uploads/dashboard-views-side-rail-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Dashboard with its views along the left side, showing their names: Todo, Tasks (selected), Agent Graph, and New view at the top, with Settings and the Collapse views button at the foot. The Tasks list fills the rest of the window, and the top bar has no Settings button.">
   </a>
   <figcaption style="text-align:center; color:#888">The views along the left side of the window, with their names shown.</figcaption>
 </figure>
@@ -167,7 +167,7 @@ Each view remembers its own column width. When a column has more tasks to load, 
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/columns-progress-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/columns-progress-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Tasks view on the Board layout, grouped by Progress: the Exploration, In Development, In Review, On hold and Done columns side by side, each with its count, and Open in panels and Select on every column that has tasks. Each task is a card with its title, age, session and progress glyphs, its waiting state (New reply, or Approval needed for Run npm test), and, for a task with a worktree, its repository and branch; Done reads Nothing here. Above, the toolbar holds the View button showing the Board glyph and Progress, then the search box reading Search, or filter like activity:waiting.">
+    <img src="/wp-content/uploads/columns-progress-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Board layout grouped by Progress, with the Exploration, In Development, In Review, On hold, and Done columns side by side, each with its count. Task cards show their state, such as New reply or Approval needed for Run npm test, and the empty Done column reads Nothing here.">
   </a>
   <figcaption style="text-align:center; color:#888">The Board layout, grouped by Progress.</figcaption>
 </figure>
@@ -288,7 +288,7 @@ To add an archived task to a group, restore the task first.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/add-to-group-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/add-to-group-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Task actions menu of Fix the cart total with Add to group open: its submenu lists Checkout, with a blue swatch and checked, and Payments, with a green swatch, then New group… and Remove from group. The menu runs Open task page; Progress, In Development, Mark as read and Star; Rename task and Add to group; Manage resources and Refresh; Copy task link and Copy task prompt; then Shut down all agents, Archive task and Delete task. In the list behind, Fix the cart total and Update checkout copy carry a blue bar for Checkout and Upgrade the payment SDK a green bar for Payments.">
+    <img src="/wp-content/uploads/add-to-group-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The menu of Fix the cart total with Add to group open, its submenu listing Checkout (blue, checked) and Payments (green), then New group… and Remove from group. In the list behind, Fix the cart total and Update checkout copy carry a blue bar for Checkout, and Upgrade the payment SDK a green bar for Payments.">
   </a>
   <figcaption style="text-align:center; color:#888">Add to group, in a task's menu.</figcaption>
 </figure>
@@ -433,7 +433,7 @@ You can set the stage in these ways:
 - **The progress control.** Click the stage name on a task row, in the panel header, or in the task page header to open the **Progress** menu: **Automatic**, then each stage, **On hold**, and **Later**.
 - **The task menus.** A task's **⋮** and right-click menus have the same choices under a **Progress** submenu, plus **Reopen** while the task is Done.
 - **Drag a card.** In any grouping, on **List** or **Board**, drag a task's card or row. When grouped by **Progress**, drop it on another stage. On a touch screen, press and hold the card to pick it up. Press **Escape** to cancel the drag. If you drop the card in its own section, Kepler reorders it (see [Put tasks in your own order](#put-tasks-in-your-own-order)).
-- **The Mark as bar.** While you drag, a **Mark as** bar appears over the toolbar with chips for what the card can become: **Read** or **Unread**, the stages, **On hold** and **Later**, **Reopen** for a Done task, and **Archive task**. For an archived task, it shows only **Restore**. Drop the card on a chip.
+- **The Mark as bar.** While you drag, a **Mark as** bar appears over the toolbar with chips for what the card can become: **Read** or **Unread**, the stages, **On hold**, **Later**, **Reopen** for a Done task, and **Archive task**. For an archived task, it shows only **Restore**. Drop the card on a chip.
 - **From the keyboard.** When a card has focus on the **Board** grouped by **Progress**, press **Cmd/Ctrl+Shift+←** or **Cmd/Ctrl+Shift+→** to move it 1 column.
 
 <figure style="text-align:center">
@@ -505,7 +505,7 @@ The **Filters** section at the end of the **View** menu has a submenu for each f
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/filter-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/filter-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The View menu, open under the View button (List glyph and Inbox): the List, Board and Graph switch, Your groups, Group by Inbox and Sort by Updated, then Filters with Activity at Any, Progress set to In Development, and Starred, Group, Repository, Agent, Session and Linked work at Any, and Clear filters. Progress's flyout lists Exploration (1), In Development (ticked, 2), In Review (1), On hold (1), Later, Done and Archived (each 0); Archived's exclude button is hovered, and its tooltip reads Exclude Archived with Shift+Enter. Above, the search box reads progress:development with a 3 hidden pill at its end, and behind the menu the two In Development tasks show acme-web, Approval needed for Run npm test and New reply.">
+    <img src="/wp-content/uploads/filter-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The View menu's Filters section with Progress set to In Development and its flyout open, listing each stage with its count, In Development ticked, and Archived's exclude button hovered with the tooltip Exclude Archived, Shift Enter. Above, the search box reads progress:development with a 3 hidden pill.">
   </a>
   <figcaption style="text-align:center; color:#888">The Filters section, with a facet's flyout open.</figcaption>
 </figure>
@@ -598,7 +598,7 @@ A qualifier that can match nothing is underlined. Hover over it to see why, such
 
 ## What Kepler remembers
 
-Each view keeps its layout, grouping, sort, filters, search text, and, on Todo, its scope, in every window and across restarts. In each window, each view also remembers its open panels and their layout, its folded sections, and where you scrolled to. If you switch to another view and back, each panel is as you left it, such as its side pane, your place in the chat, an open find bar or a maximized terminal.
+Each view keeps its layout, grouping, sort, filters, search text, and, on Todo, its scope, in every window and across restarts. In each window, each view also remembers its open panels and their layout, its folded sections, and where you scrolled to. If you switch to another view and back, each panel is as you left it, such as its side pane, your place in the chat, an open find bar, or a maximized terminal.
 
 After a restart, each window reopens on the view it was showing, and every view gets its panels back.
 
@@ -637,7 +637,7 @@ With **Also delete the branch on the remote** ticked, Kepler also deletes each b
 
 **Restore task** replaces **Archive task** in an archived task's **⋮** menu, and also appears in the task page's header. It restores the task at once, without asking. A restored task stays in its group, and if that group was archived, Kepler restores the group too.
 
-To archive, restore or delete several tasks at once, click **Select** on a section header in a Tasks view. The header becomes a bar with a select-all box and the actions, and the section's rows show checkboxes. You can select in 1 section at a time, and while you select, clicking a row ticks it instead of opening its panel.
+To archive, restore, or delete several tasks at once, click **Select** on a section header in a Tasks view. The header becomes a bar with a select-all box and the actions, and the section's rows show checkboxes. You can select in 1 section at a time, and while you select, clicking a row ticks it instead of opening its panel.
 
 The bar has these buttons:
 
@@ -657,7 +657,7 @@ The bar has these buttons:
 
 The tasks you open with **Shift**-click or **Cmd/Ctrl**-click (see [Open a panel](/kepler/kepler-interface#open-a-panel)) are also a selection you can act on. While 2 or more tasks are selected, right-clicking or dragging any one of them acts on all of them. Right-clicking or dragging a task outside the selection acts on that task only. A row's **⋮** always acts on its own row.
 
-Right-clicking inside the selection opens a selection menu instead of the task menu, and each item counts the tasks it acts on. With it you can set the progress of every selected task, mark them read or unread, star or unstar them, group or ungroup them, shut down their agents, and archive, restore or delete them. **Shut down agents** asks first while an agent is still working. The group and **Progress** items skip archived tasks. **Archive**, **Restore**, and **Delete** open the same batch confirmation as a section's **Select** bar. For the full menu, see [Task rows](/kepler/kepler-interface#task-rows).
+Right-clicking inside the selection opens a selection menu instead of the task menu, and each item counts the tasks it acts on. With it you can set the progress of every selected task, mark them read or unread, star or unstar them, group or ungroup them, shut down their agents, and archive, restore, or delete them. **Shut down agents** asks first while an agent is still working. The group and **Progress** items skip archived tasks. **Archive**, **Restore**, and **Delete** open the same batch confirmation as a section's **Select** bar. For the full menu, see [Task rows](/kepler/kepler-interface#task-rows).
 
 Dragging a selected task drags the whole selection. Each drop target says how many of the tasks it accepts. After the drop, Kepler reports how many tasks moved and how many stayed where they were. Under the **Manual** sort, the tasks land together as one block.
 

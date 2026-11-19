@@ -21,7 +21,7 @@ taxonomy:
 
 Kepler by GitKraken keeps track of several Claude Code and Codex sessions in 1 Dashboard, including sessions you start in your own terminal once you turn on detection. Give each piece of work its own task, so each one gets its own worktree and branch. The Dashboard then shows which session needs you, and each task's **Changes** group shows what its agent changed.
 
-**Requirements and limits**
+## Requirements and limits
 
 - Scope: Following several agent sessions at once, seeing which one needs you, and seeing which one changed what.
 - Sessions you start in your own terminal: Kepler lists them only after you turn on **Show sessions started outside Kepler**, which is off by default.
@@ -47,7 +47,7 @@ Kepler can list the Claude Code and Codex sessions you run in your own terminal,
 1. Open **Settings → Integrations → Your terminal**.
 2. Turn on **Show sessions started outside Kepler**. It is off by default.
 
-The setting covers Claude Code, Codex, Cursor, GitHub Copilot, OpenCode, Auggie, Grok Build, and Pi.
+The setting covers Claude Code, Codex, Cursor, GitHub Copilot, OpenCode, Auggie, Grok Build, Pi, and Google Antigravity.
 
 To put a terminal session in a task:
 
@@ -90,6 +90,8 @@ To change where new tasks make their changes, open **Settings → Tasks** and fi
 
 ## How to see which session needs you
 
+Kepler shows what needs you on the Dashboard, in the top bar, on each session, in notifications, in the Agent Graph, and through Ask Kepler.
+
 ### The Dashboard and its Inbox
 
 The Dashboard's **Tasks** view groups tasks by what each one needs from you. This grouping, **Inbox**, is the default. The first 3 sections are:
@@ -111,7 +113,7 @@ Each task row adds a line that says what its session needs, such as **Approval n
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/dashboard-inbox-nov-2026@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/dashboard-inbox-nov-2026@2x.png" class="help-center-img img-bordered" alt="The Dashboard's Tasks view grouped by Inbox. Under Needs attention (1), Add product search in acme-web, In Development, reads Approval needed for Run npm test in orange. Under Unread (1), Fix the cart total, In Development, reads New reply in blue. Under Running (2), Fix gift card code matching and Upgrade the payment SDK, both Exploration, each show a green status dot.">
+    <img src="/wp-content/uploads/dashboard-inbox-nov-2026@2x.png" class="help-center-img img-bordered" alt="The Dashboard's Tasks view grouped by Inbox, with Add product search under Needs attention reading Approval needed for Run npm test, and Fix the cart total under Unread reading New reply. Two tasks under Running, Fix gift card code matching and Upgrade the payment SDK, each show a green status dot.">
   </a>
   <figcaption style="text-align:center; color:#888">Tasks grouped by what needs you: an approval, a new reply, and 2 running tasks.</figcaption>
 </figure>

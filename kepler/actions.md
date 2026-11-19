@@ -294,7 +294,7 @@ You cannot delete an Action that an automation runs. Delete the automation first
 
 ## Setting an Action's agent
 
-By default an Action runs on your **default agent**, configured in **Settings → Tasks → New tasks → Default agent**. To change it, open the **Preset** list in the editor's **Agent** field and pick one of the following:
+By default, an Action runs on your **default agent**, configured in **Settings → Tasks → New tasks → Default agent**. To change it, open the **Preset** list in the editor's **Agent** field and pick one of the following:
 
 | Choice | What the Action runs on |
 |---|---|
@@ -315,7 +315,7 @@ An [automation](/kepler/kepler-automations) runs its Action unattended, on issue
 
 **Custom agent settings** is an **all-or-nothing override**: it pins the provider, account, model, mode, and options together, rather than changing one of them and inheriting the rest.
 
-Three rules govern which agent actually runs:
+Three rules decide which agent runs:
 
 - A model belongs to its provider, so a pinned model never runs on a different agent.
 - If an Action names an agent you do not have installed, the override falls back **whole** to your default agent.

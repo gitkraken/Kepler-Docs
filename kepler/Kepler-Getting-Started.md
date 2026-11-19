@@ -56,7 +56,7 @@ Kepler opens on a welcome screen, **Launch any agent. Land every PR.** Click **S
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/sign-in-aug-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/sign-in-aug-2026-v3@2x.png" class="help-center-img img-bordered" alt="Kepler's sign-in screen over a night sky: on the left Kep says Hi, I'm Kep. Sign in, and your first task is moments away, above the Watch Quick Start Tour tile; on the right Kepler with its Public Preview badge, Launch any agent. Land every PR., the description, Sign in with GitKraken and New to GitKraken? You'll create an account in the next step. Version 0.15.0 sits top right.">
+    <img src="/wp-content/uploads/sign-in-aug-2026-v3@2x.png" class="help-center-img img-bordered" alt="Kepler's sign-in screen over a night sky, with Kep saying Hi, I'm Kep on the left above the Watch Quick Start Tour tile. On the right, under the Public Preview badge, is Sign in with GitKraken, with a note that new users create an account in the next step.">
   </a>
   <figcaption style="text-align:center; color:#888">The welcome screen on first launch.</figcaption>
 </figure>
@@ -89,7 +89,7 @@ If you installed an agent that Kepler did not find, click **Rescan**. To go on w
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/onboarding-no-agent-nov-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/onboarding-no-agent-nov-2026-v4@2x.png" class="help-center-img img-bordered" alt="The guided start's first step, Choose your coding agents, with no agent found, under the 01 Agents / 02 Repos / 03 Preferences steps: the list is headed Set up a coding agent to get started, with Rescan and the line Install one here, or Rescan if you installed one yourself., and the nine coding agents are dashed tiles, each ending in an arrow that you click to install or locate it. Kep says Hmm, no agents here yet. Installed one yourself? Press Rescan., and the step ends with Explore on my own and Continue without an agent.">
+    <img src="/wp-content/uploads/onboarding-no-agent-nov-2026-v4@2x.png" class="help-center-img img-bordered" alt="The guided start's first step, Choose your coding agents, with no agent found: the nine coding agents are dashed tiles, each with an arrow to install or locate it, under Set up a coding agent to get started and Rescan. Kep says no agents are here yet, and the step ends with Explore on my own and Continue without an agent.">
   </a>
   <figcaption style="text-align:center; color:#888">The first step of the guided start, with no agent found.</figcaption>
 </figure>
@@ -111,7 +111,7 @@ Then click the button that adds them, such as **Add 2 and continue**. Kepler add
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/onboarding-repos-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/onboarding-repos-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The guided start's second step, Bring in your repos, with 02 Repos current in the 01 Agents / 02 Repos / 03 Preferences step header: the Repos folder field reads /home/alex/code, and Repos and folders lists acme-web and acme-api checked and design-tokens unchecked, each with its path and when it was last used, under Filter, 2 selected, Select all, Unselect all and Add a folder. Below the list, Trust the repos you're adding is ticked and Also trust /home/alex/code, including repos added there later is not. Kep says it found 3 places and picked the 2 you use most; Back, Explore on my own and Add 2 and continue sit at the bottom.">
+    <img src="/wp-content/uploads/onboarding-repos-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The guided start's Repos step, with the Repos folder /home/alex/code and acme-web and acme-api checked while design-tokens is not. Below the list, Trust the repos you're adding is ticked and the folder-wide trust option is not, above Back, Explore on my own, and Add 2 and continue.">
   </a>
   <figcaption style="text-align:center; color:#888">The second step, with the 2 repos Kepler picked checked.</figcaption>
 </figure>
@@ -137,7 +137,7 @@ To try an alert, click **Send a test notification**. You can change these choice
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/onboarding-import-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/onboarding-import-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The guided start's last step, Bring your work over, with 01 Agents, 02 Repos and 03 Preferences checked off and 04 Import current: Workspaces come over as tasks once you finish setup. A row per app found, each with Review and its switch on: Conductor, 9 of 14 workspaces selected, active in the last 30 days (Checkout redesign, Gift card support, Cart total with discounts and 6 more), and Orca, 2 of 2 workspaces selected (First-run tour, Offline cart). Kep says it found Conductor and Orca on this machine; Back, Finish without importing and Import 11 and finish sit at the bottom.">
+    <img src="/wp-content/uploads/onboarding-import-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The guided start's Import step, Bring your work over, with a row for Conductor, 9 of 14 workspaces selected, and one for Orca, 2 of 2, each with Review and its switch on. Kep says it found both apps, and the footer has Back, Finish without importing, and Import 11 and finish.">
   </a>
   <figcaption style="text-align:center; color:#888">The Import step, with the workspaces Kepler found in 2 apps.</figcaption>
 </figure>
@@ -150,7 +150,7 @@ After the guided start, the **Setup** entry in the top bar tracks 2 setup items 
 
 | # | Item | What it does |
 |---|---|---|
-| 1 | **Connect an AI agent** | At least one coding agent. See [Agent Integrations](/kepler/agent-integrations) |
+| 1 | **Connect an AI agent** | At least 1 coding agent. See [Agent Integrations](/kepler/agent-integrations) |
 | 2 | **Connect issue & PR trackers** | Any provider, which fills your Todo list. See [Issue Tracker Integrations](/kepler/issue-tracker-integrations) and [Pull Request Integrations](/kepler/pull-request-integrations) |
 
 Expand **More setup options** for optional items:
@@ -176,7 +176,7 @@ After you connect a tracker, the **Todo** view of [the Kepler interface](/kepler
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/actions-drop-down.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/actions-drop-down.png" class="help-center-img img-bordered" alt="The Action dropdown open on a Todo row, listing Plan, Implement, Review, and Address Feedback">
+    <img src="/wp-content/uploads/actions-drop-down.png" class="help-center-img img-bordered" alt="The Action dropdown open on a Todo row, listing Plan, Implement, Review, and Address Feedback.">
   </a>
   <figcaption style="text-align:center; color:#888">The Action dropdown, opened from the chevron next to the button.</figcaption>
 </figure>

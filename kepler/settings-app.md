@@ -1,6 +1,6 @@
 ---
 title: App Settings
-description: Change how Kepler looks and behaves, including its language, the chat's send key, windows, default editor, notifications, themes, the Dashboard's views, chat, terminal and code settings, dictation and read aloud, and keyboard shortcuts.
+description: Change how Kepler looks and behaves, including its language, the chat's send key, windows, default editor, notifications, themes, the Dashboard's views, chat, terminal, and code settings, dictation and read aloud, and keyboard shortcuts.
 product: Kepler
 feature: Settings
 content_type: reference

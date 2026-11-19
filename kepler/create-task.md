@@ -134,7 +134,7 @@ The task appears in the list as soon as you press **Start**, with a **Preparing*
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/task-launch-kep-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-launch-kep-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The side panel of a task that is starting, Add a gift-card field to checkout, marked Preparing. Kep, the Kepler mascot, sits above the line Making your worktree. So your other work stays put. Below it, the launch steps list Setting up worktrees… (current), Starting OpenCode with your prompt and Opening the chat.">
+    <img src="/wp-content/uploads/task-launch-kep-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The side panel of a task that is starting, Add a gift-card field to checkout, marked Preparing, with Kep, the Kepler mascot, above the message Making your worktree. The launch steps below list Setting up worktrees… as the current step, then Starting OpenCode with your prompt and Opening the chat.">
   </a>
   <figcaption style="text-align:center; color:#888">Kep narrating a task's launch in its panel.</figcaption>
 </figure>
@@ -242,7 +242,7 @@ To import workspaces from Conductor, take the following steps:
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/import-workspaces-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/import-workspaces-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Import from Conductor dialog, Choose the workspaces to bring in as tasks: 9 of 14 selected with an info button, Select all (dimmed) and Select none, and a Filter workspaces box above the list. The workspaces are grouped by repository, each group with its own tick and count: acme-web (4 of 4), acme-api (3 of 3) and acme-mobile (2 of 2), every row ticked and showing its branch, a Claude Code 1 chat badge and how long ago it was active, from 22h to 25d. The 5 older workspaces are folded under Older, and Back to apps and Import 9 workspaces sit at the bottom.">
+    <img src="/wp-content/uploads/import-workspaces-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Import from Conductor dialog with 9 of 14 selected, Select none, and a Filter workspaces box above ticked workspaces grouped by repository, each row showing its branch and how long ago it was active. The 5 older workspaces are folded under Older, and Import 9 workspaces sits at the bottom.">
   </a>
   <figcaption style="text-align:center; color:#888">Step 3: choosing the Conductor workspaces to import.</figcaption>
 </figure>

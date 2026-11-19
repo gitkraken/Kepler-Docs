@@ -103,7 +103,7 @@ To move this window to another host, click the host's row under **Switch to**. T
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/remote-popover-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-popover-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The popover open under the dev-server chip, whose icon carries a green dot. The header shows dev-server over SSH as alex@dev.acme.example, Connected at 5 ms, the server and app version 0.15.0, and a gear, with Disconnect and the restart and stop server buttons. Below are Switch to with Local (Work on this machine) and its window icon, and Manage remote environments… with its Ctrl+Shift+R shortcut.">
+    <img src="/wp-content/uploads/remote-popover-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The dev-server chip's popover, showing the host Connected over SSH as alex@dev.acme.example, with Disconnect. Below, Switch to lists Local with its window icon, above Manage remote environments… and its Ctrl+Shift+R shortcut.">
   </a>
   <figcaption style="text-align:center; color:#888">The popover, connected to a host.</figcaption>
 </figure>
@@ -290,7 +290,7 @@ If the address you enter is a machine you already saved, the first step says so 
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/remote-auth-mode-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-auth-mode-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Add machine wizard's Choose authentication step asking how Kepler should authenticate to dev.acme.example. Under Authentication mode, Existing key (1 key found) is selected beside Use my SSH agent or SSH config (Keys from ssh-agent, 1Password, Secretive, a security key, or ~/.ssh/config), with Password (Re-prompt every connect) and Generate key (Keyless after first connect) below. The Identity file reads /home/alex/.ssh/id_ed25519, and Back, Cancel and Continue sit below the card.">
+    <img src="/wp-content/uploads/remote-auth-mode-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Choose authentication step of Add machine for dev.acme.example, with Existing key selected beside Use my SSH agent or SSH config, Password, and Generate key. The Identity file reads /home/alex/.ssh/id_ed25519, above Back, Cancel, and Continue.">
   </a>
   <figcaption style="text-align:center; color:#888">Choosing how Kepler signs in to the host.</figcaption>
 </figure>
@@ -584,7 +584,7 @@ To open Kepler like an app, add it to your phone's home screen from the browser'
 
 #### The Dashboard
 
-The Dashboard's bar holds **Menu**, a view picker, **Search**, **Options**, **Tasks that need you** (while a task waits on you), **Ask Kepler**, and **New task**. The view picker switches between your Dashboard views and has **New view**. **Search** expands in the bar. **Options** opens a sheet with **Refresh** and the view's settings, such as its grouping, sort and filters.
+The Dashboard's bar holds **Menu**, a view picker, **Search**, **Options**, **Tasks that need you** (while a task waits on you), **Ask Kepler**, and **New task**. The view picker switches between your Dashboard views and has **New view**. **Search** expands in the bar. **Options** opens a sheet with **Refresh** and the view's settings, such as its grouping, sort, and filters.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/phone-dashboard-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
@@ -597,14 +597,14 @@ Tapping an item opens it full screen, with a **Back to list** arrow at the left 
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/phone-dashboard-switch-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/phone-dashboard-switch-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A pull request open full screen in a phone-width browser, dimmed behind the Switch item sheet. The bar above shows Back and the title chip for #51 Apply discounts before tax in the cart total. The sheet repeats the title with Open and More actions and lists the Todo items in their groups: PR with #51 checked and #49, and Issue with #42, #38 and #45.">
+    <img src="/wp-content/uploads/phone-dashboard-switch-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="A pull request open in a phone's browser, dimmed behind a sheet of Todo items: two pull requests under PR, with #51 checked, and three issues under Issue.">
   </a>
   <figcaption style="text-align:center; color:#888">Switching to another Todo item without going back to the list.</figcaption>
 </figure>
 
 #### A task
 
-A task's bar has **Back**, the task's name, and one icon each for **Sessions**, **Changes**, **Terminal**, and **Resources**. While a task waits on you, the bar also shows **Tasks that need you**. Tap it to see those tasks, or to go to the next one.
+A task's bar has **Back**, the task's name, and one icon each for **Sessions**, **Changes**, and **Terminal**, plus **Resources** when the bar has room. While a task waits on you, the bar also shows **Tasks that need you**. Tap it to see those tasks, or to go to the next one.
 
 - **Tap an icon** to go to what is waiting there first, or else the last thing you had open. Its list offers each row, an action to add one (**New session**, **New terminal**, or **Add resource**), and **Show everything in this task**.
 - **Tap the task's name** to open **Switch task**, a sheet of every task in the Dashboard's order. Swipe sideways on the name to go back to the previous task.
