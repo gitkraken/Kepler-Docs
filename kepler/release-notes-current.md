@@ -45,9 +45,9 @@ New to Kepler? [Getting Started with Kepler](/kepler/kepler-getting-started) tak
 
 ### Highlights
 
-- **Find any task, command or past conversation from one palette.** The palette opens on an All view of what needs you and searches tasks, todos and commands together, so you rarely pick a tab first.
-- **Keep agents working through usage limits and outages.** When a usage limit stops a turn, a bar on the composer, in chat and in terminals, offers to continue on another account, wait for the reset or start a new session, and the work picks up where it was cut off.
-- **Keep work and personal apart with profiles.** Each profile runs side by side with its own repositories, tasks, folders, themes, GitKraken sign-in and agent logins.
+- **Find any task, command or past conversation from one palette.** One place to find a task, a todo, a command, a file, or the conversation where something was decided.
+- **Keep agents working through usage limits and outages.** Work you leave running keeps going: a usage limit or a provider outage no longer ends a turn until you come back.
+- **Keep work and personal apart with profiles.** Keep work and personal, or one client and another, fully apart without signing out or running a second install.
 
 ### Features
 
