@@ -37,7 +37,7 @@ Kepler has installers for these platforms:
 
 | Platform | Installer | Minimum OS |
 |---|---|---|
-| Windows | 64-bit, ARM64 | Windows 10+ |
+| Windows | 64-bit, ARM64 | Windows 10 and later |
 | macOS | Apple Silicon, Intel | macOS 12+ |
 | Linux (x64) | .deb, .rpm, .AppImage, Flatpak, AUR | Ubuntu LTS 18.04+ / Debian 10+ / RHEL 8+ / Fedora 39+ |
 | Linux (ARM) | .deb, .rpm, .AppImage | Ubuntu LTS 20.04+ / RHEL 8+ / Fedora 39+ |
@@ -235,7 +235,7 @@ Pick the next step that fits what you want to do:
 | Run an agent on a schedule, or on new GitHub or Jira activity | [Automations](/kepler/kepler-automations) |
 | See what every agent is doing at once | [The Agent Graph](/kepler/agent-graph) |
 | Reshape the list to fit how you work | [Arranging Your Work](/kepler/arranging-your-work) |
-| Review and ship what an agent wrote | [Review Changes](/kepler/review-changes) |
+| Review and ship what an agent wrote | [Review What a Coding Agent Changed](/kepler/review-changes) |
 | Run agents on another machine or in WSL | [Remote Environments](/kepler/remote-environments) |
 | Find a quick answer to a common question | [Quick Answers](/kepler/quick-answers) |
 

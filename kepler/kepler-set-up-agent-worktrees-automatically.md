@@ -19,15 +19,15 @@ taxonomy:
 ---
 <kbd>Last updated: November 2026</kbd>
 
-Kepler by GitKraken repeats your worktree setup every time it creates a worktree for an agent. You set it up once per repository: a `.worktreeinclude` file copies Git-ignored files such as `.env` into each new worktree, and repository commands set to **Run on worktree creation** install dependencies in the background, for Claude Code, Codex or any other agent.
+Kepler by GitKraken repeats your worktree setup every time it creates a worktree for an agent. You set it up once per repository: a `.worktreeinclude` file copies Git-ignored files such as `.env` into each new worktree, and repository commands set to **Run on worktree creation** install dependencies in the background, for Claude Code, Codex, or any other agent.
 
-**Requirements and limits**
+## Requirements and limits
 
 - Scope: Preparing every new worktree that Kepler creates for a task: ignored files, dependency installs, and per-worktree settings such as a port or a database name
 - Prerequisite: The repository is added to Kepler, in **Settings → Repositories**
 - Limits: Kepler copies only files that Git ignores in the new worktree, and never overwrites a file that is already there
 - Limits: Setup commands run one at a time, in list order. If one fails, Kepler skips the rest. Each command has a 10-minute timeout
-- Limits: A worktree separates files only. Ports, databases and caches stay shared unless your setup gives each worktree its own
+- Limits: A worktree separates files only. Ports, databases, and caches stay shared unless your setup gives each worktree its own
 
 ***
 
@@ -43,7 +43,7 @@ Kepler by GitKraken repeats your worktree setup every time it creates a worktree
 
 ## How to copy .env and other ignored files into each worktree
 
-A new worktree is a clean checkout. It has none of the Git-ignored files in your own checkout, such as `.env`, local config files or certificates.
+A new worktree is a clean checkout. It has none of the Git-ignored files in your own checkout, such as `.env`, local config files, or certificates.
 
 To copy them into every new worktree:
 
@@ -67,13 +67,13 @@ Kepler copies a file only when Git also ignores it in the new worktree, so an ag
 
 ## How to install dependencies in each new worktree
 
-A new worktree has no `node_modules`, virtual environment or build output. Save the setup steps once as repository commands:
+A new worktree has no `node_modules`, virtual environment, or build output. Save the setup steps once as repository commands:
 
 1. Open **Settings → Repositories** and open the repository's page.
 2. Under **Commands**, click **Add command**.
 3. Enter a name, such as *Install deps*, and the command, such as `pnpm install`.
 4. Tick **Run on worktree creation**.
-5. Click **Add command**, or press **Ctrl + Enter** (**⌘ Enter** on macOS). The command shows a **Runs on creation** chip.
+5. Click **Add command**, or press **Cmd/Ctrl+Enter**. The command shows a **Runs on creation** chip.
 
 Add one command for each step, and drag the rows into the order they need to run. Each time Kepler creates a worktree for the repository, it runs these commands one at a time, in list order, in the new worktree's folder.
 
@@ -92,9 +92,9 @@ The commands run in the background, so the agent can start while an install is s
 
 ***
 
-## Give each worktree its own port or database
+## How to give each worktree its own port or database
 
-Worktrees separate files, and nothing else. When agents in 2 worktrees start the same dev server on the same port, the second server fails to start. When they point at the same database, they read and write the same data.
+Worktrees separate files, and nothing else. When agents in 2 worktrees start the same dev server on the same port, the second server can fail to start. When they point at the same database, they read and write the same data.
 
 To keep them apart, add a setup command that writes per-worktree settings into a Git-ignored file in the new worktree, such as `.env.local`. Your app then reads its port and database name from that file.
 
@@ -139,7 +139,7 @@ A worktree gives each task its own copy of the repository's files. Tasks still s
 
 | Shared | What happens | What to do |
 |---|---|---|
-| **Ports** | 2 dev servers on the same port collide | Write a port per worktree in a setup command |
+| **Ports** | Two dev servers on the same port collide | Write a port per worktree in a setup command |
 | **Databases and other local services** | Agents read and write the same data | Write a database name per worktree, and create it in a setup command |
 | **Caches and files outside the repository** | A global package cache or a file in your home folder is the same for every worktree | Keep per-task files inside the repository, in Git-ignored paths |
 
@@ -148,6 +148,8 @@ See [What a worktree does not separate](/kepler/tasks-and-resources#what-a-workt
 ***
 
 ## Common questions
+
+Short answers about setting up agent worktrees automatically in Kepler.
 
 ### How do I copy my .env file into every new worktree?
 
@@ -165,7 +167,7 @@ No. Setup commands run in the background, and the agent can start before they fi
 
 Kepler shows **Worktree setup failed** with the command and its error, and skips the commands after it. The worktree stays. Fix the command, then run it again with **Run command here**. On Windows, that runs it in PowerShell.
 
-### Does this work for Claude Code, Codex and other agents?
+### Does this work for Claude Code, Codex, and other agents?
 
 Yes. The setup belongs to the repository, so it runs for every new worktree, whichever agent the task uses.
 

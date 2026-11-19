@@ -39,7 +39,7 @@ Prompts, steering, permissions, status, and the session lifecycle work the same 
   <figcaption style="text-align:center; color:#888">A session in the Sessions column: tabs, transcript, and composer.</figcaption>
 </figure>
 
-To read the changes an agent made, see [Review Changes](/kepler/review-changes).
+To read the changes an agent made, see [Review What a Coding Agent Changed](/kepler/review-changes).
 
 ***
 
@@ -511,7 +511,7 @@ If an upload fails, or the message is too large for the agent, Kepler does not s
   <figcaption style="text-align:center; color:#888">A pasted pull request link, turned into a chip.</figcaption>
 </figure>
 
-**Review comments wait in a chip until you send.** Comments you queue for a session while you review its changes collect in one chip on its composer, such as **2 comments**. Click the chip to list them by file and line. Click a comment to open its place in the file, or click its **X** to remove it from the queue. The chip's own **X** removes all of them. Your next message sends the queued comments first, ahead of what you typed. You can also send them with an empty prompt. See [Review Changes](/kepler/review-changes).
+**Review comments wait in a chip until you send.** Comments you queue for a session while you review its changes collect in one chip on its composer, such as **2 comments**. Click the chip to list them by file and line. Click a comment to open its place in the file, or click its **X** to remove it from the queue. The chip's own **X** removes all of them. Your next message sends the queued comments first, ahead of what you typed. You can also send them with an empty prompt. See [Review What a Coding Agent Changed](/kepler/review-changes).
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/queued-comments-chip-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -1268,6 +1268,6 @@ In-app notifications show a close button when you hover them, and **Clear all ({
 
 ## Reviewing what the agent changed
 
-To read the diff an agent produced and sync its branch, see [Review Changes](/kepler/review-changes).
+To read the diff an agent produced and sync its branch, see [Review What a Coding Agent Changed](/kepler/review-changes).
 
 ---

@@ -8,7 +8,7 @@ audience: developer
 plan_required: all
 os_support: [Windows, macOS, Linux]
 git_hosts: [github, github-enterprise, gitlab, gitlab-self-managed, bitbucket, azure-devops]
-integrations: [jira, linear, trello, asana, github, github-enterprise, gitlab, gitlab-self-hosted, azure-devops, claude-code, codex-cli]
+integrations: [jira, linear, trello, asana, github, github-enterprise, gitlab, gitlab-self-managed, azure-devops, claude-code, codex-cli]
 hosted_variant: both
 status: GA
 last_verified: 2026-11
@@ -19,13 +19,13 @@ taxonomy:
 ---
 <kbd>Last updated: November 2026</kbd>
 
-Kepler by GitKraken starts a coding agent from a Jira or GitHub issue, with the ticket already attached, and takes the work to a pull request. You connect your tracker once, then click the **Action** button on the issue's row in **Todo**. For a GitHub or GitLab issue, Kepler creates a task, sets up a worktree by default, and starts Claude Code, Codex, or your default agent with the issue's details in place, so you never paste the ticket into a chat. For a Jira issue, you add the repository in the issue's panel first, then start.
+Kepler by GitKraken starts a coding agent from a GitHub or GitLab issue in 1 click, or from a Jira issue once you add its repository, with the ticket already attached, and takes the work to a pull request. You connect your tracker once, then click the **Action** button on the issue's row in **Todo**. Kepler creates a task, sets up a worktree by default, and starts Claude Code, Codex, or your default agent with the issue's details in place, so you never paste the ticket into a chat.
 
-**Requirements and limits**
+## Requirements and limits
 
 - Scope: Going from an issue in a connected tracker to an agent's pull request, inside 1 Kepler task
 - Prerequisite: A GitKraken account signed in to Kepler, and a connected issue tracker. See [Issue Tracker Integrations](/kepler/issue-tracker-integrations).
-- Limits: Kepler reads issues from Jira, Jira Server / Data Center, Linear, Trello, Asana, GitHub, GitHub Enterprise, GitLab, GitLab Self-Hosted, Azure DevOps, and Azure DevOps Server.
+- Supported trackers: Jira, Jira Server / Data Center, Linear, Trello, Asana, GitHub, GitHub Enterprise, GitLab, GitLab Self-Hosted, Azure DevOps, and Azure DevOps Server.
 - Limits: Kepler has no button that creates a pull request. The agent opens it, or you open it yourself. Kepler then attaches it to the task.
 
 ***
@@ -92,9 +92,11 @@ From the issue's row, the agent is your default agent, or the agent the Action n
 
 ## How to take the work to a pull request
 
+When the agent finishes, you review and commit its work, open the pull request, and Kepler attaches the pull request to the task.
+
 ### Review and commit
 
-When the agent finishes, open the task's worktree and read its changes in the **Changes** overlay. Send fixes back as review comments, then click **Commit…** to stage and commit. See [Review an AI-Written Pull Request Before Your Teammates Do](/kepler/kepler-review-ai-pull-request-before-sharing) and [Review Changes](/kepler/review-changes).
+When the agent finishes, open the task's worktree and read its changes in the **Changes** overlay. Send fixes back as review comments, then click **Commit…** to stage and commit. See [Review an AI-Written Pull Request Before Your Teammates Do](/kepler/kepler-review-ai-pull-request-before-sharing) and [Review What a Coding Agent Changed](/kepler/review-changes).
 
 ### Open the pull request
 
@@ -126,6 +128,8 @@ To have Kepler start the agent for you, set up an [automation](/kepler/kepler-au
 
 ## Common questions
 
+Short answers about starting a coding agent from an issue in Kepler.
+
 ### Can I start a coding agent straight from a Jira issue?
 
 Yes. Connect Jira in **Settings → Integrations**, then click **Action** on the issue's row in **Todo**, add the repository in the issue's panel, then send. Kepler starts the agent with the issue's description attached as context.
@@ -153,7 +157,7 @@ Your default agent, such as Claude Code or Codex, unless the Action names anothe
 - [Create a task](/kepler/create-task)
 - [Issue Tracker Integrations](/kepler/issue-tracker-integrations)
 - [Actions](/kepler/actions)
-- [Review What a Coding Agent Changed in Kepler](/kepler/review-changes)
+- [Review What a Coding Agent Changed](/kepler/review-changes)
 - [Pull Request Integrations](/kepler/pull-request-integrations)
 - [Automations](/kepler/kepler-automations)
 - [Kepler Quick Answers: Running Coding Agents](/kepler/quick-answers)

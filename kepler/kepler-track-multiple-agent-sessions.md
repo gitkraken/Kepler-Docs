@@ -1,6 +1,6 @@
 ---
 title: Keep Track of Several Claude Code and Codex Sessions in Kepler
-description: In Kepler, track several Claude Code and Codex sessions at once, with 1 task per worktree, a Dashboard of who needs you, and each worktree's changes.
+description: In Kepler, track several Claude Code and Codex sessions at once, with a worktree per task, a Dashboard of who needs you, and each worktree's changes.
 product: Kepler
 feature: Agent Sessions
 content_type: how-to
@@ -26,7 +26,7 @@ Kepler by GitKraken keeps track of several Claude Code and Codex sessions in 1 D
 - Scope: Following several agent sessions at once, seeing which one needs you, and seeing which one changed what.
 - Sessions you start in your own terminal: Kepler lists them only after you turn on **Show sessions started outside Kepler**, which is off by default.
 - Limits: Kepler follows a session running in your terminal but does not control it. To answer a question it asks, answer in your terminal, or move the session into Kepler.
-- Limits: 2 sessions that share 1 worktree also share its changes. To tell their changes apart, give each session its own task.
+- Limits: Sessions that share a worktree also share its changes. To tell their changes apart, give each session its own task.
 
 ***
 
@@ -76,7 +76,7 @@ See [Sessions started outside Kepler](/kepler/agent-sessions#sessions-started-ou
 
 ***
 
-## How to keep 1 task per worktree
+## How to give each task its own worktree
 
 Give each piece of work its own task. By default, each new task makes its changes in its own worktree: a separate copy of the repository on its own branch. Sessions in different tasks do not edit the same files, so you always know which session changed what.
 
@@ -103,13 +103,6 @@ The Dashboard's **Tasks** view groups tasks by what each one needs from you. Thi
 | **Running** | An agent is working on it |
 
 Each task row adds a line that says what its session needs, such as **Approval needed for** *tool*, **Asking:** *question*, or **New reply**. See [Inbox](/kepler/arranging-your-work#inbox).
-
-<figure style="text-align:center">
-  <a href="/wp-content/uploads/arrange-work-oct-2026-v7@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/arrange-work-oct-2026-v7@2x.png" class="help-center-img img-bordered" alt="The Dashboard's arranging controls: the row of views (Todo and Tasks with Kepler's own Todo and Task icons, Tasks selected, Agent Graph, New view, and Automations at the right), and under it the list toggle, the View button showing the List glyph and Inbox, the search box reading Search, or filter like activity:waiting across the toolbar, then Panel layout (Auto × 1) and Refresh at the right. Tasks and Agent Graph carry the orange mark of a task waiting on you.">
-  </a>
-  <figcaption style="text-align:center; color:#888">The Dashboard's Tasks view, grouped by Inbox.</figcaption>
-</figure>
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/dashboard-inbox-nov-2026@2x.png" target="_blank" rel="noopener noreferrer">
@@ -155,11 +148,13 @@ On the Dashboard, a task's preview shows each worktree with chips for its uncomm
   <figcaption style="text-align:center; color:#888">A task's sessions and its worktree under Changes.</figcaption>
 </figure>
 
-See [Review Changes](/kepler/review-changes) to read the diff, comment on it, and commit.
+See [Review What a Coding Agent Changed](/kepler/review-changes) to read the diff, comment on it, and commit.
 
 ***
 
 ## Common questions
+
+Short answers about keeping track of several agent sessions in Kepler.
 
 ### How do people manage 5 or more Claude Code and Codex sessions at once?
 
@@ -186,11 +181,11 @@ Each task gets its own worktree, so Claude Code and Codex can work in the same r
 ## Related pages
 
 - [Agent Sessions](/kepler/agent-sessions)
-- [Create a Task](/kepler/create-task)
+- [Create a task](/kepler/create-task)
 - [Tasks and Resources](/kepler/tasks-and-resources)
 - [Arranging Your Work](/kepler/arranging-your-work)
 - [The Agent Graph](/kepler/agent-graph)
 - [Ask Kepler](/kepler/ask-kepler)
-- [Review Changes](/kepler/review-changes)
-- [Manage Claude Code and Codex Sessions Across Accounts and SSH Hosts in Kepler](/kepler/kepler-manage-agents-across-accounts-and-ssh-hosts)
+- [Review What a Coding Agent Changed](/kepler/review-changes)
+- [Manage Claude Code and Codex Sessions Across Accounts and SSH Hosts](/kepler/kepler-manage-agents-across-accounts-and-ssh-hosts)
 - [Kepler Quick Answers: Running Coding Agents](/kepler/quick-answers)

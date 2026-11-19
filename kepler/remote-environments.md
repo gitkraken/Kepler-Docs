@@ -690,6 +690,6 @@ You can also manage the current machine's connections locally, in **Settings →
 
 - [Settings](/kepler/settings-environment): the **Remote environments** and **Remote Access** pages, and [the shortcut list](/kepler/settings-app#keyboard-shortcuts)
 - [Agent Integrations](/kepler/agent-integrations): signing agents in, including on a remote target
-- [Review Changes](/kepler/review-changes): reviewing and shipping the work a remote agent produced
+- [Review What a Coding Agent Changed](/kepler/review-changes): reviewing and shipping the work a remote agent produced
 
 ---

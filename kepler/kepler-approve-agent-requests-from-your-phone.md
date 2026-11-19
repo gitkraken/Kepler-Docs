@@ -108,7 +108,7 @@ Kepler marks every task and session that waits on you, so you can find a request
   <figcaption style="text-align:center; color:#888">The phone menu, with a dot on each recent task that waits on you.</figcaption>
 </figure>
 
-> **Note:** Kepler sends no push notifications to your phone. When Kepler is closed on the phone, nothing tells you that an agent is waiting. Open Kepler on the phone to check. On your computer, Kepler's desktop notifications still work as usual.
+> **Note:** When Kepler is closed on the phone, nothing tells you that an agent is waiting. Open Kepler on the phone to check. On your computer, Kepler's desktop notifications still work as usual.
 
 ***
 
@@ -142,7 +142,7 @@ You see only the choices the agent offers. A session in Terminal mode shows the 
 
 ***
 
-## How to answer plans, questions and approval requests
+## How to answer plans, questions, and approval requests
 
 Other requests wait in the session the same way, and you answer them on the phone as you do on your computer:
 
@@ -155,6 +155,8 @@ To see what an agent did while you were away, open its session and read the conv
 ***
 
 ## Common questions
+
+Short answers about approving agent requests from a phone with Kepler.
 
 ### Will my phone notify me when an agent needs permission?
 

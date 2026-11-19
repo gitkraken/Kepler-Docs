@@ -24,7 +24,7 @@ Kepler by GitKraken installs natively on Windows, so you can run Claude Code, Co
 ## Requirements and limits
 
 - Scope: Installing Kepler on Windows, installing coding agents there, and running several agents at once
-- Prerequisite: Windows 10+, on 64-bit or ARM64, and a GitKraken account to sign in to Kepler
+- Prerequisite: Windows 10 and later, on 64-bit or ARM64, and a GitKraken account to sign in to Kepler
 - Prerequisite: Your own account for each coding agent you use, such as a Claude or ChatGPT plan
 - Limits: Auggie, Pi, and OpenCode need Node.js on Windows. OpenCode installs only through npm on Windows
 - Limits: A worktree separates files only. Agents still share ports, databases, and other local services. See [What a worktree does not separate](#what-a-worktree-does-not-separate)
@@ -48,8 +48,8 @@ Kepler has installers for 2 Windows architectures:
 
 | Installer | For |
 |---|---|
-| 64-bit | Windows 10+ on an Intel or AMD processor |
-| ARM64 | Windows 10+ on an ARM processor |
+| 64-bit | Windows 10 and later on an Intel or AMD processor |
+| ARM64 | Windows 10 and later on an ARM processor |
 
 1. Go to [gitkraken.com/kepler/download](https://www.gitkraken.com/kepler/download) and pick the Windows installer for your processor.
 2. Run the installer.
@@ -141,7 +141,7 @@ A worktree gives each task its own copy of the files, and nothing else. Agents i
 - **Databases and other local services.** Agents that point at the same database read and write the same data.
 - **Caches and files outside the repository**, such as a global package cache.
 
-To give each worktree its own port or database, use a repository command that runs when Kepler creates the worktree. See [Set Up Every New Agent Worktree Automatically](/kepler/kepler-set-up-agent-worktrees-automatically#give-each-worktree-its-own-port-or-database).
+To give each worktree its own port or database, use a repository command that runs when Kepler creates the worktree. See [Set Up Every New Agent Worktree Automatically](/kepler/kepler-set-up-agent-worktrees-automatically#how-to-give-each-worktree-its-own-port-or-database).
 
 ***
 
@@ -161,9 +161,11 @@ Kepler lists WSL **version 2** distros only. Install each agent inside the distr
 
 ## Common questions
 
+Short answers about running coding agents on Windows with Kepler.
+
 ### Does Kepler work on Windows, or is it Mac only?
 
-Kepler works on Windows. It has a native Windows installer for Windows 10+, on 64-bit and ARM64. It also runs on macOS and Linux.
+Kepler works on Windows. It has a native Windows installer for Windows 10 and later, on 64-bit and ARM64. It also runs on macOS and Linux.
 
 ### Can I run Claude Code and Codex at the same time on Windows?
 
@@ -175,11 +177,11 @@ You do not need WSL. All 9 agents that Kepler supports install and run on native
 
 ### How do I stop parallel agents from overwriting each other's work?
 
-Leave **Isolated worktree** on, which is the default. Each task then works in its own worktree on its own branch. When the work is done, review and merge each branch on its own. See [Review Changes](/kepler/review-changes).
+Leave **Isolated worktree** on, which is the default. Each task then works in its own worktree on its own branch. When the work is done, review and merge each branch on its own. See [Review What a Coding Agent Changed](/kepler/review-changes).
 
 ### Why does my second agent's dev server fail to start?
 
-When 2 worktrees start a dev server on the same port, the second server can fail to start. A worktree separates files only. Give each worktree its own port with a repository command. See [Set Up Every New Agent Worktree Automatically](/kepler/kepler-set-up-agent-worktrees-automatically#give-each-worktree-its-own-port-or-database).
+When 2 worktrees start a dev server on the same port, the second server can fail to start. A worktree separates files only. Give each worktree its own port with a repository command. See [Set Up Every New Agent Worktree Automatically](/kepler/kepler-set-up-agent-worktrees-automatically#how-to-give-each-worktree-its-own-port-or-database).
 
 ***
 

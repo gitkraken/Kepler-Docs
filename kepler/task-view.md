@@ -253,7 +253,7 @@ The worktree's **Branch** submenu holds the actions that change the branch itsel
 
 **Picking an editor or a command does not make it your default.** To make one your default, use the set/unset toggle at the end of its row.
 
-**Rename branch** opens a dialog for the new name. Tick **Also rename remote branch** to rename it on its remote too. **Change merge target…** opens a picker of remote branches; see [Review Changes](/kepler/review-changes).
+**Rename branch** opens a dialog for the new name. Tick **Also rename remote branch** to rename it on its remote too. **Change merge target…** opens a picker of remote branches; see [Review What a Coding Agent Changed](/kepler/review-changes).
 
 **Rename session** lets you name a Chat session yourself. Automatic titles never overwrite a name you chose.
 
@@ -318,7 +318,7 @@ With tabs off, the kind of row you open decides its column:
 | Column | What opens here |
 |---|---|
 | **Sessions** | Agent conversations, whether they run in Chat or in a terminal, and draft sessions you have not started yet |
-| **Changes** | A worktree: a strip of actions over its changed files. See [Review Changes](/kepler/review-changes) |
+| **Changes** | A worktree: a strip of actions over its changed files. See [Review What a Coding Agent Changed](/kepler/review-changes) |
 | **Resources** | Folders, files, pull requests, issues, links, notes |
 
 To resize columns, drag the divider between them. Kepler keeps the sizes you set.
@@ -652,7 +652,7 @@ Each kind of resource opens in its own pane:
 
 | Resource | Details |
 |---|---|
-| **Worktree**, on disk | A strip of actions (the branch, the sync control, **Open in**, **Run a command**) over its changed files, which lead into the Changes overlay, plus a **Comments** view that lists the task's review comments with how many are open and unread. See [Review Changes](/kepler/review-changes) |
+| **Worktree**, on disk | A strip of actions (the branch, the sync control, **Open in**, **Run a command**) over its changed files, which lead into the Changes overlay, plus a **Comments** view that lists the task's review comments with how many are open and unread. See [Review What a Coding Agent Changed](/kepler/review-changes) |
 | **Worktree**, missing | Its branch, base branch, and recorded path, with a way to recreate it. See [When a worktree goes missing](/kepler/tasks-and-resources#when-a-worktree-goes-missing) |
 | **Folder** | The folder's name and its **Path** |
 | **File** | The file itself, in the [file viewer](#opening-a-file), with its description, where it came from, and its size on the viewer's toolbar. An uploaded copy says it's a copy in the task folder, and has **Rename** in **File actions** |

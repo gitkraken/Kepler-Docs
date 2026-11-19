@@ -232,7 +232,7 @@ Your pull requests appear in 4 places:
 |---|---|
 | [The Kepler interface](/kepler/kepler-interface) | A **Todo** view lists the pull requests related to you on each connected host, or every open one in the repositories added to Kepler |
 | [Actions](/kepler/actions) | The **Action** button hands the pull request to an agent. **Review** and **Address Feedback** are the 2 built-in Actions for pull requests, and Kepler picks one based on who authored the pull request |
-| [Review Changes](/kepler/review-changes) | Reading the diff and the commits behind a pull request |
+| [Review What a Coding Agent Changed](/kepler/review-changes) | Reading the diff and the commits behind a pull request |
 | [Tasks and Resources](/kepler/tasks-and-resources) | A pull request is a resource on a task, so you can attach one to work that already exists |
 
 **Todo's scope.** A Todo view's **View** menu sets its **Scope**: **Mine**, the work related to you, or **All**, which adds the open pull requests of the repositories added to Kepler on every Git host above. See [Which issues Kepler lists](/kepler/issue-tracker-integrations#which-issues-kepler-lists).

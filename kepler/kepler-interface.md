@@ -710,7 +710,7 @@ The button's controls do the following:
 - **Branch name**: opens or closes the worktree's changes in the side pane. Its **⋮** opens the [worktree menu](#the-worktree-menu).
 - **Upstream control**: runs the action its counts call for. It offers **Pull** when the branch is behind, **Push** when it's ahead, and **Publish** when the branch is not on a remote yet. When the branch has diverged, or after you apply a rebase, it offers **Force push** after a confirmation. **Fetch** and the upstream row are in its chevron menu.
 - **Uncommitted** and **commits** chips: open the worktree's changes in the side pane, on that scope. Click the chip that's showing again to close the side pane, or the other chip to switch scope.
-- **Merge target** chip: shows how the branch compares with its merge target. While the target is ahead, its menu offers **See what's new on {target}**. See [What's new on the merge target](/kepler/review-changes#whats-new-on-the-merge-target). The menu also offers **Rebase onto {target}** and **Merge {target} into this branch**. See [Review Changes](/kepler/review-changes#updating-from-the-base).
+- **Merge target** chip: shows how the branch compares with its merge target. While the target is ahead, its menu offers **See what's new on {target}**. See [What's new on the merge target](/kepler/review-changes#whats-new-on-the-merge-target). The menu also offers **Rebase onto {target}** and **Merge {target} into this branch**. See [Review What a Coding Agent Changed](/kepler/review-changes#updating-from-the-base).
 - **Open in**: opens the checkout in your default editor. Other editors are in its chevron menu.
 - **Run**: runs one of the repository's commands. While the repository has none, it shows a **+** that adds one.
 

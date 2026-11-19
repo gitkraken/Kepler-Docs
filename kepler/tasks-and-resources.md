@@ -249,7 +249,7 @@ To prepare new worktrees automatically, use **Commands**. Save a repository's se
 The worktree's menu has the same entries wherever the worktree appears:
 
 - **Run command here**, **New session here**, which opens a draft session in that worktree, and **New terminal here**.
-- The **Branch** submenu, with **Rename branch**, the upstream, **Change merge target…**, and **Rebase onto {target}** or **Merge {target} into this branch**. For the upstream and updating the branch, see [Review Changes](/kepler/review-changes#publishing-and-syncing-the-branch).
+- The **Branch** submenu, with **Rename branch**, the upstream, **Change merge target…**, and **Rebase onto {target}** or **Merge {target} into this branch**. For the upstream and updating the branch, see [Review What a Coding Agent Changed](/kepler/review-changes#publishing-and-syncing-the-branch).
 - The copy actions, **Refresh**, **Detach worktree…**, and **Delete worktree…**.
 
 <figure style="text-align:center">
@@ -539,7 +539,7 @@ If you paste a Kepler link to a task or a session into the chat, the agent can u
 | `worktree_update` | Record a branch's new merge target, such as after a rebase onto another branch |
 | `worktree_delete` | Delete a worktree from disk. An unmerged branch is kept unless the agent asks to delete it |
 
-Where AI Sync and AI Compose are turned on, the `sync_*` and `compose_*` tools also let an agent update a branch from its base with a rebase or merge, and reorganize its commits. See [Review Changes](/kepler/review-changes#agent-tools-ai-sync-and-ai-compose).
+Where AI Sync and AI Compose are turned on, the `sync_*` and `compose_*` tools also let an agent update a branch from its base with a rebase or merge, and reorganize its commits. See [Review What a Coding Agent Changed](/kepler/review-changes#agent-tools-ai-sync-and-ai-compose).
 
 ### Progress and lifecycle
 

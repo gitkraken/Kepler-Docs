@@ -27,20 +27,18 @@ Kepler by GitKraken gives you a review step between an agent's work and your tea
 - Prerequisite: A task whose agent has made changes in its worktree. See [Create a task](/kepler/create-task).
 - Limits: Kepler has no button that creates a pull request. The agent opens it, or you open it yourself.
 - Limits: Review comments you write in Kepler go to the agent. Kepler does not post them to your Git host.
-- Limits: A second agent's review is a report, not an approval. You still decide what to change.
+- Second agent's review: a report, not an approval. You still decide what to change.
 
 ***
 
 ## Quick Start
 
-| Self-review step | What you do in Kepler |
-|---|---|
-| 1. Restate the problem | Ask the agent for a summary of what it changed and what it did not test, with an Action you create from the **Prepare for review** example |
-| 2. Read every changed line | Open the task's worktree and read the diff in the **Changes** overlay |
-| 3. Send fixes back | Comment on the lines that need work, then click **Send comments (*n*)** |
-| 4. Prove it works | Ask the agent to run the tests in the session, and read the commands and results it reports |
-| 5. Get a second opinion | Run the built-in **Review** Action with a different agent, such as Codex for work Claude Code wrote |
-| 6. Open the pull request | Commit, then open the pull request yourself or with an Action you create from the **Open a pull request** example |
+1. **Restate the problem.** Ask the agent for a summary of what it changed and what it did not test, with an Action you create from the **Prepare for review** example.
+2. **Read every changed line.** Open the task's worktree and read the diff in the **Changes** overlay.
+3. **Send fixes back.** Comment on the lines that need work, then click **Send comments (*n*)**.
+4. **Prove it works.** Ask the agent to run the tests in the session, and read the commands and results it reports.
+5. **Get a second opinion.** Run the built-in **Review** Action with a different agent, such as Codex for work Claude Code wrote.
+6. **Open the pull request.** Commit, then open the pull request yourself or with an Action you create from the **Open a pull request** example.
 
 ***
 
@@ -75,7 +73,7 @@ The agent makes its changes in the task's worktree. To read them:
   <figcaption style="text-align:center; color:#888">The Changes overlay lists every changed file beside its diff.</figcaption>
 </figure>
 
-See [Review Changes](/kepler/review-changes#the-changes-overlay) for the overlay's views, layouts, and keyboard controls.
+See [Review What a Coding Agent Changed](/kepler/review-changes#the-changes-overlay) for the overlay's views, layouts, and keyboard controls.
 
 ***
 
@@ -83,7 +81,7 @@ See [Review Changes](/kepler/review-changes#the-changes-overlay) for the overlay
 
 When a line needs work, comment on it instead of fixing it yourself or retyping the location in the chat.
 
-1. In the **Changes** overlay, hover a line and click the **+** beside its line number. To comment on a range, **Shift**-click the last line.
+1. In the **Changes** overlay, hover over a line and click the **+** beside its line number. To comment on a range, **Shift**-click the last line.
 2. Type your note.
 3. Click **Add comment** to queue it, or **Send now** to send it to the agent at once.
 4. When you finish the file, click **Send comments (*n*)** in the overlay's header to send every queued comment.
@@ -136,6 +134,8 @@ When the agent publishes the pull request, Kepler attaches it to the task. A pul
 
 ## Common questions
 
+Short answers about reviewing an AI-written pull request in Kepler.
+
 ### How do I review an AI-written PR myself before I send it to a teammate?
 
 In Kepler, read every changed line in the task's **Changes** overlay, send review comments back to the agent, ask it to run the tests, and run the built-in **Review** Action with a second agent. Open the pull request only after that.
@@ -160,7 +160,7 @@ Write a note in the description yourself, or use an Action created from the **Op
 
 ## Related pages
 
-- [Review What a Coding Agent Changed in Kepler](/kepler/review-changes)
+- [Review What a Coding Agent Changed](/kepler/review-changes)
 - [Actions](/kepler/actions)
 - [Create a task](/kepler/create-task)
 - [Agent Sessions](/kepler/agent-sessions)

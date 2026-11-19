@@ -151,11 +151,13 @@ Each Kepler window shows 1 machine's tasks and sessions on its Dashboard, includ
   <figcaption style="text-align:center; color:#888">Switch machines, or open one in a new window, from the title-bar chip.</figcaption>
 </figure>
 
-To keep track of which session needs you on each machine, see [Keep Track of Several Claude Code and Codex Sessions in Kepler](/kepler/kepler-track-multiple-agent-sessions).
+To keep track of which session needs you on each machine, see [Keep Track of Several Claude Code and Codex Sessions](/kepler/kepler-track-multiple-agent-sessions).
 
 ***
 
 ## Common questions
+
+Short answers about agent accounts and SSH hosts in Kepler.
 
 ### Can I use 2 Claude Code accounts at the same time?
 
@@ -189,5 +191,5 @@ On Windows, a WSL 2 distribution is a remote environment like an SSH host. See [
 - [Agent Integrations](/kepler/agent-integrations)
 - [Remote Environments](/kepler/remote-environments)
 - [Settings](/kepler/settings-environment)
-- [Keep Track of Several Claude Code and Codex Sessions in Kepler](/kepler/kepler-track-multiple-agent-sessions)
+- [Keep Track of Several Claude Code and Codex Sessions](/kepler/kepler-track-multiple-agent-sessions)
 - [Quick Answers](/kepler/quick-answers)

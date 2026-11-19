@@ -40,7 +40,7 @@ Kepler by GitKraken imports your Conductor workspaces on a Mac as tasks, in the 
 4. The import runs in the background. When the title bar chip reads **Imported *N***, click it, then click **View tasks**.
 5. Open a new task in **Tasks** to pick its chat up where it left off.
 
-After you install Kepler, the guided start also offers to import Conductor's workspaces when it finds them. See [Getting Started](/kepler/kepler-getting-started).
+After you install Kepler, the guided start also offers to import Conductor's workspaces when it finds them. See [Getting Started with Kepler](/kepler/kepler-getting-started).
 
 ***
 
@@ -48,21 +48,21 @@ After you install Kepler, the guided start also offers to import Conductor's wor
 
 1. On an empty **Tasks** list, click the import card. It names the apps Kepler found, such as **Import from Conductor, Orca and 2 more**. You can also choose **File → Import from Another App…** at any time.
 
-<figure style="text-align:center">
-  <a href="/wp-content/uploads/import-card-nov-2026@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/import-card-nov-2026@2x.png" class="help-center-img img-bordered" alt="Two cards below an or divider: Import from Conductor, Orca and 2 more, reading Bring in your workspaces as tasks, with their branches and chats, and Open an external session.">
-  </a>
-  <figcaption style="text-align:center; color:#888">The import card names the apps Kepler found.</figcaption>
-</figure>
+    <figure style="text-align:center">
+      <a href="/wp-content/uploads/import-card-nov-2026@2x.png" target="_blank" rel="noopener noreferrer">
+        <img src="/wp-content/uploads/import-card-nov-2026@2x.png" class="help-center-img img-bordered" alt="Two cards below an or divider: Import from Conductor, Orca and 2 more, reading Bring in your workspaces as tasks, with their branches and chats, and Open an external session.">
+      </a>
+      <figcaption style="text-align:center; color:#888">The import card names the apps Kepler found.</figcaption>
+    </figure>
 
 2. If Kepler found more than 1 app, click **Conductor** in **Import from another app**.
 
-<figure style="text-align:center">
-  <a href="/wp-content/uploads/import-choose-app-nov-2026@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/import-choose-app-nov-2026@2x.png" class="help-center-img img-bordered" alt="The Import from another app dialog, Choose the app to bring workspaces in from, listing Conductor, Orca, herdr and Vibe Kanban.">
-  </a>
-  <figcaption style="text-align:center; color:#888">Picking Conductor as the app to import from.</figcaption>
-</figure>
+    <figure style="text-align:center">
+      <a href="/wp-content/uploads/import-choose-app-nov-2026@2x.png" target="_blank" rel="noopener noreferrer">
+        <img src="/wp-content/uploads/import-choose-app-nov-2026@2x.png" class="help-center-img img-bordered" alt="The Import from another app dialog, Choose the app to bring workspaces in from, listing Conductor, Orca, herdr and Vibe Kanban.">
+      </a>
+      <figcaption style="text-align:center; color:#888">Picking Conductor as the app to import from.</figcaption>
+    </figure>
 
 3. In **Import from Conductor**, tick the workspaces you want, and click **Import *N* workspaces**. The workspaces are grouped by repository, and each row shows its branch and how long ago it was active. Workspaces active in the last 30 days arrive ticked, and older ones are folded under **Older**. To tick a whole repository, use its tick box. The count at the top, such as **9 of 14 selected**, shows how many you picked. To narrow a long list, type in **Filter workspaces**. To clear every tick, click **Select none**. A workspace you already imported is marked **Already a task:** and the task's name.
 
@@ -84,12 +84,12 @@ After you install Kepler, the guided start also offers to import Conductor's wor
 
 5. Find the new tasks in **Tasks**.
 
-<figure style="text-align:center">
-  <a href="/wp-content/uploads/import-tasks-nov-2026@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/import-tasks-nov-2026@2x.png" class="help-center-img img-bordered" alt="The Tasks view listing the 4 imported tasks under Recent, each with its repository and In Development status.">
-  </a>
-  <figcaption style="text-align:center; color:#888">The imported workspaces, now tasks.</figcaption>
-</figure>
+    <figure style="text-align:center">
+      <a href="/wp-content/uploads/import-tasks-nov-2026@2x.png" target="_blank" rel="noopener noreferrer">
+        <img src="/wp-content/uploads/import-tasks-nov-2026@2x.png" class="help-center-img img-bordered" alt="The Tasks view listing the 4 imported tasks under Recent, each with its repository and In Development status.">
+      </a>
+      <figcaption style="text-align:center; color:#888">The imported workspaces, now tasks.</figcaption>
+    </figure>
 
 If Conductor is not in the list, Kepler did not find Conductor's workspaces on this Mac.
 
@@ -114,14 +114,16 @@ After the import, continue each chat in Kepler or in Conductor, not both. Both a
 
 ## What to do next in Kepler
 
-- **Start new work from your issues.** Connect your tracker and start tasks from the **Todo** view, with the issue attached. See [Start a Coding Agent from a Jira or GitHub Issue](/kepler/kepler-start-agent-from-issue-to-pull-request).
+- **Start new work from your issues.** Connect your tracker and start tasks from the **Todo** view, with the issue attached. See [Start a Coding Agent from a Jira or GitHub Issue and Take It to a Pull Request](/kepler/kepler-start-agent-from-issue-to-pull-request).
 - **Run Actions.** Run **Plan**, **Implement**, **Review**, or your own Actions on a task instead of retyping prompts. See [Actions](/kepler/actions).
-- **Review each task's changes.** Read the diff in the **Changes** overlay, send comments back to the agent, and commit. See [Review Changes](/kepler/review-changes).
+- **Review each task's changes.** Read the diff in the **Changes** overlay, send comments back to the agent, and commit. See [Review What a Coding Agent Changed](/kepler/review-changes).
 - **Set up new worktrees.** Run a setup command each time Kepler creates a worktree with **Run on worktree creation**, and copy git-ignored files such as `.env` with a `.worktreeinclude` file. See [Repository Settings](/kepler/settings-repositories) and [Tasks and Resources](/kepler/tasks-and-resources).
 
 ***
 
 ## Common questions
+
+Short answers about moving from Conductor to Kepler.
 
 ### Can I move my Conductor workspaces to Kepler?
 
@@ -137,7 +139,7 @@ Kepler imports Conductor workspaces only on a Mac, because Conductor runs only o
 
 ### Does importing change anything in Conductor?
 
-Kepler reads Conductor's workspaces and does not move your files. Both apps then point at the same folders, branches, and chat history, so continue each chat in 1 app only.
+No. Kepler reads Conductor's workspaces and does not change or move your files. Both apps then point at the same folders, branches, and chat history, so continue each chat in 1 app only.
 
 ### Which other apps can Kepler import from?
 
@@ -151,6 +153,6 @@ Kepler can also import workspaces from Orca, herdr, and Vibe Kanban, in the same
 - [Tasks and Resources](/kepler/tasks-and-resources)
 - [Agent Sessions](/kepler/agent-sessions)
 - [Actions](/kepler/actions)
-- [Review What a Coding Agent Changed in Kepler](/kepler/review-changes)
+- [Review What a Coding Agent Changed](/kepler/review-changes)
 - [Getting Started with Kepler](/kepler/kepler-getting-started)
 - [Kepler Quick Answers: Running Coding Agents](/kepler/quick-answers)

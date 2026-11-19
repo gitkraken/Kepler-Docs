@@ -256,7 +256,7 @@ Before I review this work, write a review summary in this session. Include:
 Don't change any files.
 ```
 
-The summary is the agent's own account. Check it against the diff in [Review Changes](/kepler/review-changes) before you commit.
+The summary is the agent's own account. Check it against the diff in [Review What a Coding Agent Changed](/kepler/review-changes) before you commit.
 
 #### Example: Open a pull request
 
@@ -278,7 +278,7 @@ End the description with this line:
 If the worktree has uncommitted changes, stop and tell me.
 ```
 
-The agent opens the pull request with the tools it has, such as your Git host's command-line tool. When it publishes the pull request, Kepler attaches it to the task. See [Review Changes](/kepler/review-changes#opening-a-pull-request).
+The agent opens the pull request with the tools it has, such as your Git host's command-line tool. When it publishes the pull request, Kepler attaches it to the task. See [Review What a Coding Agent Changed](/kepler/review-changes#opening-a-pull-request).
 
 ### Restore defaults
 
