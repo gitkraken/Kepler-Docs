@@ -21,7 +21,7 @@ taxonomy:
 
 Kepler by GitKraken manages your Claude Code and Codex sessions across several accounts and SSH hosts in 1 app. You add each account once in **Settings → Agents**, pick the account when you start a session, and add each remote server in **Settings → Remote environments**. Sessions on a server run there and keep running when you disconnect.
 
-**Requirements and limits**
+## Requirements and limits
 
 - Scope: Several signed-in accounts for 1 agent, choosing the account for each session, moving a conversation to another account, and running agent sessions on SSH hosts.
 - Agents with several accounts: Claude Code, Codex, GitHub Copilot, Auggie, and Grok Build.
@@ -60,7 +60,7 @@ The first row is the agent's own login. The account badged **Default** is the on
   <a href="/wp-content/uploads/agent-accounts-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/agent-accounts-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Claude Code card in Settings › Agents with two accounts, the default Claude Code CLI (Acme, Default) with the No color mark and Personal with a blue color swatch, each with Check usage and a row menu. Below them sit New sessions start in, Let artifact comments start turns, Artifacts in new sessions, and Program and data folder.">
   </a>
-  <figcaption style="text-align:center; color:#888">2 Claude Code accounts in Settings → Agents.</figcaption>
+  <figcaption style="text-align:center; color:#888">Two Claude Code accounts in Settings → Agents.</figcaption>
 </figure>
 
 See [Several accounts for one agent](/kepler/agent-sessions#several-accounts-for-one-agent) for every account control.
@@ -73,7 +73,7 @@ When an agent has 2 or more accounts, the **Agent** list shows 1 row per account
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/account-multiple-selector-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/account-multiple-selector-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Agent list open in the New task composer, with Search options… at the top. Under a Claude Code heading sit two account rows: CLI, with the login alex.lee@example.com and an Acme badge, checked, and Personal. Below come Codex CLI (Not signed in), GitHub Copilot CLI (Not signed in), OpenCode, Pi and Auggie CLI (Not signed in), with more agents further down the list, then Add another account and Install another agent.">
+    <img src="/wp-content/uploads/account-multiple-selector-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Agent list in the New task composer, with 2 Claude Code accounts, CLI (checked) and Personal, under the Claude Code heading above the other agents.">
   </a>
   <figcaption style="text-align:center; color:#888">The Agent list, with 1 row per account.</figcaption>
 </figure>
@@ -138,16 +138,18 @@ Each Kepler window shows 1 machine's tasks and sessions on its Dashboard, includ
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/remote-popover-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-popover-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The popover open under the dev-server chip, whose icon carries a green dot. The header shows dev-server over SSH as alex@dev.acme.example, Connected at 5 ms, the server and app version 0.15.0, and a gear, with Disconnect and the restart and stop server buttons. Below are Switch to with Local (Work on this machine) and its window icon, and Manage remote environments… with its Ctrl+Shift+R shortcut.">
+    <img src="/wp-content/uploads/remote-popover-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The remote environment popover for dev-server over SSH: Connected, with Disconnect in its header and Switch to Local below.">
   </a>
   <figcaption style="text-align:center; color:#888">Switch machines, or open one in a new window, from the title-bar chip.</figcaption>
 </figure>
 
-To keep track of which session needs you on each machine, see [Keep Track of Several Claude Code and Codex Sessions in Kepler](/kepler/kepler-track-multiple-agent-sessions).
+To keep track of which session needs you on each machine, see [Keep Track of Several Claude Code and Codex Sessions](/kepler/kepler-track-multiple-agent-sessions).
 
 ***
 
 ## Common questions
+
+Short answers about agent accounts and SSH hosts in Kepler.
 
 ### Can I use 2 Claude Code accounts at the same time?
 
@@ -181,5 +183,5 @@ Yes. On Windows, a WSL 2 distribution is a remote environment like an SSH host. 
 - [Agent Integrations](/kepler/agent-integrations)
 - [Remote Environments](/kepler/remote-environments)
 - [Settings](/kepler/settings-environment)
-- [Keep Track of Several Claude Code and Codex Sessions in Kepler](/kepler/kepler-track-multiple-agent-sessions)
+- [Keep Track of Several Claude Code and Codex Sessions](/kepler/kepler-track-multiple-agent-sessions)
 - [Quick Answers](/kepler/quick-answers)

@@ -103,7 +103,7 @@ To move this window to another host, click the host's row under **Switch to**. T
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/remote-popover-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-popover-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The popover open under the dev-server chip, whose icon carries a green dot. The header shows dev-server over SSH as alex@dev.acme.example, Connected at 5 ms, the server and app version 0.15.0, and a gear, with Disconnect and the restart and stop server buttons. Below are Switch to with Local (Work on this machine) and its window icon, and Manage remote environments… with its Ctrl+Shift+R shortcut.">
+    <img src="/wp-content/uploads/remote-popover-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The remote environment popover for dev-server over SSH: Connected, with Disconnect in its header and Switch to Local below.">
   </a>
   <figcaption style="text-align:center; color:#888">The popover, connected to a host.</figcaption>
 </figure>
@@ -663,6 +663,6 @@ You can also manage the current machine's connections locally, in **Settings →
 
 - [Settings](/kepler/settings-environment): the **Remote environments** and **Remote Access** pages, and [the shortcut list](/kepler/settings-app#keyboard-shortcuts)
 - [Agent Integrations](/kepler/agent-integrations): signing agents in, including on a remote target
-- [Review Changes](/kepler/review-changes): reviewing and shipping the work a remote agent produced
+- [Review What a Coding Agent Changed](/kepler/review-changes): reviewing and shipping the work a remote agent produced
 
 ---

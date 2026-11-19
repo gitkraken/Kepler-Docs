@@ -39,7 +39,7 @@ Prompts, steering, permissions, status, and the session lifecycle work the same 
   <figcaption style="text-align:center; color:#888">A session in the Sessions column: tabs, transcript, and composer.</figcaption>
 </figure>
 
-To read the changes an agent made, see [Review Changes](/kepler/review-changes).
+To read the changes an agent made, see [Review What a Coding Agent Changed](/kepler/review-changes).
 
 ***
 
@@ -209,7 +209,7 @@ If 2 or more accounts are signed in, the **Agent** list shows one row per accoun
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/account-multiple-selector-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/account-multiple-selector-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Agent list open in the New task composer, with Search options at the top. Under a Claude Code heading sit two account rows: CLI, with the login alex.lee@example.com and an Acme badge, checked, and Personal. Below come Codex CLI (Not signed in), GitHub Copilot CLI (Not signed in), OpenCode, Pi and Auggie CLI (Not signed in), with more agents further down the list, then Add another account and Install another agent.">
+    <img src="/wp-content/uploads/account-multiple-selector-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Agent list in the New task composer, with 2 Claude Code accounts, CLI (checked) and Personal, under the Claude Code heading above the other agents.">
   </a>
   <figcaption style="text-align:center; color:#888">The Agent list, with one row per account.</figcaption>
 </figure>
@@ -505,7 +505,7 @@ If an upload fails, or the message is too large for the agent, Kepler does not s
   <figcaption style="text-align:center; color:#888">A pasted pull request link, turned into a chip.</figcaption>
 </figure>
 
-**Review comments wait in a chip until you send.** Comments you queue for a session while you review its changes collect in one chip on its composer, such as **2 comments**. Click the chip to list them by file and line. Click a comment to open its place in the file, or click its **X** to remove it from the queue. The chip's own **X** removes all of them. Your next message sends the queued comments first, ahead of what you typed. You can also send them with an empty prompt. See [Review Changes](/kepler/review-changes).
+**Review comments wait in a chip until you send.** Comments you queue for a session while you review its changes collect in one chip on its composer, such as **2 comments**. Click the chip to list them by file and line. Click a comment to open its place in the file, or click its **X** to remove it from the queue. The chip's own **X** removes all of them. Your next message sends the queued comments first, ahead of what you typed. You can also send them with an empty prompt. See [Review What a Coding Agent Changed](/kepler/review-changes).
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/queued-comments-chip-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -1206,6 +1206,6 @@ In-app notifications show a close button when you hover them, and **Clear all ({
 
 ## Reviewing what the agent changed
 
-To read the diff an agent produced and sync its branch, see [Review Changes](/kepler/review-changes).
+To read the diff an agent produced and sync its branch, see [Review What a Coding Agent Changed](/kepler/review-changes).
 
 ---

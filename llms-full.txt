@@ -1,5 +1,5 @@
 # Kepler Documentation: llms-full.txt
-Generated: 2026-11-18
+Generated: 2026-11-19
 Pages: 38
 Source: https://help.gitkraken.com/kepler/
 
@@ -32,7 +32,7 @@ Kepler has installers for these platforms:
 
 | Platform | Installer | Minimum OS |
 |---|---|---|
-| Windows | 64-bit, ARM64 | Windows 10+ |
+| Windows | 64-bit, ARM64 | Windows 10 and later |
 | macOS | Apple Silicon, Intel | macOS 12+ |
 | Linux (x64) | .deb, .rpm, .AppImage, Flatpak, AUR | Ubuntu LTS 18.04+ / Debian 10+ / RHEL 8+ / Fedora 39+ |
 | Linux (ARM) | .deb, .rpm, .AppImage | Ubuntu LTS 20.04+ / RHEL 8+ / Fedora 39+ |
@@ -167,7 +167,7 @@ Pick the next step that fits what you want to do:
 | Run an agent on a schedule, or on new GitHub or Jira activity | [Automations](/kepler/kepler-automations) |
 | See what every agent is doing at once | [The Agent Graph](/kepler/agent-graph) |
 | Reshape the list to fit how you work | [Arranging Your Work](/kepler/arranging-your-work) |
-| Review and ship what an agent wrote | [Review Changes](/kepler/review-changes) |
+| Review and ship what an agent wrote | [Review What a Coding Agent Changed](/kepler/review-changes) |
 | Run agents on another machine or in WSL | [Remote Environments](/kepler/remote-environments) |
 | Find a quick answer to a common question | [Quick Answers](/kepler/quick-answers) |
 
@@ -197,10 +197,10 @@ Common questions about where and how your agents run:
 | What you want to do | Short answer | Full details |
 |---|---|---|
 | Run several agents at once without their changes colliding | In Kepler, each task gets a **worktree**, a private Git working copy. Agents change files there, so several can run at once without touching each other's work or your own checkout. | [Tasks and Resources → Worktrees](/kepler/tasks-and-resources#worktrees-and-working-in-place) |
-| Run Kepler on Windows | Kepler installs natively on Windows 10 and later, on 64-bit and ARM64. It also runs on macOS 12 and later, and on Linux. | [Getting Started → Install Kepler](/kepler/kepler-getting-started#install-kepler), [Run Coding Agents in Parallel on Windows](/kepler/kepler-run-coding-agents-in-parallel-on-windows) |
-| Run agents in Windows Subsystem for Linux (WSL) | In Kepler, a WSL 2 distro is a remote environment. Kepler finds your version 2 distros and lists them under **Found on this machine** in Settings. | [Remote Environments → WSL environments](/kepler/remote-environments#wsl-environments), [Manage Sessions Across Accounts and SSH Hosts](/kepler/kepler-manage-agents-across-accounts-and-ssh-hosts) |
-| Run agents on another machine | In Kepler, add the machine as an SSH host. Kepler installs itself on the host over SSH, so you do not need to install anything there first. | [Remote Environments → Add an SSH host](/kepler/remote-environments#add-an-ssh-host), [Manage Sessions Across Accounts and SSH Hosts](/kepler/kepler-manage-agents-across-accounts-and-ssh-hosts) |
-| Use several accounts of the same agent | In Kepler, Claude Code, Codex, GitHub Copilot, Auggie, and Grok Build can each hold more than one signed-in account. To add one, open **Settings → Agents**, expand the agent, and click **Add account**. | [Agent Sessions → Several accounts for one agent](/kepler/agent-sessions#several-accounts-for-one-agent), [Manage Sessions Across Accounts and SSH Hosts](/kepler/kepler-manage-agents-across-accounts-and-ssh-hosts) |
+| Run Kepler on Windows | Kepler installs natively on Windows 10 and later, on 64-bit and ARM64. It also runs on macOS 12 and later, and on Linux. | [Getting Started → Install Kepler](/kepler/kepler-getting-started#install-kepler), [Run Multiple Coding Agents in Parallel on Windows](/kepler/kepler-run-coding-agents-in-parallel-on-windows) |
+| Run agents in Windows Subsystem for Linux (WSL) | In Kepler, a WSL 2 distro is a remote environment. Kepler finds your version 2 distros and lists them under **Found on this machine** in Settings. | [Remote Environments → WSL environments](/kepler/remote-environments#wsl-environments), [Manage Claude Code and Codex Sessions Across Accounts and SSH Hosts](/kepler/kepler-manage-agents-across-accounts-and-ssh-hosts) |
+| Run agents on another machine | In Kepler, add the machine as an SSH host. Kepler installs itself on the host over SSH, so you do not need to install anything there first. | [Remote Environments → Add an SSH host](/kepler/remote-environments#add-an-ssh-host), [Manage Claude Code and Codex Sessions Across Accounts and SSH Hosts](/kepler/kepler-manage-agents-across-accounts-and-ssh-hosts) |
+| Use several accounts of the same agent | In Kepler, Claude Code, Codex, GitHub Copilot, Auggie, and Grok Build can each hold more than one signed-in account. To add one, open **Settings → Agents**, expand the agent, and click **Add account**. | [Agent Sessions → Several accounts for one agent](/kepler/agent-sessions#several-accounts-for-one-agent), [Manage Claude Code and Codex Sessions Across Accounts and SSH Hosts](/kepler/kepler-manage-agents-across-accounts-and-ssh-hosts) |
 
 ***
 
@@ -212,13 +212,13 @@ Common questions about starting work, giving agents your rules, preparing each n
 
 | What you want to do | Short answer | Full details |
 |---|---|---|
-| Start an agent from a Jira, Linear, or GitHub issue | In Kepler, connect your tracker, then run an Action from the issue's row. The issue becomes a task, and Kepler attaches what it read, so the agent starts with that context. For a Jira issue, or a Linear issue not synced with GitHub, add a repository in its panel first. | [Issue Tracker Integrations](/kepler/issue-tracker-integrations), [Actions](/kepler/actions), [Start an Agent from an Issue and Take It to a Pull Request](/kepler/kepler-start-agent-from-issue-to-pull-request) |
+| Start an agent from a Jira, Linear, or GitHub issue | In Kepler, connect your tracker, then run an Action from the issue's row, and the agent starts with the issue attached. For a Jira issue, or a Linear issue not synced with GitHub, add a repository in its panel first. | [Issue Tracker Integrations](/kepler/issue-tracker-integrations), [Actions](/kepler/actions), [Start a Coding Agent from a Jira or GitHub Issue and Take It to a Pull Request](/kepler/kepler-start-agent-from-issue-to-pull-request) |
 | Start without an issue | In Kepler, click **New task** or press **Cmd/Ctrl+N**, then write a prompt. You can attach nothing at all and turn the task into real work later. | [Getting Started → Start something that is not tracked yet](/kepler/kepler-getting-started#start-something-that-is-not-tracked-yet) |
 | Move my work over from Conductor | In Kepler on macOS, click the import card on an empty **Tasks** list, or choose **File → Import from Another App…**. Each Conductor workspace becomes a task, and its chats continue in Kepler. | [Create a task → From another agent app](/kepler/create-task#from-another-agent-app), [Move from Conductor to Kepler](/kepler/kepler-move-from-conductor) |
 | Give every agent on a task your team's rules | In Kepler, attach a **Note** to the task with the rule, constraint, or decision. Every session on the task gets it, including sessions you start later. | [Tasks and Resources → Notes](/kepler/tasks-and-resources#notes-are-how-you-give-standing-instructions) |
 | Copy `.env` files into every new worktree | In Kepler, list them in a `.worktreeinclude` file at the repository's root, in `.gitignore` syntax. Kepler copies the matching Git-ignored files into each new worktree. | [Tasks and Resources → Make a new worktree ready to build](/kepler/tasks-and-resources#make-a-new-worktree-ready-to-build), [Set Up Every New Agent Worktree Automatically](/kepler/kepler-set-up-agent-worktrees-automatically) |
-| Install dependencies in every new worktree | In Kepler, add a per-repository command, such as `pnpm install`, and turn on **Run on worktree creation**. | [Settings → Per-repository commands](/kepler/settings-repositories#per-repository-commands), [Set Up Every New Agent Worktree → Install dependencies](/kepler/kepler-set-up-agent-worktrees-automatically#how-to-install-dependencies-in-each-new-worktree) |
-| Keep agents in different worktrees from colliding on ports or databases | In Kepler, a worktree separates files, not ports, databases, or caches. Use a command that runs on worktree creation to give each worktree its own settings, such as its own port or database name. | [Tasks and Resources → What a worktree does not separate](/kepler/tasks-and-resources#what-a-worktree-does-not-separate), [Set Up Every New Agent Worktree → Own port or database](/kepler/kepler-set-up-agent-worktrees-automatically#give-each-worktree-its-own-port-or-database) |
+| Install dependencies in every new worktree | In Kepler, add a per-repository command, such as `pnpm install`, and turn on **Run on worktree creation**. | [Settings → Per-repository commands](/kepler/settings-repositories#per-repository-commands), [Set Up Every New Agent Worktree Automatically → Install dependencies](/kepler/kepler-set-up-agent-worktrees-automatically#how-to-install-dependencies-in-each-new-worktree) |
+| Keep agents in different worktrees from colliding on ports or databases | In Kepler, a worktree separates files, not ports, databases, or caches. Use a command that runs on worktree creation to give each worktree its own settings, such as its own port or database name. | [Tasks and Resources → What a worktree does not separate](/kepler/tasks-and-resources#what-a-worktree-does-not-separate), [Set Up Every New Agent Worktree Automatically → Own port or database](/kepler/kepler-set-up-agent-worktrees-automatically#how-to-give-each-worktree-its-own-port-or-database) |
 | Run an agent on a schedule, or when an issue or pull request changes | In Kepler, click **Automations** on the Dashboard and create an automation. It runs an Action or your own prompt on a schedule, or when new GitHub or Jira activity matches its query. | [Automations](/kepler/kepler-automations) |
 
 ***
@@ -231,10 +231,10 @@ Common questions about watching and answering your agents:
 
 | What you want to do | Short answer | Full details |
 |---|---|---|
-| See what every agent is doing | In Kepler, the **Agent Graph** draws every task, session, turn, tool call, subagent, and file the agents touch. It updates live as they work. | [The Agent Graph](/kepler/agent-graph), [Keep Track of Several Agent Sessions](/kepler/kepler-track-multiple-agent-sessions) |
-| Find out what needs you | In Kepler, open **Ask Kepler** and ask. Its chat can see what is on your screen and check on your tasks and sessions. | [Ask Kepler](/kepler/ask-kepler), [Keep Track of Several Agent Sessions → See which session needs you](/kepler/kepler-track-multiple-agent-sessions#how-to-see-which-session-needs-you) |
-| Answer an agent's permission request | In Kepler, the request pins to the top of the session. Choose **Allow**, **Allow for this session**, **Allow always**, **Reject**, or **Reject always**. | [Agent Sessions → Permission requests](/kepler/agent-sessions#permission-requests), [Approve Agent Requests from Your Phone → Answer a permission request](/kepler/kepler-approve-agent-requests-from-your-phone#how-to-answer-a-permission-request) |
-| Check on your agents from your phone | In Kepler, turn on **Remote Access** and scan its QR code with your phone's camera. Kepler opens in your phone's browser, and your work keeps running on your computer. | [Remote Environments → Using Kepler on a phone](/kepler/remote-environments#using-kepler-on-a-phone), [Approve Agent Requests from Your Phone](/kepler/kepler-approve-agent-requests-from-your-phone) |
+| See what every agent is doing | In Kepler, the **Agent Graph** draws every task, session, turn, tool call, subagent, and file the agents touch. It updates live as they work. | [The Agent Graph](/kepler/agent-graph), [Keep Track of Several Claude Code and Codex Sessions](/kepler/kepler-track-multiple-agent-sessions) |
+| Find out what needs you | In Kepler, open **Ask Kepler** and ask. Its chat can see what is on your screen and check on your tasks and sessions. | [Ask Kepler](/kepler/ask-kepler), [Keep Track of Several Claude Code and Codex Sessions → See which session needs you](/kepler/kepler-track-multiple-agent-sessions#how-to-see-which-session-needs-you) |
+| Answer an agent's permission request | In Kepler, the request pins to the top of the session. Choose **Allow**, **Allow for this session**, **Allow always**, **Reject**, or **Reject always**. | [Agent Sessions → Permission requests](/kepler/agent-sessions#permission-requests), [Approve Coding Agent Requests from Your Phone → Answer a permission request](/kepler/kepler-approve-agent-requests-from-your-phone#how-to-answer-a-permission-request) |
+| Check on your agents from your phone | In Kepler, turn on **Remote Access** and scan its QR code with your phone's camera. Kepler opens in your phone's browser, and your work keeps running on your computer. | [Remote Environments → Using Kepler on a phone](/kepler/remote-environments#using-kepler-on-a-phone), [Approve Coding Agent Requests from Your Phone](/kepler/kepler-approve-agent-requests-from-your-phone) |
 
 ***
 
@@ -246,12 +246,12 @@ Common questions about reviewing an agent's work and getting it merged:
 
 | What you want to do | Short answer | Full details |
 |---|---|---|
-| Have the agent prepare its work for review | In Kepler, create an Action that asks the agent to summarize what it changed, what it tested, and what it did not test. The example **Prepare for review** Action shows the prompt. | [Actions → Example: Prepare for review](/kepler/actions#example-prepare-for-review), [Review an AI-Written Pull Request Before Sharing It](/kepler/kepler-review-ai-pull-request-before-sharing) |
-| Read what an agent changed | In Kepler, open the task's worktree and read the diff in the **Changes** overlay. From there you can comment, stage, and commit. | [Review Changes](/kepler/review-changes) |
-| Undo an agent's change to a file | In Kepler, use **Discard changes**, which asks first. Your current version goes to the Trash (the Recycle Bin on Windows), so you can get it back. | [Review Changes → Staging and committing](/kepler/review-changes#staging-and-committing) |
-| Have a different agent review the work | In Kepler, set the **Review** Action to a different agent from the one that wrote the code. | [Actions → Review with a different agent](/kepler/actions#review-with-a-different-agent), [Review an AI-Written Pull Request Before Sharing It](/kepler/kepler-review-ai-pull-request-before-sharing) |
+| Have the agent prepare its work for review | In Kepler, create an Action that asks the agent to summarize what it changed, what it tested, and what it did not test. The example **Prepare for review** Action shows the prompt. | [Actions → Example: Prepare for review](/kepler/actions#example-prepare-for-review), [Review an AI-Written Pull Request Before Your Teammates Do](/kepler/kepler-review-ai-pull-request-before-sharing) |
+| Read what an agent changed | In Kepler, open the task's worktree and read the diff in the **Changes** overlay. From there you can comment, stage, and commit. | [Review What a Coding Agent Changed](/kepler/review-changes) |
+| Undo an agent's change to a file | In Kepler, use **Discard changes**, which asks first. Your current version goes to the Trash (the Recycle Bin on Windows), so you can get it back. | [Review What a Coding Agent Changed → Staging and committing](/kepler/review-changes#staging-and-committing) |
+| Have a different agent review the work | In Kepler, set the **Review** Action to a different agent from the one that wrote the code. | [Actions → Review with a different agent](/kepler/actions#review-with-a-different-agent), [Review an AI-Written Pull Request Before Your Teammates Do](/kepler/kepler-review-ai-pull-request-before-sharing) |
 | Apply the review comments on a pull request | In Kepler, run **Address Feedback** on the pull request. The agent works through each comment, applies the changes it agrees with, pushes back on the rest, and replies to each comment. | [Actions → The four built-in Actions](/kepler/actions#the-four-built-in-actions) |
-| Open a pull request | In Kepler, you or the agent opens the pull request, and Kepler attaches it to the task once it exists. The example **Open a pull request** Action has the agent open it for you. | [Review Changes → Opening a pull request](/kepler/review-changes#opening-a-pull-request), [Actions → Example: Open a pull request](/kepler/actions#example-open-a-pull-request), [Start an Agent from an Issue and Take It to a Pull Request](/kepler/kepler-start-agent-from-issue-to-pull-request) |
+| Open a pull request | In Kepler, you or the agent opens the pull request, and Kepler attaches it to the task once it exists. The example **Open a pull request** Action has the agent open it for you. | [Review What a Coding Agent Changed → Opening a pull request](/kepler/review-changes#opening-a-pull-request), [Actions → Example: Open a pull request](/kepler/actions#example-open-a-pull-request), [Start a Coding Agent from a Jira or GitHub Issue and Take It to a Pull Request](/kepler/kepler-start-agent-from-issue-to-pull-request) |
 
 ---
 
@@ -748,7 +748,7 @@ The button's controls do the following:
 - **Branch name**: opens or closes the worktree's changes in the side pane. Its **⋮** opens the [worktree menu](#the-worktree-menu).
 - **Upstream control**: runs the action its counts call for. It offers **Pull** when the branch is behind, **Push** when it's ahead, and **Publish** when the branch is not on a remote yet. When the branch has diverged, or after you apply a rebase, it offers **Force push** after a confirmation. **Fetch** and the upstream row are in its chevron menu.
 - **Uncommitted** and **commits** chips: open the worktree's changes in the side pane, on that scope. Click the chip that's showing again to close the side pane, or the other chip to switch scope.
-- **Merge target** chip: shows how the branch compares with its merge target. While the target is ahead, its menu offers **See what's new on {target}**. See [What's new on the merge target](/kepler/review-changes#whats-new-on-the-merge-target). The menu also offers **Rebase onto {target}** and **Merge {target} into this branch**. See [Review Changes](/kepler/review-changes#updating-from-the-base).
+- **Merge target** chip: shows how the branch compares with its merge target. While the target is ahead, its menu offers **See what's new on {target}**. See [What's new on the merge target](/kepler/review-changes#whats-new-on-the-merge-target). The menu also offers **Rebase onto {target}** and **Merge {target} into this branch**. See [Review What a Coding Agent Changed](/kepler/review-changes#updating-from-the-base).
 - **Open in**: opens the checkout in your default editor. Other editors are in its chevron menu.
 - **Run**: runs one of the repository's commands.
 
@@ -1485,7 +1485,7 @@ Before I review this work, write a review summary in this session. Include:
 Don't change any files.
 ```
 
-The summary is the agent's own account. Check it against the diff in [Review Changes](/kepler/review-changes) before you commit.
+The summary is the agent's own account. Check it against the diff in [Review What a Coding Agent Changed](/kepler/review-changes) before you commit.
 
 #### Example: Open a pull request
 
@@ -1507,7 +1507,7 @@ End the description with this line:
 If the worktree has uncommitted changes, stop and tell me.
 ```
 
-The agent opens the pull request with the tools it has, such as your Git host's command-line tool. When it publishes the pull request, Kepler attaches it to the task. See [Review Changes](/kepler/review-changes#opening-a-pull-request).
+The agent opens the pull request with the tools it has, such as your Git host's command-line tool. When it publishes the pull request, Kepler attaches it to the task. See [Review What a Coding Agent Changed](/kepler/review-changes#opening-a-pull-request).
 
 ### Restore defaults
 
@@ -1746,7 +1746,7 @@ To prepare new worktrees automatically, use **Commands**. Save a repository's se
 The worktree's menu has the same entries wherever the worktree appears:
 
 - **Run command here**, **New session here**, which opens a draft session in that worktree, and **New terminal here**.
-- The **Branch** submenu, with **Rename branch**, the upstream, **Change merge target…**, and **Rebase onto {target}** or **Merge {target} into this branch**. For the upstream and updating the branch, see [Review Changes](/kepler/review-changes#publishing-and-syncing-the-branch).
+- The **Branch** submenu, with **Rename branch**, the upstream, **Change merge target…**, and **Rebase onto {target}** or **Merge {target} into this branch**. For the upstream and updating the branch, see [Review What a Coding Agent Changed](/kepler/review-changes#publishing-and-syncing-the-branch).
 - The copy actions, **Refresh**, **Detach worktree…** and **Delete worktree…**.
 
 To set up commands, open **Settings → Repositories** and go to the repository's own page. See [Settings](/kepler/settings-repositories#per-repository-commands) for the fields, the **Variables** a command can use, and what happens when one fails.
@@ -1956,7 +1956,7 @@ If you paste a Kepler link to a task or a session into the chat, the agent can u
 | `worktree_update` | Record a branch's new merge target, such as after a rebase onto another branch |
 | `worktree_delete` | Delete a worktree from disk. An unmerged branch is kept unless the agent asks to delete it |
 
-Where AI Sync and AI Compose are turned on, the `sync_*` and `compose_*` tools also let an agent update a branch from its base with a rebase or merge, and reorganize its commits. See [Review Changes](/kepler/review-changes#agent-tools-ai-sync-and-ai-compose).
+Where AI Sync and AI Compose are turned on, the `sync_*` and `compose_*` tools also let an agent update a branch from its base with a rebase or merge, and reorganize its commits. See [Review What a Coding Agent Changed](/kepler/review-changes#agent-tools-ai-sync-and-ai-compose).
 
 **Progress and lifecycle**
 
@@ -2192,7 +2192,7 @@ The worktree's **Branch** submenu holds the actions that change the branch itsel
 
 **Picking an editor or a command does not make it your default.** To make one your default, use the set/unset toggle at the end of its row.
 
-**Rename branch** opens a dialog for the new name. Tick **Also rename remote branch** to rename it on its remote too. **Change merge target…** opens a picker of remote branches; see [Review Changes](/kepler/review-changes).
+**Rename branch** opens a dialog for the new name. Tick **Also rename remote branch** to rename it on its remote too. **Change merge target…** opens a picker of remote branches; see [Review What a Coding Agent Changed](/kepler/review-changes).
 
 **Rename session** lets you name a Chat session yourself. Automatic titles never overwrite a name you chose.
 
@@ -2233,7 +2233,7 @@ With tabs off, the kind of row you open decides its column:
 | Column | What opens here |
 |---|---|
 | **Sessions** | Agent conversations, whether they run in Chat or in a terminal, and draft sessions you have not started yet |
-| **Changes** | A worktree: a strip of actions over its changed files. See [Review Changes](/kepler/review-changes) |
+| **Changes** | A worktree: a strip of actions over its changed files. See [Review What a Coding Agent Changed](/kepler/review-changes) |
 | **Resources** | Folders, files, pull requests, issues, links, notes |
 
 To resize columns, drag the divider between them. Kepler keeps the sizes you set.
@@ -2501,7 +2501,7 @@ Each kind of resource opens in its own pane:
 
 | Resource | Details |
 |---|---|
-| **Worktree**, on disk | A strip of actions (the branch, the sync control, **Open in**, **Run a command**) over its changed files, which lead into the Changes overlay, plus a **Comments** view that lists the task's review comments with how many are open and unread. See [Review Changes](/kepler/review-changes) |
+| **Worktree**, on disk | A strip of actions (the branch, the sync control, **Open in**, **Run a command**) over its changed files, which lead into the Changes overlay, plus a **Comments** view that lists the task's review comments with how many are open and unread. See [Review What a Coding Agent Changed](/kepler/review-changes) |
 | **Worktree**, missing | Its branch, base branch, and recorded path, with a way to recreate it. See [When a worktree goes missing](/kepler/tasks-and-resources#when-a-worktree-goes-missing) |
 | **Folder** | The folder's name and its **Path** |
 | **File** | The file itself, in the [file viewer](#opening-a-file), with its description, where it came from, and its size on the viewer's toolbar. An uploaded copy says it's a copy in the task folder, and has **Rename** in **File actions** |
@@ -2955,7 +2955,7 @@ If a link cannot open on the machine it names, it opens on this computer instead
 
 The task appears in the **Tasks** view right away, with the **Preparing** pill until its setup finishes. Click it to open its side panel, or double-click it to open [the task page](/kepler/task-view).
 
-From there you can add more sessions, attach more resources, and review what the agent changed. See [Agent Sessions](/kepler/agent-sessions) and [Review Changes](/kepler/review-changes).
+From there you can add more sessions, attach more resources, and review what the agent changed. See [Agent Sessions](/kepler/agent-sessions) and [Review What a Coding Agent Changed](/kepler/review-changes).
 
 ### Context: what gets handed to the agent
 
@@ -2994,7 +2994,7 @@ Sessions vary in 2 ways:
 
 Prompts, steering, permissions, status, and the session lifecycle work the same way for every session.
 
-To read the changes an agent made, see [Review Changes](/kepler/review-changes).
+To read the changes an agent made, see [Review What a Coding Agent Changed](/kepler/review-changes).
 
 ***
 
@@ -3372,7 +3372,7 @@ If an upload fails, or the message is too large for the agent, Kepler does not s
 
 **A pasted pull request or issue link becomes a chip.** Paste the URL of a pull request or issue from a connected GitHub, GitLab, Bitbucket, or Azure DevOps host, self-hosted included, or of a Jira or Linear issue. In a task's session composer or the **New task** composer, Kepler turns the URL into a chip labeled with its number, such as **#49**, and puts the label in your text in its place. Hover the chip to see the title and the URL. When you send, Kepler attaches the link to the task.
 
-**Review comments wait in a chip until you send.** Comments you queue for a session while you review its changes collect in one chip on its composer, such as **2 comments**. Click the chip to list them by file and line. Click a comment to open its place in the file, or click its **X** to remove it from the queue. The chip's own **X** removes all of them. Your next message sends the queued comments first, ahead of what you typed. You can also send them with an empty prompt. See [Review Changes](/kepler/review-changes).
+**Review comments wait in a chip until you send.** Comments you queue for a session while you review its changes collect in one chip on its composer, such as **2 comments**. Click the chip to list them by file and line. Click a comment to open its place in the file, or click its **X** to remove it from the queue. The chip's own **X** removes all of them. Your next message sends the queued comments first, ahead of what you typed. You can also send them with an empty prompt. See [Review What a Coding Agent Changed](/kepler/review-changes).
 
 **Replies to your review comments show on the session.** When the agent replies to a comment you left in Changes, its composer shows a chip such as **1 new reply**, and the session's tab shows the count. Click the chip to list the replies under **Replies**. Click a reply to open its comment in Changes, or click **Mark all read**. In a Terminal session with the composer hidden, the chip sits in the bar under the terminal. The reply itself also appears in the conversation; see [Reading the conversation](#reading-the-conversation).
 
@@ -3904,7 +3904,7 @@ In-app notifications show a close button when you hover them, and **Clear all ({
 
 ## Reviewing what the agent changed
 
-To read the diff an agent produced and sync its branch, see [Review Changes](/kepler/review-changes).
+To read the diff an agent produced and sync its branch, see [Review What a Coding Agent Changed](/kepler/review-changes).
 
 ---
 
@@ -4949,7 +4949,7 @@ last_verified: 2026-11
 
 Kepler by GitKraken imports your Conductor workspaces on a Mac as tasks, in the same folders and branches, with their Claude Code or Codex chats ready to continue. You pick the workspaces to bring over in **Import from another app**, and Kepler leaves your files and branches where they are.
 
-**Requirements and limits**
+## Requirements and limits
 
 - Scope: Bringing the workspaces the Conductor app keeps on your Mac into Kepler as tasks
 - Prerequisite: Conductor's workspaces on the Mac that runs Kepler
@@ -4974,14 +4974,19 @@ Kepler by GitKraken imports your Conductor workspaces on a Mac as tasks, in the 
 
 1. On an empty **Tasks** list, click the import card. It names the apps Kepler found, such as **Import from Conductor, Orca and 2 more**. You can also choose **File → Import from Another App…** at any time.
 
+    
 2. If Kepler found more than 1 app, click **Conductor** in **Import from another app**.
 
+    
 3. In **Import from Conductor**, tick the workspaces you want, and click **Import *N* workspaces**. The workspaces are grouped by repository, and each row shows its branch and how many chats it has. A workspace you already imported is marked **Already a task:** and the task's name.
 
+    
 4. When **Import finished** shows how many workspaces became tasks and how many chats resumed, click **Done**.
 
+    
 5. Find the new tasks in **Tasks**.
 
+    
 If Conductor is not in the list, Kepler did not find Conductor's workspaces on this Mac.
 
 ***
@@ -5005,14 +5010,16 @@ After the import, continue each chat in Kepler or in Conductor, not both. Both a
 
 ## What to do next in Kepler
 
-- **Start new work from your issues.** Connect your tracker and start tasks from the **Todo** view, with the issue attached. See [Start a Coding Agent from a Jira or GitHub Issue](/kepler/kepler-start-agent-from-issue-to-pull-request).
+- **Start new work from your issues.** Connect your tracker and start tasks from the **Todo** view, with the issue attached. See [Start a Coding Agent from a Jira or GitHub Issue and Take It to a Pull Request](/kepler/kepler-start-agent-from-issue-to-pull-request).
 - **Run Actions.** Fire **Plan**, **Implement**, **Review**, or your own Actions at a task instead of retyping prompts. See [Actions](/kepler/actions).
-- **Review each task's changes.** Read the diff in the **Changes** overlay, send comments back to the agent, and commit. See [Review Changes](/kepler/review-changes).
+- **Review each task's changes.** Read the diff in the **Changes** overlay, send comments back to the agent, and commit. See [Review What a Coding Agent Changed](/kepler/review-changes).
 - **Set up new worktrees.** Run a setup command each time Kepler creates a worktree with **Run on worktree creation**, and copy git-ignored files such as `.env` with a `.worktreeinclude` file. See [Repository Settings](/kepler/settings-repositories) and [Tasks and Resources](/kepler/tasks-and-resources).
 
 ***
 
 ## Common questions
+
+Short answers about moving from Conductor to Kepler.
 
 ### Can I move my Conductor workspaces to Kepler?
 
@@ -5028,7 +5035,7 @@ No. Conductor runs only on macOS, so Kepler imports Conductor workspaces only on
 
 ### Does importing change anything in Conductor?
 
-Kepler reads Conductor's workspaces and does not move your files. Both apps then point at the same folders, branches, and chat history, so continue each chat in 1 app only.
+No. Kepler reads Conductor's workspaces and does not change or move your files. Both apps then point at the same folders, branches, and chat history, so continue each chat in 1 app only.
 
 ### Which other apps can Kepler import from?
 
@@ -5042,7 +5049,7 @@ Kepler can also import workspaces from Orca, herdr, and Vibe Kanban, in the same
 - [Tasks and Resources](/kepler/tasks-and-resources)
 - [Agent Sessions](/kepler/agent-sessions)
 - [Actions](/kepler/actions)
-- [Review What a Coding Agent Changed in Kepler](/kepler/review-changes)
+- [Review What a Coding Agent Changed](/kepler/review-changes)
 - [Getting Started with Kepler](/kepler/kepler-getting-started)
 - [Kepler Quick Answers: Running Coding Agents](/kepler/quick-answers)
 
@@ -5057,15 +5064,15 @@ plan_required: all
 status: GA
 last_verified: 2026-11
 
-Kepler by GitKraken installs natively on Windows, so you can run Claude Code, Codex and other coding agents in parallel without a Mac or WSL. Each task gets its own worktree, a private Git working copy, so agents that run at the same time never change each other's files.
+Kepler by GitKraken installs natively on Windows, so you can run Claude Code, Codex, and other coding agents in parallel without a Mac or WSL. Each task gets its own worktree, a private Git working copy, so agents that run at the same time never change each other's files.
 
-**Requirements and limits**
+## Requirements and limits
 
 - Scope: Installing Kepler on Windows, installing coding agents there, and running several agents at once
-- Prerequisite: Windows 10+, on 64-bit or ARM64, and a GitKraken account to sign in to Kepler
+- Prerequisite: Windows 10 and later, on 64-bit or ARM64, and a GitKraken account to sign in to Kepler
 - Prerequisite: Your own account for each coding agent you use, such as a Claude or ChatGPT plan
-- Limits: Auggie, Pi and OpenCode need Node.js on Windows. OpenCode installs only through npm on Windows
-- Limits: A worktree separates files only. Agents still share ports, databases and other local services. See [What a worktree does not separate](#what-a-worktree-does-not-separate)
+- Limits: Auggie, Pi, and OpenCode need Node.js on Windows. OpenCode installs only through npm on Windows
+- Limits: A worktree separates files only. Agents still share ports, databases, and other local services. See [What a worktree does not separate](#what-a-worktree-does-not-separate)
 
 ***
 
@@ -5086,8 +5093,8 @@ Kepler has installers for 2 Windows architectures:
 
 | Installer | For |
 |---|---|
-| 64-bit | Windows 10+ on an Intel or AMD processor |
-| ARM64 | Windows 10+ on an ARM processor |
+| 64-bit | Windows 10 and later on an Intel or AMD processor |
+| ARM64 | Windows 10 and later on an ARM processor |
 
 1. Go to [gitkraken.com/kepler/download](https://www.gitkraken.com/kepler/download) and pick the Windows installer for your processor.
 2. Run the installer.
@@ -5147,11 +5154,11 @@ A new worktree has none of your Git-ignored files, such as `.env` or `node_modul
 
 A worktree gives each task its own copy of the files, and nothing else. Agents in different tasks still share:
 
-- **Ports.** 2 worktrees that start the same dev server on the same port collide.
+- **Ports.** Two worktrees that start the same dev server on the same port collide.
 - **Databases and other local services.** Agents that point at the same database read and write the same data.
 - **Caches and files outside the repository**, such as a global package cache.
 
-To give each worktree its own port or database, use a repository command that runs when Kepler creates the worktree. See [Set Up Every New Agent Worktree Automatically](/kepler/kepler-set-up-agent-worktrees-automatically#give-each-worktree-its-own-port-or-database).
+To give each worktree its own port or database, use a repository command that runs when Kepler creates the worktree. See [Set Up Every New Agent Worktree Automatically](/kepler/kepler-set-up-agent-worktrees-automatically#how-to-give-each-worktree-its-own-port-or-database).
 
 ***
 
@@ -5159,7 +5166,7 @@ To give each worktree its own port or database, use a repository command that ru
 
 Run agents natively on Windows when your project builds and runs on Windows. Use a WSL 2 distro when your project needs a Linux toolchain, such as build scripts written for bash.
 
-In Kepler, a WSL 2 distro is a remote environment. Your agents, worktrees and terminals run inside the distro, while you work from the Kepler window on Windows. It needs no credentials and no extra setup:
+In Kepler, a WSL 2 distro is a remote environment. Your agents, worktrees, and terminals run inside the distro, while you work from the Kepler window on Windows. It needs no credentials and no extra setup:
 
 1. Open **Settings → Remote environments**.
 2. Find your distro under **Found on this machine**, and click **Add**.
@@ -5171,9 +5178,11 @@ Kepler lists WSL **version 2** distros only. Install each agent inside the distr
 
 ## Common questions
 
+Short answers about running coding agents on Windows with Kepler.
+
 ### Does Kepler work on Windows, or is it Mac only?
 
-Kepler works on Windows. It has a native Windows installer for Windows 10+, on 64-bit and ARM64. It also runs on macOS and Linux.
+Kepler works on Windows. It has a native Windows installer for Windows 10 and later, on 64-bit and ARM64. It also runs on macOS and Linux.
 
 ### Can I run Claude Code and Codex at the same time on Windows?
 
@@ -5185,11 +5194,11 @@ No. All 9 agents that Kepler supports install and run on native Windows. Use WSL
 
 ### How do I stop parallel agents from overwriting each other's work?
 
-Leave **Isolated worktree** on, which is the default. Each task then works in its own worktree on its own branch. When the work is done, review and merge each branch on its own. See [Review Changes](/kepler/review-changes).
+Leave **Isolated worktree** on, which is the default. Each task then works in its own worktree on its own branch. When the work is done, review and merge each branch on its own. See [Review What a Coding Agent Changed](/kepler/review-changes).
 
 ### Why does my second agent's dev server fail to start?
 
-When 2 worktrees start a dev server on the same port, the second server can fail to start. A worktree separates files only. Give each worktree its own port with a repository command. See [Set Up Every New Agent Worktree Automatically](/kepler/kepler-set-up-agent-worktrees-automatically#give-each-worktree-its-own-port-or-database).
+When 2 worktrees start a dev server on the same port, the second server can fail to start. A worktree separates files only. Give each worktree its own port with a repository command. See [Set Up Every New Agent Worktree Automatically](/kepler/kepler-set-up-agent-worktrees-automatically#how-to-give-each-worktree-its-own-port-or-database).
 
 ***
 
@@ -5214,15 +5223,15 @@ plan_required: all
 status: GA
 last_verified: 2026-11
 
-Kepler by GitKraken repeats your worktree setup every time it creates a worktree for an agent. You set it up once per repository: a `.worktreeinclude` file copies Git-ignored files such as `.env` into each new worktree, and repository commands set to **Run on worktree creation** install dependencies in the background, for Claude Code, Codex or any other agent.
+Kepler by GitKraken repeats your worktree setup every time it creates a worktree for an agent. You set it up once per repository: a `.worktreeinclude` file copies Git-ignored files such as `.env` into each new worktree, and repository commands set to **Run on worktree creation** install dependencies in the background, for Claude Code, Codex, or any other agent.
 
-**Requirements and limits**
+## Requirements and limits
 
 - Scope: Preparing every new worktree that Kepler creates for a task: ignored files, dependency installs, and per-worktree settings such as a port or a database name
 - Prerequisite: The repository is added to Kepler, in **Settings → Repositories**
 - Limits: Kepler copies only files that Git ignores in the new worktree, and never overwrites a file that is already there
 - Limits: Setup commands run one at a time, in list order. If one fails, Kepler skips the rest. Each command has a 10-minute timeout
-- Limits: A worktree separates files only. Ports, databases and caches stay shared unless your setup gives each worktree its own
+- Limits: A worktree separates files only. Ports, databases, and caches stay shared unless your setup gives each worktree its own
 
 ***
 
@@ -5238,7 +5247,7 @@ Kepler by GitKraken repeats your worktree setup every time it creates a worktree
 
 ## How to copy .env and other ignored files into each worktree
 
-A new worktree is a clean checkout. It has none of the Git-ignored files in your own checkout, such as `.env`, local config files or certificates.
+A new worktree is a clean checkout. It has none of the Git-ignored files in your own checkout, such as `.env`, local config files, or certificates.
 
 To copy them into every new worktree:
 
@@ -5262,13 +5271,13 @@ Kepler copies a file only when Git also ignores it in the new worktree, so an ag
 
 ## How to install dependencies in each new worktree
 
-A new worktree has no `node_modules`, virtual environment or build output. Save the setup steps once as repository commands:
+A new worktree has no `node_modules`, virtual environment, or build output. Save the setup steps once as repository commands:
 
 1. Open **Settings → Repositories** and open the repository's page.
 2. Under **Commands**, click **Add command**.
 3. Enter a name, such as *Install deps*, and the command, such as `pnpm install`.
 4. Tick **Run on worktree creation**.
-5. Click **Add command**, or press **Ctrl + Enter** (**⌘ Enter** on macOS). The command shows a **Runs on creation** chip.
+5. Click **Add command**, or press **Cmd/Ctrl+Enter**. The command shows a **Runs on creation** chip.
 
 Add one command for each step, and drag the rows into the order they need to run. Each time Kepler creates a worktree for the repository, it runs these commands one at a time, in list order, in the new worktree's folder.
 
@@ -5280,9 +5289,9 @@ The commands run in the background, so the agent can start while an install is s
 
 ***
 
-## Give each worktree its own port or database
+## How to give each worktree its own port or database
 
-Worktrees separate files, and nothing else. When agents in 2 worktrees start the same dev server on the same port, the second server fails to start. When they point at the same database, they read and write the same data.
+Worktrees separate files, and nothing else. When agents in 2 worktrees start the same dev server on the same port, the second server can fail to start. When they point at the same database, they read and write the same data.
 
 To keep them apart, add a setup command that writes per-worktree settings into a Git-ignored file in the new worktree, such as `.env.local`. Your app then reads its port and database name from that file.
 
@@ -5327,7 +5336,7 @@ A worktree gives each task its own copy of the repository's files. Tasks still s
 
 | Shared | What happens | What to do |
 |---|---|---|
-| **Ports** | 2 dev servers on the same port collide | Write a port per worktree in a setup command |
+| **Ports** | Two dev servers on the same port collide | Write a port per worktree in a setup command |
 | **Databases and other local services** | Agents read and write the same data | Write a database name per worktree, and create it in a setup command |
 | **Caches and files outside the repository** | A global package cache or a file in your home folder is the same for every worktree | Keep per-task files inside the repository, in Git-ignored paths |
 
@@ -5336,6 +5345,8 @@ See [What a worktree does not separate](/kepler/tasks-and-resources#what-a-workt
 ***
 
 ## Common questions
+
+Short answers about setting up agent worktrees automatically in Kepler.
 
 ### How do I copy my .env file into every new worktree?
 
@@ -5353,7 +5364,7 @@ No. Setup commands run in the background, and the agent can start before they fi
 
 Kepler shows **Worktree setup failed** with the command and its error, and skips the commands after it. The worktree stays. Fix the command, then run it again with **Run command here**. On Windows, that runs it in PowerShell.
 
-### Does this work for Claude Code, Codex and other agents?
+### Does this work for Claude Code, Codex, and other agents?
 
 Yes. The setup belongs to the repository, so it runs for every new worktree, whichever agent the task uses.
 
@@ -5384,7 +5395,7 @@ last_verified: 2026-11
 
 Kepler by GitKraken manages your Claude Code and Codex sessions across several accounts and SSH hosts in 1 app. You add each account once in **Settings → Agents**, pick the account when you start a session, and add each remote server in **Settings → Remote environments**. Sessions on a server run there and keep running when you disconnect.
 
-**Requirements and limits**
+## Requirements and limits
 
 - Scope: Several signed-in accounts for 1 agent, choosing the account for each session, moving a conversation to another account, and running agent sessions on SSH hosts.
 - Agents with several accounts: Claude Code, Codex, GitHub Copilot, Auggie, and Grok Build.
@@ -5478,11 +5489,13 @@ Each Kepler window shows 1 machine's tasks and sessions on its Dashboard, includ
 - **Open a window per machine.** In the chip's menu, click the window icon next to a host to open it in a new window. Keep 1 window on your computer and 1 on each server.
 - **Manage every machine in Settings.** **Settings → Remote environments** lists **Your machines**, whether each one is connected, and how many windows use it.
 
-To keep track of which session needs you on each machine, see [Keep Track of Several Claude Code and Codex Sessions in Kepler](/kepler/kepler-track-multiple-agent-sessions).
+To keep track of which session needs you on each machine, see [Keep Track of Several Claude Code and Codex Sessions](/kepler/kepler-track-multiple-agent-sessions).
 
 ***
 
 ## Common questions
+
+Short answers about agent accounts and SSH hosts in Kepler.
 
 ### Can I use 2 Claude Code accounts at the same time?
 
@@ -5516,7 +5529,7 @@ Yes. On Windows, a WSL 2 distribution is a remote environment like an SSH host. 
 - [Agent Integrations](/kepler/agent-integrations)
 - [Remote Environments](/kepler/remote-environments)
 - [Settings](/kepler/settings-environment)
-- [Keep Track of Several Claude Code and Codex Sessions in Kepler](/kepler/kepler-track-multiple-agent-sessions)
+- [Keep Track of Several Claude Code and Codex Sessions](/kepler/kepler-track-multiple-agent-sessions)
 - [Quick Answers](/kepler/quick-answers)
 
 ---
@@ -5532,12 +5545,12 @@ last_verified: 2026-11
 
 Kepler by GitKraken keeps track of several Claude Code and Codex sessions in 1 Dashboard, including sessions you start in your own terminal once you turn on detection. Give each piece of work its own task, so each one gets its own worktree and branch. The Dashboard then shows which session needs you, and each task's **Changes** group shows what its agent changed.
 
-**Requirements and limits**
+## Requirements and limits
 
 - Scope: Following several agent sessions at once, seeing which one needs you, and seeing which one changed what.
 - Sessions you start in your own terminal: Kepler lists them only after you turn on **Show sessions started outside Kepler**, which is off by default.
 - Limits: Kepler follows a session running in your terminal but does not control it. To answer a question it asks, answer in your terminal, or move the session into Kepler.
-- Limits: 2 sessions that share 1 worktree also share its changes. To tell their changes apart, give each session its own task.
+- Limits: Sessions that share a worktree also share its changes. To tell their changes apart, give each session its own task.
 
 ***
 
@@ -5580,7 +5593,7 @@ See [Sessions started outside Kepler](/kepler/agent-sessions#sessions-started-ou
 
 ***
 
-## How to keep 1 task per worktree
+## How to give each task its own worktree
 
 Give each piece of work its own task. By default, each new task makes its changes in its own worktree: a separate copy of the repository on its own branch. Sessions in different tasks do not edit the same files, so you always know which session changed what.
 
@@ -5593,6 +5606,8 @@ To change where new tasks make their changes, open **Settings → Tasks** and fi
 ***
 
 ## How to see which session needs you
+
+Kepler shows what each session needs in 5 places: the Dashboard, session status, notifications, the Agent Graph, and Ask Kepler.
 
 ### The Dashboard and its Inbox
 
@@ -5630,11 +5645,13 @@ Each task lists its worktrees under **Changes** in the context panel, on the lef
 
 On the Dashboard, a task's preview shows each worktree with chips for its uncommitted files and commits. Click a chip to open that worktree's changes without leaving the Dashboard.
 
-See [Review Changes](/kepler/review-changes) to read the diff, comment on it, and commit.
+See [Review What a Coding Agent Changed](/kepler/review-changes) to read the diff, comment on it, and commit.
 
 ***
 
 ## Common questions
+
+Short answers about keeping track of several agent sessions in Kepler.
 
 ### How do people manage 5 or more Claude Code and Codex sessions at once?
 
@@ -5661,13 +5678,13 @@ Yes. Each task gets its own worktree, so Claude Code and Codex can each work in 
 ## Related pages
 
 - [Agent Sessions](/kepler/agent-sessions)
-- [Create a Task](/kepler/create-task)
+- [Create a task](/kepler/create-task)
 - [Tasks and Resources](/kepler/tasks-and-resources)
 - [Arranging Your Work](/kepler/arranging-your-work)
 - [The Agent Graph](/kepler/agent-graph)
 - [Ask Kepler](/kepler/ask-kepler)
-- [Review Changes](/kepler/review-changes)
-- [Manage Claude Code and Codex Sessions Across Accounts and SSH Hosts in Kepler](/kepler/kepler-manage-agents-across-accounts-and-ssh-hosts)
+- [Review What a Coding Agent Changed](/kepler/review-changes)
+- [Manage Claude Code and Codex Sessions Across Accounts and SSH Hosts](/kepler/kepler-manage-agents-across-accounts-and-ssh-hosts)
 - [Kepler Quick Answers: Running Coding Agents](/kepler/quick-answers)
 
 ---
@@ -5681,11 +5698,11 @@ plan_required: all
 status: GA
 last_verified: 2026-11
 
-Kepler by GitKraken lets you see what your coding agents are doing and approve their requests from your phone. Turn on Remote Access in Kepler on your computer, scan its QR code with your phone, and answer each permission request from Claude Code, Codex or any other agent in your phone's browser, with the same choices as on your desktop.
+Kepler by GitKraken lets you see what your coding agents are doing and approve their requests from your phone. Turn on Remote Access in Kepler on your computer, scan its QR code with your phone, and answer each permission request from Claude Code, Codex, or any other agent in your phone's browser, with the same choices as on your desktop.
 
-**Requirements and limits**
+## Requirements and limits
 
-- Scope: Watching agent sessions and answering permission requests, questions, plan reviews and approval requests from a phone
+- Scope: Watching agent sessions and answering permission requests, questions, plan reviews, and approval requests from a phone
 - Prerequisite: Kepler running on your computer, signed in to your GitKraken account. Your agents keep running on the computer, and the phone shows its interface
 - Prerequisite: A phone browser signed in to the same GitKraken account
 - Limits: Kepler sends no push notifications to your phone. Requests appear on the phone only while Kepler is open there, as an alert and in the waiting task
@@ -5704,7 +5721,7 @@ Kepler by GitKraken lets you see what your coding agents are doing and approve t
 
 ## How to turn on Remote Access
 
-Remote Access opens this Kepler from another device, such as your phone, through your GitKraken account. Your agents, worktrees and terminals stay on your computer.
+Remote Access opens this Kepler from another device, such as your phone, through your GitKraken account. Your agents, worktrees, and terminals stay on your computer.
 
 1. On your computer, open **Settings → Remote Access**, or hover over the **Remote Access** button in the title bar.
 2. Click **Turn on Remote Access**.
@@ -5741,7 +5758,7 @@ Kepler marks every task and session that waits on you, so you can find a request
 - **The task list.** On the Dashboard, a Tasks view grouped by **Inbox** lists the tasks that wait on you under **Needs attention**.
 - **Inside a task.** Tap **Sessions** to go to the session that waits on you. A dot on the back arrow means another task needs you.
 
-> **Note:** Kepler sends no push notifications to your phone. When Kepler is closed on the phone, nothing tells you that an agent is waiting. Open Kepler on the phone to check. On your computer, Kepler's desktop notifications still work as usual.
+> **Note:** When Kepler is closed on the phone, nothing tells you that an agent is waiting. Open Kepler on the phone to check. On your computer, Kepler's desktop notifications still work as usual.
 
 ***
 
@@ -5757,11 +5774,11 @@ A permission request pins to the top of its session. It names the tool the agent
 | **Reject** | Refuses this call |
 | **Reject always** | Refuses it permanently |
 
-You see only the choices the agent offers. A session in Terminal mode offers **Allow once**, **Always allow** and **Deny** instead. The agent continues as soon as you answer. If you already answered on another device, Kepler says **Already answered**. See [Agent Sessions](/kepler/agent-sessions#permission-requests).
+You see only the choices the agent offers. A session in Terminal mode offers **Allow once**, **Always allow**, and **Deny** instead. The agent continues as soon as you answer. If you already answered on another device, Kepler says **Already answered**. See [Agent Sessions](/kepler/agent-sessions#permission-requests).
 
 ***
 
-## How to answer plans, questions and approval requests
+## How to answer plans, questions, and approval requests
 
 Other requests wait in the session the same way, and you answer them on the phone as you do on your computer:
 
@@ -5774,6 +5791,8 @@ To see what an agent did while you were away, open its session and read the conv
 ***
 
 ## Common questions
+
+Short answers about approving agent requests from a phone with Kepler.
 
 ### Will my phone notify me when an agent needs permission?
 
@@ -5789,7 +5808,7 @@ Yes. Your agents run on your computer, and the phone shows that computer's Keple
 
 ### Does this work with Claude Code and Codex?
 
-Yes. In a Chat session, a permission request shows the same buttons whichever agent raised it, including Claude Code, Codex and GitHub Copilot. A session in Terminal mode offers **Allow once**, **Always allow** and **Deny**, and you answer those from the phone too.
+Yes. In a Chat session, a permission request shows the same buttons whichever agent raised it, including Claude Code, Codex, and GitHub Copilot. A session in Terminal mode offers **Allow once**, **Always allow**, and **Deny**, and you answer those from the phone too.
 
 ### Can someone else open my Kepler from their phone?
 
@@ -5816,13 +5835,13 @@ plan_required: all
 status: GA
 last_verified: 2026-11
 
-Kepler by GitKraken starts a coding agent from a Jira or GitHub issue, with the ticket already attached, and takes the work to a pull request. You connect your tracker once, then click the **Action** button on the issue's row in **Todo**. For a GitHub or GitLab issue, Kepler creates a task, sets up a worktree by default, and starts Claude Code, Codex, or your default agent with the issue's details in place, so you never paste the ticket into a chat. For a Jira issue, you add the repository in the issue's panel first, then start.
+Kepler by GitKraken starts a coding agent from a GitHub or GitLab issue in 1 click, or from a Jira issue once you add its repository, with the ticket already attached, and takes the work to a pull request. You connect your tracker once, then click the **Action** button on the issue's row in **Todo**. Kepler creates a task, sets up a worktree by default, and starts Claude Code, Codex, or your default agent with the issue's details in place, so you never paste the ticket into a chat.
 
-**Requirements and limits**
+## Requirements and limits
 
 - Scope: Going from an issue in a connected tracker to an agent's pull request, inside 1 Kepler task
 - Prerequisite: A GitKraken account signed in to Kepler, and a connected issue tracker. See [Issue Tracker Integrations](/kepler/issue-tracker-integrations).
-- Limits: Kepler reads issues from Jira, Jira Server / Data Center, Linear, Trello, Asana, GitHub, GitHub Enterprise, GitLab, GitLab Self-Hosted, Azure DevOps, and Azure DevOps Server.
+- Supported trackers: Jira, Jira Server / Data Center, Linear, Trello, Asana, GitHub, GitHub Enterprise, GitLab, GitLab Self-Hosted, Azure DevOps, and Azure DevOps Server.
 - Limits: Kepler has no button that creates a pull request. The agent opens it, or you open it yourself. Kepler then attaches it to the task.
 
 ***
@@ -5875,9 +5894,11 @@ From the issue's row, the agent is your default agent, or the agent the Action n
 
 ## How to take the work to a pull request
 
+When the agent finishes, you review and commit its work, open the pull request, and Kepler attaches the pull request to the task.
+
 ### Review and commit
 
-When the agent finishes, open the task's worktree and read its changes in the **Changes** overlay. Send fixes back as review comments, then click **Commit…** to stage and commit. See [Review an AI-Written Pull Request Before Your Teammates Do](/kepler/kepler-review-ai-pull-request-before-sharing) and [Review Changes](/kepler/review-changes).
+When the agent finishes, open the task's worktree and read its changes in the **Changes** overlay. Send fixes back as review comments, then click **Commit…** to stage and commit. See [Review an AI-Written Pull Request Before Your Teammates Do](/kepler/kepler-review-ai-pull-request-before-sharing) and [Review What a Coding Agent Changed](/kepler/review-changes).
 
 ### Open the pull request
 
@@ -5909,6 +5930,8 @@ To have Kepler start the agent for you, set up an [automation](/kepler/kepler-au
 
 ## Common questions
 
+Short answers about starting a coding agent from an issue in Kepler.
+
 ### Can I start a coding agent straight from a Jira issue?
 
 Yes. Connect Jira in **Settings → Integrations**, then click **Action** on the issue's row in **Todo**, add the repository in the issue's panel, then send. Kepler starts the agent with the issue's description attached as context.
@@ -5936,7 +5959,7 @@ Your default agent, such as Claude Code or Codex, unless the Action names anothe
 - [Create a task](/kepler/create-task)
 - [Issue Tracker Integrations](/kepler/issue-tracker-integrations)
 - [Actions](/kepler/actions)
-- [Review What a Coding Agent Changed in Kepler](/kepler/review-changes)
+- [Review What a Coding Agent Changed](/kepler/review-changes)
 - [Pull Request Integrations](/kepler/pull-request-integrations)
 - [Automations](/kepler/kepler-automations)
 - [Kepler Quick Answers: Running Coding Agents](/kepler/quick-answers)
@@ -5954,26 +5977,24 @@ last_verified: 2026-11
 
 Kepler by GitKraken gives you a review step between an agent's work and your teammates. You read every changed line in the Changes overlay, send review comments back to the agent, have a second agent review the work, and only then open the pull request. The work stays in the task's worktree, so you can review what Claude Code, Codex, or any other agent wrote before you open the pull request.
 
-**Requirements and limits**
+## Requirements and limits
 
 - Scope: Reviewing an agent's uncommitted or committed work in a Kepler task before you open a pull request
 - Prerequisite: A task whose agent has made changes in its worktree. See [Create a task](/kepler/create-task).
 - Limits: Kepler has no button that creates a pull request. The agent opens it, or you open it yourself.
 - Limits: Review comments you write in Kepler go to the agent. Kepler does not post them to your Git host.
-- Limits: A second agent's review is a report, not an approval. You still decide what to change.
+- Second agent's review: a report, not an approval. You still decide what to change.
 
 ***
 
 ## Quick Start
 
-| Self-review step | What you do in Kepler |
-|---|---|
-| 1. Restate the problem | Ask the agent for a summary of what it changed and what it did not test, with an Action you create from the **Prepare for review** example |
-| 2. Read every changed line | Open the task's worktree and read the diff in the **Changes** overlay |
-| 3. Send fixes back | Comment on the lines that need work, then click **Send comments (*n*)** |
-| 4. Prove it works | Ask the agent to run the tests in the session, and read the commands and results it reports |
-| 5. Get a second opinion | Run the built-in **Review** Action with a different agent, such as Codex for work Claude Code wrote |
-| 6. Open the pull request | Commit, then open the pull request yourself or with an Action you create from the **Open a pull request** example |
+1. **Restate the problem.** Ask the agent for a summary of what it changed and what it did not test, with an Action you create from the **Prepare for review** example.
+2. **Read every changed line.** Open the task's worktree and read the diff in the **Changes** overlay.
+3. **Send fixes back.** Comment on the lines that need work, then click **Send comments (*n*)**.
+4. **Prove it works.** Ask the agent to run the tests in the session, and read the commands and results it reports.
+5. **Get a second opinion.** Run the built-in **Review** Action with a different agent, such as Codex for work Claude Code wrote.
+6. **Open the pull request.** Commit, then open the pull request yourself or with an Action you create from the **Open a pull request** example.
 
 ***
 
@@ -6001,7 +6022,7 @@ The agent makes its changes in the task's worktree. To read them:
 2. Click a file, or choose **Open changes** from the worktree's menu, to open the **Changes** overlay.
 3. Read each file's diff. The file tree beside it lists every file the agent touched.
 
-See [Review Changes](/kepler/review-changes#the-changes-overlay) for the overlay's views, layouts, and keyboard controls.
+See [Review What a Coding Agent Changed](/kepler/review-changes#the-changes-overlay) for the overlay's views, layouts, and keyboard controls.
 
 ***
 
@@ -6009,7 +6030,7 @@ See [Review Changes](/kepler/review-changes#the-changes-overlay) for the overlay
 
 When a line needs work, comment on it instead of fixing it yourself or retyping the location in the chat.
 
-1. In the **Changes** overlay, hover a line and click the **+** beside its line number. To comment on a range, **Shift**-click the last line.
+1. In the **Changes** overlay, hover over a line and click the **+** beside its line number. To comment on a range, **Shift**-click the last line.
 2. Type your note.
 3. Click **Add comment** to queue it, or **Send now** to send it to the agent at once.
 4. When you finish the file, click **Send comments (*n*)** in the overlay's header to send every queued comment.
@@ -6055,6 +6076,8 @@ When the agent publishes the pull request, Kepler attaches it to the task. A pul
 
 ## Common questions
 
+Short answers about reviewing an AI-written pull request in Kepler.
+
 ### How do I review an AI-written PR myself before I send it to a teammate?
 
 In Kepler, read every changed line in the task's **Changes** overlay, send review comments back to the agent, ask it to run the tests, and run the built-in **Review** Action with a second agent. Open the pull request only after that.
@@ -6079,7 +6102,7 @@ Yes. Write it in the description yourself, or use an Action created from the **O
 
 ## Related pages
 
-- [Review What a Coding Agent Changed in Kepler](/kepler/review-changes)
+- [Review What a Coding Agent Changed](/kepler/review-changes)
 - [Actions](/kepler/actions)
 - [Create a task](/kepler/create-task)
 - [Agent Sessions](/kepler/agent-sessions)
@@ -6806,7 +6829,7 @@ Kepler recognizes an issue from its URL when you paste or attach one, including 
 
 **Search by key or link.** In the issue list of a task's **Resources** screen, type a Jira or Linear issue key, such as `OPS-42`, or paste a Jira Cloud, Jira Server / Data Center, Linear, or Azure DevOps work item link. Kepler finds that issue in its tracker, whatever its state, even when it is not in the list. A Jira Server / Data Center link resolves when it points at an installation you have connected.
 
-**Jira keys in commits and branches.** With Jira or Jira Server / Data Center connected, Kepler links Jira issue keys in commit messages and branch names, so `OPS-42` in a commit message links to that issue. Right-click a commit in a worktree's commit list for **Open issue *key*** and **Copy issue URL for *key*** (see [Review Changes](/kepler/review-changes#the-changes-panel)), and the **Worktrees and branches** page shows the keys as chips on branch and worktree rows (see [Repository Settings](/kepler/settings-repositories#worktrees-and-branches)). Only Jira keys are linked this way.
+**Jira keys in commits and branches.** With Jira or Jira Server / Data Center connected, Kepler links Jira issue keys in commit messages and branch names, so `OPS-42` in a commit message links to that issue. Right-click a commit in a worktree's commit list for **Open issue *key*** and **Copy issue URL for *key*** (see [Review What a Coding Agent Changed](/kepler/review-changes#the-changes-panel)), and the **Worktrees and branches** page shows the keys as chips on branch and worktree rows (see [Repository Settings](/kepler/settings-repositories#worktrees-and-branches)). Only Jira keys are linked this way.
 
 **Add from the list with the keyboard.** In the issue list on the **Resources** screen, the arrows move between rows, and **Enter** or a double-click adds the row. **Show preview** in the screen's header shows the picked row beside the list. See [Picking issues and pull requests](/kepler/tasks-and-resources#picking-issues-and-pull-requests).
 
@@ -7015,7 +7038,7 @@ Your pull requests appear in 4 places:
 |---|---|
 | [The Kepler interface](/kepler/kepler-interface) | A **Todo** view lists the pull requests related to you on each connected host, or every open one in the repositories added to Kepler |
 | [Actions](/kepler/actions) | The **Action** button hands the pull request to an agent. **Review** and **Address Feedback** are the 2 built-in Actions for pull requests, and Kepler picks one based on who authored the pull request |
-| [Review Changes](/kepler/review-changes) | Reading the diff and the commits behind a pull request |
+| [Review What a Coding Agent Changed](/kepler/review-changes) | Reading the diff and the commits behind a pull request |
 | [Tasks and Resources](/kepler/tasks-and-resources) | A pull request is a resource on a task, so you can attach one to work that already exists |
 
 **Todo's scope.** A Todo view's **View** menu sets its **Scope**: **Mine**, the work related to you, or **All**, which adds the open pull requests of the repositories added to Kepler on every Git host above. See [Which issues Kepler lists](/kepler/issue-tracker-integrations#which-issues-kepler-lists).
@@ -8112,7 +8135,7 @@ These settings set how diffs and code look:
 | **Font** › **Family** | The font for diffs, file views, and code in chat. Leave it empty to use the terminal's font | Empty |
 | **Font** › **Size** | Text size in diffs and file views, from 10 to 24 | 13 |
 
-To switch a single diff without changing the default, use the layout button on the file's header in the Changes overlay. See [Review changes](/kepler/review-changes).
+To switch a single diff without changing the default, use the layout button on the file's header in the Changes overlay. See [Review What a Coding Agent Changed](/kepler/review-changes).
 
 ***
 
@@ -9021,7 +9044,7 @@ You can also manage the current machine's connections locally, in **Settings →
 
 - [Settings](/kepler/settings-environment): the **Remote environments** and **Remote Access** pages, and [the shortcut list](/kepler/settings-app#keyboard-shortcuts)
 - [Agent Integrations](/kepler/agent-integrations): signing agents in, including on a remote target
-- [Review Changes](/kepler/review-changes): reviewing and shipping the work a remote agent produced
+- [Review What a Coding Agent Changed](/kepler/review-changes): reviewing and shipping the work a remote agent produced
 
 ---
 
