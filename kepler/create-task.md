@@ -172,7 +172,7 @@ Kepler names a task's branch from what the task is about, rather than from the t
 - **A name you type is yours verbatim.** The prefix applies to automatic names only.
 - **Kepler applies your repository's own branch-naming policy** where the host publishes one.
 
-You can set the prefix in 2 places: **Settings → Tasks → New tasks → Branch prefix** for the app, and per repository in **Settings → Repositories**, on the repository's own page. The repository's page offers **Default (*prefix*)**, **None**, or **Custom**, and shows an example branch name. Leave the app setting empty for no prefix at all.
+You can set the prefix in 2 places: **Settings → Repositories → Default locations → Branch prefix** for the app, and per repository in **Settings → Repositories**, on the repository's own page. The repository's page offers **Default (*prefix*)**, **None**, or **Custom**, and shows an example branch name. Leave the app setting empty for no prefix at all.
 
 A repository linked to a pull request always opens in its own isolated working copy, and the toggle is locked. Kepler never overwrites a local branch that has commits the pull request does not: it starts the task on a new branch that tracks the pull request.
 
@@ -184,7 +184,7 @@ Attaching the same repository twice gives the task 2 independent worktrees on it
 
 ## From a session you already started
 
-If you started work with an agent in your own terminal, you can track that conversation in a task. Under the **New task** composer, and on an empty tasks list, **Open an external session** switches the composer to a list of every agent conversation Kepler can see. **Start a new task** switches back. **Open an external session** appears only while external session detection is on.
+If you started work with an agent in your own terminal, you can track that conversation in a task. Under the **New task** composer, and on an empty tasks list, **Open an external session** switches the composer to a list of every agent conversation Kepler can see. **Start a new task** switches back. **Open an external session** appears only while **Show them in Kepler** is on in **Settings → General → Sessions outside Kepler**, which it is by default.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/continue-external-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
@@ -269,7 +269,7 @@ Continue each chat in one app only: both apps write to the same chat history.
 
 **A task does not need a repository.** Attach a plain folder from **Add repo or folder**, and the agent works on it in place, with no branch, no worktree, and no Git at all. A folder of notes or a scratch directory works as a normal task.
 
-When you browse for a folder in a window connected to another machine, Kepler opens its own folder picker. To use this picker everywhere, turn on **Always use the custom folder picker** in **Settings → General**. When you type a path into it, Kepler checks the path and, for a path close to an existing folder, offers **Did you mean** with the closest folder.
+When you browse for a folder in a window connected to another machine, Kepler opens its own folder picker. To use this picker everywhere, turn on **Always use Kepler's folder picker** in **Settings → General → Windows**. When you type a path into it, Kepler checks the path and, for a path close to an existing folder, offers **Did you mean** with the closest folder.
 
 You can also attach nothing at all: no repository, no folder, and no issue. Use a task like this to ask a question or explore an idea, and attach the real work later, once it's worth tracking. See [The Task View](/kepler/task-view).
 

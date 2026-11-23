@@ -38,6 +38,169 @@ New to Kepler? [Getting Started with Kepler](/kepler/kepler-getting-started) tak
 
 ***
 
+<a id="v0-24-0"></a>
+## Version 0.24.0
+
+<kbd>Friday, November 20th, 2026</kbd>
+
+### Highlights
+
+- **See everything that needs you from the title bar.** Know what needs you without opening a menu, and get to it in one press.
+- **Answer your agents from your phone, even when locked.** Step away from your desk without leaving agents stuck on a question until you get back.
+- **Dictate to terminal agents as you speak.** Talk to a terminal agent instead of typing, without leaving your machine.
+
+### Features
+
+#### Search Kepler
+
+Know what needs you without opening a menu, and get to it in one press.
+
+- A Search Kepler field in the middle of the title bar opens the palette and shows at a glance what needs you, what is unread and what is running, on this machine and your others.
+- The palette's first screen lists every task waiting on you, so clearing your queue starts from one place. The phone gets a chip with the same states.
+
+#### Phone notifications and approvals
+
+Step away from your desk without leaving agents stuck on a question until you get back.
+
+- Your phone gets a notification when a session needs you, and it clears once you answer anywhere.
+- Answer an approval from a sheet on the session, from the palette, or straight from the lock screen, where buttons appear only for requests that are safe to answer there.
+
+#### Voice
+
+Talk to a terminal agent instead of typing, without leaving your machine.
+
+- Dictate into an agent terminal from the mic in its status bar and watch your words appear as you speak: each phrase goes in when you pause, and saying "send" submits it.
+- Toggle dictation (Ctrl/⌘ + Shift + Space) acts on the focused session.
+- Parakeet joins Qwen and Whisper as a local dictation engine, faster and covering English and 24 other European languages, on GPUs that support it.
+- Settings → Voice picks your microphone and speaker and checks both, so dictation and read-aloud use the devices you mean.
+- Right-click a terminal's read-aloud button to change engine, voice and speed without opening Settings.
+
+#### Agents & terminals
+
+- Pick the tools a task needs: switch MCP servers on or off for one session from the composer, and save the switches in a preset.
+- Agents can list, start, read and stop terminals, and a Run command can be set to ask you before an agent starts it, so a deploy stays behind your approval while the rest run freely.
+- Always approve is offered for destructive requests too, after a confirmation that names what is at risk, so an agent working overnight stops waiting on you for the same rebase.
+- A shell or Run command that failed or was killed stays after Kepler restarts, with its final screen and exit code, so you can still read what went wrong.
+- A new session's composer shows the task's saved prompt and whether it goes out as the first message, as context or not at all.
+
+#### Dashboard
+
+- Work the task list from the keyboard: I stars, E archives, U toggles read, H holds, R renames, O opens, S sets progress, X selects, and J and K move.
+- Quick look opens a task's preview over the grid, so you can check on a task without rearranging your panels, and Open as panel adds it.
+- A Smart sort lists what needs you first, then unread, starred and recent, and keeps on-hold, Done, Later and archived tasks below active work.
+- Find where a dev server or shell is still going with `has:terminal`, or the rest with `no:terminal`.
+- Delete task groups together with their tasks, and the dialog lists the worktrees it would remove and keeps any with unsaved or unpushed work.
+- Move a task to another group or a new one from its group chip, and turn grouping by your groups on or off from a toggle beside View (Shift+G).
+
+#### Settings
+
+- Settings opens over the page you are on, so you can check or change a setting without losing your place, and it can pop out into its own window.
+- Settings is reorganized around agents, their tools and the app: each agent opens its own page, Agent tools, Approvals and Chat and terminal get pages of their own, and one default applies to every agent unless its page overrides it.
+- Settings search finds a setting by its own name and opens right on its control.
+- Drag Settings' top or bottom edge to resize it; Kepler remembers the height per window.
+
+#### Everything else
+
+- Open in new window works for a file or folder you open, not only a task's Changes, so a file can sit on a second screen at the line you were reading.
+- A daily or weekly automation can run at several times of day, so one automation covers 9:00 and 15:00, and Ask Kepler can set that up.
+- A self-hosted provider token can stay on this device only, never uploaded to your GitKraken account, and can be moved either way later from its Settings row.
+- An "Open links with a click" setting under Appearance → Terminal opens terminal links without holding Ctrl/Cmd.
+
+### Improvements
+
+#### Performance
+
+- Waking a session with a very long history no longer freezes Kepler while it loads.
+- Switching Dashboard views and picking a tab respond sooner, and a hidden draft keeps its undo history.
+- Opening a dialog or maximizing a panel no longer lags in a window with many tasks.
+- Remote windows and the phone recover faster after a dropped connection.
+- Terminals restore more faithfully after a restart or in a new window, and use less CPU on heavy output.
+- Resizing one window on macOS no longer makes your other Kepler windows redraw.
+
+#### Agents & terminals
+
+- Quiet terminal sessions nobody is watching now sleep like chat sessions and wake on your next send, while a running dev server keeps a session awake. Task agents and Ask Kepler chats get separate idle-sleep settings.
+- Agent CLI updates gather in one title-bar chip with Update all, Skip these versions and an Agent updates section in Settings, and Cursor and Antigravity updates are now found too.
+- A session still running an older agent version offers a restart once a newer one is installed, and stays quiet while it is working or waiting on you.
+- A retry, a usage-limit continue or another agent's message waits for you to finish a half-typed terminal line, instead of landing in the middle of it.
+- "Unable to resume" offers Resume anyway, after a warning, when Kepler can't prove the earlier process has ended.
+- Antigravity, Codex, Grok, Cursor and Pi terminals no longer stop on a "trust this folder?" question in a folder you trust in Kepler, so automations there don't time out.
+- Sub-agents show as summary cards with their prompt, result and step count, and long sub-agent transcripts load in pages.
+- New Antigravity sessions start in Chat by default and need no separate download.
+- Auggie 1.2 is supported, so you can update the Auggie CLI without losing it in Kepler.
+- A file dropped onto an agent terminal in a remote or browser window shows that it is uploading.
+
+#### Usage limits and accounts
+
+- Usage-limit notices say what Kepler did about the limit (switched accounts, waiting, or needs you), with Switch account and Stop waiting on the bar.
+- Each usage limit leads with its reset countdown, so you can see when you can work again at a glance.
+- Codex terminals show the retrying banner while a model request is retried, so a stall explains itself.
+- Estimated cost reads in whole dollars, and the session hover card shows the context share instead of a bare figure that looked like a charge.
+
+#### Dashboard
+
+- An automation marks its task Done when its run finishes, so finished automation work leaves your active list on its own.
+- The side pane opens on its own only when a worktree has changes, by default; Always and Never are in Settings.
+- Opening a task that another view already shows switches to that view instead of adding a duplicate panel.
+- An unread task you open stays in the Inbox's Unread section until you move on, so its row doesn't jump away under your cursor.
+- Click a focused row again to close its lone preview.
+
+#### Remote and SSH
+
+- A failed remote connect says why (a server that isn't responding, port forwarding refused, a full disk, an unwritable home folder), and offers Restart server.
+- An SSH connect, install or update asks for your sign-in once instead of several times when your SSH client doesn't share connections.
+- A WSL server that Windows' localhost relay can't reach connects through `wsl.exe` instead of failing until `wsl --shutdown`.
+- A repository's settings warn when WSL reaches it on a Windows drive, where git, file watching and agents run much slower, and suggest cloning it into Linux.
+
+### Fixes
+
+#### Agents & terminals
+
+- A session that showed "Unable to resume" or stayed stuck after a restart resumes, including on Windows machines that restrict process lookups.
+- Hook installers an agent runs, such as lefthook, no longer write one repo's git hooks into every session's repos.
+- Kepler no longer replaces a symlinked agent config, such as `~/.claude.json` from a dotfiles repo, with a plain file when it saves MCP changes.
+- A Claude session with a scheduled wake or loop is no longer put to sleep, so the wake still fires.
+- Stop ends a session's background tasks even when no turn is running.
+- A question, permission or plan review stays answerable when an answer is refused, instead of saying it was already answered.
+- A Claude plan that arrives with its approval request is shown instead of "No plan provided".
+- When Codex refuses a turn, Kepler shows the provider's reason instead of "Internal error" and a Reconnect that fails again.
+- Codex skills from plugins no longer go missing from the `$` and `/` menu until a restart.
+- A large Copilot session no longer fails to wake after a short stall.
+- A session you are looking at no longer flashes as unread when a turn ends.
+- A session whose folder was removed while Kepler was closed shows "Folder missing" instead of "Ended" with a Resume that can't work.
+- Idle agents are woken for their reports, and an orchestrator is no longer woken each time a child you drive yourself goes idle.
+- A finished task whose agent still has a stuck background shell offers Ready to archive.
+
+#### Usage limits and accounts
+
+- Continue as no longer refuses a session whose first prompt was held by a usage limit; it starts over on the new account.
+- Account pickers show the account or login name instead of "Signed in".
+- "Add another account" opens the add-account dialog for that agent.
+- Provider settings no longer stay locked after you cancel a sign-in.
+
+#### Remote and SSH
+
+- Connecting to a Windows host over SSH no longer fails on a too-long install check, and Kepler's SSH key works for Windows administrator accounts.
+- A machine's Remote Access address survives restarts and relay drops, so a phone's home-screen app keeps working.
+- A remote window that loses its connection says the connection dropped, instead of claiming the server restarted.
+
+#### Everything else
+
+- Typing in the palette's All view finds todos.
+- The palette closes when you click outside it.
+- Detaching a pull request or issue that Kepler found by branch now sticks, and you can restore it from the task's archive.
+- A deleted detached worktree no longer breaks launching tasks on other branches or reviewing pull requests.
+- A damaged saved-connection file no longer stops self-hosted integrations from saving or connecting.
+- Dashboard search suggestions open only when you type, click or press Down, so F6 moves between regions.
+- A preview pane you dismissed stays dismissed when you come back to a view.
+
+### Breaking changes
+
+- The title bar's What needs you menu is replaced by the Search Kepler field, and Dashboard view tabs can no longer sit in the title bar.
+- The Dashboard's Search box setting is gone; search always fills the free toolbar space.
+
+***
+
 <a id="v0-22-0"></a>
 ## Version 0.22.0
 

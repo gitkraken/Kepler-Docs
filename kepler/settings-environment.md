@@ -99,7 +99,9 @@ To turn on Remote Access, do the following:
 1. Click **Turn on Remote Access**.
 2. Enter a name in **Name this machine**.
 
-A status badge shows the connection state: **Connecting…**, **Active**, **Reconnecting…**, **Waiting to reconnect**, **Error**, or **Inactive**. While Remote Access is on, the page shows a QR code (*Scan with your phone camera to open*) and **Copy URL**. The page also shows *This machine stays awake while Remote Access is on.*, with **Change in General**, which opens [Keep agents running](/kepler/settings-app#keep-agents-running).
+A status badge shows the connection state: **Connecting…**, **Active**, **Reconnecting…**, **Waiting to reconnect**, **Error**, or **Inactive**. While Remote Access is on, the page shows a QR code (*Scan with your phone camera to open*) and **Copy URL**. The page also shows *This machine stays awake while Remote Access is on.*, with **Change in Agents**, which opens [Keep agents running](/kepler/settings-agents#keep-agents-running).
+
+A phone you pair can also get notifications when a session needs you. Turn them on from the phone, in its **Settings → Notifications**. See [Notifications on this phone](/kepler/settings-app#notifications-on-this-phone).
 
 Remote Access stays on until you turn it off, sign out, or another account signs in.
 
@@ -118,7 +120,7 @@ These 2 reasons tell you how to fix them:
 
 **Machines on your account** shows *See every machine on your account with Remote Access on, and remove the ones you no longer use.* Its **Manage machines on gitkraken.dev** button appears even while Remote Access is off.
 
-**Connected devices** lists each device that has connected. It marks **This device** and shows when each device was **Last seen**. You can do the following:
+**Connected devices** lists each device that has connected. It marks **This device**, shows when each device was **Last seen**, and marks a device that **Gets notifications**. You can do the following:
 
 - To disconnect one device, click **Revoke**.
 - To reload the list, click **Refresh**.

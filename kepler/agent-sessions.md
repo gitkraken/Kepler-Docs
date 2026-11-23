@@ -135,7 +135,7 @@ If a session's model changes, for example because the default now resolves to a 
 
 The model and mode lists update on their own, so a newly released model appears without restarting Kepler.
 
-The same menu lists the MCP servers the agent loads for this repository. To change them, click **Manage**. See [MCP Servers](/kepler/mcp-servers).
+The same menu lists the MCP servers the agent loads. To turn one on or off, click **Manage**. For Claude Code, Codex, OpenCode, and GitHub Copilot, the change applies only to this session, or to the session the **New task** composer starts. A preset you save from the menu keeps the change. A server that is off in the agent's own settings stays off. Change the repository and global defaults in Settings. See [MCP Servers](/kepler/mcp-servers).
 
 When the menu cannot offer the usual choices, it shows one of these messages:
 
@@ -148,9 +148,9 @@ When the menu cannot offer the usual choices, it shows one of these messages:
 
 To set one up from **Set up a coding agent**, click **Install or locate {name}** for an agent. If you installed an agent yourself, click **Rescan**. If your agents are on another machine, click **Choose** to open **Settings → Remote environments**.
 
-If you have more than one account, the **Agent** list groups accounts under their agent. The list ends with **Add another account** and **Install another agent**.
+If you have more than one account, the **Agent** list groups accounts under their agent. The list ends with **Add another {name} account**, such as **Add another Claude Code account**, and **Install another agent**. **Add another {name} account** opens the agent's add-account dialog in Settings. It appears only for an agent that takes several accounts and that your organization does not manage.
 
-By default, a new task, the Dashboard composer, and a new draft tab start with the agent, model, and mode you last picked. To always start with one agent instead, open **Settings → Tasks → New tasks**, pick the agent and its settings in **New sessions start with**, and clear **Start each session on the agent you used last**. To start one session with other settings, change them in the draft's **Agent settings**. See [Settings](/kepler/settings-tasks#default-agent).
+By default, a new task, the Dashboard composer, and a new draft tab start with the agent, model, and mode you last picked. To always start with one agent instead, open **Settings → Agents → Defaults** and pick the agent and its settings in **New sessions start with**. Then clear **Start each session on the agent you used last**. To start one session with other settings, change them in the draft's **Agent settings**. See [Settings](/kepler/settings-agents).
 
 ### Which agents are available
 
@@ -160,13 +160,13 @@ Kepler supports Claude Code, Codex, GitHub Copilot, Cursor, Auggie, OpenCode, Gr
 
 ## Several accounts for one agent
 
-Claude Code, Codex, GitHub Copilot, Auggie, and Grok Build can each have more than one signed-in account. To manage an agent's accounts, open **Settings → Agents**, expand the agent, and find **Accounts**:
+Claude Code, Codex, GitHub Copilot, Auggie, and Grok Build can each have more than one signed-in account. To manage an agent's accounts, open **Settings → Agents → Your agents**, click the agent to open its own page, and find **Accounts**:
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/agent-accounts-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/agent-accounts-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Accounts section of the Claude Code card in Settings › Agents, with Add account above its priority-order help text. Two accounts are listed in order, Claude Code CLI and Personal, each with a drag handle and Check usage, and Personal reads New sessions only.">
   </a>
-  <figcaption style="text-align:center; color:#888">The Accounts section, in Settings → Agents.</figcaption>
+  <figcaption style="text-align:center; color:#888">The Accounts section, on an agent's own page in Settings → Agents.</figcaption>
 </figure>
 
 Each account keeps its own credentials but shares your skills, agents, commands, and settings. An account keeps its own conversation history unless it shares history with the CLI, which Claude Code, Codex, and GitHub Copilot accounts can do. A Copilot account shares history unless you choose otherwise.
@@ -177,7 +177,7 @@ Each account keeps its own credentials but shares your skills, agents, commands,
 | **Add account** | Adds an account with its own credentials. For Claude Code, Codex, and GitHub Copilot, you choose **Keep separate** or **Share with the CLI** for its history |
 | **Account name** | Rename a row in place. The name is what you pick from later |
 | **Sign in** / **Sign out** | Authenticates or clears that account alone |
-| **Check usage** | Reads that account's plan usage. Grayed out only when **Check plan usage with each agent's provider** is turned off in **Settings → Agents → Usage and recovery** |
+| **Check usage** | Reads that account's plan usage. If usage checks are off, the row offers **Turn on usage checks** instead |
 | **Switch account…** | On a signed-in Claude Code account's row menu. Signs that account in with a different Claude login, after a confirmation that counts the running sessions using it |
 | **Remove account** | Signs the account out and deletes its local data, but leaves your shared skills, agents, and settings alone. Sessions whose conversations are stored only in that account are deleted with it; see below |
 | Color swatch | At the left of each added account's row: pick a color, or **No color**. The default account's ⊘ **No color** mark means it stays uncolored, not that it is off |
@@ -214,9 +214,9 @@ If 2 or more accounts are signed in, the **Agent** list shows one row per accoun
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/account-multiple-selector-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/account-multiple-selector-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Agent list open, with two rows under Claude Code: CLI, checked, with alex.lee@example.com and an Acme badge, and Personal. Other agents follow, then Add another account and Install another agent.">
+    <img src="/wp-content/uploads/account-multiple-selector-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Agent list open, with two rows under Claude Code: CLI, checked, with alex.lee@example.com and an Acme badge, and Personal. Other agents follow, then Add another Claude Code account and Install another agent.">
   </a>
-  <figcaption style="text-align:center; color:#888">The Agent list, with one row per account.</figcaption>
+  <figcaption style="text-align:center; color:#888">The Agent list, with one row per account and Add another Claude Code account.</figcaption>
 </figure>
 
 With one account, the agent keeps a single row, with that account shown beside its name.
@@ -239,7 +239,7 @@ Some accounts look different in the list:
 
 - An account that keeps its own history is grayed out as **Separate history**, because it cannot read this conversation. To change that, open **Settings → Agents**.
 - A signed-out account offers **Sign in…**.
-- An account signed in with an API key or a token has no login name. It reads **Signed in**, and you can pick it like any other.
+- An account signed in with an API key or a token has no login name. It shows its account name or, without one, the agent's name, such as **Claude Code**, and you can pick it like any other.
 
 If the session is busy, with a turn running or work still going in the background, Kepler asks first: **Stop this session and continue as {login}?** **Stop and switch** stops the session and resumes the conversation on the new account.
 
@@ -285,11 +285,11 @@ A session runs in one of 2 modes. Most agents offer both; see the table of agent
   <a href="/wp-content/uploads/opens-in-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/opens-in-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Claude Code card in Settings › Agents, with the New sessions start in row ringed, set to Chat, and the help text You can pick the other one when you start a session.">
   </a>
-  <figcaption style="text-align:center; color:#888">New sessions start in, on an agent's card in Settings → Agents.</figcaption>
+  <figcaption style="text-align:center; color:#888">New sessions start in, on an agent's own page in Settings → Agents.</figcaption>
 </figure>
 
 
-To set an agent's default mode, open **Settings → Agents → *your agent* → New sessions start in**. Each agent has its own default, so Claude Code can start in Chat while Codex starts in Terminal. To start one session in the other mode without changing the default, set **Start in** in the draft's **Agent settings**. In a menu that lists agents, such as **New session here** on a row in the context panel, an agent that offers both modes also has a **Start in Terminal** or **Start in Chat** button. An agent that offers only one mode shows no switch.
+To set the mode for every agent at once, open **Settings → Agents → Defaults → New sessions start in**. To give one agent its own mode, open **Settings → Agents → *your agent* → New sessions start in**. For example, Claude Code can start in Chat while Codex starts in Terminal. To start one session in the other mode without changing the default, set **Start in** in the draft's **Agent settings**. In a menu that lists agents, such as **New session here** on a row in the context panel, an agent that offers both modes also has a **Start in Terminal** or **Start in Chat** button. An agent that offers only one mode shows no switch.
 
 To move an existing session to the other mode, choose **Continue in Terminal** or **Continue in Chat** on its row or tab menu. Where the CLI can, the session resumes the same conversation in the other mode; where it cannot, the session starts fresh. Kepler confirms **Continued in Terminal** or **Continued in Chat**, or reports **Unable to switch this session**.
 
@@ -307,7 +307,7 @@ Two limits apply. You must take over a session started outside Kepler before you
 | Agent | Modes |
 |---|---|
 | Claude Code, Codex, GitHub Copilot, Cursor, OpenCode, Auggie, Grok Build | Chat or Terminal |
-| Google Antigravity | Terminal by default. Chat needs Antigravity CLI 1.5.0 or newer |
+| Google Antigravity | Chat or Terminal. Chat, the default, needs Antigravity CLI 1.5.0 or newer |
 | Pi | Terminal only |
 | Your own agent server | Whichever its command supports |
 
@@ -364,9 +364,10 @@ From left to right, the status bar shows the following:
 | Context ring | The share of the context window in use. Hover for tokens used, available, and total, the estimated cost at API rates, and the prompt cache |
 | Branch | The session's branch, with a folder mark when the CLI works in a subfolder or outside the worktree |
 | Account and plan usage | The account, in a warning tone once its limit is spent, and 2 bars for the **5h** and **7d** windows, colored by pace. Hover or click for the full readout, which ends with **Continue as** to move the session to another account; see [Usage indicators](#usage-indicators) |
+| Microphone (**Dictate**) | Shown while Kepler's message composer is hidden, to dictate straight into the CLI's own input. See [Dictation](#dictation) |
 | **Transcript** | Swaps the terminal for a read-only, searchable view of the conversation. Click it again, or press **Ctrl/⌘ + Shift + X**, to return to the terminal |
 | **Rich input** | Shows or hides Kepler's message composer. Hide it to type straight into the CLI |
-| **Read last reply** | Reads the agent's last reply aloud. See [Read aloud](/kepler/voice-input#read-aloud) |
+| **Read last reply** | Reads the agent's last reply aloud. Right-click it to change the speech model, voice, or speed; see [Read aloud](/kepler/voice-input#read-aloud) |
 | **No Kepler tools** | Shown when the agent cannot use Kepler's workspace tools or inbox in a terminal. Its tip points to **Continue in Chat** on the session menu |
 | **Idle detection** | Shown for an agent that does not report its status to Kepler. Kepler judges activity from the terminal going quiet, so a long pause mid-turn can read as idle |
 | Program status | Shown in place of **Idle detection** when the program in the terminal reports its own status. See below |
@@ -389,6 +390,7 @@ Terminal sessions also differ in these ways:
 - **A pasted image reaches the agent as an image.** When you paste an image into a Claude Code or Codex terminal, the agent reads it as an image, not as a path it has to open.
 - **A terminal session's conversation is recorded**, so quitting Kepler, an idle shutdown, a restart, or a reboot does not lose it. Reopening reattaches to the same conversation with its scrollback intact.
 - **A first message that Kepler cannot safely type at launch** waits in the composer as a ready-to-send draft. Send it once the terminal is ready.
+- **Kepler never types over a line you started.** A message you did not type, such as another agent's message or a queued send, waits until you send or clear what you typed in the terminal.
 - **Lost keystrokes are never resent.** If Kepler cannot tell whether your last keystrokes reached the terminal, it warns *Your last keystrokes may not have arrived*. Check what the terminal shows before you go on.
 - **A terminal reattaches instead of restarting.** During a reconnect, the last screen stays readable. If the terminal cannot reconnect, click **Retry** under **Unable to restore this terminal**.
 - **One view types at a time.** A terminal that another window or a Remote Access device is driving reads **Another view is controlling this terminal**. Click **Take control** to type here.
@@ -405,7 +407,7 @@ Kepler takes over a conversation only when you ask. It binds the conversation to
 
 ### Turning detection on
 
-Detection is off by default. To turn it on, or off again, use **Settings → Integrations → Your terminal → Show sessions started outside Kepler**.
+Detection is on by default. To turn it off, or on again, use **Settings → General → Sessions outside Kepler → Show them in Kepler**.
 
 The switch installs GitKraken hooks, so each agent's own CLI reports what it is doing to Kepler. The one switch covers every agent that Kepler can track this way: **Claude Code**, **Codex**, **Cursor**, **GitHub Copilot**, **OpenCode**, **Auggie**, **Grok Build**, **Pi**, and **Google Antigravity**. Turning the switch off stops reporting from all of them.
 
@@ -533,7 +535,7 @@ A draft you have not sent survives a reload.
 
 The composer works with these keys:
 
-- **Enter** sends; **Shift + Enter** inserts a newline. To send with **Ctrl/⌘ + Enter** instead, and have **Enter** start a new line, change **Send messages with** in **Settings → General → Chat**.
+- **Enter** sends; **Shift + Enter** inserts a newline. To send with **Ctrl/⌘ + Enter** instead, and have **Enter** start a new line, change **Send messages with** in **Settings → Chat and terminal → Chat**.
 - **Alt/⌥ + Enter** sends after the running turn ends (**Send after this turn**). See [Steering a running turn](#steering-a-running-turn).
 - **Tab** moves focus from the prompt to **Send**, then to its chevron.
 - **Down Arrow** or **Alt/⌥ + Down Arrow** on **Send** opens the chevron's menu. Closing the menu returns focus to **Send**.
@@ -561,7 +563,7 @@ A skill you add mid-session shows up without a restart.
 
 ### Mentioning files
 
-Type `@` to search the working directory and insert a path. A path you pick from the menu shows as a chip with the file's icon and name; hover it to see the full path. A session that runs in the task folder also lists the task's other worktrees and folders, under **Worktrees and folders** above **Files**. To search inside one, pick it, or type its name and `/`. `@` also works in composers that do not belong to a session yet, where it searches the task's folders or the folder you chose. Kepler automatically approves files you paste into a chat for the agent to read.
+Type `@` to search the working directory and insert a path. A path you pick from the menu shows as a chip with the file's icon and name; hover it to see the full path. A session that runs in the task folder also lists the task's other worktrees and folders. They appear under **Worktrees and folders**, above **Files**. To search inside one, pick it, or type its name and `/`. `@` also works in composers that do not belong to a session yet, where it searches the task's folders or the folder you chose. Kepler automatically approves files you paste into a chat for the agent to read.
 
 ***
 
@@ -612,11 +614,12 @@ If a send fails, Kepler puts the text back in the composer so you can try again.
 | What you do | What happens |
 |---|---|
 | **Escape** | Stops the running turn |
-| The stop segment on the send button | Stops the running turn. Its tooltip says what happens to the queue |
+| The stop segment on the send button | Stops the running turn and leaves its background tasks running. Its tooltip says what happens to the queue |
+| The stop segment, once the turn has ended | Ends the Chat session's background tasks, such as a backgrounded shell or a monitor. It shows only while background tasks are running |
 | **Ctrl/⌘ + Shift + Enter** | **Interrupt & send**: stops the turn *and* delivers what you typed |
 | **Force quit the agent** | Offered once a cancel has been pending too long. It does not wait for the agent to settle |
 
-In **Terminal** mode, Kepler recognizes an interrupt whether it arrives as **Escape** or as **Ctrl + C**, and the session shows as stopped once the CLI has stopped.
+In **Terminal** mode, Kepler recognizes an interrupt whether it arrives as **Escape** or as `Ctrl+C`, and the session shows as stopped once the CLI has stopped.
 
 ***
 
@@ -627,7 +630,7 @@ A session's conversation shows your prompts, the agent's replies, and the agent'
 - Your messages appear as chat bubbles. Right-click one to **Copy message**, **Quote**, **Ask**, or **New session from here**.
 - Agent replies render as Markdown and stream as one continuous message, even when a tool runs mid-reply. Right-click a reply to act on its whole turn. While the menu is open, a band outlines the turn, and **Copy message** copies all of the main agent's text in that turn. Every message menu starts with the message's exact time.
 - Each prompt, and the reply that closes each turn, has a copy button beneath it.
-- A reply has a **Read aloud** button beneath it. To read on through the replies that follow, right-click a message, in the chat or in a terminal, and choose **Read aloud from here**. To stop, click **Stop reading** in the top bar. See [Read aloud](/kepler/voice-input#read-aloud).
+- A reply has a **Read aloud** button beneath it. To read on through the replies that follow, right-click a message in the chat or in a terminal and choose **Read aloud from here**. To stop, click **Stop reading** in the top bar. See [Read aloud](/kepler/voice-input#read-aloud).
 - When the agent replies to one of your review comments, the reply shows as a card with your comment beneath **Replied on** and the file and line. Click **Open in Changes** to go to the comment.
 - Your latest prompt and the latest reply show how long ago they were sent. Every earlier finished reply shows the time it was sent. A divider marks a long gap between messages.
 - An agent's thinking shows as a collapsed **Thinking** block, for agents that send it.
@@ -637,7 +640,7 @@ A session's conversation shows your prompts, the agent's replies, and the agent'
 - Tool calls collapse into groups: **{count} tool uses**, with **{count} done**, **{count} running**, and **{count} failed** tallies. Expand a group to read any call's output.
 - A plan renders as **Plan {completed}/{total}**. A plan cut short by a stop is marked **Interrupted**.
 - A context compaction shows as its own row: **Compacting the conversation…**, then **Conversation compacted**, **Unable to compact the conversation** with the error, or **Compaction stopped**. When the agent kept a summary of the conversation so far, the row expands to show it, and **Find in conversation** searches it.
-- Each subagent has its own card, collapsed by default, with **Prompt**, **Operations**, and **Result** sections that fold independently. The card's header row shows the subagent type, the description it was given, how many operations it has run, the step a running subagent is on, and a status of **Running**, **Stopped**, **Completed**, or **Failed**. A failed GitHub Copilot subagent's card also says why it failed. You can follow progress without expanding the card. Claude Code, GitHub Copilot, Cursor, and OpenCode Chat sessions all produce these cards.
+- Each subagent has its own card, collapsed by default. Expanded, it shows the subagent's **Prompt** and **Result**, with **Open transcript** to read its tool calls and narration. The card's header row shows the subagent type, the description it was given, how many steps it has run, the step a running subagent is on, and a status of **Running**, **Stopped**, **Completed**, or **Failed**. A failed GitHub Copilot subagent's card also says why it failed. You can follow progress without expanding the card. Claude Code, GitHub Copilot, Cursor, and OpenCode Chat sessions all produce these cards.
 - A session that another session started shows **Started by** and the starting session in its header. Click it to open that session.
 - A prompt that another session sent has a **From:** header naming the sending session. Click it to open that session.
 - A turn that ended for a notable reason has a pill: **Reached token limit**, **Reached request limit**, **Refused to continue**, or **Cancelled**. A turn that ended normally shows no pill.
@@ -682,12 +685,11 @@ Until earlier messages are loaded, **Find in conversation** searches only the lo
 
 Kepler keeps subagent work separate from the main thread:
 
-- A subagent's own tool calls nest inside its card under **Operations**, not alongside the main agent's calls.
-- A subagent's narration renders in an indented lane marked **Subagent**, so you can see where it starts and stops even when it interleaves with the main agent's text.
-- A subagent can start subagents of its own. Their cards nest inside its card, and the outer card counts every permission request waiting anywhere beneath it. A request from a nested subagent shows on the outer card under a path of subagent names, such as **Parent › Child**.
+- A subagent's own tool calls and narration stay out of the main conversation. You read them in the subagent's transcript.
+- A subagent can start subagents of its own. A permission request waiting anywhere beneath a card shows under its header, and a request from a nested subagent shows under a path of subagent names, such as **Parent › Child**.
 - While a turn is running, that turn's subagent cards pin to the top of the session. They return to their place in the conversation when the turn ends. A card you expanded stays expanded for the rest of the turn.
 
-To read a subagent's own transcript, click **Open subagent transcript** on its card or on its running chip above the composer. The transcript shows the subagent's prompt, then its narration and tool calls in the order they happened, then its result. The transcript updates live while the subagent runs, and the card and chip show the step in progress.
+To read a subagent's own transcript, click **Open subagent transcript** on its card's header or on its running chip above the composer, or **Open transcript** in the expanded card. The transcript shows the subagent's prompt, then its narration and tool calls in the order they happened, then its result. The transcript updates live while the subagent runs, and the card and chip show the step in progress. A long transcript opens on its latest part, with **Show earlier messages** at the top.
 
 The pane's subtitle shows the current step on one line. When the step is longer, **Show full step** expands it and **Hide full step** folds it again. In a wide pane, the transcript docks beside the chat. In a narrow pane, it covers the chat, with **Back to {title}** to return. While the transcript is open, you answer a permission request raised inside the subagent in that pane.
 
@@ -700,14 +702,14 @@ For other agents, the pane is marked **read-only**.
 
 <!-- TODO(screenshot): Replace — ade-subagent-pane-01: a Claude Code Chat session with a running subagent's pane docked beside the chat, showing Stop, the current step, and the Message {name} box with Sent through the main agent. -->
 
-A Claude Code session can keep **background tasks** running after its turn ends, such as a monitor or a backgrounded shell. In any Chat or Terminal session, the background tasks also include another agent's CLI that the session starts for its own work, such as a `claude` or `codex` run from the agent's shell. While that CLI is busy, the list shows it as the agent's name and the start of its prompt.
+A Claude Code session can keep **background tasks** running after its turn ends, such as a monitor or a backgrounded shell. In any Chat or Terminal session, the background tasks also include another agent's CLI that the session starts for its own work, such as `claude` or `codex` run from the agent's shell. While that CLI is busy, the list shows it as the agent's name and the start of its prompt.
 
 Background work affects the session's status in 2 ways:
 
 - Work the turn still depends on, such as a subagent, a workflow, or a busy child agent, keeps the session **Running**.
 - Work the agent left running on its own, such as a backgrounded shell or a monitor, does not. The turn ends, and the session is idle and reads **Background task running**.
 
-A background task's card reads **Running in background**. To stop that one task without affecting the session, click **Stop background task** on the card or its chip.
+A background task's card reads **Running in background**. To stop that one task without affecting the session, click **Stop background task** on the card or its chip. To stop all of them in an idle Chat session, click the stop segment on the send button; see [Stopping a turn](#stopping-a-turn).
 
 Code blocks have a **line-wrap toggle**, so you can read a long line without scrolling sideways. They take their syntax colors from your Kepler theme. A code block longer than 15 lines folds to a 15-line preview with **Show {count} more lines** and **Show less**. A match from **Find in conversation** inside a folded block opens it. Numbered lists stay continuous instead of restarting at 1 after an interruption.
 
@@ -717,7 +719,7 @@ A Mermaid code block draws as a diagram, with zoom buttons, **Full screen**, and
 
 You turn artifacts on or off for each Claude Code Chat session, because the artifact tools add about 12k tokens to the session's context. A new session starts with artifacts off unless **Settings → Agents → Claude Code → Artifacts in new sessions** is on.
 
-To turn artifacts on for one session, open its composer's **Agent settings** and tick **Artifacts** in the **Options** menu. In a running conversation, Kepler asks first, because the session restarts and resumes the conversation: the running turn, background shells and subagents, and queued messages end. Artifacts then stay on for the conversation. You can tick **Artifacts** once the session has started.
+To turn artifacts on for one session, open its composer's **Agent settings** and tick **Artifacts** in the **Options** menu. In a running conversation, Kepler asks first, because the session restarts and resumes the conversation. The running turn ends, as do background shells, subagents, and queued messages. Artifacts then stay on for the conversation. You can tick **Artifacts** once the session has started.
 
 <!-- TODO(screenshot): Replace — ade-artifacts-toggle-01: a live Claude Code Chat session's Agent settings with the Options menu open on the Artifacts checkbox and its description (needs a signed-in Claude Code). -->
 
@@ -752,7 +754,7 @@ Anyone with edit access to a published artifact can comment on it. By default, a
 
 ### Scrolling and where you left off
 
-To change how the transcript scrolls and how wide it grows, open **Settings → Appearance → Chat**:
+To change how the transcript scrolls and how wide it grows, open **Settings → Chat and terminal → Chat**:
 
 | Setting | What it does |
 |---|---|
@@ -814,7 +816,7 @@ A session in **Terminal** mode and a session that Kepler **detected outside itse
 | **this project (shared)** | This project, committed for your team |
 | **all projects** | Everywhere |
 
-When the hook suggests a change instead of a rule, the button names it, such as **Allow and switch to {mode} mode** or **Allow and add {folders}**.
+When the hook suggests a change instead of a rule, the button names the change, such as **Allow and switch to {mode} mode** or **Allow and add {folders}**.
 
 Above the buttons, Kepler shows the rule each button would write. A rule with no command pattern is marked **(this tool)**, which means it covers every call to that tool, not one command.
 
@@ -877,10 +879,13 @@ Auggie shows its plan as a task checklist instead. **Hide these tasks** clears t
 Some actions that an agent asks Kepler itself to do, through Kepler's workspace tools, wait for your approval. For example:
 
 - Sending a prompt or a message to another session, or stopping, renaming, or archiving one.
-- Editing or deleting a task note, changing another task or its links, detaching files, archiving or restoring another task's resources, or archiving a task.
+- Editing or deleting a task note, or detaching files.
+- Changing another task or its links.
+- Archiving or restoring another task's resources, or archiving a task.
 - Adopting another task into a session's work, or dropping it.
 - Deleting a worktree.
 - Changing a repository's sync settings, or adding, replacing, or deleting one of its Run commands.
+- Starting a Run command in a new terminal, when the repository is not trusted or the command is set to ask first, or stopping a terminal you opened.
 - Changing the prompt of one of your custom Actions.
 - Starting a session in a more permissive mode than the asking session's own.
 - Syncing a branch with its target, or rewriting its commits.
@@ -893,7 +898,7 @@ The request is pinned above that session's composer as a card. The card names th
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/approval-card-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/approval-card-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="An amber approval card pinned above the session composer, Delete worktree acme-web@kepler/cart-total-spike and its branch, At risk: 2 uncommitted files, with the Approve menu open on Approve all worktree deletes from this session and a grayed-out Always approve worktree deletes.">
+    <img src="/wp-content/uploads/approval-card-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="An amber approval card pinned above the session composer, Delete worktree acme-web@kepler/cart-total-spike and its branch, At risk: 2 uncommitted files, with the Approve menu open on Approve all worktree deletes from this session and Always approve worktree deletes….">
   </a>
   <figcaption style="text-align:center; color:#888">An approval card for deleting a worktree, with the Approve menu open.</figcaption>
 </figure>
@@ -901,19 +906,26 @@ The request is pinned above that session's composer as a card. The card names th
 The **Approve** chevron offers 2 broader answers:
 
 - **Approve all {label} from this session**: approves this kind of request for the rest of the session.
-- **Always approve {label}**: adds a standing rule. It is not offered for an action that can lose work or for starting a session.
+- **Always approve {label}**: adds a standing rule for every session. For an action that can lose work, the item reads **Always approve {label}…** and asks you to confirm first, naming what is at risk.
 
-A setting change, an Action's prompt, adopting a task, and adding or replacing a Run command offer neither answer. Each of these asks on its own.
+These requests offer neither answer, and each one asks on its own:
+
+- A setting change, including an Action's prompt.
+- Adopting a task.
+- Adding, replacing, or starting a Run command.
+- Starting a session in a more permissive mode.
+
+A card for a Run command that is set to ask first also offers **Always allow**, which lets agents start that command without asking from then on.
 
 An approved request shows **Running** while Kepler carries it out. A request that fails says what was not done, with **Dismiss**. A waiting request expires when its session is archived. The agent that asked can also withdraw a request that is still waiting, and its card goes away.
 
-To review your standing rules, open **Settings → Agents → Approvals**. Anything a rule does not cover still asks. Each rule under **Always approved** says when and where it was added and how often it has been used, with **Remove**.
+To review your standing rules, open **Settings → Approvals**. Anything a rule does not cover still asks. Each rule under **Always approved** says when and where it was added and how often it has been used, with **Remove**. See [Approval Settings](/kepler/settings-approvals).
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/settings-approvals-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/settings-approvals-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Approvals section of Settings › Agents, with one Always approved rule, Changes to other tasks, added from the Discount codes break the cart total session on Fix the cart total and not used yet, and Remove.">
+    <img src="/wp-content/uploads/settings-approvals-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Settings › Approvals, with one Always approved rule, Changes to other tasks, added from the Discount codes break the cart total session on Fix the cart total and not used yet, and Remove.">
   </a>
-  <figcaption style="text-align:center; color:#888">Standing approval rules, in Settings → Agents → Approvals.</figcaption>
+  <figcaption style="text-align:center; color:#888">Standing approval rules, in Settings → Approvals.</figcaption>
 </figure>
 
 ### Reports from other agents
@@ -937,7 +949,7 @@ When a session has unread reports, the band above its composer says how many, su
 
 To stop agents from waking each other without end, Kepler pauses wakes after 20 turns in a row that agents started without a prompt from you. The band then reads **Reports from other agents are paused**, and the session's tab and its row in the context panel show a reports badge with the count. To let reports wake the session again, click **Resume reports** or send your next prompt.
 
-In Terminal mode, only some agents can be woken to read their inbox. See [Kepler's tools in Terminal mode](/kepler/agent-integrations#supported-agents).
+In Terminal mode, Kepler wakes an idle Claude Code, Codex, GitHub Copilot, OpenCode, Pi, or Auggie session by typing a one-line note into the agent's input and sending it, only once the input is empty. To turn this off, clear **Settings → Agents → Idle agents → Wake idle terminal agents to read new reports**. See [Kepler's tools in Terminal mode](/kepler/agent-integrations#supported-agents).
 
 ### Offers to show you something
 
@@ -951,7 +963,7 @@ Kepler shows 2 usage readouts, and they measure different things.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/usage-indicators-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/usage-indicators-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Context window card open above the composer's context ring, which sits between the Agent settings pill (Docs Model, Build) and Send: 68%, with 136K tokens Used, 64K Available and 200K Total, and the Estimated cost at API rates, $0.42.">
+    <img src="/wp-content/uploads/usage-indicators-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Context window card open above the composer's context ring, which sits between the Agent settings pill (Docs Model, Build) and Send: 68%, with 136K tokens Used, 64K Available and 200K Total, and the Estimated cost at API rates, <$1.">
   </a>
   <figcaption style="text-align:center; color:#888">The Context window card, from the context ring.</figcaption>
 </figure>
@@ -959,40 +971,31 @@ Kepler shows 2 usage readouts, and they measure different things.
 | Readout | What it shows | Availability |
 |---|---|---|
 | **Context window** | How much of *this session's* context window is used, as a ring. Hover to see tokens used, available, and total, the **Estimated cost at API rates**, and the **Prompt cache**: when it expires, and how much of the session's input came from it (*{percent}% cached*) | Whenever the agent reports it |
-| **Plan usage** | Your provider plan's windows (**5h** and **7d**) as **Used** and **Resets** columns, plus whatever else the provider reports about the plan | Claude Code and Codex sessions report their own 5-hour and 7-day limits. The full readout, Auggie, GitHub Copilot, and Google Antigravity need **Check plan usage with each agent's provider**, which is on by default |
+| **Plan usage** | Your provider plan's windows (**5h** and **7d**), each with how much is used and when it resets, plus whatever else the provider reports about the plan | Claude Code and Codex sessions report their own 5-hour and 7-day limits. The full readout, Auggie, GitHub Copilot, and Google Antigravity need Kepler's usage checks, which are on by default |
 
 While a session is idle, the context ring warns about the prompt cache on its own. It shows an hourglass with the time the cache has left, or **Expiring** or **Expired**. The context card then warns that the next message re-reads most of the context. If there is no context reading, the ring is a dashed circle, and its card still shows the cost when the agent reports one.
 
-**Check plan usage with each agent's provider** fetches the full readout, including per-model limits and extra usage, from each agent's provider. It is on by default, in **Settings → Agents → Usage and recovery**:
+Kepler checks plan usage with each agent's provider, which adds per-model limits and extra usage to the readout. It asks with the agent's own sign-in, which goes nowhere else and is never changed. If usage checks are off, Kepler makes no request to any provider, and a Claude Code or Codex session shows only its own **5h** and **7d** readings, marked **Reported by the agent**. To see the full readout, click **Turn on usage checks** in that note, or on the account's row in **Settings → Agents**.
 
-<figure style="text-align:center">
-  <a href="/wp-content/uploads/show-token-usage-aug-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/show-token-usage-aug-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Usage and recovery section of Settings › Agents: Check plan usage with each agent's provider, ticked, with its help text; When a usage limit is reached, a dropdown set to Wait for the reset (Continues on its own when the limit resets), which applies to every agent in chat and in the terminal; and Retry automatically when the model is overloaded, ticked, with its help text.">
-  </a>
-  <figcaption style="text-align:center; color:#888">The Usage and recovery section of Settings → Agents.</figcaption>
-</figure>
+The meter shows the shortest window. If the provider reports a balance that cannot be shown as a percentage, the meter shows the remaining plan balance instead. A spent window reads **Limit reached until {time}** on the meter. Hover the meter to open the detail, where each window shows its percentage used and **Resets in {duration}**, or **Limit reached** once it is spent. Every reading says how old it is (**Updated {when}**), with **Refresh** to fetch it again.
 
-Kepler asks with the agent's own sign-in, which goes nowhere else and is never changed. With the setting off, Kepler makes no request to any provider. A Claude Code or Codex session still reports its own **5h** and **7d** readings as it runs, and Kepler shows those, marked as reported by the agent.
-
-The meter shows the shortest window. If the provider reports a balance that cannot be shown as a percentage, the meter shows the remaining plan balance instead. Hover the meter to open the detail. A spent window reads **Limit reached until {time}**. Every reading says how old it is (**Updated {when}**), with **Refresh** to fetch it again.
-
-Kepler judges a usage bar by pace: the share of the window you have used, compared with the share of the window that has passed. The detail reads **On pace** or **Ahead of pace**. When you are ahead, it estimates when you will use up the window. The bar turns amber, then red, as you get ahead of pace or near the limit.
+Kepler judges a usage bar by pace: the share of the window you have used, compared with the share of the window that has passed. The detail says whether the window lasts until the reset at this rate. If it may run out first, the detail estimates when. The bar turns amber, then red, as you get ahead of pace or near the limit.
 
 | Provider | What its popover shows |
 |---|---|
-| **Claude Code** | The **5h** and **7d** windows, an **Extra usage** pool with credits used against any monthly limit, and **Usage limit resets** |
-| **Codex** | The same 2 windows, plus **Usage limit resets**: earned resets that clear an active limit early, each with its expiry |
+| **Claude Code** | The **5h** and **7d** windows, an **Extra usage** pool with credits used against any monthly limit, and **Limit resets** |
+| **Codex** | The same 2 windows, plus **Limit resets**: earned resets that clear an active limit early, each with its expiry |
 | **Auggie** | No windows, only the plan's name and the credits left on it |
 | **GitHub Copilot** | The plan's monthly **Premium**, **Chat**, and **Completions** quotas, each with when it resets, and the credits used on token-based billing. A spent premium quota reads **Premium quota exhausted** |
 | **Google Antigravity** | Every limit on the selected model, including its 5-hour and weekly windows, as a percentage used. Antigravity reports no token counts |
 
-**You can spend an earned usage reset from Kepler.** Claude Code and Codex accounts list their earned resets under **Usage limit resets** in the plan usage popover. A Claude Code reset is named by what it refills, such as **Five-hour reset** or **Weekly reset**. To use one, click **Redeem reset**. Kepler warns you first when redeeming now may waste usage: for Codex, when more than 3% of your 7-day allowance is left, and for Claude Code, when the limit the reset refills is not reached yet (**Limit not reached yet**). The confirmation lists your current usage and the reset's expiry. Redeeming uses up the reset and cannot be undone.
+**You can spend an earned usage reset from Kepler.** Claude Code and Codex accounts list their earned resets under **Limit resets** in the plan usage popover, grouped by what they refill, such as **Five-hour reset** or **Weekly reset**, each with when it expires. To use one, click **Redeem**. Kepler warns you first when redeeming now may waste usage, and the confirmation lists your current usage and the reset's expiry. Redeeming uses up the reset and cannot be undone.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/usage-reset-redeem-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/usage-reset-redeem-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Plan usage popover open under the Codex usage chip in the New task composer, which reads Limit reached until Mar 5, 02:30 PM. The popover shows the account (alex.lee@example.com, Plus), the 5h window at 41% used and the 7d window at 100% used, each with its reset time, then Usage limit resets: 1 available, Expires Mar 16, 02:30 PM, the hint Earned resets that clear an active limit early, and a Redeem reset button, above Updated just now and a refresh button.">
+    <img src="/wp-content/uploads/usage-reset-redeem-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Plan usage popover open under the Codex usage chip, which reads Limit reached until Mar 5, 02:30 PM: the account alex.lee@example.com (Plus), the 5h window at 41% with Resets in 2h 0m and the 7d window at 100% with Limit reached and Resets in 3d 0h. Below them, Limit resets has a Redeem button and a Reset row that Expires in 14d, above Updated just now and a refresh button.">
   </a>
-  <figcaption style="text-align:center; color:#888">Redeem reset, in the Codex plan usage popover.</figcaption>
+  <figcaption style="text-align:center; color:#888">Limit resets, with Redeem, in the Codex plan usage popover.</figcaption>
 </figure>
 
 An account on a third-party Claude provider shows no usage. If Kepler cannot fetch the figures, the meter says which problem it hit instead of showing an old number, such as an agent you need to sign in to. Kepler shows GitHub Copilot usage only for github.com accounts. If Copilot is signed in somewhere Kepler cannot read, such as the macOS keychain, set `COPILOT_GITHUB_TOKEN` to see its usage.
@@ -1001,7 +1004,7 @@ An account on a third-party Claude provider shows no usage. If Kepler cannot fet
 
 Kepler does not keep sending prompts into a spent limit. As soon as the account's usage reading or the agent's own report shows the limit is spent, Kepler holds the prompts you queue until the limit resets. The queue banner says when the queue will be sent.
 
-The prompts go out on their own shortly after the reset, even with no Kepler window open and across a restart. To release one session's queue early, click **Send now**. A spent limit on one model does not hold prompts for the account's other models. With **Check plan usage with each agent's provider** off, a queued prompt waits only if the agent itself says when its limit resets.
+The prompts go out on their own shortly after the reset, even with no Kepler window open and across a restart. To release one session's queue early, click **Send now**. A spent limit on one model does not hold prompts for the account's other models. With usage checks off, a queued prompt waits only if the agent itself says when its limit resets.
 
 <!-- TODO(screenshot): New: The queue banner holding a prompt until the quota resets (*Sending at {time}, when the quota resets.*) with **Send now**. -->
 
@@ -1011,7 +1014,8 @@ When a usage limit cuts off a turn, a limit bar docks on the composer. In a Term
 
 - **Continue on {account}**: moves this conversation to another of the agent's accounts, which picks up where it stopped. Kepler suggests the first account in your order with usage left; see [Several accounts for one agent](#several-accounts-for-one-agent).
 - **New session as {account}** or **Continue in {agent}**: starts a new session, on an account that keeps its own history or on another agent, that reads this conversation first.
-- **Wait**: sends a continue message when the account resets.
+- **Wait**: continues this session when the limit resets.
+- **Add account**: opens the agent's add-account dialog in Settings.
 - **Manage accounts…**, in the bar's account menu, and **Dismiss**.
 
 <figure style="text-align:center">
@@ -1021,15 +1025,26 @@ When a usage limit cuts off a turn, a limit bar docks on the composer. In a Term
   <figcaption style="text-align:center; color:#888">The limit bar, offering to continue in another agent.</figcaption>
 </figure>
 
-To choose what Kepler does on its own when a limit is reached, open **Settings → Agents → Usage and recovery → When a usage limit is reached**. The choice applies to every agent, in Chat and in the terminal.
+Kepler also notifies you when an agent reaches an account's usage limit, and says what happens next. See [Notifications](#notifications).
+
+To choose what Kepler does on its own when a limit is reached, open **Settings → Agents → Keep agents running → When a usage limit is reached**. The choice applies to every agent in both Chat and Terminal sessions.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/show-token-usage-aug-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/show-token-usage-aug-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Keep agents running section of Settings › Agents: Keep this machine awake while agents work and Keep agents and terminals running after Kepler quits or restarts, both ticked; When a usage limit is reached, set to Wait for the reset (The session continues when the limit resets), which applies to every agent in chat and in the terminal; and Retry automatically when the model is overloaded, ticked, each with its help text.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The Keep agents running section of Settings → Agents.</figcaption>
+</figure>
 
 | Choice | What happens |
 |---|---|
-| **Manual** | The limit bar offers to wait for the reset or switch accounts |
+| **Ask me** | The session stops, and the limit bar offers to switch accounts or wait for the reset |
 | **Wait for the reset** (the default) | The session continues on its own when the limit resets |
-| **Switch accounts** | The session continues on an account with usage left, or after the reset if none has any |
+| **Switch accounts** | The session continues on the agent's next account with usage left, or after the reset if none has any |
 
-While a session waits for the reset, the bar reads **Waiting for {account}**, with **Cancel**. When Kepler moves the conversation for you, the bar reads **Switched to {account} automatically**.
+While a session waits for the reset, the bar still names the limit, and it says when the session continues, with **Stop waiting**. When Kepler moves the conversation for you, the bar reads **Switched to {account} automatically**.
+
+If background work is still running, Kepler switches accounts once the work ends. To stop that work and switch at once, click **Switch now** on the bar, or click **Wait for the reset instead**.
 
 A Claude Code account can read 100% while the agent still answers, for example on extra usage. Until a turn is refused, the bar only warns, such as **{account} is at its weekly limit**.
 
@@ -1045,6 +1060,8 @@ Every session's composer has a microphone, **Dictate**. Click it, then speak, an
   </a>
   <figcaption style="text-align:center; color:#888">The composer's microphone, with its Dictate tooltip.</figcaption>
 </figure>
+
+In a Terminal session with Kepler's message composer hidden, the microphone sits on the status bar and dictates straight into the CLI's own input, with a live caption while you speak. Dictation only adds text there, so to erase it, clear it in the terminal. To change the speech model, dictation mode, or dictation language, right-click the microphone, or choose **Voice settings…** on the same menu.
 
 When dictation cannot start, such as before you download a model, the microphone's tooltip says why and links to Settings. See [Dictation and Read Aloud](/kepler/voice-input).
 
@@ -1063,7 +1080,7 @@ Each session has a status, shown as a colored dot on its tab and rows.
 | **Unread** | Finished a turn you have not looked at |
 | **Idle** | Connected, nothing running |
 | **Background task running** | The turn ended, but work the agent left running on its own, such as a backgrounded shell or a monitor, is still going. Shown as idle, and it does not keep the machine awake |
-| **Asleep** or **Asleep, unread reply** | An idle Chat session that Kepler put to sleep until your next message. See [Dormant and archived sessions](#dormant-and-archived-sessions) |
+| **Asleep** or **Asleep, unread reply** | An idle Chat or Terminal session that Kepler put to sleep until your next message. See [Dormant and archived sessions](#dormant-and-archived-sessions) |
 | **Reconnecting** | Kepler is reattaching to a session that kept running while Kepler restarted |
 | **Error** | The turn or the process failed. A live session whose last turn failed on a rate limit, an exhausted quota, or an overloaded provider reads **Error** too, and says when Kepler will retry it; see [When a session drops](#when-a-session-drops) |
 | **Ended** | The agent process is not running. Kepler keeps the conversation, and a dormant session shows its last state as *{state} (ended)* until your next message starts it again |
@@ -1085,7 +1102,7 @@ To see a session's card, hover its tab, its row in the context panel, or a Termi
 - **Running in the background**, with **and {count} more**, for background tasks still running.
 - **Continued from {name}**, for a session started from another.
 - **Rate limited · Resets {time}**, when the account's limit is spent.
-- **Context {percent}%**, the share of the context window in use.
+- **Context window {percent}%**, the share of the context window in use.
 
 You can do the following with tabs:
 
@@ -1110,13 +1127,22 @@ Ending a session's agent and archiving the session are separate actions. A live 
 - **Shut down agent** cancels the turn, saves the conversation, and then ends the process. The session stays listed, and you can resume it.
 - **Restart agent** does the same and then reconnects, so the session comes back on the agent version installed *now*. Use it to pick up an agent you just updated without losing the conversation. A restart also re-reads your login shell. An environment variable you added, changed, or removed in your shell's startup files reaches the restarted agent without restarting Kepler.
 
+After an agent updates, each open session still on the old version shows a notice above its composer, such as *OpenCode 2.2.0 is installed. This session still runs 2.1.1.* Click **Restart chat**, or **Restart session** in a Terminal session, to restart it on the new version, or click **Dismiss**. To stop these notices, clear **Show a restart notice on outdated sessions** in **Settings → Updates → Agent updates**.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/agent-restart-notice-nov-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-restart-notice-nov-2026.png" class="help-center-img img-bordered" alt="A notice above the session composer reads OpenCode 2.2.0 is installed. This session still runs 2.1.1., with Restart chat and Dismiss buttons.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The restart notice on a session still running an older agent version.</figcaption>
+</figure>
+
 A restart shows its progress instead of a blank session. A session you shut down before its first prompt stays listed as dormant instead of disappearing.
 
 ### Dormant and archived sessions
 
 A **dormant** session (one restored from disk, or stopped before it ever ran) shows its transcript, with the session's title at the top of its context card. It does not start an agent until you send the first message, so restoring many old sessions costs nothing.
 
-**An idle Chat session goes to sleep.** When no window shows a Chat session and it has been quiet for the time set in **Settings → General → Keep agents running → Put idle agents to sleep** (**After 15 minutes** by default), Kepler stops its agent to free the process. The session reads **Asleep**, and your next message wakes it with the conversation intact. A session that is working or waiting on you stays awake, and a Terminal session never sleeps. See [Settings](/kepler/settings-app#keep-agents-running).
+**An idle session goes to sleep.** When no window shows a session and it has been quiet for the time set in **Settings → Agents → Idle agents → Put idle task agents to sleep** (**After 1 hour** by default), Kepler stops its agent to free the process. The session reads **Asleep**, and your next message, or typing in a Terminal session, wakes it with the conversation intact. A session that is working or waiting on you stays awake, and so does a Terminal session with text typed into it or a program it started still running. Ask Kepler chats have their own setting, **Put idle Ask Kepler chats to sleep**. See [Settings](/kepler/settings-agents).
 
 You can read an **archived** session without restoring it. It opens read-only, with **Restore this session and open it live** and **Permanently delete this saved session** beside it.
 
@@ -1134,7 +1160,7 @@ An agent that cannot use Kepler's workspace tools gets a copy instead. Kepler at
 
 ### Keeping agents running through a restart
 
-**Settings → General → Keep agents running → Keep agents and terminals running after Kepler quits or restarts** is on by default. Agents and terminals stay alive while Kepler is closed or updating, and reconnect afterwards. When the setting is off, quitting or restarting Kepler ends them. A change to the setting applies to new sessions. If agents and terminals cannot start on this computer, for example because the disk is full, the setting says why beneath it.
+**Settings → Agents → Keep agents running → Keep agents and terminals running after Kepler quits or restarts** is on by default. Agents and terminals stay alive while Kepler is closed or updating, and reconnect afterwards. When the setting is off, quitting or restarting Kepler ends them. A change to the setting applies to new sessions. If agents and terminals cannot start on this computer, for example because the disk is full, the setting says why beneath it.
 
 <!-- TODO(screenshot): New: A session showing the *Reconnecting to the agent…* overlay after Kepler restarts. -->
 
@@ -1154,7 +1180,7 @@ A Terminal session kept running this way also keeps its keyboard and paste modes
 
 A session kept running this way can stop accepting output if it reaches a storage or log limit. It then shows **Agent output paused**, and your draft is kept.
 
-By default, Kepler keeps your computer awake while any session is starting, running, or waiting on you. To turn this off, clear **Settings → General → Keep agents running → Keep this machine awake while agents work**. See [Settings](/kepler/settings-app#keep-agents-running).
+By default, Kepler keeps your computer awake while any session is starting, running, or waiting on you. To turn this off, clear **Settings → Agents → Keep agents running → Keep this machine awake while agents work**. See [Settings](/kepler/settings-agents).
 
 ***
 
@@ -1172,6 +1198,7 @@ If a session cannot continue, its context card says so with a badge, one sentenc
 | **Folder missing** | *The folder this conversation ran in was removed or moved.* | **Resume and recreate worktree** or **Resume and recreate folder**. On an archived task, **Restore and resume** |
 | **Disconnected** | *Kepler lost its connection to this session's background process. Restart to pick up where it left off.* | Restart the agent |
 | **Unable to resume** | *Another {name} is still running this conversation. Close it, then try again.* | Close the other copy, then resume |
+| **Ended** | *Kepler is unable to confirm this session's previous process has ended, so it didn't start a new one.* | Make sure the earlier process has stopped, then click **Resume anyway** and confirm. If it is still running, 2 agents work on this conversation and its files at once |
 
 If Kepler cleaned up a session's worktree to save disk space, the card reads *Worktree cleaned up to save disk space.* Click **Resume**, and Kepler brings the worktree back before the session continues.
 
@@ -1184,6 +1211,7 @@ An **Agent error** banner names the cause, such as *{name} binary is missing or 
 - **{agent} has run out of room in this conversation**: the conversation is too long for the model's context window. Click **Compact**, or start a new chat.
 - **{agent} can't use the selected model**: the provider the agent sends requests to does not serve that model. The banner names the provider. Pick another model, or enable the model with that provider.
 - **{agent} was unable to complete this turn**: the model reported a capacity problem, not a usage limit. Reconnect, then retry in a moment or switch models.
+- **{agent}'s provider declined this request**: the provider refused the turn under its usage policy, so sending it again does not help. Rephrase the request to continue.
 
 A Chat turn that fails on the provider's side says which kind of failure it hit and what to do:
 
@@ -1192,7 +1220,7 @@ A Chat turn that fails on the provider's side says which kind of failure it hit 
 - *{name} is overloaded right now. Try again shortly.*
 - *{name} hit a temporary server error. Try again shortly.*
 
-**Kepler retries a turn that an overloaded model or a temporary server error cut off.** It keeps trying for up to 12 hours, and each try asks the agent to continue; Kepler never resends your prompt. The session shows **Kepler will retry at {time}** with the try count, **Retry now**, and **Stop retrying**, and Kepler notifies you if the turn is still failing. To turn this off, clear **Settings → Agents → Usage and recovery → Retry automatically when the model is overloaded**. With the setting off, or once the tries run out, the session offers **Retry** and **Keep retrying**.
+**Kepler retries a turn that an overloaded model or a temporary server error cut off.** It keeps trying for up to 12 hours, and each try asks the agent to continue; Kepler never resends your prompt. The session shows **Kepler will retry at {time}** with the try count, **Retry now**, and **Stop retrying**, and Kepler notifies you if the turn is still failing. To turn this off, clear **Settings → Agents → Keep agents running → Retry automatically when the model is overloaded**. With the setting off, or once the tries run out, the session offers **Retry** and **Keep retrying**.
 
 While the agent itself retries a failed turn, the session shows **{name} is retrying** with the try number and *Next try at {time}.*
 
@@ -1213,7 +1241,7 @@ Sessions recover on their own where they can. If an authentication token expires
 
 ## Notifications
 
-Kepler notifies you when a session replies, needs you, or fails. Each notification has one of these statuses:
+Kepler notifies you when a session replies, needs you, fails, or reaches a usage limit. Each notification has one of these statuses:
 
 | Status | When |
 |---|---|
@@ -1223,12 +1251,15 @@ Kepler notifies you when a session replies, needs you, or fails. Each notificati
 | **Plan ready for review** | The agent proposed a plan and waits for your review. It follows your **Questions** choices in **Settings → Notifications** |
 | **Approval needed** | An agent asks Kepler to do something only you can approve, like deleting a worktree. A destructive request reads **Approval needed for a destructive action** |
 | **Error** | The session stopped because something went wrong |
+| **Usage limit** | An agent reached an account's usage limit, such as *{account} reached its weekly limit*. The notification says what happens next |
 
 A Terminal or external session blocked on a prompt in its own CLI also notifies you, for every agent. Sessions started outside Kepler notify you only once they are on a task.
 
 A notification's title reads **{status}: {task}**, with the agent and the repository or branch beneath (*{agent} on {repo}/{branch}*). A permission request for a shell command the agent described is titled with that description instead, and shows the command beneath it. Click the notification to go to the session. An approval notification's title is its status alone. Beneath it are the action, what a destructive action would put at risk, and *Asked by {session}*.
 
 You can answer an approval request from its alert. The in-app alert has **Approve** and **Deny** for every request, destructive ones included, followed by **View**, which opens the request in its session. On macOS, the desktop notification also has **Approve** and **Deny** buttons, which answer the request without opening a window. Windows and Linux notifications have no buttons.
+
+**A paired phone can notify you too.** When a session needs you and you are away from your computer, Kepler can notify a phone paired through Remote Access. To turn it on, open **Settings → Notifications** on the phone and turn on **Notify this phone**. From the phone's notification, even on the lock screen, you can answer a permission request for a short shell command, or an approval that cannot lose work. See [Approve Coding Agent Requests from Your Phone](/kepler/kepler-approve-agent-requests-from-your-phone#how-to-get-notifications-on-your-phone).
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/approval-alert-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -1241,7 +1272,9 @@ By default, Kepler sends no notification for the task open in the window you are
 
 While you are working in any Kepler window on a computer, that computer posts no desktop notifications. The window you are in shows them in Kepler instead, and several windows on one computer post a single alert.
 
-To choose which events notify you, and whether each one appears as a **Desktop** notification, **In Kepler**, or both, open **Settings → Notifications**. The same page has **Play a sound with desktop notifications**. In the desktop app, every event except **Replies** and **Offers** notifies on the desktop until you change it. In a browser, desktop notifications start off. After your first session starts, the desktop app sends a one-time **Notifications are on** notification. Click it to open **Settings → Notifications**. See [Settings](/kepler/settings-app#notifications).
+To choose which events notify you, and whether each one appears as a **Desktop** notification, **In Kepler**, or both, open **Settings → Notifications**. The same page has **Play a sound with desktop notifications**. The **Usage limits** row covers usage-limit notifications.
+
+In the desktop app, every event except **Replies** and **Offers** notifies on the desktop until you change it. In a browser, desktop notifications start off. After your first session starts, the desktop app sends a one-time **Notifications are on** notification. Click it to open **Settings → Notifications**. See [Settings](/kepler/settings-app#notifications).
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/ade-settings-notifications-01-01-v4@2x.png" target="_blank" rel="noopener noreferrer">

@@ -1,6 +1,6 @@
 ---
 title: Update and Help Settings
-description: Check your Kepler version and install updates, open the docs and release notes, show onboarding tips again, and save Kepler's logs to report a problem.
+description: Check your Kepler version and install updates, choose how Kepler tells you about agent updates, open the docs and release notes, show onboarding tips again, and save Kepler's logs to report a problem.
 product: Kepler
 feature: Settings
 content_type: reference
@@ -13,13 +13,13 @@ hosted_variant: both
 status: GA
 last_verified: 2026-11
 llms_include: true
-tags: [settings, updates, help, release-notes, onboarding, logs]
+tags: [settings, updates, agent-updates, help, release-notes, onboarding, logs]
 taxonomy:
   category: kepler
 ---
 <kbd>Last updated: November 2026</kbd>
 
-Use **Updates** to see which version of Kepler you have and to install a new one. Use **Help** to open the docs and release notes, see dismissed tips again, and save Kepler's logs when you need to report a problem.
+Use **Updates** to see which version of Kepler you have, to install a new one, and to keep your agents up to date. Use **Help** to open the docs and release notes, see dismissed tips again, and save Kepler's logs when you need to report a problem.
 
 ## Updates
 
@@ -39,6 +39,22 @@ When an update is ready, a chip also appears in the top bar on every screen. Its
 After an update, the release notes open in Kepler by themselves, once any guided start has ended. A release can start with a highlights card, *Three things in {version} to try first:*, and each item opens its part of the notes.
 
 The update controls appear only in the desktop app. In a browser window connected to Kepler, the **Updates** page has nothing to update.
+
+### Agent updates
+
+Kepler checks the agent CLIs you have installed for newer versions. **Agent updates** reads **All agents are up to date**, or lists the updates available with **Update all**. When an update is available, a button also appears in the title bar, with **Update all** and **Skip these versions**. These settings choose how Kepler tells you:
+
+| Setting | What it controls | Default |
+|---|---|---|
+| **Show agent updates in the title bar** | *A button appears in the title bar when an installed agent has a newer version. Settings still marks each agent either way.* | On |
+| **Show a restart notice on outdated sessions** | *After an agent updates, a notice above each open chat or terminal session still on the old version offers to restart it.* | On |
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/settings-agent-updates-nov-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/settings-agent-updates-nov-2026.png" class="help-center-img img-bordered" alt="The Agent updates section of Settings › Updates: All agents are up to date, then Show agent updates in the title bar and Show a restart notice on outdated sessions, both ticked, each with its help line.">
+  </a>
+  <figcaption style="text-align:center; color:#888">Agent updates, with every agent up to date.</figcaption>
+</figure>
 
 ***
 

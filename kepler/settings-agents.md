@@ -1,6 +1,6 @@
 ---
 title: Agent Settings
-description: Install, update, and sign in to your coding agents in Kepler, choose how their sessions start, and set up custom agents, MCP servers, agent tools, approval rules, and what happens at a usage limit.
+description: Choose how new Kepler sessions start, install and sign in to your coding agents, set up custom agents and agent presets, keep agents running through sleep, restarts, and usage limits, and put idle agents to sleep.
 product: Kepler
 feature: Settings
 content_type: reference
@@ -13,26 +13,46 @@ hosted_variant: both
 status: GA
 last_verified: 2026-11
 llms_include: true
-tags: [settings, agents, custom-agents, mcp-servers, agent-tools, approvals, usage-limits, artifacts]
+tags: [settings, agents, custom-agents, keep-awake, idle-agents, usage-limits, artifacts]
 taxonomy:
   category: kepler
 ---
 <kbd>Last updated: November 2026</kbd>
 
-Use **Settings → Agents** to install and update the coding agents that work on your tasks, sign in to them, choose how each one starts, and give them more tools.
-
-At the top of the page, a line names the agent new sessions start with. To change it, click **Change in Tasks**, which opens [Default agent](/kepler/settings-tasks#default-agent).
-
-To choose the agent Ask Kepler uses, set **New Ask Kepler chats start with**. It is separate from the default for tasks. Its agent-settings pill saves the agent, account, [agent preset](#agent-presets), model, and options as you pick them. Below it, **Start each chat on the agent you used last** is on by default: your first chat uses the pill's agent, and each later chat starts on your last pick. To always start on the pill's agent, clear it.
-
-**New Ask Kepler chats start with** lists only the agents that run in **Chat**, because only they can answer in the Ask Kepler panel. See [Ask Kepler](/kepler/ask-kepler#which-agents-can-answer).
+Use **Settings → Agents** to choose how new sessions start, to install, update, and sign in to the coding agents that work on your tasks, to add custom agents and agent presets, to keep agents running, and to put idle agents to sleep. Your agents' MCP servers and built-in tools are on [Agent tools](/kepler/settings-agent-tools), and the rules that approve their actions for you are on [Approvals](/kepler/settings-approvals).
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/agent-settings-oct-2026-v6@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/agent-settings-oct-2026-v6@2x.png" class="help-center-img img-bordered" alt="Settings › Agents: the page description; New sessions start on your last pick, or Claude Code the first time, with Change in Tasks; then New Ask Kepler chats start with, its agent-settings pill showing the Claude Code mark and the Quick fix preset, the caption Your first chat uses this agent, and Start each chat on the agent you used last ticked. Your agents has Update all and Rescan above the Claude Code card (Update, Enabled), which shows Accounts with Add account and the Claude Code CLI account marked Default with Check usage, New sessions start in set to Chat, Let artifact comments start turns (on), Artifacts in new sessions (off), and a collapsed Program and data folder.">
   </a>
-  <figcaption style="text-align:center; color:#888">Settings → Agents.</figcaption>
+  <figcaption style="text-align:center; color:#888">Your agents in Settings → Agents, one row per agent.</figcaption>
 </figure>
+
+<a id="default-agent"></a>
+
+## Defaults
+
+**Defaults** sets how new sessions and Ask Kepler chats start:
+
+| Setting | What it controls |
+|---|---|
+| **New sessions start with** | The agent that the **New task** composer, the Dashboard's composer, and a new draft session start with |
+| **New Ask Kepler chats start with** | The agent that new [Ask Kepler](/kepler/ask-kepler) chats start with |
+| **New sessions start in** | Whether new sessions run in **Chat** or **Terminal**, for every agent. See [Default mode for new sessions](#default-mode-for-new-sessions) |
+
+Each of the first two is an agent-settings pill, like the one in the composer: pick the agent and account, and optionally an [agent preset](#agent-presets), a model, and other options. Kepler saves each pick as you make it. An [Action](/kepler/actions) uses **New sessions start with** unless it names an agent of its own.
+
+Below each pill, **Start each session on the agent you used last** and **Start each chat on the agent you used last** are on by default. Your first session or chat uses the pill's agent, and each later one starts on your last pick. To always start on the pill's agent, clear the box.
+
+**New Ask Kepler chats start with** lists only the agents that run in **Chat**, because only they can answer in the Ask Kepler panel. See [Ask Kepler](/kepler/ask-kepler#which-agents-can-answer).
+
+### Default mode for new sessions
+
+**New sessions start in** chooses where new sessions run. **Chat** runs your agents inside Kepler, and **Terminal** runs each agent's own command-line app. The default is **Chat**.
+
+This setting applies to every agent that can run in both modes, including agents you add later. To give one agent its own mode, open the agent from [Your agents](#your-agents) and set **New sessions start in** on its page. Choosing a mode under **Defaults** again sets it for every agent.
+
+The setting is only a default: you can pick the other mode when you start a session. A terminal-only agent always starts in Terminal. See [Agent Sessions](/kepler/agent-sessions#how-a-session-runs).
 
 ## Your agents
 
@@ -40,54 +60,53 @@ Kepler supports **Claude Code**, **Codex**, **GitHub Copilot**, **OpenCode**, **
 
 In the section header, **Update all** runs each installed agent's own updater, and **Rescan** looks again for the agent CLIs installed on this machine. If you install or remove an agent outside Kepler, click **Rescan**.
 
-Each agent has a card. The card's title line shows the agent's name and these controls:
+Each agent has a row with its version, a **Default** badge on your default agent, and its accounts or sign-in state. A row also has these controls:
 
 | Control | What it does |
 |---|---|
-| Version | The installed version, **Not installed**, or **Version unknown** when Kepler could not read the version |
-| **Update** | Runs the agent's updater and streams its output. Shown when Kepler has an updater for that agent |
 | **Install** | Opens **Set up {name}** to pick an install method, then **Sign in to {name}** if the agent needs a sign-in. Shown when the agent is not installed and has an installer for your OS |
-| **Enabled** | *Off keeps it installed but hidden when you start work.* |
+| **Add account** | Opens the agent's page and its add-account dialog |
+| **Sign in** | Signs in to an agent that has a single login |
+| **Enabled** switch | *Off keeps it installed but hidden when you start work.* |
 
-If you installed the agent yourself, use **Already installed?** in the same dialog: enter or browse to the program, then click **Use this**.
+If you installed the agent yourself, use **Already installed?** in the **Set up {name}** dialog: enter or browse to the program, then click **Use this**.
 
-When the version is unknown, Kepler turns off features that depend on the version, such as sending a new session's first message automatically. To fix it, reinstall or update the agent.
+When a newer version of an installed agent is out, its row shows **Update available**. After an update, the row shows **Updated**: new sessions use the new version, and a running session switches when you restart it. To turn off the title-bar notice and the restart notice for agent updates, see [Settings → Updates](/kepler/settings-updates-help#updates).
 
-If the installed version of an agent has a known problem, a warning note on the card names the version and says what to do:
+When the version reads **Version unknown**, Kepler turns off features that depend on the version, such as sending a new session's first message automatically. To fix it, reinstall or update the agent.
+
+### An agent's own page
+
+To open an agent's page, click its row. The page holds the agent's own settings:
+
+| Setting | What it controls |
+|---|---|
+| **New sessions start in** | This agent's own mode, instead of the [default for every agent](#default-mode-for-new-sessions) |
+| **Update** | Runs the agent's updater and shows its output. Shown when Kepler has an updater for that agent |
+| **Accounts** | Claude Code, Codex, GitHub Copilot, Auggie, and Grok Build: runs more than 1 login side by side. See [Use several accounts for one agent](#use-several-accounts-for-one-agent) |
+| **Account** | On an agent with a single login: who is signed in, with **Sign in** or **Sign out**. Signing out deletes the stored credentials |
+| **Artifacts in new sessions** | Claude Code only. See below |
+| **Let artifact comments start turns** | Claude Code only. See below |
+| **Which {name} Kepler runs** | The agent program Kepler runs. **Auto** uses the first match on your `PATH`, the same one `which` finds. To override it, pick a specific install or **Custom path…**, or click **Rescan** to search again |
+| **Where {name} keeps its data** | *Set it only to keep the {name} Kepler runs apart from the one you run yourself.* Empty uses the agent's usual folder |
+
+If the installed version of an agent has a known problem, a warning note on its page says what to do:
 
 | Note | What it means |
 |---|---|
-| *OpenCode {version} is not supported* | Sessions with this version do not start. Install OpenCode 2, or choose an OpenCode 2 binary under **Program and data folder** |
-| *Auggie {version} may not load your MCP servers in chat* | With this version, Chat sessions may skip the MCP servers in Auggie's own settings, and a server whose path contains spaces or parentheses may fail to start |
+| *OpenCode {version} is not supported* | Sessions with this version do not start. Install OpenCode 2, or choose an OpenCode 2 program under **Which OpenCode Kepler runs** |
+| *Auggie integration is unverified* | Kepler could not verify the selected Auggie build. Before you rely on MCP tools in Chat, click **Rescan** or select a verified installation under **Which Auggie Kepler runs** |
 | *Codex {version} can show approval prompts that need no answer* | Update Codex to 0.163.0 or newer |
 
-The card body holds the rest:
+**OpenCode needs version 2.** If you have both versions installed, point **Which OpenCode Kepler runs** at OpenCode 2. A conversation you started under OpenCode 1 resumes in OpenCode 2.
 
-| Control | What it does |
-|---|---|
-| **Accounts** | Claude Code, Codex, GitHub Copilot, Auggie, and Grok Build: runs more than 1 login side by side. See [Use several accounts for one agent](#use-several-accounts-for-one-agent) |
-| **Account** | On an agent with a single login: who is signed in, with **Sign in** or **Sign out**. Signing out deletes the stored credentials |
-| **New sessions start in** | The default mode for new sessions. See below |
-| **Artifacts in new sessions** | Claude Code only. See below |
-| **Let artifact comments start turns** | Claude Code only. See below |
-| **Program and data folder** | A disclosure holding **Binary** and **Data folder** |
-
-Under **Program and data folder**:
-
-| Setting | What it controls | Default |
-|---|---|---|
-| **Binary** | The agent program Kepler runs. **Auto** uses the first match on your `PATH`, the same one `which` finds. To override it, pick a specific install or **Custom path…**, or click **Rescan** to search again | Auto |
-| **Data folder** | *Overrides the agent's default data and config folder.* | Empty, meaning the agent's own default |
-
-**OpenCode needs version 2.** If you have both versions installed, point **Binary** at OpenCode 2. A conversation you started under OpenCode 1 resumes in OpenCode 2.
-
-**Google Antigravity runs the `agy` CLI in both modes.** Chat needs Antigravity CLI 1.5.0 or newer. With an older CLI, click **Update** on its card. One sign-in, **Sign in in Terminal**, serves both Chat and Terminal. See [Agent Integrations](/kepler/agent-integrations#sign-in-to-an-agent).
+**Google Antigravity runs the `agy` CLI in both modes.** Chat needs Antigravity CLI 1.5.0 or newer. With an older CLI, click **Update** on its page. Chat and Terminal share one sign-in: **Sign in in Terminal**. See [Agent Integrations](/kepler/agent-integrations#sign-in-to-an-agent).
 
 ### Use several accounts for one agent
 
 With **Accounts**, you can run more than 1 login for an agent side by side. Each account has its own credentials and history, but shares your skills, agents, commands, and settings.
 
-To add an account, click **Add account**. For Claude Code, Codex, and GitHub Copilot, also choose whether its conversations **Keep separate** or **Share with the CLI**. A new Copilot account starts on **Share with the CLI**, and its new conversations use your CLI settings. If you change a Copilot account's choice later, the conversations it already has stay where they are and still open in Kepler.
+To add an account, click **Add account**, on the agent's row or its page. For Claude Code, Codex, and GitHub Copilot, also choose whether its conversations **Keep separate** or **Share with the CLI**. A new Copilot account starts on **Share with the CLI**, and its new conversations use your CLI settings. If you change a Copilot account's choice later, the conversations it already has stay where they are and still open in Kepler.
 
 Each account row has the following controls:
 
@@ -98,7 +117,7 @@ Each account row has the following controls:
 Once an agent has 2 or more accounts, Kepler uses them in list order, top first:
 
 - A new session you start without picking an account starts on the first account with usage left.
-- When a session hits a usage limit, Kepler continues it on the first account with usage left, or suggests that account, depending on [When a usage limit is reached](#usage-and-recovery).
+- When a session hits a usage limit, Kepler continues it on the first account with usage left, or suggests that account, depending on [When a usage limit is reached](#keep-agents-running).
 
 To reorder the list, drag a row by its handle, or use **Move to top**, **Move up**, and **Move down** in the account menu. To keep an account out of the switch at a usage limit, clear **Use at a usage limit** in its menu. Its row then reads **Skipped at a usage limit**. An account that keeps its own history reads **New sessions only**, because a conversation can move to it only with **Share history with the CLI** on.
 
@@ -118,19 +137,9 @@ An added account shares your own settings, instructions, skills, agents, command
 
 Click **Continue** to open the usual sign-in. If your browser is already signed in, choose a different account on the sign-in page.
 
-### Default mode for new sessions
-
-Every agent that can run in both Chat and Terminal has this setting:
-
-| Setting | What it controls | Default |
-|---|---|---|
-| **New sessions start in** | **Chat** runs the agent inside Kepler; **Terminal** runs the agent's own command-line app | Chat. Google Antigravity starts on Terminal |
-
-Kepler saves the choice per agent, so one agent can default to Terminal while another stays on Chat. The setting is only a default: you can pick the other mode when you start a session. A terminal-only agent shows **Terminal** with no switch. See [Agent Sessions](/kepler/agent-sessions#how-a-session-runs).
-
 ### Artifacts in new sessions
 
-The following setting is on Claude Code's card:
+The following setting is on Claude Code's page:
 
 | Setting | What it controls | Default |
 |---|---|---|
@@ -140,13 +149,13 @@ A running Chat session has its own **Artifacts** switch in its agent settings. W
 
 ### Let artifact comments start turns
 
-The following setting is on Claude Code's card:
+The following setting is on Claude Code's page:
 
 | Setting | What it controls | Default |
 |---|---|---|
 | **Let artifact comments start turns** | Lets anyone with edit access to an artifact a Chat session publishes start a turn in that session by sending a comment to Claude | On |
 
-Running sessions keep the value they started with. When you change the setting, the card lists the sessions still on the previous value. To apply the new value, click **Restart all**, or tick sessions and click **Restart selected**.
+Running sessions keep the value they started with. When you change the setting, the page lists the sessions still on the previous value. To apply the new value, click **Restart all**, or tick sessions and click **Restart selected**.
 
 Restarting keeps each conversation. It interrupts a turn in progress and stops background work, and a restarted session stops watching the artifacts it published before.
 
@@ -189,11 +198,14 @@ A preset opens as a sub-page with these fields:
 |---|---|
 | **Name** | A name no other preset uses |
 | **Agent** | The agent the preset belongs to, with its **Model**, **Mode**, and other options |
+| **MCP servers** | Claude Code, Codex, OpenCode, and GitHub Copilot: **On** or **Off** for each of the agent's MCP servers, with **Reset** |
+
+A preset's MCP server choices apply to each session that uses it. A server that is off in the agent's own settings can only stay off. **Save preset** in a session's agent settings keeps the MCP servers you switched for that session. See [MCP Servers](/kepler/mcp-servers#per-session).
 
 You can use a preset in these places:
 
 - **A session's agent settings.** In the composer, pick it in the **Preset** row, which appears when the chosen agent has presets. See [Agent Sessions](/kepler/agent-sessions#agent-model-mode-and-effort).
-- **The default agents.** The **New sessions start with** pill on [Default agent](/kepler/settings-tasks#default-agent), and the **New Ask Kepler chats start with** pill at the top of this page.
+- **The default agents.** The **New sessions start with** and **New Ask Kepler chats start with** pills in [Defaults](#defaults).
 - **Actions.** Each Action's **Preset** list, in the Action's editor. See [Actions](/kepler/actions).
 - **Automations.** An automation's agent settings can use a preset. See [Automations](/kepler/kepler-automations).
 
@@ -201,65 +213,62 @@ If Actions or automations use a preset you delete, Kepler lists them and asks yo
 
 When you change a preset, running sessions that use it keep the earlier version until you update them. To apply the change, click **Update all** below the list. Updating keeps each conversation, but a session that needs a restart interrupts any turn in progress.
 
-## MCP servers
-
-Use **MCP servers** to give your agents extra tools, like a database, a browser, or your issue tracker. The servers here are each agent's own defaults, and every repository inherits them.
-
-To see the servers an agent loads, pick the agent with **Agent**. If that agent has more than 1 account, pick an account too. Kepler lists only the agents that expose their MCP servers to Kepler. In the list:
-
-- Click a server to open its own page. There you can turn the server or a single tool off, sign in to a server that needs it, use **Also add to…** to copy the server to another agent, and **Remove server**.
-- Click **Add server** in the section header to add one.
-
-A server or tool you turn off here is off in every repository, unless a repository turns it back on for itself. A repository's own **MCP servers** section is on its [Edit repo](/kepler/settings-repositories#edit-a-repository) page. See [MCP Servers](/kepler/mcp-servers).
-
-Below the list, one more setting applies across every agent:
-
-| Setting | What it controls | Default |
-|---|---|---|
-| **Keep the GitKraken MCP server installed in every agent** | *Gives every command-line agent Git tools and your issues and pull requests through GitKraken. Turn off to manage it yourself.* | On |
-
-Separately, every session Kepler starts gets Kepler's own workspace tools, which are always on and have no setting. They let the agent work with your tasks and their notes, links, files, and worktrees, with sessions, approvals, and [themes](/kepler/settings-app#theme), and rebase, merge, and compose commits when [Agent tools](#agent-tools) turns them on. An agent can name a repository by one of its [aliases](/kepler/settings-repositories#edit-a-repository). For the full list of tools, see [Tasks and Resources](/kepler/tasks-and-resources).
-
-Workspace tools run without the agent's own permission prompt, in both Chat and Terminal. Instead, an action that needs your approval, such as deleting a worktree or changing another task, waits for you on an approval card. See [Approvals](#approvals).
-
-## Agent tools
-
-Use **Agent tools** to let your agents call Kepler's own tools for rebasing, merging, and cleaning up commits:
-
-| Setting | What it does | Default |
-|---|---|---|
-| **AI Sync** | *Lets agents rebase or merge your branch and resolve conflicts for you. Every change can be undone.* | Off |
-| **AI Compose** | *Lets agents turn messy changes into clean, focused commits. Every change can be undone.* | Off |
-
-A change applies to new agent sessions. Sessions already running keep the tools they started with.
-
-## Approvals
-
-Some actions your agents take wait for your approval. Use **Approvals** to manage the rules that approve those actions for you. An action that no rule covers still asks.
-
-When an agent uses Kepler's workspace tools to do something that needs your approval, Kepler pins an approval card above that session's message box. Examples include deleting a worktree, sending a prompt to another session, or rewriting a branch. The card's **Approve** menu offers **Always approve** for that kind of action. Kepler does not offer it for actions that can lose work, for adopting a task into another agent's work, for adding or replacing a repository's Run command, or for a setting change that Ask Kepler asks to make. See [Agent Sessions](/kepler/agent-sessions).
-
-**Always approved** lists each rule you create this way, with when and where you added it and how often it has run. **Remove** deletes the rule, so that kind of action asks again.
-
 <a id="usage-limits"></a>
+<a id="usage-and-recovery"></a>
 
-## Usage and recovery
+## Keep agents running
 
-These settings control what Kepler does when an agent hits a usage limit or its model is overloaded:
+**Keep agents running** keeps your agents working when the machine would sleep or Kepler quits, and when an agent hits a usage limit or its model is overloaded. **Keep agents running** and [Idle agents](#idle-agents) apply to the machine the agents run on, so in a window connected to a remote machine, they apply to that machine.
 
 | Setting | What it controls | Default |
 |---|---|---|
-| **Check plan usage with each agent's provider** | Asks each agent's provider for your plan usage, per-model limits, and extra usage, with the agent's own sign-in | On |
+| **Keep this machine awake while agents work** | Blocks sleep while an agent session is starting, running, or waiting for your input, and while Remote Access is on | On |
+| **Keep agents and terminals running after Kepler quits or restarts** | *Agents and terminals stay alive while Kepler is closed or updating, and reconnect afterwards. When off, quitting or restarting Kepler ends them.* | On |
 | **When a usage limit is reached** | What happens to a session that a usage limit cuts off, for every agent, in Chat and in Terminal. See the options below | Wait for the reset |
 | **Retry automatically when the model is overloaded** | When the model is overloaded or the provider has a temporary server error, Kepler waits and asks the agent to continue, for up to 12 hours. It never resends your prompt | On |
 
+**Keep this machine awake while agents work** also counts Claude Code sessions running outside Kepler. The screen can still turn off. If Kepler cannot keep the machine awake, the setting says why under it.
+
+**Keep agents and terminals running after Kepler quits or restarts** applies from the next session you start. If agents and terminals cannot start on this machine, the setting says why.
+
 **When a usage limit is reached** has these options:
 
-- **Manual**: the usage bar offers to wait for the reset or switch accounts.
-- **Wait for the reset**: the session continues on its own when the limit resets.
-- **Switch accounts**: the session continues on an account with usage left, in [your accounts' order](#use-several-accounts-for-one-agent), or after the reset if no account has any.
+- **Ask me**: the session stops, and its usage bar offers to switch accounts or wait for the reset.
+- **Wait for the reset**: the session continues when the limit resets.
+- **Switch accounts**: the session continues on the agent's next account with usage left, in [the order on its page](#use-several-accounts-for-one-agent), or after the reset if no account has any.
 
-Kepler uses the agent's sign-in only to ask its provider, and never changes it. With **Check plan usage with each agent's provider** off, Kepler shows only what agents report, and sends a message queued at a usage limit automatically only if the agent says when the limit resets.
+Kepler reads each account's plan usage from its provider, through the agent's own sign-in, and never changes that sign-in. If an account row on an agent's page shows **Turn on usage checks**, click it to turn those checks back on.
+
+## Idle agents
+
+**Idle agents** stops sessions you have left alone, once you are not looking at them:
+
+| Setting | What it controls | Default |
+|---|---|---|
+| **Put idle task agents to sleep** | How long an agent in a task can stay quiet before Kepler stops it, from **After 5 minutes** to **After 24 hours**, or **Never** | After 1 hour |
+| **Put idle Ask Kepler chats to sleep** | How long an Ask Kepler chat can stay quiet before Kepler stops it | After 15 minutes |
+| **Wake idle terminal agents to read new reports** | Types a one-line note into a sleeping terminal agent's empty input when a report reaches it | On |
+
+A sleeping session's status reads **Asleep**. Your next message wakes it, and the conversation carries on. Agents in a terminal sleep too, once nothing is typed into them and nothing they started is still running. Typing into the terminal wakes them. Agents that are working or waiting on you stay awake. See [Session status](/kepler/agent-sessions#session-status).
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/agents-idle-sleep-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agents-idle-sleep-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Put idle agents to sleep setting set to After 15 minutes, with help text on when an agent in a chat view sleeps, what wakes it, and which agents stay awake.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The Idle agents settings, at their defaults.</figcaption>
+</figure>
+
+## Agent tools
+
+MCP servers and Kepler's [built-in tools](/kepler/settings-agent-tools#built-in-tools) are on **Settings → Agent tools**: see [Agent Tool Settings](/kepler/settings-agent-tools).
+
+### MCP servers
+
+**MCP servers** is a section of **Settings → Agent tools**: see [MCP servers](/kepler/settings-agent-tools#mcp-servers).
+
+## Approvals
+
+The rules that approve your agents' actions for you are on **Settings → Approvals**: see [Approval Settings](/kepler/settings-approvals).
 
 ***
 

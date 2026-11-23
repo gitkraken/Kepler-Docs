@@ -25,7 +25,7 @@ You manage providers in the **Issues and pull requests** section of **Settings �
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/provider-integrations-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/provider-integrations-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Issues and pull requests section of Settings › Integrations. Azure DevOps and GitHub read Connected, each with Disconnect and Reconnect and a visibility line, Everything visible, with Choose what's visible…; Azure DevOps lists two accounts, Alex Lee (primary) and Alex Lee (Contoso). Azure DevOps Server, Bitbucket, Bitbucket Data Center, GitHub Enterprise, GitLab, GitLab Self-Hosted, Jira, Jira Server / Data Center, Linear and Trello each offer Connect.">
+    <img src="/wp-content/uploads/provider-integrations-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Issues and pull requests section of Settings › Integrations: Azure DevOps and GitHub read Connected, each with Disconnect, Reconnect and the visibility line Everything visible with Choose what's visible…, and Azure DevOps lists two accounts, Alex Lee (primary) and Alex Lee (Contoso). Azure DevOps Server, Bitbucket, Bitbucket Data Center, GitHub Enterprise, GitLab, GitLab Self-Hosted, Jira, Jira Server / Data Center, Linear and Trello each offer Connect.">
   </a>
   <figcaption style="text-align:center; color:#888">Issues and pull requests, in Settings → Integrations.</figcaption>
 </figure>
@@ -84,9 +84,10 @@ If your browser did not open, copy the **Connection link** from the dialog Keple
 2. Find the provider in **Issues and pull requests** and click **Connect**. The **Connect *provider*** dialog opens.
 3. In **Server URL**, enter the server's address, including the port and installation path when your server uses them.
 4. In **Personal access token**, paste a token with access to the repositories you need.
-5. Click **Save connection**.
+5. To keep the server URL and the token on this device, tick **Keep PAT on this device only**. Kepler then never sends them to GitKraken, and the connection is not available on your other devices or in other GitKraken products.
+6. Click **Save connection**.
 
-The address must be `http` or `https`, without credentials, a query, or a fragment. Kepler checks the token against the server from your machine, saves it on this device, and adds the connection to your GitKraken account. The dialog reports how the check went:
+The address must be `http` or `https`, without credentials, a query, or a fragment. Kepler checks the token against the server from your machine and saves it on this device. Unless you kept it on this device only, Kepler also adds the connection to your GitKraken account. The dialog reports how the check went:
 
 | Message | What it means |
 |---|---|
@@ -97,10 +98,11 @@ The address must be `http` or `https`, without credentials, a query, or a fragme
 
 Until Kepler finishes syncing the connection to your account, the provider's row shows **Cloud sync pending**, and you cannot make that connection the primary. If Kepler cannot reach GitKraken, it retries when you refresh your providers.
 
-Once connected, a self-hosted provider lists each server on its own row, with **Set as primary**, **Replace token**, and **Disconnect**. Each server keeps its own repositories and pull requests:
+Once connected, a self-hosted provider lists each server on its own row, with a storage chip, **Set as primary**, **Replace PAT**, and **Disconnect**. Each server keeps its own repositories and pull requests:
 
 - To connect another server, click **Add connection** on the provider's row.
-- To renew an expired or rejected token, click **Replace token** on that server's row.
+- To renew an expired or rejected token, click **Replace PAT** on that server's row.
+- To move a server's token between your GitKraken account and this device, click its storage chip (**GitKraken account** or **This device only**) and choose **Keep PAT on this device only** or **Store PAT in GitKraken account**. A connection kept on this device only cannot be set as primary.
 - To make a server the provider's default connection, click **Set as primary**.
 
 <figure style="text-align:center">
@@ -180,6 +182,8 @@ Disconnecting affects more than Kepler: it removes the connection from your GitK
 
 - **With another account connected**, Kepler promotes it to primary and the provider stays connected under it. Nothing else changes.
 - **With no other account connected**, Kepler removes the provider entirely, with its saved filters and its rows in your lists.
+
+Disconnecting a self-hosted server whose token is kept on this device only removes the token from this device alone. Your GitKraken account and your other devices are not affected.
 
 You can reconnect at any time.
 

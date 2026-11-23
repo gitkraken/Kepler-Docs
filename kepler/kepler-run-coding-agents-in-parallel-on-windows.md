@@ -68,7 +68,7 @@ Kepler runs directly on Windows. You do not need WSL, a virtual machine, or a Ma
 
 ## How to install coding agents on Windows
 
-Kepler supports 9 coding agents on Windows. When an agent is missing, open **Settings → Agents**, click **Install** in its section, and pick an install method. Kepler runs the install command for you and shows its output. After the install, Kepler offers to sign you in to the agent.
+Kepler supports 9 coding agents on Windows. When an agent is missing, open **Settings → Agents**, click **Install** on its row, and pick an install method. Kepler runs the install command for you and shows its output. After the install, Kepler offers to sign you in to the agent.
 
 | Agent | Install methods on Windows | Note for Windows |
 |---|---|---|

@@ -111,7 +111,7 @@ A wholly untracked folder with hundreds of files, such as a build output nobody 
 
 To open the Changes overlay, click a file, or choose **Open changes** from the worktree's menu. The overlay opens over the page at a width for one column of code, or two if you last used **Split**. Drag its edges to resize it. At that default width, **Maximize** in its header fills the window, and **Restore** returns it to the default width.
 
-In the desktop app, you can review on a second screen: click **Open in new window** in the overlay's header. The review moves to a window of its own, on the same files and view, and your comments still go to the same session. **Close window** closes it.
+In the desktop app, you can review on a second screen: click **Open in new window** in the overlay's header. The review moves to a window of its own, on the same files and view, and your comments still go to the same session. **Close window** closes it. A file in the file overlay offers **Open in new window** too. See [Files that open in an overlay](/kepler/task-view#files-that-open-in-an-overlay).
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/changes-overlay-maximize-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
@@ -228,7 +228,7 @@ An unsaved edit shows **Unsaved** with **Save** and **Discard** beside it. Keple
 
 **Editing a file from a commit.** A file shown from a commit you picked in the list is read-only, but you can switch it to the file on disk: click **Edit** in its header, choose **Edit working copy** from its row menu, or press **Ctrl/⌘ + E**.
 
-The file opens in **File** view, marked **Working**, ready to edit. Switch the file to **Changes** to see the diff counted from where the commit view started. **Stop editing** returns to the file as committed.
+The working copy opens marked **Working**, ready to edit. It stays in **File** or **Changes**, whichever you were in. In **Changes**, the diff counts from where the commit view started. **Stop editing** returns to the file as committed.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/changes-edit-working-copy-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
@@ -607,7 +607,7 @@ AI conflict resolution runs the rebase or merge on a copy and resolves each conf
 
 AI conflict resolution needs both of the following:
 
-- **AI Sync** turned on in **Settings → Agents → Agent tools**.
+- **AI Sync** turned on in **Settings → Agent tools → Built-in tools**.
 - A GitKraken sign-in.
 
 To resolve conflicts with AI, follow these steps:
@@ -757,7 +757,7 @@ Attaching a pull request also unlocks the **Address Feedback** Action on that ta
 
 ## Agent tools: AI Sync and AI Compose
 
-AI Sync and AI Compose give agents Git tools they do not otherwise have. Both are off until you turn them on. Turn them on in **Settings → Agents → Agent tools**. With a tool turned on, the agents in your sessions gain the matching tools, and you ask for the work in the chat. AI Sync also powers the Sync view's **Sync** button when the branch has conflicts. See [Resolve update conflicts with AI](#resolve-update-conflicts-with-ai).
+AI Sync and AI Compose give agents Git tools they do not otherwise have. Both are off until you turn them on. Turn them on in **Settings → Agent tools → Built-in tools**. With a tool turned on, the agents in your sessions gain the matching tools, and you ask for the work in the chat. AI Sync also powers the Sync view's **Sync** button when the branch has conflicts. See [Resolve update conflicts with AI](#resolve-update-conflicts-with-ai).
 
 | Tool | How an agent uses it |
 |---|---|
@@ -774,7 +774,7 @@ Both sets of tools work on the session's own worktree by default. Each can also 
   <a href="/wp-content/uploads/agent-features-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/agent-features-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Agent tools section of Settings › Agents, with AI Sync (lets agents rebase or merge your branch and resolve conflicts) and AI Compose (lets agents turn messy changes into focused commits), both off.">
   </a>
-  <figcaption style="text-align:center; color:#888">AI Sync and Compose, in the agent settings.</figcaption>
+  <figcaption style="text-align:center; color:#888">The AI Sync and AI Compose settings, both off.</figcaption>
 </figure>
 
 ***
@@ -785,6 +785,6 @@ Both sets of tools work on the session's own worktree by default. Each can also 
 - [Tasks and Resources](/kepler/tasks-and-resources): worktrees, and detaching or deleting one safely
 - [Agent Sessions](/kepler/agent-sessions): directing the agent that produced these changes
 - [Actions](/kepler/actions): **Review** on a task reviews exactly this uncommitted work
-- [Settings](/kepler/settings): [**Diff layout**](/kepler/settings-app#code), [**Agent tools**](/kepler/settings-agents#agent-tools), and [**Worktrees and branches**](/kepler/settings-repositories#worktrees-and-branches)
+- [Settings](/kepler/settings): [**Diff layout**](/kepler/settings-app#code), [**Agent tools**](/kepler/settings-agent-tools), and [**Worktrees and branches**](/kepler/settings-repositories#worktrees-and-branches)
 
 ---

@@ -30,18 +30,20 @@ You can arrange the Dashboard to fit how you work. See [Arranging Your Work](/ke
 The top bar holds the following controls, from the leading edge:
 
 - The application menu, on Windows and Linux
-- **Back** and **Forward**, in the desktop app only
 - **New task**
 - The remote indicator: the environment chip that shows which machine this window works on
 - **Remote Access**, a monitor-and-phone button whose color shows whether Remote Access is on. Hover it to turn Remote Access on or off and, while it's on, to scan its QR code or copy its link. See [Remote access](/kepler/remote-environments#remote-access-reach-kepler-from-another-device).
-- The Dashboard's views, when you place them in the title bar. By default they sit in a row below it. See [The Dashboard's views](#the-dashboards-views).
+- **Back** and **Forward**, in the desktop app only
+
+In the middle:
+
+- **Search Kepler**, which shows what needs you and opens the palette. See [Tasks that need you](#tasks-that-need-you).
+- **Ask Kepler** (**Ctrl/⌘ + K** or **Ctrl/⌘ + L**), the **Ask** button with Kep, Kepler's mascot. It opens a chat and quick terminals in a panel beside the page. See [Ask Kepler](/kepler/ask-kepler).
 
 At the trailing end:
 
 - Your setup progress, until you finish the primary setup steps
 - **Stop reading**, on every page while Kepler reads an agent's reply aloud. Click it to stop. Hover it to see the sentence being read. See [Read aloud](/kepler/voice-input#read-aloud).
-- **Tasks that need you**, which shows how many tasks need you. See [Tasks that need you](#tasks-that-need-you).
-- **Ask Kepler** (**Ctrl/⌘ + K** or **Ctrl/⌘ + L**), shown as Kep, Kepler's mascot, with the word **Ask**. It opens a chat and quick terminals in a panel beside the page. See [Ask Kepler](/kepler/ask-kepler).
 - Feedback
 - Settings
 - Your account
@@ -51,6 +53,8 @@ The **Ask Kepler** button also shows the state of the panel's chats. When a chat
 While an update downloads, a chip near the trailing end of the top bar shows its progress. Hover the chip to see the version and about how long is left. You can keep working meanwhile.
 
 When the update is ready, an **Update available** chip replaces the progress chip. It opens a popover that says what a restart does to running work, such as how many agents it stops, and offers **Restart to update**.
+
+When an agent you installed has a newer version, an agent updates button appears there instead. Click it to choose **Update all** or **Skip these versions**. To hide the button, see [Settings → Updates](/kepler/settings-updates-help#updates).
 
 On Windows and Linux, the menu button at the leading edge of the top bar holds the full application menu (**File**, **Edit**, **View**, **Window**, **Help**), including **Settings**, **Check for Updates…**, and **About**. macOS keeps its native menu bar. To switch windows, see [Kepler windows](#kepler-windows).
 
@@ -65,7 +69,7 @@ On Windows and Linux, the menu button at the leading edge of the top bar holds t
   <a href="/wp-content/uploads/top-tool-bar-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/top-tool-bar-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The right end of the Kepler top bar: the Tasks that need you inbox icon (nothing waiting), the Ask button with Kepler's ringed-planet glyph, Feedback, Settings, and the account avatar with Alex Lee's initials.">
   </a>
-  <figcaption style="text-align:center; color:#888">The top bar's trailing cluster.</figcaption>
+  <figcaption style="text-align:center; color:#888">Ask Kepler and the top bar's trailing controls.</figcaption>
 </figure>
 
 <figure style="text-align:center">
@@ -75,21 +79,20 @@ On Windows and Linux, the menu button at the leading edge of the top bar holds t
   <figcaption style="text-align:center; color:#888">The trailing cluster when an update is ready.</figcaption>
 </figure>
 
-Menu items and button tooltips show a command's keyboard shortcut when the item does exactly what the key does, including a key you assigned yourself. To see every shortcut or change one, see [Keyboard shortcuts](/kepler/settings-app#keyboard-shortcuts).
+Menu items and button tooltips show a command's keyboard shortcut, including a key you assigned yourself. To see every shortcut or change one, see [Keyboard shortcuts](/kepler/settings-app#keyboard-shortcuts).
 
 ### Tasks that need you
 
-**Tasks that need you**, in the top bar, shows how many tasks need you. Click it for a menu:
+The **Search Kepler** field in the top bar counts the tasks that need you and the unread ones, and shows work waiting on your other machines.
 
-- **Go to next task that needs you** (**F8**) opens the next one.
-- **Needs attention** and **Unread** list those tasks, each with what it needs. Click a task to open it at that session.
-- **Other machines** lists your other machines with work waiting. Click one to switch to its window.
+- Click the field, or press **Ctrl/⌘ + Shift + P**, to open the palette on **All**, with the tasks that need you first. See [Go to a task or file](#go-to-a-task-or-file).
+- Press **F8** (**Go to what needs you next**) to open the next task that needs you, at the session that waits.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/needs-you-menu-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/needs-you-menu-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Tasks that need you menu, open under its title-bar chip, which shows an inbox icon and 2: Go to next task that needs you with its F8 key, then Needs attention (1) with Add product search, Approval needed for Run npm test, and Unread (1) with Fix the cart total.">
+  <a href="/wp-content/uploads/search-kepler-nov-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/search-kepler-nov-2026.png" class="help-center-img img-bordered" alt="The title bar's Search Kepler field with its 1 needs you and 1 unread chips, beside the Ask button. Its tooltip reads Search Kepler with Ctrl Shift P, 1 needs you, 1 unread, and Go to what needs you next with F8.">
   </a>
-  <figcaption style="text-align:center; color:#888">The Tasks that need you menu.</figcaption>
+  <figcaption style="text-align:center; color:#888">The Search Kepler field, with its tooltip.</figcaption>
 </figure>
 
 ### Kepler windows
@@ -164,13 +167,13 @@ The **Automations** tab, after the views, opens your automations: agents that ru
 To work with views:
 
 - **New view** adds a **Todo**, **Tasks**, or **Agent Graph** view, or a copy of the one you're on. Name it, pick its **Icon** and layout, then choose **Done**.
-- Click the view you're on, or right-click any view, for its menu, with **Rename** (**F2**), **Change icon**, **Duplicate view**, **Views position**, **Delete view**, and more.
+- Click the view you're on, or right-click any view, for its menu, with **View options**, **Rename** (**F2**), **Change icon**, **Duplicate view**, **Views position**, **Delete view**, and more.
 - Double-click a view to rename it. Drag a view to reorder the row.
 - You always keep at least 1 **Todo** and 1 **Tasks** view.
 
 The views show on every page. Pick one to go back to the Dashboard on that view.
 
-Views can also sit in the top bar or down the left side of the window, as **Tabs** or **Pills**. Choose in the view menu's **Views position**, or in [Settings → Appearance → Dashboard](/kepler/settings-app#dashboard).
+Views can also sit down the left side of the window. Choose **Top** or **Left** in the view menu's **Views position**, or in [Settings → Appearance → Dashboard views](/kepler/settings-app#dashboard). At the top, views show as **Tabs** or **Pills**.
 
 What a Todo view lists depends on its **Scope**, a switch in its **View** menu:
 
@@ -277,7 +280,7 @@ The **Your role** grouping and filter sort items by your part in them:
   <a href="/wp-content/uploads/task-row-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/task-row-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Three task rows in the Unread group, Fix the cart total, Update checkout copy, and Upgrade the payment SDK, each with acme-web, its progress stage, New reply, its session dot, its age, and the ⋮ menu. Fix the cart total is starred, so its filled Star button stays in view.">
   </a>
-  <figcaption style="text-align:center; color:#888">Task rows, one of them starred.</figcaption>
+  <figcaption style="text-align:center; color:#888">Task rows, with the hovered row showing its Star and ⋮ buttons.</figcaption>
 </figure>
 
 Each task row shows:
@@ -290,7 +293,7 @@ Each task row shows:
 - What the task needs from you
 - Session activity, and a pill for its running terminals
 - Time
-- A **Star** button, shown when you hover or focus the row, and kept in view once the task is starred
+- A **Star** button and a **⋮** menu, shown when you hover or focus the row. A starred task keeps its **Star** in view, and on a touch screen the **⋮** menu stays in view.
 - An **Automation** badge, on a task an automation started. Hover it to see the automation's query. See [Automations](/kepler/kepler-automations).
 
 Star a task to mark it important. In the **Inbox** grouping, a starred task lists under **Important**, and in every sort except **Manual**, starred tasks list first in their section. To take the star off, click **Unstar**. On a touch screen, use **Star** in the task's menu.
@@ -319,13 +322,13 @@ When a session or a terminal in a task waits on you, the task's title shows in b
 
 Hover a pull request or issue chip to see its card, or click the chip to keep the card open. When the task has more than one link of that kind, the card lists them all. Right-click the chip for the link's menu.
 
-On a **Board** card, hover the group chip to see a summary of the group's tasks. Click the chip for **Open group**, **Show only this group**, **Remove from group**, and the grouping options. See [Arranging Your Work](/kepler/arranging-your-work).
+On a **Board** card, hover the group chip to see a summary of the group's tasks. Click the chip for **Open group**, **Show only this group**, **Change group**, and the grouping options. See [Arranging Your Work](/kepler/arranging-your-work).
 
 A Done task that's ready to archive also gets an **Archive task** button on its row.
 
 When the list is grouped by repository, a task that spans several repositories appears under each of them.
 
-To manage a task, open its **⋮** menu or right-click its row. The menu holds:
+To manage a task, hover its row and open its **⋮** menu, or right-click the row. The menu holds:
 
 - **Open task page** and **Open in new window**
 - **Reopen**, while the task is Done
@@ -333,7 +336,7 @@ To manage a task, open its **⋮** menu or right-click its row. The menu holds:
 - **Star** or **Unstar**
 - **Rename task** (**F2** on a focused panel)
 - A **Progress** submenu. See [Arranging Your Work](/kepler/arranging-your-work).
-- **Add to group**
+- **Add to group**, or **Change group** for a task already in a group. See [Your groups](/kepler/arranging-your-work#your-groups).
 - **Move up**, **Move down**, and **Move to top of {section}**, while the list is sorted by **Manual**. See [Arranging Your Work](/kepler/arranging-your-work#sort).
 - **Manage resources**, which opens the task's **Resources** screen
 - **Refresh**, which re-reads the task's worktrees and its linked pull requests and issues
@@ -438,10 +441,10 @@ You can change all of these defaults. See [Actions](/kepler/actions).
   <figcaption style="text-align:center; color:#888">The side panel, opened from a row.</figcaption>
 </figure>
 
-- **Click a row** to select it and open the side panel. A plain click replaces whatever was open, except for panels you've pinned.
+- **Click a row** to select it and open the side panel. A plain click replaces whatever was open, except for panels you've pinned. When only that row's panel is open, click the row again to close it.
 - **Shift-click** a second row to open both side by side. The panel holds one column per open item, each with its own chat, so you can work several tasks at once without leaving the list.
 - **Ctrl/⌘-click** to add one row to the open set, or to close it again.
-- **Double-click a row** to open the item's full task page. From a Todo row that's the page of the task behind it. A row with no task yet has no page, so a double-click opens its panel with the cursor in the prompt box instead.
+- **Double-click a row** to open the item's full task page. From a Todo row that's the page of the task behind it. A Todo row with no task yet has no page, so a double-click only opens its panel.
 
 **From the keyboard**, the list is a single tab stop. Move through it like a tree with these keys:
 
@@ -457,6 +460,25 @@ You can change all of these defaults. See [Actions](/kepler/actions).
 | **Alt/⌥ + Enter** | Open the item's task page, like a double-click |
 
 On the **Board** layout, **←** and **→** move between columns. **Tab** leaves the list.
+
+On a focused task row, these keys act on that task, or on every selected task:
+
+| Key | What it does |
+|---|---|
+| **J** / **K** | Move to the next or previous row |
+| **I** | Star or unstar the task |
+| **U** | Mark the task read or unread |
+| **E** | Archive or restore the task |
+| **H** | Put the task on hold, or back to automatic |
+| **S** | Set the task's progress |
+| **G** | Add the task to a group, or change its group |
+| **R** | Rename the task |
+| **O** | Open the task page |
+| **X** / **Shift + X** | Add the task to the selection, or select every task up to this one |
+| **.** | Open the task's actions menu |
+| **Delete** | Delete the task |
+
+Press **/** to move to the search box. These keys are fixed. [Settings → Keyboard shortcuts](/kepler/settings-app#dashboard-shortcuts) lists them.
 
 **Alt/⌥ + Shift + ↑** and **Alt/⌥ + Shift + ↓** open the previous or next item in the list.
 
@@ -488,9 +510,18 @@ Shift-click selects a range from your last plain click, as it does in Finder or 
 
 **Move between panels.** **Ctrl + Tab** opens **Recent panels**, a switcher of your open panels and the ones you replaced recently, so you can switch back to an item you moved away from. **Delete** or **Backspace** closes the highlighted panel, or removes it from the list. **Ctrl/⌘ + 1** through **Ctrl/⌘ + 8** jump to a panel by its position from the left, and **Ctrl/⌘ + 9** to the last.
 
-If you start a task from **New task** while you're on the list, the new task opens as a panel and the list stays where it was, instead of switching to the task's page. The panel opens beside the one you're reading, or at the end in a grid. To always open it at the end, change **Where a new task opens on the Dashboard** in [Settings → Tasks](/kepler/settings-tasks#new-tasks).
+If you start a task from **New task** while you're on the list, the new task opens as a panel and the list stays where it was, instead of switching to the task's page. The panel opens beside the one you're reading, or at the end in a grid. To always open it at the end, change **Where a new task opens on the Dashboard** in [Settings → Tasks](/kepler/settings-tasks#task-page-and-panels).
 
-**Open several at once.** Each section's header, except **Archived**, has a button that opens that section's rows in panels, up to the panel limit. A group's chip offers **Open group** for its tasks.
+**Open several at once.** Hover a section's header, except **Archived**, for a button that opens that section's rows in panels, up to the panel limit. A group's chip offers **Open group** for its tasks.
+
+**Quick look.** While panels are open, hover a task row and click **Quick look** (the eye button) to read the task in a card over the panels, without replacing them. To keep it, click **Open as panel**. Press **Escape** or click outside the card to close it.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/quick-look-nov-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/quick-look-nov-2026.png" class="help-center-img img-bordered" alt="The Dashboard with Fix the cart total open as a panel, dimmed behind a Quick look card of Update checkout copy whose header holds Open as panel beside Terminal and Close. The card shows the task's branch, its session and its Changes column, while the task list stays on the left.">
+  </a>
+  <figcaption style="text-align:center; color:#888">A task in Quick look, over the open panel.</figcaption>
+</figure>
 
 **Hide the list.** With at least one panel open, the toggle at the start of the Dashboard header, **Hide list** (**Ctrl/⌘ + B**), hides the list so the panels get the full width. While the list is hidden:
 
@@ -597,7 +628,7 @@ For an issue or pull request with no task yet, the side panel's primary button r
 
 In the side panel for a task, the primary button reads **Start**. Once a session exists, the composer becomes that session's chat, and the button reads **Send**.
 
-If you created a task with a prompt but have not started it, press **Start** with the box empty to send the task's prompt as the first message, or type something to send that instead.
+If you created a task with a prompt but have not started it, a **Task prompt** card above the box shows it. Press **Start** with the box empty to send the prompt as your first message, or type a message and the prompt goes with it as context. If **Task context** is off, click **Include** on the card to send the prompt.
 
 The side panel's header holds:
 
@@ -642,7 +673,7 @@ The run control runs the worktree's command, or opens the worktree in your edito
 - **Show issue**: the unfinished issue updated last
 - **Show resources**: the **Resources** list
 
-A Done task with no unpushed work, and no agent working, waiting on you, or keeping background work alive (such as a dev server), shows *Ready to archive?* in its header. See [Arranging Your Work](/kepler/arranging-your-work).
+A Done task with no unpushed work, and no agent working or waiting on you, shows *Ready to archive?* in its header. If an agent still keeps background work alive, such as a dev server, archiving stops that work and keeps the sessions. See [Arranging Your Work](/kepler/arranging-your-work).
 
 An archived task reads **Archived** where its progress control would be, in both its panel and its task page.
 
@@ -667,7 +698,7 @@ A link to one of the task's own notes also opens the note in the side pane.
 
 In a wide panel, the pane opens beside the sessions. Drag its edge to resize it, and close it with **Close side pane** or **Escape**. In a narrower panel, the pane takes the sessions' place, with **Back to sessions** to return.
 
-A wide task panel opens the side pane on its own, on the worktree's changes, or on the **Resources** list when the task has no worktree. Once you close the pane, it stays closed for that task in that view. To stop it opening on its own, turn off **Open changes beside the session in Dashboard panels** in [Settings → Tasks](/kepler/settings-tasks#task-page-and-panels).
+A wide task panel opens the side pane on its own when the worktree has changes. Once you close the pane, it stays closed for that task in that view. To choose when it opens on its own, set **Open the side pane in Dashboard panels** to **Always**, **Only when there are changes**, or **Never** in [Settings → Tasks](/kepler/settings-tasks#task-page-and-panels).
 
 Click the same chip again to close the pane. To move between the task's linked items and resources without closing the pane, use the switcher in the pane's title row. On the focused panel, 2 shortcuts show or hide the pane:
 
@@ -741,7 +772,7 @@ When a task has more than one checkout, the terminal strip's **+** opens a choos
 
 To jump to a task, a pull request or issue, a file, or something said in a chat, or to run a command, open the palette from anywhere. It has 5 tabs: **All**, **Tasks**, **Todo**, **Files**, and **Chats**. To open it:
 
-- **Ctrl/⌘ + Shift + P** or **F1** (**View › Command Palette…**) opens **Go to task or command**, on **All**.
+- Click the **Search Kepler** field in the top bar, or press **Ctrl/⌘ + Shift + P** or **F1** (**View › Command Palette…**), to open **Go to task or command**, on **All**.
 - **Ctrl/⌘ + P** (**File › Go to File…**) opens **Go to file**, on **Files**.
 
 To switch tabs, click a tab or press **Shift + Tab**. In an empty field, you can also type **@** for **Files**, **?** for **Chats**, or **>** to show only commands. Press **Backspace** to return to **All**.
@@ -750,10 +781,14 @@ To switch tabs, click a tab or press **Shift + Tab**. In an empty field, you can
   <a href="/wp-content/uploads/palette-all-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/palette-all-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The palette's All view as it opens: a search field reading Search tasks, todos and commands, or type @ for files, ? for chats or > for commands, the All, Tasks, Todo, Files, and Chats tabs with All selected, then Needs you with Add product search (Approval needed for Run npm test), Unread with Fix the cart total, and the Suggested commands such as New task, Go to what needs you next, and Open settings with their keys, above the General commands.">
   </a>
-  <figcaption style="text-align:center; color:#888">The palette as it opens, on All.</figcaption>
+  <figcaption style="text-align:center; color:#888">The palette as it opens, on All, with a request ready to answer.</figcaption>
 </figure>
 
-**All** opens on the tasks that need you, followed by the commands. Type to search your tasks, todos, and commands at once. Under **More ways to search**, rows turn what you typed into a search of your chats or files, a new task, or an [Ask Kepler](/kepler/ask-kepler) chat. Paste a pull request or issue link to open it or start a task from it.
+**All** opens on the tasks that need you (**Needs you**, then **Unread**), followed by the commands. Work waiting on your other machines is listed under **Other machines**; pick one to switch to its window.
+
+To answer a permission or approval request without opening the session, highlight its row on **All**. The row shows the request with **Allow** (or **Approve**) and **Deny**. Press **Ctrl/⌘ + Enter** to allow it, or **Ctrl/⌘ + Shift + Enter** to deny it. The menu beside **Allow** has broader answers, such as allowing it for the rest of the session or always.
+
+On **All**, type to search your tasks, todos, and commands at once. Under **More ways to search**, rows turn what you typed into a search of your chats or files, a new task, or an [Ask Kepler](/kepler/ask-kepler) chat. Paste a pull request or issue link to open it or start a task from it.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/go-to-task-palette-nov-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
@@ -809,7 +844,7 @@ Use these shortcuts to go back and forward:
 
 The **Back** and **Forward** buttons in the top bar do the same, and so do a mouse's side buttons. On macOS, a sideways swipe on a trackpad or Magic Mouse also goes back and forward.
 
-Each set of open panels gets its own history entry, so **Back** closes the set you just opened rather than the whole visit. Each Settings page you open gets its own entry too, so **Back** steps through the Settings pages you visited. To leave Settings in one step, use the back arrow in the Settings header, which returns you to what you were doing before you opened it.
+Each set of open panels gets its own history entry, so **Back** closes the set you just opened rather than the whole visit. Settings opens over the page you're on, so **Back** closes Settings and leaves you where you were.
 
 ***
 

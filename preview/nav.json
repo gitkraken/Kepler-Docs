@@ -64,6 +64,8 @@
         "settings-repositories.md",
         "settings-integrations.md",
         "settings-actions.md",
+        "settings-agent-tools.md",
+        "settings-approvals.md",
         "settings-app.md",
         "settings-environment.md",
         "settings-updates-help.md",

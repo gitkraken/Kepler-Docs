@@ -34,7 +34,7 @@ Kepler by GitKraken manages your Claude Code and Codex sessions across several a
 
 ## Quick Start
 
-1. Open **Settings → Agents** and expand **Claude Code** or **Codex**.
+1. Open **Settings → Agents** and click the **Claude Code** or **Codex** row.
 2. Under **Accounts**, click **Add account**, name the account, and sign in. Repeat for each account.
 3. Open **Settings → Remote environments**, click **Add machine**, and follow the steps to add your SSH host.
 4. Click **Connect** on the host. In the window connected to the host, install and sign in to Claude Code or Codex in **Settings → Agents**.
@@ -47,7 +47,7 @@ Kepler by GitKraken manages your Claude Code and Codex sessions across several a
 
 Claude Code, Codex, GitHub Copilot, Auggie, and Grok Build can each have more than 1 signed-in account, such as a work account and a personal account.
 
-1. Open **Settings → Agents** and expand the agent.
+1. Open **Settings → Agents** and click the agent's row.
 2. Under **Accounts**, click **Add account**.
 3. For Claude Code, Codex, and GitHub Copilot, choose how the account handles conversation history:
    - **Share with the CLI**: the account reads the same conversations as the agent's own login. Pick this to move conversations between accounts later.
@@ -73,11 +73,13 @@ See [Several accounts for one agent](/kepler/agent-sessions#several-accounts-for
 
 When an agent has 2 or more accounts, the **Agent** list shows 1 row per account, labeled with the account name. Pick the row in the **New task** window or in a new session tab, and the session runs under that account.
 
+To add an account without leaving the list, click **Add another *agent* account** at the foot of the list, such as **Add another Claude Code account**. It opens that agent's add-account dialog in Settings. The list offers it only for agents that take several accounts.
+
 <figure style="text-align:center">
   <a href="/wp-content/uploads/account-multiple-selector-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/account-multiple-selector-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Agent list open, with two rows under Claude Code: CLI, checked, with alex.lee@example.com and an Acme badge, and Personal. Other agents follow, then Add another account and Install another agent.">
   </a>
-  <figcaption style="text-align:center; color:#888">The Agent list, with 1 row per account.</figcaption>
+  <figcaption style="text-align:center; color:#888">The Agent list, with 1 row per account and Add another Claude Code account.</figcaption>
 </figure>
 
 Each session runs under 1 account. Session tabs name the account, so you can see which account each session uses.
@@ -109,7 +111,7 @@ See [Moving a session to another account](/kepler/agent-sessions#moving-a-sessio
 
 1. Open **Settings → Remote environments** and click **Add machine**. To add a host that is already in your `~/.ssh/config`, click **Add** next to it under **Found on this machine** instead.
 2. Enter the **Host**, and optionally the **Name**, **User**, and **Port**.
-3. Choose how Kepler signs in: an existing key, your SSH agent or SSH config, a password, or a key Kepler generates for this host.
+3. Choose how Kepler signs in: an existing key, your SSH agent, your SSH config, a password, or a key Kepler generates for this host.
 4. Check the host's fingerprint and click **Trust and continue**.
 5. After Kepler tests the connection, click **Add**, then click **Connect** on the host.
 
@@ -140,7 +142,7 @@ See [What runs where](/kepler/remote-environments#what-runs-where).
 
 Each Kepler window shows 1 machine's tasks and sessions on its Dashboard, including which sessions need you. Use these to cover your computer and every server:
 
-- **Switch machines from the title bar.** The chip after **New task**, at the left of the title bar, shows which machine the window works on, such as **Local** or a host name. Click it and pick a machine under **Switch to**.
+- **Switch machines from the title bar.** The chip after **New task**, at the left of the title bar, shows which machine the window works on: **Local** or a host name. Click it and pick a machine under **Switch to**.
 - **Open a window per machine.** In the chip's menu, click the window icon next to a host to open it in a new window. Keep 1 window on your computer and 1 on each server.
 - **Manage every machine in Settings.** **Settings → Remote environments** lists **Your machines**, whether each one is connected, and how many windows use it.
 

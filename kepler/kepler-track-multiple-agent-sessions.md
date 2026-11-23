@@ -19,12 +19,12 @@ taxonomy:
 ---
 <kbd>Last updated: November 2026</kbd>
 
-Kepler by GitKraken keeps track of several Claude Code and Codex sessions in 1 Dashboard, including sessions you start in your own terminal once you turn on detection. Give each piece of work its own task, so each one gets its own worktree and branch. The Dashboard then shows which session needs you, and each task's **Changes** group shows what its agent changed.
+Kepler by GitKraken keeps track of several Claude Code and Codex sessions in 1 Dashboard, including sessions you start in your own terminal. Give each piece of work its own task, so each one gets its own worktree and branch. The Dashboard then shows which session needs you, and each task's **Changes** group shows what its agent changed.
 
 ## Requirements and limits
 
 - Scope: Following several agent sessions at once, seeing which one needs you, and seeing which one changed what.
-- Sessions you start in your own terminal: Kepler lists them only after you turn on **Show sessions started outside Kepler**, which is off by default.
+- Sessions you start in your own terminal: Kepler lists them while **Show them in Kepler** under **Sessions outside Kepler** is on, which it is by default.
 - Limits: Kepler follows a session running in your terminal but does not control it. To answer a question it asks, answer in your terminal, or move the session into Kepler.
 - Limits: Sessions that share a worktree also share its changes. To tell their changes apart, give each session its own task.
 
@@ -32,7 +32,7 @@ Kepler by GitKraken keeps track of several Claude Code and Codex sessions in 1 D
 
 ## Quick Start
 
-1. Open **Settings → Integrations → Your terminal** and turn on **Show sessions started outside Kepler**.
+1. Check that **Show them in Kepler** is on in **Settings → General → Sessions outside Kepler**. It is on by default.
 2. Click **New task**, select **Open an external session**, and pick a Claude Code or Codex session you already started. Kepler puts it in a task.
 3. For new work, click **New task**, write the prompt, and pick **Claude Code** or **Codex**. Each new task gets its own worktree.
 4. Open the Dashboard's **Tasks** view. Tasks that need you are listed first, under **Needs attention**.
@@ -44,8 +44,8 @@ Kepler by GitKraken keeps track of several Claude Code and Codex sessions in 1 D
 
 Kepler can list the Claude Code and Codex sessions you run in your own terminal, so you can follow them next to the sessions Kepler starts.
 
-1. Open **Settings → Integrations → Your terminal**.
-2. Turn on **Show sessions started outside Kepler**. It is off by default.
+1. Open **Settings → General → Sessions outside Kepler**.
+2. Check that **Show them in Kepler** is on. It is on by default. Turn it off to stop listing them.
 
 The setting covers Claude Code, Codex, Cursor, GitHub Copilot, OpenCode, Auggie, Grok Build, Pi, and Google Antigravity.
 
@@ -113,9 +113,9 @@ Each task row adds a line that says what its session needs, such as **Approval n
 
 ### Tasks that need you, in the top bar
 
-The **Tasks that need you** button in the top bar shows how many tasks need you. Click it for a menu that lists them under **Needs attention** and **Unread**, each with what it needs. Click a task to open it at that session. Under **Other machines**, the menu also lists your other machines with work waiting. Click one to switch to its window.
+The **Search Kepler** field in the top bar shows how many tasks need you and how many have unread replies. Click it, or press **Ctrl/⌘ + Shift + P**, to open the palette with those tasks first, under **Needs you** and **Unread**, each with what it needs. Click a task to open it at that session, or answer a waiting request from its row. Work waiting on your other machines is listed under **Other machines**. See [Go to a task or file](/kepler/kepler-interface#go-to-a-task-or-file).
 
-To go straight to the next thing, press **F8** (**Go to what needs you next**), or choose **Go to next task that needs you** at the top of the menu. Each press opens the next session across your tasks: sessions waiting on you first, then unread replies.
+To go straight to the next thing, press **F8** (**Go to what needs you next**). Each press opens the next session across your tasks: sessions waiting on you first, then unread replies.
 
 ### Session status
 
@@ -162,7 +162,7 @@ Give each piece of work its own task and worktree, name each task by its work, a
 
 ### Can Kepler see the Claude Code session I started in my terminal?
 
-Kepler sees it after you turn on **Settings → Integrations → Your terminal → Show sessions started outside Kepler**. It is off by default.
+Kepler sees it while **Settings → General → Sessions outside Kepler → Show them in Kepler** is on, which it is by default.
 
 ### Can I answer a terminal session's question from Kepler?
 
