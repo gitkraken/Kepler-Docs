@@ -77,7 +77,7 @@ To add an account without leaving the list, click **Add another *agent* account*
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/account-multiple-selector-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/account-multiple-selector-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Agent list open in the New task composer, with Search options at the top. Under a Claude Code heading sit two account rows, CLI with the login alex.lee@example.com and an Acme badge (checked) and Personal, then Codex CLI, GitHub Copilot CLI and Auggie CLI (each Not signed in), OpenCode and Pi, with more agents further down, above Add another Claude Code account and Install another agent.">
+    <img src="/wp-content/uploads/account-multiple-selector-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Agent list open in the New task composer, with Search options at the top. Under a Claude Code heading sit two account rows, CLI with the login alex.lee@example.com and an Acme badge (checked) and Personal, then Codex CLI, GitHub Copilot CLI, OpenCode, Pi and Auggie CLI, three of them Not signed in, with more agents further down, above Add another Claude Code account and Install another agent.">
   </a>
   <figcaption style="text-align:center; color:#888">The Agent list, with 1 row per account and Add another Claude Code account.</figcaption>
 </figure>

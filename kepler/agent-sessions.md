@@ -214,7 +214,7 @@ If 2 or more accounts are signed in, the **Agent** list shows one row per accoun
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/account-multiple-selector-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/account-multiple-selector-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Agent list open in the New task composer, with Search options at the top. Under a Claude Code heading sit two account rows, CLI with the login alex.lee@example.com and an Acme badge (checked) and Personal, then Codex CLI, GitHub Copilot CLI and Auggie CLI (each Not signed in), OpenCode and Pi, with more agents further down, above Add another Claude Code account and Install another agent.">
+    <img src="/wp-content/uploads/account-multiple-selector-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Agent list open in the New task composer, with Search options at the top. Under a Claude Code heading sit two account rows, CLI with the login alex.lee@example.com and an Acme badge (checked) and Personal, then Codex CLI, GitHub Copilot CLI, OpenCode, Pi and Auggie CLI, three of them Not signed in, with more agents further down, above Add another Claude Code account and Install another agent.">
   </a>
   <figcaption style="text-align:center; color:#888">The Agent list, with one row per account and Add another Claude Code account.</figcaption>
 </figure>
@@ -963,7 +963,7 @@ Kepler shows 2 usage readouts, and they measure different things.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/usage-indicators-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/usage-indicators-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Context window card open above the composer's context ring, which sits between the Agent settings pill (Docs Model, Build) and Send: 68%, with 136K tokens Used, 64K Available and 200K Total, and the Estimated cost at API rates, <$1.">
+    <img src="/wp-content/uploads/usage-indicators-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The session composer, from Type a message... with its attach and microphone buttons to the Agent settings pill (Docs Model, Build), the context ring and Send, with the Context window card open above the ring. The card reads 68%, 136K tokens Used, 64K Available and 200K Total, and the Estimated cost at API rates, <$1.">
   </a>
   <figcaption style="text-align:center; color:#888">The Context window card, from the context ring.</figcaption>
 </figure>

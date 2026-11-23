@@ -78,10 +78,11 @@ To change the **Speech model**, **Dictation mode**, or **Dictation language**, r
 
 Qwen3-ASR learns how you spell words it gets wrong. When you fix a single dictated word in the prompt before you send it, Kepler notes the fix. After you make the same fix in 2 sends, a notice suggests the word, and **Review** opens the **Vocabulary** page. Dictation uses a suggested word only after you approve it.
 
-**Vocabulary**, in **Settings → Voice**, shows how many words dictation knows. Click **Manage** to open the **Vocabulary** page. **Manage** works only while a Qwen3-ASR model dictates. The page lists the words in 2 groups:
+**Vocabulary**, in **Settings → Voice**, shows how many words dictation knows. Click **Manage** to open the **Vocabulary** page. **Manage** works only while a Qwen3-ASR model dictates. On the page:
 
-- **Suggested words**: each shows what Qwen3-ASR heard, with **Approve** and **Dismiss**. A dismissed fix is never suggested again.
-- **Words**: the words you approved and the words you added. Each has a remove button. Type in **Add a word** and click **Add** to add one yourself. **Forget learned words…** removes every learned, suggested, and added word on this device.
+- **Suggested words** each show what Qwen3-ASR heard, with **Approve** and **Dismiss**. A dismissed fix is never suggested again.
+- Below them, the words you approved and the words you added each have a remove button. To add a word yourself, type it in **Add a word** and click **Add**.
+- **Forget learned words…** removes every learned, suggested, and added word on this device.
 
 Kepler stores only the words, on this device only, and keeps them after you sign out.
 

@@ -518,7 +518,7 @@ If you start a task from **New task** while you're on the list, the new task ope
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/quick-look-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/quick-look-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Dashboard with Fix the cart total open as a panel, dimmed behind a Quick look card of Update checkout copy whose header holds Open as panel beside Terminal and Close. The card shows the task's branch, its session and its Changes column, while the task list stays on the left.">
+    <img src="/wp-content/uploads/quick-look-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Dashboard with Fix the cart total open as a panel, dimmed behind a Quick look card of Update checkout copy whose header holds Open as panel, ringed, beside Terminal and Close. The card shows the task's branch, its session and its Changes column, while the task list stays on the left.">
   </a>
   <figcaption style="text-align:center; color:#888">A task in Quick look, over the open panel.</figcaption>
 </figure>

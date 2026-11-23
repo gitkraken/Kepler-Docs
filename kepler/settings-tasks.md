@@ -29,13 +29,6 @@ Use **Settings → Tasks** to choose how new tasks start, where tasks open, and 
 
 **New tasks** shows the agent new sessions start with. To change it, click **Change in Agents**, which opens [Defaults](/kepler/settings-agents#defaults) in **Settings → Agents**. There you also choose the agent Ask Kepler chats start with, and whether new sessions start in **Chat** or **Terminal**. An [Action](/kepler/actions) uses the default agent unless it names an agent of its own.
 
-<figure style="text-align:center">
-  <a href="/wp-content/uploads/new-sessions-start-with-oct-2026-v6@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-sessions-start-with-oct-2026-v6@2x.png" class="help-center-img img-bordered" alt="The Defaults section of Settings › Agents: New sessions start with and New Ask Kepler chats start with both set to Claude Code CLI (alex.lee@example.com · Acme), each with its caption and its Start each session (or chat) on the agent you used last checkbox ticked. Below them, New sessions start in has Chat chosen over Terminal, with the note that it is the default for every agent and an agent's page can set its own.">
-  </a>
-  <figcaption style="text-align:center; color:#888">The Defaults section of Settings → Agents.</figcaption>
-</figure>
-
 ### Where new tasks make changes
 
 **Where new tasks make changes** sets what a repository starts on when you attach it to a new task in the **New task** composer. Pick one of these options from its dropdown:

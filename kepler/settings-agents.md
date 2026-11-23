@@ -40,7 +40,14 @@ Use **Settings → Agents** to choose how new sessions start, to install, update
 | **New Ask Kepler chats start with** | The agent that new [Ask Kepler](/kepler/ask-kepler) chats start with |
 | **New sessions start in** | Whether new sessions run in **Chat** or **Terminal**, for every agent. See [Default mode for new sessions](#default-mode-for-new-sessions) |
 
-Each of the first two is an agent-settings pill, like the one in the composer: pick the agent and account, and optionally an [agent preset](#agent-presets), a model, and other options. Kepler saves each pick as you make it. An [Action](/kepler/actions) uses **New sessions start with** unless it names an agent of its own.
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/new-sessions-start-with-oct-2026-v6@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-sessions-start-with-oct-2026-v6@2x.png" class="help-center-img img-bordered" alt="The Defaults section of Settings › Agents: New sessions start with and New Ask Kepler chats start with both set to Claude Code CLI (alex.lee@example.com · Acme), each with its caption and its Start each session (or chat) on the agent you used last checkbox ticked. Below them, New sessions start in has Chat chosen over Terminal, with the note that it is the default for every agent and an agent's page can set its own.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The Defaults section of Settings → Agents.</figcaption>
+</figure>
+
+**New sessions start with** and **New Ask Kepler chats start with** are agent-settings pills, like the one in the composer: pick the agent and account, and optionally an [agent preset](#agent-presets), a model, and other options. Kepler saves each pick as you make it. An [Action](/kepler/actions) uses **New sessions start with** unless it names an agent of its own.
 
 Below each pill, **Start each session on the agent you used last** and **Start each chat on the agent you used last** are on by default. Your first session or chat uses the pill's agent, and each later one starts on your last pick. To always start on the pill's agent, clear the box.
 
