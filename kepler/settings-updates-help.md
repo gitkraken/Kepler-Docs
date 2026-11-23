@@ -50,8 +50,8 @@ Kepler checks the agent CLIs you have installed for newer versions. **Agent upda
 | **Show a restart notice on outdated sessions** | *After an agent updates, a notice above each open chat or terminal session still on the old version offers to restart it.* | On |
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/settings-agent-updates-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/settings-agent-updates-nov-2026.png" class="help-center-img img-bordered" alt="The Agent updates section of Settings › Updates: All agents are up to date, then Show agent updates in the title bar and Show a restart notice on outdated sessions, both ticked, each with its help line.">
+  <a href="/wp-content/uploads/settings-agent-updates-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/settings-agent-updates-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Agent updates section of Settings › Updates: All agents are up to date, then Show agent updates in the title bar and Show a restart notice on outdated sessions, both ticked, each with its help line.">
   </a>
   <figcaption style="text-align:center; color:#888">Agent updates, with every agent up to date.</figcaption>
 </figure>

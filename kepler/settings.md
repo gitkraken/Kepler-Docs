@@ -26,8 +26,8 @@ To open Settings, click the gear icon in the top bar, or press **Ctrl/⌘ + ,**.
 To make Settings taller or shorter, drag its top or bottom edge. In the desktop app, **Open in new window** in its header moves Settings into a window of its own.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/settings-general-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/settings-general-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="Settings open on Repositories. The Settings sidebar on the left starts with Search settings and Setup, then lists Account; Agents, Tasks, Repositories, Integrations and Actions; General, Notifications, Appearance, Voice and Keyboard shortcuts; Remote environments and Remote Access; and Updates and Help, with Repositories' section links (Your repos and folders, Worktrees and branches, Projects) expanded under it.">
+  <a href="/wp-content/uploads/settings-general-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/settings-general-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="Settings open as an overlay over the dimmed Dashboard, with a Close button at its top right and the rail on the left: Search settings, Setup and Account; Agents (open, with its section links Defaults, Your agents, Custom agents, Agent presets, Keep agents running and Idle agents), Tasks, Repositories, Integrations, Actions, Agent tools and Approvals; General, Appearance, Chat and terminal, Notifications, Voice and Keyboard shortcuts; Remote environments and Remote Access; and Updates and Help. The Agents page shows Defaults, where new sessions and new Ask Kepler chats start with Claude Code CLI and new sessions start in Chat, and the top of Your agents, with Update all and Rescan above a list of agents in which Claude Code is marked Default.">
   </a>
   <figcaption style="text-align:center; color:#888">Settings, open over the Dashboard on Agents.</figcaption>
 </figure>

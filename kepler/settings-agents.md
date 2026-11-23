@@ -22,8 +22,8 @@ taxonomy:
 Use **Settings → Agents** to choose how new sessions start, to install, update, and sign in to the coding agents that work on your tasks, to add custom agents and agent presets, to keep agents running, and to put idle agents to sleep. Your agents' MCP servers and built-in tools are on [Agent tools](/kepler/settings-agent-tools), and the rules that approve their actions for you are on [Approvals](/kepler/settings-approvals).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-settings-oct-2026-v6@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-settings-oct-2026-v6@2x.png" class="help-center-img img-bordered" alt="Settings › Agents: the page description; New sessions start on your last pick, or Claude Code the first time, with Change in Tasks; then New Ask Kepler chats start with, its agent-settings pill showing the Claude Code mark and the Quick fix preset, the caption Your first chat uses this agent, and Start each chat on the agent you used last ticked. Your agents has Update all and Rescan above the Claude Code card (Update, Enabled), which shows Accounts with Add account and the Claude Code CLI account marked Default with Check usage, New sessions start in set to Chat, Let artifact comments start turns (on), Artifacts in new sessions (off), and a collapsed Program and data folder.">
+  <a href="/wp-content/uploads/agent-settings-oct-2026-v7@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-settings-oct-2026-v7@2x.png" class="help-center-img img-bordered" alt="Your agents in Settings › Agents, with Update all and Rescan beside the heading and one row per agent: Claude Code (marked Default), Codex, GitHub Copilot, Auggie and Grok Build with 1 account and Add account; OpenCode, Antigravity and Cursor Not signed in with Sign in; and Pi. Each row shows the agent's version, an Enabled switch that is on and a chevron, and the line below the list says to open an agent for its accounts, how its sessions start and where its program lives.">
   </a>
   <figcaption style="text-align:center; color:#888">Your agents in Settings → Agents, one row per agent.</figcaption>
 </figure>
@@ -252,8 +252,8 @@ Kepler reads each account's plan usage from its provider, through the agent's ow
 A sleeping session's status reads **Asleep**. Your next message wakes it, and the conversation carries on. Agents in a terminal sleep too, once nothing is typed into them and nothing they started is still running. Typing into the terminal wakes them. Agents that are working or waiting on you stay awake. See [Session status](/kepler/agent-sessions#session-status).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agents-idle-sleep-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agents-idle-sleep-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Put idle agents to sleep setting set to After 15 minutes, with help text on when an agent in a chat view sleeps, what wakes it, and which agents stay awake.">
+  <a href="/wp-content/uploads/agents-idle-sleep-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agents-idle-sleep-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Idle agents section of Settings › Agents: Put idle task agents to sleep set to After 1 hour, with help that says agents in a terminal sleep too, and Put idle Ask Kepler chats to sleep set to After 15 minutes. Below them, Wake idle terminal agents to read new reports is ticked, with its help text.">
   </a>
   <figcaption style="text-align:center; color:#888">The Idle agents settings, at their defaults.</figcaption>
 </figure>

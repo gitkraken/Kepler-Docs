@@ -771,8 +771,8 @@ A running session keeps the tools it started with. To use a tool you just turned
 Both sets of tools work on the session's own worktree by default. Each can also name another worktree attached to the same task, so one session can clean up a branch it is not working in.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-features-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-features-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Agent tools section of Settings › Agents, with AI Sync (lets agents rebase or merge your branch and resolve conflicts) and AI Compose (lets agents turn messy changes into focused commits), both off.">
+  <a href="/wp-content/uploads/agent-features-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-features-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The AI Sync and AI Compose checkboxes, both off. AI Sync lets agents rebase or merge your branch and resolve conflicts, AI Compose lets them turn messy changes into clean, focused commits, and every change can be undone.">
   </a>
   <figcaption style="text-align:center; color:#888">The AI Sync and AI Compose settings, both off.</figcaption>
 </figure>

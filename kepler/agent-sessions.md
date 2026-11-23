@@ -163,8 +163,8 @@ Kepler supports Claude Code, Codex, GitHub Copilot, Cursor, Auggie, OpenCode, Gr
 Claude Code, Codex, GitHub Copilot, Auggie, and Grok Build can each have more than one signed-in account. To manage an agent's accounts, open **Settings → Agents → Your agents**, click the agent to open its own page, and find **Accounts**:
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-accounts-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-accounts-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Accounts section of the Claude Code card in Settings › Agents, with Add account above its priority-order help text. Two accounts are listed in order, Claude Code CLI and Personal, each with a drag handle and Check usage, and Personal reads New sessions only.">
+  <a href="/wp-content/uploads/agent-accounts-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-accounts-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="Claude Code's page in Settings › Agents: the title line with 2.1.145, Update and the Enabled switch, New sessions start in set to Chat, then Accounts with Add account and its priority-order help text. Two accounts are listed in order, Claude Code CLI and Personal, each with a drag handle and Turn on usage checks, and Personal reads New sessions only.">
   </a>
   <figcaption style="text-align:center; color:#888">The Accounts section, on an agent's own page in Settings → Agents.</figcaption>
 </figure>
@@ -213,8 +213,8 @@ Expand the warning to see which file the account copied, with the paths of **Thi
 If 2 or more accounts are signed in, the **Agent** list shows one row per account, labeled with the account name. You pick the agent and the account in one click, in the **New task** composer or in a draft session tab.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/account-multiple-selector-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/account-multiple-selector-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Agent list open, with two rows under Claude Code: CLI, checked, with alex.lee@example.com and an Acme badge, and Personal. Other agents follow, then Add another Claude Code account and Install another agent.">
+  <a href="/wp-content/uploads/account-multiple-selector-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/account-multiple-selector-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Agent list open in the New task composer, with Search options at the top. Under a Claude Code heading sit two account rows, CLI with the login alex.lee@example.com and an Acme badge (checked) and Personal, then Codex CLI, GitHub Copilot CLI and Auggie CLI (each Not signed in), OpenCode and Pi, with more agents further down, above Add another Claude Code account and Install another agent.">
   </a>
   <figcaption style="text-align:center; color:#888">The Agent list, with one row per account and Add another Claude Code account.</figcaption>
 </figure>
@@ -282,8 +282,8 @@ A session runs in one of 2 modes. Most agents offer both; see the table of agent
 | **Terminal** | The agent's own command-line app, with its commands, shortcuts, and settings, in a terminal inside the task |
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/opens-in-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/opens-in-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Claude Code card in Settings › Agents, with the New sessions start in row ringed, set to Chat, and the help text You can pick the other one when you start a session.">
+  <a href="/wp-content/uploads/opens-in-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/opens-in-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Claude Code's page in Settings › Agents, under the Agents › Claude Code breadcrumb: the title line with version 2.1.145, Update and the Enabled switch, then the New sessions start in row, ringed, set to Chat (Terminal is the other choice), with the help text You can pick the other one when you start a session.">
   </a>
   <figcaption style="text-align:center; color:#888">New sessions start in, on an agent's own page in Settings → Agents.</figcaption>
 </figure>
@@ -897,8 +897,8 @@ Kepler tells the agent that the request is waiting, and the agent can keep worki
 The request is pinned above that session's composer as a card. The card names the action, such as deleting a worktree and its branch, and shows what is at risk, with **Approve** and **Deny**. A card for an action that can lose work is amber; other cards are blue. If several requests are waiting, page through them. A setting change names the setting and its old and new values. A card for an action that would stop agents names them.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/approval-card-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/approval-card-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="An amber approval card pinned above the session composer, Delete worktree acme-web@kepler/cart-total-spike and its branch, At risk: 2 uncommitted files, with the Approve menu open on Approve all worktree deletes from this session and Always approve worktree deletes….">
+  <a href="/wp-content/uploads/approval-card-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/approval-card-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="An amber approval card pinned above the session composer, Delete worktree acme-web@kepler/cart-total-spike and its branch, At risk: 2 uncommitted files, with the Approve menu open on Approve all worktree deletes from this session and Always approve worktree deletes….">
   </a>
   <figcaption style="text-align:center; color:#888">An approval card for deleting a worktree, with the Approve menu open.</figcaption>
 </figure>
@@ -922,8 +922,8 @@ An approved request shows **Running** while Kepler carries it out. A request tha
 To review your standing rules, open **Settings → Approvals**. Anything a rule does not cover still asks. Each rule under **Always approved** says when and where it was added and how often it has been used, with **Remove**. See [Approval Settings](/kepler/settings-approvals).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/settings-approvals-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/settings-approvals-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="Settings › Approvals, with one Always approved rule, Changes to other tasks, added from the Discount codes break the cart total session on Fix the cart total and not used yet, and Remove.">
+  <a href="/wp-content/uploads/settings-approvals-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/settings-approvals-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Settings › Approvals, which explains that these rules approve agent actions for you and anything not covered still asks. Under Always approved, one rule, Changes to other tasks, added from the Discount codes break the cart total session on Fix the cart total and not used yet, with Remove.">
   </a>
   <figcaption style="text-align:center; color:#888">Standing approval rules, in Settings → Approvals.</figcaption>
 </figure>
@@ -962,8 +962,8 @@ A task's agent can offer to show you a task, session, note, or setting. The offe
 Kepler shows 2 usage readouts, and they measure different things.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/usage-indicators-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/usage-indicators-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Context window card open above the composer's context ring, which sits between the Agent settings pill (Docs Model, Build) and Send: 68%, with 136K tokens Used, 64K Available and 200K Total, and the Estimated cost at API rates, <$1.">
+  <a href="/wp-content/uploads/usage-indicators-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/usage-indicators-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Context window card open above the composer's context ring, which sits between the Agent settings pill (Docs Model, Build) and Send: 68%, with 136K tokens Used, 64K Available and 200K Total, and the Estimated cost at API rates, <$1.">
   </a>
   <figcaption style="text-align:center; color:#888">The Context window card, from the context ring.</figcaption>
 </figure>
@@ -992,8 +992,8 @@ Kepler judges a usage bar by pace: the share of the window you have used, compar
 **You can spend an earned usage reset from Kepler.** Claude Code and Codex accounts list their earned resets under **Limit resets** in the plan usage popover, grouped by what they refill, such as **Five-hour reset** or **Weekly reset**, each with when it expires. To use one, click **Redeem**. Kepler warns you first when redeeming now may waste usage, and the confirmation lists your current usage and the reset's expiry. Redeeming uses up the reset and cannot be undone.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/usage-reset-redeem-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/usage-reset-redeem-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Plan usage popover open under the Codex usage chip, which reads Limit reached until Mar 5, 02:30 PM: the account alex.lee@example.com (Plus), the 5h window at 41% with Resets in 2h 0m and the 7d window at 100% with Limit reached and Resets in 3d 0h. Below them, Limit resets has a Redeem button and a Reset row that Expires in 14d, above Updated just now and a refresh button.">
+  <a href="/wp-content/uploads/usage-reset-redeem-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/usage-reset-redeem-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Plan usage popover open under the Codex usage chip, which reads Limit reached until Mar 5, 02:30 PM: the account alex.lee@example.com (Plus), the 5h window at 41% with Resets in 2h 0m and the 7d window at 100% with Limit reached and Resets in 3d 0h. Below them, Limit resets has a Redeem button and a Reset row that Expires in 14d, above Updated just now and a refresh button.">
   </a>
   <figcaption style="text-align:center; color:#888">Limit resets, with Redeem, in the Codex plan usage popover.</figcaption>
 </figure>
@@ -1030,8 +1030,8 @@ Kepler also notifies you when an agent reaches an account's usage limit, and say
 To choose what Kepler does on its own when a limit is reached, open **Settings → Agents → Keep agents running → When a usage limit is reached**. The choice applies to every agent in both Chat and Terminal sessions.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/show-token-usage-aug-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/show-token-usage-aug-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Keep agents running section of Settings › Agents: Keep this machine awake while agents work and Keep agents and terminals running after Kepler quits or restarts, both ticked; When a usage limit is reached, set to Wait for the reset (The session continues when the limit resets), which applies to every agent in chat and in the terminal; and Retry automatically when the model is overloaded, ticked, each with its help text.">
+  <a href="/wp-content/uploads/show-token-usage-aug-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/show-token-usage-aug-2026-v5@2x.png" class="help-center-img img-bordered" alt="The Keep agents running section of Settings › Agents: Keep this machine awake while agents work and Keep agents and terminals running after Kepler quits or restarts, both ticked; When a usage limit is reached, set to Wait for the reset (The session continues when the limit resets), which applies to every agent in chat and in the terminal; and Retry automatically when the model is overloaded, ticked, each with its help text.">
   </a>
   <figcaption style="text-align:center; color:#888">The Keep agents running section of Settings → Agents.</figcaption>
 </figure>
@@ -1130,8 +1130,8 @@ Ending a session's agent and archiving the session are separate actions. A live 
 After an agent updates, each open session still on the old version shows a notice above its composer, such as *OpenCode 2.2.0 is installed. This session still runs 2.1.1.* Click **Restart chat**, or **Restart session** in a Terminal session, to restart it on the new version, or click **Dismiss**. To stop these notices, clear **Show a restart notice on outdated sessions** in **Settings → Updates → Agent updates**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-restart-notice-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-restart-notice-nov-2026.png" class="help-center-img img-bordered" alt="A notice above the session composer reads OpenCode 2.2.0 is installed. This session still runs 2.1.1., with Restart chat and Dismiss buttons.">
+  <a href="/wp-content/uploads/agent-restart-notice-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-restart-notice-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="A notice above the session composer reads OpenCode 2.2.0 is installed. This session still runs 2.1.1., with Restart chat and Dismiss buttons.">
   </a>
   <figcaption style="text-align:center; color:#888">The restart notice on a session still running an older agent version.</figcaption>
 </figure>
@@ -1277,8 +1277,8 @@ To choose which events notify you, and whether each one appears as a **Desktop**
 In the desktop app, every event except **Replies** and **Offers** notifies on the desktop until you change it. In a browser, desktop notifications start off. After your first session starts, the desktop app sends a one-time **Notifications are on** notification. Click it to open **Settings → Notifications**. See [Settings](/kepler/settings-app#notifications).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ade-settings-notifications-01-01-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ade-settings-notifications-01-01-v4@2x.png" class="help-center-img img-bordered" alt="Settings › Notifications, What to notify you about, at the desktop app's defaults: a grid of Replies, Questions, Permission requests, Approval requests, Errors and Offers against Desktop and In Kepler, with every box ticked except both Replies boxes and Offers' Desktop box; below it Play a sound with desktop notifications is ticked, Notify even for the task you're looking at is not, and Show a count on the app icon is ticked.">
+  <a href="/wp-content/uploads/ade-settings-notifications-01-01-v5@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ade-settings-notifications-01-01-v5@2x.png" class="help-center-img img-bordered" alt="Settings › Notifications, What to notify you about, at the desktop app's defaults: Replies, Questions, Permission requests, Approval requests, Errors, Usage limits and Offers against Desktop and In Kepler, with every box ticked except both Replies boxes and Offers' Desktop box. Below the grid, Play a sound with desktop notifications and Show a count on the app icon are ticked, and Notify even for the task you're looking at is not.">
   </a>
   <figcaption style="text-align:center; color:#888">What to notify you about, in Settings → Notifications, at the desktop app's defaults.</figcaption>
 </figure>

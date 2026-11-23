@@ -220,8 +220,8 @@ Kepler asks before it updates or replaces your copy, and moves your copy to the 
 With **Left**, the **Settings** button moves to the bottom of the views.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/settings-appearance-dashboard-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/settings-appearance-dashboard-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Dashboard section of Settings › Appearance at its defaults: Views, with picture tiles for In the title bar, Below the title bar (chosen) and Along the left side; View style, with Tabs chosen over Pills; Size, Default or Compact, marked Left side only; Counts on views, switched on; and Search box, with Full width chosen over Grows as you type. Each row has its help line.">
+  <a href="/wp-content/uploads/settings-appearance-dashboard-nov-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/settings-appearance-dashboard-nov-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Dashboard views section of Settings › Appearance at its defaults: Views, with picture tiles for Top (chosen) and Left; View style, with Tabs chosen over Pills; Size, Default or Compact, marked Left side only; and Counts on views, ticked. Each row has its help line.">
   </a>
   <figcaption style="text-align:center; color:#888">The Dashboard views settings, at their defaults.</figcaption>
 </figure>
@@ -257,8 +257,8 @@ The other **Chat** settings set how wide a session's conversation grows and how 
 | **Scrolling** › **Return to where I left off when I reopen a session** | Whether a session reopens where you left it | On |
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/settings-send-key-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/settings-send-key-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Chat section of Settings › General: Send messages with, set to Enter rather than Ctrl+Enter, the hint Shift+Enter starts a new line, and the note that in the browser on a phone or tablet, Enter always starts a new line.">
+  <a href="/wp-content/uploads/settings-send-key-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/settings-send-key-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Chat section of Settings › Chat and terminal: Send messages with, set to Enter rather than Ctrl+Enter, with the hints that Shift+Enter starts a new line and that Enter always does in the browser on a phone or tablet; then Conversation width, with Narrow chosen over Wide and Full width, and Scrolling, with While an agent replies set to Follow new output and Return to where I left off when I reopen a session ticked.">
   </a>
   <figcaption style="text-align:center; color:#888">The Chat settings, at their defaults.</figcaption>
 </figure>
@@ -280,8 +280,8 @@ The grayed text in **Family** is an example, not the value in effect. If Kepler 
 While the message box is hidden, a Terminal session's status bar has a microphone that dictates into the agent's own input. See [Dictation](#dictation).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/settings-terminal-links-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/settings-terminal-links-nov-2026.png" class="help-center-img img-bordered" alt="The Terminal section of Settings › Chat and terminal: Font family, Size 13 and Line height 1.2 above a sample terminal, then Show the message box under terminal sessions and Open links with a click, both unticked. The help under Open links with a click says it opens file, folder and web links in terminals without holding Ctrl.">
+  <a href="/wp-content/uploads/settings-terminal-links-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/settings-terminal-links-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Terminal section of Settings › Chat and terminal: Font family, Size 13 and Line height 1.2 above a sample terminal, then Show the message box under terminal sessions and Open links with a click, both unticked. The help under Open links with a click says it opens file, folder and web links in terminals without holding Ctrl.">
   </a>
   <figcaption style="text-align:center; color:#888">The Terminal settings, at their defaults.</figcaption>
 </figure>
@@ -325,8 +325,8 @@ These settings appear under the grid:
 To silence desktop notifications from one remote machine only, use **Mute notifications from *host*** on that machine in [Remote environments](/kepler/settings-environment#remote-environments).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ade-settings-notifications-01-01-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ade-settings-notifications-01-01-v4@2x.png" class="help-center-img img-bordered" alt="Settings › Notifications, What to notify you about, at the desktop app's defaults: a grid of Replies, Questions, Permission requests, Approval requests, Errors and Offers against Desktop and In Kepler, with every box ticked except both Replies boxes and Offers' Desktop box; below it Play a sound with desktop notifications is ticked, Notify even for the task you're looking at is not, and Show a count on the app icon is ticked.">
+  <a href="/wp-content/uploads/ade-settings-notifications-01-01-v5@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ade-settings-notifications-01-01-v5@2x.png" class="help-center-img img-bordered" alt="Settings › Notifications, What to notify you about, at the desktop app's defaults: Replies, Questions, Permission requests, Approval requests, Errors, Usage limits and Offers against Desktop and In Kepler, with every box ticked except both Replies boxes and Offers' Desktop box. Below the grid, Play a sound with desktop notifications and Show a count on the app icon are ticked, and Notify even for the task you're looking at is not.">
   </a>
   <figcaption style="text-align:center; color:#888">What to notify you about, at the desktop app's defaults.</figcaption>
 </figure>
@@ -378,8 +378,8 @@ To change the speech model, the dictation mode, or the dictation language from a
 | **Speed** | How fast Kepler reads | 1x |
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/settings-read-aloud-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/settings-read-aloud-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Read aloud section of Settings › Voice, at its defaults. Under Engine, System voices (Built in) is selected and Kokoro shows its download size and a Download button, and under Voice options, Voice is System default beside a sample button and Speed is a slider at 1x.">
+  <a href="/wp-content/uploads/settings-read-aloud-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/settings-read-aloud-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Read aloud section of Settings › Voice at its defaults. Under Speech model, System (Built in) is picked and Kokoro (310 MB) offers Download and Licenses; Voice reads System default beside a play-sample button, and Speed is a slider at 1x between 0.5x and 2x.">
   </a>
   <figcaption style="text-align:center; color:#888">The Read aloud settings, at their defaults.</figcaption>
 </figure>

@@ -59,8 +59,8 @@ The first row is the agent's own login. The account badged **Default** is the on
 With 2 or more accounts, the list is in priority order. To reorder it, drag a row by its handle, or use **Move to top**, **Move up**, or **Move down** in the row's menu. When you pick no account, a new session starts on the first account from the top with usage left. At a usage limit, Kepler moves to, or suggests, the first account from the top with usage left. To skip an account at a usage limit, clear **Use at a usage limit** in its menu. The row then reads **Skipped at a usage limit**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-accounts-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-accounts-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Accounts section of the Claude Code card in Settings › Agents, with Add account above its priority-order help text. Two accounts are listed in order, Claude Code CLI and Personal, each with a drag handle and Check usage, and Personal reads New sessions only.">
+  <a href="/wp-content/uploads/agent-accounts-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-accounts-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="Claude Code's page in Settings › Agents: the title line with 2.1.145, Update and the Enabled switch, New sessions start in set to Chat, then Accounts with Add account and its priority-order help text. Two accounts are listed in order, Claude Code CLI and Personal, each with a drag handle and Turn on usage checks, and Personal reads New sessions only.">
   </a>
   <figcaption style="text-align:center; color:#888">Two Claude Code accounts in Settings → Agents.</figcaption>
 </figure>
@@ -76,8 +76,8 @@ When an agent has 2 or more accounts, the **Agent** list shows 1 row per account
 To add an account without leaving the list, click **Add another *agent* account** at the foot of the list, such as **Add another Claude Code account**. It opens that agent's add-account dialog in Settings. The list offers it only for agents that take several accounts.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/account-multiple-selector-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/account-multiple-selector-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Agent list open, with two rows under Claude Code: CLI, checked, with alex.lee@example.com and an Acme badge, and Personal. Other agents follow, then Add another account and Install another agent.">
+  <a href="/wp-content/uploads/account-multiple-selector-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/account-multiple-selector-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Agent list open in the New task composer, with Search options at the top. Under a Claude Code heading sit two account rows, CLI with the login alex.lee@example.com and an Acme badge (checked) and Personal, then Codex CLI, GitHub Copilot CLI and Auggie CLI (each Not signed in), OpenCode and Pi, with more agents further down, above Add another Claude Code account and Install another agent.">
   </a>
   <figcaption style="text-align:center; color:#888">The Agent list, with 1 row per account and Add another Claude Code account.</figcaption>
 </figure>

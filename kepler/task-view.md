@@ -95,8 +95,8 @@ At phone width, for example in a phone browser connected through [Remote Access]
 - A segment for each of **Sessions**, **Changes**, and **Terminal**, plus **Resources** when the bar has room. When it has no room, the task's resources are in **Everything in this task**, the sheet you pull down from the bar.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/phone-task-view-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/phone-task-view-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The task page in a phone-width browser: one bar holds Back, the Fix the cart total chip, an inbox button with an orange mark for tasks that need you, and the Sessions, Changes, and Terminal segments as icons. Below it, the folded details row reads In Review, above the agent's session and the composer.">
+  <a href="/wp-content/uploads/phone-task-view-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/phone-task-view-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The task page in a phone-width browser: one bar holds Back, the Search Kepler chip with an orange mark and 1, the Fix the cart total chip, and the Sessions, Changes and Terminal segments as icons. Below it, the folded details row reads In Review with branch, pull request, issue and attachment icons, above the agent's session and the composer.">
   </a>
   <figcaption style="text-align:center; color:#888">The task page on a phone, with its single bar and details row.</figcaption>
 </figure>

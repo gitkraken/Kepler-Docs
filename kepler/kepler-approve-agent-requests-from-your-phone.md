@@ -52,8 +52,8 @@ Remote Access opens this Kepler from another device, such as your phone, through
 Remote Access stays on until you turn it off, including after Kepler restarts. By default, Kepler keeps your computer awake while Remote Access is on, so your agents keep working while you are away. To change this, use **Keep this machine awake while agents work** in **Settings → Agents → Keep agents running**. See [Remote Environments](/kepler/remote-environments#turning-on-remote-access).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-access-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-access-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Settings › Remote Access while it is off: the Inactive badge and Turn on Remote Access, Your agents, wherever you are, the 3 steps of How it works, a note that only you can connect, Machines on your account with Manage machines on gitkraken.dev, and This machine stays awake while Remote Access is on, with Change in General.">
+  <a href="/wp-content/uploads/remote-access-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-access-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="Settings › Remote Access while it is off: the Inactive badge and Turn on Remote Access, Your agents, wherever you are, the three steps of How it works, a note that only you can connect, and Machines on your account with Manage machines on gitkraken.dev. The last line reads This machine stays awake while Remote Access is on, with a Change in Agents link.">
   </a>
   <figcaption style="text-align:center; color:#888">Settings → Remote Access, before you turn it on.</figcaption>
 </figure>
@@ -110,8 +110,8 @@ Kepler marks every task and session that waits on you, so you can find a request
 - **Inside a task.** Tap **Sessions** to go to the session that waits on you.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-access-phone-sep-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-access-phone-sep-2026-v4@2x.png" class="help-center-img img-bordered" alt="Kepler's Dashboard in a phone's browser, on the Tasks view: one bar with Menu, the view picker showing Tasks with a chevron and an orange dot, Search, Options, the Tasks that need you button with an orange mark, Ask Kepler and New task, over the task list grouped into Needs attention (Add product search, In Development, Approval needed), Unread (Fix the cart total, In Review with its pull request and issue chips and Changes requested; Update checkout copy, On Hold, and Upgrade the payment SDK, In Review, each with New reply) and a folded Not started (1).">
+  <a href="/wp-content/uploads/remote-access-phone-sep-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-access-phone-sep-2026-v5@2x.png" class="help-center-img img-bordered" alt="Kepler's Dashboard in a phone's browser, on the Tasks view: one bar with Menu, the view picker showing Tasks with a chevron and an orange dot, the Search Kepler chip with an orange mark and 1, Ask Kepler and New task (+), over the task list grouped into Needs attention (Add product search, In Development, Approval needed), Unread (Fix the cart total, In Review with its pull request and issue chips and Changes requested; Update checkout copy, On Hold, and Upgrade the payment SDK, In Review, each with New reply) and a folded Not started (1).">
   </a>
   <figcaption style="text-align:center; color:#888">The Tasks view on a phone, with a task that needs approval at the top.</figcaption>
 </figure>
@@ -158,8 +158,8 @@ You see only the choices the agent offers. A session in Terminal mode shows the 
 A request you open from a notification, or with **Open session** under the **Search Kepler** chip, opens in an answer sheet over its task. The sheet shows the full command or the changes, with **Approve** and **Deny**, and the agent's other choices under **Other ways to answer**. **Open session** takes you to the request in its session. When more than one request waits on you, **Previous request** and **Next request** step through them, and the sheet moves to the next one after each answer.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/phone-answer-sheet-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/phone-answer-sheet-nov-2026.png" class="help-center-img img-bordered" alt="On a phone, an answer sheet rises over the Add product search task: Run a command, from the session Add product search to the product list, with a 1 of 1 pager, the command Run npm test, and Other ways to answer (Allow for this session, Allow always). Open session, Deny and Approve sit at its foot.">
+  <a href="/wp-content/uploads/phone-answer-sheet-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/phone-answer-sheet-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="On a phone, an answer sheet rises over the Add product search task: Run a command, from the session Add product search to the product list, with a 1 of 1 pager, the command Run npm test, and Other ways to answer (Allow for this session, Allow always). Open session, Deny and Approve sit at its foot.">
   </a>
   <figcaption style="text-align:center; color:#888">The answer sheet on a phone, for a command an agent wants to run.</figcaption>
 </figure>

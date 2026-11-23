@@ -126,8 +126,8 @@ Click a repository's row to open its **Edit repo** page. The page shows the repo
 In a WSL window, a repository stored on a Windows drive shows a warning on its Edit repo page, because git and agents are slow from WSL there. For faster access, clone it into the Linux file system, such as your home folder.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/edit-repo-dialog-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/edit-repo-dialog-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The Edit repo page for acme-web in Settings › Repositories: its path and main · 2 branches, then Name, Aliases (empty, placeholder api, backend) and Description, each with its help line; Trusted switched on (Kepler runs git here, and agent sessions skip the agent's own trust question); Branch prefix on Default (kepler/) with the example kepler/fix-login-form; Branch synchronization with How to update set to Rebase and Push after update unticked; the Commands section with Add command, Install deps (Runs on creation) and Dev server; and MCP servers with Add server, Agent set to Claude Code CLI and acme-issues, docs-search and acme-analytics switched on.">
+  <a href="/wp-content/uploads/edit-repo-dialog-oct-2026-v6@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/edit-repo-dialog-oct-2026-v6@2x.png" class="help-center-img img-bordered" alt="The Edit repo page for acme-web in Settings › Repositories: its path and main · 2 branches; Name, Aliases (empty, placeholder api, backend) and Description, each with its help line; Trusted ticked; Branch prefix on Default (kepler/) with the example kepler/fix-login-form; and Branch synchronization, with How to update set to Rebase and Push after update unticked. Below come Commands, with Add command, Install deps (Runs on creation) and Dev server, and MCP servers, with Add server, Agent set to Claude Code CLI and acme-issues, docs-search and acme-analytics switched on.">
   </a>
   <figcaption style="text-align:center; color:#888">The Edit repo page.</figcaption>
 </figure>
@@ -207,8 +207,8 @@ An agent can start a stored command in a terminal on its own task, but never a c
 To run a command from the task view, right-click a worktree row in the task's context panel and use **Run command here**. It lists that repository's commands and runs the one you pick in that worktree, in a terminal. For a repository with no commands yet, **Create command…** opens the Edit repo page. To stop a running command, use the run button or its menu.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/repo-commands-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/repo-commands-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Commands section of the Edit repo page for acme-web: Add command, Install deps (pnpm install) with the Runs on creation chip, and Dev server open for editing with its name, Run on worktree creation, the command pnpm dev with Variables, and Cancel and Save, above the note that commands run in the worktree folder with your login shell.">
+  <a href="/wp-content/uploads/repo-commands-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/repo-commands-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Commands section of the Edit repo page for acme-web: Add command, Install deps (pnpm install) with the Runs on creation chip, and Dev server open for editing with its name, Run on worktree creation unticked, the command pnpm dev with Variables, Agents can start this without asking ticked, and Cancel and Save. Below them, a note says commands run in the worktree folder with your login shell and their order sets the Run menu order.">
   </a>
   <figcaption style="text-align:center; color:#888">A repository's Commands, with one row open for editing.</figcaption>
 </figure>

@@ -40,8 +40,8 @@ Dictation has 3 transcription engines:
 Dictation turns on once you download a model in **Settings → Voice**. The microphone in the prompt becomes available when the model is ready.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/voice-input-settings-aug-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/voice-input-settings-aug-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Dictation section of Settings › Voice: under Speech model, Whisper (80 MB) is picked with Remove…, Licenses and its Quality select at Fast (80 MB), suggested, installed, and a Qwen3-ASR 1.7B and 0.6B row says they need a graphics card with WebGPU. Below come Dictation language (Auto-detect), Dictation mode with Type as you talk picked beside Type when you stop and Send when you stop, and Vocabulary (No words yet, Manage, Qwen speech models only).">
+  <a href="/wp-content/uploads/voice-input-settings-aug-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/voice-input-settings-aug-2026-v5@2x.png" class="help-center-img img-bordered" alt="The Dictation section of Settings › Voice: under Speech model, Whisper (80 MB) is picked with Remove…, Licenses and its Quality select at Fast (80 MB), suggested, installed, and a Qwen3-ASR 1.7B and 0.6B row says they need a graphics card with WebGPU. Below come Dictation language (Auto-detect), Dictation mode with Type as you talk picked beside Type when you stop and Send when you stop, and Vocabulary (No words yet, Manage, Qwen speech models only).">
   </a>
   <figcaption style="text-align:center; color:#888">The Dictation settings on a computer without WebGPU, where Whisper transcribes.</figcaption>
 </figure>
@@ -86,8 +86,8 @@ Qwen3-ASR learns how you spell words it gets wrong. When you fix a single dictat
 Kepler stores only the words, on this device only, and keeps them after you sign out.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/voice-learned-words-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/voice-learned-words-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Learned words in Settings › Voice, marked Qwen models only, with its description. Suggested words lists Kepler, heard as keplar, with Approve and Dismiss; Words shows Jira and pnpm, each with a remove button, above the Add a word field with Add and Forget learned words….">
+  <a href="/wp-content/uploads/voice-learned-words-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/voice-learned-words-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="Settings › Voice › Vocabulary: words you fix in dictated text are suggested here and kept on this device, for Qwen speech models only. Suggested words lists Kepler, heard as keplar, with Approve and Dismiss, above the words Jira and pnpm with remove buttons, the Add a word field with Add, and Forget learned words….">
   </a>
   <figcaption style="text-align:center; color:#888">The Vocabulary page, with a suggested word waiting for approval above the learned words.</figcaption>
 </figure>
@@ -104,8 +104,8 @@ Kepler stores only the words, on this device only, and keeps them after you sign
 If the microphone or speaker you picked is not connected, Kepler tells you and uses the system default.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/voice-check-setup-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/voice-check-setup-nov-2026.png" class="help-center-img img-bordered" alt="Check your setup in Settings › Voice: Microphone is set to System default, saved for this window and not synced, beside a Try dictation mic button. Speaker reads System default, greyed because system voices always play on the system default (pick Kokoro to choose a speaker), beside a Play a reply button.">
+  <a href="/wp-content/uploads/voice-check-setup-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/voice-check-setup-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="Check your setup in Settings › Voice: Microphone is set to System default, saved for this window and not synced, beside a Try dictation mic button. Speaker reads System default, greyed because system voices always play on the system default (pick Kokoro to choose a speaker), beside a Play a reply button.">
   </a>
   <figcaption style="text-align:center; color:#888">Check your setup, with the microphone and speaker Kepler uses.</figcaption>
 </figure>

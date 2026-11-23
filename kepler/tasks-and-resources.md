@@ -618,8 +618,8 @@ The request appears as an approval card above the asking session's composer, wit
 A request to start a Run command offers **Always allow** instead, which ticks **Agents can start this without asking** for that command. No other rule covers starting a Run command.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/run-command-approval-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/run-command-approval-nov-2026.png" class="help-center-img img-bordered" alt="An amber approval card, Run a command in a new terminal, with the command pnpm dev, In acme-web@kepler/fix-cart-total, on Fix the cart total, and This Run command is set to ask before an agent starts it. Its buttons are Approve, Always allow and Deny.">
+  <a href="/wp-content/uploads/run-command-approval-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/run-command-approval-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="An amber approval card, Run a command in a new terminal, with the command pnpm dev, In acme-web@kepler/fix-cart-total, on Fix the cart total, and This Run command is set to ask before an agent starts it. Its buttons are Approve, Always allow and Deny.">
   </a>
   <figcaption style="text-align:center; color:#888">An agent asks to start a Run command that is set to ask first.</figcaption>
 </figure>

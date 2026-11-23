@@ -24,8 +24,8 @@ Use **Settings → Agents** to install the coding agents you already use, sign i
 Kepler supports 9 agents. You can also add any other agent that speaks the Agent Client Protocol (ACP), or whose command-line interface you want to run inside a task.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-settings-oct-2026-v6@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-settings-oct-2026-v6@2x.png" class="help-center-img img-bordered" alt="Settings › Agents: the page description; New sessions start on your last pick, or Claude Code the first time, with Change in Tasks; then New Ask Kepler chats start with, its agent-settings pill showing the Claude Code mark and the Quick fix preset, the caption Your first chat uses this agent, and Start each chat on the agent you used last ticked. Your agents has Update all and Rescan above the Claude Code card (Update, Enabled), which shows Accounts with Add account and the Claude Code CLI account marked Default with Check usage, New sessions start in set to Chat, Let artifact comments start turns (on), Artifacts in new sessions (off), and a collapsed Program and data folder.">
+  <a href="/wp-content/uploads/agent-settings-oct-2026-v7@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-settings-oct-2026-v7@2x.png" class="help-center-img img-bordered" alt="Your agents in Settings › Agents, with Update all and Rescan beside the heading and one row per agent: Claude Code (marked Default), Codex, GitHub Copilot, Auggie and Grok Build with 1 account and Add account; OpenCode, Antigravity and Cursor Not signed in with Sign in; and Pi. Each row shows the agent's version, an Enabled switch that is on and a chevron, and the line below the list says to open an agent for its accounts, how its sessions start and where its program lives.">
   </a>
   <figcaption style="text-align:center; color:#888">Your agents in Settings → Agents, one row per agent.</figcaption>
 </figure>
@@ -175,8 +175,8 @@ If a custom path later disappears, such as after an auto-update removes an old v
 Beside the **Your agents** heading in **Settings → Agents**, **Rescan** re-detects every agent at once, and **Update all** runs each installed agent's own updater. A row shows **Update available** when a newer version of that agent is out.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-maintenance-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-maintenance-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Update all and Rescan beside the Your agents heading in Settings › Agents, above the title row of the Claude Code card: version 2.1.145, Update and Enabled.">
+  <a href="/wp-content/uploads/agent-maintenance-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-maintenance-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="Update all and Rescan beside the Your agents heading in Settings › Agents, above the first row of the list: Claude Code 2.1.145, marked Default, with 1 account, Add account, its Enabled switch and a chevron.">
   </a>
   <figcaption style="text-align:center; color:#888">Update all and Rescan, above the list of agents.</figcaption>
 </figure>

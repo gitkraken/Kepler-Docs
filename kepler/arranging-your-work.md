@@ -30,8 +30,8 @@ Arrange the Dashboard so it shows the work you need to see. The Dashboard is a s
 What you choose in the **View** menu is saved to the view at once. To learn what each part of the screen is, see [The Kepler Interface](/kepler/kepler-interface).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/arrange-work-oct-2026-v7@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/arrange-work-oct-2026-v7@2x.png" class="help-center-img img-bordered" alt="The Dashboard's arranging controls: the row of views (Todo and Tasks with Kepler's own Todo and Task icons, Tasks selected, Agent Graph, New view, and Automations at the right), and under it the list toggle, the View button showing the List glyph and Inbox, the search box reading Search, or filter like activity:waiting across the toolbar, then Panel layout (Auto × 1) and Refresh at the right. Tasks and Agent Graph carry the orange mark of a task waiting on you.">
+  <a href="/wp-content/uploads/arrange-work-oct-2026-v8@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/arrange-work-oct-2026-v8@2x.png" class="help-center-img img-bordered" alt="The Dashboard's arranging controls: the row of views (Todo, Tasks selected, Agent Graph, New view, and Automations at the right) over the list toggle, the View button showing the List glyph and Inbox, the Your groups button with its four squares, the search box reading Search, or filter like activity:waiting, then Panel layout (Auto × 1) and Refresh. Tasks and Agent Graph carry the orange mark of a task waiting on you.">
   </a>
   <figcaption style="text-align:center; color:#888">The views, and the View, Your groups, search, panel, and refresh controls under them.</figcaption>
 </figure>
@@ -54,8 +54,8 @@ Kepler starts you with a **Todo** view, a **Tasks** view, and an **Agent Graph**
 A view keeps its own layout, grouping, sort, filters, and search text, and every window shares the same views. See [What Kepler remembers](#what-kepler-remembers).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/saved-views-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/saved-views-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Tasks view's menu open from its tab in the Dashboard's row of views (Todo, Tasks, Agent Graph, New view), where Tasks and Agent Graph carry the orange mark of a task waiting on you: Rename with F2, Change icon showing Task, Show counts on views ticked, View options, Duplicate view highlighted, Move left, Move right, Views position, and Delete view.">
+  <a href="/wp-content/uploads/saved-views-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/saved-views-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Tasks view's menu open from its tab in the Dashboard's row of views (Todo, Tasks, Agent Graph, New view), where Tasks and Agent Graph carry the orange mark of a task waiting on you. The menu runs View options, Rename with F2, Change icon showing Task, Show counts on views ticked, Duplicate view highlighted, Move left, Move right, Views position, and Delete view.">
   </a>
   <figcaption style="text-align:center; color:#888">A view's menu.</figcaption>
 </figure>
@@ -184,8 +184,8 @@ On the board grouped by **Progress**, you can also move a task to another stage 
 **Group by** in the **View** menu divides the list into sections.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/group-options-tasks-sep-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/group-options-tasks-sep-2026-v5@2x.png" class="help-center-img img-bordered" alt="The View menu open under the View button, which reads Your groups › Inbox: the List, Board and Graph switch, the Your groups switch on with Shows Inbox within each group under it, and Group by open on its submenu of Inbox (checked), Progress, Activity, Repository (highlighted) and None. Below come Sort by, Updated, and the Filters section: Progress, Activity, Repository, Agent, Session, Group and Linked work, each Any.">
+  <a href="/wp-content/uploads/group-options-tasks-sep-2026-v6@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/group-options-tasks-sep-2026-v6@2x.png" class="help-center-img img-bordered" alt="The View menu open under the View button, which reads Inbox beside the pressed Your groups button with its coloured squares: the List, Board and Graph switch, the Your groups switch on with Shows Inbox within each group and its Shift G keys, and Group by open on its submenu of Inbox (checked), Progress, Activity, Repository (highlighted) and None. Below come Sort by, Updated, and the Filters section: Activity, Progress, Starred, Group, Repository, Agent, Session, Terminal and Linked work, each Any.">
   </a>
   <figcaption style="text-align:center; color:#888">Group by in the View menu of a Tasks view.</figcaption>
 </figure>
@@ -288,8 +288,8 @@ The other groupings arrange tasks by what Kepler can see. A group is one you mak
 To add an archived task to a group, restore the task first.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/add-to-group-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/add-to-group-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The menu of Fix the cart total with Add to group open, its submenu listing Checkout (blue, checked) and Payments (green), then New group… and Remove from group. In the list behind, Fix the cart total and Update checkout copy carry a blue bar for Checkout, and Upgrade the payment SDK a green bar for Payments.">
+  <a href="/wp-content/uploads/add-to-group-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/add-to-group-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Task actions menu of Fix the cart total with Change group open, its submenu running Remove from group, Checkout with a blue swatch and a check, Payments with a green swatch, New group… and Manage groups…. The menu also holds Open task page, Mark as read, Star, Rename task, Progress (In Development), Manage resources, Refresh, Copy task link, Copy task prompt, Shut down all agents, Archive task and Delete task, over a list where Fix the cart total and Update checkout copy carry a blue bar and Upgrade the payment SDK a green one.">
   </a>
   <figcaption style="text-align:center; color:#888">Change group, in a task's menu.</figcaption>
 </figure>
@@ -505,8 +505,8 @@ While a task waits, its row says what for, such as *On hold until CI finishes on
 The **Filters** section at the end of the **View** menu has a submenu for each facet, such as **Progress** or **Provider**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/filter-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/filter-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The View menu's Filters section with Progress set to In Development and its flyout open, listing each stage with its count, In Development ticked, and Archived's exclude button hovered with the tooltip Exclude Archived, Shift Enter. Above, the search box reads progress:development with a 3 hidden pill.">
+  <a href="/wp-content/uploads/filter-oct-2026-v6@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/filter-oct-2026-v6@2x.png" class="help-center-img img-bordered" alt="The View menu's Filters section, which runs Activity, Progress, Starred, Group, Repository, Agent, Session, Terminal and Linked work, with Progress set to In Development and its flyout open: each stage with its count, In Development ticked, and Archived's exclude button hovered with the tooltip Exclude Archived, Shift Enter. Above the menu, the search box reads progress:development with a 3 hidden pill.">
   </a>
   <figcaption style="text-align:center; color:#888">The Filters section, with a facet's flyout open.</figcaption>
 </figure>

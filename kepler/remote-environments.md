@@ -35,8 +35,8 @@ Kepler has 2 remote features, and they work in opposite directions:
 Both sit at the left of the title bar, right after **New task**. The **Remote Access** button shows a monitor-and-phone icon.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-task-button-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-task-button-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The left end of the Kepler top bar: the application menu, the Back and Forward arrows, the New task button with a plus sign, then the Local environment chip and the Remote Access button's monitor-and-phone icon in green because Remote Access is on.">
+  <a href="/wp-content/uploads/new-task-button-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-task-button-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The left end of the Kepler top bar: the application menu, the New task button with a plus sign, the Local environment chip, and the Remote Access button's monitor-and-phone icon in green because Remote Access is on.">
   </a>
   <figcaption style="text-align:center; color:#888">The environment chip and the Remote Access button after New task, in a local window.</figcaption>
 </figure>
@@ -50,8 +50,8 @@ To let another device reach this Kepler, rather than connecting *to* another mac
 Each window works on one environment at a time, and the title-bar chip shows which one. The chip leads with the environment's type icon, and a green dot on that icon means connected.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-chip-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-chip-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The left end of the title bar in a window connected to dev-server: the app menu, Back and Forward, and New task, then the environment chip reading dev-server on the host's purple tint, with a green dot on its type icon, followed by the Remote Access button.">
+  <a href="/wp-content/uploads/remote-chip-oct-2026-v6@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-chip-oct-2026-v6@2x.png" class="help-center-img img-bordered" alt="The left end of the title bar in a window connected to dev-server: the app menu and New task, then the environment chip reading dev-server on the host's purple tint, with a green dot on its type icon, followed by the Remote Access button.">
   </a>
   <figcaption style="text-align:center; color:#888">The chip on a host colored Purple, connected.</figcaption>
 </figure>
@@ -518,8 +518,8 @@ Configure it in **Settings → Remote Access**, or from the **Remote Access** bu
 </figure>
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-access-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-access-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Settings › Remote Access while it is off: the Inactive badge and Turn on Remote Access, Your agents, wherever you are, the three steps of How it works, a note that only you can connect, Machines on your account with Manage machines on gitkraken.dev, and This machine stays awake while Remote Access is on, with Change in General.">
+  <a href="/wp-content/uploads/remote-access-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-access-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="Settings › Remote Access while it is off: the Inactive badge and Turn on Remote Access, Your agents, wherever you are, the three steps of How it works, a note that only you can connect, and Machines on your account with Manage machines on gitkraken.dev. The last line reads This machine stays awake while Remote Access is on, with a Change in Agents link.">
   </a>
   <figcaption style="text-align:center; color:#888">Settings → Remote Access, before you turn it on.</figcaption>
 </figure>
@@ -559,8 +559,8 @@ A pairing link works once and expires after 5 minutes. To pair after that, open 
 You can bookmark the address a paired browser opens on. If that browser's connection has ended, opening the address again takes you to gitkraken.dev to sign in and pair it again.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-access-phone-sep-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-access-phone-sep-2026-v4@2x.png" class="help-center-img img-bordered" alt="Kepler's Dashboard in a phone's browser, on the Tasks view: one bar with Menu, the view picker showing Tasks with a chevron and an orange dot, Search, Options, the Tasks that need you button with an orange mark, Ask Kepler and New task, over the task list grouped into Needs attention (Add product search, In Development, Approval needed), Unread (Fix the cart total, In Review with its pull request and issue chips and Changes requested; Update checkout copy, On Hold, and Upgrade the payment SDK, In Review, each with New reply) and a folded Not started (1).">
+  <a href="/wp-content/uploads/remote-access-phone-sep-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-access-phone-sep-2026-v5@2x.png" class="help-center-img img-bordered" alt="Kepler's Dashboard in a phone's browser, on the Tasks view: one bar with Menu, the view picker showing Tasks with a chevron and an orange dot, the Search Kepler chip with an orange mark and 1, Ask Kepler and New task (+), over the task list grouped into Needs attention (Add product search, In Development, Approval needed), Unread (Fix the cart total, In Review with its pull request and issue chips and Changes requested; Update checkout copy, On Hold, and Upgrade the payment SDK, In Review, each with New reply) and a folded Not started (1).">
   </a>
   <figcaption style="text-align:center; color:#888">Once paired, a phone opens this Kepler in its browser, in the phone layout.</figcaption>
 </figure>
@@ -594,8 +594,8 @@ To get a notification on the phone when a session needs you and you are away fro
 The Dashboard's bar holds **Menu**, a view picker, the **Search Kepler** chip, **Ask Kepler**, and **New task** (+). The view picker switches between your Dashboard views and has **New view** and **View options**, a sheet with the view's search box, **Refresh**, and the view's settings, such as its grouping, sort, and filters. The **Search Kepler** chip shows a count while something waits on you. Tap it to search your tasks, files, and chats, with what needs you listed first.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/phone-dashboard-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/phone-dashboard-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="Kepler's Dashboard in a phone-width browser: one bar with Menu, the view picker showing the Todo view with a chevron and an orange dot, Search, Options, the Tasks that need you button with an orange mark, Ask Kepler and New task, above the Todo list grouped into PR (two pull requests marked Changes requested, #51 with a Task badge) and Issue (three issues, one marked Mentioned and #38 with a Task badge) for acme-web.">
+  <a href="/wp-content/uploads/phone-dashboard-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/phone-dashboard-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="Kepler's Dashboard in a phone-width browser: one bar with Menu, the view picker showing Todo with a chevron and an orange dot, the Search Kepler chip with an orange mark and 1, Ask Kepler and New task (+), above the Todo list grouped into PR (two pull requests marked Changes requested, #51 with a Task badge) and Issue (three issues, #42 marked Mentioned and #38 with a Task badge) for acme-web.">
   </a>
   <figcaption style="text-align:center; color:#888">The Dashboard's one bar on a phone, over the Todo list.</figcaption>
 </figure>

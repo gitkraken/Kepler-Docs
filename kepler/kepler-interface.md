@@ -59,22 +59,22 @@ When an agent you installed has a newer version, an agent updates button appears
 On Windows and Linux, the menu button at the leading edge of the top bar holds the full application menu (**File**, **Edit**, **View**, **Window**, **Help**), including **Settings**, **Check for Updates…**, and **About**. macOS keeps its native menu bar. To switch windows, see [Kepler windows](#kepler-windows).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-task-button-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-task-button-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The left end of the Kepler top bar: the application menu, the Back and Forward arrows, the New task button with a plus sign, then the Local environment chip and the Remote Access button's monitor-and-phone icon in green because Remote Access is on.">
+  <a href="/wp-content/uploads/new-task-button-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-task-button-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The left end of the Kepler top bar: the application menu, the New task button with a plus sign, the Local environment chip, and the Remote Access button's monitor-and-phone icon in green because Remote Access is on.">
   </a>
   <figcaption style="text-align:center; color:#888">The top bar's leading edge.</figcaption>
 </figure>
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/top-tool-bar-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/top-tool-bar-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The right end of the Kepler top bar: the Tasks that need you inbox icon (nothing waiting), the Ask button with Kepler's ringed-planet glyph, Feedback, Settings, and the account avatar with Alex Lee's initials.">
+  <a href="/wp-content/uploads/top-tool-bar-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/top-tool-bar-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The right end of the Kepler top bar: the Ask button with Kepler's ringed-planet glyph, then Feedback, Settings, and the account avatar with Alex Lee's initials.">
   </a>
   <figcaption style="text-align:center; color:#888">Ask Kepler and the top bar's trailing controls.</figcaption>
 </figure>
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/update-available-chip-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/update-available-chip-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The right end of the Kepler top bar with a green Update available chip before the Tasks that need you inbox icon, the Ask button, Feedback, Settings, and the account avatar with Alex Lee's initials.">
+  <a href="/wp-content/uploads/update-available-chip-oct-2026-v6@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/update-available-chip-oct-2026-v6@2x.png" class="help-center-img img-bordered" alt="The right end of the Kepler top bar: the Ask button, then a green Update available chip before Feedback, Settings, and the account avatar with Alex Lee's initials.">
   </a>
   <figcaption style="text-align:center; color:#888">The trailing cluster when an update is ready.</figcaption>
 </figure>
@@ -89,8 +89,8 @@ The **Search Kepler** field in the top bar counts the tasks that need you and th
 - Press **F8** (**Go to what needs you next**) to open the next task that needs you, at the session that waits.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/search-kepler-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/search-kepler-nov-2026.png" class="help-center-img img-bordered" alt="The title bar's Search Kepler field with its 1 needs you and 1 unread chips, beside the Ask button. Its tooltip reads Search Kepler with Ctrl Shift P, 1 needs you, 1 unread, and Go to what needs you next with F8.">
+  <a href="/wp-content/uploads/search-kepler-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/search-kepler-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The title bar's Search Kepler field with its 1 needs you and 1 unread chips, beside the Ask button. Its tooltip reads Search Kepler with Ctrl Shift P, 1 needs you, 1 unread, and Go to what needs you next with F8.">
   </a>
   <figcaption style="text-align:center; color:#888">The Search Kepler field, with its tooltip.</figcaption>
 </figure>
@@ -277,8 +277,8 @@ The **Your role** grouping and filter sort items by your part in them:
 ### Task rows
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/task-row-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-row-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Three task rows in the Unread group, Fix the cart total, Update checkout copy, and Upgrade the payment SDK, each with acme-web, its progress stage, New reply, its session dot, its age, and the ⋮ menu. Fix the cart total is starred, so its filled Star button stays in view.">
+  <a href="/wp-content/uploads/task-row-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-row-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Unread group of the Tasks view with Fix the cart total, Update checkout copy and Upgrade the payment SDK, each row showing its title, the acme-web repository, its progress stage, New reply, a blue session dot and its age. Fix the cart total keeps its filled Star, and the hovered Update checkout copy row shows its Star and ⋮ buttons while the group header shows its open-in-panels button and Select.">
   </a>
   <figcaption style="text-align:center; color:#888">Task rows, with the hovered row showing its Star and ⋮ buttons.</figcaption>
 </figure>
@@ -517,8 +517,8 @@ If you start a task from **New task** while you're on the list, the new task ope
 **Quick look.** While panels are open, hover a task row and click **Quick look** (the eye button) to read the task in a card over the panels, without replacing them. To keep it, click **Open as panel**. Press **Escape** or click outside the card to close it.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/quick-look-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/quick-look-nov-2026.png" class="help-center-img img-bordered" alt="The Dashboard with Fix the cart total open as a panel, dimmed behind a Quick look card of Update checkout copy whose header holds Open as panel beside Terminal and Close. The card shows the task's branch, its session and its Changes column, while the task list stays on the left.">
+  <a href="/wp-content/uploads/quick-look-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/quick-look-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Dashboard with Fix the cart total open as a panel, dimmed behind a Quick look card of Update checkout copy whose header holds Open as panel beside Terminal and Close. The card shows the task's branch, its session and its Changes column, while the task list stays on the left.">
   </a>
   <figcaption style="text-align:center; color:#888">A task in Quick look, over the open panel.</figcaption>
 </figure>
@@ -778,8 +778,8 @@ To jump to a task, a pull request or issue, a file, or something said in a chat,
 To switch tabs, click a tab or press **Shift + Tab**. In an empty field, you can also type **@** for **Files**, **?** for **Chats**, or **>** to show only commands. Press **Backspace** to return to **All**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/palette-all-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/palette-all-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The palette's All view as it opens: a search field reading Search tasks, todos and commands, or type @ for files, ? for chats or > for commands, the All, Tasks, Todo, Files, and Chats tabs with All selected, then Needs you with Add product search (Approval needed for Run npm test), Unread with Fix the cart total, and the Suggested commands such as New task, Go to what needs you next, and Open settings with their keys, above the General commands.">
+  <a href="/wp-content/uploads/palette-all-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/palette-all-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The palette's All view as it opens, with the All, Tasks, Todo, Files and Chats tabs under its search field, and Needs you (1) listing Add product search expanded to its Run npm test request with Deny (Ctrl + Shift + Enter) and Allow (Ctrl + Enter). Below come Unread (1) with Fix the cart total, the Suggested and General commands with their keys, and a footer naming the Open, Allow and Deny keys.">
   </a>
   <figcaption style="text-align:center; color:#888">The palette as it opens, on All, with a request ready to answer.</figcaption>
 </figure>

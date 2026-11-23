@@ -24,8 +24,8 @@ taxonomy:
 For the agent sessions that run inside a task, see [Agent Sessions](/kepler/agent-sessions).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ask-kepler-chat-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ask-kepler-chat-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Ask Kepler panel under the top bar's highlighted Ask button, its header holding New chat with a chevron for past chats, Archive (unavailable on a new chat), the New chat button, Terminal, Dock panel and Close. Kep, the planet mascot, sits over Ask Kepler anything and the starters What needs me right now?, Find or change a setting and What changed across my tasks today?, above the Ask anything composer with the attach and microphone buttons and the Default agent pill.">
+  <a href="/wp-content/uploads/ask-kepler-chat-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ask-kepler-chat-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The Ask Kepler panel under the top bar's pressed Ask button, its header holding New chat with a chevron for past chats, Archive (unavailable on a new chat), the New chat button, Terminal, Dock panel and Close. Kep, the planet mascot, sits over Ask Kepler anything and the starters What needs me right now?, Find or change a setting and What changed across my tasks today?, above the Ask anything composer with the attach and microphone buttons and the agent pill.">
   </a>
   <figcaption style="text-align:center; color:#888">Ask Kepler, open on a new chat under the top bar's Ask button.</figcaption>
 </figure>
