@@ -25,7 +25,7 @@ You manage providers in the **Issues and pull requests** section of **Settings �
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/provider-integrations-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/provider-integrations-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Issues and pull requests section of Settings › Integrations. Azure DevOps and GitHub read Connected, each with Disconnect and Reconnect and a visibility line, Everything visible, with Choose what's visible…; Azure DevOps lists two accounts, Alex Lee (primary) and Alex Lee (Contoso). Azure DevOps Server, Bitbucket, Bitbucket Data Center, GitHub Enterprise, GitLab, GitLab Self-Hosted, Jira, Jira Server / Data Center, Linear and Trello each offer Connect.">
+    <img src="/wp-content/uploads/provider-integrations-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Issues and pull requests section of Settings › Integrations: Azure DevOps and GitHub read Connected, each with Disconnect, Reconnect and the visibility line Everything visible with Choose what's visible…, and Azure DevOps lists two accounts, Alex Lee (primary) and Alex Lee (Contoso). Azure DevOps Server, Bitbucket, Bitbucket Data Center, GitHub Enterprise, GitLab, GitLab Self-Hosted, Jira, Jira Server / Data Center, Linear and Trello each offer Connect.">
   </a>
   <figcaption style="text-align:center; color:#888">Issues and pull requests, in Settings → Integrations.</figcaption>
 </figure>
@@ -69,7 +69,7 @@ To connect a cloud tracker (**GitHub**, **GitLab**, **Azure DevOps**, **Jira**, 
 3. Authorize Kepler on GitKraken's website, which opens in your browser.
 4. Return to Kepler, where the provider shows a **Connected** badge.
 
-Integrations belong to your GitKraken account, not to this copy of Kepler, so a provider you connect here is also available to the `gk` command-line interface (CLI) and GitKraken Desktop. To manage integrations, sign in to a GitKraken account. Kepler prompts you if you are not signed in.
+Integrations belong to your GitKraken account, not to this copy of Kepler, so a provider you connect here is also available to the `gk` command-line interface (CLI) and GitKraken Desktop. The exception is a self-hosted connection you keep on this device only. See [Connect a self-hosted tracker](#connect-a-self-hosted-tracker). To manage integrations, sign in to a GitKraken account. Kepler prompts you if you are not signed in.
 
 If your browser did not open, copy the **Connection link** from the dialog Kepler shows while you authorize, and open it in a browser yourself. Each link works once, so **Try again** makes a new one. The dialog closes by itself once the connection appears.
 
@@ -81,16 +81,17 @@ If your browser did not open, copy the **Connection link** from the dialog Keple
 2. Find the provider in **Issues and pull requests** and click **Connect**. The **Connect *provider*** dialog opens.
 3. In **Server URL**, enter the server's address, including the port and installation path when your server uses them.
 4. In **Personal access token**, paste a token with access to the issues you need.
-5. Click **Save connection**.
+5. To keep the server URL and the token on this device, tick **Keep PAT on this device only**. Kepler then never sends them to GitKraken, and the connection is not available on your other devices or in other GitKraken products.
+6. Click **Save connection**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/self-hosted-connect-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/self-hosted-connect-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Connect Jira Server / Data Center dialog: Register your server using a personal access token. Server URL holds https://jira.acme.example, with the hint to include the port and installation path when your server uses them, and Personal access token holds a masked token, with the hint to use a token with access to the repositories or issues you need. Cancel and Save connection sit at the bottom.">
+  <a href="/wp-content/uploads/self-hosted-connect-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/self-hosted-connect-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Connect Jira Server / Data Center dialog: Server URL holds https://jira.acme.example and Personal access token a masked token, each with its hint, then Keep PAT on this device only, unticked, with a note that the URL and PAT then stay on this device and are never sent to GitKraken. Cancel and Save connection sit at the bottom.">
   </a>
   <figcaption style="text-align:center; color:#888">Connecting a Jira Server / Data Center instance with a personal access token.</figcaption>
 </figure>
 
-Kepler checks the token against the server from your machine, saves it on this device, and adds the connection to your GitKraken account. The dialog reports one of these results:
+Kepler checks the token against the server from your machine and saves it on this device. Unless you kept it on this device only, Kepler also adds the connection to your GitKraken account. The dialog reports one of these results:
 
 - The server accepted the token.
 - Kepler saved the token without being able to reach the server or verify its certificate.
@@ -98,15 +99,16 @@ Kepler checks the token against the server from your machine, saves it on this d
 
 For every message the dialog shows, see [Pull Request Integrations](/kepler/pull-request-integrations#connect-a-self-hosted-instance). Until Kepler finishes syncing the connection to your account, the provider's row shows **Cloud sync pending**.
 
-Once connected, a self-hosted provider lists each server on its own row, with **Set as primary**, **Replace token**, and **Disconnect**. Each server keeps its own repositories and issues:
+Once connected, a self-hosted provider lists each server on its own row, with a storage chip, **Set as primary**, **Replace PAT**, and **Disconnect**. Each server keeps its own repositories and issues:
 
 - To connect another server, click **Add connection** on the provider's row.
-- To renew an expired or rejected token, click **Replace token** on that server's row.
+- To renew an expired or rejected token, click **Replace PAT** on that server's row.
+- To move a server's token between your GitKraken account and this device, click its storage chip (**GitKraken account** or **This device only**) and choose **Keep PAT on this device only** or **Store PAT in GitKraken account**. A connection kept on this device only cannot be set as primary.
 - To make a server the provider's default connection, click **Set as primary**. Agents' GitKraken MCP server acts through the primary connection.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/self-hosted-installations-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/self-hosted-installations-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="GitHub Enterprise in Settings › Integrations with Add connection beside its name and one row per server below it: github.acme.example and ghe.contoso.example, each signed in as alex-lee and marked Connected, with Replace token and Disconnect, the primary server marked Primary and the other offering Set as primary. Below them, Everything visible with Choose what's visible…, and a notice that agents' GitKraken MCP server acts as alex-lee (https://github.acme.example), the primary connection on your GitKraken account.">
+  <a href="/wp-content/uploads/self-hosted-installations-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/self-hosted-installations-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="GitHub Enterprise in Settings › Integrations with Add connection beside its name and one row per server: github.acme.example and ghe.contoso.example, each signed in as alex-lee, marked Connected, with a GitKraken account storage chip, Replace PAT and Disconnect; the first is marked Primary and the second offers Set as primary. Below them, Everything visible with Choose what's visible…, and a notice that agents' GitKraken MCP server acts as alex-lee (https://github.acme.example), the primary connection on your GitKraken account.">
   </a>
   <figcaption style="text-align:center; color:#888">A self-hosted provider with 2 servers connected.</figcaption>
 </figure>
@@ -144,7 +146,7 @@ To hide part of an integration:
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/provider-visibility-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/provider-visibility-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Choose what GitHub brings in dialog: hidden items are left out of the dashboard, the launcher and pickers, and tasks and branches already linked to them keep resolving. Under a Filter field, Organizations lists acme ticked and acme-labs unticked, and Repositories lists acme-labs/checkout-experiments unticked and grayed, marked Hidden with its organization, then acme/acme-api, acme/acme-web, acme/design-system and alex-lee/dotfiles ticked. Cancel and Save sit at the bottom.">
+    <img src="/wp-content/uploads/provider-visibility-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Choose what GitHub brings in dialog, which says hidden items are left out of the dashboard, the launcher and pickers while linked tasks and branches keep resolving; under a Filter field, Organizations lists acme ticked and acme-labs unticked, and Repositories lists acme-labs/checkout-experiments unticked and grayed, marked Hidden with its organization, then acme/acme-api, acme/acme-web, acme/design-system and alex-lee/dotfiles ticked. Cancel and Save sit at the bottom.">
   </a>
   <figcaption style="text-align:center; color:#888">Hiding the acme-labs organization also hides its repositories.</figcaption>
 </figure>
@@ -196,6 +198,8 @@ Disconnecting affects more than Kepler: it removes the connection from your GitK
 
 - **With another account connected**, Kepler promotes it to primary and the provider stays connected under it. Nothing else changes.
 - **With no other account connected**, Kepler removes the provider entirely, with its saved filters and its rows in your lists.
+
+Disconnecting a self-hosted server whose token is kept on this device only removes the token from this device alone. Your GitKraken account and your other devices are not affected.
 
 You can reconnect at any time.
 

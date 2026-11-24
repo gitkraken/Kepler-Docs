@@ -28,7 +28,7 @@ An **Action** is a named prompt that you run on a task, issue, or pull request t
   <figcaption style="text-align:center; color:#888">The Action split button, chevron open. One click runs the default; the chevron lists every applicable Action, including your own.</figcaption>
 </figure>
 
-You can change every Action's wording and agent, and choose which Action each kind of work suggests as its one-click default. An [automation](/kepler/kepler-automations) can also run an Action for you, on a schedule or when new GitHub or Jira activity matches its query.
+You can change every Action's wording and agent, and choose which Action each kind of work suggests as its one-click default. An [automation](/kepler/kepler-automations) can also run an Action for you on a schedule, or when new GitHub or Jira activity matches its query.
 
 ***
 
@@ -294,7 +294,7 @@ You cannot delete an Action that an automation runs. Delete the automation first
 
 ## Setting an Action's agent
 
-By default, an Action runs on your **default agent**, which you set in **New sessions start with** in [Settings → Tasks](/kepler/settings-tasks#default-agent). To change it, open the **Preset** list in the editor's **Agent** field and pick one of the following:
+By default, an Action runs on your **default agent**, which you set in **New sessions start with** in [Settings → Agents → Defaults](/kepler/settings-agents#defaults). To change it, open the **Preset** list in the editor's **Agent** field and pick one of the following:
 
 | Choice | What the Action runs on |
 |---|---|
@@ -311,7 +311,7 @@ By default, an Action runs on your **default agent**, which you set in **New ses
 
 You save agent presets in **Settings → Agents → Agent presets**; see [Settings](/kepler/settings-agents#agent-presets). For example, pick a cheap, fast preset for triage and review, and a heavier one for implementation. If an Action's preset no longer exists, the Action shows **Preset unavailable for this agent**.
 
-An [automation](/kepler/kepler-automations) runs its Action unattended, on issue and pull request text that other people write. If an automation uses the Action, choose a mode that acts without asking only if you trust everyone who can open or comment on those items.
+An [automation](/kepler/kepler-automations) runs its Action unattended. It acts on issue and pull request text that other people write. If an automation uses the Action, choose a mode that acts without asking only if you trust everyone who can open or comment on those items.
 
 **Custom agent settings** is an **all-or-nothing override**: it pins the provider, account, model, mode, and options together, rather than changing one of them and inheriting the rest.
 

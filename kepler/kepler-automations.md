@@ -78,7 +78,7 @@ In the **When** card, choose **Schedule**, **GitHub**, or **Jira**.
 
 - **GitHub**: under **Watch**, pick the repositories or organizations, choose **Pull requests** or **Issues**, and pick how they involve you, for example **Awaiting my review**. That choice also matches review requests sent to a team you are on. To run only on requests made to you, choose **Awaiting my review (requested from me, not a team)**. Open **Filters** to narrow the items further. To see the search the filters make, click **Show query**.
 - **Jira**: pick the projects from one Jira site, your role, and the statuses.
-- **Schedule**: pick how often it repeats and the time. The form lists the next runs.
+- **Schedule**: pick how often it repeats and the time. To run it at more times of day, click **Add time** and pick another hour. Every time runs at the same minute past the hour. The form lists the next runs.
 
 An issue or pull request automation runs when an item gets new activity, not on items that match when you save it. Open **Options** to set **Runs per item**: **On new activity** runs each time an item changes, and **Once** runs only the first time.
 
@@ -115,7 +115,7 @@ The Automations page lists your automations, each with its runs. **Needs you**, 
 
 Click a run to open it beside the list. A run that started a task shows the agent's session, where you answer its questions and approvals as you would in the task. Otherwise you see the run's details, with **Open item** and **Edit automation**. With no run selected, the page shows a summary of today's runs.
 
-Each run's task also appears in your task list, with an **Automation** badge on its row. Right-click a run to **Pin** it, **Mark as unread**, **Open in Tasks**, or **Clear from Needs you**.
+Each run's task also appears in your task list, with an **Automation** badge on its row. When a run finishes, Kepler marks its task **Done**, until you send the task a message. Right-click a run to **Pin** it, **Mark as unread**, **Open in Tasks**, or **Clear from Needs you**.
 
 After a while, Kepler removes a finished run's worktree from disk. The task and its branch stay, and Kepler keeps any worktree with uncommitted changes or a running session. When you continue the task, Kepler restores the worktree first.
 

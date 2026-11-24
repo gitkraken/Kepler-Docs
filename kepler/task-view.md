@@ -90,13 +90,13 @@ The name turns into an editable field. **Auto-name** fills the field with a name
 At phone width, for example in a phone browser connected through [Remote Access](/kepler/remote-environments#remote-access-reach-kepler-from-another-device), the task page replaces its header with a single bar:
 
 - **Back**, on the left.
+- The **Search Kepler** chip, which shows a count while something waits on you. Tap it to search, with what needs you listed first.
 - The task's name as a chip, which opens the task switcher. Swipe sideways on the name to go back to the previous task.
-- **Tasks that need you**, while a task needs you. Tap it for the list of those tasks and **Go to next task that needs you**.
 - A segment for each of **Sessions**, **Changes**, and **Terminal**, plus **Resources** when the bar has room. When it has no room, the task's resources are in **Everything in this task**, the sheet you pull down from the bar.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/phone-task-view-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/phone-task-view-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The task page in a phone-width browser: one bar holds Back, the Fix the cart total chip, an inbox button with an orange mark for tasks that need you, and the Sessions, Changes, and Terminal segments as icons. Below it, the folded details row reads In Review, above the agent's session and the composer.">
+  <a href="/wp-content/uploads/phone-task-view-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/phone-task-view-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The task page in a phone-width browser: one bar holds Back, the Search Kepler chip with an orange mark and 1, the Fix the cart total chip, and the Sessions, Changes and Terminal segments as icons. Below it, the folded details row reads In Review with branch, pull request, issue and attachment icons, above the agent's session and the composer.">
   </a>
   <figcaption style="text-align:center; color:#888">The task page on a phone, with its single bar and details row.</figcaption>
 </figure>
@@ -279,6 +279,8 @@ The last item in a row menu removes the row from the task. It depends on the kin
 - **Archive session** for a session
 - **Close terminal** for a terminal
 
+A pull request that Kepler found by the task's branch shows **Found by branch *branch*** on its row, and has the same menu. Detaching a pull request or issue found by the branch moves it to the task's archive, so the branch does not bring it back. You can restore it from there. See [Archiving a resource](/kepler/tasks-and-resources#archiving-a-resource).
+
 A worktree menu also ends with **Delete worktree…**, except on the repository's main worktree. **Detach worktree…**, **Delete worktree…**, and **Detach folder…** are unavailable while a session of this task still runs there. Archive that session first.
 
 ***
@@ -299,7 +301,7 @@ The content area shows what you open in either columns or tabs. To choose, turn 
   <figcaption style="text-align:center; color:#888">The Show tabs on the task page setting.</figcaption>
 </figure>
 
-In the same section, **Where links, Go To and notifications open a task** sets whether a task opens on its task page or in a Dashboard panel. **Automatic**, the default, opens a panel when you're on the Dashboard and the task page everywhere else.
+In the same section, **Where tasks open** sets whether a task opens on its task page or in a Dashboard panel. **Automatic**, the default, opens a panel when you're on the Dashboard and the task page everywhere else.
 
 In both layouts, terminals open in the [drawer](#the-terminal-drawer) below the content area, never in a column or a tab. Closing a column or a tab only changes the view. It does not detach anything or stop a session, and the context panel still lists everything.
 
@@ -465,7 +467,7 @@ If the place is a worktree that's gone from disk, **Start** recreates it, after 
 
 **Task context** is a checkbox chip in the composer's footer, beside the place chip. It's on by default and gives the agent the task's prompt and notes, and later changes to them reach the agent with your next message. Turn it off when you want the session to form its own view without them. See [Starting a session without the task's context](/kepler/tasks-and-resources#starting-a-session-without-the-tasks-context).
 
-**Which agent a draft starts with is a setting.** By default, each session starts on the agent you used last. **New sessions start with**, in **Settings → Tasks → New tasks**, sets the agent for your first session, and for every session once you untick **Start each session on the agent you used last** under it. See [Settings](/kepler/settings-tasks#default-agent).
+**Which agent a draft starts with is a setting.** By default, each session starts on the agent you used last. **New sessions start with**, in **Settings → Agents → Defaults**, sets the agent for your first session, and for every session once you untick **Start each session on the agent you used last** under it. **New sessions start in**, in the same section, sets whether new sessions start in Chat or Terminal. See [Settings](/kepler/settings-agents#defaults).
 
 If no agent is set up, the agent control reads **Set up an agent**, and **Start** opens a panel where you can install an agent or tell Kepler where yours is. See [Agent Integrations](/kepler/agent-integrations). If the agent is signed out, sign in to it before you start.
 
@@ -502,7 +504,7 @@ You can open a file in these ways:
 | A file path an agent writes in the conversation | The file, at the line the agent named |
 | A file path in a terminal | The file, at its line. See [File paths are links](#file-paths-are-links) |
 
-**All file links work the same way.** A click, a Ctrl/⌘ + click, or a middle-click opens the file in Kepler. Ctrl/⌘ + Shift + click opens it in your default editor at its line.
+**All file links in a conversation work the same way.** A click, a Ctrl/⌘ + click, or a middle-click opens the file in Kepler. Ctrl/⌘ + Shift + click opens it in your default editor at its line. In a terminal, a plain click opens a link only when **Open links with a click** is on. See [File paths are links](#file-paths-are-links).
 
 A path that's already one of the task's files opens that file's own tab rather than a second copy, however the path was spelled.
 
@@ -571,6 +573,7 @@ In the file overlay:
 - Each folder in the breadcrumb lists its folders and files, and can open the folder in your file manager.
 - **Add to task**, in **More file actions**, attaches the file to the task.
 - Drag either edge of the overlay to widen it, or use **Maximize**.
+- **Open in new window**, in the desktop app, moves the file into a window of its own.
 
 ***
 
@@ -628,6 +631,8 @@ When a shell's program needs you or finishes, Kepler sends a notification that n
 
 A finished command run shows a **result bar** rather than leaving you to read the scrollback: **Exited with code {code}**, **Exited by signal {signal}**, or **Stopped**, with **Run again** and **Close** beside it. A still-running one offers **Stop**.
 
+Finished command runs, and shell tabs whose program failed or was stopped, stay in the drawer after Kepler restarts, with their last screen and how they ended. Close the tab when you no longer need it.
+
 ### File paths are links
 
 File paths printed in a terminal are links, including relative paths, paths with a line suffix such as `src/app.ts:42`, and paths wrapped across lines. Ctrl/⌘ + click one to open the file [on the task page](#opening-a-file) at its line, and Ctrl/⌘ + Shift + click to open it in your default editor.
@@ -636,13 +641,15 @@ Right-click a path for more: **Open file**, your default editor (opening at the 
 
 Kepler task and session links in a terminal are links too. Ctrl/⌘ + click one to open it in Kepler, or right-click it for **Open in Kepler** and **Copy link**.
 
+To open file, folder, and web links in a terminal with a plain click, turn on **Open links with a click** in **Settings → Chat and terminal → Terminal**.
+
 On a phone, long-press a path or link instead, then pick **Open** from the small menu over the selection, which also offers **Copy**, **Paste**, and **Select all**. See [Remote Access](/kepler/remote-environments#remote-access-reach-kepler-from-another-device).
 
 ### Closing a busy terminal
 
 Closing a terminal with something running in it asks you to confirm first, naming the job that would stop. Click **Close terminal** to go ahead. A terminal that is already closing offers **Force close**.
 
-Shell tabs survive a Kepler update and come back after a restart. With **Keep agents and terminals running across restarts and updates** on, in **Settings → General**, command runs do too. A plain **Quit** ends them. When you quit Kepler with busy terminals or sessions, it asks first.
+Shell tabs survive a Kepler update and come back after a restart. With **Keep agents and terminals running after Kepler quits or restarts** on, in **Settings → Agents → Keep agents running**, command runs do too. A plain **Quit** ends them. When you quit Kepler with busy terminals or sessions, it asks first.
 
 ***
 

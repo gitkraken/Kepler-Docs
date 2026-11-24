@@ -1,6 +1,6 @@
 ---
 title: App Settings
-description: Change how Kepler looks and behaves, including its language, the chat's send key, windows, default editor, notifications, themes, the Dashboard's views, chat, terminal, and code settings, dictation and read aloud, and keyboard shortcuts.
+description: Change how Kepler looks and behaves, including its language, default editor, sessions started outside Kepler, windows, themes, the Dashboard's views, chat and terminal settings, notifications, dictation and read aloud, and keyboard shortcuts.
 product: Kepler
 feature: Settings
 content_type: reference
@@ -13,7 +13,7 @@ hosted_variant: both
 status: GA
 last_verified: 2026-11
 llms_include: true
-tags: [settings, language, send-key, windows, default-editor, keep-awake, notifications, appearance, themes, voice, dictation, read-aloud, keyboard-shortcuts]
+tags: [settings, language, send-key, windows, default-editor, external-sessions, notifications, phone-notifications, appearance, themes, chat, terminal, voice, dictation, read-aloud, keyboard-shortcuts]
 taxonomy:
   category: kepler
 ---
@@ -21,17 +21,18 @@ taxonomy:
 
 Use these Settings pages to change how Kepler itself looks and behaves:
 
-- [General](#general): language, the chat's send key, the default editor, windows and dialogs, keeping agents running, and usage insights
-- [Notifications](#notifications): which agent events notify you, on the desktop and in Kepler
-- [Appearance](#appearance): light or dark appearance and themes, the Dashboard's views, the chat, the terminal font, and the code font and diff layout
-- [Voice](#voice): dictation, with its models and learned words, and read aloud
+- [General](#general): language, the default editor, sessions started outside Kepler, and windows
+- [Appearance](#appearance): light or dark appearance and themes, the Dashboard's views, and the code font and diff layout
+- [Chat and terminal](#chat-and-terminal): the chat's send key, width, and scrolling, and the terminal's font, message box, and links
+- [Notifications](#notifications): which agent events notify you, on the desktop, in Kepler, and on your phone
+- [Voice](#voice): a check of your microphone and speaker, dictation with its models and vocabulary, and read aloud
 - [Keyboard shortcuts](#keyboard-shortcuts): look up and change Kepler's keyboard shortcuts
 
 ***
 
 ## General
 
-Use **General** to choose Kepler's language, which key sends a chat message, which editor opens your files, how its windows open, whether agents keep running when your machine would sleep or Kepler quits, and whether Kepler keeps usage statistics on your computer.
+Use **General** to choose Kepler's language, which editor opens your files, whether Kepler lists agent sessions you start outside it, and how its windows open.
 
 ### Language
 
@@ -43,17 +44,6 @@ Use **General** to choose Kepler's language, which key sends a chat message, whi
 
 The language also applies to Kepler's native dialogs.
 
-### Chat
-
-**Send messages with** chooses the key that sends a message from the chat box: **Enter**, the default, or **Ctrl/⌘ + Enter**. With **Enter**, **Shift + Enter** starts a new line. With **Ctrl/⌘ + Enter**, **Enter** starts a new line.
-
-<figure style="text-align:center">
-  <a href="/wp-content/uploads/settings-send-key-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/settings-send-key-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Chat section of Settings › General: Send messages with, set to Enter rather than Ctrl+Enter, the hint Shift+Enter starts a new line, and the note that in the browser on a phone or tablet, Enter always starts a new line.">
-  </a>
-  <figcaption style="text-align:center; color:#888">Send messages with, at its default.</figcaption>
-</figure>
-
 ### Default editor
 
 **Default editor** has 1 setting:
@@ -64,100 +54,44 @@ The language also applies to Kepler's native dialogs.
 
 With your system's default app, files open without line numbers, and folders open in Finder, Explorer, or your file manager. If Kepler cannot open any editor from the window you are in, the setting says so.
 
-### Windows and dialogs
+### Sessions outside Kepler
+
+To follow agent sessions you start in your own terminal, use this setting:
+
+| Setting | What it controls | Default |
+|---|---|---|
+| **Show them in Kepler** | Lists the agent sessions you run without Kepler, such as Claude Code or Codex in your own terminal, so you can read them or continue them in a task | On |
+
+The setting covers every agent Kepler can follow this way. See [Agent Sessions](/kepler/agent-sessions#sessions-started-outside-kepler).
+
+If a running agent session stops reporting to Kepler, every window shows *Agent sessions aren't reporting to Kepler*, with a **Repair** button. **Repair** reinstalls the reporting configuration. Restart any session that still does not report. For another computer's sessions, repair from that computer.
+
+### Windows
 
 These settings set how windows and folder dialogs work on this machine:
 
 | Setting | What it controls | Default |
 |---|---|---|
 | **Restore windows on launch** | *Reopens the windows you had open, with their size, page and connection. Turn off to start with one window.* | On |
-| **Always use the custom folder picker** | Local windows open your system's folder dialog, and windows connected to another machine use Kepler's own folder picker, which can browse that machine. Turn this on to use Kepler's picker in every window | Off |
+| **Always use Kepler's folder picker** | Local windows open your system's folder dialog, and windows connected to another machine use Kepler's own folder picker, which can browse that machine. Turn this on to use Kepler's picker in every window | Off |
 
 A change to **Restore windows on launch** takes effect the next time you start Kepler.
 
-### Keep agents running
-
-These settings keep agent work running when the machine would otherwise stop it. They apply to the machine the agents run on, so in a window connected to a remote machine, they apply to that machine:
-
-| Setting | What it controls | Default |
-|---|---|---|
-| **Keep this machine awake while agents work** | Blocks sleep while an agent session is starting, running, or waiting for your input, and while Remote Access is connected | On |
-| **Keep agents and terminals running after Kepler quits or restarts** | *Agents and terminals stay alive while Kepler is closed or updating, and reconnect afterwards. When off, quitting or restarting Kepler ends them.* | On |
-| **Put idle agents to sleep** | How long a chat agent can sit idle before Kepler stops it, from **After 5 minutes** to **After 1 hour**, or **Never** | After 15 minutes |
-
-**Keep this machine awake while agents work** also counts Claude Code sessions running outside Kepler. The screen can still turn off. If Kepler cannot keep the machine awake, the setting says why under the switch.
-
-**Keep agents and terminals running after Kepler quits or restarts** applies from the next session you start. If agents and terminals cannot start on this machine, the setting says why.
-
-**Put idle agents to sleep** stops chat sessions you have left alone, and their status reads **Asleep**. Your next message wakes a session, and the conversation carries on. Agents that are working or waiting on you stay awake. See [Session status](/kepler/agent-sessions#session-status).
-
-<figure style="text-align:center">
-  <a href="/wp-content/uploads/agents-idle-sleep-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agents-idle-sleep-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Put idle agents to sleep setting set to After 15 minutes, with help text on when an agent in a chat view sleeps, what wakes it, and which agents stay awake.">
-  </a>
-  <figcaption style="text-align:center; color:#888">Put idle agents to sleep, at its default.</figcaption>
-</figure>
-
-### Insights
-
-**Insights** has 1 setting:
-
-| Setting | What it controls | Default |
-|---|---|---|
-| **Collect usage insights** | *Keep local statistics about your sessions and tasks on this computer. Nothing leaves it.* | On |
-
-[Ask Kepler](/kepler/ask-kepler) uses these statistics to answer questions about your agent work, such as tokens and cost, how long agents waited on you, and how often you hit a usage limit.
-
-<figure style="text-align:center">
-  <a href="/wp-content/uploads/settings-insights-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/settings-insights-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Insights section of Settings › General, with the Collect usage insights checkbox ticked and its help text: Keep local statistics about your sessions and tasks on this computer. Nothing leaves it.">
-  </a>
-  <figcaption style="text-align:center; color:#888">Collect usage insights, at its default.</figcaption>
-</figure>
-
 ***
 
-## Notifications
+## Keep agents running
 
-Use **Notifications** to choose which agent events Kepler tells you about, and where. **Desktop** notifications show while Kepler is in the background, and **In Kepler** alerts show while you are using it. Sessions started outside Kepler notify you only once they are on a task. Kepler saves these settings on this machine.
+**Keep agents running** is a section of **Settings → Agents**: see [Keep agents running](/kepler/settings-agents#keep-agents-running).
 
-### What to notify you about
+### Idle agents
 
-**What to notify you about** has a **Desktop** and an **In Kepler** box for each event. The following table lists the events and their defaults in the desktop app:
-
-| Event | When it fires | Desktop | In Kepler |
-|---|---|---|---|
-| **Replies** | *An agent finished replying and it's your turn.* | Off | Off |
-| **Questions** | *An agent asks you something and waits for your answer.* Also fires when a plan is ready for your review | On | On |
-| **Permission requests** | *An agent wants permission to do something.* | On | On |
-| **Approval requests** | *An agent asks to do something in Kepler only you can approve, like deleting a worktree or rewriting a branch.* See [Approvals](/kepler/settings-agents#approvals) | On | On |
-| **Errors** | *A session stops because something went wrong.* | On | On |
-| **Offers** | *An agent offers to show you a task, session or note.* | Off | On |
-
-In a browser connected to Kepler, every **Desktop** box starts off. Until you set **Approval requests** yourself, it follows **Permission requests**. When you turn on the first **Desktop** box, Kepler sends a sample notification so your OS asks for permission.
-
-These settings appear under the grid:
-
-| Setting | What it controls | Default |
-|---|---|---|
-| **Play a sound with desktop notifications** | Whether a desktop notification makes the OS notification sound | On |
-| **Notify even for the task you're looking at** | *Otherwise Kepler stays quiet about the task open in the window you're using.* | Off |
-| **Show a count on the app icon** | *Shows how many tasks need you on the Dock icon or taskbar button.* Desktop app only | On |
-
-To silence desktop notifications from one remote machine only, use **Mute notifications from *host*** on that machine in [Remote environments](/kepler/settings-environment#remote-environments).
-
-<figure style="text-align:center">
-  <a href="/wp-content/uploads/ade-settings-notifications-01-01-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ade-settings-notifications-01-01-v4@2x.png" class="help-center-img img-bordered" alt="Settings › Notifications, What to notify you about, at the desktop app's defaults: a grid of Replies, Questions, Permission requests, Approval requests, Errors and Offers against Desktop and In Kepler, with every box ticked except both Replies boxes and Offers' Desktop box; below it Play a sound with desktop notifications is ticked, Notify even for the task you're looking at is not, and Show a count on the app icon is ticked.">
-  </a>
-  <figcaption style="text-align:center; color:#888">What to notify you about, at the desktop app's defaults.</figcaption>
-</figure>
+**Idle agents** is a section of **Settings → Agents**: see [Idle agents](/kepler/settings-agents#idle-agents).
 
 ***
 
 ## Appearance
 
-Use **Appearance** to choose light or dark and a theme, and to set up the Dashboard's views, the chat, the terminal, code text, and diffs. Kepler saves these settings on this machine.
+Use **Appearance** to choose light or dark and a theme, and to set up the Dashboard's views, code text, and diffs. Kepler saves these settings on this machine.
 
 ### Theme
 
@@ -229,7 +163,7 @@ A tile's **More actions for *theme*** menu has **Show in folder** and **Move to 
 - **Show**, which filters to **All**, **Dark**, or **Light** themes.
 - **Sort:**, with **Featured**, **Newest**, or **Name**.
 
-Click a theme to see its details card, with its author, its dark and light variants, its version and license, and any contrast warnings. Then choose one of the following:
+Click a theme to see its details card, with its author, its dark and light variants, its version, its license, and any contrast warnings. Then choose one of the following:
 
 - **Install** adds the theme to **Your themes** without changing the theme on screen. The button then reads **Use**.
 - **Try it** closes the gallery and paints the whole window in the theme, so you can open a diff or a terminal to judge it. In the bar at the bottom, click **Use *theme***, or **Done** to return to the gallery.
@@ -263,7 +197,7 @@ If a theme you already have uses the same id, Kepler asks before it replaces tha
 
 #### Themes in a remote window
 
-Themes and your choice of theme belong to this computer. Every window, including one connected to a remote environment, lists and installs themes in this computer's themes folder and gallery.
+Themes and your choice of theme belong to this computer. Every window lists and installs themes in this computer's themes folder and gallery, including a window connected to a remote environment.
 
 In a window connected to another machine, the picker adds an **On *host*** group with that machine's themes:
 
@@ -274,60 +208,23 @@ Kepler asks before it updates or replaces your copy, and moves your copy to the 
 
 ### Dashboard
 
-These settings set where the Dashboard's views sit and how they look:
+**Dashboard views** sets where the Dashboard's views sit and how they look:
 
 | Setting | What it controls | Default | Options |
 |---|---|---|---|
-| **Views** | Where the Dashboard's views sit in the window | Below the title bar | In the title bar, Below the title bar, Along the left side |
-| **View style** | How views in or below the title bar look | Tabs | Tabs, Pills |
+| **Views** | Where the Dashboard's views sit in the window | Top | Top, Left |
+| **View style** | How views at the top look | Tabs | Tabs, Pills |
 | **Size** | How big views along the left side are | Default | Default, Compact |
 | **Counts on views** | Shows how many tasks match each view's filters | On | On, Off |
-| **Search box** | How wide the Dashboard's search box is | Full width | Grows as you type, Full width |
 
-With **Along the left side**, the **Settings** button moves to the bottom of the views.
-
-<figure style="text-align:center">
-  <a href="/wp-content/uploads/settings-appearance-dashboard-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/settings-appearance-dashboard-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Dashboard section of Settings › Appearance at its defaults: Views, with picture tiles for In the title bar, Below the title bar (chosen) and Along the left side; View style, with Tabs chosen over Pills; Size, Default or Compact, marked Left side only; Counts on views, switched on; and Search box, with Full width chosen over Grows as you type. Each row has its help line.">
-  </a>
-  <figcaption style="text-align:center; color:#888">The Dashboard settings, at their defaults.</figcaption>
-</figure>
-
-### Chat
-
-These settings set how wide a session's conversation grows and how it scrolls:
-
-| Setting | What it controls | Default |
-|---|---|---|
-| **Conversation width** | How wide the conversation grows in a wide pane: **Narrow**, **Wide**, or **Full width** | Narrow |
-| **Scrolling** › **While an agent replies** | **Follow new output** keeps the newest output in view until you scroll up. **Stay on my message** keeps your message in view | Follow new output |
-| **Scrolling** › **Return to where I left off when I reopen a session** | Whether a session reopens where you left it | On |
+With **Left**, the **Settings** button moves to the bottom of the views.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/appearance-chat-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/appearance-chat-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Chat section of Settings › Appearance: Conversation width with Narrow selected beside Wide and Full width, then Scrolling, with While an agent replies set to Follow new output and Return to where I left off when I reopen a session ticked.">
+  <a href="/wp-content/uploads/settings-appearance-dashboard-nov-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/settings-appearance-dashboard-nov-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Dashboard views section of Settings › Appearance at its defaults: Views, with picture tiles for Top (chosen) and Left; View style, with Tabs chosen over Pills; Size, Default or Compact, marked Left side only; and Counts on views, ticked. Each row has its help line.">
   </a>
-  <figcaption style="text-align:center; color:#888">The Chat settings, at their defaults.</figcaption>
+  <figcaption style="text-align:center; color:#888">The Dashboard views settings, at their defaults.</figcaption>
 </figure>
-
-### Terminal
-
-These settings control Kepler's embedded terminals:
-
-| Setting | What it controls | Default |
-|---|---|---|
-| **Font** › **Family** | *Separate fonts with commas. The terminal uses the first one installed on this machine.* | Empty, which uses your platform's standard monospace fonts |
-| **Font** › **Size** | Terminal font size in pixels, from 8 to 32 | 13 |
-| **Font** › **Line height** | Spacing between lines, from 1 to 2 | 1.2 |
-| **Show the message box under terminal sessions** | Adds Kepler's message box, for attachments and voice, under an agent's terminal | Off |
-
-The grayed text in **Family** is an example, not the value in effect. If Kepler cannot find a font you name, the field says so, and the terminal uses the next name in your list. **Family** and **Size** save when you press **Enter** or leave the field. Code views use this family too, unless you set one under [Code](#code).
-
-#### Embedded terminals
-
-Each Kepler terminal belongs to a worktree. Opening a terminal starts a shell in that worktree's folder, so you do not need to `cd` into it, and the shell loads your profile the same way an interactive login shell would. Use **Ctrl/⌘ + J** to show and hide the terminal panel, **New terminal** to open another terminal, and **Close terminal** to end one.
-
-Use terminals for work next to an agent session: running tests while the agent writes code, checking Git state, or reproducing something the session did not show. A terminal starts in one worktree and stays there, so for work that spans several repositories, use a standalone terminal.
 
 ### Code
 
@@ -343,20 +240,132 @@ To switch a single diff without changing the default, use the layout button on t
 
 ***
 
+## Chat and terminal
+
+Use **Chat and terminal** to set how a session's chat and terminal views look and behave. Kepler saves these settings on this machine. The top of the page shows which mode new sessions start in. To change it, click **Change in Agents**.
+
+### Chat
+
+**Send messages with** chooses the key that sends a message from the chat box: **Enter**, the default, or **Ctrl/⌘ + Enter**. With **Enter**, **Shift + Enter** starts a new line. With **Ctrl/⌘ + Enter**, **Enter** starts a new line. In the browser on a phone or tablet, **Enter** always starts a new line.
+
+The other **Chat** settings set how wide a session's conversation grows and how it scrolls:
+
+| Setting | What it controls | Default |
+|---|---|---|
+| **Conversation width** | How wide the conversation grows in a wide pane: **Narrow**, **Wide**, or **Full width** | Narrow |
+| **Scrolling** › **While an agent replies** | **Follow new output** keeps the newest output in view until you scroll up. **Stay on my message** keeps your message in view | Follow new output |
+| **Scrolling** › **Return to where I left off when I reopen a session** | Whether a session reopens where you left it | On |
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/settings-send-key-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/settings-send-key-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Chat section of Settings › Chat and terminal: Send messages with, set to Enter rather than Ctrl+Enter, with the hints that Shift+Enter starts a new line and that Enter always does in the browser on a phone or tablet; then Conversation width, with Narrow chosen over Wide and Full width, and Scrolling, with While an agent replies set to Follow new output and Return to where I left off when I reopen a session ticked.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The Chat settings, at their defaults.</figcaption>
+</figure>
+
+### Terminal
+
+These settings control Kepler's embedded terminals:
+
+| Setting | What it controls | Default |
+|---|---|---|
+| **Font** › **Family** | *Separate fonts with commas. The terminal uses the first one installed on this machine.* | Empty, which uses your platform's standard monospace fonts |
+| **Font** › **Size** | Terminal font size in pixels, from 8 to 32 | 13 |
+| **Font** › **Line height** | Spacing between lines, from 1 to 2 | 1.2 |
+| **Show the message box under terminal sessions** | Adds Kepler's message box, for attachments and voice, under an agent's terminal | Off |
+| **Open links with a click** | Opens file, folder, and web links in a terminal without holding **Ctrl/⌘** | Off |
+
+The grayed text in **Family** is an example, not the value in effect. If Kepler cannot find a font you name, the field says so, and the terminal uses the next name in your list. **Family** and **Size** save when you press **Enter** or leave the field. Code views use this family too, unless you set one under [Code](#code).
+
+While the message box is hidden, a Terminal session's status bar has a microphone that dictates into the agent's own input. See [Dictation](#dictation).
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/settings-terminal-links-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/settings-terminal-links-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Terminal section of Settings › Chat and terminal: Font family, Size 13 and Line height 1.2 above a sample terminal, then Show the message box under terminal sessions and Open links with a click, both unticked. The help under Open links with a click says it opens file, folder and web links in terminals without holding Ctrl.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The Terminal settings, at their defaults.</figcaption>
+</figure>
+
+#### Embedded terminals
+
+Each Kepler terminal belongs to a worktree. Opening a terminal starts a shell in that worktree's folder, so you do not need to `cd` into it, and the shell loads your profile the same way an interactive login shell would. Use **Ctrl/⌘ + J** to show and hide the terminal panel, **New terminal** to open another terminal, and **Close terminal** to end one.
+
+Use terminals for work next to an agent session: running tests while the agent writes code, checking Git state, or reproducing something the session did not show. A terminal starts in one worktree and stays there, so for work that spans several repositories, use a standalone terminal.
+
+***
+
+## Notifications
+
+Use **Notifications** to choose which agent events Kepler tells you about, and where. **Desktop** notifications show while Kepler is in the background, and **In Kepler** alerts show while you are using it. A phone you open Kepler on can notify you too. Sessions started outside Kepler notify you only once they are on a task. Kepler saves these settings on this machine.
+
+### What to notify you about
+
+**What to notify you about** has a **Desktop** and an **In Kepler** box for each event. The following table lists the events and their defaults in the desktop app:
+
+| Event | When it fires | Desktop | In Kepler |
+|---|---|---|---|
+| **Replies** | *An agent finished replying and it's your turn.* | Off | Off |
+| **Questions** | *An agent asks you something and waits for your answer.* Also fires when a plan is ready for your review | On | On |
+| **Permission requests** | *An agent wants permission to do something.* | On | On |
+| **Approval requests** | *An agent asks to do something in Kepler only you can approve, like deleting a worktree or rewriting a branch.* See [Settings → Approvals](/kepler/settings-approvals) | On | On |
+| **Errors** | *A session stops because something went wrong.* | On | On |
+| **Usage limits** | *When an agent reaches an account's usage limit.* | On | On |
+| **Offers** | *An agent offers to show you a task, session or note.* | Off | On |
+
+In a browser connected to Kepler, every **Desktop** box starts off. Until you set **Approval requests** yourself, it follows **Permission requests**, and **Usage limits** follows **Errors** the same way. When you turn on the first **Desktop** box, Kepler sends a sample notification so your OS asks for permission. Once a phone has notifications turned on, the grid adds a **Phone** column.
+
+These settings appear under the grid:
+
+| Setting | What it controls | Default |
+|---|---|---|
+| **Play a sound with desktop notifications** | Whether a desktop notification makes the OS notification sound | On |
+| **Notify even for the task you're looking at** | *Otherwise Kepler stays quiet about the task open in the window you're using.* | Off |
+| **Show a count on the app icon** | *Shows how many tasks need you on the Dock icon or taskbar button.* Desktop app only | On |
+
+To silence desktop notifications from one remote machine only, use **Mute notifications from *host*** on that machine in [Remote environments](/kepler/settings-environment#remote-environments).
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/ade-settings-notifications-01-01-v5@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ade-settings-notifications-01-01-v5@2x.png" class="help-center-img img-bordered" alt="Settings › Notifications, What to notify you about, at the desktop app's defaults: Replies, Questions, Permission requests, Approval requests, Errors, Usage limits and Offers against Desktop and In Kepler, with every box ticked except both Replies boxes and Offers' Desktop box. Below the grid, Play a sound with desktop notifications and Show a count on the app icon are ticked, and Notify even for the task you're looking at is not.">
+  </a>
+  <figcaption style="text-align:center; color:#888">What to notify you about, at the desktop app's defaults.</figcaption>
+</figure>
+
+### Notifications on this phone
+
+When you open Kepler on your phone through [Remote Access](/kepler/settings-environment#remote-access), its **Settings → Notifications** page adds **Notifications on this phone**. Turn on **Notify this phone**, and Kepler notifies the phone when a session needs you and you're away from your computer. To check that notifications arrive, tap **Send a test**.
+
+Phone notifications need the Remote Access link. On an iPhone, add Kepler to your Home Screen from Safari's **Share** menu first, then turn notifications on from the Home Screen app. See [Approve Coding Agent Requests from Your Phone](/kepler/kepler-approve-agent-requests-from-your-phone).
+
+***
+
 ## Voice
 
 Use **Voice** to talk to your agents instead of typing, and to have their replies read aloud. Both run on this machine, so nothing you say or hear leaves it. Kepler saves these settings on this machine.
 
+### Check your setup
+
+**Check your setup** tests your devices with the speech model and voice picked on the page:
+
+- Pick the **Microphone** dictation listens to, then click **Try dictation** to see your words as you speak.
+- Pick the **Speaker** that Kokoro reads replies on, then click **Play a reply**.
+
+Nothing you say in the test is sent to an agent. Each device you pick is saved for this window. If it is not connected later, Kepler uses the system default and tells you.
+
 ### Dictation
 
-Dictation is the microphone in the chat prompt. It turns on once a model is downloaded. To choose and download a model, see [Set up dictation in Settings](/kepler/voice-input#set-up-dictation-in-settings).
+Dictation is the microphone in the chat prompt, and on a Terminal session's status bar. It turns on once a speech model is downloaded. To choose and download one, see [Set up dictation in Settings](/kepler/voice-input#set-up-dictation-in-settings).
 
 | Setting | What it controls | Default |
 |---|---|---|
-| **Model** | The on-device model that dictates: **Qwen3-ASR 1.7B**, **Qwen3-ASR 0.6B**, or **Whisper**. Each row has **Download**, and **Remove…** once downloaded | None until you download one |
-| **Dictation language** | With Qwen3-ASR, the language you speak. Whisper ignores it | Auto-detect |
-| **When you stop talking** | Insert the text, send the prompt, or keep listening | Insert the text so you can edit it |
-| **Learned words** | Words Qwen3-ASR learned from your fixes, and suggestions to approve. See [Teach dictation your words](/kepler/voice-input#teach-dictation-your-words) | Empty |
+| **Speech model** | The on-device model that dictates: **Qwen3-ASR 1.7B**, **Qwen3-ASR 0.6B**, **Parakeet TDT 0.6B v3**, or **Whisper**. Each row has **Download**, and **Remove…** once downloaded | None until you download one |
+| **Dictation language** | With Qwen3-ASR, the language you speak. Parakeet and Whisper detect it, so the setting is unavailable with them | Auto-detect |
+| **Dictation mode** | **Type as you talk**, **Type when you stop**, or **Send when you stop** | Type as you talk |
+| **Vocabulary** | The words dictation learned from your fixes, which **Manage** opens, with Qwen3-ASR only. See [Teach dictation your words](/kepler/voice-input#teach-dictation-your-words) | No words yet |
+
+**Parakeet TDT 0.6B v3** understands English and 24 other European languages. Kepler offers it only on a graphics card with WebGPU and 16-bit float shader support.
+
+To change the speech model, the dictation mode, or the dictation language from a Terminal session, right-click the microphone on its status bar.
 
 ### Read aloud
 
@@ -364,13 +373,13 @@ Dictation is the microphone in the chat prompt. It turns on once a model is down
 
 | Setting | What it controls | Default |
 |---|---|---|
-| **Voice engine** | **System voices**, or **Kokoro**, natural English voices that need a download | System voices |
+| **Speech model** | **System**, or **Kokoro**, natural English voices that need a download | System |
 | **Voice** | The voice that reads | System default |
 | **Speed** | How fast Kepler reads | 1x |
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/settings-read-aloud-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/settings-read-aloud-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Read aloud section of Settings › Voice, at its defaults. Under Engine, System voices (Built in) is selected and Kokoro shows its download size and a Download button, and under Voice options, Voice is System default beside a sample button and Speed is a slider at 1x.">
+  <a href="/wp-content/uploads/settings-read-aloud-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/settings-read-aloud-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Read aloud section of Settings › Voice at its defaults. Under Speech model, System (Built in) is picked and Kokoro (310 MB) offers Download and Licenses; Voice reads System default beside a play-sample button, and Speed is a slider at 1x between 0.5x and 2x.">
   </a>
   <figcaption style="text-align:center; color:#888">The Read aloud settings, at their defaults.</figcaption>
 </figure>
@@ -488,6 +497,24 @@ The **Dashboard** group works on the Dashboard's tasks and detail panels:
 | Toggle task list peek | Ctrl/⌘ + Shift + B |
 | Toggle resources pane | Ctrl/⌘ + Shift + E |
 | Find in dashboard | Ctrl/⌘ + F |
+| Dashboard: Find from the list | / |
+| Dashboard: Your groups | Shift + G |
+| Dashboard: Next row | J |
+| Dashboard: Previous row | K |
+| Dashboard: Open task page | O |
+| Dashboard: Star or unstar task | I |
+| Dashboard: Mark task read or unread | U |
+| Dashboard: Archive or restore task | E |
+| Dashboard: Put task on hold or back to automatic | H |
+| Dashboard: Set task progress | S |
+| Dashboard: Add task to a group or change its group | G |
+| Dashboard: Rename task | R |
+| Dashboard: Open task actions | . |
+| Dashboard: Add task to selection or remove it | X |
+| Dashboard: Select tasks up to this one | Shift + X |
+| Dashboard: Delete task | Delete or Backspace |
+
+From **Dashboard: Next row** on, the keys act on the focused task row in a Tasks view, or on the selected tasks. **Dashboard: Find from the list** focuses the Dashboard's search. None of the **Dashboard:** keys can be changed.
 
 #### Task page shortcuts
 
@@ -515,6 +542,10 @@ The **Chat** group works in a session's conversation:
 | Interrupt & send | Ctrl/⌘ + Shift + Enter |
 | Send after this turn | Alt/⌥ + Enter |
 | Switch between terminal and transcript | Ctrl/⌘ + Shift + X |
+| Toggle dictation | Ctrl/⌘ + Shift + Space |
+| Read the last reply aloud | None |
+
+**Toggle dictation** starts or stops dictation in the focused session, in its message box or its terminal. **Read the last reply aloud** reads, or stops reading, the focused terminal session's last reply.
 
 #### Changes and code view shortcuts
 
@@ -552,11 +583,11 @@ Some keys do different things depending on where you are:
 - **Ctrl + Tab** switches detail panels on the Dashboard and sessions on the task page.
 - **Ctrl/⌘ + Shift + [** and **Ctrl/⌘ + Shift + ]** step through the Dashboard's views on the Dashboard, and through a panel's tabs when the panel or the task page has focus. **Ctrl/⌘ + Alt/⌥ + [** and **Ctrl/⌘ + Alt/⌥ + ]** move the current view or tab.
 - **Ctrl/⌘ + Shift + J** maximizes the panel's terminals on the Dashboard and the terminal drawer on the task page.
-- **Ctrl/⌘ + B** shows or hides the changes panel in the Changes view, docks or hides the task list on the Dashboard, and docks or hides the context panel on the task page.
+- **Ctrl/⌘ + B** shows or hides the changes panel in the Changes view. On the Dashboard it docks or hides the task list, and on the task page it docks or hides the context panel.
 - **Ctrl/⌘ + P** filters changed files in the Changes view and opens **Go to file** elsewhere.
 - **Ctrl/⌘ + F** finds in the Dashboard from its list or header, finds in a file or diff in a code view, and finds in the conversation elsewhere.
 - **Ctrl/⌘ + Shift + G** shows or hides changes in a Dashboard detail panel, and, on macOS, moves to the previous match in a code view.
-- **Ctrl/⌘ + C** on a focused row, chip, or link copies what it names, such as a task's Kepler link, a pull request or issue link, a file path, or a commit hash. In a text field, a terminal, or a text selection, it copies as usual.
+- **Ctrl/⌘ + C** on a focused row, chip, or link copies what it names, such as a task's Kepler link, a pull request link, an issue link, a file path, or a commit hash. In a text field, a terminal, or a text selection, it copies as usual.
 
 **Previous item in list** and **Next item in list** work even while you type in the open panel's chat.
 

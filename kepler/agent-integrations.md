@@ -24,17 +24,17 @@ Use **Settings → Agents** to install the coding agents you already use, sign i
 Kepler supports 9 agents. You can also add any other agent that speaks the Agent Client Protocol (ACP), or whose command-line interface you want to run inside a task.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-settings-oct-2026-v6@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-settings-oct-2026-v6@2x.png" class="help-center-img img-bordered" alt="Settings › Agents: the page description; New sessions start on your last pick, or Claude Code the first time, with Change in Tasks; then New Ask Kepler chats start with, its agent-settings pill showing the Claude Code mark and the Quick fix preset, the caption Your first chat uses this agent, and Start each chat on the agent you used last ticked. Your agents has Update all and Rescan above the Claude Code card (Update, Enabled), which shows Accounts with Add account and the Claude Code CLI account marked Default with Check usage, New sessions start in set to Chat, Let artifact comments start turns (on), Artifacts in new sessions (off), and a collapsed Program and data folder.">
+  <a href="/wp-content/uploads/agent-settings-oct-2026-v7@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-settings-oct-2026-v7@2x.png" class="help-center-img img-bordered" alt="Your agents in Settings › Agents, with Update all and Rescan beside the heading and one row per agent: Claude Code (marked Default), Codex, GitHub Copilot, Auggie and Grok Build with 1 account and Add account; OpenCode, Antigravity and Cursor Not signed in with Sign in; and Pi. Each row shows the agent's version, an Enabled switch that is on and a chevron, and the line below the list says to open an agent for its accounts, how its sessions start and where its program lives.">
   </a>
-  <figcaption style="text-align:center; color:#888">Settings → Agents.</figcaption>
+  <figcaption style="text-align:center; color:#888">Your agents in Settings → Agents, one row per agent.</figcaption>
 </figure>
 
 ***
 
 ## Supported agents
 
-Each agent gets its own section in **Settings → Agents**, in this order:
+Each agent has a row under **Settings → Agents → Your agents**, in this order. Click a row to open the agent's own page:
 
 | Agent | Name in Settings | How Kepler runs it | Run modes | Multiple accounts |
 |---|---|---|---|---|
@@ -44,17 +44,17 @@ Each agent gets its own section in **Settings → Agents**, in this order:
 | **OpenCode** | OpenCode | Your installed `opencode` CLI, v2 | Chat or Terminal | No |
 | **Pi** | Pi | Your installed `pi` CLI, in its own terminal interface | Terminal only | No |
 | **Auggie** | Auggie | Your installed `auggie` CLI | Chat or Terminal | Yes |
-| **Google Antigravity** | Antigravity | Your installed `agy` CLI | Terminal (default) or Chat | No |
+| **Google Antigravity** | Antigravity | Your installed `agy` CLI | Chat or Terminal | No |
 | **Cursor** | Cursor | Your installed `cursor-agent` CLI | Chat or Terminal | No |
 | **Grok Build** | Grok Build | Your installed `grok` CLI | Chat or Terminal | Yes |
 
-**Auggie** is Augment's coding agent. Like Claude Code and Codex, it reports plan usage back to Kepler, but only as a credit balance rather than usage windows. Google Antigravity reports a percentage used for each limit on the selected model, including its 5-hour and weekly windows. To learn about the plan usage meter, see [Agent Sessions](/kepler/agent-sessions#usage-indicators).
+**Auggie** is Augment's coding agent. Like Claude Code and Codex, it reports plan usage back to Kepler, but only as a credit balance rather than usage windows. Google Antigravity reports a percentage used for each limit on the selected model. Those limits include its 5-hour and weekly windows. To learn about the plan usage meter, see [Agent Sessions](/kepler/agent-sessions#usage-indicators).
 
-Kepler asks each agent's provider for plan usage while **Check plan usage with each agent's provider** is on. This setting is in **Settings → Agents → Usage and recovery**, and it is on by default.
+Kepler asks each agent's provider for plan usage, through the agent's own sign-in. If an account row on the agent's page shows **Turn on usage checks**, click it to turn these checks back on.
 
 **Grok Build** is xAI's coding agent. It signs in through your browser, or you can supply an xAI API key.
 
-**Google Antigravity runs the `agy` CLI in both modes.** Its sessions start in Terminal unless you pick **Chat**. Chat needs Antigravity CLI 1.5.0 or newer. With an older CLI, Kepler asks you to update it in **Settings → Agents**.
+**Google Antigravity runs the `agy` CLI in both modes.** Chat needs Antigravity CLI 1.5.0 or newer. With an older CLI, Kepler asks you to update it in **Settings → Agents**.
 
 **Pi is terminal-only.** Kepler runs Pi's own interface in a terminal inside the task. Kepler does not check Pi's sign-in. Pi uses its own sign-in (`/login`, or the provider API-key environment variables it reads directly).
 
@@ -62,14 +62,23 @@ With Pi 1.x, a session gets the task's context and Kepler's workspace tools, and
 
 **OpenCode needs version 2.** Kepler does not start a session on an OpenCode 1 binary. A conversation you started under OpenCode 1 resumes in OpenCode 2.
 
+**Auggie 1.2.1 and the older 0.36 and 0.37 builds both run in Kepler.** A conversation continues only on the Auggie generation that started it. To continue a conversation from 0.36 or 0.37, which Kepler marks **Auggie legacy**, select an Auggie 0.37.0 program under **Which Auggie Kepler runs** on Auggie's page.
+
 **Kepler's tools in Terminal mode.** If a **Terminal** session shows **No Kepler tools** on its status bar, choose **Continue in Chat** from the session menu to give the agent Kepler's workspace tools. These agents get them in Terminal mode too, without any change to your own config:
 
-| Agent | In Terminal mode |
-|---|---|
-| Claude Code, Pi, OpenCode 2.1.1 or newer | Kepler's workspace tools, and Kepler wakes an idle session to read its inbox |
-| Google Antigravity 1.5.3 or newer | Kepler's workspace tools only |
+- Claude Code
+- Pi
+- OpenCode 2.1.1 or newer
+- Google Antigravity 1.5.3 or newer
 
-**Folder trust.** A Claude Code or Pi session does not stop at the CLI's own trust question in a repository, worktree, or folder you marked **Trusted** in Kepler. A worktree also inherits the trust you already gave its repository. See [Trust a repository](/kepler/settings-repositories#trust-a-repository).
+**Waking an idle Terminal session.** When a new report reaches an idle Claude Code, Codex, GitHub Copilot, OpenCode, Pi, or Auggie session in Terminal mode, Kepler wakes it to read the report. Kepler does not wake a session whose status bar shows **No Kepler tools**. For Codex, GitHub Copilot, and Auggie, and for the others when their own wake does not answer, Kepler types a one-line note into the agent's input, and only when the input is empty. To turn this off, clear **Wake idle terminal agents to read new reports** in **Settings → Agents → Idle agents**.
+
+**Folder trust.** In a repository, worktree, or folder you marked **Trusted** in Kepler, these sessions skip the CLI's own trust question:
+
+- In Terminal mode: Claude Code, Codex, Cursor, Grok Build, Pi, and Google Antigravity
+- In Chat: Claude Code and Grok Build
+
+A worktree also inherits the trust you already gave its repository. See [Trust a repository](/kepler/settings-repositories#trust-a-repository).
 
 To choose between **Chat** and **Terminal** for an agent, see [Run modes](#run-modes).
 
@@ -86,7 +95,7 @@ Kepler checks the build before it starts a session, and tells you to update if i
 
 ## Install an agent
 
-When an agent is not installed, its section reads **Not installed** and offers **Install**, which opens **Set up *agent***. Pick an install method, and Kepler runs the install command for you and shows its output. **Cancel** stops an install in progress. Once the install finishes, Kepler opens **Sign in to *agent*** if the agent needs a sign-in. Installs and updates run one at a time.
+When an agent is not installed, its row in **Settings → Agents** offers **Install**, which opens **Set up *agent***. Pick an install method, and Kepler runs the install command for you and shows its output. **Cancel** stops an install in progress. Once the install finishes, Kepler opens **Sign in to *agent*** if the agent needs a sign-in. Installs and updates run one at a time.
 
 The install methods depend on the operating system of the machine you are on:
 
@@ -106,14 +115,14 @@ Every OpenCode method installs OpenCode 2.
 
 The dialog marks Claude Code's **npm (global)** method *Deprecated by Anthropic*.
 
-Kepler offers a method only when the tool it runs, such as Homebrew or npm, is installed. A method that needs Node.js says so when Node.js is missing. If none of an agent's methods can run, Kepler says so and points you to the custom binary path instead. If the vendor's desktop app is installed, such as Claude or ChatGPT, you still need the command-line tool, and the dialog says so.
+Kepler offers a method only when the tool it runs is installed. For example, the Homebrew method needs Homebrew. A method that needs Node.js says so when Node.js is missing. If none of an agent's methods can run, Kepler says so and points you to the custom binary path instead. If the vendor's desktop app is installed, such as Claude or ChatGPT, you still need the command-line tool, and the dialog says so.
 
 If you already installed the agent somewhere Kepler did not find it, tell Kepler where it is from the same dialog:
 
 1. Under **Already installed?**, type the program's full path in the **Full path to *agent*** field, or click **Browse…** to pick it.
 2. Click **Use this**, or press **Enter**.
 
-Kepler saves the path as the agent's **Binary** if the agent runs from it. If it does not, Kepler keeps the path you had before.
+Kepler saves the path under **Which *agent* Kepler runs** if the agent runs from it. If it does not, Kepler keeps the path you had before.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/agent-setup-dialog-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
@@ -130,46 +139,46 @@ The install output pane stays open after the install finishes. Read it before yo
 
 Kepler finds each agent's binary the way your shell does: the first match on your `PATH`, the same one `which` reports. It also finds an agent installed by nvm or Homebrew, even when you did not launch Kepler from a terminal. After you change your shell's startup files, click **Restart agent** or **Rescan**, and the agent picks up the change without a Kepler restart.
 
-Each agent's card in **Settings → Agents** shows what Kepler resolved. The version and **Install** are in the card's title line. **Binary** and **Data folder** are under **Program and data folder**:
+Each agent's page in **Settings → Agents** shows what Kepler resolved. Its version and **Install** sit beside the agent's name, and the program and its data folder have their own fields:
 
 | Control | What it does |
 |---|---|
 | Version | The installed version, or **Not installed** |
 | **Install** | Runs one of the install methods above. Shown when the agent is not installed |
-| **Binary** | The resolved absolute path, or **Not found**, with where it came from (**PATH**, **Shell**, or **Common**) and its version |
+| **Which *agent* Kepler runs** | The resolved absolute path, or **Not found**, with where it came from (**PATH**, **Shell**, or **Common**) and its version |
 | **Rescan** | Re-detects this agent's binary. Use it after installing or removing one outside Kepler |
 | **Custom path…** | Pins an absolute path of your own, which must be a file |
 | **Clear custom** | Drops the pinned path and goes back to automatic resolution. Shown only while a custom path is set |
 | **Installed versions** | A picker listing every install Kepler found, with an **Auto** row. Appears only when Kepler finds more than one |
-| **Data folder** | Overrides the agent's own data and config directory. Leave it empty for the agent default |
-| **Enabled** | Whether Kepler offers this agent when you start a session |
+| **Where *agent* keeps its data** | Overrides the agent's own data and config folder. Leave it empty for the agent's usual folder |
+| The on/off switch | Whether Kepler offers this agent when you start a session. Also on the agent's row |
 
-If Kepler cannot read an installed agent's version, its section shows a **Version unknown** badge, and features that depend on the version stay off, such as sending a new session's first message automatically. To fix it, reinstall or update the agent.
+If Kepler cannot read an installed agent's version, its row shows a **Version unknown** badge, and features that depend on the version stay off, such as sending a new session's first message automatically. To fix it, reinstall or update the agent.
 
-When an installed version has a known problem, the agent's card shows a warning under its title line that names the version and what to do. For example:
+When an installed version has a known problem, the agent's page shows a warning under its name that says what to do. For example:
 
 | Agent | What the warning tells you |
 |---|---|
 | **OpenCode** | OpenCode 1 is not supported, and its sessions do not start. Install OpenCode 2, or pick an OpenCode 2 binary |
-| **Auggie** | Chat sessions with this version may not load your MCP servers |
+| **Auggie** | **Auggie integration is unverified**: Kepler could not verify the selected build. Click **Rescan** or select a verified installation before you rely on MCP tools in Chat |
 | **Codex** | This version can show approval prompts that need no answer. Update Codex to 0.163.0 or newer |
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-version-advisory-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-version-advisory-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Codex card in Settings › Agents, version 0.150.1 with Update and Enabled, and under its title a warning note: Codex 0.150.1 can show approval prompts that need no answer, advising to update Codex to 0.163.0 or newer. Below it are Accounts with Add account and the Codex CLI account (Not signed in, Sign in), New sessions start in with Chat selected beside Terminal, and Program and data folder.">
+  <a href="/wp-content/uploads/agent-version-advisory-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-version-advisory-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Codex's page in Settings › Agents, under the Agents › Codex breadcrumb: the title line with version 0.150.1, Update and the Enabled switch, then a warning note, Codex 0.150.1 can show approval prompts that need no answer, advising to update Codex to 0.163.0 or newer. Below the note is the New sessions start in row, set to Chat with Terminal beside it.">
   </a>
-  <figcaption style="text-align:center; color:#888">A version warning on the Codex card.</figcaption>
+  <figcaption style="text-align:center; color:#888">A version warning on Codex's page.</figcaption>
 </figure>
 
 If a custom path later disappears, such as after an auto-update removes an old version, Kepler finds the agent itself again instead of reporting it missing.
 
-Above the agent cards in **Settings → Agents**, **Rescan** re-detects every agent at once, and **Update all** runs each installed agent's own updater.
+Beside the **Your agents** heading in **Settings → Agents**, **Rescan** re-detects every agent at once, and **Update all** runs each installed agent's own updater. A row shows **Update available** when a newer version of that agent is out.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-maintenance-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-maintenance-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Update all and Rescan beside the Your agents heading in Settings › Agents, above the title row of the Claude Code card: version 2.1.145, Update and Enabled.">
+  <a href="/wp-content/uploads/agent-maintenance-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-maintenance-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="Update all and Rescan beside the Your agents heading in Settings › Agents, above the first row of the list: Claude Code 2.1.145, marked Default, with 1 account, Add account, its Enabled switch and a chevron.">
   </a>
-  <figcaption style="text-align:center; color:#888">Update all and Rescan, above the agent cards.</figcaption>
+  <figcaption style="text-align:center; color:#888">Update all and Rescan, above the list of agents.</figcaption>
 </figure>
 
 ***
@@ -214,12 +223,12 @@ The account then reads as the provider and its region, project, or resource, or 
 
 **OpenCode account (Go or Console)** signs OpenCode in to your OpenCode account:
 
-1. Click **Sign in** on OpenCode's card and pick **OpenCode account (Go or Console)**.
+1. Click **Sign in** on OpenCode's row and pick **OpenCode account (Go or Console)**.
 2. Click **Open sign-in in browser** and enter the **One-time code** the modal shows.
 3. Choose the workspace with your Go subscription.
 4. Select a Go model to use your plan.
 
-The agent's card then shows OpenCode as signed in.
+OpenCode's row then shows it as signed in.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/opencode-account-signin-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -244,7 +253,7 @@ When a sign-in runs in a terminal on a remote and the browser page does not load
 
 **Import local Codex login** is the other remote route, in the desktop app: it copies this machine's `~/.codex/auth.json` to the remote target, and asks you to confirm on this machine before it reads the file. The import copies a credential: anyone with access to that remote machine can send Codex requests on your account until you sign out.
 
-A Codex API key, entered in the modal, works locally and on a remote. **Sign out** on Codex signs the CLI itself out, and Kepler follows a sign-in you do in the Codex CLI outside Kepler.
+A Codex API key that you enter in the modal works both locally and on a remote. **Sign out** on Codex signs the CLI itself out, and Kepler follows a sign-in you do in the Codex CLI outside Kepler.
 
 ### Auggie's sign-in methods
 
@@ -259,7 +268,7 @@ If you run Auggie's browser sign-in on this machine yourself, Kepler detects it 
 
 ### Multiple accounts of one agent
 
-**Claude Code**, **Codex**, **GitHub Copilot**, **Auggie**, and **Grok Build** support more than one signed-in account. To add one, open **Settings → Agents → *your agent* → Accounts** and click **Add account**. Each account keeps its own credentials. Claude Code, Codex, and GitHub Copilot accounts can share their conversation history with the CLI, and a Copilot account shares it by default.
+**Claude Code**, **Codex**, **GitHub Copilot**, **Auggie**, and **Grok Build** support more than one signed-in account. To add one, click **Add account** on the agent's row in **Settings → Agents**, or under **Accounts** on the agent's page. Each account keeps its own credentials. Claude Code, Codex, and GitHub Copilot accounts can share their conversation history with the CLI, and a Copilot account shares it by default.
 
 To give each added account its own color, pick one from the swatch at the left of its row. Kepler tints the agent icon with that color on session tabs, the task's context panel, and the terminal status bar, so you can tell sessions on different accounts apart. The default account stays uncolored.
 
@@ -269,7 +278,7 @@ For **Auggie**, you can only add a second account with **Paste session token**. 
 
 ## Run modes
 
-Every agent except Pi runs in 2 modes, and each agent keeps its own default. To pick the default for an agent, open **Settings → Agents**, expand the agent, and set **New sessions start in**:
+Every agent except Pi runs in 2 modes. To pick the mode new sessions start in for every agent, set **New sessions start in** under **Settings → Agents → Defaults**. To give one agent its own mode, click its row and set **New sessions start in** on its page:
 
 | Mode | What you get |
 |---|---|
@@ -282,7 +291,7 @@ Chat sessions show up as Kepler in places such as your Anthropic dashboard.
 
 ### Detecting sessions started outside Kepler
 
-**Settings → Integrations → Your terminal → Show sessions started outside Kepler** is a separate setting that applies to all agents, and it is **off by default**. It installs GitKraken hooks so sessions you start in your own terminal show up in Kepler. It covers every agent Kepler can track that way: **Claude Code**, **Codex**, **Cursor**, **GitHub Copilot**, **OpenCode**, **Auggie**, **Grok Build**, **Pi**, and **Google Antigravity**. See [Agent Sessions](/kepler/agent-sessions#sessions-started-outside-kepler).
+**Settings → General → Sessions outside Kepler → Show them in Kepler** is a separate setting that applies to all agents, and it is **on by default**. It installs GitKraken hooks so sessions you start in your own terminal show up in Kepler. It covers every agent Kepler can track that way: **Claude Code**, **Codex**, **Cursor**, **GitHub Copilot**, **OpenCode**, **Auggie**, **Grok Build**, **Pi**, and **Google Antigravity**. See [Agent Sessions](/kepler/agent-sessions#sessions-started-outside-kepler).
 
 Kepler also follows its own **Terminal** sessions this way. If a running Terminal session stops reporting to Kepler, Kepler warns that **Agent sessions aren't reporting to Kepler**. Click **Repair**, then restart any session that still does not report. To repair sessions running on another computer, use Kepler on that computer.
 
@@ -294,11 +303,11 @@ Some terminal programs report their own status to Kepler. When an agent's termin
 
 ## Your default agent
 
-**New sessions start with**, in **Settings → Tasks → New tasks**, sets the agent, account, model, mode, and options a new session starts with. You pick them in the same **Agent settings** pill as the composer, and you can start from an [agent preset](/kepler/settings-agents#agent-presets). **Start each session on the agent you used last** is on by default: your first session uses the pill's agent, and each later one starts on your last pick. To always start on the pill's agent, clear it. See [Default agent](/kepler/settings-tasks#default-agent).
+**New sessions start with**, in **Settings → Agents → Defaults**, sets the agent, account, model, mode, and options a new session starts with. You pick them in the same **Agent settings** pill as the composer, and you can start from an [agent preset](/kepler/settings-agents#agent-presets). **Start each session on the agent you used last** is on by default: your first session uses the pill's agent, and each later one starts on your last pick. To always start on the pill's agent, clear it. See [Defaults](/kepler/settings-agents#defaults).
 
 Kepler saves agent options **per account**. Picking a different account of the same agent brings up that account's own saved model and options, so a larger model you chose on your work account does not carry over to your personal one.
 
-Only agents that are installed and **Enabled** appear in the picker. If your saved default is no longer installed, Kepler says so and asks you to pick another.
+Only agents that are installed and switched on appear in the picker. If your saved default is no longer installed, Kepler says so and asks you to pick another.
 
 An Action can override all of this. See [Actions](/kepler/actions) for how an Action pins a provider, account, model, mode, and options together, and which choice wins when they disagree.
 
@@ -324,7 +333,7 @@ Custom agents appear alongside the built-in agents everywhere you can choose an 
 
 ## MCP servers
 
-Kepler lists the MCP servers each agent loads. You can add, remove, sign in to, and turn off servers or single tools, per repository from the composer's **Agent settings** pill, or as defaults in **Settings → Agents → MCP servers**. See [MCP Servers](/kepler/mcp-servers).
+Kepler lists the MCP servers each agent loads. You can add, remove, sign in to, and turn off servers or single tools, for one session from the composer's **Agent settings** pill, per repository, or as defaults in **Settings → Agent tools → MCP servers**. See [MCP Servers](/kepler/mcp-servers).
 
 ***
 

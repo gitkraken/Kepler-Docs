@@ -1,6 +1,6 @@
 ---
 title: Repository Settings
-description: Choose where Kepler clones repositories, add, trust, and edit repositories with their own branch prefixes and commands, update and clean up worktrees and branches, and group repositories into projects.
+description: Choose where Kepler clones repositories and creates worktrees and how it names branches, add, trust, and edit repositories with their own branch prefixes and commands, update and clean up worktrees and branches, and group repositories into projects.
 product: Kepler
 feature: Settings
 content_type: reference
@@ -13,29 +13,65 @@ hosted_variant: both
 status: GA
 last_verified: 2026-11
 llms_include: true
-tags: [settings, repositories, worktrees, branches, per-repository-commands, projects, aliases]
+tags: [settings, repositories, worktrees, branches, branch-prefix, folder-locations, variables, per-repository-commands, projects, aliases]
 taxonomy:
   category: kepler
 ---
 <kbd>Last updated: November 2026</kbd>
 
-Use **Settings → Repositories** to choose where Kepler clones repositories, add, trust, and edit the repositories and folders Kepler tracks, update and clean up worktrees and branches, and group repositories into projects.
+Use **Settings → Repositories** to set where Kepler clones repositories and creates worktrees, and how it names branches. Here you also add, trust, and edit the repositories and folders Kepler tracks, clean up worktrees and branches, and group repositories into projects.
 
-## Repositories folder
+<a id="repositories-folder"></a>
 
-To choose where Kepler clones repositories, use this setting:
+## Default locations
+
+**Default locations** sets where Kepler puts repositories and worktrees, and how it names the branches it creates:
 
 | Setting | What it controls | Default |
 |---|---|---|
 | **Repositories folder** | Where Kepler clones repositories, and where it looks for repositories to add | `~/kepler/repositories` |
+| **Worktrees folder** | *Where Kepler creates worktrees, for new tasks and when an agent asks for one.* | `~/kepler/worktrees` |
+| **Branch prefix** | *Starts the name of every branch Kepler creates. A repo can set its own in its settings.* | `kepler/` |
 
-To add every repository already in that folder, click **Scan for repositories** beside the field. Kepler scans only when you change the setting or click the button. A scan skips any repository you removed; to bring one back, add it yourself with **Add repo**. Repositories a scan adds start untrusted, and the message after the scan offers to trust them, or to trust the folder they are in. See [Trust a repository](#trust-a-repository).
+Type a path, or click **Choose a folder** beside a folder field to browse. An edit saves when you leave the field. If the **Repositories folder** does not exist yet, Kepler creates it when you clone.
+
+### Scan the repositories folder
+
+To add every repository already in the repositories folder, click **Scan for repositories** beside the field. Kepler scans only when you change the setting or click the button. A scan skips any repository you removed; to bring one back, add it yourself with **Add repo**. Repositories a scan adds start untrusted, and the message after the scan offers to trust them, or to trust the folder they are in. See [Trust a repository](#trust-a-repository).
 
 After a scan that added repositories, **Undo** removes them again, except any you have used or changed since the scan. To scan, the setting needs a full folder path before any variable in it.
 
-To trust every repository in this folder, including ones added there later, turn on **Trust everything in this folder** under the field.
+To trust every repository in this folder, including ones added there later, tick **Trust everything in this folder** under the field.
 
-If the folder does not exist yet, Kepler creates it when you clone. The field takes the `<REPOSITORY_NAME>` variable. See [The Variables menu](/kepler/settings-tasks#the-variables-menu).
+### Worktrees folder
+
+If a **Worktrees folder** has text before `<REPOSITORY_PATH>`, Kepler adds each repository's full path after that text. The field suggests 2 patterns that work: worktrees next to each repository, or a subfolder per repository. On Windows, Kepler does not save a path like this, so use one of the 2 patterns.
+
+### Branch prefix
+
+The prefix applies to **automatic** names only. Kepler uses a branch name you type exactly as you typed it, so a repository with an enforced `feat/` or `fix/` push rule still works. If your prefix does not end in a separator, Kepler adds a `/`, so `team` becomes `team/`, while `ea-` stays as you typed it.
+
+To override the prefix for one repository, use its [Edit repo](#edit-a-repository) page.
+
+### The Variables menu
+
+A folder field that takes variables has a **Variables** menu beside it. Pick a variable, such as **REPOSITORY PATH**, to insert it at the cursor. Kepler fills it in when it creates the folder, so one pattern works for every repository. Each field offers only the variables it can fill in:
+
+| Field | Variables offered |
+|---|---|
+| **Worktrees folder** | `<REPOSITORY_PATH>` (*Main repo folder*), `<REPOSITORY_NAME>` (*Repo name*) |
+| **Repositories folder** | `<REPOSITORY_NAME>` |
+
+For example, `<REPOSITORY_PATH>/.worktrees/<REPOSITORY_NAME>` nests each worktree inside the repository it belongs to.
+
+Per-repository commands have a **Variables** menu of their own, with 2 more variables. See [Per-repository commands](#per-repository-commands).
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/folder-fields-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/folder-fields-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Worktrees folder field in Settings › Tasks, set to /home/alex/kepler/worktrees, with its Variables menu open listing the REPOSITORY PATH tag (Main repo folder) and the REPOSITORY NAME tag (Repo name), each beside its raw token, and the Choose a folder button beside the field.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The Worktrees folder field in Settings → Repositories, with the Variables menu open.</figcaption>
+</figure>
 
 ## Your repos and folders
 
@@ -75,8 +111,8 @@ Click a repository's row to open its **Edit repo** page. The page shows the repo
 | **Name** | How this repo is listed in Kepler. Leave it empty to use the folder name |
 | **Aliases** | Short names for this repo when talking to agents, separated by commas, such as `api, backend` |
 | **Description** | What this repo is for. Agents working in it read this |
-| **Trusted** | Lets Kepler run git in this repo. See [Trust a repository](#trust-a-repository) |
-| **Branch prefix** | Overrides the prefix from **Settings → Tasks** for this repository only. See below |
+| **Trusted** | A checkbox that lets Kepler run git in this repo. See [Trust a repository](#trust-a-repository) |
+| **Branch prefix** | Overrides the prefix from [Default locations](#default-locations) for this repository only. See below |
 | **Branch synchronization** | How this repo's branches update by default (**Rebase** or **Merge**), and whether to push after an update. See [Update worktrees](#update-worktrees) |
 | **Commands** | Shell commands for this repository. See [Per-repository commands](#per-repository-commands) |
 | **MCP servers** | Extra tools your agents get in this repo, on top of their own lists. See [MCP Servers](/kepler/mcp-servers) |
@@ -87,9 +123,11 @@ Click a repository's row to open its **Edit repo** page. The page shows the repo
 - An alias cannot contain a colon, or repeat another repository's alias or name.
 - Agents working in this repo read the description, so write a full sentence.
 
+In a WSL window, a repository stored on a Windows drive shows a warning on its Edit repo page, because git and agents are slow from WSL there. For faster access, clone it into the Linux file system, such as your home folder.
+
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/edit-repo-dialog-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/edit-repo-dialog-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The Edit repo page for acme-web in Settings › Repositories: its path and main · 2 branches, then Name, Aliases (empty, placeholder api, backend) and Description, each with its help line; Trusted switched on (Kepler runs git here, and agent sessions skip the agent's own trust question); Branch prefix on Default (kepler/) with the example kepler/fix-login-form; Branch synchronization with How to update set to Rebase and Push after update unticked; the Commands section with Add command, Install deps (Runs on creation) and Dev server; and MCP servers with Add server, Agent set to Claude Code CLI and acme-issues, docs-search and acme-analytics switched on.">
+  <a href="/wp-content/uploads/edit-repo-dialog-oct-2026-v6@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/edit-repo-dialog-oct-2026-v6@2x.png" class="help-center-img img-bordered" alt="The Edit repo page for acme-web in Settings › Repositories: its path and main · 2 branches; Name, Aliases (empty, placeholder api, backend) and Description, each with its help line; Trusted ticked; Branch prefix on Default (kepler/) with the example kepler/fix-login-form; and Branch synchronization, with How to update set to Rebase and Push after update unticked. Below come Commands, with Add command, Install deps (Runs on creation) and Dev server, and MCP servers, with Add server, Agent set to Claude Code CLI and acme-issues, docs-search and acme-analytics switched on.">
   </a>
   <figcaption style="text-align:center; color:#888">The Edit repo page.</figcaption>
 </figure>
@@ -100,7 +138,7 @@ The **Branch prefix** control has 3 options:
 
 | Option | What it does |
 |---|---|
-| **Default ({value})** | Uses the prefix from **Settings → Tasks** |
+| **Default ({value})** | Uses the prefix from [Default locations](#default-locations) |
 | **None** | Creates task branches with no prefix |
 | **Custom** | A prefix for this repository only |
 
@@ -114,8 +152,8 @@ Kepler runs no git in a repository or folder you have not trusted, because a rep
 
 To trust a repository or folder, use one of these:
 
-- Click the shield on its row in **Your repos and folders**, or turn on **Trusted** on its page.
-- At the top of **Your repos and folders**, under **Trusted folders**, click **Trust a folder…** to trust everything inside a folder, now and later. You cannot trust a whole drive or filesystem root. A repository trusted this way shows **via** and the folder. To stop trusting it, remove the folder from **Trusted folders**.
+- Click the shield on its row in **Your repos and folders**, or tick **Trusted** on its page. If a trusted folder covers the repository, **Trusted** is ticked and dimmed, and its help names the folder to change it in.
+- At the top of **Your repos and folders**, under **Trusted folders**, click **Trust a folder…** to trust everything inside a folder, including what you add there later. You cannot trust a whole drive or filesystem root. A repository trusted this way shows **via** and the folder. To stop trusting it, remove the folder from **Trusted folders**.
 - Under **Show**, pick **Untrusted** to see untrusted repos and folders grouped by parent folder. Tick rows and trust them together from the bar at the bottom, or trust a group's whole folder with the **Trust** button beside it.
 - Click **Trust**, **Trust and retry**, or **Trust and start** where Kepler asks, such as in a task's Changes view or when you start a task in the **New task** composer.
 
@@ -132,13 +170,14 @@ While a repository is trusted, agent sessions in it also skip the agent's own tr
 
 Use commands to run your dev server, tests, or build from a task's worktree in one click. A command can also run when Kepler creates a new worktree, for example to install dependencies. Commands are shell commands for one repository. An agent can also add, change, or delete a repository's commands, and asks for your approval first.
 
-To add a command, click **Add command** in the **Commands** section of the Edit repo page. Each command row has 3 fields:
+To add a command, click **Add command** in the **Commands** section of the Edit repo page. Each command row has these fields:
 
 | Field | What it does |
 |---|---|
 | Name | A label, for example *Install deps*. You pick the command by this name from the **Run** menu |
 | Command | The shell command, for example `pnpm install`. Its **Variables** menu inserts any of the variables below |
 | **Run on worktree creation** | Runs the command each time Kepler creates a worktree for this repository. Off by default |
+| **Agents can start this without asking** | Lets an agent start this command from its task without asking you first |
 
 To save a row, click **Add command** (or **Save** on a stored command), or press **Ctrl/⌘ + Enter**. Each command saves on its own.
 
@@ -163,11 +202,13 @@ A failed command does not undo the worktree. The worktree exists but may not be 
 2. Correct the command here.
 3. Run it again from the **Run** menu.
 
+An agent can start a stored command in a terminal on its own task, but never a command you have not stored. It asks you first if the repository is not trusted or **Agents can start this without asking** is cleared. **Always allow** on its request ticks that box. See [Tasks and Resources](/kepler/tasks-and-resources).
+
 To run a command from the task view, right-click a worktree row in the task's context panel and use **Run command here**. It lists that repository's commands and runs the one you pick in that worktree, in a terminal. For a repository with no commands yet, **Create command…** opens the Edit repo page. To stop a running command, use the run button or its menu.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/repo-commands-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/repo-commands-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Commands section of the Edit repo page for acme-web: Add command, Install deps (pnpm install) with the Runs on creation chip, and Dev server open for editing with its name, Run on worktree creation, the command pnpm dev with Variables, and Cancel and Save, above the note that commands run in the worktree folder with your login shell.">
+  <a href="/wp-content/uploads/repo-commands-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/repo-commands-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Commands section of the Edit repo page for acme-web: Add command, Install deps (pnpm install) with the Runs on creation chip, and Dev server open for editing with its name, Run on worktree creation unticked, the command pnpm dev with Variables, Agents can start this without asking ticked, and Cancel and Save. Below them, a note says commands run in the worktree folder with your login shell and their order sets the Run menu order.">
   </a>
   <figcaption style="text-align:center; color:#888">A repository's Commands, with one row open for editing.</figcaption>
 </figure>

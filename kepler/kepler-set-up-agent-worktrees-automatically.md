@@ -80,8 +80,8 @@ Add one command for each step, and drag the rows into the order they need to run
 The commands run in the background, so the agent can start while an install is still running. If a command fails, Kepler shows **Worktree setup failed** with the command's name and its error, and skips the commands after it. The worktree stays. To fix it, correct the command, then right-click the worktree in the task's context panel and choose **Run command here**. On Windows, **Run command here** runs the command in a PowerShell terminal, while setup commands run in Command Prompt.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/repo-commands-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/repo-commands-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Commands section of the Edit repo page for acme-web: Add command, Install deps (pnpm install) with the Runs on creation chip, and Dev server open for editing with its name, Run on worktree creation, the command pnpm dev with Variables, and Cancel and Save, above the note that commands run in the worktree folder with your login shell.">
+  <a href="/wp-content/uploads/repo-commands-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/repo-commands-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Commands section of the Edit repo page for acme-web: Add command, Install deps (pnpm install) with the Runs on creation chip, and Dev server open for editing with its name, Run on worktree creation unticked, the command pnpm dev with Variables, Agents can start this without asking ticked, and Cancel and Save. Below them, a note says commands run in the worktree folder with your login shell and their order sets the Run menu order.">
   </a>
   <figcaption style="text-align:center; color:#888">A repository's Commands, with Install deps set to run on creation.</figcaption>
 </figure>

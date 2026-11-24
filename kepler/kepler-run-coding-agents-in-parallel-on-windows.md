@@ -68,7 +68,7 @@ Kepler runs directly on Windows. You do not need WSL, a virtual machine, or a Ma
 
 ## How to install coding agents on Windows
 
-Kepler supports 9 coding agents on Windows. When an agent is missing, open **Settings → Agents**, click **Install** in its section, and pick an install method. Kepler runs the install command for you and shows its output. After the install, Kepler offers to sign you in to the agent.
+Kepler supports 9 coding agents on Windows. When an agent is missing, open **Settings → Agents**, click **Install** on its row, and pick an install method. Kepler runs the install command for you and shows its output. After the install, Kepler offers to sign you in to the agent.
 
 | Agent | Install methods on Windows | Note for Windows |
 |---|---|---|
@@ -110,8 +110,8 @@ You can attach the same repository to several tasks. Each task gets its own work
 To follow every agent at once, use the Dashboard. Kepler notifies you when an agent needs you, for example to answer a permission request. See [Agent Sessions](/kepler/agent-sessions#notifications).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-task-button-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-task-button-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The left end of the Kepler top bar: the application menu, the Back and Forward arrows, the New task button with a plus sign, then the Local environment chip and the Remote Access button's monitor-and-phone icon in green because Remote Access is on.">
+  <a href="/wp-content/uploads/new-task-button-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-task-button-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The left end of the Kepler top bar: the application menu, the New task button with a plus sign, the Local environment chip, and the Remote Access button's monitor-and-phone icon in green because Remote Access is on.">
   </a>
   <figcaption style="text-align:center; color:#888">The New task button starts each parallel task.</figcaption>
 </figure>

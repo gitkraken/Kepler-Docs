@@ -167,7 +167,7 @@ Automatic attachment follows these rules:
 
 **Issues attach the same way.** When an issue's branch matches one of the task's checkouts, Kepler attaches the issue. A task you start from a branch name therefore gets the issue behind that branch.
 
-Automatic attachment only adds links. It never removes one. To remove a link you do not want on the task, detach it.
+Automatic attachment only adds links. It never removes one. To remove a link you do not want on the task, detach it. Detaching a pull request or issue that Kepler found by the branch moves it to the task's [archive](#archiving-a-resource), so the branch does not bring it back. Until Kepler adds a pull request it found by the branch, the **Pull requests** group shows it marked **Found by branch *branch***.
 
 **Work item URLs attach as issues.** When you or an agent attaches one of the following URLs, Kepler records it as an issue rather than a plain link:
 
@@ -371,7 +371,7 @@ Removing a resource from a task leaves the resource itself intact, unless only t
 |---|---|
 | **Folder** or **linked file** | Removes it from the task and leaves it on disk |
 | **Uploaded copy** | Deletes the copy in the task folder |
-| **Pull request**, **issue**, or **link** | Removes it from the task |
+| **Pull request**, **issue**, or **link** | Removes it from the task. One that Kepler found by the branch moves to the task's archive |
 | **Note** | Deletes the note |
 
 The task's **Prompt** has no remove action.
@@ -541,6 +541,17 @@ If you paste a Kepler link to a task or a session into the chat, the agent can u
 
 Where AI Sync and AI Compose are turned on, the `sync_*` and `compose_*` tools also let an agent update a branch from its base with a rebase or merge, and reorganize its commits. See [Review What a Coding Agent Changed](/kepler/review-changes#agent-tools-ai-sync-and-ai-compose).
 
+### Terminals
+
+| Tool | What it does |
+|---|---|
+| `terminal_list` | List the terminals on the agent's own task |
+| `terminal_start` | Start one of the repository's Run commands, such as a dev server, or open an empty shell, on the agent's own task. Some Run commands ask you first |
+| `terminal_read` | Read a terminal's output, and whether it has exited |
+| `terminal_stop` | Stop a terminal, and close its tab. Stopping a terminal you opened asks you first |
+
+An agent cannot type into a terminal, or run a command that is not one of the repository's Run commands.
+
 ### Progress and lifecycle
 
 | Tool | What it does |
@@ -588,6 +599,8 @@ These requests wait for your approval:
 - Changing a Kepler setting that affects your accounts, privacy, other tools, what runs, or where files go. Only [Ask Kepler](/kepler/ask-kepler) can change settings, and you approve each change on its own. See [Approval requests](/kepler/agent-sessions#approval-requests)
 - Adopting a task into its own work. Once you approve, the agent can change that task, its notes, worktrees, and sessions as freely as its own
 - Adding, replacing, or deleting a repository's Run command, or changing a repository's sync settings
+- Starting a Run command whose **Agents can start this without asking** is cleared, or any Run command in a repository that is not trusted
+- Stopping a terminal you opened
 - Changing an Action's prompt
 - Deleting any note
 - Detaching an uploaded file, because Kepler deletes its saved copy
@@ -600,7 +613,16 @@ These requests wait for your approval:
 
 A session that an agent starts cannot run in a higher mode than the session that started it unless you approve.
 
-The request appears as an approval card above the asking session's composer, with **Approve** and **Deny**. The **Approve** menu can approve every request of that kind from the session, or always. A rule you make with **Always approve** is listed under **Settings → Agents → Approvals**, where **Remove** deletes it. **Always approve** is not offered for actions that can lose work, for adopting a task, for changing an Action's prompt, or for adding or replacing a Run command. See [Agent Sessions](/kepler/agent-sessions#when-the-agent-asks-you-something).
+The request appears as an approval card above the asking session's composer, with **Approve** and **Deny**. The **Approve** menu can approve every request of that kind from the session, or always. For an action that can lose work, **Always approve** asks you to confirm first. A rule you make with **Always approve** is listed under **Settings → Approvals**, where **Remove** deletes it. **Always approve** is not offered for adopting a task, for changing an Action's prompt, or for adding or replacing a Run command. See [Agent Sessions](/kepler/agent-sessions#when-the-agent-asks-you-something).
+
+A request to start a Run command offers **Always allow** instead, which ticks **Agents can start this without asking** for that command. No other rule covers starting a Run command.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/run-command-approval-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/run-command-approval-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="An amber approval card, Run a command in a new terminal, with the command pnpm dev, In acme-web@kepler/fix-cart-total, on Fix the cart total, and This Run command is set to ask before an agent starts it. Its buttons are Approve, Always allow and Deny.">
+  </a>
+  <figcaption style="text-align:center; color:#888">An agent asks to start a Run command that is set to ask first.</figcaption>
+</figure>
 
 The agent does not wait for you to answer the card. Kepler tells the agent the request is awaiting your approval, the agent continues, and the outcome arrives in its inbox. Before an approved request runs, Kepler checks again. If the target changed in the meantime, such as a worktree that has new commits, nothing runs.
 

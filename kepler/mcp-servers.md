@@ -1,6 +1,6 @@
 ---
 title: MCP Servers
-description: See the MCP servers each agent loads, turn a server or a single tool on or off per repository or for every repository, add and remove servers, and sign in to the ones that need it, from inside Kepler.
+description: See the MCP servers each agent loads, turn a server or a single tool on or off for one session, per repository, or for every repository, add and remove servers, and sign in to the ones that need it, from inside Kepler.
 product: Kepler
 feature: MCP Servers
 content_type: how-to
@@ -28,11 +28,11 @@ Your coding agents load **Model Context Protocol** (**MCP**) servers from their 
 
 You manage MCP servers in 3 places:
 
-- Per repository, from the composer's **Agent settings** pill
+- For one session, from the composer's **Agent settings** pill
 - Per repository, in **Settings → Repositories →** *repository* **→ MCP servers**
-- As global defaults, in **Settings → Agents → MCP servers**
+- As global defaults, in **Settings → Agent tools → MCP servers**
 
-**Requirements and limits**
+## Requirements and limits
 
 - Works for **Claude Code**, **Codex**, **GitHub Copilot**, **Cursor**, **OpenCode**, **Auggie**, and **Grok Build**. Pi, Antigravity, and custom agents do not expose their MCP servers to Kepler. For these agents, the manager reads *This agent does not expose its MCP servers to Kepler.*
 - The agent must be installed. Settings lists only the agents that answer.
@@ -44,9 +44,9 @@ You manage MCP servers in 3 places:
 
 | Where | What a change applies to |
 |---|---|
-| The composer's **Agent settings** pill → **MCP servers** → **Manage** | This repository, for that agent |
+| The composer's **Agent settings** pill → **MCP servers** → **Manage** | That session, or the session the **New task** composer starts. For Cursor and Grok Build, this repository |
 | **Settings → Repositories →** *repository* **→ MCP servers** | This repository, for the agent you pick |
-| **Settings → Agents → MCP servers** | Every repository, as the default each one inherits |
+| **Settings → Agent tools → MCP servers** | Every repository, as the default each one inherits |
 
 The **MCP servers** dialog in the composer includes **Open repo settings**, which opens the same list in **Settings → Repositories**.
 
@@ -70,17 +70,19 @@ Each row is a server. The switch on a row turns the server on or off, and clicki
   <a href="/wp-content/uploads/mcp-servers-dialog-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/mcp-servers-dialog-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The MCP servers dialog for Claude Code in acme-web, with Open repo settings, and Add server at the bottom. Added by you lists acme-issues and acme-analytics (marked Sign in needed), and In this repo, shared with your team lists acme-design-system (marked Sign in needed) and storybook, each with its switch on.">
   </a>
-  <figcaption style="text-align:center; color:#888">The MCP servers dialog for one repository.</figcaption>
+  <figcaption style="text-align:center; color:#888">The MCP servers dialog, opened from the composer.</figcaption>
 </figure>
 
 ***
 
-## Per repository
+<a id="per-session"></a>
 
-To manage the servers for one repository:
+## For one session
+
+To switch servers for one session:
 
 1. In a session or in the **New task** composer, open the **Agent settings** pill. Its **MCP servers** row reads *{enabled} of {total} enabled*.
-2. Click **Manage**. The **MCP servers** dialog opens. Its subtitle reads *{agent} in {repo}*, the agent and the repository the dialog applies to.
+2. Click **Manage**. The **MCP servers** dialog opens.
 
 When you open a server's page, **All servers** takes you back to the list.
 
@@ -91,15 +93,25 @@ When you open a server's page, **All servers** takes you back to the list.
   <figcaption style="text-align:center; color:#888">The MCP servers row in the Agent settings menu.</figcaption>
 </figure>
 
-A change here applies to that repository and all of its worktrees.
+For Claude Code, Codex, OpenCode, and GitHub Copilot, turning a server on or off here applies to that session only, or to the session the **New task** composer starts. Your repository and global defaults stay as they are. To reuse the choice, click **Save preset**: the [agent preset](/kepler/settings-agents#agent-presets) keeps it.
 
-If a server is off in Settings and you have not turned it on here, the server says *Off for every repo in Settings. Turn it on to use it here.*, with **Open Settings** to go to the global default. Turning it on in the dialog turns it on for this repository only.
+A session cannot turn on a server that is off in the agent's own settings. Its row reads *Off in this agent's own settings, so a session cannot turn it on. Turn it on in Settings.*
+
+Turning off a single tool from the dialog still changes it for the repository. For Cursor and Grok Build, every switch in the dialog changes the repository.
+
+***
+
+## Per repository
+
+To set the servers for every session in one repository, open **Settings → Repositories →** *repository* **→ MCP servers**, or click **Open repo settings** in the composer's **MCP servers** dialog. A change here applies to that repository and all of its worktrees.
+
+If a server is off in Settings and you have not turned it on for the repository, the server's row says so, with **Open Settings** to go to the global default. Turning it on here turns it on for this repository only.
 
 ### Turn off a single tool
 
-A server's page lists its **Tools** under the **Let {agent} use this server** switch. The list can take a moment to load (*Asking the server for its tools…*). If the server needs authentication first, the list reads *Sign in to this server to see its tools.*
+A server's page lists its **Tools** under the **Let {agent} use this server** switch. If the server needs authentication, sign in to it to see its tools.
 
-To turn off one tool, open the server's page and turn off the tool's switch. *Turn a tool off to keep {agent} from calling it.*
+To keep the agent from calling one tool, open the server's page and turn off the tool's switch.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/ade-mcp-server-detail-01-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -114,20 +126,20 @@ Turning off a single tool works for Claude Code, Codex, and Grok Build. For the 
 
 ## Global defaults
 
-**Settings → Agents → MCP servers** is the same manager with no repository. Its description reads *Give your agents extra tools, like a database, a browser or your issue tracker.* Use the **Agent** picker at the top to choose the agent, and the account when that agent has more than one.
+**Settings → Agent tools → MCP servers** is the same manager with no repository. Use the **Agent** picker at the top to choose the agent, and the account when that agent has more than one.
 
-**Keep the GitKraken MCP server installed in every agent** is on by default. *Gives every command-line agent Git tools and your issues and pull requests through GitKraken. Turn off to manage it yourself.*
+**Keep the GitKraken MCP server installed in every agent**, on by default, gives every command-line agent Git tools and your issues and pull requests through GitKraken. Turn it off to manage that server yourself.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/mcp-global-defaults-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/mcp-global-defaults-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The MCP servers section of Settings › Agents for Claude Code CLI (alex.lee@example.com, Acme): Add server, the Agent picker, Added by you with acme-issues, docs-search, acme-analytics and GitKraken (Kepler keeps this installed) each switched on, and Keep the GitKraken MCP server installed in every agent ticked.">
+    <img src="/wp-content/uploads/mcp-global-defaults-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The MCP servers section of Settings › Agent tools for Claude Code CLI (alex.lee@example.com, Acme): Add server, the Agent picker, Added by you with acme-issues, docs-search, acme-analytics and GitKraken (Kepler keeps this installed) each switched on, and Keep the GitKraken MCP server installed in every agent ticked.">
   </a>
-  <figcaption style="text-align:center; color:#888">Global MCP server defaults, in Settings → Agents.</figcaption>
+  <figcaption style="text-align:center; color:#888">Global MCP server defaults, in Settings → Agent tools.</figcaption>
 </figure>
 
 The repository and global levels combine like this:
 
-- A repository uses the global value until you change that server in its own dialog.
+- A repository uses the global value until you change that server for it in **Settings → Repositories**, or, for Cursor and Grok Build, in the composer's dialog.
 - A repository's choice wins over the global one, in either direction: a repository can turn off a server that's on globally, or turn on a server that's off globally.
 - Switching a server back to match the global default makes it follow the default again.
 
@@ -186,7 +198,7 @@ You cannot copy servers from plugins, so their page does not show **Also add to�
 
 For a server that needs authentication, its page has a **Sign-in** section. It offers **Sign in**, or **Re-authenticate** once you are signed in, and **Clear authentication** to sign the server out. Kepler signs in under the same account the session uses. Credentials are saved where the agent itself looks for them. Sign-in is available for Claude Code, Codex, OpenCode, and Cursor servers.
 
-In a local window, **Open sign-in page** opens your browser, and Kepler finishes when you are done (*Finish signing in in your browser*). In a window connected to a remote environment, sign in on that page, then paste the URL you land on into **Redirect URL**.
+In a local window, **Open sign-in page** opens your browser, and Kepler finishes when you are done. In a window connected to a remote environment, sign in on that page, then paste the URL you land on into **Redirect URL**.
 
 If your organization manages the agent's settings, sign-in first lists them for your approval. Click **Approve and continue** to sign in, or **Decline** if you do not recognize them. Kepler saves your approval for this account.
 
@@ -197,7 +209,7 @@ If your organization manages the agent's settings, sign-in first lists them for 
 | Where the change lands | When it takes effect |
 |---|---|
 | A Claude Code **Chat** session | Straight away. Kepler reconnects the session with the new servers and keeps the conversation and your model and mode picks |
-| A terminal session, or any other agent's session | On restart. The **Agent settings** pill and the dialog show *{count} MCP changes apply when the agent restarts.* with **Restart agent** |
+| A terminal session, or any other agent's session | On restart. The **Agent settings** pill and the dialog show how many MCP changes are waiting, with **Restart agent** |
 | The **New task** composer | The session you start comes up with that state |
 
 Where Kepler saves an on or off choice depends on the agent:
@@ -214,7 +226,7 @@ Each agent account keeps its own MCP setup. Other Claude Code accounts start wit
 
 ## Related
 
-- [Agent Settings](/kepler/settings-agents#mcp-servers): **Settings → Agents**, including the **MCP servers** section.
+- [Agent Tool Settings](/kepler/settings-agent-tools#mcp-servers): **Settings → Agent tools**, including the **MCP servers** section.
 - [Agent Integrations](/kepler/agent-integrations): the agents Kepler runs and how to set them up.
 - [Agent Sessions](/kepler/agent-sessions): the composer's **Agent settings** pill, and restarting a session.
 

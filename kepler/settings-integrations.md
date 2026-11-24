@@ -1,6 +1,6 @@
 ---
 title: Integration Settings
-description: Connect issue trackers and Git hosts to Kepler, choose what each one brings in, and follow agent sessions you start in your own terminal.
+description: Connect issue trackers and Git hosts to Kepler, keep a self-hosted server's personal access token on this device only, and choose what each provider brings in.
 product: Kepler
 feature: Settings
 content_type: reference
@@ -13,13 +13,13 @@ hosted_variant: both
 status: GA
 last_verified: 2026-11
 llms_include: true
-tags: [settings, integrations, issue-trackers, git-hosts, terminal]
+tags: [settings, integrations, issue-trackers, git-hosts, self-hosted, personal-access-token]
 taxonomy:
   category: kepler
 ---
 <kbd>Last updated: November 2026</kbd>
 
-Use **Settings → Integrations** to connect the issue trackers and Git hosts you start tasks from, and to follow agent sessions you run in your own terminal.
+Use **Settings → Integrations** to connect the issue trackers and Git hosts you start tasks from, and to choose what each one brings in.
 
 ## Issues and pull requests
 
@@ -45,19 +45,22 @@ Providers connect through your GitKraken account, so you sign in to GitKraken be
 
 A self-hosted provider, such as GitHub Enterprise, Azure DevOps Server, Bitbucket Data Center, or Jira Server / Data Center, connects with a personal access token. Click **Connect**, enter the **Server URL** and **Personal access token**, then click **Save connection**. Kepler checks the token against your server and adds the connection to your GitKraken account. Until it finishes, the row shows **Cloud sync pending**.
 
+To keep the token off your GitKraken account, tick **Keep PAT on this device only** before you save. The server URL and token then stay on this device, in its secure storage such as the system keychain, and the connection is not available on your other devices or in other GitKraken products.
+
 A connected self-hosted provider lists each server on its own row. Each server keeps its own repositories and issues:
 
 - To connect another server, click **Add connection** on the provider's row.
-- To renew an expired or rejected token, click **Replace token** on that server's row.
+- To renew an expired or rejected token, click **Replace PAT** on that server's row.
+- To move a token between your GitKraken account and this device, open the server row's storage chip (**GitKraken account** or **This device only**) and choose **Keep PAT on this device only** or **Store PAT in GitKraken account**. Kepler asks you to confirm first.
 - To make a server the provider's default connection, click **Set as primary**.
 
 ### Choose what's visible
 
-To hide organizations, repositories, or tracker projects you do not want in Kepler, click **Choose what's visible…** under the provider's row, then untick the items to hide. Every connected provider except Trello and Asana has it. Hidden items leave the dashboard, the launcher, and pickers, and tasks and branches already linked to them keep working. The choice is saved on your GitKraken account.
+To hide organizations, repositories, or tracker projects you do not want in Kepler, click **Choose what's visible…** under the provider's row, then untick the items to hide. Every connected provider except Trello and Asana has it. A connection kept on this device only does not. Hidden items leave the dashboard, the launcher, and pickers, and tasks and branches already linked to them keep working. The choice is saved on your GitKraken account.
 
 ### Accounts and organizations
 
-When a provider has more than 1 account, an **Accounts** block lists them. **Set as primary** chooses which account Kepler acts as, and **Read from this account** chooses which account Kepler reads issues and pull requests from. These can be different accounts, but agents' GitKraken MCP server always acts as the primary account. See [MCP servers](/kepler/settings-agents#mcp-servers).
+When a provider has more than 1 account, an **Accounts** block lists them. **Set as primary** chooses which account Kepler acts as, and **Read from this account** chooses which account Kepler reads issues and pull requests from. These can be different accounts, but agents' GitKraken MCP server always acts as the primary account. A self-hosted connection kept on this device only cannot be set as primary. See [MCP servers](/kepler/settings-agent-tools#mcp-servers).
 
 When an organization refuses a working connection, because it blocks third-party OAuth apps or has not approved GitKraken, the row names the organization and says that its items are not shown. The row links to a fix, such as **Request access on GitHub**.
 
@@ -65,15 +68,7 @@ For per-provider setup, see [Issue Tracker Integrations](/kepler/issue-tracker-i
 
 ## Your terminal
 
-To follow agent sessions you start in your own terminal, use this setting:
-
-| Setting | What it controls | Default |
-|---|---|---|
-| **Show sessions started outside Kepler** | Lists sessions you start in your own terminal, so you can follow and continue them in Kepler | On |
-
-The setting covers every agent Kepler can follow this way. See [Agent Sessions](/kepler/agent-sessions#sessions-started-outside-kepler).
-
-If a running agent session stops reporting to Kepler, every window shows *Agent sessions aren't reporting to Kepler*, with a **Repair** button. **Repair** reinstalls the reporting configuration. Restart any session that still does not report. For another computer's sessions, repair from that computer.
+To follow agent sessions you start in your own terminal, use **Show them in Kepler** in **Settings → General → Sessions outside Kepler**. It is on by default. See [Sessions outside Kepler](/kepler/settings-app#sessions-outside-kepler).
 
 ***
 

@@ -36,7 +36,7 @@ When several agents run at once, use the **Agent Graph** to see what each one is
   <a href="/wp-content/uploads/agent-graph-toggle-sep-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/agent-graph-toggle-sep-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Dashboard's row of views: Todo, Tasks, and Agent Graph, selected, then New view. Tasks and Agent Graph carry an orange mark on their icons for a task waiting on you.">
   </a>
-  <figcaption style="text-align:center; color:#888">The Agent Graph view, beside Todo and Tasks.</figcaption>
+  <figcaption style="text-align:center; color:#888">The Agent Graph view beside the Todo and Tasks views.</figcaption>
 </figure>
 
 You can open the Agent Graph for all your agents or for a single session. It has no page of its own:
@@ -187,12 +187,9 @@ The **Tool spectrum** section shows the calls by kind, with a bar and a count fo
 
 ### Usage windows
 
-The **Usage windows** section shows your agent subscription windows, with 1 bar for each window of each agent, and the share of the window you have used. The section appears when it has something to show:
+The **Usage windows** section shows your agent subscription windows, with 1 bar for each window of each agent, and the share of the window you have used. The section appears when it has something to show. Kepler asks each agent's provider for your usage, through the agent's own sign-in.
 
-- With **Check plan usage with each agent's provider** on (the default, in **Settings → Agents → Usage and recovery**), Kepler asks each agent's provider for your usage.
-- With it off, the section shows only readings that your agents report themselves, dimmed when they are out of date. The section stays hidden until an agent reports a reading.
-
-See [Settings](/kepler/settings-agents#usage-and-recovery).
+If an account row on an agent's page in **Settings → Agents** shows **Turn on usage checks**, the checks are off. The section then shows only readings that your agents report themselves, dimmed when they are out of date, and stays hidden until an agent reports a reading. Click **Turn on usage checks** to turn them back on. See [Keep agents running](/kepler/settings-agents#keep-agents-running).
 
 These bars show only how much of each window you have used. To see whether you are on pace for a window, and when it runs out at your current rate, check a session's usage meter. See [Usage indicators](/kepler/agent-sessions#usage-indicators).
 

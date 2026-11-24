@@ -1,6 +1,6 @@
 ---
 title: Approve Coding Agent Requests from Your Phone with Kepler
-description: In Kepler, turn on Remote Access and pair your phone to see what Claude Code, Codex, and other agents are doing and answer their permission requests.
+description: In Kepler, turn on Remote Access and pair your phone to see what Claude Code, Codex, and other agents are doing, get notified, and answer their permission requests.
 product: Kepler
 feature: Remote Access
 content_type: how-to
@@ -19,14 +19,14 @@ taxonomy:
 ---
 <kbd>Last updated: November 2026</kbd>
 
-Kepler by GitKraken lets you see what your coding agents are doing and approve their requests from your phone. Turn on Remote Access in Kepler on your computer, scan its QR code with your phone, and answer each permission request from Claude Code, Codex, or any other agent in your phone's browser, with the same choices as on your desktop.
+Kepler by GitKraken lets you see what your coding agents are doing and approve their requests from your phone. Turn on Remote Access in Kepler on your computer, scan its QR code with your phone, and answer each permission request from Claude Code, Codex, or any other agent in your phone's browser, with the same choices as on your desktop. Your phone can also notify you when an agent needs you.
 
 ## Requirements and limits
 
 - Scope: Watching agent sessions and answering permission requests, questions, plan reviews, and approval requests from a phone
 - Prerequisite: Kepler running on your computer, signed in to your GitKraken account. Your agents keep running on the computer, and the phone shows its interface
 - Prerequisite: A phone browser signed in to the same GitKraken account
-- Limits: Kepler sends no push notifications to your phone. Requests appear on the phone only while Kepler is open there, as an alert and in the waiting task
+- Limits: The phone gets notifications only after you turn on **Notify this phone** in Kepler on the phone. On an iPhone, add Kepler to your home screen first
 
 ***
 
@@ -36,7 +36,8 @@ Kepler by GitKraken lets you see what your coding agents are doing and approve t
 2. In **Name this machine**, keep the name or enter your own, then click **Turn on Remote Access** in the dialog.
 3. Scan the QR code with your phone's camera, and sign in with your GitKraken account.
 4. In your phone's browser menu, choose the option that adds the page to your home screen, such as Add to Home Screen, to open Kepler like an app.
-5. When an agent stops to ask, open Kepler on your phone, tap the task that waits on you, and answer the request with **Allow**, **Allow for this session**, **Allow always**, **Reject**, or **Reject always**.
+5. In Kepler on your phone, open **Settings → Notifications** and turn on **Notify this phone**.
+6. When an agent stops to ask, answer from the notification, or tap the notification to open the request in Kepler and choose **Approve** or **Deny**.
 
 ***
 
@@ -48,11 +49,11 @@ Remote Access opens this Kepler from another device, such as your phone, through
 2. Click **Turn on Remote Access**.
 3. In **Name this machine**, keep the name Kepler fills in, or enter a name you recognize, then click **Turn on Remote Access** in the dialog.
 
-Remote Access stays on until you turn it off, including after Kepler restarts. By default, Kepler keeps your computer awake while Remote Access is on, so your agents keep working while you are away. To change this, use **Keep this machine awake while agents work** in **Settings → General**. See [Remote Environments](/kepler/remote-environments#turning-on-remote-access).
+Remote Access stays on until you turn it off, including after Kepler restarts. By default, Kepler keeps your computer awake while Remote Access is on, so your agents keep working while you are away. To change this, use **Keep this machine awake while agents work** in **Settings → Agents → Keep agents running**. See [Remote Environments](/kepler/remote-environments#turning-on-remote-access).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-access-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-access-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Settings › Remote Access while it is off: the Inactive badge and Turn on Remote Access, Your agents, wherever you are, the 3 steps of How it works, a note that only you can connect, Machines on your account with Manage machines on gitkraken.dev, and This machine stays awake while Remote Access is on, with Change in General.">
+  <a href="/wp-content/uploads/remote-access-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-access-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="Settings › Remote Access while it is off: the Inactive badge and Turn on Remote Access, Your agents, wherever you are, the three steps of How it works, a note that only you can connect, and Machines on your account with Manage machines on gitkraken.dev. The last line reads This machine stays awake while Remote Access is on, with a Change in Agents link.">
   </a>
   <figcaption style="text-align:center; color:#888">Settings → Remote Access, before you turn it on.</figcaption>
 </figure>
@@ -84,19 +85,33 @@ To open Kepler like an app, add it to your phone's home screen from the browser'
 
 ***
 
+## How to get notifications on your phone
+
+Your phone can notify you when a session needs you and you are away from your computer, even while Kepler is closed on the phone.
+
+1. On an iPhone, add Kepler to your home screen first, then open Kepler from its home screen icon.
+2. In Kepler on your phone, tap **Menu**, then **Settings**, and open **Notifications**.
+3. Under **Notifications on this phone**, turn on **Notify this phone**, and allow notifications when the browser asks.
+4. To check that they arrive, tap **Send a test**.
+
+To choose which events reach the phone, use the **Phone** column in **What to notify you about**, in **Settings → Notifications** on your computer. The column appears once a phone gets notifications. When you answer a request on another device, its notification leaves the phone. Turning off Remote Access, or removing the phone from it, stops its notifications.
+
+***
+
 ## How to find what waits on you
 
 Kepler marks every task and session that waits on you, so you can find a request as soon as you open Kepler on your phone:
 
+- **A notification.** With **Notify this phone** on, the phone shows a notification when a session needs you. Tap it to open the request. See [How to get notifications on your phone](#how-to-get-notifications-on-your-phone).
 - **An alert.** While Kepler is open on the phone, a new permission request, question, plan review, or approval request shows as an alert. A permission alert has **Allow** and **Deny** for a one-time answer, and **View**, which opens the request in its session.
 - **The menu.** Tap **Menu**. Under **Recent tasks**, a dot marks each task that waits on you.
 - **The task list.** On the Dashboard, a Tasks view grouped by **Inbox** lists the tasks that wait on you under **Needs attention**.
-- **The bar.** While a task waits on you, the Dashboard's bar and a task's bar show **Tasks that need you**. Tap it to see those tasks, or to go to the next one.
+- **The Search Kepler chip.** On the Dashboard's bar and a task's bar, the **Search Kepler** chip shows a count while something waits on you. Tap it to see what needs you first, under **Needs you**. Tap a request there to answer it with **Allow** or **Deny**, or tap **Open session** to open it in an answer sheet.
 - **Inside a task.** Tap **Sessions** to go to the session that waits on you.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-access-phone-sep-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-access-phone-sep-2026-v4@2x.png" class="help-center-img img-bordered" alt="Kepler's Dashboard in a phone's browser, on the Tasks view: one bar with Menu, the view picker showing Tasks with a chevron and an orange dot, Search, Options, the Tasks that need you button with an orange mark, Ask Kepler and New task, over the task list grouped into Needs attention (Add product search, In Development, Approval needed), Unread (Fix the cart total, In Review with its pull request and issue chips and Changes requested; Update checkout copy, On Hold, and Upgrade the payment SDK, In Review, each with New reply) and a folded Not started (1).">
+  <a href="/wp-content/uploads/remote-access-phone-sep-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-access-phone-sep-2026-v5@2x.png" class="help-center-img img-bordered" alt="Kepler's Dashboard in a phone's browser, on the Tasks view: one bar with Menu, the view picker showing Tasks with a chevron and an orange dot, the Search Kepler chip with an orange mark and 1, Ask Kepler and New task (+), over the task list grouped into Needs attention (Add product search, In Development, Approval needed), Unread (Fix the cart total, In Review with its pull request and issue chips and Changes requested; Update checkout copy, On Hold, and Upgrade the payment SDK, In Review, each with New reply) and a folded Not started (1).">
   </a>
   <figcaption style="text-align:center; color:#888">The Tasks view on a phone, with a task that needs approval at the top.</figcaption>
 </figure>
@@ -108,7 +123,7 @@ Kepler marks every task and session that waits on you, so you can find a request
   <figcaption style="text-align:center; color:#888">The phone menu, with a dot on each recent task that waits on you.</figcaption>
 </figure>
 
-> **Note:** When Kepler is closed on the phone, nothing tells you that an agent is waiting. Open Kepler on the phone to check. On your computer, Kepler's desktop notifications still work as usual.
+> **Note:** While **Notify this phone** is off, nothing tells you that an agent is waiting when Kepler is closed on the phone. On your computer, Kepler's desktop notifications still work as usual.
 
 ***
 
@@ -140,6 +155,19 @@ You see only the choices the agent offers. A session in Terminal mode shows the 
   <figcaption style="text-align:center; color:#888">A permission request on a phone, with every answer available.</figcaption>
 </figure>
 
+A request you open from a notification, or with **Open session** under the **Search Kepler** chip, opens in an answer sheet over its task. The sheet shows the full command or the changes, with **Approve** and **Deny**, and the agent's other choices under **Other ways to answer**. Inside the sheet, **Open session** takes you to the session itself, at the request. When more than one request waits on you, **Previous request** and **Next request** step through them, and the sheet moves to the next one after each answer.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/phone-answer-sheet-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/phone-answer-sheet-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="On a phone, an answer sheet rises over the Add product search task: Run a command, from the session Add product search to the product list, with a 1 of 1 pager, the command Run npm test, and Other ways to answer (Allow for this session, Allow always). Open session, Deny and Approve sit at its foot.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The answer sheet on a phone, for a command an agent wants to run.</figcaption>
+</figure>
+
+### Answer from the notification
+
+You can answer some requests from the phone's notification, even on the lock screen, without opening Kepler. A short shell command has **Allow** and **Deny**, and an approval request that is not destructive has **Approve** and **Deny**. For anything else, such as a file edit, a long command, or a destructive approval request, tap the notification to answer it in Kepler.
+
 ***
 
 ## How to answer plans, questions, and approval requests
@@ -149,6 +177,8 @@ Other requests wait in the session the same way, and you answer them on the phon
 - **A plan review.** Read the agent's plan, then **Approve** it or comment and tap **Request changes (*n*)**. See [Reviewing a plan](/kepler/agent-sessions#reviewing-a-plan).
 - **A question.** Pick an option, or type your own answer, and submit. See [Multiple-choice and multi-select questions](/kepler/agent-sessions#multiple-choice-and-multi-select-questions).
 - **An approval request**, when an agent asks Kepler itself to do something, such as delete a worktree. Tap **Approve** or **Deny**. See [Approval requests](/kepler/agent-sessions#approval-requests).
+
+Questions and approval requests also open in the answer sheet, where you answer them the same way. For a plan review, the sheet sends you to the session to read the plan. To answer from the notification instead, see [Answer from the notification](#answer-from-the-notification).
 
 To see what an agent did while you were away, open its session and read the conversation, or tap **Changes** to read the changed files.
 
@@ -160,7 +190,7 @@ Short answers about approving agent requests from a phone with Kepler.
 
 ### Will my phone notify me when an agent needs permission?
 
-No. Kepler sends no push notifications to your phone. A request shows on the phone as an alert, and in its task, only while Kepler is open there. Add Kepler to your home screen so you can check it in one tap.
+Yes, once you turn on **Notify this phone** in **Settings → Notifications** in Kepler on the phone. The phone then notifies you when a session needs you and you are away from your computer, and you can answer some requests from the notification. On an iPhone, add Kepler to your home screen first. See [How to get notifications on your phone](#how-to-get-notifications-on-your-phone).
 
 ### Do I need to install an app on my phone?
 
@@ -168,7 +198,7 @@ No. Kepler opens in your phone's browser. To open it like an app, add it to your
 
 ### Does my computer need to stay on?
 
-Your computer needs to stay on. Your agents run on it, and the phone shows that computer's Kepler. By default, Kepler keeps the computer awake while Remote Access is on, with the setting **Keep this machine awake while agents work**.
+Your computer needs to stay on. Your agents run on it, and the phone shows that computer's Kepler. By default, Kepler keeps the computer awake while Remote Access is on, with the setting **Keep this machine awake while agents work** in **Settings → Agents → Keep agents running**.
 
 ### Does this work with Claude Code and Codex?
 

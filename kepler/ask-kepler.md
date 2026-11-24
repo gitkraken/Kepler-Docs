@@ -24,10 +24,10 @@ taxonomy:
 For the agent sessions that run inside a task, see [Agent Sessions](/kepler/agent-sessions).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ask-kepler-chat-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ask-kepler-chat-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Ask Kepler panel under the top bar's highlighted Ask button, its header holding New chat with a chevron for past chats, Archive (unavailable on a new chat), the New chat button, Terminal, Dock panel and Close. Kep, the planet mascot, sits over Ask Kepler anything and the starters What needs me right now?, Find or change a setting and What changed across my tasks today?, above the Ask anything composer with the attach and microphone buttons and the Default agent pill.">
+  <a href="/wp-content/uploads/ask-kepler-chat-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ask-kepler-chat-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The Ask Kepler panel under the top bar's pressed Ask button, its header holding New chat with a chevron for past chats, Archive (unavailable on a new chat), the New chat button, Terminal, Dock panel and Close. Kep, the planet mascot, sits over Ask Kepler anything and the starters What needs me right now?, Find or change a setting and What changed across my tasks today?, above the Ask anything composer with the attach and microphone buttons and the agent pill.">
   </a>
-  <figcaption style="text-align:center; color:#888">Ask Kepler, open on a new chat.</figcaption>
+  <figcaption style="text-align:center; color:#888">Ask Kepler, open on a new chat under the top bar's Ask button.</figcaption>
 </figure>
 
 ***
@@ -101,13 +101,13 @@ The agent can read your tasks and sessions and act on them through Kepler's own 
 
 ### Ask how your agent work is going
 
-The chat can answer questions about your own usage, from the usage insights Kepler keeps on your computer. For example, you can ask how many tokens or how much cost your agents used this week, how long agents worked or waited on you, how often you hit a usage limit, or how quickly your pull requests merged. These answers need **Collect usage insights** on. See [Insights](/kepler/settings-app#insights).
+The chat can answer questions about your own usage, from the usage insights Kepler keeps on your computer. For example, you can ask how many tokens or how much cost your agents used this week, how long agents worked or waited on you, how often you hit a usage limit, or how quickly your pull requests merged.
 
 ### Finding and changing settings
 
 The chat can look up Kepler's settings for you. Ask where something is set, or what a setting is set to, and the agent finds the setting, tells you its current value and what it can be set to, and links to it. Click the link to open **Settings** at that setting. Only **Ask Kepler** can find and change settings; agents in tasks cannot.
 
-The agent changes a setting only when you ask it to. It can find and link to some settings but not change them, such as secrets and settings that take a list.
+The agent changes a setting only when you ask it to. It can find and link to some settings but not change them: secrets, for example, and settings that take a list.
 
 The agent can also list your [Actions](/kepler/actions) and read an Action's prompt. When you ask, it can change the prompt of an Action you created, and Kepler asks for your approval every time. To change a built-in Action, edit it in **Settings → Actions**.
 
@@ -136,7 +136,7 @@ The chat creates the automation paused and shows an **Automation created** card 
 
 The agent pill lists only agents that run in **Chat**. An agent that runs only in a terminal, such as Pi, cannot answer in the panel. See [Agent Integrations](/kepler/agent-integrations) for which agents run in **Chat**.
 
-**Ask Kepler keeps its own agent, separate from tasks.** A new chat opens on the agent you picked last in the panel, and picking an agent here never changes a task's agent, or the reverse. Your first chat uses the agent and settings set in **Settings → Agents** under **New Ask Kepler chats start with**. To start every chat there instead of on your last pick, clear **Start each chat on the agent you used last**. See [Settings: Agents](/kepler/settings-agents).
+**Ask Kepler keeps its own agent, separate from tasks.** A new chat opens on the agent you picked last in the panel, and picking an agent here never changes a task's agent, or the reverse. Your first chat uses the agent and settings in **New Ask Kepler chats start with**, under **Settings → Agents → Defaults**. To start every chat there instead of on your last pick, clear **Start each chat on the agent you used last**. See [Defaults](/kepler/settings-agents#defaults).
 
 ### Past chats and new chats
 
@@ -144,7 +144,7 @@ To switch chats, open the chat's title in the panel header. To find a chat, type
 
 - **New chat**, which returns the section to a fresh chat
 - **Continue in a new task**, for the chat that's open
-- Your open chats, grouped by state, such as **Unread** and **Running**. Click one to open it, or click **Archive** beside it to put it away.
+- Your open chats, grouped by state (for example **Unread** or **Running**). Click one to open it, or click **Archive** beside it to put it away.
 - **Show archived**, which lists your archived chats. Click one to restore and open it.
 
 <figure style="text-align:center">
