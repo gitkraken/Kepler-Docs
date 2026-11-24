@@ -949,7 +949,7 @@ When a session has unread reports, the band above its composer says how many, su
 
 To stop agents from waking each other without end, Kepler pauses wakes after 20 turns in a row that agents started without a prompt from you. The band then reads **Reports from other agents are paused**, and the session's tab and its row in the context panel show a reports badge with the count. To let reports wake the session again, click **Resume reports** or send your next prompt.
 
-In Terminal mode, Kepler wakes an idle Claude Code, Codex, GitHub Copilot, OpenCode, Pi, or Auggie session by typing a one-line note into the agent's input and sending it, only once the input is empty. To turn this off, clear **Settings → Agents → Idle agents → Wake idle terminal agents to read new reports**. See [Kepler's tools in Terminal mode](/kepler/agent-integrations#supported-agents).
+In Terminal mode, Kepler wakes an idle Claude Code, Codex, GitHub Copilot, OpenCode, Pi, or Auggie session that has Kepler's tools. For Codex, GitHub Copilot, and Auggie, and for the others when their own wake does not answer, it types a one-line note into the agent's input and sends it, only once the input is empty. To turn this off, clear **Settings → Agents → Idle agents → Wake idle terminal agents to read new reports**. See [Kepler's tools in Terminal mode](/kepler/agent-integrations#supported-agents).
 
 ### Offers to show you something
 

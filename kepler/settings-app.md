@@ -359,7 +359,7 @@ Dictation is the microphone in the chat prompt, and on a Terminal session's stat
 | Setting | What it controls | Default |
 |---|---|---|
 | **Speech model** | The on-device model that dictates: **Qwen3-ASR 1.7B**, **Qwen3-ASR 0.6B**, **Parakeet TDT 0.6B v3**, or **Whisper**. Each row has **Download**, and **Remove…** once downloaded | None until you download one |
-| **Dictation language** | With Qwen3-ASR, the language you speak. Parakeet detects it, and Whisper ignores it | Auto-detect |
+| **Dictation language** | With Qwen3-ASR, the language you speak. Parakeet and Whisper detect it, so the setting is unavailable with them | Auto-detect |
 | **Dictation mode** | **Type as you talk**, **Type when you stop**, or **Send when you stop** | Type as you talk |
 | **Vocabulary** | The words dictation learned from your fixes, which **Manage** opens, with Qwen3-ASR only. See [Teach dictation your words](/kepler/voice-input#teach-dictation-your-words) | No words yet |
 

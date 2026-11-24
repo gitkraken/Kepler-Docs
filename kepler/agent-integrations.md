@@ -71,7 +71,7 @@ With Pi 1.x, a session gets the task's context and Kepler's workspace tools, and
 - OpenCode 2.1.1 or newer
 - Google Antigravity 1.5.3 or newer
 
-**Waking an idle Terminal session.** When a new report reaches an idle Claude Code, Codex, GitHub Copilot, OpenCode, Pi, or Auggie session in Terminal mode, Kepler wakes it to read the report. To wake some agents, Kepler types a one-line note into the agent's input, and only when the input is empty. To turn this off, clear **Wake idle terminal agents to read new reports** in **Settings → Agents → Idle agents**.
+**Waking an idle Terminal session.** When a new report reaches an idle Claude Code, Codex, GitHub Copilot, OpenCode, Pi, or Auggie session in Terminal mode, Kepler wakes it to read the report. Kepler does not wake a session whose status bar shows **No Kepler tools**. For Codex, GitHub Copilot, and Auggie, and for the others when their own wake does not answer, Kepler types a one-line note into the agent's input, and only when the input is empty. To turn this off, clear **Wake idle terminal agents to read new reports** in **Settings → Agents → Idle agents**.
 
 **Folder trust.** In a repository, worktree, or folder you marked **Trusted** in Kepler, these sessions skip the CLI's own trust question:
 
@@ -151,7 +151,7 @@ Each agent's page in **Settings → Agents** shows what Kepler resolved. Its ver
 | **Clear custom** | Drops the pinned path and goes back to automatic resolution. Shown only while a custom path is set |
 | **Installed versions** | A picker listing every install Kepler found, with an **Auto** row. Appears only when Kepler finds more than one |
 | **Where *agent* keeps its data** | Overrides the agent's own data and config folder. Leave it empty for the agent's usual folder |
-| **Enabled** switch | Whether Kepler offers this agent when you start a session. Also on the agent's row |
+| The on/off switch | Whether Kepler offers this agent when you start a session. Also on the agent's row |
 
 If Kepler cannot read an installed agent's version, its row shows a **Version unknown** badge, and features that depend on the version stay off, such as sending a new session's first message automatically. To fix it, reinstall or update the agent.
 
@@ -164,8 +164,8 @@ When an installed version has a known problem, the agent's page shows a warning 
 | **Codex** | This version can show approval prompts that need no answer. Update Codex to 0.163.0 or newer |
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-version-advisory-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-version-advisory-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Codex card in Settings › Agents, version 0.150.1 with Update and Enabled, and under its title a warning note: Codex 0.150.1 can show approval prompts that need no answer, advising to update Codex to 0.163.0 or newer. Below it are Accounts with Add account and the Codex CLI account (Not signed in, Sign in), New sessions start in with Chat selected beside Terminal, and Program and data folder.">
+  <a href="/wp-content/uploads/agent-version-advisory-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-version-advisory-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Codex's page in Settings › Agents, under the Agents › Codex breadcrumb: the title line with version 0.150.1, Update and the Enabled switch, then a warning note, Codex 0.150.1 can show approval prompts that need no answer, advising to update Codex to 0.163.0 or newer. Below the note is the New sessions start in row, set to Chat with Terminal beside it.">
   </a>
   <figcaption style="text-align:center; color:#888">A version warning on Codex's page.</figcaption>
 </figure>
@@ -307,7 +307,7 @@ Some terminal programs report their own status to Kepler. When an agent's termin
 
 Kepler saves agent options **per account**. Picking a different account of the same agent brings up that account's own saved model and options, so a larger model you chose on your work account does not carry over to your personal one.
 
-Only agents that are installed and **Enabled** appear in the picker. If your saved default is no longer installed, Kepler says so and asks you to pick another.
+Only agents that are installed and switched on appear in the picker. If your saved default is no longer installed, Kepler says so and asks you to pick another.
 
 An Action can override all of this. See [Actions](/kepler/actions) for how an Action pins a provider, account, model, mode, and options together, and which choice wins when they disagree.
 

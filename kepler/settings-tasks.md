@@ -122,7 +122,7 @@ Closing the pane keeps it closed for that task in that view.
 - To reorder groups, drag a row by its grip.
 - To archive or delete a group, use its **⋮** menu. You can archive a group once all its tasks are archived.
 
-Archived groups are listed under **Archived**, where their menu has **Restore group**. When you delete a group, its tasks stay, ungrouped, unless you tick **Also delete its *n* tasks** in the confirmation. See [Your groups](/kepler/arranging-your-work#your-groups).
+Archived groups are listed under **Archived**, where their menu has **Restore group**. When you delete a group, its tasks stay, ungrouped, unless you tick **Also delete its {count} tasks** in the confirmation. See [Your groups](/kepler/arranging-your-work#your-groups).
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/task-groups-settings-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">

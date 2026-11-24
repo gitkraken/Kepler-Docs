@@ -133,7 +133,7 @@ Use **Settings → Remote environments** to add, connect, edit, and remove machi
   <a href="/wp-content/uploads/remote-environments-hosts-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/remote-environments-hosts-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Settings › Remote environments: Add machine, Your machines with dev-server (SSH, not connected, alex@dev.acme.example) and Connect, Found on this machine listing build-box and staging-db from the SSH config with Add and hide buttons and Show hidden (1), and Remote windows with the option Always use this app's interface, off.">
   </a>
-  <figcaption style="text-align:center; color:#888">Settings → Remote Environments, with a saved host.</figcaption>
+  <figcaption style="text-align:center; color:#888">Settings → Remote environments, with a saved host.</figcaption>
 </figure>
 
 **Found on this machine** lists machines from your `~/.ssh/config` and WSL distributions you have not saved yet. To save one, click **Add**. To stop Kepler from offering a machine, click its eye icon to hide it. To bring hidden machines back, click **Show hidden (*N*)**.

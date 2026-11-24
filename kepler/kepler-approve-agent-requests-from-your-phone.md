@@ -106,7 +106,7 @@ Kepler marks every task and session that waits on you, so you can find a request
 - **An alert.** While Kepler is open on the phone, a new permission request, question, plan review, or approval request shows as an alert. A permission alert has **Allow** and **Deny** for a one-time answer, and **View**, which opens the request in its session.
 - **The menu.** Tap **Menu**. Under **Recent tasks**, a dot marks each task that waits on you.
 - **The task list.** On the Dashboard, a Tasks view grouped by **Inbox** lists the tasks that wait on you under **Needs attention**.
-- **The Search Kepler chip.** On the Dashboard's bar and a task's bar, the **Search Kepler** chip shows a count while something waits on you. Tap it to see what needs you first, under **Needs you**. Tap a request there to answer it with **Allow** or **Deny**, or tap **Open session**.
+- **The Search Kepler chip.** On the Dashboard's bar and a task's bar, the **Search Kepler** chip shows a count while something waits on you. Tap it to see what needs you first, under **Needs you**. Tap a request there to answer it with **Allow** or **Deny**, or tap **Open session** to open it in an answer sheet.
 - **Inside a task.** Tap **Sessions** to go to the session that waits on you.
 
 <figure style="text-align:center">
@@ -155,7 +155,7 @@ You see only the choices the agent offers. A session in Terminal mode shows the 
   <figcaption style="text-align:center; color:#888">A permission request on a phone, with every answer available.</figcaption>
 </figure>
 
-A request you open from a notification, or with **Open session** under the **Search Kepler** chip, opens in an answer sheet over its task. The sheet shows the full command or the changes, with **Approve** and **Deny**, and the agent's other choices under **Other ways to answer**. **Open session** takes you to the request in its session. When more than one request waits on you, **Previous request** and **Next request** step through them, and the sheet moves to the next one after each answer.
+A request you open from a notification, or with **Open session** under the **Search Kepler** chip, opens in an answer sheet over its task. The sheet shows the full command or the changes, with **Approve** and **Deny**, and the agent's other choices under **Other ways to answer**. Inside the sheet, **Open session** takes you to the session itself, at the request. When more than one request waits on you, **Previous request** and **Next request** step through them, and the sheet moves to the next one after each answer.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/phone-answer-sheet-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">

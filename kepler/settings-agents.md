@@ -74,7 +74,7 @@ Each agent has a row with its version, a **Default** badge on your default agent
 | **Install** | Opens **Set up {name}** to pick an install method, then **Sign in to {name}** if the agent needs a sign-in. Shown when the agent is not installed and has an installer for your OS |
 | **Add account** | Opens the agent's page and its add-account dialog |
 | **Sign in** | Signs in to an agent that has a single login |
-| **Enabled** switch | *Off keeps it installed but hidden when you start work.* |
+| The on/off switch | Off keeps the agent installed but hides it when you start work |
 
 If you installed the agent yourself, use **Already installed?** in the **Set up {name}** dialog: enter or browse to the program, then click **Use this**.
 
@@ -90,6 +90,7 @@ To open an agent's page, click its row. The page holds the agent's own settings:
 |---|---|
 | **New sessions start in** | This agent's own mode, instead of the [default for every agent](#default-mode-for-new-sessions) |
 | **Update** | Runs the agent's updater and shows its output. Shown when Kepler has an updater for that agent |
+| The switch beside **Update** | On by default. Off keeps the agent installed but hides it when you start work |
 | **Accounts** | Claude Code, Codex, GitHub Copilot, Auggie, and Grok Build: runs more than 1 login side by side. See [Use several accounts for one agent](#use-several-accounts-for-one-agent) |
 | **Account** | On an agent with a single login: who is signed in, with **Sign in** or **Sign out**. Signing out deletes the stored credentials |
 | **Artifacts in new sessions** | Claude Code only. See below |

@@ -70,7 +70,7 @@ Each row is a server. The switch on a row turns the server on or off, and clicki
   <a href="/wp-content/uploads/mcp-servers-dialog-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/mcp-servers-dialog-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The MCP servers dialog for Claude Code in acme-web, with Open repo settings, and Add server at the bottom. Added by you lists acme-issues and acme-analytics (marked Sign in needed), and In this repo, shared with your team lists acme-design-system (marked Sign in needed) and storybook, each with its switch on.">
   </a>
-  <figcaption style="text-align:center; color:#888">The MCP servers dialog for one repository.</figcaption>
+  <figcaption style="text-align:center; color:#888">The MCP servers dialog, opened from the composer.</figcaption>
 </figure>
 
 ***
@@ -139,7 +139,7 @@ Turning off a single tool works for Claude Code, Codex, and Grok Build. For the 
 
 The repository and global levels combine like this:
 
-- A repository uses the global value until you change that server in its own dialog.
+- A repository uses the global value until you change that server for it in **Settings → Repositories**, or, for Cursor and Grok Build, in the composer's dialog.
 - A repository's choice wins over the global one, in either direction: a repository can turn off a server that's on globally, or turn on a server that's off globally.
 - Switching a server back to match the global default makes it follow the default again.
 

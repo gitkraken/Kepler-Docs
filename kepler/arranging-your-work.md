@@ -381,7 +381,7 @@ Each type of view has its own sort options:
 | **Todo** | Updated, Created, Name, ID, Type | Updated |
 | **Tasks** | Smart, Updated, Created, Name, Manual | Updated |
 
-**Smart** lists the tasks that need attention first, then unread and active tasks, with held, done, later, and archived tasks last, each by latest activity. Dates sort newest first. **Name** and **ID** sort in ascending order. **Type** puts pull requests before issues, with the most recent first within each. On a Tasks view, starred tasks come first in each section, except under **Manual**. Each view remembers its own sort.
+**Smart** lists the tasks that need attention first, then unread and active tasks, with held, done, later, and archived tasks last. Within each of these, starred tasks come first, then the latest activity. Dates sort newest first. **Name** and **ID** sort in ascending order. **Type** puts pull requests before issues, with the most recent first within each. Under **Updated**, **Created**, and **Name**, starred tasks also come first in each section. **Manual** keeps your own order. Each view remembers its own sort.
 
 ### Put tasks in your own order
 
