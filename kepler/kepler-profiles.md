@@ -50,8 +50,8 @@ Each profile that connects to a [remote machine](/kepler/remote-environments) ge
 To have one of your profiles use a profile on another machine instead, choose **Use a profile from another machine…** from its row menu. The profile reopens with that profile's tasks and sessions. Its local tasks and settings stay.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/profiles-host-profiles-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/profiles-host-profiles-nov-2026.png" class="help-center-img img-bordered" alt="Settings › Profiles: Default, marked This profile, then On dev-server listing Work, Last used 2d ago, with its menu open on Open on this computer and Remove from dev-server….">
+  <a href="/wp-content/uploads/profiles-host-profiles-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/profiles-host-profiles-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="Settings › Profiles: Default, marked This profile, then On dev-server listing Work, Last used 2d ago, with its menu open on Open on this computer and Remove from dev-server….">
   </a>
   <figcaption style="text-align:center; color:#888">A profile from another computer, listed under the machine that serves it.</figcaption>
 </figure>

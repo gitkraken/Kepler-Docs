@@ -54,8 +54,8 @@ On a phone, tap Kep in the Dashboard bar. The panel opens full screen, so it has
 Right-click the panel's header, or press the keyboard's context-menu key on it, for the panel's menu: **Dock panel** and **Auto-hide panel**. With **Auto-hide panel** on, the floating panel closes when you click or move focus elsewhere in Kepler. A docked panel stays open. **Auto-hide panel** is off by default. You can also set it in [Settings → Chat and terminal](/kepler/settings-app#ask-kepler-panel).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ask-kepler-docked-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ask-kepler-docked-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Ask Kepler panel docked on the right of the window, with the Dashboard's Tasks view narrowed beside it rather than covered. The panel's header menu is open, with Dock panel checked above Move to the left.">
+  <a href="/wp-content/uploads/ask-kepler-docked-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ask-kepler-docked-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Ask Kepler panel docked on the right of the window, with the Dashboard's Tasks view narrowed beside it rather than covered: Needs attention (Add product search, Approval needed for Run npm test), Unread (Fix the cart total, Update checkout copy and Upgrade the payment SDK, each with New reply) and a folded Not started. The panel's Dock panel button is pressed and its header's right-click menu is open: Dock panel, checked, and Auto-hide panel. The panel shows Ask Kepler anything, three starters and the Ask anything composer.">
   </a>
   <figcaption style="text-align:center; color:#888">Ask Kepler docked beside the Dashboard, with the header's menu open.</figcaption>
 </figure>

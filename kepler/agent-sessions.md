@@ -103,8 +103,8 @@ To give a session your own name, choose **Rename session** on its row menu. Agen
 ## Agent, model, mode, and effort
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-settings-from-composer-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-settings-from-composer-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="Agent settings open above a new session's composer: Agent OpenCode, Preset No preset, Start in with Chat selected beside Terminal, Model Docs Model, Permission mode Build or Plan, MCP servers (No servers) with Manage, and the agent settings gear with Save preset. Below it, the composer footer holds Attach a file, the microphone and a ticked Task context chip, then the Docs Model Build pill and Start.">
+  <a href="/wp-content/uploads/agent-settings-from-composer-oct-2026-v6@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-settings-from-composer-oct-2026-v6@2x.png" class="help-center-img img-bordered" alt="Agent settings open above a new session's composer: Agent OpenCode, Preset No preset, Model Docs Model, Permission mode Build or Plan, MCP servers (No servers) with Manage, and the agent settings gear with Save preset. Below it, the composer footer holds Attach a file, the microphone, the Chat / Terminal switch with Chat selected and a ticked Task context chip, then the Docs Model Build pill and Start.">
   </a>
   <figcaption style="text-align:center; color:#888">The Agent settings pill, opened from the composer, with the Task context chip in the footer.</figcaption>
 </figure>
@@ -214,8 +214,8 @@ Expand the warning to see which file the account copied, with the paths of **Thi
 If 2 or more accounts are signed in, the **Agent** list shows one row per account, labeled with the account name. You pick the agent and the account in one click, in the **New task** composer or in a draft session tab.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/account-multiple-selector-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/account-multiple-selector-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Agent list open in the New task composer, with Search options at the top. Under a Claude Code heading sit two account rows, CLI with the login alex.lee@example.com and an Acme badge (checked) and Personal, then Codex CLI, GitHub Copilot CLI, OpenCode, Pi and Auggie CLI, three of them Not signed in, with more agents further down, above Add another Claude Code account and Install another agent.">
+  <a href="/wp-content/uploads/account-multiple-selector-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/account-multiple-selector-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The Agent list open in the New task composer, with Search options at the top. Under a Claude Code heading sit two account rows, CLI with the login alex.lee@example.com and an Acme badge (checked) and Personal, then Codex CLI, GitHub Copilot CLI, OpenCode, Pi and Auggie CLI, three of them Not signed in, with more agents further down, above Add another Claude Code account and Install another agent.">
   </a>
   <figcaption style="text-align:center; color:#888">The Agent list, with one row per account and Add another Claude Code account.</figcaption>
 </figure>
@@ -297,8 +297,8 @@ If the session is busy, with a turn running or work still going in the backgroun
 Two limits apply. You must take over a session started outside Kepler before you can move it, and only a session on a task can move to Terminal.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/continue-in-terminal-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/continue-in-terminal-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The menu of a Chat session, opened from its row in the task page's context panel: Open, Show Agent Graph, Rename session, Copy session link, New session from this one, Continue in Terminal, Restart agent, Shut down agent, Archive session and Delete session.">
+  <a href="/wp-content/uploads/continue-in-terminal-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/continue-in-terminal-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The menu of a Chat session, opened from its row on the task page rail: Open, Mark as unread, Rename session, Copy session link, Show Agent Graph, Continue in Terminal, Continue in new session, Restart agent, Shut down agent, Archive session and Delete session.">
   </a>
   <figcaption style="text-align:center; color:#888">Continue in Terminal, on a Chat session's row menu.</figcaption>
 </figure>
@@ -426,8 +426,8 @@ For a waiting session, answer in your terminal. Kepler does not answer a prompt 
 Kepler reads the transcripts of **Claude Code**, **Codex**, **GitHub Copilot**, **Cursor**, **OpenCode**, **Auggie**, **Grok Build**, **Pi**, and the **Google Antigravity** CLI from each agent's own store on disk, without starting the agent. For Cursor, that includes chats from its terminal CLI.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/external-past-session-preview-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/external-past-session-preview-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The preview of a past Pi session started outside Kepler, marked Not running, with its folder, Import session and Create new task, and the replayed conversation: the prompt, the agent's replies, and its Read products.js call.">
+  <a href="/wp-content/uploads/external-past-session-preview-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/external-past-session-preview-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The preview of a past session started outside Kepler: the replayed conversation (the question, the agent's replies and its Read products.js call) above a bar reading Outside Kepler, last active 1h ago, with Continue here to pick this conversation up, Import session and Create new task.">
   </a>
   <figcaption style="text-align:center; color:#888">A past session started outside Kepler, previewed read-only from its transcript on disk.</figcaption>
 </figure>
@@ -711,8 +711,8 @@ Code blocks have a **line-wrap toggle**, so you can read a long line without scr
 **Run a shell command from a reply.** A shell code block in an agent's reply has a **Run command** button. Kepler runs the command in the session's folder and shows the output under the block, with **Stop command** while it runs and the exit code if it fails. After the turn, Kepler tells the agent the result, in a prompt from Kepler marked **You ran a command**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/chat-run-command-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/chat-run-command-nov-2026.png" class="help-center-img img-bordered" alt="An agent reply ending with a bash code block holding git status --short, with the block's Run command (play), wrap and copy buttons; under the block, the command's output lists M cart.js and ?? cart.test.js.">
+  <a href="/wp-content/uploads/chat-run-command-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/chat-run-command-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="An agent reply ending with a bash code block holding git status --short, with the block's Run command (play), wrap and copy buttons; under the block, the command's output lists M cart.js and ?? cart.test.js.">
   </a>
   <figcaption style="text-align:center; color:#888">A shell command run from a reply, with its output under the block.</figcaption>
 </figure>
@@ -1004,8 +1004,8 @@ Kepler judges a usage bar by pace: the share of the window you have used, compar
 **You can spend an earned usage reset from Kepler.** For a Claude Code or Codex account, the plan usage popover says how many earned resets are left and warns when one expires within a day. To use one, click **Redeem…** and confirm. Kepler warns you first when redeeming now may waste usage. Redeeming uses up the reset and cannot be undone. A reset that works only once you reach the limit it refills cannot be redeemed before then.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/usage-reset-redeem-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/usage-reset-redeem-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Plan usage popover open under the Codex usage chip, which reads Limit reached until Mar 5, 02:30 PM: the account alex.lee@example.com (Plus), the 5h window at 41% with Resets in 2h 0m and the 7d window at 100% with Limit reached and Resets in 3d 0h. Below them, Limit resets has a Redeem button and a Reset row that Expires in 14d, above Updated just now and a refresh button.">
+  <a href="/wp-content/uploads/usage-reset-redeem-nov-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/usage-reset-redeem-nov-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Plan usage popover open under the Codex usage chip, which reads Limit reached until Mar 5, 02:30 PM: the account alex.lee@example.com (Plus), the 5h window at 41% with Resets in 2h 0m and the 7d window at 100% with Limit reached and Resets in 3d 0h. Below them, 1 limit reset available has a Redeem… button, above Updated just now and a refresh button.">
   </a>
   <figcaption style="text-align:center; color:#888">An earned limit reset, with Redeem…, in the Codex plan usage popover.</figcaption>
 </figure>
@@ -1069,8 +1069,8 @@ A Claude Code account can read 100% while the agent still answers, for example o
 Every session's composer has a microphone, **Dictate**. Click it, then speak, and the transcript appears in the prompt. Transcription runs on your device. Dictation works once you download a model in **Settings → Voice**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/start-voice-input-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/start-voice-input-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="The New task composer: Add issue, Add PR and Add context above the empty prompt, then the attach button and the microphone button with its Dictate tooltip below it, and the agent pill with a warning sign and Start on the right.">
+  <a href="/wp-content/uploads/start-voice-input-aug-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/start-voice-input-aug-2026-v3@2x.png" class="help-center-img img-bordered" alt="The New task composer: Add issue, Add PR and Add context above the empty prompt, then the attach button, the microphone button with its Dictate tooltip and the shortcut Ctrl Shift Space below it, and the Chat / Terminal switch; on the right, the agent pill with a warning sign and Start.">
   </a>
   <figcaption style="text-align:center; color:#888">The composer's microphone, with its Dictate tooltip.</figcaption>
 </figure>
@@ -1146,8 +1146,8 @@ Ending a session's agent and archiving the session are separate actions. A live 
 After an agent updates, each open session still on the old version shows a notice above its composer, such as *Restart this chat to use the updated OpenCode (2.2.0).* Click **Restart chat**, or **Restart session** in a Terminal session, to restart it on the new version, or click **Dismiss**. To stop these notices, clear **Show a restart notice on outdated sessions** in **Settings → Updates → Agent updates**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-restart-notice-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-restart-notice-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="A notice above the session composer reads OpenCode 2.2.0 is installed. This session still runs 2.1.1., with Restart chat and Dismiss buttons.">
+  <a href="/wp-content/uploads/agent-restart-notice-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-restart-notice-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="A notice above the session composer reads Restart this chat to use the updated OpenCode (2.2.0)., with Restart chat and Dismiss buttons.">
   </a>
   <figcaption style="text-align:center; color:#888">The restart notice on a session still running an older agent version.</figcaption>
 </figure>
@@ -1161,8 +1161,8 @@ A **dormant** session (one restored from disk, or stopped before it ever ran) sh
 **A stopped session's composer becomes a resume bar.** Its status line says what happened, such as **Stopped just now**. In Chat and Terminal alike, type a reply and send it, or click **Resume**. The bar also has the Chat / Terminal switch and **Agent settings**, so you can pick how the session resumes. Opening a session never resumes it on its own.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/session-resume-bar-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/session-resume-bar-nov-2026.png" class="help-center-img img-bordered" alt="A stopped session on a task page: the agent's last reply above, and in place of the composer the resume bar reading Stopped just now with the branch kepler/fix-cart-total in acme-web, the Reply to resume this conversation box, the Chat / Terminal switch with Chat selected, the Docs Model Build agent settings pill and Resume.">
+  <a href="/wp-content/uploads/session-resume-bar-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/session-resume-bar-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="A stopped session on a task page: the agent's last reply above, and in place of the composer the resume bar reading Stopped just now with the branch kepler/fix-cart-total in acme-web, the Reply to resume this conversation box, the Chat / Terminal switch with Chat selected, the Docs Model Build agent settings pill and Resume.">
   </a>
   <figcaption style="text-align:center; color:#888">A stopped session's resume bar.</figcaption>
 </figure>

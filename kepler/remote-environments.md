@@ -35,8 +35,8 @@ Kepler has 2 remote features, and they work in opposite directions:
 Both sit at the left of the title bar, right after **New task**. The **Remote Access** button shows a monitor-and-phone icon.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-task-button-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-task-button-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The left end of the Kepler top bar: the application menu, the New task button with a plus sign, the Local environment chip, and the Remote Access button's monitor-and-phone icon in green because Remote Access is on.">
+  <a href="/wp-content/uploads/new-task-button-oct-2026-v6@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-task-button-oct-2026-v6@2x.png" class="help-center-img img-bordered" alt="The left end of the Kepler top bar: the application menu, the New task button with a plus sign, the environment chip's computer icon for this machine, and the Remote Access button's monitor-and-phone icon in green because Remote Access is on.">
   </a>
   <figcaption style="text-align:center; color:#888">The environment chip and the Remote Access button after New task, in a local window.</figcaption>
 </figure>
@@ -130,8 +130,8 @@ Use **Settings → Remote environments** to add, connect, edit, and remove machi
 - To open the host's page, click the row.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-environments-hosts-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-environments-hosts-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Settings › Remote environments: Add machine, Your machines with dev-server (SSH, not connected, alex@dev.acme.example) and Connect, Found on this machine listing build-box and staging-db from the SSH config with Add and hide buttons and Show hidden (1), and Remote windows with the option Always use this app's interface, off.">
+  <a href="/wp-content/uploads/remote-environments-hosts-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-environments-hosts-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="Settings › Remote environments: Your machines with Add machine and dev-server (SSH, Not connected, alex@dev.acme.example) with Connect, Found on this machine listing build-box and staging-db from the SSH config with Add and hide buttons and Show hidden (1), and Remote windows with Always use this app's interface ticked.">
   </a>
   <figcaption style="text-align:center; color:#888">Settings → Remote environments, with a saved host.</figcaption>
 </figure>
@@ -414,8 +414,8 @@ When you start a connection with **Connect**, **Switch to**, a new window, or **
 When you connect to a machine whose server is signed in to a different GitKraken account than this computer, Kepler asks which account the server should use: **Keep** the server's account or **Switch to** yours. Switching changes the account for every computer that uses that server, including agents running there now. Kepler remembers your answer for that machine.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-account-choice-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-account-choice-nov-2026.png" class="help-center-img img-bordered" alt="The dev-server uses another account dialog: the server is signed in as sam@acme.dev and this computer as alex@acme.dev, and switching changes the account for every computer that uses the server. Buttons: Cancel, Keep sam@acme.dev and Switch to alex@acme.dev.">
+  <a href="/wp-content/uploads/remote-account-choice-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-account-choice-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The dev-server uses another account dialog: the server is signed in as sam@acme.dev and this computer as alex@acme.dev, and switching changes the account for every computer that uses the server. Buttons: Cancel, Keep sam@acme.dev and Switch to alex@acme.dev.">
   </a>
   <figcaption style="text-align:center; color:#888">Choosing which GitKraken account a shared server uses.</figcaption>
 </figure>

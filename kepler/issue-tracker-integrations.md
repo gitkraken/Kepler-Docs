@@ -322,8 +322,8 @@ You can change a GitHub.com issue's state without leaving Kepler. Click **Manage
 Closing keeps the discussion and lets you reopen the issue later, so close an issue unless you need it gone.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/github-issue-manage-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/github-issue-manage-nov-2026.png" class="help-center-img img-bordered" alt="The side panel header of GitHub issue #42, Gift card codes are case-sensitive at checkout, with its Manage GitHub issue button (a pencil after the title) open on a menu of Close issue and Delete issue.">
+  <a href="/wp-content/uploads/github-issue-manage-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/github-issue-manage-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The side panel header of GitHub issue #42, Gift card codes are case-sensitive at checkout, with its Manage GitHub issue button (a pencil after the title) open on a menu of Close issue and Delete issue.">
   </a>
   <figcaption style="text-align:center; color:#888">The Manage GitHub issue menu on an open issue.</figcaption>
 </figure>

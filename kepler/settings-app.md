@@ -221,8 +221,8 @@ Kepler asks before it updates or replaces your copy, and moves your copy to the 
 With **Left**, the **Settings** button moves to the bottom of the views.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/settings-appearance-dashboard-nov-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/settings-appearance-dashboard-nov-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Dashboard views section of Settings › Appearance at its defaults: Views, with picture tiles for Top (chosen) and Left; View style, with Tabs chosen over Pills; Size, Default or Compact, marked Left side only; and Counts on views, ticked. Each row has its help line.">
+  <a href="/wp-content/uploads/settings-appearance-dashboard-nov-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/settings-appearance-dashboard-nov-2026-v5@2x.png" class="help-center-img img-bordered" alt="The Dashboard views section of Settings › Appearance at its defaults: Views, with picture tiles for Top (chosen) and Left; View style, with Tabs chosen over Pills; Size, Default or Compact, marked Left side only; and Counts on views and Dim quiet items, both ticked. Each row has its help line.">
   </a>
   <figcaption style="text-align:center; color:#888">The Dashboard views settings, at their defaults.</figcaption>
 </figure>

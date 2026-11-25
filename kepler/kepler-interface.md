@@ -58,8 +58,8 @@ When an agent you installed has a newer version, an agent updates button appears
 On Windows and Linux, the menu button at the leading edge of the top bar holds the full application menu (**File**, **Edit**, **View**, **Window**, **Help**), including **Settings**, **Check for Updates…**, and **About**. macOS keeps its native menu bar. To switch windows, see [Kepler windows](#kepler-windows).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-task-button-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-task-button-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The left end of the Kepler top bar: the application menu, the New task button with a plus sign, the Local environment chip, and the Remote Access button's monitor-and-phone icon in green because Remote Access is on.">
+  <a href="/wp-content/uploads/new-task-button-oct-2026-v6@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-task-button-oct-2026-v6@2x.png" class="help-center-img img-bordered" alt="The left end of the Kepler top bar: the application menu, the New task button with a plus sign, the environment chip's computer icon for this machine, and the Remote Access button's monitor-and-phone icon in green because Remote Access is on.">
   </a>
   <figcaption style="text-align:center; color:#888">The top bar's leading edge.</figcaption>
 </figure>
@@ -88,8 +88,8 @@ The **Search Kepler** field in the top bar counts the tasks that need you and th
 - Press **F8** (**Go to what needs you next**) to open the next task that needs you, at the session that waits.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/search-kepler-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/search-kepler-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The title bar's Search Kepler field with its 1 needs you and 1 unread chips, beside the Ask button. Its tooltip reads Search Kepler with Ctrl Shift P, 1 needs you, 1 unread, and Go to what needs you next with F8.">
+  <a href="/wp-content/uploads/search-kepler-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/search-kepler-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The title bar's Search Kepler field with its 1 needs you and 1 unread chips, beside the Ask button. Its tooltip lists Search Kepler with Ctrl Shift P and Go to what needs you next with F8, then the counts Needs you 1, Unread 1 and Working 2.">
   </a>
   <figcaption style="text-align:center; color:#888">The Search Kepler field, with its tooltip.</figcaption>
 </figure>
@@ -278,8 +278,8 @@ The **Your role** grouping and filter sort items by your part in them:
 ### Task rows
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/task-row-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/task-row-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Unread group of the Tasks view with Fix the cart total, Update checkout copy and Upgrade the payment SDK, each row showing its title, the acme-web repository, its progress stage, New reply, a blue session dot and its age. Fix the cart total keeps its filled Star, and the hovered Update checkout copy row shows its Star and ⋮ buttons while the group header shows its open-in-panels button and Select.">
+  <a href="/wp-content/uploads/task-row-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/task-row-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The Unread group of the Tasks view with Fix the cart total, Update checkout copy and Upgrade the payment SDK, each row showing its title, the acme-web repository, its progress stage, New reply, a blue session dot and its age. Fix the cart total has a filled Star before its title, and the hovered Update checkout copy row shows an empty Star before its title, the Quick look eye button after it and the ⋮ button in place of its age, while the group header shows its open-in-panels button and Select.">
   </a>
   <figcaption style="text-align:center; color:#888">Task rows, with the hovered row showing its Star, Quick look and ⋮ buttons.</figcaption>
 </figure>
@@ -798,8 +798,8 @@ To answer a permission or approval request without opening the session, highligh
 On **All**, type to search your tasks, todos, and commands at once. Under **More ways to search**, rows turn what you typed into a search of your chats or files, a new task, or an [Ask Kepler](/kepler/ask-kepler) chat. Paste a pull request or issue link to open it or start a task from it.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/go-to-task-palette-nov-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/go-to-task-palette-nov-2026-v4@2x.png" class="help-center-img img-bordered" alt="The palette on its Tasks tab: a search field reading Go to task, or type @ for files, > for commands or ? for chats, the All, Tasks, Todo, Files, and Chats tabs with Tasks selected, and your tasks under Needs attention, Unread, Recent, and Not started, with Fix the cart total checked as the current task, above key hints such as All, Open, Task files, and Next tab.">
+  <a href="/wp-content/uploads/go-to-task-palette-nov-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/go-to-task-palette-nov-2026-v5@2x.png" class="help-center-img img-bordered" alt="The palette on its Tasks tab: a search field reading Go to task, or type @ for files, > for commands or ? for chats, the All, Tasks, Todo, Files and Chats tabs with Tasks selected, and your tasks under Needs attention, Unread, Recent and Not started, with Fix the cart total checked as the current task, above the key hints All, Open, Actions, and Switch tab with the left and right arrow keys.">
   </a>
   <figcaption style="text-align:center; color:#888">The Tasks tab, listing your tasks to switch to.</figcaption>
 </figure>
@@ -819,8 +819,8 @@ On **All**, type to search your tasks, todos, and commands at once. Under **More
 On **Files** and **Chats**, the scope chip at the end of the tabs names the task being searched, or reads **All tasks**. To search another task, click the chip or press **Alt + S**, or **⌘ + ⌥ + S** on macOS, then pick a task or type to find one. To search every task, pick **All tasks** or click the chip's **×**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/palette-chats-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/palette-chats-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The palette on its Chats tab, searching all tasks (All tasks scope chip) for discount: one chat, Fix the cart total, marked Running with 3 matches, then its three messages with discount highlighted, two from the agent and your own prompt, Fix the cart total: discounts should apply before tax, above key hints such as Open, Scope and Next tab.">
+  <a href="/wp-content/uploads/palette-chats-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/palette-chats-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The palette on its Chats tab, searching all tasks (All tasks scope chip) for discount: one chat, Fix the cart total, marked Running with 3 matches, then its three messages with discount highlighted, two from the agent and your own prompt, Fix the cart total: discounts should apply before tax, above the key hints All, Open, Scope (Alt S) and Switch tab (Shift Tab).">
   </a>
   <figcaption style="text-align:center; color:#888">The Chats tab, with matches grouped by chat.</figcaption>
 </figure>
@@ -828,8 +828,8 @@ On **Files** and **Chats**, the scope chip at the end of the tabs names the task
 **Commands.** To show only commands, type **>** in an empty field, or press **Ctrl/⌘ + Shift + P** again while **All** is showing. Before you type, the list starts with **Suggested**, led by the commands you use most. Each command shows its keyboard shortcut. The list also has a row for each Settings page and for actions such as **Switch to window: {name}**. Press **Enter** to run the highlighted command. To give it a different key, click **Change shortcut** on its row.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/palette-commands-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/palette-commands-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="The palette's All view filtered to commands: a Commands chip with an x in a search field reading Search commands, or type @ for files or ? for chats, the All, Tasks, Todo, Files, and Chats tabs with All selected, and the Suggested commands, New task (highlighted, with its Change shortcut keyboard button), Go to what needs you next (F8), Toggle Ask Kepler chat, New Ask Kepler chat, Open settings, and others, then the General commands, above key hints such as Run and Next tab.">
+  <a href="/wp-content/uploads/palette-commands-nov-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/palette-commands-nov-2026-v4@2x.png" class="help-center-img img-bordered" alt="The palette's All view filtered to commands: a Commands chip with an x in a search field reading Search commands, or type @ for files or ? for chats, the All, Tasks, Todo, Files and Chats tabs with All selected, and the Suggested commands, New task (highlighted, with its Change shortcut keyboard button), Go to what needs you next (F8), Toggle Ask Kepler chat, New Ask Kepler chat, Open settings and others, then the General commands, above the key hints All, Run, and Switch tab with the left and right arrow keys.">
   </a>
   <figcaption style="text-align:center; color:#888">The palette showing only commands, with Suggested first.</figcaption>
 </figure>

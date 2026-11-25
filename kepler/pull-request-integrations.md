@@ -299,8 +299,8 @@ To open a pull request, follow these steps:
 4. Add a **Title** and a **Description**, and click **Create pull request**.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/github-pr-create-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/github-pr-create-nov-2026.png" class="help-center-img img-bordered" alt="The Create pull request dialog, which asks you to choose a GitHub repository and name two branches that already exist in it: Repository acme/acme-web, Head branch kepler/fix-cart-total, Base branch main, a Title and a Description, with Cancel and Create pull request.">
+  <a href="/wp-content/uploads/github-pr-create-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/github-pr-create-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Create pull request dialog, which asks you to choose a GitHub repository and name two branches that already exist in it: Repository acme/acme-web, Head branch kepler/fix-cart-total, Base branch main, a Title and a Description, with Cancel and Create pull request.">
   </a>
   <figcaption style="text-align:center; color:#888">Opening a pull request between two pushed branches.</figcaption>
 </figure>
@@ -312,8 +312,8 @@ To change a pull request, click **Manage pull request**, the **…** button in t
 - **Merge pull request**, which then asks for the **Merge method**. When the base branch uses a merge queue, **Add to merge queue** takes its place
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/github-pr-manage-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/github-pr-manage-nov-2026.png" class="help-center-img img-bordered" alt="The Manage pull request dialog for acme/acme-web #51, offering Edit title and description, Close pull request and Merge pull request.">
+  <a href="/wp-content/uploads/github-pr-manage-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/github-pr-manage-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Manage pull request dialog for acme/acme-web #51, offering Edit title and description, Close pull request and Merge pull request.">
   </a>
   <figcaption style="text-align:center; color:#888">The actions GitHub allows on an open pull request.</figcaption>
 </figure>

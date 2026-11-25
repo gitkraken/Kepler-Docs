@@ -120,8 +120,8 @@ Kepler offers a method only when the tool it runs is installed. For example, the
 **Kepler can run the copy that came with a desktop app.** When an agent's command-line tool is not installed but the vendor's desktop app is, such as Claude, ChatGPT, GitHub Copilot, or OpenCode Desktop, Kepler runs the app's copy of the agent. The agent's page marks it **Desktop app**, and that copy updates only when the app does. To get a copy that updates itself, click **Install CLI** on the agent's page. Kepler then runs the standalone CLI instead. If the desktop app keeps its sign-in to itself, sign in to the agent once in Kepler.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/agent-desktop-copy-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/agent-desktop-copy-nov-2026.png" class="help-center-img img-bordered" alt="Claude Code's page in Settings › Agents running the Claude desktop app's copy: version 2.1.145 with a Desktop app badge, and Install CLI with its tooltip, Install the standalone CLI, which updates itself. Kepler then runs it instead of the desktop app's copy.">
+  <a href="/wp-content/uploads/agent-desktop-copy-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-desktop-copy-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="Claude Code's page in Settings › Agents running the Claude desktop app's copy: version 2.1.145 with a Desktop app badge, and Install CLI with its tooltip, Install the standalone CLI, which updates itself. Kepler then runs it instead of the desktop app's copy.">
   </a>
   <figcaption style="text-align:center; color:#888">Claude Code running from the Claude desktop app, with Install CLI.</figcaption>
 </figure>

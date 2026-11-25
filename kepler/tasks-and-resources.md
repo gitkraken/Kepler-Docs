@@ -107,8 +107,8 @@ You can use the list from the keyboard:
 | **Space** or **Enter** | Ticks or clears the focused row |
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/add-resources-issue-list-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/add-resources-issue-list-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Resources screen on its Issues tab, adding from your GitHub issues with the Related to me filter, with issue #42 focused and its Add button showing. Issue #38 has a check because it is already on the task, and the preview on the right shows #42's labels and description.">
+  <a href="/wp-content/uploads/add-resources-issue-list-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/add-resources-issue-list-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Resources screen on its Issues tab, marked as having unsaved changes, with the Search GitHub issues field, Refresh and the filter pills GitHub, Related to me, Any repo, Open, Last 90 days, Any label and No active task. Cart total ignores discounts when tax is applied (#38) has a check and reads On this task; Gift card codes are case-sensitive at checkout (#42) is ticked, reads Will be added and shows the acme-web, default branch and worktree chips; Add a wishlist to product pages (#45) is unticked. The preview shows #42 in acme/acme-web by sam-ortiz with its bug and checkout labels, and the footer reads 1 to add with Discard and Save changes.">
   </a>
   <figcaption style="text-align:center; color:#888">An issue ticked to add, with its repository chip and the preview open.</figcaption>
 </figure>
@@ -199,8 +199,8 @@ The chip's **worktree** box sets whether the task gets a worktree, and the chip'
 If the branch you picked is already checked out somewhere, Git cannot check it out a second time. The **worktree** box locks and says where the task will work instead.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/isolated-worktree-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/isolated-worktree-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Resources screen on its Repos & folders tab, adding from your repos and folders, with Open folder… and Clone…, the search field and the repositories folder /home/alex/kepler/repositories with Scan and Change. The acme-web row is selected, and under it a confirm line offers New worktree from main, reads Creates a worktree on a new branch from main, and has Cancel and Create worktree.">
+  <a href="/wp-content/uploads/isolated-worktree-aug-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/isolated-worktree-aug-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Resources screen on its Repos & folders tab, marked as having unsaved changes, with the search field, Open folder… and Clone…. The acme-web row is ticked and reads Will be added, with a chip for a new branch from main and the worktree option on, a remove button and an add button for another branch. The footer shows the repositories folder with Scan and Change, and 1 to add with Discard and Save changes.">
   </a>
   <figcaption style="text-align:center; color:#888">A ticked repository with its branch and worktree chip, before you save.</figcaption>
 </figure>

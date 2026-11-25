@@ -31,8 +31,8 @@ Dictation has 3 transcription engines:
 - **Whisper** works on any machine. Use it where WebGPU is unavailable.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/start-voice-input-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/start-voice-input-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="The New task composer: Add issue, Add PR and Add context above the empty prompt, then the attach button and the microphone button with its Dictate tooltip below it, and the agent pill with a warning sign and Start on the right.">
+  <a href="/wp-content/uploads/start-voice-input-aug-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/start-voice-input-aug-2026-v3@2x.png" class="help-center-img img-bordered" alt="The New task composer: Add issue, Add PR and Add context above the empty prompt, then the attach button, the microphone button with its Dictate tooltip and the shortcut Ctrl Shift Space below it, and the Chat / Terminal switch; on the right, the agent pill with a warning sign and Start.">
   </a>
   <figcaption style="text-align:center; color:#888">The composer's microphone, with its Dictate tooltip.</figcaption>
 </figure>
@@ -40,8 +40,8 @@ Dictation has 3 transcription engines:
 Dictation turns on once you download a model in **Settings → Voice**. The microphone in the prompt becomes available when the model is ready.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/voice-input-settings-aug-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/voice-input-settings-aug-2026-v5@2x.png" class="help-center-img img-bordered" alt="The Dictation section of Settings › Voice: under Speech model, Whisper (80 MB) is picked with Remove…, Licenses and its Quality select at Fast (80 MB), suggested, installed, and a Qwen3-ASR 1.7B and 0.6B row says they need a graphics card with WebGPU. Below come Dictation language (Auto-detect), Dictation mode with Type as you talk picked beside Type when you stop and Send when you stop, and Vocabulary (No words yet, Manage, Qwen speech models only).">
+  <a href="/wp-content/uploads/voice-input-settings-aug-2026-v6@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/voice-input-settings-aug-2026-v6@2x.png" class="help-center-img img-bordered" alt="The Dictation section of Settings › Voice: under Speech model, Whisper (80 MB) is picked with Remove…, Licenses and a select at Fast (80 MB), and a Qwen3-ASR 1.7B and 0.6B row says they need a graphics card with WebGPU. Below come Dictation language (Auto-detect), Dictation mode with Type as you talk picked beside Type when you stop and Send when you stop, and Vocabulary (No words yet, Manage, Qwen speech models only).">
   </a>
   <figcaption style="text-align:center; color:#888">The Dictation settings on a computer without WebGPU, where Whisper transcribes.</figcaption>
 </figure>
@@ -178,8 +178,8 @@ Hover the microphone, and its tooltip explains why. When the model cannot dictat
 | *Loading voice model…* / *Transcribing…* | Busy. The button is disabled for the moment |
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/voice-mic-tooltip-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/voice-mic-tooltip-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The New task launcher with the microphone button showing a struck-through mic and its tooltip: The selected voice model needs WebGPU, which is not available here. Open Settings to choose Whisper.">
+  <a href="/wp-content/uploads/voice-mic-tooltip-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/voice-mic-tooltip-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The New task launcher with the microphone button showing a struck-through mic and its tooltip: Dictate, with the shortcut Ctrl Shift Space, over Choose Whisper here. The selected model needs WebGPU, which is not available.">
   </a>
   <figcaption style="text-align:center; color:#888">The microphone with a Qwen3-ASR model selected on a computer without WebGPU.</figcaption>
 </figure>
@@ -215,8 +215,8 @@ To have a reply read aloud, use one of these controls:
 During continuous reading, the **Read aloud** bar above the composer shows the sentence being read, with buttons to pause, skip to the next reply, or stop, and a **Continuous reading** toggle.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/read-aloud-bar-nov-2026.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/read-aloud-bar-nov-2026.png" class="help-center-img img-bordered" alt="Above a session's composer, the Read aloud bar shows Pause reading, Skip to the next reply and Stop reading, the status Reading aloud, the sentence being read and Continuous reading turned on; in the composer footer the Continuous reading button (headphones) is pressed.">
+  <a href="/wp-content/uploads/read-aloud-bar-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/read-aloud-bar-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="Above a session's composer, the Read aloud bar shows Pause reading, Skip to the next reply and Stop reading, the status Reading aloud, the sentence being read and Continuous reading turned on; in the composer footer the Continuous reading button (headphones) is pressed.">
   </a>
   <figcaption style="text-align:center; color:#888">The Read aloud bar during continuous reading.</figcaption>
 </figure>
@@ -224,8 +224,8 @@ During continuous reading, the **Read aloud** bar above the composer shows the s
 While anything is being read, the **Search Kepler** field in the top bar shows **Reading aloud** and the sentence. Click it to stop reading.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/read-aloud-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/read-aloud-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="An agent reply in the chat being read aloud: its second sentence, The total now takes the discount off before tax, so a discounted order no longer pays tax on money it never spent, is highlighted, and under the reply the Read aloud button has turned into Stop reading, a square icon between Copy and the reply's time.">
+  <a href="/wp-content/uploads/read-aloud-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/read-aloud-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="An agent reply in the chat being read aloud: its second sentence, The total now takes the discount off before tax, so a discounted order no longer pays tax on money it never spent, is highlighted, and under the reply the Read aloud button has turned into Pause reading, with Stop reading beside it, between Copy and the reply's time.">
   </a>
   <figcaption style="text-align:center; color:#888">A reply being read aloud, with its current sentence highlighted.</figcaption>
 </figure>
