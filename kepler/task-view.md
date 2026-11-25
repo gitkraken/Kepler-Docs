@@ -392,13 +392,13 @@ A closed session keeps running and stays in the context panel. To archive a sess
 
 When every tab is closed, the content area offers **New session**, so you can start something right away.
 
-To bring in an agent conversation you started outside Kepler, start a new session, then click **Open an external session** under its composer. The card shows only while Kepler lists [sessions started outside Kepler](/kepler/agent-sessions#sessions-started-outside-kepler). Each conversation you open gets its own tab. **Back to the new session** returns to the composer.
+To bring in an agent conversation you started outside Kepler, start a new session, then click **Continue a session started outside Kepler** under its composer. The card shows only while Kepler lists [sessions started outside Kepler](/kepler/agent-sessions#sessions-started-outside-kepler). Each conversation you open gets its own tab. **Back to the new session** returns to the composer.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-session-external-card-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-session-external-card-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="A new session's draft on the task page: What should the agent work on?, the composer with its repository, branch and worktree chips, then &quot;or&quot;, then the Open an external session card, Pick up a Claude Code, Codex or other agent session you already started and bring it into this task.">
+  <a href="/wp-content/uploads/new-session-external-card-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-session-external-card-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="A new session's draft on the task page: What should the agent work on?, the composer with its repository, branch and worktree chips, then &quot;or&quot;, then the Continue a session started outside Kepler card, Pick up a Claude Code, Codex or other agent session you already started and bring it into this task.">
   </a>
-  <figcaption style="text-align:center; color:#888">Open an external session, under a new session's composer.</figcaption>
+  <figcaption style="text-align:center; color:#888">The Continue a session started outside Kepler card, under a new session's composer.</figcaption>
 </figure>
 
 The list shows the agent conversations Kepler found outside it, under **Live now** and **Past sessions**, with the folder each ran in and when it was last active. **Show past sessions** and **Show sessions from every folder** widen the list.

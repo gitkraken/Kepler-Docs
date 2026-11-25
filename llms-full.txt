@@ -360,7 +360,7 @@ The app icon shows how many tasks need you: as a badge on the macOS Dock icon, o
 
 ### New task
 
-**New task** (**Ctrl/⌘ + N**) opens the **New task** composer. To start a task from a conversation you began outside Kepler, use **Open an external session** in the composer. See [Create a task](/kepler/create-task#from-a-session-you-already-started).
+**New task** (**Ctrl/⌘ + N**) opens the **New task** composer. To start a task from a conversation you began outside Kepler, use **Continue a session started outside Kepler** in the composer. See [Create a task](/kepler/create-task#from-a-session-you-already-started).
 
 ***
 
@@ -425,7 +425,7 @@ To fill **Todo**, connect at least one provider. See [Issue Tracker Integrations
 
 ### External sessions
 
-Todo lists only issues and pull requests. To pick up an agent conversation you started outside Kepler, open **New task** and use **Open an external session**. See [Create a task](/kepler/create-task#from-a-session-you-already-started).
+Todo lists only issues and pull requests. To pick up an agent conversation you started outside Kepler, open **New task** and use **Continue a session started outside Kepler**. See [Create a task](/kepler/create-task#from-a-session-you-already-started).
 
 To learn what external sessions are and what you can do with them, see [Agent Sessions](/kepler/agent-sessions#sessions-started-outside-kepler).
 
@@ -2409,7 +2409,7 @@ A closed session keeps running and stays in the context panel. To archive a sess
 
 When every tab is closed, the content area offers **New session**, so you can start something right away.
 
-To bring in an agent conversation you started outside Kepler, start a new session, then click **Open an external session** under its composer. The card shows only while Kepler lists [sessions started outside Kepler](/kepler/agent-sessions#sessions-started-outside-kepler). Each conversation you open gets its own tab. **Back to the new session** returns to the composer.
+To bring in an agent conversation you started outside Kepler, start a new session, then click **Continue a session started outside Kepler** under its composer. The card shows only while Kepler lists [sessions started outside Kepler](/kepler/agent-sessions#sessions-started-outside-kepler). Each conversation you open gets its own tab. **Back to the new session** returns to the composer.
 
 The list shows the agent conversations Kepler found outside it, under **Live now** and **Past sessions**, with the folder each ran in and when it was last active. **Show past sessions** and **Show sessions from every folder** widen the list.
 
@@ -2899,7 +2899,7 @@ You can start a task in 5 ways. The shortest starts from work that is already as
 |---|---|
 | **Work assigned to you** | Run an Action on an issue or pull request in the **Todo** view of [the Kepler interface](/kepler/kepler-interface). One click starts the task with its context attached |
 | **Something you're describing yourself** | **New task** opens the **New task** composer, where you write the prompt and attach what it needs |
-| **A conversation you already started** | **Open an external session**, under the **New task** composer, wraps a task around an agent session you began in your own terminal |
+| **A conversation you already started** | **Continue a session started outside Kepler**, under the **New task** composer, wraps a task around an agent session you began in your own terminal |
 | **Workspaces in another agent app** | **Import from another app** brings workspaces from Conductor, Orca, T3 Code, herdr, or Vibe Kanban in as tasks, with their branches and chats |
 | **Another GitKraken app** | A link from GitLens or GitKraken Desktop opens Kepler on the work you were looking at |
 
@@ -3016,7 +3016,7 @@ Attaching the same repository twice gives the task 2 independent worktrees on it
 
 ## From a session you already started
 
-If you started work with an agent in your own terminal, you can track that conversation in a task. Under the **New task** composer, and on an empty tasks list, **Open an external session** switches the composer to a list of every agent conversation Kepler can see. **Start a new task** switches back. **Open an external session** appears only while **Show them in Kepler** is on in **Settings → General → Sessions outside Kepler**, which it is by default.
+If you started work with an agent in your own terminal, you can track that conversation in a task. Under the **New task** composer, and on an empty tasks list, **Continue a session started outside Kepler** switches the composer to a list of every agent conversation Kepler can see. **Start a new task** switches back. **Continue a session started outside Kepler** appears only while **Show them in Kepler** is on in **Settings → General → Sessions outside Kepler**, which it is by default.
 
 | Part | What it does |
 |---|---|
@@ -3045,7 +3045,7 @@ If you work in Conductor, Orca, T3 Code, herdr, or Vibe Kanban, you can bring it
 
 To import workspaces from Conductor, take the following steps:
 
-1. On an empty **Tasks** list, click the import card. It names the apps Kepler found, such as **Import from Conductor, Orca and 2 more**. You can also choose **File → Import from Another App…**.
+1. On an empty **Tasks** list, click the import card. It names the apps Kepler found, such as **Import from Conductor and Orca**. You can also choose **File → Import from Another App…**.
 2. If Kepler finds more than 1 app, click **Conductor**.
 3. Tick the workspaces you want, and click **Import *N* workspaces**. The list is grouped by repository, and workspaces active in the last 30 days start ticked. Older ones are folded under **Older**. To narrow a long list, type in **Filter workspaces**. To clear every tick, click **Select none**. A workspace you already imported is marked **Already a task**.
 4. The import runs in the background, and a chip in the title bar shows its progress. When it reads **Imported *N***, hover over or click the chip, and click **View tasks**. The chip's card also has **Stop**, to stop the import, and **Retry**, to try a failed workspace again.
@@ -5246,7 +5246,7 @@ After you install Kepler, the guided start also offers to import Conductor's wor
 
 ## How to import your Conductor workspaces
 
-1. On an empty **Tasks** list, click the import card. It names the apps Kepler found, such as **Import from Conductor, Orca and 2 more**. You can also choose **File → Import from Another App…** at any time.
+1. On an empty **Tasks** list, click the import card. It names the apps Kepler found, such as **Import from Conductor and Orca**. You can also choose **File → Import from Another App…** at any time.
 
     
 2. If Kepler found more than 1 app, click **Conductor** in **Import from another app**.

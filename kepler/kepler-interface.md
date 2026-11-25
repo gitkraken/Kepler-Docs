@@ -136,7 +136,7 @@ The app icon shows how many tasks need you: as a badge on the macOS Dock icon, o
 
 ### New task
 
-**New task** (**Ctrl/⌘ + N**) opens the **New task** composer. To start a task from a conversation you began outside Kepler, use **Open an external session** in the composer. See [Create a task](/kepler/create-task#from-a-session-you-already-started).
+**New task** (**Ctrl/⌘ + N**) opens the **New task** composer. To start a task from a conversation you began outside Kepler, use **Continue a session started outside Kepler** in the composer. See [Create a task](/kepler/create-task#from-a-session-you-already-started).
 
 ***
 
@@ -208,7 +208,7 @@ To fill **Todo**, connect at least one provider. See [Issue Tracker Integrations
 
 ### External sessions
 
-Todo lists only issues and pull requests. To pick up an agent conversation you started outside Kepler, open **New task** and use **Open an external session**. See [Create a task](/kepler/create-task#from-a-session-you-already-started).
+Todo lists only issues and pull requests. To pick up an agent conversation you started outside Kepler, open **New task** and use **Continue a session started outside Kepler**. See [Create a task](/kepler/create-task#from-a-session-you-already-started).
 
 To learn what external sessions are and what you can do with them, see [Agent Sessions](/kepler/agent-sessions#sessions-started-outside-kepler).
 
@@ -874,8 +874,8 @@ When a view has nothing to show, or Kepler cannot load it, you see one of these 
 | **Unable to find this task** | The task was deleted, or its link is from another machine |
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/tasks-empty-state-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/tasks-empty-state-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Tasks view's empty state: the heading Your agents' work lives here and a line on what a task is, then Add issue, Add PR and Add context above the composer (Describe a task or ask a question…, the agent pill and Start), Add repo or folder below it, handwritten hints pointing at each, and an Open an external session card under an or divider.">
+  <a href="/wp-content/uploads/tasks-empty-state-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/tasks-empty-state-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Tasks view's empty state: the heading Your agents' work lives here and a line on what a task is, then Add issue, Add PR and Add context above the composer (Describe a task or ask a question…, the agent pill and Start), Add repo or folder below it, handwritten hints pointing at each, and a Continue a session started outside Kepler card under an or divider.">
   </a>
   <figcaption style="text-align:center; color:#888">The Tasks view with no tasks yet.</figcaption>
 </figure>

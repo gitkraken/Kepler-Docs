@@ -46,11 +46,11 @@ After you install Kepler, the guided start also offers to import Conductor's wor
 
 ## How to import your Conductor workspaces
 
-1. On an empty **Tasks** list, click the import card. It names the apps Kepler found, such as **Import from Conductor, Orca and 2 more**. You can also choose **File → Import from Another App…** at any time.
+1. On an empty **Tasks** list, click the import card. It names the apps Kepler found, such as **Import from Conductor and Orca**. You can also choose **File → Import from Another App…** at any time.
 
     <figure style="text-align:center">
-      <a href="/wp-content/uploads/import-card-nov-2026@2x.png" target="_blank" rel="noopener noreferrer">
-        <img src="/wp-content/uploads/import-card-nov-2026@2x.png" class="help-center-img img-bordered" alt="Two cards below an or divider: Import from Conductor, Orca and 2 more, reading Bring in your workspaces as tasks, with their branches and chats, and Open an external session.">
+      <a href="/wp-content/uploads/import-card-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+        <img src="/wp-content/uploads/import-card-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="Two cards below an or divider: Import from Conductor and Orca, reading Bring in your workspaces as tasks, with their branches and chats, and Continue a session started outside Kepler.">
       </a>
       <figcaption style="text-align:center; color:#888">The import card names the apps Kepler found.</figcaption>
     </figure>

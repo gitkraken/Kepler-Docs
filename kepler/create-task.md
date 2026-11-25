@@ -220,15 +220,15 @@ If you work in Conductor, Orca, T3 Code, herdr, or Vibe Kanban, you can bring it
 
 To import workspaces from Conductor, take the following steps:
 
-1. On an empty **Tasks** list, click the import card. It names the apps Kepler found, such as **Import from Conductor, Orca and 2 more**. You can also choose **File → Import from Another App…**.
+1. On an empty **Tasks** list, click the import card. It names the apps Kepler found, such as **Import from Conductor and Orca**. You can also choose **File → Import from Another App…**.
 2. If Kepler finds more than 1 app, click **Conductor**.
 3. Tick the workspaces you want, and click **Import *N* workspaces**. The list is grouped by repository, and workspaces active in the last 30 days start ticked. Older ones are folded under **Older**. To narrow a long list, type in **Filter workspaces**. To clear every tick, click **Select none**. A workspace you already imported is marked **Already a task**.
 4. The import runs in the background, and a chip in the title bar shows its progress. When it reads **Imported *N***, hover over or click the chip, and click **View tasks**. The chip's card also has **Stop**, to stop the import, and **Retry**, to try a failed workspace again.
 5. Find the new tasks in **Tasks**. Open one to pick its chat up where it left off.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/import-card-nov-2026@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/import-card-nov-2026@2x.png" class="help-center-img img-bordered" alt="Two cards below an or divider: Import from Conductor, Orca and 2 more, reading Bring in your workspaces as tasks, with their branches and chats, and Open an external session.">
+  <a href="/wp-content/uploads/import-card-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/import-card-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="Two cards below an or divider: Import from Conductor and Orca, reading Bring in your workspaces as tasks, with their branches and chats, and Continue a session started outside Kepler.">
   </a>
   <figcaption style="text-align:center; color:#888">Step 1: the import card names the apps Kepler found.</figcaption>
 </figure>
