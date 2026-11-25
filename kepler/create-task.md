@@ -25,7 +25,7 @@ You can start a task in 5 ways. The shortest starts from work that is already as
 |---|---|
 | **Work assigned to you** | Run an Action on an issue or pull request in the **Todo** view of [the Kepler interface](/kepler/kepler-interface). One click starts the task with its context attached |
 | **Something you're describing yourself** | **New task** opens the **New task** composer, where you write the prompt and attach what it needs |
-| **A conversation you already started** | **Open an external session**, under the **New task** composer, wraps a task around an agent session you began in your own terminal |
+| **A conversation you already started** | **Continue a session started outside Kepler**, under the **New task** composer, wraps a task around an agent session you began in your own terminal |
 | **Workspaces in another agent app** | **Import from another app** brings workspaces from Conductor, Orca, T3 Code, herdr, or Vibe Kanban in as tasks, with their branches and chats |
 | **Another GitKraken app** | A link from GitLens or GitKraken Desktop opens Kepler on the work you were looking at |
 
@@ -184,13 +184,13 @@ Attaching the same repository twice gives the task 2 independent worktrees on it
 
 ## From a session you already started
 
-If you started work with an agent in your own terminal, you can track that conversation in a task. Under the **New task** composer, and on an empty tasks list, **Open an external session** switches the composer to a list of every agent conversation Kepler can see. **Start a new task** switches back. **Open an external session** appears only while **Show them in Kepler** is on in **Settings → General → Sessions outside Kepler**, which it is by default.
+If you started work with an agent in your own terminal, you can track that conversation in a task. Under the **New task** composer, and on an empty tasks list, **Continue a session started outside Kepler** switches the composer to a list of every agent conversation Kepler can see. **Start a new task** switches back. **Continue a session started outside Kepler** appears only while **Show them in Kepler** is on in **Settings → General → Sessions outside Kepler**, which it is by default.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/continue-external-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/continue-external-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The New task launcher flipped to Open an external session: a Find an external session… search field over Past sessions, listing the Pi session Why do product search results miss items tagged in uppercase? in …/repositories/acme-web, highlighted with Continue. Below the panel, Start a new task switches back to the composer.">
+  <a href="/wp-content/uploads/continue-external-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/continue-external-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Continue a session started outside Kepler panel: a Find an external session… search field over Past sessions, listing the Pi session Why do product search results miss items tagged in uppercase in …/repositories/acme-web, highlighted with Continue. Below the panel is the Start a new task button.">
   </a>
-  <figcaption style="text-align:center; color:#888">Opening an external session from the New task composer.</figcaption>
+  <figcaption style="text-align:center; color:#888">Continuing a session started outside Kepler.</figcaption>
 </figure>
 
 | Part | What it does |

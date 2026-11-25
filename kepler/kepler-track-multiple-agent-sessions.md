@@ -57,10 +57,10 @@ To put a terminal session in a task:
 A session still running in your terminal opens read-only. The bar under its transcript says what it is doing, such as **Running outside Kepler** or **Waiting on you**. When it waits on you, answer in your terminal.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/continue-external-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/continue-external-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The New task launcher flipped to Open an external session: a Find an external session… search field over Past sessions, listing the Pi session Why do product search results miss items tagged in uppercase? in …/repositories/acme-web, highlighted with Continue. Below the panel, Start a new task switches back to the composer.">
+  <a href="/wp-content/uploads/continue-external-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/continue-external-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Continue a session started outside Kepler panel: a Find an external session… search field over Past sessions, listing the Pi session Why do product search results miss items tagged in uppercase in …/repositories/acme-web, highlighted with Continue. Below the panel is the Start a new task button.">
   </a>
-  <figcaption style="text-align:center; color:#888">Opening a session you started in your terminal.</figcaption>
+  <figcaption style="text-align:center; color:#888">Continuing a session started outside Kepler.</figcaption>
 </figure>
 
 ### Take a session over
