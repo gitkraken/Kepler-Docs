@@ -64,7 +64,7 @@ After you install Kepler, the guided start also offers to import Conductor's wor
       <figcaption style="text-align:center; color:#888">Picking Conductor as the app to import from.</figcaption>
     </figure>
 
-3. In **Import from Conductor**, tick the workspaces you want, and click **Import *N* workspaces**. The workspaces are grouped by repository. Workspaces active in the last 30 days arrive ticked, and older ones are folded under **Older**. To tick a whole repository, use its tick box. To narrow a long list, type in **Filter workspaces**. A workspace you already imported is marked **Already a task:** and the task's name.
+3. In **Import from Conductor**, tick the workspaces you want, and click **Import *N* workspaces**. The workspaces are grouped by repository, and each row shows its branch and how long ago it was active. Workspaces active in the last 30 days arrive ticked, and older ones are folded under **Older**. To tick a whole repository, use its tick box. The count at the top, such as **9 of 14 selected**, shows how many you picked. To narrow a long list, type in **Filter workspaces**. To clear every tick, click **Select none**. A workspace you already imported is marked **Already a task:** and the task's name.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/import-workspaces-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -107,6 +107,8 @@ If Conductor is not in the list, Kepler did not find Conductor's workspaces on t
 | The workspace's target branch | The worktree's merge target |
 
 A chat continues only if its agent's history is on your Mac and Kepler supports that agent. The workspace list marks a chat that Kepler cannot continue. If a workspace fails to import, the title bar chip counts it, and its card offers **Retry**.
+
+After the import, continue each chat in Kepler or in Conductor, not both. Both apps write to the same chat history.
 
 ***
 

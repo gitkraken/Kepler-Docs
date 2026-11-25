@@ -244,6 +244,8 @@ Some accounts look different in the list:
 
 If the session is busy, with a turn running or work still going in the background, Kepler asks first: **Stop this session and switch to {login}?** **Stop and switch** stops the session and resumes the conversation on the new account.
 
+<!-- TODO(screenshot): New — a live session's Agent list open in Agent settings, showing Restart conversation as on the agent's other signed-in account (needs two signed-in accounts of one agent). -->
+
 ***
 
 ## Signing in through your browser
@@ -298,7 +300,7 @@ Two limits apply. You must take over a session started outside Kepler before you
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/continue-in-terminal-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/continue-in-terminal-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The menu of a Chat session, opened from its row on the task page rail: Open, Mark as unread, Rename session, Copy session link, Show Agent Graph, Continue in Terminal, Continue in new session, Restart agent, Shut down agent, Archive session and Delete session.">
+    <img src="/wp-content/uploads/continue-in-terminal-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The menu of a Chat session, opened from its row in the task page's context panel: Open, Mark as unread, Rename session, Copy session link, Show Agent Graph, Continue in Terminal, Continue in new session, Restart agent, Shut down agent, Archive session and Delete session.">
   </a>
   <figcaption style="text-align:center; color:#888">Continue in Terminal, on a Chat session's row menu.</figcaption>
 </figure>
@@ -345,13 +347,13 @@ A Terminal session's pane has 3 parts:
 | The status bar | The session at a glance, then your plan usage. See below |
 | The composer | Kepler's own message box, with attachments and dictation |
 
-<!-- TODO(screenshot): Replace — shows Transcript, now Reading view (v0.25.0) -->
 <figure style="text-align:center">
   <a href="/wp-content/uploads/terminal-session-status-bar-oct-2026.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/terminal-session-status-bar-oct-2026.png" class="help-center-img img-bordered" alt="A Claude Code session running in Terminal mode, with the CLI's own prompt above Kepler's status bar. The bar shows a green status dot, the agent and account, Opus 5.5 at Medium effort in Auto mode, the context ring, the branch, the 5-hour usage meter, and Rich input.">
   </a>
   <figcaption style="text-align:center; color:#888">A Terminal session, with Kepler's status bar along the bottom.</figcaption>
 </figure>
+<!-- TODO(screenshot): Replace — ade-terminal-session-status-bar-01: a Claude Code Terminal session on v0.25.0 with the status bar showing the status dot, the agent, model, effort and mode, the context ring, the branch, the account badge and plan usage bars, Reading view, Rich input, and Continuous reading (needs a real Claude Code CLI signed in with two accounts). -->
 
 From left to right, the status bar shows the following:
 
