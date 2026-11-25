@@ -38,29 +38,29 @@ You can open **Ask Kepler** from anywhere in Kepler in one of these ways:
 
 | How | Opens |
 |---|---|
-| The **Ask Kepler** button (Kep, the planet mascot, with the word **Ask**) in the top bar | The panel, on the section you used last |
+| The **Ask Kepler** button (Kep, the planet mascot, with the word **Ask**) in the top bar | The **Chat** section, on the chat you had open |
 | **Ctrl/⌘ + K** or **Ctrl/⌘ + L** (**Toggle Ask Kepler chat**) | The **Chat** section |
 | **Ctrl + &#96;** on every platform, macOS included (**Toggle Ask Kepler terminal**) | The **Terminal** section, starting a shell if none is open |
 | **Ctrl/⌘ + Shift + K** or **Ctrl/⌘ + Shift + L** (**New Ask Kepler chat**) | A new chat, from anywhere in the desktop app |
 
 To close the panel, press the same shortcut again while focus is inside it. On Windows and Linux, a focused shell uses **Ctrl + L** to clear its screen, so press **Ctrl + K** to open or close the chat from inside a terminal.
 
-On a phone, tap Kep in the Dashboard bar. The panel opens full screen, so it has no **Dock panel** and no controls to move it to the other side.
+On a phone, tap Kep in the Dashboard bar. The panel opens full screen, so it has no **Dock panel**.
 
 **The top bar button shows the state of your chats.** When a chat needs something from you, the button becomes a pill that reads **Needs you**, **New reply**, or **Failed**. Click the pill to open the panel on that chat.
 
-**Floating or docked.** By default, the panel floats as a card over the left or right edge of the page, and you can still use the page behind it. To make the panel a column of the window, with the page narrowed beside it, click **Dock panel** in the panel's header. Click it again to float the panel. **Close Ask Kepler** beside it puts the panel away.
+**Floating or docked.** By default, the panel floats as a card over the right edge of the page, and you can still use the page behind it. To make the panel a column of the window, with the page narrowed beside it, click **Dock panel** in the panel's header. Click it again to float the panel. **Close Ask Kepler** beside it puts the panel away.
 
-Right-click the panel's header, or press the keyboard's context-menu key on it, for the panel's menu: **Dock panel**, and **Move to the left** or **Move to the right** to move the panel to the other edge of the window.
+Right-click the panel's header, or press the keyboard's context-menu key on it, for the panel's menu: **Dock panel** and **Auto-hide panel**. With **Auto-hide panel** on, the floating panel closes when you click or move focus elsewhere in Kepler. A docked panel stays open. **Auto-hide panel** is off by default. You can also set it in [Settings → Chat and terminal](/kepler/settings-app#ask-kepler-panel).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/ask-kepler-docked-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/ask-kepler-docked-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Ask Kepler panel docked on the right of the window, with the Dashboard's Tasks view narrowed beside it rather than covered. The panel's header menu is open, with Dock panel checked above Move to the left.">
+  <a href="/wp-content/uploads/ask-kepler-docked-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/ask-kepler-docked-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Ask Kepler panel docked on the right of the window, with the Dashboard's Tasks view narrowed beside it rather than covered: Needs attention (Add product search, Approval needed for Run npm test), Unread (Fix the cart total, Update checkout copy and Upgrade the payment SDK, each with New reply) and a folded Not started. The panel's Dock panel button is pressed and its header's right-click menu is open: Dock panel, checked, and Auto-hide panel. The panel shows Ask Kepler anything, three starters and the Ask anything composer.">
   </a>
   <figcaption style="text-align:center; color:#888">Ask Kepler docked beside the Dashboard, with the header's menu open.</figcaption>
 </figure>
 
-**Resize.** Drag the panel's inner edge (**Resize Ask Kepler**) to change its width, or focus the edge and use the arrow keys. Double-click the edge to return to the default width. Kepler remembers the width, the side, and whether the panel is docked on this computer, for every window.
+**Resize.** Drag the panel's inner edge (**Resize Ask Kepler**) to change its width, or focus the edge and use the arrow keys. Double-click the edge to return to the default width. Kepler remembers the width and whether the panel is docked on this computer, for every window.
 
 **Escape** also closes the panel, except in a shell, a find bar, or a text field that holds a draft. In a chat whose agent is still answering, **Escape** stops the turn instead.
 
@@ -140,12 +140,12 @@ The agent pill lists only agents that run in **Chat**. An agent that runs only i
 
 ### Past chats and new chats
 
-To switch chats, open the chat's title in the panel header. To find a chat, type in **Search chats** at the top. The search also finds archived chats, and picking one restores it. The picker lists:
+To switch chats, open the chat's title in the panel header. To find a chat, type in **Search chats** at the top. The search also finds archived chats. The picker lists:
 
 - **New chat**, which returns the section to a fresh chat
 - **Continue in a new task**, for the chat that's open
 - Your open chats, grouped by state (for example **Unread** or **Running**). Click one to open it, or click **Archive** beside it to put it away.
-- **Show archived**, which lists your archived chats. Click one to restore and open it.
+- **Show archived**, which lists your archived chats. Click one to read it without restoring it, or click **Restore** beside it to restore and open it. Sending a message in an archived chat also restores it.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/ask-kepler-chat-picker-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
@@ -155,6 +155,8 @@ To switch chats, open the chat's title in the panel header. To find a chat, type
 </figure>
 
 The **New chat** button beside the title starts a new chat. The **Archive** button before it archives the chat that's open.
+
+When a chat reaches a usage limit, **New session as *account*** or **Continue in *agent*** on the limit bar opens a new chat rather than sending anything. The new chat holds your draft and a **Continues from** card naming the chat it picks up from. Choose **Include** or **Don't send that conversation**, then send the message yourself.
 
 ### Continue in a new task
 

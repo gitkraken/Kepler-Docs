@@ -26,13 +26,13 @@ Kepler has 2 voice features, both set up in **Settings → Voice**:
 
 Dictation has 3 transcription engines:
 
-- **Qwen3-ASR** is the default. It reads what you're writing, so it gets developer terms such as Jira, rebase, or pull request right more often than Whisper. It needs a graphics card with WebGPU.
+- **Qwen3-ASR** reads what you're writing, so it gets developer terms such as Jira, rebase, or pull request right more often than Whisper. It needs a graphics card with WebGPU.
 - **Parakeet** is fast, and understands English and 24 other European languages. It needs a graphics card with WebGPU and 16-bit float shader support.
 - **Whisper** works on any machine. Use it where WebGPU is unavailable.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/start-voice-input-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/start-voice-input-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="The New task composer: Add issue, Add PR and Add context above the empty prompt, then the attach button and the microphone button with its Dictate tooltip below it, and the agent pill with a warning sign and Start on the right.">
+  <a href="/wp-content/uploads/start-voice-input-aug-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/start-voice-input-aug-2026-v3@2x.png" class="help-center-img img-bordered" alt="The New task composer: Add issue, Add PR and Add context above the empty prompt, then the attach button, the microphone button with its Dictate tooltip and the shortcut Ctrl Shift Space below it, and the Chat / Terminal switch; on the right, the agent pill with a warning sign and Start.">
   </a>
   <figcaption style="text-align:center; color:#888">The composer's microphone, with its Dictate tooltip.</figcaption>
 </figure>
@@ -40,8 +40,8 @@ Dictation has 3 transcription engines:
 Dictation turns on once you download a model in **Settings → Voice**. The microphone in the prompt becomes available when the model is ready.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/voice-input-settings-aug-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/voice-input-settings-aug-2026-v5@2x.png" class="help-center-img img-bordered" alt="The Dictation section of Settings › Voice: under Speech model, Whisper (80 MB) is picked with Remove…, Licenses and its Quality select at Fast (80 MB), suggested, installed, and a Qwen3-ASR 1.7B and 0.6B row says they need a graphics card with WebGPU. Below come Dictation language (Auto-detect), Dictation mode with Type as you talk picked beside Type when you stop and Send when you stop, and Vocabulary (No words yet, Manage, Qwen speech models only).">
+  <a href="/wp-content/uploads/voice-input-settings-aug-2026-v6@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/voice-input-settings-aug-2026-v6@2x.png" class="help-center-img img-bordered" alt="The Dictation section of Settings › Voice: under Speech model, Whisper (80 MB) is picked with Remove…, Licenses and a select at Fast (80 MB), and a Qwen3-ASR 1.7B and 0.6B row says they need a graphics card with WebGPU. Below come Dictation language (Auto-detect), Dictation mode with Type as you talk picked beside Type when you stop and Send when you stop, and Vocabulary (No words yet, Manage, Qwen speech models only).">
   </a>
   <figcaption style="text-align:center; color:#888">The Dictation settings on a computer without WebGPU, where Whisper transcribes.</figcaption>
 </figure>
@@ -50,7 +50,11 @@ Dictation turns on once you download a model in **Settings → Voice**. The micr
 
 ## Choose what happens when you stop talking
 
-To record, click **Dictate** in the prompt, or press **Ctrl/⌘ + Shift + Space** (**Toggle dictation**), and speak. Click the microphone again to stop, or press the shortcut again. The shortcut works in the focused session's prompt, and in its Terminal session.
+To record, click **Dictate** in the prompt, or press **Ctrl/⌘ + Shift + Space** (**Toggle dictation**), and speak. Click the microphone again to stop, or press the shortcut again. The shortcut works in whichever message box has focus and a microphone, including the **New task** composer and a Terminal session.
+
+While you dictate, the **Search Kepler** field in the top bar shows **Listening…** and your words. Click it to stop.
+
+To change the **Speech model**, **Dictation mode**, or **Dictation language** without opening Settings, right-click the microphone. **Voice settings…** opens **Settings → Voice**.
 
 To choose what Kepler does with what you say, go to **Settings → Voice → Dictation mode** and pick one of these options:
 
@@ -72,7 +76,7 @@ In a Terminal session, the microphone sits on the status bar while Kepler's mess
 
 Dictation only adds to the agent's input, so saying "clear" does not erase it: clear it in the terminal. If the agent cannot take input yet, Kepler moves the dictated text to the message box.
 
-To change the **Speech model**, **Dictation mode**, or **Dictation language**, right-click the status-bar microphone. **Voice settings…** opens **Settings → Voice**.
+Right-click the status-bar microphone for the same dictation menu as in the prompt.
 
 ### Teach dictation your words
 
@@ -111,21 +115,20 @@ If the microphone or speaker you picked is not connected, Kepler tells you and u
   <figcaption style="text-align:center; color:#888">Check your setup, with the microphone and speaker Kepler uses.</figcaption>
 </figure>
 
-Below it, the **Dictation** section's **Speech model** list offers up to 4 models. Every model runs on this computer, and nothing you say leaves it.
+Below it, the **Dictation** section's **Speech model** list offers these models. Every model runs on this computer, and nothing you say leaves it.
 
 | Model | What it is |
 |---|---|
-| **Qwen3-ASR 1.7B** | The most accurate, especially with developer terms and mixed languages. Needs a recent graphics card |
-| **Qwen3-ASR 0.6B** | Better than Whisper with technical terms, and lighter on memory, for graphics cards with less memory |
+| **Qwen3-ASR** | Gets developer terms and mixed languages right more often than Whisper. Pick a **Qwen3-ASR size**: **1.7B** is the most accurate, **0.6B** suits graphics cards with less memory |
 | **Parakeet TDT 0.6B v3** | A fast model for English and 24 other European languages that detects which one you speak. Listed only when the graphics card supports it |
 | **Whisper** | Works on any machine, including without a compatible graphics card. Less accurate with technical terms |
 
-Kepler checks the graphics card and marks the Qwen3-ASR size it suits as **Recommended**. Without WebGPU, only Whisper can run.
+Kepler marks the model that suits this computer and your languages **Recommended**. Without WebGPU, only Whisper can run.
 
 To set up dictation, follow these steps:
 
 1. Open **Settings → Voice**.
-2. For Whisper, pick a **Quality** on its row: **Fast**, **Balanced**, **Accurate**, or **Most accurate**. Kepler marks the best fit for this machine as *suggested*.
+2. For Qwen3-ASR, pick a **Qwen3-ASR size**. For Whisper, pick a quality from **Fast** to **Most accurate**. **Automatic** uses the quality Kepler suggests for this machine.
 3. Click **Download** on the model's row.
 
 Your first download turns dictation on. Downloads keep going if you leave the page, and Kepler notifies you when the model is ready. With more than 1 model downloaded, pick the one dictation uses.
@@ -163,25 +166,23 @@ For every dictation and read aloud setting, see [Voice settings](/kepler/setting
 
 ## Why the microphone is unavailable
 
-Hover the microphone, and its tooltip explains why:
+Hover the microphone, and its tooltip explains why. When the model cannot dictate, clicking the microphone opens the dictation menu, where you can download or choose another model.
 
 | Tooltip | What it means |
 |---|---|
-| *Dictation needs a model. Open Settings to download one.* | No model is downloaded yet. Clicking opens Settings |
+| *Download a model first* | No model is downloaded yet |
 | *Dictation requires a secure (https) connection* | You're using Kepler over plain HTTP, where the browser will not grant microphone access |
 | *Dictation is not supported in this environment* | This build or browser cannot run it |
-| *The selected voice model needs WebGPU, which is not available here. Open Settings to choose Whisper.* | A Qwen3-ASR or Parakeet model is selected, but this computer or browser has no WebGPU. Clicking opens Settings |
-| *The graphics card is not responding, so dictation cannot start. Open Settings to check it again.* | The graphics card did not answer. Clicking opens Settings |
+| *Choose Whisper here. The selected model needs WebGPU, which is not available.* | A Qwen3-ASR or Parakeet model is selected, but this computer or browser has no WebGPU |
+| *The graphics card is not responding, so dictation cannot start. Open Settings to check it again.* | The graphics card did not answer |
 | *Loading voice model…* / *Transcribing…* | Busy. The button is disabled for the moment |
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/voice-mic-tooltip-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/voice-mic-tooltip-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The New task launcher with the microphone button showing a struck-through mic and its tooltip: The selected voice model needs WebGPU, which is not available here. Open Settings to choose Whisper.">
+  <a href="/wp-content/uploads/voice-mic-tooltip-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/voice-mic-tooltip-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The New task launcher with the microphone button showing a struck-through mic and its tooltip: Dictate, with the shortcut Ctrl Shift Space, over Choose Whisper here. The selected model needs WebGPU, which is not available.">
   </a>
   <figcaption style="text-align:center; color:#888">The microphone with a Qwen3-ASR model selected on a computer without WebGPU.</figcaption>
 </figure>
-
-With Qwen3-ASR or Parakeet, the microphone's **Dictate** tooltip also names the model, for example **Dictate · Parakeet TDT 0.6B v3**.
 
 When dictation fails, Kepler names the cause, with **Open Settings** where Settings can fix it. For example:
 
@@ -206,16 +207,25 @@ Read aloud speaks an agent's replies to you. Kepler reads only the prose: code b
 
 To have a reply read aloud, use one of these controls:
 
-- **Read aloud**, the speaker button under each chat reply. While that reply plays, the button reads **Stop reading**.
+- **Read aloud**, the speaker button under each chat reply. While that reply plays, the button pauses and resumes it, and **Stop reading** appears beside it.
+- **Continuous reading**, the headphones button in the composer and on a Terminal session's status bar. It reads the latest reply, then each new one as it arrives, until you stop. Right-click it to change the **Speech model**, **Voice**, or **Speed**, or to open **Voice settings…**.
 - **Read aloud from here**, in the right-click menu of a message or a terminal session. Kepler reads from the sentence under the pointer through the replies after it.
-- **Read last reply**, on a terminal session's status bar. Right-click it to change the **Speech model**, **Voice**, or **Speed**, or to open **Voice settings…**.
-- **Read the last reply aloud**, a shortcut with no default key. Assign one in **Settings → Keyboard shortcuts** to read the focused terminal's last reply, or stop reading it.
+- **Read the last reply aloud, or pause and resume it**, a shortcut for the focused session, with no default key. Assign one in **Settings → Keyboard shortcuts**.
 
-While anything is being read, **Stop reading** appears in the top bar, on every page.
+During continuous reading, the **Read aloud** bar above the composer shows the sentence being read, with buttons to pause, skip to the next reply, or stop, and a **Continuous reading** toggle.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/read-aloud-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/read-aloud-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="An agent reply in the chat being read aloud: its second sentence, The total now takes the discount off before tax, so a discounted order no longer pays tax on money it never spent, is highlighted, and under the reply the Read aloud button has turned into Stop reading, a square icon between Copy and the reply's time.">
+  <a href="/wp-content/uploads/read-aloud-bar-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/read-aloud-bar-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="Above a session's composer, the Read aloud bar shows Pause reading, Skip to the next reply and Stop reading, the status Reading aloud, the sentence being read and Continuous reading turned on; in the composer footer the Continuous reading button (headphones) is pressed.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The Read aloud bar during continuous reading.</figcaption>
+</figure>
+
+While anything is being read, the **Search Kepler** field in the top bar shows **Reading aloud** and the sentence. Click it to stop reading.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/read-aloud-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/read-aloud-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="An agent reply in the chat being read aloud: its second sentence, The total now takes the discount off before tax, so a discounted order no longer pays tax on money it never spent, is highlighted, and under the reply the Read aloud button has turned into Pause reading, with Stop reading beside it, between Copy and the reply's time.">
   </a>
   <figcaption style="text-align:center; color:#888">A reply being read aloud, with its current sentence highlighted.</figcaption>
 </figure>

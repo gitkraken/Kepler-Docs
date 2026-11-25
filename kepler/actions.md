@@ -260,7 +260,11 @@ The summary is the agent's own account. Check it against the diff in [Review Wha
 
 #### Example: Open a pull request
 
-Kepler has no "create pull request" button, so the agent or you open one. This Action has the agent open it, with a note in the description that an agent helped write the change. Fire it after you've reviewed and committed the work. To create it, click **New Action** in **Settings → Actions** and fill in the following fields:
+This Action has the agent open the pull request, on any Git host: it pushes the branch, writes the title and description, and notes that an agent helped write the change. Fire it after you've reviewed and committed the work.
+
+For a GitHub.com repository, you can also open the pull request yourself with **Create pull request** above the **Todo** list, once the branch is pushed. See [Create and manage GitHub pull requests](/kepler/pull-request-integrations#create-and-manage-github-pull-requests).
+
+To create the Action, click **New Action** in **Settings → Actions** and fill in the following fields:
 
 | Field | Value |
 |---|---|

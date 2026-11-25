@@ -13,7 +13,7 @@ hosted_variant: both
 status: GA
 last_verified: 2026-11
 llms_include: true
-tags: [conductor, import, migrate, switch, parallel-agents, workspaces, tasks, worktrees, claude-code, codex, orca, herdr, vibe-kanban]
+tags: [conductor, import, migrate, switch, parallel-agents, workspaces, tasks, worktrees, claude-code, codex, orca, t3-code, herdr, vibe-kanban]
 taxonomy:
   category: kepler
 ---
@@ -46,11 +46,11 @@ After you install Kepler, the guided start also offers to import Conductor's wor
 
 ## How to import your Conductor workspaces
 
-1. On an empty **Tasks** list, click the import card. It names the apps Kepler found, such as **Import from Conductor, Orca and 2 more**. You can also choose **File → Import from Another App…** at any time.
+1. On an empty **Tasks** list, click the import card. It names the apps Kepler found, such as **Import from Conductor and Orca**. You can also choose **File → Import from Another App…** at any time.
 
     <figure style="text-align:center">
-      <a href="/wp-content/uploads/import-card-nov-2026@2x.png" target="_blank" rel="noopener noreferrer">
-        <img src="/wp-content/uploads/import-card-nov-2026@2x.png" class="help-center-img img-bordered" alt="Two cards below an or divider: Import from Conductor, Orca and 2 more, reading Bring in your workspaces as tasks, with their branches and chats, and Open an external session.">
+      <a href="/wp-content/uploads/import-card-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+        <img src="/wp-content/uploads/import-card-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="Two cards below an or divider: Import from Conductor and Orca, reading Bring in your workspaces as tasks, with their branches and chats, and Continue a session started outside Kepler.">
       </a>
       <figcaption style="text-align:center; color:#888">The import card names the apps Kepler found.</figcaption>
     </figure>
@@ -73,7 +73,7 @@ After you install Kepler, the guided start also offers to import Conductor's wor
   <figcaption style="text-align:center; color:#888">Choosing the Conductor workspaces to import.</figcaption>
 </figure>
 
-4. The dialog closes and the import runs in the background. A chip in the title bar shows its progress, such as **Importing 2 of 4**. Hover over or click the chip for its card, where **Stop** ends the import and **Retry** tries a failed workspace again. When the chip reads **Imported *N***, click **View tasks** on its card, or **Dismiss** to clear the chip.
+4. The dialog closes and the import runs in the background. A chip in the title bar shows its progress, such as **Importing 2 of 4**. To end the import early, hover over or click the chip and click **Stop** on its card. When the chip reads **Imported *N***, click **View tasks** on its card, or **Dismiss** to clear the chip.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/import-run-chip-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -143,7 +143,7 @@ No. Kepler reads Conductor's workspaces and does not change or move your files. 
 
 ### Which other apps can Kepler import from?
 
-Kepler can also import workspaces from Orca, herdr, and Vibe Kanban, in the same **Import from another app** dialog. See [From another agent app](/kepler/create-task#from-another-agent-app).
+Kepler can also import workspaces from Orca, T3 Code, herdr, and Vibe Kanban, in the same **Import from another app** dialog. See [From another agent app](/kepler/create-task#from-another-agent-app).
 
 ***
 

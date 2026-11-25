@@ -81,13 +81,13 @@ Only your GitKraken account can connect. To disconnect one device, use **Connect
 
 ## How to add Kepler to your home screen
 
-To open Kepler like an app, add it to your phone's home screen from the browser's menu, such as Add to Home Screen. The Kepler icon then opens Kepler full screen, without the browser's address bar and toolbars.
+To open Kepler like an app, add it to your phone's home screen from the browser's menu, such as Add to Home Screen. Where the browser can install web apps, the Dashboard also offers to install Kepler, and the phone menu has **Install app**. The Kepler icon then opens Kepler full screen, without the browser's address bar and toolbars.
 
 ***
 
 ## How to get notifications on your phone
 
-Your phone can notify you when a session needs you and you are away from your computer, even while Kepler is closed on the phone.
+Your phone can notify you when a session needs you and you are away from your computer, even while Kepler is closed on the phone. The Dashboard on your phone offers to turn them on: tap **Turn on**. To turn them on from Settings instead:
 
 1. On an iPhone, add Kepler to your home screen first, then open Kepler from its home screen icon.
 2. In Kepler on your phone, tap **Menu**, then **Settings**, and open **Notifications**.
@@ -178,7 +178,7 @@ Other requests wait in the session the same way, and you answer them on the phon
 - **A question.** Pick an option, or type your own answer, and submit. See [Multiple-choice and multi-select questions](/kepler/agent-sessions#multiple-choice-and-multi-select-questions).
 - **An approval request**, when an agent asks Kepler itself to do something, such as delete a worktree. Tap **Approve** or **Deny**. See [Approval requests](/kepler/agent-sessions#approval-requests).
 
-Questions and approval requests also open in the answer sheet, where you answer them the same way. For a plan review, the sheet sends you to the session to read the plan. To answer from the notification instead, see [Answer from the notification](#answer-from-the-notification).
+Questions, approval requests, and plan reviews also open in the answer sheet. For a plan review, the sheet shows the plan with **Approve & implement**. To request changes, open the session. To answer from the notification instead, see [Answer from the notification](#answer-from-the-notification).
 
 To see what an agent did while you were away, open its session and read the conversation, or tap **Changes** to read the changed files.
 
@@ -186,7 +186,7 @@ To see what an agent did while you were away, open its session and read the conv
 
 ## Common questions
 
-Short answers about approving agent requests from a phone with Kepler.
+Your agents keep running on your computer while you answer them from your phone.
 
 ### Will my phone notify me when an agent needs permission?
 

@@ -27,6 +27,7 @@ Some actions always ask, so their menu has no **Always approve**. For example:
 
 - Adopting a task into another agent's work
 - Adding a Run command to a repository, or replacing one
+- Deleting a GitHub issue, which cannot be undone
 - A setting change that Ask Kepler asks to make
 - Starting a session in a more permissive mode
 

@@ -71,14 +71,16 @@ Each agent has a row with its version, a **Default** badge on your default agent
 
 | Control | What it does |
 |---|---|
-| **Install** | Opens **Set up {name}** to pick an install method, then **Sign in to {name}** if the agent needs a sign-in. Shown when the agent is not installed and has an installer for your OS |
+| **Install** | Opens **Set up *agent*** to pick an install method, then **Sign in to *agent*** if the agent needs a sign-in. Shown when the agent is not installed and has an installer for your OS |
 | **Add account** | Opens the agent's page and its add-account dialog |
 | **Sign in** | Signs in to an agent that has a single login |
 | The on/off switch | Off keeps the agent installed but hides it when you start work |
 
-If you installed the agent yourself, use **Already installed?** in the **Set up {name}** dialog: enter or browse to the program, then click **Use this**.
+If you installed the agent yourself, use **Already installed?** in the **Set up *agent*** dialog: enter or browse to the program, then click **Use this**.
 
 When a newer version of an installed agent is out, its row shows **Update available**. After an update, the row shows **Updated**: new sessions use the new version, and a running session switches when you restart it. To turn off the title-bar notice and the restart notice for agent updates, see [Settings → Updates](/kepler/settings-updates-help#updates).
+
+When Kepler runs the copy of an agent that came with its vendor's desktop app, the agent shows a **Desktop app** badge. That copy updates only when you update the app. See [Agent Integrations](/kepler/agent-integrations#install-an-agent).
 
 When the version reads **Version unknown**, Kepler turns off features that depend on the version, such as sending a new session's first message automatically. To fix it, reinstall or update the agent.
 
@@ -90,21 +92,22 @@ To open an agent's page, click its row. The page holds the agent's own settings:
 |---|---|
 | **New sessions start in** | This agent's own mode, instead of the [default for every agent](#default-mode-for-new-sessions) |
 | **Update** | Runs the agent's updater and shows its output. Shown when Kepler has an updater for that agent |
+| **Install CLI** | Shown when Kepler runs a desktop app's copy of the agent. Installs the standalone CLI, which updates itself, and Kepler runs it instead |
 | The switch beside **Update** | On by default. Off keeps the agent installed but hides it when you start work |
 | **Accounts** | Claude Code, Codex, GitHub Copilot, Auggie, and Grok Build: runs more than 1 login side by side. See [Use several accounts for one agent](#use-several-accounts-for-one-agent) |
 | **Account** | On an agent with a single login: who is signed in, with **Sign in** or **Sign out**. Signing out deletes the stored credentials |
 | **Artifacts in new sessions** | Claude Code only. See below |
 | **Let artifact comments start turns** | Claude Code only. See below |
-| **Which {name} Kepler runs** | The agent program Kepler runs. **Auto** uses the first match on your `PATH`, the same one `which` finds. To override it, pick a specific install or **Custom path…**, or click **Rescan** to search again |
-| **Where {name} keeps its data** | *Set it only to keep the {name} Kepler runs apart from the one you run yourself.* Empty uses the agent's usual folder |
+| **Which *agent* Kepler runs** | The agent program Kepler runs. **Auto** uses the first match on your `PATH`, the same one `which` finds. To override it, pick a specific install or **Custom path…**, or click **Rescan** to search again |
+| **Where *agent* keeps its data** | Set it only to keep the copy Kepler runs apart from the one you run yourself. Empty uses the agent's usual folder |
 
 If the installed version of an agent has a known problem, a warning note on its page says what to do:
 
 | Note | What it means |
 |---|---|
-| *OpenCode {version} is not supported* | Sessions with this version do not start. Install OpenCode 2, or choose an OpenCode 2 program under **Which OpenCode Kepler runs** |
-| *Auggie integration is unverified* | Kepler could not verify the selected Auggie build. Before you rely on MCP tools in Chat, click **Rescan** or select a verified installation under **Which Auggie Kepler runs** |
-| *Codex {version} can show approval prompts that need no answer* | Update Codex to 0.163.0 or newer |
+| OpenCode *version* is not supported | Sessions with this version do not start. Install OpenCode 2, or choose an OpenCode 2 program under **Which OpenCode Kepler runs** |
+| Auggie integration is unverified | Kepler could not verify the selected Auggie build. Before you rely on MCP tools in Chat, click **Rescan** or select a verified installation under **Which Auggie Kepler runs** |
+| Codex *version* can show approval prompts that need no answer | Update Codex to 0.163.0 or newer |
 
 **OpenCode needs version 2.** If you have both versions installed, point **Which OpenCode Kepler runs** at OpenCode 2. A conversation you started under OpenCode 1 resumes in OpenCode 2.
 
@@ -136,8 +139,8 @@ Removing an account stops its running sessions and deletes the sessions stored o
 An added account shares your own settings, instructions, skills, agents, commands, and other configuration. If the agent saves a change while signed in to that account, it can write its own copy, and the account stops following your file. Kepler then shows a message under the account's row. Expand it to see both files, and choose one of the following:
 
 - **Ask Kepler to resolve** opens an Ask Kepler chat with a prompt you can edit, asking the agent to copy what is worth keeping into your shared copy.
-- **Share your {item} again** links the account back to your file, and saves its own copy as a backup next to it.
-- **Keep its own {item}** keeps the account's copy. You can still choose **Share your {item} again** later from the row's menu.
+- **Share your *item* again** links the account back to your file, and saves its own copy as a backup next to it.
+- **Keep its own *item*** keeps the account's copy. You can still choose **Share your *item* again** later from the row's menu.
 
 ### Switch the account a Claude Code login uses
 
@@ -177,7 +180,7 @@ To run an agent that Kepler does not list, add it as a custom agent by giving Ke
 | **Command** | The program to run, for example `/usr/local/bin/my-agent` or `my-agent` |
 | **Args (one per line)** | Arguments passed to the command |
 | **Environment variables (KEY=value, one per line)** | Environment for the command |
-| **Runs in** | **Chat**: *Kepler's chat. Needs a program that speaks ACP (the Agent Client Protocol).* **Terminal**: *The command's own app, in a terminal.* |
+| **Runs in** | **Chat**, Kepler's chat, for a program that speaks the Agent Client Protocol (ACP). **Terminal**, the command's own app in a terminal |
 
 Custom agents appear with the built-in agents wherever you pick an agent.
 
@@ -231,7 +234,7 @@ When you change a preset, running sessions that use it keep the earlier version 
 | Setting | What it controls | Default |
 |---|---|---|
 | **Keep this machine awake while agents work** | Blocks sleep while an agent session is starting, running, or waiting for your input, and while Remote Access is on | On |
-| **Keep agents and terminals running after Kepler quits or restarts** | *Agents and terminals stay alive while Kepler is closed or updating, and reconnect afterwards. When off, quitting or restarting Kepler ends them.* | On |
+| **Keep agents and terminals running after Kepler quits or restarts** | Agents and terminals keep running while Kepler is closed or updating, and reconnect afterwards. When it is off, quitting or restarting Kepler ends them | On |
 | **When a usage limit is reached** | What happens to a session that a usage limit cuts off, for every agent, in Chat and in Terminal. See the options below | Wait for the reset |
 | **Retry automatically when the model is overloaded** | When the model is overloaded or the provider has a temporary server error, Kepler waits and asks the agent to continue, for up to 12 hours. It never resends your prompt | On |
 

@@ -19,13 +19,13 @@ taxonomy:
 ---
 <kbd>Last updated: November 2026</kbd>
 
-Kepler by GitKraken gives you a review step between an agent's work and your teammates. You read every changed line in the Changes overlay, send review comments back to the agent, have a second agent review the work, and only then open the pull request. The work stays in the task's worktree, so you can review what Claude Code, Codex, or any other agent wrote before you open the pull request.
+Kepler by GitKraken gives you a review step between an agent's work and your teammates. You read every changed line in the Changes overlay, send review comments back to the agent, have a second agent review the work, and only then open the pull request. The work stays in the task's worktree while you review it, whether Claude Code, Codex, or another agent wrote it.
 
 ## Requirements and limits
 
 - Scope: Reviewing an agent's uncommitted or committed work in a Kepler task before you open a pull request
 - Prerequisite: A task whose agent has made changes in its worktree. See [Create a task](/kepler/create-task).
-- Limits: Kepler has no button that creates a pull request. The agent opens it, or you open it yourself.
+- Opening the pull request: the agent opens it, or you do. For a GitHub.com repository, you can also click **Create pull request** on the **Todo** list. See [Create and manage GitHub pull requests](/kepler/pull-request-integrations#create-and-manage-github-pull-requests).
 - Limits: Review comments you write in Kepler go to the agent. Kepler does not post them to your Git host.
 - Second agent's review: a report, not an approval. You still decide what to change.
 
@@ -126,6 +126,7 @@ When you are satisfied, commit the work. In the **Changes** overlay, click **Com
 Then open the pull request in one of these ways:
 
 - **Write it yourself.** Push the branch and open the pull request on your Git host's website, or with a command in the worktree's terminal. Writing the description yourself is the last check that you understand the change.
+- **Use Create pull request.** For a GitHub.com repository, push the branch, then click **Create pull request** on the **Todo** list. See [Create and manage GitHub pull requests](/kepler/pull-request-integrations#create-and-manage-github-pull-requests).
 - **Have the agent open it.** Kepler does not ship an Action for this. Create one from the [Open a pull request](/kepler/actions#example-open-a-pull-request) example in **Settings → Actions**, then run it on the task. The example tells the agent to stop if the worktree has uncommitted changes, and to end the description with a line that says an AI coding agent helped write the change and a person reviewed it.
 
 When the agent publishes the pull request, Kepler attaches it to the task. A pull request you open yourself can be attached from **Manage resources**. See [Opening a pull request](/kepler/review-changes#opening-a-pull-request).
@@ -150,7 +151,7 @@ No. Review comments in Kepler go to the agent in the task's session. Your teamma
 
 ### Is there a "Prepare for review" or "Open a pull request" button in Kepler?
 
-No. Both are examples on the [Actions](/kepler/actions) page. You create each one once as your own Action in **Settings → Actions**, and then it appears in the list of Actions on every task.
+No. Both are examples on the [Actions](/kepler/actions) page. You create each one once as your own Action in **Settings → Actions**, and then it appears in the list of Actions on every task. For a GitHub.com repository, you can also open the pull request yourself with **Create pull request** on the **Todo** list.
 
 ### Can I mark the pull request as AI-assisted?
 

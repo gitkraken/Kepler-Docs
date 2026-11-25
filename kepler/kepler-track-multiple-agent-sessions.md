@@ -33,7 +33,7 @@ Kepler by GitKraken keeps track of several Claude Code and Codex sessions in 1 D
 ## Quick Start
 
 1. Check that **Show them in Kepler** is on in **Settings → General → Sessions outside Kepler**. It is on by default.
-2. Click **New task**, select **Open an external session**, and pick a Claude Code or Codex session you already started. Kepler puts it in a task.
+2. Click **New task**, select **Continue a session started outside Kepler**, and pick a Claude Code or Codex session you already started. Kepler puts it in a task.
 3. For new work, click **New task**, write the prompt, and pick **Claude Code** or **Codex**. Each new task gets its own worktree.
 4. Open the Dashboard's **Tasks** view. Tasks that need you are listed first, under **Needs attention**.
 5. To see what a session changed, open its task and click the worktree under **Changes**.
@@ -51,21 +51,21 @@ The setting covers Claude Code, Codex, Cursor, GitHub Copilot, OpenCode, Auggie,
 
 To put a terminal session in a task:
 
-1. Click **New task**, then select **Open an external session**.
+1. Click **New task**, then select **Continue a session started outside Kepler**.
 2. Pick the session under **Live now**, or a past one under **Past sessions**. Kepler opens it in a new task.
 
-A session still running in your terminal opens read-only, marked **External**, and its badge says what it is doing, such as **Running** or **Waiting on you**. When it waits on you, answer in your terminal.
+A session still running in your terminal opens read-only. The bar under its transcript says what it is doing, such as **Running outside Kepler** or **Waiting on you**. When it waits on you, answer in your terminal.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/continue-external-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/continue-external-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The New task launcher flipped to Open an external session: a Find an external session… search field over Past sessions, listing the Pi session Why do product search results miss items tagged in uppercase? in …/repositories/acme-web, highlighted with Continue. Below the panel, Start a new task switches back to the composer.">
+  <a href="/wp-content/uploads/continue-external-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/continue-external-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Continue a session started outside Kepler panel: a Find an external session… search field over Past sessions, listing the Pi session Why do product search results miss items tagged in uppercase in …/repositories/acme-web, highlighted with Continue. Below the panel is the Start a new task button.">
   </a>
-  <figcaption style="text-align:center; color:#888">Opening a session you started in your terminal.</figcaption>
+  <figcaption style="text-align:center; color:#888">Continuing a session started outside Kepler.</figcaption>
 </figure>
 
 ### Take a session over
 
-Once the session is idle, you can carry it on in Kepler:
+To carry the session on in Kepler, use the bar under its transcript. You can first pick the account, the mode, and the agent settings there:
 
 | Button | What it does |
 |---|---|
@@ -154,7 +154,7 @@ See [Review What a Coding Agent Changed](/kepler/review-changes) to read the dif
 
 ## Common questions
 
-Short answers about keeping track of several agent sessions in Kepler.
+The Dashboard follows every task in one place and lists the tasks that wait on you first.
 
 ### How do people manage 5 or more Claude Code and Codex sessions at once?
 
@@ -166,7 +166,7 @@ Kepler sees it while **Settings → General → Sessions outside Kepler → Show
 
 ### Can I answer a terminal session's question from Kepler?
 
-Kepler follows a session that runs in your terminal but does not control it. Answer in your terminal, or once the session is idle, click **Continue here** to carry the conversation on in Kepler.
+Kepler follows a session that runs in your terminal but does not control it. Answer in your terminal, or close the session there and click **Continue here** to carry the conversation on in Kepler.
 
 ### How do I know which session changed a file?
 

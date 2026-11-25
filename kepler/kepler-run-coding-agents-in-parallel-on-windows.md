@@ -110,8 +110,8 @@ You can attach the same repository to several tasks. Each task gets its own work
 To follow every agent at once, use the Dashboard. Kepler notifies you when an agent needs you, for example to answer a permission request. See [Agent Sessions](/kepler/agent-sessions#notifications).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-task-button-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-task-button-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The left end of the Kepler top bar: the application menu, the New task button with a plus sign, the Local environment chip, and the Remote Access button's monitor-and-phone icon in green because Remote Access is on.">
+  <a href="/wp-content/uploads/new-task-button-oct-2026-v6@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-task-button-oct-2026-v6@2x.png" class="help-center-img img-bordered" alt="The left end of the Kepler top bar: the application menu, the New task button with a plus sign, the environment chip's computer icon for this machine, and the Remote Access button's monitor-and-phone icon in green because Remote Access is on.">
   </a>
   <figcaption style="text-align:center; color:#888">The New task button starts each parallel task.</figcaption>
 </figure>
@@ -125,8 +125,8 @@ A worktree is a private Git working copy for one task. Agents make their changes
 **Isolated worktree** is the default for new tasks. You can change the default in **Settings → Tasks → Where new tasks make changes**, and change it for each repository in each task. See [Tasks and Resources](/kepler/tasks-and-resources#worktrees-and-working-in-place).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/isolated-worktree-aug-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/isolated-worktree-aug-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Resources screen on its Repos & folders tab, adding from your repos and folders, with Open folder… and Clone…, the search field and the repositories folder /home/alex/kepler/repositories with Scan and Change. The acme-web row is selected, and under it a confirm line offers New worktree from main, reads Creates a worktree on a new branch from main, and has Cancel and Create worktree.">
+  <a href="/wp-content/uploads/isolated-worktree-aug-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/isolated-worktree-aug-2026-v3@2x.png" class="help-center-img img-bordered" alt="The Resources screen on its Repos & folders tab, marked as having unsaved changes, with the search field, Open folder… and Clone…. The acme-web row is ticked and reads Will be added, with a chip for a new branch from main and the worktree option on, a remove button and an add button for another branch. The footer shows the repositories folder with Scan and Change, and 1 to add with Discard and Save changes.">
   </a>
   <figcaption style="text-align:center; color:#888">Adding a repository to a task creates a new worktree for it.</figcaption>
 </figure>

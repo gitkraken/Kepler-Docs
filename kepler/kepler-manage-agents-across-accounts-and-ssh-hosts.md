@@ -39,7 +39,7 @@ Kepler by GitKraken manages your Claude Code and Codex sessions across several a
 3. Open **Settings → Remote environments**, click **Add machine**, and follow the steps to add your SSH host.
 4. Click **Connect** on the host. In the window connected to the host, install and sign in to Claude Code or Codex in **Settings → Agents**.
 5. Start a task. In the **Agent** list, pick the agent and the account in 1 click.
-6. To move a running conversation to another account, use **Continue as** on the session's tab menu.
+6. To move a running conversation to another account, use **Switch account** on the session's row menu.
 
 ***
 
@@ -71,13 +71,13 @@ See [Several accounts for one agent](/kepler/agent-sessions#several-accounts-for
 
 ## How to choose the account for a session
 
-When an agent has 2 or more accounts, the **Agent** list shows 1 row per account, labeled with the account name. Pick the row in the **New task** window or in a new session tab, and the session runs under that account.
+When an agent has 2 or more accounts, the **Agent** list shows 1 row per account, labeled with the account name. Pick the row in the **New task** window or in a new session tab, and the session runs under that account. On a session that already started, picking another account in its **Agent** list moves the conversation instead. See [How to move a conversation to another account](#how-to-move-a-conversation-to-another-account).
 
 To add an account without leaving the list, click **Add another *agent* account** at the foot of the list, such as **Add another Claude Code account**. It opens that agent's add-account dialog in Settings. The list offers it only for agents that take several accounts.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/account-multiple-selector-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/account-multiple-selector-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Agent list open in the New task composer, with Search options at the top. Under a Claude Code heading sit two account rows, CLI with the login alex.lee@example.com and an Acme badge (checked) and Personal, then Codex CLI, GitHub Copilot CLI, OpenCode, Pi and Auggie CLI, three of them Not signed in, with more agents further down, above Add another Claude Code account and Install another agent.">
+  <a href="/wp-content/uploads/account-multiple-selector-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/account-multiple-selector-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The Agent list open in the New task composer, with Search options at the top. Under a Claude Code heading sit two account rows, CLI with the login alex.lee@example.com and an Acme badge (checked) and Personal, then Codex CLI, GitHub Copilot CLI, OpenCode, Pi and Auggie CLI, three of them Not signed in, with more agents further down, above Add another Claude Code account and Install another agent.">
   </a>
   <figcaption style="text-align:center; color:#888">The Agent list, with 1 row per account and Add another Claude Code account.</figcaption>
 </figure>
@@ -90,8 +90,8 @@ Each session runs under 1 account. Session tabs name the account, so you can see
 
 Move a Claude Code or Codex conversation to another account when an account reaches its usage limit, or when you started on the wrong account. The conversation stays the same.
 
-1. Open the session's tab menu and select **Continue as**.
-2. Pick the account. Kepler restarts the agent with the same conversation as that account and confirms **Continued as** *account*.
+1. Open the session's row menu and select **Switch account**.
+2. Pick the account. Kepler restarts the agent on that account with the same conversation.
 
 When an account reaches its usage limit, a bar on the session's composer says which limit and when it resets. The bar offers these choices:
 
@@ -99,7 +99,7 @@ When an account reaches its usage limit, a bar on the session's composer says wh
 - A new session on another account reads this conversation first.
 - **Wait** continues the conversation when the account resets.
 
-You can also use the **Account** row in the composer's agent settings.
+You can also pick the account in the **Agent** list of the session's **Agent settings**, or click the account badge beside the session's plan usage meter.
 
 The move works only between accounts that share history with the CLI. An account that keeps its own history shows as **Separate history** in the list, because it cannot read the conversation. Sessions started outside Kepler cannot move to another account.
 
@@ -142,7 +142,7 @@ See [What runs where](/kepler/remote-environments#what-runs-where).
 
 Each Kepler window shows 1 machine's tasks and sessions on its Dashboard, including which sessions need you. Use these to cover your computer and every server:
 
-- **Switch machines from the title bar.** The chip after **New task**, at the left of the title bar, shows which machine the window works on: **Local** or a host name. Click it and pick a machine under **Switch to**.
+- **Switch machines from the title bar.** The chip after **New task**, at the left of the title bar, shows which machine the window works on: a computer icon for this computer, or a host name. Click it and pick a machine under **Switch to**.
 - **Open a window per machine.** In the chip's menu, click the window icon next to a host to open it in a new window. Keep 1 window on your computer and 1 on each server.
 - **Manage every machine in Settings.** **Settings → Remote environments** lists **Your machines**, whether each one is connected, and how many windows use it.
 
@@ -171,7 +171,7 @@ Each agent has its own accounts, and each session picks its own agent and accoun
 
 ### Can I switch accounts when I hit a usage limit?
 
-When an account reaches its limit, the bar on the session's composer offers **Continue on** another account. You can also use **Continue as** on the session's tab menu. For Claude Code and Codex, the conversation moves to the other account when both accounts share history with the CLI. Otherwise, the bar offers a new session on another account that reads this conversation first.
+When an account reaches its limit, the bar on the session's composer offers **Continue on** another account. You can also use **Switch account** on the session's row menu. For Claude Code and Codex, the conversation moves to the other account when both accounts share history with the CLI. Otherwise, the bar offers a new session on another account that reads this conversation first.
 
 ### Do I need to install anything on the SSH server?
 

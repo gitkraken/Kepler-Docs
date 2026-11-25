@@ -25,8 +25,8 @@ You can start a task in 5 ways. The shortest starts from work that is already as
 |---|---|
 | **Work assigned to you** | Run an Action on an issue or pull request in the **Todo** view of [the Kepler interface](/kepler/kepler-interface). One click starts the task with its context attached |
 | **Something you're describing yourself** | **New task** opens the **New task** composer, where you write the prompt and attach what it needs |
-| **A conversation you already started** | **Open an external session**, under the **New task** composer, wraps a task around an agent session you began in your own terminal |
-| **Workspaces in another agent app** | **Import from another app** brings workspaces from Conductor, Orca, herdr, or Vibe Kanban in as tasks, with their branches and chats |
+| **A conversation you already started** | **Continue a session started outside Kepler**, under the **New task** composer, wraps a task around an agent session you began in your own terminal |
+| **Workspaces in another agent app** | **Import from another app** brings workspaces from Conductor, Orca, T3 Code, herdr, or Vibe Kanban in as tasks, with their branches and chats |
 | **Another GitKraken app** | A link from GitLens or GitKraken Desktop opens Kepler on the work you were looking at |
 
 ***
@@ -66,8 +66,8 @@ Kepler names tasks automatically from what you started them with. To rename a ta
 Click **New task** or press **Ctrl/⌘ + N**. To start one without switching to Kepler first, press **Shift + Alt/⌥ + N** to open the quick launcher from anywhere, including when Kepler is not the focused window.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-task-button-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-task-button-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The left end of the Kepler top bar: the application menu, the New task button with a plus sign, the Local environment chip, and the Remote Access button's monitor-and-phone icon in green because Remote Access is on.">
+  <a href="/wp-content/uploads/new-task-button-oct-2026-v6@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-task-button-oct-2026-v6@2x.png" class="help-center-img img-bordered" alt="The left end of the Kepler top bar: the application menu, the New task button with a plus sign, the environment chip's computer icon for this machine, and the Remote Access button's monitor-and-phone icon in green because Remote Access is on.">
   </a>
   <figcaption style="text-align:center; color:#888">The New task button, available from anywhere in Kepler.</figcaption>
 </figure>
@@ -109,7 +109,7 @@ You can attach as much or as little context as you want. To create a task from t
 
 **The composer also remembers an unsent draft.** If you close the dialog with a prompt half written, the prompt is still there when you reopen it. Kepler asks before it discards a draft.
 
-**Kepler also remembers which repository you pick for a tracker project.** When you pick a Jira, Linear, or Azure issue, its **Repository** chip holds the repository you used for that project before. To use another repository, or **No repository**, choose it from the chip's menu.
+**Kepler also remembers which repository you pick for a tracker project.** When you pick a Jira, Linear, or Azure issue, the repository you used for that project before appears under it, with the same branch and worktree chip as any repository. To drop it, click the X on the chip. To choose one when none is shown, click **Add its repository**.
 
 The primary button runs the Action that matches what you've attached, exactly as it would from a Todo row. A linked pull request resolves to **Address Feedback** or **Review**, depending on who wrote it; a linked issue resolves to **Plan**. With nothing attached, the button reads **Start** and starts the task with your prompt as written.
 
@@ -184,13 +184,13 @@ Attaching the same repository twice gives the task 2 independent worktrees on it
 
 ## From a session you already started
 
-If you started work with an agent in your own terminal, you can track that conversation in a task. Under the **New task** composer, and on an empty tasks list, **Open an external session** switches the composer to a list of every agent conversation Kepler can see. **Start a new task** switches back. **Open an external session** appears only while **Show them in Kepler** is on in **Settings → General → Sessions outside Kepler**, which it is by default.
+If you started work with an agent in your own terminal, you can track that conversation in a task. Under the **New task** composer, and on an empty tasks list, **Continue a session started outside Kepler** switches the composer to a list of every agent conversation Kepler can see. **Start a new task** switches back. **Continue a session started outside Kepler** appears only while **Show them in Kepler** is on in **Settings → General → Sessions outside Kepler**, which it is by default.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/continue-external-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/continue-external-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="The New task launcher flipped to Open an external session: a Find an external session… search field over Past sessions, listing the Pi session Why do product search results miss items tagged in uppercase? in …/repositories/acme-web, highlighted with Continue. Below the panel, Start a new task switches back to the composer.">
+  <a href="/wp-content/uploads/continue-external-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/continue-external-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="The Continue a session started outside Kepler panel: a Find an external session… search field over Past sessions, listing the Pi session Why do product search results miss items tagged in uppercase in …/repositories/acme-web, highlighted with Continue. Below the panel is the Start a new task button.">
   </a>
-  <figcaption style="text-align:center; color:#888">Opening an external session from the New task composer.</figcaption>
+  <figcaption style="text-align:center; color:#888">Continuing a session started outside Kepler.</figcaption>
 </figure>
 
 | Part | What it does |
@@ -216,19 +216,19 @@ For what happens to the conversation once it's on a task, including forking, con
 
 ## From another agent app
 
-If you work in Conductor, Orca, herdr, or Vibe Kanban, you can bring its workspaces into Kepler as tasks. Each workspace becomes a task in the same folder, on the same branch, and its chats continue as the task's sessions. From Conductor, Kepler imports the workspaces the Conductor app keeps on your Mac, not Conductor Cloud workspaces.
+If you work in Conductor, Orca, T3 Code, herdr, or Vibe Kanban, you can bring its workspaces into Kepler as tasks. Each workspace becomes a task in the same folder, on the same branch, and its chats continue as the task's sessions. From Conductor, Kepler imports the workspaces the Conductor app keeps on your Mac, not Conductor Cloud workspaces.
 
 To import workspaces from Conductor, take the following steps:
 
-1. On an empty **Tasks** list, click the import card. It names the apps Kepler found, such as **Import from Conductor, Orca and 2 more**. You can also choose **File → Import from Another App…**.
+1. On an empty **Tasks** list, click the import card. It names the apps Kepler found, such as **Import from Conductor and Orca**. You can also choose **File → Import from Another App…**.
 2. If Kepler finds more than 1 app, click **Conductor**.
 3. Tick the workspaces you want, and click **Import *N* workspaces**. The list is grouped by repository, and workspaces active in the last 30 days start ticked. Older ones are folded under **Older**. To narrow a long list, type in **Filter workspaces**. To clear every tick, click **Select none**. A workspace you already imported is marked **Already a task**.
 4. The import runs in the background, and a chip in the title bar shows its progress. When it reads **Imported *N***, hover over or click the chip, and click **View tasks**. The chip's card also has **Stop**, to stop the import, and **Retry**, to try a failed workspace again.
 5. Find the new tasks in **Tasks**. Open one to pick its chat up where it left off.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/import-card-nov-2026@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/import-card-nov-2026@2x.png" class="help-center-img img-bordered" alt="Two cards below an or divider: Import from Conductor, Orca and 2 more, reading Bring in your workspaces as tasks, with their branches and chats, and Open an external session.">
+  <a href="/wp-content/uploads/import-card-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/import-card-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="Two cards below an or divider: Import from Conductor and Orca, reading Bring in your workspaces as tasks, with their branches and chats, and Continue a session started outside Kepler.">
   </a>
   <figcaption style="text-align:center; color:#888">Step 1: the import card names the apps Kepler found.</figcaption>
 </figure>

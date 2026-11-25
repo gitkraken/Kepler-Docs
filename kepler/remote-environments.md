@@ -35,8 +35,8 @@ Kepler has 2 remote features, and they work in opposite directions:
 Both sit at the left of the title bar, right after **New task**. The **Remote Access** button shows a monitor-and-phone icon.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-task-button-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-task-button-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The left end of the Kepler top bar: the application menu, the New task button with a plus sign, the Local environment chip, and the Remote Access button's monitor-and-phone icon in green because Remote Access is on.">
+  <a href="/wp-content/uploads/new-task-button-oct-2026-v6@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-task-button-oct-2026-v6@2x.png" class="help-center-img img-bordered" alt="The left end of the Kepler top bar: the application menu, the New task button with a plus sign, the environment chip's computer icon for this machine, and the Remote Access button's monitor-and-phone icon in green because Remote Access is on.">
   </a>
   <figcaption style="text-align:center; color:#888">The environment chip and the Remote Access button after New task, in a local window.</figcaption>
 </figure>
@@ -58,7 +58,7 @@ Each window works on one environment at a time, and the title-bar chip shows whi
 
 | Chip | What it means |
 |---|---|
-| **Local** | This window works on this machine |
+| The computer icon alone | This window works on this machine. Hover over it to see **Local** |
 | **Connecting to *machine*…**, or the current stage | This window is connecting, or its server is restarting or updating |
 | **Reconnecting…** | The connection dropped and Kepler is rebuilding it |
 | Host name | Connected. The chip takes the host's [color](#host-details) when you have set one |
@@ -68,8 +68,6 @@ Each window works on one environment at a time, and the title-bar chip shows whi
 | An error headline | The last attempt failed; the host's Settings page keeps the full error |
 
 **Hover over the chip to preview the popover.** To open the whole popover and keep it open, click the chip, or focus it and press **Enter** or **Down Arrow**.
-
-In a browser client, Kepler hides the chip, because a browser client cannot manage connections.
 
 ### The popover
 
@@ -101,6 +99,8 @@ If this app is older than the server, the header offers an update for this app i
 
 To move this window to another host, click the host's row under **Switch to**. To open the host in a new window and leave this window where it is, hold **Ctrl/⌘** while you click, or click the window icon at the end of the row. A host already open in another window is marked **Connected**. Clicking its row brings that window to the front instead of opening a second connection.
 
+A host under **Switch to** can have profiles from another computer but no server for this profile yet. Its row then says how many profiles it has. When you connect, Kepler asks whether to start this profile on the host, with its own server and tasks, or to open one of the host's profiles on this computer. See [Profiles on your other machines](/kepler/kepler-profiles#profiles-on-your-other-machines).
+
 <figure style="text-align:center">
   <a href="/wp-content/uploads/remote-popover-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/remote-popover-oct-2026-v2@2x.png" class="help-center-img img-bordered" alt="The dev-server chip's popover, showing the host Connected over SSH as alex@dev.acme.example, with Disconnect. Below, Switch to lists Local with its window icon, above Manage remote environments… and its Ctrl+Shift+R shortcut.">
@@ -130,8 +130,8 @@ Use **Settings → Remote environments** to add, connect, edit, and remove machi
 - To open the host's page, click the row.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/remote-environments-hosts-oct-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/remote-environments-hosts-oct-2026-v3@2x.png" class="help-center-img img-bordered" alt="Settings › Remote environments: Add machine, Your machines with dev-server (SSH, not connected, alex@dev.acme.example) and Connect, Found on this machine listing build-box and staging-db from the SSH config with Add and hide buttons and Show hidden (1), and Remote windows with the option Always use this app's interface, off.">
+  <a href="/wp-content/uploads/remote-environments-hosts-oct-2026-v4@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-environments-hosts-oct-2026-v4@2x.png" class="help-center-img img-bordered" alt="Settings › Remote environments: Your machines with Add machine and dev-server (SSH, Not connected, alex@dev.acme.example) with Connect, Found on this machine listing build-box and staging-db from the SSH config with Add and hide buttons and Show hidden (1), and Remote windows with Always use this app's interface ticked.">
   </a>
   <figcaption style="text-align:center; color:#888">Settings → Remote environments, with a saved host.</figcaption>
 </figure>
@@ -365,14 +365,14 @@ Forwards belong to the window that made them. Disconnecting, closing, reconnecti
 | Git operations, worktrees, and repositories | The host |
 | Agent and terminal sessions | The host |
 | Provider and issue-tracker data | The host |
-| The interface itself | Served by this computer when the host runs the same version of Kepler, otherwise by the host's Kepler server (below) |
+| The interface itself | This computer, unless you turn off **Always use this app's interface** (below) |
 | Themes, and your choice of theme | Your local machine |
 
 **Agent sessions belong to the server, not to your window.** If you close the window, lose the network, or put the laptop to sleep, the sessions keep running. When you reconnect, from this machine or a different one, the sessions are listed and you can resume them. If the server itself goes away, you can still resume the conversation.
 
 Kepler runs agent sign-in on the host. Claude Code, Codex, and Auggie all sign in to a remote target: Kepler starts the flow on the host, the sign-in page opens in your *local* browser, and Kepler saves the credential on the host. For Claude Code and Auggie, you paste back what the sign-in page gives you. Codex signs in with **ChatGPT (device code)**, which *works on any machine*, with an API key, or with **Import local Codex login**. See [Agent Integrations](/kepler/agent-integrations).
 
-> **Note:** Remote windows use this app's interface. When the host runs the same version of Kepler, a remote window shows this app's interface. Otherwise, it shows the host's own interface. To keep this app's interface even then, turn on **Settings → Remote environments → Remote windows → Always use this app's interface**, and Kepler offers to update the server or this app instead. It is off by default.
+> **Note:** Remote windows use this app's interface. When the host runs a different version of Kepler, Kepler offers to update the server or this app. To show the host's own interface instead, turn off **Settings → Remote environments → Remote windows → Always use this app's interface**, which is on by default.
 
 **Themes belong to this computer.** Every window lists and installs themes from this computer's themes folder and gallery, including a window on a remote machine. Every window opens in the theme you chose.
 
@@ -408,6 +408,17 @@ When you start a connection with **Connect**, **Switch to**, a new window, or **
 - **Remember for this session** keeps a password or passphrase while you stay connected, so Kepler can reconnect without asking. Kepler never keeps a code or PIN.
 - **Skip this key** lets SSH try its other ways to sign in.
 - Only a connection you start asks. An automatic reconnect that needs an answer stops at the [recovery screen](#the-recovery-screen) instead.
+
+### When the server uses another GitKraken account
+
+When you connect to a machine whose server is signed in to a different GitKraken account than this computer, Kepler asks which account the server should use: **Keep** the server's account or **Switch to** yours. Switching changes the account for every computer that uses that server, including agents running there now. Kepler remembers your answer for that machine.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/remote-account-choice-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/remote-account-choice-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The dev-server uses another account dialog: the server is signed in as sam@acme.dev and this computer as alex@acme.dev, and switching changes the account for every computer that uses the server. Buttons: Cancel, Keep sam@acme.dev and Switch to alex@acme.dev.">
+  </a>
+  <figcaption style="text-align:center; color:#888">Choosing which GitKraken account a shared server uses.</figcaption>
+</figure>
 
 ***
 
@@ -485,7 +496,7 @@ Other editors, and the file manager, need a path that Windows can reach. WSL pro
 
 The first connection to a machine downloads the Kepler server, so it takes minutes. Later updates download only what changed. Besides SSH or WSL, the host needs `tar`, `gzip`, at least glibc 2.28, and free disk space in a home folder you can write to. Kepler installs itself to `~/.kepler-server`. If the download fails, check your internet connection and try again. If the install or the server's start fails, the connection error names the cause. See [Connection failures](#connection-failures).
 
-**Kepler never installs over a running server.** On connect, it replaces an out-of-date server on its own only when no running agents, open terminals, or other connected windows would be affected. Otherwise the server keeps running and the chip offers **Restart server to update**. With **Always use this app's interface** on, other connected windows and devices no longer hold the update back.
+**Kepler never installs over a running server.** On connect, it replaces an out-of-date server on its own only when no running agents, open terminals, or other connected windows would be affected. Otherwise the server keeps running and the chip offers **Restart server to update**. Other connected windows and devices do not hold the update back while **Always use this app's interface** is on, as it is by default.
 
 ### When the server and the window disagree
 
@@ -619,7 +630,7 @@ A task's bar has **Back**, the **Search Kepler** chip, the task's name, and one 
 
 Under the bar, a details row shows the task's stage and a summary. Expand it to see the checkout and the task's pull request and issue.
 
-**Add resource** opens a sheet of resource kinds. Pick a kind to see what the task already holds, add more with its add control, such as **Add issues**, or use **Select** to archive or remove several at once.
+**Add resource** opens a sheet of resource kinds. Pick a kind to see what the task already holds. For repositories and folders, issues, and pull requests, select what to add or remove, then tap **Save changes**. Other kinds offer **Select** to archive or remove several at once.
 
 **Changes** opens with one bar: **Close**, the file's name, and **Previous** and **Next**. Tap the name for the list of changed files. Everything else, from which changes to show to saving an edit, is in the bar's overflow menu.
 

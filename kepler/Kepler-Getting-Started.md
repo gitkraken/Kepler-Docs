@@ -133,7 +133,7 @@ To try an alert, click **Send a test notification**. You can change these choice
   <figcaption style="text-align:center; color:#888">The third step, with where new tasks work, the notification choices, and the theme.</figcaption>
 </figure>
 
-**Bring your work over.** If Kepler finds workspaces from Conductor, Orca, herdr, or Vibe Kanban on this computer, the guided start ends with an **Import** step. Each app has a row with a switch, and the workspaces you used in the last 30 days are already picked. To change the picks, click **Review**. Click the button that imports them, such as **Import 11 and finish**, to bring them over as tasks once setup ends, or click **Finish without importing**.
+**Bring your work over.** If Kepler finds workspaces from Conductor, Orca, T3 Code, herdr, or Vibe Kanban on this computer, the guided start ends with an **Import** step. Each app has a row with a switch, and the workspaces you used in the last 30 days are already picked. To change the picks, click **Review**. Click the button that imports them, such as **Import 11 and finish**, to bring them over as tasks once setup ends, or click **Finish without importing**.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/onboarding-import-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -214,8 +214,8 @@ You can also attach nothing at all and turn the task into real work later. See [
 If you work in Conductor or another agent app, you can import its workspaces as tasks, chats included. See [Create a task → From another agent app](/kepler/create-task#from-another-agent-app).
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-task-button-oct-2026-v5@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-task-button-oct-2026-v5@2x.png" class="help-center-img img-bordered" alt="The left end of the Kepler top bar: the application menu, the New task button with a plus sign, the Local environment chip, and the Remote Access button's monitor-and-phone icon in green because Remote Access is on.">
+  <a href="/wp-content/uploads/new-task-button-oct-2026-v6@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-task-button-oct-2026-v6@2x.png" class="help-center-img img-bordered" alt="The left end of the Kepler top bar: the application menu, the New task button with a plus sign, the environment chip's computer icon for this machine, and the Remote Access button's monitor-and-phone icon in green because Remote Access is on.">
   </a>
   <figcaption style="text-align:center; color:#888">The New task button, available from anywhere in Kepler.</figcaption>
 </figure>

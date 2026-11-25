@@ -52,6 +52,8 @@ The header holds these controls, from left to right:
 
 When a task looks finished, the header shows a **Ready to archive?** prompt with **Archive** beside it, until you archive the task or dismiss the prompt.
 
+An archived task's header shows **Restore** and **Delete** in place of **Terminal** and the controls that start sessions. Hover its **Archived** status to see when it was archived. See [Archive, restore, and clean up in bulk](/kepler/arranging-your-work#archive-restore-and-clean-up-in-bulk).
+
 ### Task actions
 
 The **⋮ Task actions** menu holds these items:
@@ -236,7 +238,7 @@ Each kind of row adds its own items to the menu:
 | A folder | **New session here**, **New terminal here**, **Open in**, and **Copy path** |
 | A file | **Open in default app**, a way to show it in your file manager, **Save as…**, and **Copy path** |
 | A note | **Rename note**, **Copy note**, **Copy link to note**, and **Save as…**, which saves the note as a Markdown file |
-| A session | **New session from this one**, **Rename session**, **Copy session link**, **Show Agent Graph**, the ways to continue it, **Restart agent**, and **Shut down agent** |
+| A session | **Rename session**, **Copy session link**, **Show Agent Graph**, the ways to continue it, such as **Continue in new session**, then **Restart agent** and **Shut down agent** |
 | A session started outside Kepler | **Open preview**, **Continue in this task**, **Create task**, and the copy actions |
 | A pull request or issue | **Open**, which opens it in Kepler, **Open on {provider}**, the copy actions, **Refresh**, and **Go to worktree** when its branch is checked out |
 | A plain link | **Open in browser** and the copy actions |
@@ -259,7 +261,7 @@ The worktree's **Branch** submenu holds the actions that change the branch itsel
 
 **Copy session link** copies a Kepler link that opens the session. When the window is connected to a remote machine, the link names that machine, so it opens there. With the row focused, **Ctrl/⌘ + C** copies the same link. See [Agent Sessions](/kepler/agent-sessions#pointing-an-agent-at-another-session).
 
-**Continue as** moves the conversation to another signed-in account of the same agent. The agent restarts under that account and keeps the conversation. **Continue in Terminal** and **Continue in Chat** move the conversation between the 2 ways a session runs. When the session is still running, Kepler asks first, and warns when queued messages would be discarded. **Stop and switch** stops the session and moves it. See [Moving a session to another account](/kepler/agent-sessions#moving-a-session-to-another-account) and [How a session runs](/kepler/agent-sessions#how-a-session-runs).
+**Switch account** moves the conversation to another signed-in account of the same agent: pick the account from its submenu. The agent restarts under that account and keeps the conversation. **Continue in Terminal** and **Continue in Chat** move the conversation between the 2 ways a session runs. When the session is still running, Kepler asks first, and warns when queued messages would be discarded. **Stop and switch** stops the session and moves it. See [Moving a session to another account](/kepler/agent-sessions#moving-a-session-to-another-account) and [How a session runs](/kepler/agent-sessions#how-a-session-runs).
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/switch-mode-confirm-oct-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -390,13 +392,13 @@ A closed session keeps running and stays in the context panel. To archive a sess
 
 When every tab is closed, the content area offers **New session**, so you can start something right away.
 
-To bring in an agent conversation you started outside Kepler, start a new session, then click **Open an external session** under its composer. The card shows only while Kepler lists [sessions started outside Kepler](/kepler/agent-sessions#sessions-started-outside-kepler). Each conversation you open gets its own tab. **Back to the new session** returns to the composer.
+To bring in an agent conversation you started outside Kepler, start a new session, then click **Continue a session started outside Kepler** under its composer. The card shows only while Kepler lists [sessions started outside Kepler](/kepler/agent-sessions#sessions-started-outside-kepler). Each conversation you open gets its own tab. **Back to the new session** returns to the composer.
 
 <figure style="text-align:center">
-  <a href="/wp-content/uploads/new-session-external-card-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
-    <img src="/wp-content/uploads/new-session-external-card-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="A new session's draft on the task page: What should the agent work on?, the composer with its repository, branch and worktree chips, then &quot;or&quot;, then the Open an external session card, Pick up a Claude Code, Codex or other agent session you already started and bring it into this task.">
+  <a href="/wp-content/uploads/new-session-external-card-nov-2026-v3@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/new-session-external-card-nov-2026-v3@2x.png" class="help-center-img img-bordered" alt="A new session's draft on the task page: What should the agent work on?, the composer with its repository, branch and worktree chips, then &quot;or&quot;, then the Continue a session started outside Kepler card, Pick up a Claude Code, Codex or other agent session you already started and bring it into this task.">
   </a>
-  <figcaption style="text-align:center; color:#888">Open an external session, under a new session's composer.</figcaption>
+  <figcaption style="text-align:center; color:#888">The Continue a session started outside Kepler card, under a new session's composer.</figcaption>
 </figure>
 
 The list shows the agent conversations Kepler found outside it, under **Live now** and **Past sessions**, with the folder each ran in and when it was last active. **Show past sessions** and **Show sessions from every folder** widen the list.
@@ -442,7 +444,7 @@ To start a session, follow these steps:
 
 1. Click **+** on the **Sessions** group in the context panel, or press **Ctrl/⌘ + T**. A draft tab opens, and a **Draft** row appears in **Sessions**.
 2. Choose where the agent works from the place chip at the bottom of the composer. The chip names the place, then its branch, then whether the session gets a new worktree.
-3. Open **Agent settings** to choose the **Agent**, **Start in**, and the agent's own options, such as **Permission mode**.
+3. Open **Agent settings** to choose the **Agent** and the agent's own options, such as **Permission mode**. For an agent that runs both ways, the **Start in** switch at the composer picks Chat or Terminal.
 4. Type your prompt.
 5. Press **Start**.
 
@@ -475,7 +477,9 @@ If no agent is set up, the agent control reads **Set up an agent**, and **Start*
 
 **When a session cannot start.** If the agent fails after launch, the task page shows **{agent} was unable to start** with the agent's message. Press **Retry** to launch it again, or **Open agent settings** to fix the problem.
 
-**Start from an existing session.** **New session from this one**, on a session's row or tab menu, picks an agent and starts a session in the same working directory that can read the source conversation. **New session from here**, on a message in a conversation, does the same but cuts the source off at that message. The new session shows a **Continues from** divider naming its source; **Open source session** in its menu takes you back.
+**Start from an existing session.** On a session's row or tab menu, point to **Continue in new session** and pick the agent and account. Kepler opens a draft in the same working directory, with a **Continues from** card naming the source conversation. Add your prompt and send the draft yourself. To leave the source conversation out, click **Don't send that conversation** on the card. **New session from here**, on a message in a conversation, does the same but cuts the source off at that message.
+
+The new session shows a **Continues from** divider naming its source; **Open source session** in its menu takes you back. If the source session is archived, the divider marks it **(archived)**, and clicking it opens the archived session.
 
 To run an Action instead of typing a prompt, open the chevron beside the session composer's **Send** button and pick an Action. Kepler adds anything you typed to the Action's prompt as a refinement. See [Actions](/kepler/actions).
 
@@ -522,6 +526,8 @@ The file viewer shows each kind of file in its own way:
 - **Markdown**, rendered, with a **Preview** / **Source** toggle. A Markdown file opened at a line, such as from a path an agent wrote, opens in **Source** so you see the line.
 - **Images and SVG**, fitted to the pane, with **Fit** and **100%**.
 - Anything else gets a **No preview for this file** card with the options available in this window: **Open in default app**, **Show in Finder** (macOS), **Show in Explorer** (Windows), or **Show in file manager** (Linux), and **Copy path**.
+
+In a window connected to another machine, file menus offer **Download…** in place of **Save as…**, and the **No preview for this file** card adds **Download…**.
 
 **An open file stays in sync with the file on disk.** When the file changes, the viewer updates in place and says **Updated just now**, naming the session that changed it when Kepler knows. **Show changes** shows what changed since the file was first shown; **Back to file** returns. A deleted file keeps showing the last version Kepler read, and says so.
 
@@ -640,6 +646,8 @@ File paths printed in a terminal are links, including relative paths, paths with
 Right-click a path for more: **Open file**, your default editor (opening at the line), **Open in** for the rest of your editors and your computer's **Default app**, **Save as…**, and **Copy path**. Any of those targets can be your default, with **Set as default**.
 
 Kepler task and session links in a terminal are links too. Ctrl/⌘ + click one to open it in Kepler, or right-click it for **Open in Kepler** and **Copy link**.
+
+A `#N` in a terminal that matches one of the task's pull requests or issues links to it. Hover it to see its card, or Ctrl/⌘ + click it to open it.
 
 To open file, folder, and web links in a terminal with a plain click, turn on **Open links with a click** in **Settings → Chat and terminal → Terminal**.
 

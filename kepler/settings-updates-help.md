@@ -29,14 +29,14 @@ The **Updates** page has these rows:
 |---|---|
 | **Current version** | The installed version, with **Release notes** beside it to open what's new in that release |
 | **Check for updates** | Checks for a newer release and downloads it in the background. Reads **Up to date** when there is nothing newer, and becomes **Check again** |
-| Download progress | While a release downloads: **Downloading**, with its progress and the time left. A **Verifying** step follows, and on Windows a **Preparing** step |
+| Download progress | While a release downloads, shows its progress and the time left |
 | **New version** | Appears once a release is ready, with **Restart to update** beside it, and how many running agents a restart would stop |
 
 When an update is ready, a chip also appears in the top bar on every screen. Its popover reads **Update ready to install** and says what a restart does to running work. If agents are in the middle of a tool call when you restart, Kepler waits up to 30 seconds for them to finish. To skip the wait, click **Restart now**, which may interrupt tool calls that are still running.
 
 **Check for updates** in the app menu shows its result where you are, without opening Settings. The top bar shows **Checking…**, then **Up to date** or the download. On the welcome screen, click the version in the corner to check. If that check fails, it reads **Unable to check for updates** with **Try again**.
 
-After an update, the release notes open in Kepler by themselves, once any guided start has ended. A release can start with a highlights card, *Three things in {version} to try first:*, and each item opens its part of the notes.
+After an update, the release notes open in Kepler by themselves, once any guided start has ended. A release can start with a highlights card, and each item opens its part of the notes.
 
 The update controls appear only in the desktop app. In a browser window connected to Kepler, the **Updates** page has nothing to update.
 
@@ -47,7 +47,7 @@ Kepler checks the agent CLIs you have installed for newer versions. **Agent upda
 | Setting | What it controls | Default |
 |---|---|---|
 | **Show agent updates in the title bar** | *A button appears in the title bar when an installed agent has a newer version. Settings still marks each agent either way.* | On |
-| **Show a restart notice on outdated sessions** | *After an agent updates, a notice above each open chat or terminal session still on the old version offers to restart it.* | On |
+| **Show a restart notice on outdated sessions** | *After an agent or Kepler updates, a notice above each open chat or terminal session still on the old version offers to restart it.* | On |
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/settings-agent-updates-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -72,7 +72,7 @@ The **Help** section links to the docs and release notes, and shows again any ti
 | **Release notes** | *See what changed in each version.* **Show release notes** opens them in Kepler, starting with the release's highlights when it has them. See [Updates](#updates) |
 | **Show tips and guides again** | A disclosure, closed by default: *Kepler points out a few controls the first time they matter. Show any of those tips again here.* |
 
-Inside the disclosure, each tip has a row that reads **Seen and dismissed** or **Not shown yet**, with its own **Show again** button. A tip that Kepler showed but you never dismissed still reads **Not shown yet**. The tips are the following:
+Inside the disclosure, each tip has a row with its own **Show again** button. The tips are the following:
 
 - **Actions callout**
 - **Todo pointer**
@@ -92,7 +92,7 @@ To report a problem, save the logs and attach the file. The **Logs** section has
 | **Save logs…** | Saves Kepler's logs as a single zip file |
 | **Clear log…** | Deletes the current and rotated log files, after a confirmation |
 
-In a window connected to a remote environment, the section shows the remote machine's logs: *These are the logs on {machine}.* Saving them from there includes this machine's logs too. To open your local logs, click **Show this machine's logs**.
+In a window connected to a remote environment, the section shows the remote machine's logs. Saving them from there includes this machine's logs too. To open your local logs, click **Show this machine's logs**.
 
 To find this computer's log without opening Settings, use **Help → Show Logs in Finder** (**Show Logs in Explorer**, **Show Logs in File Manager**) in the app menu.
 

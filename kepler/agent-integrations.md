@@ -34,7 +34,7 @@ Kepler supports 9 agents. You can also add any other agent that speaks the Agent
 
 ## Supported agents
 
-Each agent has a row under **Settings → Agents → Your agents**, in this order. Click a row to open the agent's own page:
+Each agent has a row under **Settings → Agents → Your agents**. Click a row to open the agent's own page:
 
 | Agent | Name in Settings | How Kepler runs it | Run modes | Multiple accounts |
 |---|---|---|---|---|
@@ -71,7 +71,7 @@ With Pi 1.x, a session gets the task's context and Kepler's workspace tools, and
 - OpenCode 2.1.1 or newer
 - Google Antigravity 1.5.3 or newer
 
-**Waking an idle Terminal session.** When a new report reaches an idle Claude Code, Codex, GitHub Copilot, OpenCode, Pi, or Auggie session in Terminal mode, Kepler wakes it to read the report. Kepler does not wake a session whose status bar shows **No Kepler tools**. For Codex, GitHub Copilot, and Auggie, and for the others when their own wake does not answer, Kepler types a one-line note into the agent's input, and only when the input is empty. To turn this off, clear **Wake idle terminal agents to read new reports** in **Settings → Agents → Idle agents**.
+**Waking an idle Terminal session.** When a new report reaches an idle Claude Code, Codex, GitHub Copilot, OpenCode, Pi, or Auggie session in Terminal mode, Kepler wakes it to read the report. Kepler does not wake a session whose status bar shows **No Kepler tools**. To wake a session, Kepler can type a one-line note into the agent's input, but only when the input is empty. To turn this off, clear **Wake idle terminal agents to read new reports** in **Settings → Agents → Idle agents**.
 
 **Folder trust.** In a repository, worktree, or folder you marked **Trusted** in Kepler, these sessions skip the CLI's own trust question:
 
@@ -115,7 +115,16 @@ Every OpenCode method installs OpenCode 2.
 
 The dialog marks Claude Code's **npm (global)** method *Deprecated by Anthropic*.
 
-Kepler offers a method only when the tool it runs is installed. For example, the Homebrew method needs Homebrew. A method that needs Node.js says so when Node.js is missing. If none of an agent's methods can run, Kepler says so and points you to the custom binary path instead. If the vendor's desktop app is installed, such as Claude or ChatGPT, you still need the command-line tool, and the dialog says so.
+Kepler offers a method only when the tool it runs is installed. For example, the Homebrew method needs Homebrew. A method that needs Node.js says so when Node.js is missing. If none of an agent's methods can run, Kepler says so and points you to the custom binary path instead.
+
+**Kepler can run the copy that came with a desktop app.** When an agent's command-line tool is not installed but the vendor's desktop app is, such as Claude, ChatGPT, GitHub Copilot, or OpenCode Desktop, Kepler runs the app's copy of the agent. The agent's page marks it **Desktop app**, and that copy updates only when the app does. To get a copy that updates itself, click **Install CLI** on the agent's page. Kepler then runs the standalone CLI instead. If the desktop app keeps its sign-in to itself, sign in to the agent once in Kepler.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/agent-desktop-copy-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/agent-desktop-copy-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="Claude Code's page in Settings › Agents running the Claude desktop app's copy: version 2.1.145 with a Desktop app badge, and Install CLI with its tooltip, Install the standalone CLI, which updates itself. Kepler then runs it instead of the desktop app's copy.">
+  </a>
+  <figcaption style="text-align:center; color:#888">Claude Code running from the Claude desktop app, with Install CLI.</figcaption>
+</figure>
 
 If you already installed the agent somewhere Kepler did not find it, tell Kepler where it is from the same dialog:
 
@@ -145,7 +154,7 @@ Each agent's page in **Settings → Agents** shows what Kepler resolved. Its ver
 |---|---|
 | Version | The installed version, or **Not installed** |
 | **Install** | Runs one of the install methods above. Shown when the agent is not installed |
-| **Which *agent* Kepler runs** | The resolved absolute path, or **Not found**, with where it came from (**PATH**, **Shell**, or **Common**) and its version |
+| **Which *agent* Kepler runs** | The resolved absolute path, or **Not found**, with where it came from (**PATH**, **Shell**, **Common**, or **Desktop app**) and its version |
 | **Rescan** | Re-detects this agent's binary. Use it after installing or removing one outside Kepler |
 | **Custom path…** | Pins an absolute path of your own, which must be a file |
 | **Clear custom** | Drops the pinned path and goes back to automatic resolution. Shown only while a custom path is set |
@@ -285,7 +294,7 @@ Every agent except Pi runs in 2 modes. To pick the mode new sessions start in fo
 | **Chat** | Kepler shows the conversation itself, with replies, diffs, and plans you can read, review, and search. This is the default |
 | **Terminal** | The agent's own command-line app, with its commands, shortcuts, and settings, in a terminal inside the task |
 
-To start one session in the other mode without changing the default, set **Start in** in the composer's **Agent settings** before you send the first message. An agent that offers only one mode shows no switch at all. See [Agent Sessions](/kepler/agent-sessions#how-a-session-runs).
+To start one session in the other mode without changing the default, use the Chat and Terminal switch at the composer's input before you send the first message. An agent that offers only one mode shows no switch at all. See [Agent Sessions](/kepler/agent-sessions#how-a-session-runs).
 
 Chat sessions show up as Kepler in places such as your Anthropic dashboard.
 
