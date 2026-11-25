@@ -26,7 +26,7 @@ You can start a task in 5 ways. The shortest starts from work that is already as
 | **Work assigned to you** | Run an Action on an issue or pull request in the **Todo** view of [the Kepler interface](/kepler/kepler-interface). One click starts the task with its context attached |
 | **Something you're describing yourself** | **New task** opens the **New task** composer, where you write the prompt and attach what it needs |
 | **A conversation you already started** | **Open an external session**, under the **New task** composer, wraps a task around an agent session you began in your own terminal |
-| **Workspaces in another agent app** | **Import from another app** brings workspaces from Conductor, Orca, herdr, or Vibe Kanban in as tasks, with their branches and chats |
+| **Workspaces in another agent app** | **Import from another app** brings workspaces from Conductor, Orca, T3 Code, herdr, or Vibe Kanban in as tasks, with their branches and chats |
 | **Another GitKraken app** | A link from GitLens or GitKraken Desktop opens Kepler on the work you were looking at |
 
 ***
@@ -109,7 +109,7 @@ You can attach as much or as little context as you want. To create a task from t
 
 **The composer also remembers an unsent draft.** If you close the dialog with a prompt half written, the prompt is still there when you reopen it. Kepler asks before it discards a draft.
 
-**Kepler also remembers which repository you pick for a tracker project.** When you pick a Jira, Linear, or Azure issue, its **Repository** chip holds the repository you used for that project before. To use another repository, or **No repository**, choose it from the chip's menu.
+**Kepler also remembers which repository you pick for a tracker project.** When you pick a Jira, Linear, or Azure issue, the repository you used for that project before appears under it, with the same branch and worktree chip as any repository. To drop it, click the X on the chip. To choose one when none is shown, click **Add its repository**.
 
 The primary button runs the Action that matches what you've attached, exactly as it would from a Todo row. A linked pull request resolves to **Address Feedback** or **Review**, depending on who wrote it; a linked issue resolves to **Plan**. With nothing attached, the button reads **Start** and starts the task with your prompt as written.
 
@@ -216,7 +216,7 @@ For what happens to the conversation once it's on a task, including forking, con
 
 ## From another agent app
 
-If you work in Conductor, Orca, herdr, or Vibe Kanban, you can bring its workspaces into Kepler as tasks. Each workspace becomes a task in the same folder, on the same branch, and its chats continue as the task's sessions. From Conductor, Kepler imports the workspaces the Conductor app keeps on your Mac, not Conductor Cloud workspaces.
+If you work in Conductor, Orca, T3 Code, herdr, or Vibe Kanban, you can bring its workspaces into Kepler as tasks. Each workspace becomes a task in the same folder, on the same branch, and its chats continue as the task's sessions. From Conductor, Kepler imports the workspaces the Conductor app keeps on your Mac, not Conductor Cloud workspaces.
 
 To import workspaces from Conductor, take the following steps:
 

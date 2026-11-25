@@ -54,7 +54,7 @@ The organization you are acting as decides what a feature costs.
 
 ## Profiles
 
-**Profiles**, right under **Account** in the desktop app, lists the profiles on this computer. Each profile has its own tasks, repositories, settings, and sign-ins, and runs side by side with the others. Click **Add profile** to add one, or use a profile's row menu to edit, open, or delete it. See [Use Profiles in Kepler](/kepler/kepler-profiles).
+**Profiles**, right under **Account** in the desktop app, lists the profiles on this computer. Each profile has its own tasks, repositories, settings, and sign-ins, and runs side by side with the others. Click **Add profile** to add one, or use a profile's row menu to edit, open, or delete it. When a remote machine you connect to has profiles from your other computers, they are listed under **On *machine***. From there, you can open one on this computer or remove it from the machine. See [Use Profiles in Kepler](/kepler/kepler-profiles).
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/profiles-settings-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">

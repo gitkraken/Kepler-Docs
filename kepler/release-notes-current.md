@@ -38,6 +38,207 @@ New to Kepler? [Getting Started with Kepler](/kepler/kepler-getting-started) tak
 
 ***
 
+<a id="v0-25-0"></a>
+## Version 0.25.0
+
+<kbd>Wednesday, November 25th, 2026</kbd>
+
+### Highlights
+
+- **Create, merge and close GitHub pull requests in Kepler.** Finish the work where you started it. The last steps of a task, opening the pull request, getting it through CI and merging it, no longer need a browser tab.
+- **Type into a stopped session to resume it.** Pick a conversation back up by answering it. A stopped session no longer needs a separate Resume before you can type.
+- **Have each reply read aloud as it arrives.** Listen to an agent while you do something else, and stop looking for the model setting.
+
+### Features
+
+#### Pull requests and issues
+
+Finish the work where you started it. The last steps of a task, opening the pull request, getting it through CI and merging it, no longer need a browser tab.
+
+- Create a GitHub.com pull request from the Todo, then edit, close, reopen, merge or add it to the merge queue from its preview or its task. Kepler shows whether a merge completed, was queued or is blocked.
+- Close a GitHub issue with a reason, reopen it or delete it from its preview, its link card or its task, on GitHub.com and GitHub Enterprise. Deleting asks you to confirm.
+- An agent can stop polling CI: it watches its pull request and is woken when checks pass or fail, a review or comment arrives, a conflict appears, the merge queue moves, or it merges. A failure report names the failed checks and quotes their logs.
+- Agents can create, edit, close and reopen GitHub issues on the account you name, and deleting one always asks for your approval.
+- `#1234` in a terminal or a chat opens the pull request or issue when the task links one with that number, and shows its state card on hover.
+- A pull request or issue link in a chat shows the same card as a task's link chips, with the link's own right-click menu.
+
+#### Resuming sessions
+
+Pick a conversation back up by answering it. A stopped session no longer needs a separate Resume before you can type.
+
+- Type a reply into a stopped or archived chat or terminal session and send it: Kepler resumes the session with the agent, model and account the bar shows, then delivers the reply.
+- Stopped chats, terminals, external conversations and archived sessions share one resume bar that says what happened and leads with the fix: Sign in, Resume anyway, Open agent settings, a missing folder that Resume recreates, or another account when this one is at its limit.
+- Every composer and the terminal bar have the same agent, account and usage controls, and the terminal's agent button opens the settings popover chat has. The account shows once, as a badge on the usage chip.
+- Switch account or agent from a session's settings popover or its usage card. A choice that can't carry the conversation is marked New session and asks first.
+- Continuing in a new session opens a filled-in draft with a Continues from card instead of launching at once, so you can change the prompt or the agent before it starts.
+- Draft session tabs follow you to every window, remote ones included.
+- An archived Ask Kepler chat picked from search or the panel's history opens read-only, and a reply restores it, instead of opening a blank chat.
+
+#### Voice
+
+Listen to an agent while you do something else, and stop looking for the model setting.
+
+- Continuous reading, next to the chat mic and in a terminal's status bar, reads the latest reply and then each new one, and says when the agent is waiting for you or a turn fails.
+- Pause a read, resume from the same sentence or skip to the next reply, from a bar above the chat input or the terminal's status bar.
+- Every mic and read-aloud button opens a menu that shows the model in use and downloads or switches to another, so setting up dictation no longer means leaving for Settings.
+- The title bar shows dictation and read aloud while they run, with the words being heard or read, and a click stops them. On the phone the status chip does the same.
+- Dictation pauses a read so it isn't spoken into the mic, and the reply to a dictated prompt is still read.
+
+#### Agents & terminals
+
+- Reading view replaces a terminal session's Transcript button: read a running terminal session as a conversation without restarting it, opening on the latest turn, and Escape returns to the terminal.
+- A Claude plan in a terminal session opens in Kepler's plan review, where Approve picks the mode to continue in and Request changes sends your feedback back in the same turn.
+- A terminal's status bar shows how many tasks an idle agent still runs in the background, such as a dev server, with their descriptions on hover.
+- With only Claude Desktop, the Codex or ChatGPT app, the GitHub Copilot app or OpenCode Desktop installed, Kepler runs the CLI that app keeps instead of finding no agents, and Settings offers to install the standalone CLI.
+- A coordinating agent can compare the usage left on each of your accounts before choosing where to start a session.
+- Send anyway delivers a message that is waiting for a terminal's input line to clear, without you finding and emptying the line first.
+
+#### Chat
+
+- Run a shell command an agent suggests without copying it to a terminal: a shell code block gets a Run button, shows its output under the block, and the agent is told the result.
+- Prompts from other sessions and automations fold into one line naming the sender and the first sentence, so a supervised session's transcript reads as your conversation, not other agents' traffic.
+- A failed tool call shows its error's first line without being opened.
+- Links to a Kepler task, session or note show the record's name instead of a long address, in the transcript and in the composer, with a hover card in the transcript.
+- A session's first line says how it was started (delegate of, reviewing for, follow-up to, started by) and links to that session.
+- A fork's Continues from notice names an archived source and opens it, where it can be restored.
+
+#### Profiles
+
+- A profile made on two computers can share one server on a host, so tasks made from one show on the other. Settings → Profiles and the account menu list a host's profiles from other computers, to open here or remove.
+- Adding a profile a host already has, or first connecting one, offers the host's existing profile instead of quietly starting a second server.
+- Opening a host's profile asks which of this computer's accounts to sign in with, so it opens straight onto the host.
+- The tray menu marks a profile that is still running after its last window closed.
+
+#### Dashboard
+
+- `is:archived` finds archived tasks in a Dashboard search.
+- Quick look and Archive appear right after a task row's title on hover, and the star keeps one place before the title on every row.
+- Right-click anywhere blank in a panel header for the task menu, not only on the task's name.
+- List titles with nothing happening on them are dimmed, so active sections stand out.
+
+#### Everything else
+
+- Import workspaces and conversations from T3 Code, next to Conductor, Orca, herdr and Vibe Kanban.
+- Take a file off another machine: file menus in a remote window or a browser tab offer Download, and the desktop app saves a large file straight to disk.
+- Markdown file previews show local images, and reload them when the file changes.
+- The phone palette lists commands and todos like the desktop one, and a pasted pull request or issue link offers to open it as a todo or start a task from it.
+- In the palette, the left and right arrows switch tabs while the search field is empty.
+- Auto-hide closes the floating Ask Kepler panel when you click outside it, for using it as a quick popover. It is off by default, in the panel's right-click menu and Settings.
+- Time fields take typed times such as "9p" or "21:30" and list every 15 minutes, in the automation schedule and Hold until.
+
+### Improvements
+
+#### Performance
+
+- A long chat stays responsive while a reply streams in.
+- A session that links other sessions starts sooner, without reading their whole history first.
+- With reduced motion on, dragging a split and other live changes no longer make the whole window do extra work.
+
+#### Agents & terminals
+
+- Kepler's own prompts to Claude, Pi and OpenCode terminals (another agent's message, a retry, a usage-limit continue) are handed to the agent instead of typed into its input box, so a half-typed draft neither delays them nor gets mixed in.
+- A retry or continuation Kepler sends shows as From: Kepler with its reason, so it doesn't read as something you typed.
+- Claude Code's file and URL links are clickable in Kepler terminals.
+- A new task's first message carries snapshots of the tasks and sessions it links, so an agent without Kepler's tools, such as Cursor or Grok, can read them.
+- The MCP server list groups servers by where they apply: all repos, this repo shared with your team, or this repo for you only.
+- Turning off artifact comments applies to terminal sessions too, and Settings lists the running ones that need a restart.
+- A terminal session started before 0.24 offers a restart when idle, to move onto the current background process.
+- An exited terminal keeps its whole final screen after a restart, however long its output was.
+- The text Kepler adds around another agent's message is shorter, so less of a terminal fills with framing.
+- The resources dialog is rebuilt around picking: select repositories, folders, issues and pull requests from one list per tab, and nothing changes until Save changes.
+
+#### Usage limits and accounts
+
+- When a usage limit stops a delegate or reviewer, its banner names the session that decides whether to continue and links to it, and your own Continue and Wait stay available.
+- A worker its planner already replaced no longer wakes at the reset and spends the new window. The session that started it is told when the limit resets instead.
+- Coordinating agents can see that a session's prompt is held for a usage limit and when it will go out, so they don't start the same work twice.
+- Redeeming a usage-limit reset says what it refills before you confirm and what was refilled after.
+- The session menu groups Switch account, Continue in Chat or Terminal, and Continue in new session together.
+
+#### Remote and SSH
+
+- Remote windows use this app's interface by default. When the server runs another version, the window offers to update the server or this app.
+- A server shared by two computers signed in to different GitKraken accounts asks before switching accounts, instead of flipping on every connect.
+
+#### Everything else
+
+- The title bar's search field narrows to fit the room it has before any label collapses, and its counts stay visible.
+- Its tooltip lists what needs you, what is unread and what is working as separate counts, for this machine and each other one.
+- Settings grows taller on tall displays and keeps its margins in short windows.
+- Worktree cleanup filters show their counts while checks are still running.
+- Dragging a Dashboard preview panel highlights the panel whose place it will take.
+
+### Fixes
+
+#### Security
+
+- Updated Electron to pick up Chromium and V8 security fixes.
+
+#### Agents & terminals
+
+- Kepler no longer deletes files an agent wrote into a task's attachments folder when it starts.
+- A task started from its prompt no longer gives Claude that prompt twice, and the prompt card no longer shows a second copy.
+- A resumed Claude chat stays on its conversation's model, without stray "Set model" messages in the conversation.
+- A switch between Chat and Terminal that can't carry the conversation puts the session back, instead of starting a fresh conversation and saying it continued.
+- A permission request left unanswered when Kepler quit no longer comes back as a live prompt.
+- Agent questions with optional fields, yes or no fields or no fields at all are shown, instead of being declined with nothing on screen.
+- The Other field under an agent question no longer sends on Shift+Enter or on the Enter that confirms an input method's conversion.
+- Messages from other agents are no longer held back after a one-key menu choice in Claude Code.
+- A prompt from another session or an automation that is resent after a usage limit keeps its sender, instead of reaching the agent as your words.
+- A Claude session moved to another account no longer asks again to trust its task's attachments folder.
+- Claude terminal sessions start on machines whose managed policy forbids extra MCP servers or plugins, instead of exiting at launch.
+- Antigravity CLI sessions can call Kepler's session and task tools, which it used to refuse.
+- Antigravity Chat launches on Windows when the CLI's version can't be read.
+- Auggie signs in on 1.2.2 and other newer releases.
+- Installing Claude Code or OpenCode works with npm 12, and agent installs work under Windows' default PowerShell policy.
+- Updating OpenCode no longer fails when your default Node differs from the one that installed it.
+- A slow first launch of a newly installed agent on Windows no longer fails before the agent has started.
+- A session's MCP menu no longer shows every server on while the agent starts.
+- Recreating a worktree no longer breaks its setup command by updating the branch under it.
+- The working icon on a terminal's status bar and tab spins again.
+- With "Open links with a click" on, a click opens a link in an unfocused terminal.
+- A terminal restored after a restart shows at its own size, with the cursor under its last line.
+- A file path Claude Code wraps beside an `[image]` label is linked.
+- Picking the current account in the Resume menu resumes the session.
+
+#### Voice
+
+- The dictation shortcut works in every composer, including Ask Kepler's new chat and the new-task launcher.
+- A mic hidden behind another tab stops recording, and no longer shows as recording when you come back.
+- Installing Parakeet no longer fails when a Qwen model is removed during the download.
+
+#### Remote and phone
+
+- Kepler added to an iPhone's Home Screen keeps your sign-in.
+- Scrolling a long changes list on a phone no longer opens files.
+- A remote browser recovers from a dropped connection instead of showing a "Failed to load" error.
+
+#### Everything else
+
+- Arrowing through the Dashboard list no longer pulls keyboard focus into a task that was still loading.
+- A dragged Dashboard preview panel lands on the panel under the pointer.
+- The Changes overlay stays open when you start a line comment from the gutter.
+- The title bar's Ask button opens Ask Kepler's chat, not the terminal tab you used last.
+- Opening a file in an editor works on Windows when the editor's path has a space, such as VS Code under Program Files.
+- The Windows file-watching helper no longer crashes when a folder stops being watched.
+- When a worktree's folder can't be fully removed because of files you lack permission to delete, Kepler names the file and says you can delete the folder yourself.
+- A deleted task's folder is removed with it.
+- Issues and pull requests on a self-hosted provider open when their link uses http and the connection uses https.
+- Providers no longer show as unavailable when Kepler starts offline or wakes from sleep.
+- A Jira connection whose credential is refused is marked for reconnecting.
+- A focused Dashboard row shows its keyboard focus in forced-colors mode.
+
+### Breaking changes
+
+- "Continue as" is now Switch account, and "New session from this one" is now Continue in new session.
+- A terminal session's Transcript button is now Reading view, and its Read last reply button is replaced by the reading bar.
+- Switching tabs, closing Ask Kepler or leaving the page stops dictation and read aloud, and keeps the dictated text in the draft without sending it.
+- In the palette, the right arrow no longer jumps from a task to its files. Use the Files tab.
+- Deleting a profile no longer removes its servers on other machines, since another computer may use them. Remove one from Settings → Profiles.
+- With remote windows on this app's interface by default, connecting updates an outdated server even while other devices use it. Turning off "Always use this app's interface" restores the old behavior.
+
+***
+
 <a id="v0-24-0"></a>
 ## Version 0.24.0
 

@@ -287,4 +287,35 @@ When nothing you have connected can list issues or pull requests, **Add issue** 
 
 You can also start work on a pull request from GitLens or GitKraken Desktop. See [Create a task](/kepler/create-task).
 
+### Create and manage GitHub pull requests
+
+With GitHub connected, you can open and manage GitHub.com pull requests from Kepler.
+
+To open a pull request, follow these steps:
+
+1. Push your branch. Both branches must already exist in the repository.
+2. Click **Create pull request** at the top right of the **Todo** list.
+3. Choose the **Repository**, and type the **Head branch** and the **Base branch**.
+4. Add a **Title** and a **Description**, and click **Create pull request**.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/github-pr-create-nov-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/github-pr-create-nov-2026.png" class="help-center-img img-bordered" alt="The Create pull request dialog, which asks you to choose a GitHub repository and name two branches that already exist in it: Repository acme/acme-web, Head branch kepler/fix-cart-total, Base branch main, a Title and a Description, with Cancel and Create pull request.">
+  </a>
+  <figcaption style="text-align:center; color:#888">Opening a pull request between two pushed branches.</figcaption>
+</figure>
+
+To change a pull request, click **Manage pull request**, the **…** button in the pull request's panel header. The dialog offers one button for each action GitHub allows you:
+
+- **Edit title and description**
+- **Close pull request**, or **Reopen pull request** on a closed one
+- **Merge pull request**, which then asks for the **Merge method**. When the base branch uses a merge queue, **Add to merge queue** takes its place
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/github-pr-manage-nov-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/github-pr-manage-nov-2026.png" class="help-center-img img-bordered" alt="The Manage pull request dialog for acme/acme-web #51, offering Edit title and description, Close pull request and Merge pull request.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The actions GitHub allows on an open pull request.</figcaption>
+</figure>
+
 ---

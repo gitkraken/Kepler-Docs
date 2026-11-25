@@ -337,7 +337,7 @@ You can also drag a group's header to move the group before or after another gro
   <figcaption style="text-align:center; color:#888">A group header's menu.</figcaption>
 </figure>
 
-**Archive or delete a group.** When a group's work is done and every task in it is archived, archive the group. The group leaves the Dashboard, and you can reuse its name. If you restore one of its tasks, the group comes back too, and the task stays in it. Deleting a group keeps its tasks, without a group. To delete them too, tick **Also delete its {count} tasks** in the confirmation. It then offers the same worktree and branch options as deleting tasks.
+**Archive or delete a group.** When a group's work is done and every task in it is archived, archive the group. The group leaves the Dashboard, and you can reuse its name. If you restore one of its tasks, the group comes back too, and the task stays in it. Deleting a group keeps its tasks, without a group. To delete them too, tick **Also delete its {count} tasks** in the confirmation. Kepler then also deletes each task's folder and the files in it. The confirmation then offers the same worktree and branch options as deleting tasks.
 
 **Manage every group in Settings.** **Settings → Tasks → Groups** lists every group, including archived groups. There you can create, edit, reorder, restore, and delete groups. See [Groups](/kepler/settings-tasks#groups).
 
@@ -582,7 +582,7 @@ The search box also takes the view's filters, written as qualifiers such as `act
 - Separate values with commas to match any of them, such as `activity:waiting,unread`.
 - Join filters with **OR** in parentheses to match either one, such as `(activity:waiting OR progress:review)`. The group combines with your other filters.
 - Use `has:` or `no:` to find tasks with or without something: `group`, `linked`, `session`, `terminal`, `repo`, or `branch`, such as `no:group`. On Todo, `no:` and `has:` take `label`, `assignee`, `milestone`, or `reviewer` with a provider, such as `no:label@github`.
-- `is:starred` shows the tasks you starred.
+- `is:starred` shows the tasks you starred, and `is:archived` shows archived tasks.
 
 A qualifier that can match nothing is underlined. Hover over it to see why, such as a group name that does not exist.
 
@@ -633,7 +633,7 @@ The confirmation offers the same options as deleting a task: **Also delete workt
 
 With **Also delete the branch on the remote** ticked, Kepler also deletes each branch's remote copy, unless that would lose work, such as a branch with an open pull request or commits that are not on the remote. A message says which branches it kept, and why.
 
-**Restore task** replaces **Archive task** in an archived task's **⋮** menu, and also appears in the task page's header. It restores the task at once, without asking. A restored task stays in its group, and if that group was archived, Kepler restores the group too.
+**Restore task** replaces **Archive task** in an archived task's **⋮** menu. An archived task's header, on its task page and in its panel, shows **Restore** and **Delete** in place of the terminal and new-session buttons. Restoring takes effect at once, without asking. A restored task stays in its group, and if that group was archived, Kepler restores the group too.
 
 To archive, restore, or delete several tasks at once, click **Select** on a section header in a Tasks view. The header becomes a bar with a select-all box and the actions, and the section's rows show checkboxes. You can select in 1 section at a time, and while you select, clicking a row ticks it instead of opening its panel.
 
@@ -646,7 +646,7 @@ The bar has these buttons:
 | **Delete** | Deletes the selected tasks permanently |
 | **Cancel** | Ends selection and clears the selection |
 
-**Archive** and **Delete** both ask you to confirm, with **Archive tasks** or **Delete tasks** as the confirm button. Both offer **Also delete worktrees**, **Also delete branches**, and **Also delete the branch on the remote**. Deleting cannot be undone, and the confirmation says so. The batch confirmation differs from the single-task dialog in 2 ways:
+**Archive** and **Delete** both ask you to confirm, with **Archive tasks** or **Delete tasks** as the confirm button. Both offer **Also delete worktrees**, **Also delete branches**, and **Also delete the branch on the remote**. Deleting cannot be undone, and the confirmation says so. Deleting a task removes its sessions and resources, and deletes its folder and the files in it. The batch confirmation differs from the single-task dialog in 2 ways:
 
 - The single-task dialog remembers what you ticked last time. The batch confirmation always starts with all 3 boxes unticked.
 - When you archive, the batch confirmation does not list the worktrees. Kepler keeps any worktree that would lose work, and a message afterwards says which ones and why. When you delete, it lists them as the single-task dialog does.

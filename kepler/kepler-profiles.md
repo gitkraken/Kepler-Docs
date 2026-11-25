@@ -40,6 +40,24 @@ To see and manage your profiles, open **Settings → Profiles**, right under **A
   <figcaption style="text-align:center; color:#888">Settings → Profiles, with a second profile added.</figcaption>
 </figure>
 
+### Profiles on your other machines
+
+Each profile that connects to a [remote machine](/kepler/remote-environments) gets its own server there, and other computers can share it. When a machine you connect to already has profiles from another computer, **Settings → Profiles** lists them under **On *machine***. Each row's menu has these items:
+
+- **Open on this computer** opens that profile here as a profile of its own, with the tasks your other computer made on that machine.
+- **Remove from *machine*…** deletes the profile's server on that machine, with its tasks, conversations, and settings there, for every computer that uses it. Task folders on the machine stay.
+
+To have one of your profiles use a profile on another machine instead, choose **Use a profile from another machine…** from its row menu. The profile reopens with that profile's tasks and sessions. Its local tasks and settings stay.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/profiles-host-profiles-nov-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/profiles-host-profiles-nov-2026.png" class="help-center-img img-bordered" alt="Settings › Profiles: Default, marked This profile, then On dev-server listing Work, Last used 2d ago, with its menu open on Open on this computer and Remove from dev-server….">
+  </a>
+  <figcaption style="text-align:center; color:#888">A profile from another computer, listed under the machine that serves it.</figcaption>
+</figure>
+
+If a machine's server is signed in to a different GitKraken account than this computer, Kepler asks which account to keep when you connect. See [When the server uses another GitKraken account](/kepler/remote-environments#when-the-server-uses-another-gitkraken-account).
+
 ## Add a profile
 
 1. In **Settings → Profiles**, click **Add profile**. You can also run **Add profile** from the command palette, or choose **Add profile…** from the account menu before you have a second profile.
@@ -49,6 +67,8 @@ To see and manage your profiles, open **Settings → Profiles**, right under **A
    - **Copy of** a profile keeps that profile's settings, repositories, themes, and GitKraken sign-in. Its tasks and agent logins stay behind, and you can sign in to another GitKraken account after it opens.
 4. Click **Add** to add the profile, or **Add and open** to also open it in a new window.
 
+If a machine you connect to already has profiles from another computer, the dialog lists them too, so you can open one here instead of adding a new profile.
+
 <figure style="text-align:center">
   <a href="/wp-content/uploads/profiles-add-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
     <img src="/wp-content/uploads/profiles-add-nov-2026-v2@2x.png" class="help-center-img img-bordered" alt="The Add profile dialog: Name reads Client work, Profile color has the purple swatch picked among twelve colors, and the Start from list is open with Blank profile and Copy of Default (selected). Cancel, Add and Add and open sit at the bottom.">
@@ -56,14 +76,14 @@ To see and manage your profiles, open **Settings → Profiles**, right under **A
   <figcaption style="text-align:center; color:#888">Adding a profile as a copy of the Default profile.</figcaption>
 </figure>
 
-Most agents keep a separate sign-in in each profile. An agent that uses your own sign-in in every profile says so on its card in **Settings → Agents**, and signing in or out of it changes it everywhere.
+Each agent keeps a separate sign-in in each profile, unless its page in **Settings → Agents** says it uses your own sign-in in every profile. Signing in or out of such an agent changes it everywhere.
 
 ## Switch between profiles
 
 Each profile opens in its own windows. To open another profile, or bring its windows forward, use one of these:
 
-- The account menu in the top bar shows this window's profile, marked **This window**. Under **Other profiles**, click a profile to open it.
-- The tray icon's menu lists each profile with its windows and **New Window**.
+- The account menu in the top bar shows this window's profile, marked **This window**. Under **Other profiles**, click a profile to open it. Profiles from your other computers are listed under **On *machine***.
+- The tray icon's menu lists each profile with its windows and **New Window**. A profile that is running shows **(Running)** after its name.
 - The command palette has **Open profile:** and the name of each profile.
 - In **Settings → Profiles**, choose **Open** from a profile's row menu.
 
@@ -93,7 +113,7 @@ While another profile is running, the tray's **Quit** reads **Quit All**, and ea
 3. To also delete the profile's folder in your home folder, select **Also delete its folder**. That folder holds the repositories the profile cloned, its worktrees, and its task folders. Work there may exist nowhere else and cannot be recovered.
 4. Click **Delete *profile*** to confirm.
 
-Deleting a profile removes its tasks, conversations, settings, and repository list from this computer, and signs it out of GitKraken and its agents. On each remote machine the profile used, its server stops and is removed, which ends any agents still running there. Your accounts, your other profiles, and repositories added from elsewhere are not affected.
+Deleting a profile removes its tasks, conversations, settings, and repository list from this computer, and signs it out of GitKraken and its agents. Its servers on remote machines stay, with their tasks, so other computers using the profile keep working. To remove one, use **Remove from *machine*…** in [Profiles on your other machines](#profiles-on-your-other-machines). Your accounts, your other profiles, and repositories added from elsewhere are not affected.
 
 ***
 

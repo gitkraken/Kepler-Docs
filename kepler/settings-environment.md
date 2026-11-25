@@ -25,7 +25,7 @@ Use **Settings → Remote environments** to save the machines your agents can ru
 
 ## Remote environments
 
-*Run your agents on another machine, like a dev server or cloud VM, while you work from here. Kepler installs itself over SSH, so there's nothing to set up on that machine first.* On Windows, you can also use a WSL distro, with nothing extra to install.
+Run your agents on another machine, such as a dev server or cloud VM, while you work from here. Kepler installs itself over SSH, so you do not need to set up anything on that machine first. On Windows, you can also use a WSL distro, with nothing extra to install.
 
 To open this page from anywhere, press **Ctrl/⌘ + Shift + R**, or click **Manage remote environments…** in the remote chip's popover. Kepler saves the machine list on this computer, whichever machine a window is connected to.
 
@@ -34,18 +34,18 @@ The Remote environments page has 3 sections:
 | Section | What it holds |
 |---|---|
 | **Your machines** | Your saved machines. Each row shows whether the machine is connected and how many windows have it open |
-| **Found on this machine** | *Machines from your SSH config and WSL that you haven't added yet.* The section appears only while Kepler finds one |
+| **Found on this machine** | Machines from your SSH config and WSL that you have not added yet. The section appears only while Kepler finds one |
 | **Remote windows** | How a window connected to another machine loads its interface. See [Remote windows](#remote-windows) |
 
 In **Your machines**, you can do the following:
 
-- To open a machine in this window, click **Connect**. To open it in a new window, click the button next to **Connect** (*Connect to {name} in a new window*).
+- To open a machine in this window, click **Connect**. To open it in a new window, click the window icon next to **Connect**.
 - To add a machine by hand, click **Add machine**. On Windows, choose **SSH** or **WSL** in **Machine type**. A WSL machine takes a **Distro** and an optional **Name**.
 
 In **Found on this machine**, you can do the following:
 
 - To save a machine, click **Add**.
-- To move a machine out of the list, click **Hide**. Hidden machines appear under **Show hidden ({count})**.
+- To move a machine out of the list, click **Hide**. Hidden machines appear under **Show hidden (*N*)**.
 
 To open a saved machine's page, click the machine:
 
@@ -54,9 +54,9 @@ To open a saved machine's page, click the machine:
 | Name | Rename the machine. You can rename a machine only from a local window |
 | **Latency**, **Live sessions** | The connection's current state |
 | **Color** | Tints the machine's chip, its popover, and a connected window's top strip, so you can tell machines apart. **None** removes the tint |
-| **Mute notifications from {host}** | *Kepler won't show desktop notifications for sessions on {host}. Alerts still appear inside its windows.* |
+| **Mute notifications from *machine*** | Stops desktop notifications for sessions on the machine. Alerts still appear inside its windows |
 | **Connection** | Edit the SSH or WSL address. If you enter a new SSH address, Kepler asks you to trust its host key with **Trust and save** |
-| **Remove {name}…** | Deletes the saved machine |
+| **Remove *machine*…** | Deletes the saved machine |
 
 To edit the connection of a machine you are connected to, disconnect from it first.
 
@@ -66,17 +66,17 @@ In a window connected to an SSH machine, a **Ports** list shows the ports forwar
 - To stop forwarding a port, click **Stop**.
 - To stop every forwarded port, click **Stop all**. This button appears when more than one port is forwarded.
 
-A window connected to a machine shows the other machines read-only, with the message *To add, edit, or remove machines, open Remote environments in a local window.* To make changes, click **Open in a local window**.
+A window connected to a machine shows the other machines read-only. To add, edit, or remove machines, click **Open in a local window**.
 
 If a window cannot reconnect to its machine, it shows a full-screen recovery screen instead of this page. See [The recovery screen](/kepler/remote-environments#the-recovery-screen).
 
 ### Remote windows
 
-When another machine runs a different version of Kepler, a window connected to it uses that machine's interface. The following setting, in the desktop app only, changes that:
+When another machine runs a different version of Kepler, a window connected to it still uses this app's interface. To show that machine's interface instead, turn off the following setting, in the desktop app only:
 
 | Setting | What it controls | Default |
 |---|---|---|
-| **Always use this app's interface** | Offers to update the server or this app instead of showing the server's interface. An outdated server then updates when you connect, even while other devices use it | Off |
+| **Always use this app's interface** | Offers to update the server or this app instead of showing the server's interface. An outdated server then updates when you connect, even while other devices use it | On |
 
 To learn how to connect, forward ports, and how sessions behave on a machine, see [Remote environments](/kepler/remote-environments).
 
@@ -84,7 +84,7 @@ To learn how to connect, forward ports, and how sessions behave on a machine, se
 
 ## Remote Access
 
-*Use this machine from any browser or your phone, through a secure GitKraken relay.* You do not need to open a port or set up a tunnel.
+Remote Access lets you use this machine from any browser or your phone, through a secure GitKraken relay. You do not need to open a port or set up a tunnel.
 
 Under **How it works**, the page lists 3 steps:
 
@@ -99,13 +99,13 @@ To turn on Remote Access, do the following:
 1. Click **Turn on Remote Access**.
 2. Enter a name in **Name this machine**.
 
-A status badge shows the connection state: **Connecting…**, **Active**, **Reconnecting…**, **Waiting to reconnect**, **Error**, or **Inactive**. While Remote Access is on, the page shows a QR code (*Scan with your phone camera to open*) and **Copy URL**. The page also shows *This machine stays awake while Remote Access is on.*, with **Change in Agents**, which opens [Keep agents running](/kepler/settings-agents#keep-agents-running).
+A status badge shows the connection state, such as **Active** or **Waiting to reconnect**. While Remote Access is on, the page shows a QR code to scan with your phone and **Copy URL**. This machine stays awake while Remote Access is on. To change that, click **Change in Agents**, which opens [Keep agents running](/kepler/settings-agents#keep-agents-running).
 
 A phone you pair can also get notifications when a session needs you. Turn them on from the phone, in its **Settings → Notifications**. See [Notifications on this phone](/kepler/settings-app#notifications-on-this-phone).
 
 Remote Access stays on until you turn it off, sign out, or another account signs in.
 
-To turn off Remote Access, click the switch. Kepler asks **Turn off Remote Access?** first, because *Every paired device is disconnected.*
+To turn off Remote Access, click the switch, then confirm. Every paired device is disconnected.
 
 ### Reconnecting after a dropped connection
 
@@ -118,14 +118,14 @@ These 2 reasons tell you how to fix them:
 
 ### Managing machines and devices
 
-**Machines on your account** shows *See every machine on your account with Remote Access on, and remove the ones you no longer use.* Its **Manage machines on gitkraken.dev** button appears even while Remote Access is off.
+To see every machine on your account with Remote Access on, and remove the ones you no longer use, click **Manage machines on gitkraken.dev** under **Machines on your account**. The button appears even while Remote Access is off.
 
 **Connected devices** lists each device that has connected. It marks **This device**, shows when each device was **Last seen**, and marks a device that **Gets notifications**. You can do the following:
 
 - To disconnect one device, click **Revoke**.
 - To reload the list, click **Refresh**.
 
-The section notes: *Only you can connect, signed in to your GitKraken account. Turning Remote Access off disconnects every device, and you can revoke any single device under Connected devices.*
+Only you can connect, signed in to your GitKraken account.
 
 A pairing link works once and expires after 5 minutes. A used link shows *This pairing link no longer works*. To pair again, open a new link from the computer running Kepler. If you open a saved address, such as a bookmark, after its browser session has ended, Kepler takes you to gitkraken.dev to sign in again. To learn about prerequisites, pairing, and managing sessions from gitkraken.dev, see [Remote environments](/kepler/remote-environments).
 

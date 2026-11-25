@@ -243,7 +243,7 @@ When you edit a file through a symbolic link, Kepler saves the file the link poi
 
 **Stacked** shows removals and additions in one column. **Split** shows the old and new file side by side. To switch, open the diff layout button on a file's header and pick **Stacked** or **Split**. **Diff layout**, in **Settings → Appearance**, sets which layout the overlay starts with.
 
-**Split** needs room for 2 columns of code. When the viewer is narrower than 640 pixels, the diff shows as **Stacked** and **Split** is unavailable.
+**Split** needs room for 2 columns of code. When the viewer is too narrow, the diff shows as **Stacked** and **Split** is unavailable.
 
 ### Diffs that are not code
 
@@ -263,12 +263,7 @@ If Kepler cannot read the changes, the view says so instead of showing an empty 
 
 In a repository you have not trusted, Kepler runs no git, so the view reads **Trust this repository to see its changes**. To show the changes, click **Trust**. See [Trust a repository](/kepler/settings-repositories#trust-a-repository).
 
-An empty view shows one of these messages:
-
-- **No changes on this branch yet**, in **Changes**, when the branch has no commits and nothing uncommitted.
-- **No working changes** or **No changes in this scope**, when what you picked has nothing to show.
-- **No base branch to compare against yet**, when the branch has nothing to measure its commits against, such as a detached HEAD or a default branch with no upstream.
-- **No commits**, when the branch is level with its base or has no commit yet.
+An empty view says why, such as **No changes on this branch yet** when the branch has no commits and nothing uncommitted, or **No base branch to compare against yet** when the branch has nothing to measure its commits against, such as a detached HEAD.
 
 ### On a phone
 
@@ -696,7 +691,7 @@ A branch's **merge target** is the branch it will merge into: what its commits, 
 
 Kepler and GitLens share a branch's merge target, so a change you make in GitLens shows up in Kepler while it is running.
 
-A branch that landed in its merge target without a pull request counts as merged. That includes rebase-merged and squash-merged branches, which Git itself does not see as merged; Kepler checks their content. The Dashboard says **Merged into {target}**.
+A branch that landed in its merge target without a pull request counts as merged. That includes rebase-merged and squash-merged branches. The Dashboard says **Merged into {target}**.
 
 ### What's new on the merge target
 
@@ -741,13 +736,18 @@ Keep each repository's default way to update and push, or choose another for thi
 
 ## Opening a pull request
 
-**Kepler does not have a button that creates a pull request.** You open the pull request outside Kepler: the agent opens it, you run a command in the worktree's terminal, or you use your host's website. Once the pull request exists, Kepler tracks it as a task resource. A pull request gets attached to the task in one of 3 ways:
+The agent can open the pull request, or you can open it yourself:
+
+- Run a command in the worktree's terminal, or use your host's website.
+- For a GitHub.com repository, click **Create pull request** above the **Todo** list. See [Create and manage GitHub pull requests](/kepler/pull-request-integrations#create-and-manage-github-pull-requests).
+
+Once the pull request exists, Kepler tracks it as a task resource. A pull request gets attached to the task in one of 3 ways:
 
 | Path | What happens |
 |---|---|
 | **The agent publishes it** | When an agent publishes a pull request on one of the worktree's remotes, Kepler attaches it to the task. You do not need to do anything |
-| **The agent attaches it** | Agents can attach links to the task, or detach them, themselves, including a link you attached. Kepler shows each one as a pull request, an issue, or a plain link, with its title and status where it can |
-| **You attach an existing one** | **Manage resources**, at the bottom of the task's context panel, opens the **Resources** screen. On its **Pull requests** tab, click **Add pull requests**, then **Add** on a result |
+| **The agent attaches it** | Agents can attach and detach the task's links themselves, including a link you attached. Kepler shows each one as a pull request, an issue, or a plain link, with its title and status where it can |
+| **You attach an existing one** | **Manage resources**, at the bottom of the task's context panel, opens the **Resources** screen. On its **Pull requests** tab, tick the pull request, then click **Save changes** |
 
 Only the task's own pull request is attached, not every link the agent reads along the way. Anything the agent attaches shows up in the task right away.
 

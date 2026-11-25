@@ -22,8 +22,8 @@ taxonomy:
 Use these Settings pages to change how Kepler itself looks and behaves:
 
 - [General](#general): language, the default editor, sessions started outside Kepler, and windows
-- [Appearance](#appearance): light or dark appearance and themes, the Dashboard's views, and the code font and diff layout
-- [Chat and terminal](#chat-and-terminal): the chat's send key, width, and scrolling, and the terminal's font, message box, and links
+- [Appearance](#appearance): your theme for light and dark, the Dashboard's views, the code font, the diff layout, and Kep's seasonal touches
+- [Chat and terminal](#chat-and-terminal): the chat's send key, width, and scrolling; the terminal's font, message box, and links; and whether the floating Ask Kepler panel hides on its own
 - [Notifications](#notifications): which agent events notify you, on the desktop, in Kepler, and on your phone
 - [Voice](#voice): a check of your microphone and speaker, dictation with its models and vocabulary, and read aloud
 - [Keyboard shortcuts](#keyboard-shortcuts): look up and change Kepler's keyboard shortcuts
@@ -91,7 +91,7 @@ A change to **Restore windows on launch** takes effect the next time you start K
 
 ## Appearance
 
-Use **Appearance** to choose light or dark and a theme, and to set up the Dashboard's views, code text, and diffs. Kepler saves these settings on this machine.
+Use **Appearance** to choose light or dark and a theme, and to set up the Dashboard's views, code text, diffs, and Kep. Kepler saves these settings on this machine.
 
 ### Theme
 
@@ -208,7 +208,7 @@ Kepler asks before it updates or replaces your copy, and moves your copy to the 
 
 ### Dashboard
 
-**Dashboard views** sets where the Dashboard's views sit and how they look:
+**Dashboard views** sets where the Dashboard's views sit, how they look, and whether quiet items dim:
 
 | Setting | What it controls | Default | Options |
 |---|---|---|---|
@@ -216,6 +216,7 @@ Kepler asks before it updates or replaces your copy, and moves your copy to the 
 | **View style** | How views at the top look | Tabs | Tabs, Pills |
 | **Size** | How big views along the left side are | Default | Default, Compact |
 | **Counts on views** | Shows how many tasks match each view's filters | On | On, Off |
+| **Dim quiet items** | Dims an item's title in lists while it is quiet: no agent connected, no new reply, and nothing waiting on you | On | On, Off |
 
 With **Left**, the **Settings** button moves to the bottom of the views.
 
@@ -237,6 +238,10 @@ These settings set how diffs and code look:
 | **Font** › **Size** | Text size in diffs and file views, from 10 to 24 | 13 |
 
 To switch a single diff without changing the default, use the layout button on the file's header in the Changes overlay. See [Review What a Coding Agent Changed](/kepler/review-changes).
+
+### Kep
+
+**Seasonal touches**, on by default, lets [Kep](/kepler/kepler-interface#kep) mark seasons and holidays with small extras, such as an outfit or a bit of weather. Turn it off to keep Kep the same all year.
 
 ***
 
@@ -291,6 +296,10 @@ While the message box is hidden, a Terminal session's status bar has a microphon
 Each Kepler terminal belongs to a worktree. Opening a terminal starts a shell in that worktree's folder, so you do not need to `cd` into it, and the shell loads your profile the same way an interactive login shell would. Use **Ctrl/⌘ + J** to show and hide the terminal panel, **New terminal** to open another terminal, and **Close terminal** to end one.
 
 Use terminals for work next to an agent session: running tests while the agent writes code, checking Git state, or reproducing something the session did not show. A terminal starts in one worktree and stays there, so for work that spans several repositories, use a standalone terminal.
+
+### Ask Kepler panel
+
+**Auto-hide the floating panel**, off by default, closes the floating [Ask Kepler](/kepler/ask-kepler) panel when you click or move focus elsewhere in Kepler. A docked panel stays open.
 
 ***
 
@@ -358,18 +367,18 @@ Dictation is the microphone in the chat prompt, and on a Terminal session's stat
 
 | Setting | What it controls | Default |
 |---|---|---|
-| **Speech model** | The on-device model that dictates: **Qwen3-ASR 1.7B**, **Qwen3-ASR 0.6B**, **Parakeet TDT 0.6B v3**, or **Whisper**. Each row has **Download**, and **Remove…** once downloaded | None until you download one |
+| **Speech model** | The on-device model that dictates: **Qwen3-ASR** (with a **Qwen3-ASR size**), **Parakeet TDT 0.6B v3**, or **Whisper** (with a **Whisper quality**). Each row has **Download**, and **Remove…** once downloaded | None until you download one |
 | **Dictation language** | With Qwen3-ASR, the language you speak. Parakeet and Whisper detect it, so the setting is unavailable with them | Auto-detect |
 | **Dictation mode** | **Type as you talk**, **Type when you stop**, or **Send when you stop** | Type as you talk |
 | **Vocabulary** | The words dictation learned from your fixes, which **Manage** opens, with Qwen3-ASR only. See [Teach dictation your words](/kepler/voice-input#teach-dictation-your-words) | No words yet |
 
 **Parakeet TDT 0.6B v3** understands English and 24 other European languages. Kepler offers it only on a graphics card with WebGPU and 16-bit float shader support.
 
-To change the speech model, the dictation mode, or the dictation language from a Terminal session, right-click the microphone on its status bar.
+To change the speech model, the dictation mode, or the dictation language from a session, right-click its microphone.
 
 ### Read aloud
 
-**Read aloud** reads agent replies to you from the chat, the terminal, or the title bar. To use it, see [Read aloud](/kepler/voice-input#read-aloud).
+**Read aloud** reads agent replies to you in a chat or a Terminal session, one reply at a time or continuously as new replies arrive. To use it, see [Read aloud](/kepler/voice-input#read-aloud).
 
 | Setting | What it controls | Default |
 |---|---|---|
@@ -541,11 +550,11 @@ The **Chat** group works in a session's conversation:
 | Next message | Ctrl/⌘ + Alt/⌥ + ↓ |
 | Interrupt & send | Ctrl/⌘ + Shift + Enter |
 | Send after this turn | Alt/⌥ + Enter |
-| Switch between terminal and transcript | Ctrl/⌘ + Shift + X |
+| Switch between terminal and reading view | Ctrl/⌘ + Shift + X |
 | Toggle dictation | Ctrl/⌘ + Shift + Space |
-| Read the last reply aloud | None |
+| Read the last reply aloud, or pause and resume it | None |
 
-**Toggle dictation** starts or stops dictation in the focused session, in its message box or its terminal. **Read the last reply aloud** reads, or stops reading, the focused terminal session's last reply.
+**Toggle dictation** starts or stops dictation in the focused message box that has a microphone, including the **New task** composer and a Terminal session. **Read the last reply aloud, or pause and resume it** works on the focused session.
 
 #### Changes and code view shortcuts
 

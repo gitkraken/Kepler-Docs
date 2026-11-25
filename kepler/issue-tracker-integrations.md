@@ -95,7 +95,7 @@ Kepler checks the token against the server from your machine and saves it on thi
 
 - The server accepted the token.
 - Kepler saved the token without being able to reach the server or verify its certificate.
-- The server refused the token: *The server refused this token. Check its value and permissions.*
+- The server refused the token. Check its value and permissions.
 
 For every message the dialog shows, see [Pull Request Integrations](/kepler/pull-request-integrations#connect-a-self-hosted-instance). Until Kepler finishes syncing the connection to your account, the provider's row shows **Cloud sync pending**.
 
@@ -305,10 +305,29 @@ Kepler recognizes an issue from its URL when you paste or attach one, including 
 
 **Jira keys in commits and branches.** With Jira or Jira Server / Data Center connected, Kepler links Jira issue keys in commit messages and branch names, so `OPS-42` in a commit message links to that issue. Right-click a commit in a worktree's commit list for **Open issue *key*** and **Copy issue URL for *key*** (see [Review What a Coding Agent Changed](/kepler/review-changes#the-changes-panel)), and the **Worktrees and branches** page shows the keys as chips on branch and worktree rows (see [Repository Settings](/kepler/settings-repositories#worktrees-and-branches)). Only Jira keys are linked this way.
 
-**Add from the list with the keyboard.** In the issue list on the **Resources** screen, the arrows move between rows, and **Enter** or a double-click adds the row. **Show preview** in the screen's header shows the picked row beside the list. See [Picking issues and pull requests](/kepler/tasks-and-resources#picking-issues-and-pull-requests).
+**Add from the list with the keyboard.** In the issue list on the **Resources** screen, the arrows move between rows, and **Space** or **Enter** ticks the row. Ticked issues go onto the task when you click **Save changes**. **Show preview** in the screen's header shows the focused row beside the list. See [Picking issues and pull requests](/kepler/tasks-and-resources#picking-issues-and-pull-requests).
 
 **Paste a link on the Links tab.** An issue URL pasted on the **Links** tab of the **Resources** screen is looked up and added as that issue, with **Add as plain link** to keep it a plain link. See [Pasting an issue link](/kepler/tasks-and-resources#pasting-an-issue-link).
 
 **Paste a link into a prompt.** Paste an issue or pull request URL into a session's or a new task's composer and it becomes a link chip, which Kepler attaches to the task when you send. See [Sending a prompt](/kepler/agent-sessions#sending-a-prompt).
+
+### Close, reopen, or delete a GitHub issue
+
+You can change a GitHub.com issue's state without leaving Kepler. Click **Manage GitHub issue**, the pencil after the issue's title in its panel header or side-pane reader, or open the menu on a linked issue's card:
+
+- **Close issue** asks for a **Closing reason**: **Completed** or **Not planned**.
+- **Reopen issue** opens a closed issue again.
+- **Delete issue** removes the issue from GitHub for everyone, after you confirm. A deleted issue reads **Deleted** in Kepler.
+
+Closing keeps the discussion and lets you reopen the issue later, so close an issue unless you need it gone.
+
+<figure style="text-align:center">
+  <a href="/wp-content/uploads/github-issue-manage-nov-2026.png" target="_blank" rel="noopener noreferrer">
+    <img src="/wp-content/uploads/github-issue-manage-nov-2026.png" class="help-center-img img-bordered" alt="The side panel header of GitHub issue #42, Gift card codes are case-sensitive at checkout, with its Manage GitHub issue button (a pencil after the title) open on a menu of Close issue and Delete issue.">
+  </a>
+  <figcaption style="text-align:center; color:#888">The Manage GitHub issue menu on an open issue.</figcaption>
+</figure>
+
+An agent can change GitHub issues too, and deleting one always asks you first. See [What an agent can do with a task's resources](/kepler/tasks-and-resources#repositories-and-actions).
 
 ---

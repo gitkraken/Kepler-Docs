@@ -13,7 +13,7 @@ hosted_variant: both
 status: GA
 last_verified: 2026-11
 llms_include: true
-tags: [conductor, import, migrate, switch, parallel-agents, workspaces, tasks, worktrees, claude-code, codex, orca, herdr, vibe-kanban]
+tags: [conductor, import, migrate, switch, parallel-agents, workspaces, tasks, worktrees, claude-code, codex, orca, t3-code, herdr, vibe-kanban]
 taxonomy:
   category: kepler
 ---
@@ -64,7 +64,7 @@ After you install Kepler, the guided start also offers to import Conductor's wor
       <figcaption style="text-align:center; color:#888">Picking Conductor as the app to import from.</figcaption>
     </figure>
 
-3. In **Import from Conductor**, tick the workspaces you want, and click **Import *N* workspaces**. The workspaces are grouped by repository, and each row shows its branch and how long ago it was active. Workspaces active in the last 30 days arrive ticked, and older ones are folded under **Older**. To tick a whole repository, use its tick box. The count at the top, such as **9 of 14 selected**, shows how many you picked. To narrow a long list, type in **Filter workspaces**. To clear every tick, click **Select none**. A workspace you already imported is marked **Already a task:** and the task's name.
+3. In **Import from Conductor**, tick the workspaces you want, and click **Import *N* workspaces**. The workspaces are grouped by repository. Workspaces active in the last 30 days arrive ticked, and older ones are folded under **Older**. To tick a whole repository, use its tick box. To narrow a long list, type in **Filter workspaces**. A workspace you already imported is marked **Already a task:** and the task's name.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/import-workspaces-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -73,7 +73,7 @@ After you install Kepler, the guided start also offers to import Conductor's wor
   <figcaption style="text-align:center; color:#888">Choosing the Conductor workspaces to import.</figcaption>
 </figure>
 
-4. The dialog closes and the import runs in the background. A chip in the title bar shows its progress, such as **Importing 2 of 4**. Hover over or click the chip for its card, where **Stop** ends the import and **Retry** tries a failed workspace again. When the chip reads **Imported *N***, click **View tasks** on its card, or **Dismiss** to clear the chip.
+4. The dialog closes and the import runs in the background. A chip in the title bar shows its progress, such as **Importing 2 of 4**. To end the import early, hover over or click the chip and click **Stop** on its card. When the chip reads **Imported *N***, click **View tasks** on its card, or **Dismiss** to clear the chip.
 
 <figure style="text-align:center">
   <a href="/wp-content/uploads/import-run-chip-nov-2026-v2@2x.png" target="_blank" rel="noopener noreferrer">
@@ -108,8 +108,6 @@ If Conductor is not in the list, Kepler did not find Conductor's workspaces on t
 
 A chat continues only if its agent's history is on your Mac and Kepler supports that agent. The workspace list marks a chat that Kepler cannot continue. If a workspace fails to import, the title bar chip counts it, and its card offers **Retry**.
 
-After the import, continue each chat in Kepler or in Conductor, not both. Both apps write to the same chat history.
-
 ***
 
 ## What to do next in Kepler
@@ -143,7 +141,7 @@ No. Kepler reads Conductor's workspaces and does not change or move your files. 
 
 ### Which other apps can Kepler import from?
 
-Kepler can also import workspaces from Orca, herdr, and Vibe Kanban, in the same **Import from another app** dialog. See [From another agent app](/kepler/create-task#from-another-agent-app).
+Kepler can also import workspaces from Orca, T3 Code, herdr, and Vibe Kanban, in the same **Import from another app** dialog. See [From another agent app](/kepler/create-task#from-another-agent-app).
 
 ***
 

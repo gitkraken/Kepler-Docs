@@ -26,7 +26,7 @@ Kepler by GitKraken starts a coding agent from a GitHub or GitLab issue in 1 cli
 - Scope: Going from an issue in a connected tracker to an agent's pull request, inside 1 Kepler task
 - Prerequisite: A GitKraken account signed in to Kepler, and a connected issue tracker. See [Issue Tracker Integrations](/kepler/issue-tracker-integrations).
 - Supported trackers: Jira, Jira Server / Data Center, Linear, Trello, Asana, GitHub, GitHub Enterprise, GitLab, GitLab Self-Hosted, Azure DevOps, and Azure DevOps Server.
-- Limits: Kepler has no button that creates a pull request. The agent opens it, or you open it yourself. Kepler then attaches it to the task.
+- Limits: Kepler's **Create pull request** button works for GitHub.com repositories only. On other hosts, the agent opens the pull request, or you open it yourself. Kepler then attaches it to the task.
 
 ***
 
@@ -100,7 +100,7 @@ When the agent finishes, open the task's worktree and read its changes in the **
 
 ### Open the pull request
 
-Kepler does not ship a "create pull request" Action. To have the agent open the pull request, create an Action once from the example on the Actions page:
+None of Kepler's built-in Actions opens a pull request. To have the agent open the pull request, create an Action once from the example on the Actions page:
 
 1. Go to **Settings → Actions** and click **New Action**.
 2. For **Title**, type `Open a pull request`.
@@ -110,7 +110,7 @@ Kepler does not ship a "create pull request" Action. To have the agent open the 
 
 Then open the task and pick **Open a pull request** from the chevron on the composer's send button. The agent opens the pull request with the tools it has, such as your Git host's command-line tool.
 
-You can also push the branch and open the pull request yourself, on your Git host's website or from the worktree's terminal.
+You can also push the branch and open the pull request yourself. For a GitHub.com repository, click **Create pull request** above the **Todo** list and name the two branches. See [Create and manage GitHub pull requests](/kepler/pull-request-integrations#create-and-manage-github-pull-requests). On other hosts, use the host's website or the worktree's terminal.
 
 ### Kepler attaches the pull request
 
